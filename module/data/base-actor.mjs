@@ -3,7 +3,7 @@ export default class SWNActorBase extends foundry.abstract
   static LOCALIZATION_PREFIXES = ["SWN.Actor.base"];
 
 
-  // helper function to generatate a SchemaField with reosources
+  // helper function to generate a SchemaField with resources (value, max)
   static resourceField(initialValue, initialMax) {
     const fields = foundry.data.fields;
 
