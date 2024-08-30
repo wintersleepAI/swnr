@@ -8,13 +8,4 @@ export default class SWNItemBase extends foundry.abstract
 
     return schema;
   }
-
-  static defineSchema() {
-    const fields = foundry.data.fields;
-    const schema = super.defineSchema();
-
-    schema.description = new fields.HTMLField();
-
-    return schema;
-  }
 }
