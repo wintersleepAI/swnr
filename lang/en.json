@@ -67,6 +67,14 @@
         },
         "SpellLVL": "Level {level} Spells",
         "AddLVL": "Add LVL {level}"
+      }, 
+      "Skill": {
+        "FIELDS": {
+          "rank": {"label": "Skill Rank"},
+          "defaultStat": {"label": "Default Stat"},
+          "pool": {"label": "Dice Pool"},
+          "source": {"label": "Source"}
+        }
       }
     },
     "Effect": {
@@ -85,7 +93,8 @@
     "Item": {
       "gear": "Gear",
       "feature": "Feature",
-      "spell": "Spell"
+      "spell": "Spell",
+      "skill": "Skill"
     }
   }
 }

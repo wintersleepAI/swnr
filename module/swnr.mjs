@@ -58,6 +58,7 @@ Hooks.once('init', function () {
     gear: models.SWNGear,
     feature: models.SWNFeature,
     spell: models.SWNSpell,
+    skill: models.SWNSkill,
   };
 
   // Active Effects are never copied to the Actor,

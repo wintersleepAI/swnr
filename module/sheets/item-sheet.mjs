@@ -78,6 +78,8 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'spell':
         options.parts.push('attributesSpell');
         break;
+      case 'skill':
+        break;
     }
   }
 
