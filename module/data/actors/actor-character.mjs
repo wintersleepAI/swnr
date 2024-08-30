@@ -1,4 +1,4 @@
-import SWNActorBase from '../base-actor.mjs';
+import SWNActorBase from './base-actor.mjs';
 
 export default class SWNCharacter extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
