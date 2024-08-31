@@ -64,7 +64,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
     // Not all parts always render
-    options.parts = ['header', 'tabs', 'description'];
+    options.parts = ['header', 'tabs'];
+    //wsai adding to allow setting default tab
+    options.defaultTab= 'description';
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
     // Control which parts show based on document subtype
@@ -74,6 +76,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'gear':
         options.parts.push('attributesGear');
+        options.defaultTab = 'attributes';
         break;
       case 'spell':
         options.parts.push('attributesSpell');
@@ -81,6 +84,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'skill':
         break;
     }
+    options.parts.push('description');
   }
 
   /* -------------------------------------------- */
@@ -100,7 +104,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       // Adding a pointer to CONFIG.SWN
       config: CONFIG.SWN,
       // You can factor out context construction to helper functions
-      tabs: this._getTabs(options.parts),
+      tabs: this._getTabs(options.parts, options.defaultTab),
       // Necessary for formInput and formFields helpers
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
@@ -149,11 +153,11 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
    * @returns {Record<string, Partial<ApplicationTab>>}
    * @protected
    */
-  _getTabs(parts) {
+  _getTabs(parts, defaultTab = 'description') {
     // If you have sub-tabs this is necessary to change
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
-    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'description';
+    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = defaultTab;
     return parts.reduce((tabs, partId) => {
       const tab = {
         cssClass: '',
