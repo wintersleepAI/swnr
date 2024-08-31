@@ -58,6 +58,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     effects: {
       template: 'systems/swnr/templates/item/effects.hbs',
     },
+    attributesSkill: {
+      template: 'systems/swnr/templates/item/attribute-parts/skill.hbs',
+    }
   };
 
   /** @override */
@@ -82,6 +85,8 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         options.parts.push('attributesSpell');
         break;
       case 'skill':
+        options.parts.push('attributesSkill');
+        options.defaultTab = 'attributes';
         break;
     }
     options.parts.push('description');
@@ -118,6 +123,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     switch (partId) {
       case 'attributesFeature':
       case 'attributesGear':
+      case 'attributesSkill':
       case 'attributesSpell':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
@@ -179,6 +185,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
           break;
         case 'attributesFeature':
         case 'attributesGear':
+        case 'attributesSkill':
         case 'attributesSpell':
           tab.id = 'attributes';
           tab.label += 'Attributes';
