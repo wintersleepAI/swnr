@@ -15,6 +15,12 @@
         },
         "npc": {
             "htmlFields": ["biography"]
+        },
+        "ship": {
+            "htmlFields": ["description"]
+        },
+        "mech": {
+            "htmlFields": ["description"]
         }
     },
     "Item": {

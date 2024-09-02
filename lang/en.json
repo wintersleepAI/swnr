@@ -88,7 +88,9 @@
   "TYPES": {
     "Actor": {
       "character": "Character",
-      "npc": "NPC"
+      "npc": "NPC",
+      "ship": "Ship",
+      "mech": "Mech"
     },
     "Item": {
       "gear": "Gear",

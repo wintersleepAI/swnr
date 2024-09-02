@@ -23,6 +23,7 @@ export default class SWNActorBase extends foundry.abstract
     schema.health = resourceField(10,10);
     schema.power = resourceField(5,5);
     schema.biography = new fields.HTMLField();
+    schema.traumaTarget = new fields.NumberField({...requiredInteger, initial: 6});
 
     return schema;
   }

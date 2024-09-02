@@ -52,6 +52,8 @@ Hooks.once('init', function () {
   CONFIG.Actor.dataModels = {
     character: models.SWNCharacter,
     npc: models.SWNNPC,
+    ship: models.SWNShip,
+    mech: models.SWNMech,
   };
   CONFIG.Item.documentClass = SWNItem;
   CONFIG.Item.dataModels = {
