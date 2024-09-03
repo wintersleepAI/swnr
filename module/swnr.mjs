@@ -4,6 +4,8 @@ import { SWNItem } from './documents/item.mjs';
 // Import sheet classes.
 import { SWNActorSheet } from './sheets/actor-sheet.mjs';
 import { SWNItemSheet } from './sheets/item-sheet.mjs';
+import { SWNVehicleSheet } from './sheets/vehicle-sheet.mjs';
+
 // Import helper/utility classes and constants.
 import { SWN } from './helpers/config.mjs';
 // Import DataModel classes
@@ -73,6 +75,12 @@ Hooks.once('init', function () {
   Actors.registerSheet('swnr', SWNActorSheet, {
     makeDefault: true,
     label: 'SWN.SheetLabels.Actor',
+    types: ['character', 'npc'],
+  });
+  Actors.registerSheet('swnr', SWNVehicleSheet, {
+    makeDefault: true,
+    label: 'SWN.SheetLabels.Vehicle',
+    types: ['ship', 'mech'],
   });
   Items.unregisterSheet('core', ItemSheet);
   Items.registerSheet('swnr', SWNItemSheet, {
