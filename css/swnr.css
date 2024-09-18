@@ -267,11 +267,11 @@
 .swnr .resource-label {
   font-weight: bold;
 }
-.swnr .ability {
+.swnr .stat {
   margin-bottom: 2px;
 }
-.swnr .ability-score,
-.swnr .ability-mod {
+.swnr .stat-score,
+.swnr .stat-mod {
   flex: 0 0 44px;
 }
 .swnr .items-header {
