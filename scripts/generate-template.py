@@ -36,6 +36,7 @@ def run():
                 if current != None:
                     print_class(current, attributes)
                     attributes = []
+                    in_schema = None
                 current = row[NAME]
                 #print(f'## {current}')
             elif current is not None:
@@ -65,5 +66,6 @@ def run():
         if in_schema is not None:
             attributes.append((schema_name, in_schema))
         print_class(current, attributes)
+        current = None
 if __name__ == '__main__':
     run()

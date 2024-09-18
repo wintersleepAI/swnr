@@ -73,6 +73,7 @@ export default class SWNCharacter extends SWNActorBase {
   }
 
   prepareDerivedData() {
+    super.prepareBaseData();
     // Loop through stat scores, and add their modifiers to our sheet output.
     for (const key in this.stats) {
       this.stats[key].baseTotal = this.stats[key].base + this.stats[key].boost;
@@ -85,6 +86,19 @@ export default class SWNCharacter extends SWNActorBase {
       this.stats[key].label =
         game.i18n.localize(CONFIG.SWN.stats[key]) ?? key;
     }
+    /*
+    schema.encumbrance =; // TODO
+
+
+    itemTypes;
+
+    save: {
+      physical?: number;
+      evasion?: number;
+      mental?: number;
+      luck?: number;
+    };
+    */
   }
 
   getRollData() {

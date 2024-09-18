@@ -4,9 +4,9 @@ export default class SWNShared {
   static resourceField(initialValue, initialMax) {
     const fields = foundry.data.fields;
     return new fields.SchemaField({
-          // Make sure to call new so you invoke the constructor!
-      value: new fields.NumberField({required: true, nullable: false, integer: true, min:0, initial: initialValue }),
-      max: new fields.NumberField({required: true, nullable: false, integer: true, initial: initialMax }),
+      // Make sure to call new so you invoke the constructor!
+      value: new fields.NumberField({ required: true, nullable: false, integer: true, min: 0, initial: initialValue }),
+      max: new fields.NumberField({ required: true, nullable: false, integer: true, initial: initialMax }),
     });
   }
 
@@ -20,8 +20,13 @@ export default class SWNShared {
     return new fields.StringField({ required: true, nullable: false, initial: initialValue });
   }
 
+  static stringChoices(initialValue, choices) {
+    const fields = foundry.data.fields;
+    return new fields.StringField({ required: true, nullable: false, initial: initialValue, choices: choices });
+  }
+
   static emptyString() {
     const fields = foundry.data.fields;
-    return new fields.StringField({ required: false, nullable: false});
+    return new fields.StringField({ required: false, nullable: false });
   }
 }

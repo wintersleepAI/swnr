@@ -4,9 +4,6 @@ export default class SWNActorBase extends foundry.abstract
   .TypeDataModel {
   static LOCALIZATION_PREFIXES = ["SWN.Actor.base"];
 
-
-
-
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = {};
@@ -37,4 +34,40 @@ export default class SWNActorBase extends foundry.abstract
     schema.cyberdecks = new fields.ArrayField(new fields.DocumentUUIDField());
     return schema;
   }
+
+  prepareDerivedData() {
+    /*
+    baseAc: number; //computed-active effects needed
+    systemStrain: {
+      max: number;
+      permanent: number;
+      cyberware: number;
+    };
+
+    effort: {
+      max: number;
+      value: number;
+    };
+
+    tweak: {
+      extraEffort: {
+        value: number;
+      };
+    };
+    //CWN
+    access: {
+      max: number;
+    };
+    settings: null | {
+      useCWNArmor: boolean;
+      useTrauma: boolean;
+    };
+    soakTotal: {
+      value: number;
+      max: number;
+    };
+    modifiedTraumaTarget: number;
+    */
+  }
+
 }
