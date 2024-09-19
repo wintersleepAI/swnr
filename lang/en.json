@@ -99,5 +99,917 @@
       "spell": "Spell",
       "skill": "Skill"
     }
+  },
+  "swnr": {
+    "title": "Stars Without Number: Revised",
+    "CharacterActorSheet": "Basic Sheet",
+    "stat": {
+      "long": {
+        "str": "Strength",
+        "dex": "Dexterity",
+        "con": "Constitution",
+        "int": "Intelligence",
+        "wis": "Wisdom",
+        "cha": "Charisma"
+      },
+      "short": {
+        "str": "STR",
+        "dex": "DEX",
+        "con": "CON",
+        "int": "INT",
+        "wis": "WIS",
+        "cha": "CHA"
+      }
+    },
+    "skills": {
+      "revised": {
+        "administer": {
+          "name": "Administer",
+          "text": "Manage an organization, handle paperwork, analyze records, and keep an institution functioning on a daily basis. Roll it for bureaucratic expertise, organizational management, legal knowledge, dealing with government agencies, and understanding how institutions really work."
+        },
+        "connect": {
+          "name": "Connect",
+          "text": "Find people who can be helpful to your purposes and get them to cooperate with you. Roll it to make useful connections with others, find people you know, know where to get illicit goods and services, and be familiar with foreign cultures and languages. You can use it in place of Talk for persuading people you find via this skill."
+        },
+        "exert": {
+          "name": "Exert",
+          "text": "Apply trained speed, strength, or stamina in some feat of physical exertion. Roll it to run, jump, lift, swim, climb, throw, and so forth. You can use it as a combat skill when throwing things, though it doesn’t qualify as a combat skill for other ends."
+        },
+        "fix": {
+          "name": "Fix",
+          "text": "Create and repair devices both simple and complex. How complex will depend on your character’s background; a lostworlder blacksmith is going to need some study time before he’s ready to fix that broken fusion reactor, though he can do it eventually. Roll it to fix things, build things, and identify what something is supposed to do."
+        },
+        "heal": {
+          "name": "Heal",
+          "text": "Employ medical and psychological treatment for the injured or disturbed. Roll it to cure diseases, stabilize the critically injured, treat psychological disorders, or diagnose illnesses."
+        },
+        "know": {
+          "name": "Know",
+          "text": "Know facts about academic or scientific fields. Roll it to understand planetary ecologies, remember relevant history, solve science mysteries, and know the basic facts about rare or esoteric topics."
+        },
+        "lead": {
+          "name": "Lead",
+          "text": "Convince others to also do whatever it is you’re trying to do. Talk might persuade them that following you is smart, but Lead can make them do it even when they think it’s a bad idea. Roll it to lead troops in combat, convince others to follow you, or maintain morale and discipline."
+        },
+        "notice": {
+          "name": "Notice",
+          "text": "Spot anomalies or interesting facts about your environment. Roll it for searching places, detecting ambushes, spotting things, and reading the emotional state of other people."
+        },
+        "perform": {
+          "name": "Perform",
+          "text": "Exhibit some performative skill. Roll it to dance, sing, orate, act, or otherwise put on a convincing or emotionally moving performance."
+        },
+        "pilot": {
+          "name": "Pilot",
+          "text": "Use this skill to pilot vehicles or ride beasts. Roll it to fly spaceships, drive vehicles, ride animals, or tend to basic vehicle repair. This skill doesn’t help you with things entirely outside the scope of your background or experience, though with some practice a PC can expand their expertise."
+        },
+        "program": {
+          "name": "Program",
+          "text": "Operating or hacking computing and communications hardware. Roll it to program or hack computers, control computer-operated hardware, operate communications tech, or decrypt things."
+        },
+        "punch": {
+          "name": "Punch",
+          "text": "Use it as a combat skill when fighting unarmed. If your PC means to make a habit of this rather than as a recourse of desperation, you should take the Unarmed Combatant focus described later."
+        },
+        "shoot": {
+          "name": "Shoot",
+          "text": "Use it as a combat skill when using ranged weaponry, whether hurled rocks, bows, laser pistols, combat rifles, or ship’s gunnery."
+        },
+        "sneak": {
+          "name": "Sneak",
+          "text": "Move without drawing notice. Roll it for stealth, disguise, infiltration, manual legerdemain, pickpocketing, and the defeat of security measures."
+        },
+        "stab": {
+          "name": "Stab",
+          "text": "Use it as a combat skill when wielding melee weapons, whether primitive or complex."
+        },
+        "survive": {
+          "name": "Survive",
+          "text": "Obtain the basics of food, water, and shelter in hostile environments, along with avoiding their natural perils. Roll it to handle animals, navigate difficult terrain, scrounge urban resources, make basic tools, and avoid wild beasts or gangs."
+        },
+        "talk": {
+          "name": "Talk",
+          "text": "Convince other people of the facts you want them to believe. What they do with that conviction may not be completely predictable. Roll it to persuade, charm, or deceive others in conversation."
+        },
+        "trade": {
+          "name": "Trade",
+          "text": "Find what you need on the market and sell what you have. Roll it to sell or buy things, figure out where to purchase hard-to-get or illicit goods, deal with customs agents, or run a business."
+        },
+        "work": {
+          "name": "Work",
+          "text": "This is a catch-all skill for professions not represented by other skills. Roll it to work at a particular profession, art, or trade"
+        }
+      },
+      "spaceMagic": {
+        "knowMagic": {
+          "name": "Know Magic",
+          "text": ""
+        },
+        "useMagic": {
+          "name": "Use Magic",
+          "text": ""
+        },
+        "sunblade": {
+          "name": "Sunblade",
+          "text": ""
+        },
+        "fight": {
+          "name": "Fight",
+          "text": ""
+        }
+      },
+      "classic": {
+        "artist": {
+          "name": "Artist",
+          "text": ""
+        },
+        "athletics": {
+          "name": "Athletics",
+          "text": ""
+        },
+        "bureaucracy": {
+          "name": "Bureaucracy",
+          "text": ""
+        },
+        "business": {
+          "name": "Business",
+          "text": ""
+        },
+        "combat-energy": {
+          "name": "Combat/Energy",
+          "text": ""
+        },
+        "combat-gunnery": {
+          "name": "Combat/Gunnery",
+          "text": ""
+        },
+        "combat-primitive": {
+          "name": "Combat/Primitive",
+          "text": ""
+        },
+        "combat-projectile": {
+          "name": "Combat/Projectile",
+          "text": ""
+        },
+        "combat-psitech": {
+          "name": "Combat/Psitech",
+          "text": ""
+        },
+        "combat-unarmed": {
+          "name": "Combat/Unarmed",
+          "text": ""
+        },
+        "computer": {
+          "name": "Computer",
+          "text": ""
+        },
+        "culture-alien": {
+          "name": "Culture/Alien/",
+          "text": ""
+        },
+        "culture-criminal": {
+          "name": "Culture/Criminal",
+          "text": ""
+        },
+        "culture-spacer": {
+          "name": "Culture/Spacer",
+          "text": ""
+        },
+        "culture-traveller": {
+          "name": "Culture/Traveller",
+          "text": ""
+        },
+        "culture": {
+          "name": "Culture/",
+          "text": ""
+        },
+        "exosuit": {
+          "name": "Exosuit",
+          "text": ""
+        },
+        "gambling": {
+          "name": "Gambling",
+          "text": ""
+        },
+        "history": {
+          "name": "History",
+          "text": ""
+        },
+        "instructor": {
+          "name": "Instructor",
+          "text": ""
+        },
+        "language": {
+          "name": "Language",
+          "text": ""
+        },
+        "leadership": {
+          "name": "Leadership",
+          "text": ""
+        },
+        "navigation": {
+          "name": "Navigation",
+          "text": ""
+        },
+        "perception": {
+          "name": "Perception",
+          "text": ""
+        },
+        "persuade": {
+          "name": "Persuade",
+          "text": ""
+        },
+        "profession": {
+          "name": "Profession/",
+          "text": ""
+        },
+        "religion": {
+          "name": "Religion",
+          "text": ""
+        },
+        "science": {
+          "name": "Science",
+          "text": ""
+        },
+        "security": {
+          "name": "Security",
+          "text": ""
+        },
+        "stealth": {
+          "name": "Stealth",
+          "text": ""
+        },
+        "steward": {
+          "name": "Steward",
+          "text": ""
+        },
+        "survival": {
+          "name": "Survival",
+          "text": ""
+        },
+        "tactics": {
+          "name": "Tactics",
+          "text": ""
+        },
+        "tech-astronautic": {
+          "name": "Tech/Astronautic",
+          "text": ""
+        },
+        "tech-maltech": {
+          "name": "Tech/Maltech",
+          "text": ""
+        },
+        "tech-medical": {
+          "name": "Tech/Medical",
+          "text": ""
+        },
+        "tech-postech": {
+          "name": "Tech/Postech",
+          "text": ""
+        },
+        "tech-pretech": {
+          "name": "Tech/Pretech",
+          "text": ""
+        },
+        "tech-psitech": {
+          "name": "Tech/Psitech",
+          "text": ""
+        },
+        "vehicle-air": {
+          "name": "Vehicle/Air",
+          "text": ""
+        },
+        "vehicle-grav": {
+          "name": "Vehicle/Grav",
+          "text": ""
+        },
+        "vehicle-land": {
+          "name": "Vehicle/Land",
+          "text": ""
+        },
+        "vehicle-space": {
+          "name": "Vehicle/Space",
+          "text": ""
+        },
+        "vehicle-water": {
+          "name": "Vehicle/Water",
+          "text": ""
+        }
+      },
+      "psionic": {
+        "biopsionics": {
+          "name": "Biopsionics",
+          "text": "Master powers of physical repair, body augmentation, and shapeshifting."
+        },
+        "metapsionics": {
+          "name": "Metapsionics",
+          "text": "Master powers that nullify, boost, and shape the use of other psychic abilities."
+        },
+        "precognition": {
+          "name": "Precognition",
+          "text": "Master the ability to sense future events and control probability."
+        },
+        "telekinesis": {
+          "name": "Telekinesis",
+          "text": "Master the remote control of kinetic energy to move objects and fabricate force constructs."
+        },
+        "telepathy": {
+          "name": "Telepathy",
+          "text": "Master the reading and influencing of other sapient minds."
+        },
+        "teleportation": {
+          "name": "Teleportation",
+          "text": "Master the arts of physical translocation of yourself and allies."
+        }
+      },
+      "original": {},
+      "labels": {
+        "spaceMagic": "Space Magic",
+        "classic": "Classic",
+        "revised": "Revised",
+        "psionic": "Psionic"
+      }
+    },
+    "sheet": {
+      "background": "Background",
+      "class": "Class",
+      "homeworld": "Home world",
+      "species": "Species/Gender",
+      "level": "Level",
+      "stats": "Stats",
+      "base": "Base",
+      "boosts": "Boosts",
+      "bonus": "Bonus",
+      "total": "Total",
+      "modifier": "Modifier",
+      "temp": "Temp",
+      "mod": "Mod",
+      "saves": {
+        "save": "Save",
+        "luck": "Luck",
+        "physical": "Physical",
+        "mental": "Mental",
+        "evasion": "Evasion"
+      },
+      "name": "Name",
+      "armor-class": "Armor Class",
+      "armor": "Armor",
+      "access": "Access",
+      "hp": "HP",
+      "permanent-strain": "Perm. Strain",
+      "attack-bonus": "Attack Bonus",
+      "system-strain": "System Strain",
+      "ss": "Strain",
+      "ac": "AC",
+      "ab": "AB",
+      "credit-change": "Add/Remove",
+      "tabs": {
+        "biography": "Biography",
+        "debug": "Sheet Debug",
+        "skills": "Skills",
+        "weapons": "Weapons",
+        "inventory": "Inventory",
+        "armor": "Armor",
+        "foci": "Foci",
+        "edge": "Edge",
+        "other": "Other",
+        "powers": "Powers",
+        "combat": "Combat",
+        "stats": "Stats"
+      },
+      "xp": "XP",
+      "power": "Power",
+      "powers": {
+        "roll": "Roll",
+        "duration": "Duration",
+        "save": "Save",
+        "skill": "Skill Button (e.g. dex/pilot)",
+        "range": "Range",
+        "prepared": "Is Prepared?"
+      },
+      "resources": "Resources",
+      "delete-item": "Delete Item",
+      "show-item": "Show Item",
+      "edit-item": "Edit Item",
+      "reload-item": "Reload Item",
+      "add-item": "Add Item",
+      "search-item": "Search to Add Item",
+      "break-item": "Break/Disable Item",
+      "jury-rig": "Jury-Rig Item",
+      "fix-item": "Fix Item",
+      "destroy-item": "Destroy Item",
+      "ask": "Ask",
+      "description": "Description:",
+      "ammoType": "Ammo Type",
+      "longReload": "Long Reload",
+      "burst": "Burst Fire",
+      "magazine": "Magazine",
+      "suppress": "Suppressive Fire",
+      "skill": "Skill",
+      "employer": "Employer",
+      "source": "Source",
+      "factionname": "Faction",
+      "movement": "Movement",
+      "base-ac": "Base AC",
+      "vs": "vs",
+      "rollables": "Rollables",
+      "roll-skill": "Roll Skill",
+      "hit-dice": "Hit Dice",
+      "hd": "Hit Dice per level (without CON mod)",
+      "command-points": "Command Points",
+      "npc-command-points": "NPC Ship CP",
+      "unspent-skill": "Unspent Skill Points",
+      "unspent-psy-skill": "Unspent Psychic Skill Points",
+      "add-skill": "Add New Skill",
+      "level-up": "Level Up",
+      "rest": "A night's rest",
+      "scene": "End Scene",
+      "traumaTarget": "Trauma Target",
+      "traumaTargetShort": "TT",
+      "rest-desc": "Apply a good night's rest (reset effort, drop strain, heal HP)?",
+      "rest-title": "Apply a Good Night's Rest?",
+      "cyberware": {
+        "disabled": "Disabled",
+        "strain": "Strain",
+        "name": "Cyberware",
+        "concealment": "Concealment",
+        "concealmentShort": "Conc.",
+        "type": "Type",
+        "complication": "Complication",
+        "conc": {
+          "sight": "Sight",
+          "touch": "Touch",
+          "medical": "Medical"
+        },
+        "types": {
+          "head": "Head",
+          "body": "Body",
+          "skin": "Skin",
+          "limb": "Limb",
+          "nerve": "Nerve",
+          "sensory": "Sensory"
+        }
+      },
+      "type": {
+        "mech": "Mech",
+        "ship": "Ship",
+        "vehicle": "Vehicle",
+        "drone": "Drone",
+        "desc": "Ship/Mech/Vehicle/Drone"
+      },
+      "mech": {
+        "name": "Mech Name",
+        "mechClass": {
+          "suit": "Suit",
+          "light": "Light",
+          "heavy": "Heavy"
+        },
+        "mech-class": "Mech Class",
+        "mech-hull": "Mech Hull Type",
+        "pilot": "Pilot"
+      },
+      "drone": {
+        "enc": "Encumbrance",
+        "range": "Range",
+        "tl": "TL",
+        "name": "Drone Name",
+        "fittings": "Fittings (mass)",
+        "hardpoints": "Hardpoints",
+        "fitTip": "CWN uses hardpoints for weapons. If hardpoint max > 0, the system will count ship/vehicle weapons and weapons against hardpoints and not fittings.",
+        "model": "Model",
+        "moveType": "Move Type",
+        "move": "Move",
+        "models": {
+          "custom": "Custom",
+          "primitive-drone": "Primitive Drone",
+          "void-hawk": "Void Hawk",
+          "stalker": "Stalker",
+          "cuttlefish": "Cuttlefish",
+          "ghostwalker": "Ghostwalker",
+          "sleeper": "Sleeper",
+          "pax": "Pax",
+          "alecto": "Alecto"
+        }
+      },
+      "vehicle": {
+        "tonnage": "Tonnage",
+        "kmph": "KM/H",
+        "tl": "TL",
+        "name": "Vehicle Name",
+        "size": "Size",
+        "vehicle-class": {
+          "s": "S",
+          "m": "M",
+          "l": "L"
+        }
+      },
+      "faction": {
+        "forceRating": "Force Rating",
+        "cunningRating": "Cunning Rating",
+        "wealthRating": "Wealth Rating",
+        "facCreds": "FacCreds",
+        "xp": "XP",
+        "homeworld": "Homeworld",
+        "tags": "Tags",
+        "assets": "Assets",
+        "assetType": "Asset Type",
+        "baseOfInfluence": "Base of Influence",
+        "attackSource": "Source",
+        "attackTarget": "Target",
+        "attackDamage": "Damage",
+        "attackSpecial": "Special Attack Note",
+        "counter": "Counter",
+        "note": "Note",
+        "turnRoll": "On Turn Log/Roll",
+        "stealthed": "Is Stealthed?",
+        "tl": "TL",
+        "rating": "Rating",
+        "hp": "HP",
+        "assets-tab": "Assets",
+        "desc-tab": "Description",
+        "tags-tab": "Tags",
+        "log-tab": "Log",
+        "add-tag": "Add Tag",
+        "add-tag-custom": "Add Custom Tag",
+        "remove-tag": "Remove Tag",
+        "remove-log": "Remove Log Entry",
+        "add-log": "Add Manual Log Entry",
+        "remove-log-all": "Remove All Log Entries",
+        "active": "Active Faction",
+        "attack-roll": "Attack Hit Roll",
+        "counter-roll": "Counter Hit Roll",
+        "damage": "Damage",
+        "attack": "Attack",
+        "att-damage": "Attack Damage",
+        "def-damage": "Counter Damage",
+        "att-roll": "Attacker Roll",
+        "def-roll": "Defender Roll",
+        "factionGoal": "Faction Goal",
+        "factionGoalDesc": "Goal Description",
+        "setGoal": "Set Goal",
+        "location": "Location",
+        "maintenance": "Maintenance",
+        "income": "Income",
+        "unusable": "Unusable",
+        "turn": "Start Turn",
+        "setHomeworld": "Set the faction homeworld to {name}?",
+        "abandonGoal": "Abandon current goal {name}? Will lose income and no actions this turn/"
+      },
+      "ship": {
+        "life-support-days": "Life Support Days",
+        "fuel": "Fuel",
+        "power": "Power",
+        "mass": "Mass",
+        "speed": "Speed",
+        "hard-points": "Hardpoints",
+        "ship-class": "Ship Class",
+        "min-ship-class": "Min. Class",
+        "ship-hull-type": "Ship Hull Type",
+        "cargo": "Cargo",
+        "operating-cost": "Operating Cost",
+        "maintenance-cost": "Maintenance Cost",
+        "amount-owed": "Amount Owed",
+        "credit-pool": "Ship's Credit Pool",
+        "payment-amount": "Payment Amount",
+        "payment-months": "Months Between Payments",
+        "maintenance-months": "Months Between Maintenance",
+        "last-payment": "Last Payment Date (YYYY/MM/DD)",
+        "cost": "Cost",
+        "last-maintenance": "Last Maintenance (YYYY/MM/DD)",
+        "calc-cost": "Calculate the cost for the ship (using hull and items)",
+        "make-payment": "Make a payment (using ship's pool)",
+        "pay-maintenance": "Pay maintenance (using ship's pool)",
+        "crew": "Crew (min/cur/max)",
+        "shipHullType": {
+          "strikeFighter": "Strike Fighter",
+          "shuttle": "Shuttle",
+          "freeMerchant": "Free Merchant",
+          "patrolBoat": "Patrol Boat",
+          "corvette": "Corvette",
+          "heavyFrigate": "Heavy Frigate",
+          "bulkFreighter": "Bulk Freighter",
+          "fleetCruiser": "Fleet Cruiser",
+          "battleship": "Battleship",
+          "carrier": "Carrier",
+          "smallStation": "Small Station",
+          "largeStation": "Large Station"
+        },
+        "shipClass": {
+          "fighter": "Fighter",
+          "frigate": "Frigate",
+          "cruiser": "Cruiser",
+          "capital": "Capital"
+        },
+        "weapons": "Weapons",
+        "weapon": "Weapon",
+        "defense": "Defense",
+        "fittings": "Fitting",
+        "stations": "Stations",
+        "weapons-tab": "Weapons/Defense/Fittings",
+        "notes-tab": "Notes/ Description",
+        "crew-tab": "Crew Members",
+        "cost-tab": "Ship Costs",
+        "cargo-tab": "Cargo",
+        "crew-name": "Crew Member",
+        "crew-skill-bonus": "NPC Ship Crew Bonus",
+        "crew-skill-bonus-note": "(Mod to attack and skill rolls)",
+        "name": "Name",
+        "dmg": "Dmg",
+        "qualities": "Qualities",
+        "effect": "Effect",
+        "broken": "Is Broken?",
+        "destroyed": "Is Destroyed?",
+        "jury-rigged": "Is Jury-Rigged?",
+        "shooter": "Shooting",
+        "travel": "Travel Days",
+        "spike": "Spike Drill",
+        "spike-drive": "Spike Drive",
+        "crisis": "Crisis",
+        "system-failure": "System Failure(s)",
+        "repair-all": "Repair All",
+        "sensor-roll": "Sensor Roll",
+        "refuel": "Refuel",
+        "costMultiplier": "Scale cost by class",
+        "powerMultiplier": "Scale power by class",
+        "massMultiplier": "Scale mass by class",
+        "station": {
+          "captain": "Captain",
+          "gunnery": "Gunnery",
+          "bridge": "Bridge",
+          "engineering": "Engineering",
+          "comms": "Comms",
+          "role": "Station",
+          "crew": "Crew"
+        },
+        "cargo-name": "Cargo Name / Description"
+      },
+      "cyberdeck": {
+        "shielding": "Shielding",
+        "hacker": "Hacker",
+        "bonusAccess": "Bonus Access",
+        "memory": "Memory",
+        "cpu": "CPU",
+        "baseShielding": "Base Shielding",
+        "bonusShielding": "Bonus Shielding",
+        "neuralBuffer": "Neural Buffer",
+        "wirelessConnectionPenalty": "Wireless(-2)",
+        "crownPenalty": "Crown (-1)",
+        "run": "Run/ Activate Program"
+      },
+      "program": {
+        "type": "Type",
+        "verb": "Verb",
+        "subject": "Subject",
+        "datafile": "Datafile",
+        "running": "Running/Active Program",
+        "cost": "Cost",
+        "use": "Use",
+        "affect": "Affects",
+        "selfTerminating": "Self-Terminating",
+        "accessCost": "Access Cost",
+        "accessCostShort": "A/C",
+        "skillCheckMod": "Skill Check Modifier",
+        "target": "Subject Type",
+        "targetAllowed": "Target Types Allowed",
+        "targetAllowedShort": "Targets",
+        "subjectType": "Subject Type",
+        "attackRoll": "Attack Roll",
+        "skillRoll": "Skill Roll"
+      },
+      "tweaks": "Tweaks"
+    },
+    "settings": {
+      "useRollNPCHD": "Use NPC HD on token create?",
+      "useRollNPCHDHint": "When creating a npc token, if the HP or Hit Dice (HD) has not been rolled, it will roll d8 HD for health automatically.",
+      "useHomebrewLuckSave": "Use Homebrew Luck saves?",
+      "useHomebrewLuckSaveHint": "Uses 16 - Level for the save, no modifiers, just pure luck",
+      "addShockMessage": "Add Shock Damage Message?",
+      "addShockMessageHint": "When attacking this adds another roll for shock damage in the attack chat message.",
+      "showTempAttrMod": "Show Temporary Attribute Total Modifiers?",
+      "showTempAttrModHint": "On the character sidebar show the temporary modifiers to an attribute (e.g. attribute damage)",
+      "attrRoll": "Stat/Attribute Roll",
+      "attrRollHint": "What action/roll, if any, to take on an stat roll/click?",
+      "attrRollNo": "Nothing",
+      "attrRolld20": "d20 + mod",
+      "attrRoll2d6": "2d6 + mod",
+      "attrRollUnder": "Roll d20 under",
+      "attrRollUnderEqual": "Roll d20 under or equal",
+      "attackRoll": "Attack Roll?",
+      "attackRollHint": "What to roll for attacks?",
+      "useTrauma": "Use Trauma?",
+      "useTraumaHint": "Use CWN trauma dice for rolling attacks?",
+      "useCWNArmor": "Use CWN Armor?",
+      "useCWNArmorHint": "Use CWN armor options (soak, melee and ranged AC)?",
+      "useCWNCyber": "Use CWN Cyber Options?",
+      "useCWNCyberHint": "Use CWN cyber options (concealment, type, complications, etc)?",
+      "search": "Compendium item search?",
+      "searchHint": "What compendiums to search for items for in-sheet item adds?"
+    },
+    "chat": {
+      "dicepool": "Dice Pool",
+      "difficulty": "Difficulty",
+      "modifier": "Modifier",
+      "roll": "Roll",
+      "cancel": "Cancel",
+      "skillCheck": "Skill Check",
+      "savingThrow": "Saving Throw",
+      "statApply": "Apply stats to {name}",
+      "statRollFlavor": "{name} rolling {stat}",
+      "totalModifier": "Total Modifier",
+      "statRoll": "Roll stats",
+      "savemoddesc": "(Positive makes easier, negative harder)",
+      "spike": {
+        "fail3": "Catastrophic dimensional energy incursion.  Ship emerges around a star within 1d6 hexes  of the target destination with drive and all systems destroyed.",
+        "fail4-5": "Shear surge overwhelms internal systems. Ship emerges around star nearest to drill origin. 50% chance for each system to be disabled until repaired. If the spike drive is disabled, treat as if a 3 were rolled.",
+        "fail6-8": "Power spike. One system disabled until repaired, ship stuck in transit for full  base time before being able to make another Pilot check. If the spike drive fails, treat as if a 3 were rolled.",
+        "fail9-12": "Ship off course. Spend base time in transit, then make another Pilot check.",
+        "fail13-15": "Ship off course, but detected early. Make another Pilot check.",
+        "fail16-17": "Drill successful, but takes twice base time",
+        "fail18": "Drill successful and on time, by blind luck."
+      }
+    },
+    "ammo": {
+      "ammo": "Standard Ammo",
+      "missile": "Missiles",
+      "none": "None",
+      "special": "Specialty",
+      "typeAPower": "Type A Power Cell",
+      "typeBPower": "Type B Power Cell",
+      "infinite": "Infinite"
+    },
+    "foci": {
+      "level2": "Level 2:",
+      "level1": "Level 1:",
+      "level": "Current Level"
+    },
+    "item": {
+      "bundledCount": "Bundle Count",
+      "cost": "Cost",
+      "encumbrance": "Encumbrance",
+      "enc": "Enc.",
+      "qty": "Qty",
+      "quality": {
+        "stock": "Stock",
+        "label": "Quality",
+        "juryRigged": "Jury-rigged",
+        "mastercrafted": "Mastercrafted"
+      },
+      "techlevel": "Tech Level",
+      "quantity": "Quantity",
+      "location": "Location",
+      "locationOther": "Other",
+      "locationStowed": "Stowed",
+      "locationReadied": "Readied",
+      "range": "Range",
+      "favorite": "Favorite"
+    },
+    "weapon": {
+      "shock": {
+        "label": "Shock Damage",
+        "ac": "AC"
+      },
+      "trauma": {
+        "label": "Trauma",
+        "die": "Trauma Die",
+        "rating": "Trauma Rating",
+        "damage": "Trauma Damage"
+      },
+      "damage": "Damage",
+      "damageFormula": "Damage Formula",
+      "attackBonus": "Attack Bonus",
+      "ammo": "Ammo",
+      "noSetSkill": "No Skill Set",
+      "burst": "Use Burst Fire",
+      "skillAddDamage": "Skill adds to damage",
+      "skillAddShockDamage": "Skill adds to shock",
+      "remember": "Remember these settings (do not ask again, reset in edit)"
+    },
+    "titles": {
+      "savingThrow": "{throwType} Saving Throw"
+    },
+    "effort": {
+      "bonus": "Bonus",
+      "current": "Current",
+      "day": "Day",
+      "scene": "Scene",
+      "title": "Effort",
+      "max": "Max"
+    },
+    "dialog": {
+      "attackRoll": "{actorName} attacking with {weaponName}?",
+      "spikeRoll": "{actorName} making spike roll",
+      "sensorRoll": "{actorName} making sensor roll",
+      "sysFailure": "Rolling system failures for {actorName}",
+      "skillRoll": "Rolling skill for {actorName}",
+      "failure": {
+        "inc-drive": "Include Drive (Spike Level Drop)",
+        "inc-wpn": "Include Weapons",
+        "inc-fit": "Include Fittings",
+        "inc-def": "Include Defenses",
+        "what": "What to fail? <br>(disabling/breaking an already disabled system will destroy it)",
+        "dest-all": "Destroy All",
+        "break-all": "Break/disable All",
+        "all-50": "50% chance to break/disable each system",
+        "break-1": "Break/disable one system"
+      },
+      "add-skills": "Add Skills",
+      "add-bulk-skills": "Add Bulk Skills to {actor}",
+      "tweak-char": "Tweaking options for {actorName}",
+      "save-changes": "Save Changes",
+      "tweak": {
+        "adv-init": "Initiative Advantage (roll 2x and keep higher)",
+        "quick-skill-1": "Quick Skill 1",
+        "quick-skill-2": "Quick Skill 2",
+        "quick-skill-3": "Quick Skill 3",
+        "debtDisplay": "Name of Currency 1",
+        "owedDisplay": "Name of Currency 3",
+        "balanceDisplay": "Name of Currency 2",
+        "extra-effort-name": "Extra Effort Name (leave blank to not show on sheet)",
+        "show-resource-list": "On the combat tab, show optional resource tracking.  This allows you to add an arbitrary resource that tracks a value and max (just 2 numbers really) with  a customized name. You can delete these attributes  from the list."
+      },
+      "hp": {
+        "title": "Confirm rolling level hit dice for {actor}.",
+        "text": "Confirm rolling {level} level hit dice for {actor}. Each level HD (includes CON mod) is {formula}, where max means taking the higher of the roll with modifiers or 1 (note this is not a fractional number like 0.1). This action will set the HP to the roll results or the current HP + 1, whatever is larger. To change the hitdie see the stats tab.",
+        "revised": "Revised Expert/Psychic d6",
+        "revised-war": "Revised Warrior/Partial Warrior d6+2",
+        "codex-mage": "Arcanist / Magister d6-1",
+        "classic-psy": "Classic Psychic d4",
+        "classic-exp": "Classic Expert d6",
+        "classic-war": "Classic Warrior d8"
+      }
+    },
+    "roll": {
+      "skillNeeded": "Hey! You need to pick a skill!"
+    },
+    "armor": {
+      "type": {
+        "combat": "Combat",
+        "label": "Type",
+        "powered": "Powered",
+        "primitive": "Primitive",
+        "street": "Street"
+      },
+      "innateArmorClass": "Innate Armor Class",
+      "equipped": "Equipped",
+      "shield": "Counts as a shield",
+      "soak": {
+        "label": "Soak"
+      },
+      "dr": "Damage Reduction",
+      "subtle": "Is Subtle?",
+      "heavy": "Is Heavy?",
+      "ranged": "Ranged",
+      "melee": "Melee",
+      "shieldAC": "Shield AC Bonus",
+      "traumaMod": "Trauma Target Mod"
+    },
+    "npc": {
+      "reaction": {
+        "unknown": "Unknown",
+        "hostile": "Hostile",
+        "negative": "Negative",
+        "neutral": "Neutral",
+        "positive": "Positive",
+        "friendly": "Friendly"
+      },
+      "morale-check": "Morale Check",
+      "trained-skill": "Trained Skill",
+      "attacks-per-turn": "Attacks Per Turn",
+      "attack-bonus-hit": "Attack Bonus to Hit",
+      "attack-bonus-damage": "Attack Bonus Damage",
+      "abilities": "Abilities",
+      "combat": "Combat",
+      "equipment": "Equipment",
+      "skilled-with-weapon": "Skilled with Weapon",
+      "morale": {
+        "failure": "Fails their Moral Check!",
+        "success": "Succeeds in their Moral Check!"
+      },
+      "skill": {
+        "trained": "{actor} uses their trained skill.",
+        "untrained": "{actor} uses their untrained skill."
+      },
+      "unarmed": "Unarmed",
+      "saving": {
+        "failure": "{actor} failed (target: {target})",
+        "success": "{actor} succeeded (target: {target})"
+      }
+    },
+    "migration": {
+      "start": "SWNR: Starting migration from {oldVersion} to {newVersion}. Please let this finish before closing.",
+      "done": "SWNR: Done Migration to {newVersion}",
+      "needsGM": "SWNR: A GM needs to log in to do run {count} migrations from {oldVersion} to {newVersion}!"
+    },
+    "credits": {
+      "debts": "Debts",
+      "balance": "Balance",
+      "owed": "Owed"
+    },
+    "deleteTitle": "Delete {name}?",
+    "deleteCrew": "Do you want to remove {name} from the crew?",
+    "deletePilot": "Do you want to remove {name} as the pilot?",
+    "deleteContent": "Are you sure you want to delete {name} from the actor {actor}? (hold shift to skip confirm dialog)",
+    "AddCurrency": "Add Currency",
+    "InvalidNumber": "Enter a valid whole number"
   }
 }

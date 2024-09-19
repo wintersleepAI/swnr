@@ -45,6 +45,20 @@
             data-dtype='Number'
           />
         </div>
+        <div class="resource-content flexrow flex-center flex-between">
+          <a 
+            class="rest-button px-2.5" 
+            title='{{localize 'swnr.sheet.rest'}}'
+            data-action='rest'
+          >
+            <i class="fas fa-bed"></i>
+          </a>
+          {{#if (eq actor.type 'character')}}
+          <a class="scene-button px-2.5" title='{{localize 'swnr.sheet.scene'}}'>
+            <i class="fas fa-hourglass-end"></i>
+          </a>
+          {{/if}}
+        </div>
       </div>
 
       <div class='resource flex-group-center'>

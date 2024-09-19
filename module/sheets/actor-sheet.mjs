@@ -28,6 +28,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       deleteDoc: this._deleteDoc,
       toggleEffect: this._toggleEffect,
       roll: this._onRoll,
+      rest: this._onRest,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -212,7 +213,6 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     const gear = [];
     const features = [];
     const spells = {
-      0: [],
       1: [],
       2: [],
       3: [],
@@ -373,6 +373,92 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     const effect = this._getEmbeddedDocument(target);
     await effect.update({ disabled: !effect.disabled });
   }
+
+  /**
+   * Handle clickable rolls.
+   *
+   * @this SWNActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onRest(event, _target) {
+    event.preventDefault();
+    const rest = await foundry.applications.api.DialogV2.wait({
+      window: { title: game.i18n.localize("swnr.sheet.rest-title") },
+      content: game.i18n.localize("swnr.sheet.rest-desc"),
+      rejectClose: false,
+      modal: true,
+      buttons: [
+      {
+        icon: 'fa-check',
+        label: "Yes",
+        action: "normal",
+      },
+      {
+        icon: 'fa-check',
+        label: "Yes, but no HP",
+        action: "no_hp",
+      },
+      {
+        icon: 'fa-times',
+        label: "No",        
+        action: "no",
+      },
+      ]
+    })
+    if (rest === "no") {
+      return;
+    }
+    const isFrail = rest === "no_hp" ? true : false;
+    const systemData = this.actor.system
+    const newStrain = Math.max(systemData.systemStrain.value - 1, 0);
+    const newHP = isFrail
+      ? systemData.health.value
+      : Math.min(systemData.health.value + systemData.level.value, systemData.health.max);
+    await this.actor.update({
+      system: {
+        systemStrain: { value: newStrain },
+        health: { value: newHP },
+        effort: { scene: 0, day: 0 },
+        tweak: {
+          extraEffort: {
+            scene: 0,
+            day: 0,
+          },
+        },
+      },
+    });
+    await this._resetSoak();
+  }
+
+  async _resetSoak() {
+    if (game.settings.get("swnr", "useCWNArmor")) {
+      if (this.actor.type == "npc") {
+        const maxSoak = this.actor.system.baseSoakTotal.max;
+        await this.actor.update({
+          "system.baseSoakTotal.value": maxSoak,
+        });
+      }
+
+      const armorWithSoak = (
+        this.actor.items.filter(
+          (i) =>
+            i.data.type === "armor" &&
+            i.data.data.use &&
+            i.data.data.location === "readied" &&
+            i.data.data.soak.value < i.data.data.soak.max
+        )
+      );
+      for (const armor of armorWithSoak) {
+        const soak = armor.data.data.soak.max;
+        await armor.update({
+          "system.soak.value": soak,
+        });
+      }
+    }
+  }
+  
 
   /**
    * Handle clickable rolls.
