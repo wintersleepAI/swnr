@@ -49,8 +49,9 @@
   /* padding: 2px; */
   margin: 2px;
   border: none;
-  border-bottom: 1px solid var(--swnr-c-faint);
+  border-bottom: 1px solid var(--swnr-c-dark);
   border-radius: 4px;
+  border-radius: 0%;
   /* background: var(--swnr-c-white); */
   background: none;
   color: var(--swnr-c-dark);
@@ -180,6 +181,11 @@
 
 .swnr .health-bar .health-fill{
   background: var(--health-bar-color);
+  height: 100%;
+}
+
+.swnr .strain-bar .strain-fill{
+  background: var(--strain-bar-color);
   height: 100%;
 }
 
