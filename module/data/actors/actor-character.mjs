@@ -28,7 +28,8 @@ export default class SWNCharacter extends SWNActorBase {
 
     schema.level = new fields.SchemaField({
       value: SWNShared.requiredNumber(1),
-      exp: SWNShared.requiredNumber(0)
+      exp: SWNShared.requiredNumber(0),
+      expToLevel: SWNShared.requiredNumber(3)
     });
     schema.goals = SWNShared.requiredString("");
     schema.class = SWNShared.requiredString("");

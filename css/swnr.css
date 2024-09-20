@@ -67,6 +67,11 @@
   padding-top: 0px;
 }
 
+.swnr .nested-sep {
+  margin: 0px;
+  padding: 0px;
+}
+
 .swnr input[type="text"].nested-field,
 .swnr input[type="number"].nested-field{
   border: none;
@@ -98,6 +103,10 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-bottom: 10px;
+}
+
+.swnr .sheet-header div.profile-img {
+  margin-right: 10px;
 }
 
 .swnr .sheet-header .profile-img {

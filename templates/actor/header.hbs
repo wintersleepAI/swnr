@@ -84,7 +84,7 @@
       from 1 to 12 and will create that number of columns.  }}
     <div class='resources grid grid-4col'>
       
-      <div class='document-name grid-span-3'><!-- Name -->
+      <div class='document-name grid-span-2'><!-- Name -->
         <input
           name='name'
           type='text'
@@ -129,6 +129,39 @@
               data-dtype='Number'
               class='field header'
             />
+          </div>
+        {{/if}}
+      </div>
+
+      <div class="resource flex-group-center"><!-- XP / Morale -->
+        {{#if (eq actor.type 'character')}}
+          <div class="field resource-content">         
+            <input
+              type='text'
+              name='system.level.exp'
+              value='{{system.level.exp}}'
+              data-dtype='Number'
+              class='nested-field header'
+            />
+            <span class="nested-sep">/</span>
+            <input
+              type='text'
+              name='system.level.expToLevel'
+              value='{{system.level.expToLevel}}'
+              data-dtype='Number'
+              class='nested-field header'
+            />
+          </div>
+          <label class='resource-label'>
+            {{localize 'swnr.sheet.xp'}}          
+          </label>
+        {{/if}}
+        {{#if (eq actor.type 'npc')}}
+          <label class='resource-label'>
+            Morale??
+          </label>
+          <div class='resource-content flexrow flex-center flex-between'>
+            TODO
           </div>
         {{/if}}
       </div>
