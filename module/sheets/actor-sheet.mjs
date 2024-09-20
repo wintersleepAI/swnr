@@ -396,12 +396,12 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
         action: "normal",
       },
       {
-        icon: 'fa-check',
+        icon: 'fas fa-check',
         label: "Yes, but no HP",
         action: "no_hp",
       },
       {
-        icon: 'fa-times',
+        icon: 'fas fa-times',
         label: "No",        
         action: "no",
       },

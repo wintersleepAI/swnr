@@ -1,16 +1,17 @@
 {{! Sheet Header }}
 <header class='sheet-header'>
-  <img
-    class='profile-img'
-    src='{{actor.img}}'
-    data-edit='img'
-    data-action='onEditImage'
-    title='{{actor.name}}'
-  />
-  <div class="portrait-button" title="Rest" data-type="rest" style="left:0; top:0">
-    <i class="fa-solid fa-bed" style="font-size: 20px;"></i>
+  <div class="profile-img">
+    <img
+      class='profile-img'
+      src='{{actor.img}}'
+      data-edit='img'
+      data-action='onEditImage'
+      title='{{actor.name}}'
+    />
+    <div class="portrait-button" title="Rest" data-type="rest" style="left:0; top:0">
+      <i class="fa-solid fa-bed" style="font-size: 20px;"></i>
+    </div>
   </div>
-  <div class='header-fields'>
 
     {{! The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
