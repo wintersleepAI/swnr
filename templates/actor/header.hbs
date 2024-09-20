@@ -6,9 +6,10 @@
     data-edit='img'
     data-action='onEditImage'
     title='{{actor.name}}'
-    height='100'
-    width='100'
   />
+  <div class="portrait-button" title="Rest" data-type="rest" style="left:0; top:0">
+    <i class="fa-solid fa-bed" style="font-size: 20px;"></i>
+  </div>
   <div class='header-fields'>
 
     {{! The grid classes are defined in scss/global/_grid.scss. To use,
@@ -27,9 +28,6 @@
       
       <div class="resource flex-group-center"><!-- Level / HD -->
         {{#if (eq actor.type 'character')}}
-          <label class='resource-label'>
-            {{localize 'SWN.Actor.Character.FIELDS.attributes.level.value.label'}}
-          </label>
           <div class='resource-content flexrow flex-center flex-between'>
             <input
               type='text'
@@ -39,6 +37,9 @@
               class='field header short'
             />
           </div>
+          <label class='resource-label'>
+            {{localize 'SWN.Actor.Character.FIELDS.attributes.level.value.label'}}
+          </label>
         {{/if}}
         {{#if (eq actor.type 'npc')}}
           <label class='resource-label'>
@@ -50,6 +51,7 @@
               name='system.cr'
               value='{{system.cr}}'
               data-dtype='Number'
+              class='field header'
             />
             <span></span>
             <input
@@ -58,6 +60,7 @@
               name='system.xp'
               value='{{system.xp}}'
               data-dtype='Number'
+              class='field header'
             />
           </div>
         {{/if}}
@@ -67,9 +70,6 @@
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. }}
       <div class='resource flex-group-center'><!-- Health-->
-        <label for='system.health.value' class='resource-label'>
-          {{localize 'SWN.Actor.base.FIELDS.health.value.label'}}
-        </label>
         <div class='resource-content flexrow flex-center flex-between'>
           <input
             type='text'
@@ -84,8 +84,12 @@
             name='system.health.max'
             value='{{system.health.max}}'
             data-dtype='Number'
+            class='field header'
           />
         </div>
+        <label for='system.health.value' class='resource-label'>
+          {{localize 'SWN.Actor.base.FIELDS.health.value.label'}}
+        </label>
         <div class="resource-content flexrow flex-center flex-between">
           <a 
             class="rest-button px-2.5" 
@@ -103,15 +107,13 @@
       </div>
 
       <div class='resource flex-group-center'><!-- -->
-        <label for='system.power.value' class='resource-label'>
-          {{localize 'SWN.Actor.base.FIELDS.power.value.label'}}
-        </label>
         <div class='resource-content flexrow flex-center flex-between'>
           <input
             type='text'
             name='system.power.value'
             value='{{system.power.value}}'
             data-dtype='Number'
+            class='field header'
           />
           <span> / </span>
           <input
@@ -119,19 +121,24 @@
             name='system.power.max'
             value='{{system.power.max}}'
             data-dtype='Number'
+            class='field header'
           />
         </div>
+        <label for='system.power.value' class='resource-label'>
+          {{localize 'SWN.Actor.base.FIELDS.power.value.label'}}
+        </label>
       </div>
 
 
       <div class='resource flex-group-center'><!-- -->
-          <label class='resource-label'>
-            Test
-          </label>
+          
           <div class="field">
             <input type="text" class="nested-field short-field" value="123"/>
             / XX
           </div>
+          <label class='resource-label'>
+            Test
+          </label>
       </div>
     </div>
   </div>

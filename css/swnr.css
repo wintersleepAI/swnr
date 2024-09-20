@@ -233,9 +233,11 @@
   font-size: 14px;
   /* padding: 2px; */
   margin: 2px;
-  border: 1px solid var(--swnr-c-faint);
+  border: none;
+  border-bottom: 1px solid var(--swnr-c-faint);
   border-radius: 4px;
-  background: var(--swnr-c-white);
+  /* background: var(--swnr-c-white); */
+  background: none;
   color: var(--swnr-c-dark);
   outline: 1px solid transparent;
   height: var(--input-height);
@@ -281,10 +283,60 @@
   margin-bottom: 10px;
 }
 .swnr .sheet-header .profile-img {
-  flex: 0 0 100px;
-  height: 100px;
+  flex: 0 0 150px;
   margin-right: 10px;
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+
+  box-shadow: 0 0 10px inset rgb(0,0,0,0.4);
+  background: var(--background-portrait-image);
+  background-size: 50px;
+
+  display: flex;
+  position: relative;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
 }
+
+.swnr .portrait-button{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+
+  background: var(--background-portrait-image);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 10px inset rgb(0,0,0,0.4);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.swnr .portrait-button i{
+  color: var(--portrait-icon-color);
+}
+
+.swnr .portrait-button i.d20-glowing{
+  color: var(--active-font-color);
+  animation: pulse 3s infinite;
+}
+
+.swnr .portrait-button:hover i{
+  color: var(--font-color);
+  animation: unset;
+}
+
+.swnr .portrait-button:hover{
+  border: 1px solid var(--input-focus-color);
+}
+
 .swnr .sheet-header .header-fields {
   flex: 1;
 }
@@ -310,6 +362,7 @@
 }
 .swnr .resource-label {
   font-weight: bold;
+  font-size: 12px;
 }
 .swnr .stat {
   margin-bottom: 2px;
