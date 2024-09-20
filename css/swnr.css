@@ -21,6 +21,21 @@
   --swnr-c-groove: #11121f;
 }
 
+.swnr { 
+  --background-portrait-image: url("../../../../ui/parchment-white.jpg");
+  --portrait-icon-color: rgb(124,124,124);
+  --health-bar-color: linear-gradient(45deg, rgba(48,121,22,1) 0%, rgba(97,190,80,1) 100%);
+  --strain-bar-color: linear-gradient(45deg, rgba(29,131,170,1) 0%, rgba(80,190,183,1) 100%);
+  --stowed-bar-color: linear-gradient(45deg, rgb(183, 116, 0) 0%, rgb(225, 167, 50) 100%);
+  --over-filled-bar-color: linear-gradient(45deg, rgb(199, 57, 57) 0%, rgb(219 108 108) 100%);
+  /* Replace with defined theme colors? */
+  --border-color: rgb(170,170,170);
+  
+  --font-color: rgb(28,28,28);
+  --second-font-color: rgb(71, 71, 71);
+  --active-font-color: rgb(5, 99, 150);
+  --input-focus-color: rgb(5, 99, 150);
+}
 
 /* Styles limited to swnr sheets */
 .swnr .item-form {
@@ -28,6 +43,7 @@
 }
 
 .swnr input[type="text"].field,
+.swnr input[type="number"].field,
 .swnr div.field {
   font-size: 14px;
   /* padding: 2px; */
@@ -50,7 +66,8 @@
   padding-top: 0px;
 }
 
-.swnr input[type="text"].nested-field {
+.swnr input[type="text"].nested-field,
+.swnr input[type="number"].nested-field{
   border: none;
   background: transparent;
   padding: 0px;
@@ -59,12 +76,12 @@
   color: inherit;
   font-size: inherit;
   width: calc(50% - 30px);
+  height: 100%;
 }
 
 .swnr input.short-field {
   width: 40px;
 }
-
 
 .swnr input[type="text"].field:focus,
 .swnr div.field:focus {
@@ -81,6 +98,7 @@
   justify-content: flex-start;
   margin-bottom: 10px;
 }
+
 .swnr .sheet-header .profile-img {
   width: 150px;
   max-width: 150px;
@@ -144,6 +162,37 @@
 
 .swnr .portrait-button:hover{
   border: 1px solid var(--input-focus-color);
+}
+
+/* Sets the position of the health-bar and strain-bar and sets it to the propper size. */
+.swnr .health-bar, .swnr .strain-bar{
+  position: relative;
+  bottom: -10px;
+
+  width: 80%;
+  height: 20px;
+
+  border: 1px solid var(--border-color);
+
+  box-shadow: 0 0 5px inset rgb(0,0,0,0.4);
+  background-color: whitesmoke;
+}
+
+.swnr .health-bar .health-fill{
+  background: var(--health-bar-color);
+  height: 100%;
+}
+
+/* Positions the HP text in the center of the healthbar or strainbar */
+.swnr .health-text, .swnr .strain-text{
+  display: flex;
+  position: relative;
+  top: -100%;
+  
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
 }
 
 .swnr .sheet-header .header-fields {

@@ -1,6 +1,6 @@
 {{! Sheet Header }}
 <header class='sheet-header'>
-  <div class="profile-img">
+  <div class="profile-img"><!-- Profile Image -->
     <img
       class='profile-img'
       src='{{actor.img}}'
@@ -8,8 +8,30 @@
       data-action='onEditImage'
       title='{{actor.name}}'
     />
-    <div class="portrait-button" title="Rest" data-type="rest" style="left:0; top:0">
+    <div class="portrait-button" 
+      title='{{localize 'swnr.sheet.rest'}}'
+      data-action='rest'
+      style="left:0; top:0"
+    >
       <i class="fa-solid fa-bed" style="font-size: 20px;"></i>
+    </div>
+    {{#if (eq actor.type 'character')}}
+      <div class="portrait-button" 
+        title='{{localize 'swnr.sheet.scene'}}'
+        data-action='scene'
+        style="right:0; top:0"
+      >
+        <i class="fas fa-hourglass-end"></i>
+      </div>
+    {{/if}}
+    <!-- The character health bar -->
+    <div class="health-bar">
+      <div style="width:{{system.health.percentage}}%" class="health-fill"></div>
+      <div class="health-text">
+        HP <input data-name="health.value" type="text" value="{{system.health.value}}" class="health-input nested-field short-field current-value" style="text-align:right;margin:0px;" {{#unless owner}}disabled{{/unless}}/>
+        <p style="margin:0px">/</p>
+        <input name="health.max" type="number" value="{{system.health.max}}" class="health-input nested-field short-field" style=";margin:0px;"/>
+      </div>
     </div>
   </div>
 
@@ -91,20 +113,6 @@
         <label for='system.health.value' class='resource-label'>
           {{localize 'SWN.Actor.base.FIELDS.health.value.label'}}
         </label>
-        <div class="resource-content flexrow flex-center flex-between">
-          <a 
-            class="rest-button px-2.5" 
-            title='{{localize 'swnr.sheet.rest'}}'
-            data-action='rest'
-          >
-            <i class="fas fa-bed"></i>
-          </a>
-          {{#if (eq actor.type 'character')}}
-          <a class="scene-button px-2.5" title='{{localize 'swnr.sheet.scene'}}'>
-            <i class="fas fa-hourglass-end"></i>
-          </a>
-          {{/if}}
-        </div>
       </div>
 
       <div class='resource flex-group-center'><!-- -->
