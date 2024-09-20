@@ -227,9 +227,53 @@
 .swnr .item-form {
   font-family: "Roboto", sans-serif;
 }
+
+.swnr input[type="text"].field,
+.swnr div.field {
+  font-size: 14px;
+  /* padding: 2px; */
+  margin: 2px;
+  border: 1px solid var(--swnr-c-faint);
+  border-radius: 4px;
+  background: var(--swnr-c-white);
+  color: var(--swnr-c-dark);
+  outline: 1px solid transparent;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  user-select: text;
+  transition: outline-color 0.5s;
+  min-width: 20px;
+} 
+
+.swnr div.field {
+  padding-top: 0px;
+}
+
+.swnr input[type="text"].nested-field {
+  border: none;
+  background: transparent;
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  color: inherit;
+  font-size: inherit;
+  width: calc(50% - 30px);
+}
+
+.swnr input.short-field {
+  width: 40px;
+}
+
+
+.swnr input[type="text"].field:focus,
+.swnr div.field:focus {
+  outline-color: var(--swnr-c-dark);
+  /* outline: 2px solid var(--input-focus-outline-color); */
+}
+
 .swnr .sheet-header {
   flex: 0 auto;
-  overflow: hidden;
+  /* overflow: hidden; TODO */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

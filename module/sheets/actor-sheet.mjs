@@ -18,7 +18,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
   static DEFAULT_OPTIONS = {
     classes: ['swnr', 'actor'],
     position: {
-      width: 600,
+      width: 700,
       height: 600,
     },
     actions: {
@@ -391,7 +391,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       modal: true,
       buttons: [
       {
-        icon: 'fa-check',
+        icon: 'fas fa-check',
         label: "Yes",
         action: "normal",
       },
