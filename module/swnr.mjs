@@ -59,9 +59,9 @@ Hooks.once('init', function () {
   };
   CONFIG.Item.documentClass = SWNItem;
   CONFIG.Item.dataModels = {
-    gear: models.SWNGear,
+    item: models.SWNItemItem,
     feature: models.SWNFeature,
-    spell: models.SWNSpell,
+    power: models.SWNPower,
     skill: models.SWNSkill,
   };
 

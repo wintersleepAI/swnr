@@ -54,8 +54,8 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     gear: {
       template: 'systems/swnr/templates/actor/gear.hbs',
     },
-    spells: {
-      template: 'systems/swnr/templates/actor/spells.hbs',
+    power: {
+      template: 'systems/swnr/templates/actor/powers.hbs',
     },
     effects: {
       template: 'systems/swnr/templates/actor/effects.hbs',
@@ -71,11 +71,13 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     if (this.document.limited) return;
     // Control which parts show based on document subtype
     switch (this.document.type) {
-      case 'character':
-        options.parts.push('features', 'gear', 'spells', 'effects');
+      case 'mech':
+        //TODO
+        //options.parts.push('features', 'gear', 'powers', 'effects');
         break;
-      case 'npc':
-        options.parts.push('gear', 'effects');
+      case 'ship':
+        //TODO
+        //options.parts.push('gear', 'effects');
         break;
     }
   }
@@ -111,38 +113,8 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
 
   /** @override */
   async _preparePartContext(partId, context) {
-    switch (partId) {
-      case 'features':
-      case 'spells':
-      case 'gear':
-        context.tab = context.tabs[partId];
-        break;
-      case 'biography':
-        context.tab = context.tabs[partId];
-        // Enrich biography info for display
-        // Enrichment turns text like `[[/r 1d20]]` into buttons
-        context.enrichedBiography = await TextEditor.enrichHTML(
-          this.actor.system.biography,
-          {
-            // Whether to show secret blocks in the finished html
-            secrets: this.document.isOwner,
-            // Data to fill in for inline rolls
-            rollData: this.actor.getRollData(),
-            // Relative UUID resolution
-            relativeTo: this.actor,
-          }
-        );
-        break;
-      case 'effects':
-        context.tab = context.tabs[partId];
-        // Prepare active effects
-        context.effects = prepareActiveEffectCategories(
-          // A generator that returns all effects stored on the actor
-          // as well as any items
-          this.actor.allApplicableEffects()
-        );
-        break;
-    }
+    // TODO copy from actor-sheet.mjs
+    console.log("TODO: Implement _preparePartContext");//TODO
     return context;
   }
 
@@ -209,47 +181,7 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     // You can just use `this.document.itemTypes` instead
     // if you don't need to subdivide a given type like
     // this sheet does with spells
-    const gear = [];
-    const features = [];
-    const spells = {
-      0: [],
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: [],
-    };
-
-    // Iterate through items, allocating to containers
-    for (let i of this.document.items) {
-      // Append to gear.
-      if (i.type === 'gear') {
-        gear.push(i);
-      }
-      // Append to features.
-      else if (i.type === 'feature') {
-        features.push(i);
-      }
-      // Append to spells.
-      else if (i.type === 'spell') {
-        if (i.system.spellLevel != undefined) {
-          spells[i.system.spellLevel].push(i);
-        }
-      }
-    }
-
-    for (const s of Object.values(spells)) {
-      s.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    }
-
-    // Sort then assign
-    context.gear = gear.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.features = features.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.spells = spells;
+    console.log("TODO: Implement _prepareItems");//TODO
   }
 
   /**

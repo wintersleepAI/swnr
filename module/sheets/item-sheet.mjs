@@ -49,11 +49,11 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       template:
         'systems/swnr/templates/item/attribute-parts/feature.hbs',
     },
-    attributesGear: {
-      template: 'systems/swnr/templates/item/attribute-parts/gear.hbs',
+    attributesItem: {
+      template: 'systems/swnr/templates/item/attribute-parts/item.hbs',
     },
-    attributesSpell: {
-      template: 'systems/swnr/templates/item/attribute-parts/spell.hbs',
+    attributesPower: {
+      template: 'systems/swnr/templates/item/attribute-parts/power.hbs',
     },
     effects: {
       template: 'systems/swnr/templates/item/effects.hbs',
@@ -77,12 +77,12 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'feature':
         options.parts.push('attributesFeature', 'effects');
         break;
-      case 'gear':
-        options.parts.push('attributesGear');
+      case 'item':
+        options.parts.push('attributesItem');
         options.defaultTab = 'attributes';
         break;
-      case 'spell':
-        options.parts.push('attributesSpell');
+      case 'power':
+        options.parts.push('attributesPower');
         break;
       case 'skill':
         options.parts.push('attributesSkill');
@@ -122,8 +122,8 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
   async _preparePartContext(partId, context) {
     switch (partId) {
       case 'attributesFeature':
-      case 'attributesGear':
-      case 'attributesSkill':
+      case 'attributesItem':
+      case 'attributesPower':
       case 'attributesSpell':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
@@ -184,9 +184,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
           tab.label += 'Description';
           break;
         case 'attributesFeature':
-        case 'attributesGear':
+        case 'attributesItem':
         case 'attributesSkill':
-        case 'attributesSpell':
+        case 'attributesPower':
           tab.id = 'attributes';
           tab.label += 'Attributes';
           break;
@@ -300,8 +300,8 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       // These data attributes are reserved for the action handling
       if (['action', 'documentClass'].includes(dataKey)) continue;
       // Nested properties require dot notation in the HTML, e.g. anything with `system`
-      // An example exists in spells.hbs, with `data-system.spell-level`
-      // which turns into the dataKey 'system.spellLevel'
+      // An example exists in power.hbs, with `data-system.power-level`
+      // which turns into the dataKey 'system.powerLevel'
       foundry.utils.setProperty(effectData, dataKey, value);
     }
 

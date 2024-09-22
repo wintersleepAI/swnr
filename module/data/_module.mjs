@@ -8,7 +8,7 @@ export { default as SWNShip } from './actors/actor-ship.mjs';
 
 // Export Items
 export { default as SWNItemBase } from './items/base-item.mjs';
-export { default as SWNGear } from './items/item-gear.mjs';
+export { default as SWNItemItem } from './items/item-item.mjs';
 export { default as SWNFeature } from './items/item-feature.mjs';
-export { default as SWNSpell } from './items/item-spell.mjs';
+export { default as SWNPower } from './items/item-power.mjs';
 export { default as SWNSkill } from './items/item-skill.mjs';

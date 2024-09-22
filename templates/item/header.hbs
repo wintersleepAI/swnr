@@ -11,7 +11,7 @@
       <input name='name' type='text' value='{{item.name}}' placeholder='Name' />
     </div>
     {{! You may prefer to have a separate header file instead of this if statement}}
-    {{#if (eq item.type 'gear')}}
+    {{#if (eq item.type 'item')}}
       <div class='grid grid-2col'>
         <div class='resource'>
           <label class='resource-label'>{{localize 'SWN.Item.Gear.FIELDS.quantity.label'}}</label>

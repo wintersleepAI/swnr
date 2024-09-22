@@ -1,14 +1,14 @@
 {{! Spells Tab }}
 <section
-  class='tab spells {{tab.cssClass}}'
+  class='tab powers {{tab.cssClass}}'
   data-group='primary'
-  data-tab='spells'
+  data-tab='powers'
 >
   <ol class='items-list'>
-    {{#each spells as |spells spellLevel|}}
+    {{#each powers as |powers powerLevel|}}
       <li class='item flexrow items-header'>
         <div class='item-name'>
-          {{localize 'SWN.Item.Spell.SpellLVL' level=spellLevel}}
+          {{localize 'SWN.Item.Spell.SpellLVL' level=powerLevel}}
         </div>
         <div class='item-controls'>
           {{#if @root.editable}}
@@ -17,16 +17,16 @@
               title='{{localize "DOCUMENT.Create" type='Spell'}}'
               data-action='createDoc'
               data-document-class='Item'
-              data-type='spell'
-              data-system.spell-level='{{spellLevel}}'
+              data-type='power'
+              data-system.power-level='{{powerLevel}}'
             >
               <i class='fas fa-plus'></i>
-              {{localize 'SWN.Item.Spell.AddLVL' level=spellLevel}}
+              {{localize 'SWN.Item.Spell.AddLVL' level=powerLevel}}
             </a>
           {{/if}}
         </div>
       </li>
-      {{#each spells as |item id|}}
+      {{#each powers as |item id|}}
         <li
           class='item flexrow'
           data-item-id='{{item._id}}'
@@ -49,7 +49,7 @@
           <div class='item-controls'>
             <a
               class='item-control item-edit'
-              title='{{localize "DOCUMENT.Update" type='spell'}}'
+              title='{{localize "DOCUMENT.Update" type='power'}}'
               data-action='viewDoc'
             >
               <i class='fas fa-edit'></i>
@@ -57,7 +57,7 @@
             {{#if @root.editable}}
               <a
                 class='item-control item-delete'
-                title='{{localize "DOCUMENT.Delete" type='spell'}}'
+                title='{{localize "DOCUMENT.Delete" type='power'}}'
                 data-action='deleteDoc'
               >
                 <i class='fas fa-trash'></i>

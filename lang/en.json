@@ -18,7 +18,7 @@
         "Biography": "Biography",
         "Features": "Features",
         "Gear": "Gear",
-        "Spells": "Spells",
+        "Powers": "Powers",
         "Effects": "Effects"
       },
       "base": {
@@ -94,9 +94,9 @@
       "mech": "Mech"
     },
     "Item": {
-      "gear": "Gear",
+      "item": "Item",
       "feature": "Feature",
-      "spell": "Spell",
+      "power": "Power",
       "skill": "Skill"
     }
   },

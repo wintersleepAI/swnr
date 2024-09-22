@@ -55,8 +55,8 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     gear: {
       template: 'systems/swnr/templates/actor/gear.hbs',
     },
-    spells: {
-      template: 'systems/swnr/templates/actor/spells.hbs',
+    powers: {
+      template: 'systems/swnr/templates/actor/powers.hbs',
     },
     effects: {
       template: 'systems/swnr/templates/actor/effects.hbs',
@@ -73,7 +73,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        options.parts.push('features', 'gear', 'spells', 'effects');
+        options.parts.push('features', 'gear', 'powers', 'effects');
         break;
       case 'npc':
         options.parts.push('gear', 'effects');
@@ -114,7 +114,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
   async _preparePartContext(partId, context) {
     switch (partId) {
       case 'features':
-      case 'spells':
+      case 'powers':
       case 'gear':
         context.tab = context.tabs[partId];
         break;
@@ -185,9 +185,9 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
           tab.id = 'gear';
           tab.label += 'Gear';
           break;
-        case 'spells':
-          tab.id = 'spells';
-          tab.label += 'Spells';
+        case 'powers':
+          tab.id = 'powers';
+          tab.label += 'Powers';
           break;
         case 'effects':
           tab.id = 'effects';
@@ -209,10 +209,10 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     // Initialize containers.
     // You can just use `this.document.itemTypes` instead
     // if you don't need to subdivide a given type like
-    // this sheet does with spells
-    const gear = [];
+    // this sheet does with powers
+    const items = [];
     const features = [];
-    const spells = {
+    const powers = {
       1: [],
       2: [],
       3: [],
@@ -227,29 +227,29 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     // Iterate through items, allocating to containers
     for (let i of this.document.items) {
       // Append to gear.
-      if (i.type === 'gear') {
-        gear.push(i);
+      if (i.type === 'item') {
+        items.push(i);
       }
       // Append to features.
       else if (i.type === 'feature') {
         features.push(i);
       }
-      // Append to spells.
-      else if (i.type === 'spell') {
-        if (i.system.spellLevel != undefined) {
-          spells[i.system.spellLevel].push(i);
+      // Append to powers.
+      else if (i.type === 'power') {
+        if (i.system.powerLevel != undefined) {
+          powers[i.system.powerLevel].push(i);
         }
       }
     }
 
-    for (const s of Object.values(spells)) {
+    for (const s of Object.values(powers)) {
       s.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     }
 
     // Sort then assign
-    context.gear = gear.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.items = items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.features = features.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.spells = spells;
+    context.powers = powers;
   }
 
   /**
@@ -352,8 +352,8 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       // These data attributes are reserved for the action handling
       if (['action', 'documentClass'].includes(dataKey)) continue;
       // Nested properties require dot notation in the HTML, e.g. anything with `system`
-      // An example exists in spells.hbs, with `data-system.spell-level`
-      // which turns into the dataKey 'system.spellLevel'
+      // An example exists in powers.hbs, with `data-system.power-level`
+      // which turns into the dataKey 'system.powerLevel'
       foundry.utils.setProperty(docData, dataKey, value);
     }
 

@@ -1,6 +1,6 @@
 import SWNItemBase from './base-item.mjs';
 
-export default class SWNGear extends SWNItemBase {
+export default class SWNItemItem extends SWNItemBase {
   static LOCALIZATION_PREFIXES = [
     'SWN.Item.base',
     'SWN.Item.Gear',

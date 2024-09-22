@@ -1,47 +1,9 @@
 {{! Attributes Tab }}
 <section
-  class='tab skills {{tab.cssClass}}'
+  class='tab attributes {{tab.cssClass}}'
   data-group='primary'
-  data-tab='skills'
+  data-tab='attributes'
 >
-
-  <div class='resource'>
-    <div class='grid grid-4col'>
-      <div class='grid-span-1'>
-        <label class='resource-label'>{{localize 'SWN.Item.Skill.FIELDS.rank.label'}}</label>
-        <input
-          type='text'
-          name='system.rank'
-          value='{{system.rank}}'
-          data-dtype='Number'
-        />
-      </div>
-      <div class='grid-span-1'>
-        <label class='resource-label'>{{localize 'SWN.Item.Skill.FIELDS.defaultStat.label'}}</label>
-        <input
-          type='text'
-          name='system.defaultStat'
-          value='{{system.defaultStat}}'
-          data-dtype='String'
-        />
-      </div>
-      <div class='grid-span-1'>
-        <label class='resource-label'>{{localize 'SWN.Item.Skill.FIELDS.pool.label'}}</label>
-        <input
-          type='text'
-          name='system.pool'
-          value='{{system.pool}}'
-          data-dtype='String'
-        />
-      </div>
-      <div class='grid-span-1'>
-        <label class='resource-label'>{{localize 'SWN.Item.Skill.FIELDS.source.label'}}</label>
-        <input
-          type='text'
-          name='system.source'
-          value='{{system.source}}'
-          data-dtype='String'
-        />
-    </div>
-  </div>
+  {{! As you add new fields, add them in here! }}
+  SKILL
 </section>

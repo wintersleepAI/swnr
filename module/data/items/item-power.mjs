@@ -1,6 +1,6 @@
 import SWNItemBase from './base-item.mjs';
 
-export default class SWNSpell extends SWNItemBase {
+export default class SWNPower extends SWNItemBase {
   static LOCALIZATION_PREFIXES = [
     'SWN.Item.base',
     'SWN.Item.Spell',
@@ -10,7 +10,7 @@ export default class SWNSpell extends SWNItemBase {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
 
-    schema.spellLevel = new fields.NumberField({
+    schema.powerLevel = new fields.NumberField({
       required: true,
       nullable: false,
       integer: true,
