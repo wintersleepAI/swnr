@@ -21,6 +21,18 @@
         },
         "mech": {
             "htmlFields": ["description"]
+        },
+        "vehicle": {
+            "htmlFields": ["description"]
+        },
+        "drone": {
+            "htmlFields": ["description"]
+        },
+        "cyberdeck": {
+            "htmlFields": ["description"]
+        },
+        "faction": {
+            "htmlFields": ["description"]
         }
     },
     "Item": {

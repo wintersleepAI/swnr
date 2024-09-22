@@ -11,7 +11,9 @@
     "SheetLabels": {
       "Actor": "SWN Actor Sheet",
       "Item": "SWN Item Sheet",
-      "Vehicle": "SWN Vehicle Sheet"
+      "Vehicle": "SWN Vehicle Sheet",
+      "Cyberdeck": "SWN Cyberdeck Sheet",
+      "Faction": "SWN Faction Sheet"
     },
     "Actor": {
       "Tabs": {
@@ -91,7 +93,11 @@
       "character": "Character",
       "npc": "NPC",
       "ship": "Ship",
-      "mech": "Mech"
+      "mech": "Mech",
+      "vehicle": "Vehicle",
+      "drone": "Drone",
+      "cyberdeck": "Cyberdeck",
+      "faction": "Faction"
     },
     "Item": {
       "item": "Item",

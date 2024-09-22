@@ -5,6 +5,8 @@ import { SWNItem } from './documents/item.mjs';
 import { SWNActorSheet } from './sheets/actor-sheet.mjs';
 import { SWNItemSheet } from './sheets/item-sheet.mjs';
 import { SWNVehicleSheet } from './sheets/vehicle-sheet.mjs';
+import { SWNCyberdeckSheet } from './sheets/cyberdeck-sheet.mjs';
+import { SWNFactionSheet } from './sheets/faction-sheet.mjs';
 
 // Import helper/utility classes and constants.
 import { SWN } from './helpers/config.mjs';
@@ -56,6 +58,10 @@ Hooks.once('init', function () {
     npc: models.SWNNPC,
     ship: models.SWNShip,
     mech: models.SWNMech,
+    drone: models.SWNDrone,
+    cyberdeck: models.SWNCyberdeck,
+    faction: models.SWNFaction,
+    vehicle: models.SWNVehicle
   };
   CONFIG.Item.documentClass = SWNItem;
   CONFIG.Item.dataModels = {
@@ -88,7 +94,17 @@ Hooks.once('init', function () {
   Actors.registerSheet('swnr', SWNVehicleSheet, {
     makeDefault: true,
     label: 'SWN.SheetLabels.Vehicle',
-    types: ['ship', 'mech'],
+    types: ['ship', 'mech', 'drone', 'vehicle'],
+  });
+  Actors.registerSheet('swnr', SWNCyberdeckSheet, {
+    makeDefault: true,
+    label: 'SWN.SheetLabels.Cyberdeck',
+    types: ['cyberdeck']
+  });
+  Actors.registerSheet('swnr', SWNFactionSheet, {
+    makeDefault: true,
+    label: 'SWN.SheetLabels.Faction',
+    types: ['faction']
   });
   Items.unregisterSheet('core', ItemSheet);
   Items.registerSheet('swnr', SWNItemSheet, {

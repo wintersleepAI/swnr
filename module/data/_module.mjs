@@ -5,6 +5,10 @@ export { default as SWNCharacter } from './actors/actor-character.mjs';
 export { default as SWNNPC } from './actors/actor-npc.mjs';
 export { default as SWNMech } from './actors/actor-mech.mjs';
 export { default as SWNShip } from './actors/actor-ship.mjs';
+export { default as SWNDrone } from './actors/actor-drone.mjs';
+export { default as SWNCyberdeck } from './actors/actor-cyberdeck.mjs';
+export { default as SWNFaction } from './actors/actor-faction.mjs';
+export { default as SWNVehicle } from './actors/actor-vehicle.mjs';
 
 // Export Items
 export { default as SWNItemBase } from './items/base-item.mjs';
