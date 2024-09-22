@@ -1,14 +1,18 @@
 {{! Sheet Header }}
 <header class='sheet-header'>
-  <img
-    class='profile-img'
-    src='{{actor.img}}'
-    data-edit='img'
-    data-action='onEditImage'
-    title='{{actor.name}}'
-    height='100'
-    width='100'
-  />
+  <div class="profile-img"><!-- Profile Image -->
+
+    <img
+      class='profile-img'
+      src='{{actor.img}}'
+      data-edit='img'
+      data-action='onEditImage'
+      title='{{actor.name}}'
+      height='100'
+      width='100'
+    />
+
+  </div>
   <div class='header-fields'>
     <div class='document-name'>
       <input
