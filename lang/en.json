@@ -95,9 +95,18 @@
     },
     "Item": {
       "item": "Item",
-      "feature": "Feature",
+      "feature": "Focus/Edge/Feature",
       "power": "Power",
-      "skill": "Skill"
+      "skill": "Skill",
+      "weapon": "Weapon",
+      "armor": "Armor",
+      "cyberware": "Cyberware",
+      "program": "Program",
+      "asset": "Asset",
+      "shipWeapon": "Ship/Vehicle Weapon",
+      "shipDefense": "Ship/Vehicle Defense",
+      "shipFitting": "Ship/Vehicle Fitting/Item"
+
     }
   },
   "swnr": {

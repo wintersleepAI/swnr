@@ -63,6 +63,14 @@ Hooks.once('init', function () {
     feature: models.SWNFeature,
     power: models.SWNPower,
     skill: models.SWNSkill,
+    armor: models.SWNArmor,
+    weapon: models.SWNWeapon,
+    cyberware: models.SWNCyberware,
+    program: models.SWNProgram,
+    asset: models.SWNAsset,
+    shipWeapon: models.SWNShipWeapon,
+    shipFitting: models.SWNShipFitting,
+    shipDefense: models.SWNShipDefense
   };
 
   // Active Effects are never copied to the Actor,

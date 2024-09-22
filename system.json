@@ -35,6 +35,30 @@
         },
         "skill": {
             "htmlFields": ["description"]
+        },
+        "weapon": {
+            "htmlFields": ["description"]
+        },
+        "armor": {
+            "htmlFields": ["description"]
+        },
+        "cyberware": {
+            "htmlFields": ["description"]
+        },
+        "asset": {
+            "htmlFields": ["description"]
+        },
+        "program": {
+            "htmlFields": ["description"]
+        },
+        "shipWeapon": {
+            "htmlFields": ["description"]
+        },
+        "shipDefense": {
+            "htmlFields": ["description"]
+        },
+        "shipFitting": {
+            "htmlFields": ["description"]
         }
     }
   },

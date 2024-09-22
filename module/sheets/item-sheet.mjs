@@ -88,6 +88,16 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         options.parts.push('attributesSkill');
         options.defaultTab = 'attributes';
         break;
+      case 'weapon':
+      case 'armor':
+      case 'cyberware':
+      case 'program':
+      case 'asset':
+        break;
+      case 'shipWeapon':
+      case 'shipFitting':
+      case 'shipDefense':
+        break;
     }
     options.parts.push('description');
   }
