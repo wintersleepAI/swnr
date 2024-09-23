@@ -160,7 +160,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'biography';
     return parts.reduce((tabs, partId) => {
       const tab = {
-        cssClass: '',
+        cssClass: 'sheet-body',
         group: tabGroup,
         // Matches tab property to
         id: '',
@@ -218,10 +218,6 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       3: [],
       4: [],
       5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: [],
     };
 
     // Iterate through items, allocating to containers

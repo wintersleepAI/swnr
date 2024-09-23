@@ -16,7 +16,7 @@ export default class SWNPower extends SWNItemBase {
       integer: true,
       initial: 1,
       min: 1,
-      max: 9,
+      max: 5,
     });
 
     return schema;

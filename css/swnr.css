@@ -220,6 +220,7 @@
 .swnr .sheet-body .tab,
 .swnr .sheet-body .tab .editor {
   height: 100%;
+  overflow-y: scroll;
 }
 .swnr .tab.biography {
   flex: 1;

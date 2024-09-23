@@ -131,7 +131,7 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
     if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'biography';
     return parts.reduce((tabs, partId) => {
       const tab = {
-        cssClass: '',
+        cssClass: 'sheet-body',
         group: tabGroup,
         // Matches tab property to
         id: '',
