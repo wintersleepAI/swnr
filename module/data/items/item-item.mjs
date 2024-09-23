@@ -1,6 +1,7 @@
-import SWNItemBase from './base-item.mjs';
+import SWNBaseGearItem from './base-gear-item.mjs';
+import SWNShared from '../shared.mjs';
 
-export default class SWNItemItem extends SWNItemBase {
+export default class SWNItemItem extends SWNBaseGearItem {
   static LOCALIZATION_PREFIXES = [
     'SWN.Item.base',
     'SWN.Item.Gear',
@@ -15,12 +16,6 @@ export default class SWNItemItem extends SWNItemBase {
       ...requiredInteger,
       initial: 1,
       min: 1,
-    });
-    schema.weight = new fields.NumberField({
-      required: true,
-      nullable: false,
-      initial: 0,
-      min: 0,
     });
 
     // Break down roll formula into three independent fields

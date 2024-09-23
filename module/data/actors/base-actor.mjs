@@ -1,4 +1,4 @@
-import SWNShared from './shared.mjs';
+import SWNShared from '../shared.mjs';
 
 export default class SWNActorBase extends foundry.abstract
   .TypeDataModel {

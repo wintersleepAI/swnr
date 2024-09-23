@@ -15,9 +15,19 @@ export default class SWNShared {
     return new fields.NumberField({ required: true, nullable: false, integer: true, min: 0, initial: initialValue });
   }
 
+  static nullableNumber() {
+    const fields = foundry.data.fields;
+    return new fields.NumberField({ required: false, nullable: true, integer: true });
+  }
+
   static requiredString(initialValue) {
     const fields = foundry.data.fields;
     return new fields.StringField({ required: true, nullable: false, initial: initialValue });
+  }
+
+  static nullableString() {
+    const fields = foundry.data.fields;
+    return new fields.StringField({ required: false, nullable: true });
   }
 
   static stringChoices(initialValue, choices) {

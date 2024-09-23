@@ -1,5 +1,5 @@
 import SWNActorBase from './base-actor.mjs';
-import SWNShared from './shared.mjs';
+import SWNShared from '../shared.mjs';
 
 export default class SWNNPC extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
