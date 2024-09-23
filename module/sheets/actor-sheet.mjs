@@ -229,6 +229,12 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       // Append to gear.
       if (i.type === 'item') {
         items.push(i);
+      } 
+      else if (i.type === 'armor') {
+        items.push(i); //TODO fix to new array
+      }
+      else if (i.type === 'weapon') {
+        items.push(i); //TODO fix to new array
       }
       // Append to features.
       else if (i.type === 'feature') {
