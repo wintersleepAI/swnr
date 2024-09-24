@@ -1,36 +1,54 @@
 <header class='sheet-header'>
-  <div class="item-img"><!-- Profile Image -->
-    <img
-      class='item-img'
-      src='{{item.img}}'
-      data-edit='img'
-      data-action='onEditImage'
-      title='{{item.name}}'
-    />
-  </div>
-  <div class='header-fields'>
-    <div class='document-name'>
-      <input name='name' type='text' value='{{item.name}}' placeholder='Name' />
-    </div>
-    <div class='grid grid-2col'>
-      <div class='resource'>
-        <label class='resource-label'>{{localize 'SWN.Item.Gear.FIELDS.quantity.label'}}</label>
-        <input
-          type='text'
-          name='system.quantity'
-          value='{{system.quantity}}'
-          data-dtype='Number'
+  <div class="flexcol">
+    <div class="flexrow">
+      <div class="item-img"><!-- Profile Image -->
+        <img
+          class='item-img'
+          src='{{item.img}}'
+          data-edit='img'
+          data-action='onEditImage'
+          title='{{item.name}}'
         />
       </div>
+      <div class='header-fields'>
+        <div class='document-name'>
+          <input name='name' type='text' value='{{item.name}}' placeholder='Name' />
+        </div>
+        <div class='grid grid-3col'>
+          <div class='resource grid-span-3 thin-bar' style="text-align:right;">
+            <label class='resource-label'>{{localize 'swnr.item.favorite'}}</label>
+            <input type="checkbox" class="small-checkbox" name="system.favorite" {{#if system.favorite}}checked{{/if}} />
+          </div>
+          <div class='resource'>
+            <label class='resource-label'>{{localize 'SWN.Item.Gear.FIELDS.quantity.label'}}</label>
+            <input
+              type='text'
+              name='system.quantity'
+              value='{{system.quantity}}'
+              data-dtype='Number'
+            />
+          </div>
+          <div class='resource'>
+            <label class='resource-label'>{{localize 'swnr.item.cost'}}</label>
+            <input
+              type='text'
+              name='system.cost'
+              value='{{system.cost}}'
+              data-dtype='Number'
+            />
+          </div>
       <div class='resource'>
-        <label class='resource-label'>{{localize 'swnr.item.cost'}}</label>
+        <label class='resource-label'>{{localize 'swnr.item.location'}}</label>
         <input
           type='text'
-          name='system.cost'
-          value='{{system.cost}}'
-          data-dtype='Number'
+          name='system.location'
+          value='{{system.location}}'
         />
       </div>
+        </div><!--2col-->
+      </div><!--header-fields-->
+    </div><!-- row-->
+    <div class="grid grid-4col" style="margin-top:0px;">
       <div class='resource'>
         <label class='resource-label'>{{localize 'swnr.item.encumbrance'}}</label>
         <input
@@ -45,7 +63,6 @@
           <label class='resource-label'>{{localize 'swnr.item.bundledCount'}}</label>
           <input type="checkbox" class="small-checkbox" name="system.bundle.bundled" {{#if system.bundle.bundled}}checked{{/if}} />
         </span>
-        
         <input
           type='text'
           name='system.bundle.amount'
@@ -54,12 +71,29 @@
         />
       </div>
       <div class='resource'>
-        <label class='resource-label'>{{localize 'swnr.item.favorite'}}</label>
-        <input type="checkbox" class="small-checkbox" name="system.favorite" {{#if system.favorite}}checked{{/if}} />
+        <label class='resource-label'>{{localize 'swnr.item.techlevel'}}</label>
+        <input
+          type='text'
+          name='system.tl'
+          value='{{system.tl}}'
+          data-dtype='Number'
+        />
       </div>
-    </div>
-  </div>
-  <div class="header-fields">
-    adljadlj
-  </div>
+      <div class='resource'>
+        <label class='resource-label'>{{localize 'swnr.item.quality.label'}}</label>
+        <input
+          type='text'
+          name='system.quality'
+          value='{{system.quality}}'
+        />
+      </div>
+
+      <div class='resource grid-span-4 thin-bar' style="">
+        <label class='resource-label'>{{localize 'swnr.item.noEncReadied'}}</label>
+        <input type="checkbox" class="small-checkbox" name="system.noEncReadied" {{#if system.noEncReadied}}checked{{/if}} />
+
+      </div>
+
+    </div><!--4col-->
+  </div><!--flexcol-->
 </header>

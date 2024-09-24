@@ -226,6 +226,11 @@
   justify-content: center;
 }
 
+.swnr .sheet-header .thin-bar {
+  margin-top:-5px;
+  margin-bottom:-15px;
+}
+
 .swnr .sheet-header .header-fields {
   flex: 1;
 }
