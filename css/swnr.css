@@ -255,10 +255,23 @@
 .swnr .tox .tox-edit-area {
   padding: 0 8px;
 }
+.swnr .form-group label,
 .swnr .resource-label {
   font-weight: bold;
   font-size: 12px;
+  margin: 0px;
+  margin-top: -5px;
+  margin-bottom: -5px;
 }
+
+.swnr .form-group {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+}
+
 .swnr .stat {
   margin-bottom: 2px;
 }

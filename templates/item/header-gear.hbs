@@ -20,13 +20,15 @@
             <input type="checkbox" class="small-checkbox" name="system.favorite" {{#if system.favorite}}checked{{/if}} />
           </div>
           <div class='resource'>
-            <label class='resource-label'>{{localize 'SWN.Item.Gear.FIELDS.quantity.label'}}</label>
+            {{!-- <label class='resource-label'>{{localize 'SWN.Item.Gear.FIELDS.quantity.label'}}</label>
             <input
               type='text'
               name='system.quantity'
               value='{{system.quantity}}'
               data-dtype='Number'
-            />
+            /> --}}
+            {{formGroup systemFields.quantity value=system.quantity localize=true}}
+
           </div>
           <div class='resource'>
             <label class='resource-label'>{{localize 'swnr.item.cost'}}</label>

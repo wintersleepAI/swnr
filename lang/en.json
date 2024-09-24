@@ -54,6 +54,13 @@
         "Description": "Description",
         "Effects": "Effects"
       },
+      "base": {
+        "FIELDS": {
+          "description": {"label": "Description"},
+          "quantity": {"label": "Quantity"},
+          "weight": {"label": "Weight"}
+        }
+      },
       "Gear": {
         "FIELDS": {
           "rollFormula": {"label": "Roll Formula"},
