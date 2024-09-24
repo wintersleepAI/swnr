@@ -105,11 +105,13 @@
   margin-bottom: 10px;
 }
 
-.swnr .sheet-header div.profile-img {
+.swnr .sheet-header div.profile-img,
+.swnr .sheet-header div.item-img {
   margin-right: 10px;
 }
 
-.swnr .sheet-header .profile-img {
+.swnr .sheet-header .profile-img,
+.swnr .sheet-header .item-img {
   width: 150px;
   max-width: 150px;
   height: 150px;
@@ -128,7 +130,8 @@
   flex-direction: column;
 }
 
-.swnr .sheet-header  img.profile-img {
+.swnr .sheet-header  img.profile-img,
+.swnr .sheet-header  img.item-img {
   height: 100%;
   width: 100%;
   border: none;
@@ -136,6 +139,10 @@
   margin-right: 0px;
 
   position: absolute;
+}
+
+.swnr .sheet-header  img.item-img {
+  border-radius: 0%;
 }
 
 

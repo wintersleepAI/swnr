@@ -112,6 +112,7 @@ export default class SWNCharacter extends SWNActorBase {
       }
     }
 
+    data["lvl"] =this.level.value;
     return data;
   }
 }
