@@ -35,6 +35,18 @@ export default class SWNShared {
     return new fields.StringField({ required: true, nullable: false, initial: initialValue, choices: choices });
   }
 
+  static stats(initialValue, none_allowed = false, ask_allowed = false) {
+    const fields = foundry.data.fields;
+    let stats = Object.keys(CONFIG.SWN.stats);
+    if (none_allowed) {
+      stats = stats.concat(["none"]);
+    }
+    if (ask_allowed) {
+      stats = stats.concat(["ask"]);
+    }
+    return new fields.StringField({ required: true, nullable: false, initial: initialValue, choices: stats });
+  }
+
   static emptyString() {
     const fields = foundry.data.fields;
     return new fields.StringField({ required: false, nullable: false });

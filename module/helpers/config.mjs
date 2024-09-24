@@ -21,3 +21,13 @@ SWN.statAbbreviations = {
   wis: 'SWN.Stat.Wis.abbr',
   cha: 'SWN.Stat.Cha.abbr',
 };
+
+SWN.ammoTypes = {
+  none: 'SWN.AmmoType.none',
+  typeAPower: 'SWN.AmmoType.typeAPower',
+  typeBPower: 'SWN.AmmoType.typeBPower',
+  ammo: 'SWN.AmmoType.ammo',
+  missile: 'SWN.AmmoType.missile',
+  special: 'SWN.AmmoType.special',
+  infinite: 'SWN.AmmoType.infinite',
+};

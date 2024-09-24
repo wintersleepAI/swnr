@@ -20,11 +20,7 @@ export default class SWNSkill extends SWNItemBase {
       max: 4,
     });
 
-    schema.defaultStat = new fields.StringField({
-      required: true,
-      nullable: false,
-      initial: 'ask',
-    });
+    schema.defaultStat =  SWNShared.stats("ask", false, true);
 
     schema.pool = new fields.StringField({
         required: true,
