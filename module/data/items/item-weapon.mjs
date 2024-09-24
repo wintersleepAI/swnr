@@ -40,7 +40,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       modifier: SWNShared.requiredNumber(0),
       isNonLethal: new fields.BooleanField({initial: false}),
     });
-    schema.quantity = SWNShared.requiredNumber(1);
+    //schema.quantity = SWNShared.requiredNumber(1);
     schema.save = SWNShared.requiredString("");
     schema.trauma = new fields.SchemaField({
       die: SWNShared.requiredString("1d6"),

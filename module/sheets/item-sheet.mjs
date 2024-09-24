@@ -38,6 +38,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     header: {
       template: 'systems/swnr/templates/item/header.hbs',
     },
+    headerGear: {
+      template: 'systems/swnr/templates/item/header-gear.hbs',
+    },
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
@@ -67,7 +70,18 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
     // Not all parts always render
-    options.parts = ['header', 'tabs'];
+    options.parts = [];
+    switch (this.document.type) {
+      case 'item':
+      case 'weapon':
+      case 'armor':
+        options.parts.push('headerGear');
+        break;
+      default:
+        options.parts.push('header');
+        break;
+    }
+    options.parts.push('tabs');
     //wsai adding to allow setting default tab
     options.defaultTab= 'description';
     // Don't show the other tabs if only limited view
@@ -187,6 +201,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       };
       switch (partId) {
         case 'header':
+        case 'headerGear':
         case 'tabs':
           return tabs;
         case 'description':

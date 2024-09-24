@@ -13,7 +13,7 @@ export default class SWNArmor extends SWNBaseGearItem {
     schema.ac = SWNShared.requiredNumber(10);
     schema.shield = new fields.BooleanField({initial: false});
     schema.use = new fields.BooleanField({initial: false});
-    schema.quantity = SWNShared.requiredNumber(1);
+    //schema.quantity = SWNShared.requiredNumber(1);
     schema.meleeAc = SWNShared.nullableNumber();
     schema.soak = SWNShared.resourceField(0,0);
     schema.dr = SWNShared.requiredNumber(0);

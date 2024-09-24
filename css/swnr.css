@@ -121,13 +121,22 @@
 
   box-shadow: 0 0 10px inset rgb(0,0,0,0.4);
   background: var(--background-portrait-image);
-  background-size: 50px;
+  background-size: 150px;
 
   display: flex;
   position: relative;
   justify-content: end;
   align-items: center;
   flex-direction: column;
+}
+
+.swnr .sheet-header .item-img {
+  width: 100px;
+  max-width: 100px;
+  height: 100px;
+
+  border-radius: 0%;
+  background-size: 100px;
 }
 
 .swnr .sheet-header  img.profile-img,
@@ -252,6 +261,14 @@
 .swnr .stat-mod {
   flex: 0 0 44px;
 }
+
+.swnr input[type="checkbox"].small-checkbox {
+  width: 15px;
+  height: 15px;
+  margin: 0px;
+  --checkbox-size: 15px;
+}
+
 .swnr .items-header {
   height: 28px;
   margin: 2px 0;
