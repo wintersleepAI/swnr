@@ -8,8 +8,9 @@ export default class SWNBaseGearItem extends SWNItemBase {
     const schema = super.defineSchema();
     schema.encumbrance = SWNShared.requiredNumber(1);
     schema.cost = SWNShared.requiredNumber(0);
-    schema.tl = new fields.NumberField({ required: false, nullable: true, integer: true,min: 0, max: 6});;
-    schema.location = SWNShared.requiredString("stowed");
+    schema.tl = new fields.NumberField({ required: false, nullable: true, integer: true,min: 0, max: CONFIG.SWN.maxTL });
+    const locations = Object.keys(CONFIG.SWN.itemLocations)
+    schema.location = SWNShared.stringChoices("stowed" , locations);
     schema.quality = SWNShared.requiredString("stock");
     schema.noEncReadied = new fields.BooleanField({initial: false});
     return schema;

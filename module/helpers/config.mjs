@@ -22,6 +22,14 @@ SWN.statAbbreviations = {
   cha: 'SWN.Stat.Cha.abbr',
 };
 
+SWN.maxTL = 6;
+
+SWN.itemLocations = {
+  readied: 'SWNR.item.locationReadied', 
+  stowed: 'SWNR.item.locationStowed', 
+  other : 'SWNR.item.locationOther',
+}
+
 SWN.ammoTypes = {
   none: 'SWN.AmmoType.none',
   typeAPower: 'SWN.AmmoType.typeAPower',
