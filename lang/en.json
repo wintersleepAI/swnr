@@ -58,7 +58,8 @@
         "FIELDS": {
           "description": {"label": "Description"},
           "quantity": {"label": "Quantity"},
-          "weight": {"label": "Weight"}
+          "weight": {"label": "Weight"},
+          "quality": {"label": "Quality"}
         }
       },
       "Gear": {

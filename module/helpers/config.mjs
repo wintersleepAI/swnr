@@ -25,9 +25,15 @@ SWN.statAbbreviations = {
 SWN.maxTL = 6;
 
 SWN.itemLocations = {
-  readied: 'SWNR.item.locationReadied', 
-  stowed: 'SWNR.item.locationStowed', 
-  other : 'SWNR.item.locationOther',
+  readied: 'swnr.item.locationReadied', 
+  stowed: 'swnr.item.locationStowed', 
+  other : 'swnr.item.locationOther',
+}
+
+SWN.itemQualities = {
+  stock: 'swnr.item.quality.stock',
+  makeshift: 'swnr.item.quality.juryRigged',
+  masterwork: 'swnr.item.quality.mastercrafted',
 }
 
 SWN.ammoTypes = {

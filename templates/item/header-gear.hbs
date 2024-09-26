@@ -41,11 +41,12 @@
           </div>
       <div class='resource'>
         <label class='resource-label'>{{localize 'swnr.item.location'}}</label>
-        <input
+        {{formInput systemFields.location value=system.location localize=true options=config.SWN.itemLocations}}
+        {{!-- <input
           type='text'
           name='system.location'
           value='{{system.location}}'
-        />
+        /> --}}
       </div>
         </div><!--2col-->
       </div><!--header-fields-->
@@ -82,12 +83,7 @@
         />
       </div>
       <div class='resource'>
-        <label class='resource-label'>{{localize 'swnr.item.quality.label'}}</label>
-        <input
-          type='text'
-          name='system.quality'
-          value='{{system.quality}}'
-        />
+        {{formGroup systemFields.quality value=system.quality localize=true}}
       </div>
 
       <div class='resource grid-span-4 thin-bar' style="">
