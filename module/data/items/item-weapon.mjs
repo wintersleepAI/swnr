@@ -11,7 +11,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
     schema.stat = SWNShared.stats("dex");
-    schema.secondStat = SWNShared.stats("none", true, false);
+    schema.secondStat = SWNShared.stats("", true, false);
     schema.skill = SWNShared.requiredString("ask");
     schema.skillBoostsDamage = new fields.BooleanField({initial: false});
     schema.skillBoostsShock = new fields.BooleanField({initial: false});

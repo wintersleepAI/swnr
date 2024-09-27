@@ -37,14 +37,17 @@ export default class SWNShared {
 
   static stats(initialValue, none_allowed = false, ask_allowed = false) {
     const fields = foundry.data.fields;
-    let stats = Object.keys(CONFIG.SWN.stats);
+    //clone the stats object
+    let required = true;
+    let stats = {...CONFIG.SWN.stats};
     if (none_allowed) {
-      stats = stats.concat(["none"]);
+      stats["none"] = "";
+      required = false;
     }
     if (ask_allowed) {
-      stats = stats.concat(["ask"]);
+      stats["ask"] = "swnr.sheet.ask";
     }
-    return new fields.StringField({ required: true, nullable: false, initial: initialValue, choices: stats });
+    return new fields.StringField({ required: required, nullable: false, initial: initialValue, choices: stats });
   }
 
   static emptyString() {
