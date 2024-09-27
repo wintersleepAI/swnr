@@ -107,7 +107,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'weapon':
         options.parts.push('attributesWeapons');
-        //options.defaultTab = 'attributesWeapons';
+        options.defaultTab = 'weapon';
         break;
       case 'armor':
       case 'cyberware':
@@ -219,12 +219,11 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'attributesItem':
         case 'attributesSkill':
         case 'attributesPower':
-        case 'attributesWeapons':
           tab.id = 'attributes';
           tab.label += 'Attributes';
           break;
-        case 'attributesWeaponsX':
-          tab.id = 'attributesWeapons';
+        case 'attributesWeapons':
+          tab.id = 'weapon';
           tab.label += 'WeaponDetails';
           break;
         case 'effects':
