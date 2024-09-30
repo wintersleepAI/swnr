@@ -87,6 +87,27 @@
           "pool": {"label": "Dice Pool"},
           "source": {"label": "Source"}
         }
+      },
+      "Weapon": {
+        "FIELDS": {
+          "stat": {"label": "Stat"},
+          "secondStat": {"label": "Secondary Stat"},
+          "skill": {"label": "Skill"},
+          "skillBoostsDamage": {"label": "Skill Boosts Damage"},
+          "skillBoostsShock": {"label": "Skill Boosts Shock"},
+          "shock": {
+            "label": "Shock Damage",
+            "dmg": {"label": "Shock Damage"},
+            "ac": {"label": "Shock AC"}
+          },
+          "ab": {"label": "Attack Bonus"},
+          "range": {"label": "Range"},
+          "damage": {"label": "Damage"},
+          "ammo": {"label": "Ammo"},
+          "burst": {"label": "Burst"},
+          "suppress": {"label": "Suppressive Fire"},
+          "source": {"label": "Source"}
+        }
       }
     },
     "Effect": {

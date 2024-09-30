@@ -3,8 +3,19 @@
   data-group='primary'
   data-tab='weapon'
 >
-  <div class='resource'>
-
-    Weapons
+  <div class='grid grid-4col'>
+    <div class="resource">
+      {{formGroup systemFields.damage value=system.damage localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.shock.fields.dmg value=system.shock.dmg localize=true}}
+      {{formGroup systemFields.shock.fields.ac value=system.shock.ac localize=true}}
+      {{!-- <input
+              type='text'
+              name='system.shock.dmg'
+              value='{{system.shock.dmg}}'
+              data-dtype='Number'
+            /> --}}
+    </div>
   </div>  
 </section>
