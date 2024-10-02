@@ -30,9 +30,9 @@ export default class SWNShared {
     return new fields.StringField({ required: false, nullable: true });
   }
 
-  static stringChoices(initialValue, choices) {
+  static stringChoices(initialValue, choices, required = true) {
     const fields = foundry.data.fields;
-    return new fields.StringField({ required: true, nullable: false, initial: initialValue, choices: choices });
+    return new fields.StringField({ required: required, nullable: !required, initial: initialValue, choices: choices });
   }
 
   static stats(initialValue, none_allowed = false, ask_allowed = false) {
@@ -41,13 +41,13 @@ export default class SWNShared {
     let required = true;
     let stats = {...CONFIG.SWN.stats};
     if (none_allowed) {
-      stats["none"] = "";
+      //stats["none"] = "";
       required = false;
     }
     if (ask_allowed) {
       stats["ask"] = "swnr.sheet.ask";
     }
-    return new fields.StringField({ required: required, nullable: false, initial: initialValue, choices: stats });
+    return new fields.StringField({ required: required, nullable:  none_allowed, initial: initialValue, choices: stats });
   }
 
   static emptyString() {

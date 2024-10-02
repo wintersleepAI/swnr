@@ -100,13 +100,36 @@
             "dmg": {"label": "Shock Damage"},
             "ac": {"label": "Shock AC"}
           },
+          "ammo": {
+            "label": "Ammo",
+
+            "type": { "label": "Ammo Type"},
+            "longReload": { "label": "Long Reload"},
+            "burst": { "label": "Burst Fire"},
+            "magazine": { "label": "Magazine"},
+            "max": { "label": "Max"},
+            "value": { "label": "Value"},
+
+            "suppress": { "label": "Suppressive Fire"} 
+          },
           "ab": {"label": "Attack Bonus"},
-          "range": {"label": "Range"},
+          "range": {
+            "label": "Range",
+            "normal": {"label": "Normal"},
+            "max": {"label": "Max"}
+          },
           "damage": {"label": "Damage"},
-          "ammo": {"label": "Ammo"},
           "burst": {"label": "Burst"},
           "suppress": {"label": "Suppressive Fire"},
-          "source": {"label": "Source"}
+          "source": {"label": "Source"},
+          "save" : {"label": "Save"},
+          "trauma": {
+            "label": "Trauma",
+            "die": {"label": "Trauma Die"},
+            "rating": {"label": "Trauma Rating"}
+          },
+          "isTwoHanded": {"label": "Two Handed"},
+          "isNonLethal": {"label": "Non-Lethal"}
         }
       }
     },

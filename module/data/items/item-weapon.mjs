@@ -11,7 +11,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
     schema.stat = SWNShared.stats("dex");
-    schema.secondStat = SWNShared.stats("", true, false);
+    schema.secondStat = SWNShared.stats(null, true, false);
     schema.skill = SWNShared.requiredString("ask");
     schema.skillBoostsDamage = new fields.BooleanField({initial: false});
     schema.skillBoostsShock = new fields.BooleanField({initial: false});
@@ -20,11 +20,10 @@ export default class SWNWeapon extends SWNBaseGearItem {
       ac: SWNShared.requiredNumber(10),
     });
     schema.ab = SWNShared.requiredNumber(0);
-    const ammoChoices = Object.keys(CONFIG.SWN.ammoTypes);
     schema.ammo = new fields.SchemaField({
       longReload: new fields.BooleanField({initial: false}),
       suppress: new fields.BooleanField({initial: false}),
-      type: SWNShared.stringChoices("ammo", ammoChoices),
+      type: SWNShared.stringChoices("ammo", CONFIG.SWN.ammoTypes),
       max: SWNShared.requiredNumber(10),
       value: SWNShared.requiredNumber(10),
       burst: new fields.BooleanField({initial: false}),
@@ -41,7 +40,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       isNonLethal: new fields.BooleanField({initial: false}),
     });
     //schema.quantity = SWNShared.requiredNumber(1);
-    schema.save = SWNShared.requiredString("");
+    schema.save = SWNShared.stringChoices(null, CONFIG.SWN.saveTypes, false);
     schema.trauma = new fields.SchemaField({
       die: SWNShared.requiredString("1d6"),
       rating: SWNShared.nullableNumber(),

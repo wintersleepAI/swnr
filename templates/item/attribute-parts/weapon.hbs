@@ -3,19 +3,81 @@
   data-group='primary'
   data-tab='weapon'
 >
-  <div class='grid grid-4col'>
-    <div class="resource">
-      {{formGroup systemFields.damage value=system.damage localize=true}}
-    </div>
+<div class='grid grid-4col'> <!-- Weapon -->
+  <div class="resource">
+   {{formGroup systemFields.stat value=system.stat localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.secondStat value=system.secondStat localize=true}}
+  </div>
+  <div class="resource-group">
     <div class="resource">
       {{formGroup systemFields.shock.fields.dmg value=system.shock.dmg localize=true}}
-      {{formGroup systemFields.shock.fields.ac value=system.shock.ac localize=true}}
-      {{!-- <input
-              type='text'
-              name='system.shock.dmg'
-              value='{{system.shock.dmg}}'
-              data-dtype='Number'
-            /> --}}
     </div>
-  </div>  
+    <div class="resource">
+      {{formGroup systemFields.shock.fields.ac value=system.shock.ac localize=true}}
+    </div>
+  </div><!-- end resource-group -->
+  <div class="resource">
+   {{formGroup systemFields.skill value=system.skill localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.skillBoostsDamage value=system.skillBoostsDamage localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.skillBoostsShock value=system.skillBoostsShock localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.ab value=system.ab localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.damage value=system.damage localize=true}}
+  </div>
+  <div class="resource-group grid-span-4 flexrow">
+    <div class="resource">
+      {{formGroup systemFields.ammo.fields.longReload value=system.ammo.longReload localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.ammo.fields.suppress value=system.ammo.suppress localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.ammo.fields.type value=system.ammo.type localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.ammo.fields.max value=system.ammo.max localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.ammo.fields.value value=system.ammo.value localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.ammo.fields.burst value=system.ammo.burst localize=true}}
+    </div>
+  </div><!-- end resource-group -->
+  <div class="resource-group">
+    <div class="resource">
+      {{formGroup systemFields.range.fields.normal value=system.range.normal localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.range.fields.max value=system.range.max localize=true}}
+    </div>
+  </div><!-- end resource-group -->
+  <div class="resource">
+   {{formGroup systemFields.save value=system.save localize=true}}
+  </div>
+  <div class="resource-group">
+    <div class="resource">
+      {{formGroup systemFields.trauma.fields.die value=system.trauma.die localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.trauma.fields.rating value=system.trauma.rating localize=true}}
+    </div>
+  </div><!-- end resource-group -->
+  <div class="resource">
+   {{formGroup systemFields.isTwoHanded value=system.isTwoHanded localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.isNonLethal value=system.isNonLethal localize=true}}
+  </div>
+</div><!-- end grid-col weapon  -->
+
 </section>

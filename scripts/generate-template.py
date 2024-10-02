@@ -24,6 +24,25 @@ def print_class(current, attributes):
             print(f'    schema.{attr[0]} = SWNShared.requiredString("");')
     print('  });')
     print('}')
+
+    print('\n\n')
+    print(f"<div class='grid grid-4col'> <!-- {current}-->")
+    for attr in attributes:
+        if attr[1] and type(attr[1]) == list:
+            name = f'systemFields.{attr[0]}.fields.'
+            print('  <div class="resource-group">')
+            for x in attr[1]:
+                print('    <div class="resource">')
+                print(f'      {{{{formGroup {name}{x[0]} value=system.{attr[0]}.{x[0]} localize=true}}}}')
+                print('    </div>')
+            print('  </div><!-- end resource-group -->')
+
+        else:
+            print('  <div class="resource">')
+            print(f'   {{{{formGroup systemFields.{attr[0]} value=system.{attr[0]} localize=true}}}}')
+            print('  </div>')
+    print(f'</div><!-- end grid-col {current} -->\n')
+
 def run():
     current = None
     in_schema = None

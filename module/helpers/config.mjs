@@ -37,11 +37,18 @@ SWN.itemQualities = {
 }
 
 SWN.ammoTypes = {
-  none: 'SWN.AmmoType.none',
-  typeAPower: 'SWN.AmmoType.typeAPower',
-  typeBPower: 'SWN.AmmoType.typeBPower',
-  ammo: 'SWN.AmmoType.ammo',
-  missile: 'SWN.AmmoType.missile',
-  special: 'SWN.AmmoType.special',
-  infinite: 'SWN.AmmoType.infinite',
+  none: 'swnr.ammo.none',
+  typeAPower: 'swnr.ammo.typeAPower',
+  typeBPower: 'swnr.ammo.typeBPower',
+  ammo: 'swnr.ammo.ammo',
+  missile: 'swnr.ammo.missile',
+  special: 'swnr.ammo.special',
+  infinite: 'swnr.ammo.infinite',
 };
+
+SWN.saveTypes = {
+  physical: 'swnr.sheet.saves.physical',
+  mental: 'swnr.sheet.saves.mental',
+  evasion: 'swnr.sheet.saves.evasion',
+  luck: 'swnr.sheet.saves.luck',
+}
