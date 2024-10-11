@@ -33,26 +33,29 @@
   <div class="resource">
    {{formGroup systemFields.damage value=system.damage localize=true}}
   </div>
-  <div class="resource-group grid-span-4 flexrow">
+  <div class="resource-group grid-span-4 flexrow"><!-- AMMO-->
+    <div class="resource">
+      {{formGroup systemFields.ammo.fields.type value=system.ammo.type localize=true}}
+    </div>
+    {{#if (and (ne system.ammo.type "none") (ne system.ammo.type "infinite"))}}
+      <div class="resource">
+        {{formGroup systemFields.ammo.fields.value value=system.ammo.value localize=true}}
+      </div>
+      <div class="resource">
+        {{formGroup systemFields.ammo.fields.max value=system.ammo.max localize=true}}
+      </div>
+    {{/if}}
     <div class="resource">
       {{formGroup systemFields.ammo.fields.longReload value=system.ammo.longReload localize=true}}
     </div>
     <div class="resource">
       {{formGroup systemFields.ammo.fields.suppress value=system.ammo.suppress localize=true}}
     </div>
-    <div class="resource">
-      {{formGroup systemFields.ammo.fields.type value=system.ammo.type localize=true}}
-    </div>
-    <div class="resource">
-      {{formGroup systemFields.ammo.fields.max value=system.ammo.max localize=true}}
-    </div>
-    <div class="resource">
-      {{formGroup systemFields.ammo.fields.value value=system.ammo.value localize=true}}
-    </div>
+
     <div class="resource">
       {{formGroup systemFields.ammo.fields.burst value=system.ammo.burst localize=true}}
     </div>
-  </div><!-- end resource-group -->
+  </div><!-- AMMO end resource-group -->
   <div class="resource-group">
     <div class="resource">
       {{formGroup systemFields.range.fields.normal value=system.range.normal localize=true}}
