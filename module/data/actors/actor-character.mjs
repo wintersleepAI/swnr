@@ -86,7 +86,16 @@ export default class SWNCharacter extends SWNActorBase {
       this.stats[key].label =
         game.i18n.localize(CONFIG.SWN.stats[key]) ?? key;
     }
+
+    this.systemStrain.cyberware = 0;
+    this.systemStrain.max = this.stats.con.total - this.systemStrain.cyberware + this.systemStrain.permanent;
     /*
+    systemStrain: {
+      max: number;
+      permanent: number;
+      cyberware: number;
+    };
+
     schema.encumbrance =; // TODO
 
 
