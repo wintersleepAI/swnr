@@ -128,7 +128,10 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 
 Hooks.once('ready', function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
-  Hooks.on('hotbarDrop', (bar, data, slot) => createDocMacro(data, slot));
+  Hooks.on('hotbarDrop', (_bar, data, slot) => {
+    createDocMacro(data, slot);
+    return false;
+  });
 });
 
 /* -------------------------------------------- */
@@ -154,7 +157,7 @@ async function createDocMacro(data, slot) {
   const item = await Item.fromDropData(data);
 
   // Create the macro command using the uuid.
-  const command = `game.swnr.rollItemMacro("${data.uuid}");`;
+  const command = `swnr.utils.rollItemMacro("${data.uuid}");`;
   let macro = game.macros.find(
     (m) => m.name === item.name && m.command === command
   );

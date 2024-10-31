@@ -50,4 +50,14 @@ export default class SWNWeapon extends SWNBaseGearItem {
 
     return schema;
   }
+
+  async roll() {
+    let roll = new Roll(this.damage);
+    await roll.toMessage({
+      speaker: ChatMessage.getSpeaker({alias: this.parent.name}),
+      flavor: `${this.parent.name} Damage Roll`,
+
+    });
+    return roll;
+  }
 }

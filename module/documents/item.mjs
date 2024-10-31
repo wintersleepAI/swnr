@@ -36,6 +36,11 @@ export class SWNItem extends Item {
    */
   async roll(event) {
     const item = this;
+    // If the item has a roll function, call it and return.
+    if (typeof this.system.roll == "function" ){
+      this.system.roll();
+      return;
+    }
 
     // Initialize chat data.
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });
