@@ -51,11 +51,63 @@ export default class SWNWeapon extends SWNBaseGearItem {
     return schema;
   }
 
-  async roll() {
-    let roll = new Roll(this.damage);
+  get canBurstFire() {
+    return (
+      this.ammo.burst &&
+      (this.ammo.type === "infinite" ||
+        (this.ammo.type !== "none" && this.ammo.value >= 3))
+    );
+  }
+
+  get hasAmmo() {
+    return (
+      this.ammo.type === "none" ||
+      this.ammo.type === "infinite" ||
+      this.ammo.value > 0
+    );
+  }
+
+  async roll(shiftKey = false) {
+    let item = this.parent;
+    const actor = item.actor;
+    
+    if (!actor) {
+      const message = `Called weapon.roll on item without an actor.`;
+      ui.notifications?.error(message);
+      new Error(message);
+      return;
+    }
+    if (!this.hasAmmo) {
+      ui.notifications?.error(`Your ${item.name} is out of ammo!`);
+      return;
+    }
+
+    const title = game.i18n.format("swnr.dialog.attackRoll", {
+      actorName: actor.name,
+      weaponName: item.name,
+    });
+    const ammo = this.ammo;
+    const burstFireHasAmmo =
+      ammo.type !== "none" && ammo.burst && ammo.value >= 3;
+
+    let dmgBonus = 0;
+
+    // for finesse weapons take the stat with the higher mod
+    let statName = this.stat;
+    const secStatName = this.secondStat;
+    // check if there is 2nd stat name and its mod is better
+    if (
+      secStatName != null &&
+      secStatName != "none" &&
+        actor.system["stats"]?.[statName].mod <
+        actor.system["stats"]?.[secStatName].mod
+    ) {
+      statName = secStatName;
+    }
+
     await roll.toMessage({
       speaker: ChatMessage.getSpeaker({alias: this.parent.name}),
-      flavor: `${this.parent.name} Damage Roll`,
+      flavor: `${actor.name}'s ${this.parent.name} Damage Roll`,
 
     });
     return roll;
