@@ -74,7 +74,166 @@ export default class SWNWeapon extends SWNBaseGearItem {
     modifier, // number
     useBurst // boolean
   ) {
-    alert("Attacking ! " + damageBonus + " " + stat + " " + skillMod + " " + modifier + " " + useBurst);  
+    let item = this.parent;
+    const actor = item.actor;
+    
+    if (!actor) {
+      const message = `Called rollAttack on item without an actor.`;
+      ui.notifications?.error(message);
+      throw new Error(message);
+    }
+    if (!this.hasAmmo) {
+      ui.notifications?.error(`Your ${item.name} is out of ammo!`);
+      return;
+    }
+    if (
+      useBurst &&
+      this.ammo.type !== "infinite" &&
+      this.ammo.type !== "none" &&
+      this.ammo.value < 3
+    ) {
+      ui.notifications?.error(
+        `Your ${item.name} is does not have enough ammo to burst!`
+      );
+      return;
+    }
+    const template = "systems/swnr/templates/chat/attack-roll.hbs";
+    const burstFire = useBurst ? 2 : 0;
+    const attackRollDie = game.settings.get("swnr", "attackRoll");
+    const rollData = {
+      actor: actor.getRollData(),
+      weapon: this,
+      hitRoll: undefined,
+      stat,
+      burstFire,
+      modifier,
+      damageBonus,
+      effectiveSkillRank: skillMod < 0 ? -2 : skillMod,
+      shockDmg: this.shock?.dmg > 0 ? this.shock.dmg : 0,
+      attackRollDie,
+    };
+    let dieString =
+      "@attackRollDie + @burstFire + @modifier + @actor.ab + @weapon.ab + @stat + @effectiveSkillRank";
+    const useA = game.settings.get("swnr", "useCWNArmor") ? true : false;
+    if (
+      useA &&
+      this.range.normal <= 1 &&
+      this.ammo.type == "none"
+    ) {
+      if (actor.type == "character" || actor.type == "npc") {
+        if (actor.system.meleeAb) {
+          dieString =
+            "@attackRollDie + @burstFire + @modifier + @actor.meleeAb + @weapon.ab + @stat + @effectiveSkillRank";
+        }
+      }
+    }
+    const hitRoll = new Roll(dieString, rollData);
+    await hitRoll.roll({ async: true });
+    const hitExplainTip = "1d20 +burst +mod +CharAB +WpnAB +Stat +Skill";
+    rollData.hitRoll = +(hitRoll.dice[0].total?.toString() ?? 0);
+    const damageRoll = new Roll(
+      this.damage + " + @burstFire + @stat + @damageBonus",
+      rollData
+    );
+    await damageRoll.roll({ async: true });
+    const damageExplainTip = "roll +burst +statBonus +dmgBonus";
+    const diceTooltip = {
+      hit: await hitRoll.render(),
+      damage: await damageRoll.render(),
+      hitExplain: hitExplainTip,
+      damageExplain: damageExplainTip,
+    };
+
+    console.log("TODO replace settings useTrauma");
+    let traumaRollRender = null;
+    let traumaDamage = null;
+    if (
+      this.settings?.useTrauma &&
+      this.trauma.die != null &&
+      this.trauma.die !== "none" &&
+      this.trauma.rating != null
+    ) {
+      const traumaRoll = new Roll(this.trauma.die);
+      await traumaRoll.roll({ async: true });
+      traumaRollRender = await traumaRoll.render();
+      if (
+        traumaRoll &&
+        traumaRoll.total &&
+        traumaRoll.total >= 6 &&
+        damageRoll?.total
+      ) {
+        const traumaDamageRoll = new Roll(
+          `${damageRoll.total} * ${this.trauma.rating}`
+        );
+        await traumaDamageRoll.roll({ async: true });
+        traumaDamage = await traumaDamageRoll.render();
+      }
+    }
+
+    const rollArray = [hitRoll, damageRoll];
+    // Placeholder for shock damage
+    let shock_content = null;
+    let shock_roll = null;
+    // Show shock damage
+    if (game.settings.get("swnr", "addShockMessage")) {
+      if (this.shock && this.shock.dmg > 0) {
+        shock_content = `Shock Damage  AC ${this.shock.ac}`;
+        const _shockRoll = new Roll(
+          " @shockDmg + @stat " +
+            (this.skillBoostsShock ? ` + ${damageBonus}` : ""),
+          rollData
+        );
+        await _shockRoll.roll({ async: true });
+        shock_roll = await _shockRoll.render();
+        rollArray.push(_shockRoll);
+      }
+    }
+
+    const dialogData = {
+      actor,
+      weapon: this.parent,
+      hitRoll,
+      stat,
+      damageRoll,
+      burstFire,
+      modifier,
+      effectiveSkillRank: rollData.effectiveSkillRank,
+      diceTooltip,
+      ammoRatio: Math.clamped(
+        Math.floor((this.ammo.value * 20) / this.ammo.max),
+        0,
+        20
+      ),
+      shock_roll,
+      shock_content,
+      traumaDamage,
+      traumaRollRender,
+    };
+    const rollMode = game.settings.get("core", "rollMode");
+    const diceData = Roll.fromTerms([PoolTerm.fromRolls(rollArray)]);
+    if (
+      this.ammo.type !== "none" &&
+      this.ammo.type !== "infinite"
+    ) {
+      const newAmmoTotal = this.ammo.value - 1 - burstFire;
+      await this.parent.update({ 
+        system: {
+          "ammo.value": newAmmoTotal 
+        }
+      });
+      if (newAmmoTotal === 0)
+        ui.notifications?.warn(`Your ${item.name} is now out of ammo!`);
+    }
+    const chatContent = await renderTemplate(template, dialogData);
+    const chatData = {
+      speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),
+      roll: JSON.stringify(diceData),
+      content: chatContent,
+      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+    };
+    getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+    getDocumentClass("ChatMessage").create(chatData);
+
   }
 
   async roll(shiftKey = false) {
@@ -169,8 +328,10 @@ export default class SWNWeapon extends SWNBaseGearItem {
       if (actor?.type == "npc" && html.find('[name="skilled"]')) {
         const npcSkillMod = button.form.elements.skilled?.checked ? actor.system.skillBonus : 0;
         if (npcSkillMod) skillMod = npcSkillMod;
-      } else {
+      } else if (skill) {
         skillMod = skill.system.rank < 0 ? -2 : skill.system.rank;
+      } else {
+        skillMod = -2;
       }
       // for finesse weapons take the stat with the higher mod
       let statName = this.stat;
@@ -206,7 +367,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       // If remember is checked, set the skill and data
       const remember = (button.form.elements.remember?.checked) ? true : false;
       if (remember) {
-        await this.update({
+        await this.parent.update({
           system: {
             remember: {
               use: true,

@@ -10,6 +10,7 @@ import { SWNFactionSheet } from './sheets/faction-sheet.mjs';
 
 // Import helper/utility classes and constants.
 import { SWN } from './helpers/config.mjs';
+import { registerSettings } from './helpers/register-settings.mjs';
 // Import DataModel classes
 import * as models from './data/_module.mjs';
 
@@ -37,6 +38,8 @@ globalThis.swnr = {
 Hooks.once('init', function () {
   // Add custom constants for configuration.
   CONFIG.SWN = SWN;
+
+  registerSettings();
 
   /**
    * Set an initiative formula for the system
