@@ -501,7 +501,6 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     event.preventDefault();
     const dataset = target.dataset;
     const saveType = dataset.saveType;
-    //alert(saveType);
     this.actor.system.rollSave(saveType);
   }
 
