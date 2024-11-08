@@ -144,7 +144,6 @@ export default class SWNCharacter extends SWNActorBase {
   }
 
   async rollSave(saveType) {
-    alert("Rolling save: " + saveType);
     const target = this.save[saveType];
     if (isNaN(target)) {
       ui.notifications?.error("Unable to find save: " + saveType);
@@ -156,13 +155,11 @@ export default class SWNCharacter extends SWNActorBase {
     });
     const dialogData = {};
     const html = await renderTemplate(template, dialogData);
-    const _doRoll = async (html) => {
+
+    //Callback for rolling
+    const _doRoll = async (_event, button, _html) => {
       const rollMode = game.settings.get("core", "rollMode");
-      const form = html[0].querySelector("form");
-      const modString = ((
-        form.querySelector('[name="modifier"]')
-      )).value;
-      const modifier = parseInt(modString);
+      const modifier = parseInt(button.form.elements.modifier?.value);
       if (isNaN(modifier)) {
         ui.notifications?.error(`Error, modifier is not a number ${modString}`);
         return;
@@ -179,9 +176,9 @@ export default class SWNCharacter extends SWNActorBase {
         success
           ? game.i18n.localize("swnr.npc.saving.success")
           : game.i18n.localize("swnr.npc.saving.failure"),
-        { actor: this.name, target: target - modifier }
+        { actor: this.parent.name, target: target - modifier }
       );
-      const chatTemplate = "systems/swnr/templates/chat/save-throw.html";
+      const chatTemplate = "systems/swnr/templates/chat/save-throw.hbs";
       const chatDialogData = {
         saveRoll: await roll.render(),
         title,
@@ -197,37 +194,18 @@ export default class SWNCharacter extends SWNActorBase {
       };
       getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
       getDocumentClass("ChatMessage").create(chatData);
-      // roll.toMessage(
-      //   {
-      //     speaker: ChatMessage.getSpeaker(),
-      //     flavor: title,
-      //   },
-      //   { rollMode }
-      // );
-      // return roll;
     };
-    const popUpDialog = new ValidatedDialog(
+    const popUpDialog = await foundry.applications.api.DialogV2.prompt(
       {
-        title: title,
+        window: { title: title },
         content: html,
-        default: "roll",
-        buttons: {
-          roll: {
+        modal: false,
+        rejectClose: false,
+        ok: {
             label: game.i18n.localize("swnr.chat.roll"),
             callback: _doRoll,
           },
-        },
-      },
-      {
-        failCallback: () => {
-          return;
-        },
-        classes: ["swnr"],
       }
     );
-    const s = popUpDialog.render(true);
-    if (s instanceof Promise) await s;
-    return;
-  
   }
 }

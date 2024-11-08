@@ -172,8 +172,7 @@
 
 
       <div class='resource header-group flex-group-center grid-span-2'><!-- Saves -->
-        <div class="flexcol">
-          <div class="flexrow flex-center flex-between">
+        <div class="grid grid-2col">
             <div class="save-throw-button" data-save-type="physical" data-action="rollSave">
               <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.physical}}</p> 
               <p>&nbsp;{{localize 'swnr.sheet.saves.physical'}}</p>
@@ -182,8 +181,6 @@
              <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.evasion}}</p>
              <p>&nbsp;{{localize 'swnr.sheet.saves.evasion'}}</p>
             </div> 
-          </div><!-- end flexrow -->
-          <div class="flexrow flex-center flex-between">
             <div class="save-throw-button" data-save-type="mental" data-action="rollSave">
               <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.mental}}</p> 
               <p>&nbsp;{{localize 'swnr.sheet.saves.mental'}}</p>
@@ -196,9 +193,7 @@
             {{else}}
             <div></div>
             {{/if}}
-            
-          </div><!-- end flexrow -->
-        </div><!-- end flexcol -->
+        </div><!-- end grid -->
       </div><!-- end resource-group -->
       <div class='resource flex-group-center'><!-- -->
         <div class='resource-content flexrow flex-center flex-between'>
