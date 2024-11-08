@@ -52,4 +52,8 @@ export default class SWNNPC extends SWNActorBase {
     super.prepareDerivedData();
     this.xp = 11;//TODO remove
   }
+
+  rollSave(saveType) {
+    alert("TODO");
+  }
 }

@@ -94,8 +94,26 @@ export default class SWNCharacter extends SWNActorBase {
       max: number;
       permanent: number;
       cyberware: number;
-    };
+    };*/
 
+    // Calculate saves
+    const save = {};
+    const base = 16 - this.level.value;
+    save.physical = Math.max(
+      1,
+      base - Math.max(this.stats.str.mod, this.stats.con.mod)
+    );
+    save.evasion = Math.max(
+      1,
+      base - Math.max(this.stats.dex.mod, this.stats.int.mod)
+    );
+    save.mental = Math.max(
+      1,
+      base - Math.max(this.stats.wis.mod, this.stats.cha.mod)
+    );
+    save.luck = Math.max(1, base);
+    this.save = save;
+    /*
     schema.encumbrance =; // TODO
 
 
@@ -123,5 +141,9 @@ export default class SWNCharacter extends SWNActorBase {
 
     data["lvl"] =this.level.value;
     return data;
+  }
+
+  rollSave(saveType) {
+    alert("Rolling save: " + saveType);
   }
 }

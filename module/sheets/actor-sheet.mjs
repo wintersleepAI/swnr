@@ -1,4 +1,5 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
+import { getGameSettings } from '../helpers/register-settings.mjs';
 
 const { api, sheets } = foundry.applications;
 
@@ -29,6 +30,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       toggleEffect: this._toggleEffect,
       roll: this._onRoll,
       rest: this._onRest,
+      rollSave: this._onRollSave,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -102,6 +104,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       // Necessary for formInput and formFields helpers
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
+      gameSettings: getGameSettings(),
     };
 
     // Offloading context prep to a helper function
@@ -492,6 +495,14 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       });
       return roll;
     }
+  }
+
+  static async _onRollSave(event, target) {
+    event.preventDefault();
+    const dataset = target.dataset;
+    const saveType = dataset.saveType;
+    //alert(saveType);
+    this.actor.system.rollSave(saveType);
   }
 
   /** Helper Functions */

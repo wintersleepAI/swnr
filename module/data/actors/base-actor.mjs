@@ -70,4 +70,8 @@ export default class SWNActorBase extends foundry.abstract
     */
   }
 
+  rollSave(_saveType) {
+    console.log("rollSave call on base actor");
+  }
+
 }

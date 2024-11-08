@@ -127,5 +127,21 @@ export const registerSettings = function () {
         // A callback function which triggers when the setting is changed
       },
     });
-  };
+};
   
+export const getGameSettings = function () {
+  let settings = {
+    systemMigrationVersion: game.settings.get("swnr", "systemMigrationVersion"),
+    useHomebrewLuckSave: game.settings.get("swnr", "useHomebrewLuckSave"),
+    useRollNPCHD: game.settings.get("swnr", "useRollNPCHD"),
+    addShockMessage: game.settings.get("swnr", "addShockMessage"),
+    showTempAttrMod: game.settings.get("swnr", "showTempAttrMod"),
+    attrRoll: game.settings.get("swnr", "attrRoll"),
+    attackRoll: game.settings.get("swnr", "attackRoll"),
+    useTrauma: game.settings.get("swnr", "useTrauma"),
+    useCWNArmor: game.settings.get("swnr", "useCWNArmor"),
+    useCWNCyber: game.settings.get("swnr", "useCWNCyber"),
+    search: game.settings.get("swnr", "search"),
+  };
+  return settings;
+};

@@ -234,6 +234,29 @@
 .swnr .sheet-header .header-fields {
   flex: 1;
 }
+
+.swnr .sheet-header .header-group {
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+}
+
+.swnr .save-throw-button {
+  width: 90px;
+  height: 20px;
+  background-color: var(--level-background-color);
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  
+  margin: 7px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+
 .swnr .sheet-tabs {
   flex: 0;
 }
