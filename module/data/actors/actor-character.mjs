@@ -86,15 +86,18 @@ export default class SWNCharacter extends SWNActorBase {
       this.stats[key].label =
         game.i18n.localize(CONFIG.SWN.stats[key]) ?? key;
     }
+    //Cyberware
+    const cyberware = this.parent.items.filter((i) => i.type === "cyberware");
+    let cyberwareStrain = 0;
+    //Sum up cyberware strain. force to number
+    cyberwareStrain = cyberware.reduce(
+      (i, n) => i + Number(n.system.strain),
+      0
+    );
 
-    this.systemStrain.cyberware = 0;
+    // System Strain
+    this.systemStrain.cyberware = cyberwareStrain;
     this.systemStrain.max = this.stats.con.total - this.systemStrain.cyberware + this.systemStrain.permanent;
-    /*
-    systemStrain: {
-      max: number;
-      permanent: number;
-      cyberware: number;
-    };*/
 
     // Calculate saves
     const save = {};
@@ -116,16 +119,143 @@ export default class SWNCharacter extends SWNActorBase {
     /*
     schema.encumbrance =; // TODO
 
-
     itemTypes;
-
-    save: {
-      physical?: number;
-      evasion?: number;
-      mental?: number;
-      luck?: number;
-    };
     */
+    // Access calculation
+    this.access.max = this.stats.int.mod;
+    // If the character has a program skill add it
+    const programSkill = 
+      this.parent.items
+        .filter((i) => i.type === "skill")
+        .filter((i) => i.name === "Program");
+    if (programSkill && programSkill.length == 1) {
+      this.access.max += programSkill[0].system.rank;
+    }
+
+    const useCWNArmor = game.settings.get("swnr", "useCWNArmor") ? true : false;
+    const useTrauma = game.settings.get("swnr", "useTrauma") ? true : false;
+    
+    if (useTrauma) {
+      this.modifiedTraumaTarget = this.traumaTarget;
+    }
+
+    // AC
+    const armor = this.parent.items.filter(
+        (i) =>
+          i.type === "armor" &&
+          i.system.use &&
+          i.system.location === "readied"
+      );
+    const shields = armor.filter((i) => i.system.shield);
+    let armorId = "";
+    let baseAc = this.baseAc;
+    let baseMeleeAc = this.baseAc;
+    for (const a of armor) {
+      if (a.system.ac > baseAc) {
+        baseAc = a.system.ac;
+        if (a.system.meleeAc) {
+          baseMeleeAc = a.system.meleeAc;
+          if (useTrauma) {
+            this.modifiedTraumaTarget =
+              this.traumaTarget + a.system.traumaDiePenalty;
+          }
+        }
+        if (a.id) {
+          armorId = a.id;
+        }
+      }
+      if (a.system.soak.max > 0) {
+        this.soakTotal.max += a.system.soak.max;
+        this.soakTotal.value += a.system.soak.value;
+      }
+    }
+    for (const shield of shields) {
+      if (shield.system.shieldACBonus && shield.id != armorId) {
+        baseAc += shield.system.shieldACBonus;
+        if (shield.system.shieldMeleeACBonus) {
+          baseMeleeAc += shield.system.shieldMeleeACBonus;
+        }
+      }
+    }
+    this.ac = baseAc + this.stats.dex.mod;
+    if (useCWNArmor) {
+      this.meleeAc = baseMeleeAc + this.stats.dex.mod;
+    }
+
+    // effort
+    const psychicSkills = 
+      this.parent.items.filter(
+        (i) =>
+          i.type === "skill" &&
+          i.system.source.toLocaleLowerCase() ===
+            game.i18n.localize("swnr.skills.labels.psionic").toLocaleLowerCase()
+      );
+    const effort = this.effort;
+    effort.max =
+      Math.max(
+        1,
+        1 +
+          Math.max(this.stats.con.mod, this.stats.wis.mod) +
+          Math.max(0, ...psychicSkills.map((i) => i.system.rank))
+      ) + effort.bonus;
+    effort.value = effort.max - effort.current - effort.scene - effort.day;
+
+    // extra effort
+    const extraEffort = this.tweak.extraEffort;
+    extraEffort.value =
+      extraEffort.max -
+      extraEffort.current -
+      extraEffort.scene -
+      extraEffort.day;
+
+    //encumbrance
+    if (!this.encumbrance)
+      this.encumbrance = {
+        ready: { max: 0, value: 0 },
+        stowed: { max: 0, value: 0 },
+      };
+    const encumbrance = this.encumbrance;
+    encumbrance.ready.max = Math.floor(this.stats.str.total / 2);
+    encumbrance.stowed.max = this.stats.str.total;
+    const inventory = this.parent.items.filter(
+        (i) => i.type === "item" || i.type === "weapon" || i.type === "armor");
+    const itemInvCost = function (i) {
+      let itemSize = 1;
+      if (i.this.type === "item") {
+        const itemData = i.system;
+        const bundle = itemData.bundle;
+        itemSize = Math.ceil(
+          itemData.quantity / (bundle.bundled ? bundle.amount : 1)
+        );
+      } else {
+        if (i.system.quantity) {
+          // Weapons and armor can have qty
+          itemSize = i.system.quantity;
+        }
+      }
+      return itemSize * i.system.encumbrance;
+    };
+    encumbrance.ready.value = inventory
+      .filter((i) => i.system.location === "readied")
+      .map(itemInvCost)
+      .reduce((i, n) => i + n, 0);
+    encumbrance.stowed.value = inventory
+      .filter((i) => i.system.location === "stowed")
+      .map(itemInvCost)
+      .reduce((i, n) => i + n, 0);
+
+    const powers = this.parent.items.filter((i) => i.type == "power");
+
+    powers.sort(function (a, b) {
+      if (a.system.source == b.system.source) {
+        return a.system.level - b.system.level;
+      } else {
+        return a.system.source.localeCompare(b.system.source);
+      }
+    });
+    this.powers = powers;
+      
+    this.favorites = this.parent.items.filter((i) => i.system["favorite"]);;
   }
 
   getRollData() {
