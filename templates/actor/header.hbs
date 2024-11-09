@@ -196,38 +196,16 @@
         </div><!-- end grid -->
       </div><!-- end resource-group -->
       <div class='resource flex-group-center'><!-- -->
-        <div class='resource-content flexrow flex-center flex-between'>
-          <input
-            type='text'
-            name='system.power.value'
-            value='{{system.power.value}}'
-            data-dtype='Number'
-            class='field header'
-          />
-          <span> / </span>
-          <input
-            type='text'
-            name='system.power.max'
-            value='{{system.power.max}}'
-            data-dtype='Number'
-            class='field header'
-          />
-        </div>
-        <label for='system.power.value' class='resource-label'>
-          {{localize 'SWN.Actor.base.FIELDS.power.value.label'}}
-        </label>
+            {{!-- <svg version="1.1" x="0px" y="0px" viewBox="0 0 90 100" xml:space="preserve">
+							<path d="M45,100C-2.6,79.3,0,12.6,0,12.6c0-2.2,1.8-4,4.4-4.6l39.1-7.9C44,0,44.5,0,45,0c0.5,0,1,0,1.4,0.1L85.5,8
+								c2.6,0.5,4.4,2.4,4.4,4.6C90,12.6,92.6,79.3,45,100L45,100z"/>
+            </svg> --}}
+            {{formInput systemFields.ac value=system.ac localize=true}}
+              {{system.ac}}
       </div>
-
-
       <div class='resource flex-group-center'><!-- -->
-          
-          <div class="field">
-            <input type="text" class="nested-field short-field" value="123"/>
-            / XX
-          </div>
-          <label class='resource-label'>
-            Test
-          </label>
+        {{formGroup systemFields.ab value=system.ab localize=true}}
+
       </div>
     </div>
   </div>

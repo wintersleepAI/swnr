@@ -9,7 +9,6 @@ export default class SWNActorBase extends foundry.abstract
     const schema = {};
 
     schema.health = SWNShared.resourceField(10,10);
-    schema.power = SWNShared.resourceField(5,5); // TODO remove
     schema.biography = new fields.HTMLField();
 
     schema.access = SWNShared.resourceField(1,1); // CWN

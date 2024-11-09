@@ -38,7 +38,10 @@
       },
       "Character": {
         "FIELDS": {
-          "attributes.level.value": {"label": "Level"}
+          "ab": {"label": "Attack Bonus"},
+          "attributes" : {
+            "level.value": {"label": "Level"}
+          }
         }
       },
       "NPC": {

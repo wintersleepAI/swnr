@@ -221,7 +221,7 @@ export default class SWNCharacter extends SWNActorBase {
         (i) => i.type === "item" || i.type === "weapon" || i.type === "armor");
     const itemInvCost = function (i) {
       let itemSize = 1;
-      if (i.this.type === "item") {
+      if (i.type === "item") {
         const itemData = i.system;
         const bundle = itemData.bundle;
         itemSize = Math.ceil(
