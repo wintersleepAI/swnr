@@ -42,8 +42,8 @@
   font-family: "Roboto", sans-serif;
 }
 
-.swnr input[type="text"].field,
-.swnr input[type="number"].field,
+.swnr .header input[type="text"],
+.swnr .header input[type="number"],
 .swnr div.field {
   font-size: 14px;
   /* padding: 2px; */
@@ -85,8 +85,7 @@
   height: 100%;
 }
 
-.swnr input.short-field {
-  width: 40px;
+.swnr .short-field input {
 }
 
 .swnr input[type="text"].field:focus,

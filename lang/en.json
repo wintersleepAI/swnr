@@ -26,6 +26,7 @@
       "base": {
         "FIELDS": {
           "biography": {"label": "Biography"},
+          "ac": { "label": "AC" },
           "health": {
             "value": {"label": "Health"},
             "max": {"label": "Maximum Health"}
