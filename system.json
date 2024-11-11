@@ -58,7 +58,7 @@
             "htmlFields": ["description"]
         },
         "asset": {
-            "htmlFields": ["description"]
+            "htmlFields": ["description", "attackSpecial", "turnRoll"]
         },
         "program": {
             "htmlFields": ["description"]

@@ -692,6 +692,11 @@
         "tags": "Tags",
         "assets": "Assets",
         "assetType": "Asset Type",
+        "assetCategories": {
+          "force": "Force",
+          "cunning": "Cunning",
+          "wealth": "Wealth"
+        },
         "baseOfInfluence": "Base of Influence",
         "attackSource": "Source",
         "attackTarget": "Target",
@@ -699,6 +704,11 @@
         "attackSpecial": "Special Attack Note",
         "counter": "Counter",
         "note": "Note",
+        "noteTypes": {
+          "permission": "P",
+          "action": "A",
+          "special": "S"
+        },
         "turnRoll": "On Turn Log/Roll",
         "stealthed": "Is Stealthed?",
         "tl": "TL",

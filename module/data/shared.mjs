@@ -54,4 +54,9 @@ export default class SWNShared {
     const fields = foundry.data.fields;
     return new fields.StringField({ required: false, nullable: false });
   }
+  
+  static techLevel(required = true, initialValue = null) {
+    const fields = foundry.data.fields;
+    return new fields.NumberField({ required: required, nullable: true, integer: true, min: 0, max: CONFIG.SWN.maxTL, initial: initialValue });
+  }
 }
