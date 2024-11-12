@@ -1,5 +1,6 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
+import { headerFieldWidget } from '../helpers/handlebar.mjs';
 
 const { api, sheets } = foundry.applications;
 
@@ -105,6 +106,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
       gameSettings: getGameSettings(),
+      headerWidget: headerFieldWidget.bind(this),
     };
 
     // Offloading context prep to a helper function
