@@ -7,11 +7,13 @@ export default class SWNAsset extends SWNItemBase {
     'SWN.Item.Asset',
   ];
   
+  static get CurrentDataModelVersion() { return 1 }
+  
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
     
-    schema.catagory = SWNShared.stringChoices(CONFIG.SWN.assetCategories.cunning, CONFIG.SWN.assetCategories, true);
+    schema.category = SWNShared.stringChoices('cunning', CONFIG.SWN.assetCategories, true);
     schema.type = SWNShared.requiredString("Facility");
     schema.health = SWNShared.resourceField(1, 1)
     schema.rating = SWNShared.requiredNumber(1);
@@ -40,4 +42,24 @@ export default class SWNAsset extends SWNItemBase {
   }
   
   //TODO: Migrate and shim data (assetType -> category)
+  
+  static migrateDataSafe(data) {
+    console.log(data);
+    switch (data.dataModelVersion) {
+      case undefined:
+      case 0:
+        data = this.migrateToV1(data);
+    }    
+    
+    data.dataModelVersion = this.CurrentDataModelVersion;
+    return data;
+  }
+  
+  static migrateToV1(data) {
+    return {
+      ...data,
+      category: data.assetType
+      // TODO: Migrate old note field to new array
+    }
+  }
 }

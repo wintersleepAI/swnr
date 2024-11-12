@@ -1,12 +1,12 @@
 import SWNShared from '../shared.mjs';
+import SWNDataModelBase from "../datamodel-base.mjs";
 
-export default class SWNActorBase extends foundry.abstract
-  .TypeDataModel {
+export default class SWNActorBase extends SWNDataModelBase {
   static LOCALIZATION_PREFIXES = ["SWN.Actor.base"];
 
   static defineSchema() {
     const fields = foundry.data.fields;
-    const schema = {};
+    const schema = super.defineSchema();
 
     schema.health = SWNShared.resourceField(10,10);
     schema.biography = new fields.HTMLField();
