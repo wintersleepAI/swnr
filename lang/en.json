@@ -46,7 +46,8 @@
           "ab": {"label": "Attack Bonus"},
           "attributes" : {
             "level.value": {"label": "Level"}
-          }
+          },
+          "level": { "label": "XP" }
         }
       },
       "NPC": {

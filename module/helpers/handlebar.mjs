@@ -1,11 +1,37 @@
+
+
 export function headerFieldWidget(field, _groupConfig, inputConfig) {
     const fg = document.createElement("div");
     fg.classList.add("resource", "flex-group-center");
 
     const inputDiv = document.createElement("div");
     inputDiv.classList.add("resource", "header", "flexrow");
-    const input = field.toInput({ value: inputConfig.value });
+    
+    
+    let input = null;
+    if (field.fields) {
+        const spanSep = document.createElement("span");
+        spanSep.classList.add("nested-sep");
+        spanSep.innerHTML = "/";
+        const fieldCount = Object.keys(field.fields).length;
+        input = document.createElement("div");
+        input.classList.add("field", "resource-content");
+        for (const [key, value] of Object.entries(field.fields)) {
+            // let subInput = document.createElement("space");
+            // subInput.innerHTML = key;
+            let subInput = value.toInput({ value: inputConfig[key] });
+            subInput.classList.add("nested-field", "header");
+            input.appendChild(subInput);
+            input.appendChild(spanSep.cloneNode(true));
+        }
+    } else {
+        input = field.toInput({ value: inputConfig.value });
+    }
 
+    if (input == null) {
+        input = document.createElement("span");
+        input.innerHTML = "error hlp";
+    }
     inputDiv.appendChild(input);
     fg.appendChild(inputDiv);
 
@@ -15,6 +41,7 @@ export function headerFieldWidget(field, _groupConfig, inputConfig) {
     fg.appendChild(label);
     return fg;
 }
+
 
 export function headerFieldValMaxWidget(field, _groupConfig, inputConfig) {
     console.log("headerFieldValMaxWidget");
