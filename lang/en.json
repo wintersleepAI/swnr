@@ -27,6 +27,7 @@
         "FIELDS": {
           "biography": {"label": "Biography"},
           "ac": { "label": "AC" },
+          "baseAc": { "label": "Base AC" },
           "health": {
             "value": {"label": "Health"},
             "max": {"label": "Maximum Health"}
@@ -34,6 +35,9 @@
           "power": {
             "value": {"label": "Power"},
             "max": {"label": "Maximum Power"}
+          },
+          "access": {
+            "label": "Access"
           }
         }
       },
