@@ -15,8 +15,8 @@ export default class SWNActorBase extends foundry.abstract
     schema.traumaTarget = SWNShared.requiredNumber(6); // CWN
     schema.hitDie = SWNShared.requiredString("d6");
     schema.baseAc = SWNShared.requiredNumber(10);
-    schema.ac = SWNShared.requiredString("");
-    schema.meleeAc = SWNShared.requiredNumber(10);
+    // schema.ac = SWNShared.requiredString("");
+    // schema.meleeAc = SWNShared.requiredNumber(10);
     schema.ab = SWNShared.requiredNumber(1);
     schema.meleeAb = SWNShared.requiredNumber(1);
     schema.systemStrain = new fields.SchemaField({
@@ -67,6 +67,9 @@ export default class SWNActorBase extends foundry.abstract
     };
     modifiedTraumaTarget: number;
     */
+    //TODO
+    this.ac = baseAc + 0;
+    this.meleeAc = baseAc + 0;
   }
 
   rollSave(_saveType) {

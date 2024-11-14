@@ -49,8 +49,8 @@ export default class SWNNPC extends SWNActorBase {
   }
 
   prepareDerivedData() {
+    // Any derived data should be calculated here and added to "this."
     super.prepareDerivedData();
-    this.xp = 11;//TODO remove
   }
 
   rollSave(saveType) {

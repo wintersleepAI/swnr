@@ -1,5 +1,12 @@
 
-
+/** 
+ * Generate the HTML for header input elements.
+ * Only works for fields and derived /prepared data elements cannot be used.
+ * invoked like  {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget readonly=0}} 
+ * readonly is optional sets what attribute should be set to readonly
+ * for nested fields, the readonly attribute is to the index of the field in the nested fields object
+ * for non-nested, 0 means the field is readonly 
+ */
 export function headerFieldWidget(field, _groupConfig, inputConfig) {
     const fg = document.createElement("div");
     fg.classList.add("resource", "flex-group-center");
@@ -8,6 +15,7 @@ export function headerFieldWidget(field, _groupConfig, inputConfig) {
     inputDiv.classList.add("resource", "header", "flexrow");
     
     
+    const readOnly = inputConfig.readonly != null ? inputConfig.readonly : -1;
     let input = null;
     if (field.fields) {
         const spanSep = document.createElement("span");
@@ -16,16 +24,26 @@ export function headerFieldWidget(field, _groupConfig, inputConfig) {
         const fieldCount = Object.keys(field.fields).length;
         input = document.createElement("div");
         input.classList.add("field", "resource-content");
+        let count = 0;
         for (const [key, value] of Object.entries(field.fields)) {
             // let subInput = document.createElement("space");
             // subInput.innerHTML = key;
-            let subInput = value.toInput({ value: inputConfig[key] });
+            const val = inputConfig.value[key];
+            let subInput = value.toInput({ value: val });
             subInput.classList.add("nested-field", "header");
+            if (readOnly == count++) {
+                subInput.setAttribute("readonly", true);
+                subInput.classList.add("readonly");
+            }
             input.appendChild(subInput);
             input.appendChild(spanSep.cloneNode(true));
         }
     } else {
         input = field.toInput({ value: inputConfig.value });
+        if (readOnly == 0) {
+            input.setAttribute("readonly", true);
+            input.classList.add("readonly");
+        }
     }
 
     if (input == null) {
@@ -42,28 +60,3 @@ export function headerFieldWidget(field, _groupConfig, inputConfig) {
     return fg;
 }
 
-
-export function headerFieldValMaxWidget(field, _groupConfig, inputConfig) {
-    console.log("headerFieldValMaxWidget");
-    console.log(field);
-    console.log(_groupConfig);
-    console.log(inputConfig);
-    // let val = field.fields.value.toInput();
-    // let max = field.fields.max.toInput();
-
-    // console.log(val.outerHTML + " " + max.outerHTML);
-    //console.log(field.toInput());
-    // let x = foundry.applications.fields.createFormGroup(field, _groupConfig, inputConfig);
-    // console.log(typeof x);
-    // console.log(x);
-
-    //return val.outerHTML + " \ " + max.outerHTML; 
-
-    const fg = document.createElement("div");
-    // fg.appendChild(val);
-    // fg.appendChild(max);
-
-    // fg.className = "resource flex-group-center";
-    // fg.innerHTML = `field: ${field}`;
-    return fg;
-}
