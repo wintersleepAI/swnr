@@ -34,14 +34,15 @@ export default class SWNAsset extends SWNItemBase {
     schema.counter = SWNShared.emptyString();
     
     schema.turnRoll = new fields.HTMLField(); // Special action taken on or between turns
-    schema.note = new fields.ArrayField(
-        SWNShared.stringChoices(CONFIG.SWN.assetNoteTypes.permission, CONFIG.SWN.assetNoteTypes, true)
-    );
+    schema.note = SWNShared.emptyString();
+    schema.qualities = new fields.SchemaField({
+      permission: new fields.BooleanField({initial: false}),
+      action: new fields.BooleanField({initial: false}),
+      special: new fields.BooleanField({initial: false}),
+    })
     
     return schema;
   }
-  
-  //TODO: Migrate and shim data (assetType -> category)
   
   static migrateDataSafe(data) {
     console.log(data);
@@ -56,10 +57,22 @@ export default class SWNAsset extends SWNItemBase {
   }
   
   static migrateToV1(data) {
+    let qualities = data.qualities;
+    if (qualities == null) {
+      const noteSections = data.note.split(',')
+          .map(s => s.trim().toUpperCase());
+
+      qualities = {
+        permission: noteSections.includes('P'),
+        action: noteSections.includes('A'),
+        special: noteSections.includes('S'),
+      };
+    }
+    
     return {
       ...data,
-      category: data.assetType
-      // TODO: Migrate old note field to new array
+      category: data.assetType,
+      qualities: qualities
     }
   }
 }
