@@ -38,7 +38,8 @@
           },
           "access": {
             "label": "Access"
-          }
+          }, 
+          "speed" : { "label": "Movement" }
         }
       },
       "Character": {
@@ -538,6 +539,7 @@
       "system-strain": "System Strain",
       "ss": "Strain",
       "ac": "AC",
+      "acCWN": "AC (Ranged/Melee)",
       "ab": "AB",
       "credit-change": "Add/Remove",
       "tabs": {
