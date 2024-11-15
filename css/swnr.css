@@ -328,6 +328,12 @@
   text-align: left;
   display: flex;
 }
+
+.swnr .items-center {
+  text-align: center;
+  align-items: center;
+}
+
 .swnr .items-list {
   list-style: none;
   margin: 0;

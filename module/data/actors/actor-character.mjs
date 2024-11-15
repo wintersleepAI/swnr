@@ -64,9 +64,9 @@ export default class SWNCharacter extends SWNActorBase {
         value: SWNShared.requiredNumber(0),
         max: SWNShared.requiredNumber(0),
       })),
-      debtDisplay: SWNShared.emptyString(),
-      owedDisplay: SWNShared.emptyString(),
-      balanceDisplay: SWNShared.emptyString(),
+      debtDisplay: SWNShared.requiredString("Debt"),
+      owedDisplay: SWNShared.requiredString("Owed"),
+      balanceDisplay: SWNShared.requiredString("Balance"),
     });
 
     return schema;

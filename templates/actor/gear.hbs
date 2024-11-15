@@ -1,5 +1,37 @@
 {{! Gear Tab }}
 <section class='tab gear {{tab.cssClass}}' data-group='primary' data-tab='gear'>
+  <div class="flex flexrow gap" style="column-gap:10%">
+    <div class="flex flex-col items-center">
+      {{formInput systemFields.credits.fields.debt value=system.credits.debt localize=true}}
+      <label for="system.credits.debt">{{system.tweak.debtDisplay}}
+      <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
+        title="{{localize 'swnr.sheet.credit-change'}} {{system.tweak.debtDisplay}}"
+        data-credit-type="debt">
+          <i class="fas fa-coins"></i>
+      </a> 
+      </label>
+    </div>
+    <div class="flex flex-col items-center">
+      {{formInput systemFields.credits.fields.balance value=system.credits.balance localize=true}}
+      <label for="system.credits.balance">{{system.tweak.balanceDisplay}}
+      <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
+        title="{{localize 'swnr.sheet.credit-change'}} {{system.tweak.balanceDisplay}}"
+        data-credit-type="balance">
+          <i class="fas fa-coins"></i>
+      </a> 
+      </label>
+    </div>
+    <div class="flex flex-col items-center">
+      {{formInput systemFields.credits.fields.owed value=system.credits.owed localize=true}}
+      <label for="system.credits.owed">{{system.tweak.owedDisplay}}
+      <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
+        title="{{localize 'swnr.sheet.credit-change'}} {{system.tweak.owedDisplay}}"
+        data-credit-type="owed">
+          <i class="fas fa-coins"></i>
+      </a> 
+      </label>
+    </div>
+  </div>
   <ol class='items-list'>
     <li class='item flexrow items-header'>
       <div class='item-name'>{{localize 'Name'}}</div>
