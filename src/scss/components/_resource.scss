@@ -1,3 +1,22 @@
+/* Sets the position of the health-bar and strain-bar and sets it to the propper size. */
+@mixin resource-bar-size-pos {
+  position: relative;
+  bottom: -10px;
+
+  width: 80%;
+  height: 20px;
+
+  border: 1px solid var(--border-color);
+
+  box-shadow: 0 0 5px inset rgb(0,0,0,0.4);
+  background-color: whitesmoke;
+}
+
+@mixin resource-bar-fill($background) {
+  background: $background;
+  height: 100%;
+}
+
 .resource-label {
   font-weight: bold;
 }
@@ -9,4 +28,32 @@
 .stat-score,
 .stat-mod {
   flex: 0 0 44px;
+}
+
+
+.health-bar {
+  @include resource-bar-size-pos;
+  
+  .health-fill {
+    @include resource-bar-fill(var(--health-bar-color));
+  }
+}
+
+.strain-bar{
+ @include resource-bar-size-pos;
+  .strain-fill {
+    @include resource-bar-fill(var(--strain-bar-color));
+  }
+}
+
+/* Positions the HP text in the center of the healthbar or strainbar */
+.health-text, .strain-text{
+  display: flex;
+  position: relative;
+  top: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
 }

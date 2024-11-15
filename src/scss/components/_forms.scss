@@ -4,22 +4,136 @@
 
 .sheet-header {
   flex: 0 auto;
-  overflow: hidden;
+  /* overflow: hidden; TODO */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-bottom: 10px;
 
-  .profile-img {
-    flex: 0 0 100px;
+  .header-fields {
+    flex: 1;
+  }
+
+   input[type="text"],
+   input[type="number"],
+   div.field {
+    font-size: 14px;
+    /* padding: 2px; */
+    margin: 2px;
+    border: none;
+    border-bottom: 1px solid $c-dark;
+    border-radius: 4px;
+    border-radius: 0%;
+    /* background: var(--swnr-c-white); */
+    background: none;
+    color: $c-dark;
+    outline: 1px solid transparent;
+    height: var(--input-height);
+    line-height: var(--input-height);
+    user-select: text;
+    transition: outline-color 0.5s;
+    min-width: 20px;
+  }
+  
+  .profile-img,
+  .item-img {
+    width: 150px;
+    max-width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+
+    box-shadow: 0 0 10px inset rgb(0,0,0,0.4);
+    background: var(--background-portrait-image);
+    background-size: 150px;
+
+    display: flex;
+    position: relative;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    
+    @include unify-parent("div") {
+      margin-right: 10px;
+    }
+    
+    @include unify-parent("img") {
+      height: 100%;
+      width: 100%;
+      border: none;
+      border-radius: 50%;
+      margin-right: 0px;
+
+      position: absolute;
+    }
+  }
+  
+  .item-img {
+    width: 100px;
+    max-width: 100px;
     height: 100px;
-    margin-right: 10px;
+
+    border-radius: 0;
+    background-size: 100px;
+    
+    @include unify-parent("img") {
+      border-radius: 0;
+    }
+  }
+
+  .thin-bar {
+    margin-top:-5px;
+    margin-bottom:-15px;
   }
 
   .header-fields {
     flex: 1;
   }
+
+  .header-group {
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+  }
+}
+
+div.field {
+  padding-top: 0px;
+}
+input[type="text"],
+input[type="number"] {
+  &.nested-field {
+    border: none;
+    background: transparent;
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    color: inherit;
+    font-size: inherit;
+    width: calc(50% - 30px);
+    height: 100%;
+  }
+}
+
+input[type="text"],
+div {
+  &.field:focus {
+    outline-color: var(--swnr-c-dark);
+    /* outline: 2px solid var(--input-focus-outline-color); */
+  }
+}
+
+input[type="checkbox"].small-checkbox {
+  width: 15px;
+  height: 15px;
+  margin: 0px;
+  --checkbox-size: 15px;
+}
+
+.nested-sep {
+  margin: 0px;
+  padding: 0px;
 }
 
 .sheet-tabs {
@@ -30,6 +144,7 @@
 .sheet-body .tab,
 .sheet-body .tab .editor {
   height: 100%;
+  overflow-y: scroll;
 }
 
 .tab.biography {
@@ -48,4 +163,19 @@
   .tox-edit-area {
     padding: 0 8px;
   }
+}
+
+.form-group label,
+.resource-label {
+  font-weight: bold;
+  font-size: 12px;
+  margin: -5px 0px;
+}
+
+.form-group {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
 }

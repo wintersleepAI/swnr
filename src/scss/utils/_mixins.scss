@@ -1,3 +1,5 @@
+@use "sass:selector";
+
 @mixin element-invisible {
   position: absolute;
 
@@ -13,4 +15,10 @@
 
 @mixin hide {
   display: none;
+}
+
+@mixin unify-parent($child) {
+  @at-root #{selector.unify(&, $child)} {
+    @content;
+  }
 }

@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import"./layout.css";
-
 :root {
   --swnr-c-dark: #191813;
   --swnr-c-faint: #c9c7b8;
@@ -21,7 +19,13 @@
   --swnr-c-groove: #11121f;
 }
 
-.swnr { 
+/* Global styles */
+/* Styles limited to swnr sheets */
+.swnr {
+  /* Sets the position of the health-bar and strain-bar and sets it to the propper size. */
+  /* Positions the HP text in the center of the healthbar or strainbar */
+}
+.swnr {
   --background-portrait-image: url("../../../../ui/parchment-white.jpg");
   --portrait-icon-color: rgb(124,124,124);
   --health-bar-color: linear-gradient(45deg, rgba(48,121,22,1) 0%, rgba(97,190,80,1) 100%);
@@ -30,21 +34,29 @@
   --over-filled-bar-color: linear-gradient(45deg, rgb(199, 57, 57) 0%, rgb(219 108 108) 100%);
   /* Replace with defined theme colors? */
   --border-color: rgb(170,170,170);
-  
   --font-color: rgb(28,28,28);
   --second-font-color: rgb(71, 71, 71);
   --active-font-color: rgb(5, 99, 150);
   --input-focus-color: rgb(5, 99, 150);
 }
-
-/* Styles limited to swnr sheets */
 .swnr .item-form {
   font-family: "Roboto", sans-serif;
 }
-
-.swnr .header input[type="text"],
-.swnr .header input[type="number"],
-.swnr div.field {
+.swnr .sheet-header {
+  flex: 0 auto;
+  /* overflow: hidden; TODO */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.swnr .sheet-header .header-fields {
+  flex: 1;
+}
+.swnr .sheet-header input[type=text],
+.swnr .sheet-header input[type=number],
+.swnr .sheet-header div.field {
   font-size: 14px;
   /* padding: 2px; */
   margin: 2px;
@@ -61,19 +73,63 @@
   user-select: text;
   transition: outline-color 0.5s;
   min-width: 20px;
-} 
+}
+.swnr .sheet-header .profile-img,
+.swnr .sheet-header .item-img {
+  width: 150px;
+  max-width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 10px inset rgba(0, 0, 0, 0.4);
+  background: var(--background-portrait-image);
+  background-size: 150px;
+  display: flex;
+  position: relative;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+}
+.swnr .sheet-header div.profile-img, .swnr .sheet-header div.item-img {
+  margin-right: 10px;
+}
 
+.swnr .sheet-header img.profile-img, .swnr .sheet-header img.item-img {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 50%;
+  margin-right: 0px;
+  position: absolute;
+}
+
+.swnr .sheet-header .item-img {
+  width: 100px;
+  max-width: 100px;
+  height: 100px;
+  border-radius: 0;
+  background-size: 100px;
+}
+.swnr .sheet-header img.item-img {
+  border-radius: 0;
+}
+
+.swnr .sheet-header .thin-bar {
+  margin-top: -5px;
+  margin-bottom: -15px;
+}
+.swnr .sheet-header .header-fields {
+  flex: 1;
+}
+.swnr .sheet-header .header-group {
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+}
 .swnr div.field {
   padding-top: 0px;
 }
-
-.swnr .nested-sep {
-  margin: 0px;
-  padding: 0px;
-}
-
-.swnr input[type="text"].nested-field,
-.swnr input[type="number"].nested-field{
+.swnr input[type=text].nested-field,
+.swnr input[type=number].nested-field {
   border: none;
   background: transparent;
   padding: 0px;
@@ -84,178 +140,21 @@
   width: calc(50% - 30px);
   height: 100%;
 }
-
-.swnr .short-field input {
-}
-
-.swnr input[type="text"].field:focus,
+.swnr input[type=text].field:focus,
 .swnr div.field:focus {
   outline-color: var(--swnr-c-dark);
   /* outline: 2px solid var(--input-focus-outline-color); */
 }
-
-.swnr .sheet-header {
-  flex: 0 auto;
-  /* overflow: hidden; TODO */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-bottom: 10px;
+.swnr input[type=checkbox].small-checkbox {
+  width: 15px;
+  height: 15px;
+  margin: 0px;
+  --checkbox-size: 15px;
 }
-
-.swnr .sheet-header div.profile-img,
-.swnr .sheet-header div.item-img {
-  margin-right: 10px;
+.swnr .nested-sep {
+  margin: 0px;
+  padding: 0px;
 }
-
-.swnr .sheet-header .profile-img,
-.swnr .sheet-header .item-img {
-  width: 150px;
-  max-width: 150px;
-  height: 150px;
-
-  border-radius: 50%;
-  border: 1px solid var(--border-color);
-
-  box-shadow: 0 0 10px inset rgb(0,0,0,0.4);
-  background: var(--background-portrait-image);
-  background-size: 150px;
-
-  display: flex;
-  position: relative;
-  justify-content: end;
-  align-items: center;
-  flex-direction: column;
-}
-
-.swnr .sheet-header .item-img {
-  width: 100px;
-  max-width: 100px;
-  height: 100px;
-
-  border-radius: 0%;
-  background-size: 100px;
-}
-
-.swnr .sheet-header  img.profile-img,
-.swnr .sheet-header  img.item-img {
-  height: 100%;
-  width: 100%;
-  border: none;
-  border-radius: 50%;
-  margin-right: 0px;
-
-  position: absolute;
-}
-
-.swnr .sheet-header  img.item-img {
-  border-radius: 0%;
-}
-
-
-.swnr .portrait-button{
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-
-  background: var(--background-portrait-image);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 0 10px inset rgb(0,0,0,0.4);
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  cursor: pointer;
-}
-
-.swnr .portrait-button i{
-  color: var(--portrait-icon-color);
-}
-
-.swnr .portrait-button i.d20-glowing{
-  color: var(--active-font-color);
-  animation: pulse 3s infinite;
-}
-
-.swnr .portrait-button:hover i{
-  color: var(--font-color);
-  animation: unset;
-}
-
-.swnr .portrait-button:hover{
-  border: 1px solid var(--input-focus-color);
-}
-
-/* Sets the position of the health-bar and strain-bar and sets it to the propper size. */
-.swnr .health-bar, .swnr .strain-bar{
-  position: relative;
-  bottom: -10px;
-
-  width: 80%;
-  height: 20px;
-
-  border: 1px solid var(--border-color);
-
-  box-shadow: 0 0 5px inset rgb(0,0,0,0.4);
-  background-color: whitesmoke;
-}
-
-.swnr .health-bar .health-fill{
-  background: var(--health-bar-color);
-  height: 100%;
-}
-
-.swnr .strain-bar .strain-fill{
-  background: var(--strain-bar-color);
-  height: 100%;
-}
-
-/* Positions the HP text in the center of the healthbar or strainbar */
-.swnr .health-text, .swnr .strain-text{
-  display: flex;
-  position: relative;
-  top: -100%;
-  
-  width: 100%;
-  height: 100%;
-
-  justify-content: center;
-}
-
-.swnr .sheet-header .thin-bar {
-  margin-top:-5px;
-  margin-bottom:-15px;
-}
-
-.swnr .sheet-header .header-fields {
-  flex: 1;
-}
-
-.swnr .sheet-header .header-group {
-  border: 1px solid var(--border-color);
-  border-radius: 2px;
-}
-
-.swnr .save-throw-button {
-  width: 105;
-  height: 20px;
-  background-color: var(--level-background-color);
-  border-radius: 5px;
-  border: 1px solid var(--border-color);
-  
-  margin: 4px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  cursor: pointer;
-}
-
-
 .swnr .sheet-tabs {
   flex: 0;
 }
@@ -281,11 +180,8 @@
 .swnr .resource-label {
   font-weight: bold;
   font-size: 12px;
-  margin: 0px;
-  margin-top: -5px;
-  margin-bottom: -5px;
+  margin: -5px 0px;
 }
-
 .swnr .form-group {
   margin: 0;
   padding: 0;
@@ -293,7 +189,9 @@
   flex-direction: column;
   align-items: inherit;
 }
-
+.swnr .resource-label {
+  font-weight: bold;
+}
 .swnr .stat {
   margin-bottom: 2px;
 }
@@ -301,14 +199,40 @@
 .swnr .stat-mod {
   flex: 0 0 44px;
 }
-
-.swnr input[type="checkbox"].small-checkbox {
-  width: 15px;
-  height: 15px;
-  margin: 0px;
-  --checkbox-size: 15px;
+.swnr .health-bar {
+  position: relative;
+  bottom: -10px;
+  width: 80%;
+  height: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 5px inset rgba(0, 0, 0, 0.4);
+  background-color: whitesmoke;
 }
-
+.swnr .health-bar .health-fill {
+  background: var(--health-bar-color);
+  height: 100%;
+}
+.swnr .strain-bar {
+  position: relative;
+  bottom: -10px;
+  width: 80%;
+  height: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 5px inset rgba(0, 0, 0, 0.4);
+  background-color: whitesmoke;
+}
+.swnr .strain-bar .strain-fill {
+  background: var(--strain-bar-color);
+  height: 100%;
+}
+.swnr .health-text, .swnr .strain-text {
+  display: flex;
+  position: relative;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
 .swnr .items-header {
   height: 28px;
   margin: 2px 0;
@@ -328,12 +252,6 @@
   text-align: left;
   display: flex;
 }
-
-.swnr .items-center {
-  text-align: center;
-  align-items: center;
-}
-
 .swnr .items-list {
   list-style: none;
   margin: 0;
@@ -528,3 +446,44 @@
 .swnr .effects .item .effect-controls {
   border: none;
 }
+.swnr .portrait-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: var(--background-portrait-image);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 10px inset rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.swnr .portrait-button:hover {
+  border: 1px solid var(--input-focus-color);
+}
+.swnr .portrait-button i {
+  color: var(--portrait-icon-color);
+}
+.swnr .portrait-button i.d20-glowing {
+  color: var(--active-font-color);
+  animation: pulse 3s infinite;
+}
+.swnr .portrait-button i:hover i {
+  color: var(--font-color);
+  animation: unset;
+}
+.swnr .save-throw-button {
+  width: 105;
+  height: 20px;
+  background-color: var(--level-background-color);
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  margin: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=swnr.css.map */
