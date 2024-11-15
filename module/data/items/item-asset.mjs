@@ -7,8 +7,6 @@ export default class SWNAsset extends SWNItemBase {
     'SWN.Item.Asset',
   ];
   
-  static get CurrentDataModelVersion() { return 1 }
-  
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
@@ -44,35 +42,23 @@ export default class SWNAsset extends SWNItemBase {
     return schema;
   }
   
-  static migrateDataSafe(data) {
-    console.log(data);
-    switch (data.dataModelVersion) {
-      case undefined:
-      case 0:
-        data = this.migrateToV1(data);
-    }    
-    
-    data.dataModelVersion = this.CurrentDataModelVersion;
-    return data;
-  }
-  
-  static migrateToV1(data) {
-    let qualities = data.qualities;
-    if (qualities == null) {
+  static migrateData(data) {
+    if (data.qualities == null) {
       const noteSections = data.note.split(',')
           .map(s => s.trim().toUpperCase());
 
-      qualities = {
+      data.qualities = {
         permission: noteSections.includes('P'),
         action: noteSections.includes('A'),
         special: noteSections.includes('S'),
       };
     }
-    
-    return {
-      ...data,
-      category: data.assetType,
-      qualities: qualities
+
+    if (data.category == null) {
+      data.category = data.assetType ?? 'cunning';
     }
+
+    return data;
   }
+  
 }

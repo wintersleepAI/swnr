@@ -1,10 +1,10 @@
 import SWNShared from '../shared.mjs';
-import SWNDataModelBase from "../datamodel-base.mjs";
 
-export default class SWNItemBase extends SWNDataModelBase {
+export default class SWNItemBase extends foundry.abstract
+  .TypeDataModel {
   static defineSchema() {
     const fields = foundry.data.fields;
-    const schema = super.defineSchema();
+    const schema = {};
 
     schema.description = new fields.HTMLField();
     schema.favorite = new fields.BooleanField({initial: false});
