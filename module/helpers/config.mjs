@@ -58,9 +58,3 @@ SWN.assetCategories = {
   cunning: 'swnr.sheet.faction.assetCategories.cunning',
   wealth: 'swnr.sheet.faction.assetCategories.wealth',
 }
-
-SWN.assetNoteTypes = {
-  permission: 'swnr.sheet.faction.noteTypes.permission',
-  action: 'swnr.sheet.faction.noteTypes.action',
-  special: 'swnr.sheet.faction.noteTypes.special',
-}
