@@ -14,8 +14,11 @@
 
 /* Styles limited to swnr sheets */
 .swnr {
+  @import "utils/system-variables";
+  
   @import 'components/forms';
   @import 'components/resource';
   @import 'components/items';
   @import 'components/effects';
+  @import "components/buttons";
 }

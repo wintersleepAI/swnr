@@ -1,0 +1,50 @@
+.portrait-button{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+
+  background: var(--background-portrait-image);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 10px inset rgb(0,0,0,0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  &:hover{
+    border: 1px solid var(--input-focus-color);
+  }
+
+  i{
+    color: var(--portrait-icon-color);
+
+    &.d20-glowing {
+      color: var(--active-font-color);
+      animation: pulse 3s infinite;
+    }
+
+    &:hover i{
+      color: var(--font-color);
+      animation: unset;
+    }
+  }
+}
+
+.save-throw-button {
+  width: 105px;
+  height: 20px;
+  /*background-color: var(--level-background-color);*/
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+
+  margin: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
