@@ -265,8 +265,7 @@
   margin: 2px;
   border: none;
   border-bottom: 1px solid var(--swnr-c-dark);
-  border-radius: 4px;
-  border-radius: 0%;
+  border-radius: 0;
   /* background: var(--swnr-c-white); */
   background: none;
   color: var(--swnr-c-dark);
@@ -302,7 +301,7 @@
   width: 100%;
   border: none;
   border-radius: 50%;
-  margin-right: 0px;
+  margin-right: 0;
   position: absolute;
 }
 
@@ -329,14 +328,14 @@
   border-radius: 2px;
 }
 .swnr div.field {
-  padding-top: 0px;
+  padding-top: 0;
 }
 .swnr input[type=text].nested-field,
 .swnr input[type=number].nested-field {
   border: none;
   background: transparent;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   outline: none;
   color: inherit;
   font-size: inherit;
@@ -351,12 +350,12 @@
 .swnr input[type=checkbox].small-checkbox {
   width: 15px;
   height: 15px;
-  margin: 0px;
+  margin: 0;
   --checkbox-size: 15px;
 }
 .swnr .nested-sep {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 .swnr .sheet-tabs {
   flex: 0;
@@ -383,7 +382,7 @@
 .swnr .resource-label {
   font-weight: bold;
   font-size: 12px;
-  margin: -5px 0px;
+  margin: -5px 0;
 }
 .swnr .form-group {
   margin: 0;
@@ -681,7 +680,7 @@
   animation: unset;
 }
 .swnr .save-throw-button {
-  width: 105;
+  width: 105px;
   height: 20px;
   background-color: var(--level-background-color);
   border-radius: 5px;

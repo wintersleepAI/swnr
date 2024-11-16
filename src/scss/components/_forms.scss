@@ -23,8 +23,7 @@
     margin: 2px;
     border: none;
     border-bottom: 1px solid $c-dark;
-    border-radius: 4px;
-    border-radius: 0%;
+    border-radius: 0;
     /* background: var(--swnr-c-white); */
     background: none;
     color: $c-dark;
@@ -64,7 +63,7 @@
       width: 100%;
       border: none;
       border-radius: 50%;
-      margin-right: 0px;
+      margin-right: 0;
 
       position: absolute;
     }
@@ -99,15 +98,15 @@
 }
 
 div.field {
-  padding-top: 0px;
+  padding-top: 0;
 }
 input[type="text"],
 input[type="number"] {
   &.nested-field {
     border: none;
     background: transparent;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     outline: none;
     color: inherit;
     font-size: inherit;
@@ -127,13 +126,13 @@ div {
 input[type="checkbox"].small-checkbox {
   width: 15px;
   height: 15px;
-  margin: 0px;
+  margin: 0;
   --checkbox-size: 15px;
 }
 
 .nested-sep {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .sheet-tabs {
@@ -169,7 +168,7 @@ input[type="checkbox"].small-checkbox {
 .resource-label {
   font-weight: bold;
   font-size: 12px;
-  margin: -5px 0px;
+  margin: -5px 0;
 }
 
 .form-group {
