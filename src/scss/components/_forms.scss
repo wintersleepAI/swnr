@@ -22,11 +22,11 @@
     /* padding: 2px; */
     margin: 2px;
     border: none;
-    border-bottom: 1px solid $c-dark;
+    border-bottom: 1px solid var(--swnr-c-dark);
     border-radius: 0;
     /* background: var(--swnr-c-white); */
     background: none;
-    color: $c-dark;
+    color: var(--swnr-c-dark);
     outline: 1px solid transparent;
     height: var(--input-height);
     line-height: var(--input-height);
@@ -156,7 +156,7 @@ input[type="checkbox"].small-checkbox {
 
 .tox {
   .tox-editor-container {
-    background: $c-white;
+    background: var(--swnr-c-white);
   }
 
   .tox-edit-area {

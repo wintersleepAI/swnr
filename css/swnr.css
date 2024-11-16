@@ -682,7 +682,7 @@
 .swnr .save-throw-button {
   width: 105px;
   height: 20px;
-  background-color: var(--level-background-color);
+  /*background-color: var(--level-background-color);*/
   border-radius: 5px;
   border: 1px solid var(--border-color);
   margin: 4px;
