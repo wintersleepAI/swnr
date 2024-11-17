@@ -1,3 +1,7 @@
+@use "../utils/variables";
+
+// Effects Styles
+
 // Section Header
 .effects-header {
   height: 28px;
@@ -5,7 +9,7 @@
   padding: 0;
   align-items: center;
   background: rgba(0, 0, 0, 0.05);
-  border: $border-groove;
+  border: variables.$border-groove;
   font-weight: bold;
   > * {
     font-size: 14px;
@@ -99,7 +103,7 @@
     padding: 0;
     align-items: center;
     background: rgba(0, 0, 0, 0.05);
-    border: $border-groove;
+    border: variables.$border-groove;
     font-weight: bold;
     > * {
       font-size: 12px;
