@@ -46,6 +46,13 @@ SWN.ammoTypes = {
   infinite: 'swnr.ammo.infinite',
 };
 
+SWN.programTypes = {
+  verb: 'swnr.program.verb',
+  subject: 'swnr.program.subject',
+  dataFile: 'swnr.program.dataFile',
+  running: 'swnr.program.running'
+}
+
 SWN.saveTypes = {
   physical: 'swnr.sheet.saves.physical',
   mental: 'swnr.sheet.saves.mental',
