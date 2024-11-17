@@ -10,13 +10,13 @@ export default class SWNProgram extends SWNItemBase {
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
-    schema.cost = new fields.NumberField({initial: 0});
+    schema.cost = SWNShared.requiredNumber(0);
     schema.type = SWNShared.stringChoices("dataFile", CONFIG.SWN.programTypes, true);
-    schema.accessCost = new fields.NumberField({initial: 0});
-    schema.target = new fields.StringField({initial: ""});
+    schema.accessCost = SWNShared.requiredNumber(0);
+    schema.target = SWNShared.requiredString("");
     schema.selfTerminating = new fields.BooleanField({initial: false});
-    schema.useAffects = new fields.StringField({initial: ""});
-    schema.skillCheckMod = new fields.NumberField({initial: 0})
+    schema.useAffects = SWNShared.requiredString("");
+    schema.skillCheckMod = SWNShared.requiredNumber(0);
 
     return schema;
   }
