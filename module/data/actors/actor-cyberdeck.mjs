@@ -35,4 +35,16 @@ export default class SWNCyberdeck extends SWNActorBase {
 
   prepareDerivedData() {
   }
+
+
+  getHacker(){
+    const hackerId = this.schema.hackerId;
+    if (hackerId) {
+      const actor = game.actors?.get(hackerId);
+      if (actor && (actor.type == "character" || actor.type == "npc")) {
+        return actor;
+      }
+    }
+    return null;
+  }
 }
