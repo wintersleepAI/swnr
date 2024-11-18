@@ -9,6 +9,11 @@ export default class SWNShared {
       max: new fields.NumberField({ required: true, nullable: false, integer: true, initial: initialMax }),
     });
   }
+  
+  static resourceFieldPercentage(field) {
+    const diff = field.value / field.max;
+    return diff * 100;
+  }
 
   static requiredNumber(initialValue) {
     const fields = foundry.data.fields;

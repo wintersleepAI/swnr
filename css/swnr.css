@@ -424,6 +424,7 @@
   width: 100%;
   height: 100%;
   justify-content: center;
+  color: var(--font-color);
 }
 .swnr .resource-bar .text input:first-child {
   text-align: right;

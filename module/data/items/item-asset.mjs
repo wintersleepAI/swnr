@@ -42,6 +42,12 @@ export default class SWNAsset extends SWNItemBase {
     return schema;
   }
   
+  prepareDerivedData() {
+    super.prepareBaseData();
+    
+    this.health.percentage = SWNShared.resourceFieldPercentage(this.health);
+  }
+  
   static migrateData(data) {
     if (data.qualities == null) {
       const noteSections = data.note.split(',')

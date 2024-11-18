@@ -8,9 +8,9 @@
                 data-action="onEditImage"
                 title="{{item.name}}"
             />
-            <div class="resource-bar health-bar"><!-- The character health bar -->
+            <div class="resource-bar"><!-- The character health bar -->
                 <div style="width:{{system.health.percentage}}%" class="health-fill"></div>
-                <div class="health-text">
+                <div class="text">
                     {{localize 'swnr.sheet.hp'}}
                     <input
                             type='text'
@@ -18,9 +18,8 @@
                             value='{{system.health.value}}'
                             data-dtype='Number'
                             class='nested-field short-field align-right current-value'
-                            style='text-align:right;'
                     />
-                    <p style="margin:0">/</p>
+                    <p>/</p>
                     <input
                             type='text'
                             name='system.health.max'
