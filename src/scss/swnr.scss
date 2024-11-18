@@ -1,24 +1,20 @@
+@use "sass:meta";
 // Add custom fonts by visiting and search https://fonts.google.com
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-// Import utilities.
-@import 'utils/typography';
-@import 'utils/colors';
-@import 'utils/mixins';
-@import 'utils/variables';
-
 /* Global styles */
-@import 'global/window';
-@import 'global/grid';
-@import 'global/flex';
+@include meta.load-css('utils/colors');
+@include meta.load-css('global/window');
+@include meta.load-css('global/grid');
+@include meta.load-css('global/flex');
+
+@include meta.load-css("utils/system-variables");
 
 /* Styles limited to swnr sheets */
 .swnr {
-  @import "utils/system-variables";
-  
-  @import 'components/forms';
-  @import 'components/resource';
-  @import 'components/items';
-  @import 'components/effects';
-  @import "components/buttons";
+  @include meta.load-css('components/forms');
+  @include meta.load-css('components/resource');
+  @include meta.load-css('components/items');
+  @include meta.load-css('components/effects');
+  @include meta.load-css("components/buttons");
 }

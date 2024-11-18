@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+/* Global styles */
 :root {
   --swnr-c-dark: #191813;
   --swnr-c-faint: #c9c7b8;
@@ -19,7 +20,6 @@
   --swnr-c-groove: #11121f;
 }
 
-/* Global styles */
 .window-app {
   font-family: "Roboto", sans-serif;
 }
@@ -223,11 +223,6 @@
   text-align: center;
 }
 
-/* Styles limited to swnr sheets */
-.swnr {
-  /* Sets the position of the health-bar and strain-bar and sets it to the propper size. */
-  /* Positions the HP text in the center of the healthbar or strainbar */
-}
 .swnr {
   --background-portrait-image: url("../../../../ui/parchment-white.jpg");
   --portrait-icon-color: rgb(124,124,124);
@@ -242,6 +237,8 @@
   --active-font-color: rgb(5, 99, 150);
   --input-focus-color: rgb(5, 99, 150);
 }
+
+/* Styles limited to swnr sheets */
 .swnr .item-form {
   font-family: "Roboto", sans-serif;
 }
@@ -295,7 +292,6 @@
 .swnr .sheet-header div.profile-img, .swnr .sheet-header div.item-img {
   margin-right: 10px;
 }
-
 .swnr .sheet-header img.profile-img, .swnr .sheet-header img.item-img {
   height: 100%;
   width: 100%;
@@ -304,7 +300,6 @@
   margin-right: 0;
   position: absolute;
 }
-
 .swnr .sheet-header .item-img {
   width: 100px;
   max-width: 100px;
@@ -315,7 +310,6 @@
 .swnr .sheet-header img.item-img {
   border-radius: 0;
 }
-
 .swnr .sheet-header .thin-bar {
   margin-top: -5px;
   margin-bottom: -15px;
@@ -402,6 +396,7 @@
   flex: 0 0 44px;
 }
 .swnr .health-bar {
+  /* Sets the position of the health-bar and strain-bar and sets it to the propper size. */
   position: relative;
   bottom: -10px;
   width: 80%;
@@ -415,6 +410,7 @@
   height: 100%;
 }
 .swnr .strain-bar {
+  /* Sets the position of the health-bar and strain-bar and sets it to the propper size. */
   position: relative;
   bottom: -10px;
   width: 80%;
@@ -428,6 +424,7 @@
   height: 100%;
 }
 .swnr .health-text, .swnr .strain-text {
+  /* Positions the HP text in the center of the healthbar or strainbar */
   display: flex;
   position: relative;
   top: -100%;

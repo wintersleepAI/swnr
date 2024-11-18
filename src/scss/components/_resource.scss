@@ -1,5 +1,7 @@
-/* Sets the position of the health-bar and strain-bar and sets it to the propper size. */
+// Resource Styles
+
 @mixin resource-bar-size-pos {
+  /* Sets the position of the health-bar and strain-bar and sets it to the propper size. */
   position: relative;
   bottom: -10px;
 
@@ -46,8 +48,8 @@
   }
 }
 
-/* Positions the HP text in the center of the healthbar or strainbar */
 .health-text, .strain-text{
+  /* Positions the HP text in the center of the healthbar or strainbar */
   display: flex;
   position: relative;
   top: -100%;
