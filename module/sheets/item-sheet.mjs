@@ -41,6 +41,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     headerGear: {
       template: 'systems/swnr/templates/item/header-gear.hbs',
     },
+    headerAsset: {
+      template: 'systems/swnr/templates/item/header-asset.hbs',
+    },
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
@@ -66,6 +69,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     },
     attributesSkill: {
       template: 'systems/swnr/templates/item/attribute-parts/skill.hbs',
+    },
+    attributesAsset: {
+      template: 'systems/swnr/templates/item/attribute-parts/asset.hbs',
     }
   };
 
@@ -79,6 +85,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'weapon':
       case 'armor':
         options.parts.push('headerGear');
+        break;
+      case 'asset':
+        options.parts.push('headerAsset');
         break;
       default:
         options.parts.push('header');
@@ -112,7 +121,10 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'armor':
       case 'cyberware':
       case 'program':
+        break;
       case 'asset':
+        options.parts.push('attributesAsset');
+        options.defaultTab = 'asset';
         break;
       case 'shipWeapon':
       case 'shipFitting':
@@ -156,6 +168,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'attributesPower':
       case 'attributesSpell':
       case 'attributesWeapons':
+      case 'attributesAsset':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
         break;
@@ -209,6 +222,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       switch (partId) {
         case 'header':
         case 'headerGear':
+        case 'headerAsset':
         case 'tabs':
           return tabs;
         case 'description':
@@ -225,6 +239,10 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'attributesWeapons':
           tab.id = 'weapon';
           tab.label += 'WeaponDetails';
+          break;
+        case 'attributesAsset':
+          tab.id = 'asset';
+          tab.label += 'AssetDetails';
           break;
         case 'effects':
           tab.id = 'effects';

@@ -63,7 +63,8 @@
         "Attributes": "Attributes",
         "Description": "Description",
         "Effects": "Effects",
-        "WeaponDetails": "Weapon Details"
+        "WeaponDetails": "Weapon Details",
+        "AssetDetails": "Asset Details"
       },
       "base": {
         "FIELDS": {
@@ -140,6 +141,19 @@
           },
           "isTwoHanded": {"label": "Two Handed"},
           "isNonLethal": {"label": "Non-Lethal"}
+        }
+      },
+      "Asset": {
+        "FIELDS": {
+          "category": { "label":  "Category"},
+          "rating": { "label": "Rating" },
+          "type": { "label":  "Asset Type" },
+          "tl": { "label":  "Tech Level"},
+          "baseOfInfluence": { "label":  "Base of Influence"},
+          "stealthed": { "label":  "Stealthed" },
+          "cost": { "label":  "Cost" },
+          "income": { "label":  "Income" },
+          "maintenance": { "label":  "Maintenance" }
         }
       }
     },

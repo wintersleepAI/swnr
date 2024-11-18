@@ -1,0 +1,56 @@
+<header class="sheet-header">
+    <div class="flexrow">
+        <div class="item-img">
+            <img 
+                class="item-img"
+                src="{{item.img}}"
+                data-edit="img"
+                data-action="onEditImage"
+                title="{{item.name}}"
+            />
+            <div class="resource-bar health-bar"><!-- The character health bar -->
+                <div style="width:{{system.health.percentage}}%" class="health-fill"></div>
+                <div class="health-text">
+                    {{localize 'swnr.sheet.hp'}}
+                    <input
+                            type='text'
+                            name='system.health.value'
+                            value='{{system.health.value}}'
+                            data-dtype='Number'
+                            class='nested-field short-field align-right current-value'
+                            style='text-align:right;'
+                    />
+                    <p style="margin:0">/</p>
+                    <input
+                            type='text'
+                            name='system.health.max'
+                            value='{{system.health.max}}'
+                            data-dtype='Number'
+                            class='nested-field short-field'
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="header-fields">
+            <div class="document-name">
+                <input name="name" type="text" value="{{item.name}}" placeholder="Name">
+            </div>
+            <div class="grid grid-3col">
+                <div class='resource grid-span-3 thin-bar' style="text-align:right;">
+                    <label class='resource-label'>{{localize 'swnr.item.favorite'}}</label>
+                    <input type="checkbox" class="small-checkbox" name="system.favorite" {{#if system.favorite}}checked{{/if}} />
+                </div>
+                <div class="grid-span-3"></div>
+                <div class="resource">
+                    {{formGroup systemFields.baseOfInfluence value=system.baseOfInfluence localize=true}}
+                </div>
+                <div class="resource">
+                    {{formGroup systemFields.category value=system.category localize=true}}
+                </div>
+                <div class="resource">
+                    {{formGroup systemFields.rating value=system.rating localize=true}}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
