@@ -1,4 +1,6 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
+import { getGameSettings } from '../helpers/register-settings.mjs';
+
 
 const { api, sheets } = foundry.applications;
 
@@ -143,6 +145,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       // Necessary for formInput and formFields helpers
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
+      gameSettings: getGameSettings(),
     };
 
     return context;

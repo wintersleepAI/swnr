@@ -21,7 +21,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     classes: ['swnr', 'actor'],
     position: {
       width: 700,
-      height: 600,
+      height: 800,
     },
     actions: {
       onEditImage: this._onEditImage,

@@ -42,6 +42,14 @@
   .strain-fill {
     @include resource-bar-fill(var(--strain-bar-color));
   }
+
+  .ready-fill {
+    @include resource-bar-fill(var(--ready-bar-color));
+  }
+
+  .stowed-fill {
+    @include resource-bar-fill(var(--stowed-bar-color));
+  }
   
   .text{
     /* Positions the HP text in the center of the resource-bar */

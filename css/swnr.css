@@ -228,6 +228,7 @@
   --portrait-icon-color: rgb(124,124,124);
   --health-bar-color: linear-gradient(45deg, rgba(48,121,22,1) 0%, rgba(97,190,80,1) 100%);
   --strain-bar-color: linear-gradient(45deg, rgba(29,131,170,1) 0%, rgba(80,190,183,1) 100%);
+  --ready-bar-color: linear-gradient(45deg, rgba(48,121,22,1) 0%, rgba(97,190,80,1) 100%);
   --stowed-bar-color: linear-gradient(45deg, rgb(183, 116, 0) 0%, rgb(225, 167, 50) 100%);
   --over-filled-bar-color: linear-gradient(45deg, rgb(199, 57, 57) 0%, rgb(219 108 108) 100%);
   /* Replace with defined theme colors? */
@@ -249,7 +250,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 .swnr .sheet-header .header-fields {
   flex: 1;
@@ -320,6 +321,7 @@
 .swnr .sheet-header .header-group {
   border: 1px solid var(--border-color);
   border-radius: 2px;
+  margin: 0px;
 }
 .swnr div.field {
   padding-top: 0;
@@ -414,6 +416,14 @@
 }
 .swnr .resource-bar .strain-fill {
   background: var(--strain-bar-color);
+  height: 100%;
+}
+.swnr .resource-bar .ready-fill {
+  background: var(--ready-bar-color);
+  height: 100%;
+}
+.swnr .resource-bar .stowed-fill {
+  background: var(--stowed-bar-color);
   height: 100%;
 }
 .swnr .resource-bar .text {
@@ -687,3 +697,5 @@
   align-items: center;
   cursor: pointer;
 }
+
+/*# sourceMappingURL=swnr.css.map */

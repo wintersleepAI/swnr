@@ -14,7 +14,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 
   .header-fields {
     flex: 1;
@@ -99,6 +99,7 @@
   .header-group {
     border: 1px solid var(--border-color);
     border-radius: 2px;
+    margin: 0px;
   }
 }
 
