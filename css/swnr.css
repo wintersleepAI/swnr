@@ -515,6 +515,9 @@
   border: none;
   margin-right: 5px;
 }
+.swnr .items-list .item .item-name .item-image img {
+  border: none;
+}
 .swnr .items-list .item-prop {
   text-align: center;
   border-left: 1px solid #c9c7b8;

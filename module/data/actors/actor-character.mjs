@@ -217,6 +217,7 @@ export default class SWNCharacter extends SWNActorBase {
     const encumbrance = this.encumbrance;
     encumbrance.ready.max = Math.floor(this.stats.str.total / 2);
     encumbrance.stowed.max = this.stats.str.total;
+    
     const inventory = this.parent.items.filter(
         (i) => i.type === "item" || i.type === "weapon" || i.type === "armor");
     const itemInvCost = function (i) {

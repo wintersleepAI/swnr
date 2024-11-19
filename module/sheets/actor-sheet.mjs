@@ -64,6 +64,9 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     effects: {
       template: 'systems/swnr/templates/actor/effects.hbs',
     },
+    itemslist: { 
+      template: 'systems/swnr/templates/actor/fragments/items-list.hbs',
+    }
   };
 
   /** @override */
