@@ -32,9 +32,9 @@
         <i class="fas fa-dice-d20"></i>
     </div>
     
-    <div class="health-bar" style="border-bottom:0px;"><!-- The character health bar -->
+    <div class="resource-bar"><!-- The character health bar -->
       <div style="width:{{system.health.percentage}}%" class="health-fill"></div>
-        <div class="health-text">
+        <div class="text">
           HP
             <input
               type='text'
@@ -42,9 +42,8 @@
               value='{{system.health.value}}'
               data-dtype='Number'
               class='nested-field short-field align-right current-value'
-              style='text-align:right;'
             />
-          <p style="margin:0px">/</p>
+          <p>/</p>
             <input
               type='text'
               name='system.health.max'
@@ -55,9 +54,9 @@
         </div>
     </div>
 
-    <div class="strain-bar"><!-- The character strain bar -->
+    <div class="resource-bar"><!-- The character strain bar -->
       <div style="width:{{system.systemStrain.percentage}}%" class="strain-fill"></div>
-        <div class="strain-text">
+        <div class="text">
           SS
             <input
               type='text'
@@ -65,9 +64,8 @@
               value='{{system.systemStrain.value}}'
               data-dtype='Number'
               class='nested-field short-field align-right current-value'
-              style='text-align:right;'
             />
-          <p style="margin:0px">/</p>
+          <p>/</p>
             <input
               type='text'
               name='system.systemStrain.max'
