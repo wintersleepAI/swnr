@@ -151,9 +151,21 @@
           "tl": { "label":  "Tech Level"},
           "baseOfInfluence": { "label":  "Base of Influence"},
           "stealthed": { "label":  "Stealthed" },
+          "unusable": { "label":  "Unusable" },
           "cost": { "label":  "Cost" },
           "income": { "label":  "Income" },
-          "maintenance": { "label":  "Maintenance" }
+          "maintenance": { "label":  "Maintenance" },
+          "attackSource": { "label":  "Source" },
+          "attackTarget": { "label":  "Target" },
+          "attackDamage": { "label":  "Damage" },
+          "counter": { "label":  "Counter" },
+          "note": { "label":  "Note" },
+          "qualities": {
+            "permission": { "label": "P" },
+            "action": { "label": "A" },
+            "special": { "label":  "S" }
+          },
+          "attackSpecial": { "label":  "Special Attack Note" }
         }
       }
     },

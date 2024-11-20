@@ -9,17 +9,61 @@
         <div class="resource">
             {{formGroup systemFields.tl value=system.tl localize=true}}
         </div>
-        <div class="resource flexrow">
-            {{formGroup systemFields.stealthed value=system.stealthed localize=true}}
+        <div class="flexrow">
+            <div class="resource flexrow">
+                {{formGroup systemFields.stealthed value=system.stealthed localize=true}}
+            </div>
+            <div class="resource flexrow">
+                {{formGroup systemFields.unusable value=system.unusable localize=true}}
+            </div>
+        </div>
+        <div class="flexcol">
+            <div class="resource">
+                {{formGroup systemFields.cost value=system.cost localize=true}}
+            </div>
+            <div class="resource">
+                {{formGroup systemFields.income value=system.income localize=true}}
+            </div>
+            <div class="resource">
+                {{formGroup systemFields.maintenance value=system.maintenance localize=true}}
+            </div>
+        </div>
+        <div class="grid-span-2 grid grid-2col">
+            <div class="resource">
+                {{formGroup systemFields.attackSource value=system.attackSource localize=true}}
+            </div>
+            <div class="resource">
+                {{formGroup systemFields.attackTarget value=system.attackTarget localize=true}}
+            </div>
+            <div class="resource">
+                {{formGroup systemFields.attackDamage value=system.attackDamage localize=true}}
+            </div>
+            <div class="resource">
+                {{formGroup systemFields.counter value=system.counter localize=true}}
+            </div>
         </div>
         <div class="resource">
-            {{formGroup systemFields.cost value=system.cost localize=true}}
+            {{formGroup systemFields.note value=system.note localize=true}}
         </div>
-        <div class="resource">
-            {{formGroup systemFields.income value=system.income localize=true}}
-        </div>
-        <div class="resource">
-            {{formGroup systemFields.maintenance value=system.maintenance localize=true}}
+        <div class="flexcol">
+            <div class="flex">
+                Qualities
+            </div>
+            <div class="flexrow">
+<!--                TODO: Create helper for inline checkboxes-->
+                <div class="resource">
+                    <label class="resource-label">{{localize 'swnr.sheet.faction.qualities.permission'}}</label>
+                    <input type="checkbox" class="small-checkbox" name="system.qualities.permission" {{#if system.qualities.permission}}checked{{/if}}>
+                </div>
+                <div class="resource ">
+                    <label class="resource-label">{{localize 'swnr.sheet.faction.qualities.action'}}</label>
+                    <input type="checkbox"  class="small-checkbox" name="system.qualities.action" {{#if system.qualities.action}}checked{{/if}}>
+                </div>
+                <div class="resource ">
+                    <label class="resource-label">{{localize 'swnr.sheet.faction.qualities.special'}}</label>
+                    <input type="checkbox" class="small-checkbox" name="system.qualities.special" {{#if system.qualities.special}}checked{{/if}}>
+                </div>
+            </div>
         </div>
     </div>
 </section>
