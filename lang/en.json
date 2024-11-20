@@ -141,6 +141,11 @@
           "isTwoHanded": {"label": "Two Handed"},
           "isNonLethal": {"label": "Non-Lethal"}
         }
+      },
+      "Armor": {
+        "FIELDS": {
+          "ac": { "label": "AC" }
+        }
       }
     },
     "Effect": {
