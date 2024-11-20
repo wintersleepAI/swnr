@@ -22,12 +22,16 @@
   flex: 0;
 }
 
+.flexlarge {
+  flex: 2;
+}
+
 .flex-between {
   justify-content: space-between;
 }
 
-.flexlarge {
-  flex: 2;
+.flex-evenly {
+  justify-content: space-evenly;
 }
 
 // Alignment styles.
