@@ -66,12 +66,22 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     },
     itemslist: { 
       template: 'systems/swnr/templates/actor/fragments/items-list.hbs',
-    }
+    },
+    combat: {
+      template: 'systems/swnr/templates/actor/combat.hbs',
+    },
+    skills: {
+      template: 'systems/swnr/templates/actor/skills.hbs',
+    },
   };
 
   /** @override */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
+
+    //wsai adding to allow setting default tab
+    options.defaultTab= 'gear';
+
     // Not all parts always render
     options.parts = ['header', 'tabs', 'biography'];
     // Don't show the other tabs if only limited view
@@ -79,7 +89,8 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        options.parts.push('features', 'gear', 'powers', 'effects');
+        options.parts.push('combat','skills','features', 'gear', 'powers', 'effects');
+        options.defaultTab = 'combat';
         break;
       case 'npc':
         options.parts.push('gear', 'effects');
@@ -104,7 +115,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       flags: this.actor.flags,
       // Adding a pointer to CONFIG.SWN
       config: CONFIG.SWN,
-      tabs: this._getTabs(options.parts),
+      tabs: this._getTabs(options.parts, options.defaultTab),
       // Necessary for formInput and formFields helpers
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
@@ -122,6 +133,8 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
   async _preparePartContext(partId, context) {
     switch (partId) {
       case 'features':
+      case 'combat':
+      case 'skills':
       case 'powers':
       case 'gear':
         context.tab = context.tabs[partId];
@@ -161,11 +174,11 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
    * @returns {Record<string, Partial<ApplicationTab>>}
    * @protected
    */
-  _getTabs(parts) {
+  _getTabs(parts, defaultTab = 'gear') {
     // If you have sub-tabs this is necessary to change
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
-    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'biography';
+    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = defaultTab;
     return parts.reduce((tabs, partId) => {
       const tab = {
         cssClass: 'sheet-body',
@@ -192,6 +205,14 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
         case 'gear':
           tab.id = 'gear';
           tab.label += 'Gear';
+          break;
+        case 'combat':
+          tab.id = 'combat';
+          tab.label += 'Combat';
+          break;
+        case 'skills':
+          tab.id = 'skills';
+          tab.label += 'Skills';
           break;
         case 'powers':
           tab.id = 'powers';
