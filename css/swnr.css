@@ -542,7 +542,19 @@
   text-align: left;
 }
 .swnr .item-formula {
-  flex: 0 0 200px;
+  flex: 0 0 120px;
+  padding: 0 8px;
+}
+.swnr .item-qty {
+  flex: 0 0 40px;
+  padding: 0 8px;
+}
+.swnr .item-enc {
+  flex: 0 0 40px;
+  padding: 0 8px;
+}
+.swnr .item-loc {
+  flex: 0 0 100px;
   padding: 0 8px;
 }
 .swnr .items-center {

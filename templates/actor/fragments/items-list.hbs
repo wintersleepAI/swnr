@@ -1,7 +1,20 @@
     <ol class='items-list'>
       <li class='item flexrow items-header'>
         <div class='item-name'>{{name}}</div>
-        <div class='item-formula'>{{localize 'SWN.Item.Gear.FIELDS.rollFormula.label'}}</div>
+        <div class="item-enc"> {{ localize 'swnr.item.enc' }} </div>
+        {{#if (eq type "item")}}
+          <div class="item-qty"> {{ localize 'swnr.item.qty' }} </div>
+        {{/if}}
+        <div class="item-loc"> {{ localize 'swnr.item.location' }} </div>
+        <div class='item-formula'>
+          {{# if (eq type "weapon")}}
+            {{localize 'SWN.Item.Gear.FIELDS.damage.label'}}
+          {{else if (eq type "armor")}}
+            {{localize 'SWN.Item.Gear.FIELDS.soak.label'}}
+          {{else}}
+            {{localize 'SWN.Item.Gear.FIELDS.rollFormula.label'}}
+          {{/if}}
+        </div>
         <div class='item-controls'>
           {{#if @root.editable}}
             <a
@@ -35,9 +48,40 @@
                 />
               </a>
             </div>
-            <div>{{item.name}}</div>
+            <div>{{item.name}}
+              {{#if (eq item.type "armor")}}
+                {{#if (ne item.system.soak.max 0)}}
+                ({{item.system.soak.value}}/{{item.system.soak.max}})
+                {{/if}}
+              {{/if}}
+            </div>
           </div>
-          <div class='item-formula item-prop'>{{item.system.formula}}</div>
+          <div class="item-enc">{{ item.system.encumbrance }} </div>
+          {{#if (eq ../type "item")}}
+            <div class="item-qty"> {{ item.system.quantity }} </div>
+          {{/if}}
+          <div class="item-loc">
+            <select 
+              name="items.{{item.id}}.data.location"
+              >
+              {{#select item.system.location}}
+              <option value="readied">
+                {{localize 'swnr.item.locationReadied'}}
+              </option>
+              <option value="stowed">{{localize 'swnr.item.locationStowed'}}</option>
+              <option value="other">{{localize 'swnr.item.locationOther'}}</option>
+              {{/select}}
+            </select>
+          </div>
+          <div class='item-formula item-prop'>
+            {{# if (eq ../type "weapon")}}
+              {{item.system.damage}}
+            {{else if (eq ../type "armor")}}
+              {{item.system.soak}}
+            {{else}}
+              {{item.system.rollFormula}}
+            {{/if}}
+          </div>
           <div class='item-controls'>
             <a
               class='item-control item-edit'
