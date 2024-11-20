@@ -160,11 +160,6 @@
           "attackDamage": { "label":  "Damage" },
           "counter": { "label":  "Counter" },
           "note": { "label":  "Note" },
-          "qualities": {
-            "permission": { "label": "P" },
-            "action": { "label": "A" },
-            "special": { "label":  "S" }
-          },
           "attackSpecial": { "label":  "Special Attack Note" }
         }
       }
@@ -723,14 +718,8 @@
           "cunning": "Cunning",
           "wealth": "Wealth"
         },
-        "baseOfInfluence": "Base of Influence",
-        "attackSource": "Source",
-        "attackTarget": "Target",
-        "attackDamage": "Damage",
-        "attackSpecial": "Special Attack Note",
-        "counter": "Counter",
-        "note": "Note",
-        "qualities": {
+        "qualities": "Qualities",
+        "assetQualities": {
           "permission": "P",
           "action": "A",
           "special": "S"
