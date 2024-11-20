@@ -1,12 +1,12 @@
 {
   "SWN": {
     "Stat": {
-      "Str": { "long": "Strength", "abbr": "str" },
-      "Con": { "long": "Constitution", "abbr": "con" },
-      "Dex": { "long": "Dexterity", "abbr": "dex" },
-      "Int": { "long": "Intelligence", "abbr": "int" },
-      "Wis": { "long": "Wisdom", "abbr": "wis" },
-      "Cha": { "long": "Charisma", "abbr": "cha" }
+      "Str": { "long": "Strength", "abbr": "STR" },
+      "Con": { "long": "Constitution", "abbr": "CON" },
+      "Dex": { "long": "Dexterity", "abbr": "DEX" },
+      "Int": { "long": "Intelligence", "abbr": "INT" },
+      "Wis": { "long": "Wisdom", "abbr": "WIS" },
+      "Cha": { "long": "Charisma", "abbr": "CHA" }
     },
     "SheetLabels": {
       "Actor": "SWN Actor Sheet",

@@ -1,6 +1,33 @@
-<section
-  class='tab combat flexcol {{tab.cssClass}}'
-  data-group='primary'
-  data-tab='combat'
->
-combat
+<section class='tab combat flexcol {{tab.cssClass}}' data-group='primary' data-tab='combat'>
+  <section class='grid grid-5col'>
+    <aside class='sidebar'>
+      {{! The grid classes are defined in scss/global/_grid.scss. To use,
+      use both the "grid" and "grid-Ncol" class where "N" can be any number
+      from 1 to 12 and will create that number of columns. }}
+      <div class='stats flexcol'>
+        {{#each system.stats as |stat key|}}
+        <div class='stat flexrow flex-group-center'>
+          <label class='resource-label rollable flexlarge align-left' data-action='roll'
+            data-roll='d20+@stats.{{key}}.mod' data-label='{{localize (lookup @root.config.stats key)}}'>
+            {{localize (lookup @root.config.statAbbreviations key)}}
+          </label>
+          <input type='text' name='system.stats.{{key}}.base' value='{{stat.base}}' class="stat-score"
+            data-dtype='Number' />
+          <span class='stat-mod rollable' data-action='roll' data-roll='d20+@stats.{{key}}.mod'
+            data-label='{{localize (lookup @root.config.stats key)}}'>{{numberFormat stat.mod decimals=0
+            sign=true}}</span>
+        </div>
+        {{/each}}
+      </div>
+    </aside>
+
+    {{! For the skills list, span the middle two columns }}
+    <section class='main grid-span-2'>
+      skills
+    </section>
+
+
+    {{! For the quick items list, span the right two columns }}
+    <section class='main grid-span-2'>
+      items
+    </section>

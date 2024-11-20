@@ -20,8 +20,8 @@
             >{{localize (lookup @root.config.stats key)}}</label>
             <input
               type='text'
-              name='system.stats.{{key}}.base'
               value='{{stat.base}}'
+              readonly
               class="stat-score"
               data-dtype='Number'
             />
