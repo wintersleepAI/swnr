@@ -273,9 +273,29 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
   _onRender(context, options) {
     this.#dragDrop.forEach((d) => d.bind(this.element));
     this.#disableOverrides();
+
     // You may want to add other special handling here
     // Foundry comes with a large number of utility classes, e.g. SearchFilter
     // That you may want to implement yourself.
+
+    // NOTE that 'click' events should just be actions like roll, rest, etc.
+    this.element.querySelectorAll(".location-selector").forEach((d) => 
+      d.addEventListener('change', this._onLocationChange.bind(this)));
+
+  }
+
+  /**************
+   * Listener Events
+   ************/
+
+  /**
+   * Change an embedded item's location
+   * @param {*} event 
+   */
+  async _onLocationChange(event) {
+    const value = event.target.value;
+    const id = event.target.dataset.itemId;
+    await this.actor.items.get(id).update({ "system.location": value });
   }
 
   /**************

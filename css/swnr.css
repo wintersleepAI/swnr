@@ -489,7 +489,7 @@
 }
 .swnr .items-list .item-controls {
   display: flex;
-  flex: 0 0 100px;
+  flex: 0 0 120px;
   justify-content: flex-end;
 }
 .swnr .items-list .item-controls a {
@@ -712,5 +712,3 @@
   align-items: center;
   cursor: pointer;
 }
-
-/*# sourceMappingURL=swnr.css.map */

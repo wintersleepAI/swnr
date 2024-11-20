@@ -1,5 +1,5 @@
     <ol class='items-list'>
-      <li class='item flexrow items-header'>
+      <li class='item flex flexrow items-header'>
         <div class='item-name'>{{name}}</div>
         <div class="item-enc"> {{ localize 'swnr.item.enc' }} </div>
         {{#if (eq type "item")}}
@@ -40,7 +40,7 @@
       </li>
       {{#each itemList as |item id|}}
         <li
-          class='item flexrow'
+          class='item flex flexrow'
           data-item-id='{{item._id}}'
           data-drag='true'
           data-document-class='Item'
@@ -70,8 +70,9 @@
           {{/if}}
           <div class="item-loc">
             <select 
-              name="items.{{item.id}}.data.location"
-              >
+              data-item-id="{{item.id}}"
+              class="location-selector"
+            >
               {{#select item.system.location}}
               <option value="readied">
                 {{localize 'swnr.item.locationReadied'}}
