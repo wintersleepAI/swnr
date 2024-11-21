@@ -19,7 +19,7 @@ export default class SWNCharacter extends SWNActorBase {
           base: SWNShared.requiredNumber(9),
           bonus: SWNShared.requiredNumber(0),
           boost: SWNShared.requiredNumber(0),
-          temp: SWNShared.requiredNumber(0),
+          temp: SWNShared.requiredNumber(0,-18),
         });
         return obj;
       }, {})

@@ -17,14 +17,22 @@
               data-action='roll'
               data-roll='d20+@stats.{{key}}.mod'
               data-label='{{localize (lookup @root.config.stats key)}}'
-            >{{localize (lookup @root.config.stats key)}}</label>
+            >{{localize (lookup @root.config.statAbbreviations key)}}</label>
             <input
               type='text'
               value='{{stat.base}}'
-              readonly
-              class="stat-score"
+              name="system.stats.{{key}}.base"
+              class="stat-score-small"
               data-dtype='Number'
-            />
+            /> + 
+            <input
+              type='text'
+              value='{{stat.boost}}'
+              name="system.stats.{{key}}.boost"
+              class="stat-score-small"
+              data-dtype='Number'
+            /> +
+            {{ stat.temp }} = {{ stat.total }}
             <span
               class='stat-mod rollable'
               data-action='roll'

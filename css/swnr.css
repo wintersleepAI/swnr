@@ -397,6 +397,9 @@
 .swnr .stat-mod {
   flex: 0 0 44px;
 }
+.swnr .stat-score-small {
+  flex: 0 0 34px;
+}
 .swnr .resource-bar {
   /* Sets the position of the resource-bar and sets it to the proper size. */
   position: relative;
@@ -712,3 +715,5 @@
   align-items: center;
   cursor: pointer;
 }
+
+/*# sourceMappingURL=swnr.css.map */
