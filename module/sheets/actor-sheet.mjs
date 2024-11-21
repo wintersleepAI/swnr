@@ -1,6 +1,7 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
 import { headerFieldWidget } from '../helpers/handlebar.mjs';
+import { initSkills, initCompendSkills } from '../helpers/utils.mjs';
 
 const { api, sheets } = foundry.applications;
 
@@ -32,6 +33,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       roll: this._onRoll,
       rest: this._onRest,
       rollSave: this._onRollSave,
+      loadSkills: this._loadSkills,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -64,15 +66,19 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     effects: {
       template: 'systems/swnr/templates/actor/effects.hbs',
     },
-    itemslist: { 
-      template: 'systems/swnr/templates/actor/fragments/items-list.hbs',
-    },
     combat: {
       template: 'systems/swnr/templates/actor/combat.hbs',
     },
     skills: {
       template: 'systems/swnr/templates/actor/skills.hbs',
     },
+    // FRAGMENTS
+    itemsList: { 
+      template: 'systems/swnr/templates/actor/fragments/items-list.hbs',
+    },
+    skillFrag: {
+      template: 'systems/swnr/templates/actor/fragments/skill.hbs',
+    }
   };
 
   /** @override */
@@ -510,6 +516,46 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     }
   }
   
+  /**
+   * Load skills roll button
+   */
+  static async _loadSkills(event, target) {
+    event.preventDefault();
+    const _addSkills = async (_event, button, html) => {
+      const skillList = button.form.elements.skillList.value;
+      const extra = button.form.elements.extra?.value;
+      if (!skillList && !extra) return;
+      if (skillList && skillList === "compendiumList") {
+        await initCompendSkills(this.actor);
+      } else {
+        await initSkills(this.actor, skillList);
+      }
+      if (extra)
+        await initSkills(this.actor);
+      return;
+    };
+    const template = "systems/swnr/templates/dialogs/add-bulk-skills.hbs";
+    const content = await renderTemplate(template, {});
+
+    const _resp = await foundry.applications.api.DialogV2.prompt(
+      {
+        window: { 
+          title: game.i18n.format("swnr.dialog.add-bulk-skills",
+            { actor: this.actor.name }
+          )   }, 
+        content,
+        modal: true,
+        default: "addSkills",
+        rejectClose: false,
+        ok: 
+          {
+            action: "addSkills",
+            label: game.i18n.localize("swnr.dialog.add-skills"),
+            callback: _addSkills,
+          },
+      }
+    );
+  }    
 
   /**
    * Handle clickable rolls.

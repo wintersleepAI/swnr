@@ -25,7 +25,13 @@
 
     {{! For the skills list, span the middle two columns }}
     <section class='main grid-span-2'>
-      skills
+      {{#if (ne actor.itemTypes.skill.length 0)}}
+      Skills
+      {{else}}
+      <button class="skill-load-button" type="button" data-action="loadSkills">
+        {{localize 'swnr.sheet.loadSkills'}}
+      </button>
+      {{/if}}
     </section>
 
 
@@ -33,3 +39,5 @@
     <section class=''>
       items
     </section>
+  </section>
+</section>
