@@ -325,6 +325,9 @@
   border: 1px solid var(--border-color);
   border-radius: 2px;
 }
+.swnr .group-title {
+  border-bottom: 1px solid var(--border-color);
+}
 .swnr div.field {
   padding-top: 0;
 }

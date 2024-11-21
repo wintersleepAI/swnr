@@ -28,10 +28,10 @@ export default class SWNAsset extends SWNItemBase {
     schema.attackTarget = SWNShared.stringChoices(null,  CONFIG.SWN.assetCategories, false);
     schema.attackSource = SWNShared.stringChoices(null, CONFIG.SWN.assetCategories, false);
     schema.attackDamage = SWNShared.emptyString();
-    schema.attackSpecial = new fields.HTMLField(); // Special action taken when attacking
+    schema.attackSpecial = SWNShared.emptyString(); // Special action taken when attacking
     schema.counter = SWNShared.emptyString();
     
-    schema.turnRoll = new fields.HTMLField(); // Special action taken on or between turns
+    schema.turnRoll = SWNShared.emptyString(); // Special action taken on or between turns
     schema.note = SWNShared.emptyString();
     schema.qualities = new fields.SchemaField({
       permission: new fields.BooleanField({initial: false}),

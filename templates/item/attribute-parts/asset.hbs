@@ -11,6 +11,9 @@
                 {{formGroup systemFields.tl value=system.tl localize=true}}
             </div>
             <div class="grid-span-2 grid grid-2col">
+                <span class="grid-span-2 group-title">
+                    {{localize 'swnr.sheet.faction.attack'}}
+                </span>
                 <div class="resource">
                     {{formGroup systemFields.attackSource value=system.attackSource localize=true}}
                 </div>
@@ -63,6 +66,16 @@
             </div>
             <div class="resource flexrow">
                 {{formGroup systemFields.unusable value=system.unusable localize=true}}
+            </div>
+        </div>
+        <div class="grid-span-3 ">
+            <div class="resource">
+                <label class="resource-label">{{localize 'swnr.sheet.faction.attackSpecial'}}</label>
+                <textarea name="system.attackSpecial">{{system.attackSpecial}}</textarea>
+            </div>
+            <div class="resource">
+                <label class="resource-label">{{localize 'swnr.sheet.faction.turnRoll'}}</label>
+                <textarea name="system.turnRoll">{{system.turnRoll}}</textarea>
             </div>
         </div>
     </div>
