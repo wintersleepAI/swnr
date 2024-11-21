@@ -26,7 +26,30 @@
     {{! For the skills list, span the middle two columns }}
     <section class='main grid-span-2'>
       {{#if (ne actor.itemTypes.skill.length 0)}}
-      Skills
+      
+        <div class="grid grid-cols-2 ">
+          <div class="items-list">
+            {{#each actor.itemTypes.skill as |item id|}}
+            {{#if (halfway @root.actor.itemTypes.skill @index)}}          
+              </div>
+              <div class="items-list">
+            {{/if}}
+            <div data-item-id="{{item.id}}"
+              class="skill skillRoll 
+              {{#if (mod2 @index) }}
+               {{!-- alt-row --}}
+              {{/if}}
+              ">
+            <a class="inline-flex flex-wrap gap-2">
+                <i class="fas fa-dice-d20"></i>
+                {{item.name}}
+                {{numberFormat item.system.rank decimals=0 sign=true}}
+              </a>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+
       {{else}}
       <button class="skill-load-button" type="button" data-action="loadSkills">
         {{localize 'swnr.sheet.loadSkills'}}

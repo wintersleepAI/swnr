@@ -544,6 +544,9 @@
   padding-left: 5px;
   text-align: left;
 }
+.swnr .alt-row {
+  background: --swnr-c-faint;
+}
 .swnr .item-formula {
   flex: 0 0 120px;
   padding: 0 8px;
