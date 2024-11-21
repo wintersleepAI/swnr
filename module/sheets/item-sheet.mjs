@@ -55,6 +55,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     attributesItem: {
       template: 'systems/swnr/templates/item/attribute-parts/item.hbs',
     },
+    attributesProgram: {
+      template: 'systems/swnr/templates/item/attribute-parts/program.hbs',
+    },
     attributesPower: {
       template: 'systems/swnr/templates/item/attribute-parts/power.hbs',
     },
@@ -112,6 +115,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'armor':
       case 'cyberware':
       case 'program':
+        options.parts.push('attributesProgram');
       case 'asset':
         break;
       case 'shipWeapon':
@@ -153,6 +157,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     switch (partId) {
       case 'attributesFeature':
       case 'attributesItem':
+      case 'attribuesProgram':
       case 'attributesPower':
       case 'attributesSpell':
       case 'attributesWeapons':
@@ -226,6 +231,10 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
           tab.id = 'weapon';
           tab.label += 'WeaponDetails';
           break;
+        case 'attributesProgram':
+          tab.id = 'program';
+          tab.label += 'ProgramDetails';
+        break;
         case 'effects':
           tab.id = 'effects';
           tab.label += 'Effects';

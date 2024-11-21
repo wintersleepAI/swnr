@@ -1,0 +1,20 @@
+<section
+  class='tab {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='program'
+>
+<div class='grid grid-2col'> <!-- program -->
+    <div class="resource">
+      {{formGroup systemFields.type value=system.type localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.cost value=system.cost localize=true}}
+    </div>
+    <div class="resource-group grid-span-2 flexrow"><!-- Target-->
+        <div class="resource">
+          {{formGroup systemFields.target value=system.target localize=true}}
+        </div>
+     </div><!-- End Target -->    
+</div><!-- end grid-col program  -->
+
+</section>

@@ -63,7 +63,8 @@
         "Attributes": "Attributes",
         "Description": "Description",
         "Effects": "Effects",
-        "WeaponDetails": "Weapon Details"
+        "WeaponDetails": "Weapon Details",
+        "ProgramDetails": "Program Details"
       },
       "base": {
         "FIELDS": {
@@ -96,6 +97,13 @@
           "defaultStat": {"label": "Default Stat"},
           "pool": {"label": "Dice Pool"},
           "source": {"label": "Source"}
+        }
+      },
+      "Program": {
+        "FIELDS": {
+          "type": {"label": "Type"},
+          "cost": {"label": "Cost"},
+          "target": {"label": "Subject Type"}
         }
       },
       "Weapon": {
