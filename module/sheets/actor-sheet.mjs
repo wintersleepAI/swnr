@@ -34,6 +34,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       rest: this._onRest,
       rollSave: this._onRollSave,
       loadSkills: this._loadSkills,
+      rollSkill: this._onSkillRoll,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -517,6 +518,16 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
   }
   
   /**
+   * Skill roll
+   */
+  static async _onSkillRoll(event, target) {
+    event.preventDefault();
+    const skillID = target.dataset.itemId;
+    const skill = this.actor.items.get(skillID);
+    skill.roll(event.shiftKey);
+  }
+
+  /**
    * Load skills roll button
    */
   static async _loadSkills(event, target) {
@@ -545,7 +556,6 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
           )   }, 
         content,
         modal: true,
-        default: "addSkills",
         rejectClose: false,
         ok: 
           {
