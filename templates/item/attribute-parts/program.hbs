@@ -8,8 +8,8 @@
       {{formGroup systemFields.type value=system.type localize=true}}
     </div>
     {{#if (eq item.system.type "running")}}
-      <div class="resource align-left">
-        {{formGroup systemFields.selfTerminating value=system.selfTerminating localize=true class="align-left"}}
+      <div class="resource">
+        {{formGroup systemFields.selfTerminating value=system.selfTerminating localize=true}}
       </div>
     {{else if  (or (eq item.system.type "subject") (eq item.system.type "verb"))}}
       <div class="resource">
