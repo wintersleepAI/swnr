@@ -7,23 +7,29 @@
     <div class="resource">
       {{formGroup systemFields.type value=system.type localize=true}}
     </div>
-    <div class="resource">
-      {{formGroup systemFields.cost value=system.cost localize=true}}
-    </div>
+    {{#if (eq item.system.type "running")}}
+      <div class="resource align-left">
+        {{formGroup systemFields.selfTerminating value=system.selfTerminating localize=true class="align-left"}}
+      </div>
+    {{else if  (or (eq item.system.type "subject") (eq item.system.type "verb"))}}
+      <div class="resource">
+        {{formGroup systemFields.cost value=system.cost localize=true}}
+      </div>
+    {{/if}}
     {{#if (or (eq item.system.type "subject") (eq item.system.type "verb"))}}
       <div class="resource grid-span-2">
         <label class='resource-label flexlarge align-left'>
           {{#if (eq item.system.type "subject")}}
-            {{localize 'swnr.sheet.program.target'}}:
+            {{localize 'swnr.sheet.program.target'}}
           {{else}}
-            {{localize 'swnr.sheet.program.targetAllowed'}}:
+            {{localize 'swnr.sheet.program.targetAllowed'}}
           {{/if}}
         </label>
         <input
           name="system.target"
           value="{{system.target}}"
           type='text'
-          data-dtype='Text'
+          data-dtype='String'
         />
       </div>
     {{/if}}
@@ -38,9 +44,17 @@
         {{formGroup systemFields.useAffects value=system.useAffects localize=true}}
       </div>
     {{/if}}
-    {{#if (eq item.system.type "running")}}
-      <div class="resource align-left">
-        {{formGroup systemFields.selfTerminating value=system.selfTerminating localize=true class="align-left"}}
+    {{#if (eq item.system.type "dataFile")}}
+      <div class="resource grid-span-2">
+        <label class='resource-label flexlarge align-left'>
+            {{localize 'swnr.sheet.program.contents'}}
+        </label>
+        <input
+          name="system.useAffects"
+          value="{{system.useAffects}}"
+          type='text'
+          data-dtype='String'
+        />
       </div>
     {{/if}}
 </div><!-- end grid-col program  -->

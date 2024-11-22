@@ -116,6 +116,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'cyberware':
       case 'program':
         options.parts.push('attributesProgram');
+        options.defaultTab = 'program';
       case 'asset':
         break;
       case 'shipWeapon':
@@ -157,7 +158,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     switch (partId) {
       case 'attributesFeature':
       case 'attributesItem':
-      case 'attribuesProgram':
+      case 'attributesProgram':
       case 'attributesPower':
       case 'attributesSpell':
       case 'attributesWeapons':
