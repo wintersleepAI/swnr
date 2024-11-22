@@ -103,7 +103,11 @@
         "FIELDS": {
           "type": {"label": "Type"},
           "cost": {"label": "Cost"},
-          "target": {"label": "Subject Type"}
+          "target": {"label": "Subject Type"},
+          "accessCost": {"label": "Access Cost"},
+          "skillCheckMod": {"label": "Skill Check Modifier"},
+          "useAffects": {"label": "Use"},
+          "selfTerminating": {"label": "Self-Terminating"}
         }
       },
       "Weapon": {
@@ -847,7 +851,7 @@
         "type": "Type",
         "verb": "Verb",
         "subject": "Subject",
-        "datafile": "Datafile",
+        "dataFile": "Datafile",
         "running": "Running/Active Program",
         "cost": "Cost",
         "use": "Use",

@@ -47,10 +47,10 @@ SWN.ammoTypes = {
 };
 
 SWN.programTypes = {
-  verb: 'swnr.program.verb',
-  subject: 'swnr.program.subject',
-  dataFile: 'swnr.program.dataFile',
-  running: 'swnr.program.running'
+  verb: 'swnr.sheet.program.verb',
+  subject: 'swnr.sheet.program.subject',
+  dataFile: 'swnr.sheet.program.dataFile',
+  running: 'swnr.sheet.program.running'
 }
 
 SWN.saveTypes = {
