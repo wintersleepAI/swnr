@@ -222,6 +222,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       switch (partId) {
         case 'header':
         case 'headerGear':
+        case 'headerProgram':
         case 'tabs':
           return tabs;
         case 'description':
