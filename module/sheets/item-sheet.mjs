@@ -41,6 +41,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     headerGear: {
       template: 'systems/swnr/templates/item/header-gear.hbs',
     },
+    headerProgram: {
+      template: 'systems/swnr/templates/item/header-program.hbs',
+    },
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
@@ -83,6 +86,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'armor':
         options.parts.push('headerGear');
         break;
+      case 'program':
+        options.parts.push('headerProgram');
+        break;
       default:
         options.parts.push('header');
         break;
@@ -117,6 +123,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'program':
         options.parts.push('attributesProgram');
         options.defaultTab = 'program';
+        break;
       case 'asset':
         break;
       case 'shipWeapon':
@@ -235,7 +242,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'attributesProgram':
           tab.id = 'program';
           tab.label += 'ProgramDetails';
-        break;
+          break;
         case 'effects':
           tab.id = 'effects';
           tab.label += 'Effects';

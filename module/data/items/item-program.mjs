@@ -16,7 +16,7 @@ export default class SWNProgram extends SWNItemBase {
     schema.target = SWNShared.requiredString("");
     schema.selfTerminating = new fields.BooleanField({initial: false});
     schema.useAffects = SWNShared.requiredString("");
-    schema.skillCheckMod = SWNShared.requiredNumber(0);
+    schema.skillCheckMod = SWNShared.requiredNumber(0, -10);
 
     return schema;
   }
