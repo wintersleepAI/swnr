@@ -1,5 +1,5 @@
 <section class='tab combat flexcol {{tab.cssClass}}' data-group='primary' data-tab='combat'>
-  <section class='grid grid-4col'>
+  <section class='grid grid-5col'>
     <aside class='sidebar'>
       {{! The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
@@ -59,8 +59,69 @@
 
 
     {{! For the quick items list, span the right two columns }}
-    <section class=''>
-      items
+    <section class='grid-span-2'>
+      {{#if actor.favs.length }}
+      <h4>
+        {{localize 'swnr.sheet.favorites'}}
+      </h4>
+      {{#each actor.favs as |fav|}}
+      <div class="item flexrow flex-group-center">
+        <a class="inline-flex gap-2" data-action="rollItem" data-item-id="{{fav.id}}">
+          <i class="fas fa-dice-d20"></i>
+          {{fav.name}}
+        </a>
+      </div>
+      {{/each}}
+      {{/if}}
+      <h4>
+        {{localize 'swnr.item.locationReadied'}} {{localize 'swnr.sheet.tabs.weapons'}}
+      </h4>
+      {{#each actor.itemTypes.weapon as |item id|}} 
+        {{#if (eq item.system.location "readied")}}
+          <div class="item flexrow flex-group-center">
+            <div class="item-name">{{item.name}}</div>
+            <div class="item-damage">{{item.system.damage}}</div>
+          </div>
+        {{/if}}
+      {{/each}}
+
+      <h4>
+        {{localize 'swnr.item.locationReadied'}} {{localize 'swnr.sheet.tabs.armor'}}
+      </h4>
+      {{#if gameSettings.useTrauma}}
+        ({{localize 'swnr.sheet.traumaTarget'}}: {{actor.system.modifiedTraumaTarget}})
+      {{/if}}
+      {{#if gameSettings.useCWNArmor}}
+        ({{localize 'swnr.armor.soak.label'}} Total: {{actor.system.soakTotal.value}}/{{actor.system.soakTotal.max}} )
+      {{/if}}
+      <ol>
+      {{#each actor.itemTypes.armor as |item id|}} 
+        {{#if (eq item.system.location "readied")}}
+          <li data-item-id="{{item.id}}" 
+            data-document-class='Item'
+            class="item flexrow flex-group-center">
+           <input type="checkbox" data-action="toggleArmor" data-item-id="{{item.id}}" {{#if item.system.use}}checked{{/if}}>
+            <div class="item-name">
+              {{item.name}} 
+              {{localize "swnr.sheet.ac"}}: {{item.system.ac}}
+              {{#if gameSettings.useCWNArmor}}
+                / {{item.system.meleeAc}}
+                {{#if (ne item.system.soak 0)}}
+                  ({{item.system.soak.value}}/{{item.system.soak.max}}) 
+                {{/if}}
+              {{/if}}
+            </div>
+            <a
+              class='item-control item-edit'
+              title='{{localize "DOCUMENT.Update" type='Item'}}'
+              data-action='viewDoc'
+            >
+              <i class='fas fa-edit'></i>
+            </a>
+          </li>
+        {{/if}}
+      {{/each}}
+      </ol>
     </section>
   </section>
 </section>

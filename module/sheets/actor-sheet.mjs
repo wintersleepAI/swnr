@@ -35,6 +35,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       rollSave: this._onRollSave,
       loadSkills: this._loadSkills,
       rollSkill: this._onSkillRoll,
+      toggleArmor: this._toggleArmor,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -248,6 +249,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     // this sheet does with powers
     const items = [];
     const features = [];
+    const favs = [];
     const powers = {
       1: [],
       2: [],
@@ -258,6 +260,9 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
 
     // Iterate through items, allocating to containers
     for (let i of this.document.items) {
+      if (i.system.favorite) {
+        favs.push(i);
+      }
       // Append to gear.
       if (i.type === 'item') {
         items.push(i);
@@ -288,6 +293,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     context.items = items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.features = features.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.powers = powers;
+    context.favs = favs;
   }
 
   /**
@@ -525,6 +531,14 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     const skillID = target.dataset.itemId;
     const skill = this.actor.items.get(skillID);
     skill.roll(event.shiftKey);
+  }
+
+  static async _toggleArmor(event, target) {
+    event.preventDefault();
+    const armorID = target.dataset.itemId;
+    const armor = this.actor.items.get(armorID);
+    const use = armor.system.use;
+    await armor.update({ system: { use: !use }});
   }
 
   /**
