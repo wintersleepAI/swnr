@@ -55,46 +55,6 @@
         {{formGroup systemFields.useAffects value=system.useAffects localize=true}}
       </div>
     {{/if}}
-
-    {{!-- <div class="resource">
-      {{formGroup systemFields.cost value=system.cost localize=true}}
-    </div>
-    {{#if (eq item.system.type "running")}}
-      <div class="resource">
-        {{formGroup systemFields.selfTerminating value=system.selfTerminating localize=true}}
-      </div>
-    {{/if}}
-    {{#if (or (eq item.system.type "subject") (eq item.system.type "verb"))}}
-      <div class="resource">
-        <label class='resource-label flexlarge align-left'>
-          {{#if (eq item.system.type "subject")}}
-            {{localize 'swnr.sheet.program.target'}}
-          {{else}}
-            {{localize 'swnr.sheet.program.targetAllowed'}}
-          {{/if}}
-        </label>
-        {{formInput systemFields.target value=system.target localize=true}}
-      </div>
-    {{/if}}
-    {{#if (eq item.system.type "verb")}}
-      <div class="resource">
-        {{formGroup systemFields.selfTerminating value=system.selfTerminating localize=true}}
-      </div>
-      <div class="resource">
-        {{formGroup systemFields.accessCost value=system.accessCost localize=true}}
-      </div>
-      <div class="resource">
-        {{formGroup systemFields.skillCheckMod value=system.skillCheckMod localize=true}}
-      </div>
-      <div class="resource grid-span-2">
-        {{formGroup systemFields.useAffects value=system.useAffects localize=true}}
-      </div>
-    {{/if}}
-    {{#if (eq item.system.type "dataFile")}}
-    <div class="resource grid-span-2">
-      {{formGroup systemFields.useAffects value=system.useAffects localize=true}}
-    </div>
-    {{/if}} --}}
 </div><!-- end grid-col program  -->
 
 </section>
