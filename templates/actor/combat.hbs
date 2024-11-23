@@ -60,18 +60,43 @@
 
     {{! For the quick items list, span the right two columns }}
     <section class='grid-span-2'>
-      {{#if actor.favs.length }}
+      {{#if actor.system.favorites.length }}
       <h4>
         {{localize 'swnr.sheet.favorites'}}
       </h4>
-      {{#each actor.favs as |fav|}}
-      <div class="item flexrow flex-group-center">
-        <a class="inline-flex gap-2" data-action="rollItem" data-item-id="{{fav.id}}">
-          <i class="fas fa-dice-d20"></i>
-          {{fav.name}}
-        </a>
-      </div>
+      <ol class='items-list'>
+      {{#each actor.system.favorites as |item|}}
+      <li
+          class='item flex flexrow'
+          data-item-id='{{item._id}}'
+          data-drag='true'
+          data-document-class='Item'
+        >
+          <div class='item-name'>
+            <div class='item-image'>
+              <a class='rollable' data-roll-type='item' data-action='roll'>
+                <img
+                  src='{{item.img}}'
+                  title='{{item.name}}'
+                  width='24'
+                  height='24'
+                />
+              </a>
+            </div>
+            <div>{{item.name}}</div>
+            <div class='item-controls'>
+              <a
+                class='item-control item-edit'
+                title='{{localize "DOCUMENT.Update" type='Item'}}'
+                data-action='viewDoc'
+              >
+                <i class='fas fa-edit'></i>
+              </a>
+            </div>
+          </div>
+        </li>
       {{/each}}
+      </ol>
       {{/if}}
       <h4>
         {{localize 'swnr.item.locationReadied'}} {{localize 'swnr.sheet.tabs.weapons'}}
@@ -111,13 +136,15 @@
                 {{/if}}
               {{/if}}
             </div>
-            <a
-              class='item-control item-edit'
-              title='{{localize "DOCUMENT.Update" type='Item'}}'
-              data-action='viewDoc'
-            >
-              <i class='fas fa-edit'></i>
-            </a>
+            <div class='item-controls'>
+              <a
+                class='item-control item-edit'
+                title='{{localize "DOCUMENT.Update" type='Item'}}'
+                data-action='viewDoc'
+              >
+                <i class='fas fa-edit'></i>
+              </a>
+            </div>
           </li>
         {{/if}}
       {{/each}}

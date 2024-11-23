@@ -249,7 +249,6 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     // this sheet does with powers
     const items = [];
     const features = [];
-    const favs = [];
     const powers = {
       1: [],
       2: [],
@@ -260,9 +259,6 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
 
     // Iterate through items, allocating to containers
     for (let i of this.document.items) {
-      if (i.system.favorite) {
-        favs.push(i);
-      }
       // Append to gear.
       if (i.type === 'item') {
         items.push(i);
@@ -293,7 +289,6 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     context.items = items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.features = features.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.powers = powers;
-    context.favs = favs;
   }
 
   /**
