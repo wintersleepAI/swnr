@@ -43,6 +43,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     headerGear: {
       template: 'systems/swnr/templates/item/header-gear.hbs',
     },
+    headerProgram: {
+      template: 'systems/swnr/templates/item/header-program.hbs',
+    },
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
@@ -56,6 +59,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     },
     attributesItem: {
       template: 'systems/swnr/templates/item/attribute-parts/item.hbs',
+    },
+    attributesProgram: {
+      template: 'systems/swnr/templates/item/attribute-parts/program.hbs',
     },
     attributesPower: {
       template: 'systems/swnr/templates/item/attribute-parts/power.hbs',
@@ -81,6 +87,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'weapon':
       case 'armor':
         options.parts.push('headerGear');
+        break;
+      case 'program':
+        options.parts.push('headerProgram');
         break;
       default:
         options.parts.push('header');
@@ -114,6 +123,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'armor':
       case 'cyberware':
       case 'program':
+        options.parts.push('attributesProgram');
+        options.defaultTab = 'program';
+        break;
       case 'asset':
         break;
       case 'shipWeapon':
@@ -156,6 +168,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     switch (partId) {
       case 'attributesFeature':
       case 'attributesItem':
+      case 'attributesProgram':
       case 'attributesPower':
       case 'attributesSpell':
       case 'attributesWeapons':
@@ -212,6 +225,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       switch (partId) {
         case 'header':
         case 'headerGear':
+        case 'headerProgram':
         case 'tabs':
           return tabs;
         case 'description':
@@ -228,6 +242,10 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'attributesWeapons':
           tab.id = 'weapon';
           tab.label += 'WeaponDetails';
+          break;
+        case 'attributesProgram':
+          tab.id = 'program';
+          tab.label += 'ProgramDetails';
           break;
         case 'effects':
           tab.id = 'effects';
