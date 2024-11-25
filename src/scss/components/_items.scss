@@ -20,6 +20,7 @@
     padding-left: 5px;
     text-align: left;
     display: flex;
+    flex: 1 1 auto;
     // font-size: 16px;
   }
 }
@@ -45,7 +46,7 @@
 
   // Item Name
   .item-name {
-    flex: 2;
+    flex: 1;
     margin: 0;
     overflow: hidden;
     font-size: 13px;
@@ -132,7 +133,12 @@
 }
 
 .item-qty {
-  flex: 0 0 40px;
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+
+.item-dmg {
+  flex: 0 1 80px;
   padding: 0 8px;
 }
 
@@ -142,7 +148,7 @@
 }
 
 .item-controls-small {
-  flex: 0 0 40px;
+  flex: 0 1 40px;
   padding: 0 8px;
 }
 .item-loc {

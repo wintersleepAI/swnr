@@ -71,7 +71,7 @@
           </div>
         </li>
       {{#each actor.system.favorites as |item|}}
-      <li
+        <li
           class='item flex flexrow'
           data-item-id='{{item._id}}'
           data-drag='true'
@@ -89,16 +89,16 @@
               </a>
             </div>
             <div>{{item.name}}</div>
-            <div class="item-qty"> {{ item.system.quantity }} </div>
-            <div class='item-controls-small'>
-              <a
-                class='item-control item-edit'
-                title='{{localize "DOCUMENT.Update" type='Item'}}'
-                data-action='viewDoc'
-              >
-                <i class='fas fa-edit'></i>
-              </a>
-            </div>
+          </div>
+          <div class="item-qty"> {{ item.system.quantity }} </div>
+          <div class='item-controls-small'>
+            <a
+              class='item-control item-edit'
+              title='{{localize "DOCUMENT.Update" type='Item'}}'
+              data-action='viewDoc'
+            >
+              <i class='fas fa-edit'></i>
+            </a>
           </div>
         </li>
       {{/each}}
@@ -110,7 +110,7 @@
           <div class='item-name'>
              {{localize 'swnr.item.locationReadied'}} {{localize 'swnr.sheet.tabs.weapons'}}
           </div>
-          <div class="item-formula">
+          <div class="item-dmg">
             {{localize 'swnr.weapon.damage'}}
           </div>
           <div class='item-controls-small'>
@@ -136,17 +136,16 @@
                 </a>
               </div>
               <div>{{item.name}}</div>
-              <div class="item-formula item-prop">{{item.system.damage}}</div>
-
-              <div class='item-controls-small'>
-                <a
-                  class='item-control item-edit'
-                  title='{{localize "DOCUMENT.Update" type='Item'}}'
-                  data-action='viewDoc'
-                >
-                  <i class='fas fa-edit'></i>
-                </a>
-              </div>
+            </div>
+            <div class="item-dmg item-prop">{{item.system.damage}}</div>
+            <div class='item-controls-small'>
+              <a
+                class='item-control item-edit'
+                title='{{localize "DOCUMENT.Update" type='Item'}}'
+                data-action='viewDoc'
+              >
+                <i class='fas fa-edit'></i>
+              </a>
             </div>
           </li>
         {{/if}}
