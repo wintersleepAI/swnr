@@ -59,3 +59,13 @@ SWN.saveTypes = {
   evasion: 'swnr.sheet.saves.evasion',
   luck: 'swnr.sheet.saves.luck',
 }
+
+SWN.cyberTypes = {
+  head: 'swnr.sheet.cyberware.types.head',
+  body: 'swnr.sheet.cyberware.types.body',
+  skin: 'swnr.sheet.cyberware.types.skin',
+  limb: 'swnr.sheet.cyberware.types.limb',
+  nerve: 'swnr.sheet.cyberware.types.nerve',
+  sensory: 'swnr.sheet.cyberware.types.sensory',
+  medical: 'swnr.sheet.cyberware.types.medical',
+}

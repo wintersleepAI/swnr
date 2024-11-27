@@ -160,6 +160,19 @@
         "FIELDS": {
           "ac": { "label": "AC" }
         }
+      },
+      "Cyberware": {
+        "FIELDS": {
+          "tl": { "label": "Tech Level"},
+          "cost": { "label": "Cost"},
+          "strain": { "label": "Strain"},
+          "disabled": { "label": "Disabled"},
+          "effect": { "label": "Effect"},
+          "type": { "label": "Type"},
+          "concealment": { "label": "Concealment"},
+          "complication": { "label": "Complication"},
+          "settings": { "label": "Settings"}
+        }
       }
     },
     "Effect": {
@@ -647,7 +660,8 @@
           "skin": "Skin",
           "limb": "Limb",
           "nerve": "Nerve",
-          "sensory": "Sensory"
+          "sensory": "Sensory",
+          "medical": "Medical"
         }
       },
       "type": {

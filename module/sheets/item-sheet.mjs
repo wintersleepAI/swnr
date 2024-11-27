@@ -74,6 +74,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     },
     attributesSkill: {
       template: 'systems/swnr/templates/item/attribute-parts/skill.hbs',
+    },
+    attributesCyberware: {
+      template: 'systems/swnr/templates/item/attribute-parts/cyberware.hbs'
     }
   };
 
@@ -122,6 +125,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'armor':
       case 'cyberware':
+        options.parts.push('attributesCyberware');
+        options.defaultTab = 'attributes';
+        break;
       case 'program':
         options.parts.push('attributesProgram');
         options.defaultTab = 'program';
@@ -172,6 +178,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'attributesPower':
       case 'attributesSpell':
       case 'attributesWeapons':
+      case 'attributesCyberware':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
         break;
@@ -235,6 +242,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'attributesFeature':
         case 'attributesItem':
         case 'attributesSkill':
+        case 'attributesCyberware':
         case 'attributesPower':
           tab.id = 'attributes';
           tab.label += 'Attributes';
