@@ -1,5 +1,6 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
+import { groupFieldWidget } from '../helpers/handlebar.mjs';
 
 
 const { api, sheets } = foundry.applications;
@@ -164,6 +165,8 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
       gameSettings: getGameSettings(),
+      groupWidget: groupFieldWidget.bind(this),
+
     };
 
     return context;

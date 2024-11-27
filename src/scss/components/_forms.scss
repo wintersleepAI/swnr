@@ -122,6 +122,18 @@ input[type="number"] {
 }
 
 input[type="text"],
+input[type="number"] {
+  &.sub-field {
+    margin: 2px;
+    outline: none;
+    color: inherit;
+    font-size: inherit;
+    height: 100%;
+    flex: 1 1;
+  }
+}
+
+input[type="text"],
 div {
   &.field:focus {
     outline-color: var(--swnr-c-dark);
@@ -137,8 +149,8 @@ input[type="checkbox"].small-checkbox {
 }
 
 .nested-sep {
-  margin: 0;
-  padding: 0;
+  max-width: fit-content;
+  padding: 0 0.25rem;
 }
 
 .sheet-tabs {

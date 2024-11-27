@@ -338,6 +338,15 @@
   width: calc(50% - 30px);
   height: 100%;
 }
+.swnr input[type=text].sub-field,
+.swnr input[type=number].sub-field {
+  margin: 2px;
+  outline: none;
+  color: inherit;
+  font-size: inherit;
+  height: 100%;
+  flex: 1 1;
+}
 .swnr input[type=text].field:focus,
 .swnr div.field:focus {
   outline-color: var(--swnr-c-dark);
@@ -350,8 +359,8 @@
   --checkbox-size: 15px;
 }
 .swnr .nested-sep {
-  margin: 0;
-  padding: 0;
+  max-width: fit-content;
+  padding: 0 0.25rem;
 }
 .swnr .sheet-tabs {
   flex: 0;
