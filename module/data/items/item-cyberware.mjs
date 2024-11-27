@@ -20,7 +20,9 @@ export default class SWNCyberware extends SWNItemBase {
       max: CONFIG.SWN.maxTL 
     });
     schema.cost = SWNShared.requiredNumber(0);
-    schema.strain = SWNShared.requiredNumber(1, 0, false);
+    schema.strain = new fields.SchemaField({
+      base: SWNShared.requiredNumber(1, 0, false),
+    });
     schema.disabled = new fields.BooleanField({initial: false});
     schema.effect = SWNShared.requiredString("None");
     schema.type = SWNShared.stringChoices("none", CONFIG.SWN.cyberTypes);
@@ -28,5 +30,9 @@ export default class SWNCyberware extends SWNItemBase {
     schema.complication = SWNShared.requiredString("");
     schema.settings = SWNShared.requiredString("");
     return schema;
+  }
+
+  prepareDerivedData() {
+    this.strain.value = this.strain.base;
   }
 }

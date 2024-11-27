@@ -11,7 +11,12 @@
       {{formGroup systemFields.tl value=system.tl localize=true}}
     </div>
     <div class="resource">
-      {{formGroup systemFields.strain value=system.strain localize=true}}
+      <div class="form-group">
+        <label>{{localize 'SWN.Item.Cyberware.FIELDS.strain.label'}}</label>
+        <div class="form-fields">
+          <input type="number" name="system.strain.value" value="0" min="0" step=".05">
+        </div>
+      </div>
     </div>
     <div class="resource">
       {{formGroup systemFields.disabled value=system.disabled localize=true}}
@@ -25,7 +30,7 @@
     <div class="resource">
       {{formGroup systemFields.complication value=system.complication localize=true}}
     </div>
-    <div class="resource grid-span-2">
+    <div class="resource">
       {{formGroup systemFields.settings value=system.settings localize=true}}
     </div>
   </div>
