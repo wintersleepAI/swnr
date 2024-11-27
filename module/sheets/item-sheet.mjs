@@ -72,6 +72,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     },
     attributesAsset: {
       template: 'systems/swnr/templates/item/attribute-parts/asset.hbs',
+    },
+    attributesAssetAtkDef: {
+      template: 'systems/swnr/templates/item/attribute-parts/assetAtkDef.hbs',
     }
   };
 
@@ -124,6 +127,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'asset':
         options.parts.push('attributesAsset');
+        options.parts.push('attributesAssetAtkDef');
         options.defaultTab = 'asset';
         break;
       case 'shipWeapon':
@@ -169,6 +173,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'attributesSpell':
       case 'attributesWeapons':
       case 'attributesAsset':
+      case 'attributesAssetAtkDef':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
         break;
@@ -243,6 +248,10 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'attributesAsset':
           tab.id = 'asset';
           tab.label += 'AssetDetails';
+          break;
+        case 'attributesAssetAtkDef':
+          tab.id = 'assetAtkDef';
+          tab.label += 'AssetAtkDef';
           break;
         case 'effects':
           tab.id = 'effects';
