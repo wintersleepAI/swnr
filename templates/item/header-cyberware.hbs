@@ -13,9 +13,15 @@
           <input type="checkbox" class="small-checkbox" name="system.favorite" {{#if
             system.favorite}}checked{{/if}} />
         </div>
-        <div>
-          <div class="resource">
-            {{formGroup systemFields.cost value=system.cost localize=true}}
+        <div class="resource">
+          {{formGroup systemFields.cost value=system.cost localize=true}}
+        </div>
+        <div class="resource">
+          <div class="form-group">
+            <label>{{localize 'SWN.Item.Cyberware.FIELDS.strain.value.label'}}</label>
+            <div class="form-fields">
+              <input disabled type="number" name="system.strain.value" value="{{system.strain.value}}" min="0" step=".05">
+            </div>
           </div>
         </div>
       </div>

@@ -165,7 +165,14 @@
         "FIELDS": {
           "tl": { "label": "Tech Level"},
           "cost": { "label": "Cost"},
-          "strain": { "label": "Strain"},
+          "strain": { 
+            "base": {
+              "label": "Base Strain"
+            },
+            "value": {
+              "label" :"Total Strain"
+            }
+          },
           "disabled": { "label": "Disabled"},
           "effect": { "label": "Effect"},
           "type": { "label": "Type"},
