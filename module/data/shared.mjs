@@ -10,9 +10,14 @@ export default class SWNShared {
     });
   }
 
-  static requiredNumber(initialValue, minValue = 0) {
+  static requiredNumber(initialValue, minValue = 0, integer = true) {
     const fields = foundry.data.fields;
-    return new fields.NumberField({ required: true, nullable: false, integer: true, min: minValue, initial: initialValue });
+    return new fields.NumberField({ required: true, nullable: false, integer: integer, min: minValue, initial: initialValue });
+  }
+
+  static requiredDecimal(initialValue, minValue = 0) {
+    const fields = foundry.data.fields;
+    return new fields.NumberField({ required: true, nullable: false, integer: false, min: minValue, initial: initialValue });
   }
 
   static nullableNumber() {

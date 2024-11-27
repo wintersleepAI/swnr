@@ -47,6 +47,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     headerProgram: {
       template: 'systems/swnr/templates/item/header-program.hbs',
     },
+    headerCyberware: {
+      template: 'systems/swnr/templates/item/header-cyberware.hbs',
+    },
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
@@ -69,6 +72,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     },
     attributesWeapons: {
       template: 'systems/swnr/templates/item/attribute-parts/weapon.hbs',
+    },
+    attributesCyberware: {
+      template: 'systems/swnr/templates/item/attribute-parts/cyberware.hbs'
     },
     effects: {
       template: 'systems/swnr/templates/item/effects.hbs',
@@ -94,6 +100,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'program':
         options.parts.push('headerProgram');
+        break;
+      case 'cyberware':
+        options.parts.push('headerCyberware');
         break;
       default:
         options.parts.push('header');
@@ -129,6 +138,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         options.defaultTab = 'armor';
         break;
       case 'cyberware':
+        options.parts.push('attributesCyberware');
+        options.defaultTab = 'attributes';
+        break;
       case 'program':
         options.parts.push('attributesProgram');
         options.defaultTab = 'program';
@@ -182,6 +194,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'attributesPower':
       case 'attributesSpell':
       case 'attributesWeapons':
+      case 'attributesCyberware':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
         break;
@@ -236,6 +249,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'header':
         case 'headerGear':
         case 'headerProgram':
+        case 'headerCyberware':
         case 'tabs':
           return tabs;
         case 'description':
@@ -249,6 +263,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'attributesFeature':
         case 'attributesItem':
         case 'attributesSkill':
+        case 'attributesCyberware':
         case 'attributesPower':
           tab.id = 'attributes';
           tab.label += 'Attributes';
