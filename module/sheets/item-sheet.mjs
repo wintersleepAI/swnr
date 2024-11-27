@@ -74,7 +74,10 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     },
     attributesSkill: {
       template: 'systems/swnr/templates/item/attribute-parts/skill.hbs',
-    }
+    },
+    attributesArmor: {
+      template: 'systems/swnr/templates/item/attribute-parts/armor.hbs',
+    },
   };
 
   /** @override */
@@ -118,9 +121,12 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'weapon':
         options.parts.push('attributesWeapons');
-        options.defaultTab = 'weapon';
+        options.defaultTab = 'attributes';
         break;
       case 'armor':
+        options.parts.push('attributesArmor');
+        options.defaultTab = 'armor';
+        break;
       case 'cyberware':
       case 'program':
         options.parts.push('attributesProgram');
@@ -168,6 +174,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     switch (partId) {
       case 'attributesFeature':
       case 'attributesItem':
+      case 'attributesArmor':
       case 'attributesProgram':
       case 'attributesPower':
       case 'attributesSpell':
@@ -231,6 +238,10 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'description':
           tab.id = 'description';
           tab.label += 'Description';
+          break;
+        case 'attributesArmor':
+          tab.id = 'armor';
+          tab.label += 'ArmorDetails';
           break;
         case 'attributesFeature':
         case 'attributesItem':

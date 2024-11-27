@@ -66,7 +66,8 @@
         "Description": "Description",
         "Effects": "Effects",
         "WeaponDetails": "Weapon Details",
-        "ProgramDetails": "Program Details"
+        "ProgramDetails": "Program Details",
+        "ArmorDetails": "Armor Details"
       },
       "base": {
         "FIELDS": {
@@ -158,7 +159,17 @@
       },
       "Armor": {
         "FIELDS": {
-          "ac": { "label": "AC" }
+          "ac": { "label": "AC" },
+          "meleeAc": { "label": "AC Melee" },
+          "shield": { "label": "Shield" },
+          "use": { "label": "Equipped" },
+          "soak": { "label": "Soak" },
+          "dr": { "label": "Damage Reduction" },
+          "traumaDiePenalty": { "label": "Trauma Die Penalty" },
+          "isSubtle": { "label": "Subtle" },
+          "isHeavy": { "label": "Heavy" },
+          "shieldMeleeACBonus": { "label": "Shield Melee AC Bonus" },
+          "shieldACBonus": { "label": "Shield AC Bonus" }
         }
       }
     },
