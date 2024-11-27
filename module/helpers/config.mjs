@@ -68,4 +68,11 @@ SWN.cyberTypes = {
   nerve: 'swnr.sheet.cyberware.types.nerve',
   sensory: 'swnr.sheet.cyberware.types.sensory',
   medical: 'swnr.sheet.cyberware.types.medical',
+  none: 'swnr.sheet.cyberware.types.none'
+}
+
+SWN.cyberConcealmentTypes = {
+  sight: 'swnr.sheet.cyberware.conc.sight',
+  touch: 'swnr.sheet.cyberware.conc.touch',
+  medical: 'swnr.sheet.cyberware.conc.medical',
 }

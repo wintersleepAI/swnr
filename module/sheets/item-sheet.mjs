@@ -46,6 +46,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     headerProgram: {
       template: 'systems/swnr/templates/item/header-program.hbs',
     },
+    headerCyberware: {
+      template: 'systems/swnr/templates/item/header-cyberware.hbs',
+    },
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
@@ -69,14 +72,14 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     attributesWeapons: {
       template: 'systems/swnr/templates/item/attribute-parts/weapon.hbs',
     },
+    attributesCyberware: {
+      template: 'systems/swnr/templates/item/attribute-parts/cyberware.hbs'
+    },
     effects: {
       template: 'systems/swnr/templates/item/effects.hbs',
     },
     attributesSkill: {
       template: 'systems/swnr/templates/item/attribute-parts/skill.hbs',
-    },
-    attributesCyberware: {
-      template: 'systems/swnr/templates/item/attribute-parts/cyberware.hbs'
     }
   };
 
@@ -93,6 +96,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'program':
         options.parts.push('headerProgram');
+        break;
+      case 'cyberware':
+        options.parts.push('headerCyberware');
         break;
       default:
         options.parts.push('header');
@@ -233,6 +239,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'header':
         case 'headerGear':
         case 'headerProgram':
+        case 'headerCyberware':
         case 'tabs':
           return tabs;
         case 'description':
