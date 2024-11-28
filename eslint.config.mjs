@@ -6,8 +6,6 @@ import stylisticJs from '@stylistic/eslint-plugin-js';
 export default [
   eslint.configs.recommended,
   {
-  },
-  {
     plugins: {
       '@stylistic/js': stylisticJs,
     },
