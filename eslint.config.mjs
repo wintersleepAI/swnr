@@ -13,6 +13,7 @@ export default [
       '@stylistic/js/indent': ['error', 2, { "SwitchCase": 1 }],
       '@stylistic/js/semi': ["error", "always"],
       curly: "error",
+      "no-undef": "off"
     }
   }
 ];
