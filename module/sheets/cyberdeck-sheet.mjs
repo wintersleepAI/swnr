@@ -39,34 +39,19 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
   /** @override */
   static PARTS = {
     header: {
-      template: 'systems/swnr/templates/actor/vehicle/header.hbs',
+      template: 'systems/swnr/templates/actor/cyberdeck/cyberdeckHeader.hbs',
     },
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
-    },
-    features: {
-      template: 'systems/swnr/templates/actor/features.hbs',
-    },
-    biography: {
-      template: 'systems/swnr/templates/actor/biography.hbs',
-    },
-    gear: {
-      template: 'systems/swnr/templates/actor/gear.hbs',
-    },
-    power: {
-      template: 'systems/swnr/templates/actor/powers.hbs',
-    },
-    effects: {
-      template: 'systems/swnr/templates/actor/effects.hbs',
-    },
+    }
   };
 
   /** @override */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
     // Not all parts always render
-    options.parts = ['header', 'tabs', 'biography'];
+    options.parts = ['header', 'tabs'];
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
     // Control which parts show based on document subtype
