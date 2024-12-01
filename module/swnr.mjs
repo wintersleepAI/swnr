@@ -11,6 +11,8 @@ import { SWNFactionSheet } from './sheets/faction-sheet.mjs';
 // Import helper/utility classes and constants.
 import { SWN } from './helpers/config.mjs';
 import { registerSettings } from './helpers/register-settings.mjs';
+import { registerHandlebarHelpers } from './helpers/handlebar.mjs';
+
 // Import DataModel classes
 import * as models from './data/_module.mjs';
 
@@ -124,6 +126,9 @@ Hooks.once('init', function () {
 Handlebars.registerHelper('toLowerCase', function (str) {
   return str.toLowerCase();
 });
+
+registerHandlebarHelpers();
+
 
 /* -------------------------------------------- */
 /*  Ready Hook                                  */

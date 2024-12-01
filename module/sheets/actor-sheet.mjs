@@ -1,6 +1,7 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
 import { headerFieldWidget } from '../helpers/handlebar.mjs';
+import { initSkills, initCompendSkills } from '../helpers/utils.mjs';
 
 const { api, sheets } = foundry.applications;
 
@@ -21,7 +22,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     classes: ['swnr', 'actor'],
     position: {
       width: 700,
-      height: 600,
+      height: 800,
     },
     actions: {
       onEditImage: this._onEditImage,
@@ -32,6 +33,9 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       roll: this._onRoll,
       rest: this._onRest,
       rollSave: this._onRollSave,
+      loadSkills: this._loadSkills,
+      rollSkill: this._onSkillRoll,
+      toggleArmor: this._toggleArmor,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -64,11 +68,28 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     effects: {
       template: 'systems/swnr/templates/actor/effects.hbs',
     },
+    combat: {
+      template: 'systems/swnr/templates/actor/combat.hbs',
+    },
+    skills: {
+      template: 'systems/swnr/templates/actor/skills.hbs',
+    },
+    // FRAGMENTS
+    itemsList: { 
+      template: 'systems/swnr/templates/actor/fragments/items-list.hbs',
+    },
+    skillFrag: {
+      template: 'systems/swnr/templates/actor/fragments/skill.hbs',
+    }
   };
 
   /** @override */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
+
+    //wsai adding to allow setting default tab
+    options.defaultTab= 'gear';
+
     // Not all parts always render
     options.parts = ['header', 'tabs', 'biography'];
     // Don't show the other tabs if only limited view
@@ -76,7 +97,8 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        options.parts.push('features', 'gear', 'powers', 'effects');
+        options.parts.push('combat','skills','features', 'gear', 'powers', 'effects');
+        options.defaultTab = 'combat';
         break;
       case 'npc':
         options.parts.push('gear', 'effects');
@@ -101,7 +123,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       flags: this.actor.flags,
       // Adding a pointer to CONFIG.SWN
       config: CONFIG.SWN,
-      tabs: this._getTabs(options.parts),
+      tabs: this._getTabs(options.parts, options.defaultTab),
       // Necessary for formInput and formFields helpers
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
@@ -119,6 +141,8 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
   async _preparePartContext(partId, context) {
     switch (partId) {
       case 'features':
+      case 'combat':
+      case 'skills':
       case 'powers':
       case 'gear':
         context.tab = context.tabs[partId];
@@ -158,11 +182,11 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
    * @returns {Record<string, Partial<ApplicationTab>>}
    * @protected
    */
-  _getTabs(parts) {
+  _getTabs(parts, defaultTab = 'gear') {
     // If you have sub-tabs this is necessary to change
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
-    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'biography';
+    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = defaultTab;
     return parts.reduce((tabs, partId) => {
       const tab = {
         cssClass: 'sheet-body',
@@ -189,6 +213,14 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
         case 'gear':
           tab.id = 'gear';
           tab.label += 'Gear';
+          break;
+        case 'combat':
+          tab.id = 'combat';
+          tab.label += 'Combat';
+          break;
+        case 'skills':
+          tab.id = 'skills';
+          tab.label += 'Skills';
           break;
         case 'powers':
           tab.id = 'powers';
@@ -270,9 +302,29 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
   _onRender(context, options) {
     this.#dragDrop.forEach((d) => d.bind(this.element));
     this.#disableOverrides();
+
     // You may want to add other special handling here
     // Foundry comes with a large number of utility classes, e.g. SearchFilter
     // That you may want to implement yourself.
+
+    // NOTE that 'click' events should just be actions like roll, rest, etc.
+    this.element.querySelectorAll(".location-selector").forEach((d) => 
+      d.addEventListener('change', this._onLocationChange.bind(this)));
+
+  }
+
+  /**************
+   * Listener Events
+   ************/
+
+  /**
+   * Change an embedded item's location
+   * @param {*} event 
+   */
+  async _onLocationChange(event) {
+    const value = event.target.value;
+    const id = event.target.dataset.itemId;
+    await this.actor.items.get(id).update({ "system.location": value });
   }
 
   /**************
@@ -466,6 +518,63 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     }
   }
   
+  /**
+   * Skill roll
+   */
+  static async _onSkillRoll(event, target) {
+    event.preventDefault();
+    const skillID = target.dataset.itemId;
+    const skill = this.actor.items.get(skillID);
+    skill.roll(event.shiftKey);
+  }
+
+  static async _toggleArmor(event, target) {
+    event.preventDefault();
+    const armorID = target.dataset.itemId;
+    const armor = this.actor.items.get(armorID);
+    const use = armor.system.use;
+    await armor.update({ system: { use: !use }});
+  }
+
+  /**
+   * Load skills roll button
+   */
+  static async _loadSkills(event, target) {
+    event.preventDefault();
+    const _addSkills = async (_event, button, html) => {
+      const skillList = button.form.elements.skillList.value;
+      const extra = button.form.elements.extra?.value;
+      if (!skillList && !extra) return;
+      if (skillList && skillList === "compendiumList") {
+        await initCompendSkills(this.actor);
+      } else {
+        await initSkills(this.actor, skillList);
+      }
+      if (extra)
+        await initSkills(this.actor);
+      return;
+    };
+    const template = "systems/swnr/templates/dialogs/add-bulk-skills.hbs";
+    const content = await renderTemplate(template, {});
+
+    const _resp = await foundry.applications.api.DialogV2.prompt(
+      {
+        window: { 
+          title: game.i18n.format("swnr.dialog.add-bulk-skills",
+            { actor: this.actor.name }
+          )   }, 
+        content,
+        modal: true,
+        rejectClose: false,
+        ok: 
+          {
+            action: "addSkills",
+            label: game.i18n.localize("swnr.dialog.add-skills"),
+            callback: _addSkills,
+          },
+      }
+    );
+  }    
 
   /**
    * Handle clickable rolls.

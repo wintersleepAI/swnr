@@ -1,4 +1,7 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
+import { getGameSettings } from '../helpers/register-settings.mjs';
+import { groupFieldWidget } from '../helpers/handlebar.mjs';
+
 
 const { api, sheets } = foundry.applications;
 
@@ -41,6 +44,12 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     headerGear: {
       template: 'systems/swnr/templates/item/header-gear.hbs',
     },
+    headerProgram: {
+      template: 'systems/swnr/templates/item/header-program.hbs',
+    },
+    headerCyberware: {
+      template: 'systems/swnr/templates/item/header-cyberware.hbs',
+    },
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
@@ -55,18 +64,27 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     attributesItem: {
       template: 'systems/swnr/templates/item/attribute-parts/item.hbs',
     },
+    attributesProgram: {
+      template: 'systems/swnr/templates/item/attribute-parts/program.hbs',
+    },
     attributesPower: {
       template: 'systems/swnr/templates/item/attribute-parts/power.hbs',
     },
     attributesWeapons: {
       template: 'systems/swnr/templates/item/attribute-parts/weapon.hbs',
     },
+    attributesCyberware: {
+      template: 'systems/swnr/templates/item/attribute-parts/cyberware.hbs'
+    },
     effects: {
       template: 'systems/swnr/templates/item/effects.hbs',
     },
     attributesSkill: {
       template: 'systems/swnr/templates/item/attribute-parts/skill.hbs',
-    }
+    },
+    attributesArmor: {
+      template: 'systems/swnr/templates/item/attribute-parts/armor.hbs',
+    },
   };
 
   /** @override */
@@ -79,6 +97,12 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'weapon':
       case 'armor':
         options.parts.push('headerGear');
+        break;
+      case 'program':
+        options.parts.push('headerProgram');
+        break;
+      case 'cyberware':
+        options.parts.push('headerCyberware');
         break;
       default:
         options.parts.push('header');
@@ -107,11 +131,20 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'weapon':
         options.parts.push('attributesWeapons');
-        options.defaultTab = 'weapon';
+        options.defaultTab = 'attributes';
         break;
       case 'armor':
+        options.parts.push('attributesArmor');
+        options.defaultTab = 'armor';
+        break;
       case 'cyberware':
+        options.parts.push('attributesCyberware');
+        options.defaultTab = 'attributes';
+        break;
       case 'program':
+        options.parts.push('attributesProgram');
+        options.defaultTab = 'program';
+        break;
       case 'asset':
         break;
       case 'shipWeapon':
@@ -143,6 +176,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       // Necessary for formInput and formFields helpers
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
+      gameSettings: getGameSettings(),
+      groupWidget: groupFieldWidget.bind(this),
+
     };
 
     return context;
@@ -153,9 +189,12 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     switch (partId) {
       case 'attributesFeature':
       case 'attributesItem':
+      case 'attributesArmor':
+      case 'attributesProgram':
       case 'attributesPower':
       case 'attributesSpell':
       case 'attributesWeapons':
+      case 'attributesCyberware':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
         break;
@@ -209,15 +248,22 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       switch (partId) {
         case 'header':
         case 'headerGear':
+        case 'headerProgram':
+        case 'headerCyberware':
         case 'tabs':
           return tabs;
         case 'description':
           tab.id = 'description';
           tab.label += 'Description';
           break;
+        case 'attributesArmor':
+          tab.id = 'armor';
+          tab.label += 'ArmorDetails';
+          break;
         case 'attributesFeature':
         case 'attributesItem':
         case 'attributesSkill':
+        case 'attributesCyberware':
         case 'attributesPower':
           tab.id = 'attributes';
           tab.label += 'Attributes';
@@ -225,6 +271,10 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'attributesWeapons':
           tab.id = 'weapon';
           tab.label += 'WeaponDetails';
+          break;
+        case 'attributesProgram':
+          tab.id = 'program';
+          tab.label += 'ProgramDetails';
           break;
         case 'effects':
           tab.id = 'effects';
@@ -246,6 +296,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
    */
   _onRender(context, options) {
     this.#dragDrop.forEach((d) => d.bind(this.element));
+    // Add a change listener for the location selector
+
+
     // You may want to add other special handling here
     // Foundry comes with a large number of utility classes, e.g. SearchFilter
     // That you may want to implement yourself.

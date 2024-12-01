@@ -1,19 +1,5 @@
 // Resource Styles
 
-@mixin resource-bar-size-pos {
-  /* Sets the position of the health-bar and strain-bar and sets it to the propper size. */
-  position: relative;
-  bottom: -10px;
-
-  width: 80%;
-  height: 20px;
-
-  border: 1px solid var(--border-color);
-
-  box-shadow: 0 0 5px inset rgb(0,0,0,0.4);
-  background-color: whitesmoke;
-}
-
 @mixin resource-bar-fill($background) {
   background: $background;
   height: 100%;
@@ -32,30 +18,61 @@
   flex: 0 0 44px;
 }
 
+.stat-score-small {
+  flex: 0 0 34px;
+}
 
-.health-bar {
-  @include resource-bar-size-pos;
+.resource-bar {
+  /* Sets the position of the resource-bar and sets it to the proper size. */
+  position: relative;
+  bottom: -10px;
+
+  width: 80%;
+  height: 20px;
+
+  border: 1px solid var(--border-color);
+
+  box-shadow: 0 0 5px inset rgb(0,0,0,0.4);
+  background-color: whitesmoke;
   
+  &:not(:last-child) {
+    border-bottom: 0;
+  }
+
   .health-fill {
     @include resource-bar-fill(var(--health-bar-color));
   }
-}
 
-.strain-bar{
- @include resource-bar-size-pos;
   .strain-fill {
     @include resource-bar-fill(var(--strain-bar-color));
   }
+
+  .ready-fill {
+    @include resource-bar-fill(var(--ready-bar-color));
+  }
+
+  .stowed-fill {
+    @include resource-bar-fill(var(--stowed-bar-color));
+  }
+  
+  .text{
+    /* Positions the HP text in the center of the resource-bar */
+    display: flex;
+    position: relative;
+    top: -100%;
+  
+    width: 100%;
+    height: 100%;
+  
+    justify-content: center;
+    
+    input:first-child {
+      text-align: right;
+    }
+    
+    p {
+      margin: 0;
+    }
+  }
 }
 
-.health-text, .strain-text{
-  /* Positions the HP text in the center of the healthbar or strainbar */
-  display: flex;
-  position: relative;
-  top: -100%;
-
-  width: 100%;
-  height: 100%;
-
-  justify-content: center;
-}

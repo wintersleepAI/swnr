@@ -20,6 +20,7 @@
     padding-left: 5px;
     text-align: left;
     display: flex;
+    flex: 1 1 auto;
     // font-size: 16px;
   }
 }
@@ -45,7 +46,7 @@
 
   // Item Name
   .item-name {
-    flex: 2;
+    flex: 1;
     margin: 0;
     overflow: hidden;
     font-size: 13px;
@@ -62,7 +63,7 @@
   // Control Buttons
   .item-controls {
     display: flex;
-    flex: 0 0 100px;
+    flex: 0 0 120px;
     justify-content: flex-end;
     a {
       font-size: 12px;
@@ -85,6 +86,10 @@
         background-size: 30px;
         border: none;
         margin-right: 5px;
+
+        img {
+          border: none;
+        }
       }
     }
   }
@@ -117,10 +122,37 @@
   }
 }
 
+.alt-row {
+  background: --swnr-c-faint;
+}
+
 // Example style for SWN (can be removed if not needed).
 .item-formula {
-  
-  flex: 0 0 200px;
+  flex: 0 0 120px;
+  padding: 0 8px;
+}
+
+.item-qty {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+
+.item-dmg {
+  flex: 0 1 80px;
+  padding: 0 8px;
+}
+
+.item-enc { 
+  flex: 0 0 40px;
+  padding: 0 8px;
+}
+
+.item-controls-small {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+.item-loc {
+  flex: 0 0 100px;
   padding: 0 8px;
 }
 

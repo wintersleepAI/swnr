@@ -19,7 +19,7 @@ export default class SWNCharacter extends SWNActorBase {
           base: SWNShared.requiredNumber(9),
           bonus: SWNShared.requiredNumber(0),
           boost: SWNShared.requiredNumber(0),
-          temp: SWNShared.requiredNumber(0),
+          temp: SWNShared.requiredNumber(0,-18),
         });
         return obj;
       }, {})
@@ -211,12 +211,13 @@ export default class SWNCharacter extends SWNActorBase {
     //encumbrance
     if (!this.encumbrance)
       this.encumbrance = {
-        ready: { max: 0, value: 0 },
-        stowed: { max: 0, value: 0 },
+        ready: { max: 0, value: 0, percentage: 100 },
+        stowed: { max: 0, value: 0, percentage: 100 },
       };
     const encumbrance = this.encumbrance;
     encumbrance.ready.max = Math.floor(this.stats.str.total / 2);
     encumbrance.stowed.max = this.stats.str.total;
+    
     const inventory = this.parent.items.filter(
         (i) => i.type === "item" || i.type === "weapon" || i.type === "armor");
     const itemInvCost = function (i) {
@@ -243,6 +244,9 @@ export default class SWNCharacter extends SWNActorBase {
       .filter((i) => i.system.location === "stowed")
       .map(itemInvCost)
       .reduce((i, n) => i + n, 0);
+
+    encumbrance.ready.percentage = Math.clamp((encumbrance.ready.value * 100) / encumbrance.ready.max, 0, 100);
+    encumbrance.stowed.percentage = Math.clamp((encumbrance.stowed.value * 100) / encumbrance.stowed.max, 0, 100);
 
     const powers = this.parent.items.filter((i) => i.type == "power");
 

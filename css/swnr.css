@@ -228,6 +228,7 @@
   --portrait-icon-color: rgb(124,124,124);
   --health-bar-color: linear-gradient(45deg, rgba(48,121,22,1) 0%, rgba(97,190,80,1) 100%);
   --strain-bar-color: linear-gradient(45deg, rgba(29,131,170,1) 0%, rgba(80,190,183,1) 100%);
+  --ready-bar-color: linear-gradient(45deg, rgba(48,121,22,1) 0%, rgba(97,190,80,1) 100%);
   --stowed-bar-color: linear-gradient(45deg, rgb(183, 116, 0) 0%, rgb(225, 167, 50) 100%);
   --over-filled-bar-color: linear-gradient(45deg, rgb(199, 57, 57) 0%, rgb(219 108 108) 100%);
   /* Replace with defined theme colors? */
@@ -249,7 +250,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 .swnr .sheet-header .header-fields {
   flex: 1;
@@ -320,6 +321,7 @@
 .swnr .sheet-header .header-group {
   border: 1px solid var(--border-color);
   border-radius: 2px;
+  margin: 0px;
 }
 .swnr div.field {
   padding-top: 0;
@@ -336,6 +338,15 @@
   width: calc(50% - 30px);
   height: 100%;
 }
+.swnr input[type=text].sub-field,
+.swnr input[type=number].sub-field {
+  margin: 2px;
+  outline: none;
+  color: inherit;
+  font-size: inherit;
+  height: 100%;
+  flex: 1 1;
+}
 .swnr input[type=text].field:focus,
 .swnr div.field:focus {
   outline-color: var(--swnr-c-dark);
@@ -348,8 +359,8 @@
   --checkbox-size: 15px;
 }
 .swnr .nested-sep {
-  margin: 0;
-  padding: 0;
+  max-width: fit-content;
+  padding: 0 0.25rem;
 }
 .swnr .sheet-tabs {
   flex: 0;
@@ -395,8 +406,11 @@
 .swnr .stat-mod {
   flex: 0 0 44px;
 }
-.swnr .health-bar {
-  /* Sets the position of the health-bar and strain-bar and sets it to the propper size. */
+.swnr .stat-score-small {
+  flex: 0 0 34px;
+}
+.swnr .resource-bar {
+  /* Sets the position of the resource-bar and sets it to the proper size. */
   position: relative;
   bottom: -10px;
   width: 80%;
@@ -405,32 +419,39 @@
   box-shadow: 0 0 5px inset rgba(0, 0, 0, 0.4);
   background-color: whitesmoke;
 }
-.swnr .health-bar .health-fill {
+.swnr .resource-bar:not(:last-child) {
+  border-bottom: 0;
+}
+.swnr .resource-bar .health-fill {
   background: var(--health-bar-color);
   height: 100%;
 }
-.swnr .strain-bar {
-  /* Sets the position of the health-bar and strain-bar and sets it to the propper size. */
-  position: relative;
-  bottom: -10px;
-  width: 80%;
-  height: 20px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 0 5px inset rgba(0, 0, 0, 0.4);
-  background-color: whitesmoke;
-}
-.swnr .strain-bar .strain-fill {
+.swnr .resource-bar .strain-fill {
   background: var(--strain-bar-color);
   height: 100%;
 }
-.swnr .health-text, .swnr .strain-text {
-  /* Positions the HP text in the center of the healthbar or strainbar */
+.swnr .resource-bar .ready-fill {
+  background: var(--ready-bar-color);
+  height: 100%;
+}
+.swnr .resource-bar .stowed-fill {
+  background: var(--stowed-bar-color);
+  height: 100%;
+}
+.swnr .resource-bar .text {
+  /* Positions the HP text in the center of the resource-bar */
   display: flex;
   position: relative;
   top: -100%;
   width: 100%;
   height: 100%;
   justify-content: center;
+}
+.swnr .resource-bar .text input:first-child {
+  text-align: right;
+}
+.swnr .resource-bar .text p {
+  margin: 0;
 }
 .swnr .items-header {
   height: 28px;
@@ -450,6 +471,7 @@
   padding-left: 5px;
   text-align: left;
   display: flex;
+  flex: 1 1 auto;
 }
 .swnr .items-list {
   list-style: none;
@@ -465,7 +487,7 @@
   padding: 0;
 }
 .swnr .items-list .item-name {
-  flex: 2;
+  flex: 1;
   margin: 0;
   overflow: hidden;
   font-size: 13px;
@@ -480,7 +502,7 @@
 }
 .swnr .items-list .item-controls {
   display: flex;
-  flex: 0 0 100px;
+  flex: 0 0 120px;
   justify-content: flex-end;
 }
 .swnr .items-list .item-controls a {
@@ -506,6 +528,9 @@
   border: none;
   margin-right: 5px;
 }
+.swnr .items-list .item .item-name .item-image img {
+  border: none;
+}
 .swnr .items-list .item-prop {
   text-align: center;
   border-left: 1px solid #c9c7b8;
@@ -529,8 +554,31 @@
   padding-left: 5px;
   text-align: left;
 }
+.swnr .alt-row {
+  background: --swnr-c-faint;
+}
 .swnr .item-formula {
-  flex: 0 0 200px;
+  flex: 0 0 120px;
+  padding: 0 8px;
+}
+.swnr .item-qty {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+.swnr .item-dmg {
+  flex: 0 1 80px;
+  padding: 0 8px;
+}
+.swnr .item-enc {
+  flex: 0 0 40px;
+  padding: 0 8px;
+}
+.swnr .item-controls-small {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+.swnr .item-loc {
+  flex: 0 0 100px;
   padding: 0 8px;
 }
 .swnr .items-center {
@@ -688,3 +736,5 @@
   align-items: center;
   cursor: pointer;
 }
+
+/*# sourceMappingURL=swnr.css.map */

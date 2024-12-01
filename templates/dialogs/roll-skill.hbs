@@ -1,0 +1,52 @@
+<form class="">
+  <div>
+    {{! dice }}
+    <label for="">{{localize 'swnr.chat.dicepool'}}: </label>
+    <select
+      name="dicepool"
+      {{#if (eq skill.pool 'ask')}}
+        class=""
+      {{else}}
+        class=""
+      {{/if}}
+    >
+      {{#select skill.pool}}
+      <option value="2d6">2D6</option>
+      <option value="3d6kh2">3D6</option>
+      <option value="4d6kh2">4D6</option>
+      {{/select}}
+    </select>
+  </div>
+  <div>
+    {{! mod }}
+    <label for="modifier">{{localize 'swnr.chat.modifier'}}: </label>
+    <input name="modifier" type="number" step="1" value="{{ modifier }}" class=""/>
+  </div>
+  <div>
+    {{! stat}}
+    <label for="stat">{{localize 'swnr.sheet.stats'}}: </label>
+    <select
+      name="stat"
+      {{#if (eq skill.defaultStat 'ask')}}
+        class=""
+      {{else}}
+        class=""
+      {{/if}}
+    >
+      {{#select skill.defaultStat}}
+      {{#each stats as |box name |}}
+      <option value="{{name}}">
+        {{localize (concat "swnr.stat.long." name)}}: 
+        {{numberFormat box.mod decimals=0 sign=true}}
+      </option>
+      {{/each}}
+      {{/select}}
+    </select>
+  </div>
+  <div class="flex flexrow">
+    <div class="flex flexrow">
+      <label for="remember">{{localize 'swnr.weapon.remember'}}: </label>
+      <input type="checkbox" name="remember" id="remember">
+    </div>
+  </div> 
+</form>
