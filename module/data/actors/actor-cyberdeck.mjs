@@ -11,7 +11,6 @@ export default class SWNCyberdeck extends SWNActorBase {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
     schema.health = SWNShared.resourceField(1,1);
-    schema.bonusAccess = SWNShared.requiredNumber(0);
     schema.memory = SWNShared.resourceField(1,1);
     schema.cpu = SWNShared.resourceField(1,1);
     schema.encumberance = SWNShared.requiredNumber(0);
@@ -22,6 +21,7 @@ export default class SWNCyberdeck extends SWNActorBase {
     schema.crownPenalty = new fields.BooleanField({initial: false});
     schema.baseShielding = SWNShared.requiredNumber(0);
     schema.bonusShielding = SWNShared.requiredNumber(0);
+    schema.bonusAccess = SWNShared.requiredNumber(0);
     return schema;
   }
 

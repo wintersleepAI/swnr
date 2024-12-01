@@ -58,6 +58,28 @@
           "cr": {"label": "CR"}
         },
         "xp": {"label": "XP"}
+      },
+      "Cyberdeck": {
+        "FIELDS": {
+          "shielding": {
+            "value": { "label": "Shielding"}
+          },
+          "memory": {
+            "value": { "label": "Memory"}
+          },
+          "cpu": {
+            "value": { "label": "CPU"}
+          },
+          "bonusAccess": { "label" : "Bonus Access"},
+          "baseShielding": {"label" : "Base Shielding"},
+          "bonusShielding": { "label" : "Bonus Shielding"},
+          "neuralBuffer": {"label" : "Neural Buffer"},
+          "wirelessConnectionPenalty": {"label": "Wireless Connection Penalty (-2)"},
+          "crownPenalty": { "label": "Crown Penalty (-1)"},
+          "cost": {"label": "Cost"},
+          "encumberance": {"label": "Encumberance"},
+          "hacker": {"label": "Hacker"}
+        }
       }
     },
     "Item": {
