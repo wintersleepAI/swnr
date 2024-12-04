@@ -87,11 +87,11 @@
           "weight": {"label": "Weight"}
         }
       },
-      "Spell": {
+      "Power": {
         "FIELDS": {
-          "level": {"label": "Spell Level"}
+          "level": {"label": "Power Level"}
         },
-        "SpellLVL": "Level {level} Spells",
+        "PowerLVL": "Level {level} Power",
         "AddLVL": "Add LVL {level}"
       }, 
       "Skill": {

@@ -80,6 +80,9 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     },
     skillFrag: {
       template: 'systems/swnr/templates/actor/fragments/skill.hbs',
+    },
+    cyberList: {
+      template: 'systems/swnr/templates/actor/fragments/cyberware-list.hbs',
     }
   };
 
