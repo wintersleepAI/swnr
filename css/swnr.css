@@ -510,6 +510,16 @@
   text-align: center;
   margin: 0 6px;
 }
+.swnr .items-list .item-controls-small {
+  display: flex;
+  flex: 0 0 20px;
+  justify-content: flex-end;
+}
+.swnr .items-list .item-controls-small a {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 2px;
+}
 .swnr .items-list .item {
   align-items: center;
   padding: 0 2px;

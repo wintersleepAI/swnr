@@ -28,24 +28,42 @@
       {{#if (ne actor.itemTypes.skill.length 0)}}
       
         <div class="grid grid-cols-2 ">
-          <div class="items-list">
+          <div>
+            <ol class="items-list">
             {{#each actor.itemTypes.skill as |item id|}}
-            {{#if (halfway @root.actor.itemTypes.skill @index)}}          
-              </div>
-              <div class="items-list">
-            {{/if}}
-            <div data-item-id="{{item.id}}" data-action="rollSkill"
-              class="skill skillRoll combat-skill
+        {{#if (halfway @root.actor.itemTypes.skill @index)}}          
+            </ol>
+          </div>
+          <div> 
+            <ol class="items-list">
+                
+          {{/if}}
+            <li data-item-id="{{item.id}}" data-action="rollSkill" data-drag='true' data-document-class='Item'
+              class="skill skillRoll combat-skill  flexrow
               {{#if (mod2 @index) }}
                {{!-- alt-row --}}
               {{/if}}
               ">
-            <a class="inline-flex flex-wrap gap-2">
+              <a class="inline-flex flex-wrap gap-2">
                 <i class="fas fa-dice-d20"></i>
                 {{item.name}}
                 {{numberFormat item.system.rank decimals=0 sign=true}}
               </a>
-            </div>
+        
+              <div class="item-controls-small lock-toggle" style="display:none;">
+                <a class='item-control item-edit' title='{{localize "DOCUMENT.Update" type=' Item'}}' data-action='viewDoc'>
+                  <i class='fas fa-edit'></i>
+                </a>
+                {{#if @root.editable}}
+                <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type=' Item'}}' data-action='deleteDoc'>
+                  <i class='fas fa-trash'></i>
+                </a>
+                {{/if}}
+                <a class="item-control item-level-up" title="{{localize 'swnr.sheet.level-up'}}">
+                  <i class="fas fa-level-up-alt"></i>
+                </a>
+              </div>
+            </li>  
             {{/each}}
           </div>
         </div>
