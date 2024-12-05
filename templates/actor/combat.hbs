@@ -39,7 +39,7 @@
                 
           {{/if}}
             <li data-item-id="{{item.id}}" data-action="rollSkill" data-drag='true' data-document-class='Item'
-              class="skill skillRoll combat-skill  flexrow
+              class="skill skillRoll combat-skill  flex-col
               {{#if (mod2 @index) }}
                {{!-- alt-row --}}
               {{/if}}
@@ -67,7 +67,30 @@
             {{/each}}
           </div>
         </div>
+  <div class="flex flexrow gap lock-toggle" style="column-gap:10%;display:none;">
+    <div class="flex flex-col items-center">
+      {{formInput systemFields.unspentSkillPoints value=system.unspentSkillPoints localize=true}}
+      <label>{{localize 'swnr.sheet.unspent-skill'}}</label>
+    </div>
+    <div class="flex flex-col items-center">
+      {{formInput systemFields.unspentPsySkillPoints value=system.unspentPsySkillPoints localize=true}}
+      <label>{{localize 'swnr.sheet.unspent-psy-skill'}}</label>
+    </div>
+    <div class="flex flex-col items-center">
+      <a class="item-control item-create"
+        title="{{localize 'swnr.sheet.add-item'}}" 
+        data-action='createDoc'
+        data-document-class='Item'
+        data-type='skill'
+        data-item-name="Skill"
+      >
+        <i class="fas fa-plus"></i>
+        <label>{{localize 'swnr.sheet.add-skill'}}</label>
+      </a>
 
+    </div>
+
+  </div>    
       {{else}}
       <button class="skill-load-button" type="button" data-action="loadSkills">
         {{localize 'swnr.sheet.loadSkills'}}

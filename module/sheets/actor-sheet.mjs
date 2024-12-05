@@ -36,6 +36,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       loadSkills: this._loadSkills,
       rollSkill: this._onSkillRoll,
       toggleArmor: this._toggleArmor,
+      toggleLock: this._toggleLock,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -551,6 +552,15 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     const armor = this.actor.items.get(armorID);
     const use = armor.system.use;
     await armor.update({ system: { use: !use }});
+  }
+
+  static async _toggleLock(event, _target) {
+    event.preventDefault();
+    this.element.querySelectorAll(".lock-toggle").forEach((d) => {
+      d.style.display = d.style.display === "none" ? "block" : "none";
+    });
+
+
   }
 
   /**
