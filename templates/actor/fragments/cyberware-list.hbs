@@ -1,9 +1,10 @@
 <ol class="items-list">
   <li class="item flexrow items-header">
     <div class='item-name'>{{name}}</div>
-    <div class="cyber-strain">{{localize 'swnr.sheet.cyberware.strain'}} </div>
-    <div class="cyber-conceal">{{localize 'swnr.sheet.cyberware.concealmentShort'}}</div>
-    <div class="cyber-effect">{{localize 'swnr.sheet.description'}}</div>
+    <div class="cyber-type cyber-prop">{{localize 'swnr.sheet.cyberware.type'}}</div>
+    <div class="cyber-strain cyber-prop">{{localize 'swnr.sheet.cyberware.strain'}} </div>
+    <div class="cyber-conceal cyber-prop">{{localize 'swnr.sheet.cyberware.concealmentShort'}}</div>
+    <div class="cyber-effect cyber-prop">{{localize 'swnr.sheet.cyberware.effect'}}</div>
     <div class='item-controls'>
       {{#if @root.editable}}
       <a class="item-control item-search" title="{{localize 'swnr.sheet.search-item'}}" data-item-type="{{ type }}"
@@ -14,7 +15,7 @@
       <a class='item-control item-create' title='{{localize "DOCUMENT.Create" type=' Item'}}' data-action='createDoc'
         data-document-class='Item' data-type='{{type}}'>
         <i class='fas fa-plus'></i>
-        {{localize 'DOCUMENT.New' type=type}}
+        {{localize 'DOCUMENT.New' type=''}}
       </a>
       {{/if}}
     </div>
@@ -23,7 +24,7 @@
 
   {{#each itemList as |item id|}}
   <li class='item flex flexrow' data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
-    <div class="item-name">
+    <div class="item-name cyber-list">
       <div class='item-image'>
         <a class='rollable' data-roll-type='item' data-action='roll'>
           <img src='{{item.img}}' title='{{item.name}}' width='24' height='24' />
@@ -36,13 +37,19 @@
           {{/if}}
       </div>
     </div>
-    <div class="cyber-strain">
+    <div class="cyber-type cyber-prop">
+      {{#if (ne item.system.type 'none')}}
+        {{localize (concat 'swnr.sheet.cyberware.types.' item.system.type)}}
+      {{/if}}
+    </div>
+    <div class="cyber-strain cyber-prop">
       {{item.system.strain}}
     </div>
-    <div class="cyber-conceal">
-      {{item.system.concealment}}
+    <div class="cyber-conceal cyber-prop">
+      {{!-- {{item.system.concealment}} --}}
+      {{localize (concat 'swnr.sheet.cyberware.conc.' item.system.concealment)}}
     </div>
-    <div class="cyber-effect">
+    <div class="cyber-effect cyber-prop">
       {{item.system.effect}}
     </div>
     <div class="item-controls">

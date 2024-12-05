@@ -177,6 +177,7 @@
           "tl": { "label": "Tech Level"},
           "cost": { "label": "Cost"},
           "strain": { 
+            "label": "Strain",
             "base": {
               "label": "Base Strain"
             },
@@ -664,13 +665,15 @@
         "strain": "Strain",
         "name": "Cyberware",
         "concealment": "Concealment",
-        "concealmentShort": "Conc.",
+        "concealmentShort": "Conceal.",
+        "effect": "Effect",
         "type": "Type",
         "complication": "Complication",
         "conc": {
           "sight": "Sight",
           "touch": "Touch",
-          "medical": "Medical"
+          "medical": "Medical",
+          "None": ""
         },
         "types": {
           "head": "Head",

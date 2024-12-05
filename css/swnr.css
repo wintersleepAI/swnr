@@ -585,6 +585,26 @@
   text-align: center;
   align-items: center;
 }
+.swnr .cyber-prop {
+  font-size: 12px;
+  text-align: center;
+}
+.swnr .cyber-prop .cyber-strain {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+.swnr .cyber-prop .cyber-conceal {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+.swnr .cyber-prop .cyber-effect {
+  flex: 0 0 80px;
+  padding: 0 8px;
+}
+.swnr .cyber-prop .cyber-type {
+  flex: 0 0 80px;
+  padding: 0 8px;
+}
 .swnr .effects-header {
   height: 28px;
   margin: 2px 0;

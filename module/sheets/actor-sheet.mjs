@@ -252,6 +252,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     // this sheet does with powers
     const items = [];
     const features = [];
+    const cyberware = [];
     const powers = {
       1: [],
       2: [],
@@ -276,6 +277,9 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       else if (i.type === 'feature') {
         features.push(i);
       }
+      else if (i.type === 'cyberware') {  
+        cyberware.push(i);
+      }
       // Append to powers.
       else if (i.type === 'power') {
         if (i.system.powerLevel != undefined) {
@@ -292,6 +296,16 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     context.items = items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.features = features.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.powers = powers;
+    // Sort cyberware by type, with none first
+    context.cyberware = cyberware.sort((a, b) => {
+      console.log(a, b, (a.system.type || 0), (b.system.type || 0), (a.system.type || 0) < (b.system.type || 0));
+      if (a.system.type === "none" && b.system.type !== "none") return -1; // a comes first
+      if (b.system.type === "none" && a.system.type !== "none") return 1;  // b comes first
+      
+      if ((a.system.type || 0) < (b.system.type || 0)) { return -1; }
+      if ((a.system.type || 0) > (b.system.type || 0)) { return 1; }
+      return 0;
+    });
   }
 
   /**

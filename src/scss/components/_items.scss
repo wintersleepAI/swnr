@@ -160,3 +160,29 @@
   text-align: center;
   align-items: center;
 }
+
+.cyber-prop {
+  font-size: 12px;
+  text-align: center;
+
+  .cyber-strain {
+    flex: 0 1 40px;
+    padding: 0 8px;
+  }
+  
+  .cyber-conceal {
+    flex: 0 1 40px;
+    padding: 0 8px;
+  }
+  
+  .cyber-effect {
+    flex: 0 0 80px;
+    padding: 0 8px;
+  }
+
+  .cyber-type {
+    flex: 0 0 80px;
+    padding: 0 8px;
+  }
+
+}
