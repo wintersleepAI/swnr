@@ -1,6 +1,6 @@
 <section class='tab combat flexcol {{tab.cssClass}}' data-group='primary' data-tab='combat'>
-  <section class='grid grid-5col'>
-    <aside class='sidebar'>
+  <div class='flex flexrow' style="align-items:flex-start;">
+    <aside class='sidebar' style="flex: 0 1 160px;" >
       {{! The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
       from 1 to 12 and will create that number of columns. }}
@@ -24,7 +24,7 @@
     </aside>
 
     {{! For the skills list, span the middle two columns }}
-    <section class='main grid-span-2'>
+    <div class='main'>
       {{#if (ne actor.itemTypes.skill.length 0)}}
       
         <div class="grid grid-cols-2 ">
@@ -67,7 +67,7 @@
             {{/each}}
           </div>
         </div>
-  <div class="flex flexrow gap lock-toggle" style="column-gap:10%;display:none;">
+  <div class="flex flexrow gap" style="column-gap:10%;">
     <div class="flex flex-col items-center">
       {{formInput systemFields.unspentSkillPoints value=system.unspentSkillPoints localize=true}}
       <label>{{localize 'swnr.sheet.unspent-skill'}}</label>
@@ -96,11 +96,11 @@
         {{localize 'swnr.sheet.loadSkills'}}
       </button>
       {{/if}}
-    </section>
+    </div>
 
 
     {{! For the quick items list, span the right two columns }}
-    <section class='grid-span-2'>
+    <div class='main' style="flex: 0 1 220px;">
       {{#if actor.system.favorites.length }}
       <ol class='items-list'>
         <li class='item flex flexrow items-header'>
@@ -244,6 +244,6 @@
         {{/if}}
       {{/each}}
       </ol>
-    </section>
-  </section>
+    </div>
+  </div>
 </section>

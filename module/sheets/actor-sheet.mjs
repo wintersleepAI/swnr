@@ -21,7 +21,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
   static DEFAULT_OPTIONS = {
     classes: ['swnr', 'actor'],
     position: {
-      width: 700,
+      width: 760,
       height: 800,
     },
     actions: {
@@ -557,7 +557,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
   static async _toggleLock(event, _target) {
     event.preventDefault();
     this.element.querySelectorAll(".lock-toggle").forEach((d) => {
-      d.style.display = d.style.display === "none" ? "block" : "none";
+      d.style.display = d.style.display === "none" ? "inline" : "none";
     });
 
 
