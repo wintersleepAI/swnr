@@ -47,6 +47,10 @@
     @include resource-bar-fill(var(--strain-bar-color));
   }
 
+  .effort-fill {
+    @include resource-bar-fill(var(--effort-bar-color));
+  }
+
   .ready-fill {
     @include resource-bar-fill(var(--ready-bar-color));
   }

@@ -62,7 +62,21 @@
           "species": { "label": "Species" },
           "homeworld": { "label": "Homeworld" },
           "background": { "label": "Background" },
-          "employer": { "label": "Employer" }
+          "employer": { "label": "Employer" },
+          "effort": {
+            "bonus": { "label": "Bonus" },
+            "scene": { "label" : "Scene"},
+            "current": { "label": "Current" },
+            "day": { "label": "Day" }
+          },
+          "tweak": {
+            "effort": {
+              "max": { "label": "Max" },
+              "scene": { "label" : "Scene"},
+              "current": { "label": "Current" },
+              "day": { "label": "Day" }
+            }
+          }
         }
       },
       "NPC": {

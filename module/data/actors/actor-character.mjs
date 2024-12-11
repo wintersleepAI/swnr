@@ -208,6 +208,8 @@ export default class SWNCharacter extends SWNActorBase {
       extraEffort.scene -
       extraEffort.day;
 
+    effort.percentage = Math.clamp((effort.value * 100) / effort.max, 0, 100);
+
     //encumbrance
     if (!this.encumbrance)
       this.encumbrance = {
