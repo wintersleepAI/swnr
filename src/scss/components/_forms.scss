@@ -162,6 +162,13 @@ input[type="checkbox"].small-checkbox {
 .sheet-body .tab .editor {
   height: 100%;
   overflow-y: scroll;
+
+  .sheet-cols {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
 }
 
 .tab.biography {

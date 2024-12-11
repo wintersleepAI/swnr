@@ -371,6 +371,14 @@
   height: 100%;
   overflow-y: scroll;
 }
+.swnr .sheet-body .sheet-cols,
+.swnr .sheet-body .tab .sheet-cols,
+.swnr .sheet-body .tab .editor .sheet-cols {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
 .swnr .tab.biography {
   flex: 1;
 }
@@ -766,5 +774,3 @@
   align-items: center;
   cursor: pointer;
 }
-
-/*# sourceMappingURL=swnr.css.map */

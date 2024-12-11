@@ -101,7 +101,8 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        options.parts.push('combat','skills','features', 'gear', 'powers', 'effects');
+        // ws AI removing skills for now: ,'skills'
+        options.parts.push('combat','features', 'gear', 'powers', 'effects');
         options.defaultTab = 'combat';
         break;
       case 'npc':
@@ -299,7 +300,6 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     context.powers = powers;
     // Sort cyberware by type, with none first
     context.cyberware = cyberware.sort((a, b) => {
-      console.log(a, b, (a.system.type || 0), (b.system.type || 0), (a.system.type || 0) < (b.system.type || 0));
       if (a.system.type === "none" && b.system.type !== "none") return -1; // a comes first
       if (b.system.type === "none" && a.system.type !== "none") return 1;  // b comes first
       

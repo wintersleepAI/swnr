@@ -1,5 +1,5 @@
-<section class='tab combat flexcol {{tab.cssClass}}' data-group='primary' data-tab='combat'>
-  <div class='flex flexrow' style="align-items:flex-start;">
+<section class='tab combat sheet-body {{tab.cssClass}}' data-group='primary' data-tab='combat'>
+  <div class='sheet-cols'>
     <aside class='sidebar' style="flex: 0 1 160px;" >
       {{! The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
@@ -24,7 +24,27 @@
     </aside>
 
     {{! For the skills list, span the middle two columns }}
-    <div class='main'>
+    <div class='main' style="flex: 1 1; margin-right:4px">
+      <ol class='items-list'>
+        <li class='flex flexrow items-header'>
+          <div class='item-name'>{{localize 'SWN.Actor.Tabs.Skills'}}</div>
+          <div class='item-controls'>
+            {{#if @root.editable}}
+              <a
+                class='item-control item-create'
+                title='Create item'
+                data-action='createDoc'
+                data-document-class='Item'
+                data-type='skill'
+              >
+                <i class='fas fa-plus'></i>
+                {{localize 'DOCUMENT.New' type=''}}
+              </a>
+            {{/if}}
+          </div>
+        </li> 
+      </ol>
+
       {{#if (ne actor.itemTypes.skill.length 0)}}
       
         <div class="grid grid-cols-2 ">
@@ -67,7 +87,7 @@
             {{/each}}
           </div>
         </div>
-  <div class="flex flexrow gap" style="column-gap:10%;">
+  <div class="flex flexrow gap" style="column-gap:30%;align-items:flex-start;">
     <div class="flex flex-col items-center">
       {{formInput systemFields.unspentSkillPoints value=system.unspentSkillPoints localize=true}}
       <label>{{localize 'swnr.sheet.unspent-skill'}}</label>
@@ -76,7 +96,7 @@
       {{formInput systemFields.unspentPsySkillPoints value=system.unspentPsySkillPoints localize=true}}
       <label>{{localize 'swnr.sheet.unspent-psy-skill'}}</label>
     </div>
-    <div class="flex flex-col items-center">
+    {{!-- <div class="flex flex-col items-center">
       <a class="item-control item-create"
         title="{{localize 'swnr.sheet.add-item'}}" 
         data-action='createDoc'
@@ -87,8 +107,7 @@
         <i class="fas fa-plus"></i>
         <label>{{localize 'swnr.sheet.add-skill'}}</label>
       </a>
-
-    </div>
+    </div> --}}
 
   </div>    
       {{else}}
