@@ -57,7 +57,12 @@
           "attributes" : {
             "level.value": {"label": "Level"}
           },
-          "level": { "label": "XP" }
+          "level": { "label": "XP" },
+          "class": { "label": "Class" },
+          "species": { "label": "Species" },
+          "homeworld": { "label": "Homeworld" },
+          "background": { "label": "Background" },
+          "employer": { "label": "Employer" }
         }
       },
       "NPC": {
