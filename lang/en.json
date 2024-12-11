@@ -30,6 +30,13 @@
           "biography": {"label": "Biography"},
           "ac": { "label": "AC" },
           "baseAc": { "label": "Base AC" },
+          "hitDie": { "label": "Hit Die (per level)" },
+          "traumaTarget": { "label": "Trauma Target" },
+          "systemStrain": { 
+            "permanent": { "label": "Permanent Strain" },
+            "cyberware": "Cyberware Strain",
+            "label": "System Strain" 
+          },
           "health": {
             "value": {"label": "Health"},
             "max": {"label": "Maximum Health"}

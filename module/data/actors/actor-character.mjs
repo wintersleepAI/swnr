@@ -97,7 +97,7 @@ export default class SWNCharacter extends SWNActorBase {
 
     // System Strain
     this.systemStrain.cyberware = cyberwareStrain;
-    this.systemStrain.max = this.stats.con.total - this.systemStrain.cyberware + this.systemStrain.permanent;
+    this.systemStrain.max = this.stats.con.total - this.systemStrain.cyberware - this.systemStrain.permanent;
 
     // Calculate saves
     const save = {};

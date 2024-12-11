@@ -122,7 +122,7 @@
     <div class='main' style="flex: 0 1 220px;">
       {{#if actor.system.favorites.length }}
       <ol class='items-list'>
-        <li class='item flex flexrow items-header'>
+        <li class='flex flexrow items-header'>
           <div class='item-name'>
             {{localize 'swnr.sheet.favorites'}}
           </div>
@@ -165,8 +165,9 @@
       </ol>
       {{/if}}
 
+      {{!-- Readied Weapons --}}
       <ol class='items-list'>
-        <li class='item flex flexrow items-header'>
+        <li class='flex flexrow items-header'>
           <div class='item-name'>
              {{localize 'swnr.item.locationReadied'}} {{localize 'swnr.sheet.tabs.weapons'}}
           </div>
@@ -212,8 +213,9 @@
       {{/each}}
       </ol>
 
+    {{!-- Readied Armor --}}
     <ol class='items-list'>
-      <li class='item flex flexrow items-header'>
+      <li class='flex flexrow items-header'>
         <div class='item-name'>
          {{localize 'swnr.item.locationReadied'}} {{localize 'swnr.sheet.tabs.armor'}}
         </div>

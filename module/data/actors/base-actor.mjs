@@ -21,7 +21,7 @@ export default class SWNActorBase extends foundry.abstract
     schema.meleeAb = SWNShared.requiredNumber(1);
     schema.systemStrain = new fields.SchemaField({
       value: SWNShared.requiredNumber(0),
-      permanent: SWNShared.requiredNumber(0)
+      permanent: SWNShared.requiredNumber(0,-99)
     });
     schema.effort = new fields.SchemaField({
       bonus: SWNShared.requiredNumber(0),
