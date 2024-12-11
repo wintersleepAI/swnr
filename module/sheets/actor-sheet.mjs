@@ -37,6 +37,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       rollSkill: this._onSkillRoll,
       toggleArmor: this._toggleArmor,
       toggleLock: this._toggleLock,
+      rollStats: this._onRollStats,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -633,6 +634,11 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       });
       return roll;
     }
+  }
+
+  static async _onRollStats(event, _target) {
+    event.preventDefault();
+    alert("TODO: Implement roll stats");
   }
 
   static async _onRollSave(event, target) {

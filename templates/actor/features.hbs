@@ -5,10 +5,24 @@
   data-tab='features'
 >
   <section class='sheet-cols'>
-    <aside class='sidebar' style="flex: 0 1 250px;">
+    <aside class='sidebar' style="flex: 0 1 250px;margin-right:4px;">
       {{! The grid classes are defined in scss/global/_grid.scss. To use,
           use both the "grid" and "grid-Ncol" class where "N" can be any number
           from 1 to 12 and will create that number of columns.  }}
+      <ol class="items-list">
+        <li class="flexrow items-header">
+          <div class"item-name">
+            {{localize 'swnr.sheet.stats'}}
+            <a class='item-control' title='{{localize "swnr.chat.statRoll"}}' data-action='rollStats'>
+              <i class='fas fa-dice-d20'></i>
+            </a>
+          </div>
+          <div>{{localize 'swnr.sheet.base'}}</div>
+          <div>{{localize 'swnr.sheet.boosts'}}</div>
+          <div>{{localize 'swnr.sheet.bonus'}}</div>
+          <div>{{localize 'swnr.sheet.modifier'}}</div>
+        </li>
+      </ol>
       <div class='stats flex flexcol'>
         {{#each system.stats as |stat key|}}
           <div class='stat flexrow flex-group-center'>
