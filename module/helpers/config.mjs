@@ -85,10 +85,10 @@ SWN.armorTypes = {
 }
 
 SWN.reactionTypes = {
-  hostile: 'swnr.npc.reaction.hostile',
-  neutral: 'swnr.npc.reaction.neutral',
-  friendly: 'swnr.npc.reaction.friendly',
   unknown: 'swnr.npc.reaction.unknown',
+  hostile: 'swnr.npc.reaction.hostile',
   negative: 'swnr.npc.reaction.negative',
+  neutral: 'swnr.npc.reaction.neutral',
   positive: 'swnr.npc.reaction.positive',
+  friendly: 'swnr.npc.reaction.friendly',
 }

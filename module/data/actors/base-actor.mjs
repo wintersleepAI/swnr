@@ -10,6 +10,7 @@ export default class SWNActorBase extends foundry.abstract
 
     schema.health = SWNShared.resourceField(10,10);
     schema.biography = new fields.HTMLField();
+    schema.species = SWNShared.requiredString("");
 
     schema.access = SWNShared.resourceField(1,1); // CWN
     schema.traumaTarget = SWNShared.requiredNumber(6); // CWN

@@ -29,7 +29,8 @@ export function headerFieldWidget(field, _groupConfig, inputConfig) {
       // let subInput = document.createElement("space");
       // subInput.innerHTML = key;
       const val = inputConfig.value[key];
-      let subInput = value.toInput({ value: val });
+      console.log(_groupConfig.localize);
+      let subInput = value.toInput({ value: val, localize: _groupConfig.localize });
       subInput.classList.add("nested-field", "header");
       if (readOnly == count++) {
         subInput.setAttribute("readonly", true);

@@ -32,7 +32,6 @@ export default class SWNCharacter extends SWNActorBase {
     });
     schema.goals = SWNShared.requiredString("");
     schema.class = SWNShared.requiredString("");
-    schema.species = SWNShared.requiredString("");
     schema.homeworld = SWNShared.requiredString("");
     schema.background = SWNShared.requiredString("");
     schema.employer = SWNShared.requiredString("");

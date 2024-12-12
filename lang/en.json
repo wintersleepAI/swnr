@@ -50,6 +50,8 @@
             "label": "Access"
           }, 
           "speed" : { "label": "Movement" },
+          "species": { "label": "Species" },
+          "homeworld": { "label": "Homeworld" },
           "effort": {
             "bonus": { "label": "Bonus" },
             "scene": { "label" : "Scene"},
@@ -82,8 +84,6 @@
             }
           },
           "class": { "label": "Class" },
-          "species": { "label": "Species" },
-          "homeworld": { "label": "Homeworld" },
           "background": { "label": "Background" },
           "employer": { "label": "Employer" }
         }
@@ -105,6 +105,8 @@
           "ab": {"label": "Attack Bonus"},
           "baseSoakTotal": { "label" : "Base Soak"},
           "soakTotal": { "label" : "Soak Total"},
+          "reaction": { "label": "Reaction" },
+          "faction": { "label": "Faction" },
           "meleeAb": {"label": "Melee Attack Bonus"}
         },
         "xp": {"label": "XP"}

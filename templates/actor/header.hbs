@@ -107,7 +107,18 @@
           </label>
         {{/if}}
         {{#if (eq actor.type 'npc')}}
-          
+          <div class="field resource-content">  
+            <div class="flex flexrow">
+              {{formInput systemFields.reaction value=system.reaction localize=true widget=headerWidget}}
+
+            </div> 
+          </div>
+          <label class='resource-label'>
+            <a data-action="reactionRoll">
+              {{localize 'SWN.Actor.NPC.FIELDS.reaction.label'}}          
+              <i class="fa fa-dice-d6"></i>
+            </a>
+          </label>  
         {{/if}}
       </div>
 
@@ -137,16 +148,12 @@
           </label>
         {{/if}}
         {{#if (eq actor.type 'npc')}}
-          <label class='resource-label'>
-            Morale??
-          </label>
-          <div class='resource-content flexrow flex-center flex-between'>
-            TODO
-          </div>
+          {{formGroup systemFields.faction value=system.faction localize=true widget=headerWidget}}
+
         {{/if}}
       </div>
 
-      {{formGroup systemFields.speed value=system.speed localiz=true widget=headerWidget}}
+      {{formGroup systemFields.speed value=system.speed localize=true widget=headerWidget}}
 
 
       {{! "flex-group-center" is also defined in the _grid.scss file
@@ -178,6 +185,13 @@
       {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget}}
       {{else}}
       TODO AB for char with melee?
+      {{/if}}
+
+    
+      {{#if (eq actor.type 'npc')}}
+      {{formGroup systemFields.species value=system.species localize=true widget=headerWidget}}
+      {{formGroup systemFields.homeworld value=system.homeworld localize=true widget=headerWidget}}
+
       {{/if}}
 
       {{formGroup systemFields.access value=system.access localize=true widget=headerWidget}}

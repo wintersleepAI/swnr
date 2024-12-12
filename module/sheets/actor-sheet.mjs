@@ -39,6 +39,8 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       toggleLock: this._toggleLock,
       rollStats: this._onRollStats,
       toggleSection: this._toggleSection,
+      reactionRoll: this._onReactionRoll,
+      moraleRoll: this._onMoraleRoll,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -669,6 +671,16 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     const dataset = target.dataset;
     const saveType = dataset.saveType;
     this.actor.system.rollSave(saveType);
+  }
+
+  static async _onReactionRoll(event, _target) {
+    event.preventDefault();
+    alert("todo");
+  }
+
+  static async _onMoraleRoll(event, _target) {
+    event.preventDefault();
+    alert("todo");
   }
 
   /** Helper Functions */
