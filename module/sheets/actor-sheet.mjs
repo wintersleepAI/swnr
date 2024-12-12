@@ -74,6 +74,9 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     combat: {
       template: 'systems/swnr/templates/actor/combat.hbs',
     },
+    npc: {
+      template: 'systems/swnr/templates/actor/npc.hbs',
+    },
     skills: {
       template: 'systems/swnr/templates/actor/skills.hbs',
     },
@@ -108,7 +111,8 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
         options.defaultTab = 'combat';
         break;
       case 'npc':
-        options.parts.push('gear', 'effects');
+        options.parts.push('npc','gear', 'effects');
+        options.defaultTab = 'npc';
         break;
     }
   }
@@ -151,6 +155,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       case 'combat':
       case 'skills':
       case 'powers':
+      case 'npc':
       case 'gear':
         context.tab = context.tabs[partId];
         break;
@@ -224,6 +229,10 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
         case 'combat':
           tab.id = 'combat';
           tab.label += 'Combat';
+          break;
+        case 'npc':
+          tab.id = 'npc';
+          tab.label += 'NPC';
           break;
         case 'skills':
           tab.id = 'skills';
