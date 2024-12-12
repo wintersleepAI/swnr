@@ -1,6 +1,6 @@
 <section class='tab npc sheet-body {{tab.cssClass}}' data-group='primary' data-tab='npc'>
   <div class="sheet-cols">
-    <div class="flex flex-col"> <!-- 1st Column -->
+    <div class="flex flex-col" style="flex: 1 1;"> <!-- 1st Column -->
       <div class="resource-group">
         <b>{{localize 'swnr.sheet.stats'}} </b>
         {{formGroup systemFields.hitDice value=system.hitDice localize=true}}
@@ -33,7 +33,7 @@
 
       </div>
     </div> <!-- End 1st Column -->
-    <div class="flex flex-col"> <!-- 2nd Column -->
+    <div class="flex flex-col" style="flex: 1 1;"> <!-- 2nd Column -->
       <div class="resource-group">
         <b>{{localize 'swnr.sheet.rollables'}}</b>
         <div class="flex flexrow">
@@ -107,5 +107,11 @@
         </div>
       </div>
     </div> <!-- End 2nd Column -->
+    <div class="flex flex-col" style="flex: 1 0;"> <!-- 3rd Column -->
+      {{> "systems/swnr/templates/actor/fragments/compact-weapon-list.hbs" itemList=actor.itemTypes.weapon actorType=actor.type }}
+      {{> "systems/swnr/templates/actor/fragments/compact-armor-list.hbs" itemList=actor.itemTypes.armor actorType=actor.type }}
+      TODO powers/abilities
+    </div> <!-- End 3rd Column -->
+
   </div>
 </section>

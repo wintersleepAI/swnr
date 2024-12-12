@@ -174,9 +174,11 @@
         </label>
       </div>
 
-
+      {{#if (eq actor.type 'character')}}
       {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget}}
-
+      {{else}}
+      TODO AB for char with melee?
+      {{/if}}
 
       {{formGroup systemFields.access value=system.access localize=true widget=headerWidget}}
 

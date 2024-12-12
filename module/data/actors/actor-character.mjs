@@ -240,8 +240,9 @@ export default class SWNCharacter extends SWNActorBase {
       }
       return itemSize * i.system.encumbrance;
     };
-    encumbrance.ready.value = inventory
-      .filter((i) => i.system.location === "readied")
+    const readiedItems = inventory.filter((i) => i.system.location === "readied");
+
+    encumbrance.ready.value = readiedItems
       .map(itemInvCost)
       .reduce((i, n) => i + n, 0);
     encumbrance.stowed.value = inventory
@@ -264,6 +265,8 @@ export default class SWNCharacter extends SWNActorBase {
     this.powers = powers;
       
     this.favorites = this.parent.items.filter((i) => i.system["favorite"]);;
+    this.readiedWeapons = readiedItems.filter((i) => i.type === "weapon");
+    this.readiedArmor = readiedItems.filter((i) => i.type === "armor");
   }
 
   getRollData() {

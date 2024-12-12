@@ -237,105 +237,10 @@
       {{/if}}
 
       {{!-- Readied Weapons --}}
-      <ol class='items-list'>
-        <li class='flex flexrow items-header'>
-          <div class='item-name'>
-             {{localize 'swnr.item.locationReadied'}} {{localize 'swnr.sheet.tabs.weapons'}}
-          </div>
-          <div class="item-dmg">
-            {{localize 'swnr.weapon.damage'}}
-          </div>
-          <div class='item-controls-small'>
-          </div>
-        </li>
-      {{#each actor.itemTypes.weapon as |item id|}} 
-        {{#if (eq item.system.location "readied")}}
-          <li
-            class='item flex flexrow'
-            data-item-id='{{item._id}}'
-            data-drag='true'
-            data-document-class='Item'
-          >
-            <div class='item-name'>
-              <div class='item-image'>
-                <a class='rollable' data-roll-type='item' data-action='roll'>
-                  <img
-                    src='{{item.img}}'
-                    title='{{item.name}}'
-                    width='24'
-                    height='24'
-                  />
-                </a>
-              </div>
-              <div>{{item.name}}</div>
-            </div>
-            <div class="item-dmg item-prop">{{item.system.damage}}</div>
-            <div class='item-controls-small'>
-              <a
-                class='item-control item-edit'
-                title='{{localize "DOCUMENT.Update" type='Item'}}'
-                data-action='viewDoc'
-              >
-                <i class='fas fa-edit'></i>
-              </a>
-            </div>
-          </li>
-        {{/if}}
-      {{/each}}
-      </ol>
+      {{> "systems/swnr/templates/actor/fragments/compact-weapon-list.hbs" itemList=actor.system.readiedWeapons actorType=actor.type }}
 
-    {{!-- Readied Armor --}}
-    <ol class='items-list'>
-      <li class='flex flexrow items-header'>
-        <div class='item-name'>
-         {{localize 'swnr.item.locationReadied'}} {{localize 'swnr.sheet.tabs.armor'}}
-        </div>
-        <div class="item-qty">
-          {{localize 'swnr.sheet.ac'}}
-        </div>
-        <div class="item-controls-small">
-        </div>
-      </li>
-      <li>
-
-        {{#if gameSettings.useTrauma}}
-          ({{localize 'swnr.sheet.traumaTarget'}}: {{actor.system.modifiedTraumaTarget}})
-        {{/if}}
-        {{#if gameSettings.useCWNArmor}}
-          ({{localize 'swnr.armor.soak.label'}} Total: {{actor.system.soakTotal.value}}/{{actor.system.soakTotal.max}} )
-      {{/if}}
-      </li>
-      {{#each actor.itemTypes.armor as |item id|}} 
-        {{#if (eq item.system.location "readied")}}
-          <li data-item-id="{{item.id}}" 
-            data-document-class='Item'
-            class="item flexrow flex-group-center">
-           <input type="checkbox" data-action="toggleArmor" data-item-id="{{item.id}}" {{#if item.system.use}}checked{{/if}}>
-            <div class="item-name">
-              {{item.name}} 
-            </div>
-            <div class="item-qty item-prop">
-              {{item.system.ac}}
-              {{#if gameSettings.useCWNArmor}}
-                / {{item.system.meleeAc}}
-                {{#if (ne item.system.soak 0)}}
-                  ({{item.system.soak.value}}/{{item.system.soak.max}}) 
-                {{/if}}
-              {{/if}}
-            </div>
-            <div class='item-controls-small'>
-              <a
-                class='item-control item-edit'
-                title='{{localize "DOCUMENT.Update" type='Item'}}'
-                data-action='viewDoc'
-              >
-                <i class='fas fa-edit'></i>
-              </a>
-            </div>
-          </li>
-        {{/if}}
-      {{/each}}
-      </ol>
+      {{!-- Readied Armor --}}
+      {{> "systems/swnr/templates/actor/fragments/compact-armor-list.hbs" itemList=actor.system.readiedArmor actorType=actor.type }}
     </div>
   </div>
 </section>

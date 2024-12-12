@@ -67,9 +67,6 @@ export default class SWNActorBase extends foundry.abstract
     };
     modifiedTraumaTarget: number;
     */
-    //TODO
-    this.ac = baseAc + 0;
-    this.meleeAc = baseAc + 0;
   }
 
   rollSave(_saveType) {

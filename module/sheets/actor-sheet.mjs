@@ -89,6 +89,12 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     },
     cyberList: {
       template: 'systems/swnr/templates/actor/fragments/cyberware-list.hbs',
+    },
+    compactWeaponList: {
+      template: 'systems/swnr/templates/actor/fragments/compact-weapon-list.hbs',
+    },
+    compactArmorList: {
+      template: 'systems/swnr/templates/actor/fragments/compact-armor-list.hbs',
     }
   };
 
