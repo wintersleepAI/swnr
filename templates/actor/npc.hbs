@@ -1,3 +1,56 @@
-<section class='tab npc sheet-cols {{tab.cssClass}}' data-group='primary' data-tab='npc'>
-
-</section> 
+<section class='tab npc sheet-body {{tab.cssClass}}' data-group='primary' data-tab='npc'>
+  <div class="sheet-cols">
+    <div class="flex flex-col">
+      <div class="resource-group">
+        <b>{{localize 'swnr.sheet.stats'}} </b>
+        {{formGroup systemFields.hitDice value=system.hitDice localize=true}}
+        {{formGroup systemFields.baseAc value=system.baseAc localize=true}}
+        {{formGroup systemFields.meleeAc value=system.baseAc localize=true}}
+        {{formGroup systemFields.armorType value=system.armorType localize=true}}
+      </div>
+    </div>
+    <div class="flex flex-col">
+      <div class="resource-group">
+        <b>{{localize 'swnr.sheet.rollables'}}</b>
+        <div class="flex flexrow">
+          <span class="flex: 0 1 20px;">
+            <a  data-action="moraleRoll" data-target='{{system.moralScore}}'>
+              <i class="fa fa-dice-d6 fa-2x"></i>
+            </a>
+          </span>
+          <span style="flex: 4 0;">{{formGroup systemFields.moralScore value=system.moralScore localize=true}}</span>
+        </div>
+        <div class="flex flexrow">
+          <span class="flex: 0 1 20px;">
+            <a data-action="roll" data-roll='2d6 + 0' data-label="{{localize 'swnr.npc.skill.untrained' actor=actor.name}}">
+              <i class="fa fa-dice-d6 fa-2x"></i>
+            </a>
+          </span>
+          <span style="flex: 4 0;">
+            <div class="form-group">
+              <label>{{localize 'swnr.npc.untrained-skill'}}</label>
+              <input type="text" value="0" readonly>
+            </div>
+          </span>
+        </div>
+        <div class="flex flexrow">
+          <span class="flex: 0 1 20px;">
+            <a data-action="roll" data-roll='2d6 + {{system.skillBonus}}'
+              data-label="{{localize 'swnr.npc.skill.trained'  actor=actor.name}}">
+              <i class="fa fa-dice-d6 fa-2x"></i>
+            </a>
+          </span>
+          <span style="flex: 4 0;">{{formGroup systemFields.skillBonus value=system.skillBonus localize=true}}</span>
+        </div>
+        <div class="flex flexrow">
+          <span class="flex: 0 1 20px;">
+            <a  data-action="saveRoll" data-target='{{system.saves}}'>
+              <i class="fa fa-dice-d6 fa-2x"></i>
+            </a>
+          </span>
+          <span style="flex: 4 0;">{{formGroup systemFields.saves value=system.saves localize=true}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

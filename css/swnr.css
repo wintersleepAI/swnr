@@ -380,6 +380,15 @@
   flex-wrap: nowrap;
   align-items: flex-start;
 }
+.swnr .sheet-body .resource-group,
+.swnr .sheet-body .tab .resource-group,
+.swnr .sheet-body .tab .editor .resource-group {
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  margin: 0px;
+  padding: 4px;
+  margin: 4px;
+}
 .swnr .tab.biography {
   flex: 1;
 }
@@ -779,3 +788,5 @@
   align-items: center;
   cursor: pointer;
 }
+
+/*# sourceMappingURL=swnr.css.map */

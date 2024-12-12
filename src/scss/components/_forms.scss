@@ -169,6 +169,14 @@ input[type="checkbox"].small-checkbox {
     flex-wrap: nowrap;
     align-items: flex-start;
   }
+
+  .resource-group {
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    margin: 0px;
+    padding: 4px;
+    margin: 4px;
+  }
 }
 
 .tab.biography {

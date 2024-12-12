@@ -90,7 +90,14 @@
       },
       "NPC": {
         "FIELDS": {
-          "cr": {"label": "CR"}
+          "cr": {"label": "CR"},
+          "hitDice": {"label": "Hit Dice"},
+          "baseAc": {"label": "Base AC"},
+          "meleeAc": {"label": "Melee AC"},
+          "armorType": {"label": "Armor Type"},
+          "moralScore": { "label": "Morale Score" },
+          "skillBonus": { "label": "Skill Bonus" },
+          "saves": { "label": "Saving Throw"}
         },
         "xp": {"label": "XP"}
       }
@@ -1146,6 +1153,7 @@
       },
       "morale-check": "Morale Check",
       "trained-skill": "Trained Skill",
+      "untrained-skill": "Untrained Skill",
       "attacks-per-turn": "Attacks Per Turn",
       "attack-bonus-hit": "Attack Bonus to Hit",
       "attack-bonus-damage": "Attack Bonus Damage",

@@ -76,3 +76,19 @@ SWN.cyberConcealmentTypes = {
   touch: 'swnr.sheet.cyberware.conc.touch',
   medical: 'swnr.sheet.cyberware.conc.medical',
 }
+
+SWN.armorTypes = {
+  street: 'swnr.armor.type.street',
+  combat: 'swnr.armor.type.combat',
+  powered: 'swnr.armor.type.powered',
+  primitive: 'swnr.armor.type.primitive',
+}
+
+SWN.reactionTypes = {
+  hostile: 'swnr.npc.reaction.hostile',
+  neutral: 'swnr.npc.reaction.neutral',
+  friendly: 'swnr.npc.reaction.friendly',
+  unknown: 'swnr.npc.reaction.unknown',
+  negative: 'swnr.npc.reaction.negative',
+  positive: 'swnr.npc.reaction.positive',
+}

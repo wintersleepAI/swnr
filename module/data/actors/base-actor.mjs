@@ -16,7 +16,7 @@ export default class SWNActorBase extends foundry.abstract
     schema.hitDie = SWNShared.requiredString("d6");
     schema.baseAc = SWNShared.requiredNumber(10);
     // schema.ac = SWNShared.requiredString("");
-    // schema.meleeAc = SWNShared.requiredNumber(10);
+    schema.meleeAc = SWNShared.requiredNumber(10);
     schema.ab = SWNShared.requiredNumber(1);
     schema.meleeAb = SWNShared.requiredNumber(1);
     schema.systemStrain = new fields.SchemaField({

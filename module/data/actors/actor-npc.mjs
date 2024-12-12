@@ -10,8 +10,7 @@ export default class SWNNPC extends SWNActorBase {
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
-    const armorTypes = ["street", "combat", "powered", "primitive"];
-    schema.armorType = SWNShared.stringChoices("street", armorTypes);
+    schema.armorType = SWNShared.stringChoices("street", CONFIG.SWN.armorTypes);
     schema.skillBonus = SWNShared.requiredNumber(0);
     schema.attacks = new fields.SchemaField({
       damage: SWNShared.requiredString("d6"),
@@ -21,8 +20,7 @@ export default class SWNNPC extends SWNActorBase {
     schema.hitDice = SWNShared.requiredString("1d8");
     schema.saves = SWNShared.requiredNumber(0);
     schema.moralScore = SWNShared.requiredNumber(6);
-    const reactionTypes = ["hostile", "neutral", "friendly", "unknown", "negative", "positive"];
-    schema.reaction = SWNShared.stringChoices("unknown", reactionTypes);
+    schema.reaction = SWNShared.stringChoices("unknown", CONFIG.SWN.reactionTypes);
     schema.homeworld = SWNShared.emptyString();
     schema.faction = SWNShared.emptyString();
     //TODO contents to HTML?
