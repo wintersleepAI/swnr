@@ -65,7 +65,24 @@
             "showResourceList": { "label": "Show Resource List" },
             "debtDisplay": { "label": "Debt Display" },
             "owedDisplay": { "label": "Owed Display" },
-            "balanceDisplay": { "label": "Balance Display" }
+            "balanceDisplay": { "label": "Balance Display" },
+            "effort": {
+              "max": { "label": "Max" },
+              "scene": { "label" : "Scene"},
+              "current": { "label": "Current" },
+              "day": { "label": "Day" }
+            }
+          },
+          "class": { "label": "Class" },
+          "species": { "label": "Species" },
+          "homeworld": { "label": "Homeworld" },
+          "background": { "label": "Background" },
+          "employer": { "label": "Employer" },
+          "effort": {
+            "bonus": { "label": "Bonus" },
+            "scene": { "label" : "Scene"},
+            "current": { "label": "Current" },
+            "day": { "label": "Day" }
           }
         }
       },

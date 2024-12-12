@@ -82,13 +82,17 @@
       from 1 to 12 and will create that number of columns.  }}
     <div class='resources grid grid-5col'>
       
-      <div class='document-name grid-span-2'><!-- Name -->
+      <div class='document-name grid-span-2 flex flexrow'><!-- Name -->
         <input
           name='name'
           type='text'
           value='{{actor.name}}'
           placeholder='Name'
         />
+        <a class="resource-content" data-action="toggleLock" style="flex: 0 1;">
+          <div class="lock-toggle"><i class="fas fa-unlock"></i></div>
+          <div class="lock-toggle" style="display:none;"><i class="fas fa-lock"></i></div>
+        </a>
       </div>
       
       <div class="resource flex-group-center"><!-- Level / HD -->
@@ -129,11 +133,6 @@
           <label class='resource-label'>
             {{localize 'swnr.sheet.xp'}}          
           </label>
-
-          <a class="resource-content" data-action="toggleLock">
-            <div class="lock-toggle"><i class="fas fa-unlock"></i></div>
-            <div class="lock-toggle" style="display:none;"><i class="fas fa-lock"></i></div>
-          </a>
         {{/if}}
         {{#if (eq actor.type 'npc')}}
           <label class='resource-label'>
@@ -152,30 +151,6 @@
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. }}
 
-      <div class='resource header-group flex-group-center grid-span-2'><!-- Saves -->
-        <div class="grid grid-2col">
-            <div class="save-throw-button" data-save-type="physical" data-action="rollSave">
-              <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.physical}}</p> 
-              <p>&nbsp;{{localize 'swnr.sheet.saves.physical'}}</p>
-            </div>
-            <div class="save-throw-button" data-save-type="evasion" data-action="rollSave">
-             <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.evasion}}</p>
-             <p>&nbsp;{{localize 'swnr.sheet.saves.evasion'}}</p>
-            </div> 
-            <div class="save-throw-button" data-save-type="mental" data-action="rollSave">
-              <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.mental}}</p> 
-              <p>&nbsp;{{localize 'swnr.sheet.saves.mental'}}</p>
-            </div>
-            {{#if (eq gameSettings.useHomebrewLuckSave true)}}
-            <div class="save-throw-button" data-save-type="luck" data-action="rollSave">
-              <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.luck}}</p>
-              <p>&nbsp;{{localize 'swnr.sheet.saves.luck'}}</p>
-            </div>
-            {{else}}
-            <div></div>
-            {{/if}}
-        </div><!-- end grid -->
-      </div><!-- end resource-group -->
 
       <div class="resource flex-group-center"><!-- AC -->
         <div class="field resource-content">
@@ -227,6 +202,33 @@
           </label>
       </div> --}}
       
+
+
+      <div class='resource header-group flex-group-center grid-span-5'><!-- Saves -->
+        <div class="flex flexrow">
+            <div class="save-throw-button" data-save-type="physical" data-action="rollSave">
+              <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.physical}}</p> 
+              <p>&nbsp;{{localize 'swnr.sheet.saves.physical'}}</p>
+            </div>
+            <div class="save-throw-button" data-save-type="evasion" data-action="rollSave">
+             <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.evasion}}</p>
+             <p>&nbsp;{{localize 'swnr.sheet.saves.evasion'}}</p>
+            </div> 
+            <div class="save-throw-button" data-save-type="mental" data-action="rollSave">
+              <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.mental}}</p> 
+              <p>&nbsp;{{localize 'swnr.sheet.saves.mental'}}</p>
+            </div>
+            {{#if (eq gameSettings.useHomebrewLuckSave true)}}
+            <div class="save-throw-button" data-save-type="luck" data-action="rollSave">
+              <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.luck}}</p>
+              <p>&nbsp;{{localize 'swnr.sheet.saves.luck'}}</p>
+            </div>
+            {{else}}
+            <div></div>
+            {{/if}}
+        </div><!-- end grid -->
+      </div><!-- end resource-group -->
+
       {{!-- AC shield --}}
         {{!-- <svg version="1.1" x="0px" y="0px" viewBox="0 0 90 100" xml:space="preserve">
           <path d="M45,100C-2.6,79.3,0,12.6,0,12.6c0-2.2,1.8-4,4.4-4.6l39.1-7.9C44,0,44.5,0,45,0c0.5,0,1,0,1.4,0.1L85.5,8
