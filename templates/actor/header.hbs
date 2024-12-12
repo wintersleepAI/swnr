@@ -54,6 +54,7 @@
         </div>
     </div>
 
+    {{#if (eq actor.type 'character')}}
     <div class="resource-bar"><!-- The character strain bar -->
       <div style="width:{{system.systemStrain.percentage}}%" class="strain-fill"></div>
         <div class="text">
@@ -75,6 +76,7 @@
             />
         </div>
     </div>
+    {{/if}}
   </div>
 
     {{! The grid classes are defined in scss/global/_grid.scss. To use,

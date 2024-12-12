@@ -6,11 +6,13 @@
 >
 <div class="flex flex-col">
   <div class="flex flexrow" style="margin:2px;gap:2px;">
+    {{#if (eq actor.type 'character')}}
     {{formGroup systemFields.class value=system.class localize=true}}
     {{formGroup systemFields.species value=system.species localize=true}}
     {{formGroup systemFields.homeworld value=system.homeworld localize=true}}
     {{formGroup systemFields.background value=system.background localize=true}}
     {{formGroup systemFields.employer value=system.employer localize=true}}
+    {{/if}}
   </div>
   <div>
     {{! Editors must receive enriched text data from getData to properly handle rolls, UUID links, etc. }}
