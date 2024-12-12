@@ -44,6 +44,7 @@ export default class SWNCharacter extends SWNActorBase {
     });
     schema.unspentSkillPoints = SWNShared.requiredNumber(0);
     schema.unspentPsySkillPoints = SWNShared.requiredNumber(0);
+    schema.extra = SWNShared.resourceField(0, 10);
 
     schema.tweak = new fields.SchemaField({
       advInit: new fields.BooleanField({initial: false}),
@@ -58,6 +59,7 @@ export default class SWNCharacter extends SWNActorBase {
         day: SWNShared.requiredNumber(0),
         max: SWNShared.requiredNumber(0)
       }),
+      extraHeader: SWNShared.emptyString(),
       showResourceList: new fields.BooleanField({initial: false}),
       resourceList: new fields.ArrayField(new fields.SchemaField({
         name: SWNShared.emptyString(),

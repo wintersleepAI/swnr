@@ -5,7 +5,7 @@ export default class SWNShared {
     const fields = foundry.data.fields;
     return new fields.SchemaField({
       // Make sure to call new so you invoke the constructor!
-      value: new fields.NumberField({ required: true, nullable: false, integer: true, min: 0, initial: initialValue }),
+      value: new fields.NumberField({ required: true, nullable: false, integer: true, min: -20, initial: initialValue }),
       max: new fields.NumberField({ required: true, nullable: false, integer: true, initial: initialMax }),
     });
   }

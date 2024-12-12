@@ -65,8 +65,8 @@
 
     {{! For the main features list, span the right two columns }}
     <section class='main' style="flex: 2 1;">
-      <div class="flex flexcol" style=""margin-bottom:4px;>
-        <div class="grid grid-col3">
+      <div class="flex flexcol" style="gap:12px;">
+        <div class="grid grid-col3"> <!--Stats modifiers / features --> 
           {{formGroup systemFields.baseAc value=system.baseAc localize=true}}
           {{formGroup systemFields.hitDie value=system.hitDie localize=true}}
           {{formGroup systemFields.traumaTarget value=system.traumaTarget localize=true}}
@@ -80,8 +80,8 @@
               readonly
             />
           </div>
-        </div>
-        <ol class='items-list'>
+        </div> <!-- End Stats modifiers / features -->
+        <ol class='items-list'> <!-- Features -->
           <li class='item flexrow items-header'>
             <div class='item-name'>{{localize 'Name'}}</div>
             <div class='item-controls'>
@@ -139,23 +139,28 @@
               </div>
             </li>
           {{/each}}
-        </ol>
-        {{!-- Tweaks --}}
-        <div>
+        </ol> <!-- End Features -->
+        <div> <!-- Tweaks -->
           <ol class="items-list">
             <li class="item-header flexrow">
-              <div class="item-name">{{localize "swnr.sheet.tweaks"}}</div>
+              <div class="item-name">
+                <a data-action="toggleSection" data-section="tweaks">
+                  <span id="tweaks-toggle">▼</span>
+                  {{localize "swnr.sheet.tweaks"}}
+                </a>
+              </div>
           </ol>
-          <div class="grid grid-col2">
+          <div class="grid grid-col2" id="tweaks">
             {{formGroup systemFields.tweak.fields.advInit value=system.tweak.advInit localize=true}}
             {{formGroup systemFields.tweak.fields.debtDisplay value=system.tweak.debtDisplay localize=true}}
             {{formGroup systemFields.tweak.fields.extraEffortName value=system.tweak.extraEffortName localize=true}}
-            {{formGroup systemFields.tweak.fields.owedDisplay value=system.tweak.owedDisplay localize=true}}
+            {{formGroup systemFields.tweak.fields.balanceDisplay value=system.tweak.balanceDisplay localize=true}}            
             {{formGroup systemFields.tweak.fields.showResourceList value=system.tweak.showResourceList localize=true}}
-            {{formGroup systemFields.tweak.fields.balanceDisplay value=system.tweak.balanceDisplay localize=true}}
+            {{formGroup systemFields.tweak.fields.owedDisplay value=system.tweak.owedDisplay localize=true}}
+            {{formGroup systemFields.tweak.fields.extraHeader value=system.tweak.extraHeader localize=true}}
             
           </div>
-        </div>
+        </div> <!-- End Tweaks -->
       </div>
 
     </section>

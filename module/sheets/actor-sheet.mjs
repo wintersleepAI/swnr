@@ -38,6 +38,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       toggleArmor: this._toggleArmor,
       toggleLock: this._toggleLock,
       rollStats: this._onRollStats,
+      toggleSection: this._toggleSection,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -560,8 +561,13 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     this.element.querySelectorAll(".lock-toggle").forEach((d) => {
       d.style.display = d.style.display === "none" ? "inline" : "none";
     });
+  }
 
-
+  static async _toggleSection(event, target) {
+    event.preventDefault();
+    const elem = target.dataset.section; //= target.dataset.section === "open" ? "closed" : "open";
+    this.element.querySelector("#" + elem).style.display = this.element.querySelector("#" + elem).style.display === "none" ? "" : "none";
+    this.element.querySelector("#" + elem + "-toggle").innerHTML = this.element.querySelector("#" + elem + "-toggle").innerHTML === "▼" ? "▲" : "▼";
   }
 
   /**
