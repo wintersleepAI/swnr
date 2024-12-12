@@ -205,7 +205,7 @@
       </div> --}}
       
 
-
+      {{#if (eq actor.type 'character')}}
       <div class='resource header-group flex-group-center grid-span-5'><!-- Saves -->
         <div class="flex flexrow">
             <div class="save-throw-button" data-save-type="physical" data-action="rollSave">
@@ -230,6 +230,7 @@
             {{/if}}
         </div><!-- end grid -->
       </div><!-- end resource-group -->
+      {{/if}}
 
       {{!-- AC shield --}}
         {{!-- <svg version="1.1" x="0px" y="0px" viewBox="0 0 90 100" xml:space="preserve">

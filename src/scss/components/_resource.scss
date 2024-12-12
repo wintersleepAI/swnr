@@ -22,10 +22,10 @@
   flex: 0 0 34px;
 }
 
+
 .resource-bar {
   /* Sets the position of the resource-bar and sets it to the proper size. */
   position: relative;
-  bottom: -10px;
 
   width: 80%;
   height: 20px;
@@ -80,3 +80,10 @@
   }
 }
 
+.sheet-header .resource-bar {
+  bottom: -10px;
+}
+
+.sheet-body .resource-bar {
+  margin-bottom: 10px;
+}

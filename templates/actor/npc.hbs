@@ -1,6 +1,6 @@
 <section class='tab npc sheet-body {{tab.cssClass}}' data-group='primary' data-tab='npc'>
   <div class="sheet-cols">
-    <div class="flex flex-col">
+    <div class="flex flex-col"> <!-- 1st Column -->
       <div class="resource-group">
         <b>{{localize 'swnr.sheet.stats'}} </b>
         {{formGroup systemFields.hitDice value=system.hitDice localize=true}}
@@ -8,13 +8,37 @@
         {{formGroup systemFields.meleeAc value=system.baseAc localize=true}}
         {{formGroup systemFields.armorType value=system.armorType localize=true}}
       </div>
-    </div>
-    <div class="flex flex-col">
+      <div class="resource-group">
+        <b>{{localize 'swnr.npc.combat'}} </b>
+        {{formGroup systemFields.attacks.fields.number value=system.attacks.number localize=true}}
+        {{#if (eq gameSettings.useCWNArmor true)}}
+        {{formGroup systemFields.ab value=system.ab localize=true label='swnr.sheet.ranged-attack-bonus'}}
+        {{formGroup systemFields.meleeAb value=system.meleeAb localize=true}}
+        {{else}}
+        {{formGroup systemFields.ab value=system.ab localize=true}}
+        {{/if}}
+        {{formGroup systemFields.attacks.fields.bonusDamage value=system.attacks.bonusDamage localize=true}}
+        {{#if (eq gameSettings.useCWNArmor true)}}
+        {{formGroup systemFields.baseSoakTotal value=system.baseSoakTotal localize=true widget=groupWidget}}
+        <div class="form-group">
+          <label>{{localize 'SWN.Actor.NPC.FIELDS.soakTotal.label'}}</label>
+          <div class="field flex flexrow">
+            <input type="text" value="{{system.soakTotal.value}}" class="sub-field" readonly>
+            <span class="nested-sep">/</span>
+            <input type="text" value="{{system.soakTotal.max}}" class="sub-field" readonly>
+          </div>
+        </div>
+
+        {{/if}}
+
+      </div>
+    </div> <!-- End 1st Column -->
+    <div class="flex flex-col"> <!-- 2nd Column -->
       <div class="resource-group">
         <b>{{localize 'swnr.sheet.rollables'}}</b>
         <div class="flex flexrow">
           <span class="flex: 0 1 20px;">
-            <a  data-action="moraleRoll" data-target='{{system.moralScore}}'>
+            <a data-action="moraleRoll" data-target='{{system.moralScore}}'>
               <i class="fa fa-dice-d6 fa-2x"></i>
             </a>
           </span>
@@ -22,7 +46,8 @@
         </div>
         <div class="flex flexrow">
           <span class="flex: 0 1 20px;">
-            <a data-action="roll" data-roll='2d6 + 0' data-label="{{localize 'swnr.npc.skill.untrained' actor=actor.name}}">
+            <a data-action="roll" data-roll='2d6 + 0'
+              data-label="{{localize 'swnr.npc.skill.untrained' actor=actor.name}}">
               <i class="fa fa-dice-d6 fa-2x"></i>
             </a>
           </span>
@@ -44,13 +69,43 @@
         </div>
         <div class="flex flexrow">
           <span class="flex: 0 1 20px;">
-            <a  data-action="saveRoll" data-target='{{system.saves}}'>
+            <a data-action="saveRoll" data-target='{{system.saves}}'>
               <i class="fa fa-dice-d6 fa-2x"></i>
             </a>
           </span>
           <span style="flex: 4 0;">{{formGroup systemFields.saves value=system.saves localize=true}}</span>
         </div>
       </div>
-    </div>
+      <div class="resource-group">
+        <b>{{localize 'swnr.effort.title'}}</b>
+          <div class="resource-bar"><!-- The character effort bar -->
+          <div style="width:{{system.effort.percentage}}%" class="effort-fill"></div>
+            <div class="text">
+              {{localize 'swnr.effort.title'}}
+                <input
+                  type='text'
+                  value='{{system.effort.value}}'
+                  readonly
+                  data-dtype='Number'
+                  class='nested-field short-field align-right current-value'
+                />
+              <p>/</p>
+                <input
+                  type='text'
+                  value='{{system.effort.max}}'
+                  readonly
+                  data-dtype='Number'
+                  class='nested-field short-field'
+                />
+            </div>
+        </div><!-- End of the character effort bar -->
+        <div class="grid grid-2col">
+          {{ formGroup systemFields.effort.fields.bonus value=system.effort.bonus localize=true }}
+          {{ formGroup systemFields.effort.fields.current value=system.effort.current localize=true }}
+          {{ formGroup systemFields.effort.fields.scene value=system.effort.scene localize=true }}
+          {{ formGroup systemFields.effort.fields.day value=system.effort.day localize=true }}
+        </div>
+      </div>
+    </div> <!-- End 2nd Column -->
   </div>
 </section>

@@ -430,7 +430,6 @@
 .swnr .resource-bar {
   /* Sets the position of the resource-bar and sets it to the proper size. */
   position: relative;
-  bottom: -10px;
   width: 80%;
   height: 20px;
   border: 1px solid var(--border-color);
@@ -474,6 +473,12 @@
 }
 .swnr .resource-bar .text p {
   margin: 0;
+}
+.swnr .sheet-header .resource-bar {
+  bottom: -10px;
+}
+.swnr .sheet-body .resource-bar {
+  margin-bottom: 10px;
 }
 .swnr .items-header {
   height: 28px;

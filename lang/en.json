@@ -49,7 +49,13 @@
           "access": {
             "label": "Access"
           }, 
-          "speed" : { "label": "Movement" }
+          "speed" : { "label": "Movement" },
+          "effort": {
+            "bonus": { "label": "Bonus" },
+            "scene": { "label" : "Scene"},
+            "current": { "label": "Current" },
+            "day": { "label": "Day" }
+          }
         }
       },
       "Character": {
@@ -79,13 +85,7 @@
           "species": { "label": "Species" },
           "homeworld": { "label": "Homeworld" },
           "background": { "label": "Background" },
-          "employer": { "label": "Employer" },
-          "effort": {
-            "bonus": { "label": "Bonus" },
-            "scene": { "label" : "Scene"},
-            "current": { "label": "Current" },
-            "day": { "label": "Day" }
-          }
+          "employer": { "label": "Employer" }
         }
       },
       "NPC": {
@@ -97,7 +97,15 @@
           "armorType": {"label": "Armor Type"},
           "moralScore": { "label": "Morale Score" },
           "skillBonus": { "label": "Skill Bonus" },
-          "saves": { "label": "Saving Throw"}
+          "saves": { "label": "Saving Throw"},
+          "attacks": {
+            "number": { "label": "Attacks per Round"},
+            "bonusDamage": { "label": "Damage Bonus"}
+          },
+          "ab": {"label": "Attack Bonus"},
+          "baseSoakTotal": { "label" : "Base Soak"},
+          "soakTotal": { "label" : "Soak Total"},
+          "meleeAb": {"label": "Melee Attack Bonus"}
         },
         "xp": {"label": "XP"}
       }
@@ -629,6 +637,7 @@
       "hp": "HP",
       "permanent-strain": "Perm. Strain",
       "attack-bonus": "Attack Bonus",
+      "ranged-attack-bonus": "Ranged Attack Bonus",
       "system-strain": "System Strain",
       "ss": "Strain",
       "ac": "AC",
