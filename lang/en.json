@@ -57,7 +57,16 @@
           "attributes" : {
             "level.value": {"label": "Level"}
           },
-          "level": { "label": "XP" }
+          "level": { "label": "XP" },
+          "tweak": {
+            "label": "Tweaks",
+            "advInit": { "label": "Adv. Initiative" },
+            "extraEffortName": { "label": "Extra Effort Name" },
+            "showResourceList": { "label": "Show Resource List" },
+            "debtDisplay": { "label": "Debt Display" },
+            "owedDisplay": { "label": "Owed Display" },
+            "balanceDisplay": { "label": "Balance Display" }
+          }
         }
       },
       "NPC": {
