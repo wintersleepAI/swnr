@@ -36,38 +36,7 @@ export default class SWNActorBase extends foundry.abstract
   }
 
   prepareDerivedData() {
-    /*
-    baseAc: number; //computed-active effects needed
-    systemStrain: {
-      max: number;
-      permanent: number;
-      cyberware: number;
-    };
-
-    effort: {
-      max: number;
-      value: number;
-    };
-
-    tweak: {
-      extraEffort: {
-        value: number;
-      };
-    };
-    //CWN
-    access: {
-      max: number;
-    };
-    settings: null | {
-      useCWNArmor: boolean;
-      useTrauma: boolean;
-    };
-    soakTotal: {
-      value: number;
-      max: number;
-    };
-    modifiedTraumaTarget: number;
-    */
+    this.health.percentage = Math.clamp((this.health.value * 100) / this.health.max, 0, 100);
   }
 
   rollSave(_saveType) {

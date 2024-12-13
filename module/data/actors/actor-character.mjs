@@ -74,7 +74,7 @@ export default class SWNCharacter extends SWNActorBase {
   }
 
   prepareDerivedData() {
-    super.prepareBaseData();
+    super.prepareDerivedData();
     // Loop through stat scores, and add their modifiers to our sheet output.
     for (const key in this.stats) {
       this.stats[key].baseTotal = this.stats[key].base + this.stats[key].boost;
@@ -99,6 +99,7 @@ export default class SWNCharacter extends SWNActorBase {
     // System Strain
     this.systemStrain.cyberware = cyberwareStrain;
     this.systemStrain.max = this.stats.con.total - this.systemStrain.cyberware - this.systemStrain.permanent;
+    this.systemStrain.percentage = Math.clamp((this.systemStrain.value * 100) / this.systemStrain.max, 0, 100);
 
     // Calculate saves
     const save = {};

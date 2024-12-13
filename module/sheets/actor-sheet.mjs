@@ -32,6 +32,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       toggleEffect: this._toggleEffect,
       roll: this._onRoll,
       rest: this._onRest,
+      scene: this._onScene,
       rollSave: this._onRollSave,
       loadSkills: this._loadSkills,
       rollSkill: this._onSkillRoll,
@@ -482,52 +483,73 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
    */
   static async _onRest(event, _target) {
     event.preventDefault();
-    const rest = await foundry.applications.api.DialogV2.wait({
-      window: { title: game.i18n.localize("swnr.sheet.rest-title") },
-      content: game.i18n.localize("swnr.sheet.rest-desc"),
-      rejectClose: false,
-      modal: true,
-      buttons: [
-      {
-        icon: 'fas fa-check',
-        label: "Yes",
-        action: "normal",
-      },
-      {
-        icon: 'fas fa-check',
-        label: "Yes, but no HP",
-        action: "no_hp",
-      },
-      {
-        icon: 'fas fa-times',
-        label: "No",        
-        action: "no",
-      },
-      ]
-    })
-    if (rest === "no") {
-      return;
-    }
-    const isFrail = rest === "no_hp" ? true : false;
-    const systemData = this.actor.system
-    const newStrain = Math.max(systemData.systemStrain.value - 1, 0);
-    const newHP = isFrail
-      ? systemData.health.value
-      : Math.min(systemData.health.value + systemData.level.value, systemData.health.max);
-    await this.actor.update({
-      system: {
-        systemStrain: { value: newStrain },
-        health: { value: newHP },
-        effort: { scene: 0, day: 0 },
-        tweak: {
-          extraEffort: {
-            scene: 0,
-            day: 0,
+    if (this.actor.type === "character") {
+      const rest = await foundry.applications.api.DialogV2.wait({
+        window: { title: game.i18n.localize("swnr.sheet.rest-title") },
+        content: game.i18n.localize("swnr.sheet.rest-desc"),
+        rejectClose: false,
+        modal: true,
+        buttons: [
+        {
+          icon: 'fas fa-check',
+          label: "Yes",
+          action: "normal",
+        },
+        {
+          icon: 'fas fa-check',
+          label: "Yes, but no HP",
+          action: "no_hp",
+        },
+        {
+          icon: 'fas fa-times',
+          label: "No",        
+          action: "no",
+        },
+        ]
+      })
+      if (rest === "no") {
+        return;
+      }
+      const isFrail = rest === "no_hp" ? true : false;
+      const systemData = this.actor.system
+      const newStrain = Math.max(systemData.systemStrain.value - 1, 0);
+      const newHP = isFrail
+        ? systemData.health.value
+        : Math.min(systemData.health.value + systemData.level.value, systemData.health.max);
+      await this.actor.update({
+        system: {
+          systemStrain: { value: newStrain },
+          health: { value: newHP },
+          effort: { scene: 0, day: 0 },
+          tweak: {
+            extraEffort: {
+              scene: 0,
+              day: 0,
+            },
           },
         },
-      },
-    });
+      });
+    } else if (this.actor.type === "npc") {
+      const newHP = this.actor.system.health.max;
+      await this.actor.update({
+        system: {
+          health: { value: newHP },
+          effort: { scene: 0, day: 0 }
+        },
+      });
+    }
     await this._resetSoak();
+  }
+
+
+  static async _onScene(event, _target) {
+    event.preventDefault();
+    let update = { system: { effort: { scene: 0 }}};
+    if (this.actor.type === "character") {
+      update["tweak.extraEffort.scene"] = 0;
+    } 
+    await this.actor.update(update);
+    this._resetSoak();
   }
 
   async _resetSoak() {
@@ -542,14 +564,12 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       const armorWithSoak = (
         this.actor.items.filter(
           (i) =>
-            i.data.type === "armor" &&
-            i.data.data.use &&
-            i.data.data.location === "readied" &&
-            i.data.data.soak.value < i.data.data.soak.max
+            i.type === "armor" &&
+            i.system.soak.value < i.system.soak.max
         )
       );
       for (const armor of armorWithSoak) {
-        const soak = armor.data.data.soak.max;
+        const soak = armor.system.soak.max;
         await armor.update({
           "system.soak.value": soak,
         });
@@ -680,7 +700,11 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
 
   static async _onMoraleRoll(event, _target) {
     event.preventDefault();
-    alert("todo");
+    if (this.actor.type === "npc") {
+      this.actor.system.rollMorale();
+    } else {
+      console.log("Morale rolls are only for NPCs");
+    }
   }
 
   /** Helper Functions */

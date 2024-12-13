@@ -85,7 +85,27 @@ export default class SWNNPC extends SWNActorBase {
     }
   }
 
-  rollSave(saveType) {
-    alert("TODO");
+  async rollSave(_saveType) {
+    const roll = new Roll("1d20");
+    await roll.roll({ async: true });
+    const flavor = game.i18n.format(
+      parseInt(roll.result) >= this.saves
+        ? game.i18n.localize("swnr.npc.saving.success")
+        : game.i18n.localize("swnr.npc.saving.failure"),
+      { actor: this.parent.name, target: this.saves }
+    );
+    roll.toMessage({ flavor, speaker: { actor: this.id } });
   }
+
+  async rollMorale() {
+    const roll = new Roll("2d6");
+    await roll.roll({ async: true });
+    const flavor =
+      +(roll.terms[0]?.total ?? 0) > this.moralScore
+        ? game.i18n.localize("swnr.npc.morale.failure")
+        : game.i18n.localize("swnr.npc.morale.success");
+    roll.toMessage({ flavor, speaker: { actor: this.id } });
+  }
+
+
 }
