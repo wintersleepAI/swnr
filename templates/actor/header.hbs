@@ -163,14 +163,10 @@
 
       <div class="resource flex-group-center"><!-- AC -->
         <div class="field resource-content">
-          {{#if (eq actor.type 'character')}}
             {{system.ac}}          
             {{#if (eq gameSettings.useCWNArmor true)}}
             / {{system.meleeAc}}
             {{/if}}
-          {{else}}
-            TODO NPC AC
-          {{/if}}
         </div>
         <label class='resource-label'>
           {{#if (eq gameSettings.useCWNArmor true)}}
@@ -184,7 +180,19 @@
       {{#if (eq actor.type 'character')}}
       {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget}}
       {{else}}
-      TODO AB for char with melee?
+        {{#if (eq gameSettings.useCWNArmor true)}}
+        <div class="resource flex-group-center"><!-- AC -->
+          <div class="field resource-content">
+              {{system.soakTotal.value}}          
+              {{#if (eq gameSettings.useCWNArmor true)}}
+              / {{system.soakTotal.max}}
+              {{/if}}
+          </div>
+          <label class='resource-label'>
+            {{localize 'SWN.Actor.NPC.FIELDS.soakTotal.label'}}
+          </label>
+        </div>
+        {{/if}}
       {{/if}}
 
     
@@ -194,7 +202,7 @@
 
       {{/if}}
 
-      {{formGroup systemFields.access value=system.access localize=true widget=headerWidget}}
+      {{formGroup systemFields.access value=system.access localize=true widget=headerWidget readonly=1}}
 
 {{!-- 
       <div class="resource flex-group-center"><!-- access testing max bug -->

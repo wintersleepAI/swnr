@@ -49,6 +49,40 @@ export default class SWNNPC extends SWNActorBase {
   prepareDerivedData() {
     // Any derived data should be calculated here and added to "this."
     super.prepareDerivedData();
+
+    const effort = this.effort;
+    effort.max = effort.bonus;
+    effort.value = effort.bonus - effort.current - effort.scene - effort.day;
+    effort.percentage = Math.clamp((effort.value * 100) / effort.max, 0, 100);
+
+    this.ac = this.baseAc;
+    this.soakTotal = {
+      value: 0,
+      max: 0,
+    };
+    if (this.baseSoakTotal.max > 0) {
+      this.soakTotal.max += this.baseSoakTotal.max;
+    }
+    if (this.baseSoakTotal.value > 0) {
+      this.soakTotal.value += this.baseSoakTotal.value;
+    }
+    const useCWNArmor = game.settings.get("swnr", "useCWNArmor") ? true : false;
+    const useTrauma = game.settings.get("swnr", "useTrauma") ? true : false;
+    if (useTrauma) {
+      this.modifiedTraumaTarget = this.traumaTarget;
+    }
+    if (useCWNArmor) {
+      const armor = this.parent.items.filter((i) => i.type === "armor");
+      for (const a of armor) {
+        if (a.system.soak.max > 0) {
+          this.soakTotal.value += a.system.soak.value;
+          this.soakTotal.max += a.system.soak.max;
+        }
+        if (useTrauma) {
+          this.modifiedTraumaTarget += a.system.traumaDiePenalty;
+        }
+      }
+    }
   }
 
   rollSave(saveType) {

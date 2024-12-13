@@ -157,8 +157,7 @@ export default class SWNCharacter extends SWNActorBase {
         if (a.system.meleeAc) {
           baseMeleeAc = a.system.meleeAc;
           if (useTrauma) {
-            this.modifiedTraumaTarget =
-              this.traumaTarget + a.system.traumaDiePenalty;
+            this.modifiedTraumaTarget += a.system.traumaDiePenalty;
           }
         }
         if (a.id) {

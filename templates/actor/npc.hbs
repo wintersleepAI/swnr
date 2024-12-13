@@ -20,15 +20,18 @@
         {{formGroup systemFields.attacks.fields.bonusDamage value=system.attacks.bonusDamage localize=true}}
         {{#if (eq gameSettings.useCWNArmor true)}}
         {{formGroup systemFields.baseSoakTotal value=system.baseSoakTotal localize=true widget=groupWidget}}
-        <div class="form-group">
+        {{!-- moved to header for now
+         <div class="form-group">
           <label>{{localize 'SWN.Actor.NPC.FIELDS.soakTotal.label'}}</label>
           <div class="field flex flexrow">
             <input type="text" value="{{system.soakTotal.value}}" class="sub-field" readonly>
             <span class="nested-sep">/</span>
             <input type="text" value="{{system.soakTotal.max}}" class="sub-field" readonly>
           </div>
-        </div>
-
+        </div> --}}
+        {{/if}}
+        {{#if (eq gameSettings.useTrauma true)}}
+        {{formGroup systemFields.traumaTarget value=system.traumaTarget localize=true}}
         {{/if}}
 
       </div>
