@@ -348,4 +348,85 @@ export default class SWNCharacter extends SWNActorBase {
       }
     );
   }
+
+  async rollHitDice(_force = false) {
+    // 2e warrior/partial : +2
+    // 1e psy 1d4, expert 1d6, warrior 1d8
+
+    const currentLevel = this.level.value;
+    const lastModified = this.health_max_modified;
+    if (currentLevel <= lastModified) {
+      ui.notifications?.info(
+        "Not rolling hp: already rolled this level (or higher)"
+      );
+      return;
+    }
+    // const lastLevel =
+    // currentLevel === 1 ? 0 : this.parent.getFlag("swnr", "lastHpLevel");
+    const health = this.health;
+    const currentHp = health.max;
+    const hd = this.hitDie;
+    //todo: sort out health boosts from classes.
+    const constBonus = this.stats.con.mod;
+    //console.log(currentLevel, this.stats.con, this.stats.con.mod)
+    const perLevel = `max(${hd} + ${constBonus}, 1)`;
+
+    const _rollHP = async () => {
+      const hitArray = Array(currentLevel).fill(perLevel);
+      const formula = hitArray.join("+");
+
+      let msg = `Rolling Level ${currentLevel} HP: ${formula}<br>(Rolling a hitdice per level, with adding the CON mod. Each roll cannot be less than 1)<br>`;
+      const roll = new Roll(formula);
+      await roll.roll({ async: true });
+      if (roll.total) {
+        let hpRoll = roll.total;
+        msg += `Got a ${hpRoll}<br>`;
+        if (currentLevel == 1) {
+          // Rolling the first time
+        } else if (currentLevel > 1) {
+          hpRoll = Math.max(hpRoll, currentHp + 1);
+        }
+        msg += `Setting HP max to ${hpRoll}<br>`;
+        await this.parent.update({ 
+          system: {
+            health_max_modified: currentLevel,
+            health: { 
+              max: hpRoll,
+            }
+          }
+        });
+        getDocumentClass("ChatMessage").create({
+          speaker: ChatMessage.getSpeaker({ actor: this.parent }),
+          flavor: msg,
+          roll: JSON.stringify(roll),
+          type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+        });
+      } else {
+        console.log("Something went wrong with roll ", roll);
+      }
+    };
+
+    if (this.hitDie) {
+      const performHPRoll = await new Promise((resolve) => {
+        Dialog.confirm({
+          title: game.i18n.format("swnr.dialog.hp.title", {
+            actor: this.parent.name,
+          }),
+          yes: () => resolve(true),
+          no: () => resolve(false),
+          content: game.i18n.format("swnr.dialog.hp.text", {
+            actor: this.parent.name,
+            level: currentLevel,
+            formula: perLevel,
+          }),
+        });
+      });
+      if (performHPRoll) await _rollHP();
+    } else {
+      ui.notifications?.info("Set the character's HitDie");
+    }
+
+    return;
+  }
+
 }

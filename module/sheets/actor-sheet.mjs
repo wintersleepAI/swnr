@@ -36,6 +36,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       rollSave: this._onRollSave,
       loadSkills: this._loadSkills,
       rollSkill: this._onSkillRoll,
+      hitDice: this._onHitDice,
       toggleArmor: this._toggleArmor,
       toggleLock: this._toggleLock,
       rollStats: this._onRollStats,
@@ -552,6 +553,17 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     this._resetSoak();
   }
 
+
+  static async _onHitDice(event, _target) {
+    event.preventDefault();
+    if (typeof this.actor.system.rollHitDice === 'function') {
+      this.actor.system.rollHitDice(true);
+    } else {
+      console.log("Hit dice rolls are only for PCs/NPCs");
+    }
+
+  }
+  
   async _resetSoak() {
     if (game.settings.get("swnr", "useCWNArmor")) {
       if (this.actor.type == "npc") {
