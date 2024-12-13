@@ -197,3 +197,12 @@
   }
 
 }
+
+.skill-list {
+  .untrained {
+    color: var(--swnr-c-beige);
+  }
+  .trained {
+    color: var(--swnr-c-dark);
+  }
+}

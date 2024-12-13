@@ -76,7 +76,10 @@ export async function initCompendSkills(actor) {
 }
 
 export function initSkills(actor, skillSet) {
-  const items = skills[skillSet].map((element) => {
+  if (skillSet === undefined || skillSet === "") {
+    return;
+  }
+  const items = CONFIG.SWN.skills[skillSet].map((element) => {
     const skillRoot = `swnr.skills.${skillSet}.${element}.`;
     return {
       type: "skill",
@@ -92,84 +95,4 @@ export function initSkills(actor, skillSet) {
   });
   actor.createEmbeddedDocuments("Item", items);
 }
-const skills = {
-  none: [],
-  spaceMagic: ["knowMagic", "useMagic", "sunblade", "fight"],
-  classic: [
-    "artist",
-    "athletics",
-    "bureaucracy",
-    "business",
-    "combat-energy",
-    "combat-gunnery",
-    "combat-primitive",
-    "combat-projectile",
-    "combat-psitech",
-    "combat-unarmed",
-    "computer",
-    "culture-alien",
-    "culture-criminal",
-    "culture-spacer",
-    "culture-traveller",
-    "culture",
-    "culture",
-    "culture",
-    "exosuit",
-    "gambling",
-    "history",
-    "instructor",
-    "language",
-    "leadership",
-    "navigation",
-    "perception",
-    "persuade",
-    "profession",
-    "religion",
-    "science",
-    "security",
-    "stealth",
-    "steward",
-    "survival",
-    "tactics",
-    "tech-astronautic",
-    "tech-maltech",
-    "tech-medical",
-    "tech-postech",
-    "tech-pretech",
-    "tech-psitech",
-    "vehicle-air",
-    "vehicle-grav",
-    "vehicle-land",
-    "vehicle-space",
-    "vehicle-water",
-    ],
-  revised: [
-    "administer",
-    "connect",
-    "exert",
-    "fix",
-    "heal",
-    "know",
-    "lead",
-    "notice",
-    "perform",
-    "pilot",
-    "program",
-    "punch",
-    "shoot",
-    "sneak",
-    "stab",
-    "survive",
-    "talk",
-    "trade",
-    "work",
-    ],
-  psionic: [
-    "biopsionics",
-    "metapsionics",
-    "precognition",
-    "telekinesis",
-    "telepathy",
-    "teleportation",
-    ],
-  };
+

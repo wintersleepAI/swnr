@@ -642,6 +642,12 @@
   flex: 0 0 80px;
   padding: 0 8px;
 }
+.swnr .skill-list .untrained {
+  color: var(--swnr-c-beige);
+}
+.swnr .skill-list .trained {
+  color: var(--swnr-c-dark);
+}
 .swnr .effects-header {
   height: 28px;
   margin: 2px 0;
@@ -793,5 +799,3 @@
   align-items: center;
   cursor: pointer;
 }
-
-/*# sourceMappingURL=swnr.css.map */

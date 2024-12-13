@@ -36,6 +36,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       rollSave: this._onRollSave,
       loadSkills: this._loadSkills,
       rollSkill: this._onSkillRoll,
+      skillUp: this._onSkillUp,
       hitDice: this._onHitDice,
       toggleArmor: this._toggleArmor,
       toggleLock: this._toggleLock,
@@ -43,6 +44,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       toggleSection: this._toggleSection,
       reactionRoll: this._onReactionRoll,
       moraleRoll: this._onMoraleRoll,
+      creditChange: this._onCreditChange,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -602,6 +604,80 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     skill.roll(event.shiftKey);
   }
 
+  static async _onSkillUp(event, target) {
+    event.preventDefault();
+  
+    const skillID = target.dataset.itemId;
+    const skill = this.actor.items.get(skillID);
+    const rank = skill.system.rank;
+    if (rank > 0) {
+      const lvl = this.actor.system.level.value;
+      if (rank == 1 && lvl < 3) {
+        ui.notifications?.error(
+          "Must be at least level 3 (edit manually to override)"
+        );
+        return;
+      } else if (rank == 2 && lvl < 6) {
+        ui.notifications?.error(
+          "Must be at least level 6 (edit manually to override)"
+        );
+        return;
+      } else if (rank == 3 && lvl < 9) {
+        ui.notifications?.error(
+          "Must be at least level 9 (edit manually to override)"
+        );
+        return;
+      } else if (rank > 3) {
+        ui.notifications?.error("Cannot auto-level above 4");
+        return;
+      }
+    }
+    const skillCost = rank + 2;
+    const isPsy =
+      skill.system.source.toLocaleLowerCase() ===
+      game.i18n.localize("swnr.skills.labels.psionic").toLocaleLowerCase()
+        ? true
+        : false;
+    const skillPointsAvail = isPsy
+      ? this.actor.system.unspentPsySkillPoints +
+        this.actor.system.unspentSkillPoints
+      : this.actor.system.unspentSkillPoints;
+    if (skillCost > skillPointsAvail) {
+      ui.notifications?.error(
+        `Not enough skill points. Have: ${skillPointsAvail}, need: ${skillCost}`
+      );
+      return;
+    } else if (isNaN(skillPointsAvail)) {
+      ui.notifications?.error(`Skill points not set`);
+      return;
+    }
+    await skill.update({ "system.rank": rank + 1 });
+    if (isPsy) {
+      const newPsySkillPoints = Math.max(
+        0,
+        this.actor.system.unspentPsySkillPoints - skillCost
+      );
+      let newSkillPoints = this.actor.system.unspentSkillPoints;
+      if (skillCost > this.actor.system.unspentPsySkillPoints) {
+        //Not enough psySkillPoints, dip into regular
+        newSkillPoints -=
+          skillCost - this.actor.system.unspentPsySkillPoints;
+      }
+      await this.actor.update({
+        "system.unspentSkillPoints": newSkillPoints,
+        "system.unspentPsySkillPoints": newPsySkillPoints,
+      });
+      ui.notifications?.info(
+        `Removed ${skillCost} from unspent skills, with at least one psychic skill point`
+      );
+    } else {
+      const newSkillPoints =
+        this.actor.system.unspentSkillPoints - skillCost;
+      await this.actor.update({ "system.unspentSkillPoints": newSkillPoints });
+      ui.notifications?.info(`Removed ${skillCost} skill points`);
+    }
+  }
+
   static async _toggleArmor(event, target) {
     event.preventDefault();
     const armorID = target.dataset.itemId;
@@ -639,7 +715,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
         await initSkills(this.actor, skillList);
       }
       if (extra)
-        await initSkills(this.actor);
+        await initSkills(this.actor, extra);
       return;
     };
     const template = "systems/swnr/templates/dialogs/add-bulk-skills.hbs";
@@ -710,7 +786,45 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
 
   static async _onReactionRoll(event, _target) {
     event.preventDefault();
-    alert("todo");
+    if (this.actor.type !== "npc") {
+      return;
+    }
+    function defineResult(
+      text,
+      range
+    ) {
+      return {
+        text: game.i18n.localize("swnr.npc.reaction." + text),
+        type: 0,
+        range,
+        flags: { swnr: { type: text.toLocaleLowerCase() } },
+        weight: 1 + range[1] - range[0],
+        _id: text.toLocaleLowerCase().padEnd(16, "0"),
+      };
+    }
+    const tableResults = [
+      defineResult("hostile", [2, 2]),
+      defineResult("negative", [3, 5]),
+      defineResult("neutral", [6, 8]),
+      defineResult("positive", [9, 11]),
+      defineResult("friendly", [12, 12]),
+    ];
+
+    const rollTable = (await RollTable.create(
+      {
+        name: "NPC Reaction",
+        description: " ", //todo: spice this up
+        formula: "2d6",
+        results: tableResults,
+      },
+      { temporary: true }
+    ));
+
+    const { results } = await rollTable.draw();
+
+    await this.actor.update({
+      "system.reaction": results[0].id?.split("0")[0],
+    });
   }
 
   static async _onMoraleRoll(event, _target) {
@@ -720,6 +834,67 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     } else {
       console.log("Morale rolls are only for NPCs");
     }
+  }
+
+  static async _onCreditChange(event, target) {
+    event.preventDefault();
+    const currencyType = target.dataset.creditType;
+    alert("TODO add currency " + currencyType)
+    /* OLD
+        //load html variable data for dialog
+    const template = "systems/swnr/templates/dialogs/add-currency.html";
+    const data = {};
+    const html = await renderTemplate(template, data);
+    this.popUpDialog?.close();
+
+    //show a dialog prompting for amount of change to add
+    const amount = (await new Promise((resolve) => {
+      new ValidatedDialog(
+        {
+          title: game.i18n.localize("swnr.AddCurrency"),
+          content: html,
+          buttons: {
+            one: {
+              label: "Add",
+              callback: (html) => resolve(html.find('[name="amount"]').val()),
+            },
+            two: {
+              label: "Cancel",
+              callback: () => resolve("0"),
+            },
+          },
+          default: "one",
+          close: () => resolve("0"),
+        },
+        {
+          classes: ["swnr"],
+        }
+      ).render(true);
+    })) as string;
+
+    //If it's not super easily parsable as a number
+    if (isNaN(parseInt(await amount))) {
+      ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
+      return;
+    }
+
+    // if the amount is 0, or the cancel button was hit
+    if (parseInt(amount) == 0) {
+      //we can return silently in this case
+      return;
+    } else {
+      //this is our valid input scenario
+      await this.actor.update({
+        data: {
+          credits: {
+            [currencyType]:
+              this.actor.data.data.credits[currencyType] +
+              parseInt(await amount),
+          },
+        },
+      });
+    }
+    */
   }
 
   /** Helper Functions */

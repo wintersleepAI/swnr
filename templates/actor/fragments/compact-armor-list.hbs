@@ -22,8 +22,8 @@
   </li>
   {{#each itemList as |item id|}}
   <li data-item-id="{{item.id}}" data-document-class='Item' class="item flexrow flex-group-center">
-    <input type="checkbox" data-action="toggleArmor" data-item-id="{{item.id}}" {{#if item.system.use}}checked{{/if}}>
     <div class="item-name">
+      <input type="checkbox" data-action="toggleArmor" data-item-id="{{item.id}}" {{#if item.system.use}}checked{{/if}}>
       {{item.name}}
     </div>
     <div class="item-qty item-prop">
