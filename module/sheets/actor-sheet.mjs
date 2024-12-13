@@ -558,6 +558,9 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     event.preventDefault();
     if (typeof this.actor.system.rollHitDice === 'function') {
       this.actor.system.rollHitDice(true);
+      if (this.actor.type === "npc") {
+        await this.actor.update({ "system.health_max_modified": 1 });
+      }
     } else {
       console.log("Hit dice rolls are only for PCs/NPCs");
     }
