@@ -49,6 +49,16 @@ export default class SWNAsset extends SWNItemBase {
   }
   
   static migrateData(data) {
+    data = this.migrateNote(data);
+
+    if (data.category == null) {
+      data.category = data.assetType ?? 'cunning';
+    }
+
+    return data;
+  }
+  
+  static migrateNote(data) {
     if (data.qualities == null) {
       const noteSections = data.note.split(',')
           .map(s => s.trim().toUpperCase());
@@ -58,12 +68,14 @@ export default class SWNAsset extends SWNItemBase {
         action: noteSections.includes('A'),
         special: noteSections.includes('S'),
       };
-    }
 
-    if (data.category == null) {
-      data.category = data.assetType ?? 'cunning';
+      const noteContainsNonQualities =
+          noteSections.filter(n => !['P', 'A', 'S'].includes(n)).length > 0;
+      if (noteContainsNonQualities) {
+        data.description += `\n Note: ${data.note}`;
+      }
     }
-
+    
     return data;
   }
   
