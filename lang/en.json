@@ -1005,7 +1005,7 @@
       "statApply": "Apply stats to {name}",
       "statRollFlavor": "{name} rolling {stat}",
       "totalModifier": "Total Modifier",
-      "statRoll": "Roll stats",
+      "statRoll": "Roll stats for {name}",
       "savemoddesc": "(Positive makes easier, negative harder)",
       "spike": {
         "fail3": "Catastrophic dimensional energy incursion.  Ship emerges around a star within 1d6 hexes  of the target destination with drive and all systems destroyed.",
@@ -1087,6 +1087,8 @@
     },
     "dialog": {
       "attackRoll": "{actorName} attacking with {weaponName}?",
+      "addCurrency": "Amount to add to {type}:",
+      "statMethod": "Method to roll stats?",
       "spikeRoll": "{actorName} making spike roll",
       "sensorRoll": "{actorName} making sensor roll",
       "sysFailure": "Rolling system failures for {actorName}",

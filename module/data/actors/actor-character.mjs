@@ -118,11 +118,7 @@ export default class SWNCharacter extends SWNActorBase {
     );
     save.luck = Math.max(1, base);
     this.save = save;
-    /*
-    schema.encumbrance =; // TODO
 
-    itemTypes;
-    */
     // Access calculation
     this.access.max = this.stats.int.mod;
     // If the character has a program skill add it
@@ -134,9 +130,15 @@ export default class SWNCharacter extends SWNActorBase {
       this.access.max += programSkill[0].system.rank;
     }
 
+    // Set up soak and trauma target
     const useCWNArmor = game.settings.get("swnr", "useCWNArmor") ? true : false;
     const useTrauma = game.settings.get("swnr", "useTrauma") ? true : false;
     
+    this.soakTotal = {
+      value: 0,
+      max: 0,
+    };
+
     if (useTrauma) {
       this.modifiedTraumaTarget = this.traumaTarget;
     }
@@ -366,6 +368,7 @@ export default class SWNCharacter extends SWNActorBase {
     const health = this.health;
     const currentHp = health.max;
     const hd = this.hitDie;
+    
     //todo: sort out health boosts from classes.
     const constBonus = this.stats.con.mod;
     //console.log(currentLevel, this.stats.con, this.stats.con.mod)
