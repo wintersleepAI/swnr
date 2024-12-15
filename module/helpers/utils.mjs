@@ -1,3 +1,35 @@
+export function getDefaultImage(itemType) {
+  const icon_path = "systems/swnr/assets/icons/game-icons.net/item-icons";
+  const imgMap = {
+    shipWeapon: "sinusoidal-beam.svg",
+    shipDefense: "bubble-field.svg",
+    shipFitting: "power-generator.svg",
+    cyberware: "cyber-eye.svg",
+    focus: "reticule.svg",
+    armor: "armor-white.svg",
+    weapon: "weapon-white.svg",
+    power: "psychic-waves-white.svg",
+    skill: "book-white.svg",
+    edge: "edge.svg",
+    program: "program.svg",
+  };
+  if (itemType in imgMap) {
+    return `${icon_path}/${imgMap[itemType]}`;
+  } else {
+    return "icons/svg/item-bag.svg";
+  }
+}
+
+export function calcMod(value,  bonus=0) {
+  const m = (value - 10.5) / 3.5;
+  return  Math.min(2, Math.max(-2, Math[m < 0 ? "ceil" : "floor"](m))) + bonus;
+  
+}
+
+/*--------------------------------------------*/
+/*  Skill Utilities                           */
+/*--------------------------------------------*/
+
 export async function initCompendSkills(actor) {
   ui.notifications?.error("TODO - implement initCompendSkills");
   return;

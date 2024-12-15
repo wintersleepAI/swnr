@@ -1,5 +1,6 @@
 import SWNActorBase from './base-actor.mjs';
 import SWNShared from '../shared.mjs';
+import { calcMod } from '../../helpers/utils.mjs';
 
 export default class SWNCharacter extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -79,9 +80,7 @@ export default class SWNCharacter extends SWNActorBase {
     for (const key in this.stats) {
       this.stats[key].baseTotal = this.stats[key].base + this.stats[key].boost;
       this.stats[key].total = this.stats[key].baseTotal + this.stats[key].temp;
-      const v = (this.stats[key].total - 10.5) / 3.5;
-      this.stats[key].mod =
-        Math.min(2, Math.max(-2, Math[v < 0 ? "ceil" : "floor"](v))) + this.stats[key].bonus;
+      this.stats[key].mod = calcMod(this.stats[key].total , this.stats[key].bonus) ;
       
       // Handle stat label localization.
       this.stats[key].label =
@@ -368,10 +367,8 @@ export default class SWNCharacter extends SWNActorBase {
     const health = this.health;
     const currentHp = health.max;
     const hd = this.hitDie;
-    
-    //todo: sort out health boosts from classes.
+
     const constBonus = this.stats.con.mod;
-    //console.log(currentLevel, this.stats.con, this.stats.con.mod)
     const perLevel = `max(${hd} + ${constBonus}, 1)`;
 
     const _rollHP = async () => {

@@ -1,7 +1,7 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
 import { headerFieldWidget, groupFieldWidget } from '../helpers/handlebar.mjs';
-import { initSkills, initCompendSkills } from '../helpers/utils.mjs';
+import { initSkills, initCompendSkills, calcMod } from '../helpers/utils.mjs';
 
 const { api, sheets } = foundry.applications;
 
@@ -774,7 +774,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
 
   static async _onRollStats(event, _target) {
     event.preventDefault();
-    const method = await foundry.applications.api.DialogV2.wait({
+    const dice = await foundry.applications.api.DialogV2.wait({
       window: { title: game.i18n.localize("swnr.chat.statRoll", {name: this.actor.name}) },
       content: game.i18n.localize("swnr.dialog.statMethod"),
       modal: true,
@@ -791,82 +791,46 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
         },
       ],
     });
-    alert("TODO: Implement roll stats + " + method);
-
-    /* Old code :  (change options to buttons) 
-
-
-    const _doRoll = async (html: HTMLFormElement) => {
-      const rollMode = game.settings.get("core", "rollMode");
-      const elements = <HTMLFormElement>html[0].querySelector("form");
-      const dice = (<HTMLSelectElement>(
-        elements.querySelector('[name="statpool"]')
-      )).value;
-      const formula = new Array(6).fill(dice).join("+");
-      const roll = new Roll(formula);
-      await roll.roll({ async: true });
-      const stats: {
-        [p in SWNRStats]: SWNRStatBase & SWNRStatComputed & { dice: number[] };
-      } = <never>{};
-      ["str", "dex", "con", "int", "wis", "cha"].map((k, i) => {
-        stats[k] = {
-          dice: roll.dice[i].results,
-          base: roll.dice[i].total,
-          boost: 0,
-          mod: 0,
-          bonus: 0,
-          total: 0,
-          temp: 0,
-        };
-      });
-      calculateStats(stats);
-      const data = {
-        actor: this.actor,
-        stats,
-        totalMod: Object.values(stats).reduce((s, v) => {
-          return s + v.mod;
-        }, 0),
+    if (!dice) {
+      return;
+    }
+    const formula = new Array(6).fill(dice).join("+");
+    const roll = new Roll(formula);
+    await roll.roll({ async: true });
+    const stats= {};
+    ["str", "dex", "con", "int", "wis", "cha"].map((k, i) => {
+      stats[k] = {
+        dice: roll.dice[i].results,
+        base: roll.dice[i].total,
+        boost: 0,
+        mod: calcMod(roll.dice[i].total),
+        bonus: 0,
+        total: 0,
+        temp: 0,
       };
-      const chatContent = await renderTemplate(
-        "systems/swnr/templates/chat/stat-block.html",
-        data
-      );
-      const chatMessage = getDocumentClass("ChatMessage");
-      chatMessage.create(
-        chatMessage.applyRollMode(
-          {
-            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-            roll: JSON.stringify(roll.toJSON()),
-            content: chatContent,
-            type: CONST.CHAT_MESSAGE_TYPES.ROLL,
-          },
-          rollMode
-        )
-      );
-      return roll;
+    });
+    // TODO wsAI should we use this?
+    //calculateStats(stats);
+    const data = {
+      actor: this.actor,
+      stats,
+      totalMod: Object.values(stats).reduce((s, v) => {
+        return s + v.mod;
+      }, 0),
     };
-    this.popUpDialog?.close();
-    this.popUpDialog = new ValidatedDialog(
+    const chatContent = await renderTemplate(
+      "systems/swnr/templates/chat/stat-block.hbs",
+      data
+    );
+    const chatMessage = getDocumentClass("ChatMessage");
+    chatMessage.create(
       {
-        title: title,
-        content: html,
-        default: "roll",
-        buttons: {
-          roll: {
-            label: game.i18n.localize("swnr.chat.roll"),
-            callback: _doRoll,
-          },
-        },
-      },
-      {
-        failCallback: () => {
-          return;
-        },
-        classes: ["swnr"],
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        roll: JSON.stringify(roll.toJSON()),
+        content: chatContent,
+        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
       }
     );
-
-    */
   }
 
   static async _onRollSave(event, target) {
