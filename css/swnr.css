@@ -240,6 +240,25 @@
   --input-focus-color: rgb(5, 99, 150);
 }
 
+.chat-message .card-buttons {
+  width: 60%;
+  padding: 4px;
+  margin: auto;
+}
+
+.chat-message .card-show-buttons {
+  width: 60%;
+  padding: 4px;
+  margin: auto;
+}
+
+.chat-message .chat-button-small {
+  width: 22px;
+  height: 22px;
+  font-size: 10px;
+  line-height: 1px;
+}
+
 /* Styles limited to swnr sheets */
 .swnr .item-form {
   font-family: "Roboto", sans-serif;
@@ -799,3 +818,5 @@
   align-items: center;
   cursor: pointer;
 }
+
+/*# sourceMappingURL=swnr.css.map */
