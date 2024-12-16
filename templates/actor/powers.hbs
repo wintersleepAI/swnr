@@ -4,9 +4,11 @@
   data-group='primary'
   data-tab='powers'
 >
-  {{> "systems/swnr/templates/actor/fragments/cyberware-list.hbs" itemList=cyberware  type='cyberware' name='Cyberware' }}
+  {{#if system.tweak.showCyberware}}
+    {{> "systems/swnr/templates/actor/fragments/cyberware-list.hbs" itemList=cyberware  type='cyberware' name='Cyberware' }}
+  {{/if}}
 
-
+  {{#if system.tweak.showPowers}}
   <ol class='items-list'>
     {{#each powers as |powers powerLevel|}}
       <li class='flexrow items-header'>
@@ -71,5 +73,6 @@
       {{/each}}
     {{/each}}
   </ol>
+  {{/if}}
 
 </section>

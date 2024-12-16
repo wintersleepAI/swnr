@@ -48,9 +48,9 @@ export default class SWNCharacter extends SWNActorBase {
 
     schema.tweak = new fields.SchemaField({
       advInit: new fields.BooleanField({initial: false}),
-      quickSkill1: SWNShared.emptyString(),
-      quickSkill2: SWNShared.emptyString(),
-      quickSkill3: SWNShared.emptyString(),
+      quickSkill1: SWNShared.emptyString(), //deprecated
+      quickSkill2: SWNShared.emptyString(), //deprecated
+      quickSkill3: SWNShared.emptyString(), //deprecated
       extraEffortName: SWNShared.emptyString(),
       extraEffort: new fields.SchemaField({
         bonus: SWNShared.requiredNumber(0),
@@ -61,6 +61,8 @@ export default class SWNCharacter extends SWNActorBase {
       }),
       extraHeader: SWNShared.emptyString(),
       showResourceList: new fields.BooleanField({initial: false}),
+      showCyberware: new fields.BooleanField({initial: true}),
+      showPowers: new fields.BooleanField({initial: true}),
       resourceList: new fields.ArrayField(new fields.SchemaField({
         name: SWNShared.emptyString(),
         value: SWNShared.requiredNumber(0),
