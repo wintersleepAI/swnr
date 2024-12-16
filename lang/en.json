@@ -40,9 +40,11 @@
           },
           "health": {
             "value": {"label": "Health"},
-            "max": {"label": "Maximum Health"}
+            "max": {"label": "Maximum Health"},
+            "label": "HP" 
           },
           "power": {
+            "label": "Power",
             "value": {"label": "Power"},
             "max": {"label": "Maximum Power"}
           },
@@ -57,7 +59,13 @@
             "scene": { "label" : "Scene"},
             "current": { "label": "Current" },
             "day": { "label": "Day" }
-          }
+          },
+          "cost": { "label": "Cost" },
+          "armor": { "label": "Armor" },
+          "crew": { "label": "Crew" },
+          "tl": { "label": "TL" },
+          "mass": { "label": "Mass" },
+          "hardpoints": { "label": "Hardpoints" }
         }
       },
       "Character": {

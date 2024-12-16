@@ -1,4 +1,7 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
+import { getGameSettings } from '../helpers/register-settings.mjs';
+import { headerFieldWidget, groupFieldWidget } from '../helpers/handlebar.mjs';
+
 
 const { api, sheets } = foundry.applications;
 
@@ -16,10 +19,10 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
 
   /** @override */
   static DEFAULT_OPTIONS = {
-    classes: ['swnr', 'actor'],
+    classes: ['swnr', 'actor','vehicle'],
     position: {
-      width: 600,
-      height: 600,
+      width: 760,
+      height: 700,
     },
     actions: {
       onEditImage: this._onEditImage,
@@ -45,20 +48,14 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
     },
+    effects: {
+      template: 'systems/swnr/templates/actor/effects.hbs',
+    },
     features: {
       template: 'systems/swnr/templates/actor/features.hbs',
     },
     biography: {
       template: 'systems/swnr/templates/actor/biography.hbs',
-    },
-    gear: {
-      template: 'systems/swnr/templates/actor/gear.hbs',
-    },
-    power: {
-      template: 'systems/swnr/templates/actor/powers.hbs',
-    },
-    effects: {
-      template: 'systems/swnr/templates/actor/effects.hbs',
     },
   };
 
@@ -77,7 +74,7 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'ship':
         //TODO
-        //options.parts.push('gear', 'effects');
+        options.parts.push('effects');
         break;
     }
   }
@@ -103,6 +100,9 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
       // Necessary for formInput and formFields helpers
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
+      gameSettings: getGameSettings(),
+      headerWidget: headerFieldWidget.bind(this),
+      groupWidget: groupFieldWidget.bind(this),
     };
 
     // Offloading context prep to a helper function
@@ -115,6 +115,34 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
   async _preparePartContext(partId, context) {
     // TODO copy from actor-sheet.mjs
     console.log("TODO: Implement _preparePartContext");//TODO
+    switch (partId) {
+
+      case 'biography':
+        context.tab = context.tabs[partId];
+        // Enrich biography info for display
+        // Enrichment turns text like `[[/r 1d20]]` into buttons
+        context.enrichedBiography = await TextEditor.enrichHTML(
+          this.actor.system.biography,
+          {
+            // Whether to show secret blocks in the finished html
+            secrets: this.document.isOwner,
+            // Data to fill in for inline rolls
+            rollData: this.actor.getRollData(),
+            // Relative UUID resolution
+            relativeTo: this.actor,
+          }
+        );
+        break;
+      case 'effects':
+        context.tab = context.tabs[partId];
+        // Prepare active effects
+        context.effects = prepareActiveEffectCategories(
+          // A generator that returns all effects stored on the actor
+          // as well as any items
+          this.actor.allApplicableEffects()
+        );
+        break;
+      }
     return context;
   }
 
@@ -151,14 +179,6 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
         case 'features':
           tab.id = 'features';
           tab.label += 'Features';
-          break;
-        case 'gear':
-          tab.id = 'gear';
-          tab.label += 'Gear';
-          break;
-        case 'spells':
-          tab.id = 'spells';
-          tab.label += 'Spells';
           break;
         case 'effects':
           tab.id = 'effects';
