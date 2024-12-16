@@ -24,7 +24,11 @@
         "Effects": "Effects",
         "Combat": "Combat",
         "Skills": "Skills",
-        "NPC": "NPC Details"
+        "NPC": "NPC Details",
+        "Ship": "Ship Details",
+        "Drone": "Drone Details",
+        "Mech": "Mech Details",
+        "Vehicle": "Vehicle Details"
       },
       "base": {
         "FIELDS": {
@@ -120,6 +124,56 @@
           "meleeAb": {"label": "Melee Attack Bonus"}
         },
         "xp": {"label": "XP"}
+      },
+      "Ship": {
+        "FIELDS":{
+          "lifeSupportDays": { "label": "Life Support Days" },
+          "fuel": { "label": "Fuel" },
+          "cargo": { "label": "Cargo" },
+          "spikeDrive": { "label": "Spike Drive" },
+          "shipClass": { "label": "Ship Class" },
+          "shipHullType": { "label": "Ship Hull Type" },
+          "operatingCost": { "label": "Operating Cost" },
+          "maintenanceCost": { "label": "Maintenance Cost" },
+          "amountOwed": { "label": "Amount Owed" },
+          "paymentAmount": { "label": "Payment Amount" },
+          "paymentMonths": { "label": "Payment Months" },
+          "maintenanceMonths": { "label": "Maintenance Months" },
+          "creditPool": { "label": "Credit Pool" },
+          "lastMaintenance": { "label": "Last Maintenance" },
+          "lastPayment": { "label": "Last Payment" },
+          "roles": { "label": "Roles" },
+          "cargoCarried": { "label": "Cargo Carried" },
+          "commandPoints": { "label": "Command Points" },
+          "npcCommandPoints": { "label": "NPC Command Points" },
+          "crewSkillBonus": { "label": "Crew Skill Bonus" },
+          "actionsTaken": { "label": "Actions Taken" },
+          "supportingDept": { "label": "Supporting Dept" },
+          "roleOrder": { "label": "Role Order" }
+        }
+      },
+      "Mech": {
+        "FIELDS":{
+          "maintenanceCost": { "label": "Maintenance Cost" },
+          "mechClass": { "label": "Mech Class" },
+          "mechHullType": { "label": "Mech Hull Type" }
+        }
+      },
+      "Vehicle": {
+        "FIELDS":{
+          "kmph": { "label": "kmph" },
+          "tonnage": { "label": "Tonnage" },
+          "size": { "label": "Size" }
+        }
+      },
+      "Drone": {
+        "FIELDS":{
+          "fittings": { "label": "Fittings" },
+          "enc": { "label": "Enc." },
+          "range": { "label": "Range" },
+          "model": { "label": "Model" },
+          "moveType": { "label": "Move Type" }
+        }
       }
     },
     "Item": {

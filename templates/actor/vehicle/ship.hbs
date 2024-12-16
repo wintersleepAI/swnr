@@ -2,16 +2,16 @@
   <div class='sheet-cols'>
     <div class='grid grid-4col'> <!-- SWNRShipData extends SWNRVehicleTemplateBase-->
         <div class="resource">
-        {{formGroup systemFields.lifeSupportDays value=system.lifeSupportDays localize=true}}
+        {{formGroup systemFields.lifeSupportDays value=system.lifeSupportDays localize=true widget=groupWidget}}
         </div>
         <div class="resource">
-        {{formGroup systemFields.fuel value=system.fuel localize=true}}
+        {{formGroup systemFields.fuel value=system.fuel localize=true widget=groupWidget}}
         </div>
         <div class="resource">
-        {{formGroup systemFields.cargo value=system.cargo localize=true}}
+        {{formGroup systemFields.cargo value=system.cargo localize=true widget=groupWidget}}
         </div>
         <div class="resource">
-        {{formGroup systemFields.spikeDrive value=system.spikeDrive localize=true}}
+        {{formGroup systemFields.spikeDrive value=system.spikeDrive localize=true widget=groupWidget}}
         </div>
         {{!-- <div class="resource">
         {{formGroup systemFields.shipClass value=system.shipClass localize=true}}
@@ -38,13 +38,13 @@
         {{formGroup systemFields.maintenanceMonths value=system.maintenanceMonths localize=true}}
         </div>
         <div class="resource">
-        {{formGroup systemFields.creditPool; value=system.creditPool; localize=true}}
+        {{formGroup systemFields.creditPool value=system.creditPool localize=true}}
         </div>
         <div class="resource">
-        {{formGroup systemFields.lastMaintenance value=system.lastMaintenance localize=true}}
+        {{formGroup systemFields.lastMaintenance value=system.lastMaintenance localize=true widget=groupWidget}}
         </div>
         <div class="resource">
-        {{formGroup systemFields.lastPayment value=system.lastPayment localize=true}}
+        {{formGroup systemFields.lastPayment value=system.lastPayment localize=true widget=groupWidget}}
         </div>
         {{!-- <div class="resource">
         {{formGroup systemFields.roles value=system.roles localize=true}}

@@ -57,11 +57,25 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     biography: {
       template: 'systems/swnr/templates/actor/biography.hbs',
     },
+    ship: {
+      template: 'systems/swnr/templates/actor/vehicle/ship.hbs',
+    },
+    vehicle: {
+      template: 'systems/swnr/templates/actor/vehicle/vehicle.hbs',
+    },
+    drone: {
+      template: 'systems/swnr/templates/actor/vehicle/drone.hbs',
+    },
+    mech: {
+      template: 'systems/swnr/templates/actor/vehicle/mech.hbs',
+    }
   };
 
   /** @override */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
+    options.defaultTab= 'biography';
+
     // Not all parts always render
     options.parts = ['header', 'tabs', 'biography'];
     // Don't show the other tabs if only limited view
@@ -69,12 +83,20 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'mech':
-        //TODO
-        //options.parts.push('features', 'gear', 'powers', 'effects');
+        options.parts.push('mech','effects');
+        options.defaultTab = 'mech';
         break;
       case 'ship':
-        //TODO
-        options.parts.push('effects');
+        options.parts.push('ship','effects');
+        options.defaultTab = 'ship';
+        break;
+      case 'drone':
+        options.parts.push('drone','effects');
+        options.defaultTab = 'drone';
+        break;
+      case 'vehicle':
+        options.parts.push('vehicle','effects');
+        options.defaultTab = 'vehicle';
         break;
     }
   }
@@ -116,7 +138,12 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     // TODO copy from actor-sheet.mjs
     console.log("TODO: Implement _preparePartContext");//TODO
     switch (partId) {
-
+      case 'ship':
+      case 'vehicle':
+      case 'drone':
+      case 'mech':
+        context.tab = context.tabs[partId];
+      break;
       case 'biography':
         context.tab = context.tabs[partId];
         // Enrich biography info for display
@@ -152,11 +179,11 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
    * @returns {Record<string, Partial<ApplicationTab>>}
    * @protected
    */
-  _getTabs(parts) {
+  _getTabs(parts, defaultTab = 'biography') {
     // If you have sub-tabs this is necessary to change
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
-    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'biography';
+    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = defaultTab;
     return parts.reduce((tabs, partId) => {
       const tab = {
         cssClass: 'sheet-body',
@@ -183,6 +210,22 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
         case 'effects':
           tab.id = 'effects';
           tab.label += 'Effects';
+          break;
+        case 'ship':
+          tab.id = 'ship';
+          tab.label += 'Ship';
+          break;
+        case 'vehicle':
+          tab.id = 'vehicle';
+          tab.label += 'Vehicle';
+          break;
+        case 'drone':
+          tab.id = 'drone';
+          tab.label += 'Drone';
+          break;
+        case 'mech':
+          tab.id = 'mech';
+          tab.label += 'Mech';
           break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
