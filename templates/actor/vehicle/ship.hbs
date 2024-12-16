@@ -1,0 +1,76 @@
+<section class='tab ship sheet-body {{tab.cssClass}}' data-group='primary' data-tab='ship'>
+  <div class='sheet-cols'>
+    <div class='grid grid-4col'> <!-- SWNRShipData extends SWNRVehicleTemplateBase-->
+        <div class="resource">
+        {{formGroup systemFields.lifeSupportDays value=system.lifeSupportDays localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.fuel value=system.fuel localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.cargo value=system.cargo localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.spikeDrive value=system.spikeDrive localize=true}}
+        </div>
+        {{!-- <div class="resource">
+        {{formGroup systemFields.shipClass value=system.shipClass localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.shipHullType value=system.shipHullType localize=true}}
+        </div> --}}
+        <div class="resource">
+        {{formGroup systemFields.operatingCost value=system.operatingCost localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.maintenanceCost value=system.maintenanceCost localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.amountOwed value=system.amountOwed localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.paymentAmount value=system.paymentAmount localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.paymentMonths value=system.paymentMonths localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.maintenanceMonths value=system.maintenanceMonths localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.creditPool; value=system.creditPool; localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.lastMaintenance value=system.lastMaintenance localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.lastPayment value=system.lastPayment localize=true}}
+        </div>
+        {{!-- <div class="resource">
+        {{formGroup systemFields.roles value=system.roles localize=true}}
+        </div> --}}
+        {{!-- <div class="resource">
+        {{formGroup systemFields.cargoCarried value=system.cargoCarried localize=true}}
+        </div> --}}
+        <div class="resource">
+        {{formGroup systemFields.commandPoints value=system.commandPoints localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.npcCommandPoints value=system.npcCommandPoints localize=true}}
+        </div>
+        <div class="resource">
+        {{formGroup systemFields.crewSkillBonus value=system.crewSkillBonus localize=true}}
+        </div>
+        {{!-- <div class="resource">
+        {{formGroup systemFields.actionsTaken value=system.actionsTaken localize=true}}
+        </div> --}}
+        <div class="resource">
+        {{formGroup systemFields.supportingDept value=system.supportingDept localize=true}}
+        </div>
+        {{!-- <div class="resource">
+        {{formGroup systemFields.roleOrder value=system.roleOrder localize=true}}
+        </div> --}}
+        </div><!-- end grid-col SWNRShipData extends SWNRVehicleTemplateBase -->
+
+  </div>
+</section>
