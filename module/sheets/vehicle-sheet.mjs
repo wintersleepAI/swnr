@@ -31,6 +31,20 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
       deleteDoc: this._deleteDoc,
       toggleEffect: this._toggleEffect,
       roll: this._onRoll,
+      travel: this._onTravel,
+      spike: this._onSpike,
+      refuel: this._onRefuel,
+      crisis: this._onCrisis,
+      failure: this._onSysFailure,
+      repair: this._onRepair,
+      sensor: this._onSensor,
+      calcCost: this._onCalcCost,
+      makePayment: this._onPayment,
+      npcCrewRoll: this._onCrewNPCRoll,
+      payMaintenance: this._onMaintenance,
+      creditsChange: this._onAddCurrency,
+      resourceDelete: this._onResourceDelete,
+      resourceCreate: this._onResourceCreate
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -261,6 +275,13 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     // You may want to add other special handling here
     // Foundry comes with a large number of utility classes, e.g. SearchFilter
     // That you may want to implement yourself.
+
+    this.element.querySelectorAll("[name='shipActions']").forEach((d) => 
+      d.addEventListener('change', this._onShipAction.bind(this)));
+    this.element.querySelectorAll("[name='data.shipHullType']").forEach((d) => 
+      d.addEventListener('change', this._onHullChange.bind(this)));
+    this.element.querySelectorAll(".resource-list-val").forEach((d) => 
+      d.addEventListener('change', this._onResourceName.bind(this)));
   }
 
   /**************
@@ -714,6 +735,9 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
       return new DragDrop(d);
     });
   }
+
+
+  
 
   /********************
    *
