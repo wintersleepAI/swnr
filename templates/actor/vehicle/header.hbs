@@ -41,5 +41,44 @@
       {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget}}
 
     </div>
+    {{#if (eq actor.type 'ship')}}
+      <div class="flex-grow grid grid-cols-7 items-center gap-1">
+        <!--buttons-->
+        <div class="cost flex flex-col items-center ">
+          <a data-action="travel"><i class="fas fa-route  fa-2x travel-button"></i></a>
+          {{localize 'swnr.sheet.ship.travel'}}
+        </div>
+
+        <div class="cost flex flex-col items-center ">
+          <a data-action="spike"><i class="fas fa-rocket  fa-2x spike-button"></i></a>
+          {{localize 'swnr.sheet.ship.spike'}}
+        </div>
+
+        <div class="cost flex flex-col items-center ">
+          <a data-action="refuel"><i class="fas fa-gas-pump  fa-2x refuel-button"></i></a>
+          {{localize 'swnr.sheet.ship.refuel'}}
+        </div>
+
+        <div class="cost flex flex-col items-center ">
+          <a data-action="crisis"><i class="fas fa-dumpster-fire  fa-2x crisis-button"></i></a>
+          {{localize 'swnr.sheet.ship.crisis'}}
+        </div>
+
+        <div class="cost flex flex-col items-center ">
+          <a  data-action="failure"><i class="fas fa-heart-broken  fa-2x failure-button"></i></a>
+          {{localize 'swnr.sheet.ship.system-failure'}}
+        </div>
+
+        <div class="cost flex flex-col items-center ">
+          <a data-action="repair"><i class="fas fa-tools  fa-2x repair-button"></i></a>
+          {{localize 'swnr.sheet.ship.repair-all'}}
+        </div>
+
+        <div class="cost flex flex-col items-center ">
+          <a data-action="sensor"><i class="fas fa-satellite-dish  fa-2x sensor-button"></i></a>
+          {{localize 'swnr.sheet.ship.sensor-roll'}}
+        </div>
+      </div><!-- end buttons-->
+    {{/if}}
   </div>
 </header>
