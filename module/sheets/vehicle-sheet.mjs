@@ -737,13 +737,13 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
   }
 
   // Add Currency to selected type
-async _onAddCurrency(event, target) {
+static async _onAddCurrency(event, target) {
   // Stop propagation
   event.preventDefault();
   event.stopPropagation();
 
   // get any useful params
-  const currencyType = $(event.currentTarget).data("creditType");
+  const currencyType = target.dataset.creditType
 
   // load html variable data for dialog
   const template = "systems/swnr/templates/dialogs/add-currency.html";
@@ -787,70 +787,70 @@ async _onAddCurrency(event, target) {
     // this is our valid input scenario
     await this.actor.update({
       data: {
-        [currencyType]: this.actor.data.data[currencyType] + parseInt(await amount)
+        [currencyType]: this.actor.system[currencyType] + parseInt(await amount)
       }
     });
   }
 }
 
-async _onResourceName(event, target) {
+static async _onResourceName(event, target) {
   event.preventDefault();
   event.stopPropagation();
   const value = target?.value;
-  const resourceType = $(event.currentTarget).data("rlType");
+  const resourceType = target.dataset.rlType
   const idx = $(event.currentTarget).parents(".item").data("rlIdx");
-  const resourceList = duplicate(this.actor.data.data.cargoCarried);
+  const resourceList = duplicate(this.actor.system.cargoCarried);
   resourceList[idx][resourceType] = value;
-  await this.actor.update({ "data.cargoCarried": resourceList });
+  await this.actor.update({ "system.cargoCarried": resourceList });
 }
 
-async _onResourceDelete(event, target) {
+static async _onResourceDelete(event, target) {
   event.preventDefault();
   event.stopPropagation();
   const idx = $(event.currentTarget).parents(".item").data("rlIdx");
-  const resourceList = duplicate(this.actor.data.data.cargoCarried);
+  const resourceList = duplicate(this.actor.system.cargoCarried);
   resourceList.splice(idx, 1);
-  await this.actor.update({ "data.cargoCarried": resourceList });
+  await this.actor.update({ "system.cargoCarried": resourceList });
 }
 
-async _onResourceCreate(event, target) {
+static async _onResourceCreate(event, target) {
   event.preventDefault();
   // console.log("Changing HP Max", this.actor);
-  let resourceList = this.actor.data.data.cargoCarried;
+  let resourceList = this.actor.system.cargoCarried;
   if (!resourceList) {
     resourceList = [];
   }
   resourceList.push({ name: "Cargo X", value: 0, max: 1 });
   await this.actor.update({
-    "data.cargoCarried": resourceList,
+    "system.cargoCarried": resourceList,
   });
 }
 
-async _onPayment(event, target) {
+static async _onPayment(event, target) {
   return this._onPay(event, "payment");
 }
 
-async _onMaintenance(event, target) {
+static async _onMaintenance(event, target) {
   return this._onPay(event, "maintenance");
 }
 
-async _onPay(event, paymentType) {
+static async _onPay(event, paymentType) {
   // if a new payment type is added this function needs to be refactored
-  let shipPool = this.actor.data.data.creditPool;
+  let shipPool = this.actor.system.creditPool;
   const paymentAmount = 
     paymentType == "payment"
-      ? this.actor.data.data.paymentAmount
-      : this.actor.data.data.maintenanceCost;
+      ? this.actor.system.paymentAmount
+      : this.actor.system.maintenanceCost;
   // Assume its payment and change if maintenance
 
   const lastPayDate =
     paymentType == "payment"
-      ? this.actor.data.data.lastPayment
-      : this.actor.data.data.lastMaintenance;
+      ? this.actor.system.lastPayment
+      : this.actor.system.lastMaintenance;
   const monthSchedule =
     paymentType == "payment"
-      ? this.actor.data.data.paymentMonths
-      : this.actor.data.data.maintenanceMonths;
+      ? this.actor.system.paymentMonths
+      : this.actor.system.maintenanceMonths;
 
   if (paymentAmount > shipPool) {
     ui.notifications?.error(
@@ -891,7 +891,7 @@ async _onPay(event, paymentType) {
   this.actor.setScheduledDate(dateObject, paymentType);
 }
 
-async _onHullChange(event, target) {
+static async _onHullChange(event, target) {
   const targetHull = event.target?.value;
 
   if (targetHull) {
@@ -918,9 +918,9 @@ async _onHullChange(event, target) {
   }
 }
 
-async _onRepair(event, target) {
+static async _onRepair(event, target) {
   event.preventDefault();
-  const data = this.actor.data.data;
+  const data = this.actor.system;
   const hpToFix = data.health.max - data.health.value;
   const hpCosts = hpToFix * 1000;
   const shipInventory = this.actor.items.filter(
@@ -931,9 +931,9 @@ async _onRepair(event, target) {
   );
 
   const disabledParts = shipInventory.filter(
-    (i) => i.data.data.broken == true && i.data.data.destroyed == false
+    (i) => i.system.broken == true && i.system.destroyed == false
   );
-  const shipClass = this.actor.data.data.shipClass;
+  const shipClass = this.actor.system.shipClass;
 
   let multiplier = 1;
   if (shipClass == "frigate") {
@@ -949,9 +949,9 @@ async _onRepair(event, target) {
   const eitems = [];
   for (let i = 0; i < disabledParts.length; i++) {
     const item = disabledParts[i];
-    const itemCost = item.data.data.costMultiplier
-      ? item.data.data.cost * multiplier
-      : item.data.data.cost;
+    const itemCost = item.system.costMultiplier
+      ? item.system.cost * multiplier
+      : item.system.cost;
     disabledCosts += itemCost;
     itemsToFix.push(`${item.name} (${itemCost})`);
     eitems.push({ _id: item.id, data: { broken: false } });
@@ -961,7 +961,7 @@ async _onRepair(event, target) {
   }
   const fullRepairCost = disabledCosts * 0.25;
   const totalCost = hpCosts + fullRepairCost;
-  await this.actor.update({ "data.health.value": data.health.max });
+  await this.actor.update({ "system.health.value": data.health.max });
   if (totalCost > 0) {
     const itemList = itemsToFix.join("<br>");
     const content = `<h3>Ship Repaired</h3><b>Estimated Total Cost: ${totalCost}</b><br>HP points: ${hpToFix} cost: ${hpCosts}<br>Full Repair Costs: ${fullRepairCost} (25%/item cost). <br><br> Items Repaired (item full cost):<br> ${itemList} `;
@@ -972,9 +972,9 @@ async _onRepair(event, target) {
   }
 }
 
-async _onTravel(event, target) {
+static async _onTravel(event, target) {
   event.preventDefault();
-  if (this.actor.data.data.spikeDrive.value <= 0) {
+  if (this.actor.system.spikeDrive.value <= 0) {
     ui.notifications?.error("Drive disabled.");
     return;
   }
@@ -1011,14 +1011,414 @@ async _onTravel(event, target) {
   }).render(true);
 }
 
+static async _onSensor(event, target) {
+  event.preventDefault();
+  let defaultCommId = this.actor.system.roles.comms;
+  let defaultComm = null;
+  if (defaultCommId) {
+    const _temp = game.actors?.get(defaultCommId);
+    if (_temp && (_temp.type == "character" || _temp.type == "npc")) {
+      defaultComm = _temp;
+    }
+  }
+  const crewArray = [];
+  if (this.actor.system.crewMembers) {
+    for (let i = 0; i < this.actor.system.crewMembers.length; i++) {
+      const cId = this.actor.system.crewMembers[i];
+      const crewMember = game.actors?.get(cId);
+      if (
+        crewMember &&
+        (crewMember.type == "character" || crewMember.type == "npc")
+      ) {
+        crewArray.push(crewMember);
+      }
+    }
+  }
+  const title = game.i18n.format("swnr.dialog.sensorRoll", {
+    actorName: this.actor?.name,
+  });
 
-async _onCrewNPCRoll(event, target) {
+  if (defaultComm == null && crewArray.length > 0) {
+    //There is no pilot. Use first crew as default
+    defaultComm = crewArray[0];
+    defaultCommId = crewArray[0].id;
+  }
+  if (defaultComm?.type == "npc" && crewArray.length > 0) {
+    //See if we have a non NPC to set as pilot to get skills and attr
+    for (const char of crewArray) {
+      if (char.type == "character") {
+        defaultComm = char;
+        defaultCommId = char.id;
+        break;
+      }
+    }
+  }
+  const dialogData = {
+    actor: this.actor.data,
+    defaultSkill1: "Program",
+    defaultSkill2: "Tech/Astronautic",
+    defaultStat: "int",
+    comm: defaultComm,
+    commId: defaultCommId,
+    crewArray: crewArray,
+  };
+
+  const template = "systems/swnr/templates/dialogs/roll-sensor.html";
+  const html = renderTemplate(template, dialogData);
+  const _rollForm = async (html) => {
+    const form = html[0].querySelector("form");
+    const mod = parseInt(
+      form.querySelector('[name="modifier"]')?.value
+    );
+    const actorId = form.querySelector('[name="commId"]')?.value;
+    const rollingActor = actorId ? game.actors?.get(actorId) : null;
+    const dice = form.querySelector('[name="dicepool"]').value;
+    const skillName = form.querySelector('[name="skill"]')?.value;
+    const statName = form.querySelector('[name="stat"]')?.value;
+    const targetModifier = parseInt(
+      form.querySelector('[name="targetModifier"]')?.value
+    );
+    const observerModifier = parseInt(
+      form.querySelector('[name="observerModifier"]')?.value
+    );
+    const rollingAs = form.querySelector('[name="rollingAs"]')?.value;
+    if (
+      rollingAs != "observer" &&
+      rollingAs != "target" &&
+      rollingAs != "single"
+    ) {
+      ui.notifications?.error("Error with rolling as ");
+      return;
+    }
+    const rollType = form.querySelector('[name="rollType"]')?.value;
+    if (
+      rollType != "roll" &&
+      rollType != "gmroll" &&
+      rollType != "blindroll"
+    ) {
+      ui.notifications?.error("Error with roll type");
+      return;
+    }
+
+    let skillMod = 0;
+    let statMod = 0;
+    let actorName = "";
+    if (rollingActor) {
+      if (skillName) {
+        // We need to look up by name
+        for (const skill of rollingActor.itemTypes.skill) {
+          if (skillName == skill.data.name) {
+            skillMod =
+              skill.system["rank"] < 0 ? -1 : skill.system["rank"];
+          }
+        }
+      } //end skill
+      if (statName) {
+        const sm = rollingActor.system["stats"]?.[statName].mod;
+        if (sm) {
+          console.log("setting stat mod", sm);
+          statMod = sm;
+        }
+      }
+      actorName = rollingActor.name;
+    }
+    this.actor.rollSensor(
+      actorName,
+      targetModifier,
+      observerModifier,
+      skillMod,
+      statMod,
+      dice,
+      rollingAs,
+      rollType
+    );
+  };
+
+  this.popUpDialog?.close();
+  this.popUpDialog = new ValidatedDialog(
+    {
+      title: title,
+      content: await html,
+      default: "roll",
+      buttons: {
+        roll: {
+          label: game.i18n.localize("swnr.chat.roll"),
+          callback: _rollForm,
+        },
+      },
+    },
+    {
+      classes: ["swnr"],
+    }
+  );
+  this.popUpDialog.render(true);
+}
+
+static async _onSpike(event, target) {
+  event.preventDefault();
+  if (this.actor.system.fuel.value <= 0) {
+    ui.notifications?.error("Out of fuel.");
+    return;
+  }
+  if (this.actor.system.spikeDrive.value <= 0) {
+    ui.notifications?.error("Drive disabled.");
+    return;
+  }
+  let defaultPilotId = this.actor.system.roles.bridge;
+  let defaultPilot = null;
+  if (defaultPilotId) {
+    const _temp = game.actors?.get(defaultPilotId);
+    if (_temp && (_temp.type == "character" || _temp.type == "npc")) {
+      defaultPilot = _temp;
+    }
+  }
+  const crewArray = [];
+  if (this.actor.system.crewMembers) {
+    for (let i = 0; i < this.actor.system.crewMembers.length; i++) {
+      const cId = this.actor.system.crewMembers[i];
+      const crewMember = game.actors?.get(cId);
+      if (
+        crewMember &&
+        (crewMember.type == "character" || crewMember.type == "npc")
+      ) {
+        crewArray.push(crewMember);
+      }
+    }
+  }
+
+  const title = game.i18n.format("swnr.dialog.spikeRoll", {
+    actorName: this.actor?.name,
+  });
+
+  if (defaultPilot == null && crewArray.length > 0) {
+    //There is no pilot. Use first crew as default
+    defaultPilot = crewArray[0];
+    defaultPilotId = crewArray[0].id;
+  }
+  if (defaultPilot?.type == "npc" && crewArray.length > 0) {
+    //See if we have a non NPC to set as pilot to get skills and attr
+    for (const char of crewArray) {
+      if (char.type == "character") {
+        defaultPilot = char;
+        defaultPilotId = char.id;
+        break;
+      }
+    }
+  }
+
+  const dialogData = {
+    actor: this.actor.data,
+    defaultSkill1: "Pilot",
+    defaultSkill2: "Navigation",
+    defaultStat: "int",
+    pilot: defaultPilot,
+    pilotId: defaultPilotId,
+    crewArray: crewArray,
+    baseDifficulty: 7,
+  };
+
+  const template = "systems/swnr/templates/dialogs/roll-spike.html";
+  const html = renderTemplate(template, dialogData);
+
+  const _rollForm = async (html) => {
+    const form = html[0].querySelector("form");
+    const mod = parseInt(
+      form.querySelector('[name="modifier"]')?.value
+    );
+    const pilotId = form.querySelector('[name="pilotId"]')?.value;
+    const pilot = pilotId ? game.actors?.get(pilotId) : null;
+    const dice = form.querySelector('[name="dicepool"]').value;
+    const skillName = form.querySelector('[name="skill"]')?.value;
+    const statName = form.querySelector('[name="stat"]')?.value;
+    const difficulty = parseInt(
+      form.querySelector('[name="difficulty"]')?.value
+    );
+    const travelDays = parseInt(
+      form.querySelector('[name="travelDays"]')?.value
+    );
+    let skillMod = 0;
+    let statMod = 0;
+    let pilotName = "";
+    if (pilot) {
+      if (skillName) {
+        // We need to look up by name
+        for (const skill of pilot.itemTypes.skill) {
+          if (skillName == skill.data.name) {
+            skillMod =
+              skill.system["rank"] < 0 ? -1 : skill.system["rank"];
+          }
+        }
+      } //end skill
+      if (statName) {
+        const sm = pilot.system["stats"]?.[statName].mod;
+        if (sm) {
+          console.log("setting stat mod", sm);
+          statMod = sm;
+        }
+      }
+      pilotName = pilot.name;
+    }
+    this.actor.rollSpike(
+      pilotId,
+      pilotName,
+      skillMod,
+      statMod,
+      mod,
+      dice,
+      difficulty,
+      travelDays
+    );
+  };
+
+  this.popUpDialog?.close();
+  this.popUpDialog = new ValidatedDialog(
+    {
+      title: title,
+      content: await html,
+      default: "roll",
+      buttons: {
+        roll: {
+          label: game.i18n.localize("swnr.chat.roll"),
+          callback: _rollForm,
+        },
+      },
+    },
+    {
+      classes: ["swnr"],
+    }
+  );
+  this.popUpDialog.render(true);
+}
+
+static async _onRefuel(event, target) {
+  event.preventDefault();
+  const data = this.actor.system;
+  const daysToRefill = data.lifeSupportDays.max - data.lifeSupportDays.value;
+  const fuelToRefill = data.fuel.max - data.fuel.value;
+  const lifeCost = daysToRefill * 20;
+  const fuelCost = fuelToRefill * 500;
+  const totalCost = lifeCost + fuelCost;
+  await this.actor.update({
+    "system.lifeSupportDays.value": data.lifeSupportDays.max,
+    "system.fuel.value": data.fuel.max,
+  });
+  //ui.notifications?.info("Refuelled");
+  const chatData = {
+    content: `Refueled. Estimated refuel costs: <b>${totalCost}</b>. <br>${daysToRefill} of life support costs ${lifeCost} (20/day). <br> ${fuelToRefill} jumps cost ${fuelCost} (500/load).`,
+  };
+  if (totalCost > 0) {
+    ChatMessage.create(chatData);
+  }
+}
+
+static _onCrisis(event, target) {
+  event.preventDefault();
+  this.actor.rollCrisis();
+}
+
+static async _onSysFailure(event, target) {
+  event.preventDefault();
+  const title = game.i18n.format("swnr.dialog.sysFailure", {
+    actorName: this.actor?.name,
+  });
+  const dialogData = {};
+  const template = "systems/swnr/templates/dialogs/roll-ship-failure.html";
+  const html = renderTemplate(template, dialogData);
+
+  const _rollForm = async (html) => {
+    const form = html[0].querySelector("form");
+    const incDrive = form.querySelector('[name="inc-drive"]')?.checked
+      ? true
+      : false;
+    const incWpn = form.querySelector('[name="inc-wpn"]')?.checked
+      ? true
+      : false;
+    const incFit = form.querySelector('[name="inc-fit"]')?.checked
+      ? true
+      : false;
+    const incDef = form.querySelector('[name="inc-def"]')?.checked
+      ? true
+      : false;
+    const whatToRoll = form.querySelector('[name="what"]')?.value;
+
+    const sysToInclude = [];
+    if (incDrive) {
+      sysToInclude.push("drive");
+    }
+    if (incWpn) {
+      sysToInclude.push("wpn");
+    }
+    if (incFit) {
+      sysToInclude.push("fit");
+    }
+    if (incDef) {
+      sysToInclude.push("def");
+    }
+    this.actor.rollSystemFailure(sysToInclude, whatToRoll);
+  };
+
+  this.popUpDialog?.close();
+  this.popUpDialog = new ValidatedDialog(
+    {
+      title: title,
+      content: await html,
+      default: "roll",
+      buttons: {
+        roll: {
+          label: game.i18n.localize("swnr.chat.roll"),
+          callback: _rollForm,
+        },
+      },
+    },
+    {
+      classes: ["swnr"],
+    }
+  );
+  this.popUpDialog.render(true);
+}
+
+static _onCalcCost(event, target) {
+  event.preventDefault();
+  const hullType = this.actor.system.shipHullType;
+  const d = new Dialog({
+    title: "Calc Costs",
+    content: `Do you want to calculate the cost based on your fittings and the hull ${hullType}`,
+    buttons: {
+      yesnomaint: {
+        icon: '<i class="fas fa-check"></i>',
+        label: "Yes, but leave maintenance alone",
+        callback: () => {
+          this.actor.calcCost(false);
+        },
+      },
+      yes: {
+        icon: '<i class="fas fa-times"></i>',
+        label: "Yes, and calculate maintence costs as 5%",
+        callback: () => {
+          this.actor.calcCost(true);
+        },
+      },
+      no: {
+        icon: '<i class="fas fa-times"></i>',
+        label: "No",
+        callback: () => {
+          console.log("Doing nothing");
+        },
+      },
+    },
+    default: "no",
+  });
+  d.render(true);
+}
+
+
+static async _onCrewNPCRoll(event, target) {
   event.preventDefault();
   // Roll skill, show name, skill, attr if != ""
   const rollMode = game.settings.get("core", "rollMode");
   const formula = `2d6 + @npcCrewSkill`;
-  const npcCrewSkill = this.actor.data.data.crewSkillBonus
-    ? this.actor.data.data.crewSkillBonus
+  const npcCrewSkill = this.actor.system.crewSkillBonus
+    ? this.actor.system.crewSkillBonus
     : 0;
   const roll = new Roll(formula, {
     npcCrewSkill,
@@ -1034,9 +1434,9 @@ async _onCrewNPCRoll(event, target) {
   );
 }
 
-async _setCaptSupport(dept) {
-  const deptSupport = this.actor.data.data.supportingDept
-    ? this.actor.data.data.supportingDept
+static async _setCaptSupport(dept) {
+  const deptSupport = this.actor.system.supportingDept
+    ? this.actor.system.supportingDept
     : "";
   if (dept == deptSupport) {
     return;
@@ -1045,11 +1445,11 @@ async _setCaptSupport(dept) {
     ui.notifications?.error("Department is already supported. Error.");
   }
   await this.actor.update({
-    "data.supportingDept": dept,
+    "system.supportingDept": dept,
   });
 }
 
-async _onShipAction(event, target) {
+static async _onShipAction(event, target) {
   event.preventDefault();
   const actionName = event.target?.value;
   if (actionName === "") {
@@ -1061,9 +1461,9 @@ async _onShipAction(event, target) {
     return;
   }
   const actionTitle = action.title ? action.title : actionName;
-  let cp = this.actor.data.data.commandPoints;
-  const actionsTaken = this.actor.data.data.actionsTaken
-    ? this.actor.data.data.actionsTaken
+  let cp = this.actor.system.commandPoints;
+  const actionsTaken = this.actor.system.actionsTaken
+    ? this.actor.system.actionsTaken
     : [];
   if (action.limit === "round" && actionsTaken.indexOf(actionName) >= 0) {
     ui.notifications?.info(
@@ -1075,19 +1475,19 @@ async _onShipAction(event, target) {
   if (actionName == "startRound") {
     let depts = ``;
     let roleOrder = [];
-    if (this.actor.data.data.roleOrder) {
+    if (this.actor.system.roleOrder) {
       // we may have set an order prior
-      roleOrder = this.actor.data.data.roleOrder;
+      roleOrder = this.actor.system.roleOrder;
     } else {
       // get the default list
-      for (const role in this.actor.data.data.roles) {
+      for (const role in this.actor.system.roles) {
         roleOrder.push(role);
       }
     }
     for (const role of roleOrder) {
       let roleName = "";
-      if (this.actor.data.data.roles[role]) {
-        const roleActor = game.actors?.get(this.actor.data.data.roles[role]);
+      if (this.actor.system.roles[role]) {
+        const roleActor = game.actors?.get(this.actor.system.roles[role]);
         if (roleActor && roleActor.name) {
           roleName = ` (${roleActor.name})`;
         }
@@ -1137,8 +1537,8 @@ async _onShipAction(event, target) {
     return;
   } else if (actionName == "endRound") {
     // endRound action is special. clear and reset.
-    const newCp = this.actor.data.data.npcCommandPoints
-      ? this.actor.data.data.npcCommandPoints
+    const newCp = this.actor.system.npcCommandPoints
+      ? this.actor.system.npcCommandPoints
       : 0;
     let actionsText =
       actionsTaken.length > 0 ? `Actions: <ul>` : "No actions.";
@@ -1168,7 +1568,7 @@ async _onShipAction(event, target) {
   }
   let actionCp = action.cp ? action.cp : 0;
   let supported = false;
-  let supportingDept = this.actor.data.data.supportingDept;
+  let supportingDept = this.actor.system.supportingDept;
   if (action.dept && action.dept == supportingDept) {
     // If captain is supporting the department.
     actionCp += 2;
@@ -1186,8 +1586,8 @@ async _onShipAction(event, target) {
     diffText += ` (2d6: ${res.total})`;
   }
   const descText = action.desc ? action.desc : "";
-  const order = this.actor.data.data.roleOrder
-    ? ` (${this.actor.data.data.roleOrder.join(",")})`
+  const order = this.actor.system.roleOrder
+    ? ` (${this.actor.system.roleOrder.join(",")})`
     : "";
   if (action.skill) {
     // this action needs a skill roll
@@ -1198,19 +1598,19 @@ async _onShipAction(event, target) {
 
     if (action.dept) {
       let foundActor = false; // might not be anyone in this dept/role
-      if (this.actor.data.data.roles[action.dept] != "") {
+      if (this.actor.system.roles[action.dept] != "") {
         const defaultActor = game.actors?.get(
-          this.actor.data.data.roles[action.dept]
+          this.actor.system.roles[action.dept]
         );
         if (defaultActor) {
           foundActor = true;
           if (defaultActor.type == "character") {
             for (const skill of defaultActor.itemTypes.skill) {
               if (action.skill == skill.data.name) {
-                skillLevel = skill.data.data["rank"];
+                skillLevel = skill.system["rank"];
                 dicePool =
-                  skill.data.data["pool"] && skill.data.data["pool"] != "ask"
-                    ? skill.data.data["pool"]
+                  skill.system["pool"] && skill.system["pool"] != "ask"
+                    ? skill.system["pool"]
                     : "2d6";
               }
             }
@@ -1219,10 +1619,10 @@ async _onShipAction(event, target) {
               // Find the attribute with the highest mod
               for (const attr of action.attr) {
                 if (
-                  defaultActor.data.data.stats[attr] &&
-                  defaultActor.data.data.stats[attr].mod > tempMod
+                  defaultActor.system.stats[attr] &&
+                  defaultActor.system.stats[attr].mod > tempMod
                 ) {
-                  tempMod = defaultActor.data.data.stats[attr].mod;
+                  tempMod = defaultActor.system.stats[attr].mod;
                   const key = `swnr.stat.short.${attr}`;
                   attrName = `${game.i18n.localize(key)}\\`;
                 }
@@ -1231,7 +1631,7 @@ async _onShipAction(event, target) {
             }
           }
           if (defaultActor.type == "npc") {
-            skillLevel = defaultActor.data.data.skillBonus;
+            skillLevel = defaultActor.system.skillBonus;
           }
           // Roll skill, show name, skill, attr if != ""
           const rollMode = game.settings.get("core", "rollMode");
@@ -1253,8 +1653,8 @@ async _onShipAction(event, target) {
       }
       if (!foundActor) {
         // We are here means there is a skill but we don't know who it is for
-        skillLevel = this.actor.data.data.crewSkillBonus
-          ? this.actor.data.data.crewSkillBonus
+        skillLevel = this.actor.system.crewSkillBonus
+          ? this.actor.system.crewSkillBonus
           : 0;
         const rollMode = game.settings.get("core", "rollMode");
         const formula = `${dicePool} + @skillLevel`;
@@ -1319,9 +1719,9 @@ async _onShipAction(event, target) {
     supportingDept = "";
   }
   await this.actor.update({
-    "data.commandPoints": cp,
-    "data.actionsTaken": actionsTaken,
-    "data.supportingDept": supportingDept,
+    "system.commandPoints": cp,
+    "system.actionsTaken": actionsTaken,
+    "system.supportingDept": supportingDept,
   });
   event.target.value = "";
   return;
