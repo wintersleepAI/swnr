@@ -40,14 +40,17 @@
                     <input type="checkbox" class="small-checkbox" name="system.favorite" {{#if system.favorite}}checked{{/if}} />
                 </div>
                 <div class="grid-span-3"></div>
-                <div class="resource flexrow">
-                    {{formGroup systemFields.baseOfInfluence value=system.baseOfInfluence localize=true}}
-                </div>
                 <div class="resource">
                     {{formGroup systemFields.category value=system.category localize=true}}
                 </div>
                 <div class="resource">
                     {{formGroup systemFields.rating value=system.rating localize=true}}
+                </div>
+                <div class="resource grid-span-2">
+                    {{formGroup systemFields.location value=system.location localize=true}}
+                </div>
+                <div class="resource flexrow">
+                    {{formGroup systemFields.baseOfInfluence value=system.baseOfInfluence localize=true}}
                 </div>
             </div>
         </div>

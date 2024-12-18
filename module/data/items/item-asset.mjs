@@ -32,6 +32,8 @@ export default class SWNAsset extends SWNItemBase {
     schema.counter = SWNShared.emptyString();
     
     schema.turnRoll = SWNShared.emptyString(); // Special action taken on or between turns
+    schema.locationRoll = SWNShared.emptyString();
+    schema.location = SWNShared.emptyString();
     schema.note = SWNShared.emptyString();
     schema.qualities = new fields.SchemaField({
       permission: new fields.BooleanField({initial: false}),

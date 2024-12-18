@@ -160,7 +160,8 @@
           "attackTarget": { "label":  "Target" },
           "attackDamage": { "label":  "Damage" },
           "counter": { "label":  "Counter" },
-          "note": { "label":  "Note" }
+          "note": { "label":  "Note" },
+          "location": { "label": "Location" }
         }
       }
     },
@@ -726,6 +727,7 @@
         },
         "attackSpecial": "Special Attack Note",
         "turnRoll": "On Turn Log/Roll",
+        "locationRoll": "Location Note",
         "stealthed": "Is Stealthed?",
         "tl": "TL",
         "rating": "Rating",
