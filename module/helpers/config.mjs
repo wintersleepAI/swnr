@@ -175,3 +175,10 @@ SWN.skills = {
     "teleportation",
     ],
   };
+
+
+SWN.assetCategories = {
+  force: 'swnr.sheet.faction.assetCategories.force',
+  cunning: 'swnr.sheet.faction.assetCategories.cunning',
+  wealth: 'swnr.sheet.faction.assetCategories.wealth',
+}

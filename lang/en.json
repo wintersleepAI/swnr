@@ -183,7 +183,9 @@
         "Effects": "Effects",
         "WeaponDetails": "Weapon Details",
         "ProgramDetails": "Program Details",
-        "ArmorDetails": "Armor Details"
+        "ArmorDetails": "Armor Details",
+        "AssetDetails": "Asset Details",
+        "AssetAtkDef": "Attack / Defense"
       },
       "base": {
         "FIELDS": {
@@ -307,6 +309,26 @@
           "concealment": { "label": "Concealment"},
           "complication": { "label": "Complication"},
           "settings": { "label": "Settings"}
+        }
+      },
+      "Asset": {
+        "FIELDS": {
+          "category": { "label":  "Category"},
+          "rating": { "label": "Rating" },
+          "type": { "label":  "Asset Type" },
+          "tl": { "label":  "Tech Level"},
+          "baseOfInfluence": { "label":  "Base of Influence"},
+          "stealthed": { "label":  "Stealthed" },
+          "unusable": { "label":  "Unusable" },
+          "cost": { "label":  "Cost" },
+          "income": { "label":  "Income" },
+          "maintenance": { "label":  "Maintenance" },
+          "attackSource": { "label":  "Source" },
+          "attackTarget": { "label":  "Target" },
+          "attackDamage": { "label":  "Damage" },
+          "counter": { "label":  "Counter" },
+          "note": { "label":  "Note" },
+          "location": { "label": "Location" }
         }
       }
     },
@@ -866,14 +888,20 @@
         "tags": "Tags",
         "assets": "Assets",
         "assetType": "Asset Type",
-        "baseOfInfluence": "Base of Influence",
-        "attackSource": "Source",
-        "attackTarget": "Target",
-        "attackDamage": "Damage",
+        "assetCategories": {
+          "force": "Force",
+          "cunning": "Cunning",
+          "wealth": "Wealth"
+        },
+        "qualities": "Qualities",
+        "assetQualities": {
+          "permission": "P",
+          "action": "A",
+          "special": "S"
+        },
         "attackSpecial": "Special Attack Note",
-        "counter": "Counter",
-        "note": "Note",
         "turnRoll": "On Turn Log/Roll",
+        "locationRoll": "Location Note",
         "stealthed": "Is Stealthed?",
         "tl": "TL",
         "rating": "Rating",

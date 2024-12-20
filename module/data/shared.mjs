@@ -9,6 +9,11 @@ export default class SWNShared {
       max: new fields.NumberField({ required: true, nullable: false, integer: true, initial: initialMax }),
     });
   }
+  
+  static resourceFieldPercentage(field) {
+    const diff = field.value / field.max;
+    return diff * 100;
+  }
 
   static rangeResourceField(initialMin, initialMax, initialCurrent) {
     const fields = foundry.data.fields;
@@ -77,5 +82,10 @@ export default class SWNShared {
   static emptyString() {
     const fields = foundry.data.fields;
     return new fields.StringField({ required: false, nullable: false });
+  }
+  
+  static techLevel(required = true, initialValue = null) {
+    const fields = foundry.data.fields;
+    return new fields.NumberField({ required: required, nullable: true, integer: true, min: 0, max: CONFIG.SWN.maxTL, initial: initialValue });
   }
 }

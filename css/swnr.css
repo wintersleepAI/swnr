@@ -200,12 +200,16 @@
   flex: 0;
 }
 
+.flexlarge {
+  flex: 2;
+}
+
 .flex-between {
   justify-content: space-between;
 }
 
-.flexlarge {
-  flex: 2;
+.flex-evenly {
+  justify-content: space-evenly;
 }
 
 .align-left {
@@ -342,6 +346,9 @@
   border: 1px solid var(--border-color);
   border-radius: 2px;
   margin: 0px;
+}
+.swnr .group-title {
+  border-bottom: 1px solid var(--border-color);
 }
 .swnr div.field {
   padding-top: 0;
@@ -486,6 +493,7 @@
   width: 100%;
   height: 100%;
   justify-content: center;
+  color: var(--font-color);
 }
 .swnr .resource-bar .text input:first-child {
   text-align: right;

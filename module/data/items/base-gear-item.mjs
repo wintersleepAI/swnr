@@ -13,7 +13,7 @@ export default class SWNBaseGearItem extends SWNItemBase {
     });
     schema.encumbrance = SWNShared.requiredNumber(1);
     schema.cost = SWNShared.requiredNumber(0);
-    schema.tl = new fields.NumberField({ required: false, nullable: true, integer: true,min: 0, max: CONFIG.SWN.maxTL });
+    schema.tl =  SWNShared.techLevel(false);
     schema.location = SWNShared.stringChoices("stowed", CONFIG.SWN.itemLocations);
     schema.quality = SWNShared.stringChoices("stock", CONFIG.SWN.itemQualities);
     schema.noEncReadied = new fields.BooleanField({initial: false});
