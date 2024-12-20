@@ -61,7 +61,7 @@ export default class SWNAsset extends SWNItemBase {
   }
   
   static migrateNote(data) {
-    if (data.qualities == null) {
+    if (data.qualities == null && data.note != null) {
       const noteSections = data.note.split(',')
           .map(s => s.trim().toUpperCase());
 
@@ -74,8 +74,10 @@ export default class SWNAsset extends SWNItemBase {
       const noteContainsNonQualities =
           noteSections.filter(n => !['P', 'A', 'S'].includes(n)).length > 0;
       if (noteContainsNonQualities) {
-        data.description += `\n Note: ${data.note}`;
+        data.description += `<br> Note: ${data.note}`;
       }
+      
+      delete data.note;
     }
     
     return data;
