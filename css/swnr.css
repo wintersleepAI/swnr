@@ -232,7 +232,9 @@
   --portrait-icon-color: rgb(124,124,124);
   --health-bar-color: linear-gradient(45deg, rgba(48,121,22,1) 0%, rgba(97,190,80,1) 100%);
   --strain-bar-color: linear-gradient(45deg, rgba(29,131,170,1) 0%, rgba(80,190,183,1) 100%);
+  --ready-bar-color: linear-gradient(45deg, rgba(48,121,22,1) 0%, rgba(97,190,80,1) 100%);
   --stowed-bar-color: linear-gradient(45deg, rgb(183, 116, 0) 0%, rgb(225, 167, 50) 100%);
+  --effort-bar-color: linear-gradient(45deg, rgb(90,40, 150) 0%, rgb(100, 50, 160) 100%);
   --over-filled-bar-color: linear-gradient(45deg, rgb(199, 57, 57) 0%, rgb(219 108 108) 100%);
   /* Replace with defined theme colors? */
   --border-color: rgb(170,170,170);
@@ -240,6 +242,25 @@
   --second-font-color: rgb(71, 71, 71);
   --active-font-color: rgb(5, 99, 150);
   --input-focus-color: rgb(5, 99, 150);
+}
+
+.chat-message .card-buttons {
+  width: 60%;
+  padding: 4px;
+  margin: auto;
+}
+
+.chat-message .card-show-buttons {
+  width: 60%;
+  padding: 4px;
+  margin: auto;
+}
+
+.chat-message .chat-button-small {
+  width: 22px;
+  height: 22px;
+  font-size: 10px;
+  line-height: 1px;
 }
 
 /* Styles limited to swnr sheets */
@@ -253,7 +274,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 .swnr .sheet-header .header-fields {
   flex: 1;
@@ -324,6 +345,7 @@
 .swnr .sheet-header .header-group {
   border: 1px solid var(--border-color);
   border-radius: 2px;
+  margin: 0px;
 }
 .swnr .group-title {
   border-bottom: 1px solid var(--border-color);
@@ -343,6 +365,15 @@
   width: calc(50% - 30px);
   height: 100%;
 }
+.swnr input[type=text].sub-field,
+.swnr input[type=number].sub-field {
+  margin: 2px;
+  outline: none;
+  color: inherit;
+  font-size: inherit;
+  height: 100%;
+  flex: 1 1;
+}
 .swnr input[type=text].field:focus,
 .swnr div.field:focus {
   outline-color: var(--swnr-c-dark);
@@ -355,8 +386,8 @@
   --checkbox-size: 15px;
 }
 .swnr .nested-sep {
-  margin: 0;
-  padding: 0;
+  max-width: fit-content;
+  padding: 0 0.25rem;
 }
 .swnr .sheet-tabs {
   flex: 0;
@@ -366,6 +397,23 @@
 .swnr .sheet-body .tab .editor {
   height: 100%;
   overflow-y: scroll;
+}
+.swnr .sheet-body .sheet-cols,
+.swnr .sheet-body .tab .sheet-cols,
+.swnr .sheet-body .tab .editor .sheet-cols {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.swnr .sheet-body .resource-group,
+.swnr .sheet-body .tab .resource-group,
+.swnr .sheet-body .tab .editor .resource-group {
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  margin: 0px;
+  padding: 4px;
+  margin: 4px;
 }
 .swnr .tab.biography {
   flex: 1;
@@ -402,10 +450,12 @@
 .swnr .stat-mod {
   flex: 0 0 44px;
 }
+.swnr .stat-score-small {
+  flex: 0 0 34px;
+}
 .swnr .resource-bar {
   /* Sets the position of the resource-bar and sets it to the proper size. */
   position: relative;
-  bottom: -10px;
   width: 80%;
   height: 20px;
   border: 1px solid var(--border-color);
@@ -423,6 +473,18 @@
   background: var(--strain-bar-color);
   height: 100%;
 }
+.swnr .resource-bar .effort-fill {
+  background: var(--effort-bar-color);
+  height: 100%;
+}
+.swnr .resource-bar .ready-fill {
+  background: var(--ready-bar-color);
+  height: 100%;
+}
+.swnr .resource-bar .stowed-fill {
+  background: var(--stowed-bar-color);
+  height: 100%;
+}
 .swnr .resource-bar .text {
   /* Positions the HP text in the center of the resource-bar */
   display: flex;
@@ -438,6 +500,12 @@
 }
 .swnr .resource-bar .text p {
   margin: 0;
+}
+.swnr .sheet-header .resource-bar {
+  bottom: -10px;
+}
+.swnr .sheet-body .resource-bar {
+  margin-bottom: 10px;
 }
 .swnr .items-header {
   height: 28px;
@@ -457,6 +525,7 @@
   padding-left: 5px;
   text-align: left;
   display: flex;
+  flex: 1 1 auto;
 }
 .swnr .items-list {
   list-style: none;
@@ -472,7 +541,7 @@
   padding: 0;
 }
 .swnr .items-list .item-name {
-  flex: 2;
+  flex: 1;
   margin: 0;
   overflow: hidden;
   font-size: 13px;
@@ -487,13 +556,23 @@
 }
 .swnr .items-list .item-controls {
   display: flex;
-  flex: 0 0 100px;
+  flex: 0 0 120px;
   justify-content: flex-end;
 }
 .swnr .items-list .item-controls a {
   font-size: 12px;
   text-align: center;
   margin: 0 6px;
+}
+.swnr .items-list .item-controls-small {
+  display: flex;
+  flex: 0 0 20px;
+  justify-content: flex-end;
+}
+.swnr .items-list .item-controls-small a {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 2px;
 }
 .swnr .items-list .item {
   align-items: center;
@@ -512,6 +591,9 @@
   background-size: 30px;
   border: none;
   margin-right: 5px;
+}
+.swnr .items-list .item .item-name .item-image img {
+  border: none;
 }
 .swnr .items-list .item-prop {
   text-align: center;
@@ -536,13 +618,62 @@
   padding-left: 5px;
   text-align: left;
 }
+.swnr .alt-row {
+  background: --swnr-c-faint;
+}
 .swnr .item-formula {
-  flex: 0 0 200px;
+  flex: 0 0 120px;
+  padding: 0 8px;
+}
+.swnr .item-qty {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+.swnr .item-dmg {
+  flex: 0 1 80px;
+  padding: 0 8px;
+}
+.swnr .item-enc {
+  flex: 0 0 40px;
+  padding: 0 8px;
+}
+.swnr .item-controls-small {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+.swnr .item-loc {
+  flex: 0 0 100px;
   padding: 0 8px;
 }
 .swnr .items-center {
   text-align: center;
   align-items: center;
+}
+.swnr .cyber-prop {
+  font-size: 12px;
+  text-align: center;
+}
+.swnr .cyber-prop .cyber-strain {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+.swnr .cyber-prop .cyber-conceal {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+.swnr .cyber-prop .cyber-effect {
+  flex: 0 0 80px;
+  padding: 0 8px;
+}
+.swnr .cyber-prop .cyber-type {
+  flex: 0 0 80px;
+  padding: 0 8px;
+}
+.swnr .skill-list .untrained {
+  color: var(--swnr-c-beige);
+}
+.swnr .skill-list .trained {
+  color: var(--swnr-c-dark);
 }
 .swnr .effects-header {
   height: 28px;
@@ -695,3 +826,5 @@
   align-items: center;
   cursor: pointer;
 }
+
+/*# sourceMappingURL=swnr.css.map */

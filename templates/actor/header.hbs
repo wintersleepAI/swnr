@@ -15,7 +15,6 @@
     >
       <i class="fa-solid fa-bed" style="font-size: 20px;"></i>
     </div>
-    {{#if (eq actor.type 'character')}}
       <div class="portrait-button" 
         title='{{localize 'swnr.sheet.scene'}}'
         data-action='scene'
@@ -23,10 +22,9 @@
       >
         <i class="fas fa-hourglass-end"></i>
       </div>
-    {{/if}}
     <div class="portrait-button" 
       title='{{localize 'swnr.sheet.hp'}}'
-      data-action='hitdice'
+      data-action='hitDice'
       style="right:0; bottom:20px"
     >
         <i class="fas fa-dice-d20"></i>
@@ -54,6 +52,7 @@
         </div>
     </div>
 
+    {{#if (eq actor.type 'character')}}
     <div class="resource-bar"><!-- The character strain bar -->
       <div style="width:{{system.systemStrain.percentage}}%" class="strain-fill"></div>
         <div class="text">
@@ -75,20 +74,27 @@
             />
         </div>
     </div>
+    {{/if}}
   </div>
 
     {{! The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
       from 1 to 12 and will create that number of columns.  }}
-    <div class='resources grid grid-4col'>
+    <div class='resources grid grid-5col'>
       
-      <div class='document-name grid-span-2'><!-- Name -->
+      <div class='document-name grid-span-2 flex flexrow'><!-- Name -->
         <input
           name='name'
           type='text'
           value='{{actor.name}}'
           placeholder='Name'
         />
+        {{#if (eq actor.type 'character')}}
+        <a class="resource-content" data-action="toggleLock" style="flex: 0 1;">
+          <div class="lock-toggle"><i class="fas fa-unlock"></i></div>
+          <div class="lock-toggle" style="display:none;"><i class="fas fa-lock"></i></div>
+        </a>
+        {{/if}}
       </div>
       
       <div class="resource flex-group-center"><!-- Level / HD -->
@@ -101,7 +107,18 @@
           </label>
         {{/if}}
         {{#if (eq actor.type 'npc')}}
-          
+          <div class="field resource-content">  
+            <div class="flex flexrow">
+              {{formInput systemFields.reaction value=system.reaction localize=true widget=headerWidget}}
+
+            </div> 
+          </div>
+          <label class='resource-label'>
+            <a data-action="reactionRoll">
+              {{localize 'SWN.Actor.NPC.FIELDS.reaction.label'}}          
+              <i class="fa fa-dice-d6"></i>
+            </a>
+          </label>  
         {{/if}}
       </div>
 
@@ -131,55 +148,25 @@
           </label>
         {{/if}}
         {{#if (eq actor.type 'npc')}}
-          <label class='resource-label'>
-            Morale??
-          </label>
-          <div class='resource-content flexrow flex-center flex-between'>
-            TODO
-          </div>
+          {{formGroup systemFields.faction value=system.faction localize=true widget=headerWidget}}
+
         {{/if}}
       </div>
+
+      {{formGroup systemFields.speed value=system.speed localize=true widget=headerWidget}}
+
 
       {{! "flex-group-center" is also defined in the _grid.scss file
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. }}
 
 
-      <div class='resource header-group flex-group-center grid-span-2'><!-- Saves -->
-        <div class="grid grid-2col">
-            <div class="save-throw-button" data-save-type="physical" data-action="rollSave">
-              <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.physical}}</p> 
-              <p>&nbsp;{{localize 'swnr.sheet.saves.physical'}}</p>
-            </div>
-            <div class="save-throw-button" data-save-type="evasion" data-action="rollSave">
-             <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.evasion}}</p>
-             <p>&nbsp;{{localize 'swnr.sheet.saves.evasion'}}</p>
-            </div> 
-            <div class="save-throw-button" data-save-type="mental" data-action="rollSave">
-              <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.mental}}</p> 
-              <p>&nbsp;{{localize 'swnr.sheet.saves.mental'}}</p>
-            </div>
-            {{#if (eq gameSettings.useHomebrewLuckSave true)}}
-            <div class="save-throw-button" data-save-type="luck" data-action="rollSave">
-              <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.luck}}</p>
-              <p>&nbsp;{{localize 'swnr.sheet.saves.luck'}}</p>
-            </div>
-            {{else}}
-            <div></div>
-            {{/if}}
-        </div><!-- end grid -->
-      </div><!-- end resource-group -->
-
       <div class="resource flex-group-center"><!-- AC -->
         <div class="field resource-content">
-          {{#if (eq actor.type 'character')}}
             {{system.ac}}          
             {{#if (eq gameSettings.useCWNArmor true)}}
             / {{system.meleeAc}}
             {{/if}}
-          {{else}}
-            TODO NPC AC
-          {{/if}}
         </div>
         <label class='resource-label'>
           {{#if (eq gameSettings.useCWNArmor true)}}
@@ -190,12 +177,32 @@
         </label>
       </div>
 
-
+      {{#if (eq actor.type 'character')}}
       {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget}}
+      {{else}}
+        {{#if (eq gameSettings.useCWNArmor true)}}
+        <div class="resource flex-group-center"><!-- AC -->
+          <div class="field resource-content">
+              {{system.soakTotal.value}}          
+              {{#if (eq gameSettings.useCWNArmor true)}}
+              / {{system.soakTotal.max}}
+              {{/if}}
+          </div>
+          <label class='resource-label'>
+            {{localize 'SWN.Actor.NPC.FIELDS.soakTotal.label'}}
+          </label>
+        </div>
+        {{/if}}
+      {{/if}}
 
-      {{formGroup systemFields.speed value=system.speed localiz=true widget=headerWidget}}
+    
+      {{#if (eq actor.type 'npc')}}
+      {{formGroup systemFields.species value=system.species localize=true widget=headerWidget}}
+      {{formGroup systemFields.homeworld value=system.homeworld localize=true widget=headerWidget}}
 
-      {{formGroup systemFields.access value=system.access localize=true widget=headerWidget}}
+      {{/if}}
+
+      {{formGroup systemFields.access value=system.access localize=true widget=headerWidget readonly=1}}
 
 {{!-- 
       <div class="resource flex-group-center"><!-- access testing max bug -->
@@ -221,6 +228,34 @@
           </label>
       </div> --}}
       
+
+      {{#if (eq actor.type 'character')}}
+      <div class='resource header-group flex-group-center grid-span-5'><!-- Saves -->
+        <div class="flex flexrow">
+            <div class="save-throw-button" data-save-type="physical" data-action="rollSave">
+              <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.physical}}</p> 
+              <p>&nbsp;{{localize 'swnr.sheet.saves.physical'}}</p>
+            </div>
+            <div class="save-throw-button" data-save-type="evasion" data-action="rollSave">
+             <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.evasion}}</p>
+             <p>&nbsp;{{localize 'swnr.sheet.saves.evasion'}}</p>
+            </div> 
+            <div class="save-throw-button" data-save-type="mental" data-action="rollSave">
+              <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.mental}}</p> 
+              <p>&nbsp;{{localize 'swnr.sheet.saves.mental'}}</p>
+            </div>
+            {{#if (eq gameSettings.useHomebrewLuckSave true)}}
+            <div class="save-throw-button" data-save-type="luck" data-action="rollSave">
+              <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.luck}}</p>
+              <p>&nbsp;{{localize 'swnr.sheet.saves.luck'}}</p>
+            </div>
+            {{else}}
+            <div></div>
+            {{/if}}
+        </div><!-- end grid -->
+      </div><!-- end resource-group -->
+      {{/if}}
+
       {{!-- AC shield --}}
         {{!-- <svg version="1.1" x="0px" y="0px" viewBox="0 0 90 100" xml:space="preserve">
           <path d="M45,100C-2.6,79.3,0,12.6,0,12.6c0-2.2,1.8-4,4.4-4.6l39.1-7.9C44,0,44.5,0,45,0c0.5,0,1,0,1.4,0.1L85.5,8

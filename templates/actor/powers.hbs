@@ -1,14 +1,19 @@
-{{! Spells Tab }}
+{{! powers Tab }}
 <section
   class='tab powers {{tab.cssClass}}'
   data-group='primary'
   data-tab='powers'
 >
+  {{#if system.tweak.showCyberware}}
+    {{> "systems/swnr/templates/actor/fragments/cyberware-list.hbs" itemList=cyberware  type='cyberware' name='Cyberware' }}
+  {{/if}}
+
+  {{#if system.tweak.showPowers}}
   <ol class='items-list'>
     {{#each powers as |powers powerLevel|}}
-      <li class='item flexrow items-header'>
+      <li class='flexrow items-header'>
         <div class='item-name'>
-          {{localize 'SWN.Item.Spell.SpellLVL' level=powerLevel}}
+          {{localize 'SWN.Item.Power.PowerLVL' level=powerLevel}}
         </div>
         <div class='item-controls'>
           {{#if @root.editable}}
@@ -21,7 +26,7 @@
               data-system.power-level='{{powerLevel}}'
             >
               <i class='fas fa-plus'></i>
-              {{localize 'SWN.Item.Spell.AddLVL' level=powerLevel}}
+              {{localize 'SWN.Item.Power.AddLVL' level=powerLevel}}
             </a>
           {{/if}}
         </div>
@@ -68,5 +73,6 @@
       {{/each}}
     {{/each}}
   </ol>
+  {{/if}}
 
 </section>

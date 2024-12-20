@@ -18,10 +18,14 @@
   flex: 0 0 44px;
 }
 
+.stat-score-small {
+  flex: 0 0 34px;
+}
+
+
 .resource-bar {
   /* Sets the position of the resource-bar and sets it to the proper size. */
   position: relative;
-  bottom: -10px;
 
   width: 80%;
   height: 20px;
@@ -41,6 +45,18 @@
 
   .strain-fill {
     @include resource-bar-fill(var(--strain-bar-color));
+  }
+
+  .effort-fill {
+    @include resource-bar-fill(var(--effort-bar-color));
+  }
+
+  .ready-fill {
+    @include resource-bar-fill(var(--ready-bar-color));
+  }
+
+  .stowed-fill {
+    @include resource-bar-fill(var(--stowed-bar-color));
   }
   
   .text{
@@ -66,3 +82,10 @@
   }
 }
 
+.sheet-header .resource-bar {
+  bottom: -10px;
+}
+
+.sheet-body .resource-bar {
+  margin-bottom: 10px;
+}
