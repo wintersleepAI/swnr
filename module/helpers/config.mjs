@@ -175,9 +175,14 @@ SWN.skills = {
   ],
 };
 
-
 SWN.assetCategories = {
   force: 'swnr.sheet.faction.assetCategories.force',
   cunning: 'swnr.sheet.faction.assetCategories.cunning',
   wealth: 'swnr.sheet.faction.assetCategories.wealth',
+}
+
+SWN.pool = {
+  "2d6": "2D6",
+  "3d6kh2": "3D6",
+  "4d6kh2": "4D6"
 }

@@ -12,5 +12,12 @@
       {{! stat}}
       {{formGroup systemFields.defaultStat value=system.defaultStat localize=true}}
     </div>
+    <div class='resource'>
+      {{! remember}}
+      <div class="flex-between" style="display:flex;">
+        <label for="system.remember.use">{{localize 'SWN.Item.Skill.FIELDS.remember.use.label'}}</label>
+        <input type="checkbox" name="system.remember.use" {{#if system.remember.use}}checked{{/if}}>
+      </div>
+    </div>
   </div>
 </header>

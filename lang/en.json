@@ -217,6 +217,9 @@
           "rank": {"label": "Skill Rank"},
           "defaultStat": {"label": "Default Stat"},
           "pool": {"label": "Dice Pool"},
+          "remember": {
+            "use": {"label": "Have Actor Sheet Remember Current Settings"}
+          },
           "source": {"label": "Source"}
         }
       },

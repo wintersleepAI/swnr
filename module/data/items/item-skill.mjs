@@ -34,6 +34,19 @@ export default class SWNSkill extends SWNItemBase {
         nullable: false,
         initial: '',
     });
+
+    schema.remember = new fields.SchemaField({
+      use: new fields.BooleanField({
+        required: true,
+        nullable: false,
+        initial: false,
+      }),
+      modifier: new fields.NumberField({
+        required: true,
+        nullable: false,
+        initial: 0,
+      }),
+    });
     
     schema.stats = SWNShared.stringChoices("dex", CONFIG.SWN.stats);
 
@@ -89,7 +102,7 @@ export default class SWNSkill extends SWNItemBase {
       const modifier = this.remember.modifier;
       const defaultStat = this.defaultStat;
       const dice = this.pool;
-            const skillRank = this.rank;
+      const skillRank = this.rank;
       if (defaultStat == "ask" || dice == "ask") {
         ui.notifications?.info(
           "Quick roll set, but dice or stat is set to ask"
@@ -125,7 +138,7 @@ export default class SWNSkill extends SWNItemBase {
       stats: actor.system.stats,
       modifier,
     };
-    console.log('dialogData', dialogData);
+
     const content = await renderTemplate(template, dialogData);
     const _doRoll = async (_event, button, html) => {
       const dice = button.form.elements.dicepool.value;
@@ -163,8 +176,8 @@ export default class SWNSkill extends SWNItemBase {
               use: true,
               modifier: Number(modifier),
             },
-            defaultStat: this.statShortNameForm,
-            pool: dice,
+            defaultStat: statShortNameForm,
+            pool: CONFIG.SWN.pool[dice],
           },
         });
       }
