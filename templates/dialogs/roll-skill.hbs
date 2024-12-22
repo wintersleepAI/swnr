@@ -10,7 +10,7 @@
         class=""
       {{/if}}
     >
-      {{#select skill.pool}}
+      {{#select (transformDicePool skill.system.pool)}}
       <option value="2d6">2D6</option>
       <option value="3d6kh2">3D6</option>
       <option value="4d6kh2">4D6</option>
@@ -27,13 +27,13 @@
     <label for="stat">{{localize 'swnr.sheet.stats'}}: </label>
     <select
       name="stat"
-      {{#if (eq skill.defaultStat 'ask')}}
+      {{#if (eq skill.system.defaultStat 'ask')}}
         class=""
       {{else}}
         class=""
       {{/if}}
     >
-      {{#select skill.defaultStat}}
+      {{#select skill.system.defaultStat}}
       {{#each stats as |box name |}}
       <option value="{{name}}">
         {{localize (concat "swnr.stat.long." name)}}: 

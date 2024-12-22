@@ -202,4 +202,13 @@ export function registerHandlebarHelpers() {
       return Math.max(...statsToCheck) + skillBonus + untrainedPenalty;
     }
   );
+
+  Handlebars.registerHelper('transformDicePool', function(pool) {
+    const poolMap = {
+      "2D6": "2d6",
+      "3D6": "3d6kh2",
+      "4D6": "4d6kh2"
+    };
+    return poolMap[pool] || pool;
+  });
 }

@@ -93,7 +93,6 @@ SWN.reactionTypes = {
   friendly: 'swnr.npc.reaction.friendly',
 }
 
-
 SWN.skills = {
   none: [],
   spaceMagic: ["knowMagic", "useMagic", "sunblade", "fight"],
@@ -144,7 +143,7 @@ SWN.skills = {
     "vehicle-land",
     "vehicle-space",
     "vehicle-water",
-    ],
+  ],
   revised: [
     "administer",
     "connect",
@@ -165,7 +164,7 @@ SWN.skills = {
     "talk",
     "trade",
     "work",
-    ],
+  ],
   psionic: [
     "biopsionics",
     "metapsionics",
@@ -173,8 +172,8 @@ SWN.skills = {
     "telekinesis",
     "telepathy",
     "teleportation",
-    ],
-  };
+  ],
+};
 
 
 SWN.assetCategories = {
