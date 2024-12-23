@@ -1,5 +1,6 @@
 import SWNActorBase from './base-actor.mjs';
 import SWNShared from '../shared.mjs';
+import { calcMod } from '../../helpers/utils.mjs';
 
 export default class SWNCharacter extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -32,7 +33,6 @@ export default class SWNCharacter extends SWNActorBase {
     });
     schema.goals = SWNShared.requiredString("");
     schema.class = SWNShared.requiredString("");
-    schema.species = SWNShared.requiredString("");
     schema.homeworld = SWNShared.requiredString("");
     schema.background = SWNShared.requiredString("");
     schema.employer = SWNShared.requiredString("");
@@ -44,12 +44,13 @@ export default class SWNCharacter extends SWNActorBase {
     });
     schema.unspentSkillPoints = SWNShared.requiredNumber(0);
     schema.unspentPsySkillPoints = SWNShared.requiredNumber(0);
+    schema.extra = SWNShared.resourceField(0, 10);
 
     schema.tweak = new fields.SchemaField({
       advInit: new fields.BooleanField({initial: false}),
-      quickSkill1: SWNShared.emptyString(),
-      quickSkill2: SWNShared.emptyString(),
-      quickSkill3: SWNShared.emptyString(),
+      quickSkill1: SWNShared.emptyString(), //deprecated
+      quickSkill2: SWNShared.emptyString(), //deprecated
+      quickSkill3: SWNShared.emptyString(), //deprecated
       extraEffortName: SWNShared.emptyString(),
       extraEffort: new fields.SchemaField({
         bonus: SWNShared.requiredNumber(0),
@@ -58,7 +59,10 @@ export default class SWNCharacter extends SWNActorBase {
         day: SWNShared.requiredNumber(0),
         max: SWNShared.requiredNumber(0)
       }),
+      extraHeader: SWNShared.emptyString(),
       showResourceList: new fields.BooleanField({initial: false}),
+      showCyberware: new fields.BooleanField({initial: true}),
+      showPowers: new fields.BooleanField({initial: true}),
       resourceList: new fields.ArrayField(new fields.SchemaField({
         name: SWNShared.emptyString(),
         value: SWNShared.requiredNumber(0),
@@ -73,14 +77,12 @@ export default class SWNCharacter extends SWNActorBase {
   }
 
   prepareDerivedData() {
-    super.prepareBaseData();
+    super.prepareDerivedData();
     // Loop through stat scores, and add their modifiers to our sheet output.
     for (const key in this.stats) {
       this.stats[key].baseTotal = this.stats[key].base + this.stats[key].boost;
       this.stats[key].total = this.stats[key].baseTotal + this.stats[key].temp;
-      const v = (this.stats[key].total - 10.5) / 3.5;
-      this.stats[key].mod =
-        Math.min(2, Math.max(-2, Math[v < 0 ? "ceil" : "floor"](v))) + this.stats[key].bonus;
+      this.stats[key].mod = calcMod(this.stats[key].total , this.stats[key].bonus) ;
       
       // Handle stat label localization.
       this.stats[key].label =
@@ -97,7 +99,8 @@ export default class SWNCharacter extends SWNActorBase {
 
     // System Strain
     this.systemStrain.cyberware = cyberwareStrain;
-    this.systemStrain.max = this.stats.con.total - this.systemStrain.cyberware + this.systemStrain.permanent;
+    this.systemStrain.max = this.stats.con.total - this.systemStrain.cyberware - this.systemStrain.permanent;
+    this.systemStrain.percentage = Math.clamp((this.systemStrain.value * 100) / this.systemStrain.max, 0, 100);
 
     // Calculate saves
     const save = {};
@@ -116,11 +119,7 @@ export default class SWNCharacter extends SWNActorBase {
     );
     save.luck = Math.max(1, base);
     this.save = save;
-    /*
-    schema.encumbrance =; // TODO
 
-    itemTypes;
-    */
     // Access calculation
     this.access.max = this.stats.int.mod;
     // If the character has a program skill add it
@@ -132,9 +131,15 @@ export default class SWNCharacter extends SWNActorBase {
       this.access.max += programSkill[0].system.rank;
     }
 
+    // Set up soak and trauma target
     const useCWNArmor = game.settings.get("swnr", "useCWNArmor") ? true : false;
     const useTrauma = game.settings.get("swnr", "useTrauma") ? true : false;
     
+    this.soakTotal = {
+      value: 0,
+      max: 0,
+    };
+
     if (useTrauma) {
       this.modifiedTraumaTarget = this.traumaTarget;
     }
@@ -156,8 +161,7 @@ export default class SWNCharacter extends SWNActorBase {
         if (a.system.meleeAc) {
           baseMeleeAc = a.system.meleeAc;
           if (useTrauma) {
-            this.modifiedTraumaTarget =
-              this.traumaTarget + a.system.traumaDiePenalty;
+            this.modifiedTraumaTarget += a.system.traumaDiePenalty;
           }
         }
         if (a.id) {
@@ -208,6 +212,8 @@ export default class SWNCharacter extends SWNActorBase {
       extraEffort.scene -
       extraEffort.day;
 
+    effort.percentage = Math.clamp((effort.value * 100) / effort.max, 0, 100);
+
     //encumbrance
     if (!this.encumbrance)
       this.encumbrance = {
@@ -236,8 +242,9 @@ export default class SWNCharacter extends SWNActorBase {
       }
       return itemSize * i.system.encumbrance;
     };
-    encumbrance.ready.value = inventory
-      .filter((i) => i.system.location === "readied")
+    const readiedItems = inventory.filter((i) => i.system.location === "readied");
+
+    encumbrance.ready.value = readiedItems
       .map(itemInvCost)
       .reduce((i, n) => i + n, 0);
     encumbrance.stowed.value = inventory
@@ -260,6 +267,8 @@ export default class SWNCharacter extends SWNActorBase {
     this.powers = powers;
       
     this.favorites = this.parent.items.filter((i) => i.system["favorite"]);;
+    this.readiedWeapons = readiedItems.filter((i) => i.type === "weapon");
+    this.readiedArmor = readiedItems.filter((i) => i.type === "armor");
   }
 
   getRollData() {
@@ -342,4 +351,84 @@ export default class SWNCharacter extends SWNActorBase {
       }
     );
   }
+
+  async rollHitDice(_force = false) {
+    // 2e warrior/partial : +2
+    // 1e psy 1d4, expert 1d6, warrior 1d8
+
+    const currentLevel = this.level.value;
+    const lastModified = this.health_max_modified;
+    if (currentLevel <= lastModified) {
+      ui.notifications?.info(
+        "Not rolling hp: already rolled this level (or higher)"
+      );
+      return;
+    }
+    // const lastLevel =
+    // currentLevel === 1 ? 0 : this.parent.getFlag("swnr", "lastHpLevel");
+    const health = this.health;
+    const currentHp = health.max;
+    const hd = this.hitDie;
+
+    const constBonus = this.stats.con.mod;
+    const perLevel = `max(${hd} + ${constBonus}, 1)`;
+
+    const _rollHP = async () => {
+      const hitArray = Array(currentLevel).fill(perLevel);
+      const formula = hitArray.join("+");
+
+      let msg = `Rolling Level ${currentLevel} HP: ${formula}<br>(Rolling a hitdice per level, with adding the CON mod. Each roll cannot be less than 1)<br>`;
+      const roll = new Roll(formula);
+      await roll.roll({ async: true });
+      if (roll.total) {
+        let hpRoll = roll.total;
+        msg += `Got a ${hpRoll}<br>`;
+        if (currentLevel == 1) {
+          // Rolling the first time
+        } else if (currentLevel > 1) {
+          hpRoll = Math.max(hpRoll, currentHp + 1);
+        }
+        msg += `Setting HP max to ${hpRoll}<br>`;
+        await this.parent.update({ 
+          system: {
+            health_max_modified: currentLevel,
+            health: { 
+              max: hpRoll,
+            }
+          }
+        });
+        getDocumentClass("ChatMessage").create({
+          speaker: ChatMessage.getSpeaker({ actor: this.parent }),
+          flavor: msg,
+          roll: JSON.stringify(roll),
+          type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+        });
+      } else {
+        console.log("Something went wrong with roll ", roll);
+      }
+    };
+
+    if (this.hitDie) {
+      const performHPRoll = await new Promise((resolve) => {
+        Dialog.confirm({
+          title: game.i18n.format("swnr.dialog.hp.title", {
+            actor: this.parent.name,
+          }),
+          yes: () => resolve(true),
+          no: () => resolve(false),
+          content: game.i18n.format("swnr.dialog.hp.text", {
+            actor: this.parent.name,
+            level: currentLevel,
+            formula: perLevel,
+          }),
+        });
+      });
+      if (performHPRoll) await _rollHP();
+    } else {
+      ui.notifications?.info("Set the character's HitDie");
+    }
+
+    return;
+  }
+
 }

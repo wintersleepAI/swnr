@@ -1,12 +1,13 @@
 {{! Gear Tab }}
 <section class='tab gear {{tab.cssClass}}' data-group='primary' data-tab='gear'>
+  {{#if (eq actor.type 'character')}}
   <div class="flex flexrow gap" style="column-gap:10%">
     <div class="flex flex-col items-center">
       {{formInput systemFields.credits.fields.debt value=system.credits.debt localize=true}}
       <label for="system.credits.debt">{{system.tweak.debtDisplay}}
       <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
         title="{{localize 'swnr.sheet.credit-change'}} {{system.tweak.debtDisplay}}"
-        data-credit-type="debt">
+        data-credit-type="debt" data-action="creditChange">
           <i class="fas fa-coins"></i>
       </a> 
       </label>
@@ -16,7 +17,7 @@
       <label for="system.credits.balance">{{system.tweak.balanceDisplay}}
       <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
         title="{{localize 'swnr.sheet.credit-change'}} {{system.tweak.balanceDisplay}}"
-        data-credit-type="balance">
+        data-credit-type="balance" data-action="creditChange">
           <i class="fas fa-coins"></i>
       </a> 
       </label>
@@ -26,14 +27,14 @@
       <label for="system.credits.owed">{{system.tweak.owedDisplay}}
       <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
         title="{{localize 'swnr.sheet.credit-change'}} {{system.tweak.owedDisplay}}"
-        data-credit-type="owed">
+        data-credit-type="owed" data-action="creditChange">
           <i class="fas fa-coins"></i>
       </a>
       </label>
     </div>
   </div>
 
-  <div class="flex flexrow gap" style="column-gap:10%"><!-- Encum -->
+  <div class="flex flexrow gap" style="column-gap:10%;"><!-- Encum -->
 
     <div class="resource-bar"><!-- The readied bar -->
       <div style="width:{{actor.system.encumbrance.ready.percentage}}%" class="ready-fill"></div>
@@ -51,6 +52,7 @@
        </div>
     </div>
   </div>
+  {{/if}}
 
   <div class="flex flex-col"> <!--items -->
     {{> "systems/swnr/templates/actor/fragments/items-list.hbs" itemList=actor.itemTypes.weapon  type='weapon' name='Weapons' }}

@@ -1,0 +1,45 @@
+<ol class='items-list'>
+  <li class='flex flexrow items-header'>
+    <div class='item-name'>
+      {{#if (eq actorType 'character')}}
+      {{localize 'swnr.item.locationReadied'}} 
+      {{/if}}
+      {{localize 'swnr.sheet.tabs.armor'}}
+    </div>
+    <div class="item-qty">
+      {{localize 'swnr.sheet.ac'}}
+    </div>
+    <div class="item-controls-small">
+    </div>
+  </li>
+  <li>
+    {{#if gameSettings.useTrauma}}
+    ({{localize 'swnr.sheet.traumaTarget'}}: {{actor.system.modifiedTraumaTarget}})
+    {{/if}}
+    {{#if gameSettings.useCWNArmor}}
+    ({{localize 'swnr.armor.soak.label'}} Total: {{actor.system.soakTotal.value}}/{{actor.system.soakTotal.max}} )
+    {{/if}}
+  </li>
+  {{#each itemList as |item id|}}
+  <li data-item-id="{{item.id}}" data-document-class='Item' class="item flexrow flex-group-center">
+    <div class="item-name">
+      <input type="checkbox" data-action="toggleArmor" data-item-id="{{item.id}}" {{#if item.system.use}}checked{{/if}}>
+      {{item.name}}
+    </div>
+    <div class="item-qty item-prop">
+      {{item.system.ac}}
+      {{#if gameSettings.useCWNArmor}}
+      / {{item.system.meleeAc}}
+      {{#if (ne item.system.soak 0)}}
+      ({{item.system.soak.value}}/{{item.system.soak.max}})
+      {{/if}}
+      {{/if}}
+    </div>
+    <div class='item-controls-small'>
+      <a class='item-control item-edit' title='{{localize "DOCUMENT.Update" type=' Item'}}' data-action='viewDoc'>
+        <i class='fas fa-edit'></i>
+      </a>
+    </div>
+  </li>
+  {{/each}}
+</ol>

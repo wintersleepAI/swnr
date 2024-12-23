@@ -1,0 +1,15 @@
+<section class='tab drone sheet-body {{tab.cssClass}}' data-group='primary' data-tab='drone'>
+  <div class='sheet-cols'>
+    <div class='grid grid-4col'> <!-- SWNRVehicleData extends SWNRVehicleTemplateBase-->
+      <div class="resource">
+        {{formGroup systemFields.kmph value=system.kmph localize=true}}
+      </div>
+      <div class="resource">
+        {{formGroup systemFields.tonnage value=system.tonnage localize=true}}
+      </div>
+      {{!-- <div class="resource">
+        {{formGroup systemFields.size value=system.size localize=true}}
+      </div> --}}
+    </div><!-- end grid-col SWNRVehicleData extends SWNRVehicleTemplateBase -->
+  </div>
+</section>

@@ -1,7 +1,7 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
-import { headerFieldWidget } from '../helpers/handlebar.mjs';
-import { initSkills, initCompendSkills } from '../helpers/utils.mjs';
+import { headerFieldWidget, groupFieldWidget } from '../helpers/handlebar.mjs';
+import { initSkills, initCompendSkills, calcMod } from '../helpers/utils.mjs';
 
 const { api, sheets } = foundry.applications;
 
@@ -21,7 +21,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
   static DEFAULT_OPTIONS = {
     classes: ['swnr', 'actor'],
     position: {
-      width: 700,
+      width: 760,
       height: 800,
     },
     actions: {
@@ -32,10 +32,19 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       toggleEffect: this._toggleEffect,
       roll: this._onRoll,
       rest: this._onRest,
+      scene: this._onScene,
       rollSave: this._onRollSave,
       loadSkills: this._loadSkills,
       rollSkill: this._onSkillRoll,
+      skillUp: this._onSkillUp,
+      hitDice: this._onHitDice,
       toggleArmor: this._toggleArmor,
+      toggleLock: this._toggleLock,
+      rollStats: this._onRollStats,
+      toggleSection: this._toggleSection,
+      reactionRoll: this._onReactionRoll,
+      moraleRoll: this._onMoraleRoll,
+      creditChange: this._onCreditChange,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -71,6 +80,9 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     combat: {
       template: 'systems/swnr/templates/actor/combat.hbs',
     },
+    npc: {
+      template: 'systems/swnr/templates/actor/npc.hbs',
+    },
     skills: {
       template: 'systems/swnr/templates/actor/skills.hbs',
     },
@@ -80,6 +92,15 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     },
     skillFrag: {
       template: 'systems/swnr/templates/actor/fragments/skill.hbs',
+    },
+    cyberList: {
+      template: 'systems/swnr/templates/actor/fragments/cyberware-list.hbs',
+    },
+    compactWeaponList: {
+      template: 'systems/swnr/templates/actor/fragments/compact-weapon-list.hbs',
+    },
+    compactArmorList: {
+      template: 'systems/swnr/templates/actor/fragments/compact-armor-list.hbs',
     }
   };
 
@@ -97,11 +118,13 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        options.parts.push('combat','skills','features', 'gear', 'powers', 'effects');
+        // ws AI removing skills for now: ,'skills'
+        options.parts.push('combat','features', 'gear', 'powers', 'effects');
         options.defaultTab = 'combat';
         break;
       case 'npc':
-        options.parts.push('gear', 'effects');
+        options.parts.push('npc','gear', 'effects');
+        options.defaultTab = 'npc';
         break;
     }
   }
@@ -129,6 +152,8 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       systemFields: this.document.system.schema.fields,
       gameSettings: getGameSettings(),
       headerWidget: headerFieldWidget.bind(this),
+      groupWidget: groupFieldWidget.bind(this),
+
     };
 
     // Offloading context prep to a helper function
@@ -144,6 +169,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       case 'combat':
       case 'skills':
       case 'powers':
+      case 'npc':
       case 'gear':
         context.tab = context.tabs[partId];
         break;
@@ -218,6 +244,10 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
           tab.id = 'combat';
           tab.label += 'Combat';
           break;
+        case 'npc':
+          tab.id = 'npc';
+          tab.label += 'NPC';
+          break;
         case 'skills':
           tab.id = 'skills';
           tab.label += 'Skills';
@@ -249,6 +279,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     // this sheet does with powers
     const items = [];
     const features = [];
+    const cyberware = [];
     const powers = {
       1: [],
       2: [],
@@ -273,6 +304,9 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       else if (i.type === 'feature') {
         features.push(i);
       }
+      else if (i.type === 'cyberware') {  
+        cyberware.push(i);
+      }
       // Append to powers.
       else if (i.type === 'power') {
         if (i.system.powerLevel != undefined) {
@@ -289,6 +323,15 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     context.items = items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.features = features.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.powers = powers;
+    // Sort cyberware by type, with none first
+    context.cyberware = cyberware.sort((a, b) => {
+      if (a.system.type === "none" && b.system.type !== "none") return -1; // a comes first
+      if (b.system.type === "none" && a.system.type !== "none") return 1;  // b comes first
+      
+      if ((a.system.type || 0) < (b.system.type || 0)) { return -1; }
+      if ((a.system.type || 0) > (b.system.type || 0)) { return 1; }
+      return 0;
+    });
   }
 
   /**
@@ -443,54 +486,89 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
    */
   static async _onRest(event, _target) {
     event.preventDefault();
-    const rest = await foundry.applications.api.DialogV2.wait({
-      window: { title: game.i18n.localize("swnr.sheet.rest-title") },
-      content: game.i18n.localize("swnr.sheet.rest-desc"),
-      rejectClose: false,
-      modal: true,
-      buttons: [
-      {
-        icon: 'fas fa-check',
-        label: "Yes",
-        action: "normal",
-      },
-      {
-        icon: 'fas fa-check',
-        label: "Yes, but no HP",
-        action: "no_hp",
-      },
-      {
-        icon: 'fas fa-times',
-        label: "No",        
-        action: "no",
-      },
-      ]
-    })
-    if (rest === "no") {
-      return;
-    }
-    const isFrail = rest === "no_hp" ? true : false;
-    const systemData = this.actor.system
-    const newStrain = Math.max(systemData.systemStrain.value - 1, 0);
-    const newHP = isFrail
-      ? systemData.health.value
-      : Math.min(systemData.health.value + systemData.level.value, systemData.health.max);
-    await this.actor.update({
-      system: {
-        systemStrain: { value: newStrain },
-        health: { value: newHP },
-        effort: { scene: 0, day: 0 },
-        tweak: {
-          extraEffort: {
-            scene: 0,
-            day: 0,
+    if (this.actor.type === "character") {
+      const rest = await foundry.applications.api.DialogV2.wait({
+        window: { title: game.i18n.localize("swnr.sheet.rest-title") },
+        content: game.i18n.localize("swnr.sheet.rest-desc"),
+        rejectClose: false,
+        modal: true,
+        buttons: [
+        {
+          icon: 'fas fa-check',
+          label: "Yes",
+          action: "normal",
+        },
+        {
+          icon: 'fas fa-check',
+          label: "Yes, but no HP",
+          action: "no_hp",
+        },
+        {
+          icon: 'fas fa-times',
+          label: "No",        
+          action: "no",
+        },
+        ]
+      })
+      if (rest === "no") {
+        return;
+      }
+      const isFrail = rest === "no_hp" ? true : false;
+      const systemData = this.actor.system
+      const newStrain = Math.max(systemData.systemStrain.value - 1, 0);
+      const newHP = isFrail
+        ? systemData.health.value
+        : Math.min(systemData.health.value + systemData.level.value, systemData.health.max);
+      await this.actor.update({
+        system: {
+          systemStrain: { value: newStrain },
+          health: { value: newHP },
+          effort: { scene: 0, day: 0 },
+          tweak: {
+            extraEffort: {
+              scene: 0,
+              day: 0,
+            },
           },
         },
-      },
-    });
+      });
+    } else if (this.actor.type === "npc") {
+      const newHP = this.actor.system.health.max;
+      await this.actor.update({
+        system: {
+          health: { value: newHP },
+          effort: { scene: 0, day: 0 }
+        },
+      });
+    }
     await this._resetSoak();
   }
 
+
+  static async _onScene(event, _target) {
+    event.preventDefault();
+    let update = { system: { effort: { scene: 0 }}};
+    if (this.actor.type === "character") {
+      update["tweak.extraEffort.scene"] = 0;
+    } 
+    await this.actor.update(update);
+    this._resetSoak();
+  }
+
+
+  static async _onHitDice(event, _target) {
+    event.preventDefault();
+    if (typeof this.actor.system.rollHitDice === 'function') {
+      this.actor.system.rollHitDice(true);
+      if (this.actor.type === "npc") {
+        await this.actor.update({ "system.health_max_modified": 1 });
+      }
+    } else {
+      console.log("Hit dice rolls are only for PCs/NPCs");
+    }
+
+  }
+  
   async _resetSoak() {
     if (game.settings.get("swnr", "useCWNArmor")) {
       if (this.actor.type == "npc") {
@@ -503,14 +581,12 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
       const armorWithSoak = (
         this.actor.items.filter(
           (i) =>
-            i.data.type === "armor" &&
-            i.data.data.use &&
-            i.data.data.location === "readied" &&
-            i.data.data.soak.value < i.data.data.soak.max
+            i.type === "armor" &&
+            i.system.soak.value < i.system.soak.max
         )
       );
       for (const armor of armorWithSoak) {
-        const soak = armor.data.data.soak.max;
+        const soak = armor.system.soak.max;
         await armor.update({
           "system.soak.value": soak,
         });
@@ -528,12 +604,100 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     skill.roll(event.shiftKey);
   }
 
+  static async _onSkillUp(event, target) {
+    event.preventDefault();
+  
+    const skillID = target.dataset.itemId;
+    const skill = this.actor.items.get(skillID);
+    const rank = skill.system.rank;
+    if (rank > 0) {
+      const lvl = this.actor.system.level.value;
+      if (rank == 1 && lvl < 3) {
+        ui.notifications?.error(
+          "Must be at least level 3 (edit manually to override)"
+        );
+        return;
+      } else if (rank == 2 && lvl < 6) {
+        ui.notifications?.error(
+          "Must be at least level 6 (edit manually to override)"
+        );
+        return;
+      } else if (rank == 3 && lvl < 9) {
+        ui.notifications?.error(
+          "Must be at least level 9 (edit manually to override)"
+        );
+        return;
+      } else if (rank > 3) {
+        ui.notifications?.error("Cannot auto-level above 4");
+        return;
+      }
+    }
+    const skillCost = rank + 2;
+    const isPsy =
+      skill.system.source.toLocaleLowerCase() ===
+      game.i18n.localize("swnr.skills.labels.psionic").toLocaleLowerCase()
+        ? true
+        : false;
+    const skillPointsAvail = isPsy
+      ? this.actor.system.unspentPsySkillPoints +
+        this.actor.system.unspentSkillPoints
+      : this.actor.system.unspentSkillPoints;
+    if (skillCost > skillPointsAvail) {
+      ui.notifications?.error(
+        `Not enough skill points. Have: ${skillPointsAvail}, need: ${skillCost}`
+      );
+      return;
+    } else if (isNaN(skillPointsAvail)) {
+      ui.notifications?.error(`Skill points not set`);
+      return;
+    }
+    await skill.update({ "system.rank": rank + 1 });
+    if (isPsy) {
+      const newPsySkillPoints = Math.max(
+        0,
+        this.actor.system.unspentPsySkillPoints - skillCost
+      );
+      let newSkillPoints = this.actor.system.unspentSkillPoints;
+      if (skillCost > this.actor.system.unspentPsySkillPoints) {
+        //Not enough psySkillPoints, dip into regular
+        newSkillPoints -=
+          skillCost - this.actor.system.unspentPsySkillPoints;
+      }
+      await this.actor.update({
+        "system.unspentSkillPoints": newSkillPoints,
+        "system.unspentPsySkillPoints": newPsySkillPoints,
+      });
+      ui.notifications?.info(
+        `Removed ${skillCost} from unspent skills, with at least one psychic skill point`
+      );
+    } else {
+      const newSkillPoints =
+        this.actor.system.unspentSkillPoints - skillCost;
+      await this.actor.update({ "system.unspentSkillPoints": newSkillPoints });
+      ui.notifications?.info(`Removed ${skillCost} skill points`);
+    }
+  }
+
   static async _toggleArmor(event, target) {
     event.preventDefault();
     const armorID = target.dataset.itemId;
     const armor = this.actor.items.get(armorID);
     const use = armor.system.use;
     await armor.update({ system: { use: !use }});
+  }
+
+  static async _toggleLock(event, _target) {
+    event.preventDefault();
+    this.element.querySelectorAll(".lock-toggle").forEach((d) => {
+      d.style.display = d.style.display === "none" ? "inline" : "none";
+    });
+  }
+
+  static async _toggleSection(event, target) {
+    event.preventDefault();
+    const elem = target.dataset.section; //= target.dataset.section === "open" ? "closed" : "open";
+    this.element.querySelector("#" + elem).style.display = this.element.querySelector("#" + elem).style.display === "none" ? "" : "none";
+    this.element.querySelector("#" + elem + "-toggle").innerHTML = this.element.querySelector("#" + elem + "-toggle").innerHTML === "▼" ? "▲" : "▼";
   }
 
   /**
@@ -551,7 +715,7 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
         await initSkills(this.actor, skillList);
       }
       if (extra)
-        await initSkills(this.actor);
+        await initSkills(this.actor, extra);
       return;
     };
     const template = "systems/swnr/templates/dialogs/add-bulk-skills.hbs";
@@ -608,11 +772,155 @@ export class SWNActorSheet extends api.HandlebarsApplicationMixin(
     }
   }
 
+  static async _onRollStats(event, _target) {
+    event.preventDefault();
+    const dice = await foundry.applications.api.DialogV2.wait({
+      window: { title: game.i18n.localize("swnr.chat.statRoll", {name: this.actor.name}) },
+      content: game.i18n.localize("swnr.dialog.statMethod"),
+      modal: true,
+      buttons: [
+        {
+          icon: 'fas fa-dice-d20',
+          label: "3d6",
+          action: "3d6",
+        },
+        {
+          icon: 'fas fa-dice-d20',
+          label: "4d6kh3",
+          action: "4d6kh3",
+        },
+      ],
+    });
+    if (!dice) {
+      return;
+    }
+    const formula = new Array(6).fill(dice).join("+");
+    const roll = new Roll(formula);
+    await roll.roll({ async: true });
+    const stats= {};
+    ["str", "dex", "con", "int", "wis", "cha"].map((k, i) => {
+      stats[k] = {
+        dice: roll.dice[i].results,
+        base: roll.dice[i].total,
+        boost: 0,
+        mod: calcMod(roll.dice[i].total),
+        bonus: 0,
+        total: 0,
+        temp: 0,
+      };
+    });
+    // TODO wsAI should we use this?
+    //calculateStats(stats);
+    const data = {
+      actor: this.actor,
+      stats,
+      totalMod: Object.values(stats).reduce((s, v) => {
+        return s + v.mod;
+      }, 0),
+    };
+    const chatContent = await renderTemplate(
+      "systems/swnr/templates/chat/stat-block.hbs",
+      data
+    );
+    const chatMessage = getDocumentClass("ChatMessage");
+    chatMessage.create(
+      {
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        roll: JSON.stringify(roll.toJSON()),
+        content: chatContent,
+        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+      }
+    );
+  }
+
   static async _onRollSave(event, target) {
     event.preventDefault();
     const dataset = target.dataset;
     const saveType = dataset.saveType;
     this.actor.system.rollSave(saveType);
+  }
+
+  static async _onReactionRoll(event, _target) {
+    event.preventDefault();
+    if (this.actor.type !== "npc") {
+      return;
+    }
+    function defineResult(
+      text,
+      range
+    ) {
+      return {
+        text: game.i18n.localize("swnr.npc.reaction." + text),
+        type: 0,
+        range,
+        flags: { swnr: { type: text.toLocaleLowerCase() } },
+        weight: 1 + range[1] - range[0],
+        _id: text.toLocaleLowerCase().padEnd(16, "0"),
+      };
+    }
+    const tableResults = [
+      defineResult("hostile", [2, 2]),
+      defineResult("negative", [3, 5]),
+      defineResult("neutral", [6, 8]),
+      defineResult("positive", [9, 11]),
+      defineResult("friendly", [12, 12]),
+    ];
+
+    const rollTable = (await RollTable.create(
+      {
+        name: "NPC Reaction",
+        description: " ", //todo: spice this up
+        formula: "2d6",
+        results: tableResults,
+      },
+      { temporary: true }
+    ));
+
+    const { results } = await rollTable.draw();
+
+    await this.actor.update({
+      "system.reaction": results[0].id?.split("0")[0],
+    });
+  }
+
+  static async _onMoraleRoll(event, _target) {
+    event.preventDefault();
+    if (this.actor.type === "npc") {
+      this.actor.system.rollMorale();
+    } else {
+      console.log("Morale rolls are only for NPCs");
+    }
+  }
+
+  static async _onCreditChange(event, target) {
+    event.preventDefault();
+    const currencyType = target.dataset.creditType;
+    const _doAdd = async (_event, button, _html) => {
+      const amount = button.form.elements.amount.value;
+      if (isNaN(parseInt(amount))) {
+        ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
+        return;
+      }
+      const newAmount = this.actor.system.credits[currencyType] + parseInt(amount);
+      await this.actor.update({
+        system: {
+          credits: {
+            [currencyType]: newAmount,
+          },
+        },
+      });
+    };
+
+    const description = game.i18n.format("swnr.dialog.addCurrency", { type: currencyType });
+    const proceed = await foundry.applications.api.DialogV2.prompt({
+      window: { title: "Proceed" },
+      content: `<p>${description}</p> <input type="number" name="amount">`,
+      modal: false,
+      rejectClose: false,
+      ok: {
+        callback: _doAdd,
+      }
+    });
   }
 
   /** Helper Functions */

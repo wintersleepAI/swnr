@@ -1,12 +1,36 @@
 export default class SWNShared {
 
   // helper function to generate a SchemaField with resources (value, max)
-  static resourceField(initialValue, initialMax) {
+  static resourceField(initialValue, initialMax, derivedValue = false) {
     const fields = foundry.data.fields;
     return new fields.SchemaField({
       // Make sure to call new so you invoke the constructor!
-      value: new fields.NumberField({ required: true, nullable: false, integer: true, min: 0, initial: initialValue }),
+      value: new fields.NumberField({ required: true, nullable: false, integer: true, min: -20, initial: initialValue }),
       max: new fields.NumberField({ required: true, nullable: false, integer: true, initial: initialMax }),
+    });
+  }
+  
+  static resourceFieldPercentage(field) {
+    const diff = field.value / field.max;
+    return diff * 100;
+  }
+
+  static rangeResourceField(initialMin, initialMax, initialCurrent) {
+    const fields = foundry.data.fields;
+    return new fields.SchemaField({
+      // Make sure to call new so you invoke the constructor!
+      min: new fields.NumberField({ required: true, nullable: false, integer: true, min: -100, initial: initialMin }),
+      max: new fields.NumberField({ required: true, nullable: false, integer: true, initial: initialMax }),
+      current: new fields.NumberField({ required: true, nullable: false, min: -100, integer: true, initial: initialCurrent }),
+    });
+  }
+
+  static date() {
+    const fields = foundry.data.fields;
+    return new fields.SchemaField({
+      year: new fields.NumberField({ required: true, nullable: false, integer: true, initial: 0 }),
+      month: new fields.NumberField({ required: true, nullable: false, integer: true, initial: 0 }),
+      day: new fields.NumberField({ required: true, nullable: false, integer: true, initial: 0 }),
     });
   }
 
@@ -58,5 +82,10 @@ export default class SWNShared {
   static emptyString() {
     const fields = foundry.data.fields;
     return new fields.StringField({ required: false, nullable: false });
+  }
+  
+  static techLevel(required = true, initialValue = null) {
+    const fields = foundry.data.fields;
+    return new fields.NumberField({ required: required, nullable: true, integer: true, min: 0, max: CONFIG.SWN.maxTL, initial: initialValue });
   }
 }

@@ -11,18 +11,19 @@
       {{formGroup systemFields.tl value=system.tl localize=true}}
     </div>
     <div class="resource">
-      <div class="form-group">
-        <label>{{localize 'SWN.Item.Cyberware.FIELDS.strain.base.label'}}</label>
+      {{formGroup systemFields.strain value=system.strain localize=true}}
+      {{!-- <div class="form-group">
+        <label>{{localize 'SWN.Item.Cyberware.FIELDS.strain.label'}}</label>
         <div class="form-fields">
           <input
             type="number"
-            name="system.strain.base"
-            value="{{system.strain.base}}"
+            name="system.strain"
+            value="{{system.strain}}"
             min="0"
             step=".05"
           >
         </div>
-      </div>
+      </div> --}}
     </div>
     <div class="resource">
       {{formGroup systemFields.disabled value=system.disabled localize=true}}
@@ -35,9 +36,6 @@
     </div>
     <div class="resource">
       {{formGroup systemFields.complication value=system.complication localize=true}}
-    </div>
-    <div class="resource">
-      {{formGroup systemFields.settings value=system.settings localize=true}}
     </div>
   </div>
 </section>

@@ -200,12 +200,16 @@
   flex: 0;
 }
 
+.flexlarge {
+  flex: 2;
+}
+
 .flex-between {
   justify-content: space-between;
 }
 
-.flexlarge {
-  flex: 2;
+.flex-evenly {
+  justify-content: space-evenly;
 }
 
 .align-left {
@@ -230,6 +234,7 @@
   --strain-bar-color: linear-gradient(45deg, rgba(29,131,170,1) 0%, rgba(80,190,183,1) 100%);
   --ready-bar-color: linear-gradient(45deg, rgba(48,121,22,1) 0%, rgba(97,190,80,1) 100%);
   --stowed-bar-color: linear-gradient(45deg, rgb(183, 116, 0) 0%, rgb(225, 167, 50) 100%);
+  --effort-bar-color: linear-gradient(45deg, rgb(90,40, 150) 0%, rgb(100, 50, 160) 100%);
   --over-filled-bar-color: linear-gradient(45deg, rgb(199, 57, 57) 0%, rgb(219 108 108) 100%);
   /* Replace with defined theme colors? */
   --border-color: rgb(170,170,170);
@@ -237,6 +242,25 @@
   --second-font-color: rgb(71, 71, 71);
   --active-font-color: rgb(5, 99, 150);
   --input-focus-color: rgb(5, 99, 150);
+}
+
+.chat-message .card-buttons {
+  width: 60%;
+  padding: 4px;
+  margin: auto;
+}
+
+.chat-message .card-show-buttons {
+  width: 60%;
+  padding: 4px;
+  margin: auto;
+}
+
+.chat-message .chat-button-small {
+  width: 22px;
+  height: 22px;
+  font-size: 10px;
+  line-height: 1px;
 }
 
 /* Styles limited to swnr sheets */
@@ -323,6 +347,9 @@
   border-radius: 2px;
   margin: 0px;
 }
+.swnr .group-title {
+  border-bottom: 1px solid var(--border-color);
+}
 .swnr div.field {
   padding-top: 0;
 }
@@ -371,6 +398,23 @@
   height: 100%;
   overflow-y: scroll;
 }
+.swnr .sheet-body .sheet-cols,
+.swnr .sheet-body .tab .sheet-cols,
+.swnr .sheet-body .tab .editor .sheet-cols {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.swnr .sheet-body .resource-group,
+.swnr .sheet-body .tab .resource-group,
+.swnr .sheet-body .tab .editor .resource-group {
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  margin: 0px;
+  padding: 4px;
+  margin: 4px;
+}
 .swnr .tab.biography {
   flex: 1;
 }
@@ -412,7 +456,6 @@
 .swnr .resource-bar {
   /* Sets the position of the resource-bar and sets it to the proper size. */
   position: relative;
-  bottom: -10px;
   width: 80%;
   height: 20px;
   border: 1px solid var(--border-color);
@@ -428,6 +471,10 @@
 }
 .swnr .resource-bar .strain-fill {
   background: var(--strain-bar-color);
+  height: 100%;
+}
+.swnr .resource-bar .effort-fill {
+  background: var(--effort-bar-color);
   height: 100%;
 }
 .swnr .resource-bar .ready-fill {
@@ -446,12 +493,19 @@
   width: 100%;
   height: 100%;
   justify-content: center;
+  color: var(--font-color);
 }
 .swnr .resource-bar .text input:first-child {
   text-align: right;
 }
 .swnr .resource-bar .text p {
   margin: 0;
+}
+.swnr .sheet-header .resource-bar {
+  bottom: -10px;
+}
+.swnr .sheet-body .resource-bar {
+  margin-bottom: 10px;
 }
 .swnr .items-header {
   height: 28px;
@@ -509,6 +563,16 @@
   font-size: 12px;
   text-align: center;
   margin: 0 6px;
+}
+.swnr .items-list .item-controls-small {
+  display: flex;
+  flex: 0 0 20px;
+  justify-content: flex-end;
+}
+.swnr .items-list .item-controls-small a {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 2px;
 }
 .swnr .items-list .item {
   align-items: center;
@@ -584,6 +648,32 @@
 .swnr .items-center {
   text-align: center;
   align-items: center;
+}
+.swnr .cyber-prop {
+  font-size: 12px;
+  text-align: center;
+}
+.swnr .cyber-prop .cyber-strain {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+.swnr .cyber-prop .cyber-conceal {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+.swnr .cyber-prop .cyber-effect {
+  flex: 0 0 80px;
+  padding: 0 8px;
+}
+.swnr .cyber-prop .cyber-type {
+  flex: 0 0 80px;
+  padding: 0 8px;
+}
+.swnr .skill-list .untrained {
+  color: var(--swnr-c-beige);
+}
+.swnr .skill-list .trained {
+  color: var(--swnr-c-dark);
 }
 .swnr .effects-header {
   height: 28px;

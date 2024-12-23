@@ -72,6 +72,17 @@
     }
   }
 
+  .item-controls-small {
+    display: flex;
+    flex: 0 0 20px;
+    justify-content: flex-end;
+    a {
+      font-size: 12px;
+      text-align: center;
+      margin: 0 2px;
+    }
+  }
+
   // Individual Item
   .item {
     align-items: center;
@@ -159,4 +170,39 @@
 .items-center {
   text-align: center;
   align-items: center;
+}
+
+.cyber-prop {
+  font-size: 12px;
+  text-align: center;
+
+  .cyber-strain {
+    flex: 0 1 40px;
+    padding: 0 8px;
+  }
+  
+  .cyber-conceal {
+    flex: 0 1 40px;
+    padding: 0 8px;
+  }
+  
+  .cyber-effect {
+    flex: 0 0 80px;
+    padding: 0 8px;
+  }
+
+  .cyber-type {
+    flex: 0 0 80px;
+    padding: 0 8px;
+  }
+
+}
+
+.skill-list {
+  .untrained {
+    color: var(--swnr-c-beige);
+  }
+  .trained {
+    color: var(--swnr-c-dark);
+  }
 }

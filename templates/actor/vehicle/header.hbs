@@ -25,89 +25,60 @@
     {{! The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
       from 1 to 12 and will create that number of columns.  }}
-    <div class='resources grid grid-3col'>
+    <div class='resources grid grid-5col'>
+      {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
+      {{formGroup systemFields.health value=system.health localize=true widget=headerWidget}}
+      {{formGroup systemFields.traumaTarget value=system.traumaTarget localize=true widget=headerWidget}}
+      {{formGroup systemFields.armor value=system.armor localize=true widget=headerWidget}}
+      {{formGroup systemFields.speed value=system.speed localize=true widget=headerWidget}}
+      {{formGroup systemFields.ac value=system.ac localize=true widget=headerWidget}}
+      {{formGroup systemFields.crew value=system.crew localize=true widget=headerWidget}}
+      {{!--TODO {{formGroup systemFields.crewMembers value=system.crewMembers localize=true widget=headerWidget}} --}}
+      {{formGroup systemFields.tl value=system.tl localize=true widget=headerWidget}}
+      {{!--TODO {{formGroup systemFields.mods value=system.mods localize=true widget=headerWidget}} --}}
+      {{formGroup systemFields.power value=system.power localize=true widget=headerWidget}}
+      {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget}}
+      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget}}
 
-      {{! "flex-group-center" is also defined in the _grid.scss file
-        and it will add a small amount of padding, a border, and will
-        center all of its child elements content and text. }}
-      <div class='resource flex-group-center'>
-        VEHICLE <label for='system.health.value' class='resource-label'>
-          {{localize 'SWN.Actor.base.FIELDS.health.value.label'}}
-        </label>
-        <div class='resource-content flexrow flex-center flex-between'>
-          <input
-            type='text'
-            name='system.health.value'
-            value='{{system.health.value}}'
-            data-dtype='Number'
-          />
-          <span> / </span>
-          <input
-            type='text'
-            name='system.health.max'
-            value='{{system.health.max}}'
-            data-dtype='Number'
-          />
-        </div>
-      </div>
-
-      <div class='resource flex-group-center'>
-        <label for='system.power.value' class='resource-label'>
-          {{localize 'SWN.Actor.base.FIELDS.power.value.label'}}
-        </label>
-        <div class='resource-content flexrow flex-center flex-between'>
-          <input
-            type='text'
-            name='system.power.value'
-            value='{{system.power.value}}'
-            data-dtype='Number'
-          />
-          <span> / </span>
-          <input
-            type='text'
-            name='system.power.max'
-            value='{{system.power.max}}'
-            data-dtype='Number'
-          />
-        </div>
-      </div>
-
-      <div class='resource flex-group-center'>
-        {{#if (eq actor.type 'character')}}
-          <label class='resource-label'>
-            {{localize 'SWN.Actor.Character.FIELDS.attributes.level.value.label'}}
-          </label>
-          <div class='resource-content flexrow flex-center flex-between'>
-            <input
-              type='text'
-              name='system.attributes.level.value'
-              value='{{system.attributes.level.value}}'
-              data-dtype='Number'
-            />
-          </div>
-        {{/if}}
-        {{#if (eq actor.type 'npc')}}
-          <label class='resource-label'>
-            {{localize 'SWN.Actor.NPC.FIELDS.cr.label'}} / {{localize 'SWN.Actor.NPC.xp.label'}}
-          </label>
-          <div class='resource-content flexrow flex-center flex-between'>
-            <input
-              type='text'
-              name='system.cr'
-              value='{{system.cr}}'
-              data-dtype='Number'
-            />
-            <span></span>
-            <input
-              type='text'
-              disabled='true'
-              name='system.xp'
-              value='{{system.xp}}'
-              data-dtype='Number'
-            />
-          </div>
-        {{/if}}
-      </div>
     </div>
+    {{#if (eq actor.type 'ship')}}
+      <div class="flex-grow grid grid-cols-7 items-center gap-1">
+        <!--buttons-->
+        <div class="cost flex flex-col items-center ">
+          <a data-action="travel"><i class="fas fa-route  fa-2x travel-button"></i></a>
+          {{localize 'swnr.sheet.ship.travel'}}
+        </div>
+
+        <div class="cost flex flex-col items-center ">
+          <a data-action="spike"><i class="fas fa-rocket  fa-2x spike-button"></i></a>
+          {{localize 'swnr.sheet.ship.spike'}}
+        </div>
+
+        <div class="cost flex flex-col items-center ">
+          <a data-action="refuel"><i class="fas fa-gas-pump  fa-2x refuel-button"></i></a>
+          {{localize 'swnr.sheet.ship.refuel'}}
+        </div>
+
+        <div class="cost flex flex-col items-center ">
+          <a data-action="crisis"><i class="fas fa-dumpster-fire  fa-2x crisis-button"></i></a>
+          {{localize 'swnr.sheet.ship.crisis'}}
+        </div>
+
+        <div class="cost flex flex-col items-center ">
+          <a  data-action="failure"><i class="fas fa-heart-broken  fa-2x failure-button"></i></a>
+          {{localize 'swnr.sheet.ship.system-failure'}}
+        </div>
+
+        <div class="cost flex flex-col items-center ">
+          <a data-action="repair"><i class="fas fa-tools  fa-2x repair-button"></i></a>
+          {{localize 'swnr.sheet.ship.repair-all'}}
+        </div>
+
+        <div class="cost flex flex-col items-center ">
+          <a data-action="sensor"><i class="fas fa-satellite-dish  fa-2x sensor-button"></i></a>
+          {{localize 'swnr.sheet.ship.sensor-roll'}}
+        </div>
+      </div><!-- end buttons-->
+    {{/if}}
   </div>
 </header>

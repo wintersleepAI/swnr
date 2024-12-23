@@ -1,4 +1,5 @@
 import SWNVehicleBase from './base-vehicle.mjs';
+import SWNShared from '../shared.mjs';
 
 export default class SWNVehicle extends SWNVehicleBase {
   static LOCALIZATION_PREFIXES = [
@@ -9,7 +10,9 @@ export default class SWNVehicle extends SWNVehicleBase {
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
-
+    schema.kmph = SWNShared.requiredNumber(0);
+    schema.tonnage = SWNShared.requiredNumber(0);
+    // schema.size = TODO;
     return schema;
   }
 

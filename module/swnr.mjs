@@ -12,6 +12,7 @@ import { SWNFactionSheet } from './sheets/faction-sheet.mjs';
 import { SWN } from './helpers/config.mjs';
 import { registerSettings } from './helpers/register-settings.mjs';
 import { registerHandlebarHelpers } from './helpers/handlebar.mjs';
+import { chatListeners } from './helpers/chat.mjs';
 
 // Import DataModel classes
 import * as models from './data/_module.mjs';
@@ -141,6 +142,15 @@ Hooks.once('ready', function () {
     return false;
   });
 });
+
+/* -------------------------------------------- */
+/* Chat Listeners                               */
+/* -------------------------------------------- */
+
+Hooks.on("renderChatMessage", (message, html, _data) =>
+  chatListeners(message, html)
+);
+
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
