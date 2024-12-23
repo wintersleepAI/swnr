@@ -44,25 +44,31 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
-    }
+    },
+    programs: {
+      template: 'systems/swnr/templates/actor/cyberdeck/programs.hbs'
+    },
+    // FRAGMENTS
+    // programList: {
+    //   tempalte: 'systems/swnr/templates/actor/fragments/programs-list.hbs'
+    // }
   };
 
   /** @override */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
+    //wsai adding to allow setting default tab
+    options.defaultTab= 'programs';
+
     // Not all parts always render
     options.parts = ['header', 'tabs'];
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
     // Control which parts show based on document subtype
     switch (this.document.type) {
-      case 'mech':
-        //TODO
-        //options.parts.push('features', 'gear', 'powers', 'effects');
-        break;
-      case 'ship':
-        //TODO
-        //options.parts.push('gear', 'effects');
+      case 'cyberdeck':
+        options.parts.push('programs');
+        options.defaultTab = 'programs';
         break;
     }
   }
@@ -84,10 +90,13 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
       flags: this.actor.flags,
       // Adding a pointer to CONFIG.SWN
       config: CONFIG.SWN,
-      tabs: this._getTabs(options.parts),
+      tabs: this._getTabs(options.part, options.defaultTab),
       // Necessary for formInput and formFields helpers
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
+      gameSettings: getGameSettings(),
+      headerWidget: headerFieldWidget.bind(this),
+      groupWidget: groupFieldWidget.bind(this),
     };
 
     // Offloading context prep to a helper function
@@ -100,6 +109,7 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
   async _preparePartContext(partId, context) {
     // TODO copy from actor-sheet.mjs
     console.log("TODO: Implement _preparePartContext");//TODO
+    context.tab = context.tabs[partId];
     return context;
   }
 
@@ -109,11 +119,11 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
    * @returns {Record<string, Partial<ApplicationTab>>}
    * @protected
    */
-  _getTabs(parts) {
+  _getTabs(parts, defaultTab = 'programs') {
     // If you have sub-tabs this is necessary to change
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
-    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'biography';
+    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = defaultTab;
     return parts.reduce((tabs, partId) => {
       const tab = {
         cssClass: 'sheet-body',
@@ -129,26 +139,10 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
         case 'header':
         case 'tabs':
           return tabs;
-        case 'biography':
-          tab.id = 'biography';
-          tab.label += 'Biography';
-          break;
-        case 'features':
-          tab.id = 'features';
-          tab.label += 'Features';
-          break;
-        case 'gear':
-          tab.id = 'gear';
-          tab.label += 'Gear';
-          break;
-        case 'spells':
-          tab.id = 'spells';
-          tab.label += 'Spells';
-          break;
-        case 'effects':
-          tab.id = 'effects';
-          tab.label += 'Effects';
-          break;
+        case 'programs':
+            tab.id = 'programs';
+            tab.label += 'Programs';
+            break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
       tabs[partId] = tab;
