@@ -50,6 +50,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     headerCyberware: {
       template: 'systems/swnr/templates/item/header-cyberware.hbs',
     },
+    headerSkill: {
+      template: 'systems/swnr/templates/item/header-skill.hbs',
+    },
     headerAsset: {
       template: 'systems/swnr/templates/item/header-asset.hbs',
     },
@@ -113,6 +116,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'cyberware':
         options.parts.push('headerCyberware');
         break;
+      case 'skill':
+        options.parts.push('headerSkill');
+        break;
       case 'asset':
         options.parts.push('headerAsset');
         break;
@@ -136,10 +142,6 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'power':
         options.parts.push('attributesPower');
-        break;
-      case 'skill':
-        options.parts.push('attributesSkill');
-        options.defaultTab = 'attributes';
         break;
       case 'weapon':
         options.parts.push('attributesWeapons');
@@ -165,6 +167,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'shipWeapon':
       case 'shipFitting':
       case 'shipDefense':
+      case 'skill':
         break;
     }
     options.parts.push('description');
@@ -267,6 +270,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'headerGear':
         case 'headerProgram':
         case 'headerCyberware':
+        case 'headerSkill':
         case 'headerAsset':
         case 'tabs':
           return tabs;

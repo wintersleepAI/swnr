@@ -20,12 +20,12 @@ export default class SWNSkill extends SWNItemBase {
       max: 4,
     });
 
-    schema.defaultStat =  SWNShared.stats("ask", false, true);
+    schema.defaultStat = SWNShared.stats("ask", false, true);
 
-    schema.pool = new fields.StringField({
-        required: true,
-        nullable: false,
-        initial: '2D6',
+    schema.pool = SWNShared.stringChoices("2D6", {
+      "2D6": "2D6",
+      "3D6": "3D6",
+      "4D6": "4D6"
     });
 
     // Can possibly remove this field
@@ -34,7 +34,21 @@ export default class SWNSkill extends SWNItemBase {
         nullable: false,
         initial: '',
     });
+
+    schema.remember = new fields.SchemaField({
+      use: new fields.BooleanField({
+        required: true,
+        nullable: false,
+        initial: false,
+      }),
+      modifier: new fields.NumberField({
+        required: true,
+        nullable: false,
+        initial: 0,
+      }),
+    });
     
+    schema.stats = SWNShared.stringChoices("dex", CONFIG.SWN.stats);
 
     return schema;
   }
@@ -124,6 +138,7 @@ export default class SWNSkill extends SWNItemBase {
       stats: actor.system.stats,
       modifier,
     };
+
     const content = await renderTemplate(template, dialogData);
     const _doRoll = async (_event, button, html) => {
       const dice = button.form.elements.dicepool.value;
@@ -161,8 +176,8 @@ export default class SWNSkill extends SWNItemBase {
               use: true,
               modifier: Number(modifier),
             },
-            defaultStat: this.statShortNameForm,
-            pool: dice,
+            defaultStat: statShortNameForm,
+            pool: CONFIG.SWN.pool[dice],
           },
         });
       }
