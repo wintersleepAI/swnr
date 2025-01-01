@@ -53,6 +53,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     headerSkill: {
       template: 'systems/swnr/templates/item/header-skill.hbs',
     },
+    headerFeature: {
+      template: 'systems/swnr/templates/item/header-feature.hbs',
+    },
     headerAsset: {
       template: 'systems/swnr/templates/item/header-asset.hbs',
     },
@@ -119,6 +122,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'skill':
         options.parts.push('headerSkill');
         break;
+      case 'feature':
+        options.parts.push('headerFeature');
+        break;
       case 'asset':
         options.parts.push('headerAsset');
         break;
@@ -134,7 +140,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'feature':
-        options.parts.push('attributesFeature', 'effects');
+        options.parts.push('effects');
         break;
       case 'item':
         options.parts.push('attributesItem');
@@ -271,6 +277,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'headerProgram':
         case 'headerCyberware':
         case 'headerSkill':
+        case 'headerFeature':
         case 'headerAsset':
         case 'tabs':
           return tabs;

@@ -84,6 +84,7 @@
         <ol class='items-list'> <!-- Features -->
           <li class='item flexrow items-header'>
             <div class='item-name'>{{localize 'Name'}}</div>
+            <div class='item-level'>{{localize 'Level'}}</div>
             <div class='item-controls'>
               {{#if @root.editable}}
                 <a
@@ -97,7 +98,7 @@
                   {{localize 'DOCUMENT.New' type='feature'}}
                 </a>
               {{/if}}
-            </div>
+            </div>   
           </li>
           {{#each features as |item id|}}
             <li
@@ -119,6 +120,7 @@
                 </div>
                 <div>{{item.name}}</div>
               </div>
+              <div class='item-level'>{{item.system.level}}</div>
               <div class='item-controls'>
                 <a
                   class='item-control item-edit'
