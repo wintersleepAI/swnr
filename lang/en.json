@@ -218,9 +218,14 @@
           "defaultStat": {"label": "Default Stat"},
           "pool": {"label": "Dice Pool"},
           "remember": {
-            "use": {"label": "Have Actor Sheet Remember Current Settings"}
+            "use": {"label": "Remember Settings"}
           },
           "source": {"label": "Source"}
+        }
+      },
+      "Feature": {
+        "FIELDS": {
+          "level": {"label": "Level"}
         }
       },
       "Program": {

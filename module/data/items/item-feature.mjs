@@ -6,4 +6,18 @@ export default class SWNFeature extends SWNItemBase {
     'SWN.Item.base',
     'SWN.Item.Feature',
   ];
+
+  static defineSchema() {
+    const fields = foundry.data.fields;
+    const schema = super.defineSchema();
+
+    schema.level = new fields.NumberField({
+      required: true,
+      nullable: true,
+      integer: true,
+      initial: 0
+    });
+
+    return schema;
+  }
 }
