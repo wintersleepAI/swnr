@@ -225,7 +225,8 @@
       },
       "Feature": {
         "FIELDS": {
-          "level": {"label": "Level"}
+          "level": {"label": "Level"},
+          "type": {"label": "Type"}
         }
       },
       "Program": {

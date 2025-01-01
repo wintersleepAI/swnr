@@ -18,7 +18,7 @@ export default class SWNFeature extends SWNItemBase {
       initial: 0
     });
 
-    schema.featureTypes = SWNShared.stringChoices("focus", CONFIG.SWN.featureTypes);
+    schema.type = SWNShared.stringChoices("focus", CONFIG.SWN.featureTypes);
 
     return schema;
   }
