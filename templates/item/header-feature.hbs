@@ -19,10 +19,12 @@
           placeholder='Name'
         />
       </div>
-      <div class='grid grid-3col'>
+      <div class='flexrow' style="gap: 16; padding-top: 8px;">
         <div class="resource">
           {{formGroup systemFields.level value=system.level localize=true}}
         </div>
+        <div class="resource" style="padding-top: 12px;">
+          {{formGroup systemFields.featureTypes value=system.featureTypes localize=true}}
       </div>
     </div>
   </div>

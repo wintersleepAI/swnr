@@ -186,3 +186,9 @@ SWN.pool = {
   "3d6kh2": "3D6",
   "4d6kh2": "4D6"
 }
+
+SWN.featureTypes = {
+  focus: 'swnr.featureTypes.focus',
+  edge: 'swnr.featureTypes.edge',
+  feature: 'swnr.featureTypes.feature'
+}
