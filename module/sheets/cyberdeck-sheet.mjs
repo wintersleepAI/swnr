@@ -1,4 +1,7 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
+import { getGameSettings } from '../helpers/register-settings.mjs';
+import { headerFieldWidget, groupFieldWidget } from '../helpers/handlebar.mjs';
+import { initSkills, initCompendSkills, calcMod } from '../helpers/utils.mjs';
 
 const { api, sheets } = foundry.applications;
 
@@ -57,6 +60,7 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
   /** @override */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
+    
     //wsai adding to allow setting default tab
     options.defaultTab= 'programs';
 
@@ -90,7 +94,7 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
       flags: this.actor.flags,
       // Adding a pointer to CONFIG.SWN
       config: CONFIG.SWN,
-      tabs: this._getTabs(options.part, options.defaultTab),
+      tabs: this._getTabs(options.parts, options.defaultTab),
       // Necessary for formInput and formFields helpers
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
@@ -107,9 +111,12 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
 
   /** @override */
   async _preparePartContext(partId, context) {
-    // TODO copy from actor-sheet.mjs
-    console.log("TODO: Implement _preparePartContext");//TODO
-    context.tab = context.tabs[partId];
+    switch(partId) {
+      case 'programs':
+        context.tab = context.tabs[partId];
+        break;
+    }
+    
     return context;
   }
 
@@ -140,10 +147,10 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
         case 'tabs':
           return tabs;
         case 'programs':
-            tab.id = 'programs';
-            tab.label += 'Programs';
-            break;
-      }
+          tab.id = 'programs';
+          tab.label += 'Programs';
+          break;
+    }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
       tabs[partId] = tab;
       return tabs;
