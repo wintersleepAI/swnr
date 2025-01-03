@@ -972,43 +972,44 @@ static async _onRepair(event, target) {
   }
 }
 
-static async _onTravel(event, target) {
+static async _onTravel(event, _target) {
   event.preventDefault();
+  if (this.actor.type != "ship") {
+    ui.notifications?.error("Only ships can travel.");
+  };
   if (this.actor.system.spikeDrive.value <= 0) {
     ui.notifications?.error("Drive disabled.");
     return;
   }
   // TODO localize
-  new Dialog({
-    title: "Travel Days (Use life support)",
-    content: `
-        <form>
-          <div class="form-group">
-            <label>Days of Travel</label>
-            <input type='text' name='inputField'></input>
-          </div>
-        </form>`,
-    buttons: {
-      yes: {
-        icon: "<i class='fas fa-check'></i>",
-        label: `Travel`,
-      },
-    },
-    default: "yes",
-    close: (html) => {
-      const form = html[0].querySelector("form");
-      const days = form.querySelector('[name="inputField"]')?.value;
-      if (days && days != "") {
-        const nDays = Number(days);
-        if (nDays) {
-          this.actor.useDaysOfLifeSupport(nDays);
-          if (game.modules?.get("foundryvtt-simple-calendar")?.active) {
-            this.actor.moveTime(nDays);
-          }
+  const _doTravel = async (_event, button, _html) => {
+    const days = button.form.elements.amount.value;
+    if (isNaN(parseInt(days))) {
+      ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
+      return;
+    }
+    if (days && days != "") {
+      const nDays = Number(days);
+      if (nDays) {
+        this.actor.useDaysOfLifeSupport(nDays);
+        if (game.modules?.get("foundryvtt-simple-calendar")?.active) {
+          this.actor.moveTime(nDays);
         }
       }
-    },
-  }).render(true);
+    }
+  }
+
+  const _proceed = await foundry.applications.api.DialogV2.prompt({
+    window: { title: "Travel Days (Use life support)" },
+    content: `<label>Days of Travel</label><input type='text' name='amount'></input>`,
+    modal: false,
+    rejectClose: false,
+    ok: {
+      callback: _doTravel,
+      icon: 'fas fa-check',
+      label: 'Travel',
+    }
+  });
 }
 
 static async _onSensor(event, target) {
