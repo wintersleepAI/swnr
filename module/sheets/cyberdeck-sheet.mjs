@@ -52,9 +52,9 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
       template: 'systems/swnr/templates/actor/cyberdeck/programs.hbs'
     },
     // FRAGMENTS
-    // programList: {
-    //   tempalte: 'systems/swnr/templates/actor/fragments/programs-list.hbs'
-    // }
+    programList: {
+      template: 'systems/swnr/templates/actor/fragments/programs-list.hbs'
+    }
   };
 
   /** @override */
@@ -167,7 +167,35 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
     // You can just use `this.document.itemTypes` instead
     // if you don't need to subdivide a given type like
     // this sheet does with spells
-    console.log("TODO: Implement _prepareItems");//TODO
+    const runners = [];
+    const verbs = [];
+    const subjects = [];
+    const dataFiles = [];
+
+    for (let i of this.document.items) {
+      console.log(i.name);
+      console.log(i);
+      console.log(i.system.type);
+      if (i.system.type === 'running') {
+        runners.push(i);
+      } 
+      else if (i.system.type === 'verb') {
+        verbs.push(i); //TODO fix to new array - is this needed? pattern swiped from actor-sheet ~ 20/12/2024 CyborgLlama
+      }
+      else if (i.system.type === 'subject') {
+        subjects.push(i); //TODO fix to new array
+      }
+      else if (i.system.type === 'data') {
+        dataFiles.push(i); //TODO fix to new array
+      }
+    }
+
+    context.runners = runners.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.verbs = verbs.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.subjects = subjects.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.dataFiles = dataFiles.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+
+    console.log("TODO: finish implementation _prepareItems");//TODO
   }
 
   /**

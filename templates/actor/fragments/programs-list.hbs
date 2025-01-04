@@ -1,21 +1,42 @@
     <ol class='programs-list'>
-      
       <li class='item flex flexrow items-header'>
-        <div class='item-name'>{{name}}</div>
-        <div class="item-enc"> {{ localize 'swnr.item.enc' }} </div>
-        {{#if (eq type "item")}}
-          <div class="item-qty"> {{ localize 'swnr.item.qty' }} </div>
-        {{/if}}
-        <div class="item-loc"> {{ localize 'swnr.item.location' }} </div>
-        <div class='item-formula'>
-          {{# if (eq type "weapon")}}
-            {{localize 'SWN.Item.Weapon.FIELDS.damage.label'}}
-          {{else if (eq type "armor")}}
-            {{localize 'SWN.Item.Armor.FIELDS.ac.label'}}
-          {{else}}
-            {{localize 'SWN.Item.Gear.FIELDS.rollFormula.label'}}
+        <div class="item-name"> 
+          {{#if (eq subType "verb")}}
+            {{ localize 'swnr.sheet.program.verb' }}
+          {{else if (eq subType "subject")}}
+            {{ localize 'swnr.sheet.program.subject' }}
+          {{else if (eq subType "running")}}
+            {{ localize 'swnr.sheet.program.running' }}
+          {{else if (eq subType "dataFile")}}
+            {{ localize 'swnr.sheet.program.dataFile' }}
           {{/if}}
         </div>
+
+        {{#if (eq subType "running")}}
+          <div class="item-name">
+            {{ localize 'swnr.sheet.program.use' }}
+          </div>
+        {{/if}}
+
+        {{#if (eq subType "verb")}}
+          <div class="item-name">
+            {{ localize 'swnr.sheet.program.use' }}
+          </div>
+          <div class="item-name">
+            {{ localize 'swnr.sheet.program.targetAllowedShort' }}
+          </div>
+          <div class="item-name">
+            {{ localize 'swnr.sheet.program.accessCostShort' }}
+          </div>
+        {{/if}}
+
+        {{#if (eq subType "subject")}}
+          <div class="item-name">
+            {{ localize 'swnr.sheet.program.subjectType' }}
+          </div>
+        {{/if}}
+
+
         <div class='item-controls'>
           {{#if @root.editable}}
             <a 
@@ -31,7 +52,7 @@
               title='{{localize "DOCUMENT.Create" type='Item'}}'
               data-action='createDoc'
               data-document-class='Item'
-              data-type='{{type}}'
+              data-type='program'
             >
               <i class='fas fa-plus'></i>
               {{localize 'DOCUMENT.New' type=type}}
@@ -40,76 +61,41 @@
         </div>
       </li>
       {{#each itemList as |item id|}}
-        <li
-          class='item flex flexrow'
-          data-item-id='{{item._id}}'
-          data-drag='true'
-          data-document-class='Item'
-        >
-          <div class='item-name'>
-            <div class='item-image'>
-              <a class='rollable' data-roll-type='item' data-action='roll'>
-                <img
-                  src='{{item.img}}'
-                  title='{{item.name}}'
-                  width='24'
-                  height='24'
-                />
-              </a>
-            </div>
-            <div>{{item.name}}
-              {{#if (eq item.type "armor")}}
-                {{#if (ne item.system.soak.max 0)}}
-                ({{item.system.soak.value}}/{{item.system.soak.max}})
+        {{#if (eq ../subType item.system.type)}}
+            <li
+              class='item flex flexrow'
+              data-item-id='{{item._id}}'
+              data-drag='true'
+              data-document-class='Item'
+            >
+              <div class='item-name'>
+                <div>{{item.name}}
+                </div>
+              </div>
+            {{#if (eq system.type "running")}}
+              <div class="item-name">
+                {{ item.system.useAffects }}
+              </div>
+            {{/if}}
+              <div class='item-controls'>
+                <a
+                  class='item-control item-edit'
+                  title='{{localize "DOCUMENT.Update" type='Item'}}'
+                  data-action='viewDoc'
+                >
+                  <i class='fas fa-edit'></i>
+                </a>
+                {{#if @root.editable}}
+                  <a
+                    class='item-control item-delete'
+                    title='{{localize "DOCUMENT.Delete" type='Item'}}'
+                    data-action='deleteDoc'
+                  >
+                    <i class='fas fa-trash'></i>
+                  </a>
                 {{/if}}
-              {{/if}}
-            </div>
-          </div>
-          <div class="item-enc">{{ item.system.encumbrance }} </div>
-          {{#if (eq ../type "item")}}
-            <div class="item-qty"> {{ item.system.quantity }} </div>
-          {{/if}}
-          <div class="item-loc">
-            <select 
-              data-item-id="{{item.id}}"
-              class="location-selector"
-            >
-              {{#select item.system.location}}
-              <option value="readied">
-                {{localize 'swnr.item.locationReadied'}}
-              </option>
-              <option value="stowed">{{localize 'swnr.item.locationStowed'}}</option>
-              <option value="other">{{localize 'swnr.item.locationOther'}}</option>
-              {{/select}}
-            </select>
-          </div>
-          <div class='item-formula item-prop'>
-            {{# if (eq ../type "weapon")}}
-              {{item.system.damage}}
-            {{else if (eq ../type "armor")}}
-              {{item.system.ac}}
-            {{else}}
-              {{item.system.rollFormula}}
-            {{/if}}
-          </div>
-          <div class='item-controls'>
-            <a
-              class='item-control item-edit'
-              title='{{localize "DOCUMENT.Update" type='Item'}}'
-              data-action='viewDoc'
-            >
-              <i class='fas fa-edit'></i>
-            </a>
-            {{#if @root.editable}}
-              <a
-                class='item-control item-delete'
-                title='{{localize "DOCUMENT.Delete" type='Item'}}'
-                data-action='deleteDoc'
-              >
-                <i class='fas fa-trash'></i>
-              </a>
-            {{/if}}
-          </div>
-        </li>
+              </div>
+            </li>
+        {{/if}}
       {{/each}}
     </ol>
