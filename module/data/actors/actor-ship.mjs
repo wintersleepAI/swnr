@@ -96,17 +96,17 @@ export default class SWNShip extends SWNVehicleBase {
   
   async applyDefaulStats(hullType) {
     if (HULL_DATA[hullType]) {
-      await this.update(HULL_DATA[hullType]);
+      await this.parent.update(HULL_DATA[hullType]);
     } else {
       console.log("hull type not found " + hullType);
     }
   }
   
   async useDaysOfLifeSupport(nDays) {
-    if (this.system.crew.current > 0) {
-      let newLifeDays = this.system.lifeSupportDays.value;
-      newLifeDays -= this.system.crew.current * nDays;
-      await this.update({
+    if (this.crew.current > 0) {
+      let newLifeDays = this.lifeSupportDays.value;
+      newLifeDays -= this.crew.current * nDays;
+      await this.parent.update({
         "system.lifeSupportDays.value": newLifeDays,
       });
       if (newLifeDays <= 0) {
@@ -116,7 +116,7 @@ export default class SWNShip extends SWNVehicleBase {
   }
   
   async rollSensor(actorName, targetMod, observerMod, skillMod, statMod, dice, rollingAs, rollMode) {
-    const template = "systems/swnr/templates/chat/sensor-roll.html";
+    const template = "systems/swnr/templates/chat/sensor-roll.hbs";
     let mod = observerMod;
     let opposedMod = targetMod;
     let typeDesc = "Observer";
@@ -185,7 +185,7 @@ export default class SWNShip extends SWNVehicleBase {
   }
   
   async rollSpike(pilotId, pilotName, skillMod, statMod, mod, dice, difficulty, travelDays) {
-    const template = "systems/swnr/templates/chat/spike-roll.html";
+    const template = "systems/swnr/templates/chat/spike-roll.hbs";
     const rollData = {
       dice,
       skillMod,
@@ -273,7 +273,7 @@ export default class SWNShip extends SWNVehicleBase {
     if (travelDays > 0) {
       let fuel = this.system.fuel.value;
       fuel -= 1;
-      await this.update({ "system.fuel.value": fuel });
+      await this.parent.update({ "system.fuel.value": fuel });
       if (fuel <= 0) {
         ui.notifications?.info("Out of fuel...");
       }
@@ -320,7 +320,7 @@ export default class SWNShip extends SWNVehicleBase {
   async updateFuel() {
     let fuel = this.system.fuel.value;
     fuel -= 1;
-    await this.update({ "system.fuel.value": fuel });
+    await this.parent.update({ "system.fuel.value": fuel });
     if (fuel <= 0) {
       ui.notifications?.info("Out of fuel...");
     }

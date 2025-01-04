@@ -991,7 +991,7 @@ static async _onTravel(event, _target) {
     if (days && days != "") {
       const nDays = Number(days);
       if (nDays) {
-        this.actor.useDaysOfLifeSupport(nDays);
+        this.actor.system.useDaysOfLifeSupport(nDays);
         if (game.modules?.get("foundryvtt-simple-calendar")?.active) {
           this.actor.moveTime(nDays);
         }
