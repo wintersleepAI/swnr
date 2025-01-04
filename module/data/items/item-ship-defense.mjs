@@ -6,4 +6,11 @@ export default class SWNShipDefense extends SWNVehicleItemBase {
     'SWN.Item.base',
     'SWN.Item.ShipDefense',
   ];
+
+  static defineSchema() {
+    const fields = foundry.data.fields;
+    const schema = super.defineSchema();
+    schema.effect = SWNShared.requiredString("");
+    return schema;
+  }
 }
