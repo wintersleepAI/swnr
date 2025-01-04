@@ -1,0 +1,31 @@
+<header class='sheet-header'>
+  <div class="flexrow">
+    <!-- Profile Image -->
+    <div class="item-img">
+      <img
+        class='item-img'
+        src='{{item.img}}'
+        data-edit='img'
+        data-action='onEditImage'
+        title='{{item.name}}'
+      />
+    </div>
+    <div class='header-fields'>
+      <div class='document-name'>
+        <input
+          name='name'
+          type='text'
+          value='{{item.name}}'
+          placeholder='Name'
+        />
+      </div>
+      <div class='flexrow' style="gap: 16px; padding-top: 8px;">
+        <div class="resource">
+          {{formGroup systemFields.level value=system.level localize=true}}
+        </div>
+        <div class="resource">
+          {{formGroup systemFields.type value=system.type localize=true}}
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,44 @@
+<header class='sheet-header'>
+  <div class="flexcol">
+    <div class="flexrow">
+      <!-- Profile Image -->
+      <div class="item-img">
+        <img
+          class='item-img'
+          src='{{item.img}}'
+          data-edit='img'
+          data-action='onEditImage'
+          title='{{item.name}}'
+        />
+      </div>
+      <div class='header-fields'>
+        <div class='document-name'>
+          <input
+            name='name'
+            type='text'
+            value='{{item.name}}'
+            placeholder='Name'
+          />
+        </div>
+        <div style='display: flex; gap: 16px; padding-top: 16px;'>
+          <div class='resource' style='flex: 1;'>
+            {{! stat}}
+            {{formGroup systemFields.rank value=system.rank localize=true}}
+          </div>
+          <div class='resource' style='flex: 1;'>
+            {{! stat}}
+            {{formGroup systemFields.pool value=system.pool localize=true}}
+          </div>
+          <div class='resource' style='flex: 1;'>
+            {{! stat}}
+            {{formGroup systemFields.defaultStat value=system.defaultStat localize=true}}
+          </div>
+          <div class='resource' style='flex: 1;'>
+            {{! remember}}
+            {{formGroup systemFields.remember.fields.use value=system.remember.use localize=true}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

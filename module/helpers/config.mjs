@@ -93,7 +93,6 @@ SWN.reactionTypes = {
   friendly: 'swnr.npc.reaction.friendly',
 }
 
-
 SWN.skills = {
   none: [],
   spaceMagic: ["knowMagic", "useMagic", "sunblade", "fight"],
@@ -144,7 +143,7 @@ SWN.skills = {
     "vehicle-land",
     "vehicle-space",
     "vehicle-water",
-    ],
+  ],
   revised: [
     "administer",
     "connect",
@@ -165,7 +164,7 @@ SWN.skills = {
     "talk",
     "trade",
     "work",
-    ],
+  ],
   psionic: [
     "biopsionics",
     "metapsionics",
@@ -173,12 +172,23 @@ SWN.skills = {
     "telekinesis",
     "telepathy",
     "teleportation",
-    ],
-  };
-
+  ],
+};
 
 SWN.assetCategories = {
   force: 'swnr.sheet.faction.assetCategories.force',
   cunning: 'swnr.sheet.faction.assetCategories.cunning',
   wealth: 'swnr.sheet.faction.assetCategories.wealth',
+}
+
+SWN.pool = {
+  "2d6": "2D6",
+  "3d6kh2": "3D6",
+  "4d6kh2": "4D6"
+}
+
+SWN.featureTypes = {
+  focus: 'swnr.featureTypes.focus',
+  edge: 'swnr.featureTypes.edge',
+  feature: 'swnr.featureTypes.feature'
 }
