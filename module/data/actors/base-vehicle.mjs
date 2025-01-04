@@ -65,4 +65,9 @@ export default class SWNRResource  extends foundry.abstract.TypeDataModel {
     schema.hardpoints = SWNShared.resourceField(1,1,true);
     return schema;
   }
+
+  prepareDerivedData() {
+    this.health.percentage = Math.clamp((this.health.value * 100) / this.health.max, 0, 100);
+    this.armor.percentage = Math.clamp((this.armor.value * 100) / this.armor.max, 0, 100);
+  }
 }
