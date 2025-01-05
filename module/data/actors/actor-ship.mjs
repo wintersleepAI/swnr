@@ -3,6 +3,8 @@ import SWNShared from '../shared.mjs';
 
 
 export default class SWNShip extends SWNVehicleBase {
+  ENGINE_ID = "SPIKE_DRIVE";
+
   static LOCALIZATION_PREFIXES = [
     ...super.LOCALIZATION_PREFIXES,
     'SWN.Actor.Ship',
@@ -288,9 +290,8 @@ export default class SWNShip extends SWNVehicleBase {
   }
   
   async calcCost(maintenance) {
-    const hull = this.system.shipHullType;
-    const shipClass = this.system.shipClass;
-    this.system.maintenanceCost;
+    const hull = this.shipHullType;
+    const shipClass = this.shipClass;
     const shipData = HULL_DATA[hull];
     if (shipData) {
       let baseCost = shipsystem.cost;
@@ -324,7 +325,7 @@ export default class SWNShip extends SWNVehicleBase {
   }
   
   async updateFuel() {
-    let fuel = this.system.fuel.value;
+    let fuel = this.fuel.value;
     fuel -= 1;
     await this.parent.update({ "system.fuel.value": fuel });
     if (fuel <= 0) {
@@ -356,6 +357,169 @@ export default class SWNShip extends SWNVehicleBase {
 
   _getRandomInt(exclusiveMax) {
     return Math.floor(Math.random() * exclusiveMax);
+  }
+
+  async _breakItem(
+    id,
+    forceDestroy
+  ) {
+    //console.log("breaking ", id);
+    if (!id || id == "") {
+      //console.log("Nothing to break");
+      throw new TypeError();
+    }
+    if (id == this.ENGINE_ID) {
+      let curSpike = this.spikeDrive.value;
+      if (forceDestroy) {
+        curSpike = 0;
+      } else {
+        curSpike -= 1;
+      }
+      await this.parent.update({ "system.spikeDrive.value": curSpike });
+      if (curSpike == 0) {
+        return [null, "Engine Destroyed"];
+      } else {
+        return [null, "Engine Damaged"];
+      }
+    } else {
+      const item = this.getEmbeddedDocument("Item", id);
+      //console.log(item);
+      if (
+        forceDestroy ||
+        item?.system.broken ||
+        item?.system.juryRigged
+      ) {
+        let msg = `${item.name} Destroyed`;
+        if (item?.system.juryRigged) {
+          msg += " (item was jury-rigged)";
+        }
+        const eitem = {
+          _id: id,
+          data: { destroyed: true, broken: false, juryRigged: false },
+        };
+        return [eitem, msg];
+      } else {
+        const msg = `${item.name} Disabled`;
+        const eitem = {
+          _id: id,
+          data: { destroyed: false, broken: true, juryRigged: false },
+        };
+        return [eitem, msg];
+      }
+    }
+  }
+
+  async rollSystemFailure(
+    sysToInclude,
+    whatToRoll
+  ) {
+    const candidateIds = [];
+    let idx = sysToInclude.indexOf("drive");
+    if (idx > -1) {
+      if (this.spikeDrive.value > 0) {
+        candidateIds.push(this.ENGINE_ID);
+      }
+      sysToInclude.splice(idx, 1);
+    }
+    //Get wpns if marked
+    idx = sysToInclude.indexOf("wpn");
+    if (idx > -1) {
+      const shipWeapons = this.parent.items.filter((i) => i.type === "shipWeapon");
+      for (const i of shipWeapons) {
+        if (i.id && !i.system["destroyed"]) {
+          candidateIds.push(i.id);
+        }
+      }
+      sysToInclude.splice(idx, 1);
+    }
+    //Get def if marked
+    idx = sysToInclude.indexOf("def");    
+    if (idx > -1) {
+      const shipDefenses = this.parent.items.filter((i) => i.type === "shipDefense");
+      for (const i of shipDefenses) {
+        if (i.id && !i.system["destroyed"]) {
+          candidateIds.push(i.id);
+        }
+      }
+      sysToInclude.splice(idx, 1);
+    }
+    //Get fit if marked
+    idx = sysToInclude.indexOf("fit");
+    if (idx > -1) {
+      const shipFittings = this.parent.items.filter((i) => i.type === "shipFitting");
+
+      for (const i of shipFittings) {
+        if (i.id && !i.system["destroyed"]) {
+          candidateIds.push(i.id);
+        }
+      }
+      sysToInclude.splice(idx, 1);
+    }
+    // Should be nothing left
+    if (sysToInclude.length > 0) {
+      ui.notifications?.error("Sys to fail not evaluated: " + sysToInclude);
+    }
+    const msg = [];
+    const eitems = [];
+    if (whatToRoll == "dest-all") {
+      for (const itemId of candidateIds) {
+        const [eitem, m] = await this._breakItem(itemId, true);
+        msg.push(m);
+        if (eitem) {
+          eitems.push(eitem);
+        }
+      }
+    } else if (whatToRoll == "break-all") {
+      for (const itemId of candidateIds) {
+        const [eitem, m] = await this._breakItem(itemId, false);
+        msg.push(m);
+        if (eitem) {
+          eitems.push(eitem);
+        }
+      }
+    } else if (whatToRoll == "all-50") {
+      for (const itemId of candidateIds) {
+        const coin = this._getRandomInt(2);
+        if (coin == 0) {
+          const [eitem, m] = await this._breakItem(itemId, false);
+          msg.push(m);
+          if (eitem) {
+            eitems.push(eitem);
+          }
+        }
+      }
+    } else if (whatToRoll == "break-1") {
+      if (candidateIds.length > 0) {
+        const coin = this._getRandomInt(candidateIds.length);
+        const [eitem, m] = await this._breakItem(candidateIds[coin], false);
+        msg.push(m);
+        if (eitem) {
+          eitems.push(eitem);
+        }
+      }
+    } else {
+      ui.notifications?.error(
+        "Sys to fail not evaluated. What to include " + whatToRoll
+      );
+      return;
+    }
+    msg.filter((i) => i != "");
+    let content = "<h3>Nothing to fail</h3>";
+    if (msg.length > 0) {
+      if (eitems.length > 0) {
+        await this.parent.updateEmbeddedDocuments("Item", eitems);
+      }
+      content = "<h3>Systems Failure:</h3>";
+      for (let i = 0; i < msg.length; i++) {
+        if (msg[i]) {
+          content += `<p>${msg[i]}</p>`;
+        }
+      }
+    }
+    const chatData = {
+      content: content,
+    };
+    ChatMessage.create(chatData);
   }
 
 }

@@ -132,7 +132,7 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
       flags: this.actor.flags,
       // Adding a pointer to CONFIG.SWN
       config: CONFIG.SWN,
-      tabs: this._getTabs(options.parts),
+      tabs: this._getTabs(options.parts, options.defaultTab),
       // Necessary for formInput and formFields helpers
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
@@ -1320,17 +1320,16 @@ static async _onSysFailure(event, target) {
   const html = renderTemplate(template, dialogData);
 
   const _rollForm = async (_event, button, html) => {
-    const form = html[0].querySelector("form");
-    const incDrive = button.form.elements.inc-drive?.checked
+    const incDrive = button.form.elements.incdrive?.checked
       ? true
       : false;
-    const incWpn = button.form.elements.inc-wpn?.checked
+    const incWpn = button.form.elements.incwpn?.checked
       ? true
       : false;
-    const incFit = button.form.elements.inc-fit?.checked
+    const incFit = button.form.elements.incfit?.checked
       ? true
       : false;
-    const incDef = button.form.elements.inc-def?.checked
+    const incDef = button.form.elements.incdef?.checked
       ? true
       : false;
     const whatToRoll = button.form.elements.what.value;
@@ -1348,7 +1347,7 @@ static async _onSysFailure(event, target) {
     if (incDef) {
       sysToInclude.push("def");
     }
-    this.actor.rollSystemFailure(sysToInclude, whatToRoll);
+    this.actor.system.rollSystemFailure(sysToInclude, whatToRoll);
   };
 
   const popUpDialog = await foundry.applications.api.DialogV2.prompt(
