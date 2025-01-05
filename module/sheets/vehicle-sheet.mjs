@@ -1014,7 +1014,7 @@ static async _onTravel(event, _target) {
   });
 }
 
-static async _onSensor(event, target) {
+static async _onSensor(event, _target) {
   event.preventDefault();
   let defaultCommId = this.actor.system.roles.comms;
   let defaultComm = null;
@@ -1068,21 +1068,21 @@ static async _onSensor(event, target) {
 
   const template = "systems/swnr/templates/dialogs/roll-sensor.hbs";
   const html = renderTemplate(template, dialogData);
-  const _rollForm = async (_event, button, html) => {
+  const _rollForm = async (_event, button, _html) => {
     const mod = parseInt(
-      button.form.elements.modifier.value
-    );
+      button.form.elements.modifier?.value
+    ) || 0;
     const actorId = button.form.elements.commId.value;
     const rollingActor = actorId ? game.actors?.get(actorId) : null;
     const dice = button.form.elements.dicepool.value;
     const skillName = button.form.elements.skill.value;
     const statName = button.form.elements.stat.value;
     const targetModifier = parseInt(
-      button.form.elements.targetModifier.value
-    );
+      button.form.elements.targetModifier?.value
+    ) || 0;
     const observerModifier = parseInt(
-      button.form.elements.observerModifier.value
-    );
+      button.form.elements.observerModifier?.value
+    ) || 0;
     const rollingAs = button.form.elements.rollingAs.value;
     if (
       rollingAs != "observer" &&
@@ -1108,6 +1108,7 @@ static async _onSensor(event, target) {
     if (rollingActor) {
       if (skillName) {
         // We need to look up by name
+        console.log("looking for skill", skillName); //TODO remove
         for (const skill of rollingActor.itemTypes.skill) {
           if (skillName == skill.name) {
             skillMod =
@@ -1124,7 +1125,7 @@ static async _onSensor(event, target) {
       }
       actorName = rollingActor.name;
     }
-    this.actor.rollSensor(
+    this.actor.system.rollSensor(
       actorName,
       targetModifier,
       observerModifier,
@@ -1137,20 +1138,15 @@ static async _onSensor(event, target) {
   };
 
 
-  this.popUpDialog = new ValidatedDialog(
-    {
+  const _proceed = await foundry.applications.api.DialogV2.prompt({
       window: { title: title },
       content: await html,
-      default: "roll",
-      buttons: {
-        roll: {
+      modal: false,
+      rejectClose: false,
+      ok: {
           label: game.i18n.localize("swnr.chat.roll"),
           callback: _rollForm,
-        },
       },
-    },
-    {
-      classes: ["swnr"],
     }
   );
   
@@ -1224,19 +1220,19 @@ static async _onSpike(event, target) {
 
   const _rollForm = async (_event, button, _html) => {
     const mod = parseInt(
-      button.form.elements.modifier.value
-    );
+      button.form.elements.modifier?.value
+    ) || 0;
     const pilotId = button.form.elements.pilotId.value;
     const pilot = pilotId ? game.actors?.get(pilotId) : null;
     const dice = button.form.elements.dicepool.value;
     const skillName = button.form.elements.skill.value;
     const statName = button.form.elements.stat.value;
     const difficulty = parseInt(
-      button.form.elements.difficulty.value
-    );
+      button.form.elements.difficulty?.value
+    ) || 0;
     const travelDays = parseInt(
-      button.form.elements.travelDays.value
-    );
+      button.form.elements.travelDays?.value
+    ) || 0;
     let skillMod = 0;
     let statMod = 0;
     let pilotName = "";
