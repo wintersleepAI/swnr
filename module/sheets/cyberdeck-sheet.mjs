@@ -506,7 +506,40 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   async _onDropActor(event, data) {
+    // Check ownership of the current actor
     if (!this.actor.isOwner) return false;
+  
+    // Retrieve the Actor UUID from the data
+    const uuid = data.uuid;
+  
+    // Ensure the UUID exists
+    if (!uuid) {
+      console.error("No UUID found in the dropped data");
+      return false;
+    }
+
+    try {
+      // Retrieve the actor document using the UUID
+      const droppedActor = await fromUuid(uuid);
+  
+      // Check if the retrieved document is an Actor
+      if (!droppedActor || !droppedActor instanceof Actor) {
+        console.error("The dropped data is not an actor.");
+        return false;
+      }
+      
+      // Check if the refreived document is a Character or NPC.
+       if(droppedActor.type != 'character' && droppedActor.type != 'npc')
+       {
+         console.error("The dropped actor is not a character or an npc.");
+         return false;
+       }
+
+      this.actor.system.hackerID = droppedActor.id;
+       console.log(this.actor);
+    } catch (err) {
+      console.error("Error retrieving actor from UUID:", err);
+    }
   }
 
   /* -------------------------------------------- */
