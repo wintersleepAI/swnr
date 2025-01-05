@@ -969,6 +969,8 @@ static async _onRepair(event, target) {
       content: content,
     };
     ChatMessage.create(chatData);
+  } else {
+    ui.notifications.info("Nothing to repair");
   }
 }
 
