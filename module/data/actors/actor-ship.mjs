@@ -277,7 +277,7 @@ export default class SWNShip extends SWNVehicleBase {
   
     this.useDaysOfLifeSupport(travelDays);
     if (travelDays > 0) {
-      let fuel = this.system.fuel.value;
+      let fuel = this.fuel.value;
       fuel -= 1;
       await this.parent.update({ "system.fuel.value": fuel });
       if (fuel <= 0) {

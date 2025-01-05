@@ -749,7 +749,7 @@ static async _onAddCurrency(event, target) {
   const template = "systems/swnr/templates/dialogs/add-currency.hbs";
   const data = {};
   const html = await renderTemplate(template, data);
-  this.popUpDialog?.close();
+
   
   // show a dialog prompting for amount of change to add
   const amount = await new Promise((resolve) => {
@@ -1066,23 +1066,22 @@ static async _onSensor(event, target) {
 
   const template = "systems/swnr/templates/dialogs/roll-sensor.hbs";
   const html = renderTemplate(template, dialogData);
-  const _rollForm = async (html) => {
-    const form = html[0].querySelector("form");
+  const _rollForm = async (_event, button, html) => {
     const mod = parseInt(
-      form.querySelector('[name="modifier"]')?.value
+      button.form.elements.modifier.value
     );
-    const actorId = form.querySelector('[name="commId"]')?.value;
+    const actorId = button.form.elements.commId.value;
     const rollingActor = actorId ? game.actors?.get(actorId) : null;
-    const dice = form.querySelector('[name="dicepool"]').value;
-    const skillName = form.querySelector('[name="skill"]')?.value;
-    const statName = form.querySelector('[name="stat"]')?.value;
+    const dice = button.form.elements.dicepool.value;
+    const skillName = button.form.elements.skill.value;
+    const statName = button.form.elements.stat.value;
     const targetModifier = parseInt(
-      form.querySelector('[name="targetModifier"]')?.value
+      button.form.elements.targetModifier.value
     );
     const observerModifier = parseInt(
-      form.querySelector('[name="observerModifier"]')?.value
+      button.form.elements.observerModifier.value
     );
-    const rollingAs = form.querySelector('[name="rollingAs"]')?.value;
+    const rollingAs = button.form.elements.rollingAs.value;
     if (
       rollingAs != "observer" &&
       rollingAs != "target" &&
@@ -1091,7 +1090,7 @@ static async _onSensor(event, target) {
       ui.notifications?.error("Error with rolling as ");
       return;
     }
-    const rollType = form.querySelector('[name="rollType"]')?.value;
+    const rollType = button.form.elements.rollType.value;
     if (
       rollType != "roll" &&
       rollType != "gmroll" &&
@@ -1135,10 +1134,10 @@ static async _onSensor(event, target) {
     );
   };
 
-  this.popUpDialog?.close();
+
   this.popUpDialog = new ValidatedDialog(
     {
-      title: title,
+      window: { title: title },
       content: await html,
       default: "roll",
       buttons: {
@@ -1152,7 +1151,7 @@ static async _onSensor(event, target) {
       classes: ["swnr"],
     }
   );
-  this.popUpDialog.render(true);
+  
 }
 
 static async _onSpike(event, target) {
@@ -1221,21 +1220,20 @@ static async _onSpike(event, target) {
   const template = "systems/swnr/templates/dialogs/roll-spike.hbs";
   const html = renderTemplate(template, dialogData);
 
-  const _rollForm = async (html) => {
-    const form = html[0].querySelector("form");
+  const _rollForm = async (_event, button, _html) => {
     const mod = parseInt(
-      form.querySelector('[name="modifier"]')?.value
+      button.form.elements.modifier.value
     );
-    const pilotId = form.querySelector('[name="pilotId"]')?.value;
+    const pilotId = button.form.elements.pilotId.value;
     const pilot = pilotId ? game.actors?.get(pilotId) : null;
-    const dice = form.querySelector('[name="dicepool"]').value;
-    const skillName = form.querySelector('[name="skill"]')?.value;
-    const statName = form.querySelector('[name="stat"]')?.value;
+    const dice = button.form.elements.dicepool.value;
+    const skillName = button.form.elements.skill.value;
+    const statName = button.form.elements.stat.value;
     const difficulty = parseInt(
-      form.querySelector('[name="difficulty"]')?.value
+      button.form.elements.difficulty.value
     );
     const travelDays = parseInt(
-      form.querySelector('[name="travelDays"]')?.value
+      button.form.elements.travelDays.value
     );
     let skillMod = 0;
     let statMod = 0;
@@ -1259,7 +1257,7 @@ static async _onSpike(event, target) {
       }
       pilotName = pilot.name;
     }
-    this.actor.rollSpike(
+    this.actor.system.rollSpike(
       pilotId,
       pilotName,
       skillMod,
@@ -1271,24 +1269,19 @@ static async _onSpike(event, target) {
     );
   };
 
-  this.popUpDialog?.close();
-  this.popUpDialog = new ValidatedDialog(
+  const popUpDialog = await foundry.applications.api.DialogV2.prompt(
     {
-      title: title,
+      window: { title: title },
       content: await html,
-      default: "roll",
-      buttons: {
-        roll: {
+      modal: false,
+      rejectClose: false,
+      ok: {
           label: game.i18n.localize("swnr.chat.roll"),
           callback: _rollForm,
-        },
       },
-    },
-    {
-      classes: ["swnr"],
     }
   );
-  this.popUpDialog.render(true);
+  
 }
 
 static async _onRefuel(event, target) {
@@ -1326,21 +1319,21 @@ static async _onSysFailure(event, target) {
   const template = "systems/swnr/templates/dialogs/roll-ship-failure.hbs";
   const html = renderTemplate(template, dialogData);
 
-  const _rollForm = async (html) => {
+  const _rollForm = async (_event, button, html) => {
     const form = html[0].querySelector("form");
-    const incDrive = form.querySelector('[name="inc-drive"]')?.checked
+    const incDrive = button.form.elements.inc-drive?.checked
       ? true
       : false;
-    const incWpn = form.querySelector('[name="inc-wpn"]')?.checked
+    const incWpn = button.form.elements.inc-wpn?.checked
       ? true
       : false;
-    const incFit = form.querySelector('[name="inc-fit"]')?.checked
+    const incFit = button.form.elements.inc-fit?.checked
       ? true
       : false;
-    const incDef = form.querySelector('[name="inc-def"]')?.checked
+    const incDef = button.form.elements.inc-def?.checked
       ? true
       : false;
-    const whatToRoll = form.querySelector('[name="what"]')?.value;
+    const whatToRoll = button.form.elements.what.value;
 
     const sysToInclude = [];
     if (incDrive) {
@@ -1358,24 +1351,18 @@ static async _onSysFailure(event, target) {
     this.actor.rollSystemFailure(sysToInclude, whatToRoll);
   };
 
-  this.popUpDialog?.close();
-  this.popUpDialog = new ValidatedDialog(
+  const popUpDialog = await foundry.applications.api.DialogV2.prompt(
     {
-      title: title,
+      window: { title: title },
       content: await html,
-      default: "roll",
-      buttons: {
-        roll: {
+      modal: false,
+      rejectClose: false,
+      ok: {
           label: game.i18n.localize("swnr.chat.roll"),
           callback: _rollForm,
-        },
       },
-    },
-    {
-      classes: ["swnr"],
     }
   );
-  this.popUpDialog.render(true);
 }
 
 static _onCalcCost(event, target) {
@@ -1516,7 +1503,7 @@ static async _onShipAction(event, target) {
         buttons: {
           setOrder: {
             label: "Set Order",
-            callback: async (html) => {
+            callback: async (_event, button, html) => {
               const order = html.find("#deptOrder");
               const orderArr = [];
               order.children(".role-order").each(function () {
