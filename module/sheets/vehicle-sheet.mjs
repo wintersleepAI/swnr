@@ -1307,7 +1307,7 @@ static async _onRefuel(event, target) {
 
 static _onCrisis(event, target) {
   event.preventDefault();
-  this.actor.rollCrisis(); //TODO
+  this.actor.system.rollCrisis();
 }
 
 static async _onSysFailure(event, target) {
