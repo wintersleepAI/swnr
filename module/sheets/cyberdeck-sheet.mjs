@@ -21,8 +21,8 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
   static DEFAULT_OPTIONS = {
     classes: ['swnr', 'actor'],
     position: {
-      width: 600,
-      height: 600,
+      width: 800,
+      height: 1000,
     },
     actions: {
       onEditImage: this._onEditImage,
@@ -167,35 +167,7 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
     // You can just use `this.document.itemTypes` instead
     // if you don't need to subdivide a given type like
     // this sheet does with spells
-    const runners = [];
-    const verbs = [];
-    const subjects = [];
-    const dataFiles = [];
-
-    for (let i of this.document.items) {
-      console.log(i.name);
-      console.log(i);
-      console.log(i.system.type);
-      if (i.system.type === 'running') {
-        runners.push(i);
-      } 
-      else if (i.system.type === 'verb') {
-        verbs.push(i); //TODO fix to new array - is this needed? pattern swiped from actor-sheet ~ 20/12/2024 CyborgLlama
-      }
-      else if (i.system.type === 'subject') {
-        subjects.push(i); //TODO fix to new array
-      }
-      else if (i.system.type === 'data') {
-        dataFiles.push(i); //TODO fix to new array
-      }
-    }
-
-    context.runners = runners.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.verbs = verbs.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.subjects = subjects.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.dataFiles = dataFiles.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-
-    console.log("TODO: finish implementation _prepareItems");//TODO
+    console.log("TODO: Implement _prepareItems");//TODO
   }
 
   /**
@@ -302,7 +274,6 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
       // which turns into the dataKey 'system.spellLevel'
       foundry.utils.setProperty(docData, dataKey, value);
     }
-
     // Finally, create the embedded document!
     await docCls.create(docData, { parent: this.actor });
   }
