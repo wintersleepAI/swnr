@@ -28,7 +28,13 @@ export default class SWNShip extends SWNVehicleBase {
     schema.creditPool = SWNShared.requiredNumber(0);
     schema.lastMaintenance = SWNShared.date();
     schema.lastPayment = SWNShared.date();
-    // schema.roles = TODO; // Check with WWN overlap
+    schema.roles = new fields.SchemaField({
+      captain: new fields.DocumentUUIDField(),
+      bridge: new fields.DocumentUUIDField(),
+      engineering: new fields.DocumentUUIDField(),
+      gunner: new fields.DocumentUUIDField(),
+      comms: new fields.DocumentUUIDField(),
+    });
     // schema.cargoCarried = TODO;
     schema.commandPoints = SWNShared.requiredNumber(0);
     schema.npcCommandPoints = SWNShared.requiredNumber(0);

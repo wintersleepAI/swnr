@@ -746,7 +746,7 @@ static async _onAddCurrency(event, target) {
   const currencyType = target.dataset.creditType
 
   // load html variable data for dialog
-  const template = "systems/swnr/templates/dialogs/add-currency.html";
+  const template = "systems/swnr/templates/dialogs/add-currency.hbs";
   const data = {};
   const html = await renderTemplate(template, data);
   this.popUpDialog?.close();
@@ -1055,7 +1055,7 @@ static async _onSensor(event, target) {
     }
   }
   const dialogData = {
-    actor: this.actor.data,
+    actor: this.actor.system,
     defaultSkill1: "Program",
     defaultSkill2: "Tech/Astronautic",
     defaultStat: "int",
@@ -1064,7 +1064,7 @@ static async _onSensor(event, target) {
     crewArray: crewArray,
   };
 
-  const template = "systems/swnr/templates/dialogs/roll-sensor.html";
+  const template = "systems/swnr/templates/dialogs/roll-sensor.hbs";
   const html = renderTemplate(template, dialogData);
   const _rollForm = async (html) => {
     const form = html[0].querySelector("form");
@@ -1108,7 +1108,7 @@ static async _onSensor(event, target) {
       if (skillName) {
         // We need to look up by name
         for (const skill of rollingActor.itemTypes.skill) {
-          if (skillName == skill.data.name) {
+          if (skillName == skill.name) {
             skillMod =
               skill.system["rank"] < 0 ? -1 : skill.system["rank"];
           }
@@ -1208,7 +1208,7 @@ static async _onSpike(event, target) {
   }
 
   const dialogData = {
-    actor: this.actor.data,
+    actor: this.actor.system,
     defaultSkill1: "Pilot",
     defaultSkill2: "Navigation",
     defaultStat: "int",
@@ -1218,7 +1218,7 @@ static async _onSpike(event, target) {
     baseDifficulty: 7,
   };
 
-  const template = "systems/swnr/templates/dialogs/roll-spike.html";
+  const template = "systems/swnr/templates/dialogs/roll-spike.hbs";
   const html = renderTemplate(template, dialogData);
 
   const _rollForm = async (html) => {
@@ -1244,7 +1244,7 @@ static async _onSpike(event, target) {
       if (skillName) {
         // We need to look up by name
         for (const skill of pilot.itemTypes.skill) {
-          if (skillName == skill.data.name) {
+          if (skillName == skill.name) {
             skillMod =
               skill.system["rank"] < 0 ? -1 : skill.system["rank"];
           }
@@ -1323,7 +1323,7 @@ static async _onSysFailure(event, target) {
     actorName: this.actor?.name,
   });
   const dialogData = {};
-  const template = "systems/swnr/templates/dialogs/roll-ship-failure.html";
+  const template = "systems/swnr/templates/dialogs/roll-ship-failure.hbs";
   const html = renderTemplate(template, dialogData);
 
   const _rollForm = async (html) => {
@@ -1520,7 +1520,7 @@ static async _onShipAction(event, target) {
               const order = html.find("#deptOrder");
               const orderArr = [];
               order.children(".role-order").each(function () {
-                orderArr.push($(this).data("role"));
+                orderArr.push($(this).system("role"));
               });
               if (orderArr.length > 0) {
                 await this.actor.update({ data: { roleOrder: orderArr } });
@@ -1607,7 +1607,7 @@ static async _onShipAction(event, target) {
           foundActor = true;
           if (defaultActor.type == "character") {
             for (const skill of defaultActor.itemTypes.skill) {
-              if (action.skill == skill.data.name) {
+              if (action.skill == skill.name) {
                 skillLevel = skill.system["rank"];
                 dicePool =
                   skill.system["pool"] && skill.system["pool"] != "ask"
