@@ -82,6 +82,9 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     },
     mech: {
       template: 'systems/swnr/templates/actor/vehicle/mech.hbs',
+    },
+    shipCrew: {
+      template: 'systems/swnr/templates/actor/vehicle/ship-crew.hbs',
     }
   };
 
@@ -101,7 +104,7 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
         options.defaultTab = 'mech';
         break;
       case 'ship':
-        options.parts.push('ship','effects');
+        options.parts.push('ship','effects','shipCrew');
         options.defaultTab = 'ship';
         break;
       case 'drone':
@@ -153,6 +156,7 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     console.log("TODO: Implement _preparePartContext");//TODO
     switch (partId) {
       case 'ship':
+      case 'shipCrew':
       case 'vehicle':
       case 'drone':
       case 'mech':
@@ -228,6 +232,10 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
         case 'ship':
           tab.id = 'ship';
           tab.label += 'Ship';
+          break;
+        case 'shipCrew':
+          tab.id = 'shipCrew';
+          tab.label += 'Crew';
           break;
         case 'vehicle':
           tab.id = 'vehicle';
