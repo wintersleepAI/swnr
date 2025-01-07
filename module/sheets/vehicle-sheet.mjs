@@ -85,6 +85,9 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     },
     shipCrew: {
       template: 'systems/swnr/templates/actor/vehicle/ship-crew.hbs',
+    },
+    crewList: {
+      template: 'systems/swnr/templates/actor/fragments/crew-list.hbs',
     }
   };
 
@@ -122,6 +125,15 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
 
   /** @override */
   async _prepareContext(options) {
+    let crewArray = [];
+    if (this.actor.system.crewMembers) {
+      for (let crew of this.actor.system.crewMembers) {
+        let actor = game.actors.get(crew);
+        if (actor) {
+          crewArray.push(actor);
+        } 
+      }
+    }
     // Output initialization
     const context = {
       // Validates both permissions and compendium status
@@ -142,6 +154,7 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
       gameSettings: getGameSettings(),
       headerWidget: headerFieldWidget.bind(this),
       groupWidget: groupFieldWidget.bind(this),
+      crewArray: crewArray
     };
 
     // Offloading context prep to a helper function

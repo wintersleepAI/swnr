@@ -1,7 +1,124 @@
 <section class='tab ship shipCrew sheet-body {{tab.cssClass}}' data-group='primary' data-tab='shipCrew'>
- CREW
- {{#each system.crewMembers as |crewMember|}}
-  {{ crewMember }} 
-   {{!-- {{> "systems/swnr/templates/actor/fragments/crew-member.hbs" crewMember=crewMember}} --}}
- {{/each}}
+  <div class="grid grid-cols-2">
+    <div class="gap-2"><!-- left col-->
+      <div class="stations">
+        <div>
+          <li class="item-titles flexrow">
+            <div class="role-name">{{localize 'swnr.sheet.ship.station.role'}}</div>
+
+            <div class="role-crew">{{localize 'swnr.sheet.ship.station.crew'}}</div>
+          </li>
+          <ol class="item-list">
+            <li class="item-entry">
+              <div class="item flexrow" data-item-id="role-bridge">
+                <div>
+                  {{localize 'swnr.sheet.ship.station.bridge'}}
+                </div>
+                <div>
+                  <select name="system.roles.bridge"
+                    class="">
+                    {{#select actor.system.roles.bridge}}
+                    <option value=""></option>
+                    {{#each crewArray as | crew id| }}
+                    <option value="{{crew.id}}">{{crew.name}}</option>
+                    {{/each}}
+                    {{/select}}
+                  </select>
+                </div>
+              </div>
+            </li>
+            <li class="item-entry">
+              <div class="item flexrow" data-item-id="role-captain">
+                <div>
+                  {{localize 'swnr.sheet.ship.station.captain'}}
+                </div>
+                <div>
+                  <select name="system.roles.captain"
+                    class="">
+                    {{#select actor.system.roles.captain}}
+                    <option value=""></option>
+                    {{#each crewArray as | crew id| }}
+                    <option value="{{crew.id}}">{{crew.name}}</option>
+                    {{/each}}
+                    {{/select}}
+                  </select>
+                </div>
+              </div>
+            </li>
+            <li class="item-entry">
+              <div class="item flexrow" data-item-id="role-comms">
+                <div>
+                  {{localize 'swnr.sheet.ship.station.comms'}}
+                </div>
+                <div>
+                  <select name="system.roles.comms"
+                    class="">
+                    {{#select actor.system.roles.comms}}
+                    <option value=""></option>
+                    {{#each crewArray as | crew id| }}
+                    <option value="{{crew.id}}">{{crew.name}}</option>
+                    {{/each}}
+                    {{/select}}
+                  </select>
+                </div>
+              </div>
+            </li>
+            <li class="item-entry">
+              <div class="item flexrow" data-item-id="role-engineering">
+                <div>
+                  {{localize 'swnr.sheet.ship.station.engineering'}}
+                </div>
+                <div>
+                  <select name="system.roles.engineering"
+                    class="">
+                    {{#select actor.system.roles.engineering}}
+                    <option value=""></option>
+                    {{#each crewArray as | crew id| }}
+                    <option value="{{crew.id}}">{{crew.name}}</option>
+                    {{/each}}
+                    {{/select}}
+                  </select>
+                </div>
+              </div>
+            </li>
+            <li class="item-entry">
+              <div class="item flexrow" data-item-id="role-gunnery">
+                <div>
+                  {{localize 'swnr.sheet.ship.station.gunnery'}}
+                </div>
+                <div>
+                  <select name="system.roles.gunnery"
+                    class="">
+                    {{#select actor.system.roles.gunnery}}
+                    <option value=""></option>
+                    {{#each crewArray as | crew id| }}
+                    <option value="{{crew.id}}">{{crew.name}}</option>
+                    {{/each}}
+                    {{/select}}
+                  </select>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div><!-- end stations-->
+    </div>
+    <div> <!-- right col: crew list -->
+      {{>
+      "systems/swnr/templates/actor/fragments/crew-list.hbs"
+      type=actor.type crewArray=crewArray
+      }}
+      <div class="">
+        {{localize 'swnr.sheet.ship.crew-skill-bonus'}}:
+        {{formInput systemFields.crewSkillBonus value=system.crewSkillBonus}}
+          <a class="item-control" title='{{localize 'swnr.sheet.roll-skill'}}'>
+            <i class="fas fa-dice"></i></a>
+          <span class="">
+          {{localize 'swnr.sheet.ship.crew-skill-bonus-note'}}                      
+          </span>
+      </div>
+    </div>
+
+
+  </div>
 </section>
