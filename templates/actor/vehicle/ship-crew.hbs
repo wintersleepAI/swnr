@@ -1,3 +1,7 @@
 <section class='tab ship shipCrew sheet-body {{tab.cssClass}}' data-group='primary' data-tab='shipCrew'>
  CREW
+ {{#each system.crewMembers as |crewMember|}}
+  {{ crewMember }} 
+   {{!-- {{> "systems/swnr/templates/actor/fragments/crew-member.hbs" crewMember=crewMember}} --}}
+ {{/each}}
 </section>

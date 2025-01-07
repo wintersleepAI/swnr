@@ -54,7 +54,7 @@ export default class SWNRResource  extends foundry.abstract.TypeDataModel {
     schema.armor = SWNShared.resourceField(1,1);
     schema.speed = SWNShared.requiredNumber(1);
     schema.crew = SWNShared.rangeResourceField(1,1,1);
-    schema.crewMembers = new fields.ArrayField(new fields.DocumentUUIDField());
+    schema.crewMembers = new fields.ArrayField(new fields.DocumentIdField());
     schema.tl = SWNShared.requiredNumber(5);
 
     schema.description = new fields.HTMLField();
