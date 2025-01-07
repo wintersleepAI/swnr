@@ -192,3 +192,27 @@ SWN.featureTypes = {
   edge: 'swnr.featureTypes.edge',
   feature: 'swnr.featureTypes.feature'
 }
+
+SWN.itemIconPath = "systems/swnr/assets/icons/game-icons.net/item-icons";
+SWN.actorIconPath = "systems/swnr/assets/icons";
+
+SWN.defaultImg = {
+  shipWeapon: "sinusoidal-beam.svg",
+  shipDefense: "bubble-field.svg",
+  shipFitting: "power-generator.svg",
+  cyberware: "cyber-eye.svg",
+  focus: "reticule.svg",
+  feature: "reticule.svg",
+  armor: "armor-white.svg",
+  weapon: "weapon-white.svg",
+  power: "psychic-waves-white.svg",
+  skill: "book-white.svg",
+  edge: "edge.svg",
+  program: "program.svg",
+  drone: "drone.png",
+  vehicle: "vehicle.png",
+  ship: "spaceship.png",
+  mech: "mech.png",
+  cyberdeck: "cyberdeck.png",
+  faction: "faction.png",
+};

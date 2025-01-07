@@ -41,4 +41,20 @@ export class SWNActor extends Actor {
   getRollData() {
     return { ...super.getRollData(), ...(this.system.getRollData?.() ?? null) };
   }
+
+  /**
+  * @override
+  * Override the standard permission test for an Item.
+  * Determine default artwork based on the provided item data.
+  * @param {ItemData} itemData  The source item data.
+  * @returns {{img: string}}    Candidate item image.
+  */
+  static getDefaultArtwork(itemData) {
+    let itemType = itemData.type;
+    if (itemType in CONFIG.SWN.defaultImg) {
+      return { img: `${CONFIG.SWN.actorIconPath}/${CONFIG.SWN.defaultImg[itemType]}` };
+    } else {
+      return { img: this.DEFAULT_ICON };
+    }
+  }
 }

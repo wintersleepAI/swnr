@@ -21,6 +21,7 @@ export default class SWNSkill extends SWNItemBase {
     schema.defaultStat = SWNShared.stats("ask", false, true);
 
     schema.pool = SWNShared.stringChoices("2D6", {
+      "ask": "swnr.sheet.ask",
       "2D6": "2D6",
       "3D6": "3D6",
       "4D6": "4D6"
