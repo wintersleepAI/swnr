@@ -6,7 +6,7 @@
       <label for="skill">{{localize 'swnr.sheet.skill'}}: </label>
       <select name="skill">
         {{#each skills }}
-        <option value="{{this.id}}">{{this.name}} {{this.data.data.rank}}</option>
+        <option value="{{this.id}}">{{this.name}} {{this.system.rank}}</option>
         {{/each}}
       </select>
     </div>
@@ -16,7 +16,7 @@
       <label for="stat">{{localize 'swnr.sheet.stats'}}: </label>
       <select name="stat">
         {{#select defaultStat}}
-        {{#each actor.data.data.stats as |box name |}}
+        {{#each actor.system.stats as |box name |}}
         <option value="{{name}}">
           {{localize (concat "swnr.stat.long." name)}}
           {{numberFormat box.mod decimals=0 sign=true}}

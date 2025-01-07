@@ -45,7 +45,7 @@
       <label for="stat">{{localize 'swnr.sheet.stats'}}: </label>
       <select name="stat">
         {{#select defaultStat}}
-        {{#each comm.data.data.stats as |box name |}}
+        {{#each comm.system.stats as |box name |}}
         <option value="{{name}}">{{localize (concat "swnr.stat.long." name)}}</option>
         {{/each}}
         {{/select}}

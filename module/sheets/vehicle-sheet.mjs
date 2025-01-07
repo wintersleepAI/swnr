@@ -614,6 +614,31 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
    */
   async _onDropActor(event, data) {
     if (!this.actor.isOwner) return false;
+    //dropped actor
+    let actor = fromUuidSync(data.uuid);
+    // Only allow dropping of npc or character actors
+    if (actor.type !== 'npc' && actor.type !== 'character') {
+      ui.notifications.error("Only NPC or Character actors can be dropped onto vehicle.");
+      return false;
+    }
+    const actorId = actor.id;
+    if (this.actor.type === 'ship' || this.actor.type === 'vehicle') {
+      //Multi-crew vehicle
+      let crewMembers = this.actor.system.crewMembers;
+      if (crewMembers.indexOf(actorId) == -1) {
+        crewMembers.push(actorId);
+        let crewCount = this.actor.system.crew.current + 1;
+        await this.actor.update(
+          { system: {
+            crewMembers: crewMembers,
+            crew: { current: crewCount }
+          }
+        });
+      }
+    } else {
+      //Single pilot vehicle
+      ui.notifications.error("TODO");
+    }
   }
 
   /* -------------------------------------------- */
@@ -794,7 +819,7 @@ static async _onAddCurrency(event, target) {
   } else {
     // this is our valid input scenario
     await this.actor.update({
-      data: {
+      system: {
         [currencyType]: this.actor.system[currencyType] + parseInt(await amount)
       }
     });
