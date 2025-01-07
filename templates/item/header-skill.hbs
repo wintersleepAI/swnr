@@ -20,20 +20,24 @@
             placeholder='Name'
           />
         </div>
-        <div style='display: flex; gap: 16px; padding-top: 16px;'>
-          <div class='resource' style='flex: 1;'>
+        <div class="grid grid-3col">
+          <div class='resource'>
             {{! stat}}
             {{formGroup systemFields.rank value=system.rank localize=true}}
           </div>
-          <div class='resource' style='flex: 1;'>
+          <div class='resource'>
             {{! stat}}
             {{formGroup systemFields.pool value=system.pool localize=true}}
           </div>
-          <div class='resource' style='flex: 1;'>
+          <div class='resource'>
             {{! stat}}
             {{formGroup systemFields.defaultStat value=system.defaultStat localize=true}}
           </div>
-          <div class='resource' style='flex: 1;'>
+          <div class='resource'>
+            {{! stat}}
+            {{formGroup systemFields.source value=system.source localize=true}}
+          </div>
+          <div class='resource grid-span-3 thin-bar' style="text-align:right;">
             {{! remember}}
             {{formGroup systemFields.remember.fields.use value=system.remember.use localize=true}}
           </div>
