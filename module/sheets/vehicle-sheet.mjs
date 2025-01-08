@@ -44,7 +44,10 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
       payMaintenance: this._onMaintenance,
       creditsChange: this._onAddCurrency,
       resourceDelete: this._onResourceDelete,
-      resourceCreate: this._onResourceCreate
+      resourceCreate: this._onResourceCreate,
+      crewDelete: this._onCrewDelete,
+      crewRoll: this._onCrewRoll,
+      crewShow: this._onCrewShow
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -870,6 +873,111 @@ static async _onResourceCreate(event, target) {
   await this.actor.update({
     "system.cargoCarried": resourceList,
   });
+}
+
+static async _onCrewDelete(event, target) {
+  event.preventDefault();
+  const actorId = target.dataset.crewId;
+}
+
+static async _onCrewShow(event, target) {
+  event.preventDefault();
+  const actorId = target.dataset.crewId;
+  const crewActor = game.actors?.get(actorId);
+  crewActor?.sheet?.render(true);
+}
+
+static async _onCrewRoll(event, target) {
+  event.preventDefault();
+  const actorId = target.dataset.crewId;
+  const crewActor = game.actors?.get(actorId);
+  if (!crewActor) {
+    ui.notifications?.error(`$Crew nameno longer exists`);
+    return;
+  }
+  const skills = crewActor.itemTypes.skill;
+  const isChar = crewActor.type == "character" ? true : false;
+  const dialogData = {
+    actor: crewActor,
+    skills: skills,
+    isChar,
+  };
+  const template = "systems/swnr/templates/dialogs/roll-skill-crew.hbs";
+  const html = await renderTemplate(template, dialogData);
+
+  const _rollForm = async (html: HTMLFormElement) => {
+    const rollMode = game.settings.get("core", "rollMode");
+    const form = <HTMLFormElement>html[0].querySelector("form");
+    const dice = (<HTMLSelectElement>form.querySelector('[name="dicepool"]'))
+      .value;
+    const modifier = parseInt(
+      (<HTMLInputElement>form.querySelector('[name="modifier"]'))?.value
+    );
+    const skillId = (<HTMLSelectElement>form.querySelector('[name="skill"]'))
+      ?.value;
+    const skill = crewActor.getEmbeddedDocument(
+      "Item",
+      skillId
+    ) as SWNRBaseItem<"skill">;
+    const useNPCSkillBonus = (<HTMLInputElement>(
+      form.querySelector('[name="useNPCSkillBonus"]')
+    ))?.checked
+      ? true
+      : false;
+    const npcSkillBonus =
+      useNPCSkillBonus && crewActor.type == "npc"
+        ? crewActor.system.skillBonus
+        : 0;
+    const skillBonus = skill ? skill.system.rank : npcSkillBonus;
+    const statName = (<HTMLSelectElement>form.querySelector('[name="stat"]'))
+      ?.value;
+    const stat = crewActor.system["stats"]?.[statName] || {
+      mod: 0,
+    };
+    const formula = `${dice} + @stat + @skillBonus + @modifier`;
+    const roll = new Roll(formula, {
+      skillBonus,
+      modifier,
+      stat: stat.mod,
+    });
+    const skillName = skill ? skill.name : "No Skill";
+    const statNameDisply = statName
+      ? game.i18n.localize("swnr.stat.short." + statName)
+      : "No Stat";
+    const title = `${game.i18n.localize(
+      "swnr.chat.skillCheck"
+    )}: ${statNameDisply}/${skillName}`;
+    await roll.roll({ async: true });
+    roll.toMessage(
+      {
+        speaker: { alias: crewActor.name },
+        flavor: title,
+      },
+      { rollMode }
+    );
+  };
+
+  this.popUpDialog?.close();
+  this.popUpDialog = new ValidatedDialog(
+    {
+      title: game.i18n.format("swnr.dialog.skillRoll", {
+        actorName: crewActor?.name,
+      }),
+      content: html,
+      default: "roll",
+      buttons: {
+        roll: {
+          label: game.i18n.localize("swnr.chat.roll"),
+          callback: _rollForm,
+        },
+      },
+    },
+    {
+      classes: ["swnr"],
+    }
+  );
+  this.popUpDialog?.render(true);
+}
 }
 
 static async _onPayment(event, target) {
