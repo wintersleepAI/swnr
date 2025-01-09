@@ -878,6 +878,47 @@ static async _onResourceCreate(event, target) {
 static async _onCrewDelete(event, target) {
   event.preventDefault();
   const actorId = target.dataset.crewId;
+  let crewMembers = this.actor.system.crewMembers;
+  //Only remove if there
+  const idx = crewMembers.indexOf(actorId);
+  if (idx == -1) {
+    ui.notifications?.error("Crew member not found");
+  } else {
+    crewMembers.splice(idx, 1);
+    let crew = this.actor.system.crew.current;
+    crew -= 1;
+    if (this.actor.system.roles) {
+      let roles = {...this.actor.system.roles};
+      if (roles.captain == actorId) {
+        roles.captain = null;
+      }
+      if (roles.comms == actorId) {
+        roles.comms = null;
+      }
+      if (roles.engineering == actorId) {
+        roles.engineering = null;
+      }
+      if (roles.gunnery == actorId) {
+        roles.gunnery = null;
+      }
+      if (roles.bridge == actorId) {
+        roles.bridge = null;
+      }
+      await this.actor.update({
+        "system.crew.current": crew,
+        "system.crewMembers": crewMembers,
+        "system.roles": roles,
+      });
+    } else {
+      await this.actor.update({
+        "system.crew.current": crew,
+        "system.crewMembers": crewMembers,
+      });
+      if (this.actor.type == "drone") {
+        ui.notifications.info("Check character sheet for removing drone");
+      }
+    }
+  }
 }
 
 static async _onCrewShow(event, target) {
@@ -892,7 +933,7 @@ static async _onCrewRoll(event, target) {
   const actorId = target.dataset.crewId;
   const crewActor = game.actors?.get(actorId);
   if (!crewActor) {
-    ui.notifications?.error(`$Crew nameno longer exists`);
+    ui.notifications?.error(`Crew no longer exists`);
     return;
   }
   const skills = crewActor.itemTypes.skill;
@@ -905,31 +946,25 @@ static async _onCrewRoll(event, target) {
   const template = "systems/swnr/templates/dialogs/roll-skill-crew.hbs";
   const html = await renderTemplate(template, dialogData);
 
-  const _rollForm = async (html: HTMLFormElement) => {
+  const _rollForm = async (_event, button, html) => {
     const rollMode = game.settings.get("core", "rollMode");
-    const form = <HTMLFormElement>html[0].querySelector("form");
-    const dice = (<HTMLSelectElement>form.querySelector('[name="dicepool"]'))
-      .value;
+    const dice = button.form.elements.dicepool.value;
     const modifier = parseInt(
-      (<HTMLInputElement>form.querySelector('[name="modifier"]'))?.value
-    );
-    const skillId = (<HTMLSelectElement>form.querySelector('[name="skill"]'))
-      ?.value;
+      button.form.elements.modifier?.value
+    ) || 0;
+    const skillId = button.form.elements.skill?.value;
     const skill = crewActor.getEmbeddedDocument(
       "Item",
       skillId
-    ) as SWNRBaseItem<"skill">;
-    const useNPCSkillBonus = (<HTMLInputElement>(
-      form.querySelector('[name="useNPCSkillBonus"]')
-    ))?.checked
-      ? true
-      : false;
+    );
+    const useNPCSkillBonus =  button.form.elements.useNPCSkillBonus?.checked
+      ? true : false;
     const npcSkillBonus =
       useNPCSkillBonus && crewActor.type == "npc"
         ? crewActor.system.skillBonus
         : 0;
     const skillBonus = skill ? skill.system.rank : npcSkillBonus;
-    const statName = (<HTMLSelectElement>form.querySelector('[name="stat"]'))
+    const statName = button.form.elements.stat
       ?.value;
     const stat = crewActor.system["stats"]?.[statName] || {
       mod: 0,
@@ -957,27 +992,18 @@ static async _onCrewRoll(event, target) {
     );
   };
 
-  this.popUpDialog?.close();
-  this.popUpDialog = new ValidatedDialog(
-    {
-      title: game.i18n.format("swnr.dialog.skillRoll", {
-        actorName: crewActor?.name,
-      }),
-      content: html,
-      default: "roll",
-      buttons: {
-        roll: {
-          label: game.i18n.localize("swnr.chat.roll"),
-          callback: _rollForm,
-        },
-      },
+  const d = await foundry.applications.api.DialogV2.prompt({
+    window: { title: game.i18n.format("swnr.dialog.skillRoll", {
+      actorName: crewActor?.name,
+    })},
+    content: html,
+    modal: true,
+    rejectClose: false,
+    ok: {
+      label: game.i18n.localize("swnr.chat.roll"),
+      callback: _rollForm,
     },
-    {
-      classes: ["swnr"],
-    }
-  );
-  this.popUpDialog?.render(true);
-}
+  });
 }
 
 static async _onPayment(event, target) {
