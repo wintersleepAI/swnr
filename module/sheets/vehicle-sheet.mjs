@@ -91,6 +91,12 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     },
     crewList: {
       template: 'systems/swnr/templates/actor/fragments/crew-list.hbs',
+    },
+    shipCombat: {
+      template: 'systems/swnr/templates/actor/vehicle/ship-combat.hbs',
+    },
+    shipCargo: {
+      template: 'systems/swnr/templates/actor/vehicle/ship-cargo.hbs',
     }
   };
 
@@ -110,8 +116,8 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
         options.defaultTab = 'mech';
         break;
       case 'ship':
-        options.parts.push('ship','effects','shipCrew');
-        options.defaultTab = 'ship';
+        options.parts.push('shipCombat','ship','shipCrew','shipCargo','effects');
+        options.defaultTab = 'shipCombat';
         break;
       case 'drone':
         options.parts.push('drone','effects');
@@ -173,6 +179,8 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     switch (partId) {
       case 'ship':
       case 'shipCrew':
+      case 'shipCombat':
+      case 'shipCargo':
       case 'vehicle':
       case 'drone':
       case 'mech':
@@ -252,6 +260,14 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
         case 'shipCrew':
           tab.id = 'shipCrew';
           tab.label += 'Crew';
+          break;
+        case 'shipCargo':
+          tab.id = 'shipCargo';
+          tab.label += 'Cargo';
+          break;
+        case 'shipCombat':
+          tab.id = 'shipCombat';
+          tab.label += 'Combat';
           break;
         case 'vehicle':
           tab.id = 'vehicle';
