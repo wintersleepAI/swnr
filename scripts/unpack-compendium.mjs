@@ -5,15 +5,16 @@ import path from 'path';
 const MODULE_ID = process.cwd();
 const IGNORE = [ '.gitattributes', '.DS_Store' ];
 
-fs.readdir(`${MODULE_ID}/packs`)
+fs.readdir(`${MODULE_ID}/packs`, {withFileTypes: true, recursive: true})
+    .filter(file => file.isDirectory())
     .then(packs => {
         for (const pack of packs) {
-            if (IGNORE.includes(pack)) {
+            if (IGNORE.includes(pack.name)) {
                 continue;
             }
 
             console.log(`Unpacking ${pack}`);
-            const directory = `${MODULE_ID}/src/packs/${pack}`;
+            const directory = `${MODULE_ID}/src/packs/${pack.name}`;
 
             // Delete all the pack files in the source directory.
             fs.readdir(directory)
@@ -22,30 +23,33 @@ fs.readdir(`${MODULE_ID}/packs`)
                         fs.unlink(path.join(directory, file))
                             .catch(err => {
                                 if (err.code === 'ENOENT') {
-                                    console.log(`No files inside of ${pack}`);
+                                    console.log(`No files inside of ${pack.name}`);
                                 } else {
                                     throw err;
                                 }
-                            });
+                            }
+                        );
                     }
                 })
                 .catch(err => {
                     if (err.code === 'ENOENT') {
-                        console.log(`No files inside of ${pack}`);
+                        console.log(`No files inside of ${pack.name}`);
                     } else {
                         throw err;
                     }
                 });
 
             extractPack(
-                `${MODULE_ID}/packs/${pack}`,
-                `${MODULE_ID}/src/packs/${pack}`,
+                `${MODULE_ID}/packs/${pack.name}`,
+                `${MODULE_ID}/src/packs/${pack.name}`,
                 {
-                    transformName: transformName,
-                })
-                .catch(err => {
-                    console.log(`Error extracting ${pack}: ${err}`);
-                });
+                    yaml: true,
+                    transformName,
+                }
+            )
+            .catch(err => {
+                console.log(`Error extracting ${pack.name}: ${err}`);
+            });
         }
     });
 
