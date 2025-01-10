@@ -1,8 +1,19 @@
 <section class='tab ship shipCombat sheet-body {{tab.cssClass}}' data-group='primary' data-tab='shipCombat'>
-  <div class="grid grid-cols-3">
+  <div class="grid grid-3col">
     <div class="resource">
       {{formGroup systemFields.commandPoints value=system.commandPoints localize=true}}
     </div>
+    <div class="resource">
+      <div class="form-group">
+        <label>{{localize "Ship Actions"}}</label>
+        <select name="shipActions" class="shipActions">
+          <option value=""></option>
+          {{#each actions as | action id| }}
+          <option value="{{@key}}">{{action.title}} ({{action.cp}}) {{action.dept}}</option>
+          {{/each}}                      
+        </select>
+      </div>
+   </div>
     <div class="resource">
       {{formGroup systemFields.npcCommandPoints value=system.npcCommandPoints localize=true}}
     </div>

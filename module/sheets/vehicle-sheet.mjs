@@ -163,7 +163,8 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
       gameSettings: getGameSettings(),
       headerWidget: headerFieldWidget.bind(this),
       groupWidget: groupFieldWidget.bind(this),
-      crewArray: crewArray
+      crewArray: crewArray,
+      actions: CONFIG.SWN.shipActions
     };
 
     // Offloading context prep to a helper function
@@ -316,6 +317,7 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     // Foundry comes with a large number of utility classes, e.g. SearchFilter
     // That you may want to implement yourself.
 
+    
     this.element.querySelectorAll("[name='shipActions']").forEach((d) => 
       d.addEventListener('change', this._onShipAction.bind(this)));
     this.element.querySelectorAll("[name='data.shipHullType']").forEach((d) => 
@@ -326,7 +328,7 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
 
   /**************
    *
-   *   ACTIONS
+   *   CONFIG.SWN.shipActions
    *
    **************/
 
@@ -858,7 +860,7 @@ static async _onAddCurrency(event, target) {
   }
 }
 
-static async _onResourceName(event, target) {
+async _onResourceName(event, target) {
   event.preventDefault();
   event.stopPropagation();
   const value = target?.value;
@@ -1087,7 +1089,7 @@ static async _onPay(event, paymentType) {
   this.actor.setScheduledDate(dateObject, paymentType);
 }
 
-static async _onHullChange(event, target) {
+async _onHullChange(event) {
   const targetHull = event.target?.value;
 
   if (targetHull) {
@@ -1630,13 +1632,13 @@ static async _setCaptSupport(dept) {
   });
 }
 
-static async _onShipAction(event, target) {
+async _onShipAction(event) {
   event.preventDefault();
   const actionName = event.target?.value;
   if (actionName === "") {
     return;
   }
-  const action = ACTIONS[actionName];
+  const action = CONFIG.SWN.shipActions[actionName];
   if (!action) {
     ui.notifications?.error("There was an error in looking up your action");
     return;
@@ -1727,7 +1729,7 @@ static async _onShipAction(event, target) {
     if (actionsTaken.length > 0) {
       for (const act of actionsTaken) {
         const actTitle =
-          ACTIONS[act] && ACTIONS[act].title ? ACTIONS[act].title : act;
+          CONFIG.SWN.shipActions[act] && CONFIG.SWN.shipActions[act].title ? CONFIG.SWN.shipActions[act].title : act;
         actionsText += `<li>${actTitle}</li>`;
       }
       actionsText += "</ul>";
