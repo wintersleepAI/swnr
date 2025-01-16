@@ -1658,14 +1658,22 @@ async _onShipAction(event) {
   if (actionName == "startRound") {
     let depts = ``;
     let roleOrder = [];
-    if (this.actor.system.roleOrder) {
+    if (this.actor.system.roleOrder && this.actor.system.roleOrder.length > 0) {
       // we may have set an order prior
       roleOrder = this.actor.system.roleOrder;
     } else {
       // get the default list
-      for (const role in this.actor.system.roles) {
-        roleOrder.push(role);
+      // to iterate schema      
+      // for (const role of Object.keys(this.actor.system.schema.fields.roles.fields)) {
+      for (const role of Object.entries(this.actor.system.roles)) {
+        console.log(role);
+        console.log(this.actor.system.roles[role]);
+        roleOrder.push(role[0]);
       }
+    }
+    if (roleOrder.length == 0) {
+      ui.notifications?.error("No roles assigned");
+      return;
     }
     for (const role of roleOrder) {
       let roleName = "";
@@ -1678,8 +1686,8 @@ async _onShipAction(event) {
       depts += `<div class="border p-2 flex border-black role-order" data-role="${role}" data-role-name="${roleName}"><a><i class="fas fa-sort"></i></a>${role}${roleName}</div>`;
     }
     const dialogTemplate = `
-    <div class="flex flex-col -m-2 p-2 pb-4 space-y-2">
-      <h1> Order Departments/Roles </h1>
+    <div class="flex flex-col">
+      <h2> Order Departments/Roles </h2>
       <div class="flex flexrow">
           <div id="deptOrder">
           ${depts}
@@ -1687,36 +1695,29 @@ async _onShipAction(event) {
       </div>
       <script>
       var el = document.getElementById('deptOrder');
-      var sortable = Sortable.create(el);
+      // var sortable = Sortable.create(el);
       </script>
     </div>
     `;
-    new Dialog(
-      {
-        title: "Set Order",
-        content: dialogTemplate,
-        buttons: {
-          setOrder: {
-            label: "Set Order",
-            callback: async (_event, button, html) => {
-              const order = html.find("#deptOrder");
-              const orderArr = [];
-              order.children(".role-order").each(function () {
-                orderArr.push($(this).system("role"));
-              });
-              if (orderArr.length > 0) {
-                await this.actor.update({ data: { roleOrder: orderArr } });
-              }
-            },
-          },
-          close: {
-            label: "Close",
-          },
-        },
-        default: "setOrder",
-      },
-      { classes: ["swnr"] }
-    ).render(true);
+    const d = await foundry.applications.api.DialogV2.prompt({
+      window: { title: "Set Order"},
+      content: dialogTemplate,
+      modal: true,
+      rejectClose: false,
+      ok: {
+        label: "Set Order",
+        callback: async (_event, button, html) => {
+          const order = html.find("#deptOrder");
+          const orderArr = [];
+          order.children(".role-order").each(function () {
+            orderArr.push($(this).system("role"));
+          });
+          if (orderArr.length > 0) {
+            await this.actor.update({ data: { roleOrder: orderArr } });
+          }
+        }
+      }
+    });
     return;
   } else if (actionName == "endRound") {
     // endRound action is special. clear and reset.

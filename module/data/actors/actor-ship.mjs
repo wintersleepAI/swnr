@@ -31,11 +31,11 @@ export default class SWNShip extends SWNVehicleBase {
     schema.lastMaintenance = SWNShared.date();
     schema.lastPayment = SWNShared.date();
     schema.roles = new fields.SchemaField({
-      captain: new fields.DocumentIdField(),
-      bridge: new fields.DocumentIdField(),
-      engineering: new fields.DocumentIdField(),
-      gunner: new fields.DocumentIdField(),
-      comms: new fields.DocumentIdField(),
+      captain: new fields.DocumentIdField({readonly:false}),
+      bridge: new fields.DocumentIdField({readonly:false}),
+      engineering: new fields.DocumentIdField({readonly:false}),
+      gunner: new fields.DocumentIdField({readonly:false}),
+      comms: new fields.DocumentIdField({readonly:false}),
     });
     // schema.cargoCarried = TODO;
     schema.commandPoints = SWNShared.requiredNumber(0);
