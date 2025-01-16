@@ -1755,7 +1755,7 @@ async _onShipAction(event) {
           for (let i = 1; i <= count; i++) {
             const role = button.form.elements[`role${i}`].value;
             if (orderArr.indexOf(role) >= 0) {
-              ui.notifications?.error("Duplicate role found");
+              ui.notifications?.error("Duplicate role found. Not setting order.");
               return;
             }
             orderArr.push(role);
