@@ -2,7 +2,6 @@ import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
 import { headerFieldWidget, groupFieldWidget } from '../helpers/handlebar.mjs';
 
-
 const { api, sheets } = foundry.applications;
 
 /**
@@ -1632,6 +1631,18 @@ static async _setCaptSupport(dept) {
   });
 }
 
+  /* Handles drag-and-drop visual */
+  _handleDragEnter(event){
+    let ele = event.target.closest(".item-row");
+    if(ele) $(ele).addClass('over')
+  }
+  
+  _handleDragLeave(event) {
+    let ele = event.target.closest(".item-row");
+    if(ele) $(ele).removeClass('over')
+  }
+
+
 async _onShipAction(event) {
   event.preventDefault();
   const actionName = event.target?.value;
@@ -1658,6 +1669,7 @@ async _onShipAction(event) {
   if (actionName == "startRound") {
     let depts = ``;
     let roleOrder = [];
+    let roles = [];
     if (this.actor.system.roleOrder && this.actor.system.roleOrder.length > 0) {
       // we may have set an order prior
       roleOrder = this.actor.system.roleOrder;
@@ -1666,8 +1678,6 @@ async _onShipAction(event) {
       // to iterate schema      
       // for (const role of Object.keys(this.actor.system.schema.fields.roles.fields)) {
       for (const role of Object.entries(this.actor.system.roles)) {
-        console.log(role);
-        console.log(this.actor.system.roles[role]);
         roleOrder.push(role[0]);
       }
     }
@@ -1675,6 +1685,7 @@ async _onShipAction(event) {
       ui.notifications?.error("No roles assigned");
       return;
     }
+    let counter = 0;
     for (const role of roleOrder) {
       let roleName = "";
       if (this.actor.system.roles[role]) {
@@ -1684,8 +1695,29 @@ async _onShipAction(event) {
         }
       }
       depts += `<div class="border p-2 flex border-black role-order" data-role="${role}" data-role-name="${roleName}"><a><i class="fas fa-sort"></i></a>${role}${roleName}</div>`;
+      let capRole = role.charAt(0).toUpperCase() + role.slice(1).toLowerCase();
+      let roleTuple = [role, `${capRole}${roleName}`, counter++];
+      roles.push(roleTuple);
     }
-    const dialogTemplate = `
+    let selectDialog = `
+    <div class="flex flex-col">
+      <h2> Order Departments/Roles </h2>
+      <input type="hidden" id="roleCount" value="${roles.length}">
+    `;
+    for (let i = 1; i <= roles.length; i++) {
+      selectDialog += `<div class="flex flexrow"> ${i}: <select id="role${i}">`;
+      for (let j = 0; j < roles.length; j++) {
+        let role = roles[j];
+        let selected = '';
+        if (role[2] == i - 1) {
+          selected = 'selected';
+        }
+        selectDialog += `<option value="${role[0]}" ${selected}>${role[1]}</option>`;
+      }
+      selectDialog += `</select></div>`;
+    }
+    selectDialog += `</div>`;
+    const sortedDialogTemplate = `
     <div class="flex flex-col">
       <h2> Order Departments/Roles </h2>
       <div class="flex flexrow">
@@ -1694,26 +1726,42 @@ async _onShipAction(event) {
           </div>
       </div>
       <script>
+      console.log("hello");
+
       var el = document.getElementById('deptOrder');
+      console.log(el);
+      el.
+      el.find('.role-order').each((i, di) {
+        console.log(di);
+        new Dragster( di );
+        li.addEventListener("dragster:enter", ev => this._handleDragEnter(ev) , false);
+        li.addEventListener("dragster:leave", ev => this._handleDragLeave(ev) , false);
+      });
+
       // var sortable = Sortable.create(el);
       </script>
     </div>
     `;
     const d = await foundry.applications.api.DialogV2.prompt({
       window: { title: "Set Order"},
-      content: dialogTemplate,
+      content: selectDialog,
       modal: true,
       rejectClose: false,
       ok: {
         label: "Set Order",
         callback: async (_event, button, html) => {
-          const order = html.find("#deptOrder");
+          let count = button.form.elements.roleCount.value;
           const orderArr = [];
-          order.children(".role-order").each(function () {
-            orderArr.push($(this).system("role"));
-          });
+          for (let i = 1; i <= count; i++) {
+            const role = button.form.elements[`role${i}`].value;
+            if (orderArr.indexOf(role) >= 0) {
+              ui.notifications?.error("Duplicate role found");
+              return;
+            }
+            orderArr.push(role);
+          }
           if (orderArr.length > 0) {
-            await this.actor.update({ data: { roleOrder: orderArr } });
+            await this.actor.update({ system: { roleOrder: orderArr } });
           }
         }
       }
