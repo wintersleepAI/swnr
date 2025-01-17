@@ -37,7 +37,13 @@ export default class SWNShip extends SWNVehicleBase {
       gunner: new fields.DocumentIdField({readonly:false}),
       comms: new fields.DocumentIdField({readonly:false}),
     });
-    // schema.cargoCarried = TODO;
+    schema.cargoCarried = new fields.ArrayField(
+      new fields.SchemaField({
+        name: SWNShared.requiredString("CargoX"),
+        value: new fields.NumberField({initial: 0, integer: true}),
+        max: new fields.NumberField({initial: 0, integer: true}),
+      })
+    );
     schema.commandPoints = SWNShared.requiredNumber(0);
     schema.npcCommandPoints = SWNShared.requiredNumber(0);
     schema.crewSkillBonus = SWNShared.requiredNumber(0);

@@ -862,9 +862,9 @@ static async _onAddCurrency(event, target) {
 async _onResourceName(event, target) {
   event.preventDefault();
   event.stopPropagation();
-  const value = target?.value;
-  const resourceType = target.dataset.rlType
-  const idx = $(event.currentTarget).parents(".item").data("rlIdx");
+  const value = event.target?.value;
+  const resourceType = event.target.dataset.rlType
+  const idx = event.target.dataset.rlIdx;
   const resourceList = duplicate(this.actor.system.cargoCarried);
   resourceList[idx][resourceType] = value;
   await this.actor.update({ "system.cargoCarried": resourceList });
@@ -873,7 +873,7 @@ async _onResourceName(event, target) {
 static async _onResourceDelete(event, target) {
   event.preventDefault();
   event.stopPropagation();
-  const idx = $(event.currentTarget).parents(".item").data("rlIdx");
+  const idx = target.dataset.rlIdx;
   const resourceList = duplicate(this.actor.system.cargoCarried);
   resourceList.splice(idx, 1);
   await this.actor.update({ "system.cargoCarried": resourceList });
@@ -881,7 +881,6 @@ static async _onResourceDelete(event, target) {
 
 static async _onResourceCreate(event, target) {
   event.preventDefault();
-  // console.log("Changing HP Max", this.actor);
   let resourceList = this.actor.system.cargoCarried;
   if (!resourceList) {
     resourceList = [];
