@@ -96,6 +96,9 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     },
     shipCargo: {
       template: 'systems/swnr/templates/actor/vehicle/ship-cargo.hbs',
+    },
+    carriedGear: {
+      template: 'systems/swnr/templates/actor/fragments/compact-carried-list.hbs'
     }
   };
 

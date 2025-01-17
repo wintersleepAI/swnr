@@ -69,5 +69,15 @@ export default class SWNRResource  extends foundry.abstract.TypeDataModel {
   prepareDerivedData() {
     this.health.percentage = Math.clamp((this.health.value * 100) / this.health.max, 0, 100);
     this.armor.percentage = Math.clamp((this.armor.value * 100) / this.armor.max, 0, 100);
+
+    this.carriedGear = this.parent.items.filter((item) => 
+      item.type === "item" || item.type === "weapon" || item.type === "armor");
+    this.carriedGear.sort((a, b) => {
+      if (a.type == b.type) {
+        return a.name.localeCompare(b.name);
+      } else {
+        return a.type.localeCompare(b.type);
+      }
+    });
   }
 }

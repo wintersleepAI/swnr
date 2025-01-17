@@ -796,6 +796,7 @@
       "rollables": "Rollables",
       "roll-skill": "Roll Skill",
       "hit-dice": "Hit Dice",
+      "carriedGear": "Carried Gear",
       "hd": "Hit Dice per level (without CON mod)",
       "command-points": "Command Points",
       "npc-command-points": "NPC Ship CP",
@@ -1156,7 +1157,8 @@
       "locationReadied": "Readied",
       "range": "Range",
       "favorite": "Favorite",
-      "noEncReadied": "No Encumbrance Readied"
+      "noEncReadied": "No Encumbrance Readied",
+      "type": "Type"
     },
     "weapon": {
       "shock": {
