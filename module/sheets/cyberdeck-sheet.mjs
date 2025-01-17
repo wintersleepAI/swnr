@@ -534,10 +534,8 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
          console.error("The dropped actor is not a character or an npc.");
          return false;
        }
-       console.log(this);
        const droppedActorId = droppedActor.id;
-       this.actor.update("system.hackerId", droppedActorId);
-       console.log(this.actor);
+       this.actor.update({ "system.hackerId": droppedActor });
     } catch (err) {
       console.error("Error retrieving actor from UUID:", err);
     }
