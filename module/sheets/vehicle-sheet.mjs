@@ -104,7 +104,7 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
       template: 'systems/swnr/templates/actor/fragments/vehicle-weapon-table.hbs'
     },
     vehicleFittings: {
-      template: 'systems/swnr/templates/actor/fragments/vehicle-fittings-table.hbs'
+      template: 'systems/swnr/templates/actor/fragments/vehicle-fitting-table.hbs'
     },
     vehicleDefense: {
       template: 'systems/swnr/templates/actor/fragments/vehicle-defense-table.hbs'
