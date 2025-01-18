@@ -1,0 +1,43 @@
+name: Armored Vacc Suit
+type: armor
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024792
+  modifiedTime: 1737230024792
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 0a3569tke8kyp9y7
+system:
+  description: An armored vacc suit has traded off some comfort and flexibility for additional protective thickness. Aside from functioning as a normal vacc suit, it has only half the usual chance to tear when hit by an edged weapon or suit ripper. The choice between armored or standard suits is a common debate in spacer bars.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 2
+  cost: 400
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  ac: 13
+  shield: false
+  use: false
+  meleeAc: 13
+  soak:
+    value: 2
+    max: 2
+  dr: 0
+  traumaDiePenalty: 2
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+effects: []
+_key: '!items!0a3569tke8kyp9y7'

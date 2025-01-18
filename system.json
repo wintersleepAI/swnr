@@ -106,7 +106,248 @@
       "path": "lang/en.json"
     }
   ],
-  "packs": [],
+  "packs": [
+    {
+      "name": "all-items",
+      "label": "All Items",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "ammo-and-power",
+      "label": "Ammo And Power",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "armor",
+      "label": "Armor",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "assets",
+      "label": "Assets",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "bestiary",
+      "label": "Bestiary",
+      "system": "swnr",
+      "type": "Actor"
+    },
+    {
+      "name": "communications",
+      "label": "Communications",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "computing-gear",
+      "label": "Computing Gear",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "cwn-armor",
+      "label": "Cwn Armor",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "cwn-cyberware",
+      "label": "Cwn Cyberware",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "cwn-drone-fittings",
+      "label": "Cwn Drone Fittings",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "cwn-drones",
+      "label": "Cwn Drones",
+      "system": "swnr",
+      "type": "Actor"
+    },
+    {
+      "name": "cwn-edges",
+      "label": "Cwn Edges",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "cwn-foci",
+      "label": "Cwn Foci",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "cwn-items",
+      "label": "Cwn Items",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "cwn-pharmaceuticals",
+      "label": "Cwn Pharmaceuticals",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "cwn-program",
+      "label": "Cwn Program",
+      "system": "swnr",
+      "type": "Actor"
+    },
+    {
+      "name": "cwn-vehicle-fittings",
+      "label": "Cwn Vehicle Fittings",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "cwn-vehicle-weapons",
+      "label": "Cwn Vehicle Weapons",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "cwn-weapons",
+      "label": "Cwn Weapons",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "cyberware",
+      "label": "Cyberware",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "drone-fittings",
+      "label": "Drone Fittings",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "field-equipment",
+      "label": "Field Equipment",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "foci",
+      "label": "Foci",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "heavy",
+      "label": "Heavy",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "melee",
+      "label": "Melee",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "one-roll-backing",
+      "label": "One Roll Backing",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "one-roll-tables",
+      "label": "One Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "pharmaceuticals",
+      "label": "Pharmaceuticals",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "psi-biopsionics",
+      "label": "Psi Biopsionics",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "psi-metapsionics",
+      "label": "Psi Metapsionics",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "psi-precognition",
+      "label": "Psi Precognition",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "psi-telekinesis",
+      "label": "Psi Telekinesis",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "psi-telepathy",
+      "label": "Psi Telepathy",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "psi-teleportation",
+      "label": "Psi Teleportation",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "ranged",
+      "label": "Ranged",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "sample-ships",
+      "label": "Sample Ships",
+      "system": "swnr",
+      "type": "Actor"
+    },
+    {
+      "name": "ship-defense",
+      "label": "Ship Defense",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "ship-fitting",
+      "label": "Ship Fitting",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "ship-weapon",
+      "label": "Ship Weapon",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "tools-and-medical",
+      "label": "Tools And Medical",
+      "system": "swnr",
+      "type": "Item"
+    }
+  ],
   "packFolders": [],
   "socket": false,
   "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",

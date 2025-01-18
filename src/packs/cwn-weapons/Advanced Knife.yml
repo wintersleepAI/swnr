@@ -1,0 +1,61 @@
+name: Advanced Knife
+type: weapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025062
+  modifiedTime: 1737230025062
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: ss3ni6syenqx0c8n
+system:
+  description: Advanced weapons employ modern polymers, sophisticated metallurgy, fractal edges, electro-stun tech, and a small legion of marketers to sell products that are distinctly superior to the plain steel edges of a prior age. An advanced micro-edged butcher knife can go through bone like bamboo and keep an edge for weeks between sharpenings. The more martial offerings go to even greater lengths in their marketing, with some enterprising serial killers and gang enforcers inking exclusivity deals with particular knife manufacturers.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 1
+  cost: 200
+  tl: null
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  stat: str
+  secondStat: dex
+  skill: ask
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  shock:
+    ac: 15
+    dmg: 2
+  ab: 0
+  ammo:
+    burst: false
+    max: 0
+    suppress: false
+    type: none
+    value: 0
+  range:
+    max: 20
+    normal: 10
+  damage: 1d6
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d8
+    rating: 3
+  isTwoHanded: false
+  isNonLethal: false
+effects: []
+_key: '!items!ss3ni6syenqx0c8n'

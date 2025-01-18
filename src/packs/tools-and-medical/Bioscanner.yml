@@ -1,0 +1,34 @@
+name: Bioscanner
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025257
+  modifiedTime: 1737230025257
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 8m5sxfkj95vezg6c
+system:
+  description: 'Bioscanner: While an untrained user can use this tool to discern internal bleeding, gross physical distress, or toxins in a plant or animal, it requires Heal-0 skill to use this tool to its fullest. Such operators can use the bioscanner for a full spectrum of diagnosis and DNA sequencing achievable in minutes. One type A power cell will power it for up to twenty-four hours of regular usage.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 1
+  cost: 300
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!8m5sxfkj95vezg6c'

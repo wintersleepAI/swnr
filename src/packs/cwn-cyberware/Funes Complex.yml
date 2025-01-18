@@ -1,0 +1,29 @@
+name: Funes Complex
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024938
+  modifiedTime: 1737230024938
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: ea6q0c1kghopfgq6
+system:
+  description: A synthetic eidetic memory is granted by this implant, with formalized bodies of knowledge easily cross-referenced and recollected. Once per day, as an Instant action, reroll any failed Int-based skill check. This memory can be difficult to control, however, and unwanted allusions can overwhelm the desired datum. If the user rolls a natural 2 on any Int skill check, it automatically fails and cannot be recovered by any rerolling ability.
+  favorite: false
+  tl: 4
+  cost: 40000
+  strain: 1
+  disabled: false
+  effect: Gain eidetic memory
+  type: Head
+  concealment: Medical
+  complication: ''
+effects: []
+_key: '!items!ea6q0c1kghopfgq6'

@@ -1,0 +1,124 @@
+name: One Roll Patrons - Basic Challenge of the Job
+img: icons/svg/d20-grey.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025146
+  modifiedTime: 1737230025146
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: c7ae3ov6i4clkmgo
+results:
+  - _id: u5DtAm7asAmYpDro
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 1
+    rangeH: 1
+    rangeL: 1
+    text: 'Job: Kill somebody who might deserve it'
+    type: 0
+    weight: 1
+    _key: '!tables.results!c7ae3ov6i4clkmgo.u5DtAm7asAmYpDro'
+  - _id: nLtJ3VEFXfLNCUE9
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 2
+      - 2
+    rangeH: 2
+    rangeL: 2
+    text: 'Job: Kidnap someone dangerous'
+    type: 0
+    weight: 1
+    _key: '!tables.results!c7ae3ov6i4clkmgo.nLtJ3VEFXfLNCUE9'
+  - _id: zHVhLvnR5EzZNbeg
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 3
+      - 3
+    rangeH: 3
+    rangeL: 3
+    text: 'Job: Steal a well-guarded object'
+    type: 0
+    weight: 1
+    _key: '!tables.results!c7ae3ov6i4clkmgo.zHVhLvnR5EzZNbeg'
+  - _id: UgFRcvI5wm9DTRur
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 4
+      - 4
+    rangeH: 4
+    rangeL: 4
+    text: 'Job: Arson or sabotage on a place'
+    type: 0
+    weight: 1
+    _key: '!tables.results!c7ae3ov6i4clkmgo.UgFRcvI5wm9DTRur'
+  - _id: W6Fzl0AeJF2N0Gg3
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 5
+      - 5
+    rangeH: 5
+    rangeL: 5
+    text: 'Job: Get proof of some misdeed'
+    type: 0
+    weight: 1
+    _key: '!tables.results!c7ae3ov6i4clkmgo.W6Fzl0AeJF2N0Gg3'
+  - _id: vbAJPp3nebYq00hD
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 6
+      - 6
+    rangeH: 6
+    rangeL: 6
+    text: 'Job: Protect someone from an immediate threat'
+    type: 0
+    weight: 1
+    _key: '!tables.results!c7ae3ov6i4clkmgo.vbAJPp3nebYq00hD'
+  - _id: m56kvhamlIhgFrgd
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 7
+      - 7
+    rangeH: 7
+    rangeL: 7
+    text: 'Job: Transport someone through danger'
+    type: 0
+    weight: 1
+    _key: '!tables.results!c7ae3ov6i4clkmgo.m56kvhamlIhgFrgd'
+  - _id: egc0uDqOuUWvXfko
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 8
+      - 8
+    rangeH: 8
+    rangeL: 8
+    text: 'Job: Guard an object being transported'
+    type: 0
+    weight: 1
+    _key: '!tables.results!c7ae3ov6i4clkmgo.egc0uDqOuUWvXfko'
+replacement: true
+displayRoll: true
+formula: 1d8
+_key: '!tables!c7ae3ov6i4clkmgo'

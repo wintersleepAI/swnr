@@ -1,0 +1,32 @@
+_id: mUjqNzcm7xSfdnUZ
+data:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 1
+    suppress: false
+    type: ammo
+    value: 1
+  cost: 15
+  damage: 1d6
+  description: >-
+    Bows are uncommon weapons in the far future, though some lostworlder
+    barbarians have nothing better. Some sophisticated “conversion bows” use
+    special materials to convert the kinetic energy of the draw into a force
+    field “glazing” around the arrow, improving penetration. Bows can be
+    reloaded with a Move action, or faster if the Gunslinger focus is applied.
+  encumbrance: 2
+  location: other
+  quality: stock
+  range:
+    max: 75
+    normal: 50
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 1
+name: Primitive Bow
+type: weapon

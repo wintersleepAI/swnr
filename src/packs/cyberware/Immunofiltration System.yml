@@ -1,0 +1,29 @@
+name: Immunofiltration System
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025089
+  modifiedTime: 1737230025089
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: f3iog3gszw7hzcna
+system:
+  description: This broad-spectrum scrub system carefully identifies and contains toxic substances introduced into the user’s system. Whenever the subject would normally have to make a saving throw to resist some disease or toxin, they may instead gain one System Strain to automatically succeed on the save. Most of these systems are calibrated to automatically filter any toxins or chemicals in standard use by police or military forces in the sector, but if presented with a special biowarfare toxin, the filters are less effective. In such cases, the most it can do is either grant a second saving throw if the first is failed, or grant a single saving throw if none is normally allowed.
+  favorite: false
+  tl: 4
+  cost: 25000
+  strain: 2
+  disabled: false
+  effect: Immune to almost all diseases and poisons
+  type: none
+  concealment: sight
+  complication: ''
+effects: []
+_key: '!items!f3iog3gszw7hzcna'

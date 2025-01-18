@@ -1,0 +1,28 @@
+name: Cyber
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025030
+  modifiedTime: 1737230025030
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: bnhpm6f4b2blypfy
+system:
+  description: A cybernetic system in a visible subject within 30 meters with no significant obstacles to line of sight. Unlike most Subjects, it's not necessary for a hacker to manifest an avatar inside the target node to affect cyber systems; they can launch their program directly at it, and the system itself need not be visible on the target's body. Given the difficulty of affecting cyber wirelessly, many hackers prefer to use more specific Subjects for a +1 bonus, such as Nerve Cyber or Limb Cyber.
+  favorite: false
+  cost: 1000
+  type: subject
+  accessCost: 0
+  target: Cyber
+  selfTerminating: false
+  useAffects: Cyberware of any kind
+  skillCheckMod: 0
+effects: []
+_key: '!items!bnhpm6f4b2blypfy'

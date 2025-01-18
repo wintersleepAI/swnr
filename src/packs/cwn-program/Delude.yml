@@ -1,0 +1,28 @@
+name: Delude
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025033
+  modifiedTime: 1737230025033
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: f7jl9a8bdhqv51c5
+system:
+  description: Spoof a device with false sensor input. A camera can be made to record nonexistent scenes, a minefield can be made to see phantom intrusions, a drone can feed the operator false visuals, and a turret can be made to mistake friends for foes. This Verb can't control a device directly, however, and must rely on feeding it false sensor data.
+  favorite: false
+  cost: 5000
+  type: verb
+  accessCost: 1
+  target: Device
+  selfTerminating: false
+  useAffects: Spoof a device with false sensor input
+  skillCheckMod: '-1'
+effects: []
+_key: '!items!f7jl9a8bdhqv51c5'

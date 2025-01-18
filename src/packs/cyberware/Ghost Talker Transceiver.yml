@@ -1,0 +1,29 @@
+name: Ghost Talker Transceiver
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025087
+  modifiedTime: 1737230025087
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: ecag5vperpbrcgne
+system:
+  description: Some people simply cannot afford to be out of contact at any time, under any circumstances. Those people find use for the microfine web of radio wiring and optical augmentation that make up the ghost talker. These units act as a built-in compad for the user and allow for reception and transmission of audio and visual recordings, the latter playing in an inset window in the user’s field of vision. If the unit is operating outside of a standard comm grid, it has a transmission range of twenty kilometers and a reception range of one hundred. Ghost talker users can transmit basic visual diagrams and images to each other, as well as optical recordings.
+  favorite: false
+  tl: 4
+  cost: 15000
+  strain: 1
+  disabled: false
+  effect: Integral compad with audiovisual transmission
+  type: none
+  concealment: sight
+  complication: ''
+effects: []
+_key: '!items!ecag5vperpbrcgne'

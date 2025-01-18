@@ -1,0 +1,34 @@
+name: Translator torc
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024784
+  modifiedTime: 1737230024784
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: bnu2q6r7l8ou8ecj
+system:
+  description: 'Translator torc: Each translator torc is keyed for two languages, and will automatically translate what it hears in one into speech in the other. The translations are eccentric in many cases, and there is always a several-second delay between each statement and its translation. Any attempts to exert social skills or Charisma through a translator torc suffer a -2 skill check penalty. The torc is powered by one type A power cell, which lasts for one week of regular use.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 0
+  cost: 200
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!bnu2q6r7l8ou8ecj'

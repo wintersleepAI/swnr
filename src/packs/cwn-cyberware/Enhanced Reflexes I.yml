@@ -1,0 +1,29 @@
+name: Enhanced Reflexes I
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024931
+  modifiedTime: 1737230024931
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: eryem0bmvfmxvgyl
+system:
+  description: Neural acceleration matrices can be deployed to briefly boost the user's reaction speed. Once per scene, as an On Turn action, the user gets a bonus non-cyberspace Main Action.
+  favorite: false
+  tl: 4
+  cost: 100000
+  strain: 2
+  disabled: false
+  effect: 1/scene, bonus Main Action
+  type: Nerve
+  concealment: Medical
+  complication: ''
+effects: []
+_key: '!items!eryem0bmvfmxvgyl'

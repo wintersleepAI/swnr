@@ -1,0 +1,34 @@
+name: Ammo, 20 rounds
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024741
+  modifiedTime: 1737230024741
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 6pf7aqbnzr031dx6
+system:
+  description: 'Ammunition: A few worlds are too primitive or too resource-poor to manufacture ammunition, but the vast majority of worlds provide cartridges in almost every conceivable caliber and make. Most local gunsmiths can load ammunition to any specification required by a buyer.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 3
+    bundled: false
+  encumbrance: 1
+  cost: 10
+  tl: 2
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!6pf7aqbnzr031dx6'

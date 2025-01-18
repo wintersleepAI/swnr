@@ -1,0 +1,40 @@
+name: Medical Center
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024823
+  modifiedTime: 1737230024823
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: gguln1nhd2l0pbst
+system:
+  description: Salvage and repair damaged assets. Once between turns, if a Special Forces or Military Unit asset on the world is destroyed, the faction may immediately pay half its purchase cost to restore it with one hit point. Any Repair Asset action taken on that world costs one less FacCred for Special Forces and Military Units.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    max: 8
+    value: 8
+  rating: 4
+  tl: 4
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 12
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!gguln1nhd2l0pbst'

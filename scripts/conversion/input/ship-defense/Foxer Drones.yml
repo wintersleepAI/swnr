@@ -1,0 +1,20 @@
+data:
+  broken: false
+  cost: 10000
+  costMultiplier: true
+  description: >-
+    These drones are invariably short-lived due to enormous
+    energy signatures they produce, but until the ship's
+    next turn they grant a +2 AC bonus as their emissions
+    confuse foes. Foxer drones are cheaply constructed
+    and essentially free; the only limit on their number
+    is the amount of free space set aside for holding them.
+  effect: +2 AC for one round when fired
+  mass: 1.0
+  massMultiplier: true
+  minClass: cruiser
+  power: 2
+  powerMultiplier: false
+img: systems/swnr/assets/icons/game-icons.net/item-icons/missile-swarm.svg
+name: Foxer Drones
+type: shipDefense

@@ -1,0 +1,44 @@
+name: Armored Clothing
+type: armor
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024911
+  modifiedTime: 1737230024911
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: iwgaeggcqgnb0yhl
+system:
+  description: The bulky plates and heavy ballistic weaves of this outfit are disguised as drapes and fashion elements.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 2
+  cost: 1000
+  tl: null
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 16
+  shield: false
+  use: false
+  meleeAc: 14
+  soak:
+    max: 5
+    value: 5
+  dr: 0
+  traumaDiePenalty: 1
+  isSubtle: true
+  isHeavy: false
+  shieldMeleeACBonus: 0
+  shieldACBonus: 0
+effects: []
+_key: '!items!iwgaeggcqgnb0yhl'

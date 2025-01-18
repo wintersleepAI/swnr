@@ -1,0 +1,40 @@
+name: Monopoly
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024825
+  modifiedTime: 1737230024825
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: rl4hhlsy2sr3ui5w
+system:
+  description: An open or tacit stranglehold on certain vital businesses or resources on a world. As an action, owners of a monopoly may force one other faction with unstealthed assets on that world to pay them one FacCred. If the target faction can't pay, they lose one asset of their choice on the world.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    max: 12
+    value: 12
+  rating: 4
+  tl: 3
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 8
+  income: 0
+  maintenance: 0
+  attackTarget: wealth
+  attackSource: wealth
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!rl4hhlsy2sr3ui5w'

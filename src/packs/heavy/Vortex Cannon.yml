@@ -1,0 +1,61 @@
+name: Vortex Cannon
+type: weapon
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025134
+  modifiedTime: 1737230025134
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: ubetz3gejvoqstml
+system:
+  description: Vortex cannons use controlled gravitic shear planes to cause a target to simply fall apart into component fragments. The cannons are silent in operation, but so heavy and complex that they can only be mounted on gravtanks and other similar dedicated fighting vehicles.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 0
+  cost: 75000
+  tl: 5
+  location: other
+  quality: stock
+  noEncReadied: false
+  stat: dex
+  secondStat: none
+  skill: ''
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  shock:
+    ac: 15
+    dmg: 0
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 5
+    suppress: false
+    type: special
+    value: 5
+  range:
+    max: 2000
+    normal: 1000
+  damage: 5d12
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+    rating: null
+  isTwoHanded: false
+  isNonLethal: false
+effects: []
+_key: '!items!ubetz3gejvoqstml'

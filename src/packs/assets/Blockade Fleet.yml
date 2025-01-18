@@ -1,0 +1,40 @@
+name: Blockade Fleet
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024804
+  modifiedTime: 1737230024804
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: w418y3n63auu3gir
+system:
+  description: A ragtag lot of corsairs, pirates, privateers, and other deniable assets. When they successfully Attack an enemy faction asset, they steal 1d4 FacCreds from the target faction as well. This theft can occur to a faction only once per turn, no matter how many blockade fleets attack. As an action, this asset may also move itself to a world within one hex.
+  favorite: false
+  category: cunning
+  type: Starship
+  health:
+    max: 8
+    value: 8
+  rating: 5
+  tl: 4
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 10
+  income: 0
+  maintenance: 0
+  attackTarget: wealth
+  attackSource: force
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!w418y3n63auu3gir'

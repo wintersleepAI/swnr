@@ -1,0 +1,61 @@
+name: Light Pistol
+type: weapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025075
+  modifiedTime: 1737230025075
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: eclwxmmlty3kr434
+system:
+  description: Light and heavy pistols are categorized by the caliber of the bullet they fire. Some operators prefer the low recoil and high mag capacity possible with a low-caliber round, while others like to have a little more certainty in dropping the targets they hit.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 1
+  cost: 200
+  tl: null
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  stat: dex
+  secondStat: none
+  skill: ask
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  shock:
+    ac: 0
+    dmg: 0
+  ab: 0
+  ammo:
+    burst: false
+    max: 15
+    suppress: false
+    type: ammo
+    value: 15
+  range:
+    max: 80
+    normal: 10
+  damage: 1d6
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d8
+    rating: 2
+  isTwoHanded: false
+  isNonLethal: false
+effects: []
+_key: '!items!eclwxmmlty3kr434'

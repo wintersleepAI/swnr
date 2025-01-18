@@ -1,0 +1,34 @@
+name: Tailored antiallergens
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025259
+  modifiedTime: 1737230025259
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: iaar6fnstlvc1m2n
+system:
+  description: 'Tailored Antiallergens: A dose of tailored antiallergens can be used to render a local world’s organics largely edible by humans and its atmosphere breathable without severe allergic reactions. While many worlds have been seeded with Terran life forms or have produced organics that are edible by humans, others are toxic without the appropriate chemical augmentation. A dose of these antiallergens lasts for twenty-four hours.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 0
+  cost: 5
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!iaar6fnstlvc1m2n'

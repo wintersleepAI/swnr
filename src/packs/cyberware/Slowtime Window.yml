@@ -1,0 +1,29 @@
+name: Slowtime Window
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025092
+  modifiedTime: 1737230025092
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: jz30caqozd0vko1a
+system:
+  description: A piece of cutting-edge pretech cyberware, the slowtime window was installed in crisis responders and others reliant on split-second decision making. When engaged, the implants accelerate the user’s cogitation speed by more than three thousand percent. While there is no corresponding acceleration of the user’s physical reflexes, they have time to process the situation and take in its details. A person who triggers a slowtime window cannot be surprised; they always roll initiative as normal no matter how unexpected the attacker. This brain acceleration is highly stressful on the tissues, however, and one point of System Strain is gained each time it is engaged.
+  favorite: false
+  tl: 5
+  cost: 30000
+  strain: 2
+  disabled: false
+  effect: Prevents surprise and speeds up the user's cogitation
+  type: none
+  concealment: sight
+  complication: ''
+effects: []
+_key: '!items!jz30caqozd0vko1a'

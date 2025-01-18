@@ -1,0 +1,380 @@
+name: Legendary Fighter
+type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024869
+  modifiedTime: 1737230024869
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: oa4g2han0quq60mr
+system:
+  health:
+    value: 10
+    max: 10
+  biography: ''
+  species: ''
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  hitDie: d10
+  baseAc: 20
+  meleeAc: 10
+  ab: 12
+  meleeAb: 1
+  systemStrain:
+    value: 0
+    permanent: 0
+  effort:
+    bonus: 0
+    current: 0
+    scene: 0
+    day: 0
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: powered
+  skillBonus: 5
+  attacks:
+    bonusDamage: 4
+    number: 2
+  hitDice: 1d10
+  saves: 10
+  moralScore: 12
+  reaction: unknown
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  homeworld: ''
+  faction: ''
+effects: []
+prototypeToken:
+  name: Legendary Fighter
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/blankface.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+_key: '!actors!oa4g2han0quq60mr'
+items:
+  - name: D4 Weapon
+    type: weapon
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230024869
+      modifiedTime: 1737230024869
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: sok00ppdvo91m0md
+    system:
+      description: ''
+      favorite: false
+      quantity: 1
+      bundle: &ref_0
+        bundled: false
+        amount: null
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      stat: dex
+      secondStat: null
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      shock:
+        dmg: 0
+        ac: 15
+      ab: 0
+      ammo: &ref_1
+        longReload: false
+        suppress: false
+        type: ammo
+        max: 10
+        value: 10
+        burst: false
+      range: &ref_2
+        normal: 1
+        max: 2
+      damage: d4
+      remember: &ref_3
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      trauma: &ref_4
+        die: 1d6
+        rating: null
+      isTwoHanded: false
+      isNonLethal: false
+    effects: []
+    _key: '!actors.items!oa4g2han0quq60mr.sok00ppdvo91m0md'
+  - name: D6 Weapon
+    type: weapon
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230024869
+      modifiedTime: 1737230024869
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 4ohb9orzmbzkrmqi
+    system:
+      description: ''
+      favorite: false
+      quantity: 1
+      bundle: *ref_0
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      stat: dex
+      secondStat: null
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      shock:
+        dmg: 0
+        ac: 15
+      ab: 0
+      ammo: *ref_1
+      range: *ref_2
+      damage: d6
+      remember: *ref_3
+      save: null
+      trauma: *ref_4
+      isTwoHanded: false
+      isNonLethal: false
+    effects: []
+    _key: '!actors.items!oa4g2han0quq60mr.4ohb9orzmbzkrmqi'
+  - name: D8 Weapon
+    type: weapon
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230024869
+      modifiedTime: 1737230024869
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: fmdem3kmoglbd2ko
+    system:
+      description: ''
+      favorite: false
+      quantity: 1
+      bundle: *ref_0
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      stat: dex
+      secondStat: null
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      shock:
+        dmg: 0
+        ac: 15
+      ab: 0
+      ammo: *ref_1
+      range: *ref_2
+      damage: d8
+      remember: *ref_3
+      save: null
+      trauma: *ref_4
+      isTwoHanded: false
+      isNonLethal: false
+    effects: []
+    _key: '!actors.items!oa4g2han0quq60mr.fmdem3kmoglbd2ko'
+  - name: D10 Weapon
+    type: weapon
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230024869
+      modifiedTime: 1737230024869
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: xr3gqysgtnx4yv06
+    system:
+      description: ''
+      favorite: false
+      quantity: 1
+      bundle: *ref_0
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      stat: dex
+      secondStat: null
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      shock:
+        dmg: 0
+        ac: 15
+      ab: 0
+      ammo: *ref_1
+      range: *ref_2
+      damage: d10
+      remember: *ref_3
+      save: null
+      trauma: *ref_4
+      isTwoHanded: false
+      isNonLethal: false
+    effects: []
+    _key: '!actors.items!oa4g2han0quq60mr.xr3gqysgtnx4yv06'
+  - name: D12 Weapon
+    type: weapon
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230024869
+      modifiedTime: 1737230024869
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 9f4w96ocm21g2iow
+    system:
+      description: ''
+      favorite: false
+      quantity: 1
+      bundle: *ref_0
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      stat: dex
+      secondStat: null
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      shock:
+        dmg: 0
+        ac: 15
+      ab: 0
+      ammo: *ref_1
+      range: *ref_2
+      damage: d12
+      remember: *ref_3
+      save: null
+      trauma: *ref_4
+      isTwoHanded: false
+      isNonLethal: false
+    effects: []
+    _key: '!actors.items!oa4g2han0quq60mr.9f4w96ocm21g2iow'

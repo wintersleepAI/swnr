@@ -1,0 +1,40 @@
+name: Union Toughs
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024840
+  modifiedTime: 1737230024840
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: f2h82ku9n3eit0qh
+system:
+  description: These bruisers don't much like scabs and management, and they're willing to take the faction's word on which people are which. They're lightly armed and poorly trained, but they can infiltrate to perform sabotage.
+  favorite: false
+  category: cunning
+  type: Military Unit
+  health:
+    max: 6
+    value: 6
+  rating: 2
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 4
+  income: 0
+  maintenance: 0
+  attackTarget: force
+  attackSource: wealth
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!f2h82ku9n3eit0qh'

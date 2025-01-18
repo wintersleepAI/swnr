@@ -1,0 +1,40 @@
+name: Bank
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024802
+  modifiedTime: 1737230024802
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: wksnop1s5j5bx2g5
+system:
+  description: Once per turn, the faction can ignore one cost or FacCred loss imposed by another faction. This does not require an action. Multiple bank assets allow multiple losses to be ignored.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    max: 8
+    value: 8
+  rating: 4
+  tl: 3
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 12
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!wksnop1s5j5bx2g5'

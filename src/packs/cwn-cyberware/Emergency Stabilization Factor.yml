@@ -1,0 +1,29 @@
+name: Emergency Stabilization Factor
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024931
+  modifiedTime: 1737230024931
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: x6o498cqxk36spj7
+system:
+  description: When brought to zero hit points by an injury that does not instantly kill them, the user automatically stabilizes, gaining one System Strain, and will regain consciousness at the end of the scene with 1 hit point. If they are already at maximum strain, this cyberware does not function.
+  favorite: false
+  tl: 4
+  cost: 30000
+  strain: 1
+  disabled: false
+  effect: Automatically stabilize
+  type: Body
+  concealment: Medical
+  complication: ''
+effects: []
+_key: '!items!x6o498cqxk36spj7'

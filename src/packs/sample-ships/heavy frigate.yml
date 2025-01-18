@@ -1,0 +1,344 @@
+name: Heavy Frigate
+type: ship
+img: systems/swnr/assets/icons/spaceship.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025218
+  modifiedTime: 1737230025218
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 5t840x33m2us4vh3
+system:
+  health:
+    max: 50
+    value: 50
+  cost: 0
+  ac: 15
+  traumaTarget: 6
+  armor:
+    max: 10
+    value: 10
+  speed: 1
+  crew:
+    min: 30
+    max: 120
+    current: 30
+  crewMembers: []
+  tl: 5
+  description: Sometimes confusingly called a “light cruiser”, a heavyfrigate pushes the engineering parameters of a frigate hull to the maximum available to most TL4 worlds. Equipped with a torpedo launcher capable of threatening even cruiser-class enemies, the heavy frigate can intimidate any ship of its weight class. Its heavy crew complement and military drop pod fitting allow it to quickly dispatch well-armed marines to hot spots throughout a solar system.  However, despite the large weapon loadout, the heavy frigate remains a frigate. Its armor is significantly inferior to that of a true cruiser-class warship, and most frigates built for same-class engagements can be a meaningful threat to it. It comes into its own as a bludgeon against the other small warships likely to be fielded by a peer star-faring polity.
+  mods: ''
+  power:
+    max: 25
+  mass:
+    max: 20
+  hardpoints:
+    value: 8
+    max: 8
+  lifeSupportDays:
+    value: 1
+    max: 1
+  fuel:
+    value: 1
+    max: 1
+  cargo:
+    value: 0
+    max: 0
+  spikeDrive:
+    value: 2
+    max: 2
+  operatingCost: 3942000
+  maintenanceCost: 498000
+  amountOwed: 9783000
+  paymentAmount: 0
+  paymentMonths: 0
+  maintenanceMonths: 6
+  creditPool: 0
+  lastMaintenance:
+    year: 0
+    month: 0
+    day: 0
+  lastPayment:
+    year: 0
+    month: 0
+    day: 0
+  commandPoints: 5
+  npcCommandPoints: 5
+  crewSkillBonus: 2
+  actionsTaken: []
+  supportingDept: ''
+  roleOrder: []
+effects: []
+prototypeToken:
+  name: Heavy Frigate
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/spaceship.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+_key: '!actors!5t840x33m2us4vh3'
+items:
+  - name: Plasma Beam
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025218
+      modifiedTime: 1737230025218
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: zou7ryqetys19rg1
+    system: {}
+    effects: []
+    _key: '!actors.items!5t840x33m2us4vh3.zou7ryqetys19rg1'
+  - name: Plasma Beam
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025218
+      modifiedTime: 1737230025218
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: jtjwp1k7p8aeulvk
+    system: {}
+    effects: []
+    _key: '!actors.items!5t840x33m2us4vh3.jtjwp1k7p8aeulvk'
+  - name: Hardened Polyceramic Overlay
+    type: shipDefense
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025218
+      modifiedTime: 1737230025218
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: vwfu5tlwohul6lhr
+    system: {}
+    effects: []
+    _key: '!actors.items!5t840x33m2us4vh3.vwfu5tlwohul6lhr'
+  - name: Spike Drive-2 upgrade
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025218
+      modifiedTime: 1737230025218
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: kgliv5xcd7vfbcjx
+    system: {}
+    effects: []
+    _key: '!actors.items!5t840x33m2us4vh3.kgliv5xcd7vfbcjx'
+  - name: Drop Pod
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025218
+      modifiedTime: 1737230025218
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: za1paw05row2pvxh
+    system: {}
+    effects: []
+    _key: '!actors.items!5t840x33m2us4vh3.za1paw05row2pvxh'
+  - name: Fuel Scoops
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025218
+      modifiedTime: 1737230025218
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: yc3vlyzw8ttkpxda
+    system: {}
+    effects: []
+    _key: '!actors.items!5t840x33m2us4vh3.yc3vlyzw8ttkpxda'
+  - name: Fuel Bunker
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025218
+      modifiedTime: 1737230025218
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: x21d1j3z2guw0bgf
+    system: {}
+    effects: []
+    _key: '!actors.items!5t840x33m2us4vh3.x21d1j3z2guw0bgf'
+  - name: Armory
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025218
+      modifiedTime: 1737230025218
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: vl3xwt0g854j2hiw
+    system: {}
+    effects: []
+    _key: '!actors.items!5t840x33m2us4vh3.vl3xwt0g854j2hiw'
+  - name: Ship's Locker
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025218
+      modifiedTime: 1737230025218
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: w2nndf7vu557wvcl
+    system: {}
+    effects: []
+    _key: '!actors.items!5t840x33m2us4vh3.w2nndf7vu557wvcl'
+  - name: Boarding Tubes
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025218
+      modifiedTime: 1737230025218
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: nhv7f7i6m28t6n67
+    system: {}
+    effects: []
+    _key: '!actors.items!5t840x33m2us4vh3.nhv7f7i6m28t6n67'

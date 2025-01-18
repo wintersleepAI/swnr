@@ -1,0 +1,28 @@
+name: Avatar
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025028
+  modifiedTime: 1737230025028
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: t35wr7lmusyzkewi
+system:
+  description: A cyberspace avatar, whether one adopted by a hacker who's jacked into the network or a Demon program standing guard there.
+  favorite: false
+  cost: 500
+  type: subject
+  accessCost: 0
+  target: Avatar
+  selfTerminating: false
+  useAffects: Avatars and Demons
+  skillCheckMod: 0
+effects: []
+_key: '!items!t35wr7lmusyzkewi'

@@ -1,0 +1,60 @@
+name: One Roll Urban Encounters - What’s the Conflict About?
+img: icons/svg/d20-grey.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025153
+  modifiedTime: 1737230025153
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: r2s8ddjxnxm8uwav
+results:
+  - _id: CvLCoaiFhiymuS7b
+    drawn: false
+    flags: {}
+    range:
+      - 1
+      - 1
+    text: 'What’s the Conflict About?: Money, extortion, payment due, debts'
+    type: 0
+    weight: 1
+    _key: '!tables.results!r2s8ddjxnxm8uwav.CvLCoaiFhiymuS7b'
+  - _id: ay80xdOFOR5QyIpB
+    drawn: false
+    flags: {}
+    range:
+      - 2
+      - 2
+    text: 'What’s the Conflict About?: Respect, submission to social authority'
+    type: 0
+    weight: 1
+    _key: '!tables.results!r2s8ddjxnxm8uwav.ay80xdOFOR5QyIpB'
+  - _id: aFCBxaSqLv1bPeAB
+    drawn: false
+    flags: {}
+    range:
+      - 3
+      - 3
+    text: 'What’s the Conflict About?: Grudges, ethnic resentment, gang payback'
+    type: 0
+    weight: 1
+    _key: '!tables.results!r2s8ddjxnxm8uwav.aFCBxaSqLv1bPeAB'
+  - _id: PgLdYCgfXua9umKO
+    drawn: false
+    flags: {}
+    range:
+      - 4
+      - 4
+    text: 'What’s the Conflict About?: Politics, religion, or other ideology'
+    type: 0
+    weight: 1
+    _key: '!tables.results!r2s8ddjxnxm8uwav.PgLdYCgfXua9umKO'
+replacement: true
+displayRoll: true
+formula: 1d4
+_key: '!tables!r2s8ddjxnxm8uwav'

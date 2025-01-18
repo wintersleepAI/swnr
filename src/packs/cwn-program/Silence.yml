@@ -1,0 +1,28 @@
+name: Silence
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025043
+  modifiedTime: 1737230025043
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: pdpmfi8ml5b8f0a7
+system:
+  description: The affected avatar or Demon is unable to use the Send Message cyberspace action while this program runs. Alert the Network can still be done.
+  favorite: false
+  cost: 1000
+  type: verb
+  accessCost: 1
+  target: Avatar
+  selfTerminating: false
+  useAffects: Lock out the Send Message action
+  skillCheckMod: 1
+effects: []
+_key: '!items!pdpmfi8ml5b8f0a7'

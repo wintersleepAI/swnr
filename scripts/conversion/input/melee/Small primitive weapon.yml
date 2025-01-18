@@ -1,0 +1,34 @@
+_id: VTaRGxI6f9zmXliu
+data:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 0
+    suppress: false
+    type: none
+    value: 0
+  cost: 0
+  damage: 1d4
+  description: >-
+    Small weapons are small one-handed implements no larger than a baton or
+    knife. These weapons are easily concealed in normal clothing, and can even
+    be kept Readied up sleeves or in tailored pockets. Many can be thrown at a
+    range up to 10 meters. A primitive weapon is simply one of ordinary metal or
+    wood, with no high-tech augmentations. Primitive weapons are often unable to
+    harm targets in powered armor.
+  encumbrance: 1
+  location: other
+  quality: stock
+  range:
+    max: 0
+    normal: 0
+  secondStat: dex
+  shock:
+    ac: 15
+    dmg: 1
+  skill: ''
+  stat: str
+  tl: 0
+name: Small primitive weapon
+type: weapon

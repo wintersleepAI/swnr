@@ -1,0 +1,44 @@
+name: Heavy Armored Suit
+type: armor
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024911
+  modifiedTime: 1737230024911
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: z4lr1fnr718zh5h9
+system:
+  description: A head-to-toe suit of interlocking plates and impact absorption units, these suits are reserved for high-end response teams and military operations.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 3
+  cost: 20000
+  tl: null
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 20
+  shield: false
+  use: false
+  meleeAc: 18
+  soak:
+    max: 15
+    value: 15
+  dr: 0
+  traumaDiePenalty: 3
+  isSubtle: false
+  isHeavy: true
+  shieldMeleeACBonus: 0
+  shieldACBonus: 0
+effects: []
+_key: '!items!z4lr1fnr718zh5h9'

@@ -1,0 +1,43 @@
+name: Force Pavis
+type: armor
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024795
+  modifiedTime: 1737230024795
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: synp492fxd19au02
+system:
+  description: A force pavis is more effective shield, being a small pretech force disc projector that can absorb all manner of small arms fire. All shields require one free hand to use effectively.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 1
+  cost: 10000
+  tl: 5
+  location: other
+  quality: stock
+  noEncReadied: false
+  ac: 15
+  shield: true
+  use: false
+  meleeAc: 15
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: 1
+  shieldACBonus: 1
+effects: []
+_key: '!items!synp492fxd19au02'

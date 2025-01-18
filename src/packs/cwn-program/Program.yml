@@ -1,0 +1,28 @@
+name: Program
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025040
+  modifiedTime: 1737230025040
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: onpdyxk4jf2p5597
+system:
+  description: hostile program, used most often with the Terminate verb to end the effects of an enemy hacker's programs prematurely.
+  favorite: false
+  cost: 500
+  type: subject
+  accessCost: 0
+  target: Program
+  selfTerminating: false
+  useAffects: Active running program
+  skillCheckMod: 0
+effects: []
+_key: '!items!onpdyxk4jf2p5597'

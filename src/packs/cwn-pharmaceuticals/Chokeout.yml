@@ -1,0 +1,33 @@
+name: Chokeout
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025019
+  modifiedTime: 1737230025019
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: tfq2i3wdb0y06ajq
+system:
+  description: A chem that briefly induces severe swelling of the mucous membranes, Chokeout is odorless and tasteless, but must be consumed in food or drink and naturally degrades after twelve hours. A subject who consumes a dose of Chokeout must make a Physical save; on a failure, they are strangled to unconsciousness for an hour, waking up with one hit point at the end. On a success, they take 1d10 non-lethal damage as they struggle to breathe. On a natural saving throw of 1, the victim chokes to death.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 0
+  cost: 50
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!tfq2i3wdb0y06ajq'

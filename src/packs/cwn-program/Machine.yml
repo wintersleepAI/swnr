@@ -1,0 +1,28 @@
+name: Machine
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025039
+  modifiedTime: 1737230025039
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: j6w5bt0rs4yaomff
+system:
+  description: Security panels, factory machinery, electronic minefields, or any other hackable device not covered under an existing Subject. Its generality applies a +1 penalty to the security difficulty.
+  favorite: false
+  cost: 500
+  type: subject
+  accessCost: 0
+  target: Device
+  selfTerminating: false
+  useAffects: Unclassified devices
+  skillCheckMod: '-1'
+effects: []
+_key: '!items!j6w5bt0rs4yaomff'

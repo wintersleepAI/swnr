@@ -1,0 +1,98 @@
+name: One Roll Patrons - Trustworthiness
+img: icons/svg/d20-grey.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025150
+  modifiedTime: 1737230025150
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 3jfgkv0ssisj2plk
+results:
+  - _id: VgNAXzwhazrs4LeE
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 1
+    rangeH: 1
+    rangeL: 1
+    text: 'Trustworthiness: They intend to totally screw the PCs'
+    type: 0
+    weight: 1
+    _key: '!tables.results!3jfgkv0ssisj2plk.VgNAXzwhazrs4LeE'
+  - _id: UQsaDKN3qVexl8Ie
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 2
+      - 2
+    rangeH: 2
+    rangeL: 2
+    text: 'Trustworthiness: They won’t pay unless forced to do so'
+    type: 0
+    weight: 1
+    _key: '!tables.results!3jfgkv0ssisj2plk.UQsaDKN3qVexl8Ie'
+  - _id: WlzFhoVI26SXoRM7
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 3
+      - 3
+    rangeH: 3
+    rangeL: 3
+    text: 'Trustworthiness: They’ll pay slowly or reluctantly'
+    type: 0
+    weight: 1
+    _key: '!tables.results!3jfgkv0ssisj2plk.WlzFhoVI26SXoRM7'
+  - _id: D8zWX3Qf5qbWOSEA
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 4
+      - 4
+    rangeH: 4
+    rangeL: 4
+    text: 'Trustworthiness: They’ll pay, but discount for mistakes'
+    type: 0
+    weight: 1
+    _key: '!tables.results!3jfgkv0ssisj2plk.D8zWX3Qf5qbWOSEA'
+  - _id: SbZBVPyN2Ab11ARc
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 5
+      - 5
+    rangeH: 5
+    rangeL: 5
+    text: 'Trustworthiness: They’ll pay without quibbling'
+    type: 0
+    weight: 1
+    _key: '!tables.results!3jfgkv0ssisj2plk.SbZBVPyN2Ab11ARc'
+  - _id: cs55gFOlr3mjdgRz
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 6
+      - 6
+    rangeH: 6
+    rangeL: 6
+    text: 'Trustworthiness: They’ll pay more than they promised'
+    type: 0
+    weight: 1
+    _key: '!tables.results!3jfgkv0ssisj2plk.cs55gFOlr3mjdgRz'
+replacement: true
+displayRoll: true
+formula: 1d6
+_key: '!tables!3jfgkv0ssisj2plk'

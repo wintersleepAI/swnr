@@ -1,0 +1,34 @@
+name: Ammo, missile
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024788
+  modifiedTime: 1737230024788
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 3fnb7l2yn5q00yso
+system:
+  description: 'Ammunition, missile: Some characters might have reason to pack along a man-portable rocket launcher, or have one mounted on their favorite gravcar. Heavy weapons and their ammunition are usually outlawed for civilians on most worlds, but this price is for locales where missiles can be bought.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 1
+  cost: 50
+  tl: 3
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!3fnb7l2yn5q00yso'

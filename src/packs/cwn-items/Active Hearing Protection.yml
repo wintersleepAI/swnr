@@ -1,0 +1,33 @@
+name: Active Hearing Protection
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025003
+  modifiedTime: 1737230025003
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: fcjyffc86qu0wo7i
+system:
+  description: This headset protects the wearer from disorientation due to loud noises. It passes along conversational-level speech without difficulty.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 250
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!fcjyffc86qu0wo7i'

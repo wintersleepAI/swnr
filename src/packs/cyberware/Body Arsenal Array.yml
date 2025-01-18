@@ -1,0 +1,29 @@
+name: Body Arsenal Array
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025084
+  modifiedTime: 1737230025084
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: krnrd7tujn6ra0ew
+system:
+  description: Some personnel need to be armed at all times without giving any indication of such. Improvised weaponry and conventional holdout weapons are useful enough against soft targets, but disabling a target in powered armor requires more. The details of the array vary from user to user, but usually act as advanced medium weapons that can be used with either Punch or Stab skills and at least one integral energy projector equal to a laser rifle, one that must be powered by an insertable type A power cell. Retracted body arsenals can be detected only by a medical examination.
+  favorite: false
+  tl: 4
+  cost: 10000
+  strain: 1
+  disabled: false
+  effect: Provides retractable body weaponry
+  type: none
+  concealment: sight
+  complication: ''
+effects: []
+_key: '!items!krnrd7tujn6ra0ew'

@@ -1,0 +1,26 @@
+name: Specialist
+type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025000
+  modifiedTime: 1737230025000
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: sl8eqfm9b9s00w0d
+system:
+  description: |-
+    You are remarkably talented at a particular skill. Whether a marvelous cat burglar, a natural athlete, a brilliant engineer, or some other savant, your expertise is extremely reliable. You may take this Focus more than once for different skills.
+    Level 1: Gain a non-combat skill as a bonus. Roll 3d6 and drop the lowest die for all skill checks in this skill.
+    Level 2: Roll 4d6 and drop the two lowest dice for all skill checks in this skill.
+  favorite: false
+  level: 0
+  type: focus
+effects: []
+_key: '!items!sl8eqfm9b9s00w0d'

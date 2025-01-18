@@ -1,0 +1,33 @@
+name: Ammunition (Round)
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025004
+  modifiedTime: 1737230025004
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: bph9r1nyr7pl0yh1
+system:
+  description: Individual rounds are loaded into empty magazines that are specific to individual firearms.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 0
+  cost: 1
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!bph9r1nyr7pl0yh1'

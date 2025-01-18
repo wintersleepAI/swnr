@@ -1,0 +1,43 @@
+name: Cuirass, brigandine, linothorax, half-plate
+type: armor
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024794
+  modifiedTime: 1737230024794
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: smcswc71ingayg74
+system:
+  description: Primitive armor is a catch-all covering all armor technology that lacks access to advanced materials and processes. While such armor can be very effective in protecting against primitive weaponry, it is useless against advanced TL4 melee weapons and firearms of all kinds. Against these weapons, it is treated as AC 10. Note that some planets have native flora or fauna capable of naturally producing extremely effective armor materials, ones not susceptible to this limitation
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 1
+  cost: 50
+  tl: 1
+  location: other
+  quality: stock
+  noEncReadied: false
+  ac: 15
+  shield: false
+  use: false
+  meleeAc: 15
+  soak:
+    value: 8
+    max: 8
+  dr: 0
+  traumaDiePenalty: 2
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+effects: []
+_key: '!items!smcswc71ingayg74'

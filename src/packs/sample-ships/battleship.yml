@@ -1,0 +1,439 @@
+name: Battleship
+type: ship
+img: systems/swnr/assets/icons/spaceship.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025213
+  modifiedTime: 1737230025213
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 3vx8c76mylto34u0
+system:
+  health:
+    max: 120
+    value: 120
+  cost: 79060000
+  ac: 17
+  traumaTarget: 6
+  armor:
+    max: 20
+    value: 20
+  speed: 0
+  crew:
+    min: 200
+    max: 1000
+    current: 200
+  crewMembers: []
+  tl: 5
+  description: Built off the biggest hull class that TL4 polities can create, only the richest modern worlds can afford to fabricate these massive engines of war. Even those worlds with adequate resources to do so often balk at expending such a tremendous amount of money on a single ship. Those that do build battleships do so for a reason. The tremendous weight of fire these ships put out can pop a cruiser in a single firing pass, and its reinforced hull plating shrugs off all but the heaviest armor-piercing blows. Where cruisers often require hunter-killer frigates to take them out, battleships commonly require hunter-killer cruisers to disable them.  The main weakness of a battleship is the fact that it is only a single ship… a single, extremely expensive ship. It can only attack or defend a single location at a time, and an enemy that has the time and resources to build specialized anti-capital ships with AP weaponry and expendable crews can bring the battleship down for far less money than it cost to build it.
+  mods: ''
+  power:
+    max: 75
+  mass:
+    max: 50
+  hardpoints:
+    value: 15
+    max: 15
+  lifeSupportDays:
+    value: 60000
+    max: 60000
+  fuel:
+    value: 1
+    max: 1
+  cargo:
+    value: 200
+    max: 200
+  spikeDrive:
+    value: 3
+    max: 3
+  operatingCost: 35000000
+  maintenanceCost: 4000000
+  amountOwed: 0
+  paymentAmount: 0
+  paymentMonths: 0
+  maintenanceMonths: 6
+  creditPool: 0
+  lastMaintenance:
+    year: 0
+    month: 0
+    day: 0
+  lastPayment:
+    year: 0
+    month: 0
+    day: 0
+  commandPoints: 6
+  npcCommandPoints: 6
+  crewSkillBonus: 3
+  actionsTaken: []
+  supportingDept: ''
+  roleOrder: []
+effects: []
+prototypeToken:
+  name: Battleship
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/spaceship.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+_key: '!actors!3vx8c76mylto34u0'
+items:
+  - name: Vortex Tunnel Inductor
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: bsp7zeq9c5s59nh0
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.bsp7zeq9c5s59nh0'
+  - name: Lightning Charge Mantle
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 7owo6gumtjstyzro
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.7owo6gumtjstyzro'
+  - name: Multifocal Laser
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: k0k6kjp45hfsvreh
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.k0k6kjp45hfsvreh'
+  - name: Multifocal Laser
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: u4ivjcmux49hheri
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.u4ivjcmux49hheri'
+  - name: Gravcannon
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: mtbvinz1n1tbq8dp
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.mtbvinz1n1tbq8dp'
+  - name: Hardened Polyceramic Overlay
+    type: shipDefense
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/bubble-field.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: wqs83hlfu9n5pvrb
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.wqs83hlfu9n5pvrb'
+  - name: Ablative Hull Compartments
+    type: shipDefense
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/metal-scales.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: qef5l5e304dsuvtx
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.qef5l5e304dsuvtx'
+  - name: Spike Drive-3 upgrade
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/rocket-thruster.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: nzdp1x25pp1u5vun
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.nzdp1x25pp1u5vun'
+  - name: Drop Pod
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: kci5rb2rg7p4b21r
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.kci5rb2rg7p4b21r'
+  - name: Armory
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 4aimqfwj6qw2a329
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.4aimqfwj6qw2a329'
+  - name: Ship's Locker
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: rkwap2pfnw1ln9au
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.rkwap2pfnw1ln9au'
+  - name: Boarding Tubes
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: bt20isaedwvn1vwp
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.bt20isaedwvn1vwp'
+  - name: Fuel Scoops
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/energise.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 8cjaytr8umcx2yxw
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.8cjaytr8umcx2yxw'
+  - name: Advanced Nav Computer
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/gps.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: m3bumxhs9zf4d8ha
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.m3bumxhs9zf4d8ha'
+  - name: Ship bay (fighter and shuttle)
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025213
+      modifiedTime: 1737230025213
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: krw5ssrlrtrciyhz
+    system: {}
+    effects: []
+    _key: '!actors.items!3vx8c76mylto34u0.krw5ssrlrtrciyhz'

@@ -1,0 +1,19 @@
+data:
+  broken: false
+  cost: 500000
+  costMultiplier: false
+  damage: 2d6
+  description: >-
+    A baseline frigate anti-fighter system,
+    this battery fires waves of lasers or charged particles to knock down small craft.
+  hardpoint: 1
+  mass: 3.0
+  massMultiplier: false
+  minClass: frigate
+  power: 5
+  powerMultiplier: false
+  qualities: AP 10, Flak
+  tl: 4
+img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+name: Flak Emitter Battery
+type: shipWeapon

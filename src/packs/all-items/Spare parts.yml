@@ -1,0 +1,34 @@
+name: Spare parts
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024775
+  modifiedTime: 1737230024775
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: qcaybcft3sxvk466
+system:
+  description: 'Spare parts: This is a general category for a number of small TL4 components and repair materials. While a simple toolkit or metatool is often enough to fix a damaged object, severely broken devices may need replacement parts. Rather than keep a catalog of bits and pieces, a technician can simply bring along one or more units of spare parts, subtracting one whenever the GM decides that a repair effort requires more than existing salvage can support. A unit of spare parts can also be used to jury-rig some basic, uncomplicated tool or weapon from the equipment list with ten or fifteen minutes of assembly and at least Fix-0 skill. Such bodged devices rarely last longer than one scene.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 3
+    bundled: false
+  encumbrance: 1
+  cost: 50
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!qcaybcft3sxvk466'

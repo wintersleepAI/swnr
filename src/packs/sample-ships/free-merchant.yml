@@ -1,0 +1,250 @@
+name: Free Merchant
+type: ship
+img: systems/swnr/assets/icons/spaceship.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025217
+  modifiedTime: 1737230025217
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: f0xkvgyu8ty8ozhx
+system:
+  health:
+    max: 20
+    value: 20
+  cost: 775000
+  ac: 14
+  traumaTarget: 6
+  armor:
+    max: 2
+    value: 2
+  speed: 3
+  crew:
+    min: 1
+    max: 6
+    current: 0
+  crewMembers: []
+  tl: 5
+  description: |-
+    A mainstay of freebooting merchant-adventurers throughout human space, the standard free merchant is an extremely versatile craft, capable of hauling sig- nificant amounts of cargo to neighboring systems while requiring very few hands to operate it. Only one crew member is needed for in-system flight, though spike drills require three for normal margins of safety.
+    The standard free merchant is not a warship, but its sandthrower is enough to discourage pirate shuttles and the other small or fragile craft that wreckers or primitive worlds tend to favor. The multifocal laser is ideal for a highly-skilled gunner who can snipe out important systems on an attacking vessel, but the ship lacks the armor and durability to stand up to a true war- ship. Of course, with a sufficiently expert crew, even a corvette might be threatened by the well-aimed guns of a small craft like this.
+  mods: ''
+  power:
+    max: 10
+  mass:
+    max: 15
+  hardpoints:
+    max: 2
+  lifeSupportDays:
+    value: 1
+    max: 1
+  fuel:
+    value: 1
+    max: 1
+  cargo:
+    value: 160
+    max: 160
+  spikeDrive:
+    value: 1
+    max: 1
+  operatingCost: 131400
+  maintenanceCost: 38750
+  amountOwed: 0
+  paymentAmount: 0
+  paymentMonths: 0
+  maintenanceMonths: 6
+  creditPool: 0
+  lastMaintenance:
+    year: 0
+    month: 0
+    day: 0
+  lastPayment:
+    year: 0
+    month: 0
+    day: 0
+  commandPoints: 4
+  npcCommandPoints: 4
+  crewSkillBonus: 1
+  actionsTaken: []
+  supportingDept: ''
+  roleOrder: []
+effects: []
+prototypeToken:
+  name: Free Merchant
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/spaceship.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+_key: '!actors!f0xkvgyu8ty8ozhx'
+items:
+  - name: Multifocal Laser
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025217
+      modifiedTime: 1737230025217
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: vz3gak76nku774hl
+    system: {}
+    effects: []
+    _key: '!actors.items!f0xkvgyu8ty8ozhx.vz3gak76nku774hl'
+  - name: Sandthrower
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/fog.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025217
+      modifiedTime: 1737230025217
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: p17dr0xpg6w0efbg
+    system: {}
+    effects: []
+    _key: '!actors.items!f0xkvgyu8ty8ozhx.p17dr0xpg6w0efbg'
+  - name: Atmospheric Configuration
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025217
+      modifiedTime: 1737230025217
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 6u8y8ixfqm9e0fxe
+    system: {}
+    effects: []
+    _key: '!actors.items!f0xkvgyu8ty8ozhx.6u8y8ixfqm9e0fxe'
+  - name: Fuel Scoops
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/energise.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025217
+      modifiedTime: 1737230025217
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: tgee7d6ugox87pcn
+    system: {}
+    effects: []
+    _key: '!actors.items!f0xkvgyu8ty8ozhx.tgee7d6ugox87pcn'
+  - name: Fuel Bunker
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/fuel-tank.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025217
+      modifiedTime: 1737230025217
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: dnjeppmi9dry56oq
+    system: {}
+    effects: []
+    _key: '!actors.items!f0xkvgyu8ty8ozhx.dnjeppmi9dry56oq'

@@ -1,0 +1,35 @@
+_id: 2r1DQVh1Ru8pPyB4
+data:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 0
+    suppress: false
+    type: none
+    value: 0
+  cost: 80
+  damage: 1d10+1
+  description: >-
+    Large weapons are two-handed implements of bodily ruin such as claymores,
+    halberds, tetsubos, or other such weapons. Unlike smaller weapons, they rely
+    largely on Strength for their employ, and can bash through lighter forms of
+    armor. Large weapons count as two encumbrance items. An advanced one has
+    been given a monoblade edge, kinetic sheathing, thermal wires, a chainsaw
+    blade, or some other TL4 touch. Advanced weapons can ignore primitive plate
+    and hide protections.
+  encumbrance: 2
+  location: other
+  quality: stock
+  range:
+    max: 0
+    normal: 0
+  secondStat: none
+  shock:
+    ac: 15
+    dmg: 2
+  skill: ''
+  stat: str
+  tl: 4
+name: Large advanced weapon
+type: weapon

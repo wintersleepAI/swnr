@@ -1,0 +1,72 @@
+name: One Roll Patrons - Eagerness to Hire
+img: icons/svg/d20-grey.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025148
+  modifiedTime: 1737230025148
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: r8zzx5kyln5cx5r4
+results:
+  - _id: ntGZpDvZBrnu1Uep
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 1
+    rangeH: 1
+    rangeL: 1
+    text: 'Eagerness to Hire: Cautious, but can be convinced to hire'
+    type: 0
+    weight: 1
+    _key: '!tables.results!r8zzx5kyln5cx5r4.ntGZpDvZBrnu1Uep'
+  - _id: fUXMB2HeSuYuYCl9
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 2
+      - 2
+    rangeH: 2
+    rangeL: 2
+    text: 'Eagerness to Hire: Willing to promise standard rates'
+    type: 0
+    weight: 1
+    _key: '!tables.results!r8zzx5kyln5cx5r4.fUXMB2HeSuYuYCl9'
+  - _id: VExWuJBtOL6EoCrL
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 3
+      - 3
+    rangeH: 3
+    rangeL: 3
+    text: 'Eagerness to Hire: Eager, willing to offer a bonus'
+    type: 0
+    weight: 1
+    _key: '!tables.results!r8zzx5kyln5cx5r4.VExWuJBtOL6EoCrL'
+  - _id: MzNZ1NFIjgUlzINW
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 4
+      - 4
+    rangeH: 4
+    rangeL: 4
+    text: 'Eagerness to Hire: Desperate, might offer what they can’t pay'
+    type: 0
+    weight: 1
+    _key: '!tables.results!r8zzx5kyln5cx5r4.MzNZ1NFIjgUlzINW'
+replacement: true
+displayRoll: true
+formula: 1d4
+_key: '!tables!r8zzx5kyln5cx5r4'

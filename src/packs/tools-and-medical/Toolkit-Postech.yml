@@ -1,0 +1,34 @@
+name: Toolkit/Postech
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025260
+  modifiedTime: 1737230025260
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: n1a35vegq2gsizpf
+system:
+  description: 'Toolkits/Postech: Containing a wide range of necessary tools for a particular skill set, toolkits can handle almost any job that doesn’t require a full-scale shop or lab. A standard postech toolkit can handle electronics, small welding jobs, and basic repair on ordinary TL4 goods.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 3
+  cost: 300
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!n1a35vegq2gsizpf'

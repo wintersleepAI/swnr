@@ -1,0 +1,34 @@
+name: Storage unit
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024777
+  modifiedTime: 1737230024777
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: voqylurzape4dnq8
+system:
+  description: 'Storage unit: While conventional dataslabs have ample space to hold any reasonable amount of data, sometimes a party needs to store or acquire a truly huge dataset. This standard TL4 storage unit is a portable but clumsy case hardened against anything short of intentional damage with a firearm, capable of interfacing with a wide variety of hardware to receive and upload data. A single storage unit can hold a tremendous amount of data that has been carefully compressed and optimized for it. If the user is simply ripping a database off a network and stuffing it into the unit, it can absorb up to a small corporation’s complete files.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 3
+  cost: 500
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!voqylurzape4dnq8'

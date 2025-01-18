@@ -1,0 +1,20 @@
+data:
+  broken: false
+  cost: 5000000
+  costMultiplier: false
+  damage: 3d20
+  description: >-
+    A capital-class model of the SIP, a VTI is capable
+    pf incapacitating a cruiser in two hits. Its bulk
+    limits its utility against fighter-class craft, however.
+  hardpoint: 4
+  mass: 10.0
+  massMultiplier: false
+  minClass: capital
+  power: 20
+  powerMultiplier: false
+  qualities: AP 20, Clumsy
+  tl: 4
+img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+name: Vortex Tunnel Inductor
+type: shipWeapon

@@ -1,0 +1,28 @@
+name: Kill
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025038
+  modifiedTime: 1737230025038
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 2t786oo2bwxe9b0x
+system:
+  description: Through forced autonomic feedback and outof- bounds electrical current parameters, inflict lethal damage to an enemy avatar equal to 1d10 per Program skill level, to a minimum of 1d10 on a successful opposed Int/Program skill check. This damage has a Trauma Die of 1d8 and a x3 Trauma Rating. The victim's Trauma Target is not modified by armor, but it is by cyber or other modifiers. Unconscious hackers cannot resist this Verb and will be instantly killed by it. This Verb has no effect on Demons.
+  favorite: false
+  cost: 5000
+  type: verb
+  accessCost: 1
+  target: Avatar
+  selfTerminating: true
+  useAffects: Inflict lethal feedback on a human avatar
+  skillCheckMod: 0
+effects: []
+_key: '!items!2t786oo2bwxe9b0x'

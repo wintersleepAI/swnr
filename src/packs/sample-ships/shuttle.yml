@@ -1,0 +1,192 @@
+name: Shuttle
+type: ship
+img: systems/swnr/assets/icons/spaceship.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025220
+  modifiedTime: 1737230025220
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: a5qjt3tjac4ia7wo
+system:
+  health:
+    max: 15
+    value: 15
+  cost: 210000
+  ac: 11
+  traumaTarget: 6
+  armor:
+    max: 0
+    value: 0
+  speed: 3
+  crew:
+    min: 1
+    max: 20
+    current: 0
+  crewMembers: []
+  tl: 5
+  description: This craft is a conventional civilian shuttle, albeit one with a spike drive sufficient to get it to a neighboring system and enough passenger space to make it a minimally- acceptable transport for brave VIPs and light cargo. If used as an inter-system transport, however, at least three crew will be needed to safely navigate a drill. While cheap and flexible, the shuttle is entirely unarmed and acutely vulnerable to piracy or hostile warships. In such cases the pilot’s only recourse is to surrender or hope the small craft’s nimble maneuver drives can keep it away from the attacker long enough to get to safety.
+  mods: ''
+  power:
+    max: 3
+  mass:
+    max: 5
+  hardpoints:
+    value: 1
+    max: 1
+  lifeSupportDays:
+    value: 1
+    max: 1
+  fuel:
+    value: 1
+    max: 1
+  cargo:
+    value: 6
+    max: 6
+  spikeDrive:
+    value: 1
+    max: 1
+  operatingCost: 43800
+  maintenanceCost: 10500
+  amountOwed: 0
+  paymentAmount: 0
+  paymentMonths: 0
+  maintenanceMonths: 6
+  creditPool: 0
+  lastMaintenance:
+    year: 0
+    month: 0
+    day: 0
+  lastPayment:
+    year: 0
+    month: 0
+    day: 0
+  commandPoints: 4
+  npcCommandPoints: 4
+  crewSkillBonus: 1
+  actionsTaken: []
+  supportingDept: ''
+  roleOrder: []
+effects: []
+prototypeToken:
+  name: Shuttle
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/spaceship.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+_key: '!actors!a5qjt3tjac4ia7wo'
+items:
+  - name: Atmospheric Configuration
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025220
+      modifiedTime: 1737230025220
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: qx4ks4pjnqitybgx
+    system: {}
+    effects: []
+    _key: '!actors.items!a5qjt3tjac4ia7wo.qx4ks4pjnqitybgx'
+  - name: Extended life support
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/fuel-tank.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1737230025220
+      modifiedTime: 1737230025220
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: x4zixse7xo5xbi15
+    system: {}
+    effects: []
+    _key: '!actors.items!a5qjt3tjac4ia7wo.x4zixse7xo5xbi15'

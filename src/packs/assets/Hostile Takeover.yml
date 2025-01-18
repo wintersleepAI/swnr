@@ -1,0 +1,40 @@
+name: Hostile Takeover
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024818
+  modifiedTime: 1737230024818
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 99j4m2ct6kb2v080
+system:
+  description: This asset can seize control of damaged and poorly-controlled assets. If a Hostile Takeover does enough damage to destroy an asset, the target is instead reduced to 1 hit point and acquired by the Hostile Takeover's owning faction.
+  favorite: false
+  category: cunning
+  type: Tactic
+  health:
+    max: 10
+    value: 10
+  rating: 7
+  tl: 4
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 20
+  income: 0
+  maintenance: 0
+  attackTarget: wealth
+  attackSource: wealth
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!99j4m2ct6kb2v080'

@@ -1,0 +1,40 @@
+name: Pretech Infantry
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024829
+  modifiedTime: 1737230024829
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: w4xfrbp0r511hyjn
+system:
+  description: The cream of the stellar ground forces, elite troops kitted out in the best pretech weaponry and armor available, with sophisticated heavy support weaponry integral to the unit.
+  favorite: false
+  category: cunning
+  type: Military Unit
+  health:
+    max: 16
+    value: 16
+  rating: 6
+  tl: 5
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 20
+  income: 0
+  maintenance: 0
+  attackTarget: force
+  attackSource: force
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!w4xfrbp0r511hyjn'

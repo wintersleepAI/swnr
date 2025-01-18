@@ -1,0 +1,34 @@
+name: Toolkit/Pretech
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025260
+  modifiedTime: 1737230025260
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 43dyx1izckm98zpr
+system:
+  description: 'Toolkits/Pretech: Containing a wide range of necessary tools for a particular skill set, toolkits can handle almost any job that doesn’t require a full-scale shop or lab. These sophisticated pretech tools are necessary for working on advanced TL5 artifacts, and the tools themselves are very rare and difficult to obtain.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 1
+  cost: 1000
+  tl: 5
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!43dyx1izckm98zpr'

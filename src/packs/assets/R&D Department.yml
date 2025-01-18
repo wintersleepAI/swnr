@@ -1,0 +1,40 @@
+name: R&D Department
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024832
+  modifiedTime: 1737230024832
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 045wr6f3owz5j907
+system:
+  description: These allow the smooth extension of wealth-creation and industrial principles to the farthest reaches of the faction's operations. A faction with an R&D department may treat all planets as having tech level 4 for purposes of buying Wealth assets.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    max: 15
+    value: 15
+  rating: 6
+  tl: 4
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 18
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!045wr6f3owz5j907'

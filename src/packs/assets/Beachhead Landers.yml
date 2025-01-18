@@ -1,0 +1,40 @@
+name: Beachhead Landers
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024803
+  modifiedTime: 1737230024803
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: j2w7wuilpm0559q1
+system:
+  description: A collection of short-range, high-capacity spike drive ships capable of moving large numbers of troops. As an action, the asset may move any number of assets on the planet, including itself, to any world within one hex at a cost of one FacCred per asset moved.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    max: 10
+    value: 10
+  rating: 4
+  tl: 4
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 10
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!j2w7wuilpm0559q1'

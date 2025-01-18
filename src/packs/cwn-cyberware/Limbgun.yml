@@ -1,0 +1,29 @@
+name: Limbgun
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024941
+  modifiedTime: 1737230024941
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: bd7vuz3mhvna9lu7
+system:
+  description: A ranged weapon is implanted into an arm, tail, or other significant limb, along with space for two magazines worth of ammunition. A full reload of this space can be accomplished as a Main Action. Limbguns can be used with Gunlink cyber, count as Readied at all times, and can be used even while both hands are occupied, but can be bound up in melee as normal guns can. Limbguns have an intrinsic +1 hit bonus, in addition to whatever bonus the implanted weapon may have. The maximum size of the gun is Encumbrance 1 for legs or neolimb tails, or Encumbrance 2 for arms. The buyer must supply the gun. Different guns can be swapped in as desired during the system's monthly maintenance, but once implanted, a gun is useless for later conventional use.
+  favorite: false
+  tl: 4
+  cost: 30000
+  strain: 1
+  disabled: false
+  effect: Implanted gun in a limb
+  type: Limb
+  concealment: Touch
+  complication: ''
+effects: []
+_key: '!items!bd7vuz3mhvna9lu7'

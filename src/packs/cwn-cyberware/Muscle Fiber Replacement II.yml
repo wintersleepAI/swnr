@@ -1,0 +1,29 @@
+name: Muscle Fiber Replacement II
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024943
+  modifiedTime: 1737230024943
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 44l03dyfb6f43359
+system:
+  description: The subject gains a Strength score of 18, and can smash through standard interior doors or equivalent barriers as a Move action.
+  favorite: false
+  tl: 4
+  cost: 200000
+  strain: 2
+  disabled: false
+  effect: Str 18 and extreme feats
+  type: Limb
+  concealment: Sight
+  complication: ''
+effects: []
+_key: '!items!44l03dyfb6f43359'

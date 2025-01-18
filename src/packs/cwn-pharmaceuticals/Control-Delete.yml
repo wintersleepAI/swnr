@@ -1,0 +1,33 @@
+name: Control-Delete
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025019
+  modifiedTime: 1737230025019
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: vb15k3g14sfytw79
+system:
+  description: A chemical that temporarily destroys a person's ability to form long-term memories, Control-Delete must be ingested in food or drink. Toxin-filtering cyber can fend it off, but it otherwise grants no saving throw. Once affected, the target will continue to act normally, but anything that happens to them between then and their next sleep or unconsciousness will be completely forgotten by the time they awake.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 0
+  cost: 25
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!vb15k3g14sfytw79'

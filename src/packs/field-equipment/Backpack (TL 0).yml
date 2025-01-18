@@ -1,0 +1,34 @@
+name: Backpack (TL 0)
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025103
+  modifiedTime: 1737230025103
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: ajvy8efiaq1nnxk5
+system:
+  description: 'Backpack (TL 0): A worn backpack counts as a readied item, though objects stowed inside it still require the usual round to dig free. Characters without backpacks or similar carrying devices might have difficulty justifying the hauling of large amounts of gear.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 1
+  cost: 5
+  tl: 0
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!ajvy8efiaq1nnxk5'

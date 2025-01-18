@@ -1,0 +1,28 @@
+name: Lock
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025038
+  modifiedTime: 1737230025038
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: jh32iv1urf62qz78
+system:
+  description: Lock a physical device that has some sort of electronic locking mechanism or a currently-unlocked cyberspace node barrier.
+  favorite: false
+  cost: 1000
+  type: verb
+  accessCost: 1
+  target: Device/Data
+  selfTerminating: false
+  useAffects: Lock an electronic lock or node barrier
+  skillCheckMod: 1
+effects: []
+_key: '!items!jh32iv1urf62qz78'

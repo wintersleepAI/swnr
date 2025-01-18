@@ -1,0 +1,29 @@
+name: Syntheyes (pair)
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024957
+  modifiedTime: 1737230024957
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: ulk7ncrrb25hwifx
+system:
+  description: 'These high-end cybereyes are designed to be indistinguishable from normal eyes under anything short of a medical examination. Any additional mods made to the eyes share this subtlety. '
+  favorite: false
+  tl: 4
+  cost: 25000
+  strain: 0.25
+  disabled: false
+  effect: Lifelike artificial eyes
+  type: Sensory
+  concealment: Medical
+  complication: ''
+effects: []
+_key: '!items!ulk7ncrrb25hwifx'

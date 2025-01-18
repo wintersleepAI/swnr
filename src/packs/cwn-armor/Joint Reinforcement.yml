@@ -1,0 +1,44 @@
+name: Joint Reinforcement
+type: armor
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024912
+  modifiedTime: 1737230024912
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: x2ui561kd2yr9qb3
+system:
+  description: The weak points around limb joints are reinforced with extra layers of weave. The extra weave hinders movement, and applies a -1 penalty to the wearer's Sneak and Exert checks.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 0
+  cost: 250
+  tl: null
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 0
+  shield: true
+  use: false
+  meleeAc: 0
+  soak:
+    max: 0
+    value: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: true
+  isHeavy: true
+  shieldMeleeACBonus: 1
+  shieldACBonus: 1
+effects: []
+_key: '!items!x2ui561kd2yr9qb3'

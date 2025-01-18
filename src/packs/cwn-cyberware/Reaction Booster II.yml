@@ -1,0 +1,29 @@
+name: Reaction Booster II
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024947
+  modifiedTime: 1737230024947
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: mtg27tcbse5dge05
+system:
+  description: As level one, but the user automatically wins initiative against targets that don't also automatically win initiative; if both have this ability, initiative is rolled without modifications. The user can act normally during surprise rounds.
+  favorite: false
+  tl: 4
+  cost: 100000
+  strain: 2
+  disabled: false
+  effect: Automatically win initiative
+  type: Nerve
+  concealment: Medical
+  complication: ''
+effects: []
+_key: '!items!mtg27tcbse5dge05'

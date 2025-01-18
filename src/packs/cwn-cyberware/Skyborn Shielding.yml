@@ -1,0 +1,29 @@
+name: Skyborn Shielding
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024955
+  modifiedTime: 1737230024955
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 1xve7fjdcnq04axm
+system:
+  description: A set of implants and skin treatments meant for those who spend extended periods in hard vacuum, this implant can be triggered as an Instant action. When deployed, the user gains the benefits of a Sealed Systems Implant and low-G microjets that allow 30m/round flight in microgravity conditions. Skyborn Shielding can operate for up to 72 hours before needing an hour of downtime to regenerate.
+  favorite: false
+  tl: 4
+  cost: 40000
+  strain: 2
+  disabled: false
+  effect: Orbital hab lifestyle mods
+  type: Skin
+  concealment: Sight
+  complication: ''
+effects: []
+_key: '!items!1xve7fjdcnq04axm'

@@ -1,0 +1,34 @@
+name: Comm server
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024892
+  modifiedTime: 1737230024892
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: saxpitdhpeip1gvl
+system:
+  description: 'Comm server: A powerful base unit for providing communications without comsats. The server provides service between up to three dozen compads within 300 kilometers of the unit. Server usage can be locked to specific compads, and all transmissions are heavily encrypted. A comm server can function for several months on a type B cell.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 3
+  cost: 1000
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!saxpitdhpeip1gvl'

@@ -1,0 +1,44 @@
+name: Medium Armored Suit
+type: armor
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024914
+  modifiedTime: 1737230024914
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: p8iu9t51qrm88knr
+system:
+  description: Heavy security usually sports armor on this level, including police rapid response teams.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 3
+  cost: 10000
+  tl: null
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 18
+  shield: false
+  use: false
+  meleeAc: 14
+  soak:
+    max: 10
+    value: 10
+  dr: 0
+  traumaDiePenalty: 2
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: 0
+  shieldACBonus: 0
+effects: []
+_key: '!items!p8iu9t51qrm88knr'

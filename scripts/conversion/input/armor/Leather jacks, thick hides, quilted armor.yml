@@ -1,0 +1,27 @@
+_id: C2MVd1p0yHwZweNw
+data:
+  ac: 13
+  meleeAc: 13
+  traumaDiePenalty: 0
+  isSubtle: false
+  soak:
+    value: 0
+    max: 0
+  cost: 10
+  description: >-
+    Primitive armor is a catch-all covering all armor technology that lacks
+    access to advanced materials and processes. While such armor can be very
+    effective in protecting against primitive weaponry, it is useless against
+    advanced TL4 melee weapons and firearms of all kinds. Against these weapons,
+    it is treated as AC 10. Note that some planets have native flora or fauna
+    capable of naturally producing extremely effective armor materials, ones not
+    susceptible to this limitation
+  encumbrance: 1
+  location: other
+  quality: stock
+  shield: false
+  tl: 0
+  type: primitive
+  use: false
+name: 'Leather jacks, thick hides, quilted armor'
+type: armor

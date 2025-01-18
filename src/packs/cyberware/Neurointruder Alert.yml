@@ -1,0 +1,29 @@
+name: Neurointruder Alert
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025090
+  modifiedTime: 1737230025090
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: dzv2839cnf6x2y1o
+system:
+  description: While somewhat primitive by pretech standards, this TL5 cybernetic implant allows the wearer to gain a +3 bonus on all saving throws to resist telepathic intrusion. Even if such a save is failed, the user will be aware that they are under telepathic assault, though some forms of mental control may not allow them to say as much until after the influence is ended. The warning does not indicate the source of the influence.
+  favorite: false
+  tl: 5
+  cost: 50000
+  strain: 1
+  disabled: false
+  effect: Grants +3 to save vs. telepathy alerts of intrusion
+  type: none
+  concealment: sight
+  complication: ''
+effects: []
+_key: '!items!dzv2839cnf6x2y1o'

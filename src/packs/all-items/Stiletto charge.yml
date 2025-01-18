@@ -1,0 +1,34 @@
+name: Stiletto charge
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024776
+  modifiedTime: 1737230024776
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: dmsle4mldcw13f3w
+system:
+  description: 'Stiletto charge: These ancient Mandate-era polymorphic intrusion charges were originally made to allow Mandate agents to easily overcome primitive colonial data security measures. Each charge is a small interface plug the size of a human thumb. When used as part of a hack against a TL4 system, it causes the skill check to automatically succeed regardless of the difficulty. Without line shunts, however, the duration of the hack is still no more than the usual 1d4 rounds plus the hacker’s Program skill. These devices are single-use, and are prized so highly that they are almost always unavailable for conventional purchase. Favors to the right people and the looting of Mandate remnants are the only normal ways to acquire these devices.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 1
+  cost: 0
+  tl: 5
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!dmsle4mldcw13f3w'

@@ -1,0 +1,34 @@
+name: Data protocol
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230024895
+  modifiedTime: 1737230024895
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: p940vhe9cayq3w56
+system:
+  description: 'Data protocol: Not so much a device as a collection of standard manuals on a world’s particular data formats and security methodologies. The price listed here are for black-market manuals on worlds where this information is rigidly restricted. On less paranoid planets, the equivalent information can be acquired for free.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 0
+  cost: 1000
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!p940vhe9cayq3w56'

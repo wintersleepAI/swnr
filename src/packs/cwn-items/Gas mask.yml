@@ -1,0 +1,33 @@
+name: Gas mask
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1737230025008
+  modifiedTime: 1737230025008
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: rzvz2als89iav3up
+system:
+  description: Bulky and uncomfortable, but once Readied it leaves the user immune to most inhaled gases, including tear gas grenades.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 1000
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!rzvz2als89iav3up'
