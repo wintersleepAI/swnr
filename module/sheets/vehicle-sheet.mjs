@@ -99,6 +99,15 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
     },
     carriedGear: {
       template: 'systems/swnr/templates/actor/fragments/compact-carried-list.hbs'
+    },
+    vehicleWeapons: {
+      template: 'systems/swnr/templates/actor/fragments/vehicle-weapon-table.hbs'
+    },
+    vehicleFittings: {
+      template: 'systems/swnr/templates/actor/fragments/vehicle-fittings-table.hbs'
+    },
+    vehicleDefense: {
+      template: 'systems/swnr/templates/actor/fragments/vehicle-defense-table.hbs'
     }
   };
 
