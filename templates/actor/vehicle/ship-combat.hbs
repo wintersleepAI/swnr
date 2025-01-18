@@ -18,20 +18,19 @@
       {{formGroup systemFields.npcCommandPoints value=system.npcCommandPoints localize=true}}
     </div>
   </div>
-  <div class="grid grid-3col">
+  <div class="grid grid-2col">
     <div class="col">
       {{>
         "systems/swnr/templates/actor/fragments/vehicle-weapon-table.hbs" 
           type=actor.type actor=actor
       }}
     </div>
-    <div class="resource">
+    <div class="resource flex flexcol">
       {{>
         "systems/swnr/templates/actor/fragments/vehicle-fitting-table.hbs" 
           type=actor.type actor=actor
       }}
-    </div>
-    <div class="resource">
+
       {{>
         "systems/swnr/templates/actor/fragments/vehicle-defense-table.hbs" 
           type=actor.type actor=actor
