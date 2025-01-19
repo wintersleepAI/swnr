@@ -46,7 +46,8 @@ export class SWNVehicleSheet extends api.HandlebarsApplicationMixin(
       resourceCreate: this._onResourceCreate,
       crewDelete: this._onCrewDelete,
       crewRoll: this._onCrewRoll,
-      crewShow: this._onCrewShow
+      crewShow: this._onCrewShow,
+      toggle: this._onToggleVehicleStatus,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -946,6 +947,27 @@ static async _onCrewDelete(event, target) {
         ui.notifications.info("Check character sheet for removing drone");
       }
     }
+  }
+}
+
+static async _onToggleVehicleStatus(event, target) {
+  event.preventDefault();
+  const dataset = target.dataset;
+  const item = this._getEmbeddedDocument(target);
+  if (item) {
+    console.log(`toggling for  ${item.name}`);
+  }
+  // Handle item rolls.
+  switch (dataset.toggle) {
+    case 'juryRig':
+      console.log("jury");
+      break;
+    case 'broken': 
+      console.log("broken");
+      break;
+    case 'destroyed':
+      console.log('destroyed');
+      break;
   }
 }
 
