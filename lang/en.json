@@ -178,14 +178,21 @@
       },
       "Cyberdeck": {
         "FIELDS": {
-          "shielding": {
-            "value": { "label": "Shielding"}
+          "health": {
+            "value": { "label": "Shielding"},
+            "label": "Shielding" 
           },
           "memory": {
-            "value": { "label": "Memory"}
+            "value": { "label": "Memory"},
+            "label": "Memory"
           },
           "cpu": {
-            "value": { "label": "CPU"}
+            "value": { "label": "CPU"},
+            "label": "CPU"
+          },
+          "access": {
+            "value": { "label": "Access"},
+            "label": "Access"
           },
           "bonusAccess": { "label" : "Bonus Access"},
           "baseShielding": {"label" : "Base Shielding"},

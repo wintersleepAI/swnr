@@ -126,7 +126,7 @@ export default class SWNProgram extends SWNItemBase {
     // promise.then(() => {
     const chatData = {
       speaker: ChatMessage.getSpeaker({ actor: this.actor ?? undefined }),
-      content: chatContent,
+      content: chatContent
     };
     getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
