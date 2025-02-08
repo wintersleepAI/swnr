@@ -33,6 +33,7 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
       roll: this._onRoll,
       hackerDelete: this._onHackerDelete,
       hackerRoll: this._onHackerRoll,
+      runProgram: this._onActivateProgram
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -168,15 +169,14 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
     }
   }
 
-
   static async _onActivateProgram(event, target) {
-    // async _onActivate(event: JQuery.ClickEvent): Promise<void> {
-    //   event.preventDefault();
-    //   if (this.actor.data.data.cpu.value < 1) {
-    //     ui.notifications?.error("Not enough CPU to activate program");
-    //     return;
-    //   }
-    //   const sheetData = await this.getData();
+    event.preventDefault();
+    if (this.actor.system.cpu.value < 1) {
+      ui.notifications?.error("Not enough CPU to activate program.");
+      return;
+    }
+    const sheetData = await this.getData({});
+
     //   let verbOptions = "";
     //   let subjectOptions = "";
     //   for (const verb of sheetData.verbs) {
@@ -306,6 +306,71 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
     //   }).render(true);
     // }
   }    
+
+  async getData(options) {
+    // let data = super.getData(options);
+    let data = {};
+    let hacker = null;
+    if (this.actor.system.hackerId) {
+      const cId = this.actor.system.hackerId;
+      const crewMember = game.actors?.get(cId);
+      if (crewMember) {
+        if (crewMember.type == "character" || crewMember.type == "npc") {
+          hacker = crewMember;
+        }
+      }
+    }
+    const programs = this.actor.items.filter(
+      (item) => item.type === "program"
+    );
+
+    console.log(programs);
+
+    const activePrograms= programs.filter(
+      (item) => item.system.type === "running"
+    );
+
+    const verbs= programs.filter(
+      (item) => item.system.type === "verb"
+    );
+
+    const subjects = programs.filter(
+      (item) => item.system.type === "subject"
+    );
+
+    const datafiles = programs.filter(
+      (item) => item.system.type === "datafile"
+    );
+
+    const access = {
+      value: 0,
+      max: 0,
+    };
+
+    if (hacker) {
+      if (hacker.type == "character") {
+        access.value =
+          hacker.system.access.value + this.actor.system.bonusAccess;
+        access.max =
+          hacker.system.access.max + this.actor.system.bonusAccess;
+      } else if (hacker.type == "npc") {
+        access.value =
+          hacker.system.access.value + this.actor.system.bonusAccess;
+        access.max =
+          hacker.system.access.max + this.actor.system.bonusAccess;
+      }
+    }
+
+    return foundry.utils.mergeObject(data, {
+      itemTypes: this.actor.itemTypes,
+      activePrograms: activePrograms,
+      verbs: verbs,
+      subjects: subjects,
+      datafiles: datafiles,
+      hacker: hacker,
+      access: access,
+    });
+  }
 
   /** @override */
   static PARTS = {

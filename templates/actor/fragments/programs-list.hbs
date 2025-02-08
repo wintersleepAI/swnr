@@ -46,18 +46,31 @@
               data-item-name="{{ name }}">
             <i class="fas fa-search"></i>
             </a>
-
-            <a
-              class='item-control item-create'
-              title='{{localize "DOCUMENT.Create" type='Item'}}'
-              data-action='createDoc'
-              data-document-class='Item'
-              data-type='program'
-              data-system.type='{{subType}}'
-            >
-              <i class='fas fa-plus'></i>
-              {{localize 'DOCUMENT.New' type=type}}
-            </a>
+            {{#if (eq subType "running")}}
+              <a
+                class='item-control item-create'
+                title='{{localize "DOCUMENT.Create" type='Item'}}'
+                data-action='runProgram'
+                data-document-class='Item'
+                data-type='program'
+                data-system.type='{{subType}}'
+              >
+                <i class='fas fa-plus'></i>
+                {{localize 'swnr.sheet.program.run'}}
+              </a>
+            {{else}}
+              <a
+                class='item-control item-create'
+                title='{{localize "DOCUMENT.Create" type='Item'}}'
+                data-action='createDoc'
+                data-document-class='Item'
+                data-type='program'
+                data-system.type='{{subType}}'
+              >
+                <i class='fas fa-plus'></i>
+                {{localize 'DOCUMENT.New' type=type}}
+              </a>
+            {{/if}}
           {{/if}}
         </div>
       </li>
