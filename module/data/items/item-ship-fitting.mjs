@@ -6,11 +6,4 @@ export default class SWNShipFitting extends SWNVehicleItemBase {
     'SWN.Item.base',
     'SWN.Item.ShipFitting',
   ];
-
-  static defineSchema() {
-    const fields = foundry.data.fields;
-    const schema = super.defineSchema();
-    schema.effect = SWNShared.requiredString("");
-    return schema;
-  }
 }

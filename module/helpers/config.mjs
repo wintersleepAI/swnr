@@ -93,53 +93,6 @@ SWN.reactionTypes = {
   friendly: 'swnr.npc.reaction.friendly',
 }
 
-SWN.vehicleTypes = {
-  ship: 'SWN.TYPES.Actor.starship',
-  vehicle: 'SWN.TYPES.Actor.vehicle',
-  drone: 'SWN.TYPES.Actor.drone',
-  mech: 'SWN.TYPES.Actor.mech',
-}
-
-SWN.mechClasses = {
-  suit: 'swnr.mech.mechClass.suit',
-  light: 'swnr.mech.mechClass.light',
-  heavy: 'swnr.mech.mechClass.heavy',
-}
-
-SWN.shipClasses = {
-  fighter: 'swnr.ship.shipClass.fighter',
-  frigate: 'swnr.ship.shipClass.frigate',
-  cruiser: 'swnr.ship.shipClass.cruiser',
-  capital: 'swnr.ship.shipClass.capital',
-}
-
-SWN.vehicleClasses = {
-  s: 'swnr.vehicle.vehicle-class.s',
-  m: 'swnr.vehicle.vehicle-class.m',
-  l: 'swnr.vehicle.vehicle-class.l',
-}
-
-SWN.allVehicleClasses = {
-  ...SWN.mechClasses,
-  ...SWN.shipClasses,
-  ...SWN.vehicleClasses
-};
-
-SWN.shipHullTypes = {
-  strikeFighter: 'swnr.sheet.ship.shipHullType.strikeFighter',
-  shuttle: 'swnr.sheet.ship.shipHullType.shuttle',
-  freeMerchant: 'swnr.sheet.ship.shipHullType.freeMerchant',
-  patrolBoat: 'swnr.sheet.ship.shipHullType.patrolBoat',
-  corvette: 'swnr.sheet.ship.shipHullType.corvette',
-  heavyFrigate: 'swnr.sheet.ship.shipHullType.heavyFrigate',
-  bulkFreighter: 'swnr.sheet.ship.shipHullType.bulkFreighter',
-  fleetCruiser: 'swnr.sheet.ship.shipHullType.fleetCruiser',
-  battleship: 'swnr.sheet.ship.shipHullType.battleship',
-  carrier: 'swnr.sheet.ship.shipHullType.carrier',
-  smallStation: 'swnr.sheet.ship.shipHullType.smallStation',
-  largeStation: 'swnr.sheet.ship.shipHullType.largeStation'
-}
-
 SWN.skills = {
   none: [],
   spaceMagic: ["knowMagic", "useMagic", "sunblade", "fight"],
