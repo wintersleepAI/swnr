@@ -43,89 +43,82 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
 
   static async _onHackerRoll(event, target) {
     event.preventDefault();
-    console.log("Target");
-    console.log(target);
-    console.log("This");
-    console.log(this);
-
     const actorId = this.actor.system.hackerId;
-    const hackerActor = game.actors?.get(actorId);
-    console.log("Hacker actor");
-    console.log(hackerActor);
-    // if (!crewActor) {
-    //   ui.notifications?.error(`Crew no longer exists`);
-    //   return;
-    // }
-    // const skills = crewActor.itemTypes.skill;
-    // const isChar = crewActor.type == "character" ? true : false;
-    // const dialogData = {
-    //   actor: crewActor,
-    //   skills: skills,
-    //   isChar,
-    // };
-    // const template = "systems/swnr/templates/dialogs/roll-skill-crew.hbs";
-    // const html = await renderTemplate(template, dialogData);
+    const crewActor = game.actors?.get(actorId);
+    if (!crewActor) {
+      ui.notifications?.error(`Hacker no longer exists`);
+      return;
+    }
+    const skills = crewActor.itemTypes.skill;
+    const isChar = crewActor.type == "character" ? true : false;
+    const dialogData = {
+      actor: crewActor,
+      skills: skills,
+      isChar,
+    };
+    const template = "systems/swnr/templates/dialogs/roll-skill-crew.hbs";
+    const html = await renderTemplate(template, dialogData);
   
-    // const _rollForm = async (_event, button, html) => {
-    //   const rollMode = game.settings.get("core", "rollMode");
-    //   const dice = button.form.elements.dicepool.value;
-    //   const modifier = parseInt(
-    //     button.form.elements.modifier?.value
-    //   ) || 0;
-    //   const skillId = button.form.elements.skill?.value;
-    //   const skill = crewActor.getEmbeddedDocument(
-    //     "Item",
-    //     skillId
-    //   );
-    //   const useNPCSkillBonus =  button.form.elements.useNPCSkillBonus?.checked
-    //     ? true : false;
-    //   const npcSkillBonus =
-    //     useNPCSkillBonus && crewActor.type == "npc"
-    //       ? crewActor.system.skillBonus
-    //       : 0;
-    //   const skillBonus = skill ? skill.system.rank : npcSkillBonus;
-    //   const statName = button.form.elements.stat
-    //     ?.value;
-    //   const stat = crewActor.system["stats"]?.[statName] || {
-    //     mod: 0,
-    //   };
-    //   const formula = `${dice} + @stat + @skillBonus + @modifier`;
-    //   const roll = new Roll(formula, {
-    //     skillBonus,
-    //     modifier,
-    //     stat: stat.mod,
-    //   });
-    //   const skillName = skill ? skill.name : "No Skill";
-    //   const statNameDisply = statName
-    //     ? game.i18n.localize("swnr.stat.short." + statName)
-    //     : "No Stat";
-    //   const title = `${game.i18n.localize(
-    //     "swnr.chat.skillCheck"
-    //   )}: ${statNameDisply}/${skillName}`;
-    //   await roll.roll({ async: true });
-    //   roll.toMessage(
-    //     {
-    //       speaker: { alias: crewActor.name },
-    //       flavor: title,
-    //     },
-    //     { rollMode }
-    //   );
-    // };
+    const _rollForm = async (_event, button, html) => {
+      const rollMode = game.settings.get("core", "rollMode");
+      const dice = button.form.elements.dicepool.value;
+      const modifier = parseInt(
+        button.form.elements.modifier?.value
+      ) || 0;
+      const skillId = button.form.elements.skill?.value;
+      const skill = crewActor.getEmbeddedDocument(
+        "Item",
+        skillId
+      );
+      const useNPCSkillBonus =  button.form.elements.useNPCSkillBonus?.checked
+        ? true : false;
+      const npcSkillBonus =
+        useNPCSkillBonus && crewActor.type == "npc"
+          ? crewActor.system.skillBonus
+          : 0;
+      const skillBonus = skill ? skill.system.rank : npcSkillBonus;
+      const statName = button.form.elements.stat
+        ?.value;
+      const stat = crewActor.system["stats"]?.[statName] || {
+        mod: 0,
+      };
+      const formula = `${dice} + @stat + @skillBonus + @modifier`;
+      const roll = new Roll(formula, {
+        skillBonus,
+        modifier,
+        stat: stat.mod,
+      });
+      const skillName = skill ? skill.name : "No Skill";
+      const statNameDisply = statName
+        ? game.i18n.localize("swnr.stat.short." + statName)
+        : "No Stat";
+      const title = `${game.i18n.localize(
+        "swnr.chat.skillCheck"
+      )}: ${statNameDisply}/${skillName}`;
+      await roll.roll({ async: true });
+      roll.toMessage(
+        {
+          speaker: { alias: crewActor.name },
+          flavor: title,
+        },
+        { rollMode }
+      );
+    };
   
-    // const d = await foundry.applications.api.DialogV2.prompt({
-    //   window: { title: game.i18n.format("swnr.dialog.skillRoll", {
-    //     actorName: crewActor?.name,
-    //   })},
-    //   content: html,
-    //   modal: true,
-    //   rejectClose: false,
-    //   ok: {
-    //     label: game.i18n.localize("swnr.chat.roll"),
-    //     callback: _rollForm,
-    //   },
-    // });
+    const d = await foundry.applications.api.DialogV2.prompt({
+      window: { title: game.i18n.format("swnr.dialog.skillRoll", {
+        actorName: crewActor?.name,
+      })},
+      content: html,
+      modal: true,
+      rejectClose: false,
+      ok: {
+        label: game.i18n.localize("swnr.chat.roll"),
+        callback: _rollForm,
+      },
+    });
   }
-
+  
   static async _onHackerDelete(event, target) {
     console.log("Removing hacker");
     console.log(this);
@@ -174,6 +167,145 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
       ui.notifications?.error("Crew member not found");
     }
   }
+
+
+  static async _onActivateProgram(event, target) {
+    // async _onActivate(event: JQuery.ClickEvent): Promise<void> {
+    //   event.preventDefault();
+    //   if (this.actor.data.data.cpu.value < 1) {
+    //     ui.notifications?.error("Not enough CPU to activate program");
+    //     return;
+    //   }
+    //   const sheetData = await this.getData();
+    //   let verbOptions = "";
+    //   let subjectOptions = "";
+    //   for (const verb of sheetData.verbs) {
+    //     verbOptions += `<option value="${verb.id}">${verb.name}</option>`;
+    //   }
+    //   for (const subject of sheetData.subjects) {
+    //     subjectOptions += `<option value="${subject.id}">${subject.name}</option>`;
+    //   }
+    //   if (!sheetData.verbs.length || !sheetData.subjects.length) {
+    //     ui.notifications?.error("No verbs or subjects found");
+    //     return;
+    //   }
+    //   const formContent = `<form>
+    //   <div class="form-group">
+    //     <label>Verb:</label>
+    //     <select name="verbId"
+    //       class="px-1.5 border border-gray-800 bg-gray-400 bg-opacity-75 placeholder-blue-800 placeholder-opacity-75 rounded-md">
+    //       ${verbOptions}
+    //     </select>
+    //     <label>Subject:</label>
+    //     <select name="subjectId"
+    //       class="px-1.5 border border-gray-800 bg-gray-400 bg-opacity-75 placeholder-blue-800 placeholder-opacity-75 rounded-md">
+    //       ${subjectOptions}
+    //     </select>
+    //   </div>
+    //   </form>`;
+  
+    //   const _activateForm = async (html: HTMLFormElement) => {
+    //     const form = <HTMLFormElement>html[0].querySelector("form");
+    //     const verbID = (<HTMLInputElement>form.querySelector('[name="verbId"]'))
+    //       ?.value;
+    //     const subID = (<HTMLInputElement>form.querySelector('[name="subjectId"]'))
+    //       ?.value;
+    //     if (!verbID || !subID) {
+    //       ui.notifications?.error("Verb or Subject not selected");
+    //       return;
+    //     }
+    //     const verb = sheetData.verbs.find((item) => item.id === verbID);
+    //     const subject = sheetData.subjects.find((item) => item.id === subID);
+    //     if (!verb || !subject) {
+    //       ui.notifications?.error("Verb or Subject not found");
+    //       return;
+    //     }
+  
+    //     if (
+    //       verb.data.data.target &&
+    //       verb.data.data.target.indexOf(subject.data.data.target) === -1
+    //     ) {
+    //       ui.notifications?.error(
+    //         "Verb and Subject are incompatible (target and type does not match)"
+    //       );
+    //       return;
+    //     }
+    //     let skillCheckMod = 0;
+    //     if (verb.data.data.skillCheckMod) {
+    //       skillCheckMod += verb.data.data.skillCheckMod;
+    //     }
+    //     if (subject.data.data.skillCheckMod) {
+    //       skillCheckMod += subject.data.data.skillCheckMod;
+    //     }
+    //     const newProgram = {
+    //       name: `${verb.name} ${subject.name}`,
+    //       type: `program`,
+    //       img: verb.img,
+    //       data: {
+    //         type: "running",
+    //         cost: verb.data.data.cost,
+    //         accessCost: verb.data.data.accessCost,
+    //         useAffects: verb.data.data.useAffects,
+    //         selfTerminating: verb.data.data.selfTerminating,
+    //         skillCheckMod: skillCheckMod,
+    //       },
+    //     };
+  
+    //     const docs = await this.actor.createEmbeddedDocuments(
+    //       "Item",
+    //       [newProgram],
+    //       {}
+    //     );
+    //     const program = docs[0];
+    //     if (!program || !(program instanceof SWNRProgram)) {
+    //       ui.notifications?.error("Failed to create program");
+    //       return;
+    //     }
+  
+    //     // Consume access
+    //     if (sheetData.hacker) {
+    //       let access = 0;
+    //       if (sheetData.hacker.type == "character") {
+    //         access = sheetData.hacker.data.data.access.value;
+    //         access -= program.data.data.accessCost;
+    //       } else if (sheetData.hacker.type == "npc") {
+    //         access = sheetData.hacker.data.data.access.value;
+    //         access -= program.data.data.accessCost;
+    //       }
+    //       await sheetData.hacker.update({
+    //         "data.access.value": access,
+    //       });
+    //       if (access <= 0) {
+    //         ui.notifications?.info("Hacker has no access left");
+    //       }
+    //     }
+  
+    //     // Roll skill / create button
+    //     program.roll();
+  
+    //     if (program.data.data.selfTerminating) {
+    //       program.delete();
+    //     } else {
+    //       // await this.actor.update({
+    //       //   "data.cpu.value": this.actor.data.data.cpu.value - 1,
+    //       // });
+    //     }
+    //   };
+  
+    //   new Dialog({
+    //     title: game.i18n.localize("swnr.sheet.cyberdeck.run"),
+    //     content: formContent,
+    //     buttons: {
+    //       yes: {
+    //         icon: "<i class='fas fa-check'></i>",
+    //         label: `Run`,
+    //         callback: _activateForm,
+    //       },
+    //     },
+    //     default: "Run",
+    //   }).render(true);
+    // }
+  }    
 
   /** @override */
   static PARTS = {
