@@ -31,6 +31,8 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
       deleteDoc: this._deleteDoc,
       toggleEffect: this._toggleEffect,
       roll: this._onRoll,
+      hackerDelete: this._onHackerDelete,
+      hackerRoll: this._onHackerRoll,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -38,6 +40,140 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
       submitOnChange: true,
     },
   };
+
+  static async _onHackerRoll(event, target) {
+    event.preventDefault();
+    console.log("Target");
+    console.log(target);
+    console.log("This");
+    console.log(this);
+
+    const actorId = this.actor.system.hackerId;
+    const hackerActor = game.actors?.get(actorId);
+    console.log("Hacker actor");
+    console.log(hackerActor);
+    // if (!crewActor) {
+    //   ui.notifications?.error(`Crew no longer exists`);
+    //   return;
+    // }
+    // const skills = crewActor.itemTypes.skill;
+    // const isChar = crewActor.type == "character" ? true : false;
+    // const dialogData = {
+    //   actor: crewActor,
+    //   skills: skills,
+    //   isChar,
+    // };
+    // const template = "systems/swnr/templates/dialogs/roll-skill-crew.hbs";
+    // const html = await renderTemplate(template, dialogData);
+  
+    // const _rollForm = async (_event, button, html) => {
+    //   const rollMode = game.settings.get("core", "rollMode");
+    //   const dice = button.form.elements.dicepool.value;
+    //   const modifier = parseInt(
+    //     button.form.elements.modifier?.value
+    //   ) || 0;
+    //   const skillId = button.form.elements.skill?.value;
+    //   const skill = crewActor.getEmbeddedDocument(
+    //     "Item",
+    //     skillId
+    //   );
+    //   const useNPCSkillBonus =  button.form.elements.useNPCSkillBonus?.checked
+    //     ? true : false;
+    //   const npcSkillBonus =
+    //     useNPCSkillBonus && crewActor.type == "npc"
+    //       ? crewActor.system.skillBonus
+    //       : 0;
+    //   const skillBonus = skill ? skill.system.rank : npcSkillBonus;
+    //   const statName = button.form.elements.stat
+    //     ?.value;
+    //   const stat = crewActor.system["stats"]?.[statName] || {
+    //     mod: 0,
+    //   };
+    //   const formula = `${dice} + @stat + @skillBonus + @modifier`;
+    //   const roll = new Roll(formula, {
+    //     skillBonus,
+    //     modifier,
+    //     stat: stat.mod,
+    //   });
+    //   const skillName = skill ? skill.name : "No Skill";
+    //   const statNameDisply = statName
+    //     ? game.i18n.localize("swnr.stat.short." + statName)
+    //     : "No Stat";
+    //   const title = `${game.i18n.localize(
+    //     "swnr.chat.skillCheck"
+    //   )}: ${statNameDisply}/${skillName}`;
+    //   await roll.roll({ async: true });
+    //   roll.toMessage(
+    //     {
+    //       speaker: { alias: crewActor.name },
+    //       flavor: title,
+    //     },
+    //     { rollMode }
+    //   );
+    // };
+  
+    // const d = await foundry.applications.api.DialogV2.prompt({
+    //   window: { title: game.i18n.format("swnr.dialog.skillRoll", {
+    //     actorName: crewActor?.name,
+    //   })},
+    //   content: html,
+    //   modal: true,
+    //   rejectClose: false,
+    //   ok: {
+    //     label: game.i18n.localize("swnr.chat.roll"),
+    //     callback: _rollForm,
+    //   },
+    // });
+  }
+
+  static async _onHackerDelete(event, target) {
+    console.log("Removing hacker");
+    console.log(this);
+    const actorId = this.actor.system.hackerId;
+    console.log("1");
+    //Only remove if there;
+    // if (hackerId !== actorId) {
+    //   ui.notifications?.error(
+    //     "Removing hacker from deck, but not currently the hacker"
+    //   );
+    //   return;
+    // }
+    console.log("2");
+    if (actorId) {
+      console.log("3");
+      await this.actor.update({
+        "system.-=hackerId": null
+      });
+      console.log("4");
+      await this.actor.update({
+        "system.hacker": "",
+      });
+      // // Remove the deck from the list of decks ID's on the hacker actor
+      // const actor = game.actors?.get(actorId);
+      console.log("5");
+
+      console.log(this);
+      // if (
+      //   actor &&
+      //   this.id &&
+      //   (actor.type === "character" || actor.type === "npc")
+      // ) {
+      //   const cyberdeck = actor.data.data.cyberdecks;
+      //   const idx = cyberdeck.indexOf(this.id);
+      //   if (idx != -1) {
+      //     cyberdeck.splice(idx, 1);
+      //     await actor.update({
+      //       "data.cyberdecks": cyberdeck,
+      //     });
+      //   }
+      // }
+      // ui.notifications?.info(
+      //   `Removed hacker from ${this.name}. Manually remove the cyberdeck from the hacker's sheet`
+      // );
+    } else {
+      ui.notifications?.error("Crew member not found");
+    }
+  }
 
   /** @override */
   static PARTS = {
@@ -635,6 +771,8 @@ export class SWNCyberdeckSheet extends api.HandlebarsApplicationMixin(
     return this.actor.updateEmbeddedDocuments('Item', updateData);
   }
 
+
+  
   /** The following pieces set up drag handling and are unlikely to need modification  */
 
   /**

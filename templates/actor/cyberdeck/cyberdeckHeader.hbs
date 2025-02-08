@@ -1,7 +1,6 @@
 {{! Sheet Header }}
 <header class='sheet-header'>
   <div class="profile-img"><!-- Profile Image -->
-
     <img
       class='profile-img'
       src='{{actor.img}}'
@@ -11,7 +10,6 @@
       height='100'
       width='100'
     />
-
   </div>
   <div class='header-fields'>
     <div class='document-name'>
@@ -75,6 +73,10 @@
       {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
       {{formGroup systemFields.encumberance value=system.encumberance localize=true widget=headerWidget}}
       {{formGroup systemFields.hacker value=system.hacker localize=true widget=headerWidget}}
+      <div class="item-controls">
+        <a class="item-control" data-action="hackerRoll" title='{{localize ' swnr.sheet.roll-skill'}}'><i class="fas fa-dice"></i></a>
+        <a class="item-control" data-action="hackerDelete" title='{{localize 'swnr.sheet.delete-item'}}'><i class="fas fa-trash"></i></a>
+      </div>
     </div>
 
 
