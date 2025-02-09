@@ -195,6 +195,36 @@
           "quality": {"label": "Quality"}
         }
       },
+      "vehiclebase": {
+        "FIELDS": {
+          "cost": { "label": "Cost" },
+          "costMultiplier": { "label": "Cost Multiplier" },
+          "power": { "label": "Power" },
+          "powerMultiplier": { "label": "Power Multiplier" },
+          "mass": { "label": "Free Mass" },
+          "massMultiplier": { "label": "Free Mass Multiplier" },
+          "minClass": { "label": "Min Class" },
+          "broken": { "label": "Broken" }
+        }
+      },
+      "ShipWeapon": {
+        "FIELDS": {
+          "tl": { "label": "Tech Level" },
+          "damage": { "label": "Damage" },
+          "hardpoint": { "label": "Hardpoints" },
+          "qualities": { "label": "Qualities" }
+        }
+      },
+      "ShipDefense": {
+        "FIELDS": {
+          "effect": { "label": "Effect" }
+        }
+      },
+      "ShipFitting": {
+        "FIELDS": {
+          "effect": { "label": "Effect" }
+        }
+      },
       "Gear": {
         "FIELDS": {
           "rollFormula": {"label": "Roll Formula"},
@@ -1303,6 +1333,14 @@
       "focus": "Focus",
       "edge": "Edge",
       "feature": "Feature"
+    },
+    "ship": {
+      "shipClass": {
+        "fighter": "Fighter",
+        "frigate": "Frigate",
+        "cruiser": "Cruiser",
+        "capital": "Capital"
+      }
     },
     "deleteTitle": "Delete {name}?",
     "deleteCrew": "Do you want to remove {name} from the crew?",

@@ -216,3 +216,10 @@ SWN.defaultImg = {
   cyberdeck: "cyberdeck.png",
   faction: "faction.png",
 };
+
+SWN.shipClasses = {
+  fighter: 'swnr.ship.shipClass.fighter',
+  frigate: 'swnr.ship.shipClass.frigate',
+  cruiser: 'swnr.ship.shipClass.cruiser',
+  capital: 'swnr.ship.shipClass.capital',
+}
