@@ -37,10 +37,16 @@
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. }}
     <div class='resources grid grid-4col'>
-      {{formGroup systemFields.health value=system.health localize=true widget=headerWidget}}
+      <div>
+        {{formGroup systemFields.health value=system.health localize=true widget=headerWidget}}
+        <a class="item-control" data-action="refreshShielding" title='{{localize 'swnr.sheet.cyberdeck.refreshShielding'}}'><i class="fas fa-hourglass-end"></i></a>
+      </div>
       {{formGroup systemFields.memory value=system.memory localize=true widget=headerWidget}}
       {{formGroup systemFields.cpu value=system.cpu localize=true widget=headerWidget}}
-      {{formGroup systemFields.access value=system.access localize=true widget=headerWidget}}
+      <div>
+        {{formGroup systemFields.access value=system.access localize=true widget=headerWidget}}
+        <a class="item-control" data-action="refreshAccess" title='{{localize 'swnr.sheet.cyberdeck.refreshAccess'}}'><i class="fas fa-hourglass-end"></i></a>
+      </div>
     </div>
 
     <div class="resource grid grid-3col thin-bar">

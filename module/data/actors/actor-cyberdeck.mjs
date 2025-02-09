@@ -12,6 +12,7 @@ export default class SWNCyberdeck extends SWNActorBase {
     const schema = super.defineSchema();
     schema.health = SWNShared.resourceField(1,1);
     schema.memory = SWNShared.resourceField(1,1);
+    schema.access = SWNShared.resourceField(1,1);
     schema.cpu = SWNShared.resourceField(1,1);
     schema.encumberance = SWNShared.requiredNumber(0);
     schema.hackerId = new fields.DocumentIdField();
@@ -40,7 +41,6 @@ export default class SWNCyberdeck extends SWNActorBase {
 
     //Calculate the health from shielding and neural buffer.
     this.health.max = parseInt(this.baseShielding + this.bonusShielding);
-
     if (this.neuralBuffer && actor) {
       if (actor.type === "character") {
         const nbBonus = actor.system.level.value * 3;
@@ -49,9 +49,12 @@ export default class SWNCyberdeck extends SWNActorBase {
         const nbBonus = actor.system.hitDice * 3;
         this.health.max += nbBonus;
       }
+      else {
+        console.log("Hacker for is neither a character nor npc. Neural buffer bonus not applied to deck");
+      }
     }
 
-    //Set the memrory and CPU based on the programs.
+    //Set the memory and CPU based on the programs.
     const programs = this.parent.items.filter(
       item => item.type === "program"
     );
@@ -69,7 +72,7 @@ export default class SWNCyberdeck extends SWNActorBase {
         return actor;
       }
       else {
-        console.log("Hacker for is neither a characher nor npc.");
+        console.log("Hacker for is neither a character nor npc.");
       }
     }
     return null;

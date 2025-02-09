@@ -30,7 +30,9 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       roll: this._onRoll,
       hackerDelete: this._onHackerDelete,
       hackerRoll: this._onHackerRoll,
-      runProgram: this._onActivateProgram
+      runProgram: this._onActivateProgram,
+      refreshAccess: this._onRefreshAccess,
+      refreshShielding: this._onRefreshShielding
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -163,11 +165,66 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
    * @param {object} context The context object to mutate
    */
   _prepareItems(context) {
-    // Initialize containers.
-    // You can just use `this.document.itemTypes` instead
-    // if you don't need to subdivide a given type like
-    // this sheet does with spells
-    console.log("TODO: Implement _prepareItems for splitting up items");//TODO
+    let hacker = null;
+    if (this.actor.system.hackerId) {
+      const cId = this.actor.system.hackerId;
+      const crewMember = game.actors?.get(cId);
+      if (crewMember) {
+        if (crewMember.type == "character" || crewMember.type == "npc") {
+          hacker = crewMember;
+        }
+      }
+    }
+    const programs = this.actor.items.filter(
+      (item) => item.type === "program"
+    );
+
+    console.log(programs);
+
+    const activePrograms = programs.filter(
+      (item) => item.system.type === "running"
+    );
+
+    const verbs = programs.filter(
+      (item) => item.system.type === "verb"
+    );
+
+    const subjects = programs.filter(
+      (item) => item.system.type === "subject"
+    );
+
+    const datafiles = programs.filter(
+      (item) => item.system.type === "datafile"
+    );
+
+    const access = {
+      value: 0,
+      max: 0,
+    };
+
+    if (hacker) {
+      if (hacker.type == "character") {
+        access.value =
+          hacker.system.access.value + this.actor.system.bonusAccess;
+        access.max =
+          hacker.system.access.max + this.actor.system.bonusAccess;
+      } else if (hacker.type == "npc") {
+        access.value =
+          hacker.system.access.value + this.actor.system.bonusAccess;
+        access.max =
+          hacker.system.access.max + this.actor.system.bonusAccess;
+      }
+    }
+
+    return foundry.utils.mergeObject(context, {
+      itemTypes: this.actor.itemTypes,
+      activePrograms: activePrograms,
+      verbs: verbs,
+      subjects: subjects,
+      datafiles: datafiles,
+      hacker: hacker,
+      access: access,
+    });
   }
 
   /**
@@ -305,51 +362,53 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       ui.notifications?.error("Not enough CPU to activate program.");
       return;
     }
-    const sheetData = await this.getData({});
+    const sheetData = await this._prepareItems({});
+    const a = this.context;
+    let verbOptions = "";
+    let subjectOptions = "";
+    for (const verb of sheetData.verbs) {
+      verbOptions += `<option value="${verb.id}">${verb.name}</option>`;
+    }
+    for (const subject of sheetData.subjects) {
+      subjectOptions += `<option value="${subject.id}">${subject.name}</option>`;
+    }
 
-    //   let verbOptions = "";
-    //   let subjectOptions = "";
-    //   for (const verb of sheetData.verbs) {
-    //     verbOptions += `<option value="${verb.id}">${verb.name}</option>`;
-    //   }
-    //   for (const subject of sheetData.subjects) {
-    //     subjectOptions += `<option value="${subject.id}">${subject.name}</option>`;
-    //   }
-    //   if (!sheetData.verbs.length || !sheetData.subjects.length) {
-    //     ui.notifications?.error("No verbs or subjects found");
+    if (!sheetData.verbs.length || !sheetData.subjects.length) {
+      ui.notifications?.error("No verbs or subjects found");
+      return;
+    }
+
+    const formContent = `<form>
+    <div class="form-group">
+      <label>Verb:</label>
+      <select name="verbId"
+        class="px-1.5 border border-gray-800 bg-gray-400 bg-opacity-75 placeholder-blue-800 placeholder-opacity-75 rounded-md">
+        ${verbOptions}
+      </select>
+      <label>Subject:</label>
+      <select name="subjectId"
+        class="px-1.5 border border-gray-800 bg-gray-400 bg-opacity-75 placeholder-blue-800 placeholder-opacity-75 rounded-md">
+        ${subjectOptions}
+      </select>
+    </div>
+    </form>`;
+
+    // const _activateForm = async (html: HTMLFormElement) => {
+    //   const form = <HTMLFormElement>html[0].querySelector("form");
+    //   const verbID = (<HTMLInputElement>form.querySelector('[name="verbId"]'))
+    //     ?.value;
+    //   const subID = (<HTMLInputElement>form.querySelector('[name="subjectId"]'))
+    //     ?.value;
+    //   if (!verbID || !subID) {
+    //     ui.notifications?.error("Verb or Subject not selected");
     //     return;
     //   }
-    //   const formContent = `<form>
-    //   <div class="form-group">
-    //     <label>Verb:</label>
-    //     <select name="verbId"
-    //       class="px-1.5 border border-gray-800 bg-gray-400 bg-opacity-75 placeholder-blue-800 placeholder-opacity-75 rounded-md">
-    //       ${verbOptions}
-    //     </select>
-    //     <label>Subject:</label>
-    //     <select name="subjectId"
-    //       class="px-1.5 border border-gray-800 bg-gray-400 bg-opacity-75 placeholder-blue-800 placeholder-opacity-75 rounded-md">
-    //       ${subjectOptions}
-    //     </select>
-    //   </div>
-    //   </form>`;
-
-    //   const _activateForm = async (html: HTMLFormElement) => {
-    //     const form = <HTMLFormElement>html[0].querySelector("form");
-    //     const verbID = (<HTMLInputElement>form.querySelector('[name="verbId"]'))
-    //       ?.value;
-    //     const subID = (<HTMLInputElement>form.querySelector('[name="subjectId"]'))
-    //       ?.value;
-    //     if (!verbID || !subID) {
-    //       ui.notifications?.error("Verb or Subject not selected");
-    //       return;
-    //     }
-    //     const verb = sheetData.verbs.find((item) => item.id === verbID);
-    //     const subject = sheetData.subjects.find((item) => item.id === subID);
-    //     if (!verb || !subject) {
-    //       ui.notifications?.error("Verb or Subject not found");
-    //       return;
-    //     }
+    //   const verb = sheetData.verbs.find((item) => item.id === verbID);
+    //   const subject = sheetData.subjects.find((item) => item.id === subID);
+    //   if (!verb || !subject) {
+    //     ui.notifications?.error("Verb or Subject not found");
+    //     return;
+    //   }
 
     //     if (
     //       verb.data.data.target &&
@@ -437,69 +496,42 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     // }
   }
 
-  async getData(options) {
-    // let data = super.getData(options);
-    let data = {};
-    let hacker = null;
-    if (this.actor.system.hackerId) {
-      const cId = this.actor.system.hackerId;
-      const crewMember = game.actors?.get(cId);
-      if (crewMember) {
-        if (crewMember.type == "character" || crewMember.type == "npc") {
-          hacker = crewMember;
-        }
-      }
-    }
-    const programs = this.actor.items.filter(
-      (item) => item.type === "program"
+  static async _onRefreshShielding(event, target) {
+    event.preventDefault();
+    const oldShielding = this.actor.system.health.value;
+    const maxShielding = this.actor.system.health.max;
+
+    ui.notifications?.info(
+      `Refreshing shielding from ${oldShielding} to ${maxShielding} (reminder 15 minutes to pass)`
     );
-
-    console.log(programs);
-
-    const activePrograms = programs.filter(
-      (item) => item.system.type === "running"
-    );
-
-    const verbs = programs.filter(
-      (item) => item.system.type === "verb"
-    );
-
-    const subjects = programs.filter(
-      (item) => item.system.type === "subject"
-    );
-
-    const datafiles = programs.filter(
-      (item) => item.system.type === "datafile"
-    );
-
-    const access = {
-      value: 0,
-      max: 0,
-    };
-
-    if (hacker) {
-      if (hacker.type == "character") {
-        access.value =
-          hacker.system.access.value + this.actor.system.bonusAccess;
-        access.max =
-          hacker.system.access.max + this.actor.system.bonusAccess;
-      } else if (hacker.type == "npc") {
-        access.value =
-          hacker.system.access.value + this.actor.system.bonusAccess;
-        access.max =
-          hacker.system.access.max + this.actor.system.bonusAccess;
-      }
-    }
-
-    return foundry.utils.mergeObject(data, {
-      itemTypes: this.actor.itemTypes,
-      activePrograms: activePrograms,
-      verbs: verbs,
-      subjects: subjects,
-      datafiles: datafiles,
-      hacker: hacker,
-      access: access,
+    await this.actor.update({
+      "system.health.value": maxShielding,
     });
+  }
+
+  static async _onRefreshAccess(event, target) {
+    event.preventDefault();
+    const hacker = this.actor.system.getHacker();
+    if (hacker) {
+      const maxAccess = hacker.system.access.max;
+      const newAccessDisplay = maxAccess + this.actor.system.bonusAccess;
+      const oldAccess =
+        hacker.system.access.value + this.actor.system.bonusAccess;
+      ui.notifications?.info(
+        `Refreshing access from ${oldAccess} to ${newAccessDisplay} (reminder after 1 hour reprogramming, once per day)`
+      );
+      await hacker.update({
+        "system.access.value": maxAccess,
+      });
+      await this.actor.update({
+        "system.access.max": newAccessDisplay
+      });
+      await this.actor.update({
+        "system.access.value": newAccessDisplay
+      });
+    } else {
+      ui.notifications?.error("No hacker found");
+    }
   }
 
 
