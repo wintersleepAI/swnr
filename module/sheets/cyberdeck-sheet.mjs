@@ -273,6 +273,9 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       await this.actor.update({
         "system.hackerId": null
       });
+      await this.actor.update({
+        "system.hacker": ""
+      });
       let actor = game.actors?.get(actorId);
       if (
         actor &&

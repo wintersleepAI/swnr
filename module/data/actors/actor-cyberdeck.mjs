@@ -28,11 +28,19 @@ export default class SWNCyberdeck extends SWNActorBase {
 
   prepareDerivedData() {
     // Set the hacker's name from actor.
-    const actor = game.actors.get(this.hackerId);
-    this.hacker = actor.name;
+    const actor = this.getHacker();
+    if(actor)
+    {
+      this.hacker = actor.name;
+    }
+    else
+    {
+      this.hacker = "";
+    }
 
     //Calculate the health from shielding and neural buffer.
     this.health.max = parseInt(this.baseShielding + this.bonusShielding);
+
     if (this.neuralBuffer && actor) {
       if (actor.type === "character") {
         const nbBonus = actor.system.level.value * 3;
