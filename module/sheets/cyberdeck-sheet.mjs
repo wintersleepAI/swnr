@@ -179,7 +179,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     // You can just use `this.document.itemTypes` instead
     // if you don't need to subdivide a given type like
     // this sheet does with spells
-    console.log("TODO: Implement _prepareItems");//TODO
+    console.log("TODO: Implement _prepareItems for splitting up items");//TODO
   }
 
   /**
