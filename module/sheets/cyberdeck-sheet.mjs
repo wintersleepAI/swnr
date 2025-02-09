@@ -289,7 +289,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
         }
       }
       ui.notifications?.info(
-        `Removed hacker from ${this.name}. Manually remove the cyberdeck from the hacker's sheet`
+        `Removed hacker from ${this.actor.name}. Manually remove the cyberdeck from the hacker's sheet`
       );
     } else {
       ui.notifications?.error("hacker not found");
