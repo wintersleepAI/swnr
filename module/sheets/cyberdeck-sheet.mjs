@@ -60,9 +60,9 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
   /** @override */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
-    
+
     //wsai adding to allow setting default tab
-    options.defaultTab= 'programs';
+    options.defaultTab = 'programs';
 
     // Not all parts always render
     options.parts = ['header', 'tabs'];
@@ -111,12 +111,12 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
 
   /** @override */
   async _preparePartContext(partId, context) {
-    switch(partId) {
+    switch (partId) {
       case 'programs':
         context.tab = context.tabs[partId];
         break;
     }
-    
+
     return context;
   }
 
@@ -150,7 +150,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
           tab.id = 'programs';
           tab.label += 'Programs';
           break;
-    }
+      }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
       tabs[partId] = tab;
       return tabs;
@@ -203,7 +203,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     };
     const template = "systems/swnr/templates/dialogs/roll-skill-crew.hbs";
     const html = await renderTemplate(template, dialogData);
-  
+
     const _rollForm = async (_event, button, html) => {
       const rollMode = game.settings.get("core", "rollMode");
       const dice = button.form.elements.dicepool.value;
@@ -215,7 +215,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
         "Item",
         skillId
       );
-      const useNPCSkillBonus =  button.form.elements.useNPCSkillBonus?.checked
+      const useNPCSkillBonus = button.form.elements.useNPCSkillBonus?.checked
         ? true : false;
       const npcSkillBonus =
         useNPCSkillBonus && crewActor.type == "npc"
@@ -249,11 +249,13 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
         { rollMode }
       );
     };
-  
+
     const d = await foundry.applications.api.DialogV2.prompt({
-      window: { title: game.i18n.format("swnr.dialog.skillRoll", {
-        actorName: crewActor?.name,
-      })},
+      window: {
+        title: game.i18n.format("swnr.dialog.skillRoll", {
+          actorName: crewActor?.name,
+        })
+      },
       content: html,
       modal: true,
       rejectClose: false,
@@ -263,53 +265,34 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       },
     });
   }
-  
-  static async _onHackerDelete(event, target) {
-    console.log("Removing hacker");
-    console.log(this);
-    const actorId = this.actor.system.hackerId;
-    console.log("1");
-    //Only remove if there;
-    // if (hackerId !== actorId) {
-    //   ui.notifications?.error(
-    //     "Removing hacker from deck, but not currently the hacker"
-    //   );
-    //   return;
-    // }
-    console.log("2");
-    if (actorId) {
-      console.log("3");
-      await this.actor.update({
-        "system.-=hackerId": null
-      });
-      console.log("4");
-      await this.actor.update({
-        "system.hacker": "",
-      });
-      // // Remove the deck from the list of decks ID's on the hacker actor
-      // const actor = game.actors?.get(actorId);
-      console.log("5");
 
-      console.log(this);
-      // if (
-      //   actor &&
-      //   this.id &&
-      //   (actor.type === "character" || actor.type === "npc")
-      // ) {
-      //   const cyberdeck = actor.data.data.cyberdecks;
-      //   const idx = cyberdeck.indexOf(this.id);
-      //   if (idx != -1) {
-      //     cyberdeck.splice(idx, 1);
-      //     await actor.update({
-      //       "data.cyberdecks": cyberdeck,
-      //     });
-      //   }
-      // }
-      // ui.notifications?.info(
-      //   `Removed hacker from ${this.name}. Manually remove the cyberdeck from the hacker's sheet`
-      // );
+  static async _onHackerDelete(event, target) {
+    const actorId = this.actor.system.hackerId;
+
+    if (actorId) {
+      await this.actor.update({
+        "system.hackerId": null
+      });
+      let actor = game.actors?.get(actorId);
+      if (
+        actor &&
+        this.id &&
+        (actor.type === "character" || actor.type === "npc")
+      ) {
+        const cyberdeck = actor.system.cyberdecks;
+        const idx = cyberdeck.indexOf(this.id);
+        if (idx != -1) {
+          cyberdeck.splice(idx, 1);
+          await actor.update({
+            "system.cyberdecks": cyberdeck,
+          });
+        }
+      }
+      ui.notifications?.info(
+        `Removed hacker from ${this.name}. Manually remove the cyberdeck from the hacker's sheet`
+      );
     } else {
-      ui.notifications?.error("Crew member not found");
+      ui.notifications?.error("hacker not found");
     }
   }
 
@@ -347,7 +330,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     //     </select>
     //   </div>
     //   </form>`;
-  
+
     //   const _activateForm = async (html: HTMLFormElement) => {
     //     const form = <HTMLFormElement>html[0].querySelector("form");
     //     const verbID = (<HTMLInputElement>form.querySelector('[name="verbId"]'))
@@ -364,7 +347,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     //       ui.notifications?.error("Verb or Subject not found");
     //       return;
     //     }
-  
+
     //     if (
     //       verb.data.data.target &&
     //       verb.data.data.target.indexOf(subject.data.data.target) === -1
@@ -394,7 +377,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     //         skillCheckMod: skillCheckMod,
     //       },
     //     };
-  
+
     //     const docs = await this.actor.createEmbeddedDocuments(
     //       "Item",
     //       [newProgram],
@@ -405,7 +388,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     //       ui.notifications?.error("Failed to create program");
     //       return;
     //     }
-  
+
     //     // Consume access
     //     if (sheetData.hacker) {
     //       let access = 0;
@@ -423,10 +406,10 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     //         ui.notifications?.info("Hacker has no access left");
     //       }
     //     }
-  
+
     //     // Roll skill / create button
     //     program.roll();
-  
+
     //     if (program.data.data.selfTerminating) {
     //       program.delete();
     //     } else {
@@ -435,7 +418,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     //       // });
     //     }
     //   };
-  
+
     //   new Dialog({
     //     title: game.i18n.localize("swnr.sheet.cyberdeck.run"),
     //     content: formContent,
@@ -449,7 +432,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     //     default: "Run",
     //   }).render(true);
     // }
-  }    
+  }
 
   async getData(options) {
     // let data = super.getData(options);
@@ -470,11 +453,11 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
 
     console.log(programs);
 
-    const activePrograms= programs.filter(
+    const activePrograms = programs.filter(
       (item) => item.system.type === "running"
     );
 
-    const verbs= programs.filter(
+    const verbs = programs.filter(
       (item) => item.system.type === "verb"
     );
 
@@ -531,49 +514,83 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
    *
    ***************/
 
-/**
-   * Handle dropping of an Actor data onto another Actor sheet
-   * @param {DragEvent} event            The concluding DragEvent which contains drop data
-   * @param {object} data                The data transfer extracted from the event
-   * @returns {Promise<object|boolean>}  A data object which describes the result of the drop, or false if the drop was
-   *                                     not permitted.
-   * @protected
-   */
-async _onDropActor(event, data) {
-  // Check ownership of the current actor
-  if (!this.actor.isOwner) return false;
+  /**
+     * Handle dropping of an Actor data onto another Actor sheet
+     * @param {DragEvent} event            The concluding DragEvent which contains drop data
+     * @param {object} data                The data transfer extracted from the event
+     * @returns {Promise<object|boolean>}  A data object which describes the result of the drop, or false if the drop was
+     *                                     not permitted.
+     * @protected
+     */
+  async _onDropActor(_event, data) {
+    // Check ownership of the current actor
+    if (!this.actor.isOwner) return false;
 
-  // Retrieve the Actor UUID from the data
-  const uuid = data.uuid;
+    // Retrieve the Actor UUID from the data
+    const uuid = data.uuid;
 
-  // Ensure the UUID exists
-  if (!uuid) {
-    console.error("No UUID found in the dropped data");
-    return false;
-  }
-
-  try {
-    // Retrieve the actor document using the UUID
-    const droppedActor = await fromUuid(uuid);
-
-    // Check if the retrieved document is an Actor
-    if (!droppedActor || !droppedActor instanceof Actor) {
-      console.error("The dropped data is not an actor.");
+    // Ensure the UUID exists
+    if (!uuid) {
+      console.error("No UUID found in the dropped data");
       return false;
     }
-    
-    // Check if the refreived document is a Character or NPC.
-     if(droppedActor.type != 'character' && droppedActor.type != 'npc')
-     {
-       console.error("The dropped actor is not a character or an npc.");
-       return false;
-     }
-     const droppedActorId = droppedActor.id;
-     this.actor.update({ "system.hackerId": droppedActor });
-  } catch (err) {
-    console.error("Error retrieving actor from UUID:", err);
+
+    if (this.actor.system.hackerId) {
+      //only one hacker allowed
+      ui.notifications?.error("Cyberdeck already has a hacker");
+      return;
+    }
+
+    try {
+      // Retrieve the actor document using the UUID
+      const droppedActor = await fromUuid(uuid);
+
+      // Check if the retrieved document is an Actor
+      if (!droppedActor || !droppedActor instanceof Actor) {
+        console.error("The dropped data is not an actor.");
+        return false;
+      }
+
+      // Check if the refreived document is a Character or NPC.
+      if (droppedActor.type != 'character' && droppedActor.type != 'npc') {
+        ui.notifications?.error("The dropped/added hacker is not a character or an npc.");
+        return false;
+      }
+      const droppedActorId = droppedActor.id;
+      await this.actor.update({ "system.hackerId": droppedActorId });
+      const cyberdecks = droppedActor.system.cyberdecks;
+      if (this.id && cyberdecks.indexOf(this.id) === -1) {
+        cyberdecks.push(this.actor.id);
+        await droppedActor.update({
+          "system.cyberdecks": cyberdecks,
+        });
+      }
+
+      const itemName = this.actor.name;
+      droppedActor.createEmbeddedDocuments(
+        "Item",
+        [
+          {
+            name: itemName,
+            type: "item",
+            img: "systems/swnr/assets/icons/cyberdeck.png",
+            system: {
+              encumbrance: this.actor.system.encumberance,
+              quantity: 1,
+              cost: this.actor.system.cost,
+            },
+          },
+        ],
+        {}
+      );
+      ui.notifications?.info(
+        `Created a cyberdeck item "${itemName}" on ${droppedActor.name}'s sheet`
+      );
+
+    } catch (err) {
+      console.error("Error retrieving actor from UUID:", err);
+    }
   }
-}
 
 
   // All in base
