@@ -12,29 +12,74 @@
       width='100'
     />
 
+    <div class="resource-bar"><!-- The character health bar -->
+      <div style="width:{{system.health.percentage}}%" class="health-fill"></div>
+        <div class="text">
+          HP
+            <input
+              type='text'
+              name='system.health.value'
+              value='{{system.health.value}}'
+              data-dtype='Number'
+              class='nested-field short-field align-right current-value'
+            />
+          <p>/</p>
+            <input
+              type='text'
+              name='system.health.max'
+              value='{{system.health.max}}'
+              data-dtype='Number'
+              class='nested-field short-field'
+            />
+        </div>
+    </div>
+
+
+    <div class="resource-bar"><!-- The character armor bar -->
+      <div style="width:{{system.armor.percentage}}%" class="strain-fill"></div>
+        <div class="text">
+          Armor
+            <input
+              type='text'
+              name='system.armor.value'
+              value='{{system.armor.value}}'
+              data-dtype='Number'
+              class='nested-field short-field align-right current-value'
+            />
+          <p>/</p>
+            <input
+              type='text'
+              name='system.armor.max'
+              value='{{system.armor.max}}'
+              data-dtype='Number'
+              class='nested-field short-field'
+            />
+        </div>
+    </div>
+
   </div>
   <div class='header-fields'>
-    <div class='document-name'>
-      <input
-        name='name'
-        type='text'
-        value='{{actor.name}}'
-        placeholder='Name'
-      />
-    </div>
     {{! The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
       from 1 to 12 and will create that number of columns.  }}
     <div class='resources grid grid-5col'>
+      <div class='document-name grid-span-2'>
+        <input
+          name='name'
+          type='text'
+          value='{{actor.name}}'
+          placeholder='Name'
+        />
+      </div>
       {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
-      {{formGroup systemFields.health value=system.health localize=true widget=headerWidget}}
+      {{!-- {{formGroup systemFields.health value=system.health localize=true widget=headerWidget}} --}}
       {{formGroup systemFields.traumaTarget value=system.traumaTarget localize=true widget=headerWidget}}
-      {{formGroup systemFields.armor value=system.armor localize=true widget=headerWidget}}
+      {{!-- {{formGroup systemFields.armor value=system.armor localize=true widget=headerWidget}} --}}
       {{formGroup systemFields.speed value=system.speed localize=true widget=headerWidget}}
       {{formGroup systemFields.ac value=system.ac localize=true widget=headerWidget}}
       {{formGroup systemFields.crew value=system.crew localize=true widget=headerWidget}}
       {{!--TODO {{formGroup systemFields.crewMembers value=system.crewMembers localize=true widget=headerWidget}} --}}
-      {{formGroup systemFields.tl value=system.tl localize=true widget=headerWidget}}
+      {{!-- Moved to details {{formGroup systemFields.tl value=system.tl localize=true widget=headerWidget}} --}}
       {{!--TODO {{formGroup systemFields.mods value=system.mods localize=true widget=headerWidget}} --}}
       {{formGroup systemFields.power value=system.power localize=true widget=headerWidget}}
       {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget}}
@@ -42,39 +87,39 @@
 
     </div>
     {{#if (eq actor.type 'ship')}}
-      <div class="flex-grow grid grid-cols-7 items-center gap-1">
+      <div class="flex-grow grid grid-7col items-center gap-1" style="align-items: flex-start;" >
         <!--buttons-->
-        <div class="cost flex flex-col items-center ">
+        <div class="cost flex flexcol items-center ">
           <a data-action="travel"><i class="fas fa-route  fa-2x travel-button"></i></a>
           {{localize 'swnr.sheet.ship.travel'}}
         </div>
 
-        <div class="cost flex flex-col items-center ">
+        <div class="cost flex flexcol items-center ">
           <a data-action="spike"><i class="fas fa-rocket  fa-2x spike-button"></i></a>
           {{localize 'swnr.sheet.ship.spike'}}
         </div>
 
-        <div class="cost flex flex-col items-center ">
+        <div class="cost flex flexcol items-center ">
           <a data-action="refuel"><i class="fas fa-gas-pump  fa-2x refuel-button"></i></a>
           {{localize 'swnr.sheet.ship.refuel'}}
         </div>
 
-        <div class="cost flex flex-col items-center ">
+        <div class="cost flex flexcol items-center ">
           <a data-action="crisis"><i class="fas fa-dumpster-fire  fa-2x crisis-button"></i></a>
           {{localize 'swnr.sheet.ship.crisis'}}
         </div>
 
-        <div class="cost flex flex-col items-center ">
+        <div class="cost flex flexcol items-center ">
           <a  data-action="failure"><i class="fas fa-heart-broken  fa-2x failure-button"></i></a>
           {{localize 'swnr.sheet.ship.system-failure'}}
         </div>
 
-        <div class="cost flex flex-col items-center ">
+        <div class="cost flex flexcol items-center ">
           <a data-action="repair"><i class="fas fa-tools  fa-2x repair-button"></i></a>
           {{localize 'swnr.sheet.ship.repair-all'}}
         </div>
 
-        <div class="cost flex flex-col items-center ">
+        <div class="cost flex flexcol items-center ">
           <a data-action="sensor"><i class="fas fa-satellite-dish  fa-2x sensor-button"></i></a>
           {{localize 'swnr.sheet.ship.sensor-roll'}}
         </div>

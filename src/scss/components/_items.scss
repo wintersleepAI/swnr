@@ -23,6 +23,10 @@
     flex: 1 1 auto;
     // font-size: 16px;
   }
+  .item-name-long {
+    flex: 2 1 100px;
+
+  }
 }
 
 // -----------------------------------------
@@ -60,6 +64,12 @@
     }
   }
 
+
+  // Item Name
+  .item-name-long {
+    flex: 2 1 100px;
+  }
+
   // Control Buttons
   .item-controls {
     display: flex;
@@ -74,7 +84,7 @@
 
   .item-controls-small {
     display: flex;
-    flex: 0 0 20px;
+    flex: 0 0 50px;
     justify-content: flex-end;
     a {
       font-size: 12px;
@@ -158,8 +168,13 @@
   padding: 0 8px;
 }
 
+.item-type {
+  flex: 0 0 60px;
+  padding: 0 8px;
+}
+
 .item-controls-small {
-  flex: 0 1 40px;
+  flex: 0 1 50px;
   padding: 0 8px;
 }
 .item-loc {
