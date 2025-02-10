@@ -393,108 +393,110 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     </div>
     </form>`;
 
-    // const _activateForm = async (html: HTMLFormElement) => {
-    //   const form = <HTMLFormElement>html[0].querySelector("form");
-    //   const verbID = (<HTMLInputElement>form.querySelector('[name="verbId"]'))
-    //     ?.value;
-    //   const subID = (<HTMLInputElement>form.querySelector('[name="subjectId"]'))
-    //     ?.value;
-    //   if (!verbID || !subID) {
-    //     ui.notifications?.error("Verb or Subject not selected");
-    //     return;
-    //   }
-    //   const verb = sheetData.verbs.find((item) => item.id === verbID);
-    //   const subject = sheetData.subjects.find((item) => item.id === subID);
-    //   if (!verb || !subject) {
-    //     ui.notifications?.error("Verb or Subject not found");
-    //     return;
-    //   }
+    const _activateForm = async (html) => {
+      const form = html[0].querySelector("form");
+      const verbID = (form.querySelector('[name="verbId"]'))
+        ?.value;
+      const subID = (form.querySelector('[name="subjectId"]'))
+        ?.value;
+      if (!verbID || !subID) {
+        ui.notifications?.error("Verb or Subject not selected");
+        return;
+      }
+      const verb = sheetData.verbs.find((item) => item.id === verbID);
+      const subject = sheetData.subjects.find((item) => item.id === subID);
+      if (!verb || !subject) {
+        ui.notifications?.error("Verb or Subject not found");
+        return;
+      }
 
-    //     if (
-    //       verb.data.data.target &&
-    //       verb.data.data.target.indexOf(subject.data.data.target) === -1
-    //     ) {
-    //       ui.notifications?.error(
-    //         "Verb and Subject are incompatible (target and type does not match)"
-    //       );
-    //       return;
-    //     }
-    //     let skillCheckMod = 0;
-    //     if (verb.data.data.skillCheckMod) {
-    //       skillCheckMod += verb.data.data.skillCheckMod;
-    //     }
-    //     if (subject.data.data.skillCheckMod) {
-    //       skillCheckMod += subject.data.data.skillCheckMod;
-    //     }
-    //     const newProgram = {
-    //       name: `${verb.name} ${subject.name}`,
-    //       type: `program`,
-    //       img: verb.img,
-    //       data: {
-    //         type: "running",
-    //         cost: verb.data.data.cost,
-    //         accessCost: verb.data.data.accessCost,
-    //         useAffects: verb.data.data.useAffects,
-    //         selfTerminating: verb.data.data.selfTerminating,
-    //         skillCheckMod: skillCheckMod,
-    //       },
-    //     };
+      if (
+        verb.system.target &&
+          verb.system.target.indexOf(subject.system.target) === -1
+      ) {
+        ui.notifications?.error(
+          "Verb and Subject are incompatible (target and type does not match)"
+        );
+        return;
+      }
+      let skillCheckMod = 0;
+      if (verb.system.skillCheckMod) {
+        skillCheckMod += verb.system.skillCheckMod;
+      }
+      if (subject.system.skillCheckMod) {
+        skillCheckMod += subject.system.skillCheckMod;
+      }
+      const newProgram = {
+        name: `${verb.name} ${subject.name}`,
+        type: `program`,
+        img: verb.img,
+        data: {
+          type: "running",
+          cost: verb.system.cost,
+          accessCost: verb.system.accessCost,
+          useAffects: verb.system.useAffects,
+          selfTerminating: verb.system.selfTerminating,
+          skillCheckMod: skillCheckMod,
+        },
+      };
 
-    //     const docs = await this.actor.createEmbeddedDocuments(
-    //       "Item",
-    //       [newProgram],
-    //       {}
-    //     );
-    //     const program = docs[0];
-    //     if (!program || !(program instanceof SWNRProgram)) {
-    //       ui.notifications?.error("Failed to create program");
-    //       return;
-    //     }
+      const docs = await this.actor.createEmbeddedDocuments(
+        "Item",
+        [newProgram],
+        {}
+      );
+      const program = docs[0];
+      if (!program) {
+        ui.notifications?.error("Failed to create program");
+        return;
+      }
+      //Foundry overwites the default value for type - but I think type needs a default, so change it here.
+      await program.update({ "system.type": "running" });
 
-    //     // Consume access
-    //     if (sheetData.hacker) {
-    //       let access = 0;
-    //       if (sheetData.hacker.type == "character") {
-    //         access = sheetData.hacker.data.data.access.value;
-    //         access -= program.data.data.accessCost;
-    //       } else if (sheetData.hacker.type == "npc") {
-    //         access = sheetData.hacker.data.data.access.value;
-    //         access -= program.data.data.accessCost;
-    //       }
-    //       await sheetData.hacker.update({
-    //         "data.access.value": access,
-    //       });
-    //       if (access <= 0) {
-    //         ui.notifications?.info("Hacker has no access left");
-    //       }
-    //     }
+      // Consume access
+      if (sheetData.hacker) {
+        let access = 0;
+        if (sheetData.hacker.type == "character") {
+          access = sheetData.hacker.system.access.value;
+          access -= program.system.accessCost;
+        } else if (sheetData.hacker.type == "npc") {
+          access = sheetData.hacker.system.access.value;
+          access -= program.system.accessCost;
+        }
+        await sheetData.hacker.update({
+          "data.access.value": access,
+        });
+        if (access <= 0) {
+          ui.notifications?.info("Hacker has no access left");
+        }
+      }
 
-    //     // Roll skill / create button
-    //     program.roll();
+      // Roll skill / create button
+      program.roll();
 
-    //     if (program.data.data.selfTerminating) {
-    //       program.delete();
-    //     } else {
-    //       // await this.actor.update({
-    //       //   "data.cpu.value": this.actor.data.data.cpu.value - 1,
-    //       // });
-    //     }
-    //   };
+      if (program.system.selfTerminating) {
+        program.delete();
+      } else {
+        // await this.actor.update({
+        //   "data.cpu.value": this.actor.system.cpu.value - 1,
+        // });
+      }
+    };
 
-    //   new Dialog({
-    //     title: game.i18n.localize("swnr.sheet.cyberdeck.run"),
-    //     content: formContent,
-    //     buttons: {
-    //       yes: {
-    //         icon: "<i class='fas fa-check'></i>",
-    //         label: `Run`,
-    //         callback: _activateForm,
-    //       },
-    //     },
-    //     default: "Run",
-    //   }).render(true);
-    // }
+    new Dialog({
+      title: game.i18n.localize("swnr.sheet.cyberdeck.run"),
+      content: formContent,
+      buttons: {
+        yes: {
+          icon: "<i class='fas fa-check'></i>",
+          label: `Run`,
+          callback: _activateForm,
+        },
+      },
+      default: "Run",
+    }).render(true);
   }
+  
 
   static async _onRefreshShielding(event, target) {
     event.preventDefault();
