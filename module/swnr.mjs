@@ -17,6 +17,9 @@ import { chatListeners } from './helpers/chat.mjs';
 // Import DataModel classes
 import * as models from './data/_module.mjs';
 
+// Import migrations
+import * as migrations from './migration.mjs';
+
 /* -------------------------------------------- */
 /*  Init Hook                                   */
 /* -------------------------------------------- */
@@ -141,6 +144,26 @@ Hooks.once('ready', function () {
     createDocMacro(data, slot);
     return false;
   });
+
+  if (!game.user.isGM) {
+    return;
+  }
+
+  const storedVersion = game.settings.get('swnr', 'systemMigrationVersion');
+  const currentVersion = game.system.version;
+
+  // If there's no stored version, set it to the current system version (and don't migrate)
+  if (!storedVersion) {
+    return game.settings.set('swnr', 'systemMigrationVersion', currentVersion);
+  }
+
+  // If the stored version doesn't match the current system version, run migration
+  if (storedVersion !== currentVersion) {
+    migrations.migrateWorld();
+    game.settings.set('swnr', 'systemMigrationVersion', currentVersion);
+  }
+
+  console.log('game: ', game);
 });
 
 /* -------------------------------------------- */
