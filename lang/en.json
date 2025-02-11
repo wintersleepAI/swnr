@@ -187,7 +187,8 @@
         "ProgramDetails": "Program Details",
         "ArmorDetails": "Armor Details",
         "AssetDetails": "Asset Details",
-        "AssetAtkDef": "Attack / Defense"
+        "AssetAtkDef": "Attack / Defense",
+        "ShipWeaponDetailsEffects": "Weapon Details"
       },
       "base": {
         "FIELDS": {
@@ -370,6 +371,51 @@
           "counter": { "label":  "Counter" },
           "note": { "label":  "Note" },
           "location": { "label": "Location" }
+        }
+      },
+      "vehiclebase": {
+        "cost": { "label": "Cost" },
+        "costMultiplier": { "label": "Cost Multiplier" },
+        "powerMultiplier": { "label": "Power Multiplier" },
+        "massMultiplier": { "label": "Free Mass Multiplier" },
+        "minClass": { "label": "Min Class" },
+        "broken": { "label": "Broken" },
+        "destroyed": { "label": "Destroyed" },
+        "juryRigged": { "label": "Jury Rigged" },
+        "type": { "label": "Type" }
+      },
+      "ShipWeapon": {
+        "FIELDS": {
+          "tl": { "label": "Tech Level" },
+          "power": { "label": "Power" },
+          "mass": { "label": "Free Mass" },
+          "minClass": { "label": "Min Class" },
+          "damage": { "label": "Damage" },
+          "ab": { "label": "AB" },
+          "hardpoint": { "label": "Hardpoints" },
+          "qualities": { "label": "Qualities" },
+          "ammo": {
+            "FIELDS": {
+              "type": { "label": "Type" },
+              "max": { "label": "Maximum" },
+              "value": { "label": "Value" },
+              "burst": { "label": "Burst" }
+            }
+          },
+          "trauma": {
+            "FIELDS": {
+              "die": { "label": "Die Type" },
+              "ratng": { "label": "Rating" },
+              "vehicle": { "label": "Vehicle" }
+            }
+          },
+          "range": {
+            "FIELDS": {
+              "normal": { "label": "Normal range" },
+              "max": { "label": "Max range" }
+            }
+          },
+          "stat": { "label": "Stats" }
         }
       }
     },
@@ -1347,6 +1393,12 @@
         "cruiser": "Cruiser",
         "capital": "Capital"
       }
+    },
+    "vehicleTypes": {
+      "ship": "Ship",
+      "vehicle": "Vehicle",
+      "drone": "Drone",
+      "mech": "Mech"
     },
     "deleteTitle": "Delete {name}?",
     "deleteCrew": "Do you want to remove {name} from the crew?",
