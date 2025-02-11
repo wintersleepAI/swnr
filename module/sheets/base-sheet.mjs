@@ -331,7 +331,21 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
         return;
       }
       if (item.system.ammo.type) {
-        ui.notifications.info("TODO reload"); //TODO
+        const ammo_max = item.system.ammo?.max;
+        if (ammo_max != null) {
+          if (item.system.ammo.value < ammo_max) {
+            await item.update({ "system.ammo.value": ammo_max });
+            const content = `<p> Reloaded ${item.name} </p>`;
+            ChatMessage.create({
+              speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+              content: content,
+            });
+          } else {
+            ui.notifications?.info("Trying to reload a full item");
+          }
+        } else {
+          console.log("Unable to find ammo in item ", item.system);
+        }
       }
     }
 
