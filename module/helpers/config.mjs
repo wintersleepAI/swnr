@@ -94,10 +94,10 @@ SWN.reactionTypes = {
 }
 
 SWN.vehicleTypes = {
-  ship: 'SWN.TYPES.Actor.starship',
-  vehicle: 'SWN.TYPES.Actor.vehicle',
-  drone: 'SWN.TYPES.Actor.drone',
-  mech: 'SWN.TYPES.Actor.mech',
+  ship: 'TYPES.Actor.ship',
+  vehicle: 'TYPES.Actor.vehicle',
+  drone: 'TYPES.Actor.drone',
+  mech: 'TYPES.Actor.mech',
 }
 
 SWN.mechClasses = {

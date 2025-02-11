@@ -1,56 +1,29 @@
 <header id='header-ship' class='sheet-header'>
-    <div class='flexcol'>
-        <div class='flexrow'>
-            <div class='item-img'>
-                <img class='item-img' src='{{item.img}}' data-edit='img' data-action='onEditImage'
-                    title='{{item.name}}' />
-            </div>
-            <div class='header-fields'>
-                <div class='document-name'>
-                    <input name='name' type='text' value='{{item.name}}' placeholder='Name' />
-                </div>
-                <div class='grid' style='grid-template-columns: 2fr 1fr 1fr'>
-                    <div class='resource grid-span-3 thin-bar' style="text-align:right;">
-                        <label class='resource-label'>{{localize 'swnr.item.favorite'}}</label>
-                        <input type="checkbox" class="small-checkbox" name="system.favorite" {{#if
-                            system.favorite}}checked{{/if}} />
-                    </div>
-                    <div class='resource'>
-                        {{formGroup systemFields.cost value=system.cost localize=true}}
-                    </div>
-                    <div class='resource'>
-                        {{formGroup systemFields.power value=system.power localize=true}}
-                    </div>
-                    <div class='resource'>
-                        {{formGroup systemFields.mass value=system.mass localize=true}}
-                    </div>
-                </div>
-                <div style='display: flex;'>
-                    <div class='resource'>
-                        <label class="resource-label">Broken</label>
-                        <input type="checkbox" class="small-checkbox" name="system.broken">
-                    </div>
-                    <div class='resource'>
-                        <label class="resource-label">Cost Multiplier</label>
-                        <input type="checkbox" class="small-checkbox" name="system.broken">
-                    </div>
-                    <div class='resource'>
-                        <label class="resource-label">Mass Multiplier</label>
-                        <input type="checkbox" class="small-checkbox" name="system.broken">
-                    </div>
-                    <div class='resource'>
-                        <label class="resource-label">Power Multiplier</label>
-                        <input type="checkbox" class="small-checkbox" name="system.broken">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class='flexrow'>
-            <div class='header-fields'>
-                <div class='resource'>
-                    {{formGroup systemFields.minClass value=system.minClass localize=true}}
-                </div>
-            </div>
-        </div>
+  <div class='flexrow'>
+    <div class='item-img'>
+      <img class='item-img' src='{{item.img}}' data-edit='img' data-action='onEditImage' title='{{item.name}}' />
     </div>
+    <div class='header-fields'>
+      <div class='document-name'>
+        <input name='name' type='text' value='{{item.name}}' placeholder='Name' />
+      </div>
+      <div class='grid grid-3col'>
+        <div class='resource grid-span-3 thin-bar' style="text-align:right;">
+          <label class='resource-label'>{{localize 'swnr.item.favorite'}}</label>
+          <input type="checkbox" class="small-checkbox" name="system.favorite" {{#if system.favorite}}checked{{/if}} />
+        </div>
+        {{formGroup systemFields.type value=system.type localize=true}}
+        {{formGroup systemFields.minClass value=system.minClass localize=true}}
+        {{formGroup systemFields.cost value=system.cost localize=true}}
+        {{formGroup systemFields.power value=system.power localize=true}}
+        {{formGroup systemFields.mass value=system.mass localize=true}}
+        {{formGroup systemFields.costMultiplier value=system.costMultiplier localize=true}}
+        {{formGroup systemFields.massMultiplier value=system.massMultiplier localize=true}}
+        {{formGroup systemFields.powerMultiplier value=system.powerMultiplier localize=true}}
+        {{formGroup systemFields.broken value=system.broken localize=true}}
+        {{formGroup systemFields.destroyed value=system.destroyed localize=true}}
+        {{formGroup systemFields.juryRigged value=system.juryRigged localize=true}}
+      </div>
+    </div>
+  </div> <!--flexrow-->
 </header>
