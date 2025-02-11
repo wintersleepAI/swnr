@@ -1,0 +1,34 @@
+name: Atmofilter
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988798
+  modifiedTime: 1739238988798
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: gb1sfcq7u4lne2km
+system:
+  description: 'Atmofilter: This face mask can filter out most atmospheric toxins. Attaching a standard vacc suit oxygen bottle to a belt-mounted feed will also supply a breathable atmosphere for up to six hours.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 1
+  cost: 100
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!gb1sfcq7u4lne2km'

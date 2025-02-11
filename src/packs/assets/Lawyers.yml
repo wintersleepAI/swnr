@@ -1,0 +1,40 @@
+name: Lawyers
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988423
+  modifiedTime: 1739238988423
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 2c6muaxvhkldc0ux
+system:
+  description: Sophists in immaculate suits or charismatic tribal skalds, lawyers have the ability to tie an enemy up in the coils of their own internal rules, damaging assets with confusion and red tape. Lawyers cannot attack or counterattack Force assets.
+  favorite: false
+  category: cunning
+  type: Special Forces
+  health:
+    max: 4
+    value: 4
+  rating: 2
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 6
+  income: 0
+  maintenance: 0
+  attackTarget: wealth
+  attackSource: cunning
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!2c6muaxvhkldc0ux'

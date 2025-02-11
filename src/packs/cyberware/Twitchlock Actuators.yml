@@ -1,0 +1,29 @@
+name: Twitchlock Actuators
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988786
+  modifiedTime: 1739238988786
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: bhusfje9djgn5ao3
+system:
+  description: Neural override fibers are woven into the user’s hands and arms and linked to a perceptual modulator implanted at the base of the user’s brain stem. When presented with a direct exercise of hand-eye coordination, the twitchlock can be engaged to produce superhuman accuracy and precision. Any attack roll or skill check reliant chiefly on manual dexterity or aim can be rerolled, though the power surge inflicts two points of System Strain on the user. A given roll can only be rerolled once with this cyberware. While the twitchlock allows superhuman accuracy when engaged, the overrides fuzz ordinary nerve impulses and reduce the user’s Dexterity modifier by 1 when active. Activating or deactivating the cyberware requires a Main Action.
+  favorite: false
+  tl: 4
+  cost: 30000
+  strain: 2
+  disabled: false
+  effect: Allows brief moments of hyper-precise accuracy
+  type: none
+  concealment: sight
+  complication: ''
+effects: []
+_key: '!items!bhusfje9djgn5ao3'

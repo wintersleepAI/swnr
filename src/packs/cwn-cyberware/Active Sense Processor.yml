@@ -1,0 +1,29 @@
+name: Active Sense Processor
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988549
+  modifiedTime: 1739238988549
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: l1rfjrr7en2jn2r4
+system:
+  description: Augmented sensory processing grants a +1 Wisdom modifier for all skill checks involving sensing or noticing things, up to a +2 modifier maximum.
+  favorite: false
+  tl: 4
+  cost: 50000
+  strain: 1
+  disabled: false
+  effect: Gain +1 Wis mod for senses
+  type: Sensory
+  concealment: Medical
+  complication: ''
+effects: []
+_key: '!items!l1rfjrr7en2jn2r4'

@@ -1,0 +1,61 @@
+name: Sniper Rifle
+type: weapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988765
+  modifiedTime: 1739238988765
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: n8zvn97w43yyzu8i
+system:
+  description: Sniper rifles are often nothing more than bolt-action rifles with expensive tuning and optics. If not fired from a rest in a prepared position, a sniper rifle's statistics are the same as a normal rifle. This weapon can be reloaded with a Move action, or an On Turn if the user has at least Shoot-1 skill.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 2
+  cost: 3000
+  tl: null
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  stat: dex
+  secondStat: none
+  skill: ask
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  shock:
+    ac: 0
+    dmg: 0
+  ab: 0
+  ammo:
+    burst: false
+    max: 1
+    suppress: false
+    type: ammo
+    value: 1
+  range:
+    max: 2000
+    normal: 1000
+  damage: 2d8
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d10
+    rating: 4
+  isTwoHanded: false
+  isNonLethal: false
+effects: []
+_key: '!items!n8zvn97w43yyzu8i'

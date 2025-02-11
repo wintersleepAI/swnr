@@ -836,3 +836,7 @@
   align-items: center;
   cursor: pointer;
 }
+.swnr #features .item-level-center {
+  display: flex;
+  justify-content: center;
+}

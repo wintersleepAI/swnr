@@ -1,0 +1,40 @@
+name: Integral Protocols
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988421
+  modifiedTime: 1739238988421
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 0mlg998mse5etdyd
+system:
+  description: A complex web of braked-AI supported sensors and redundant security checks used to defeat attempts to infiltrate an area. They can defend only against attacks versus Cunning, but they add an additional die to the defender's roll.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    max: 10
+    value: 10
+  rating: 7
+  tl: 5
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 20
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!0mlg998mse5etdyd'

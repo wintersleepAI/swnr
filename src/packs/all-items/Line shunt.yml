@@ -1,0 +1,34 @@
+name: Line shunt
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988348
+  modifiedTime: 1739238988348
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: eazxz8tou0ew1667
+system:
+  description: 'Line shunt: These palm-sized discs are roughly one centimeter in thickness, with an adhesive side that will stick to virtually anything and a polychromatic phased compound on its shell which will shift color to blend with its surroundings. One or more line shunts must be applied at specific locations within a site to access the more well-defended varieties of computerized systems. Shunts employ phased energy manipulation tech, and so do not need to be directly in contact with a data line but only within a few centimeters. Line shunts are single-use, and keep functioning until removed.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 0
+  cost: 100
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!eazxz8tou0ew1667'

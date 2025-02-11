@@ -1,0 +1,40 @@
+name: Blackmail
+type: asset
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988400
+  modifiedTime: 1739238988400
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 17wdolnwhj0ou6jh
+system:
+  description: Selectively degrade the effectiveness of an asset. Any attempt to attack or defend against Blackmail loses any bonus dice earned by tags.
+  favorite: false
+  category: cunning
+  type: Tactic
+  health:
+    max: 4
+    value: 4
+  rating: 2
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 4
+  income: 0
+  maintenance: 0
+  attackTarget: cunning
+  attackSource: cunning
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!17wdolnwhj0ou6jh'

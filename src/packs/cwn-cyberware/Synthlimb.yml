@@ -1,0 +1,29 @@
+name: Synthlimb
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988600
+  modifiedTime: 1739238988600
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 2qn0xjo6pxmd7wpz
+system:
+  description: 'A high-grade cyberlimb that''s indistinguishable from an organic body part by anything short of a medical examination. It functions as a Cyberlimb for purposes of implanted equipment. '
+  favorite: false
+  tl: 4
+  cost: 25000
+  strain: 0.5
+  disabled: false
+  effect: Lifelike artificial limb
+  type: Limb
+  concealment: Medical
+  complication: ''
+effects: []
+_key: '!items!2qn0xjo6pxmd7wpz'

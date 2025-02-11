@@ -1,0 +1,251 @@
+name: Bulk Freighter
+type: ship
+img: systems/swnr/assets/icons/spaceship.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988950
+  modifiedTime: 1739238988950
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: f7t7ks1kcjs809z5
+system:
+  health:
+    max: 40
+    value: 40
+  cost: 6088000
+  ac: 11
+  traumaTarget: 6
+  armor:
+    max: 0
+    value: 0
+  speed: 0
+  crew:
+    min: 10
+    max: 40
+    current: 10
+  crewMembers: []
+  tl: 5
+  description: |-
+    Found only in rich, peaceful regions of space, the bulk freighter is capable of hauling thousands of tons of goods between star systems. While it’s equipped with enough of a sting to discourage small-ship piracy, it’s woefully inadequate to handle a warship, or even an up-gunned free merchant. 
+    Some adventurers do find use for a bulk freighter hull, however, trading off some of its massive cargo space for more fittings and using customized modifications to allow the ship to support heavier power demands. While the end result is no match for a true cruiser, the sheer mass of the freighter can make it a dangerous opponent in the right hands.
+  mods: ''
+  power:
+    max: 10
+  mass:
+    max: 25
+  hardpoints:
+    value: 2
+    max: 2
+  lifeSupportDays:
+    value: 2400
+    max: 2400
+  fuel:
+    value: 1
+    max: 1
+  cargo:
+    value: 3400
+    max: 3400
+  spikeDrive:
+    value: 2
+    max: 2
+  operatingCost: 657000
+  maintenanceCost: 304000
+  amountOwed: 0
+  paymentAmount: 0
+  paymentMonths: 0
+  maintenanceMonths: 6
+  creditPool: 0
+  lastMaintenance:
+    year: 0
+    month: 0
+    day: 0
+  lastPayment:
+    year: 0
+    month: 0
+    day: 0
+  commandPoints: 4
+  npcCommandPoints: 4
+  crewSkillBonus: 1
+  actionsTaken: []
+  supportingDept: ''
+  roleOrder: []
+effects: []
+prototypeToken:
+  name: Bulk Freighter
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/spaceship.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+_key: '!actors!f7t7ks1kcjs809z5'
+items:
+  - name: Plasma Beam
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988950
+      modifiedTime: 1739238988950
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: stixemop70hnpchw
+    system: {}
+    effects: []
+    _key: '!actors.items!f7t7ks1kcjs809z5.stixemop70hnpchw'
+  - name: Spike Drive-2 upgrade
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988950
+      modifiedTime: 1739238988950
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: lnevsn8knivv565p
+    system: {}
+    effects: []
+    _key: '!actors.items!f7t7ks1kcjs809z5.lnevsn8knivv565p'
+  - name: Cargo Lighter
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988950
+      modifiedTime: 1739238988950
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 2qc52ewqbdlgqima
+    system: {}
+    effects: []
+    _key: '!actors.items!f7t7ks1kcjs809z5.2qc52ewqbdlgqima'
+  - name: Fuel Bunker
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988950
+      modifiedTime: 1739238988950
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 6p6sfjoy6ez9u785
+    system: {}
+    effects: []
+    _key: '!actors.items!f7t7ks1kcjs809z5.6p6sfjoy6ez9u785'
+  - name: Ship's Locker
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988950
+      modifiedTime: 1739238988950
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 5veun9itb2y7fchl
+    system: {}
+    effects: []
+    _key: '!actors.items!f7t7ks1kcjs809z5.5veun9itb2y7fchl'

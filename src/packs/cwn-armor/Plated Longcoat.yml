@@ -1,0 +1,44 @@
+name: Plated Longcoat
+type: armor
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988544
+  modifiedTime: 1739238988544
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: dpr5ksg9wblmqpgr
+system:
+  description: An ankle-length coat, robe, or mantle is used as a substrate for numerous reinforced plates and swaths of ballistic weave. It's heavy, bulky, and blatant, but it can absorb a lot of punishment.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 3
+  cost: 2000
+  tl: null
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 17
+  shield: false
+  use: false
+  meleeAc: 15
+  soak:
+    max: 5
+    value: 5
+  dr: 0
+  traumaDiePenalty: 1
+  isSubtle: false
+  isHeavy: true
+  shieldMeleeACBonus: 0
+  shieldACBonus: 0
+effects: []
+_key: '!items!dpr5ksg9wblmqpgr'
