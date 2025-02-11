@@ -28,6 +28,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       deleteDoc: this._deleteDoc,
       toggleEffect: this._toggleEffect,
       roll: this._onRoll,
+      reload: this._onReload,
       travel: this._onTravel,
       spike: this._onSpike,
       refuel: this._onRefuel,

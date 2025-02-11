@@ -33,7 +33,7 @@
       </div> --}}
       <div class="item-controls  text-right">
         {{#if (ne item.system.ammo.type "none")}}
-        <a class="item-control item-reload " title="{{localize 'swnr.sheet.reload-item'}}">
+        <a class="item-control item-reload" data-action="reload" title="{{localize 'swnr.sheet.reload-item'}}">
           <i class="fas fa-retweet"></i>
         </a>
         {{/if}}

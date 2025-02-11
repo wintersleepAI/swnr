@@ -33,6 +33,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       deleteDoc: this._deleteDoc,
       toggleEffect: this._toggleEffect,
       roll: this._onRoll,
+      reload: this._onReload,
       rest: this._onRest,
       scene: this._onScene,
       rollSave: this._onRollSave,
@@ -654,38 +655,6 @@ export class SWNActorSheet extends SWNBaseSheet {
         },
       }
     );
-  }
-
-  /**
-   * Handle clickable rolls.
-   *
-   * @this SWNActorSheet
-   * @param {PointerEvent} event   The originating click event
-   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-   * @protected
-   */
-  static async _onRoll(event, target) {
-    event.preventDefault();
-    const dataset = target.dataset;
-
-    // Handle item rolls.
-    switch (dataset.rollType) {
-      case 'item':
-        const item = this._getEmbeddedDocument(target);
-        if (item) return item.roll();
-    }
-
-    // Handle rolls that supply the formula directly.
-    if (dataset.roll) {
-      let label = dataset.label ? `[stat] ${dataset.label}` : '';
-      let roll = new Roll(dataset.roll, this.actor.getRollData());
-      await roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label,
-        rollMode: game.settings.get('core', 'rollMode'),
-      });
-      return roll;
-    }
   }
 
   static async _onRollStats(event, _target) {

@@ -1,8 +1,3 @@
-import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
-import { getGameSettings } from '../helpers/register-settings.mjs';
-import { headerFieldWidget, groupFieldWidget } from '../helpers/handlebar.mjs';
-import { initSkills, initCompendSkills, calcMod } from '../helpers/utils.mjs';
-
 const { api, sheets } = foundry.applications;
 
 /**
@@ -16,8 +11,6 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
     super(options);
     this.#dragDrop = this.#createDragDropHandlers();
   }
-
-
 
   /* -------------------------------------------- */
 
@@ -318,6 +311,29 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       return roll;
     }
   }
+
+  /**
+   * Reload an item
+   *
+   * @this SWNActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+    static async _onReload(_event, target) {
+      const item = this._getEmbeddedDocument(target);
+      if (!item || (item.type !== 'weapon' && item.type !== 'shipWeapon')) {
+        ui.notifications.error("Only weapons can be reloaded.");
+        return;
+      }
+      if (!item.system.ammo) {
+        ui.notifications.error("This weapon does not use ammo.");
+        return;
+      }
+      if (item.system.ammo.type) {
+        ui.notifications.info("TODO reload"); //TODO
+      }
+    }
 
   /***************
    *

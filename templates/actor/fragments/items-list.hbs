@@ -7,7 +7,7 @@
         {{/if}}
         <div class="item-loc"> {{ localize 'swnr.item.location' }} </div>
         <div class='item-formula'>
-          {{# if (eq type "weapon")}}
+          {{#if (eq type "weapon")}}
             {{localize 'SWN.Item.Weapon.FIELDS.damage.label'}}
           {{else if (eq type "armor")}}
             {{localize 'SWN.Item.Armor.FIELDS.ac.label'}}
@@ -83,7 +83,7 @@
             </select>
           </div>
           <div class='item-formula item-prop'>
-            {{# if (eq ../type "weapon")}}
+            {{#if (eq ../type "weapon")}}
               {{item.system.damage}}
             {{else if (eq ../type "armor")}}
               {{item.system.ac}}
@@ -92,6 +92,17 @@
             {{/if}}
           </div>
           <div class='item-controls'>
+            {{#if (eq ../type "weapon")}}
+              {{#if (ne item.system.ammo.type "none")}}
+                <a
+                  class='item-control item-reload'
+                  data-action='reload'
+                  title='{{localize "swnr.sheet.reload-item"}}'
+                >
+                  <i class='fas fa-retweet'></i>
+                </a>
+              {{/if}}
+            {{/if}}
             <a
               class='item-control item-edit'
               title='{{localize "DOCUMENT.Update" type='Item'}}'
