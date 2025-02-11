@@ -513,8 +513,8 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
 
   static async _onRefreshAccess(event, target) {
     event.preventDefault();
-    const hacker = this.actor.system.getHacker();
-    if (hacker) {
+    // const hacker = this.actor.system.getHacker();
+    if (this.actor.system.hacker) {
       const maxAccess = hacker.system.access.max;
       const newAccessDisplay = maxAccess + this.actor.system.bonusAccess;
       const oldAccess =
@@ -523,16 +523,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
         `Refreshing access from ${oldAccess} to ${newAccessDisplay} (reminder after 1 hour reprogramming, once per day)`
       );
       await hacker.update({
-        "system.access.max": maxAccess,
-      });
-      await hacker.update({
         "system.access.value": maxAccess,
-      });
-      await this.actor.update({
-        "system.access.max": newAccessDisplay
-      });
-      await this.actor.update({
-        "system.access.value": newAccessDisplay
       });
     } else {
       ui.notifications?.error("No hacker found");
