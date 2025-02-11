@@ -36,7 +36,7 @@ export function headerFieldWidget(field, _groupConfig, inputConfig) {
         subInput.classList.add("readonly");
       }
       input.appendChild(subInput);
-      if (++count <= fieldCount) {
+      if (count++ <= fieldCount) {
         input.appendChild(spanSep.cloneNode(true));
       }
     }
