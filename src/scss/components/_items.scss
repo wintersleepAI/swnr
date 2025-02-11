@@ -78,7 +78,7 @@
     a {
       font-size: 12px;
       text-align: center;
-      margin: 0 6px;
+      margin: 0 2px;
     }
   }
 
@@ -92,6 +92,7 @@
       margin: 0 2px;
     }
   }
+
 
   // Individual Item
   .item {
@@ -144,7 +145,7 @@
 }
 
 .alt-row {
-  background: --swnr-c-faint;
+  background:  var(--swnr-c-faint);
 }
 
 // Example style for SWN (can be removed if not needed).
@@ -160,6 +161,11 @@
 
 .item-dmg {
   flex: 0 1 80px;
+  padding: 0 8px;
+}
+
+.item-dmg-small {
+  flex: 0 1 40px;
   padding: 0 8px;
 }
 
@@ -180,6 +186,15 @@
 .item-loc {
   flex: 0 0 100px;
   padding: 0 8px;
+}
+
+.toggles {
+  color: var(--swnr-c-faint);
+  margin:0 2px;
+}
+
+.item-toggled {
+  color:  var(--swnr-c-black);
 }
 
 .items-center {

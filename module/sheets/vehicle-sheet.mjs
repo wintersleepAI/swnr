@@ -953,21 +953,37 @@ static async _onCrewDelete(event, target) {
 static async _onToggleVehicleStatus(event, target) {
   event.preventDefault();
   const dataset = target.dataset;
+
   const item = this._getEmbeddedDocument(target);
-  if (item) {
-    console.log(`toggling for  ${item.name}`);
+  const flipping = dataset.toggle;
+  if (flipping == undefined || flipping == "") {
+    ui.notifications.error("Toggle status not found");
+    return;
   }
-  // Handle item rolls.
-  switch (dataset.toggle) {
-    case 'juryRig':
-      console.log("jury");
-      break;
-    case 'broken': 
-      console.log("broken");
-      break;
-    case 'destroyed':
-      console.log('destroyed');
-      break;
+  // check if flipping is juryRigged, broken, destroyed
+  if (flipping == "juryRigged" || flipping == "broken" || flipping == "destroyed") {
+    let juryRigged = false;
+    let broken = false;
+    let destroyed = false;
+    switch (dataset.toggle) {
+      case 'juryRigged':
+        juryRigged = !item.system.juryRigged;
+        break;
+      case 'broken': 
+        broken = !item.system.broken;
+        break;
+      case 'destroyed':
+        destroyed = !item.system.destroyed;
+        break;
+    }
+    await item.update({
+      system: {
+        broken: broken,
+        destroyed: destroyed,
+        juryRigged: juryRigged,
+      }});
+  } else {
+    ui.notifications.error("unknown toggle status");
   }
 }
 

@@ -568,7 +568,7 @@
 .swnr .items-list .item-controls a {
   font-size: 12px;
   text-align: center;
-  margin: 0 6px;
+  margin: 0 2px;
 }
 .swnr .items-list .item-controls-small {
   display: flex;
@@ -625,7 +625,7 @@
   text-align: left;
 }
 .swnr .alt-row {
-  background: --swnr-c-faint;
+  background: var(--swnr-c-faint);
 }
 .swnr .item-formula {
   flex: 0 0 120px;
@@ -637,6 +637,10 @@
 }
 .swnr .item-dmg {
   flex: 0 1 80px;
+  padding: 0 8px;
+}
+.swnr .item-dmg-small {
+  flex: 0 1 40px;
   padding: 0 8px;
 }
 .swnr .item-enc {
@@ -654,6 +658,13 @@
 .swnr .item-loc {
   flex: 0 0 100px;
   padding: 0 8px;
+}
+.swnr .toggles {
+  color: var(--swnr-c-faint);
+  margin: 0 2px;
+}
+.swnr .item-toggled {
+  color: var(--swnr-c-black);
 }
 .swnr .items-center {
   text-align: center;
