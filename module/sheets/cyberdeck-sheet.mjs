@@ -430,7 +430,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
         name: `${verb.name} ${subject.name}`,
         type: `program`,
         img: verb.img,
-        data: {
+        system: {
           type: "running",
           cost: verb.system.cost,
           accessCost: verb.system.accessCost,
@@ -451,7 +451,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
         return;
       }
       //Foundry overwites the default value for type - but I think type needs a default, so change it here.
-      await program.update({ "system.type": "running" });
+      // await program.update({ "system.type": "running" });
 
       // Consume access
       if (sheetData.hacker) {
@@ -464,7 +464,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
           access -= program.system.accessCost;
         }
         await sheetData.hacker.update({
-          "data.access.value": access,
+          "system.access.value": access,
         });
         if (access <= 0) {
           ui.notifications?.info("Hacker has no access left");
@@ -522,6 +522,9 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       ui.notifications?.info(
         `Refreshing access from ${oldAccess} to ${newAccessDisplay} (reminder after 1 hour reprogramming, once per day)`
       );
+      await hacker.update({
+        "system.access.max": maxAccess,
+      });
       await hacker.update({
         "system.access.value": maxAccess,
       });

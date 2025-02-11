@@ -32,11 +32,11 @@ export default class SWNCyberdeck extends SWNActorBase {
     const actor = this.getHacker();
     if(actor)
     {
-      this.hacker = actor.name;
+      this.hacker = actor;
     }
     else
     {
-      this.hacker = "";
+      this.hacker = null;
     }
 
     //Calculate the health from shielding and neural buffer.
