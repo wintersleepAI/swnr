@@ -5,16 +5,15 @@
 export const migrateWorld = async function () {
   ui.notifications.info(`Applying SWN/CWN/AWN System Migration for version ${game.system.version}. Please be patient and do not close your game or shut down your server.`, { permanent: true });
 
-  const updateData = [];
-  for (const [itemId, item] of game.items) {
+  for (const item of game.items.contents) {
     if (item.type === 'Focus' || item.type === 'Edge') {
       await migrateFocusAndEdgeToFeature(item);
     }
   }
 
   // Set the migration as complete
-  game.settings.set("wwn", "systemMigrationVersion", game.system.version);
-  ui.notifications.info(`WWN System Migration to version ${game.system.version} completed!`, { permanent: true });
+  game.settings.set("swnr", "systemMigrationVersion", game.system.version);
+  ui.notifications.info(`SWN System Migration to version ${game.system.version} completed!`, { permanent: true });
 };
 
 /**

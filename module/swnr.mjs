@@ -162,8 +162,6 @@ Hooks.once('ready', function () {
     migrations.migrateWorld();
     game.settings.set('swnr', 'systemMigrationVersion', currentVersion);
   }
-
-  console.log('game: ', game);
 });
 
 /* -------------------------------------------- */
