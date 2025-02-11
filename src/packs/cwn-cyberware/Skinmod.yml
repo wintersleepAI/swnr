@@ -1,0 +1,29 @@
+name: Skinmod
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988596
+  modifiedTime: 1739238988596
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: cd4opf43vm30pm8d
+system:
+  description: Various neon tattoos, skin texture and color changes, and other superficial physical mods can be performed with no real systemic burden beyond the usual need for regular maintenance.
+  favorite: false
+  tl: 4
+  cost: '250 '
+  strain: 0
+  disabled: false
+  effect: Make cosmetic-level body mods
+  type: Skin
+  concealment: Sight
+  complication: ''
+effects: []
+_key: '!items!cd4opf43vm30pm8d'

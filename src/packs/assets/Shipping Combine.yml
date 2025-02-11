@@ -1,0 +1,40 @@
+name: Shipping Combine
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988442
+  modifiedTime: 1739238988442
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 93ini2mzp7g1my5w
+system:
+  description: Transport large amounts of equipment and personnel between worlds. As an action, the combine may move any number of non-Force assets, including itself, to any world within two hexes at a cost of one FacCred per asset.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    max: 10
+    value: 10
+  rating: 4
+  tl: 4
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 10
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!93ini2mzp7g1my5w'

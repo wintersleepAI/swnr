@@ -1,0 +1,384 @@
+name: Fleet Cruiser
+type: ship
+img: systems/swnr/assets/icons/spaceship.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988953
+  modifiedTime: 1739238988953
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: gsubkmpvyt714nmm
+system:
+  health:
+    max: 60
+    value: 60
+  cost: 17170000
+  ac: 14
+  traumaTarget: 6
+  armor:
+    max: 15
+    value: 15
+  speed: 1
+  crew:
+    min: 50
+    max: 200
+    current: 50
+  crewMembers: []
+  tl: 5
+  description: |-
+    The archetypal warship of post-Silence humanity, the fleet cruiser is a ship-eating monster compared to its smaller brethren in the navy. Only prosperous polities can build such powerful ships, and even they sometimes find it more practical to have a flexible fleet of small craft rather than a few heavily-armed cruisers. 
+    The chief advantage of a fleet cruiser is in its heavily- armored hull. Only special hunter-killer ships fitted with armor-piercing weaponry have any real chance of penetrating the cruiser’s thick skin. Those weapons are almost always more bulky and power-hungry than their peer weapons, so enemy polities must usually choose between building small ships that are very effective at defeating other small ships, or building hunter-killers that can threaten cruisers but are at a disadvantage against their less specialized brethren.
+  mods: ''
+  power:
+    max: 50
+  mass:
+    max: 30
+  hardpoints:
+    value: 10
+    max: 10
+  lifeSupportDays:
+    value: 12000
+    max: 12000
+  fuel:
+    value: 1
+    max: 1
+  cargo:
+    value: 3400
+    max: 3400
+  spikeDrive:
+    value: 3
+    max: 3
+  operatingCost: 6580000
+  maintenanceCost: 858000
+  amountOwed: 0
+  paymentAmount: 0
+  paymentMonths: 0
+  maintenanceMonths: 6
+  creditPool: 0
+  lastMaintenance:
+    year: 0
+    month: 0
+    day: 0
+  lastPayment:
+    year: 0
+    month: 0
+    day: 0
+  commandPoints: 5
+  npcCommandPoints: 5
+  crewSkillBonus: 2
+  actionsTaken: []
+  supportingDept: ''
+  roleOrder: []
+effects: []
+prototypeToken:
+  name: Fleet Cruiser
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/spaceship.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+_key: '!actors!gsubkmpvyt714nmm'
+items:
+  - name: Gravcannon
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988953
+      modifiedTime: 1739238988953
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: whl5ek2r02yg8bz5
+    system: {}
+    effects: []
+    _key: '!actors.items!gsubkmpvyt714nmm.whl5ek2r02yg8bz5'
+  - name: Smart Cloud
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988953
+      modifiedTime: 1739238988953
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 8q0hicf39270cxan
+    system: {}
+    effects: []
+    _key: '!actors.items!gsubkmpvyt714nmm.8q0hicf39270cxan'
+  - name: Multifocal Laser
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988953
+      modifiedTime: 1739238988953
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: t8vxbh5y31xy5tn3
+    system: {}
+    effects: []
+    _key: '!actors.items!gsubkmpvyt714nmm.t8vxbh5y31xy5tn3'
+  - name: Multifocal Laser
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988953
+      modifiedTime: 1739238988953
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 05xcthztlkqrmcll
+    system: {}
+    effects: []
+    _key: '!actors.items!gsubkmpvyt714nmm.05xcthztlkqrmcll'
+  - name: Hardened Polyceramic Overlay
+    type: shipDefense
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/bubble-field.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988953
+      modifiedTime: 1739238988953
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 5to6g3w2o6pcwlro
+    system: {}
+    effects: []
+    _key: '!actors.items!gsubkmpvyt714nmm.5to6g3w2o6pcwlro'
+  - name: Spike Drive-3 upgrade
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/rocket-thruster.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988953
+      modifiedTime: 1739238988953
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: fgf3jqnk52or9y3y
+    system: {}
+    effects: []
+    _key: '!actors.items!gsubkmpvyt714nmm.fgf3jqnk52or9y3y'
+  - name: Drop Pod
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988953
+      modifiedTime: 1739238988953
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: joepjom2h54altu1
+    system: {}
+    effects: []
+    _key: '!actors.items!gsubkmpvyt714nmm.joepjom2h54altu1'
+  - name: Armory
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988953
+      modifiedTime: 1739238988953
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: ribp8d0ur8vb0u6g
+    system: {}
+    effects: []
+    _key: '!actors.items!gsubkmpvyt714nmm.ribp8d0ur8vb0u6g'
+  - name: Ship's Locker
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988953
+      modifiedTime: 1739238988953
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 0kyxnhmilkozp7dl
+    system: {}
+    effects: []
+    _key: '!actors.items!gsubkmpvyt714nmm.0kyxnhmilkozp7dl'
+  - name: Boarding Tubes
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988953
+      modifiedTime: 1739238988953
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 4m05o20eny399zp4
+    system: {}
+    effects: []
+    _key: '!actors.items!gsubkmpvyt714nmm.4m05o20eny399zp4'
+  - name: Fuel Scoops
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/energise.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988953
+      modifiedTime: 1739238988953
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: iv3lcmmwyt5zaf2u
+    system: {}
+    effects: []
+    _key: '!actors.items!gsubkmpvyt714nmm.iv3lcmmwyt5zaf2u'
+  - name: Advanced Nav Computer
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/gps.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988953
+      modifiedTime: 1739238988953
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: trdcsbk9xepbjasf
+    system: {}
+    effects: []
+    _key: '!actors.items!gsubkmpvyt714nmm.trdcsbk9xepbjasf'

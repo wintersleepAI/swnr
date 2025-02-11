@@ -1,0 +1,43 @@
+name: Shield
+type: armor
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988394
+  modifiedTime: 1739238988394
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: nur9z2zngxadqsuq
+system:
+  description: Shields are an ancient yet extremely useful adjunct to body armor. Primitive shields are usually of wood or stretched hide, while more modern riot shields tend toward clear plastic. All shields require one free hand to use effectively.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 2
+  cost: 10
+  tl: 0
+  location: other
+  quality: stock
+  noEncReadied: false
+  ac: 13
+  shield: true
+  use: false
+  meleeAc: 13
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: 1
+  shieldACBonus: 1
+effects: []
+_key: '!items!nur9z2zngxadqsuq'

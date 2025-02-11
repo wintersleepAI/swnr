@@ -1,0 +1,29 @@
+name: Cybereyes (pair)
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988556
+  modifiedTime: 1739238988556
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: f5e4jy48hf4rjoop
+system:
+  description: While a single cybernetic eye can be implanted, it is recommended that both be replaced at the same time to improve neural adaptation. These cybereyes are clearly artificial, though most are styled in attractive or striking fashions. They all have perfect 20/20 vision and integral flash protectors, but additional functionality must be implanted separately. A user with a pair of cybereyes or syntheyes halves the System Strain cost of cybernetic eye implants.
+  favorite: false
+  tl: 4
+  cost: 10000
+  strain: 0.25
+  disabled: false
+  effect: Flash-protected synthetic eyes
+  type: Sensory
+  concealment: Sight
+  complication: ''
+effects: []
+_key: '!items!f5e4jy48hf4rjoop'

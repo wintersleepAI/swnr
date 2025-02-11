@@ -1,0 +1,34 @@
+name: Trauma Patch
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988692
+  modifiedTime: 1739238988692
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: jhxt4vfab1gzhtla
+system:
+  description: A theoretically foolproof cocktail of coagulants, stimulants, and painkillers, a trauma patch can be applied to a Mortally Wounded ally to stabilize them on a successful Int or Dex/Heal skill check against difficulty 6, with a +1 difficulty penalty for each full round since the subject went down. The patch is useless after six rounds. Trauma patches cannot revive victims downed by poisons or diseases, or those dismembered by explosives or heavy weapons.
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 3
+    bundled: false
+  encumbrance: 1
+  cost: 50
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!jhxt4vfab1gzhtla'

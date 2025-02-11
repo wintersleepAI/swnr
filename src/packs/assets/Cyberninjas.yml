@@ -1,0 +1,40 @@
+name: Cyberninjas
+type: asset
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988409
+  modifiedTime: 1739238988409
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: tjuvtww3d439f9d5
+system:
+  description: Outfitted with the latest in personal stealth cyberware, cyberninjas are designed to avoid all but the most careful scans.
+  favorite: false
+  category: cunning
+  type: Special Forces
+  health:
+    max: 4
+    value: 4
+  rating: 3
+  tl: 4
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 6
+  income: 0
+  maintenance: 0
+  attackTarget: cunning
+  attackSource: cunning
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!tjuvtww3d439f9d5'

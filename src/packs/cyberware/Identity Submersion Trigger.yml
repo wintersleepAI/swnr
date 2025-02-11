@@ -1,0 +1,29 @@
+name: Identity Submersion Trigger
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988778
+  modifiedTime: 1739238988778
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 4jzvjqki61sg9s1b
+system:
+  description: 'This cyberware involves micronized neural stimulation technology which is imperceptible to anything short of TL5 medical scanning or TL4 surgical examination of the subject’s brain tissue. When active, the IST allows the subject to adopt a secondary persona, complete with a library of manufactured memories. So long as the IST is active, the subject will honestly and completely believe himself to be the secondary persona, a conviction that cannot be penetrated by telepathy or TL4 methods of interrogation. The persona can be activated at the user’s discretion, but it only deactivates on a preset trigger, leaving the subject in full possession of all memories experienced. The trigger can be any perceptible stimulus: a particular time, the sight of a specific person, a code phrase, or any other sign, and it may be changed by the user each time they activate the cyberware. Many ISTs are also implanted with a “master key” that will automatically deactivate the triggered identity.'
+  favorite: false
+  tl: 4
+  cost: 25000
+  strain: 1
+  disabled: false
+  effect: Allows a false identity to be perfectly assumed
+  type: none
+  concealment: sight
+  complication: ''
+effects: []
+_key: '!items!4jzvjqki61sg9s1b'
