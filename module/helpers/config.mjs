@@ -101,22 +101,22 @@ SWN.vehicleTypes = {
 }
 
 SWN.mechClasses = {
-  suit: 'swnr.mech.mechClass.suit',
-  light: 'swnr.mech.mechClass.light',
-  heavy: 'swnr.mech.mechClass.heavy',
+  suit: 'swnr.sheet.mech.mechClass.suit',
+  light: 'swnr.sheet.mech.mechClass.light',
+  heavy: 'swnr.sheet.mech.mechClass.heavy',
 }
 
 SWN.shipClasses = {
-  fighter: 'swnr.ship.shipClass.fighter',
-  frigate: 'swnr.ship.shipClass.frigate',
-  cruiser: 'swnr.ship.shipClass.cruiser',
-  capital: 'swnr.ship.shipClass.capital',
+  fighter: 'swnr.sheet.ship.shipClass.fighter',
+  frigate: 'swnr.sheet.ship.shipClass.frigate',
+  cruiser: 'swnr.sheet.ship.shipClass.cruiser',
+  capital: 'swnr.sheet.ship.shipClass.capital',
 }
 
 SWN.vehicleClasses = {
-  s: 'swnr.vehicle.vehicle-class.s',
-  m: 'swnr.vehicle.vehicle-class.m',
-  l: 'swnr.vehicle.vehicle-class.l',
+  s: 'swnr.sheet.vehicle.vehicle-class.s',
+  m: 'swnr.sheet.vehicle.vehicle-class.m',
+  l: 'swnr.sheet.vehicle.vehicle-class.l',
 }
 
 SWN.allVehicleClasses = {
