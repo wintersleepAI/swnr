@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230025115
-  modifiedTime: 1737230025115
+  createdTime: 1739238988813
+  modifiedTime: 1739238988813
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: wr5izdnrs39nxdne
+_id: x2kyr1na92cxpqwy
 system:
   description: 'Thermal flare: If triggered in one mode, the flare burns with a bright white light for two hours, illuminating up to twenty meters around the holder. If the guidance fins are extended first, the flare launches up to 200 meters and explodes in a bright white flash. A launched flare does 1d6 damage to anyone it hits, though the clumsy flight gives a -4 penalty on any attempts to hit something with it.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!wr5izdnrs39nxdne'
+_key: '!items!x2kyr1na92cxpqwy'

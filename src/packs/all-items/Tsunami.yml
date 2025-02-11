@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024785
-  modifiedTime: 1737230024785
+  createdTime: 1739238988376
+  modifiedTime: 1739238988376
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: m5qqghivjwdf26yh
+_id: gtwcbd9zrs34k50e
 system:
   description: 'Tsunami (Heal-1): An emergency combat stim used to juice certain expendable soldiers before an assault, Tsunami fills them with a reckless disregard for pain and an intense aggressiveness. The short effect duration and difficult application limits its wider use, however. Subjects gain a Morale score of 12, 10 extra hit points for ten minutes and a +2 bonus on all hit rolls. At the end of the duration, they immediately lose those 10 hit points, which may leave them mortally wounded. Each application adds 2 System Strain to the target.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!m5qqghivjwdf26yh'
+_key: '!items!gtwcbd9zrs34k50e'

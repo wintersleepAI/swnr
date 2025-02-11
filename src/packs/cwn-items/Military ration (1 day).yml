@@ -9,11 +9,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230025013
-  modifiedTime: 1737230025013
+  createdTime: 1739238988674
+  modifiedTime: 1739238988674
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: ey457a5x5k997k2a
+_id: 38fzcb6k2e81hysc
 system:
   description: This food brick is unappetizing but contains the nutrition necessary for a day of heavy activity. Water can be included for an extra point of Encumbrance per day.
   favorite: false
@@ -30,4 +30,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!ey457a5x5k997k2a'
+_key: '!items!38fzcb6k2e81hysc'

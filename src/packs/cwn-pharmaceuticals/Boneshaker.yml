@@ -9,11 +9,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230025018
-  modifiedTime: 1737230025018
+  createdTime: 1739238988682
+  modifiedTime: 1739238988682
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: ce7k4cxhjbmp1qme
+_id: 2mcqf2i5aet2fhcy
 system:
   description: A filthy mix of jailbroken corp industrial chems and amphetamine scrapings, Boneshaker is a popular combat drug among the most impoverished or savage street gangs. On application, the subject is filled with blind aggression, gaining a +2 Morale bonus and a +2 bonus to hit rolls, damage, and Shock. The recklessness induced by Boneshaker leaves them wide open, however, and all attacks against them add +2 to any Trauma Die rolls. Boneshaker lasts for one scene and adds 2 System Strain at the end of it.
   favorite: false
@@ -30,4 +30,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!ce7k4cxhjbmp1qme'
+_key: '!items!2mcqf2i5aet2fhcy'

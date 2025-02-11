@@ -9,11 +9,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024828
-  modifiedTime: 1737230024828
+  createdTime: 1739238988432
+  modifiedTime: 1739238988432
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: 2wh0kh6krwual7s8
+_id: gm52idz257bc535a
 system:
   description: 'As an action, the owning faction can roll 1d6 for a Postech Industry asset. On a 1, one FacCred is lost, on a 2-4 one FacCred is earned, and a 5-6 returns two FacCreds. If money is lost and no resources are available to pay it, the Postech Industry is destroyed. Roll: [[1d6]]'
   favorite: false
@@ -37,4 +37,4 @@ system:
     action: false
     special: false
 effects: []
-_key: '!items!2wh0kh6krwual7s8'
+_key: '!items!gm52idz257bc535a'

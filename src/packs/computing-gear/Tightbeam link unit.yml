@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024898
-  modifiedTime: 1737230024898
+  createdTime: 1739238988518
+  modifiedTime: 1739238988518
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: v2mxw9rl6vh0a7am
+_id: 6sbjrbqe8y02ttr8
 system:
   description: 'Tightbeam link unit: Much like a remote link unit, a tightbeam unit uses a laser to connect via lineof-sight transmission. Unlike a remote link unit, there’s almost no chance for a conventional security system to detect this link, but it requires that the infiltrators get a clear line of sight between the unit and the receiving end. Commercial satellite reception units can be employed for skyward aiming at 500 credits/hour if a second land unit is unavailable, but indoor use is impossible.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!v2mxw9rl6vh0a7am'
+_key: '!items!6sbjrbqe8y02ttr8'

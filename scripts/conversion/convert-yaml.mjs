@@ -217,7 +217,9 @@ const mapToV12Format = (compendium) => {
             type: 'feature',
             system: {
                 ...outputFormat.system,
-                description: `${compendium.data.description}\nLevel 1: ${compendium.data.level1}\nLevel 2: ${compendium.data.level2}`, // Will change the skill item so that I don't have to do this later
+                description: compendium.data.description + (compendium.type === 'focus'
+                    ? `<br><br>Level 1: ${compendium.data.level1}<br>Level 2: ${compendium.data.level2}`
+                    : '')
             }
         }
     } else if (compendium.type === 'npc') {

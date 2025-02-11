@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230025110
-  modifiedTime: 1737230025110
+  createdTime: 1739238988806
+  modifiedTime: 1739238988806
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: pdnpt9o7hloi24vv
+_id: 3ox6qw8arzyznu70
 system:
   description: 'Navcomp: A combination of low-tech compasses, automappers, astronomic charts, and gyroscopes packed into a flat, one-kilo case. A character with a navcomp will never get lost on worlds with GPS satellites. They can also make a crude but serviceable automatic map of all buildings or landscapes they travel through. Other terrestrial navigation skill checks are made at a +1 bonus.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!pdnpt9o7hloi24vv'
+_key: '!items!3ox6qw8arzyznu70'

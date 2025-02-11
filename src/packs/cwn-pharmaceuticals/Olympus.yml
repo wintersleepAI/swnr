@@ -9,11 +9,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230025022
-  modifiedTime: 1737230025022
+  createdTime: 1739238988688
+  modifiedTime: 1739238988688
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: vwvj36vipbec1akm
+_id: df7ees7m0rhepz26
 system:
   description: (Heal-0) A 'respectable' combat chem used by certain units of corporate security, Olympus numbs pain, sharpens mental focus, and slows down instinctive panic or rush instincts, allowing a calm observation of the battlefield. Users can reroll their first failed Morale check in a fight and gain a +2 bonus to hit rolls. One dose of Olympus lasts for one scene, and adds one System Strain at its end.
   favorite: false
@@ -30,4 +30,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!vwvj36vipbec1akm'
+_key: '!items!df7ees7m0rhepz26'

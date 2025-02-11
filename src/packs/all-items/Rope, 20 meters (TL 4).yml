@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024773
-  modifiedTime: 1737230024773
+  createdTime: 1739238988361
+  modifiedTime: 1739238988361
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: 2tzyr0szrufktz56
+_id: c9q7hf6vb9v3qugb
 system:
   description: 'Rope: Light and sturdy. A metatool can be used to cut and join the synthetics used in TL4 rope, which counts as one encumbrance item per 40 meters and costs 40 credits.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!2tzyr0szrufktz56'
+_key: '!items!c9q7hf6vb9v3qugb'

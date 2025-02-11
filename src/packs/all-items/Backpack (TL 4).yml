@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024746
-  modifiedTime: 1737230024746
+  createdTime: 1739238988325
+  modifiedTime: 1739238988325
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: cj76kkxqk5y6eyl2
+_id: dvhnbbc8jfsf3lzs
 system:
   description: 'Backpack (TL 4): TL4 versions of this item are effectively without encumbrance, albeit they cost 50 credits. A worn backpack counts as a readied item, though objects stowed inside it still require the usual round to dig free. Characters without backpacks or similar carrying devices might have difficulty justifying the hauling of large amounts of gear.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!cj76kkxqk5y6eyl2'
+_key: '!items!dvhnbbc8jfsf3lzs'

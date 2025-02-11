@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024892
-  modifiedTime: 1737230024892
+  createdTime: 1739238988509
+  modifiedTime: 1739238988509
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: saxpitdhpeip1gvl
+_id: 0lgriuf8uh2qzirj
 system:
   description: 'Comm server: A powerful base unit for providing communications without comsats. The server provides service between up to three dozen compads within 300 kilometers of the unit. Server usage can be locked to specific compads, and all transmissions are heavily encrypted. A comm server can function for several months on a type B cell.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!saxpitdhpeip1gvl'
+_key: '!items!0lgriuf8uh2qzirj'

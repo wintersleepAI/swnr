@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230025108
-  modifiedTime: 1737230025108
+  createdTime: 1739238988804
+  modifiedTime: 1739238988804
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: 9f9s97l06tz9odwn
+_id: r0wzahwk87gja1fd
 system:
   description: 'Grav harness: This advanced gravitic harness allows clumsy flight at a rate of 20 meters per round as a Main Action. It requires a Type B power cell to fuel it, and the miniaturized electronics are rapacious, consuming the cell in five minutes of operation. It can lift up to 200 kilos.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!9f9s97l06tz9odwn'
+_key: '!items!r0wzahwk87gja1fd'

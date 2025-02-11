@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024747
-  modifiedTime: 1737230024747
+  createdTime: 1739238988326
+  modifiedTime: 1739238988326
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: knx0yndowxtyusxh
+_id: 8kd3gexktcyehlrz
 system:
   description: 'Bezoar (Heal-1): A complex antibiotic cocktail, Bezoar is an effective default treatment for a wide variety of infectious diseases. When applied to a sufferer, roll 1d6; on a 1, this victim cannot be helped by Bezoar, while otherwise the affliction is cured within 24 hours. Each application of Bezoar adds 1 System Strain to the target, and it cannot cure cancers, bioweapons, or congenital diseases.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!knx0yndowxtyusxh'
+_key: '!items!8kd3gexktcyehlrz'

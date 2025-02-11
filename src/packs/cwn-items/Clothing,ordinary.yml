@@ -9,11 +9,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230025008
-  modifiedTime: 1737230025008
+  createdTime: 1739238988667
+  modifiedTime: 1739238988667
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: ke5yddg2qxra4e5v
+_id: kb4v18o6lff7nzlh
 system:
   description: Clothing has no Encumbrance when worn, but it`s sometimes prudent to have a spare outfit in your pack.
   favorite: false
@@ -30,4 +30,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!ke5yddg2qxra4e5v'
+_key: '!items!kb4v18o6lff7nzlh'

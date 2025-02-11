@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230025260
-  modifiedTime: 1737230025260
+  createdTime: 1739238989036
+  modifiedTime: 1739238989036
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: n1a35vegq2gsizpf
+_id: 5hqzllovb6qqfgsb
 system:
   description: 'Toolkits/Postech: Containing a wide range of necessary tools for a particular skill set, toolkits can handle almost any job that doesn’t require a full-scale shop or lab. A standard postech toolkit can handle electronics, small welding jobs, and basic repair on ordinary TL4 goods.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!n1a35vegq2gsizpf'
+_key: '!items!5hqzllovb6qqfgsb'

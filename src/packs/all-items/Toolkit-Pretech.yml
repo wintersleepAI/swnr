@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024783
-  modifiedTime: 1737230024783
+  createdTime: 1739238988373
+  modifiedTime: 1739238988373
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: 0k7ceumfuryimkik
+_id: w2a4ehmg5bvnyui5
 system:
   description: 'Toolkits/Pretech: Containing a wide range of necessary tools for a particular skill set, toolkits can handle almost any job that doesn’t require a full-scale shop or lab. These sophisticated pretech tools are necessary for working on advanced TL5 artifacts, and the tools themselves are very rare and difficult to obtain.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!0k7ceumfuryimkik'
+_key: '!items!w2a4ehmg5bvnyui5'

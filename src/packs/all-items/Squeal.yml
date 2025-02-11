@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024776
-  modifiedTime: 1737230024776
+  createdTime: 1739238988365
+  modifiedTime: 1739238988365
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: a1lc4rpdec2ikv7j
+_id: w8q77dj62m0oz2h8
 system:
   description: 'Squeal (Heal-1): This “truth serum” is unreliable but still one of the best available options for field interrogations. The subject must be immobilized or willing to be affected by it. For five minutes afterwards they will be unable to avoid answering questions about facts known to them; they will be unable to exercise anything resembling a hypothesis or a judgment, but they will answer specific questions about facts known to them truthfully. Unwilling victims can attempt a Physical saving throw; on a success, they can simply refuse to speak about one particular topic of their choice. Targets pass out for 1d6 hours after the drug wears off and are immune to it for a week thereafter.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!a1lc4rpdec2ikv7j'
+_key: '!items!w8q77dj62m0oz2h8'

@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024751
-  modifiedTime: 1737230024751
+  createdTime: 1739238988331
+  modifiedTime: 1739238988331
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: 1uo72fapa2qz4yaj
+_id: 8r28mso980h3qsfz
 system:
   description: 'Black slab: While a “black slab” appears to be a normal dataslab to casual examination, these devices are packed with intrusion-optimization hardware and integral line tapping tools. They function as a metatool for purposes of accessing data lines and grant a +1 bonus to all hacking attempts made with them. They are also quite illegal on most worlds, available only from black market dealers and private sales from hackers.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!1uo72fapa2qz4yaj'
+_key: '!items!8r28mso980h3qsfz'

@@ -9,11 +9,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024863
-  modifiedTime: 1737230024863
+  createdTime: 1739238988476
+  modifiedTime: 1739238988476
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: t00h9rywrnob5vdo
+_id: lxymlk7vcd9bh9mv
 system:
   health:
     value: 10
@@ -135,7 +135,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!t00h9rywrnob5vdo'
+_key: '!actors!lxymlk7vcd9bh9mv'
 items:
   - name: Natural Attack
     type: weapon
@@ -147,11 +147,11 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1737230024863
-      modifiedTime: 1737230024863
+      createdTime: 1739238988476
+      modifiedTime: 1739238988476
       lastModifiedBy: systembuilder9000
     sort: 0
-    _id: 3m7walvli5tnebq1
+    _id: 149l63nfv7ndazrz
     system:
       description: ''
       favorite: false
@@ -197,4 +197,4 @@ items:
       isTwoHanded: false
       isNonLethal: false
     effects: []
-    _key: '!actors.items!t00h9rywrnob5vdo.3m7walvli5tnebq1'
+    _key: '!actors.items!lxymlk7vcd9bh9mv.149l63nfv7ndazrz'

@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024741
-  modifiedTime: 1737230024741
+  createdTime: 1739238988319
+  modifiedTime: 1739238988319
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: 6pf7aqbnzr031dx6
+_id: qml5nrfad7ojl3i1
 system:
   description: 'Ammunition: A few worlds are too primitive or too resource-poor to manufacture ammunition, but the vast majority of worlds provide cartridges in almost every conceivable caliber and make. Most local gunsmiths can load ammunition to any specification required by a buyer.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!6pf7aqbnzr031dx6'
+_key: '!items!qml5nrfad7ojl3i1'

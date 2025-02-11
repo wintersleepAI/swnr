@@ -9,11 +9,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024853
-  modifiedTime: 1737230024853
+  createdTime: 1739238988462
+  modifiedTime: 1739238988462
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: gf8zrkxofu2fvf11
+_id: k1fjo0jrj5lkw9ah
 system:
   health:
     value: 10
@@ -135,7 +135,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!gf8zrkxofu2fvf11'
+_key: '!actors!k1fjo0jrj5lkw9ah'
 items:
   - name: Unarmed Attack
     type: weapon
@@ -147,11 +147,11 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1737230024853
-      modifiedTime: 1737230024853
+      createdTime: 1739238988462
+      modifiedTime: 1739238988462
       lastModifiedBy: systembuilder9000
     sort: 0
-    _id: skq8oz6c7ohrbam6
+    _id: s09ucvuth4xo7lka
     system:
       description: ''
       favorite: false
@@ -197,4 +197,4 @@ items:
       isTwoHanded: false
       isNonLethal: false
     effects: []
-    _key: '!actors.items!gf8zrkxofu2fvf11.skq8oz6c7ohrbam6'
+    _key: '!actors.items!k1fjo0jrj5lkw9ah.s09ucvuth4xo7lka'

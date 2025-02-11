@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024770
-  modifiedTime: 1737230024770
+  createdTime: 1739238988358
+  modifiedTime: 1739238988358
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: k05bdywcndau2u8b
+_id: u4049vqrew9j19q8
 system:
   description: 'Rations: Dried or otherwise preserved foodstuffs sufficient for one day. If water is not otherwise available, add another item’s worth of encumbrance for the water necessary for a person’s daily needs.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!k05bdywcndau2u8b'
+_key: '!items!u4049vqrew9j19q8'

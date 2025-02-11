@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024893
-  modifiedTime: 1737230024893
+  createdTime: 1739238988510
+  modifiedTime: 1739238988510
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: 7w8aaltddtl9uxcw
+_id: 9izkc6pqsfzuapmn
 system:
   description: 'Field Radio: On worlds too primitive to have a comm grid, adventurers often fall back on these headset-mounted field radios. A single type A cell powers them for months of use. Urban or rugged terrain limits their range to about two kilometers, while flat plains give a maximum range of thirty kilometers. Someone with at least Program-0 skill can use the radio’s shortwave functionality to communicate with a prepared target at continental distances if given ten minutes for tuning.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!7w8aaltddtl9uxcw'
+_key: '!items!9izkc6pqsfzuapmn'

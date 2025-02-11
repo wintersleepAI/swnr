@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230025163
-  modifiedTime: 1737230025163
+  createdTime: 1739238988876
+  modifiedTime: 1739238988876
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: in5nx98dxejb4zaf
+_id: hfsfze3nd7k4haof
 system:
   description: 'Pretech Cosmetic (None): Before the Silence stims existed for a host of cosmetic, hygiene, and health purposes. While these effects are trivial, the basic pretech stim substrate also works to heal 1d6 lost hit points in the user at a cost of 1 System Strain.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!in5nx98dxejb4zaf'
+_key: '!items!hfsfze3nd7k4haof'

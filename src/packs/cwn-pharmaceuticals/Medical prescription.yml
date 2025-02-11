@@ -9,11 +9,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230025022
-  modifiedTime: 1737230025022
+  createdTime: 1739238988687
+  modifiedTime: 1739238988687
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: r61vjmoho1omelj1
+_id: 5fz6dadlyt15wv2c
 system:
   description: One of a thousand different medical drugs, a prescription like this is often necessary to treat some chronic condition or keep a medical problem from growing worse. Corp employees get their drugs for a pittance, but less fortunate souls need to source their drugs from extortionate corp pharmacies or street docs. Lucky users only need a dose a few times a week, but others must have a daily supply or suffer potentially lethal complications.
   favorite: false
@@ -30,4 +30,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!r61vjmoho1omelj1'
+_key: '!items!5fz6dadlyt15wv2c'

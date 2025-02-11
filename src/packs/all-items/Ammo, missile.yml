@@ -8,11 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1737230024743
-  modifiedTime: 1737230024743
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
   lastModifiedBy: systembuilder9000
 sort: 0
-_id: zaafxppyr0ca2vmm
+_id: i6vu77e7dczbpck3
 system:
   description: 'Ammunition, missile: Some characters might have reason to pack along a man-portable rocket launcher, or have one mounted on their favorite gravcar. Heavy weapons and their ammunition are usually outlawed for civilians on most worlds, but this price is for locales where missiles can be bought.'
   favorite: false
@@ -31,4 +31,4 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!zaafxppyr0ca2vmm'
+_key: '!items!i6vu77e7dczbpck3'
