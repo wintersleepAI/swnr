@@ -4,6 +4,13 @@
 
 ## Development
 
+Using node 20.14 for development.
+
+Recommend using nvm (available on mac via brew or ubuntu) to manage node versions.
+`nvm use 20.14.0`
+
+`npm install`
+
 ### SCSS
 
 
