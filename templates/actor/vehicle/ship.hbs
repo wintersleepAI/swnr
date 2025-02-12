@@ -24,66 +24,74 @@
       </div>
     </div>
     <div>
-      <h3>Costs</h3>
+      <h3>Costs</h3> <!-- COSTS -->
     </div>
-    <div class='grid grid-3col'> <!-- SWNRShipData extends SWNRVehicleTemplateBase-->
-      <div class="resource">
-        {{formGroup systemFields.operatingCost value=system.operatingCost localize=true}}
+    <div class='grid grid-4col'>
+      {{formGroup systemFields.cost value=system.cost localize=true}}
+
+      <div class="resource form-group flex flex-col">
+        <div>
+          <label>{{localize 'SWN.Actor.Ship.FIELDS.amountOwed.label'}}</label>
+          <a class="credits-change" title="{{localize 'swnr.sheet.credit-change'}}" data-credit-type="amountOwed"
+            data-action="creditChange">
+            <i class="fas fa-coins"></i></a>
+        </div>
+        {{formInput systemFields.amountOwed value=system.amountOwed localize=true}}
       </div>
-      <div class="resource">
-        {{formGroup systemFields.maintenanceCost value=system.maintenanceCost localize=true}}
+
+      <div class="resource form-group flex flex-col">
+        <div>
+          <label>{{localize 'SWN.Actor.Ship.FIELDS.creditPool.label'}}</label>
+          <a class="credits-change" title="{{localize 'swnr.sheet.credit-change'}}" data-credit-type="creditPool">
+            <i class="fas fa-coins"></i> </a>
+        </div>
+        {{formInput systemFields.creditPool value=system.creditPool localize=true}}
       </div>
-      <div class="resource">
-        {{formGroup systemFields.amountOwed value=system.amountOwed localize=true}}
-      </div>
-      <div class="resource">
-        {{formGroup systemFields.paymentAmount value=system.paymentAmount localize=true}}
-      </div>
-      <div class="resource">
-        {{formGroup systemFields.paymentMonths value=system.paymentMonths localize=true}}
-      </div>
-      <div class="resource">
-        {{formGroup systemFields.maintenanceMonths value=system.maintenanceMonths localize=true}}
-      </div>
-      <div class="resource">
-        {{formGroup systemFields.creditPool value=system.creditPool localize=true}}
-        <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
-          title="{{localize 'swnr.sheet.credit-change'}} {{actor.system.tweak.debtDisplay}}"
-          data-credit-type="creditPool">
-          <i class="fas fa-coins"></i> <!--TODO-->
-      </div>
-      <div class="resource">
-        {{formGroup systemFields.lastMaintenance value=system.lastMaintenance localize=true widget=groupWidget}}
-      </div>
-      <div class="resource">
-        {{formGroup systemFields.lastPayment value=system.lastPayment localize=true widget=groupWidget}}
-      </div>
-      <div class="resource">
+
+      <div class="resource form-group"> <!-- calc cost-->
         <div class="flex flex-col items-center">
-          <a class="calc-cost" title='{{localize ' swnr.sheet.ship.calc-cost'}}'><i
-              class="fas fa-2x fa-cash-register"></i></a>
-          <label>{{localize 'swnr.sheet.ship.calc-cost'}}</label>
+          <div><a class="calc-cost" title="{{localize 'swnr.sheet.ship.calc-cost'}}"><i
+                class=" fas fa-2x fa-cash-register"></i></a></div>
+          <div data-tooltip="{{localize 'swnr.sheet.ship.calc-cost-hint'}}"><label>{{localize
+              'swnr.sheet.ship.calc-cost'}}</label></div>
         </div>
       </div>
-      <div class="resource">
-        <!-- make payment -->
-        <div class="flex flex-col items-center text-center">
-          <a class="make-payment" title='{{localize ' swnr.sheet.ship.make-payment'}}'><i
-              class="fas fa-2x fa-money-bill-wave"></i></a>
-          <label>{{localize 'swnr.sheet.ship.make-payment'}}</label>
-        </div>
-        <div class="">
-          Note: If simple-calendar module is installed, travel and schedule will integrate automatically.
-        </div>
-      </div>
-      <div class="resource">
-        <!-- pay maintenance -->
+
+      {{formGroup systemFields.maintenanceCost value=system.maintenanceCost localize=true}}
+
+      {{formGroup systemFields.lastMaintenance value=system.lastMaintenance localize=true widget=groupWidget}}
+
+
+      {{formGroup systemFields.maintenanceMonths value=system.maintenanceMonths localize=true}}
+
+      <div class="resource" data-tooltip="{{localize 'swnr.sheet.ship.pay-maintenance-hint'}}"> <!-- pay maintenance -->
         <div class="flex flex-col items-center text-center">
           <a class="pay-maintenance" title='{{localize ' swnr.sheet.ship.pay-maintenance'}}'><i
               class="fas fa-2x fa-tools"></i></a>
           <label>{{localize 'swnr.sheet.ship.pay-maintenance'}}</label>
         </div>
       </div>
+
+      {{formGroup systemFields.paymentAmount value=system.paymentAmount localize=true}}
+
+      {{formGroup systemFields.lastPayment value=system.lastPayment localize=true widget=groupWidget}}
+
+      {{formGroup systemFields.paymentMonths value=system.paymentMonths localize=true}}
+
+      <div class="resource" data-tooltip="{{localize 'swnr.sheet.ship.make-payment-hint'}}">
+        <!-- make payment -->
+        <div class="flex flex-col items-center text-center">
+          <a class="make-payment" title='{{localize ' swnr.sheet.ship.make-payment'}}'><i
+              class="fas fa-2x fa-money-bill-wave"></i></a>
+          <label>{{localize 'swnr.sheet.ship.make-payment'}}</label>
+        </div>
+      </div>
+
+      {{formGroup systemFields.operatingCost value=system.operatingCost localize=true}}
+
+
+
+
 
       {{!-- <div class="resource">
         {{formGroup systemFields.actionsTaken value=system.actionsTaken localize=true}}
