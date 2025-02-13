@@ -64,11 +64,12 @@
 
       {{formGroup systemFields.maintenanceMonths value=system.maintenanceMonths localize=true}}
 
-      <div class="resource" data-tooltip="{{localize 'swnr.sheet.ship.pay-maintenance-hint'}}"> <!-- pay maintenance -->
+      <div class="resource form-group" data-tooltip="{{localize 'swnr.sheet.ship.pay-maintenance-hint'}}"> <!-- pay maintenance -->
         <div class="flex flex-col items-center text-center">
-          <a class="pay-maintenance" title='{{localize ' swnr.sheet.ship.pay-maintenance'}}'><i
+          <a class="pay-maintenance" data-action="payMaintenance" title='{{localize 'swnr.sheet.ship.pay-maintenance'}}'><i
               class="fas fa-2x fa-tools"></i></a>
-          <label>{{localize 'swnr.sheet.ship.pay-maintenance'}}</label>
+          <div >
+            <label>{{localize 'swnr.sheet.ship.pay-maintenance'}}</label></div>
         </div>
       </div>
 
@@ -78,12 +79,12 @@
 
       {{formGroup systemFields.paymentMonths value=system.paymentMonths localize=true}}
 
-      <div class="resource" data-tooltip="{{localize 'swnr.sheet.ship.make-payment-hint'}}">
+      <div class="resource form-group" data-tooltip="{{localize 'swnr.sheet.ship.make-payment-hint'}}">
         <!-- make payment -->
         <div class="flex flex-col items-center text-center">
-          <a class="make-payment" title='{{localize ' swnr.sheet.ship.make-payment'}}'><i
+          <a class="make-payment" data-action="makePayment" title='{{localize 'swnr.sheet.ship.make-payment'}}'><i
               class="fas fa-2x fa-money-bill-wave"></i></a>
-          <label>{{localize 'swnr.sheet.ship.make-payment'}}</label>
+          <div><label>{{localize 'swnr.sheet.ship.make-payment'}}</label></div>
         </div>
       </div>
 

@@ -598,7 +598,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     return this._onPay(event, "maintenance");
   }
 
-  static async _onPay(event, paymentType) {
+  async _onPay(event, paymentType) {
     // if a new payment type is added this function needs to be refactored
     let shipPool = this.actor.system.creditPool;
     const paymentAmount =
@@ -631,7 +631,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     dateObject.setMonth(dateObject.getMonth() + monthSchedule);
     if (paymentType == "payment") {
       await this.actor.update({
-        data: {
+        system: {
           creditPool: shipPool,
           lastPayment: {
             year: dateObject.getFullYear(),
@@ -642,7 +642,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       });
     } else {
       await this.actor.update({
-        data: {
+        system: {
           creditPool: shipPool,
           lastMaintenance: {
             year: dateObject.getFullYear(),
@@ -652,7 +652,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
         },
       });
     }
-    this.actor.setScheduledDate(dateObject, paymentType);
+    this.actor.system.setScheduledDate(dateObject, paymentType);
   }
 
   async _onHullChange(event) {
