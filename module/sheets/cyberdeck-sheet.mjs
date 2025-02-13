@@ -167,16 +167,8 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
    * @param {object} context The context object to mutate
    */
   _prepareItems(context) {
-    let hacker = null;
-    if (this.actor.system.hackerId) {
-      const cId = this.actor.system.hackerId;
-      const crewMember = game.actors?.get(cId);
-      if (crewMember) {
-        if (crewMember.type == "character" || crewMember.type == "npc") {
-          hacker = crewMember;
-        }
-      }
-    }
+    const hacker = this.actor.system.getHacker();
+
     const programs = this.actor.items.filter(
       (item) => item.type === "program"
     );
