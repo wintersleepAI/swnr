@@ -77,15 +77,16 @@
       {{formGroup systemFields.speed value=system.speed localize=true widget=headerWidget}}
       {{formGroup systemFields.ac value=system.ac localize=true widget=headerWidget}}
       {{formGroup systemFields.crew value=system.crew localize=true widget=headerWidget}}
-      {{!--TODO {{formGroup systemFields.crewMembers value=system.crewMembers localize=true widget=headerWidget}} --}}
-      {{!-- Moved to details {{formGroup systemFields.tl value=system.tl localize=true widget=headerWidget}} --}}
       {{!--TODO {{formGroup systemFields.mods value=system.mods localize=true widget=headerWidget}} --}}
-      {{formGroup systemFields.power value=system.power localize=true widget=headerWidget}}
-      {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget}}
-      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget}}
 
+      {{#if (eq actor.type 'ship')}}
+        {{formGroup systemFields.lifeSupportDays value=system.lifeSupportDays localize=true widget=headerWidget}}
+        {{formGroup systemFields.fuel value=system.fuel localize=true widget=headerWidget}}
+        {{formGroup systemFields.spikeDrive value=system.spikeDrive localize=true widget=headerWidget}}
+      {{/if}}
     </div>
     {{#if (eq actor.type 'ship')}}
+
       <div class="flex-grow grid grid-7col items-center gap-1" style="align-items: flex-start;" >
         <!--buttons-->
         <div class="vehicle-button flex flexcol items-center ">
