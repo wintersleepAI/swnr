@@ -19,11 +19,11 @@
     </li>
     {{#each actor.itemTypes.shipWeapon as |item id|}}
     <li class='item flex flexrow' data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
-      <div class="item-name item-click item-rollable flexrow flex2">
-        <div class="item-image" style="background-image: url({{item.img}})"></div>
-          <a class='rollable' data-roll-type='item' data-action='roll'>
-            {{item.name}}
-          </a>
+      <div class="item-name">
+        <a class='rollable item-image' data-roll-type='item' data-action='roll'>
+          <img src='{{item.img}}' title='{{item.name}}' width='24' height='24' />
+        </a>
+        {{item.name}}
       </div>
       <div class="item-dmg-small">
         {{item.system.damage}}

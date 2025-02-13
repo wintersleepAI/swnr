@@ -10,8 +10,6 @@ export default class SWNShip extends SWNVehicleBase {
     'SWN.Actor.Ship',
   ];
 
-//  TODO leftoff with striping  and need to change html to hbs
-
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
@@ -108,9 +106,10 @@ export default class SWNShip extends SWNVehicleBase {
     }
   }
   
+  //TODO
   async applyDefaulStats(hullType) {
-    if (HULL_DATA[hullType]) {
-      await this.parent.update(HULL_DATA[hullType]);
+    if (CONFIG.SWN.HullData[hullType]) {
+      await this.parent.update(CONFIG.SWN.HullData[hullType]);
     } else {
       console.log("hull type not found " + hullType);
     }
