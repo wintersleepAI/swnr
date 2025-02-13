@@ -53,6 +53,9 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     form: {
       submitOnChange: true,
     },
+    window: {
+      resizable: true
+    }
   };
 
   /** @override */
@@ -180,7 +183,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
 
     // Offloading context prep to a helper function
     this._prepareItems(context);
-
+    console.log('context', context);
     return context;
   }
 

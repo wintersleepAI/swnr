@@ -21,7 +21,7 @@ export default class SWNShip extends SWNVehicleBase {
     schema.spikeDrive = SWNShared.resourceField(1,1);
     schema.shipClass= SWNShared.stringChoices(null, CONFIG.SWN.shipClasses, false);
     // TODO string or config.
-    schema.shipHullType = SWNShared.stringChoices("", CONFIG.SWN.shipHullTypes, false);
+    schema.shipHullType = SWNShared.stringChoices("freeMerchant", CONFIG.SWN.shipHullTypes, false);
     schema.operatingCost = SWNShared.requiredNumber(1);
     schema.maintenanceCost = SWNShared.requiredNumber(1);
     schema.amountOwed = SWNShared.requiredNumber(0);

@@ -789,42 +789,36 @@
             "label": "Qualities"
           },
           "ammo": {
-            "FIELDS": {
-              "type": {
-                "label": "Type"
-              },
-              "max": {
-                "label": "Maximum"
-              },
-              "value": {
-                "label": "Value"
-              },
-              "burst": {
-                "label": "Burst"
-              }
+            "type": {
+              "label": "Ammo Type"
+            },
+            "max": {
+              "label": "Ammo Maximum"
+            },
+            "value": {
+              "label": "Ammo Value"
+            },
+            "burst": {
+              "label": "Burst"
             }
           },
           "trauma": {
-            "FIELDS": {
-              "die": {
-                "label": "Die Type"
-              },
-              "ratng": {
-                "label": "Rating"
-              },
-              "vehicle": {
-                "label": "Vehicle"
-              }
-            }
+            "die": {
+              "label": "Trauma Die Type"
+            },
+            "rating": {
+              "label": "Trauma Rating"
+            },
+            "vehicle": {
+              "label": "Trauma Vehicle"
+            }   
           },
           "range": {
-            "FIELDS": {
-              "normal": {
-                "label": "Normal range"
-              },
-              "max": {
-                "label": "Max range"
-              }
+            "normal": {
+              "label": "Normal range"
+            },
+            "max": {
+              "label": "Max range"
             }
           },
           "stat": {
