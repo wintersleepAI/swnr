@@ -1,0 +1,29 @@
+name: Ear Mod/Positional Detection
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988563
+  modifiedTime: 1739238988563
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: s1yq757uo1zm6rlz
+system:
+  description: This ear mod constructs a spatial map of significant surrounding sounds, allowing the user to know the exact location of anything making audible noise. The precise location of distant shooters, the location of targets in visual concealment, and the positions of moving creatures in darkness are all clear.
+  favorite: false
+  tl: 4
+  cost: 15000
+  strain: 0.5
+  disabled: false
+  effect: Map all sound positions nearby
+  type: Sensory
+  concealment: Medical
+  complication: ''
+effects: []
+_key: '!items!s1yq757uo1zm6rlz'

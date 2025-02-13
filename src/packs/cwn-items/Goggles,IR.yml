@@ -1,0 +1,33 @@
+name: Goggles,IR
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988670
+  modifiedTime: 1739238988670
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: wq8pnz72newab0ms
+system:
+  description: Basic anti-flash goggles defuse the visual threat of flashbangs and similar dazzlers. IR goggles include anti-flash tech, but also give the user effective IR vision out to 50 meters in most environments.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 1000
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!wq8pnz72newab0ms'

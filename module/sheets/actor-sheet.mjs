@@ -16,6 +16,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     super(options);
   }
 
+  // Private properties
+  #toggleLock = false;
+
   /** @override */
   static DEFAULT_OPTIONS = {
     classes: ['swnr', 'actor'],
@@ -154,7 +157,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       groupWidget: groupFieldWidget.bind(this),
 
     };
-
+    
     // Offloading context prep to a helper function
     this._prepareItems(context);
 
@@ -352,6 +355,13 @@ export class SWNActorSheet extends SWNBaseSheet {
     this.element.querySelectorAll(".location-selector").forEach((d) =>
       d.addEventListener('change', this._onLocationChange.bind(this)));
 
+    // Toggle lock related elements after render depending on the lock state
+    this.element?.querySelectorAll(".lock-icon").forEach((d) => {
+      d.style.display = this.#toggleLock ? "none" : "inline";
+    });
+    this.element?.querySelectorAll(".lock-toggle").forEach((d) => {
+      d.style.display = this.#toggleLock ? "inline" : "none";
+    });
   }
 
   /**************
@@ -584,10 +594,17 @@ export class SWNActorSheet extends SWNBaseSheet {
     await armor.update({ system: { use: !use } });
   }
 
+   /**
+   * @this SWNActorSheet
+   */  
   static async _toggleLock(event, _target) {
     event.preventDefault();
+    this.#toggleLock = !this.#toggleLock;
+    this.element.querySelectorAll(".lock-icon").forEach((d) => {
+      d.style.display = this.#toggleLock ? "none" : "inline";
+    });
     this.element.querySelectorAll(".lock-toggle").forEach((d) => {
-      d.style.display = d.style.display === "none" ? "inline" : "none";
+      d.style.display = this.#toggleLock ? "inline" : "none";
     });
   }
 

@@ -1,0 +1,29 @@
+name: Enhanced Reflexes II
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988567
+  modifiedTime: 1739238988567
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: lupnjtc82pe97qv1
+system:
+  description: Once per scene, as an On Turn action, the user gains a bonus non-cyberspace Main Action and Move action. By accepting one System Strain, this ability can be used as an Instant action, potentially interrupting incoming attacks if the user moves out of reach.
+  favorite: false
+  tl: 4
+  cost: 250000
+  strain: 3
+  disabled: false
+  effect: 1/scene, bonus Main and Move
+  type: Nerve
+  concealment: Medical
+  complication: ''
+effects: []
+_key: '!items!lupnjtc82pe97qv1'

@@ -1,0 +1,28 @@
+name: Hijack
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988708
+  modifiedTime: 1739238988708
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: f7q1rxswcqc364pn
+system:
+  description: Seize control of a device, operating it as you wish within the limits of its functionality for as long as the program remains running. One command is free with the program's successful execution; others take a Main Action to issue.
+  favorite: false
+  cost: 5000
+  type: verb
+  accessCost: 1
+  target: Device
+  selfTerminating: false
+  useAffects: Take remote control of a device
+  skillCheckMod: '-1'
+effects: []
+_key: '!items!f7q1rxswcqc364pn'

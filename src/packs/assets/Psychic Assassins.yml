@@ -1,0 +1,40 @@
+name: Psychic Assassins
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988437
+  modifiedTime: 1739238988437
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: tmyyw4fb19qmkgn8
+system:
+  description: Combat-trained psychics equipped with advanced pretech stealth gear and psitech weaponry. Psychic assassins automatically start Stealthed when purchased.
+  favorite: false
+  category: cunning
+  type: Special Forces
+  health:
+    max: 4
+    value: 4
+  rating: 5
+  tl: 4
+  baseOfInfluence: false
+  unusable: false
+  stealthed: true
+  cost: 12
+  income: 0
+  maintenance: 0
+  attackTarget: cunning
+  attackSource: cunning
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!tmyyw4fb19qmkgn8'

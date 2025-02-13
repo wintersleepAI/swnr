@@ -1,0 +1,28 @@
+name: Transmission
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988717
+  modifiedTime: 1739238988717
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: evj118bd4urvqo3h
+system:
+  description: Ambient radio transmissions can be affected with this element, most often for the purpose of tampering with local comms. A hacker need not be jacked into a cyberspace node to target local radio transmissions, but the usual -2 check penalty for wireless hacking applies.
+  favorite: false
+  cost: 1000
+  type: subject
+  accessCost: 0
+  target: Data
+  selfTerminating: false
+  useAffects: Radio and wifi signals
+  skillCheckMod: 0
+effects: []
+_key: '!items!evj118bd4urvqo3h'

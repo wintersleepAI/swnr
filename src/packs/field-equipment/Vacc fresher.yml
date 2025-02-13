@@ -1,0 +1,34 @@
+name: Vacc fresher
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988815
+  modifiedTime: 1739238988815
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: c7oo8wxkiig9pnif
+system:
+  description: 'Vacc fresher: This three-kilo tube filters and compresses atmosphere to refill vacc suit oxygen tanks. It can extract oxygen from any atmosphere which contains it, even in the form of carbon dioxide. Refilling a standard vacc suit tank requires ten minutes of operation and consumes one type A power cell. Most vacc freshers are also equipped with an emergency hand crank power source, though it requires at least two hours of cranking.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 1
+  cost: 400
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!c7oo8wxkiig9pnif'

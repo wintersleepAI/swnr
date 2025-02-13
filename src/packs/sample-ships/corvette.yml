@@ -1,0 +1,344 @@
+name: Corvette
+type: ship
+img: systems/swnr/assets/icons/spaceship.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988952
+  modifiedTime: 1739238988952
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: w3s2w9nd6z4a1hca
+system:
+  health:
+    max: 40
+    value: 40
+  cost: 5973000
+  ac: 13
+  traumaTarget: 6
+  armor:
+    max: 10
+    value: 10
+  speed: 2
+  crew:
+    min: 10
+    max: 40
+    current: 10
+  crewMembers: []
+  tl: 5
+  description: The usual ship of the line of most modestly-funded frontier navies, a corvette is a true warship, albeit of a minimal size. While it is unable to land on worlds with standard gravity, its cargo lighter allows crew and cargo transit from the surface of a world, and its ex- tended stores allow for more than four months of field operation under normal crew parameters. Most pirates flying reworked free merchants or stolen patrol boats will turn tail as soon as a cor- vette shows up in the region. Good armor, multiple ship-killing guns, and trained boarding marines make a corvette a death sentence to most stellar ruffians, and even when a pirate wolf pack can bring one down, it usually comes at the cost of crippling damage. The model depicted here is standard for anti-pi- racy and basic system defense missions. Against cruis- er-class warships, however, this corvette’s weapons have insufficient armor penetration to seriously threat- en such a major warship.
+  mods: ''
+  power:
+    max: 15
+  mass:
+    max: 15
+  hardpoints:
+    value: 6
+    max: 6
+  lifeSupportDays:
+    value: 1
+    max: 1
+  fuel:
+    value: 1
+    max: 1
+  cargo:
+    value: 0
+    max: 0
+  spikeDrive:
+    value: 2
+    max: 2
+  operatingCost: 1314000
+  maintenanceCost: 298000
+  amountOwed: 0
+  paymentAmount: 0
+  paymentMonths: 0
+  maintenanceMonths: 6
+  creditPool: 0
+  lastMaintenance:
+    year: 0
+    month: 0
+    day: 0
+  lastPayment:
+    year: 0
+    month: 0
+    day: 0
+  commandPoints: 5
+  npcCommandPoints: 5
+  crewSkillBonus: 2
+  actionsTaken: []
+  supportingDept: ''
+  roleOrder: []
+effects: []
+prototypeToken:
+  name: Corvette
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/spaceship.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+_key: '!actors!w3s2w9nd6z4a1hca'
+items:
+  - name: Plasma Beam
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/plasma-bolt.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988952
+      modifiedTime: 1739238988952
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: t43xt54eq65hxzo0
+    system: {}
+    effects: []
+    _key: '!actors.items!w3s2w9nd6z4a1hca.t43xt54eq65hxzo0'
+  - name: Plasma Beam
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/plasma-bolt.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988952
+      modifiedTime: 1739238988952
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: pzvnt1l5pwvrpug3
+    system: {}
+    effects: []
+    _key: '!actors.items!w3s2w9nd6z4a1hca.pzvnt1l5pwvrpug3'
+  - name: Hardened Polyceramic Overlay
+    type: shipDefense
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/bubble-field.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988952
+      modifiedTime: 1739238988952
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: tcv1zchz8czrnucq
+    system: {}
+    effects: []
+    _key: '!actors.items!w3s2w9nd6z4a1hca.tcv1zchz8czrnucq'
+  - name: Spike Drive-2 upgrade
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/rocket-thruster.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988952
+      modifiedTime: 1739238988952
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: ep60mvgugaqki5c4
+    system: {}
+    effects: []
+    _key: '!actors.items!w3s2w9nd6z4a1hca.ep60mvgugaqki5c4'
+  - name: Cargo Lighter
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988952
+      modifiedTime: 1739238988952
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: dg8xmws92f8ve954
+    system: {}
+    effects: []
+    _key: '!actors.items!w3s2w9nd6z4a1hca.dg8xmws92f8ve954'
+  - name: Extended Stores
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988952
+      modifiedTime: 1739238988952
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 5z9qia6w5hvulm2w
+    system: {}
+    effects: []
+    _key: '!actors.items!w3s2w9nd6z4a1hca.5z9qia6w5hvulm2w'
+  - name: Boarding Tubes
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988952
+      modifiedTime: 1739238988952
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: 03k61evrnlfx30o5
+    system: {}
+    effects: []
+    _key: '!actors.items!w3s2w9nd6z4a1hca.03k61evrnlfx30o5'
+  - name: Armory
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988952
+      modifiedTime: 1739238988952
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: pnl5o4tmqvofzdyh
+    system: {}
+    effects: []
+    _key: '!actors.items!w3s2w9nd6z4a1hca.pnl5o4tmqvofzdyh'
+  - name: Ship's Locker
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988952
+      modifiedTime: 1739238988952
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: ge7496bilqmpa97w
+    system: {}
+    effects: []
+    _key: '!actors.items!w3s2w9nd6z4a1hca.ge7496bilqmpa97w'
+  - name: Fuel Bunker
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/fuel-tank.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988952
+      modifiedTime: 1739238988952
+      lastModifiedBy: systembuilder9000
+    sort: 0
+    _id: f2tvnjbtivg70wg9
+    system: {}
+    effects: []
+    _key: '!actors.items!w3s2w9nd6z4a1hca.f2tvnjbtivg70wg9'

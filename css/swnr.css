@@ -836,24 +836,9 @@
   align-items: center;
   cursor: pointer;
 }
-.swnr .resource-field {
+.swnr #features .item-level-center {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: serif;
-  font-size: 16px;
-}
-
-.swnr .resource-values {
-  display: flex;
-  gap: 5px;
-  font-size: 15x;
-}
-
-.swnr .resource-divider {
-  width: 100%;
-  border-bottom: 2px solid black;
-  margin: 2px 0;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=swnr.css.map */

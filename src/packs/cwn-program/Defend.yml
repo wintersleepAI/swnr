@@ -1,0 +1,28 @@
+name: Defend
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988701
+  modifiedTime: 1739238988701
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 1gmnlfgk51odjkbz
+system:
+  description: A special Verb that can only be targeted at a friendly device or allied cyberware user within range, and costs no Access to use. While the program remains running, any hostile hacking attempts aimed at that device or any of the target's cyber systems must first beat the user in an opposed Int/Program skill check before they can attempt their hack. This Verb cannot negate programs that are already running on the target.
+  favorite: false
+  cost: 1000
+  type: verb
+  accessCost: 0
+  target: Device/Cyber
+  selfTerminating: false
+  useAffects: Shield a friendly device or cyber system
+  skillCheckMod: N/A
+effects: []
+_key: '!items!1gmnlfgk51odjkbz'

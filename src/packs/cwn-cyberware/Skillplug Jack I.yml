@@ -1,0 +1,29 @@
+name: Skillplug Jack I
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988594
+  modifiedTime: 1739238988594
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: ee1o7n7ncocswczo
+system:
+  description: A discreet head-mounted plug port allows use of an intellectual skillplug for a skill requiring minimal physical ability, up to level-1. Once slotted, a skillplug takes fifteen minutes to boot up and integrate properly.
+  favorite: false
+  tl: 4
+  cost: 10000
+  strain: 0.25
+  disabled: false
+  effect: Use level-1 intellectual plugs
+  type: Head
+  concealment: Touch
+  complication: ''
+effects: []
+_key: '!items!ee1o7n7ncocswczo'

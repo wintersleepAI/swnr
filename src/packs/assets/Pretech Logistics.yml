@@ -1,0 +1,40 @@
+name: Pretech Logistics
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988434
+  modifiedTime: 1739238988434
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: vr138uv6k929ojjh
+system:
+  description: These assets represent caches, smugglers, or internal research and salvage programs. As an action, a pretech logistics asset allows the owner to buy one Force asset on that world that requires up to tech level 5 to purchase. This asset costs half again as many FacCreds as usual, rounded up. Only one asset can be purchased per turn.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    max: 6
+    value: 6
+  rating: 5
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 14
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+effects: []
+_key: '!items!vr138uv6k929ojjh'
