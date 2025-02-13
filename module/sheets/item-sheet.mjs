@@ -32,6 +32,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
+    window: {
+      resizable: true
+    }
   };
 
   /* -------------------------------------------- */
