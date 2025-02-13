@@ -1165,7 +1165,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       return;
     }
     let maint = this.actor.system.calcCost(d);
-    console.log("maint", maint);
+    
   }
 
 
