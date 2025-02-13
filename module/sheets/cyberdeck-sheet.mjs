@@ -69,7 +69,9 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     // Not all parts always render
     options.parts = ['header', 'tabs'];
     // Don't show the other tabs if only limited view
-    if (this.document.limited) return;
+    if (this.document.limited){ 
+      return;
+    }
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'cyberdeck':
@@ -178,8 +180,6 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     const programs = this.actor.items.filter(
       (item) => item.type === "program"
     );
-
-    console.log(programs);
 
     const activePrograms = programs.filter(
       (item) => item.system.type === "running"
@@ -450,8 +450,6 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
         ui.notifications?.error("Failed to create program");
         return;
       }
-      //Foundry overwites the default value for type - but I think type needs a default, so change it here.
-      // await program.update({ "system.type": "running" });
 
       // Consume access
       if (sheetData.hacker) {
@@ -466,7 +464,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
         await sheetData.hacker.update({
           "system.access.value": access,
         });
-        if (access <= 0) {
+        if ((access + this.actor.system.bonusAccess) <= 0) {
           ui.notifications?.info("Hacker has no access left");
         }
       }
@@ -513,8 +511,8 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
 
   static async _onRefreshAccess(event, target) {
     event.preventDefault();
-    // const hacker = this.actor.system.getHacker();
-    if (this.actor.system.hacker) {
+    const hacker = this.actor.system.getHacker();
+    if (hacker) {
       const maxAccess = hacker.system.access.max;
       const newAccessDisplay = maxAccess + this.actor.system.bonusAccess;
       const oldAccess =
