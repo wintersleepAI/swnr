@@ -21,7 +21,7 @@ export const migrateWorld = async function () {
  * @param {Item} item to be migrated.
  */
 async function migrateFocusAndEdgeToFeature(item) {
-  const { description = "", level1 = "", level2 = "" } = item.system;
+  const { description = "", level1 = "", level2 = "", type = "feature"} = item.system;
   const level = 0;
   const newDescription = item.type === 'Focus'
     ? `${description} ${level1} ${level2}`.trim()
@@ -31,7 +31,8 @@ async function migrateFocusAndEdgeToFeature(item) {
     type: "feature",
     system: {
       description: newDescription,
-      level: level
+      level: level,
+      type: type
     }
   };
 
