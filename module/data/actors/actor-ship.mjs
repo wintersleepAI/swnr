@@ -19,9 +19,8 @@ export default class SWNShip extends SWNVehicleBase {
     schema.fuel = SWNShared.resourceField(1,1);
     schema.cargo = SWNShared.resourceField(1,1);
     schema.spikeDrive = SWNShared.resourceField(1,1);
-    schema.shipClass= SWNShared.stringChoices(null, CONFIG.SWN.shipClasses, false);
-    // TODO string or config.
-    schema.shipHullType = SWNShared.stringChoices("freeMerchant", CONFIG.SWN.shipHullTypes, false);
+    schema.shipClass= SWNShared.stringChoices("fighter", CONFIG.SWN.shipClasses, true);
+    schema.shipHullType = SWNShared.stringChoices("freeMerchant", CONFIG.SWN.shipHullTypes, true);
     schema.operatingCost = SWNShared.requiredNumber(1);
     schema.maintenanceCost = SWNShared.requiredNumber(1);
     schema.amountOwed = SWNShared.requiredNumber(0);
@@ -299,9 +298,12 @@ export default class SWNShip extends SWNVehicleBase {
   async calcCost(maintenance) {
     const hull = this.shipHullType;
     const shipClass = this.shipClass;
-    const shipData = HULL_DATA[hull];
+    const shipData = CONFIG.SWN.HullData[hull];
     if (shipData) {
-      let baseCost = shipsystem.cost;
+      let baseCost = shipData.system.cost;
+      if (baseCost == 0) {
+        baseCost = 1;
+      }
       let multiplier = 1;
       if (shipClass == "frigate") {
         multiplier = 10;
@@ -311,7 +313,7 @@ export default class SWNShip extends SWNVehicleBase {
         multiplier = 100;
       }
   
-      const shipInventory = this.items.filter(
+      const shipInventory = this.parent.items.filter(
         (i) =>
           i.type === "shipDefense" ||
           i.type === "shipWeapon" ||
@@ -321,12 +323,25 @@ export default class SWNShip extends SWNVehicleBase {
       const shipHasSystemDrive = shipInventory.find(
         (elem) => elem.name == "System Drive"
       );
-      let systemDriveMultiplier = shipHasSystemDrive ? 1 : 0.5;
-  
-      let totalMaintenanceCost = baseCost * multiplier * systemDriveMultiplier;
-      totalMaintenanceCost += maintenance;
-  
-      return totalMaintenanceCost;
+      if (shipHasSystemDrive) {
+        baseCost *= 0.9;
+      }
+
+      for (let i = 0; i < shipInventory.length; i++) {
+        const item = shipInventory[i];
+        const itemCost = item.system.costMultiplier
+          ? item.system.cost * multiplier
+          : item.system.cost;
+        baseCost += itemCost;
+      }
+
+      const updateJSON = { cost: baseCost };
+      if (maintenance) {
+        updateJSON["maintenanceCost"] = baseCost * 0.05;
+      }
+      await this.parent.update({ system: updateJSON });
+    } else {
+      ui.notifications?.warn("Hull type not found");
     }
     return null;
   }
