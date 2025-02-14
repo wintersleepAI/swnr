@@ -33,15 +33,15 @@ export default class SWNCyberdeck extends SWNActorBase {
     //Calculate the health from shielding and neural buffer.
     this.health.max = parseInt(this.baseShielding + this.bonusShielding);
     if (this.neuralBuffer && hacker) {
-      if (actor.type === "character") {
-        const nbBonus = actor.system.level.value * 3;
+      if (hacker.type === "character") {
+        const nbBonus = hacker.system.level.value * 3;
         this.health.max += nbBonus;
-      } else if (actor.type === "npc") {
-        const nbBonus = actor.system.hitDice * 3;
+      } else if (hacker.type === "npc") {
+        const nbBonus = hacker.system.hitDice * 3;
         this.health.max += nbBonus;
       }
       else {
-        console.log("Hacker for is neither a character nor npc. Neural buffer bonus not applied to deck");
+        console.log("Hacker for is neither a character nor npc. Neural buffer bonus not applied to deck.");
       }
     }
 
