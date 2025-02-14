@@ -76,8 +76,11 @@
       <div class="grid-span-2">
         {{formGroup systemFields.mechHullType value=system.mechHullType localize=true widget=headerWidget}}
       </div>
-
-      <div class="resource flex-group-center">
+      {{/if}}
+      {{#if (or 
+        (eq actor.type 'drone')
+        (eq actor.type 'mech'))}}
+      <div class="resource flex-group-center"><!-- single pilot -->
         <div class="field resource-content">
           <div class="flex flexrow flex-group-center" 
             {{#if system.pilot}} data-action="pilotShow" {{/if}}
@@ -87,18 +90,20 @@
             {{/if}}
           </div>
         </div>
-        <div class="flex flexrow">
+        <div class="flex flexrow flex-group-center">
           <label class='resource-label'>
             {{localize 'swnr.sheet.mech.pilot'}}
           </label>
-          <div class="item-controls">
+          <div class="item-controls"> &nbsp;
+            {{#if system.pilot}}
             <a class="item-control" data-action="pilotRoll" title='{{localize 'swnr.sheet.roll-skill'}}'><i
                 class="fas fa-dice"></i></a>
             <a class="item-control" data-action="pilotDelete" title='{{localize 'swnr.sheet.delete-item'}}'><i
                 class="fas fa-trash"></i></a>
+            {{/if}}
           </div>
         </div>
-      </div>
+      </div> <!-- end single pilot -->
       {{/if}}
     </div>
     {{#if (eq actor.type 'ship')}}
