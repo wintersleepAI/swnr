@@ -73,8 +73,8 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     features: {
       template: 'systems/swnr/templates/actor/features.hbs',
     },
-    biography: {
-      template: 'systems/swnr/templates/actor/biography.hbs',
+    notes: {
+      template: 'systems/swnr/templates/actor/vehicle/notes.hbs',
     },
     ship: {
       template: 'systems/swnr/templates/actor/vehicle/ship.hbs',
@@ -117,10 +117,10 @@ export class SWNVehicleSheet extends SWNBaseSheet {
   /** @override */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
-    options.defaultTab = 'biography';
+    options.defaultTab = 'notes';
 
     // Not all parts always render
-    options.parts = ['header', 'tabs', 'biography'];
+    options.parts = ['header', 'tabs', 'notes'];
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
     // Control which parts show based on document subtype
@@ -200,12 +200,12 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       case 'mech':
         context.tab = context.tabs[partId];
         break;
-      case 'biography':
+      case 'notes':
         context.tab = context.tabs[partId];
-        // Enrich biography info for display
+        // Enrich notes info for display
         // Enrichment turns text like `[[/r 1d20]]` into buttons
-        context.enrichedBiography = await TextEditor.enrichHTML(
-          this.actor.system.biography,
+        context.enrichedDescription = await TextEditor.enrichHTML(
+          this.actor.system.description,
           {
             // Whether to show secret blocks in the finished html
             secrets: this.document.isOwner,
@@ -235,7 +235,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
    * @returns {Record<string, Partial<ApplicationTab>>}
    * @protected
    */
-  _getTabs(parts, defaultTab = 'biography') {
+  _getTabs(parts, defaultTab = 'notes') {
     // If you have sub-tabs this is necessary to change
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
@@ -255,9 +255,9 @@ export class SWNVehicleSheet extends SWNBaseSheet {
         case 'header':
         case 'tabs':
           return tabs;
-        case 'biography':
-          tab.id = 'biography';
-          tab.label += 'Biography';
+        case 'notes':
+          tab.id = 'notes';
+          tab.label += 'VehicleNotes';
           break;
         case 'features':
           tab.id = 'features';
