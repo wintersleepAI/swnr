@@ -215,6 +215,17 @@ export class SWNVehicleSheet extends SWNBaseSheet {
             relativeTo: this.actor,
           }
         );
+
+        context.enrichedMods = await TextEditor.enrichHTML(
+          this.actor.system.mods,
+          {
+            // Whether to show secret blocks in the finished html
+            secrets: this.document.isOwner,
+            // Data to fill in for inline rolls
+            rollData: this.actor.getRollData(),
+            // Relative UUID resolution
+            relativeTo: this.actor,
+          });
         break;
       case 'effects':
         context.tab = context.tabs[partId];

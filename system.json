@@ -17,16 +17,16 @@
             "htmlFields": ["biography"]
         },
         "ship": {
-            "htmlFields": ["description"]
+            "htmlFields": ["description", "mods"]
         },
         "mech": {
-            "htmlFields": ["description"]
+            "htmlFields": ["description", "mods"]
         },
         "vehicle": {
-            "htmlFields": ["description"]
+            "htmlFields": ["description", "mods"]
         },
         "drone": {
-            "htmlFields": ["description"]
+            "htmlFields": ["description", "mods"]
         },
         "cyberdeck": {
             "htmlFields": ["description"]
