@@ -11,7 +11,7 @@ export default class SWNMech extends SWNVehicleBase {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
     schema.maintenanceCost = SWNShared.requiredNumber(0);
-    // schema.mechClass = TODO;
+    schema.mechClass = SWNShared.stringChoices("suit", CONFIG.SWN.mechClasses, true);
     schema.mechHullType = SWNShared.requiredString("");
     return schema;
   }

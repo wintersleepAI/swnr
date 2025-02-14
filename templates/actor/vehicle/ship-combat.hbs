@@ -1,4 +1,5 @@
 <section class='tab ship shipCombat sheet-body {{tab.cssClass}}' data-group='primary' data-tab='shipCombat'>
+  {{#if (eq actor.type 'ship')}}
   <div class="grid grid-3col">
     <div class="resource">
       {{formGroup systemFields.commandPoints value=system.commandPoints localize=true}}
@@ -18,6 +19,7 @@
       {{formGroup systemFields.npcCommandPoints value=system.npcCommandPoints localize=true}}
     </div>
   </div>
+  {{/if}}
   <div class="grid grid-2col">
     <div class="col">
       {{>

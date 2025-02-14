@@ -85,9 +85,6 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     drone: {
       template: 'systems/swnr/templates/actor/vehicle/drone.hbs',
     },
-    mech: {
-      template: 'systems/swnr/templates/actor/vehicle/mech.hbs',
-    },
     shipCrew: {
       template: 'systems/swnr/templates/actor/vehicle/ship-crew.hbs',
     },
@@ -126,8 +123,8 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'mech':
-        options.parts.push('mech', 'effects');
-        options.defaultTab = 'mech';
+        options.parts.push('shipCombat', 'effects');
+        options.defaultTab = 'shipCombat';
         break;
       case 'ship':
         options.parts.push('shipCombat', 'ship', 'shipCrew', 'shipCargo', 'effects');
@@ -301,10 +298,6 @@ export class SWNVehicleSheet extends SWNBaseSheet {
         case 'drone':
           tab.id = 'drone';
           tab.label += 'Drone';
-          break;
-        case 'mech':
-          tab.id = 'mech';
-          tab.label += 'Mech';
           break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';

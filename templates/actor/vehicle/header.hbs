@@ -71,22 +71,34 @@
           placeholder='Name'
         />
       </div>
+      {{!-- Moved to picture overlay bars --}}
       {{!-- {{formGroup systemFields.health value=system.health localize=true widget=headerWidget}} --}}
-      {{formGroup systemFields.traumaTarget value=system.traumaTarget localize=true widget=headerWidget}}
       {{!-- {{formGroup systemFields.armor value=system.armor localize=true widget=headerWidget}} --}}
+      
+      {{formGroup systemFields.traumaTarget value=system.traumaTarget localize=true widget=headerWidget}}
       {{formGroup systemFields.speed value=system.speed localize=true widget=headerWidget}}
       {{formGroup systemFields.ac value=system.ac localize=true widget=headerWidget}}
-      {{formGroup systemFields.crew value=system.crew localize=true widget=headerWidget}}
-      {{!--TODO {{formGroup systemFields.mods value=system.mods localize=true widget=headerWidget}} --}}
-
+  
       {{#if (eq actor.type 'ship')}}
+        {{formGroup systemFields.crew value=system.crew localize=true widget=headerWidget}}
         {{formGroup systemFields.lifeSupportDays value=system.lifeSupportDays localize=true widget=headerWidget}}
         {{formGroup systemFields.fuel value=system.fuel localize=true widget=headerWidget}}
         {{formGroup systemFields.spikeDrive value=system.spikeDrive localize=true widget=headerWidget}}
       {{/if}}
+      {{#if (eq actor.type 'mech')}}
+
+        {{formGroup systemFields.power value=system.power localize=true widget=headerWidget}}
+        {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget}}
+        {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget}}
+        {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
+        {{formGroup systemFields.maintenanceCost value=system.maintenanceCost localize=true widget=headerWidget}}
+        {{formGroup systemFields.mechClass value=system.mechClass localize=true widget=headerWidget}}
+        {{formGroup systemFields.mechHullType value=system.mechHullType localize=true widget=headerWidget}}
+
+        <div> pilot </div>
+      {{/if}}
     </div>
     {{#if (eq actor.type 'ship')}}
-
       <div class="flex-grow grid grid-7col items-center gap-1" style="align-items: flex-start;" >
         <!--buttons-->
         <div class="vehicle-button flex flexcol items-center ">
