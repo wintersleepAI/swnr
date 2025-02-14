@@ -11,6 +11,7 @@ export default class SWNCyberdeck extends SWNActorBase {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
     schema.health = SWNShared.resourceField(1,1);
+    schema.hackerHP = SWNShared.resourceField(1,1);
     schema.memory = SWNShared.resourceField(1,1);
     schema.cpu = SWNShared.resourceField(1,1);
     schema.encumberance = SWNShared.requiredNumber(0);

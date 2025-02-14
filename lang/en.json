@@ -184,6 +184,14 @@
             "value": { "label": "Shielding"},
             "label": "Shielding" 
           },
+          "access": {
+            "value": { "label": "Access"},
+            "label": "Access"
+          },
+          "hackerHP": {
+            "value": { "label": "HP"},
+            "label": "HP" 
+          },
           "memory": {
             "value": { "label": "Memory"},
             "label": "Memory"
@@ -191,10 +199,6 @@
           "cpu": {
             "value": { "label": "CPU"},
             "label": "CPU"
-          },
-          "access": {
-            "value": { "label": "Access"},
-            "label": "Access"
           },
           "bonusAccess": { "label" : "Bonus Access"},
           "baseShielding": {"label" : "Base Shielding"},
@@ -1082,7 +1086,8 @@
         "crownPenalty": "Crown (-1)",
         "run": "Run/ Activate Program",
         "refreshShielding": "Refresh Shielding",
-        "refreshAccess": "Refresh Access"
+        "refreshAccess": "Refresh Access",
+        "hackerHP": "Hacker HP"
       },
       "program": {
         "type": "Type",

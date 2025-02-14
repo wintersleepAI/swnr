@@ -44,7 +44,7 @@
       {{formGroup systemFields.memory value=system.memory localize=true widget=headerWidget}}
       {{formGroup systemFields.cpu value=system.cpu localize=true widget=headerWidget}}
       <div>
-        {{formGroup systemFields.access value=system.access localize=true widget=headerWidget}}
+        {{formGroup systemFields.access value=access localize=true widget=headerWidget}}
         <a class="item-control" data-action="refreshAccess" title='{{localize 'swnr.sheet.cyberdeck.refreshAccess'}}'><i class="fas fa-hourglass-end"></i></a>
       </div>
     </div>
@@ -71,17 +71,7 @@
     </div>
 
     <div class="resource grid grid-4col thin-bar">
-      {{!-- {{formGroup systemFields.health value=system.hacker.system.health localize=true widget=headerWidget}} --}}
-      <div class="resource-field">
-        <div class="resource-values">
-          <span class="current">{{system.hacker.system.health.value}}</span>
-          <span class="separator">/</span>
-          <span class="max">{{system.hacker.system.health.max}}</span>
-        </div>
-        <div class="swnr resource-divider"></div>
-        <div class="swnr resource-label">{{localize "swnr.sheet.hp"}}</div>
-      </div>
-
+      {{formGroup systemFields.hackerHP value=hacker.system.health localize=true widget=headerWidget}}
       {{formGroup systemFields.baseShielding value=system.baseShielding localize=true widget=headerWidget}}
       {{formGroup systemFields.bonusShielding value=system.bonusShielding localize=true widget=headerWidget}}
       {{formGroup systemFields.bonusAccess value=system.bonusAccess localize=true widget=headerWidget}}
@@ -89,7 +79,7 @@
     <div class="resource grid grid-4col thin-bar">
       {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
       {{formGroup systemFields.encumberance value=system.encumberance localize=true widget=headerWidget}}
-      {{formGroup systemFields.hacker value=system.hacker.name localize=true widget=headerWidget}}
+      {{formGroup systemFields.hacker value=hacker.name localize=true widget=headerWidget}}
       <div class="item-controls">
         <a class="item-control" data-action="hackerRoll" title='{{localize ' swnr.sheet.roll-skill'}}'><i class="fas fa-dice"></i></a>
         <a class="item-control" data-action="hackerDelete" title='{{localize 'swnr.sheet.delete-item'}}'><i class="fas fa-trash"></i></a>

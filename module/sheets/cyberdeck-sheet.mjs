@@ -194,18 +194,11 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       max: 0,
     };
 
-    if (hacker) {
-      if (hacker.type == "character") {
-        access.value =
-          hacker.system.access.value + this.actor.system.bonusAccess;
-        access.max =
-          hacker.system.access.max + this.actor.system.bonusAccess;
-      } else if (hacker.type == "npc") {
-        access.value =
-          hacker.system.access.value + this.actor.system.bonusAccess;
-        access.max =
-          hacker.system.access.max + this.actor.system.bonusAccess;
-      }
+    if (hacker && (hacker.type == "character" || hacker.type == "npc")) {
+      access.max =
+        hacker.system.access.max + this.actor.system.bonusAccess;
+      access.value =
+        hacker.system.access.value + this.actor.system.bonusAccess;
     }
 
     return foundry.utils.mergeObject(context, {
@@ -215,7 +208,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       subjects: subjects,
       datafiles: datafiles,
       hacker: hacker,
-      access: access,
+      access: access
     });
   }
 
@@ -471,6 +464,8 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
         //   "data.cpu.value": this.actor.system.cpu.value - 1,
         // });
       }
+
+      this.render();
     };
 
     new Dialog({
@@ -515,9 +510,11 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       await hacker.update({
         "system.access.value": maxAccess,
       });
+      await this.actor.update({});
     } else {
       ui.notifications?.error("No hacker found");
     }
+    this.render();
   }
 
 
