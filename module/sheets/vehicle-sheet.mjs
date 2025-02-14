@@ -46,6 +46,9 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       crewDelete: this._onCrewDelete,
       crewRoll: this._onCrewRoll,
       crewShow: this._onCrewShow,
+      pilotRoll: this._onPilotRoll,
+      pilotDelete: this._onPilotDelete,
+      pilotShow: this._onPilotShow,
       toggle: this._onToggleVehicleStatus,
     },
     // Custom property that's merged into `this.options`
@@ -384,7 +387,27 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       }
     } else {
       //Single pilot vehicle
-      ui.notifications.error("TODO");
+      let crewMembers = this.actor.system.crewMembers;
+      if (crewMembers.length > 0) {
+        // TODO allow shift to force remove/overwrite
+        ui.notifications.warn(`${this.actor.name} already has a pilot. Remove first`);
+        return false;
+      }
+      crewMembers.push(actorId);
+      let crewCount = 1
+      await this.actor.update(
+        {
+          system: {
+            crewMembers: crewMembers,
+            crew: { current: crewCount }
+          }
+        });
+
+      // if drone add to pilot's inventory
+      if (this.actor.type === 'drone') {
+        //TODO
+        ui.notifications.info("TODO Add Drone to pilot's inventory");
+      }
     }
   }
 
@@ -514,14 +537,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     crewActor?.sheet?.render(true);
   }
 
-  static async _onCrewRoll(event, target) {
-    event.preventDefault();
-    const actorId = target.dataset.crewId;
-    const crewActor = game.actors?.get(actorId);
-    if (!crewActor) {
-      ui.notifications?.error(`Crew no longer exists`);
-      return;
-    }
+  async crewRoll(crewActor) {
     const skills = crewActor.itemTypes.skill;
     const isChar = crewActor.type == "character" ? true : false;
     const dialogData = {
@@ -592,6 +608,61 @@ export class SWNVehicleSheet extends SWNBaseSheet {
         callback: _rollForm,
       },
     });
+  }
+
+  static async _onCrewRoll(event, target) {
+    event.preventDefault();
+    const actorId = target.dataset.crewId;
+    const crewActor = game.actors?.get(actorId);
+    if (!crewActor) {
+      ui.notifications?.error(`Crew no longer exists`);
+      return;
+    }
+    this.crewRoll(crewActor);
+  }
+
+  static async _onPilotShow(event, _target) {
+    event.preventDefault();
+    const crewMembers = this.actor.system.crewMembers;
+    if (crewMembers.length == 0) {
+      return;
+    }
+    const actorId = crewMembers[0];
+    const crewActor = game.actors?.get(actorId);
+    crewActor?.sheet?.render(true);
+  }
+
+  static async _onPilotRoll(event, _target) {
+    event.preventDefault();
+    const crewMembers = this.actor.system.crewMembers;
+    if (crewMembers.length == 0) {
+      ui.notifications?.error(`No pilot to roll for`);
+      return;
+    }
+    const pilotId = this.actor.system.crewMembers[0];
+    const pilotActor = game.actors?.get(pilotId);
+    if (!pilotActor) {
+      ui.notifications?.error(`Pilot no longer exists`);
+      return;
+    }
+    this.crewRoll(pilotActor);
+  }
+
+  static async _onPilotDelete(event, _target) {
+    event.preventDefault();
+    const crewMembers = this.actor.system.crewMembers;
+    if (crewMembers.length == 0) {
+      ui.notifications?.error(`No pilot to remove`);
+      return;
+    }
+    if (this.actor.type == "drone") {
+      // TODO remove drone from pilot's inventory
+      ui.notifications?.info("Manually remove drone from pilot's inventory");
+    }
+    await this.actor.update({
+      "system.crew.current": 1,
+      "system.crewMembers": [],
+    });  
   }
 
   static async _onPayment(event, target) {
