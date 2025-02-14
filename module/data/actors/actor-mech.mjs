@@ -17,5 +17,16 @@ export default class SWNMech extends SWNVehicleBase {
   }
 
   prepareDerivedData() {
+    this.pilot = null;
+    if (this.crewMembers.length > 0) {
+      //should only be 1 or 0 but grabbing first in case it changes.
+      const cId = this.crewMembers[0];
+      const crewMember = game.actors?.get(cId);
+      if (crewMember) {
+        if (crewMember.type == "character" || crewMember.type == "npc") {
+          this.pilot = crewMember;
+        }
+      }
+    }
   }
 }
