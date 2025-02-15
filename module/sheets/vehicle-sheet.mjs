@@ -333,6 +333,11 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       d.addEventListener('change', this._onHullChange.bind(this)));
     this.element.querySelectorAll(".resource-list-val").forEach((d) =>
       d.addEventListener('change', this._onResourceName.bind(this)));
+
+    // For drone
+    this.element.querySelectorAll("[name='system.model']").forEach((d) =>
+      d.addEventListener('change', this._onHullChange.bind(this)));
+  
   }
 
 
@@ -723,26 +728,15 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     const targetHull = event.target?.value;
 
     if (targetHull) {
-      const d = new Dialog({
-        title: "Apply Default Stats",
-        content: `<p>Do you want to apply the default stats for a ${targetHull}?</p><b>This will change your current and max values for HP, cost, armor, AC, mass, power, hardpoints, hull type, speed, life support (60*max crew), and crew.</b>`,
-        buttons: {
-          yes: {
-            icon: '<i class="fas fa-check"></i>',
-            label: "Yes",
-            callback: () => this.actor.applyDefaulStats(targetHull),
-          },
-          no: {
-            icon: '<i class="fas fa-times"></i>',
-            label: "No",
-            callback: () => {
-              console.log("Doing Nothing ");
-            },
-          },
-        },
-        default: "no",
+      const d = await foundry.applications.api.DialogV2.confirm({
+        window: {title: "Apply Default Stats"},
+        content: `<p>Do you want to apply the default stats for a ${targetHull}?</p><b>This will change your current and max values for stats like HP, cost, armor, AC, mass, power, hardpoints, hull type, speed, life support (60*max crew), and crew.</b>`,
+        modal: true,
       });
-      d.render(true);
+
+      if (!d) return;
+      ui.notifications.info(`TODO Applying default stats for ${targetHull} ${d}`);
+      //this.actor.applyDefaulStats(targetHull)
     }
   }
 

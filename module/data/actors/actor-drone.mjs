@@ -8,12 +8,18 @@ export default class SWNDrone extends SWNVehicleBase {
   ];
 
   static defineSchema() {
-    const fields = foundry.data.fields;
+    let modelMap = Object.keys(CONFIG.SWN.DroneModelsData).reduce((acc, key) => {
+      acc[key] = `swnr.sheet.drone.models.${key}`;
+      return acc;
+    }, {});
+    modelMap['custom'] = 'swnr.sheet.drone.models.custom';
+    
+
     const schema = super.defineSchema();
     schema.fittings = SWNShared.resourceField(1,1,true); //TODO Migrate to mass 
     schema.enc = SWNShared.requiredNumber(1);
     schema.range = SWNShared.requiredString("");
-    schema.model = SWNShared.requiredString("");
+    schema.model = SWNShared.stringChoices('primitiveDrone', modelMap, false); //SWNShared.requiredString("");
     schema.moveType = SWNShared.requiredString("");
     return schema;
   }
