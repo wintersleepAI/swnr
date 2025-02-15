@@ -22,12 +22,18 @@
   {{/if}}
   <div class="grid grid-2col">
     <div class="col">
+      {{#if (eq actor.type 'vehicle')}}
+        {{>
+          "systems/swnr/templates/actor/fragments/crew-list.hbs"
+          type=actor.type crewArray=crewArray
+        }}
+      {{/if}}
       {{>
         "systems/swnr/templates/actor/fragments/vehicle-weapon-table.hbs" 
           type=actor.type actor=actor
       }}
     </div>
-    <div class="resource flex flexcol">
+    <div class="flex flexcol">
       {{>
         "systems/swnr/templates/actor/fragments/vehicle-fitting-table.hbs" 
           type=actor.type actor=actor

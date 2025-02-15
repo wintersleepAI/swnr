@@ -48,9 +48,9 @@
       {{formGroup systemFields.traumaTarget value=system.traumaTarget localize=true widget=headerWidget}}
       {{/if}}
 
-      {{#if (ne actor.type 'vehicle')}}
+      {{!--//TODO? {{#if (ne actor.type 'vehicle')}} --}}
       {{formGroup systemFields.speed value=system.speed localize=true widget=headerWidget}}
-      {{/if}}
+      {{!-- {{/if}} --}}
       
       {{#if (eq actor.type 'ship')}}
       {{formGroup systemFields.crew value=system.crew localize=true widget=headerWidget}}
@@ -90,9 +90,14 @@
         
       {{/if}}
       {{#if (eq actor.type 'vehicle')}}
+        {{formGroup systemFields.power value=system.power localize=true widget=headerWidget}}
+        {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget}}
+        {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget}}
+        {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
         {{formGroup systemFields.kmph value=system.kmph localize=true widget=headerWidget}}
         {{formGroup systemFields.tonnage value=system.tonnage localize=true widget=headerWidget}}
         {{formGroup systemFields.tl value=system.tl localize=true widget=headerWidget}}
+        {{formGroup systemFields.crew value=system.crew localize=true widget=headerWidget}}
       {{/if}}
 
       {{#if (or 
