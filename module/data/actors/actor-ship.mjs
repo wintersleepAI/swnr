@@ -106,15 +106,6 @@ export default class SWNShip extends SWNVehicleBase {
     }
   }
   
-  //TODO
-  async applyDefaulStats(hullType) {
-    if (CONFIG.SWN.HullData[hullType]) {
-      await this.parent.update(CONFIG.SWN.HullData[hullType]);
-    } else {
-      console.log("hull type not found " + hullType);
-    }
-  }
-  
   async useDaysOfLifeSupport(nDays) {
     if (this.crew.current > 0) {
       let newLifeDays = this.lifeSupportDays.value;

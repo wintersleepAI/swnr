@@ -14,7 +14,6 @@ export default class SWNDrone extends SWNVehicleBase {
     }, {});
     modelMap['custom'] = 'swnr.sheet.drone.models.custom';
     
-
     const schema = super.defineSchema();
     schema.fittings = SWNShared.resourceField(1,1,true); //TODO Migrate to mass 
     schema.enc = SWNShared.requiredNumber(1);

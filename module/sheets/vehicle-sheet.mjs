@@ -399,8 +399,27 @@ export class SWNVehicleSheet extends SWNBaseSheet {
 
       // if drone add to pilot's inventory
       if (this.actor.type === 'drone') {
-        //TODO
-        ui.notifications.info("TODO Add Drone to pilot's inventory");
+
+        const itemName = this.actor.name;
+        actor.createEmbeddedDocuments(
+          "Item",
+          [
+            {
+              name: itemName,
+              type: "item",
+              img: "systems/swnr/assets/icons/drone.png",
+              system: {
+                encumbrance: this.actor.system.enc,
+                quantity: 1,
+                cost: this.actor.system.cost,
+              },
+            },
+          ],
+          {}
+        );
+        ui.notifications?.info(
+          `Created a drone item "${itemName}" on ${actor.name}'s sheet`
+        );
       }
     }
   }
