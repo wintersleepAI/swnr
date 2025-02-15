@@ -329,12 +329,12 @@ export class SWNVehicleSheet extends SWNBaseSheet {
 
     this.element.querySelectorAll("[name='shipActions']").forEach((d) =>
       d.addEventListener('change', this._onShipAction.bind(this)));
-    this.element.querySelectorAll("[name='data.shipHullType']").forEach((d) =>
-      d.addEventListener('change', this._onHullChange.bind(this)));
     this.element.querySelectorAll(".resource-list-val").forEach((d) =>
       d.addEventListener('change', this._onResourceName.bind(this)));
 
-    // For drone
+    // For hull changes
+    this.element.querySelectorAll("[name='system.shipHullType']").forEach((d) =>
+      d.addEventListener('change', this._onHullChange.bind(this)));
     this.element.querySelectorAll("[name='system.model']").forEach((d) =>
       d.addEventListener('change', this._onHullChange.bind(this)));
   
@@ -726,6 +726,11 @@ export class SWNVehicleSheet extends SWNBaseSheet {
 
   async _onHullChange(event) {
     const targetHull = event.target?.value;
+    if (this.actor.type == "mech" || this.actor.type == "vehicle") {
+      // Not supported as mech is deluxe. 
+      // TODO vehicle types in CWN or AWN to use?
+      return;
+    }
 
     if (targetHull) {
       const d = await foundry.applications.api.DialogV2.confirm({
@@ -735,8 +740,15 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       });
 
       if (!d) return;
-      ui.notifications.info(`TODO Applying default stats for ${targetHull} ${d}`);
-      //this.actor.applyDefaulStats(targetHull)
+      let hullData = CONFIG.SWN.HullData;
+      if (this.actor.type == "drone") {
+        hullData = CONFIG.SWN.DroneModelsData;
+      }
+      if (hullData[targetHull]) {
+        await this.actor.update(hullData[targetHull]);
+      } else {
+        console.log("hull type not found " + targetHull);
+      }
     }
   }
 
