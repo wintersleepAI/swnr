@@ -48,7 +48,10 @@
       {{formGroup systemFields.traumaTarget value=system.traumaTarget localize=true widget=headerWidget}}
       {{/if}}
 
+      {{#if (ne actor.type 'vehicle')}}
       {{formGroup systemFields.speed value=system.speed localize=true widget=headerWidget}}
+      {{/if}}
+      
       {{#if (eq actor.type 'ship')}}
       {{formGroup systemFields.crew value=system.crew localize=true widget=headerWidget}}
       {{formGroup systemFields.lifeSupportDays value=system.lifeSupportDays localize=true widget=headerWidget}}
@@ -56,13 +59,11 @@
       {{formGroup systemFields.spikeDrive value=system.spikeDrive localize=true widget=headerWidget}}
       {{/if}}
       {{#if (eq actor.type 'mech')}}
-
       {{formGroup systemFields.power value=system.power localize=true widget=headerWidget}}
       {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget}}
       {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget}}
       {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
       {{formGroup systemFields.maintenanceCost value=system.maintenanceCost localize=true widget=headerWidget}}
-
       <div class="resource flex-group-center"><!-- mech class, localize for formGroup header is not working -->
         <div class="field resource-content">
           <div class="flex flexrow">
@@ -77,6 +78,23 @@
         {{formGroup systemFields.mechHullType value=system.mechHullType localize=true widget=headerWidget}}
       </div>
       {{/if}}
+      {{#if (eq actor.type 'drone')}}
+        {{formGroup systemFields.moveType value=system.moveType localize=true widget=headerWidget}}
+        {{formGroup systemFields.range value=system.range localize=true widget=headerWidget}}
+        {{formGroup systemFields.enc value=system.enc localize=true widget=headerWidget}}
+        {{formGroup systemFields.fittings value=system.fittings localize=true widget=headerWidget}}
+        {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget}}
+        {{formGroup systemFields.model value=system.model localize=true widget=headerWidget}}
+        {{formGroup systemFields.tl value=system.tl localize=true widget=headerWidget}}
+        {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
+        
+      {{/if}}
+      {{#if (eq actor.type 'vehicle')}}
+        {{formGroup systemFields.kmph value=system.kmph localize=true widget=headerWidget}}
+        {{formGroup systemFields.tonnage value=system.tonnage localize=true widget=headerWidget}}
+        {{formGroup systemFields.tl value=system.tl localize=true widget=headerWidget}}
+      {{/if}}
+
       {{#if (or 
         (eq actor.type 'drone')
         (eq actor.type 'mech'))}}

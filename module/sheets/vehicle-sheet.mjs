@@ -82,12 +82,6 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     ship: {
       template: 'systems/swnr/templates/actor/vehicle/ship.hbs',
     },
-    vehicle: {
-      template: 'systems/swnr/templates/actor/vehicle/vehicle.hbs',
-    },
-    drone: {
-      template: 'systems/swnr/templates/actor/vehicle/drone.hbs',
-    },
     shipCrew: {
       template: 'systems/swnr/templates/actor/vehicle/ship-crew.hbs',
     },
@@ -134,12 +128,9 @@ export class SWNVehicleSheet extends SWNBaseSheet {
         options.defaultTab = 'shipCombat';
         break;
       case 'drone':
-        options.parts.push('drone', 'effects');
-        options.defaultTab = 'drone';
-        break;
       case 'vehicle':
-        options.parts.push('vehicle', 'effects');
-        options.defaultTab = 'vehicle';
+        options.parts.push('shipCombat', 'effects');
+        options.defaultTab = 'shipCombat';
         break;
     }
   }
@@ -188,8 +179,6 @@ export class SWNVehicleSheet extends SWNBaseSheet {
 
   /** @override */
   async _preparePartContext(partId, context) {
-    // TODO copy from actor-sheet.mjs
-    console.log("TODO: Implement _preparePartContext");//TODO
     switch (partId) {
       case 'ship':
       case 'shipCrew':
@@ -298,9 +287,9 @@ export class SWNVehicleSheet extends SWNBaseSheet {
           tab.id = 'vehicle';
           tab.label += 'Vehicle';
           break;
-        case 'drone':
-          tab.id = 'drone';
-          tab.label += 'Drone';
+        case 'combatNotes':
+          tab.id = 'combatNotes';
+          tab.label += 'CombatNotes';
           break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
