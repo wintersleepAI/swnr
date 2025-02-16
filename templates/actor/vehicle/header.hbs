@@ -100,6 +100,16 @@
 
       {{/if}}
       {{#if (eq actor.type 'vehicle')}}
+      <div class="resource flex-group-center"><!-- mech class, localize for formGroup header is not working -->
+        <div class="field resource-content">
+          <div class="flex flexrow">
+            {{formInput systemFields.size value=system.size localize=true widget=headerWidget}}
+          </div>
+        </div>
+        <label class='resource-label'>
+          {{localize 'SWN.Actor.Vehicle.FIELDS.size.label'}}
+        </label>
+      </div>
       {{formGroup systemFields.power value=system.power localize=true widget=headerWidget}}
       {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget}}
       {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget}}

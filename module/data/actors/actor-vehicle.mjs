@@ -12,7 +12,7 @@ export default class SWNVehicle extends SWNVehicleBase {
     const schema = super.defineSchema();
     schema.kmph = SWNShared.requiredNumber(0);
     schema.tonnage = SWNShared.requiredNumber(0);
-    // schema.size = TODO;
+    schema.size = SWNShared.stringChoices('s', CONFIG.SWN.vehicleClasses);
     return schema;
   }
 
