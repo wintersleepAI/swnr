@@ -308,7 +308,18 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     // You can just use `this.document.itemTypes` instead
     // if you don't need to subdivide a given type like
     // this sheet does with spells
-    console.log("TODO: Implement _prepareItems");//TODO
+
+    // Union regular weapons and ship weapons for vehicles, drones, and mechs
+    let allWeapons = [];
+    for (const i of this.document.itemTypes.shipWeapon) {
+      allWeapons.push(i);
+    }
+    if (this.actor.type == "vehicle" || this.actor.type == "drone" || this.actor.type == "mech") {
+      for (const i of this.document.itemTypes.weapon) {
+        allWeapons.push(i);
+      }
+    }
+    context.allWeapons = allWeapons.sort((a, b) => (a.sort || 0) - (b.sort || 0));
   }
 
   /**
@@ -337,7 +348,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       d.addEventListener('change', this._onHullChange.bind(this)));
     this.element.querySelectorAll("[name='system.model']").forEach((d) =>
       d.addEventListener('change', this._onHullChange.bind(this)));
-  
+
   }
 
 
@@ -675,7 +686,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     await this.actor.update({
       "system.crew.current": 1,
       "system.crewMembers": [],
-    });  
+    });
   }
 
   static async _onPayment(event, target) {
@@ -753,7 +764,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
 
     if (targetHull) {
       const d = await foundry.applications.api.DialogV2.confirm({
-        window: {title: "Apply Default Stats"},
+        window: { title: "Apply Default Stats" },
         content: `<p>Do you want to apply the default stats for a ${targetHull}?</p><b>This will change your current and max values for stats like HP, cost, armor, AC, mass, power, hardpoints, hull type, speed, life support (60*max crew), and crew.</b>`,
         modal: true,
       });
@@ -1256,7 +1267,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       return;
     }
     let maint = this.actor.system.calcCost(d);
-    
+
   }
 
 
