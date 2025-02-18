@@ -1,7 +1,7 @@
 import SWNActorBase from './base-actor.mjs';
 import SWNShared from '../shared.mjs';
 
-export default class SWNCyberdeck extends SWNActorBase {
+export default class SWNCyberdeck extends foundry.abstract.TypeDataModel {
   static LOCALIZATION_PREFIXES = [
     ...super.LOCALIZATION_PREFIXES,
     'SWN.Actor.Cyberdeck',
@@ -9,7 +9,11 @@ export default class SWNCyberdeck extends SWNActorBase {
 
   static defineSchema() {
     const fields = foundry.data.fields;
-    const schema = super.defineSchema();
+    const schema = {};
+    
+    // TODO wsAI added for header
+    schema.access = SWNShared.resourceField(1,1); // CWN
+
     schema.health = SWNShared.resourceField(1,1);
     schema.hackerHP = SWNShared.resourceField(1,1);
     schema.memory = SWNShared.resourceField(1,1);
