@@ -52,7 +52,7 @@ export class SWNItem extends Item {
     const item = this;
     // If the item has a roll function, call it and return.
     if (typeof this.system.roll == "function" ){
-      this.system.roll();
+      this.system.roll(event?.shiftKey);
       return;
     }
 
