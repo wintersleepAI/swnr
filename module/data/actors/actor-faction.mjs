@@ -1,5 +1,16 @@
 import SWNShared from "../shared.mjs";
 
+const HEALTH__XP_TABLE = {
+  1: 1,
+  2: 2,
+  3: 4,
+  4: 6,
+  5: 9,
+  6: 12,
+  7: 16,
+  8: 20,
+};
+
 export default class SWNFaction extends foundry.abstract
     .TypeDataModel {
   static LOCALIZATION_PREFIXES = [
@@ -44,5 +55,21 @@ export default class SWNFaction extends foundry.abstract
   }
 
   prepareDerivedData() {
+   
+    this.health.max =
+        4 +
+        this.getHealthForLevel(this.forceRating) +
+        this.getHealthForLevel(this.wealthRating) +
+        this.getHealthForLevel(this.cunningRating);
+    
+    this.health.percentage = SWNShared.resourceFieldPercentage(this.health);
+  }
+  
+  getHealthForLevel(level) {
+    if (level in HEALTH__XP_TABLE) {
+      return HEALTH__XP_TABLE[level];
+    }
+    
+    return 0;
   }
 }
