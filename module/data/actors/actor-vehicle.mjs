@@ -17,5 +17,6 @@ export default class SWNVehicle extends SWNVehicleBase {
   }
 
   prepareDerivedData() {
+    super.prepareDerivedData();
   }
 }

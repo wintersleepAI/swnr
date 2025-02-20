@@ -24,6 +24,7 @@ export default class SWNDrone extends SWNVehicleBase {
   }
 
   prepareDerivedData() {
+    super.prepareDerivedData();
     this.pilot = null;
     if (this.crewMembers.length > 0) {
       //should only be 1 or 0 but grabbing first in case it changes.

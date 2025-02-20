@@ -59,9 +59,9 @@
       {{formGroup systemFields.spikeDrive value=system.spikeDrive localize=true widget=headerWidget}}
       {{/if}}
       {{#if (eq actor.type 'mech')}}
-      {{formGroup systemFields.power value=system.power localize=true widget=headerWidget}}
-      {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget}}
-      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget}}
+      {{formGroup systemFields.power value=system.power localize=true widget=headerWidget readonly=0}}
+      {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget readonly=0}}
+      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget readonly=0}}
       {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
       {{formGroup systemFields.maintenanceCost value=system.maintenanceCost localize=true widget=headerWidget}}
       <div class="resource flex-group-center"><!-- mech class, localize for formGroup header is not working -->

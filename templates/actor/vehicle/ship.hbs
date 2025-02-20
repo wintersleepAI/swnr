@@ -1,9 +1,9 @@
 <section class='tab ship sheet-body {{tab.cssClass}}' data-group='primary' data-tab='ship'>
   <div class=''>
     <div class='grid grid-4col'> <!-- SWNRShipData extends SWNRVehicleTemplateBase-->
-      {{formGroup systemFields.power value=system.power localize=true widget=groupWidget}}
-      {{formGroup systemFields.mass value=system.mass localize=true widget=groupWidget}}
-      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=groupWidget}}
+      {{formGroup systemFields.power value=system.power localize=true widget=groupWidget readonly=0}}
+      {{formGroup systemFields.mass value=system.mass localize=true widget=groupWidget readonly=0}}
+      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=groupWidget readonly=0}}
       {{formGroup systemFields.shipClass value=system.shipClass localize=true}}
       {{formGroup systemFields.shipHullType value=system.shipHullType localize=true}}
       {{formGroup systemFields.tl value=system.tl localize=true}}
