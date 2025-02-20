@@ -1,0 +1,36 @@
+<header class="sheet-header">
+    <div class="profile-img">
+        <img
+            class="profile-img"
+            src="{{actor.img}}"
+            data-edit="img"
+            data-action="onEditImage"
+            title="{{actor.name}}"
+        />
+        <div class="resource-bar">
+            <div style="width: {{system.health.percentage}}%" class="health-fill"></div>
+            <div class="text">
+                {{localize 'swnr.sheet.hp'}}
+                <input
+                        type='text'
+                        name='system.health.value'
+                        value='{{system.health.value}}'
+                        data-dtype='Number'
+                        class='nested-field short-field align-right current-value'
+                />
+                <p>/</p>
+                {{system.health.max}}
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-5col">
+        <div class="document-name grid-span-5">
+            <input 
+                name="name"
+                type="text"
+                value="{{actor.name}}"
+                placeholder="Name"
+            />
+        </div>
+    </div>
+</header>
