@@ -1,0 +1,33 @@
+name: Avalanche
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988682
+  modifiedTime: 1739238988682
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: vnzmpwvtvr3v4e9a
+system:
+  description: (Heal-0) A somewhat pricey combat drug favored by shock troops and those first out of the trenches, Avalanche numbs sensations of pain or exhaustion for one hour, granting the user an effective +10 to their current hit points, even if it takes them above their maximum. This numbness tends to make it harder to notice serious harms, however, and the d12 roll for any Major Injury suffered while under its effects takes a -1 penalty.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 0
+  cost: 100
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!vnzmpwvtvr3v4e9a'

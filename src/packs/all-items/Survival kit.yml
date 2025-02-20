@@ -1,0 +1,34 @@
+name: Survival kit
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988368
+  modifiedTime: 1739238988368
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: aggxumpv6hafuu98
+system:
+  description: 'Survival kit: A standard belt-worn kit with fire lighter, water filter, three thermal flares, knife, thermal blanket, a brightly-colored 3 x 3 meter waterproof tarp, a glowbug, and a radio beacon that can transmit a distress signal up to fifty kilometers for one month on the included type A power cell. Survival kits sold on a particular world will usually also include a small booklet on specific dangers or edible organics. Possession of a survival kit grants a +1 to all relevant Survive skill checks, assuming its contents are helpful on a given planet. Survival kits are well-organized, and count as only one item for encumbrance purposes.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 1
+  cost: 60
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!aggxumpv6hafuu98'

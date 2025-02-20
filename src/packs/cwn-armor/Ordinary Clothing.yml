@@ -1,0 +1,44 @@
+name: Ordinary Clothing
+type: armor
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988544
+  modifiedTime: 1739238988544
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: p17aeknxbxr0a8bj
+system:
+  description: Some bold, impoverished, or highly fashionable people still insist on wearing clothing that has no functional use as armor.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 0
+  cost: 25
+  tl: null
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 10
+  shield: false
+  use: false
+  meleeAc: 10
+  soak:
+    max: 0
+    value: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: true
+  isHeavy: false
+  shieldMeleeACBonus: 0
+  shieldACBonus: 0
+effects: []
+_key: '!items!p17aeknxbxr0a8bj'

@@ -1,0 +1,33 @@
+name: Panacea
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988688
+  modifiedTime: 1739238988688
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: gm63zjpegpkdjdp1
+system:
+  description: (Heal-1) Not so much a single drug as a pharmaceutical suite in a single injection system, this chem requires a skilled physician to adjust its mix. When used as part of a first aid attempt, this drug doubles the amount of hit points recovered by the attempt, with a minimum healing rate of 6 HP. Rumors of a drastically increased rate of bone cancers among regular users are, of course, mere slander against its manufacturer.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 0
+  cost: 200
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!gm63zjpegpkdjdp1'

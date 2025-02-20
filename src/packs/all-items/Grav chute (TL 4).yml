@@ -1,0 +1,34 @@
+name: Grav chute (TL 4)
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988341
+  modifiedTime: 1739238988341
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: rs85ax34zmyixeb3
+system:
+  description: 'Grav chute (TL 4): When this cylinder is strapped to a person or object and activated, it smoothly modulates falling speeds for up to 1000 meters. The chute can safely slow up to 300 kilos of weight. It burn out after one use.'
+  favorite: false
+  quantity: 1
+  bundle:
+    amount: 1
+    bundled: false
+  encumbrance: 1
+  cost: 300
+  tl: 4
+  location: other
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!rs85ax34zmyixeb3'

@@ -1,0 +1,33 @@
+name: Psycho
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988690
+  modifiedTime: 1739238988690
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: 5bwqp7ek95b0vhba
+system:
+  description: Ingesting one of these small pills rapidly flattens a user's capacity for emotional distress while heavily increasing their aggressiveness. For roughly one hour, users gain a +2 bonus to Morale checks and experience no immediate emotional trauma from performing even the most heinous and violent actions. The drug is a favorite pre-fight dose among gangers, and used as self-medication among many of them who would otherwise be incapacitated by the emotional scars of what they've done.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 0
+  cost: 10
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!5bwqp7ek95b0vhba'

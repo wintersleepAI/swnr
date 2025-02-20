@@ -1,0 +1,29 @@
+name: Eye Mod/Zoom
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988572
+  modifiedTime: 1739238988572
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: rspe9444s9pt9kh3
+system:
+  description: 'The user''s vision can zoom in on distant targets. The user can see objects within 500 meters as if they were standing next to them. The hit penalty for a ranged weapon''s long range is eliminated. '
+  favorite: false
+  tl: 4
+  cost: 10000
+  strain: 0.5
+  disabled: false
+  effect: 500m telescopic vision
+  type: Sensory
+  concealment: Medical
+  complication: ''
+effects: []
+_key: '!items!rspe9444s9pt9kh3'

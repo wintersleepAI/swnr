@@ -1,0 +1,29 @@
+name: Shock Fists
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988593
+  modifiedTime: 1739238988593
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: y7xelmv9vhymljym
+system:
+  description: The user's hands are implanted with subdermal electrical webbing. As an Instant action, accept one System Strain; for the rest of the scene, the user's unarmed attacks do an additional 1d8 electrical damage on a successful hit. Unarmed attacks augmented with this mod are non-lethal if desired. This system does not stack with Body Blades.
+  favorite: false
+  tl: 4
+  cost: 10000
+  strain: 1
+  disabled: false
+  effect: Do electric fist damage
+  type: Limb
+  concealment: Touch
+  complication: ''
+effects: []
+_key: '!items!y7xelmv9vhymljym'

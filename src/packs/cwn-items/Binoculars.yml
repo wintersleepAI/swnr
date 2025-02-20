@@ -1,0 +1,33 @@
+name: Binoculars
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988664
+  modifiedTime: 1739238988664
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: u28jfsowycm3e1k9
+system:
+  description: Most modern binocs have low-light functionality and magnification sufficient to bring targets as much as a kilometer distant into view.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 100
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+_key: '!items!u28jfsowycm3e1k9'

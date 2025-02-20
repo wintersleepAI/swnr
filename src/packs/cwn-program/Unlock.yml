@@ -1,0 +1,28 @@
+name: Unlock
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988719
+  modifiedTime: 1739238988719
+  lastModifiedBy: systembuilder9000
+sort: 0
+_id: yxwpjmn4a1fl4tau
+system:
+  description: Unlock a physical device with an electronic lock or a network's cyberspace node barrier.
+  favorite: false
+  cost: 500
+  type: verb
+  accessCost: 1
+  target: Device/Data
+  selfTerminating: true
+  useAffects: Unlock an electric lock or node barrier
+  skillCheckMod: 1
+effects: []
+_key: '!items!yxwpjmn4a1fl4tau'

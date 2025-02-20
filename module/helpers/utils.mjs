@@ -116,7 +116,7 @@ export function initSkills(actor, skillSet) {
     return {
       type: "skill",
       name: game.i18n.localize(skillRoot + "name"),
-      data: {
+      system: {
         rank: -1,
         pool: "ask",
         description: game.i18n.localize(skillRoot + "text"),
