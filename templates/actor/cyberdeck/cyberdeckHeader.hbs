@@ -71,8 +71,7 @@
     </div>
 
     <div class="resource grid grid-4col thin-bar">
-      <div>TODO fix hacker hp</div>
-      {{!--//TODO wsAI causing error with no hacker {{formGroup systemFields.hackerHP value=hacker.system.health localize=true widget=headerWidget}} --}}
+      {{formGroup systemFields.hackerHP value=system.hackerHP localize=true widget=headerWidget}}
       {{formGroup systemFields.baseShielding value=system.baseShielding localize=true widget=headerWidget}}
       {{formGroup systemFields.bonusShielding value=system.bonusShielding localize=true widget=headerWidget}}
       {{formGroup systemFields.bonusAccess value=system.bonusAccess localize=true widget=headerWidget}}

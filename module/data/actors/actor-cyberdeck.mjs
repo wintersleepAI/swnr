@@ -50,8 +50,6 @@ export default class SWNCyberdeck extends foundry.abstract.TypeDataModel {
       }
     }
 
-    
-
     //Set the memory and CPU based on the programs.
     const programs = this.parent.items.filter(
       item => item.type === "program"
@@ -61,6 +59,17 @@ export default class SWNCyberdeck extends foundry.abstract.TypeDataModel {
     ).length;
     this.cpu.value = this.cpu.max - activePrograms;
     this.memory.value = this.memory.max - programs.length + activePrograms;
+
+    if(hacker)
+    {
+      this.hackerHP.max = hacker.system.health.max;
+      this.hackerHP.value = hacker.system.health.value;
+    }
+    else
+    {
+      this.hackerHP.max = 0;
+      this.hackerHP.value = 0;
+    }
   }
 
   getHacker() {
