@@ -159,7 +159,7 @@ Hooks.once('ready', function () {
 
   // If the stored version doesn't match the current system version, run migration
   if (storedVersion !== currentVersion) {
-    migrations.migrateWorld();
+    migrations.migrateWorld(storedVersion);
     game.settings.set('swnr', 'systemMigrationVersion', currentVersion);
   }
 });
