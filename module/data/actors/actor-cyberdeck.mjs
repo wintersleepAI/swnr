@@ -10,10 +10,7 @@ export default class SWNCyberdeck extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = {};
-    
-    // TODO wsAI added for header
     schema.access = SWNShared.resourceField(1,1); // CWN
-
     schema.health = SWNShared.resourceField(1,1);
     schema.hackerHP = SWNShared.resourceField(1,1);
     schema.memory = SWNShared.resourceField(1,1);
@@ -60,6 +57,7 @@ export default class SWNCyberdeck extends foundry.abstract.TypeDataModel {
     this.cpu.value = this.cpu.max - activePrograms;
     this.memory.value = this.memory.max - programs.length + activePrograms;
 
+    //Set hackerHP
     if(hacker)
     {
       this.hackerHP.max = hacker.system.health.max;
