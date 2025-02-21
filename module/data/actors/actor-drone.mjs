@@ -74,7 +74,7 @@ export default class SWNDrone extends SWNVehicleBase {
         }
       }
     }
-    shipHardpoint -= -weaponInventory.length;
+    shipHardpoint -= weaponInventory.length;
     this.power.value = shipPower;
     this.mass.value = shipMass;
     this.hardpoints.value = shipHardpoint;
