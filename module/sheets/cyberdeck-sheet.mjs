@@ -55,7 +55,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     },
     // FRAGMENTS
     programList: {
-      template: 'systems/swnr/templates/actor/fragments/programs-list.hbs'
+      template: 'systems/swnr/templates/actor/cyberdeck/programs-list.hbs'
     }
   };
 
