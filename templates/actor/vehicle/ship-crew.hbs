@@ -3,12 +3,11 @@
     <div class="gap-2"><!-- left col-->
       <div class="stations">
         <div>
-          <li class="item-titles flexrow">
-            <div class="role-name">{{localize 'swnr.sheet.ship.station.role'}}</div>
-
-            <div class="role-crew">{{localize 'swnr.sheet.ship.station.crew'}}</div>
-          </li>
-          <ol class="item-list">
+          <ol class="items-list">
+            <li class='flex flexrow items-header'>
+              <div class="role-name">{{localize 'swnr.sheet.ship.station.role'}}</div>
+              <div class="role-crew">{{localize 'swnr.sheet.ship.station.crew'}}</div>
+            </li>
             <li class="item-entry">
               <div class="item flexrow" data-item-id="role-bridge">
                 <div>
@@ -108,7 +107,7 @@
       "systems/swnr/templates/actor/fragments/crew-list.hbs"
       type=actor.type crewArray=crewArray
       }}
-      <div class="">
+      <div style="margin-top:10px; margin-left:4px;">
         {{localize 'swnr.sheet.ship.crew-skill-bonus'}}:
         {{formInput systemFields.crewSkillBonus value=system.crewSkillBonus}}
           <a class="item-control" title='{{localize 'swnr.sheet.roll-skill'}}'
