@@ -10,6 +10,28 @@
       height='100'
       width='100'
     />
+
+    <div class="resource-bar"><!-- The character health bar -->
+      <div style="width:{{system.hackerHP.percentage}}%" class="health-fill"></div>
+        <div class="text">
+          HP
+            <input
+              type='text'
+              name='system.health.value'
+              value='{{system.hackerHP.value}}'
+              data-dtype='Number'
+              class='nested-field short-field align-right current-value'
+            />
+          <p>/</p>
+            <input
+              type='text'
+              name='system.health.max'
+              value='{{system.hackerHP.max}}'
+              data-dtype='Number'
+              class='nested-field short-field'
+            />
+        </div>
+    </div>
   </div>
   <div class='header-fields'>
     <div class='document-name'>
@@ -71,7 +93,6 @@
     </div>
 
     <div class="resource grid grid-4col thin-bar">
-      {{formGroup systemFields.hackerHP value=system.hackerHP localize=true widget=headerWidget}}
       {{formGroup systemFields.baseShielding value=system.baseShielding localize=true widget=headerWidget}}
       {{formGroup systemFields.bonusShielding value=system.bonusShielding localize=true widget=headerWidget}}
       {{formGroup systemFields.bonusAccess value=system.bonusAccess localize=true widget=headerWidget}}

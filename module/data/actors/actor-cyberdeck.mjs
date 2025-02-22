@@ -12,7 +12,6 @@ export default class SWNCyberdeck extends foundry.abstract.TypeDataModel {
     const schema = {};
     schema.access = SWNShared.resourceField(1,1); // CWN
     schema.health = SWNShared.resourceField(1,1);
-    schema.hackerHP = SWNShared.resourceField(1,1);
     schema.memory = SWNShared.resourceField(1,1);
     schema.cpu = SWNShared.resourceField(1,1);
     schema.encumberance = SWNShared.requiredNumber(0);
@@ -58,6 +57,7 @@ export default class SWNCyberdeck extends foundry.abstract.TypeDataModel {
     this.memory.value = this.memory.max - programs.length + activePrograms;
 
     //Set hackerHP
+    this.hackerHP = SWNShared.resourceField(0,0);
     if(hacker)
     {
       this.hackerHP.max = hacker.system.health.max;
