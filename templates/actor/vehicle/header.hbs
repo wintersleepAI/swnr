@@ -82,8 +82,8 @@
       {{formGroup systemFields.moveType value=system.moveType localize=true widget=headerWidget}}
       {{formGroup systemFields.range value=system.range localize=true widget=headerWidget}}
       {{formGroup systemFields.enc value=system.enc localize=true widget=headerWidget}}
-      {{formGroup systemFields.fittings value=system.fittings localize=true widget=headerWidget}}
-      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget}}
+      {{formGroup systemFields.fittings value=system.fittings localize=true widget=headerWidget readonly=0}}
+      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget readonly=0}}
       {{!-- {{formGroup systemFields.model value=system.model localize=true widget=headerWidget}} --}}
       <div class="resource flex-group-center"><!-- mech class, localize for formGroup header is not working -->
         <div class="field resource-content">
@@ -110,9 +110,9 @@
           {{localize 'SWN.Actor.Vehicle.FIELDS.size.label'}}
         </label>
       </div>
-      {{formGroup systemFields.power value=system.power localize=true widget=headerWidget}}
-      {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget}}
-      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget}}
+      {{formGroup systemFields.power value=system.power localize=true widget=headerWidget readonly=0}}
+      {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget readonly=0}}
+      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget readonly=0}}
       {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
       {{formGroup systemFields.kmph value=system.kmph localize=true widget=headerWidget}}
       {{formGroup systemFields.tonnage value=system.tonnage localize=true widget=headerWidget}}

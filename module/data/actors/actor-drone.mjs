@@ -37,7 +37,7 @@ export default class SWNDrone extends SWNVehicleBase {
       }
     }
 
-    let shipMass = this.mass.max;
+    let fittingTotal = this.fittings.max;
     let shipPower = this.power.max;
     let shipHardpoint = this.hardpoints.max;
 
@@ -57,26 +57,28 @@ export default class SWNDrone extends SWNVehicleBase {
 
     for (let i = 0; i < shipInventory.length; i++) {
       const item = shipInventory[i];
-      let itemMass = item.system.mass;
-      let itemPower = item.system.power;
-      if (item.system.massMultiplier) {
-        itemMass *= multiplier;
-      }
-      if (item.system.powerMultiplier) {
-        itemPower *= multiplier;
-      }
-      shipMass -= itemMass;
-      shipPower -= itemPower;
+
       if (item.type == "shipWeapon") {
         const itemHardpoint = item.system["hardpoint"];
         if (itemHardpoint) {
           shipHardpoint -= itemHardpoint;
         }
+      } else {
+        let itemMass = item.system.mass;
+        let itemPower = item.system.power;
+        if (item.system.massMultiplier) {
+          itemMass *= multiplier;
+        }
+        if (item.system.powerMultiplier) {
+          itemPower *= multiplier;
+        }
+        fittingTotal -= itemMass;
+        shipPower -= itemPower;
       }
     }
     shipHardpoint -= weaponInventory.length;
     this.power.value = shipPower;
-    this.mass.value = shipMass;
+    this.fittings.value = fittingTotal;
     this.hardpoints.value = shipHardpoint;
   }
 }
