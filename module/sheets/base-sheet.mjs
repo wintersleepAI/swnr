@@ -296,7 +296,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
     switch (dataset.rollType) {
       case 'item':
         const item = this._getEmbeddedDocument(target);
-        if (item) return item.roll();
+        if (item) return item.roll(event);
     }
 
     // Handle rolls that supply the formula directly.

@@ -23,7 +23,7 @@
         {{formGroup systemFields.qualities value=system.qualities localize=true}}
       </div>
       <div class="resource">
-        {{formGroup systemFields.stat value=system.stat localize=true}}
+        {{formGroup systemFields.ab value=system.ab localize=true}}
       </div>
     </div>
     <div class='grid grid-2col'>
@@ -39,9 +39,6 @@
           {{formGroup systemFields.ammo.fields.max value=system.ammo.max localize=true}}
         </div>
         {{/if}}
-        <div class="resource">
-          {{formGroup systemFields.ammo.fields.burst value=system.ammo.burst localize=true}}
-        </div>
       </div><!-- AMMO end resource-group -->
       <div class="resource-group" style='display: grid; border: 1px solid var(--border-color); border-radius: 2px; padding: 4px;'>
         <div class="resource">
