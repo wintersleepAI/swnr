@@ -436,6 +436,9 @@
           },
           "homeworld": {
             "label": "Homeworld"
+          },
+          "factionGoal": {
+            "label": "Faction Goal"
           }
         }
       }
@@ -1494,7 +1497,6 @@
         "def-damage": "Counter Damage",
         "att-roll": "Attacker Roll",
         "def-roll": "Defender Roll",
-        "factionGoal": "Faction Goal",
         "factionGoalDesc": "Goal Description",
         "setGoal": "Set Goal",
         "location": "Location",
