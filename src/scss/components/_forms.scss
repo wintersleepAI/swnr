@@ -15,6 +15,10 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-bottom: 0px;
+  
+  &.column {
+    flex-direction: column;
+  }
 
   .header-fields {
     flex: 1;

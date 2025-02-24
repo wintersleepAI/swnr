@@ -276,6 +276,9 @@
   justify-content: flex-start;
   margin-bottom: 0px;
 }
+.swnr .sheet-header.column {
+  flex-direction: column;
+}
 .swnr .sheet-header .header-fields {
   flex: 1;
 }
