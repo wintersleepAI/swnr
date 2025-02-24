@@ -11,6 +11,8 @@ const HEALTH__XP_TABLE = {
   8: 20,
 };
 
+const MAX_RATING = 8;
+
 export default class SWNFaction extends foundry.abstract
     .TypeDataModel {
   static LOCALIZATION_PREFIXES = [
@@ -32,9 +34,9 @@ export default class SWNFaction extends foundry.abstract
     schema.xp = SWNShared.requiredNumber(0);
     schema.homeworld = SWNShared.requiredString("");
     
-    schema.forceRating = SWNShared.requiredNumber(1);
-    schema.cunningRating = SWNShared.requiredNumber(1);
-    schema.wealthRating = SWNShared.requiredNumber(1);
+    schema.forceRating = SWNShared.constrainedNumber(1, MAX_RATING);
+    schema.cunningRating = SWNShared.constrainedNumber(1, MAX_RATING);
+    schema.wealthRating = SWNShared.constrainedNumber(1, MAX_RATING);
 
     schema.factionGoal = SWNShared.requiredString("");
     schema.factionGoalDesc = SWNShared.requiredString("");
