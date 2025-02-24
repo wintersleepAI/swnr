@@ -23,14 +23,37 @@
             </div>
         </div>
     </div>
-    <div class="grid grid-5col">
-        <div class="document-name grid-span-5">
+    <div class="grid grid-6col">
+        <div class="document-name grid-span-6">
             <input 
                 name="name"
                 type="text"
                 value="{{actor.name}}"
                 placeholder="Name"
             />
+        </div>
+        
+        <div class="resource grid-span-3">
+            {{formGroup systemFields.homeworld value=system.homeworld localize=true}}
+        </div>
+        <div class="resource">
+            {{formGroup systemFields.xp value=system.xp localize=true}}
+        </div>
+        <div class="resource">
+            {{formGroup systemFields.facCreds value=system.facCreds localize=true}}
+        </div>
+        <div class="resource flexrow">
+            {{formGroup systemFields.active value=system.active localize=true}}
+        </div>
+        
+        <div class="resource grid-span-2">
+            {{formGroup systemFields.forceRating value=system.forceRating localize=true}}
+        </div>
+        <div class="resource grid-span-2">
+            {{formGroup systemFields.cunningRating value=system.cunningRating localize=true}}
+        </div>
+        <div class="resource grid-span-2">
+            {{formGroup systemFields.wealthRating value=system.wealthRating localize=true}}
         </div>
     </div>
 </header>
