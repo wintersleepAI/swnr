@@ -16,8 +16,8 @@ export class SWNFactionSheet extends SWNBaseSheet {
   static DEFAULT_OPTIONS = {
     classes: ['swnr', 'actor'],
     position: {
-      width: 600,
-      height: 600,
+      width: 760,
+      height: 800,
     },
     actions: {
       onEditImage: this._onEditImage,
