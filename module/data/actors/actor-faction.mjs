@@ -1,16 +1,5 @@
 import SWNShared from "../shared.mjs";
 
-const HEALTH__XP_TABLE = {
-  1: 1,
-  2: 2,
-  3: 4,
-  4: 6,
-  5: 9,
-  6: 12,
-  7: 16,
-  8: 20,
-};
-
 const MAX_RATING = 8;
 
 export default class SWNFaction extends foundry.abstract
@@ -68,8 +57,8 @@ export default class SWNFaction extends foundry.abstract
   }
   
   getHealthForLevel(level) {
-    if (level in HEALTH__XP_TABLE) {
-      return HEALTH__XP_TABLE[level];
+    if (level in CONFIG.SWN.factionHealthXp) {
+      return CONFIG.SWN.factionHealthXp[level];
     }
     
     return 0;
