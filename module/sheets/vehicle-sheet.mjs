@@ -232,6 +232,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
   /**
    * Generates the data for the generic tab navigation template
    * @param {string[]} parts An array of named template parts to render
+   * @param {string} defaultTab The name of the default tab to render
    * @returns {Record<string, Partial<ApplicationTab>>}
    * @protected
    */
