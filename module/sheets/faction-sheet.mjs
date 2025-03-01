@@ -46,13 +46,18 @@ export class SWNFactionSheet extends SWNBaseSheet {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
     },
+    description: {
+      template: 'systems/swnr/templates/actor/description.hbs',
+    }
   };
 
   /** @override */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
+    options.defaultTab = 'description';
+    
     // Not all parts always render
-    options.parts = ['header', 'tabs'];
+    options.parts = ['header', 'tabs', 'description'];
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
   }
@@ -90,6 +95,26 @@ export class SWNFactionSheet extends SWNBaseSheet {
   async _preparePartContext(partId, context) {
     // TODO copy from actor-sheet.mjs
     console.log("TODO: Implement _preparePartContext");//TODO
+    
+    context.tab = context.tabs[partId];
+    switch (partId) {
+      case 'description':
+        // Enrich description info for display
+        // Enrichment turns text like `[[/r 1d20]]` into buttons
+        context.enrichedDescription = await TextEditor.enrichHTML(
+            this.actor.system.description,
+            {
+              // Whether to show secret blocks in the finished html
+              secrets: this.document.isOwner,
+              // Data to fill in for inline rolls
+              rollData: this.actor.getRollData(),
+              // Relative UUID resolution
+              relativeTo: this.actor,
+            }
+        );
+        break;
+    }
+    
     return context;
   }
 
@@ -103,7 +128,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
     // If you have sub-tabs this is necessary to change
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
-    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'biography';
+    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'description';
     return parts.reduce((tabs, partId) => {
       const tab = {
         cssClass: 'sheet-body',
@@ -119,25 +144,9 @@ export class SWNFactionSheet extends SWNBaseSheet {
         case 'header':
         case 'tabs':
           return tabs;
-        case 'biography':
-          tab.id = 'biography';
-          tab.label += 'Biography';
-          break;
-        case 'features':
-          tab.id = 'features';
-          tab.label += 'Features';
-          break;
-        case 'gear':
-          tab.id = 'gear';
-          tab.label += 'Gear';
-          break;
-        case 'spells':
-          tab.id = 'spells';
-          tab.label += 'Spells';
-          break;
-        case 'effects':
-          tab.id = 'effects';
-          tab.label += 'Effects';
+        case 'description':
+          tab.id = 'description';
+          tab.label += 'Description';
           break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
