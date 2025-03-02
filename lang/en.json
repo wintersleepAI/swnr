@@ -483,6 +483,31 @@
         "FIELDS": {
           "level": {
             "label": "Power Level"
+          },
+          "roll" : {
+            "label": "Roll"
+          },
+          "source" : {
+            "label": "Source"
+          },
+          "duration": {
+            "label": "Duration"
+          },
+          "range": {
+            "label": "Range"
+          },
+          "save": {
+            "label": "Save"
+          },
+          "skill": {
+            "label": "Skill",
+            "tooltip": "Skill to roll for the chat window (usually opposed effects)"
+          },
+          "prepared" : {
+            "label": "Prepared"
+          },
+          "effort": {
+            "label": "Effort"
           }
         },
         "PowerLVL": "Level {level} Power",
