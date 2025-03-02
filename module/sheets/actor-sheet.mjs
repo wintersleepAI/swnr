@@ -107,6 +107,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     },
     compactArmorList: {
       template: 'systems/swnr/templates/actor/fragments/compact-armor-list.hbs',
+    },
+    compactAbilitiesList: {
+      template: 'systems/swnr/templates/actor/fragments/compact-abilities-list.hbs',
     }
   };
 
@@ -338,6 +341,16 @@ export class SWNActorSheet extends SWNBaseSheet {
       if ((a.system.type || 0) > (b.system.type || 0)) { return 1; }
       return 0;
     });
+
+    if (this.actor.type === "npc") { 
+      const abilities = []
+      for (let i of this.document.items) {
+        if (i.type === 'power' || i.type === 'feature' || i.type === 'cyberware') {
+          abilities.push(i);
+        }
+      }
+      context.abilities = abilities;
+    }
   }
 
   /**

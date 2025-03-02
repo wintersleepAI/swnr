@@ -113,7 +113,7 @@
     <div class="flex flex-col" style="flex: 1 0;"> <!-- 3rd Column -->
       {{> "systems/swnr/templates/actor/fragments/compact-weapon-list.hbs" itemList=actor.itemTypes.weapon actorType=actor.type }}
       {{> "systems/swnr/templates/actor/fragments/compact-armor-list.hbs" itemList=actor.itemTypes.armor actorType=actor.type }}
-      TODO powers/abilities
+      {{> "systems/swnr/templates/actor/fragments/compact-abilities-list.hbs" itemList=abilities actorType=actor.type }}
     </div> <!-- End 3rd Column -->
 
   </div>
