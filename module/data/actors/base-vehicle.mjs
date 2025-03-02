@@ -7,45 +7,6 @@ export default class SWNVehicleBase extends foundry.abstract
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = {};
-    /*
-    TODO
-    export default class type SWNRMechClass = "suit" | "light" | "heavy"; extends foundry.abstract.TypeDataModel {
-      static defineSchema() {
-      });
-    }
-
-    export default class type SWNRShipClass = "fighter" | "frigate" | "cruiser" | "capital"; extends foundry.abstract.TypeDataModel {
-      static defineSchema() {
-      });
-    }
-
-
-    export default class type SWNRVehicleClass = "s" | "m" | "l"; extends foundry.abstract.TypeDataModel {
-      static defineSchema() {
-      });
-    }
-
-
-export default class SWNRResource  extends foundry.abstract.TypeDataModel {
-  static defineSchema() {
-    schema.name = SWNShared.requiredString("");
-    schema.value = SWNShared.requiredString("");
-    schema.max = SWNShared.requiredString("");
-  });
-}
-  <div class='grid grid-4col'> <!-- SWNRResource -->
-  <div class="resource">
-   {{formGroup systemFields.name value=system.name localize=true}}
-  </div>
-  <div class="resource">
-   {{formGroup systemFields.value value=system.value localize=true}}
-  </div>
-  <div class="resource">
-   {{formGroup systemFields.max value=system.max localize=true}}
-  </div>
-</div><!-- end grid-col SWNRResource  -->
-
-    */
 
     schema.health = SWNShared.resourceField(10, 10);
     schema.cost = SWNShared.requiredNumber(0);
@@ -58,7 +19,7 @@ export default class SWNRResource  extends foundry.abstract.TypeDataModel {
     schema.tl = SWNShared.requiredNumber(5);
 
     schema.description = new fields.HTMLField();
-    schema.mods = SWNShared.requiredString(""); // TODO: HTML?
+    schema.mods = new fields.HTMLField();//SWNShared.requiredString(""); // TODO: HTML?
 
     schema.power = SWNShared.resourceField(1,1,true);
     schema.mass = SWNShared.resourceField(1,1,true);

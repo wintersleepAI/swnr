@@ -1,8 +1,3 @@
-import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
-import { getGameSettings } from '../helpers/register-settings.mjs';
-import { headerFieldWidget, groupFieldWidget } from '../helpers/handlebar.mjs';
-import { initSkills, initCompendSkills, calcMod } from '../helpers/utils.mjs';
-
 const { api, sheets } = foundry.applications;
 
 /**
@@ -16,8 +11,6 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
     super(options);
     this.#dragDrop = this.#createDragDropHandlers();
   }
-
-
 
   /* -------------------------------------------- */
 
@@ -303,7 +296,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
     switch (dataset.rollType) {
       case 'item':
         const item = this._getEmbeddedDocument(target);
-        if (item) return item.roll();
+        if (item) return item.roll(event);
     }
 
     // Handle rolls that supply the formula directly.
@@ -318,6 +311,79 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       return roll;
     }
   }
+
+  /**
+   * Reload an item
+   *
+   * @this SWNActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+    static async _onReload(_event, target) {
+      const item = this._getEmbeddedDocument(target);
+      if (!item || (item.type !== 'weapon' && item.type !== 'shipWeapon')) {
+        ui.notifications.error("Only weapons can be reloaded.");
+        return;
+      }
+      if (!item.system.ammo) {
+        ui.notifications.error("This weapon does not use ammo.");
+        return;
+      }
+      if (item.system.ammo.type) {
+        const ammo_max = item.system.ammo?.max;
+        if (ammo_max != null) {
+          if (item.system.ammo.value < ammo_max) {
+            await item.update({ "system.ammo.value": ammo_max });
+            const content = `<p> Reloaded ${item.name} </p>`;
+            ChatMessage.create({
+              speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+              content: content,
+            });
+          } else {
+            ui.notifications?.info("Trying to reload a full item");
+          }
+        } else {
+          console.log("Unable to find ammo in item ", item.system);
+        }
+      }
+    }
+
+    static async _onCreditChange(event, target) {
+      event.preventDefault();
+      const currencyType = target.dataset.creditType;
+      const _doAdd = async (_event, button, _html) => {
+        const amount = button.form.elements.amount.value;
+        if (isNaN(parseInt(amount))) {
+          ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
+          return;
+        }
+        const oldAmount = this.actor.system.credits[currencyType];
+        if (oldAmount == undefined || oldAmount == null) {
+          ui.notifications?.error("Invalid currency type");
+          return;
+        }
+        const newAmount = this.actor.system.credits[currencyType] + parseInt(amount);
+        await this.actor.update({
+          system: {
+            credits: {
+              [currencyType]: newAmount,
+            },
+          },
+        });
+      };
+  
+      const description = game.i18n.format("swnr.dialog.addCurrency", { type: currencyType });
+      const proceed = await foundry.applications.api.DialogV2.prompt({
+        window: { title: "Proceed" },
+        content: `<p>${description}</p> <input type="number" name="amount">`,
+        modal: false,
+        rejectClose: false,
+        ok: {
+          callback: _doAdd,
+        }
+      });
+    }
 
   /***************
    *

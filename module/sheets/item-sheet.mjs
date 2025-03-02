@@ -32,6 +32,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
+    window: {
+      resizable: true
+    }
   };
 
   /* -------------------------------------------- */
@@ -58,6 +61,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     },
     headerAsset: {
       template: 'systems/swnr/templates/item/header-asset.hbs',
+    },
+    headerShip: {
+      template: 'systems/swnr/templates/item/header-ship.hbs',
     },
     tabs: {
       // Foundry-provided generic template
@@ -100,6 +106,15 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     attributesArmor: {
       template: 'systems/swnr/templates/item/attribute-parts/armor.hbs',
     },
+    attributesShipWeapon: {
+      template: 'systems/swnr/templates/item/attribute-parts/ship-weapon.hbs'
+    },
+    attributesShipFitting: {
+      template: 'systems/swnr/templates/item/attribute-parts/ship-fitting.hbs'
+    },
+    attributesShipDefense: {
+      template: 'systems/swnr/templates/item/attribute-parts/ship-defense.hbs'
+    }
   };
 
   /** @override */
@@ -127,6 +142,11 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'asset':
         options.parts.push('headerAsset');
+        break;
+      case 'shipFitting':
+      case 'shipDefense':
+      case 'shipWeapon':        
+        options.parts.push('headerShip');
         break;
       default:
         options.parts.push('header');
@@ -171,8 +191,17 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         options.defaultTab = 'asset';
         break;
       case 'shipWeapon':
+        options.parts.push('attributesShipWeapon');
+        options.defaultTab = 'attributes';
+        break;
       case 'shipFitting':
+        options.parts.push('attributesShipFitting');
+        options.defaultTab = 'attributes';
+        break;
       case 'shipDefense':
+        options.parts.push('attributesShipDefense');
+        options.defaultTab = 'attributes';
+        break;
       case 'skill':
         break;
     }
@@ -221,6 +250,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'attributesCyberware':
       case 'attributesAsset':
       case 'attributesAssetAtkDef':
+      case 'attributesShipDefense':
+      case 'attributesShipFitting':
+      case 'attributesShipWeapon':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
         break;
@@ -279,6 +311,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'headerSkill':
         case 'headerFeature':
         case 'headerAsset':
+        case 'headerShip':
         case 'tabs':
           return tabs;
         case 'description':
@@ -294,6 +327,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         case 'attributesSkill':
         case 'attributesCyberware':
         case 'attributesPower':
+        case 'attributesShipDefense':
+        case 'attributesShipFitting':
+        case 'attributesShipWeapon':
           tab.id = 'attributes';
           tab.label += 'Attributes';
           break;

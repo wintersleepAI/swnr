@@ -33,6 +33,8 @@ export class SWNActorSheet extends SWNBaseSheet {
       deleteDoc: this._deleteDoc,
       toggleEffect: this._toggleEffect,
       roll: this._onRoll,
+      reload: this._onReload,
+      creditChange: this._onCreditChange,
       rest: this._onRest,
       scene: this._onScene,
       rollSave: this._onRollSave,
@@ -46,13 +48,15 @@ export class SWNActorSheet extends SWNBaseSheet {
       toggleSection: this._toggleSection,
       reactionRoll: this._onReactionRoll,
       moraleRoll: this._onMoraleRoll,
-      creditChange: this._onCreditChange,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
     form: {
       submitOnChange: true,
     },
+    window: {
+      resizable: true
+    }
   };
 
   /** @override */
@@ -656,38 +660,6 @@ export class SWNActorSheet extends SWNBaseSheet {
     );
   }
 
-  /**
-   * Handle clickable rolls.
-   *
-   * @this SWNActorSheet
-   * @param {PointerEvent} event   The originating click event
-   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-   * @protected
-   */
-  static async _onRoll(event, target) {
-    event.preventDefault();
-    const dataset = target.dataset;
-
-    // Handle item rolls.
-    switch (dataset.rollType) {
-      case 'item':
-        const item = this._getEmbeddedDocument(target);
-        if (item) return item.roll();
-    }
-
-    // Handle rolls that supply the formula directly.
-    if (dataset.roll) {
-      let label = dataset.label ? `[stat] ${dataset.label}` : '';
-      let roll = new Roll(dataset.roll, this.actor.getRollData());
-      await roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label,
-        rollMode: game.settings.get('core', 'rollMode'),
-      });
-      return roll;
-    }
-  }
-
   static async _onRollStats(event, _target) {
     event.preventDefault();
     const dice = await foundry.applications.api.DialogV2.wait({
@@ -806,36 +778,5 @@ export class SWNActorSheet extends SWNBaseSheet {
     } else {
       console.log("Morale rolls are only for NPCs");
     }
-  }
-
-  static async _onCreditChange(event, target) {
-    event.preventDefault();
-    const currencyType = target.dataset.creditType;
-    const _doAdd = async (_event, button, _html) => {
-      const amount = button.form.elements.amount.value;
-      if (isNaN(parseInt(amount))) {
-        ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
-        return;
-      }
-      const newAmount = this.actor.system.credits[currencyType] + parseInt(amount);
-      await this.actor.update({
-        system: {
-          credits: {
-            [currencyType]: newAmount,
-          },
-        },
-      });
-    };
-
-    const description = game.i18n.format("swnr.dialog.addCurrency", { type: currencyType });
-    const proceed = await foundry.applications.api.DialogV2.prompt({
-      window: { title: "Proceed" },
-      content: `<p>${description}</p> <input type="number" name="amount">`,
-      modal: false,
-      rejectClose: false,
-      ok: {
-        callback: _doAdd,
-      }
-    });
   }
 }

@@ -39,6 +39,9 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     form: {
       submitOnChange: true,
     },
+    window: {
+      resizable: true
+    }
   };
 
   /** @override */
