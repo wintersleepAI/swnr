@@ -1,0 +1,53 @@
+<form class="flex">
+  <div class="flex flexrow gap-2">
+
+    {{#if isChar}}
+    <div class="flex flex-col">
+      <label for="skill">{{localize 'swnr.sheet.skill'}}: </label>
+      <select name="skill">
+        {{#each skills }}
+        <option value="{{this.id}}">{{this.name}} {{this.system.rank}}</option>
+        {{/each}}
+      </select>
+    </div>
+    
+    <div class="flex flex-col">
+      {{! stat}}
+      <label for="stat">{{localize 'swnr.sheet.stats'}}: </label>
+      <select name="stat">
+        {{#select defaultStat}}
+        {{#each actor.system.stats as |box name |}}
+        <option value="{{name}}">
+          {{localize (concat "swnr.stat.long." name)}}
+          {{numberFormat box.mod decimals=0 sign=true}}
+        </option>
+        {{/each}}
+        {{/select}}
+      </select>
+    </div>
+    {{else}}
+    <div class="flex flex-col">
+      <label for="useNPCSkillBonus">{{localize 'swnr.npc.trained-skill'}}: </label>
+      <input type="checkbox" name="useNPCSkillBonus" id="useNPCSkillBonus">
+    </div>
+    {{/if}}
+  </div>
+  
+  <div class="flex flexrow gap-2">
+      <div class="flex flex-col">
+      <label for="">{{localize 'swnr.chat.dicepool'}}: </label>
+      <select name="dicepool">
+        {{#select skill.pool}}
+        <option value="2d6">2D6</option>
+        <option value="3d6kh2">3D6</option>
+        <option value="4d6kh2">4D6</option>
+        {{/select}}
+      </select>
+    </div>
+
+    <div class="flex flex-col">
+      <label for="modifier">{{localize 'swnr.chat.modifier'}}: </label>
+      <input name="modifier" type="number" step="1" value="0" />
+    </div>
+  </div>
+</form>

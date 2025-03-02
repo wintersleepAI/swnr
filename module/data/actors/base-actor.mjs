@@ -31,7 +31,7 @@ export default class SWNActorBase extends foundry.abstract
       day: SWNShared.requiredNumber(0)
     });
     schema.speed = SWNShared.requiredNumber(10);
-    schema.cyberdecks = new fields.ArrayField(new fields.DocumentUUIDField());
+    schema.cyberdecks = new fields.ArrayField(new fields.DocumentIdField()); 
     schema.health_max_modified = SWNShared.requiredNumber(0);
     return schema;
   }

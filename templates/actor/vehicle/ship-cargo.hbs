@@ -1,0 +1,57 @@
+<section class='tab ship shipCargo sheet-body {{tab.cssClass}}' data-group='primary' data-tab='shipCargo'>
+  <div class="grid grid-cols-2">
+    <!-- ship cargo -->
+    <div>
+      <ol class='items-list'>
+      <li class='flex flexrow items-header'>
+        <div class='item-name'>{{localize 'swnr.sheet.ship.cargo-name'}}</div>
+        <div class='item-name'>{{localize 'swnr.sheet.ship.cargo-amount'}}</div>
+        <div class='item-name'>{{localize 'swnr.sheet.ship.cargo-cost'}}</div>
+        <div class='item-controls'>
+          {{#if @root.editable}}
+            <a
+              class='item-control item-create'
+              title='{{localize "DOCUMENT.Create" type='Item'}}'
+              data-action='resourceCreate'
+            >
+              <i class='fas fa-plus'></i>
+              {{localize 'DOCUMENT.New' type='Cargo'}}
+            </a>
+          {{/if}}
+        </div>
+      </li>
+      {{#each actor.system.cargoCarried as |item id|}}
+        <li
+          class='item flex flexrow'
+          data-rl-idx="{{id}}"
+          data-drag='true'
+        >
+          <div class='item-name'>
+            <input type="text" class="resource-list-val" data-rl-idx="{{id}}"
+              name="resourceList-name-{{id}}" value="{{item.name}}" data-rl-type="name" />
+          </div>
+          <div class='item-name'>
+            <input class="resource-list-val" data-rl-idx="{{id}}"
+              type="number" name="resourceList-value-{{id}}" value="{{item.value}}" data-dtype="Number"
+              data-rl-type="value" />
+          </div>
+          <div class='item-name'>
+            <input class="resource-list-val" data-rl-idx="{{id}}"
+              type="number" name="resourceList-max-{{id}}" value="{{item.max}}" data-dtype="Number"
+              data-rl-type="max" />
+          </div>
+          <div class="item-controls text-right">
+              <a class="item-control" data-action="resourceDelete" data-idx="{{id}}"
+                title='{{localize 'swnr.sheet.delete-item'}}'><i class="fas fa-trash"></i></a>
+          </div>
+        </li>
+        {{/each}}
+      </ol>
+
+    </div>
+    <!-- personal items -->
+    <div>
+      {{> "systems/swnr/templates/actor/fragments/compact-carried-list.hbs" itemList=actor.system.carriedGear actorType=actor.type }}
+    </div>
+  </div>
+</section>
