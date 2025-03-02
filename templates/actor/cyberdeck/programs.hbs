@@ -1,0 +1,10 @@
+<section class='tab programs {{tab.cssClass}}' data-group='primary' data-tab='programs'>
+
+  <div class="flex flex-col"> <!--programs -->
+    {{> "systems/swnr/templates/actor/cyberdeck/programs-list.hbs" itemList=actor.itemTypes.program type='program' subType='running'}}
+    {{> "systems/swnr/templates/actor/cyberdeck/programs-list.hbs" itemList=actor.itemTypes.program type='program' subType='verb'}}
+    {{> "systems/swnr/templates/actor/cyberdeck/programs-list.hbs" itemList=actor.itemTypes.program type='program' subType='subject'}}
+    {{> "systems/swnr/templates/actor/cyberdeck/programs-list.hbs" itemList=actor.itemTypes.program type='program' subType='dataFile'}}
+  </div>
+
+</section>

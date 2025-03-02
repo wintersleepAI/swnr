@@ -23,6 +23,10 @@
     flex: 1 1 auto;
     // font-size: 16px;
   }
+  .item-name-long {
+    flex: 2 1 100px;
+
+  }
 }
 
 // -----------------------------------------
@@ -60,6 +64,12 @@
     }
   }
 
+
+  // Item Name
+  .item-name-long {
+    flex: 2 1 100px;
+  }
+
   // Control Buttons
   .item-controls {
     display: flex;
@@ -68,13 +78,13 @@
     a {
       font-size: 12px;
       text-align: center;
-      margin: 0 6px;
+      margin: 0 2px;
     }
   }
 
   .item-controls-small {
     display: flex;
-    flex: 0 0 20px;
+    flex: 0 0 50px;
     justify-content: flex-end;
     a {
       font-size: 12px;
@@ -82,6 +92,7 @@
       margin: 0 2px;
     }
   }
+
 
   // Individual Item
   .item {
@@ -134,7 +145,7 @@
 }
 
 .alt-row {
-  background: --swnr-c-faint;
+  background:  var(--swnr-c-faint);
 }
 
 // Example style for SWN (can be removed if not needed).
@@ -153,18 +164,37 @@
   padding: 0 8px;
 }
 
+.item-dmg-small {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+
 .item-enc { 
   flex: 0 0 40px;
   padding: 0 8px;
 }
 
+.item-type {
+  flex: 0 0 60px;
+  padding: 0 8px;
+}
+
 .item-controls-small {
-  flex: 0 1 40px;
+  flex: 0 1 50px;
   padding: 0 8px;
 }
 .item-loc {
   flex: 0 0 100px;
   padding: 0 8px;
+}
+
+.toggles {
+  color: var(--swnr-c-faint);
+  margin:0 2px;
+}
+
+.item-toggled {
+  color:  var(--swnr-c-black);
 }
 
 .items-center {

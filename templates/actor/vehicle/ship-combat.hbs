@@ -1,0 +1,47 @@
+<section class='tab ship shipCombat sheet-body {{tab.cssClass}}' data-group='primary' data-tab='shipCombat'>
+  {{#if (eq actor.type 'ship')}}
+  <div class="grid grid-3col">
+    <div class="resource">
+      {{formGroup systemFields.commandPoints value=system.commandPoints localize=true}}
+    </div>
+    <div class="resource">
+      <div class="form-group">
+        <label>{{localize "Ship Actions"}}</label>
+        <select name="shipActions" class="shipActions">
+          <option value=""></option>
+          {{#each actions as | action id| }}
+          <option value="{{@key}}">{{action.title}} ({{action.cp}}) {{action.dept}}</option>
+          {{/each}}                      
+        </select>
+      </div>
+   </div>
+    <div class="resource">
+      {{formGroup systemFields.npcCommandPoints value=system.npcCommandPoints localize=true}}
+    </div>
+  </div>
+  {{/if}}
+  <div class="grid grid-2col">
+    <div class="col">
+      {{#if (eq actor.type 'vehicle')}}
+        {{>
+          "systems/swnr/templates/actor/fragments/crew-list.hbs"
+          type=actor.type crewArray=crewArray
+        }}
+      {{/if}}
+      {{>
+        "systems/swnr/templates/actor/fragments/vehicle-weapon-table.hbs" 
+          type=actor.type actor=actor
+      }}
+    </div>
+    <div class="flex flexcol">
+      {{>
+        "systems/swnr/templates/actor/fragments/vehicle-fitting-table.hbs" 
+          type=actor.type actor=actor
+      }}
+
+      {{>
+        "systems/swnr/templates/actor/fragments/vehicle-defense-table.hbs" 
+          type=actor.type actor=actor
+      }}
+    </div>
+</section>

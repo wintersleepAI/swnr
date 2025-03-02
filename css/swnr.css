@@ -527,6 +527,9 @@
   display: flex;
   flex: 1 1 auto;
 }
+.swnr .items-header .item-name-long {
+  flex: 2 1 100px;
+}
 .swnr .items-list {
   list-style: none;
   margin: 0;
@@ -554,6 +557,9 @@
   white-space: nowrap;
   overflow-x: hidden;
 }
+.swnr .items-list .item-name-long {
+  flex: 2 1 100px;
+}
 .swnr .items-list .item-controls {
   display: flex;
   flex: 0 0 120px;
@@ -562,11 +568,11 @@
 .swnr .items-list .item-controls a {
   font-size: 12px;
   text-align: center;
-  margin: 0 6px;
+  margin: 0 2px;
 }
 .swnr .items-list .item-controls-small {
   display: flex;
-  flex: 0 0 20px;
+  flex: 0 0 50px;
   justify-content: flex-end;
 }
 .swnr .items-list .item-controls-small a {
@@ -619,7 +625,7 @@
   text-align: left;
 }
 .swnr .alt-row {
-  background: --swnr-c-faint;
+  background: var(--swnr-c-faint);
 }
 .swnr .item-formula {
   flex: 0 0 120px;
@@ -633,17 +639,32 @@
   flex: 0 1 80px;
   padding: 0 8px;
 }
+.swnr .item-dmg-small {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
 .swnr .item-enc {
   flex: 0 0 40px;
   padding: 0 8px;
 }
+.swnr .item-type {
+  flex: 0 0 60px;
+  padding: 0 8px;
+}
 .swnr .item-controls-small {
-  flex: 0 1 40px;
+  flex: 0 1 50px;
   padding: 0 8px;
 }
 .swnr .item-loc {
   flex: 0 0 100px;
   padding: 0 8px;
+}
+.swnr .toggles {
+  color: var(--swnr-c-faint);
+  margin: 0 2px;
+}
+.swnr .item-toggled {
+  color: var(--swnr-c-black);
 }
 .swnr .items-center {
   text-align: center;
@@ -826,7 +847,5 @@
   align-items: center;
   cursor: pointer;
 }
-.swnr #features .item-level-center {
-  display: flex;
-  justify-content: center;
-}
+
+/*# sourceMappingURL=swnr.css.map */

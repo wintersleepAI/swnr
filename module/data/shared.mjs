@@ -20,8 +20,8 @@ export default class SWNShared {
     return new fields.SchemaField({
       // Make sure to call new so you invoke the constructor!
       min: new fields.NumberField({ required: true, nullable: false, integer: true, min: -100, initial: initialMin }),
-      max: new fields.NumberField({ required: true, nullable: false, integer: true, initial: initialMax }),
       current: new fields.NumberField({ required: true, nullable: false, min: -100, integer: true, initial: initialCurrent }),
+      max: new fields.NumberField({ required: true, nullable: false, integer: true, initial: initialMax }),
     });
   }
 

@@ -16,8 +16,7 @@
             data-dtype='Number' />
           <span class="small-stat">{{stat.total}}</span>
           <span class='stat-mod rollable' data-action='roll' data-roll='d20+@stats.{{key}}.mod'
-            data-label='{{localize (lookup @root.config.stats key)}}'>{{numberFormat stat.mod decimals=0
-            sign=true}}</span>
+            data-label='{{localize (lookup @root.config.stats key)}}'>{{numberFormat stat.mod decimals=0 sign=true}}</span>
         </div>
         {{/each}}
       </div>
@@ -85,10 +84,10 @@
             </div>
         </div><!-- End of the character effort bar -->
         <div class="grid grid-2col">
-          {{ formInput systemFields.tweak.fields.effort.fields.max value=system.tweak.extraEffort.bonus localize=true }}
+          {{!-- {{ formGroup systemFields.tweak.fields.effort.fields.max value=system.tweak.extraEffort.bonus localize=true }}
           {{ formGroup systemFields.tweak.fields.effort.fields.current value=system.tweak.extraEffort.current localize=true }}
           {{ formGroup systemFields.tweak.fields.effort.fields.scene value=system.tweak.extraEffort.scene localize=true }}
-          {{ formGroup systemFields.tweak.fields.effort.fields.day value=system.tweak.extraEffort.day localize=true }}
+          {{ formGroup systemFields.tweak.fields.effort.fields.day value=system.tweak.extraEffort.day localize=true }} --}}
         </div>
       </div>
       {{/if}}

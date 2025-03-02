@@ -2,83 +2,189 @@
 <header class='sheet-header'>
   <div class="profile-img"><!-- Profile Image -->
 
-    <img
-      class='profile-img'
-      src='{{actor.img}}'
-      data-edit='img'
-      data-action='onEditImage'
-      title='{{actor.name}}'
-      height='100'
-      width='100'
-    />
+    <img class='profile-img' src='{{actor.img}}' data-edit='img' data-action='onEditImage' title='{{actor.name}}'
+      height='100' width='100' />
+
+    <div class="resource-bar"><!-- The character health bar -->
+      <div style="width:{{system.health.percentage}}%" class="health-fill"></div>
+      <div class="text">
+        HP
+        <input type='text' name='system.health.value' value='{{system.health.value}}' data-dtype='Number'
+          class='nested-field short-field align-right current-value' />
+        <p>/</p>
+        <input type='text' name='system.health.max' value='{{system.health.max}}' data-dtype='Number'
+          class='nested-field short-field' />
+      </div>
+    </div>
+
+
+    <div class="resource-bar"><!-- The character armor bar -->
+      <div style="width:{{system.armor.percentage}}%" class="strain-fill"></div>
+      <div class="text">
+        Armor
+        <input type='text' name='system.armor.value' value='{{system.armor.value}}' data-dtype='Number'
+          class='nested-field short-field align-right current-value' />
+        <p>/</p>
+        <input type='text' name='system.armor.max' value='{{system.armor.max}}' data-dtype='Number'
+          class='nested-field short-field' />
+      </div>
+    </div>
 
   </div>
   <div class='header-fields'>
-    <div class='document-name'>
-      <input
-        name='name'
-        type='text'
-        value='{{actor.name}}'
-        placeholder='Name'
-      />
-    </div>
     {{! The grid classes are defined in scss/global/_grid.scss. To use,
-      use both the "grid" and "grid-Ncol" class where "N" can be any number
-      from 1 to 12 and will create that number of columns.  }}
+    use both the "grid" and "grid-Ncol" class where "N" can be any number
+    from 1 to 12 and will create that number of columns. }}
     <div class='resources grid grid-5col'>
-      {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
-      {{formGroup systemFields.health value=system.health localize=true widget=headerWidget}}
-      {{formGroup systemFields.traumaTarget value=system.traumaTarget localize=true widget=headerWidget}}
-      {{formGroup systemFields.armor value=system.armor localize=true widget=headerWidget}}
-      {{formGroup systemFields.speed value=system.speed localize=true widget=headerWidget}}
+      <div class='document-name grid-span-2'>
+        <input name='name' type='text' value='{{actor.name}}' placeholder='Name' />
+      </div>
+      {{!-- Moved to picture overlay bars --}}
+      {{!-- {{formGroup systemFields.health value=system.health localize=true widget=headerWidget}} --}}
+      {{!-- {{formGroup systemFields.armor value=system.armor localize=true widget=headerWidget}} --}}
       {{formGroup systemFields.ac value=system.ac localize=true widget=headerWidget}}
-      {{formGroup systemFields.crew value=system.crew localize=true widget=headerWidget}}
-      {{!--TODO {{formGroup systemFields.crewMembers value=system.crewMembers localize=true widget=headerWidget}} --}}
-      {{formGroup systemFields.tl value=system.tl localize=true widget=headerWidget}}
-      {{!--TODO {{formGroup systemFields.mods value=system.mods localize=true widget=headerWidget}} --}}
-      {{formGroup systemFields.power value=system.power localize=true widget=headerWidget}}
-      {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget}}
-      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget}}
 
+      {{#if (eq gameSettings.useCWNArmor true)}}
+      {{formGroup systemFields.traumaTarget value=system.traumaTarget localize=true widget=headerWidget}}
+      {{/if}}
+
+      {{!--//TODO? {{#if (ne actor.type 'vehicle')}} --}}
+      {{formGroup systemFields.speed value=system.speed localize=true widget=headerWidget}}
+      {{!-- {{/if}} --}}
+
+      {{#if (eq actor.type 'ship')}}
+      {{formGroup systemFields.crew value=system.crew localize=true widget=headerWidget}}
+      {{formGroup systemFields.lifeSupportDays value=system.lifeSupportDays localize=true widget=headerWidget}}
+      {{formGroup systemFields.fuel value=system.fuel localize=true widget=headerWidget}}
+      {{formGroup systemFields.spikeDrive value=system.spikeDrive localize=true widget=headerWidget}}
+      {{/if}}
+      {{#if (eq actor.type 'mech')}}
+      {{formGroup systemFields.power value=system.power localize=true widget=headerWidget readonly=0}}
+      {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget readonly=0}}
+      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget readonly=0}}
+      {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
+      {{formGroup systemFields.maintenanceCost value=system.maintenanceCost localize=true widget=headerWidget}}
+      <div class="resource flex-group-center"><!-- mech class, localize for formGroup header is not working -->
+        <div class="field resource-content">
+          <div class="flex flexrow">
+            {{formInput systemFields.mechClass value=system.mechClass localize=true widget=headerWidget}}
+          </div>
+        </div>
+        <label class='resource-label'>
+          {{localize 'SWN.Actor.Mech.FIELDS.mechClass.label'}}
+        </label>
+      </div>
+      <div class="grid-span-2">
+        {{formGroup systemFields.mechHullType value=system.mechHullType localize=true widget=headerWidget}}
+      </div>
+      {{/if}}
+      {{#if (eq actor.type 'drone')}}
+      {{formGroup systemFields.moveType value=system.moveType localize=true widget=headerWidget}}
+      {{formGroup systemFields.range value=system.range localize=true widget=headerWidget}}
+      {{formGroup systemFields.enc value=system.enc localize=true widget=headerWidget}}
+      {{formGroup systemFields.fittings value=system.fittings localize=true widget=headerWidget readonly=0}}
+      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget readonly=0}}
+      {{!-- {{formGroup systemFields.model value=system.model localize=true widget=headerWidget}} --}}
+      <div class="resource flex-group-center"><!-- mech class, localize for formGroup header is not working -->
+        <div class="field resource-content">
+          <div class="flex flexrow">
+            {{formInput systemFields.model value=system.model localize=true widget=headerWidget}}
+          </div>
+        </div>
+        <label class='resource-label'>
+          {{localize 'SWN.Actor.Drone.FIELDS.model.label'}}
+        </label>
+      </div>
+      {{formGroup systemFields.tl value=system.tl localize=true widget=headerWidget}}
+      {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
+
+      {{/if}}
+      {{#if (eq actor.type 'vehicle')}}
+      <div class="resource flex-group-center"><!-- mech class, localize for formGroup header is not working -->
+        <div class="field resource-content">
+          <div class="flex flexrow">
+            {{formInput systemFields.size value=system.size localize=true widget=headerWidget}}
+          </div>
+        </div>
+        <label class='resource-label'>
+          {{localize 'SWN.Actor.Vehicle.FIELDS.size.label'}}
+        </label>
+      </div>
+      {{formGroup systemFields.power value=system.power localize=true widget=headerWidget readonly=0}}
+      {{formGroup systemFields.mass value=system.mass localize=true widget=headerWidget readonly=0}}
+      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=headerWidget readonly=0}}
+      {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
+      {{formGroup systemFields.kmph value=system.kmph localize=true widget=headerWidget}}
+      {{formGroup systemFields.tonnage value=system.tonnage localize=true widget=headerWidget}}
+      {{formGroup systemFields.tl value=system.tl localize=true widget=headerWidget}}
+      {{formGroup systemFields.crew value=system.crew localize=true widget=headerWidget}}
+      {{/if}}
+
+      {{#if (or
+      (eq actor.type 'drone')
+      (eq actor.type 'mech'))}}
+      <div class="resource flex-group-center"><!-- single pilot -->
+        <div class="field resource-content">
+          <div class="flex flexrow flex-group-center" {{#if system.pilot}} data-action="pilotShow" {{/if}}>
+            {{#if system.pilot}}
+            <a class="crew-show">{{system.pilot.name}}</a>
+            {{/if}}
+          </div>
+        </div>
+        <div class="flex flexrow flex-group-center">
+          <label class='resource-label'>
+            {{localize 'swnr.sheet.mech.pilot'}}
+          </label>
+          <div class="item-controls"> &nbsp;
+            {{#if system.pilot}}
+            <a class="item-control" data-action="pilotRoll" title='{{localize ' swnr.sheet.roll-skill'}}'><i
+                class="fas fa-dice"></i></a>
+            <a class="item-control" data-action="pilotDelete" title='{{localize ' swnr.sheet.delete-item'}}'><i
+                class="fas fa-trash"></i></a>
+            {{/if}}
+          </div>
+        </div>
+      </div> <!-- end single pilot -->
+      {{/if}}
     </div>
     {{#if (eq actor.type 'ship')}}
-      <div class="flex-grow grid grid-cols-7 items-center gap-1">
-        <!--buttons-->
-        <div class="cost flex flex-col items-center ">
-          <a data-action="travel"><i class="fas fa-route  fa-2x travel-button"></i></a>
-          {{localize 'swnr.sheet.ship.travel'}}
-        </div>
+    <div class="flex-grow grid grid-7col items-center gap-1" style="align-items: flex-start;">
+      <!--buttons-->
+      <div class="vehicle-button flex flexcol items-center ">
+        <a data-action="travel"><i class="fas fa-route  fa-2x travel-button"></i></a>
+        {{localize 'swnr.sheet.ship.travel'}}
+      </div>
 
-        <div class="cost flex flex-col items-center ">
-          <a data-action="spike"><i class="fas fa-rocket  fa-2x spike-button"></i></a>
-          {{localize 'swnr.sheet.ship.spike'}}
-        </div>
+      <div class="vehicle-button flex flexcol items-center ">
+        <a data-action="spike"><i class="fas fa-rocket  fa-2x spike-button"></i></a>
+        {{localize 'swnr.sheet.ship.spike'}}
+      </div>
 
-        <div class="cost flex flex-col items-center ">
-          <a data-action="refuel"><i class="fas fa-gas-pump  fa-2x refuel-button"></i></a>
-          {{localize 'swnr.sheet.ship.refuel'}}
-        </div>
+      <div class="vehicle-button flex flexcol items-center ">
+        <a data-action="refuel"><i class="fas fa-gas-pump  fa-2x refuel-button"></i></a>
+        {{localize 'swnr.sheet.ship.refuel'}}
+      </div>
 
-        <div class="cost flex flex-col items-center ">
-          <a data-action="crisis"><i class="fas fa-dumpster-fire  fa-2x crisis-button"></i></a>
-          {{localize 'swnr.sheet.ship.crisis'}}
-        </div>
+      <div class="vehicle-button flex flexcol items-center ">
+        <a data-action="crisis"><i class="fas fa-dumpster-fire  fa-2x crisis-button"></i></a>
+        {{localize 'swnr.sheet.ship.crisis'}}
+      </div>
 
-        <div class="cost flex flex-col items-center ">
-          <a  data-action="failure"><i class="fas fa-heart-broken  fa-2x failure-button"></i></a>
-          {{localize 'swnr.sheet.ship.system-failure'}}
-        </div>
+      <div class="vehicle-button flex flexcol items-center ">
+        <a data-action="failure"><i class="fas fa-heart-broken  fa-2x failure-button"></i></a>
+        {{localize 'swnr.sheet.ship.system-failure'}}
+      </div>
 
-        <div class="cost flex flex-col items-center ">
-          <a data-action="repair"><i class="fas fa-tools  fa-2x repair-button"></i></a>
-          {{localize 'swnr.sheet.ship.repair-all'}}
-        </div>
+      <div class="vehicle-button flex flexcol items-center ">
+        <a data-action="repair"><i class="fas fa-tools  fa-2x repair-button"></i></a>
+        {{localize 'swnr.sheet.ship.repair-all'}}
+      </div>
 
-        <div class="cost flex flex-col items-center ">
-          <a data-action="sensor"><i class="fas fa-satellite-dish  fa-2x sensor-button"></i></a>
-          {{localize 'swnr.sheet.ship.sensor-roll'}}
-        </div>
-      </div><!-- end buttons-->
+      <div class="vehicle-button flex flexcol items-center ">
+        <a data-action="sensor"><i class="fas fa-satellite-dish  fa-2x sensor-button"></i></a>
+        {{localize 'swnr.sheet.ship.sensor-roll'}}
+      </div>
+    </div><!-- end buttons-->
     {{/if}}
   </div>
 </header>
