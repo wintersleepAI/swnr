@@ -80,7 +80,8 @@ const mapToV12Format = (compendium) => {
             systemVersion: '2.0.0',
             createdTime: Date.now(),
             modifiedTime: Date.now(),
-            lastModifiedBy: 'systembuilder9000'
+            // Removing this line due to complaints in build
+            // lastModifiedBy: 'systembuilder9000'
         },
         sort: 0,
         _id: uuid,

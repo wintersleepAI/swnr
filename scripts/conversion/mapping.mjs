@@ -197,7 +197,14 @@ const npc = {
 const power = {
   description: '',
   favorite: false,
-  powerLevel: 1
+  source: "",
+  level: 1,
+  roll: "",
+  save: null,
+  range: "",
+  skill: null,
+  prepared: true,
+  effort: null,
 };
 
 const program = {
