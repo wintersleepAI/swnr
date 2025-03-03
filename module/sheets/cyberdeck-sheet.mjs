@@ -285,7 +285,7 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       const title = `${game.i18n.localize(
         "swnr.chat.skillCheck"
       )}: ${statNameDisply}/${skillName}`;
-      await roll.roll({ async: true });
+      await roll.roll();
       roll.toMessage(
         {
           speaker: { alias: crewActor.name },

@@ -608,7 +608,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       const title = `${game.i18n.localize(
         "swnr.chat.skillCheck"
       )}: ${statNameDisply}/${skillName}`;
-      await roll.roll({ async: true });
+      await roll.roll();
       roll.toMessage(
         {
           speaker: { alias: crewActor.name },
@@ -1282,7 +1282,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     const roll = new Roll(formula, {
       npcCrewSkill,
     });
-    await roll.roll({ async: true });
+    await roll.roll();
     const title = `Rolling generic skill with bonus ${npcCrewSkill}`;
     roll.toMessage(
       {
@@ -1549,7 +1549,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
               skillLevel,
               attrMod,
             });
-            await roll.roll({ async: true });
+            await roll.roll();
             const title = `<span title="${descText}">Rolling ${actionTitle} ${attrName}${action.skill} for ${defaultActor.name}<br>${noteText}${diffText}</span><br>${order}`;
             roll.toMessage(
               {
@@ -1571,7 +1571,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
             skillLevel,
             attrMod,
           });
-          await roll.roll({ async: true });
+          await roll.roll();
           const title = `<span title="${descText}">Rolling ${actionTitle} ${attrName}${action.skill}. No PC/NPC set to role/dept.<br>${noteText}${diffText}</span>`;
           roll.toMessage(
             {

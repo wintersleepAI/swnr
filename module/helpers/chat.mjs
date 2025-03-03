@@ -93,7 +93,7 @@ function getRerollButton(
     const rollMode = game.settings.get("core", "rollMode");
     ev.stopPropagation();
     const roll = new Roll(diceRoll);
-    await roll.roll({ async: true });
+    await roll.roll();
     const flavor = "Reroll";
     const chatTemplate = "systems/swnr/templates/chat/re-roll.hbs";
     const chatDialogData = {
@@ -436,7 +436,7 @@ export async function _onChatCardAction(
       if (t.type == "npc") {
         const skill = t.system.skillBonus;
         const roll = new Roll("2d6 + @skill", { skill });
-        await roll.roll({ async: true });
+        await roll.roll();
         const flavor = game.i18n.format(
           game.i18n.localize("swnr.npc.skill.trained"),
           { actor: t.name }

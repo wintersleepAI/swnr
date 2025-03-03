@@ -313,7 +313,7 @@ export default class SWNCharacter extends SWNActorBase {
         modifier,
         target: target,
       });
-      await roll.roll({ async: true });
+      await roll.roll();
       const success = roll.total ? roll.total >= target - modifier : false;
       const save_text = game.i18n.format(
         success
@@ -345,9 +345,9 @@ export default class SWNCharacter extends SWNActorBase {
         modal: false,
         rejectClose: false,
         ok: {
-            label: game.i18n.localize("swnr.chat.roll"),
-            callback: _doRoll,
-          },
+          label: game.i18n.localize("swnr.chat.roll"),
+          callback: _doRoll,
+        },
       }
     );
   }
@@ -379,7 +379,7 @@ export default class SWNCharacter extends SWNActorBase {
 
       let msg = `Rolling Level ${currentLevel} HP: ${formula}<br>(Rolling a hitdice per level, with adding the CON mod. Each roll cannot be less than 1)<br>`;
       const roll = new Roll(formula);
-      await roll.roll({ async: true });
+      await roll.roll();
       if (roll.total) {
         let hpRoll = roll.total;
         msg += `Got a ${hpRoll}<br>`;

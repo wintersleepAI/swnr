@@ -68,7 +68,7 @@ export default class SWNSkill extends SWNItemBase {
       modifier: modifier,
       stat: statMod,
     });
-    await roll.roll({ async: true });
+    await roll.roll();
     const title = `${game.i18n.localize(
       "swnr.chat.skillCheck"
     )}: ${statShortName}/${skillName}`;

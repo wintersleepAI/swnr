@@ -684,7 +684,7 @@ export class SWNActorSheet extends SWNBaseSheet {
     }
     const formula = new Array(6).fill(dice).join("+");
     const roll = new Roll(formula);
-    await roll.roll({ async: true });
+    await roll.roll();
     const stats = {};
     ["str", "dex", "con", "int", "wis", "cha"].map((k, i) => {
       stats[k] = {
