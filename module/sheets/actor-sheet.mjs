@@ -304,10 +304,10 @@ export class SWNActorSheet extends SWNBaseSheet {
         items.push(i);
       }
       else if (i.type === 'armor') {
-        items.push(i); //TODO fix to new array
+        items.push(i); 
       }
       else if (i.type === 'weapon') {
-        items.push(i); //TODO fix to new array
+        items.push(i); 
       }
       // Append to features.
       else if (i.type === 'feature') {
@@ -318,8 +318,8 @@ export class SWNActorSheet extends SWNBaseSheet {
       }
       // Append to powers.
       else if (i.type === 'power') {
-        if (i.system.powerLevel != undefined) {
-          powers[i.system.powerLevel].push(i);
+        if (i.system.level != undefined) {
+          powers[i.system.level].push(i);
         }
       }
     }

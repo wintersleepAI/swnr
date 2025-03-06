@@ -19,11 +19,11 @@
           {{#if @root.editable}}
             <a
               class='item-control item-create'
-              title='{{localize "DOCUMENT.Create" type='Spell'}}'
+              title='{{localize "DOCUMENT.Create" type='Power'}}'
               data-action='createDoc'
               data-document-class='Item'
               data-type='power'
-              data-system.power-level='{{powerLevel}}'
+              data-system.level='{{powerLevel}}'
             >
               <i class='fas fa-plus'></i>
               {{localize 'SWN.Item.Power.AddLVL' level=powerLevel}}
