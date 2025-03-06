@@ -48,7 +48,10 @@ export class SWNFactionSheet extends SWNBaseSheet {
     },
     description: {
       template: 'systems/swnr/templates/actor/description.hbs',
-    }
+    },
+    assets: {
+      template: 'systems/swnr/templates/actor/faction/assets.hbs',
+    },
   };
 
   /** @override */
@@ -60,6 +63,9 @@ export class SWNFactionSheet extends SWNBaseSheet {
     options.parts = ['header', 'tabs', 'description'];
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
+    
+    options.parts.push('assets');
+    options.defaultTab = 'assets';
   }
 
   /* -------------------------------------------- */
@@ -79,7 +85,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       flags: this.actor.flags,
       // Adding a pointer to CONFIG.SWN
       config: CONFIG.SWN,
-      tabs: this._getTabs(options.parts),
+      tabs: this._getTabs(options.parts, options.defaultTab),
       // Necessary for formInput and formFields helpers
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
@@ -124,11 +130,11 @@ export class SWNFactionSheet extends SWNBaseSheet {
    * @returns {Record<string, Partial<ApplicationTab>>}
    * @protected
    */
-  _getTabs(parts) {
+  _getTabs(parts, defaultTab = 'description') {
     // If you have sub-tabs this is necessary to change
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
-    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'description';
+    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = defaultTab;
     return parts.reduce((tabs, partId) => {
       const tab = {
         cssClass: 'sheet-body',
@@ -148,6 +154,10 @@ export class SWNFactionSheet extends SWNBaseSheet {
           tab.id = 'description';
           tab.label += 'Description';
           break;
+        case 'assets':
+          tab.id = 'assets';
+          tab.label += 'Assets';
+          break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
       tabs[partId] = tab;
@@ -164,8 +174,33 @@ export class SWNFactionSheet extends SWNBaseSheet {
     // Initialize containers.
     // You can just use `this.document.itemTypes` instead
     // if you don't need to subdivide a given type like
-    // this sheet does with spells
-    console.log("TODO: Implement _prepareItems");//TODO
+    // this sheet does with assets
+    
+    const assets = {
+      [CONFIG.SWN.assetCategories.force]: [],
+      [CONFIG.SWN.assetCategories.wealth]: [],
+      [CONFIG.SWN.assetCategories.cunning]: []
+    }
+    
+    for (let i of this.document.items) {
+      if (i.type !== 'asset') {
+        continue;
+      }
+      
+      switch (i.system.category) {
+        case "force":
+          assets[CONFIG.SWN.assetCategories.force].push(i);
+          break;
+        case "wealth":
+          assets[CONFIG.SWN.assetCategories.wealth].push(i);
+          break;
+        case "cunning":
+          assets[CONFIG.SWN.assetCategories.cunning].push(i);
+          break;
+      }
+    }    
+    
+    context.assets = assets;
   }
 
   /**

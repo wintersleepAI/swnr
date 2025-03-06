@@ -1,0 +1,28 @@
+<section 
+        class="tab assets sheet-body {{tab.cssClass}}"
+        data-group="primary"
+        data-tab="assets">
+    <ol class="items-list">
+        {{#each assets as |assets assetCatagory|}}
+            <li class="flex flexrow items-header">
+                <div class="item-name">
+                    {{localize assetCatagory}}
+                </div>
+            </li>
+            {{#each assets as |item id|}}
+                <li
+                        class="item flexrow flexrow"
+                        data-item-id="{{item._id}}"
+                        data-drag="true"
+                        data-document-class="Item">
+                    <div>
+                        <!--                TODO: Make rollable-->
+                        <img src="{{item.img}}" alt="{{item.name}}" width="24" height="24">
+                    </div>
+                    <div>{{item.name}}</div>
+                </li>
+            {{/each}}
+        {{/each}}
+    </ol>
+    
+</section>
