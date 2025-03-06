@@ -3,15 +3,30 @@
         data-group="primary"
         data-tab="assets">
     <ol class="items-list">
-        {{#each assets as |assets assetCatagory|}}
+        {{#each assets as |assets assetCategory|}}
             <li class="flex flexrow items-header">
-                <div class="item-name">{{localize assetCatagory}}</div>
+                <div class="item-name">{{localize assetCategory}}</div>
                 <div class="asset-prop asset-rating">{{localize 'swnr.sheet.faction.rating'}}</div>
                 <div class="asset-prop asset-hp">{{localize 'swnr.sheet.faction.hp'}}</div>
                 <div class="asset-prop asset-location">{{localize 'swnr.sheet.faction.location'}}</div>
                 <div class="asset-prop asset-damage">{{localize 'swnr.sheet.faction.damage'}}</div>
                 <div class="asset-prop asset-counter">{{localize 'swnr.sheet.faction.counter'}}</div>
                 <div class="asset-prop asset-qualities">{{localize 'swnr.sheet.faction.qualities'}}</div>
+                <div class='item-controls'>
+                    {{#if @root.editable}}
+                        <a
+                                class='item-control item-create'
+                                title='{{localize "DOCUMENT.Create" type='asset'}}'
+                                data-action='createDoc'
+                                data-document-class='Item'
+                                data-type='asset'
+                                data-system.category='{{getAssetCategoryKey assetCategory}}'
+                        >
+                            <i class='fas fa-plus'></i>
+                            {{localize 'SWN.Item.Asset.Add'}}
+                        </a>
+                    {{/if}}
+                </div>
             </li>
             {{#each assets as |item id|}}
                 <li
@@ -51,6 +66,22 @@
                         <span title="{{localize 'swnr.sheet.faction.assetQualityTitles.special'}}">
                             {{localize 'swnr.sheet.faction.assetQualities.special'}}
                         </span>
+                        {{/if}}
+                    </div>
+                    <div class="item-controls">
+                        <a 
+                            class="item-controls item-edit"
+                            title="{{localize 'DOCUMENT.Update' type='asset'}}"
+                            data-action="viewDoc">
+                            <i class='fas fa-edit'></i>
+                        </a>
+                        {{#if @root.editable}}
+                            <a
+                                    class='item-control item-delete'
+                                    title='{{localize "DOCUMENT.Delete" type='asset'}}'
+                                    data-action='deleteDoc'>
+                                <i class='fas fa-trash'></i>
+                            </a>
                         {{/if}}
                     </div>
                 </li>

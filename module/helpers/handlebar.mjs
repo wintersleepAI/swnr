@@ -213,4 +213,9 @@ export function registerHandlebarHelpers() {
     };
     return poolMap[pool] || pool;
   });
+  
+  Handlebars.registerHelper('getAssetCategoryKey', function (category) {
+    return Object.keys(CONFIG.SWN.assetCategories)
+        .find(key => CONFIG.SWN.assetCategories[key] === category);
+  })
 }
