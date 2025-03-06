@@ -509,3 +509,18 @@ export async function _onChatCardAction(
     }
   }
 }
+
+export async function welcomeMessage() {
+		const template = "systems/swnr/templates/chat/welcome.hbs";
+
+		const content = await renderTemplate(template, {});
+		const card = {
+			content,
+			user: game.user.id,
+			whisper: [game.user.id],
+			flags: { core: { canPopout: true } },
+			speaker: { alias: "wintersleepAI" },
+		};
+		await ChatMessage.create(card);
+
+}
