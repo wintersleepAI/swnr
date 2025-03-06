@@ -144,11 +144,12 @@ export default class SWNWeapon extends SWNBaseGearItem {
       damageExplain: damageExplainTip,
     };
 
-    console.log("TODO replace settings useTrauma");
     let traumaRollRender = null;
     let traumaDamage = null;
+    let useTrauma = (game.settings.get("swnr", "useTrauma") ? true : false);
+
     if (
-      this.settings?.useTrauma &&
+      useTrauma &&
       this.trauma.die != null &&
       this.trauma.die !== "none" &&
       this.trauma.rating != null
