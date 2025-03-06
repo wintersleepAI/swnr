@@ -92,7 +92,7 @@
       "thumbnail": "systems/swnr/assets/anvil-impact.png"
     }
   ],
-  "version": "2.0.0",
+  "version": "2.0.0-Alpha",
   "compatibility": {
     "minimum": "12.328",
     "verified": "12.328"
@@ -336,10 +336,91 @@
       "type": "Item"
     }
   ],
-  "packFolders": [],
+  "packFolders": [
+    {
+      "name": "Gear",
+      "sorting": "a",
+      "color": "#333333",
+      "packs": [
+        "all-items",
+        "ammo-and-power",
+        "armor",
+        "assets",
+        "communications",
+        "computing-gear",
+        "cyberware",
+        "field-equipment",
+        "heavy",
+        "melee",
+        "pharmaceuticals",
+        "ranged",
+        "tools-and-medical"
+      ]
+    },
+    {
+      "name": "Ship/Drone/Mech/Vehicle",
+      "sorting": "a",
+      "color": "#666666",
+      "packs": [
+        "drone-fittings",
+        "ship-defense",
+        "ship-fitting",
+        "ship-weapon"
+      ]
+    },
+    {
+      "name": "Psionics",
+      "sorting": "a",
+      "color": "#602a64",
+      "packs": [
+        "psi-biopsionics",
+        "psi-metapsionics",
+        "psi-precognition",
+        "psi-telekinesis",
+        "psi-telepathy",
+        "psi-teleportation"
+      ]
+    },
+    {
+      "name": "CWN",
+      "sorting": "a",
+      "color": "#cccccc",
+      "packs": [
+        "cwn-armor",
+        "cwn-cyberware",
+        "cwn-drone-fittings",
+        "cwn-drones",
+        "cwn-edges",
+        "cwn-foci",
+        "cwn-items",
+        "cwn-pharmaceuticals",
+        "cwn-program",
+        "cwn-vehicle-fittings",
+        "cwn-vehicle-weapons",
+        "cwn-weapons"
+      ]
+    }, 
+    {
+      "name": "Bestiary",
+      "sorting": "a",
+      "color": "#999999",
+      "packs": [
+        "bestiary",
+        "sample-ships"
+      ]
+    }, 
+    {
+      "name": "Character Options",
+      "sorting": "a",
+      "color": "#AAAAAA",
+      "packs": [
+        "foci"
+      ]
+    }
+  ],
   "socket": false,
-  "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
-  "download": "This must link to a .zip file of the current version",
+  "manifest": "",
+  "download": "",
   "background": "systems/swnr/assets/anvil-impact.png",
   "grid": {
     "type": 1,

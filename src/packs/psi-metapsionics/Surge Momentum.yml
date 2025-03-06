@@ -9,14 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988894
-  modifiedTime: 1739238988894
-  lastModifiedBy: systembuilder9000
+  createdTime: 1741294531355
+  modifiedTime: 1741294531355
 sort: 0
-_id: 15inzwwgbc7gxk40
+_id: gez35le8e3jnck3l
 system:
   description: <p>The metapsion’s abilities can be reinforced with a degree of metadimensional energy that would cause substantial damage to a less adept mind. Particularly weak or unprepared minds might be completely crushed by the force of the adept’s augmented will.</p><p>The adept must Commit Effort for the day when using a power that normally grants its target a saving throw. The target then suffers a penalty equal to the adept’s Metapsionics skill on any saving throw normally granted by the power. If the target’s hit die total or character level is less than half the adept’s level, rounded up, they automatically fail their saving throw.</p>
   favorite: false
-  powerLevel: 1
+  source: metapsionics
+  level: 3
+  roll: ''
+  save: null
+  range: ''
+  skill: null
+  prepared: true
+  effort: day
 effects: []
-_key: '!items!15inzwwgbc7gxk40'
+_key: '!items!gez35le8e3jnck3l'

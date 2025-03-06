@@ -417,7 +417,7 @@ export async function _onChatCardAction(
       //return (button.disabled = false);
     }
     for (const t of targets) {
-      await t.rollSave(button.dataset.save);
+      await t.system.rollSave(button.dataset.save);
     }
   } else if (action === "skill") {
     if (!targets.length) {
@@ -508,4 +508,19 @@ export async function _onChatCardAction(
       }
     }
   }
+}
+
+export async function welcomeMessage() {
+		const template = "systems/swnr/templates/chat/welcome.hbs";
+
+		const content = await renderTemplate(template, {});
+		const card = {
+			content,
+			user: game.user.id,
+			whisper: [game.user.id],
+			flags: { core: { canPopout: true } },
+			speaker: { alias: "wintersleepAI" },
+		};
+		await ChatMessage.create(card);
+
 }

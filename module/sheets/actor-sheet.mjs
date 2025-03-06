@@ -107,6 +107,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     },
     compactArmorList: {
       template: 'systems/swnr/templates/actor/fragments/compact-armor-list.hbs',
+    },
+    compactAbilitiesList: {
+      template: 'systems/swnr/templates/actor/fragments/compact-abilities-list.hbs',
     }
   };
 
@@ -301,10 +304,10 @@ export class SWNActorSheet extends SWNBaseSheet {
         items.push(i);
       }
       else if (i.type === 'armor') {
-        items.push(i); //TODO fix to new array
+        items.push(i); 
       }
       else if (i.type === 'weapon') {
-        items.push(i); //TODO fix to new array
+        items.push(i); 
       }
       // Append to features.
       else if (i.type === 'feature') {
@@ -315,8 +318,8 @@ export class SWNActorSheet extends SWNBaseSheet {
       }
       // Append to powers.
       else if (i.type === 'power') {
-        if (i.system.powerLevel != undefined) {
-          powers[i.system.powerLevel].push(i);
+        if (i.system.level != undefined) {
+          powers[i.system.level].push(i);
         }
       }
     }
@@ -338,6 +341,16 @@ export class SWNActorSheet extends SWNBaseSheet {
       if ((a.system.type || 0) > (b.system.type || 0)) { return 1; }
       return 0;
     });
+
+    if (this.actor.type === "npc") { 
+      const abilities = []
+      for (let i of this.document.items) {
+        if (i.type === 'power' || i.type === 'feature' || i.type === 'cyberware') {
+          abilities.push(i);
+        }
+      }
+      context.abilities = abilities;
+    }
   }
 
   /**

@@ -12,7 +12,7 @@ import { SWNFactionSheet } from './sheets/faction-sheet.mjs';
 import { SWN } from './helpers/config.mjs';
 import { registerSettings } from './helpers/register-settings.mjs';
 import { registerHandlebarHelpers } from './helpers/handlebar.mjs';
-import { chatListeners } from './helpers/chat.mjs';
+import { chatListeners, welcomeMessage } from './helpers/chat.mjs';
 
 // Import DataModel classes
 import * as models from './data/_module.mjs';
@@ -162,6 +162,9 @@ Hooks.once('ready', function () {
     migrations.migrateWorld(storedVersion);
     game.settings.set('swnr', 'systemMigrationVersion', currentVersion);
   }
+  welcomeMessage();
+
+  
 });
 
 /* -------------------------------------------- */

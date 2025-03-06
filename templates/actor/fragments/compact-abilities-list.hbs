@@ -1,0 +1,50 @@
+    <ol class='items-list'>
+      <li class='flex flexrow items-header'>
+        <div class='item-name item-name-long'>{{ localize 'swnr.npc.abilities'}}</div>
+        <div class='item-controls-small'>
+        </div>
+      </li>
+      {{#each itemList as |item id|}}
+        <li
+          class='item flex flexrow'
+          data-item-id='{{item._id}}'
+          data-drag='true'
+          data-document-class='Item'
+        >
+          <div class='item-name item-name-long'>
+            <div class='item-image'>
+              <a class='rollable' data-roll-type='item' data-action='roll'>
+                <img
+                  src='{{item.img}}'
+                  title='{{item.name}}'
+                  width='24'
+                  height='24'
+                />
+              </a>
+            </div>
+
+            <div>{{item.name}}
+            </div>
+          </div>
+          <div class='item-controls-small'>
+            <a
+              class='item-control item-edit'
+              title='{{localize "DOCUMENT.Update" type='Item'}}'
+              data-action='viewDoc'
+            >
+              <i class='fas fa-edit'></i>
+            </a>
+            {{#if @root.editable}}
+              <a
+                class='item-control item-delete'
+                title='{{localize "DOCUMENT.Delete" type='Item'}}'
+                data-action='deleteDoc'
+              >
+                <i class='fas fa-trash'></i>
+              </a>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+
+    </ol>

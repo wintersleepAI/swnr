@@ -24,6 +24,8 @@ SWN.statAbbreviations = {
 
 SWN.maxTL = 6;
 
+SWN.maxPowerLevel = 5;
+
 SWN.itemLocations = {
   readied: 'swnr.item.locationReadied', 
   stowed: 'swnr.item.locationStowed', 
@@ -58,6 +60,12 @@ SWN.saveTypes = {
   mental: 'swnr.sheet.saves.mental',
   evasion: 'swnr.sheet.saves.evasion',
   luck: 'swnr.sheet.saves.luck',
+}
+
+SWN.effortDurationTypes = {
+  scene: 'swnr.effort.scene',
+  day: 'swnr.effort.day',
+  current: 'swnr.effort.current',
 }
 
 SWN.cyberTypes = {

@@ -50,6 +50,12 @@ export class SWNItem extends Item {
    */
   async roll(event) {
     const item = this;
+    // hack check do roll for items that have roll attribute 
+    if (typeof this.system.doRoll == "function" ){
+      this.system.doRoll(event?.shiftKey);
+      return;
+    }
+    
     // If the item has a roll function, call it and return.
     if (typeof this.system.roll == "function" ){
       this.system.roll(event?.shiftKey);
