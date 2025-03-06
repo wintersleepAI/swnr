@@ -417,7 +417,7 @@ export async function _onChatCardAction(
       //return (button.disabled = false);
     }
     for (const t of targets) {
-      await t.rollSave(button.dataset.save);
+      await t.system.rollSave(button.dataset.save);
     }
   } else if (action === "skill") {
     if (!targets.length) {
