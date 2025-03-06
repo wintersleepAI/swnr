@@ -31,14 +31,15 @@ export function headerFieldWidget(field, _groupConfig, inputConfig) {
       const val = inputConfig.value[key];
       let subInput = value.toInput({ value: val, localize: _groupConfig.localize });
       subInput.classList.add("nested-field", "header");
-      if (readOnly == count++) {
+      if (readOnly == count) {
         subInput.setAttribute("readonly", true);
         subInput.classList.add("readonly");
       }
       input.appendChild(subInput);
-      if (count++ <= fieldCount) {
+      if (count < fieldCount-1) {
         input.appendChild(spanSep.cloneNode(true));
       }
+      count++;
     }
   } else {
     input = field.toInput({ value: inputConfig.value });
@@ -99,14 +100,15 @@ export function groupFieldWidget(field, _groupConfig, inputConfig) {
       const val = inputConfig.value[key];
       let subInput = value.toInput({ value: val });
       subInput.classList.add("sub-field");
-      if (readOnly == count++) {
+      if (readOnly == count) {
         subInput.setAttribute("readonly", true);
         subInput.classList.add("readonly");
       }
       input.appendChild(subInput);
-      if (count++ <= fieldCount) {
+      if (count < fieldCount-1) {
         input.appendChild(spanSep.cloneNode(true));
       }
+      count++;
     }
   } else {
     input = field.toInput({ value: inputConfig.value });

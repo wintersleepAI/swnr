@@ -9,14 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988926
-  modifiedTime: 1739238988926
-  lastModifiedBy: systembuilder9000
+  createdTime: 1741294531396
+  modifiedTime: 1741294531396
 sort: 0
-_id: bkovf1v7a3tfogsu
+_id: s5lzgkgy3d05k8h6
 system:
   description: <p>The psychic can instinctively micro-teleport away from incoming danger. As an On Turn action they may Commit Effort to begin shifting their spatial position away from attacks, gaining a base Armor Class of 20 so long as the Effort remains Committed. This Armor Class is not modified by armor, shields, or Dexterity modifiers, and the micro-jumps do not significantly move the psychic from their current location. While <em>Stutterjump</em> is active, as an Instant action the adept may Commit Effort for the day to negate a successful hit by a weapon attack, even after damage has been rolled. This reflexive defensive jump may be used only once per day and leaves the psychic just outside the radius of explosions or other area-effect attacks.</p>
   favorite: false
-  powerLevel: 1
+  source: teleportation
+  level: 3
+  roll: ''
+  save: null
+  range: ''
+  skill: null
+  prepared: true
+  effort: current
 effects: []
-_key: '!items!bkovf1v7a3tfogsu'
+_key: '!items!s5lzgkgy3d05k8h6'

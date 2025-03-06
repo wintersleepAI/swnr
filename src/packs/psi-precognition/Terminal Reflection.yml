@@ -9,14 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988902
-  modifiedTime: 1739238988902
-  lastModifiedBy: systembuilder9000
+  createdTime: 1741294531367
+  modifiedTime: 1741294531367
 sort: 0
-_id: fs1xm5vz9mh1w4k9
+_id: vmq3j1rcy8hq1s8s
 system:
   description: <p>The psychic’s <em>Oracle</em> power automatically triggers as an Instant action moments before some unexpected danger or ambush, giving the precog a brief vision of the impending hazard. This warning comes just in time to avoid springing a trap or to negate combat surprise for the precog and their companions. If the psychic does not immediately Commit Effort for the day, this sense goes numb and this technique cannot be used for the rest of the day.</p>
   favorite: false
-  powerLevel: 1
+  source: precognition
+  level: 1
+  roll: ''
+  save: null
+  range: ''
+  skill: null
+  prepared: true
+  effort: day
 effects: []
-_key: '!items!fs1xm5vz9mh1w4k9'
+_key: '!items!vmq3j1rcy8hq1s8s'

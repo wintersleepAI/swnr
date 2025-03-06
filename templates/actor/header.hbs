@@ -203,30 +203,6 @@
       {{/if}}
 
       {{formGroup systemFields.access value=system.access localize=true widget=headerWidget readonly=1}}
-
-{{!-- 
-      <div class="resource flex-group-center"><!-- access testing max bug -->
-          <div class="field resource-content">         
-            <input
-              type='text'
-              name='system.access.value'
-              value='{{system.access.value}}'
-              data-dtype='Number'
-              class='nested-field header'
-            />
-            <span class="nested-sep">/</span>
-            <input
-              type='text'
-              name='system.access.max'
-              value='{{system.access.max}}'
-              data-dtype='Number'
-              class='nested-field header'
-            />
-          </div>
-          <label class='resource-label'>
-            {{localize 'SWN.Actor.base.FIELDS.access.label'}}          
-          </label>
-      </div> --}}
       
 
       {{#if (eq actor.type 'character')}}
