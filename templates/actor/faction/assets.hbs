@@ -5,9 +5,13 @@
     <ol class="items-list">
         {{#each assets as |assets assetCatagory|}}
             <li class="flex flexrow items-header">
-                <div class="item-name">
-                    {{localize assetCatagory}}
-                </div>
+                <div class="item-name">{{localize assetCatagory}}</div>
+                <div class="asset-prop asset-rating">{{localize 'swnr.sheet.faction.rating'}}</div>
+                <div class="asset-prop asset-hp">{{localize 'swnr.sheet.faction.hp'}}</div>
+                <div class="asset-prop asset-location">{{localize 'swnr.sheet.faction.location'}}</div>
+                <div class="asset-prop asset-damage">{{localize 'swnr.sheet.faction.damage'}}</div>
+                <div class="asset-prop asset-counter">{{localize 'swnr.sheet.faction.counter'}}</div>
+                <div class="asset-prop asset-qualities">{{localize 'swnr.sheet.faction.qualities'}}</div>
             </li>
             {{#each assets as |item id|}}
                 <li
@@ -15,11 +19,40 @@
                         data-item-id="{{item._id}}"
                         data-drag="true"
                         data-document-class="Item">
-                    <div>
-                        <!--                TODO: Make rollable-->
-                        <img src="{{item.img}}" alt="{{item.name}}" width="24" height="24">
+                    <div class="item-name">
+                        <div class="item-img">
+                            <!--                TODO: Make rollable-->
+                            <img src="{{item.img}}" alt="{{item.name}}" width="24" height="24">
+                        </div>
+                        <div>{{item.name}}</div>
                     </div>
-                    <div>{{item.name}}</div>
+                    <div class="asset-prop asset-rating">{{item.system.rating}}</div>
+                    <div class="asset-prop asset-hp">{{item.system.health.value}}/{{item.system.health.max}}</div>
+                    <div class="asset-prop asset-location">{{item.system.location}}</div>
+                    <div class="asset-prop asset-damage">
+                        {{#if item.system.attackDamage}}
+                            {{firstLetter item.system.attackSource }} vs {{firstLetter item.system.attackTarget }}
+                            {{ item.system.attackDamage }}
+                        {{/if}}
+                    </div>
+                    <div class="asset-prop asset-counter">{{item.system.counter}}</div>
+                    <div class="asset-prop asset-qualities">
+                        {{#if item.system.qualities.permission}}
+                            <span title="{{localize 'swnr.sheet.faction.assetQualityTitles.permission'}}">
+                                {{localize 'swnr.sheet.faction.assetQualities.permission'}}
+                            </span>
+                        {{/if}}
+                        {{#if item.system.qualities.action}}
+                            <span title="{{localize 'swnr.sheet.faction.assetQualityTitles.action'}}">
+                                {{localize 'swnr.sheet.faction.assetQualities.action'}}
+                            </span>
+                        {{/if}}
+                        {{#if item.system.qualities.special}}
+                        <span title="{{localize 'swnr.sheet.faction.assetQualityTitles.special'}}">
+                            {{localize 'swnr.sheet.faction.assetQualities.special'}}
+                        </span>
+                        {{/if}}
+                    </div>
                 </li>
             {{/each}}
         {{/each}}

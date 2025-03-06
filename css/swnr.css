@@ -699,6 +699,26 @@
 .swnr .skill-list .trained {
   color: var(--swnr-c-dark);
 }
+.swnr .asset-prop {
+  font-size: 12px;
+  text-align: center;
+}
+.swnr .asset-prop .asset-rating {
+  flex: 0 1 20px;
+  padding: 0 8px;
+}
+.swnr .asset-prop .asset-hp {
+  flex: 0 1 20px;
+  padding: 0 8px;
+}
+.swnr .asset-prop .asset-location {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+.swnr .asset-prop .asset-damage {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
 .swnr .effects-header {
   height: 28px;
   margin: 2px 0;

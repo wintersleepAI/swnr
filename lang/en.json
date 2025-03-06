@@ -1474,6 +1474,11 @@
           "action": "A",
           "special": "S"
         },
+        "assetQualityTitles": {
+          "permission": "Permission",
+          "action": "Action",
+          "special": "Special"
+        },
         "attackSpecial": "Special Attack Note",
         "turnRoll": "On Turn Log/Roll",
         "locationRoll": "Location Note",
@@ -1494,6 +1499,7 @@
         "attack-roll": "Attack Hit Roll",
         "counter-roll": "Counter Hit Roll",
         "damage": "Damage",
+        "counter": "Counter",
         "attack": "Attack",
         "att-damage": "Attack Damage",
         "def-damage": "Counter Damage",
