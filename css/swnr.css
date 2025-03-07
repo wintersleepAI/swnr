@@ -573,6 +573,9 @@
   text-align: center;
   margin: 0 2px;
 }
+.swnr .items-list .item-controls a.item-toggle-prop.on {
+  color: white;
+}
 .swnr .items-list .item-controls-small {
   display: flex;
   flex: 0 0 50px;

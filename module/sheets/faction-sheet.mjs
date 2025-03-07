@@ -25,6 +25,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       createDoc: this._createDoc,
       deleteDoc: this._deleteDoc,
       toggleEffect: this._toggleEffect,
+      toggleProperty: this._toggleProperty,
       roll: this._onRoll,
     },
     // Custom property that's merged into `this.options`
