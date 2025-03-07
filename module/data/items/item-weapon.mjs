@@ -313,7 +313,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const _rollForm = async (_event, button, html) => {
       const modifier = parseInt(button.form.elements.modifier.value);
       const burstFire = (button.form.elements.burstFire?.checked) ? true : false;
-      const skillId = button.form.elements.skill.value || this.skill;
+      const skillId = button.form.elements.skill?.value || this.skill;
 
       if (!actor) {
         console.log("Error actor no longer exists ");
@@ -326,7 +326,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
         skillId
       );
 
-      if (actor?.type == "npc" && html.find('[name="skilled"]')) {
+      if (actor?.type == "npc") {
         const npcSkillMod = button.form.elements.skilled?.checked ? actor.system.skillBonus : 0;
         if (npcSkillMod) skillMod = npcSkillMod;
       } else if (skill) {
