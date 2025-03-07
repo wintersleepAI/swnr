@@ -17,8 +17,11 @@ This is a system re-rewrite of the Stars Without Number Revised system for Found
   - CWN and SWN are both implemented. Much of CWN is enabled through system settings.
   - Characters have a lock button/toggle that is needed to edit skills. Other attributes will go under the locks soon. 
   - Factions are WIP and should not be used yet.
-  - Old worlds should not be migrated yet.
+  - Old game worlds should not be migrated yet.
 
+### Use 
+The background art for the system is taken from the SWN Revised book download and is able to be used per the license file. 
+The artwork is by Grzegorz Pedrycz.
 
 ### Development 
 
@@ -42,12 +45,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/CyborgYeti"><img src="https://avatars.githubusercontent.com/u/4867637?v=4?s=100" width="100px;" alt="IronLlama"/><br /><sub><b>IronLlama</b></sub></a><br /><a href="https://github.com/wintersleepAI/swnr-redux/commits?author=CyborgYeti" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/wintersleepAI"><img src="https://avatars.githubusercontent.com/u/88955427?v=4?s=100" width="100px;" alt="wintersleepAI"/><br /><sub><b>wintersleepAI</b></sub></a><br /><a href="#infra-wintersleepAI" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/wintersleepAI/swnr-redux/commits?author=wintersleepAI" title="Tests">⚠️</a> <a href="https://github.com/wintersleepAI/swnr-redux/commits?author=wintersleepAI" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Sealio956"><img src="https://avatars.githubusercontent.com/u/44585912?v=4?s=100" width="100px;" alt="Sealio"/><br /><sub><b>Sealio</b></sub></a><br /><a href="#infra-Sealio956" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/wintersleepAI/swnr-redux/commits?author=Sealio956" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/CyborgYeti"><img src="https://avatars.githubusercontent.com/u/4867637?v=4?s=100" width="100px;" alt="IronLlama"/><br /><sub><b>IronLlama</b></sub></a><br /><a href="https://github.com/wintersleepAI/swnr-redux/commits?author=CyborgYeti" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/wesleygriffin"><img src="https://avatars.githubusercontent.com/u/6266349?v=4?s=100" width="100px;" alt="Wesley Griffin"/><br /><sub><b>Wesley Griffin</b></sub></a><br /><a href="https://github.com/wintersleepAI/swnr-redux/commits?author=wesleygriffin" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Demonox"><img src="https://avatars.githubusercontent.com/u/189772363?v=4?s=100" width="100px;" alt="Demonox"/><br /><sub><b>Demonox</b></sub></a><br /><a href="#infra-Demonox" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/binary-idiot"><img src="https://avatars.githubusercontent.com/u/13305186?v=4?s=100" width="100px;" alt="Jonah"/><br /><sub><b>Jonah</b></sub></a><br /><a href="#infra-binary-idiot" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/wintersleepAI/swnr-redux/commits?author=binary-idiot" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/wintersleepAI"><img src="https://avatars.githubusercontent.com/u/88955427?v=4?s=100" width="100px;" alt="wintersleepAI"/><br /><sub><b>wintersleepAI</b></sub></a><br /><a href="#infra-wintersleepAI" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/wintersleepAI/swnr-redux/commits?author=wintersleepAI" title="Tests">⚠️</a> <a href="https://github.com/wintersleepAI/swnr-redux/commits?author=wintersleepAI" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/badgkat"><img src="https://avatars.githubusercontent.com/u/109937927?v=4?s=100" width="100px;" alt="badgkat"/><br /><sub><b>badgkat</b></sub></a><br /><a href="https://github.com/wintersleepAI/swnr-redux/commits?author=badgkat" title="Tests">⚠️</a></td>
     </tr>
   </tbody>
