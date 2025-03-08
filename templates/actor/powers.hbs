@@ -74,5 +74,44 @@
     {{/each}}
   </ol>
   {{/if}}
+{{#if system.tweak.showArts}}
+  <section class="art-section">
+    <h3>{{localize "SWN.Item.Art.Arts"}}</h3>
+    {{#if @root.editable}}
+      <a class='item-control item-create'
+         title='{{localize "DOCUMENT.Create" type='Art'}}'
+         data-action='createDoc'
+         data-document-class='Item'
+         data-type='art'>
+         <i class='fas fa-plus'></i>
+         {{localize "SWN.Item.Art.Add"}}
+      </a>
+    {{/if}}
+    <ol class='items-list'>
+      {{#each arts as |art id|}}
+        <li class='item flexrow' data-item-id='{{art._id}}' data-drag='true' data-document-class='Item'>
+          <div class='item-name flexrow'>
+            <div class='item-image'>
+              <a class='rollable' data-roll-type='item' data-action='roll'>
+                <img src='{{art.img}}' title='{{art.name}}' width='24' height='24'/>
+              </a>
+            </div>
+            <div>{{art.name}}</div>
+          </div>
+          <div class='item-controls'>
+            <a class='item-control item-edit' title='{{localize "DOCUMENT.Update" type='Art'}}' data-action='viewDoc'>
+              <i class='fas fa-edit'></i>
+            </a>
+            {{#if @root.editable}}
+              <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='Art'}}' data-action='deleteDoc'>
+                <i class='fas fa-trash'></i>
+              </a>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </ol>
+  </section>
+{{/if}}
 
 </section>

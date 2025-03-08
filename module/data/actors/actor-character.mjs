@@ -63,6 +63,7 @@ export default class SWNCharacter extends SWNActorBase {
       showResourceList: new fields.BooleanField({initial: false}),
       showCyberware: new fields.BooleanField({initial: true}),
       showPowers: new fields.BooleanField({initial: true}),
+      showArts: new fields.BooleanField({initial: false}),
       resourceList: new fields.ArrayField(new fields.SchemaField({
         name: SWNShared.emptyString(),
         value: SWNShared.requiredNumber(0),
@@ -265,7 +266,7 @@ export default class SWNCharacter extends SWNActorBase {
       }
     });
     this.powers = powers;
-      
+    this.arts = this.parent.items.filter((i) => i.type === "art");  
     this.favorites = this.parent.items.filter((i) => i.system["favorite"]);;
     this.readiedWeapons = readiedItems.filter((i) => i.type === "weapon");
     this.readiedArmor = readiedItems.filter((i) => i.type === "armor");

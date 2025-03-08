@@ -77,6 +77,7 @@ Hooks.once('init', function () {
     item: models.SWNItemItem,
     feature: models.SWNFeature,
     power: models.SWNPower,
+    art: models.SWNArt,
     skill: models.SWNSkill,
     armor: models.SWNArmor,
     weapon: models.SWNWeapon,

@@ -168,6 +168,9 @@
             "showPowers": {
               "label": "Show Powers"
             },
+            "showArts": {
+              "label": "Show Arts"
+            },
             "debtDisplay": {
               "label": "Name of Currency 1"
             },
@@ -478,6 +481,33 @@
             "label": "Weight"
           }
         }
+      },
+      "Art": {
+        "FIELDS": {
+          "roll": {
+            "label": "Roll Formula"
+          },
+          "duration": {
+            "label": "Duration"
+          },
+          "range": {
+            "label": "Range"
+          },
+          "save": {
+            "label": "Save"
+          },
+          "skill": {
+            "label": "Skill"
+          },
+          "prepared": {
+            "label": "Prepared"
+          },
+          "effort": {
+            "label": "Effort"
+          }
+        },
+        "Arts": "Arts",
+        "Add": "Add Art"
       },
       "Power": {
         "FIELDS": {
@@ -905,6 +935,7 @@
       "item": "Item",
       "feature": "Focus/Edge/Feature",
       "power": "Power",
+      "art": "Art",
       "skill": "Skill",
       "weapon": "Weapon",
       "armor": "Armor",
@@ -1416,6 +1447,11 @@
           "pax": "Pax",
           "alecto": "Alecto"
         }
+      },
+      "arts":{
+        "duration": "Duration",
+        "roll": "Roll",
+        "range": "Range"
       },
       "vehicle": {
         "tonnage": "Tonnage",

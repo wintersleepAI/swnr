@@ -24,3 +24,4 @@ export { default as SWNAsset } from './items/item-asset.mjs';
 export { default as SWNShipWeapon } from './items/item-ship-weapon.mjs';
 export { default as SWNShipFitting } from './items/item-ship-fitting.mjs';
 export { default as SWNShipDefense } from './items/item-ship-defense.mjs';
+export { default as SWNArt } from './items/item-art.mjs';

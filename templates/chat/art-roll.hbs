@@ -1,0 +1,65 @@
+<div class="chat-card">
+  <h3 title="{{ art.system.description }}">{{ art.name }}</h3>
+
+  <div class="chat-desc">
+    {{#if (wouldTrim art.system.description 200)}}
+      <span class="hiddenShort">
+        {{{trim art.system.description 200}}}
+        <div class="border border-gray-700 placeholder-blue-800 pt-0">
+          <button class="longShowDesc">Show Long Desc.</button>
+        </div>
+      </span>
+      <div class="border border-gray-700 placeholder-blue-800 pt-0">
+        <span style="display:none" class="hiddenLong">
+          {{{ art.system.description }}}
+          <button class="longHideDesc">Hide Long Desc.</button>
+        </span>
+      </div>
+    {{else}}
+      <span>
+        {{{art.system.description }}}
+      </span>
+    {{/if}}
+  </div>
+
+  {{#if art.system.range}}
+    <div>
+      {{localize 'swnr.sheet.arts.range'}}: {{ art.system.range }}
+    </div>
+  {{/if}}
+
+  {{#if art.system.duration}}
+    <div>
+      {{localize 'swnr.sheet.arts.duration'}}: {{ art.system.duration }}
+    </div>
+  {{/if}}
+
+  {{#if art.system.roll}}
+    <span>{{localize 'swnr.sheet.arts.roll'}}:</span>
+    <span class="roll roll-damage">{{{ artRoll }}}</span>
+  {{/if}}
+
+  {{#if art.system.save}}
+    <div class="card-buttons">
+      <button data-action="save" data-save="{{ art.system.save }}">
+        Save {{ art.system.save }}
+      </button>
+    </div>
+  {{/if}}
+
+  {{#if art.system.skill}}
+    <div class="card-buttons">
+      <button data-action="skill" data-skill="{{ art.system.skill }}">
+        {{ art.system.skill }}
+      </button>
+    </div>
+  {{/if}}
+
+  {{#if art.system.effort}}
+    <div class="card-buttons">
+      <button data-action="effort" data-effort="{{ art.system.effort }}">
+        Use {{ art.system.effort }} effort
+      </button>
+    </div>
+  {{/if}}
+</div>

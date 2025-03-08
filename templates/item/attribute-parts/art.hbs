@@ -1,0 +1,14 @@
+
+<section class="tab art {{tab.cssClass}}" data-group="primary" data-tab="attributes">
+  <div class='grid grid-4col'>
+    {{!-- Remove level field since art items are unleveled --}}
+    {{formGroup systemFields.roll value=system.roll localize=true}}
+    {{formGroup systemFields.duration value=system.duration localize=true}}
+    {{formGroup systemFields.save value=system.save localize=true}}
+    {{formGroup systemFields.range value=system.range localize=true}}
+    {{formGroup systemFields.skill value=system.skill localize=true}}
+    {{formGroup systemFields.prepared value=system.prepared localize=true}}
+    {{formGroup systemFields.effort value=system.effort localize=true}}
+    {{formGroup systemFields.source value=system.source localize=true}}
+  </div>
+</section>

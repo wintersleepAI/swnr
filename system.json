@@ -45,6 +45,9 @@
         "power": {
             "htmlFields": ["description"]
         },
+        "art": {
+            "htmlFields": ["description"]
+        },
         "skill": {
             "htmlFields": ["description"]
         },
@@ -429,5 +432,5 @@
     "diagonals": 0
   },
   "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power"
+  "secatsdaryTokenAttribute": "power"
 }

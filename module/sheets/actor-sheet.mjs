@@ -289,6 +289,7 @@ export class SWNActorSheet extends SWNBaseSheet {
     const items = [];
     const features = [];
     const cyberware = [];
+    const arts = [];
     const powers = {
       1: [],
       2: [],
@@ -322,6 +323,9 @@ export class SWNActorSheet extends SWNBaseSheet {
           powers[i.system.level].push(i);
         }
       }
+      else if (i.type === 'art') {
+        arts.push(i);
+      }
     }
 
     for (const s of Object.values(powers)) {
@@ -332,6 +336,7 @@ export class SWNActorSheet extends SWNBaseSheet {
     context.items = items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.features = features.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.powers = powers;
+    context.arts = arts.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     // Sort cyberware by type, with none first
     context.cyberware = cyberware.sort((a, b) => {
       if (a.system.type === "none" && b.system.type !== "none") return -1; // a comes first
@@ -345,7 +350,7 @@ export class SWNActorSheet extends SWNBaseSheet {
     if (this.actor.type === "npc") { 
       const abilities = []
       for (let i of this.document.items) {
-        if (i.type === 'power' || i.type === 'feature' || i.type === 'cyberware') {
+        if (i.type === 'power' || i.type === 'art' || i.type === 'feature' || i.type === 'cyberware') {
           abilities.push(i);
         }
       }
