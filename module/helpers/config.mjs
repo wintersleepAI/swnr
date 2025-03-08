@@ -261,6 +261,7 @@ SWN.defaultImg = {
   armor: "armor-white.svg",
   weapon: "weapon-white.svg",
   power: "psychic-waves-white.svg",
+  art: "art.png",
   skill: "book-white.svg",
   edge: "edge.svg",
   program: "program.svg",
