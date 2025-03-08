@@ -9,11 +9,10 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988495
-  modifiedTime: 1739238988495
-  lastModifiedBy: systembuilder9000
+  createdTime: 1741406949698
+  modifiedTime: 1741406949698
 sort: 0
-_id: 9ak7ujq6wut8evhx
+_id: dcxhg758lokpdqyc
 system:
   health:
     value: 10
@@ -24,7 +23,6 @@ system:
     value: 1
     max: 1
   traumaTarget: 6
-  hitDie: d1
   baseAc: 14
   meleeAc: 10
   ab: 1
@@ -45,7 +43,7 @@ system:
   attacks:
     bonusDamage: 0
     number: 1
-  hitDice: 1d1
+  hitDice: 1
   saves: 15
   moralScore: 8
   reaction: unknown
@@ -135,7 +133,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!9ak7ujq6wut8evhx'
+_key: '!actors!dcxhg758lokpdqyc'
 items:
   - name: D4 Weapon
     type: weapon
@@ -147,11 +145,10 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988495
-      modifiedTime: 1739238988495
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741406949698
+      modifiedTime: 1741406949698
     sort: 0
-    _id: h58jc5xe2guweju7
+    _id: d5wwl8w86rezq0ne
     system:
       description: ''
       favorite: false
@@ -197,7 +194,7 @@ items:
       isTwoHanded: false
       isNonLethal: false
     effects: []
-    _key: '!actors.items!9ak7ujq6wut8evhx.h58jc5xe2guweju7'
+    _key: '!actors.items!dcxhg758lokpdqyc.d5wwl8w86rezq0ne'
   - name: D6 Weapon
     type: weapon
     folder: null
@@ -208,11 +205,10 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988495
-      modifiedTime: 1739238988495
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741406949698
+      modifiedTime: 1741406949698
     sort: 0
-    _id: 6cljtzvj7mzlwovt
+    _id: u65rsl6q938ruhpn
     system:
       description: ''
       favorite: false
@@ -242,7 +238,7 @@ items:
       isTwoHanded: false
       isNonLethal: false
     effects: []
-    _key: '!actors.items!9ak7ujq6wut8evhx.6cljtzvj7mzlwovt'
+    _key: '!actors.items!dcxhg758lokpdqyc.u65rsl6q938ruhpn'
   - name: D8 Weapon
     type: weapon
     folder: null
@@ -253,11 +249,10 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988495
-      modifiedTime: 1739238988495
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741406949698
+      modifiedTime: 1741406949698
     sort: 0
-    _id: 3n596tkvfzhx703w
+    _id: 48tl4fjo5bcrisq9
     system:
       description: ''
       favorite: false
@@ -287,7 +282,7 @@ items:
       isTwoHanded: false
       isNonLethal: false
     effects: []
-    _key: '!actors.items!9ak7ujq6wut8evhx.3n596tkvfzhx703w'
+    _key: '!actors.items!dcxhg758lokpdqyc.48tl4fjo5bcrisq9'
   - name: D10 Weapon
     type: weapon
     folder: null
@@ -298,11 +293,10 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988495
-      modifiedTime: 1739238988495
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741406949698
+      modifiedTime: 1741406949698
     sort: 0
-    _id: g1pb3xb5ouaqcrks
+    _id: cp1bq5b2yinmc0xs
     system:
       description: ''
       favorite: false
@@ -332,7 +326,7 @@ items:
       isTwoHanded: false
       isNonLethal: false
     effects: []
-    _key: '!actors.items!9ak7ujq6wut8evhx.g1pb3xb5ouaqcrks'
+    _key: '!actors.items!dcxhg758lokpdqyc.cp1bq5b2yinmc0xs'
   - name: D12 Weapon
     type: weapon
     folder: null
@@ -343,11 +337,10 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988495
-      modifiedTime: 1739238988495
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741406949698
+      modifiedTime: 1741406949698
     sort: 0
-    _id: 3va1g0j9pk3jb9jp
+    _id: g2opxt9eao074mzp
     system:
       description: ''
       favorite: false
@@ -377,4 +370,4 @@ items:
       isTwoHanded: false
       isNonLethal: false
     effects: []
-    _key: '!actors.items!9ak7ujq6wut8evhx.3va1g0j9pk3jb9jp'
+    _key: '!actors.items!dcxhg758lokpdqyc.g2opxt9eao074mzp'

@@ -9,11 +9,10 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988462
-  modifiedTime: 1739238988462
-  lastModifiedBy: systembuilder9000
+  createdTime: 1741406949662
+  modifiedTime: 1741406949662
 sort: 0
-_id: k1fjo0jrj5lkw9ah
+_id: zgs4ojyylp3yv6p4
 system:
   health:
     value: 10
@@ -24,7 +23,6 @@ system:
     value: 1
     max: 1
   traumaTarget: 6
-  hitDie: d1
   baseAc: 12
   meleeAc: 10
   ab: 0
@@ -45,7 +43,7 @@ system:
   attacks:
     bonusDamage: 0
     number: 1
-  hitDice: 1d1
+  hitDice: 1
   saves: 15
   moralScore: 6
   reaction: unknown
@@ -135,7 +133,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!k1fjo0jrj5lkw9ah'
+_key: '!actors!zgs4ojyylp3yv6p4'
 items:
   - name: Unarmed Attack
     type: weapon
@@ -147,11 +145,10 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988462
-      modifiedTime: 1739238988462
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741406949662
+      modifiedTime: 1741406949662
     sort: 0
-    _id: s09ucvuth4xo7lka
+    _id: xkxl86h9c78lvope
     system:
       description: ''
       favorite: false
@@ -197,4 +194,4 @@ items:
       isTwoHanded: false
       isNonLethal: false
     effects: []
-    _key: '!actors.items!k1fjo0jrj5lkw9ah.s09ucvuth4xo7lka'
+    _key: '!actors.items!zgs4ojyylp3yv6p4.xkxl86h9c78lvope'

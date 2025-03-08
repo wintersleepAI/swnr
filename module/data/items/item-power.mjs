@@ -15,6 +15,7 @@ export default class SWNPower extends SWNItemBase {
       required: true,
       nullable: false,
       integer: true,
+      initial: 1,
       min: 1,
       max: CONFIG.SWN.maxPowerLevel,
       

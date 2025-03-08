@@ -9,11 +9,10 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988484
-  modifiedTime: 1739238988484
-  lastModifiedBy: systembuilder9000
+  createdTime: 1741406949686
+  modifiedTime: 1741406949686
 sort: 0
-_id: 4e0qlfmgqu8dojtz
+_id: 3a16czqn55bppxkl
 system:
   health:
     value: 10
@@ -24,7 +23,6 @@ system:
     value: 1
     max: 1
   traumaTarget: 6
-  hitDie: d3
   baseAc: 14
   meleeAc: 10
   ab: 4
@@ -45,7 +43,7 @@ system:
   attacks:
     bonusDamage: 0
     number: 2
-  hitDice: 1d3
+  hitDice: 3
   saves: 14
   moralScore: 8
   reaction: unknown
@@ -135,7 +133,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!4e0qlfmgqu8dojtz'
+_key: '!actors!3a16czqn55bppxkl'
 items:
   - name: Natural Attack
     type: weapon
@@ -147,11 +145,10 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988484
-      modifiedTime: 1739238988484
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741406949686
+      modifiedTime: 1741406949686
     sort: 0
-    _id: 5crnzhprkfc9gggk
+    _id: 4fmqtiax8ej6qmnp
     system:
       description: ''
       favorite: false
@@ -197,4 +194,4 @@ items:
       isTwoHanded: false
       isNonLethal: false
     effects: []
-    _key: '!actors.items!4e0qlfmgqu8dojtz.5crnzhprkfc9gggk'
+    _key: '!actors.items!3a16czqn55bppxkl.4fmqtiax8ej6qmnp'

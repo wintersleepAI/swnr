@@ -9,11 +9,10 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988477
-  modifiedTime: 1739238988477
-  lastModifiedBy: systembuilder9000
+  createdTime: 1741406949677
+  modifiedTime: 1741406949677
 sort: 0
-_id: g3oupvekzgbfyodg
+_id: ivf3gfzzmb88ercu
 system:
   health:
     value: 10
@@ -24,7 +23,6 @@ system:
     value: 1
     max: 1
   traumaTarget: 6
-  hitDie: d6
   baseAc: 18
   meleeAc: 10
   ab: 8
@@ -45,7 +43,7 @@ system:
   attacks:
     bonusDamage: 0
     number: 2
-  hitDice: 1d6
+  hitDice: 6
   saves: 12
   moralScore: 10
   reaction: unknown
@@ -135,7 +133,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!g3oupvekzgbfyodg'
+_key: '!actors!ivf3gfzzmb88ercu'
 items:
   - name: Plasma
     type: weapon
@@ -147,11 +145,10 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988477
-      modifiedTime: 1739238988477
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741406949677
+      modifiedTime: 1741406949677
     sort: 0
-    _id: 2wgchq2maq7b5duv
+    _id: lpp1vpie4xs6h2ft
     system:
       description: ''
       favorite: false
@@ -197,4 +194,4 @@ items:
       isTwoHanded: false
       isNonLethal: false
     effects: []
-    _key: '!actors.items!g3oupvekzgbfyodg.2wgchq2maq7b5duv'
+    _key: '!actors.items!ivf3gfzzmb88ercu.lpp1vpie4xs6h2ft'

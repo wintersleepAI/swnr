@@ -26,6 +26,7 @@ export default class SWNCharacter extends SWNActorBase {
       }, {})
     );
 
+    schema.hitDie = SWNShared.requiredString("d6");
     schema.level = new fields.SchemaField({
       value: SWNShared.requiredNumber(1),
       exp: SWNShared.requiredNumber(0),
