@@ -137,7 +137,7 @@ export const getGameSettings = function () {
     useHomebrewLuckSave: game.settings.get("swnr", "useHomebrewLuckSave"),
     useRollNPCHD: game.settings.get("swnr", "useRollNPCHD"),
     addShockMessage: game.settings.get("swnr", "addShockMessage"),
-    showTempAttrMod: game.settings.get("swnr", "showTempAttrMod"),
+    //showTempAttrMod: game.settings.get("swnr", "showTempAttrMod"),
     attrRoll: game.settings.get("swnr", "attrRoll"),
     attackRoll: game.settings.get("swnr", "attackRoll"),
     useTrauma: game.settings.get("swnr", "useTrauma"),
