@@ -172,7 +172,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'weapon':
         options.parts.push('attributesWeapons');
-        options.defaultTab = 'attributes';
+        options.defaultTab = 'weapon';
         break;
       case 'armor':
         options.parts.push('attributesArmor');

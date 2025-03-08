@@ -9,11 +9,10 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988479
-  modifiedTime: 1739238988479
-  lastModifiedBy: systembuilder9000
+  createdTime: 1741406949681
+  modifiedTime: 1741406949681
 sort: 0
-_id: eo2bpgmo785izamo
+_id: 9u7pfj6hquc8euth
 system:
   health:
     value: 10
@@ -24,7 +23,6 @@ system:
     value: 1
     max: 1
   traumaTarget: 6
-  hitDie: d2
   baseAc: 15
   meleeAc: 10
   ab: 0
@@ -45,7 +43,7 @@ system:
   attacks:
     bonusDamage: 0
     number: 1
-  hitDice: 1d2
+  hitDice: 2
   saves: 14
   moralScore: 8
   reaction: unknown
@@ -135,7 +133,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!eo2bpgmo785izamo'
+_key: '!actors!9u7pfj6hquc8euth'
 items:
   - name: Crush
     type: weapon
@@ -147,11 +145,10 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988479
-      modifiedTime: 1739238988479
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741406949681
+      modifiedTime: 1741406949681
     sort: 0
-    _id: 8eieetf8pykztim6
+    _id: m2oi1exp3pbght4b
     system:
       description: ''
       favorite: false
@@ -197,4 +194,4 @@ items:
       isTwoHanded: false
       isNonLethal: false
     effects: []
-    _key: '!actors.items!eo2bpgmo785izamo.8eieetf8pykztim6'
+    _key: '!actors.items!9u7pfj6hquc8euth.m2oi1exp3pbght4b'

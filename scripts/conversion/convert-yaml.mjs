@@ -228,8 +228,6 @@ const mapToV12Format = (compendium) => {
             ...outputFormat,
             system: {
                 ...outputFormat.system,
-                hitDice: `1d${compendium.data.hitDice}`,
-                hitDie: `d${compendium.data.hitDice}`,
             }
         }
     }

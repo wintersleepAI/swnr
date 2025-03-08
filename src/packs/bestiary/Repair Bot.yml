@@ -9,11 +9,10 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988497
-  modifiedTime: 1739238988497
-  lastModifiedBy: systembuilder9000
+  createdTime: 1741406949699
+  modifiedTime: 1741406949699
 sort: 0
-_id: hrk82mjlcnfutyxc
+_id: ax586gbbwoyhpwsn
 system:
   health:
     value: 10
@@ -24,7 +23,6 @@ system:
     value: 1
     max: 1
   traumaTarget: 6
-  hitDie: d1
   baseAc: 14
   meleeAc: 10
   ab: 0
@@ -45,7 +43,7 @@ system:
   attacks:
     bonusDamage: 0
     number: 1
-  hitDice: 1d1
+  hitDice: 1
   saves: 15
   moralScore: 8
   reaction: unknown
@@ -135,7 +133,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!hrk82mjlcnfutyxc'
+_key: '!actors!ax586gbbwoyhpwsn'
 items:
   - name: Tool
     type: weapon
@@ -147,11 +145,10 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988497
-      modifiedTime: 1739238988497
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741406949699
+      modifiedTime: 1741406949699
     sort: 0
-    _id: hfm62v0e9t56ipnk
+    _id: 0b528utw49m5xenq
     system:
       description: ''
       favorite: false
@@ -197,4 +194,4 @@ items:
       isTwoHanded: false
       isNonLethal: false
     effects: []
-    _key: '!actors.items!hrk82mjlcnfutyxc.hfm62v0e9t56ipnk'
+    _key: '!actors.items!ax586gbbwoyhpwsn.0b528utw49m5xenq'

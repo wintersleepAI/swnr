@@ -152,7 +152,6 @@ const npc = {
     max: 1
   },
   traumaTarget: 6,
-  hitDie: 'd6',
   baseAc: 10,
   meleeAc: 10,
   ab: 1,
