@@ -215,7 +215,15 @@ async function createDocMacro(data, slot) {
   game.user.assignHotbarMacro(macro, slot);
   return false;
 }
-
+Hooks.once("ready", () => {
+  const originalGetInitiativeRoll = Combatant.prototype.getInitiativeRoll;
+  Combatant.prototype.getInitiativeRoll = function () {
+    if (this.actor?.rollInitiative) {
+      return this.actor.rollInitiative();
+    }
+    return originalGetInitiativeRoll.call(this);
+  };
+});
 /**
  * Create a Macro from an Item drop.
  * Get an existing item macro if one exists, otherwise create a new one.

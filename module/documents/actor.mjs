@@ -49,6 +49,13 @@ export class SWNActor extends Actor {
   * @param {ItemData} itemData  The source item data.
   * @returns {{img: string}}    Candidate item image.
   */
+  rollInitiative(options = {}) {
+    // If advInit flag exists, use it; otherwise default to false.
+    const adv = this.system?.tweak?.advInit || false;
+    const formula = adv ? "2d8kh1 + @stats.dex.mod" : "1d8 + @stats.dex.mod";
+    const roll = new Roll(formula, this.getRollData());
+    return roll;
+  }
   static getDefaultArtwork(itemData) {
     let itemType = itemData.type;
     if (itemType in CONFIG.SWN.defaultImg) {
