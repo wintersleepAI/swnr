@@ -33,6 +33,19 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
     return schema;
   }
 
+  static migrateData(data) {
+
+    if (data.trauma.rating == "none" || data.trauma.rating == "") {
+      data.trauma.rating = null;
+    }
+
+    if (!(data.stat in CONFIG.SWN.stats)) {
+      data.stat = "ask";
+    }
+
+    return data;
+  }
+
   async roll(shiftKey = false) {
     let item = this.parent;
     const actor = item.actor;

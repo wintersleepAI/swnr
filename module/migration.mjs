@@ -41,6 +41,7 @@ async function runMigrationsSequentially(storedVersion) {
  */
 const migrations = {
   "2.0.0": async () => {
+    console.log('Running migration for 2.0.0');
     for (const item of game.items.contents) {
       if (item.type.toLowerCase() === 'focus' || item.type.toLowerCase() === 'edge') {
         const { description = "", level1 = "", level2 = "", type = "feature"} = item.system;

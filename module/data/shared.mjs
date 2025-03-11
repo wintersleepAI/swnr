@@ -70,7 +70,7 @@ export default class SWNShared {
     let required = true;
     let stats = {...CONFIG.SWN.stats};
     if (none_allowed) {
-      //stats["none"] = "";
+      stats["none"] = "swnr.sheet.none";
       required = false;
     }
     if (ask_allowed) {
