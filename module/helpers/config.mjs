@@ -237,6 +237,7 @@ SWN.assetCategories = {
 }
 
 SWN.pool = {
+  "ask": "swnr.sheet.ask",
   "2d6": "2D6",
   "3d6kh2": "3D6",
   "4d6kh2": "4D6"

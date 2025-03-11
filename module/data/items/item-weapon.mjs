@@ -10,7 +10,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
-    schema.stat = SWNShared.stats("dex");
+    schema.stat = SWNShared.stats("dex", false, true);
     schema.secondStat = SWNShared.stats(null, true, false);
     schema.skill = SWNShared.requiredString("ask");
     schema.skillBoostsDamage = new fields.BooleanField({initial: false});
@@ -49,6 +49,19 @@ export default class SWNWeapon extends SWNBaseGearItem {
     schema.isNonLethal = new fields.BooleanField({initial: false});
 
     return schema;
+  }
+
+  static migrateData(data) {
+
+    if (data.trauma.rating == "none" || data.trauma.rating == "") {
+      data.trauma.rating = null;
+    }
+
+    if (!(data.stat in CONFIG.SWN.stats)) {
+      data.stat = "ask";
+    }
+
+    return data;
   }
 
   get canBurstFire() {
