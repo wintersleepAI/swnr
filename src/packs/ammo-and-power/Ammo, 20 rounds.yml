@@ -15,6 +15,10 @@ _id: gi3tzkdqnt0ln758
 system:
   description: 'Ammunition: A few worlds are too primitive or too resource-poor to manufacture ammunition, but the vast majority of worlds provide cartridges in almost every conceivable caliber and make. Most local gunsmiths can load ammunition to any specification required by a buyer.'
   favorite: false
+  ammo:
+    max: 20
+    type: ammo
+    value: 20
   quantity: 1
   bundle:
     amount: 3

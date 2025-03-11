@@ -1,11 +1,21 @@
     <ol class='items-list'>
+      <!-- HEADER ROW -->
       <li class='flex flexrow items-header'>
         <div class='item-name'>{{name}}</div>
         <div class="item-enc"> {{ localize 'swnr.item.enc' }} </div>
         {{#if (eq type "item")}}
           <div class="item-qty"> {{ localize 'swnr.item.qty' }} </div>
         {{/if}}
-        <div class="item-loc"> {{ localize 'swnr.item.location' }} </div>
+        {{!-- If it's "weapon" or "item" and has ammo, show two narrower ammo columns --}}
+        {{#if (and (or (eq type "weapon") (eq type "item")) (ne system.ammo.type "none"))}}
+          <div class="ammo-value-header" style="width: 3em; text-align:center;">
+            {{ localize 'swnr.item.ammo.value' }}
+          </div>
+          <div class="ammo-max-header" style="width: 3em; text-align:center;">
+            {{ localize 'swnr.item.ammo.max' }}
+          </div>
+        {{/if}}
+        <div class="item-loc">{{ localize 'swnr.item.location' }}</div>
         <div class='item-formula'>
           {{#if (eq type "weapon")}}
             {{localize 'SWN.Item.Weapon.FIELDS.damage.label'}}
@@ -38,6 +48,7 @@
           {{/if}}
         </div>
       </li>
+      <!-- ITEM ROWS -->
       {{#each itemList as |item id|}}
         <li
           class='item flex flexrow'
@@ -68,6 +79,21 @@
           {{#if (eq ../type "item")}}
             <div class="item-qty"> {{ item.system.quantity }} </div>
           {{/if}}
+
+          <!-- Ammo fields if item has ammo.type != "none" -->
+          {{#if (and (or (eq item.type "weapon") (eq item.type "item"))
+                      (ne item.system.ammo.type "none"))}}
+            <div class="ammo-fields flexrow" style="gap: 0.3em;">
+              <div class="ammo-value" style="width: 3em; text-align:center;">
+                {{item.system.ammo.value}}
+              </div>
+              <div class="ammo-max" style="width: 3em; text-align:center;">
+                {{item.system.ammo.max}}
+              </div>
+            </div>
+          {{/if}}
+
+          <!-- Location dropdown -->
           <div class="item-loc">
             <select 
               data-item-id="{{item.id}}"
@@ -82,6 +108,8 @@
               {{/select}}
             </select>
           </div>
+          
+          <!-- Formula or damage/AC -->
           <div class='item-formula item-prop'>
             {{#if (eq ../type "weapon")}}
               {{item.system.damage}}
@@ -91,14 +119,14 @@
               {{item.system.rollFormula}}
             {{/if}}
           </div>
+          <!-- Controls -->
           <div class='item-controls'>
             {{#if (eq ../type "weapon")}}
               {{#if (ne item.system.ammo.type "none")}}
                 <a
                   class='item-control item-reload'
                   data-action='reload'
-                  title='{{localize "swnr.sheet.reload-item"}}'
-                >
+                  title='{{localize "swnr.sheet.reload-item"}}'>
                   <i class='fas fa-retweet'></i>
                 </a>
               {{/if}}

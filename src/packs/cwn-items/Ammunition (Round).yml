@@ -17,6 +17,10 @@ system:
   description: Individual rounds are loaded into empty magazines that are specific to individual firearms.
   favorite: false
   quantity: 1
+  ammo:
+    max: 1
+    type: ammo
+    value: 1
   bundle:
     bundled: false
   encumbrance: 0
