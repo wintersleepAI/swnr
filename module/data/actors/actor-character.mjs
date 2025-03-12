@@ -91,12 +91,15 @@ export default class SWNCharacter extends SWNActorBase {
     }
     //Cyberware
     const cyberware = this.parent.items.filter((i) => i.type === "cyberware");
-    let cyberwareStrain = 0;
-    //Sum up cyberware strain. force to number
-    cyberwareStrain = cyberware.reduce(
-      (i, n) => i + Number(n.system.strain),
-      0
-    );
+    console.log("Cyberware items:", cyberware);
+    
+    // Sum up cyberware strain, forcing to number
+    let cyberwareStrain = cyberware.reduce((acc, item) => {
+      console.log("Item strain:", item.system.strain);
+      return acc + Number(item.system.strain);
+    }, 0);
+    
+    console.log("Computed cyberware strain:", cyberwareStrain);
 
     // System Strain
     this.systemStrain.cyberware = cyberwareStrain;
@@ -202,9 +205,14 @@ export default class SWNCharacter extends SWNActorBase {
         1 +
           Math.max(this.stats.con.mod, this.stats.wis.mod) +
           Math.max(0, ...psychicSkills.map((i) => i.system.rank))
-      ) + effort.bonus;
-    effort.value = effort.max - effort.current - effort.scene - effort.day;
-
+      ) +
+      effort.bonus -
+      this.systemStrain.cyberware;
+    
+    // Floor at 0.
+    effort.max = Math.max(0, effort.max);
+    
+    effort.value = effort.max - effort.current - effort.scene - effort.day;      
     // extra effort
     const extraEffort = this.tweak.extraEffort;
     extraEffort.value =
