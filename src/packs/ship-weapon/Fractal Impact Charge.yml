@@ -9,10 +9,40 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989019
-  modifiedTime: 1739238989019
+  createdTime: 1741813405673
+  modifiedTime: 1741813405673
 sort: 0
-_id: bs41ky21snxjn36e
-system: {}
+_id: bgg285ndagk6csp5
+system:
+  description: A spray of penetrator sabots that use fractla surfacing to increase impact. Favored for bomber-class fighter hulls.
+  favorite: false
+  tl: 4
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 200000
+  costMultiplier: false
+  mass: 1
+  massMultiplier: false
+  power: 5
+  powerMultiplier: false
+  minClass: fighter
+  type: ship
+  damage: 2d6
+  ab: 0
+  hardpoint: 1
+  qualities: AP 15
+  ammo:
+    max: 4
+    type: special
+    value: 4
+  trauma:
+    die: 1d6
+    rating: ''
+    vehicle: false
+  range:
+    normal: 1
+    max: 2
+  stat: ask
 effects: []
-_key: '!items!bs41ky21snxjn36e'
+_key: '!items!bgg285ndagk6csp5'

@@ -9,10 +9,40 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988736
-  modifiedTime: 1739238988736
+  createdTime: 1741813405601
+  modifiedTime: 1741813405601
 sort: 0
-_id: gjqpzv082y9qe4yh
-system: {}
+_id: lk7ry559fuhheshz
+system:
+  description: Headshot pods are a family of guided missiles meant for mounted deployment on vehicles or large drones. They always target AC 10 to hit, but require two full consecutive rounds of aiming at a visible target to get a target lock on them and prime for firing on the third round. Any bystanders within 5 meters of the impact take damage as if from a frag grenade. A headshot pod missile costs $2,000.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 20000
+  costMultiplier: false
+  mass: 2
+  massMultiplier: false
+  power: 3
+  powerMultiplier: false
+  minClass: l
+  type: vehicle
+  damage: 4d6
+  ab: 0
+  hardpoint: 1
+  qualities: ''
+  ammo:
+    max: 1
+    type: ammo
+    value: 2000
+  trauma:
+    die: 1d20
+    rating: 4
+    vehicle: true
+  range:
+    max: 2000
+    normal: 1000
+  stat: dex
 effects: []
-_key: '!items!gjqpzv082y9qe4yh'
+_key: '!items!lk7ry559fuhheshz'

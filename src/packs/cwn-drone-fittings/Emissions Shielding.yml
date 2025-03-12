@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988612
-  modifiedTime: 1739238988612
+  createdTime: 1741813405556
+  modifiedTime: 1741813405556
 sort: 0
-_id: vg7upfme1cx4f8nv
-system: {}
+_id: siqdqgtjw8mpeuti
+system:
+  description: The drone is designed to minimize its electromagnetic emissions and thermal signature. Skill checks to spot it with such sensor suffer a -2 penalty.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 0.2
+  costMultiplier: false
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  minClass: fighter
+  type: drone
+  effect: ''
 effects: []
-_key: '!items!vg7upfme1cx4f8nv'
+_key: '!items!siqdqgtjw8mpeuti'

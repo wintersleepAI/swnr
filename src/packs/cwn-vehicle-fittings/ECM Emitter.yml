@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988722
-  modifiedTime: 1739238988722
+  createdTime: 1741813405581
+  modifiedTime: 1741813405581
 sort: 0
-_id: qfc12jwmnhpbvkos
-system: {}
+_id: pl7513ilxpdbzd3r
+system:
+  description: On a successful hit roll by a headshot pod, rocket launcher, or other long-range guided projectile, the driver can make an opposed Int or Dex/Drive skill check against the attacker's combat skill. On a success, the attacker must reroll their hit roll and take the worst result.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 10000
+  costMultiplier: false
+  mass: 0
+  massMultiplier: false
+  power: 2
+  powerMultiplier: false
+  minClass: M
+  type: vehicle
+  effect: Jams incoming missiles
 effects: []
-_key: '!items!qfc12jwmnhpbvkos'
+_key: '!items!pl7513ilxpdbzd3r'

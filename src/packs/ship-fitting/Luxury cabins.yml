@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989006
-  modifiedTime: 1739238989006
+  createdTime: 1741813405657
+  modifiedTime: 1741813405657
 sort: 0
-_id: cdc3nf0t3sux9q91
-system: {}
+_id: awiyd44hwrolvp9x
+system:
+  description: Each time this fitting is selected, 10% of the ship's maximum crew gain access to luxury cabins of spaciousness sufficient to please a wealthy star-farer. This fitting comes with the usual zero-gee athletic courts, decorative fountains, fine-dining, and artistic fittings.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 10000
+  costMultiplier: true
+  mass: 1
+  massMultiplier: true
+  power: 1
+  powerMultiplier: false
+  minClass: frigate
+  type: ship
+  effect: 10% of the max crew get luxurious quarters
 effects: []
-_key: '!items!cdc3nf0t3sux9q91'
+_key: '!items!awiyd44hwrolvp9x'

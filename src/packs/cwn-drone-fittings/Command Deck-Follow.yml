@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988608
-  modifiedTime: 1739238988608
+  createdTime: 1741813405549
+  modifiedTime: 1741813405549
 sort: 0
-_id: phih7ymgiwjp5mnz
-system: {}
+_id: 3f95xxrhownvv2bg
+system:
+  description: The drone is equipped with minimal autonomous pursuit capabilities. As a Main Action, the drone can be ordered to follow a particular visible target at a given distance at either half or full speed. If half speed, it will use its Move action to follow, and full speed will use both Move and Main Actions. Following can be ended as an On Turn command.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 0.1
+  costMultiplier: false
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  minClass: fighter
+  type: drone
+  effect: ''
 effects: []
-_key: '!items!phih7ymgiwjp5mnz'
+_key: '!items!3f95xxrhownvv2bg'

@@ -397,6 +397,78 @@ const weapon = {
   isNonLethal: false
 };
 
+const shipWeapon = {
+  description: '',
+  favorite: false,
+  tl: null,
+  broken: false,
+  destroyed: false,
+  juryRigged: false,
+  cost: 0,
+  costMultiplier: false,
+  mass: 0,
+  massMultiplier: false,
+  power: 0,
+  powerMultiplier: false,
+  minClass: 'fighter', 
+  type: 'ship',
+  damage: '',
+  ab: 0,
+  hardpoint: 1,
+  qualities: '',
+  ammo: {
+    type: 'none',
+    max: 4,
+    value: 4
+  },
+  trauma: {
+    die: "1d6",
+    rating:"",
+    vehicle: false
+  },
+  range: {
+    normal: 1,
+    max: 2
+  },
+  stat: "ask"
+};
+
+const shipFitting = {
+  description: '',
+  favorite: false,
+  tl: null,
+  broken: false,
+  destroyed: false,
+  juryRigged: false,
+  cost: 0,
+  costMultiplier: false,
+  mass: 0,
+  massMultiplier: false,
+  power: 0,
+  powerMultiplier: false,
+  minClass: 'fighter', 
+  type: 'ship',
+  effect: ""
+};
+
+const shipDefense = {
+  description: '',
+  favorite: false,
+  tl: null,
+  broken: false,
+  destroyed: false,
+  juryRigged: false,
+  cost: 0,
+  costMultiplier: false,
+  mass: 0,
+  massMultiplier: false,
+  power: 0,
+  powerMultiplier: false,
+  minClass: 'fighter', 
+  type: 'ship',
+  effect: ""
+};
+
 export const mapping = {
   item,
   armor,
@@ -411,5 +483,9 @@ export const mapping = {
   ship,
   skill,
   vehicle,
-  weapon
+  weapon,
+  // New mappings:
+  shipWeapon,
+  shipFitting,
+  shipDefense,
 };

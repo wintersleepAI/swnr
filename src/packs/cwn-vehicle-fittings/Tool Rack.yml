@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988735
-  modifiedTime: 1739238988735
+  createdTime: 1741813405599
+  modifiedTime: 1741813405599
 sort: 0
-_id: 1hmqhd6tug16dogc
-system: {}
+_id: zrxtvp3sgmgst1ju
+system:
+  description: Any vehicle can carry a toolkit in the trunk, but this rack is equipped with welders, heavy tooling, winches, and room for up 40 HP worth of spare parts. It can repair any vehicle and can be used as a makeshift workshop for related efforts.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 2500
+  costMultiplier: false
+  mass: 2
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  minClass: M
+  type: vehicle
+  effect: Can repair vehicle or other things
 effects: []
-_key: '!items!1hmqhd6tug16dogc'
+_key: '!items!zrxtvp3sgmgst1ju'

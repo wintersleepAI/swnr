@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988969
-  modifiedTime: 1739238988969
+  createdTime: 1741813405621
+  modifiedTime: 1741813405621
 sort: 0
-_id: 3gjr0osbz8pmg80g
-system: {}
+_id: c7njxn3f0654f7yy
+system:
+  description: The ship has hardened bulkheads, reinforced hatches, and specially-designed automated kill corridors for wiping out intruders. Provided that the ship's bridge is still under control, the operator can prevent entry to the ship by any force that lacks shipyard-grade tools, weapons capable of melting hull plating, or specialized military breaching implements. If intruders do get inside, only well-equipped, specially-trained marines have any real chance of breaching the defences. Ordinary space pirates or more casual invaders have only a 1 in 6 chance of threatening the bridge crew, though they may cause significant damage in their dying.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 25000
+  costMultiplier: true
+  mass: 1
+  massMultiplier: true
+  power: 2
+  powerMultiplier: false
+  minClass: frigate
+  type: ship
+  effect: Makes enemy boarding more difficult
 effects: []
-_key: '!items!3gjr0osbz8pmg80g'
+_key: '!items!c7njxn3f0654f7yy'

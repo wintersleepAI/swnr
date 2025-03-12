@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988615
-  modifiedTime: 1739238988615
+  createdTime: 1741813405563
+  modifiedTime: 1741813405563
 sort: 0
-_id: 67bxzwqkvjul6oy0
-system: {}
+_id: t18vlm14edwkwdxo
+system:
+  description: This unit allows a skilled drone pilot to tweak the combat logic of its onboard weaponry. The drone`s attack gains a hit bonus equal to the pilot`s Drive or Program skill level when firing autonomously; no bonus is given if the pilot is in direct control.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 0.2
+  costMultiplier: false
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  minClass: fighter
+  type: drone
+  effect: ''
 effects: []
-_key: '!items!67bxzwqkvjul6oy0'
+_key: '!items!t18vlm14edwkwdxo'

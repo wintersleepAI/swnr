@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988722
-  modifiedTime: 1739238988722
+  createdTime: 1741813405580
+  modifiedTime: 1741813405580
 sort: 0
-_id: 1amt5hnrl3j5qxki
-system: {}
+_id: bi3j43rnui4et0yo
+system:
+  description: If the vehicle crashes, the occupants can each reroll one failed crash save. If they make any of their saves, their HP can't be reduced below 1 point by the crash.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 2500
+  costMultiplier: false
+  mass: 2
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  minClass: M
+  type: vehicle
+  effect: Protects in case of crash
 effects: []
-_key: '!items!1amt5hnrl3j5qxki'
+_key: '!items!bi3j43rnui4et0yo'

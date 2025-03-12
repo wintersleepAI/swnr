@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988726
-  modifiedTime: 1739238988726
+  createdTime: 1741813405587
+  modifiedTime: 1741813405587
 sort: 0
-_id: ntmfqm1tf6cdbqwr
-system: {}
+_id: 9z1xfje4szltho65
+system:
+  description: Additional power and structural support enable the addition of a hardpoint.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 5000
+  costMultiplier: false
+  mass: 1
+  massMultiplier: false
+  power: 1
+  powerMultiplier: false
+  minClass: M
+  type: vehicle
+  effect: Adds another hardpoint
 effects: []
-_key: '!items!ntmfqm1tf6cdbqwr'
+_key: '!items!9z1xfje4szltho65'
