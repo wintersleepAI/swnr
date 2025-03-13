@@ -9,11 +9,47 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988627
-  modifiedTime: 1739238988627
+  createdTime: 1741850359788
+  modifiedTime: 1741850359788
 sort: 0
-_id: 49gpynb6jf2fwpcd
-system: {}
+_id: e1cvtws9tobq8avo
+system:
+  health:
+    max: 15
+    value: 15
+  cost: 5000
+  ac: 15
+  traumaTarget: 8
+  armor:
+    value: 1
+    max: 1
+  speed: 20
+  crew:
+    min: 1
+    max: 1
+    current: 1
+  crewMembers: []
+  tl: 5
+  description: Lem Robotics has sold more than a million of these wheeled patrol drones to megacorps and governments around the world. Needless to say, a significant number of them have fallen into private hands.
+  mods: ''
+  power:
+    value: 1
+    max: 1
+  mass:
+    value: 1
+    max: 1
+  hardpoints:
+    value: 1
+    max: 1
+  kmph: 0
+  tonnage: 0
+  size: s
+  fittings:
+    max: 5
+  enc: 5
+  range: ''
+  model: primitiveDrone
+  moveType: ground
 effects: []
 prototypeToken:
   name: Lem Robotics Pitbull
@@ -91,4 +127,4 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!49gpynb6jf2fwpcd'
+_key: '!actors!e1cvtws9tobq8avo'

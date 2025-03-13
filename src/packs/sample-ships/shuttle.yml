@@ -9,10 +9,10 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988963
-  modifiedTime: 1739238988963
+  createdTime: 1741824630118
+  modifiedTime: 1741824630118
 sort: 0
-_id: unjuclbjq0guygzr
+_id: myovvkuny6n2i5gw
 system:
   health:
     max: 15
@@ -149,7 +149,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!unjuclbjq0guygzr'
+_key: '!actors!myovvkuny6n2i5gw'
 items:
   - name: Atmospheric Configuration
     type: shipFitting
@@ -162,14 +162,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988963
-      modifiedTime: 1739238988963
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630118
+      modifiedTime: 1741824630118
     sort: 0
-    _id: 1nhpt90iw6scvndq
-    system: {}
+    _id: u0knvctz74od0brz
+    system:
+      description: This fitting must be put in place when the ship is built, and cannot be installed on cruiser-class or larger ships. A ship designed for atmospheric flight can land on most solid or aqueous surfaces.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 5000
+      costMultiplier: true
+      mass: 1
+      massMultiplier: true
+      power: 0
+      powerMultiplier: false
+      minClass: fighter
+      type: ship
+      effect: 'Can land: frigates and fighters only.'
     effects: []
-    _key: '!actors.items!unjuclbjq0guygzr.1nhpt90iw6scvndq'
+    _key: '!actors.items!myovvkuny6n2i5gw.u0knvctz74od0brz'
   - name: Extended life support
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/fuel-tank.svg
@@ -181,11 +195,25 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988963
-      modifiedTime: 1739238988963
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630118
+      modifiedTime: 1741824630118
     sort: 0
-    _id: v4hgue8d1ed8kd0o
-    system: {}
+    _id: 8wu1xroe56k9rru2
+    system:
+      description: The ship can be designed to accommodate a larger number of crew or passengers. Extended life support can be fitted multiple times; each time, the maximum crew rating of the ship increases by 100% of its normal maximum. Thus, a free merchant who installs this twice can have a maximum complement of 18 people.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 5000
+      costMultiplier: true
+      mass: 1
+      massMultiplier: true
+      power: 1
+      powerMultiplier: false
+      minClass: fighter
+      type: ship
+      effect: 'Can land: frigates and fighters only.'
     effects: []
-    _key: '!actors.items!unjuclbjq0guygzr.v4hgue8d1ed8kd0o'
+    _key: '!actors.items!myovvkuny6n2i5gw.8wu1xroe56k9rru2'

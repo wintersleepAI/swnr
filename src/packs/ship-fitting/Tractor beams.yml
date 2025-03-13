@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989015
-  modifiedTime: 1739238989015
+  createdTime: 1741813405668
+  modifiedTime: 1741813405668
 sort: 0
-_id: aw3yof2jt67506pl
-system: {}
+_id: anji05qgb9oovcql
+system:
+  description: Gravitic projectors allow the ship to manipulate objects within its immediate area, pushing, pulling, and sliding objects no larger than a ship of one hull class smaller. Targets with ship-scale propulsion can resist the beams, but lifeboats, individual suit jets, or other smaller propulsors are inadequate. The beam can focus only on one Object at a time but can move it into the ship's cargo bays or hurl it out of the ship's immediate vicinity within three rounds. The beams can only effectively manipulate objects in very low gravity, and not those on the surface of planets or other objects with significant natural gravity.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 10000
+  costMultiplier: true
+  mass: 1
+  massMultiplier: false
+  power: 2
+  powerMultiplier: false
+  minClass: frigate
+  type: ship
+  effect: Manipulate objects in space at a distance
 effects: []
-_key: '!items!aw3yof2jt67506pl'
+_key: '!items!anji05qgb9oovcql'

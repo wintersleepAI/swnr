@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988621
-  modifiedTime: 1739238988621
+  createdTime: 1741813405572
+  modifiedTime: 1741813405572
 sort: 0
-_id: f60wvcttdx7euk9v
-system: {}
+_id: 29w1ykk2llkgxi9w
+system:
+  description: An array of injectors, scalpels, sutures, and trauma chems are built into the drone, allowing it to function as a medkit and make Heal skill checks for a medically-competent pilot or an on-site doc in need of a kit. Such medical efforts require a Main Action from the pilot as usual, and flying drones apply a -2 penalty to the skill check due to their innate instability. Up to six pharmaceutical doses of the pilot`s choice can be loaded into the drone.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 0.25
+  costMultiplier: false
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  minClass: fighter
+  type: drone
+  effect: ''
 effects: []
-_key: '!items!f60wvcttdx7euk9v'
+_key: '!items!29w1ykk2llkgxi9w'

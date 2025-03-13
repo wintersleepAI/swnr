@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989005
-  modifiedTime: 1739238989005
+  createdTime: 1741813405655
+  modifiedTime: 1741813405655
 sort: 0
-_id: cs7v8oyxvg43259d
-system: {}
+_id: impn5ss0g5txbjwf
+system:
+  description: Some ships are designed to produce food and air supplies for the crew. Selecting hydroponic production allows for the indefinite supply of a number of crewmen equal to the ship's maximum crew. This option may be taken multiple times for farm ships, in which case each additional selection doubles the number of people the ship can support.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 10000
+  costMultiplier: true
+  mass: 2
+  massMultiplier: true
+  power: 1
+  powerMultiplier: true
+  minClass: cruiser
+  type: ship
+  effect: Ship produces life support resources
 effects: []
-_key: '!items!cs7v8oyxvg43259d'
+_key: '!items!impn5ss0g5txbjwf'

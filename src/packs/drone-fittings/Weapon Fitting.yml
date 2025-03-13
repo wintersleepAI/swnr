@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988797
-  modifiedTime: 1739238988797
+  createdTime: 1741813405618
+  modifiedTime: 1741813405618
 sort: 0
-_id: f8cp1i9ajya0c06a
-system: {}
+_id: l3upw99za5cntjop
+system:
+  description: The drone can be mounted with 1 encumbrance worth of ranged weaponry, which must be purchased separately. This fitting may be taken more than once to mount more weapons or heavier weapons. The weapon requires one or more ammo units to feed it.
+  favorite: false
+  tl: 3
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 250
+  costMultiplier: true
+  mass: 0
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  minClass: fighter
+  type: drone
+  effect: ''
 effects: []
-_key: '!items!f8cp1i9ajya0c06a'
+_key: '!items!l3upw99za5cntjop'

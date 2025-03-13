@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988725
-  modifiedTime: 1739238988725
+  createdTime: 1741813405585
+  modifiedTime: 1741813405585
 sort: 0
-_id: hnbvpzqi00m2s8e2
-system: {}
+_id: wusdvu75o6jj0u2k
+system:
+  description: Only Small or Medium vehicles can take this option, allowing them to be broken down into easily-portable parts packages. Small vehicles turn into 30 items of Encumbrance and Medium ones into 150. Disassembly takes 30 minutes for a Small vehicle and 3 hours for a Medium one, with reassembly taking four times as long.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 1000
+  costMultiplier: false
+  mass: 2
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  minClass: S
+  type: vehicle
+  effect: Break it down into portable components
 effects: []
-_key: '!items!hnbvpzqi00m2s8e2'
+_key: '!items!wusdvu75o6jj0u2k'

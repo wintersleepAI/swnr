@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988971
-  modifiedTime: 1739238988971
+  createdTime: 1741813405622
+  modifiedTime: 1741813405622
 sort: 0
-_id: 6hxgw9dxqsvxfgq3
-system: {}
+_id: fwqrk9upjlof56vy
+system:
+  description: A high-powered secondary ECM generator can be activated to negate any one otherwise-successful hit against the ship. This generator can be activated after the damage has been rolled, but enemy ships rapidly compensate for the new ECM source, and so the generator can only be used effectively once per engagement.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 25000
+  costMultiplier: true
+  mass: 1
+  massMultiplier: true
+  power: 2
+  powerMultiplier: false
+  minClass: frigate
+  type: ship
+  effect: Negate one successful hit
 effects: []
-_key: '!items!6hxgw9dxqsvxfgq3'
+_key: '!items!fwqrk9upjlof56vy'

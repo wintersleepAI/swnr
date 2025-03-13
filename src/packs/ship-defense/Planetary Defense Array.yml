@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988977
-  modifiedTime: 1739238988977
+  createdTime: 1741813405626
+  modifiedTime: 1741813405626
 sort: 0
-_id: zgbpnumnnasv630r
-system: {}
+_id: 4esir2m150xrys1c
+system:
+  description: The ship is equipped with an array of gravitic braker guns and an upgraded nuke snuffer field. While useless in conventional ship-to-ship combat, the array can deflect or dampen meteor impacts, dropped penetrator rods, or other non-powered bombardment techniques, and the snuffer field is powerful enough to prevent nuclear fission reactions over a hemisphere-sized area. A single ship with a PDA can protect against any natural meteor strikes and deny easy terror bombardment of a planet's population. The PDA cannot fully protect against orbital strike by powered penetrators, but it can nudge them off course and make pinpoint strikes impractical. Most developed planets have much more powerful and effective ground installations, but a PDA-equipped ship is a useful emergency stopgarp for poor or primitive worlds.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 50000
+  costMultiplier: true
+  mass: 2
+  massMultiplier: true
+  power: 4
+  powerMultiplier: false
+  minClass: frigate
+  type: ship
+  effect: Anti-impact and anti-nuke surface defenses
 effects: []
-_key: '!items!zgbpnumnnasv630r'
+_key: '!items!4esir2m150xrys1c'

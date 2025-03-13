@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989003
-  modifiedTime: 1739238989003
+  createdTime: 1741813405653
+  modifiedTime: 1741813405653
 sort: 0
-_id: slm3x1rq1spgkryf
-system: {}
+_id: ssd7hmyac0730sl0
+system:
+  description: Most ships require refueling after each drill jump, no matter the distance. Installing fuel bunkers allows the ship to carry one additional load of fuel. This fitting can be installed multiple times for ships that wish to minimize fueling.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 2500
+  costMultiplier: true
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  minClass: fighter
+  type: ship
+  effect: Adds fuel for one more drill between fuelings
 effects: []
-_key: '!items!slm3x1rq1spgkryf'
+_key: '!items!ssd7hmyac0730sl0'

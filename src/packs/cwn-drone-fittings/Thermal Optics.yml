@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988620
-  modifiedTime: 1739238988620
+  createdTime: 1741813405571
+  modifiedTime: 1741813405571
 sort: 0
-_id: 9fl8svmk1x8wz1u8
-system: {}
+_id: qx60oc3xxnhwunml
+system:
+  description: The drone is equipped with IR optics that can see heat patterns. The drone can function adequately even in complete darkness and grants the pilot a +1 bonus to Notice skill checks where thermal imaging might be useful.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 0.2
+  costMultiplier: false
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  minClass: fighter
+  type: drone
+  effect: ''
 effects: []
-_key: '!items!9fl8svmk1x8wz1u8'
+_key: '!items!qx60oc3xxnhwunml'

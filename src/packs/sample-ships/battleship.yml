@@ -9,10 +9,10 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988948
-  modifiedTime: 1739238988948
+  createdTime: 1741824630096
+  modifiedTime: 1741824630096
 sort: 0
-_id: gr849t0ko9gdi5ls
+_id: 1g98es28uzqu7w3q
 system:
   health:
     max: 120
@@ -149,7 +149,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!gr849t0ko9gdi5ls'
+_key: '!actors!1g98es28uzqu7w3q'
 items:
   - name: Vortex Tunnel Inductor
     type: shipWeapon
@@ -162,14 +162,43 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630096
+      modifiedTime: 1741824630096
     sort: 0
-    _id: jy0ogjvgo7xvk1im
-    system: {}
+    _id: 96x6pk3iq1xrg6sb
+    system:
+      description: A capital-class model of the SIP, a VTI is capable pf incapacitating a cruiser in two hits. Its bulk limits its utility against fighter-class craft, however.
+      favorite: false
+      tl: 4
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 5000000
+      costMultiplier: false
+      mass: 10
+      massMultiplier: false
+      power: 20
+      powerMultiplier: false
+      minClass: capital
+      type: ship
+      damage: 3d20
+      ab: 0
+      hardpoint: 4
+      qualities: AP 20
+      ammo: &ref_0
+        type: none
+        max: 4
+        value: 4
+      trauma: &ref_1
+        die: 1d6
+        rating: ''
+        vehicle: false
+      range: &ref_2
+        normal: 1
+        max: 2
+      stat: ask
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.jy0ogjvgo7xvk1im'
+    _key: '!actors.items!1g98es28uzqu7w3q.96x6pk3iq1xrg6sb'
   - name: Lightning Charge Mantle
     type: shipWeapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
@@ -181,14 +210,35 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630096
+      modifiedTime: 1741824630096
     sort: 0
-    _id: bcdypzfs7ms6cg0z
-    system: {}
+    _id: 0v6ej90j9cpkset0
+    system:
+      description: Modulation of the ship's power core emits a cloak of MES lightning. While larger spike drive craft can shunt the energies away harmlessly, fighter-class ships are almost invariably destroyed if hit.
+      favorite: false
+      tl: 4
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 4000000
+      costMultiplier: false
+      mass: 5
+      massMultiplier: false
+      power: 15
+      powerMultiplier: false
+      minClass: capital
+      type: ship
+      damage: 1d20
+      ab: 0
+      hardpoint: 2
+      qualities: AP 5
+      ammo: *ref_0
+      trauma: *ref_1
+      range: *ref_2
+      stat: ask
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.bcdypzfs7ms6cg0z'
+    _key: '!actors.items!1g98es28uzqu7w3q.0v6ej90j9cpkset0'
   - name: Multifocal Laser
     type: shipWeapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
@@ -200,14 +250,35 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630096
+      modifiedTime: 1741824630096
     sort: 0
-    _id: hz6s2lcojvpy3qj8
-    system: {}
+    _id: m3w261sawemrf6s7
+    system:
+      description: Twinned assay and penetration lasers modulate the frequency of this beam for remarkable armor penetration. These weapons are popular choices for fighters intended for frigate or cruiser engagement.
+      favorite: false
+      tl: 4
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 100000
+      costMultiplier: false
+      mass: 1
+      massMultiplier: false
+      power: 5
+      powerMultiplier: false
+      minClass: fighter
+      type: ship
+      damage: 1d4
+      ab: 0
+      hardpoint: 0
+      qualities: AP 20
+      ammo: *ref_0
+      trauma: *ref_1
+      range: *ref_2
+      stat: ask
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.hz6s2lcojvpy3qj8'
+    _key: '!actors.items!1g98es28uzqu7w3q.m3w261sawemrf6s7'
   - name: Multifocal Laser
     type: shipWeapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
@@ -219,14 +290,35 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630096
+      modifiedTime: 1741824630096
     sort: 0
-    _id: frced0wfaw3eelt1
-    system: {}
+    _id: 58c7cvf8ihn87l93
+    system:
+      description: Twinned assay and penetration lasers modulate the frequency of this beam for remarkable armor penetration. These weapons are popular choices for fighters intended for frigate or cruiser engagement.
+      favorite: false
+      tl: 4
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 100000
+      costMultiplier: false
+      mass: 1
+      massMultiplier: false
+      power: 5
+      powerMultiplier: false
+      minClass: fighter
+      type: ship
+      damage: 1d4
+      ab: 0
+      hardpoint: 0
+      qualities: AP 20
+      ammo: *ref_0
+      trauma: *ref_1
+      range: *ref_2
+      stat: ask
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.frced0wfaw3eelt1'
+    _key: '!actors.items!1g98es28uzqu7w3q.58c7cvf8ihn87l93'
   - name: Gravcannon
     type: shipWeapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
@@ -238,14 +330,35 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630096
+      modifiedTime: 1741824630096
     sort: 0
-    _id: yb3cn2tfs6i0vgva
-    system: {}
+    _id: eb3094n6vzixbyoa
+    system:
+      description: Using much the same principles as man-portable grav weaponry, the gravcannon causes targets to fall apart in a welter of mutually-antagonistic gravitic fields.
+      favorite: false
+      tl: 4
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 2000000
+      costMultiplier: false
+      mass: 4
+      massMultiplier: false
+      power: 15
+      powerMultiplier: false
+      minClass: cruiser
+      type: ship
+      damage: 4d6
+      ab: 6
+      hardpoint: 3
+      qualities: AP 20
+      ammo: *ref_0
+      trauma: *ref_1
+      range: *ref_2
+      stat: ask
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.yb3cn2tfs6i0vgva'
+    _key: '!actors.items!1g98es28uzqu7w3q.eb3094n6vzixbyoa'
   - name: Hardened Polyceramic Overlay
     type: shipDefense
     img: systems/swnr/assets/icons/game-icons.net/item-icons/bubble-field.svg
@@ -257,14 +370,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630096
+      modifiedTime: 1741824630096
     sort: 0
-    _id: xyhvhuus9uzmzb83
-    system: {}
+    _id: k8nyjkflz9m0gex8
+    system:
+      description: A complex glazing process can harden the surface of a ship’s armor to more effectively shed incoming attacks, decreasing the armor-piercing quality of any hit by 5.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 25000
+      costMultiplier: false
+      mass: 2
+      massMultiplier: false
+      power: 0
+      powerMultiplier: false
+      minClass: fighter
+      type: ship
+      effect: ''
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.xyhvhuus9uzmzb83'
+    _key: '!actors.items!1g98es28uzqu7w3q.k8nyjkflz9m0gex8'
   - name: Ablative Hull Compartments
     type: shipDefense
     img: systems/swnr/assets/icons/game-icons.net/item-icons/metal-scales.svg
@@ -276,14 +403,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630096
+      modifiedTime: 1741824630096
     sort: 0
-    _id: d1j5jnk0ndp5wgnl
-    system: {}
+    _id: 0igi2xkk5jh8lrt5
+    system:
+      description: By sacrificing empty hull space in a complex system of ablative blast baffles, a capital-class ship can have a large amount of its mass shot away without actually impinging on its normal function. This grants it a +1 AC bonus and 20 extra maximum hit points.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 100000
+      costMultiplier: true
+      mass: 2
+      massMultiplier: true
+      power: 5
+      powerMultiplier: true
+      minClass: capital
+      type: ship
+      effect: ''
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.d1j5jnk0ndp5wgnl'
+    _key: '!actors.items!1g98es28uzqu7w3q.0igi2xkk5jh8lrt5'
   - name: Spike Drive-3 upgrade
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/rocket-thruster.svg
@@ -295,14 +436,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630096
+      modifiedTime: 1741824630096
     sort: 0
-    _id: w8vfrpjibfp39vy8
-    system: {}
+    _id: bkx0wgcfajm2v938
+    system:
+      description: A ship can improve its standard-issue drive-1 spike drive with additional phase filters and power throughput refinements. A captain needs buy only the final grade of drive desired. He does not have to buy upgrades sequentially. Drives of rating 4 and higher are generally TL5 artifacts that cannot be built most modern worlds.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 20000
+      costMultiplier: true
+      mass: 2
+      massMultiplier: true
+      power: 2
+      powerMultiplier: false
+      minClass: fighter
+      type: ship
+      effect: Upgrade a spike drive to drive-2 rating
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.w8vfrpjibfp39vy8'
+    _key: '!actors.items!1g98es28uzqu7w3q.bkx0wgcfajm2v938'
   - name: Drop Pod
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -314,14 +469,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630096
+      modifiedTime: 1741824630096
     sort: 0
-    _id: 38nfhnxwz527ayns
-    system: {}
+    _id: d1tol7zdwoz0fg1x
+    system:
+      description: Armored and stealthed versions of cargo lighters, these craft are twice as fast, apply a -3 penalty to tracking and targeting skill checks, and can carry up to one hundred troops or passengers. Many are equipped with assorted Heavy weapons to clear the landing zone, and can be treated as flight-capable gravtanks for purposes of combat. This fitting can be purchased multiple times.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 300000
+      costMultiplier: true
+      mass: 2
+      massMultiplier: true
+      power: 0
+      powerMultiplier: false
+      minClass: frigate
+      type: ship
+      effect: Upgrade a spike drive to drive-2 rating
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.38nfhnxwz527ayns'
+    _key: '!actors.items!1g98es28uzqu7w3q.d1tol7zdwoz0fg1x'
   - name: Armory
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -333,14 +502,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630096
+      modifiedTime: 1741824630096
     sort: 0
-    _id: nq21hrpeb6nv4368
-    system: {}
+    _id: nn6x0sq7wmc6rcm6
+    system:
+      description: Rather than maintaining lengthy lists of ship equipment, a captain can simply buy an armory. Ships so equipped have whatever amounts of TL4 military-grade weaponry and armor that a crew might require, and integral maintenance facilities for its upkeep. There is enough gear available to outfit the entire crew for normal use, but giving it away or losing it in use may deplete it.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 10000
+      costMultiplier: true
+      mass: 0
+      massMultiplier: true
+      power: 0
+      powerMultiplier: false
+      minClass: frigate
+      type: ship
+      effect: Weapons and armor for the crew
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.nq21hrpeb6nv4368'
+    _key: '!actors.items!1g98es28uzqu7w3q.nn6x0sq7wmc6rcm6'
   - name: Ship's Locker
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -352,14 +535,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630097
+      modifiedTime: 1741824630097
     sort: 0
-    _id: rxwvtgxdi6ijbhny
-    system: {}
+    _id: ydit0ouuiqcexqur
+    system:
+      description: Much like an armory, this option allows a captain to lay in a general supply of equipment likely to be useful to explorers and spacemen. Any TL4 equipment on the gear list can be found in the ship’s locker in amounts commensurate with the ship’s size. A few guns and some basic armor might be included as well, but for serious armament an armory is required. There is enough gear available to outfit the entire crew for normal use, but giving it away or losing it in use may deplete the locker until it is restocked.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 2000
+      costMultiplier: true
+      mass: 0
+      massMultiplier: true
+      power: 0
+      powerMultiplier: false
+      minClass: frigate
+      type: ship
+      effect: General equipment for the crew
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.rxwvtgxdi6ijbhny'
+    _key: '!actors.items!1g98es28uzqu7w3q.ydit0ouuiqcexqur'
   - name: Boarding Tubes
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -371,14 +568,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630097
+      modifiedTime: 1741824630097
     sort: 0
-    _id: 3b634vgvyclq4zph
-    system: {}
+    _id: ae9akw36annuf4mf
+    system:
+      description: Armored tubes equipped with laser cutter apertures can be used to forcibly invade a hostile ship, provided the target’s engines have been disabled. Ships without boarding tubes have to send invaders across empty space to either make an assault on a doubtless heavily-guarded airlock or cut their way in through the hull with laser cutters and half an hour of work.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 5000
+      costMultiplier: true
+      mass: 1
+      massMultiplier: true
+      power: 0
+      powerMultiplier: false
+      minClass: frigate
+      type: ship
+      effect: Allows boarding of a hostile disabled ship
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.3b634vgvyclq4zph'
+    _key: '!actors.items!1g98es28uzqu7w3q.ae9akw36annuf4mf'
   - name: Fuel Scoops
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/energise.svg
@@ -390,14 +601,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630097
+      modifiedTime: 1741824630097
     sort: 0
-    _id: n37gqsavb1kyp9mq
-    system: {}
+    _id: 2l0lru9sxglp1jbm
+    system:
+      description: Fuel scoops allow for the harvesting and extraction of hydrogen from gas giants or the penumbra of solar bodies. The extraction process requires four days of processing and refinement, but completely refuels the ship. Such fittings are common on explorer craft that cannot expect to find refueling stations.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 5000
+      costMultiplier: true
+      mass: 2
+      massMultiplier: true
+      power: 2
+      powerMultiplier: false
+      minClass: frigate
+      type: ship
+      effect: Ship can scoop fuel from a gas giant or star
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.n37gqsavb1kyp9mq'
+    _key: '!actors.items!1g98es28uzqu7w3q.2l0lru9sxglp1jbm'
   - name: Advanced Nav Computer
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/gps.svg
@@ -409,14 +634,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630097
+      modifiedTime: 1741824630097
     sort: 0
-    _id: mlj6q04oqwhzwwax
-    system: {}
+    _id: tno1ha7d50ram9ti
+    system:
+      description: Forging new spike courses is too much an art to rely on computerized assistance, but an advanced nav computer can help on well-mapped routes. When navigating an interstellar drill course with charts less than a year old, the navigator decreases drill difficulty by 2.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 10000
+      costMultiplier: true
+      mass: 0
+      massMultiplier: true
+      power: 1
+      powerMultiplier: false
+      minClass: frigate
+      type: ship
+      effect: Adds +2 for traveling familiar spike courses
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.mlj6q04oqwhzwwax'
+    _key: '!actors.items!1g98es28uzqu7w3q.tno1ha7d50ram9ti'
   - name: Ship bay (fighter and shuttle)
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -428,11 +667,25 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988948
-      modifiedTime: 1739238988948
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630097
+      modifiedTime: 1741824630097
     sort: 0
-    _id: e5a2wt3m33kaed2c
-    system: {}
+    _id: i49f4xpxmyoxq1ex
+    system:
+      description: These sophisticated docking bays provide all the necessary tools and support for launching a starship from the mother craft. They are rarely seen outside of dedicated capital-class carriers, but some cruisers make room to mount a fighter-class attack shuttle. Each bay allows room for one ship of the appropriate hull class. While the carried ship can support its own crew if necessary, most carriers fold their space wing into the mothership's crew roster. This fitting can be taken multiple times.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 200000
+      costMultiplier: false
+      mass: 2
+      massMultiplier: false
+      power: 0
+      powerMultiplier: false
+      minClass: cruiser
+      type: ship
+      effect: Carrier housing for fighter and shuttle
     effects: []
-    _key: '!actors.items!gr849t0ko9gdi5ls.e5a2wt3m33kaed2c'
+    _key: '!actors.items!1g98es28uzqu7w3q.i49f4xpxmyoxq1ex'

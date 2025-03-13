@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988732
-  modifiedTime: 1739238988732
+  createdTime: 1741813405594
+  modifiedTime: 1741813405594
 sort: 0
-_id: q0hihv684txccthg
-system: {}
+_id: 1hfr5qdrn0mii6ld
+system:
+  description: This fitting adds extra Power in battery capacity and computing support at the cost of an additional Mass burden.
+  favorite: false
+  tl: null
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 5000
+  costMultiplier: false
+  mass: 3
+  massMultiplier: false
+  power: '-4'
+  powerMultiplier: false
+  minClass: M
+  type: vehicle
+  effect: Adds Power at a cost in Mass
 effects: []
-_key: '!items!q0hihv684txccthg'
+_key: '!items!1hfr5qdrn0mii6ld'

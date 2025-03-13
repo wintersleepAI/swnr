@@ -9,10 +9,40 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989024
-  modifiedTime: 1739238989024
+  createdTime: 1741813405679
+  modifiedTime: 1741813405679
 sort: 0
-_id: uqjwq6b4vi4i7wt6
-system: {}
+_id: pfu2wupcxu5c7mq1
+system:
+  description: With superior targeting and a smaller energy drain than a CPC, a plasma beam sacrifices some armor penetration.
+  favorite: false
+  tl: 4
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 700000
+  costMultiplier: false
+  mass: 2
+  massMultiplier: false
+  power: 5
+  powerMultiplier: false
+  minClass: frigate
+  type: ship
+  damage: 3d6
+  ab: 0
+  hardpoint: 2
+  qualities: AP 10
+  ammo:
+    type: none
+    max: 4
+    value: 4
+  trauma:
+    die: 1d6
+    rating: ''
+    vehicle: false
+  range:
+    normal: 1
+    max: 2
+  stat: ask
 effects: []
-_key: '!items!uqjwq6b4vi4i7wt6'
+_key: '!items!pfu2wupcxu5c7mq1'

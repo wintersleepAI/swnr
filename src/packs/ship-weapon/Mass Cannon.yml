@@ -9,10 +9,40 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989022
-  modifiedTime: 1739238989022
+  createdTime: 1741813405677
+  modifiedTime: 1741813405677
 sort: 0
-_id: i556qore9nbggw3w
-system: {}
+_id: hee43f2yrvg3odcs
+system:
+  description: By firing projectiles almost as large as fighter-scale craft, the mass cannon inflicts tremendous damage on a target. Serious ammunition limitations hamper its wider-scale use.
+  favorite: false
+  tl: 4
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 5000000
+  costMultiplier: false
+  mass: 5
+  massMultiplier: false
+  power: 10
+  powerMultiplier: false
+  minClass: capital
+  type: ship
+  damage: 2d20
+  ab: 0
+  hardpoint: 4
+  qualities: AP 20
+  ammo:
+    max: 4
+    type: special
+    value: 4
+  trauma:
+    die: 1d6
+    rating: ''
+    vehicle: false
+  range:
+    normal: 1
+    max: 2
+  stat: ask
 effects: []
-_key: '!items!i556qore9nbggw3w'
+_key: '!items!hee43f2yrvg3odcs'

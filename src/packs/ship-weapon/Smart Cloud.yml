@@ -9,10 +9,40 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989028
-  modifiedTime: 1739238989028
+  createdTime: 1741813405683
+  modifiedTime: 1741813405683
 sort: 0
-_id: u3cw7i1vf2w6n870
-system: {}
+_id: 9tlk2xrhenh73pow
+system:
+  description: A swarm of self-directed microdrones sweeps over the ship. Their integral beam weaponry is too small to damage larger ships, but they can wipe and attacking fighter wave.
+  favorite: false
+  tl: 4
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 2000000
+  costMultiplier: false
+  mass: 5
+  massMultiplier: false
+  power: 10
+  powerMultiplier: false
+  minClass: cruiser
+  type: ship
+  damage: 3d10
+  ab: 0
+  hardpoint: 2
+  qualities: Cloud
+  ammo:
+    type: none
+    max: 4
+    value: 4
+  trauma:
+    die: 1d6
+    rating: ''
+    vehicle: false
+  range:
+    normal: 1
+    max: 2
+  stat: ask
 effects: []
-_key: '!items!u3cw7i1vf2w6n870'
+_key: '!items!9tlk2xrhenh73pow'

@@ -9,10 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988796
-  modifiedTime: 1739238988796
+  createdTime: 1741813405617
+  modifiedTime: 1741813405617
 sort: 0
-_id: 2ob21w0tsa2m3xmm
-system: {}
+_id: r676z91xdvk2lm5t
+system:
+  description: The drone is loaded with a demo charge as per page 69. The operator can trigger it as an attack, but unless they can move the drone in by surprise, the approach will always give onlookers a chance to spot it before it gets within range.
+  favorite: false
+  tl: 3
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 250
+  costMultiplier: true
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  minClass: fighter
+  type: drone
+  effect: ''
 effects: []
-_key: '!items!2ob21w0tsa2m3xmm'
+_key: '!items!r676z91xdvk2lm5t'

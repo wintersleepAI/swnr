@@ -9,10 +9,40 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989030
-  modifiedTime: 1739238989030
+  createdTime: 1741813405686
+  modifiedTime: 1741813405686
 sort: 0
-_id: qxaqa3nayugh1bk6
-system: {}
+_id: w1iq6agbjommsjth
+system:
+  description: Capable of damaging even a battleship, torpedoes are cumbersome, expensive and often the core of a line frigate's armament.
+  favorite: false
+  tl: 4
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 500000
+  costMultiplier: false
+  mass: 3
+  massMultiplier: false
+  power: 10
+  powerMultiplier: false
+  minClass: frigate
+  type: ship
+  damage: 3d8
+  ab: 0
+  hardpoint: 1
+  qualities: AP 20
+  ammo:
+    max: 4
+    type: special
+    value: 4
+  trauma:
+    die: 1d6
+    rating: ''
+    vehicle: false
+  range:
+    normal: 1
+    max: 2
+  stat: ask
 effects: []
-_key: '!items!qxaqa3nayugh1bk6'
+_key: '!items!w1iq6agbjommsjth'

@@ -9,10 +9,40 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989021
-  modifiedTime: 1739238989021
+  createdTime: 1741813405676
+  modifiedTime: 1741813405676
 sort: 0
-_id: rkaefd4u8rlbvj4a
-system: {}
+_id: j25th2p0kysrt2i5
+system:
+  description: A storm of magnetically-accelerated spike charges is almost guaranteed to eradicate any fighter-class craft it hits.
+  favorite: false
+  tl: 4
+  broken: false
+  destroyed: false
+  juryRigged: false
+  cost: 1000000
+  costMultiplier: false
+  mass: 2
+  massMultiplier: false
+  power: 5
+  powerMultiplier: false
+  minClass: frigate
+  type: ship
+  damage: 2d6+2
+  ab: 0
+  hardpoint: 2
+  qualities: Flak, AP 10
+  ammo:
+    max: 5
+    type: special
+    value: 5
+  trauma:
+    die: 1d6
+    rating: ''
+    vehicle: false
+  range:
+    normal: 1
+    max: 2
+  stat: ask
 effects: []
-_key: '!items!rkaefd4u8rlbvj4a'
+_key: '!items!j25th2p0kysrt2i5'
