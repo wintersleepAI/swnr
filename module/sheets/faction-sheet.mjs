@@ -27,6 +27,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       toggleEffect: this._toggleEffect,
       toggleProperty: this._toggleProperty,
       roll: this._onRoll,
+      createBase: this._onAddBase,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -225,6 +226,35 @@ export class SWNFactionSheet extends SWNBaseSheet {
    *   ACTIONS
    *
    **************/
+  
+  static async _onAddBase(event, target){
+    const category = target.dataset?.category;
+    
+    // TODO Localize
+    const _createBase = async (_event, button, _html) => {
+      const hp = parseInt(button.form.elements.hp.value);
+      if (isNaN(hp)) {
+        ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
+        return;
+      }
+      
+      await this.actor.system.addBase(category, hp)
+    }
+    
+    const _proceed = await foundry.applications.api.DialogV2.prompt({
+      window: { title: "Add New Base" },
+      content: `<p>Adding a new base from Expand Influence Action.<br>Select HP (up to Faction max HP). One FacCred per HP.</p>`
+      + `<form></form><label>Base HP</label><input type="text" name="hp"></form>`,
+      modal: false,
+      rejectClose: false,
+      ok: {
+        callback: _createBase,
+        icon: 'fas fa-check',
+        label: 'Expand Influence - New Base'
+      }
+    })
+    
+  }
 
   /** Helper Functions */
 

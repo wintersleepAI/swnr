@@ -817,8 +817,7 @@
           "location": {
             "label": "Location"
           }
-        },
-        "Add": "Add Asset"
+        }
       },
       "vehiclebase": {
         "FIELDS": {
@@ -1514,7 +1513,11 @@
         "unusable": "Unusable",
         "turn": "Start Turn",
         "setHomeworld": "Set the faction homeworld to {name}?",
-        "abandonGoal": "Abandon current goal {name}? Will lose income and no actions this turn/"
+        "abandonGoal": "Abandon current goal {name}? Will lose income and no actions this turn/",
+        "addAsset": "Add Asset",
+        "addBase": "Add Base",
+        "baseHpTooHigh": "Error: HP of new base ({baseHp}) cannot be greater than faction HP ({factionHp})}",
+        "notEnoughFacCredsForBase": "Error: HP of new base ({baseHp}) cannot be greater than facCreds ({facCreds})"
       },
       "ship": {
         "life-support-days": "Life Support Days",

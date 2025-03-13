@@ -63,4 +63,35 @@ export default class SWNFaction extends foundry.abstract
     
     return 0;
   }
+  
+  async addBase(category, hp){
+    if (hp > this.health.max) {
+      ui.notifications?.error(game.i18n.format("swnr.sheet.faction.baseHpTooHigh", {baseHp: hp,  factionHp: this.health.max}));
+      return;
+    }
+    
+    if (hp > this.facCreds) {
+      ui.notifications?.error(game.i18n.format("swnr.sheet.faction.notEnoughFacCredsForBase", {baseHp: hp,  facCreds: this.facCreds}));
+      return;
+    }
+    
+    const newFacCreds = this.facCreds - hp;
+    await this.parent.update({facCreds: newFacCreds});
+    
+    const docData = {
+      name: `Base of Inf. ${category}`,
+      type: 'asset',
+      // TODO Add correct image
+      system: {
+        category: category,
+        baseOfInfluence: true,
+        health: {
+          value: hp, 
+          max: hp
+        }
+      }
+    }
+    
+    await getDocumentClass('Item').create(docData, {parent: this.parent});
+  }
 }
