@@ -211,4 +211,15 @@ export function registerHandlebarHelpers() {
     };
     return poolMap[pool] || pool;
   });
+
+  Handlebars.registerHelper('getStatChoices', function(stats) {
+    const statChoices = {};
+    Object.keys(stats).forEach(key => {
+      const stat = stats[key];
+      const localizedLabel = game.i18n.localize("swnr.stat.long." + key );
+      statChoices[key] = `${localizedLabel} +${stat.mod}`; // Format the string
+    });
+    return statChoices;
+  });
+  
 }

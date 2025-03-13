@@ -568,6 +568,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       actor: crewActor,
       skills: skills,
       isChar,
+      pool: CONFIG.SWN.pool,
     };
     const template = "systems/swnr/templates/dialogs/roll-skill-crew.hbs";
     const html = await renderTemplate(template, dialogData);

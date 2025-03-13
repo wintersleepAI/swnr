@@ -29,7 +29,7 @@
         class=""
       {{/if}}
     >
-      {{selectOptions statChoices selected=skill.system.defaultStat}}
+      {{selectOptions (getStatChoices stats) selected=skill.system.defaultStat}}
     </select>
   </div>
   <div class="flex flexrow">

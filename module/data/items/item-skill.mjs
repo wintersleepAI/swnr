@@ -124,15 +124,6 @@ export default class SWNSkill extends SWNItemBase {
       }
     }
 
-    let stats = actor.system.stats;
-    const statChoices = {};
-
-    Object.keys(stats).forEach(key => {
-      const stat = stats[key];
-      const localizedLabel = game.i18n.localize("swnr.stat.long." + key );
-      statChoices[key] = `${localizedLabel} +${stat.mod}`; // Format the string
-    });
-
     const modifier =
       this.remember && this.remember.modifier
         ? this.remember.modifier
@@ -144,7 +135,7 @@ export default class SWNSkill extends SWNItemBase {
       skill: item,
       modifier,
       pool: CONFIG.SWN.pool,
-      statChoices: statChoices
+      stats: actor.system.stats
     };
 
     const content = await renderTemplate(template, dialogData);
