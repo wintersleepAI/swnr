@@ -34,8 +34,8 @@ SWN.itemLocations = {
 
 SWN.itemQualities = {
   stock: 'swnr.item.quality.stock',
-  makeshift: 'swnr.item.quality.juryRigged',
-  masterwork: 'swnr.item.quality.mastercrafted',
+  juryRigged: 'swnr.item.quality.juryRigged',
+  mastercrafted: 'swnr.item.quality.mastercrafted',
 }
 
 SWN.ammoTypes = {
