@@ -168,8 +168,6 @@ SWN.skills = {
     "culture-spacer",
     "culture-traveller",
     "culture",
-    "culture",
-    "culture",
     "exosuit",
     "gambling",
     "history",
