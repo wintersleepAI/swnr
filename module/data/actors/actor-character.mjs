@@ -90,17 +90,12 @@ export default class SWNCharacter extends SWNActorBase {
         game.i18n.localize(CONFIG.SWN.stats[key]) ?? key;
     }
     //Cyberware
-    const cyberware = this.parent.items.filter((i) => i.type === "cyberware");
-    console.log("Cyberware items:", cyberware);
+    const cyberware = this.parent.items.filter((i) => i.type === "cyberware");       
     
     // Sum up cyberware strain, forcing to number
     let cyberwareStrain = cyberware.reduce((acc, item) => {
-      console.log("Item strain:", item.system.strain);
       return acc + Number(item.system.strain);
     }, 0);
-    
-    console.log("Computed cyberware strain:", cyberwareStrain);
-
     // System Strain
     this.systemStrain.cyberware = cyberwareStrain;
     this.systemStrain.max = this.stats.con.total - this.systemStrain.cyberware - this.systemStrain.permanent;
@@ -199,6 +194,9 @@ export default class SWNCharacter extends SWNActorBase {
             game.i18n.localize("swnr.skills.labels.psionic").toLocaleLowerCase()
       );
     const effort = this.effort;
+    const useCyber = game.settings.get("swnr", "useCWNCyber");
+    const cyberStrain = useCyber ? this.systemStrain.cyberware : 0;
+    
     effort.max =
       Math.max(
         1,
@@ -207,7 +205,7 @@ export default class SWNCharacter extends SWNActorBase {
           Math.max(0, ...psychicSkills.map((i) => i.system.rank))
       ) +
       effort.bonus -
-      this.systemStrain.cyberware;
+      cyberStrain;
     
     // Floor at 0.
     effort.max = Math.max(0, effort.max);
