@@ -18,7 +18,17 @@
     <div class="resource">
       {{formGroup systemFields.npcCommandPoints value=system.npcCommandPoints localize=true}}
     </div>
+    <div class="resource">
+      {{formGroup systemFields.power value=system.power localize=true widget=groupWidgetDupe}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.mass value=system.mass localize=true widget=groupWidgetDupe}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.hardpoints value=system.hardpoints localize=true widget=groupWidgetDupe}}
+    </div>
   </div>
+
   {{/if}}
   <div class="grid grid-2col">
     <div class="col">
