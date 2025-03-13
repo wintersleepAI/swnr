@@ -175,6 +175,20 @@ Hooks.on("renderChatMessage", (message, html, _data) =>
   chatListeners(message, html)
 );
 
+/* -------------------------------------------- */
+/* Other Hooks                                */
+/* -------------------------------------------- */
+Hooks.on("createToken", (document, _options, userId) => {
+  if (game.settings.get("swnr", "useRollNPCHD")) {
+    if (game.user?.isGM && game.userId === userId) {
+      if (document.actor?.type == "npc") {
+        document.actor.system.rollHitDice(false);
+      }
+    }
+  }
+});
+
+
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
