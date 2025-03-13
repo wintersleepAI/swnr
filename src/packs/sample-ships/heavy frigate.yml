@@ -9,10 +9,10 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988956
-  modifiedTime: 1739238988956
+  createdTime: 1741824630113
+  modifiedTime: 1741824630113
 sort: 0
-_id: g150jolza9z6287s
+_id: i7a0rqy165zy0j6f
 system:
   health:
     max: 50
@@ -149,7 +149,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!g150jolza9z6287s'
+_key: '!actors!i7a0rqy165zy0j6f'
 items:
   - name: Plasma Beam
     type: shipWeapon
@@ -162,14 +162,43 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988956
-      modifiedTime: 1739238988956
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630113
+      modifiedTime: 1741824630113
     sort: 0
-    _id: 656l6qvb5e6mue21
-    system: {}
+    _id: w1eoq5eu7hznrsv9
+    system:
+      description: With superior targeting and a smaller energy drain than a CPC, a plasma beam sacrifices some armor penetration.
+      favorite: false
+      tl: 4
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 700000
+      costMultiplier: false
+      mass: 2
+      massMultiplier: false
+      power: 5
+      powerMultiplier: false
+      minClass: Frigate
+      type: ship
+      damage: 3d6
+      ab: 0
+      hardpoint: 2
+      qualities: AP 10
+      ammo: &ref_0
+        type: none
+        max: 4
+        value: 4
+      trauma: &ref_1
+        die: 1d6
+        rating: ''
+        vehicle: false
+      range: &ref_2
+        normal: 1
+        max: 2
+      stat: ask
     effects: []
-    _key: '!actors.items!g150jolza9z6287s.656l6qvb5e6mue21'
+    _key: '!actors.items!i7a0rqy165zy0j6f.w1eoq5eu7hznrsv9'
   - name: Plasma Beam
     type: shipWeapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
@@ -181,14 +210,35 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988956
-      modifiedTime: 1739238988956
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630113
+      modifiedTime: 1741824630113
     sort: 0
-    _id: 13ccj43qi3bvxtv5
-    system: {}
+    _id: y9f649fr96qqoc6y
+    system:
+      description: With superior targeting and a smaller energy drain than a CPC, a plasma beam sacrifices some armor penetration.
+      favorite: false
+      tl: 4
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 700000
+      costMultiplier: false
+      mass: 2
+      massMultiplier: false
+      power: 5
+      powerMultiplier: false
+      minClass: Frigate
+      type: ship
+      damage: 3d6
+      ab: 0
+      hardpoint: 2
+      qualities: AP 10
+      ammo: *ref_0
+      trauma: *ref_1
+      range: *ref_2
+      stat: ask
     effects: []
-    _key: '!actors.items!g150jolza9z6287s.13ccj43qi3bvxtv5'
+    _key: '!actors.items!i7a0rqy165zy0j6f.y9f649fr96qqoc6y'
   - name: Hardened Polyceramic Overlay
     type: shipDefense
     img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
@@ -200,14 +250,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988956
-      modifiedTime: 1739238988956
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630113
+      modifiedTime: 1741824630113
     sort: 0
-    _id: 6p2lm4avs5385xvz
-    system: {}
+    _id: s7zqheox1tos28su
+    system:
+      description: A complex glazing process can harden the surface of a ship’s armor to more effectively shed incoming attacks, decreasing the armor-piercing quality of any hit by 5.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 25000
+      costMultiplier: false
+      mass: 2
+      massMultiplier: false
+      power: 0
+      powerMultiplier: false
+      minClass: fighter
+      type: ship
+      effect: ''
     effects: []
-    _key: '!actors.items!g150jolza9z6287s.6p2lm4avs5385xvz'
+    _key: '!actors.items!i7a0rqy165zy0j6f.s7zqheox1tos28su'
   - name: Spike Drive-2 upgrade
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -219,14 +283,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988956
-      modifiedTime: 1739238988956
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630113
+      modifiedTime: 1741824630113
     sort: 0
-    _id: u2e9khj8pr2g5jqx
-    system: {}
+    _id: w5p8mk2vh86jgjiq
+    system:
+      description: A ship can improve its standard-issue drive-1 spike drive with additional phase filters and power throughput refinements. A captain needs buy only the final grade of drive desired. He does not have to buy upgrades sequentially. Drives of rating 4 and higher are generally TL5 artifacts that cannot be built most modern worlds.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 10000
+      costMultiplier: true
+      mass: 1
+      massMultiplier: true
+      power: 1
+      powerMultiplier: false
+      minClass: fighter
+      type: ship
+      effect: Upgrade a spike drive to drive-2 rating
     effects: []
-    _key: '!actors.items!g150jolza9z6287s.u2e9khj8pr2g5jqx'
+    _key: '!actors.items!i7a0rqy165zy0j6f.w5p8mk2vh86jgjiq'
   - name: Drop Pod
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -238,14 +316,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988956
-      modifiedTime: 1739238988956
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630113
+      modifiedTime: 1741824630113
     sort: 0
-    _id: xtvrvzjl4vocrl6z
-    system: {}
+    _id: qitminuvxzto1fas
+    system:
+      description: Armored and stealthed versions of cargo lighters, these craft are twice as fast, apply a -3 penalty to tracking and targeting skill checks, and can carry up to one hundred troops or passengers. Many are equipped with assorted Heavy weapons to clear the landing zone, and can be treated as flight-capable gravtanks for purposes of combat. This fitting can be purchased multiple times.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 300000
+      costMultiplier: true
+      mass: 2
+      massMultiplier: true
+      power: 0
+      powerMultiplier: false
+      minClass: frigate
+      type: ship
+      effect: Upgrade a spike drive to drive-2 rating
     effects: []
-    _key: '!actors.items!g150jolza9z6287s.xtvrvzjl4vocrl6z'
+    _key: '!actors.items!i7a0rqy165zy0j6f.qitminuvxzto1fas'
   - name: Fuel Scoops
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -257,14 +349,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988956
-      modifiedTime: 1739238988956
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630113
+      modifiedTime: 1741824630113
     sort: 0
-    _id: qxitrqra7b015h2l
-    system: {}
+    _id: 54ar8rd8f0w5r2ga
+    system:
+      description: Fuel scoops allow for the harvesting and extraction of hydrogen from gas giants or the penumbra of solar bodies. The extraction process requires four days of processing and refinement, but completely refuels the ship. Such fittings are common on explorer craft that cannot expect to find refueling stations.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 5000
+      costMultiplier: true
+      mass: 2
+      massMultiplier: true
+      power: 2
+      powerMultiplier: false
+      minClass: Frigate
+      type: ship
+      effect: Ship can scoop fuel from a gas giant or star
     effects: []
-    _key: '!actors.items!g150jolza9z6287s.qxitrqra7b015h2l'
+    _key: '!actors.items!i7a0rqy165zy0j6f.54ar8rd8f0w5r2ga'
   - name: Fuel Bunker
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -276,14 +382,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988956
-      modifiedTime: 1739238988956
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630113
+      modifiedTime: 1741824630113
     sort: 0
-    _id: 0j50pnb2kepb5x1s
-    system: {}
+    _id: mv2ss28507cunvss
+    system:
+      description: Most ships require refueling after each drill jump, no matter the distance. Installing fuel bunkers allows the ship to carry one additional load of fuel. This fitting can be installed multiple times for ships that wish to minimize fueling.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 2500
+      costMultiplier: true
+      mass: 1
+      massMultiplier: true
+      power: 0
+      powerMultiplier: false
+      minClass: Fighter
+      type: ship
+      effect: Adds fuel for one more drill between fuelings
     effects: []
-    _key: '!actors.items!g150jolza9z6287s.0j50pnb2kepb5x1s'
+    _key: '!actors.items!i7a0rqy165zy0j6f.mv2ss28507cunvss'
   - name: Armory
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -295,14 +415,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988956
-      modifiedTime: 1739238988956
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630113
+      modifiedTime: 1741824630113
     sort: 0
-    _id: 2nacy5cu4jhb104f
-    system: {}
+    _id: 5e8xsr5f22rkp7ua
+    system:
+      description: Rather than maintaining lengthy lists of ship equipment, a captain can simply buy an armory. Ships so equipped have whatever amounts of TL4 military-grade weaponry and armor that a crew might require, and integral maintenance facilities for its upkeep. There is enough gear available to outfit the entire crew for normal use, but giving it away or losing it in use may deplete it.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 10000
+      costMultiplier: true
+      mass: 0
+      massMultiplier: true
+      power: 0
+      powerMultiplier: false
+      minClass: Frigate
+      type: ship
+      effect: Weapons and armor for the crew
     effects: []
-    _key: '!actors.items!g150jolza9z6287s.2nacy5cu4jhb104f'
+    _key: '!actors.items!i7a0rqy165zy0j6f.5e8xsr5f22rkp7ua'
   - name: Ship's Locker
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -314,14 +448,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988956
-      modifiedTime: 1739238988956
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630113
+      modifiedTime: 1741824630113
     sort: 0
-    _id: q0lh5na34xl9afcf
-    system: {}
+    _id: gdti31xgbvmorexh
+    system:
+      description: Much like an armory, this option allows a captain to lay in a general supply of equipment likely to be useful to explorers and spacemen. Any TL4 equipment on the gear list can be found in the ship’s locker in amounts commensurate with the ship’s size. A few guns and some basic armor might be included as well, but for serious armament an armory is required. There is enough gear available to outfit the entire crew for normal use, but giving it away or losing it in use may deplete the locker until it is restocked.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 2000
+      costMultiplier: true
+      mass: 0
+      massMultiplier: true
+      power: 0
+      powerMultiplier: false
+      minClass: Frigate
+      type: ship
+      effect: General equipment for the crew
     effects: []
-    _key: '!actors.items!g150jolza9z6287s.q0lh5na34xl9afcf'
+    _key: '!actors.items!i7a0rqy165zy0j6f.gdti31xgbvmorexh'
   - name: Boarding Tubes
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -333,11 +481,25 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988956
-      modifiedTime: 1739238988956
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630114
+      modifiedTime: 1741824630114
     sort: 0
-    _id: hm5bshkrtpa0xdex
-    system: {}
+    _id: y7jyfreclj9ify6f
+    system:
+      description: Armored tubes equipped with laser cutter apertures can be used to forcibly invade a hostile ship, provided the target’s engines have been disabled. Ships without boarding tubes have to send invaders across empty space to either make an assault on a doubtless heavily-guarded airlock or cut their way in through the hull with laser cutters and half an hour of work.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 5000
+      costMultiplier: true
+      mass: 1
+      massMultiplier: true
+      power: 0
+      powerMultiplier: false
+      minClass: Frigate
+      type: ship
+      effect: Allows boarding of a hostile disabled ship
     effects: []
-    _key: '!actors.items!g150jolza9z6287s.hm5bshkrtpa0xdex'
+    _key: '!actors.items!i7a0rqy165zy0j6f.y7jyfreclj9ify6f'

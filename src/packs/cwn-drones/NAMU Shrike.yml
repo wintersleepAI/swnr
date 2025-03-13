@@ -9,11 +9,47 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988628
-  modifiedTime: 1739238988628
+  createdTime: 1741850359791
+  modifiedTime: 1741850359791
 sort: 0
-_id: qt8fnauzyrae7jcb
-system: {}
+_id: 8upinps4dm0l3zx3
+system:
+  health:
+    max: 20
+    value: 20
+  cost: 25000
+  ac: 18
+  traumaTarget: 8
+  armor:
+    value: 1
+    max: 1
+  speed: 30
+  crew:
+    min: 1
+    max: 1
+    current: 1
+  crewMembers: []
+  tl: 5
+  description: NAMU's largest drone model, the Shrike is most often used in active war zones, though most major corp security hubs keep a wing on hand for drastic situations. Three meters long with meter-wide vector wings, the Shrike can handle a substantial combat load.
+  mods: ''
+  power:
+    value: 1
+    max: 1
+  mass:
+    value: 1
+    max: 1
+  hardpoints:
+    value: 1
+    max: 1
+  kmph: 0
+  tonnage: 0
+  size: s
+  fittings:
+    max: 6
+  enc: 99
+  range: ''
+  model: primitiveDrone
+  moveType: fly
 effects: []
 prototypeToken:
   name: NAMU Shrike
@@ -91,4 +127,4 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!qt8fnauzyrae7jcb'
+_key: '!actors!8upinps4dm0l3zx3'

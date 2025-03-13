@@ -345,6 +345,50 @@ const vehicle = {
   tonnage: 0
 };
 
+const drone = {
+  health: {
+    value: 10,
+    max: 10
+  },
+  cost: 0,
+  ac: 10,
+  traumaTarget: 6,
+  armor: {
+    value: 1,
+    max: 1
+  },
+  speed: 1,
+  crew: {
+    min: 1,
+    max: 1,
+    current: 1
+  },
+  crewMembers: [],
+  tl: 5,
+  description: '',
+  mods: '',
+  power: {
+    value: 1,
+    max: 1
+  },
+  mass: {
+    value: 1,
+    max: 1
+  },
+  hardpoints: {
+    value: 1,
+    max: 1
+  },
+  kmph: 0,
+  tonnage: 0,
+  size: 's',
+  fittings: (1,1,true),
+  enc: 1,
+  range: "",
+  model: ('primitiveDrone'),
+  moveType: ""
+};
+
 const weapon = {
   description: '',
   favorite: false,
@@ -485,6 +529,7 @@ export const mapping = {
   vehicle,
   weapon,
   // New mappings:
+  drone,
   shipWeapon,
   shipFitting,
   shipDefense,

@@ -9,10 +9,10 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988955
-  modifiedTime: 1739238988955
+  createdTime: 1741824630111
+  modifiedTime: 1741824630111
 sort: 0
-_id: tu2e00kgkmhy2qlz
+_id: ysnyax4cvpruwshn
 system:
   health:
     max: 20
@@ -150,7 +150,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!tu2e00kgkmhy2qlz'
+_key: '!actors!ysnyax4cvpruwshn'
 items:
   - name: Multifocal Laser
     type: shipWeapon
@@ -163,14 +163,43 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988955
-      modifiedTime: 1739238988955
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630111
+      modifiedTime: 1741824630111
     sort: 0
-    _id: xurjvu1ukj76yutw
-    system: {}
+    _id: xdo1w1g432i9wbg6
+    system:
+      description: Twinned assay and penetration lasers modulate the frequency of this beam for remarkable armor penetration. These weapons are popular choices for fighters intended for frigate or cruiser engagement.
+      favorite: false
+      tl: 4
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 100000
+      costMultiplier: false
+      mass: 1
+      massMultiplier: false
+      power: 4
+      powerMultiplier: false
+      minClass: fighter
+      type: ship
+      damage: 1d4
+      ab: 0
+      hardpoint: 1
+      qualities: AP 20
+      ammo: &ref_0
+        type: none
+        max: 4
+        value: 4
+      trauma: &ref_1
+        die: 1d6
+        rating: ''
+        vehicle: false
+      range: &ref_2
+        normal: 1
+        max: 2
+      stat: ask
     effects: []
-    _key: '!actors.items!tu2e00kgkmhy2qlz.xurjvu1ukj76yutw'
+    _key: '!actors.items!ysnyax4cvpruwshn.xdo1w1g432i9wbg6'
   - name: Sandthrower
     type: shipWeapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/fog.svg
@@ -182,14 +211,35 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988955
-      modifiedTime: 1739238988955
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630111
+      modifiedTime: 1741824630111
     sort: 0
-    _id: wl38wve27iwcv1wd
-    system: {}
+    _id: 338b94mk3udc92p6
+    system:
+      description: Projecting a spray of tiny, dense particulate matter, sandthrowers are highly effective against lightly-armored fighters.
+      favorite: false
+      tl: 4
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 50000
+      costMultiplier: false
+      mass: 1
+      massMultiplier: false
+      power: 3
+      powerMultiplier: false
+      minClass: fighter
+      type: ship
+      damage: 2d4
+      ab: 0
+      hardpoint: 1
+      qualities: Flak
+      ammo: *ref_0
+      trauma: *ref_1
+      range: *ref_2
+      stat: ask
     effects: []
-    _key: '!actors.items!tu2e00kgkmhy2qlz.wl38wve27iwcv1wd'
+    _key: '!actors.items!ysnyax4cvpruwshn.338b94mk3udc92p6'
   - name: Atmospheric Configuration
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -201,14 +251,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988955
-      modifiedTime: 1739238988955
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630111
+      modifiedTime: 1741824630111
     sort: 0
-    _id: xikb3l1ae5axsr0b
-    system: {}
+    _id: fgy2sf3f58sf3rnm
+    system:
+      description: This fitting must be put in place when the ship is built, and cannot be installed on cruiser-class or larger ships. A ship designed for atmospheric flight can land on most solid or aqueous surfaces.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 5000
+      costMultiplier: true
+      mass: 1
+      massMultiplier: true
+      power: 0
+      powerMultiplier: false
+      minClass: fighter
+      type: ship
+      effect: 'Can land: frigates and fighters only.'
     effects: []
-    _key: '!actors.items!tu2e00kgkmhy2qlz.xikb3l1ae5axsr0b'
+    _key: '!actors.items!ysnyax4cvpruwshn.fgy2sf3f58sf3rnm'
   - name: Fuel Scoops
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/energise.svg
@@ -220,14 +284,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988955
-      modifiedTime: 1739238988955
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630111
+      modifiedTime: 1741824630111
     sort: 0
-    _id: qxskrssfqf8czrap
-    system: {}
+    _id: 70xvomz051r2dn6l
+    system:
+      description: Fuel scoops allow for the harvesting and extraction of hydrogen from gas giants or the penumbra of solar bodies. The extraction process requires four days of processing and refinement, but completely refuels the ship. Such fittings are common on explorer craft that cannot expect to find refueling stations.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 5000
+      costMultiplier: true
+      mass: 2
+      massMultiplier: true
+      power: 2
+      powerMultiplier: false
+      minClass: Frigate
+      type: ship
+      effect: Ship can scoop fuel from a gas giant or star
     effects: []
-    _key: '!actors.items!tu2e00kgkmhy2qlz.qxskrssfqf8czrap'
+    _key: '!actors.items!ysnyax4cvpruwshn.70xvomz051r2dn6l'
   - name: Fuel Bunker
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/fuel-tank.svg
@@ -239,11 +317,25 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988955
-      modifiedTime: 1739238988955
-      lastModifiedBy: systembuilder9000
+      createdTime: 1741824630111
+      modifiedTime: 1741824630111
     sort: 0
-    _id: 1agqhc5y4oj4bczd
-    system: {}
+    _id: at8bwdklp06bh1fd
+    system:
+      description: Most ships require refueling after each drill jump, no matter the distance. Installing fuel bunkers allows the ship to carry one additional load of fuel. This fitting can be installed multiple times for ships that wish to minimize fueling.
+      favorite: false
+      tl: null
+      broken: false
+      destroyed: false
+      juryRigged: false
+      cost: 2500
+      costMultiplier: true
+      mass: 1
+      massMultiplier: true
+      power: 0
+      powerMultiplier: false
+      minClass: Fighter
+      type: ship
+      effect: Adds fuel for one more drill between fuelings
     effects: []
-    _key: '!actors.items!tu2e00kgkmhy2qlz.1agqhc5y4oj4bczd'
+    _key: '!actors.items!ysnyax4cvpruwshn.at8bwdklp06bh1fd'
