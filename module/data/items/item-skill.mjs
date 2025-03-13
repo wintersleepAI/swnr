@@ -95,7 +95,6 @@ export default class SWNSkill extends SWNItemBase {
       return;
     }
     const skillName = item.name;
-
     // Set to not ask and just roll
     if (!shiftKey && this.remember && this.remember.use) {
       const modifier = this.remember.modifier;
@@ -125,6 +124,15 @@ export default class SWNSkill extends SWNItemBase {
       }
     }
 
+    let stats = actor.system.stats;
+    const statChoices = {};
+
+    Object.keys(stats).forEach(key => {
+      const stat = stats[key];
+      const localizedLabel = game.i18n.localize("swnr.stat.long." + key );
+      statChoices[key] = `${localizedLabel} +${stat.mod}`; // Format the string
+    });
+
     const modifier =
       this.remember && this.remember.modifier
         ? this.remember.modifier
@@ -134,8 +142,9 @@ export default class SWNSkill extends SWNItemBase {
       title: title,
       skillName: skillName,
       skill: item,
-      stats: actor.system.stats,
       modifier,
+      pool: CONFIG.SWN.pool,
+      statChoices: statChoices
     };
 
     const content = await renderTemplate(template, dialogData);
