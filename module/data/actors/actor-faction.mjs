@@ -95,10 +95,17 @@ export default class SWNFaction extends foundry.abstract
     await getDocumentClass('Item').create(docData, {parent: this.parent});
   }
   
-  async addTag(name, desc, effect) {
-    //TODO: Check that fields are populated
+  async addTag(tag) {
+    if (!tag.name) {
+      ui.notifications?.error(game.i18n.localize("swnr.sheet.faction.editTagDialog.noName"));
+      return;
+    }
+    
+    tag.desc ??= "";
+    tag.effect ??= "";
+    
     const tags = this.tags;
-    tags.push({name, desc, effect})
+    tags.push(tag)
     await this.parent.update({ "system.tags": tags})
   }
   

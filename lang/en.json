@@ -1530,7 +1530,9 @@
         "editTagDialog": {
           "tagName": "Tag Name",
           "tagDesc": "Tag Description",
-          "tagEffect": "Tag Effect"
+          "tagEffect": "Tag Effect",
+          "noName": "Error: Tag name cannot be empty"
+          
         },
         "tagIndexInvalid": "Error: Faction tag index {index} is invalid"
       },
