@@ -47,6 +47,7 @@
                             <img src="{{item.img}}" alt="{{item.name}}" width="24" height="24">
                         </div>
                         <div>{{item.name}}</div>
+                        {{#if item.system.baseOfInfluence}}<i class="fas fa-home"></i>{{/if}}
                     </div>
                     <div class="asset-prop asset-rating">{{item.system.rating}}</div>
                     <div class="asset-prop asset-hp">{{item.system.health.value}}/{{item.system.health.max}}</div>
