@@ -265,7 +265,12 @@ export class SWNFactionSheet extends SWNBaseSheet {
   static async _onEditTag(event, target) {
     //TODO: localize and add edit
     const index = parseInt(target.dataset?.index);
-    const tag = (!isNaN(index)) ? this.actor.system.tags[index] : null;
+    const editMode = !isNaN(index);
+    const tag = editMode ? this.actor.system.tags[index] : null;
+    
+    const title = editMode
+      ? game.i18n.localize("swnr.sheet.faction.editTag")
+      : game.i18n.localize("swnr.sheet.faction.addTagCustom");
     
     const dialogData = {
       name: tag?.name ?? "",
@@ -280,22 +285,23 @@ export class SWNFactionSheet extends SWNBaseSheet {
       const desc = button.form.elements.tagDesc.value;
       const effect = button.form.elements.tagEffect.value;
       
-      if (isNaN(index)){
-        await this.actor.system.addTag({name, desc, effect});
-      }else{
+      if (editMode){
         await this.actor.system.editTag({name, desc, effect}, index);
+      }else{
+        await this.actor.system.addTag({name, desc, effect});
       }
     }
     
+    //TODO: Increase tag width
     await foundry.applications.api.DialogV2.prompt({
       window: {
-        title: "Add Tag"
+        title: title
       },
       content: html, 
       modal: true,
       rejectClose: false,
       ok: {
-        label: "Create Tag",
+        label: title,
         callback: _modifyTags,
       }
     })
