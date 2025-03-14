@@ -28,7 +28,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       toggleProperty: this._toggleProperty,
       roll: this._onRoll,
       createBase: this._onAddBase,
-      addCustomTag: this._onAddCustomTag,
+      editTag: this._onEditTag,
       removeTag: this._onRemoveTag,
     },
     // Custom property that's merged into `this.options`
@@ -262,22 +262,29 @@ export class SWNFactionSheet extends SWNBaseSheet {
     
   }
   
-  static async _onAddCustomTag(event, target) {
+  static async _onEditTag(event, target) {
     //TODO: localize and add edit
+    const index = parseInt(target.dataset?.index);
+    const tag = (!isNaN(index)) ? this.actor.system.tags[index] : null;
+    
     const dialogData = {
-      name: "",
-      description: "",
-      effect: ""
+      name: tag?.name ?? "",
+      desc: tag?.desc ?? "",
+      effect: tag?.effect ?? "",
     }
     const template = "systems/swnr/templates/dialogs/edit-faction-tag.hbs";
     const html = await renderTemplate(template, dialogData);
     
-    const _addTag = async (_event, button, _html) => {
+    const _modifyTags = async (_event, button, _html) => {
       const name = button.form.elements.tagName.value;
       const desc = button.form.elements.tagDesc.value;
       const effect = button.form.elements.tagEffect.value;
       
-      await this.actor.system.addTag(name, desc, effect);
+      if (isNaN(index)){
+        await this.actor.system.addTag({name, desc, effect});
+      }else{
+        await this.actor.system.editTag({name, desc, effect}, index);
+      }
     }
     
     await foundry.applications.api.DialogV2.prompt({
@@ -289,7 +296,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       rejectClose: false,
       ok: {
         label: "Create Tag",
-        callback: _addTag,
+        callback: _modifyTags,
       }
     })
   }
