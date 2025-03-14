@@ -54,6 +54,9 @@ export class SWNFactionSheet extends SWNBaseSheet {
     assets: {
       template: 'systems/swnr/templates/actor/faction/assets.hbs',
     },
+    tags: {
+      template: 'systems/swnr/templates/actor/faction/tags.hbs',
+    }
   };
 
   /** @override */
@@ -66,7 +69,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
     
-    options.parts.push('assets');
+    options.parts.push('assets', 'tags');
     options.defaultTab = 'assets';
   }
 
@@ -101,9 +104,6 @@ export class SWNFactionSheet extends SWNBaseSheet {
 
   /** @override */
   async _preparePartContext(partId, context) {
-    // TODO copy from actor-sheet.mjs
-    console.log("TODO: Implement _preparePartContext");//TODO
-    
     context.tab = context.tabs[partId];
     switch (partId) {
       case 'description':
@@ -159,6 +159,10 @@ export class SWNFactionSheet extends SWNBaseSheet {
         case 'assets':
           tab.id = 'assets';
           tab.label += 'Assets';
+          break;
+        case 'tags':
+          tab.id = 'tags';
+          tab.label += 'Tags';
           break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
