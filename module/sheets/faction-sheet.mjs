@@ -246,7 +246,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       await this.actor.system.addBase(category, hp)
     }
     
-    const _proceed = await foundry.applications.api.DialogV2.prompt({
+    await foundry.applications.api.DialogV2.prompt({
       window: { title: game.i18n.localize("swnr.sheet.faction.addBaseDialog.title") },
       content: `<p>${game.i18n.localize("swnr.sheet.faction.addBaseDialog.content")}</p>`
       + `<form></form><label>${game.i18n.localize("swnr.sheet.faction.addBaseDialog.label")}</label>`
