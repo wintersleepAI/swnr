@@ -2,31 +2,33 @@
     class="tab faction-tags sheet-body {{tab.cssClass}}"
     data-group="primary"
     data-tab="tags">
-    <div>
-        {{#each system.tags as | tag index|}}
-            {{#if @root.editable}}
-                <div class="item-controls">
-                    <a class="item-control" 
-                        title="{{localize "swnr.sheet.faction.removeTag"}}"
-                        data-action="removeTag"
-                        data-index="{{index}}">
-                        <i class="fas fa-trash"></i>
-                    </a>
-                </div>
-            {{/if}}
-            <h5>
-                {{tag.name}}
-            </h5>
-            <p>
+    {{#each system.tags as | tag index|}}
+        <div class="tag">
+            <div class="flexrow tag-header">
+                <h5>
+                    {{tag.name}}
+                </h5>
+                {{#if @root.editable}}
+                    <div class="item-controls align-right">
+                        <a class="item-control" 
+                            title="{{localize "swnr.sheet.faction.removeTag"}}"
+                            data-action="removeTag"
+                            data-index="{{index}}">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                {{/if}}
+            </div>
+            <p class="tag-desc">
                 {{tag.desc}}
             </p>
-            Effect:
-            <p>
+            <span>{{localize "swnr.sheet.faction.tagEffectLabel"}}</span>
+            <p class="tag-effect">
                 {{tag.effect}}
             </p>
             <hr>
-        {{/each}}
-    </div>
+        </div>
+    {{/each}}
     {{#if @root.editable}}
         <div>
             <button
