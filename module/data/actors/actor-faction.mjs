@@ -66,12 +66,12 @@ export default class SWNFaction extends foundry.abstract
   
   async addBase(category, hp){
     if (hp > this.health.max) {
-      ui.notifications?.error(game.i18n.format("swnr.sheet.faction.baseHpTooHigh", {baseHp: hp,  factionHp: this.health.max}));
+      ui.notifications?.error(game.i18n.format("swnr.sheet.faction.addBaseDialog.baseHpTooHigh", {baseHp: hp,  factionHp: this.health.max}));
       return;
     }
     
     if (hp > this.facCreds) {
-      ui.notifications?.error(game.i18n.format("swnr.sheet.faction.notEnoughFacCredsForBase", {baseHp: hp,  facCreds: this.facCreds}));
+      ui.notifications?.error(game.i18n.format("swnr.sheet.faction.addBaseDialog.notEnoughFacCredsForBase", {baseHp: hp,  facCreds: this.facCreds}));
       return;
     }
     

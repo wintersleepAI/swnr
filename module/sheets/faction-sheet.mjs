@@ -230,7 +230,6 @@ export class SWNFactionSheet extends SWNBaseSheet {
   static async _onAddBase(event, target){
     const category = target.dataset?.category;
     
-    // TODO Localize
     const _createBase = async (_event, button, _html) => {
       const hp = parseInt(button.form.elements.hp.value);
       if (isNaN(hp)) {
@@ -242,15 +241,16 @@ export class SWNFactionSheet extends SWNBaseSheet {
     }
     
     const _proceed = await foundry.applications.api.DialogV2.prompt({
-      window: { title: "Add New Base" },
-      content: `<p>Adding a new base from Expand Influence Action.<br>Select HP (up to Faction max HP). One FacCred per HP.</p>`
-      + `<form></form><label>Base HP</label><input type="text" name="hp"></form>`,
+      window: { title: game.i18n.localize("swnr.sheet.faction.addBaseDialog.title") },
+      content: `<p>${game.i18n.localize("swnr.sheet.faction.addBaseDialog.content")}</p>`
+      + `<form></form><label>${game.i18n.localize("swnr.sheet.faction.addBaseDialog.label")}</label>`
+      + `<input type="text" name="hp"></form>`,
       modal: false,
       rejectClose: false,
       ok: {
         callback: _createBase,
         icon: 'fas fa-check',
-        label: 'Expand Influence - New Base'
+        label: game.i18n.localize("swnr.sheet.faction.addBaseDialog.confirm")
       }
     })
     

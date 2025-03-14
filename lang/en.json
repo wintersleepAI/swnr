@@ -1516,8 +1516,14 @@
         "abandonGoal": "Abandon current goal {name}? Will lose income and no actions this turn/",
         "addAsset": "Add Asset",
         "addBase": "Add Base",
-        "baseHpTooHigh": "Error: HP of new base ({baseHp}) cannot be greater than faction HP ({factionHp})}",
-        "notEnoughFacCredsForBase": "Error: HP of new base ({baseHp}) cannot be greater than facCreds ({facCreds})"
+        "addBaseDialog": {
+          "title": "Add New Base",
+          "confirm": "Expand Influence - New Base",
+          "content": "Adding a new base from Expand Influence Action.<br>Select HP (up to Faction max HP).<br>One FacCred per HP.",
+          "label": "Base HP",
+          "baseHpTooHigh": "Error: HP of new base ({baseHp}) cannot be greater than faction HP ({factionHp})}",
+          "notEnoughFacCredsForBase": "Error: HP of new base ({baseHp}) cannot be greater than facCreds ({facCreds})"
+        }
       },
       "ship": {
         "life-support-days": "Life Support Days",
