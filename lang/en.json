@@ -1492,6 +1492,7 @@
         "tags-tab": "Tags",
         "log-tab": "Log",
         "addTag": "Add Tag",
+        "editTag": "Edit Tag",
         "addTagCustom": "Add Custom Tag",
         "removeTag": "Remove Tag",
         "remove-log": "Remove Log Entry",
@@ -1524,7 +1525,13 @@
           "label": "Base HP",
           "baseHpTooHigh": "Error: HP of new base ({baseHp}) cannot be greater than faction HP ({factionHp})}",
           "notEnoughFacCredsForBase": "Error: HP of new base ({baseHp}) cannot be greater than facCreds ({facCreds})"
-        }
+        },
+        "editTagDialog": {
+          "tagName": "Tag Name",
+          "tagDesc": "Tag Description",
+          "tagEffect": "Tag Effect"
+        },
+        "tagIndexInvalid": "Error: Faction tag index {index} is invalid"
       },
       "ship": {
         "life-support-days": "Life Support Days",

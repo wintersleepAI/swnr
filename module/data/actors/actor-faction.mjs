@@ -94,4 +94,21 @@ export default class SWNFaction extends foundry.abstract
     
     await getDocumentClass('Item').create(docData, {parent: this.parent});
   }
+  
+  async addTag(name, desc, effect) {
+    //TODO: Check that fields are populated
+    const tags = this.tags;
+    tags.push({name, desc, effect})
+    await this.parent.update({ "system.tags": tags})
+  }
+  
+  async removeTag(index) {
+    if (index < 0 || index >= this.tags.length) {
+      ui.notifications?.error(game.i18n.format("swnr.sheet.faction.tagIndexInvalid", {index}));
+      return;
+    }
+    
+    const newTags = this.tags.toSpliced(index, 1);
+    await this.parent.update({ "system.tags": newTags });
+  }
 }

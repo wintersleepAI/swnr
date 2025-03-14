@@ -263,13 +263,35 @@ export class SWNFactionSheet extends SWNBaseSheet {
   }
   
   static async _onAddCustomTag(event, target) {
-    const tags = this.actor.system.tags;
-    tags.push({
-      name: `Tag ${tags.length}`,
-      desc: "test description",
-      effect: "test effect"
+    //TODO: localize and add edit
+    const dialogData = {
+      name: "",
+      description: "",
+      effect: ""
+    }
+    const template = "systems/swnr/templates/dialogs/edit-faction-tag.hbs";
+    const html = await renderTemplate(template, dialogData);
+    
+    const _addTag = async (_event, button, _html) => {
+      const name = button.form.elements.tagName.value;
+      const desc = button.form.elements.tagDesc.value;
+      const effect = button.form.elements.tagEffect.value;
+      
+      await this.actor.system.addTag(name, desc, effect);
+    }
+    
+    await foundry.applications.api.DialogV2.prompt({
+      window: {
+        title: "Add Tag"
+      },
+      content: html, 
+      modal: true,
+      rejectClose: false,
+      ok: {
+        label: "Create Tag",
+        callback: _addTag,
+      }
     })
-    await this.actor.update({ "system.tags": tags})
   }
   
   static async _onRemoveTag(event, target) {
@@ -280,8 +302,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       return;
     }
     
-    const newTags = this.actor.system.tags.toSpliced(tagIndex, 1);
-    await this.actor.update({ "system.tags": newTags });
+    await this.actor.system.removeTag(tagIndex);
   }
 
   /** Helper Functions */
