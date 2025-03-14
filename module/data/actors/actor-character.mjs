@@ -217,7 +217,8 @@ export default class SWNCharacter extends SWNActorBase {
       extraEffort.max -
       extraEffort.current -
       extraEffort.scene -
-      extraEffort.day;
+      extraEffort.day -
+      cyberStrain;
 
     effort.percentage = Math.clamp((effort.value * 100) / effort.max, 0, 100);
 
