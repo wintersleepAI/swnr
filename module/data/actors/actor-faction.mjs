@@ -76,7 +76,7 @@ export default class SWNFaction extends foundry.abstract
     }
     
     const newFacCreds = this.facCreds - hp;
-    await this.parent.update({facCreds: newFacCreds});
+    await this.parent.update({"system.facCreds": newFacCreds});
     
     const docData = {
       name: `Base of Inf. ${category}`,
