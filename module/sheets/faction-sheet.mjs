@@ -28,6 +28,8 @@ export class SWNFactionSheet extends SWNBaseSheet {
       toggleProperty: this._toggleProperty,
       roll: this._onRoll,
       createBase: this._onAddBase,
+      addCustomTag: this._onAddCustomTag,
+      removeTag: this._onRemoveTag,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -258,6 +260,28 @@ export class SWNFactionSheet extends SWNBaseSheet {
       }
     })
     
+  }
+  
+  static async _onAddCustomTag(event, target) {
+    const tags = this.actor.system.tags;
+    tags.push({
+      name: `Tag ${tags.length}`,
+      desc: "test description",
+      effect: "test effect"
+    })
+    await this.actor.update({ "system.tags": tags})
+  }
+  
+  static async _onRemoveTag(event, target) {
+    const tagIndex = parseInt(target.dataset?.index);
+
+    if (isNaN(tagIndex)) {
+      ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
+      return;
+    }
+    
+    const newTags = this.actor.system.tags.toSpliced(tagIndex, 1);
+    await this.actor.update({ "system.tags": newTags });
   }
 
   /** Helper Functions */
