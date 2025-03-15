@@ -1,0 +1,8 @@
+<form>
+    <select name="selectedTag" id="selectedTag">
+        <option value="">{{localize "swnr.sheet.faction.selectTagDialog.selectTagDefault"}}</option>
+        {{#each tags as |tag index|}}
+            <option value="{{index}}">{{tag.name}}</option>
+        {{/each}}
+    </select>
+</form>

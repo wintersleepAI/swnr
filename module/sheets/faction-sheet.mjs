@@ -30,6 +30,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       createBase: this._onAddBase,
       editTag: this._onEditTag,
       removeTag: this._onRemoveTag,
+      selectTag: this._onSelectTag,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -316,6 +317,40 @@ export class SWNFactionSheet extends SWNBaseSheet {
     }
     
     await this.actor.system.removeTag(tagIndex);
+  }
+  
+  static async _onSelectTag(event, target){
+    const title = game.i18n.localize("swnr.sheet.faction.addTag");
+    
+    const dialogData = {
+      tags: CONFIG.SWN.factionTags
+    }
+    const template = "systems/swnr/templates/dialogs/select-faction-tag.hbs";
+    const html = await renderTemplate(template, dialogData);
+    
+    const _modifyTags = async (_event, button, _html) => {
+      const selectedTagIndex = parseInt(button.form.elements.selectedTag.value);
+      
+      if (isNaN(selectedTagIndex)) {
+        return;
+      }
+      
+      const selectedTag = CONFIG.SWN.factionTags[selectedTagIndex];
+      await this.actor.system.addTag(selectedTag);
+    }
+
+    await foundry.applications.api.DialogV2.prompt({
+      window: {
+        title: title
+      },
+      content: html,
+      modal: true,
+      rejectClose: false,
+      ok: {
+        label: title,
+        callback: _modifyTags,
+      }
+    })
   }
 
   /** Helper Functions */
