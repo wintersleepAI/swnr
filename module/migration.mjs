@@ -42,34 +42,47 @@ async function runMigrationsSequentially(storedVersion) {
 const migrations = {
   "2.0.0": async () => {
     console.log('Running migration for 2.0.0');
-    for (const item of game.items.contents) {
+    //for (const item of game.items.contents) {
+    let migrated = false;
+    for (const itemId  of game.items.invalidDocumentIds) {
+      let item = game.items.getInvalid(itemId);
       if (item.type.toLowerCase() === 'focus' || item.type.toLowerCase() === 'edge') {
         const { description = "", level1 = "", level2 = "", type = "feature"} = item.system;
         const level = 0;
         const newDescription = item.type.toLowerCase() === 'focus'
           ? `${description} ${level1} ${level2}`.trim()
           : description;
+        const subtype = item.type.toLowerCase() === 'focus' ? 'focus' : 'edge';
       
         const updateData = {
           type: "feature",
           system: {
             description: newDescription,
             level: level,
-            type: type
+            type: subtype
           }
         };
 
         try {
           await item.update(updateData);
           console.log("Item updated successfully:", updateData);
+          migrated = true;
         } catch (err) {
-          console.error("Failed to update item:", err);
+          ui.notifications?.error("Failed to update item:", err);
         }
       }
     }
+    if (migrated) {
+      ui.notifications?.error("Items have been successfully updated to version. Please refresh your browser to see the changes.");
+    }
   },
-  "2.1.0": async () => { console.log('Running migration for 2.1.0'); },
-  "2.2.0": async () => { console.log('Running migration for 2.2.0'); },
+  "2.1.0": async () => { 
+    // Placeholders for future migrations
+    //console.log('Running migration for 2.1.0'); 
+  },
+  // "2.2.0": async () => { console.log('Running migration for 2.2.0'); 
+
+  // },
 }
 
 function compareVersions(v1, v2) {
