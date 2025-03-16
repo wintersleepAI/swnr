@@ -530,6 +530,9 @@
 .swnr .items-header .item-name-long {
   flex: 2 1 100px;
 }
+.swnr .items-header .item-search {
+  display: none;
+}
 .swnr .items-list {
   list-style: none;
   margin: 0;

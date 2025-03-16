@@ -25,7 +25,11 @@
   }
   .item-name-long {
     flex: 2 1 100px;
+  }
 
+  .item-search {
+    // TODO wsAI remove once search is implemented
+    display: none;
   }
 }
 
