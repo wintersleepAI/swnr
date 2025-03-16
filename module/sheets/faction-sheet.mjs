@@ -294,17 +294,22 @@ export class SWNFactionSheet extends SWNBaseSheet {
     }
     
     //TODO: Increase tag width
-    await foundry.applications.api.DialogV2.prompt({
+    await foundry.applications.api.DialogV2.wait({
       window: {
         title: title
+      },
+      position: {
+        width: 400
       },
       content: html, 
       modal: true,
       rejectClose: false,
-      ok: {
-        label: title,
-        callback: _modifyTags,
-      }
+      buttons: [
+          {
+            label: title, 
+            callback: _modifyTags
+          }
+      ],
     })
   }
   
@@ -350,18 +355,22 @@ export class SWNFactionSheet extends SWNBaseSheet {
           });
     }
 
-    await foundry.applications.api.DialogV2.prompt({
-      width: 400,
+    await foundry.applications.api.DialogV2.wait({
       window: {
         title: title
+      },
+      position: {
+        width: 400
       },
       content: html,
       modal: true,
       rejectClose: false,
-      ok: {
-        label: title,
-        callback: _modifyTags,
-      },
+      buttons: [
+          {
+            label: title, 
+            callback: _modifyTags
+          }
+      ],
       render: _addListener
     })
   }
