@@ -299,7 +299,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
         title: title
       },
       position: {
-        width: 400
+        width: 500
       },
       content: html, 
       modal: true,
@@ -360,7 +360,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
         title: title
       },
       position: {
-        width: 400
+        width: 500
       },
       content: html,
       modal: true,
