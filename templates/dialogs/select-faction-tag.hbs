@@ -1,4 +1,5 @@
 <form>
+    <label for="selectedTag">{{localize "swnr.sheet.faction.editTagDialog.tagName"}}</label>
     <select name="selectedTag" id="selectedTag">
         <option value="">{{localize "swnr.sheet.faction.selectTagDialog.selectTagDefault"}}</option>
         {{#each tags as |tag index|}}
@@ -8,10 +9,11 @@
     <div class="tag-list">
         {{#each tags as |tag index|}}
             <div class="tag-details tag-{{index}} hidden">
+                <span>{{localize "swnr.sheet.faction.editTagDialog.tagDesc"}}</span>
                 <p class="tag-desc">
                     {{tag.desc}}
                 </p>
-                <span>{{localize "swnr.sheet.faction.tagEffectLabel"}}</span>
+                <span>{{localize "swnr.sheet.faction.editTagDialog.tagEffect"}}</span>
                 <p class="tag-effect">
                     {{tag.effect}}
                 </p>
