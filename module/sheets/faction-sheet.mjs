@@ -338,8 +338,20 @@ export class SWNFactionSheet extends SWNBaseSheet {
       const selectedTag = CONFIG.SWN.factionTags[selectedTagIndex];
       await this.actor.system.addTag(selectedTag);
     }
+    
+    const _addListener = (event,  dialog) => {
+      dialog.querySelector("#selectedTag")
+          .addEventListener("change", (event) => {
+            const value = event.target.value;
+            dialog.querySelector(".tag-list .tag-details:not(.hidden)")
+                ?.classList?.add("hidden");
+            dialog.querySelector(`.tag-list .tag-${value}`)
+                ?.classList?.remove("hidden");
+          });
+    }
 
     await foundry.applications.api.DialogV2.prompt({
+      width: 400,
       window: {
         title: title
       },
@@ -349,7 +361,8 @@ export class SWNFactionSheet extends SWNBaseSheet {
       ok: {
         label: title,
         callback: _modifyTags,
-      }
+      },
+      render: _addListener
     })
   }
 

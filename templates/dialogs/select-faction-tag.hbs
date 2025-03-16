@@ -5,4 +5,17 @@
             <option value="{{index}}">{{tag.name}}</option>
         {{/each}}
     </select>
+    <div class="tag-list">
+        {{#each tags as |tag index|}}
+            <div class="tag-details tag-{{index}} hidden">
+                <p class="tag-desc">
+                    {{tag.desc}}
+                </p>
+                <span>{{localize "swnr.sheet.faction.tagEffectLabel"}}</span>
+                <p class="tag-effect">
+                    {{tag.effect}}
+                </p>
+            </div>
+        {{/each}}
+    </div>
 </form>
