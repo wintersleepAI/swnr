@@ -33,6 +33,32 @@ async function runMigrationsSequentially(storedVersion) {
   }
 }
 
+async function migrateFeature(item) {
+  const { description = "", level1 = "", level2 = "", type = "feature"} = item.system;
+  const level = 0;
+  const newDescription = item.type.toLowerCase() === 'focus'
+    ? `${description} ${level1} ${level2}`.trim()
+    : description;
+  const subtype = item.type.toLowerCase() === 'focus' ? 'focus' : 'edge';
+
+  const updateData = {
+    type: "feature",
+    system: {
+      description: newDescription,
+      level: level,
+      type: subtype
+    }
+  };
+
+  try {
+    await item.update(updateData);
+    console.log("Item updated successfully:", updateData);
+    migrated = true;
+  } catch (err) {
+    ui.notifications?.error("Failed to update item:", err);
+  }
+}
+
 /**
  * Object containing migration functions keyed by version.
  * Each migration function should perform all necessary updates for that version.
@@ -47,28 +73,16 @@ const migrations = {
     for (const itemId  of game.items.invalidDocumentIds) {
       let item = game.items.getInvalid(itemId);
       if (item.type.toLowerCase() === 'focus' || item.type.toLowerCase() === 'edge') {
-        const { description = "", level1 = "", level2 = "", type = "feature"} = item.system;
-        const level = 0;
-        const newDescription = item.type.toLowerCase() === 'focus'
-          ? `${description} ${level1} ${level2}`.trim()
-          : description;
-        const subtype = item.type.toLowerCase() === 'focus' ? 'focus' : 'edge';
-      
-        const updateData = {
-          type: "feature",
-          system: {
-            description: newDescription,
-            level: level,
-            type: subtype
+        migrateFeature(item);
+      }
+    }
+    for (const actor of game.actors) {
+      if (actor.type == 'character' || actor.type == 'npc') {
+        for (const itemId of actor.items.invalidDocumentIds) {
+          let item = actor.items.getInvalid(itemId);
+          if (item.type.toLowerCase() === 'focus' || item.type.toLowerCase() === 'edge') {
+            migrateFeature(item);
           }
-        };
-
-        try {
-          await item.update(updateData);
-          console.log("Item updated successfully:", updateData);
-          migrated = true;
-        } catch (err) {
-          ui.notifications?.error("Failed to update item:", err);
         }
       }
     }
