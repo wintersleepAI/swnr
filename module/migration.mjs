@@ -52,10 +52,10 @@ async function migrateFeature(item) {
 
   try {
     await item.update(updateData);
-    console.log("Item updated successfully:", updateData);
-    migrated = true;
+    return true;
   } catch (err) {
     ui.notifications?.error("Failed to update item:", err);
+    return false;
   }
 }
 
@@ -73,7 +73,9 @@ const migrations = {
     for (const itemId  of game.items.invalidDocumentIds) {
       let item = game.items.getInvalid(itemId);
       if (item.type.toLowerCase() === 'focus' || item.type.toLowerCase() === 'edge') {
-        migrateFeature(item);
+        if (migrateFeature(item)) {
+          migrated = true;
+        }
       }
     }
     for (const actor of game.actors) {
@@ -81,13 +83,22 @@ const migrations = {
         for (const itemId of actor.items.invalidDocumentIds) {
           let item = actor.items.getInvalid(itemId);
           if (item.type.toLowerCase() === 'focus' || item.type.toLowerCase() === 'edge') {
-            migrateFeature(item);
+            if (migrateFeature(item)) {
+              migrated = true;
+            }
           }
         }
       }
     }
     if (migrated) {
-      ui.notifications?.error("Items have been successfully updated to version. Please refresh your browser to see the changes.");
+      const msg = "Items have been successfully updated to version. Please refresh your browser to see the changes -- otherwise you will not see the updated items.";
+      ChatMessage.create({
+        user: game.user.id,
+        whisper: [game.user.id],
+        speaker: { alias: "wintersleepAI" },
+        content: msg,
+      });
+      ui.notifications?.error(msg);
     }
   },
   "2.1.0": async () => { 
