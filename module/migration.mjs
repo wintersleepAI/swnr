@@ -35,12 +35,14 @@ async function runMigrationsSequentially(storedVersion) {
 
 async function migrateFeature(item) {
   const { description = "", level1 = "", level2 = "", type = "feature"} = item.system;
-  const level = 0;
+  let level = 0;
   const newDescription = item.type.toLowerCase() === 'focus'
     ? `${description} ${level1} ${level2}`.trim()
     : description;
   const subtype = item.type.toLowerCase() === 'focus' ? 'focus' : 'edge';
-
+  if (subtype === 'focus') {
+    level = parseInt(item.system.level);
+  }
   const updateData = {
     type: "feature",
     system: {
