@@ -83,8 +83,8 @@
           </div>
         </div> <!-- End Stats modifiers / features -->
         <ol class='items-list'> <!-- Features -->
-          <li class='item flexrow items-header'>
-            <div class='item-name'>{{localize 'Name'}}</div>
+          <li class='flex flexrow items-header'>
+            <div class='item-name'>{{localize 'swnr.featureLabel'}}</div>
             <div class='item-level'>{{localize 'Level'}}</div>
             <div class='item-controls'>
               {{#if @root.editable}}
@@ -163,7 +163,8 @@
             {{formGroup systemFields.tweak.fields.showCyberware value=system.tweak.showCyberware localize=true}}
             {{formGroup systemFields.tweak.fields.showPowers value=system.tweak.showPowers localize=true}}
             {{formGroup systemFields.tweak.fields.owedDisplay value=system.tweak.owedDisplay localize=true}}
-            {{formGroup systemFields.tweak.fields.extraHeader value=system.tweak.extraHeader localize=true}}
+            {{formGroup systemFields.tweak.fields.initiative.fields.mod value=system.tweak.initiative.mod localize=true}}
+            {{!-- {{formGroup systemFields.tweak.fields.extraHeader value=system.tweak.extraHeader localize=true}} --}}
             
           </div>
         </div> <!-- End Tweaks -->

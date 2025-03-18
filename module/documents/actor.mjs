@@ -59,9 +59,13 @@ export class SWNActor extends Actor {
           const intMod = pilot.system.stats.int.mod;
           const dexMod = pilot.system.stats.dex.mod;
           const mod = intMod >= dexMod ? intMod : dexMod;
+          let tweakMod = pilot.system.tweak?.initiative.mod || '';
+          if (tweakMod !== '') {
+            tweakMod = ` + ${tweakMod}`;
+          }
           // Use pilot's advInit flag if set.
           const adv = pilot.system?.tweak?.advInit || false;
-          const formula = adv ? `2d8kh1 + ${mod}` : `1d8 + ${mod}`;
+          const formula = adv ? `2d8kh1 + ${mod}` : `1d8 + ${mod}${tweakMod}`;
           return new Roll(formula, pilot.getRollData());
         }
       }
@@ -69,9 +73,13 @@ export class SWNActor extends Actor {
   
     // Regular initiative roll.
     const adv = this.system?.tweak?.advInit || false;
+    let tweakMod = this.system.tweak?.initiative?.mod || '';
+    if (tweakMod !== '') {
+      tweakMod = ` + ${tweakMod}`;
+    }
     const formula = adv
-      ? "2d8kh1 + @stats.dex.mod"
-      : "1d8 + @stats.dex.mod";
+      ? `2d8kh1 + @stats.dex.mod ${tweakMod}`
+      : `1d8 + @stats.dex.mod ${tweakMod}`;
     return new Roll(formula, this.getRollData());
   }
   

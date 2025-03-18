@@ -33,6 +33,32 @@ async function runMigrationsSequentially(storedVersion) {
   }
 }
 
+async function migrateFeature(item) {
+  const { description = "", level1 = "", level2 = "", type = "feature"} = item.system;
+  const level = 0;
+  const newDescription = item.type.toLowerCase() === 'focus'
+    ? `${description} ${level1} ${level2}`.trim()
+    : description;
+  const subtype = item.type.toLowerCase() === 'focus' ? 'focus' : 'edge';
+
+  const updateData = {
+    type: "feature",
+    system: {
+      description: newDescription,
+      level: level,
+      type: subtype
+    }
+  };
+
+  try {
+    await item.update(updateData);
+    return true;
+  } catch (err) {
+    ui.notifications?.error("Failed to update item:", err);
+    return false;
+  }
+}
+
 /**
  * Object containing migration functions keyed by version.
  * Each migration function should perform all necessary updates for that version.
@@ -47,33 +73,32 @@ const migrations = {
     for (const itemId  of game.items.invalidDocumentIds) {
       let item = game.items.getInvalid(itemId);
       if (item.type.toLowerCase() === 'focus' || item.type.toLowerCase() === 'edge') {
-        const { description = "", level1 = "", level2 = "", type = "feature"} = item.system;
-        const level = 0;
-        const newDescription = item.type.toLowerCase() === 'focus'
-          ? `${description} ${level1} ${level2}`.trim()
-          : description;
-        const subtype = item.type.toLowerCase() === 'focus' ? 'focus' : 'edge';
-      
-        const updateData = {
-          type: "feature",
-          system: {
-            description: newDescription,
-            level: level,
-            type: subtype
-          }
-        };
-
-        try {
-          await item.update(updateData);
-          console.log("Item updated successfully:", updateData);
+        if (migrateFeature(item)) {
           migrated = true;
-        } catch (err) {
-          ui.notifications?.error("Failed to update item:", err);
+        }
+      }
+    }
+    for (const actor of game.actors) {
+      if (actor.type == 'character' || actor.type == 'npc') {
+        for (const itemId of actor.items.invalidDocumentIds) {
+          let item = actor.items.getInvalid(itemId);
+          if (item.type.toLowerCase() === 'focus' || item.type.toLowerCase() === 'edge') {
+            if (migrateFeature(item)) {
+              migrated = true;
+            }
+          }
         }
       }
     }
     if (migrated) {
-      ui.notifications?.error("Items have been successfully updated to version. Please refresh your browser to see the changes.");
+      const msg = "Items have been successfully updated to version. Please refresh your browser to see the changes -- otherwise you will not see the updated items.";
+      ChatMessage.create({
+        user: game.user.id,
+        whisper: [game.user.id],
+        speaker: { alias: "wintersleepAI" },
+        content: msg,
+      });
+      ui.notifications?.error(msg);
     }
   },
   "2.1.0": async () => { 

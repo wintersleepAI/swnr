@@ -72,6 +72,9 @@ export default class SWNCharacter extends SWNActorBase {
       debtDisplay: SWNShared.requiredString("Debt"),
       owedDisplay: SWNShared.requiredString("Owed"),
       balanceDisplay: SWNShared.requiredString("Balance"),
+      initiative: new fields.SchemaField({
+        mod: SWNShared.nullableNumber(),
+      })
     });
 
     return schema;
