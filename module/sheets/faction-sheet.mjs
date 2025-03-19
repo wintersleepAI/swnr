@@ -384,6 +384,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
     })
   }
   
+  // TODO: Add inline rolls to logs
   static async _onEditLog(event, target) {
     const index = parseInt(target.dataset?.index);
     const editMode = !isNaN(index);
@@ -420,6 +421,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
     })
   }
 
+  // TODO: Add confirm dialogs on all deletes
   static async _onRemoveLog(event, target) {
     const logIndex = parseInt(target.dataset?.index);
 
