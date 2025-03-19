@@ -46,6 +46,7 @@ export default class SWNCharacter extends SWNActorBase {
     schema.unspentSkillPoints = SWNShared.requiredNumber(0);
     schema.unspentPsySkillPoints = SWNShared.requiredNumber(0);
     schema.extra = SWNShared.resourceField(0, 10);
+    schema.stress = SWNShared.nullableNumber();
 
     schema.tweak = new fields.SchemaField({
       advInit: new fields.BooleanField({initial: false}),

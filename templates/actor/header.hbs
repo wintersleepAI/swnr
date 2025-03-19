@@ -206,6 +206,8 @@
       
 
       {{#if (eq actor.type 'character')}}
+      {{formGroup systemFields.stress value=system.stress localize=true widget=headerWidget}}
+      
       <div class='resource header-group flex-group-center grid-span-5'><!-- Saves -->
         <div class="flex flexrow">
             <div class="save-throw-button" data-save-type="physical" data-action="rollSave">
