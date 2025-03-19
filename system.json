@@ -352,6 +352,36 @@
       "label": "SWN Backing Roll Tables",
       "system": "swnr",
       "type": "RollTable"
+    },
+    {
+      "name": "wwn-gm-sub-tables",
+      "label": "WWN Backing Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-gm-tables",
+      "label": "WWN Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-instinct",
+      "label": "WWN Instinct Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-magic-items",
+      "label": "WWN Magic Items Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-magic-tables",
+      "label": "WWN Magic Tables",
+      "system": "swnr",
+      "type": "RollTable"
     }
   ],
   "packFolders": [
@@ -433,6 +463,21 @@
       "color": "#AAAAAA",
       "packs": [
         "foci"
+      ]
+    }, 
+    {
+      "name": "Tables",
+      "sorting": "a",
+      "color": "#CCCCCC",
+      "packs": [
+        "cwn-tables",
+        "one-roll-tables",
+        "one-roll-backing",
+        "wwn-gm-sub-tables",
+        "wwn-gm-tables",
+        "wwn-instinct",
+        "wwn-magic-items",
+        "wwn-magic-tables"
       ]
     }
   ],

@@ -1,0 +1,200 @@
+name: Encounters, Beasts and Monsters
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    documentCollection: ''
+    _id: IeApchJIBMXYtnn7
+    text: Harmless but annoying local creature
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.IeApchJIBMXYtnn7'
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    documentCollection: ''
+    _id: LmYxy8iB7uH4fHyV
+    text: Hungry pack hunters
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.LmYxy8iB7uH4fHyV'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    documentCollection: ''
+    _id: NHhRrrj7OOmiO6FC
+    text: Stalking predator looking for an opening
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.NHhRrrj7OOmiO6FC'
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    documentCollection: ''
+    _id: kb17YhjAB1UtFJyG
+    text: Sick or somehow enraged predator
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.kb17YhjAB1UtFJyG'
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    documentCollection: ''
+    _id: mdEej9b0ds4EyKRL
+    text: An ambush predator lying in wait
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.mdEej9b0ds4EyKRL'
+  - type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    documentCollection: ''
+    _id: Un7SFbqxYSDPa24K
+    text: Large, dangerously aggressive herbivore
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.Un7SFbqxYSDPa24K'
+  - type: text
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: false
+    documentCollection: ''
+    _id: 7oEfGwMdZnIuRDFW
+    text: Uncanny or eldritch monster
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.7oEfGwMdZnIuRDFW'
+  - type: text
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: false
+    documentCollection: ''
+    _id: YqkuGBkVkSSw12R4
+    text: A swarm of dangerous vermin
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.YqkuGBkVkSSw12R4'
+  - type: text
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: false
+    documentCollection: ''
+    _id: rnaDIi78eYIelgfB
+    text: A flying monster or beast
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.rnaDIi78eYIelgfB'
+  - type: text
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: false
+    documentCollection: ''
+    _id: HwSyRTGeU4jpm71Y
+    text: Mated pair of team hunters
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.HwSyRTGeU4jpm71Y'
+  - type: text
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: false
+    documentCollection: ''
+    _id: qDB3K2wxVho2VYvw
+    text: Ghost, animate corpse, or other undead
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.qDB3K2wxVho2VYvw'
+  - type: text
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: false
+    documentCollection: ''
+    _id: aQexs9JlvePpi4Nb
+    text: Something far too dangerous to confront
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.aQexs9JlvePpi4Nb'
+  - type: pack
+    documentCollection: wwn.gm-subtables
+    weight: 1
+    range:
+      - 1
+      - 12
+    drawn: false
+    text: Encounters-Beast Activity
+    documentId: 2vTVk5qsyC9ksVL5
+    img: icons/svg/d20-grey.svg
+    _id: Uju4FffEL1OoSwpr
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.Uju4FffEL1OoSwpr'
+replacement: true
+displayRoll: true
+folder: null
+ownership:
+  default: 0
+  VPYTJCONjTybUwoI: 3
+flags:
+  exportSource:
+    world: niafel
+    system: wwn
+    coreVersion: '10.291'
+    systemVersion: 1.1.4
+  core: {}
+_stats:
+  systemId: wwn
+  systemVersion: 1.1.4
+  coreVersion: '12.324'
+  createdTime: 1684915730424
+  modifiedTime: 1690569887981
+  lastModifiedBy: VPYTJCONjTybUwoI
+  compendiumSource: null
+  duplicateSource: null
+formula: 1d12
+_id: ZKdxiZVhIYGRMf7u
+sort: 2200000
+_key: '!tables!ZKdxiZVhIYGRMf7u'
+
