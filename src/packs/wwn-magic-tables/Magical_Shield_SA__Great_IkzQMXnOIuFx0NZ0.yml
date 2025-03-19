@@ -1,0 +1,64 @@
+_id: IkzQMXnOIuFx0NZ0
+name: Magical Shield SA, Great
+flags:
+  better-rolltables:
+    table-type: better
+    table-currency-string: ''
+    loot-actor-name: ''
+    loot-amount-key: ''
+  core:
+    sourceId: RollTable.I5XpJocjcsqY7zcS
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - _id: u9lmxfYTcelSjQ6X
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: pack
+    text: Magical Armor and Shield Abilities
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 20
+    drawn: false
+    documentCollection: wwn.magic-tables
+    documentId: pPZG8CuQQKPynEFb
+    _key: '!tables.results!IkzQMXnOIuFx0NZ0.u9lmxfYTcelSjQ6X'
+  - _id: WcnTixeFjzvQfKBR
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: pack
+    text: Magical Armor and Shield Abilities
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 17
+      - 20
+    drawn: false
+    documentCollection: wwn.magic-tables
+    documentId: pPZG8CuQQKPynEFb
+    _key: '!tables.results!IkzQMXnOIuFx0NZ0.WcnTixeFjzvQfKBR'
+formula: 1d20
+replacement: true
+displayRoll: true
+_stats:
+  coreVersion: '12.324'
+  systemId: null
+  systemVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+  compendiumSource: null
+  duplicateSource: null
+ownership:
+  default: 0
+  mgBwP0sTLP1VFg1m: 3
+folder: null
+sort: 0
+_key: '!tables!IkzQMXnOIuFx0NZ0'
+

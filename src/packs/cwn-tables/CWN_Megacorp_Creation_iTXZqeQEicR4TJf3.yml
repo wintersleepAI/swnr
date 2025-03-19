@@ -1,0 +1,122 @@
+name: CWN Megacorp Creation
+description: >-
+  <p>Megacorps are the universal patrons, targets, antagonists, and loot sources
+  of most cyberpunk games. Most have effectively unlimited money, unrestricted
+  power within their own domains, and a profound indifference toward anything
+  but their own advancement. It’s a given that your campaign is going to need a
+  decent selection of them to serve as mission targets, paymasters, and
+  background movers.</p><p>1). Focus</p><p>2). Style</p><p>3).
+  Strengths</p><p>4). Recent Events</p><p>5). Goals</p><p>6 &amp; 7). Name
+  Elements</p>
+results:
+  - text: Megacorp Main Focus
+    type: 1
+    documentCollection: RollTable
+    documentId: EoLXuivpmKvEIDUf
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: hibr6HVpEMoMDdkn
+    flags: {}
+    _key: '!tables.results!iTXZqeQEicR4TJf3.hibr6HVpEMoMDdkn'
+  - text: Megacorp Style
+    type: 1
+    documentCollection: RollTable
+    documentId: 2fn90r0sfqGhQ4nv
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: fDcisyTZ7tQzrwVQ
+    flags: {}
+    _key: '!tables.results!iTXZqeQEicR4TJf3.fDcisyTZ7tQzrwVQ'
+  - text: Corp Strengths
+    type: 1
+    documentCollection: RollTable
+    documentId: QnOoIH4TvRw3v6f3
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: 0JkBBS9FadUiNjT2
+    flags: {}
+    _key: '!tables.results!iTXZqeQEicR4TJf3.0JkBBS9FadUiNjT2'
+  - text: Recent Corp Events
+    type: 1
+    documentCollection: RollTable
+    documentId: SHdVcW7dkF5g3OVs
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: 9PgB4ITe31dWBc4U
+    flags: {}
+    _key: '!tables.results!iTXZqeQEicR4TJf3.9PgB4ITe31dWBc4U'
+  - text: Current Corp Goals
+    type: 1
+    documentCollection: RollTable
+    documentId: o2yXZkQtygdwyDKa
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: GUzTrRoGQXed4dNz
+    flags: {}
+    _key: '!tables.results!iTXZqeQEicR4TJf3.GUzTrRoGQXed4dNz'
+  - text: Corp Name Element
+    type: 1
+    documentCollection: RollTable
+    documentId: HZFRS6P1Q6gnnCsm
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: MwkP3dbNIyQSmNhH
+    flags: {}
+    _key: '!tables.results!iTXZqeQEicR4TJf3.MwkP3dbNIyQSmNhH'
+  - text: Corp Element
+    type: 1
+    documentCollection: RollTable
+    documentId: qInEYhO5fU68lztI
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: OxhJuaHpc0eowmpm
+    flags: {}
+    _key: '!tables.results!iTXZqeQEicR4TJf3.OxhJuaHpc0eowmpm'
+formula: 1d1
+_id: iTXZqeQEicR4TJf3
+img: icons/svg/d20-grey.svg
+replacement: true
+displayRoll: false
+folder: Kaj67bsHMHUR6kI2
+flags: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '11.315'
+  createdTime: 1703841309034
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!iTXZqeQEicR4TJf3'
+

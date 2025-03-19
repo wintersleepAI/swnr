@@ -1,0 +1,114 @@
+_id: e0HKruZ6WAPtCgHn
+description: >-
+  There will be times when a GM needs an NPC on short notice. The preceding name
+  generators can be used in conjunction with these tables to quickly produce a
+  minor fill-in character for your adventure. Simply roll the table, smooth over
+  any rough joins, and have your instant NPC.
+
+
+  When combat statistics are needed, just apply the most pertinent stat line
+  from page 195 and assume they have whatever weaponry, armor, or other personal
+  possessions might be appropriate for someone in their social circumstance.
+displayRoll: true
+flags:
+  core:
+    sourceId: RollTable.C9hemRvTGLVYsl0R
+folder: null
+formula: 1d1
+img: icons/svg/d20-grey.svg
+name: One Roll NPCs
+replacement: true
+results:
+  - _id: PHA8Vyy8EH92aEX8
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-grey.svg
+    range:
+      - 1
+      - 1
+    text: One Roll NPCs - Age
+    type: pack
+    weight: 1
+    documentCollection: swnr.one-roll-backing
+    documentId: esm8N14kEFl5Y6QB
+    _key: '!tables.results!e0HKruZ6WAPtCgHn.PHA8Vyy8EH92aEX8'
+  - _id: tpje92eOfKMfxTSY
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-grey.svg
+    range:
+      - 1
+      - 1
+    text: One Roll NPCs - Background
+    type: pack
+    weight: 1
+    documentCollection: swnr.one-roll-backing
+    documentId: WYrAlfwA9t3pPl1n
+    _key: '!tables.results!e0HKruZ6WAPtCgHn.tpje92eOfKMfxTSY'
+  - _id: Adp9qlU3Eys5MDGR
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-grey.svg
+    range:
+      - 1
+      - 1
+    text: One Roll NPCs - Desire
+    type: pack
+    weight: 1
+    documentCollection: swnr.one-roll-backing
+    documentId: nSdCqa06jqPekm8M
+    _key: '!tables.results!e0HKruZ6WAPtCgHn.Adp9qlU3Eys5MDGR'
+  - _id: TAo6hNCHqhTWbjhw
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-grey.svg
+    range:
+      - 1
+      - 1
+    text: One Roll NPCs - Problem
+    type: pack
+    weight: 1
+    documentCollection: swnr.one-roll-backing
+    documentId: kgqwCmui0vFPDTHu
+    _key: '!tables.results!e0HKruZ6WAPtCgHn.TAo6hNCHqhTWbjhw'
+  - _id: 3x6v8nfEh43YWaB3
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-grey.svg
+    range:
+      - 1
+      - 1
+    text: One Roll NPCs - Role
+    type: pack
+    weight: 1
+    documentCollection: swnr.one-roll-backing
+    documentId: Dj1g6s5hDb6pvZ4S
+    _key: '!tables.results!e0HKruZ6WAPtCgHn.3x6v8nfEh43YWaB3'
+  - _id: zfNMPrlsUl6ki7QD
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-grey.svg
+    range:
+      - 1
+      - 1
+    text: One Roll NPCs - Trait
+    type: pack
+    weight: 1
+    documentCollection: swnr.one-roll-backing
+    documentId: Mci0jWP2mXFfjvoQ
+    _key: '!tables.results!e0HKruZ6WAPtCgHn.zfNMPrlsUl6ki7QD'
+sort: 0
+_stats:
+  coreVersion: '12.325'
+  systemId: null
+  systemVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+  compendiumSource: null
+  duplicateSource: null
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+_key: '!tables!e0HKruZ6WAPtCgHn'
+

@@ -1,0 +1,96 @@
+folder: 4F3lvzYtRAUIuKhW
+name: 'Smuggling: Why Must It Be Smuggled?'
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: 0
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: ismiX5SkOYG607BB
+    text: It’s some form of illegal contraband
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!RG1jZixjtqk5i6TG.ismiX5SkOYG607BB'
+  - type: 0
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: aa4YlM0hSG8BxmfZ
+    text: A local monopoly keeps out competition
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!RG1jZixjtqk5i6TG.aa4YlM0hSG8BxmfZ'
+  - type: 0
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: edLBvg8xOHSSRr4d
+    text: Somebody dangerous is looking for it
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!RG1jZixjtqk5i6TG.edLBvg8xOHSSRr4d'
+  - type: 0
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: SHReMrrVhG4TZlFt
+    text: The recipient can’t be known to have it
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!RG1jZixjtqk5i6TG.SHReMrrVhG4TZlFt'
+  - type: 0
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: H6vtG6vdDKS1FJT6
+    text: High tariffs make smuggling profitable
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!RG1jZixjtqk5i6TG.H6vtG6vdDKS1FJT6'
+  - type: 0
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: anvdwmF5RaKvM3OV
+    text: They’re stolen goods for transport
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!RG1jZixjtqk5i6TG.anvdwmF5RaKvM3OV'
+replacement: true
+displayRoll: true
+flags:
+  core: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '11.315'
+  createdTime: 1703891799686
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+formula: 1d6
+_id: RG1jZixjtqk5i6TG
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!RG1jZixjtqk5i6TG'
+

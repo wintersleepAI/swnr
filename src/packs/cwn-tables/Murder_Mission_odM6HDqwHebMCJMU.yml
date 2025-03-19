@@ -1,0 +1,106 @@
+name: Murder Mission
+description: >-
+  <ul><li><p>1. How Alert Are They?</p></li><li><p>2. What kind of patron put up
+  the job?</p></li><li><p>3. Particular Complications To
+  Murder</p></li><li><p>4. How Exposed Is the Target?</p></li><li><p>5. Why Must
+  They Die?</p></li><li><p>6. Twists to the Situation</p></li></ul>
+results:
+  - text: 'Murder: How Alert Are They?'
+    type: 1
+    documentCollection: RollTable
+    documentId: 441BRrI420h46M5A
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: s1ztL9WojPU4hCIC
+    flags: {}
+    _key: '!tables.results!odM6HDqwHebMCJMU.s1ztL9WojPU4hCIC'
+  - text: 'Murder: What kind of patron put up the job?'
+    type: 1
+    documentCollection: RollTable
+    documentId: EAEC58fTE1VGzWAQ
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: qhMKT5hiA4DNsrwo
+    flags: {}
+    _key: '!tables.results!odM6HDqwHebMCJMU.qhMKT5hiA4DNsrwo'
+  - text: 'Murder: Particular Complications To Murder'
+    type: 1
+    documentCollection: RollTable
+    documentId: m8vSR5I4BhnQ6YFM
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: ibJrSaboA1Z59NEd
+    flags: {}
+    _key: '!tables.results!odM6HDqwHebMCJMU.ibJrSaboA1Z59NEd'
+  - text: 'Murder: How Exposed Is the Target?'
+    type: 1
+    documentCollection: RollTable
+    documentId: XECaF642ElVUisB5
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: UTqXt6lr901sPADn
+    flags: {}
+    _key: '!tables.results!odM6HDqwHebMCJMU.UTqXt6lr901sPADn'
+  - text: 'Murder: Why Must They Die?'
+    type: 1
+    documentCollection: RollTable
+    documentId: WHe2txkK03I0VQhT
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: r1AXO6I8L664ohtl
+    flags: {}
+    _key: '!tables.results!odM6HDqwHebMCJMU.r1AXO6I8L664ohtl'
+  - text: 'Murder: Twists to the Situation'
+    type: 1
+    documentCollection: RollTable
+    documentId: br7VEvItXWSBA7Bu
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: RuQDFNHB3VBQxWgf
+    flags: {}
+    _key: '!tables.results!odM6HDqwHebMCJMU.RuQDFNHB3VBQxWgf'
+formula: 1d1
+_id: odM6HDqwHebMCJMU
+img: icons/svg/d20-grey.svg
+replacement: true
+displayRoll: false
+folder: oIaOQNsh4qvevc7h
+flags:
+  core: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '11.315'
+  createdTime: 1703912848881
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!odM6HDqwHebMCJMU'
+
