@@ -1,0 +1,107 @@
+name: Theft Mission
+description: >-
+  <ol><li><p>Why Can’t They Get It Themselves?</p></li><li><p>What Kind of
+  Patron Put Up the Job?</p></li><li><p>What’s the Biggest
+  Obstacle?</p></li><li><p>Who Else Knows About Its Value?</p></li><li><p>Why Is
+  It Valuable to the Patron?</p></li><li><p>Twists to the
+  Situation</p></li></ol>
+results:
+  - text: 'Theft: Why Can’t They Get It Themselves?'
+    type: 1
+    documentCollection: RollTable
+    documentId: xvG7oEYLdxtysh4w
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: RkbFpCFYupbdqjNf
+    flags: {}
+    _key: '!tables.results!fr9D8n1daESt22Bw.RkbFpCFYupbdqjNf'
+  - text: 'Theft: What Kind of Patron Put Up the Job?'
+    type: 1
+    documentCollection: RollTable
+    documentId: w8uyzltm5P4pdpp2
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: 83WjUHZloidsebFh
+    flags: {}
+    _key: '!tables.results!fr9D8n1daESt22Bw.83WjUHZloidsebFh'
+  - text: 'Theft: What’s the Biggest Obstacle?'
+    type: 1
+    documentCollection: RollTable
+    documentId: VgRg3CT3OHk6J3Fu
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: MAbPnZb0nVDsaerK
+    flags: {}
+    _key: '!tables.results!fr9D8n1daESt22Bw.MAbPnZb0nVDsaerK'
+  - text: 'Theft: Who Else Knows About Its Value?'
+    type: 1
+    documentCollection: RollTable
+    documentId: fxyZpeHSqLSvcPXs
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: xeRaafk5lvsiDbsQ
+    flags: {}
+    _key: '!tables.results!fr9D8n1daESt22Bw.xeRaafk5lvsiDbsQ'
+  - text: 'Theft: Why Is It Valuable to the Patron?'
+    type: 1
+    documentCollection: RollTable
+    documentId: NiLLxNGhheqTud0P
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: pjJa884FmzBTyf1L
+    flags: {}
+    _key: '!tables.results!fr9D8n1daESt22Bw.pjJa884FmzBTyf1L'
+  - text: 'Theft: Twists to the Situation'
+    type: 1
+    documentCollection: RollTable
+    documentId: 1ohQIAHSGCEDgDUf
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: D44leOMgn00BU2rV
+    flags: {}
+    _key: '!tables.results!fr9D8n1daESt22Bw.D44leOMgn00BU2rV'
+formula: 1d1
+_id: fr9D8n1daESt22Bw
+img: icons/svg/d20-grey.svg
+replacement: true
+displayRoll: false
+folder: oIaOQNsh4qvevc7h
+flags:
+  core: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '11.315'
+  createdTime: 1703914548838
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!fr9D8n1daESt22Bw'
+

@@ -1,0 +1,71 @@
+folder: LgTVzspCcdbYvn10
+name: Contact How Well do you Know Them?
+_id: BnImIQqyydlPnQoZ
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: 0
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: PnnewI2oyQ1iVXIZ
+    text: You just met them within the past month
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!BnImIQqyydlPnQoZ.PnnewI2oyQ1iVXIZ'
+  - type: 0
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: t7iABHgim6ZcSDqg
+    text: You’ve known them for several jobs so far
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!BnImIQqyydlPnQoZ.t7iABHgim6ZcSDqg'
+  - type: 0
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: 1dB4emfAh7k09bYA
+    text: You go back a long time together
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!BnImIQqyydlPnQoZ.1dB4emfAh7k09bYA'
+  - type: 0
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: 7eKlbpf9THoVwKtg
+    text: You’ve known them since you were young
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!BnImIQqyydlPnQoZ.7eKlbpf9THoVwKtg'
+replacement: true
+displayRoll: true
+flags: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '11.315'
+  createdTime: 1703881840613
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+formula: 1d4
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!BnImIQqyydlPnQoZ'
+

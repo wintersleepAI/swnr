@@ -1,0 +1,90 @@
+name: CWN NPC Creation
+description: >-
+  <p>1). Main Strengths</p><p>2). Virtues and/or Qualities</p><p>3). Personality
+  Flaws</p><p>4). Current Problems</p><p>5). Current Desires</p>
+results:
+  - text: NPC Main Strengths
+    type: 1
+    documentCollection: RollTable
+    documentId: 9Xbkvzp6gKKKlU7b
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: lrdtme7aBrZ9u5np
+    flags: {}
+    _key: '!tables.results!i3YhSteKx9RW50p0.lrdtme7aBrZ9u5np'
+  - text: NPC Virtues and Qualities
+    type: 1
+    documentCollection: RollTable
+    documentId: m821SKLTIPRiKrb8
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: ssIoiofthLA8HQYz
+    flags: {}
+    _key: '!tables.results!i3YhSteKx9RW50p0.ssIoiofthLA8HQYz'
+  - text: NPC Personality Flaws
+    type: 1
+    documentCollection: RollTable
+    documentId: k9zmqAqfaZ9a7HMN
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: lMCwP1s0XpQyXzXm
+    flags: {}
+    _key: '!tables.results!i3YhSteKx9RW50p0.lMCwP1s0XpQyXzXm'
+  - text: NPC Current Problems
+    type: 1
+    documentCollection: RollTable
+    documentId: 8IJouo8HX8ybsHjw
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: fhakqfpmHcUArXAv
+    flags: {}
+    _key: '!tables.results!i3YhSteKx9RW50p0.fhakqfpmHcUArXAv'
+  - text: NPC Current Desires
+    type: 1
+    documentCollection: RollTable
+    documentId: vkmIe7cOgXgH02Jz
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: WSGq824aogSUMzTa
+    flags: {}
+    _key: '!tables.results!i3YhSteKx9RW50p0.WSGq824aogSUMzTa'
+formula: 1d1
+_id: i3YhSteKx9RW50p0
+img: icons/svg/d20-grey.svg
+replacement: true
+displayRoll: false
+folder: Kaj67bsHMHUR6kI2
+flags: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '11.315'
+  createdTime: 1703881206712
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!i3YhSteKx9RW50p0'
+
