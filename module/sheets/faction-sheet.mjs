@@ -31,6 +31,9 @@ export class SWNFactionSheet extends SWNBaseSheet {
       editTag: this._onEditTag,
       removeTag: this._onRemoveTag,
       selectTag: this._onSelectTag,
+      editLog: this._onEditLog,
+      removeLog: this._onRemoveLog,
+      removeAllLogs: this._onRemoveAllLogs,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -59,6 +62,9 @@ export class SWNFactionSheet extends SWNBaseSheet {
     },
     tags: {
       template: 'systems/swnr/templates/actor/faction/tags.hbs',
+    },
+    logs: {
+      template: 'systems/swnr/templates/actor/faction/logs.hbs',
     }
   };
 
@@ -72,7 +78,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
     
-    options.parts.push('assets', 'tags');
+    options.parts.push('assets', 'tags', 'logs');
     options.defaultTab = 'assets';
   }
 
@@ -166,6 +172,10 @@ export class SWNFactionSheet extends SWNBaseSheet {
         case 'tags':
           tab.id = 'tags';
           tab.label += 'Tags';
+          break;
+        case 'logs':
+          tab.id = 'logs';
+          tab.label += 'Logs';
           break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
@@ -293,7 +303,6 @@ export class SWNFactionSheet extends SWNBaseSheet {
       }
     }
     
-    //TODO: Increase tag width
     await foundry.applications.api.DialogV2.wait({
       window: {
         title: title
@@ -373,6 +382,57 @@ export class SWNFactionSheet extends SWNBaseSheet {
       ],
       render: _addListener
     })
+  }
+  
+  static async _onEditLog(event, target) {
+    const index = parseInt(target.dataset?.index);
+    const editMode = !isNaN(index);
+    const log = editMode ? this.actor.system.log[index] : null;
+
+    const title = editMode
+        ? game.i18n.localize("swnr.sheet.faction.editLog")
+        : game.i18n.localize("swnr.sheet.faction.addLog");
+    
+    const _modifyLogs = async (_event, button, _html) => {
+      const logText = button.form.logText.value;
+      
+      if (editMode) {
+        await this.actor.system.editLog(logText, index);
+      } else {
+        await this.actor.system.addLog(logText);
+      }
+    }
+    
+    await foundry.applications.api.DialogV2.prompt({
+      window: {
+        title: title,
+      },
+      position: {
+        width: 500
+      },
+      modal: false,
+      content: `<label for="logText">${game.i18n.localize("swnr.sheet.faction.editLogDialog.label")}</label>`
+          +`<textarea name="logText" id="logText">${log ?? ""}</textarea>`,
+      ok: {
+        callback: _modifyLogs,
+        label: title
+      }
+    })
+  }
+
+  static async _onRemoveLog(event, target) {
+    const logIndex = parseInt(target.dataset?.index);
+
+    if (isNaN(logIndex)) {
+      ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
+      return;
+    }
+
+    await this.actor.system.removeLog(logIndex);
+  }
+  
+  static async _onRemoveAllLogs(event, target){
+    await this.actor.system.removeAllLogs();
   }
 
   /** Helper Functions */

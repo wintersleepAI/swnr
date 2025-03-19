@@ -122,8 +122,7 @@ export default class SWNFaction extends foundry.abstract
 
     tag.desc ??= "";
     tag.effect ??= "";
-    const tags = this.tags;
-    tags.splice(index,  1, tag);
+    const tags = this.tags.toSpliced(index,  1, tag);
     await this.parent.update({ "system.tags": tags})
   }
   
@@ -135,5 +134,45 @@ export default class SWNFaction extends foundry.abstract
     
     const newTags = this.tags.toSpliced(index, 1);
     await this.parent.update({ "system.tags": newTags });
+  }
+  
+  async addLog(log) {
+    if (!log) {
+      ui.notifications?.error(game.i18n.localize("swnr.sheet.faction.editLogDialog.noText"));
+      return;
+    }
+    
+    const newLog = this.log;
+    newLog.push(log);
+    await this.parent.update({"system.log": newLog});
+  }
+
+  async editLog(log, index) {
+    if (!log) {
+      ui.notifications?.error(game.i18n.localize("swnr.sheet.faction.editLogDialog.noText"));
+      return;
+    }
+
+    if (index < 0 || index >= this.log.length) {
+      ui.notifications?.error(game.i18n.format("swnr.sheet.faction.logIndexInvalid", {index}));
+      return;
+    }
+
+    const newLog = this.log.toSpliced(index,  1, log);
+    await this.parent.update({"system.log": newLog});
+  }
+
+  async removeLog(index) {
+    if (index < 0 || index >= this.tags.length) {
+      ui.notifications?.error(game.i18n.format("swnr.sheet.faction.logIndexInvalid", {index}));
+      return;
+    }
+
+    const newTags = this.log.toSpliced(index, 1);
+    await this.parent.update({ "system.log": newTags });
+  }
+
+  async removeAllLogs(index) {
+    await this.parent.update({ "system.log": [] });
   }
 }

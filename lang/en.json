@@ -51,7 +51,8 @@
         "VehicleNotes": "Desc/Mods",
         "Programs": "Program Details",
         "Assets": "Assets",
-        "Tags": "Tags"
+        "Tags": "Tags",
+        "Logs": "Logs"
       },
       "base": {
         "FIELDS": {
@@ -1496,9 +1497,10 @@
         "addTagCustom": "Add Custom Tag",
         "removeTag": "Remove Tag",
         "tagEffectLabel": "Effect:",
-        "remove-log": "Remove Log Entry",
-        "add-log": "Add Manual Log Entry",
-        "remove-log-all": "Remove All Log Entries",
+        "removeLog": "Remove Log Entry",
+        "addLog": "Add Manual Log Entry",
+        "editLog": "Edit Log Entry",
+        "removeLogAll": "Remove All Log Entries",
         "attack-roll": "Attack Hit Roll",
         "counter-roll": "Counter Hit Roll",
         "damage": "Damage",
@@ -1537,7 +1539,12 @@
         "selectTagDialog": {
           "selectTagDefault": "Choose A Tag"
         },
-        "tagIndexInvalid": "Error: Faction tag index {index} is invalid"
+        "editLogDialog": {
+          "label": "Manual log entry.<br>To inline a roll use [[1dX]].",
+          "noText": "Error: Log cannot be empty" 
+        },
+        "tagIndexInvalid": "Error: Faction tag index {index} is invalid",
+        "logIndexInvalid": "Error: Log index {index} is invalid"
       },
       "ship": {
         "life-support-days": "Life Support Days",
