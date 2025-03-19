@@ -337,7 +337,19 @@
     },
     {
       "name": "cwn-tables",
-      "label": "CWN Roll Tabls",
+      "label": "CWN Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "one-roll-tables",
+      "label": "SWN Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "one-roll-backing",
+      "label": "SWN Backing Roll Tables",
       "system": "swnr",
       "type": "RollTable"
     }

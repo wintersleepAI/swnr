@@ -1,0 +1,97 @@
+_id: 9x8xoivdKBJ4lvyW
+displayRoll: true
+flags: {}
+folder: null
+formula: 1d6
+img: icons/svg/d20-grey.svg
+name: One Roll Patrons - Trustworthiness
+replacement: true
+results:
+  - _id: VgNAXzwhazrs4LeE
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 1
+    text: 'Trustworthiness: They intend to totally screw the PCs'
+    type: text
+    weight: 1
+    documentId: null
+    _key: '!tables.results!9x8xoivdKBJ4lvyW.VgNAXzwhazrs4LeE'
+  - _id: UQsaDKN3qVexl8Ie
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 2
+      - 2
+    text: 'Trustworthiness: They won’t pay unless forced to do so'
+    type: text
+    weight: 1
+    documentId: null
+    _key: '!tables.results!9x8xoivdKBJ4lvyW.UQsaDKN3qVexl8Ie'
+  - _id: WlzFhoVI26SXoRM7
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 3
+      - 3
+    text: 'Trustworthiness: They’ll pay slowly or reluctantly'
+    type: text
+    weight: 1
+    documentId: null
+    _key: '!tables.results!9x8xoivdKBJ4lvyW.WlzFhoVI26SXoRM7'
+  - _id: D8zWX3Qf5qbWOSEA
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 4
+      - 4
+    text: 'Trustworthiness: They’ll pay, but discount for mistakes'
+    type: text
+    weight: 1
+    documentId: null
+    _key: '!tables.results!9x8xoivdKBJ4lvyW.D8zWX3Qf5qbWOSEA'
+  - _id: SbZBVPyN2Ab11ARc
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 5
+      - 5
+    text: 'Trustworthiness: They’ll pay without quibbling'
+    type: text
+    weight: 1
+    documentId: null
+    _key: '!tables.results!9x8xoivdKBJ4lvyW.SbZBVPyN2Ab11ARc'
+  - _id: cs55gFOlr3mjdgRz
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 6
+      - 6
+    text: 'Trustworthiness: They’ll pay more than they promised'
+    type: text
+    weight: 1
+    documentId: null
+    _key: '!tables.results!9x8xoivdKBJ4lvyW.cs55gFOlr3mjdgRz'
+sort: 0
+_stats:
+  coreVersion: '12.325'
+  systemId: null
+  systemVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+  compendiumSource: null
+  duplicateSource: null
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+description: ''
+_key: '!tables!9x8xoivdKBJ4lvyW'
+
