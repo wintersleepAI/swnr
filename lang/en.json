@@ -209,6 +209,9 @@
           },
           "employer": {
             "label": "Employer"
+          }, 
+          "stress": {
+            "label": "Stress"
           }
         }
       },
@@ -1649,6 +1652,8 @@
       "attackRollHint": "What to roll for attacks?",
       "useTrauma": "Use Trauma?",
       "useTraumaHint": "Use CWN trauma dice for rolling attacks?",
+      "useStress": "Use Stress?",
+      "useStressHint": "Use AWN stress attribute for characters?",
       "useCWNArmor": "Use CWN Armor?",
       "useCWNArmorHint": "Use CWN armor options (soak, melee and ranged AC)?",
       "useCWNCyber": "Use CWN Cyber Options?",
