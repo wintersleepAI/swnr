@@ -129,6 +129,27 @@ export function groupFieldWidget(field, _groupConfig, inputConfig) {
   return fg;
 }
 
+
+/** 
+ * Generate the HTML for group input elements.
+ * Only works for fields and derived /prepared data elements cannot be used.
+ * invoked like  {{formGroup systemFields.ab value=system.ab localize=true widget=groupWidget readonly=0}} 
+ * readonly is optional sets what attribute should be set to readonly
+ * for nested fields, the readonly attribute is to the index of the field in the nested fields object
+ * for non-nested, 0 means the field is readonly 
+ */
+export function checkboxFieldWidget(field, _groupConfig, inputConfig) {
+  const fg = document.createElement("div");
+  fg.classList.add("check-group");
+
+  const label = document.createElement("label");
+  label.innerHTML = field.label;
+  fg.appendChild(label);
+  const input = field.toInput({ value: inputConfig.value });
+  fg.appendChild(input);
+  return fg;
+}
+
 /** 
  * Generate the HTML for group input elements with no name fields for 
  * purely derived groups or duplicates.

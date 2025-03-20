@@ -412,15 +412,14 @@
 .swnr .sheet-body .tab .editor .resource-group {
   border: 1px solid var(--border-color);
   border-radius: 2px;
-  margin: 0px;
   padding: 4px;
-  margin: 4px;
+  margin: 2px;
 }
 .swnr .sheet-body .thin-bar,
 .swnr .sheet-body .tab .thin-bar,
 .swnr .sheet-body .tab .editor .thin-bar {
-  margin-top: -5px;
-  margin-bottom: -15px;
+  margin-top: -10px;
+  margin-bottom: 0px;
 }
 .swnr .tab.biography {
   flex: 1;
@@ -434,11 +433,17 @@
 .swnr .tox .tox-edit-area {
   padding: 0 8px;
 }
+.swnr .check-group label,
 .swnr .form-group label,
 .swnr .resource-label {
   font-weight: bold;
   font-size: 12px;
   margin: -5px 0;
+}
+.swnr .check-group {
+  margin: 0;
+  padding: 0;
+  display: ruby;
 }
 .swnr .form-group {
   margin: 0;

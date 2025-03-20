@@ -4,11 +4,10 @@
   data-tab='weapon'
 >
 <div class='grid grid-4col'> <!-- Weapon -->
+
+
   <div class="resource">
-   {{formGroup systemFields.stat value=system.stat localize=true}}
-  </div>
-  <div class="resource">
-   {{formGroup systemFields.secondStat value=system.secondStat localize=true}}
+   {{formGroup systemFields.damage value=system.damage localize=true}}
   </div>
   <div class="resource-group grid-span-2 flex flexrow">
     <div class="resource" style="margin-right:2px;">
@@ -19,22 +18,35 @@
     </div>
   </div><!-- end resource-group -->
   <div class="resource">
-   {{formGroup systemFields.skill value=system.skill localize=true}}
+   {{formGroup systemFields.save value=system.save localize=true}}
   </div>
-  <div class="resource">
-   {{formGroup systemFields.skillBoostsDamage value=system.skillBoostsDamage localize=true}}
+
+  <div class="grid-span-4 thin-bar flex flexrow">
+    {{formGroup systemFields.skillBoostsDamage value=system.skillBoostsDamage localize=true widget=checkWidget}}
+    {{formGroup systemFields.skillBoostsShock value=system.skillBoostsShock localize=true widget=checkWidget}}
   </div>
-  <div class="resource">
-   {{formGroup systemFields.skillBoostsShock value=system.skillBoostsShock localize=true}}
+
+  <div class="grid-span-4 thin-bar flex flexrow">
+   {{formGroup systemFields.isTwoHanded value=system.isTwoHanded localize=true widget=checkWidget}}
+   {{formGroup systemFields.isNonLethal value=system.isNonLethal localize=true widget=checkWidget}}
   </div>
+
   <div class="resource">
    {{formGroup systemFields.ab value=system.ab localize=true}}
   </div>
   <div class="resource">
-   {{formGroup systemFields.damage value=system.damage localize=true}}
+   {{formGroup systemFields.stat value=system.stat localize=true}}
   </div>
+  <div class="resource">
+   {{formGroup systemFields.secondStat value=system.secondStat localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.skill value=system.skill localize=true}}
+  </div>
+
+
   <div class="resource-group grid-span-4"><!-- AMMO-->
-    <div class="grid grid-4col">
+    <div class="grid grid-4col" style="margin-top:0px;">
       <div class="resource grid-span-2">
         {{formGroup systemFields.ammo.fields.type value=system.ammo.type localize=true}}
       </div>
@@ -49,43 +61,42 @@
         <div class="resource grid-span-2"> </div>
       {{/if}}
     </div>
-  </div>
-  <div class="resource-group grid-span-4"><!-- Ammo Properties-->
-    <div class="resource thin-bar'">
-      {{formGroup systemFields.ammo.fields.longReload value=system.ammo.longReload localize=true}}
-    </div>
-    <div class="resource thin-bar'">
-      {{formGroup systemFields.ammo.fields.suppress value=system.ammo.suppress localize=true}}
-    </div>
-    <div class="resource">
-      {{formGroup systemFields.ammo.fields.burst value=system.ammo.burst localize=true}}
+    <div class="grid-span-4 thin-bar flex flexrow">
+      {{formGroup systemFields.ammo.fields.longReload value=system.ammo.longReload localize=true widget=checkWidget}}
+      {{formGroup systemFields.ammo.fields.suppress value=system.ammo.suppress localize=true widget=checkWidget}}
+      {{formGroup systemFields.ammo.fields.burst value=system.ammo.burst localize=true widget=checkWidget}}
     </div>
   </div><!-- AMMO Properties  -->
-  <div class="resource-group">
-    <div class="resource">
-      {{formGroup systemFields.range.fields.normal value=system.range.normal localize=true}}
+  <div class="resource-group grid-span-2">
+    <label class="resource-label" style="margin-left: -2px;">
+      {{localize 'SWN.Item.Weapon.FIELDS.range.label'}}
+    </label>
+    <div class="flex flexrow" style="gap: 2px;">
+      <div class="resource">
+        {{formGroup systemFields.range.fields.normal value=system.range.normal localize=true}}
+      </div>
+      <div class="resource">
+        {{formGroup systemFields.range.fields.max value=system.range.max localize=true}}
+      </div>
     </div>
-    <div class="resource">
-      {{formGroup systemFields.range.fields.max value=system.range.max localize=true}}
+
+  </div><!-- end resource-group -->
+
+  <div class="resource-group grid-span-2">
+    
+    <label class="resource-label" style="margin-left: -2px;">
+      {{localize 'SWN.Item.Weapon.FIELDS.trauma.label'}}
+    </label>
+    <div class="flex flexrow" style="gap: 2px;">
+      <div class="resource">
+        {{formGroup systemFields.trauma.fields.die value=system.trauma.die localize=true}}
+      </div>
+      <div class="resource">
+        {{formGroup systemFields.trauma.fields.rating value=system.trauma.rating localize=true}}
+      </div>
     </div>
   </div><!-- end resource-group -->
-  <div class="resource">
-   {{formGroup systemFields.save value=system.save localize=true}}
-  </div>
-  <div class="resource-group">
-    <div class="resource">
-      {{formGroup systemFields.trauma.fields.die value=system.trauma.die localize=true}}
-    </div>
-    <div class="resource">
-      {{formGroup systemFields.trauma.fields.rating value=system.trauma.rating localize=true}}
-    </div>
-  </div><!-- end resource-group -->
-  <div class="resource">
-   {{formGroup systemFields.isTwoHanded value=system.isTwoHanded localize=true}}
-  </div>
-  <div class="resource">
-   {{formGroup systemFields.isNonLethal value=system.isNonLethal localize=true}}
-  </div>
+
 </div><!-- end grid-col weapon  -->
 
 </section>
