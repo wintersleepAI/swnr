@@ -9,25 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405651
-  modifiedTime: 1741813405651
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: m8lhkczfwxqhjcop
+_id: 2i9j0t5cd55twcfk
 system:
-  description: All ships are equipped with basic medical facilities for curing lightly injured crew members and keeping the seriously injured ones stable until reaching a planet. An extended medbay improves those facilities, allowing for the medical treatment of up to the ship's entire maximum crew at once, including the treatment of critically wounded passengers.
-  favorite: false
-  tl: null
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 5000
   costMultiplier: true
+  description: All ships are equipped with basic medical facilities for curing lightly injured crew members and keeping the seriously injured ones stable until reaching a planet. An extended medbay improves those facilities, allowing for the medical treatment of up to the ship's entire maximum crew at once, including the treatment of critically wounded passengers.
+  effect: Can provide medical care to more patients
   mass: 1
   massMultiplier: false
+  minClass: frigate
   power: 1
   powerMultiplier: false
-  minClass: frigate
-  type: ship
-  effect: Can provide medical care to more patients
 effects: []
-_key: '!items!m8lhkczfwxqhjcop'
+_key: '!items!2i9j0t5cd55twcfk'

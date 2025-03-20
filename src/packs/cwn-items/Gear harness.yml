@@ -9,24 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988669
-  modifiedTime: 1739238988669
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 79k0d3wpcndek7g2
+_id: ecsm1pporow6u06o
 system:
-  description: Backpacks, gear harnesses, and other such kit may add some bulk to an operator`s burden, but without them the GM is perfectly justified in asking how a PC is fitting their entire loadout in their jacket pockets.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
   cost: 25
-  location: stowed
-  quality: stock
+  description: Backpacks, gear harnesses, and other such kit may add some bulk to an operator`s burden, but without them the GM is perfectly justified in asking how a PC is fitting their entire loadout in their jacket pockets.
+  encumbrance: 1
   noEncReadied: true
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!79k0d3wpcndek7g2'
+_key: '!items!ecsm1pporow6u06o'

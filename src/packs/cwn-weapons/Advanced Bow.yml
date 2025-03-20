@@ -9,52 +9,32 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988740
-  modifiedTime: 1739238988740
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: my9jon2c27sgkuo3
+_id: 71xakkb9edclhlst
 system:
-  description: Advanced bows are used by a few specialists who prefer the near-silence that modern composites provide or the massive blood loss induced by a modern fractal broadhead carried on a fifty-gram arrow. This weapon can be reloaded with a Move action, or an On Turn if the user has at least Shoot-1 skill.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 2
-  cost: 500
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  stat: dex
-  secondStat: none
-  skill: ask
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 0
-    dmg: 0
-  ab: 0
   ammo:
     burst: false
     max: 1
     suppress: false
     type: special
     value: 1
+  cost: 500
+  damage: 1d8
+  description: Advanced bows are used by a few specialists who prefer the near-silence that modern composites provide or the massive blood loss induced by a modern fractal broadhead carried on a fifty-gram arrow. This weapon can be reloaded with a Move action, or an On Turn if the user has at least Shoot-1 skill.
+  encumbrance: 2
+  isNonLethal: false
   range:
     max: 200
     normal: 30
-  damage: 1d8
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
+  secondStat: none
+  shock:
+    ac: 0
+    dmg: 0
+  stat: dex
   trauma:
     die: 1d8+1
     rating: 3
-  isTwoHanded: false
-  isNonLethal: false
 effects: []
-_key: '!items!my9jon2c27sgkuo3'
+_key: '!items!71xakkb9edclhlst'

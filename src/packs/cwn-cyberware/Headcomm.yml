@@ -9,20 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988576
-  modifiedTime: 1739238988576
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: dlt6dao8j1xqfg68
+_id: iofx6vrrgq73u7m9
 system:
-  description: An implanted phone/short-range radio that can directly communicate within 100 meters or use the phone grid, if it's available. For cranial security reasons, only text and voice can be transmitted, but conversations can be held without audible vocalization.
-  favorite: false
-  tl: 4
-  cost: 1000
-  strain: 0.25
-  disabled: false
-  effect: Silent radio or phone comms
-  type: Sensory
   concealment: Medical
-  complication: ''
+  cost: 1000
+  description: An implanted phone/short-range radio that can directly communicate within 100 meters or use the phone grid, if it's available. For cranial security reasons, only text and voice can be transmitted, but conversations can be held without audible vocalization.
+  effect: Silent radio or phone comms
+  strain: 0.25
+  type: Sensory
 effects: []
-_key: '!items!dlt6dao8j1xqfg68'
+_key: '!items!iofx6vrrgq73u7m9'

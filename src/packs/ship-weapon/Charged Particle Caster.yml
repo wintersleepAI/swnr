@@ -9,40 +9,23 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405671
-  modifiedTime: 1741813405671
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 1xyrgn6bdt5xennx
+_id: 3l21j2gr1wn4gu37
 system:
-  description: A focalized upgrade to the reaper battery, the CPC has a much better armor penetration profile.
-  favorite: false
-  tl: 4
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 800000
   costMultiplier: false
+  damage: 3d6
+  description: A focalized upgrade to the reaper battery, the CPC has a much better armor penetration profile.
+  hardpoint: 2
   mass: 1
   massMultiplier: false
+  minClass: frigate
   power: 10
   powerMultiplier: false
-  minClass: frigate
-  type: ship
-  damage: 3d6
-  ab: 0
-  hardpoint: 2
   qualities: AP 15, Clumsy
-  ammo:
-    type: none
-    max: 4
-    value: 4
-  trauma:
-    die: 1d6
-    rating: ''
-    vehicle: false
-  range:
-    normal: 1
-    max: 2
-  stat: ask
+  tl: 4
 effects: []
-_key: '!items!1xyrgn6bdt5xennx'
+_key: '!items!3l21j2gr1wn4gu37'

@@ -9,19 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988711
-  modifiedTime: 1739238988711
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: tkr540whv4igm683
+_id: 57nf45a77lw88ajc
 system:
-  description: hostile program, used most often with the Terminate verb to end the effects of an enemy hacker's programs prematurely.
-  favorite: false
-  cost: 500
-  type: subject
   accessCost: 0
-  target: Program
+  cost: 500
+  description: hostile program, used most often with the Terminate verb to end the effects of an enemy hacker's programs prematurely.
   selfTerminating: false
-  useAffects: Active running program
   skillCheckMod: 0
+  target: Program
+  type: subject
+  useAffects: Active running program
 effects: []
-_key: '!items!tkr540whv4igm683'
+_key: '!items!57nf45a77lw88ajc'

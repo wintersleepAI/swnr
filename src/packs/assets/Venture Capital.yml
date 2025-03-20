@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988451
-  modifiedTime: 1739238988451
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: slmkz8zva554z4v0
+_id: 2zobwngl81o5l7kg
 system:
+  assetType: wealth
+  attackDamage: 2d6
+  attackSource: wealth
+  attackSpecial: ''
+  attackTarget: wealth
+  baseOfInfluence: false
+  cost: 15
+  counter: 1d6
   description: 'This asset grows resources out of seemingly nowhere, harvesting the best of entrepreneurship for the faction''s benefit. As an action, venture capital can be tapped. 1d8 is rolled; on a 1, the asset is destroyed, while on a 2-3 one FacCred is gained, 4-7 yields two FacCreds and 8 grants three FacCreds. Roll: [[1d8]]'
-  favorite: false
-  category: cunning
-  type: Facility
   health:
     max: 10
     value: 10
-  rating: 6
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 15
   income: 0
   maintenance: 0
-  attackTarget: wealth
-  attackSource: wealth
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: A
+  rating: 6
+  tl: 4
+  turnRoll: ''
+  type: Facility
+  unusable: false
 effects: []
-_key: '!items!slmkz8zva554z4v0'
+_key: '!items!2zobwngl81o5l7kg'

@@ -9,19 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988712
-  modifiedTime: 1739238988712
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 220uyf2l75x8yblf
+_id: twvk13c71mwq4d4q
 system:
-  description: Cause a physical device or cyberware system to damage itself through violent movement or self-destructive current surges. Devices smaller than a car will usually be disabled until repaired. Cyberware users do not take damage, but must make two Physical saves to resist the effect; if they fail both, the targeted system is disabled until the next maintenance, and if they fail one, it's frozen for one round. A device or cyber can be targeted by this Verb only once per scene.
-  favorite: false
-  cost: 2000
-  type: verb
   accessCost: 1
-  target: Device/Cyber
+  cost: 2000
+  description: Cause a physical device or cyberware system to damage itself through violent movement or self-destructive current surges. Devices smaller than a car will usually be disabled until repaired. Cyberware users do not take damage, but must make two Physical saves to resist the effect; if they fail both, the targeted system is disabled until the next maintenance, and if they fail one, it's frozen for one round. A device or cyber can be targeted by this Verb only once per scene.
   selfTerminating: true
-  useAffects: Make the target damage itself
   skillCheckMod: '-1'
+  target: Device/Cyber
+  type: verb
+  useAffects: Make the target damage itself
 effects: []
-_key: '!items!220uyf2l75x8yblf'
+_key: '!items!twvk13c71mwq4d4q'

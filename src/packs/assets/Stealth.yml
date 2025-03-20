@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988444
-  modifiedTime: 1739238988444
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: n9ovpz792qf8k4ax
+_id: xdmgj1uo468kw1jm
 system:
+  assetType: cunning
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 2
+  counter: ''
   description: Not an asset, per se, but a special quality that can be purchased for another Special Forces asset on the planet. An asset that has been Stealthed cannot be detected or attacked by other factions. If the unit normally requires the permission of a planetary government to be moved onto a planet, that permission may be foregone. An asset loses its Stealth if it is used to attack or defend.
-  favorite: false
-  category: cunning
-  type: Tactic
   health:
     max: 0
     value: 0
-  rating: 3
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 2
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: S
+  rating: 3
+  tl: 0
+  turnRoll: ''
+  type: Tactic
+  unusable: false
 effects: []
-_key: '!items!n9ovpz792qf8k4ax'
+_key: '!items!xdmgj1uo468kw1jm'

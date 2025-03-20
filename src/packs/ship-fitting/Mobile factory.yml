@@ -9,25 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405658
-  modifiedTime: 1741813405658
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 8jztfgs3grxr4f0k
+_id: lvdxf3r5z1sx3w43
 system:
-  description: The ship is equipped with a full-scale TL4 fabrication plant programmed to support its needs. The ship can stock raw materials and parts at 5000 credits per ton; these parts can then be used to "pay" ship repair or maintenance costs when conventional shipyards are unavailable. The factory can also create repair vehicles, TL4 equipment, space habs, and planetary structures with these parts at a rate of 10000 credits worth of construction a day. If a mobile extractor is available, the raw materials processed by the latter unit can be used to feed the factory. Operating a mobile factory requires at least 100 well-trained personnel. Each 10 fewer doubles repair or maintenance times.
-  favorite: false
-  tl: null
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 50000
   costMultiplier: true
+  description: The ship is equipped with a full-scale TL4 fabrication plant programmed to support its needs. The ship can stock raw materials and parts at 5000 credits per ton; these parts can then be used to "pay" ship repair or maintenance costs when conventional shipyards are unavailable. The factory can also create repair vehicles, TL4 equipment, space habs, and planetary structures with these parts at a rate of 10000 credits worth of construction a day. If a mobile extractor is available, the raw materials processed by the latter unit can be used to feed the factory. Operating a mobile factory requires at least 100 well-trained personnel. Each 10 fewer doubles repair or maintenance times.
+  effect: Self-sustaining factory and repair facilities
   mass: 2
   massMultiplier: true
+  minClass: cruiser
   power: 3
   powerMultiplier: false
-  minClass: cruiser
-  type: ship
-  effect: Self-sustaining factory and repair facilities
 effects: []
-_key: '!items!8jztfgs3grxr4f0k'
+_key: '!items!lvdxf3r5z1sx3w43'

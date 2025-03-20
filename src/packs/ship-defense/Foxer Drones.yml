@@ -9,25 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405623
-  modifiedTime: 1741813405623
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 7lgjvmbxd2k0dw7n
+_id: www5hf1m0lw5l2j7
 system:
-  description: These drones are invariably short-lived due to enormous energy signatures they produce, but until the ship's next turn they grant a +2 AC bonus as their emissions confuse foes. Foxer drones are cheaply constructed and essentially free; the only limit on their number is the amount of free space set aside for holding them.
-  favorite: false
-  tl: null
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 10000
   costMultiplier: true
+  description: These drones are invariably short-lived due to enormous energy signatures they produce, but until the ship's next turn they grant a +2 AC bonus as their emissions confuse foes. Foxer drones are cheaply constructed and essentially free; the only limit on their number is the amount of free space set aside for holding them.
+  effect: +2 AC for one round when fired
   mass: 1
   massMultiplier: true
+  minClass: cruiser
   power: 2
   powerMultiplier: false
-  minClass: cruiser
-  type: ship
-  effect: +2 AC for one round when fired
 effects: []
-_key: '!items!7lgjvmbxd2k0dw7n'
+_key: '!items!www5hf1m0lw5l2j7'

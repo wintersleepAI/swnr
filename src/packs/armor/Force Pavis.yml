@@ -8,35 +8,28 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988390
-  modifiedTime: 1739238988390
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: z9472oth969gyyvc
+_id: e4kae8n7vqvlnqsm
 system:
-  description: A force pavis is more effective shield, being a small pretech force disc projector that can absorb all manner of small arms fire. All shields require one free hand to use effectively.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 10000
-  tl: 5
-  location: other
-  quality: stock
-  noEncReadied: false
   ac: 15
-  shield: true
-  use: false
   meleeAc: 15
+  traumaDiePenalty: 0
+  isSubtle: false
   soak:
     value: 0
     max: 0
-  dr: 0
-  traumaDiePenalty: 0
-  isSubtle: false
-  isHeavy: false
-  shieldMeleeACBonus: 1
+  cost: 10000
+  description: A force pavis is more effective shield, being a small pretech force disc projector that can absorb all manner of small arms fire. All shields require one free hand to use effectively.
+  encumbrance: 1
+  location: other
+  quality: stock
+  shield: true
   shieldACBonus: 1
+  shieldMeleeACBonus: 1
+  tl: 5
+  type: combat
+  use: false
 effects: []
-_key: '!items!z9472oth969gyyvc'
+_key: '!items!e4kae8n7vqvlnqsm'

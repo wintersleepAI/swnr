@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988448
-  modifiedTime: 1739238988448
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: dduqc3rjy73orjm9
+_id: fb6upyc579h0g1aq
 system:
+  assetType: cunning
+  attackDamage: 0
+  attackSource: cunning
+  attackSpecial: Traitors can attack an enemy asset. On a successful attack, the Treachery asset is lost, 5 FacCreds are gained, and the targeted asset switches sides to join the traitor's faction, even if the faction does not otherwise have the attributes necessary.
+  attackTarget: cunning
+  baseOfInfluence: false
+  cost: 10
+  counter: ''
   description: Traitors can attack an enemy asset. On a successful attack, the Treachery asset is lost, 5 FacCreds are gained, and the targeted asset switches sides to join the traitor's faction, even if the faction does not otherwise have the attributes necessary.
-  favorite: false
-  category: cunning
-  type: Tactic
   health:
     max: 5
     value: 5
-  rating: 7
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 10
   income: 0
   maintenance: 0
-  attackTarget: cunning
-  attackSource: cunning
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: S
+  rating: 7
+  tl: 0
+  turnRoll: ''
+  type: Tactic
+  unusable: false
 effects: []
-_key: '!items!dduqc3rjy73orjm9'
+_key: '!items!fb6upyc579h0g1aq'

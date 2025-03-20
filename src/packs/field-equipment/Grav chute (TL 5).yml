@@ -8,26 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988804
-  modifiedTime: 1739238988804
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: z0wgu2555y8namuo
+_id: retactgq6yuan1dl
 system:
-  description: 'Grav chute (TL 5): When this cylinder is strapped to a person or object and activated, it smoothly modulates falling speeds from from orbital heights. The chute can safely slow up to 300 kilos of weight. It burn out after one use.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 1
   cost: 1000
-  tl: 5
+  description: 'Grav chute (TL 5): When this cylinder is strapped to a person or object and activated, it smoothly modulates falling speeds from from orbital heights. The chute can safely slow up to 300 kilos of weight. It burn out after one use.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 5
 effects: []
-_key: '!items!z0wgu2555y8namuo'
+_key: '!items!retactgq6yuan1dl'

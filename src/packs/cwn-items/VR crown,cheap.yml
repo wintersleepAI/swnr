@@ -9,24 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988680
-  modifiedTime: 1739238988680
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ihek6cru9e6nkvbo
+_id: lo76ti7o69cxvftd
 system:
-  description: A cheap headset for a VR addict or a hacker too poor for a cranial jack.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
   cost: 50
-  location: stowed
-  quality: stock
+  description: A cheap headset for a VR addict or a hacker too poor for a cranial jack.
+  encumbrance: 1
   noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!ihek6cru9e6nkvbo'
+_key: '!items!lo76ti7o69cxvftd'

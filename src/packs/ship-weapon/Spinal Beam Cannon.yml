@@ -9,40 +9,23 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405685
-  modifiedTime: 1741813405685
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 014q7rg4gferdhf1
+_id: zpdz70e649rvnbo4
 system:
-  description: One of the first spinal-mount class weapons, the SBC briefly channels the full power of the ship into a charged beam. It lacks the power and penetration of the more advanced gravcannon, but also takes less power to mount.
-  favorite: false
-  tl: 4
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 1500000
   costMultiplier: false
+  damage: 3d10
+  description: One of the first spinal-mount class weapons, the SBC briefly channels the full power of the ship into a charged beam. It lacks the power and penetration of the more advanced gravcannon, but also takes less power to mount.
+  hardpoint: 3
   mass: 5
   massMultiplier: false
+  minClass: cruiser
   power: 10
   powerMultiplier: false
-  minClass: cruiser
-  type: ship
-  damage: 3d10
-  ab: 0
-  hardpoint: 3
   qualities: AP 15, Clumsy
-  ammo:
-    type: none
-    max: 4
-    value: 4
-  trauma:
-    die: 1d6
-    rating: ''
-    vehicle: false
-  range:
-    normal: 1
-    max: 2
-  stat: ask
+  tl: 4
 effects: []
-_key: '!items!014q7rg4gferdhf1'
+_key: '!items!zpdz70e649rvnbo4'

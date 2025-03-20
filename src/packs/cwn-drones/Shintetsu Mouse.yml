@@ -9,47 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741850359792
-  modifiedTime: 1741850359792
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: vgpvggvhjvncyknq
+_id: ywpfj2mpucdvdpma
 system:
+  ac: 13
+  cost: 500
+  description: Little more than a fist-sized drive core with wheels, Shintetsu's Mouse is about as small as a functional drone can get with its low-cost technology. Incapable of supporting more than its basic functionality, it still provides eyes and ears for a pilot in a cheap, portable format.
+  enc: 1
+  fittings:
+    max: 0
+  hardpoint:
+    max: 0
   health:
     max: 1
     value: 1
-  cost: 500
-  ac: 13
-  traumaTarget: 6
-  armor:
-    value: 1
-    max: 1
-  speed: 5
-  crew:
-    min: 1
-    max: 1
-    current: 1
-  crewMembers: []
-  tl: 5
-  description: Little more than a fist-sized drive core with wheels, Shintetsu's Mouse is about as small as a functional drone can get with its low-cost technology. Incapable of supporting more than its basic functionality, it still provides eyes and ears for a pilot in a cheap, portable format.
-  mods: ''
-  power:
-    value: 1
-    max: 1
-  mass:
-    value: 1
-    max: 1
-  hardpoints:
-    value: 1
-    max: 1
-  kmph: 0
-  tonnage: 0
-  size: s
-  fittings:
-    max: 0
-  enc: 1
-  range: ''
-  model: primitiveDrone
   moveType: ground
+  speed: 5
+  traumaTarget: 6
 effects: []
 prototypeToken:
   name: Shintetsu Mouse
@@ -127,4 +105,4 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!vgpvggvhjvncyknq'
+_key: '!actors!ywpfj2mpucdvdpma'

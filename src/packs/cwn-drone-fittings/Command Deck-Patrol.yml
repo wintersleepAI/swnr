@@ -9,25 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405552
-  modifiedTime: 1741813405552
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: rbj8lowrfwysx0as
+_id: ihcxwngqhmzd07ld
 system:
-  description: As a Main Action, the drone can be ordered to autonomously move to one or more waypoints on whatever schedule the pilot wishes. The drone can also be ordered to loiter at a particular location until it gets an On Turn command to proceed to the next location.
-  favorite: false
-  tl: null
-  broken: false
-  destroyed: false
-  juryRigged: false
   cost: 0.1
-  costMultiplier: false
+  description: As a Main Action, the drone can be ordered to autonomously move to one or more waypoints on whatever schedule the pilot wishes. The drone can also be ordered to loiter at a particular location until it gets an On Turn command to proceed to the next location.
   mass: 1
-  massMultiplier: false
-  power: 0
-  powerMultiplier: false
-  minClass: fighter
   type: drone
-  effect: ''
 effects: []
-_key: '!items!rbj8lowrfwysx0as'
+_key: '!items!ihcxwngqhmzd07ld'

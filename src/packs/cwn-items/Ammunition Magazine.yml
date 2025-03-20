@@ -9,24 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988663
-  modifiedTime: 1739238988663
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: wdeyzjesgh6mbyds
+_id: 9khxg7rfnwmwjeez
 system:
-  description: Individual rounds are loaded into empty magazines that are specific to individual firearms.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
   cost: 10
-  location: stowed
-  quality: stock
+  description: Individual rounds are loaded into empty magazines that are specific to individual firearms.
+  encumbrance: 1
   noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!wdeyzjesgh6mbyds'
+_key: '!items!9khxg7rfnwmwjeez'

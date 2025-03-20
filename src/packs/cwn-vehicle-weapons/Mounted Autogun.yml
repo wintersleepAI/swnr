@@ -9,40 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405603
-  modifiedTime: 1741813405603
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: nwspsu45yrvc5dk1
+_id: 9oquj3mimjghwu5s
 system:
-  description: Mounted autoguns are a drone cannon `s big brother, for larger platforms. Each round of firing costs $100.
-  favorite: false
-  tl: null
-  broken: false
-  destroyed: false
-  juryRigged: false
-  cost: 15000
-  costMultiplier: false
-  mass: 2
-  massMultiplier: false
-  power: 1
-  powerMultiplier: false
-  minClass: l
-  type: vehicle
-  damage: 3d8
-  ab: 0
-  hardpoint: 1
-  qualities: ''
   ammo:
     max: 10
     type: ammo
     value: 100
-  trauma:
-    die: 1d12
-    rating: 2
-    vehicle: true
+  cost: 15000
+  damage: 3d8
+  description: Mounted autoguns are a drone cannon `s big brother, for larger platforms. Each round of firing costs $100.
+  effect: ''
+  mass: 2
+  minClass: l
+  power: 1
   range:
     max: 2000
     normal: 500
   stat: dex
+  trauma:
+    die: 1d12
+    rating: 2
+    vehicle: true
+  type: vehicle
 effects: []
-_key: '!items!nwspsu45yrvc5dk1'
+_key: '!items!9oquj3mimjghwu5s'

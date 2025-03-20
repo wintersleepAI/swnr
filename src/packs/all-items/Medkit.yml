@@ -8,26 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988350
-  modifiedTime: 1739238988350
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: kbw5d8qtqi6jlnjo
+_id: kurhg6j0e77vgbnz
 system:
-  description: 'Medkit: Containing a broad supply of pharmaceuticals, spray bandages, glue sutures, and a succinct handbook of injury care, the medkit is designed for handling sudden and drastic injuries. It also contains all the necessary tools for providing long-term recuperative care for critically injured characters. After each day of granting long-term recuperative care, roll 2d6 per patient treated; on a 12, the kit has run out of some vital pharmaceutical and has become useless.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 2
   cost: 100
-  tl: 4
+  description: 'Medkit: Containing a broad supply of pharmaceuticals, spray bandages, glue sutures, and a succinct handbook of injury care, the medkit is designed for handling sudden and drastic injuries. It also contains all the necessary tools for providing long-term recuperative care for critically injured characters. After each day of granting long-term recuperative care, roll 2d6 per patient treated; on a 12, the kit has run out of some vital pharmaceutical and has become useless.'
+  encumbrance: 2
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!kbw5d8qtqi6jlnjo'
+_key: '!items!kurhg6j0e77vgbnz'

@@ -9,47 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741850359795
-  modifiedTime: 1741850359795
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ijgh22jjgw1zgqfw
+_id: 2su5dscllxf87c3r
 system:
+  ac: 16
+  cost: 10000
+  description: While weighing more than a hundred kilos when fully loaded, Sui's Kraken still fits into the trunk of most car-sized vehicles and can be deployed when aquatic operations are needed.
+  enc: 99
+  fittings:
+    max: 5
+  hardpoint:
+    max: 2
   health:
     max: 20
     value: 20
-  cost: 10000
-  ac: 16
-  traumaTarget: 8
-  armor:
-    value: 1
-    max: 1
-  speed: 15
-  crew:
-    min: 1
-    max: 1
-    current: 1
-  crewMembers: []
-  tl: 5
-  description: While weighing more than a hundred kilos when fully loaded, Sui's Kraken still fits into the trunk of most car-sized vehicles and can be deployed when aquatic operations are needed.
-  mods: ''
-  power:
-    value: 1
-    max: 1
-  mass:
-    value: 1
-    max: 1
-  hardpoints:
-    value: 1
-    max: 1
-  kmph: 0
-  tonnage: 0
-  size: s
-  fittings:
-    max: 5
-  enc: 99
-  range: ''
-  model: primitiveDrone
   moveType: swim
+  speed: 15
+  traumaTarget: 8
 effects: []
 prototypeToken:
   name: Sui Kraken
@@ -127,4 +105,4 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!ijgh22jjgw1zgqfw'
+_key: '!actors!2su5dscllxf87c3r'

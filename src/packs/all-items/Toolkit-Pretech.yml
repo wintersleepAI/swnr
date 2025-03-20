@@ -8,26 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988373
-  modifiedTime: 1739238988373
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: w2a4ehmg5bvnyui5
+_id: uaqqlsf0oqebz3jo
 system:
-  description: 'Toolkits/Pretech: Containing a wide range of necessary tools for a particular skill set, toolkits can handle almost any job that doesn’t require a full-scale shop or lab. These sophisticated pretech tools are necessary for working on advanced TL5 artifacts, and the tools themselves are very rare and difficult to obtain.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 1
   cost: 1000
-  tl: 5
+  description: 'Toolkits/Pretech: Containing a wide range of necessary tools for a particular skill set, toolkits can handle almost any job that doesn’t require a full-scale shop or lab. These sophisticated pretech tools are necessary for working on advanced TL5 artifacts, and the tools themselves are very rare and difficult to obtain.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 5
 effects: []
-_key: '!items!w2a4ehmg5bvnyui5'
+_key: '!items!uaqqlsf0oqebz3jo'

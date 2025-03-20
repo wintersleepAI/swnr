@@ -9,25 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405661
-  modifiedTime: 1741813405661
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: fyxdp4t59hutp3pd
+_id: xktphv8zhk21cpif
 system:
-  description: The ship can disguise its long-range sensor readings, spoofing scans with the ID tags and apparent hull type of any other ship of its choice. To penetrate this masquerade, the scanning entity must beat a Wis/Program skill check against difficulty 10 plus the Program skill of the masking ship's comms officer. Once the ship is close enough to visually identify, the masking is useless.
-  favorite: false
-  tl: null
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 10000
   costMultiplier: true
+  description: The ship can disguise its long-range sensor readings, spoofing scans with the ID tags and apparent hull type of any other ship of its choice. To penetrate this masquerade, the scanning entity must beat a Wis/Program skill check against difficulty 10 plus the Program skill of the masking ship's comms officer. Once the ship is close enough to visually identify, the masking is useless.
+  effect: At long distances
   mass: 0
   massMultiplier: false
+  minClass: frigate
   power: 1
   powerMultiplier: true
-  minClass: frigate
-  type: ship
-  effect: At long distances
 effects: []
-_key: '!items!fyxdp4t59hutp3pd'
+_key: '!items!xktphv8zhk21cpif'

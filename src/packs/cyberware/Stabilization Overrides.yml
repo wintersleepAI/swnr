@@ -9,20 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988784
-  modifiedTime: 1739238988784
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 0z2x08dcqj2rf9g2
+_id: hckuubxtqsgmoyyz
 system:
-  description: An intricate interweaving of microcapillaries and backup organs is implanted in the subject’s torso and spinal column. These overrides can stabilize the user when severe physical trauma would otherwise kill them. A user reduced to 0 hit points is automatically stabilized, as if a Lazarus patch had been successfully applied to them, assuming that a patch could have saved them. Stabilization overrides tend to interfere with the ordinary operation of the user’s organs, however, and the wearer’s Constitution modifier is lowered by 1, with all the attendant consequences in loss of maximum hit points.
-  favorite: false
-  tl: 4
   cost: 25000
-  strain: 2
+  description: An intricate interweaving of microcapillaries and backup organs is implanted in the subject’s torso and spinal column. These overrides can stabilize the user when severe physical trauma would otherwise kill them. A user reduced to 0 hit points is automatically stabilized, as if a Lazarus patch had been successfully applied to them, assuming that a patch could have saved them. Stabilization overrides tend to interfere with the ordinary operation of the user’s organs, however, and the wearer’s Constitution modifier is lowered by 1, with all the attendant consequences in loss of maximum hit points.
   disabled: false
   effect: Automatically stabilizes a mortally-wounded user
-  type: none
-  concealment: sight
-  complication: ''
+  strain: 2
+  tl: 4
 effects: []
-_key: '!items!0z2x08dcqj2rf9g2'
+_key: '!items!hckuubxtqsgmoyyz'

@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988410
-  modifiedTime: 1739238988410
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: lun3kn9qybnqwxs1
+_id: x9cfe76nsc8tgrkb
 system:
+  assetType: force
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 25
+  counter: ''
   description: These advanced transport ships are capable of moving an asset long distances. As an action, any one non-Starship asset, including itself, can be moved between any two worlds within three hexes of the deep strike landers, at a cost of 2 FacCreds. This movement can be done even if the local planetary government objects, albeit doing so is usually an act of open war.
-  favorite: false
-  category: cunning
-  type: Facility
   health:
     max: 10
     value: 10
-  rating: 7
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 25
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: A
+  rating: 7
+  tl: 4
+  turnRoll: ''
+  type: Facility
+  unusable: false
 effects: []
-_key: '!items!lun3kn9qybnqwxs1'
+_key: '!items!x9cfe76nsc8tgrkb'

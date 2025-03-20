@@ -9,19 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988716
-  modifiedTime: 1739238988716
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 6m2g8luk4tbxyckl
+_id: xi0nd1bvwjgh5l3n
 system:
-  description: Prematurely end an undesired program. Any damage or changes the program already inflicted are unaffected.
-  favorite: false
-  cost: 500
-  type: verb
   accessCost: 1
-  target: Program
+  cost: 500
+  description: Prematurely end an undesired program. Any damage or changes the program already inflicted are unaffected.
   selfTerminating: true
-  useAffects: Forcibly end an unwanted program
   skillCheckMod: 0
+  target: Program
+  type: verb
+  useAffects: Forcibly end an unwanted program
 effects: []
-_key: '!items!6m2g8luk4tbxyckl'
+_key: '!items!xi0nd1bvwjgh5l3n'

@@ -8,26 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988811
-  modifiedTime: 1739238988811
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ni5w4wtq8fw6ce6p
+_id: a4fhdbkir3vf4huc
 system:
-  description: 'Survey scanner: A multipurpose scanner that can take atmospheric and gravitic readings, provide basic chemical analysis of samples of up to one cubic centimeter in size, and record up to two hundred hours of video information or ten times that amount of audio. Know skill checks are necessary for any but the most basic analysis.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 1
   cost: 250
-  tl: 4
+  description: 'Survey scanner: A multipurpose scanner that can take atmospheric and gravitic readings, provide basic chemical analysis of samples of up to one cubic centimeter in size, and record up to two hundred hours of video information or ten times that amount of audio. Know skill checks are necessary for any but the most basic analysis.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!ni5w4wtq8fw6ce6p'
+_key: '!items!a4fhdbkir3vf4huc'

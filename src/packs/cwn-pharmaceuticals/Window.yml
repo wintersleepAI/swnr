@@ -9,24 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988693
-  modifiedTime: 1739238988693
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: fe9tlhjsw0ceg4ou
+_id: m65736luhubz3gjs
 system:
-  description: (Heal-1) A neurobooster favored among hackers and knowledge workers, Window augments the user's focus and mental reaction speed at the cost of distracting them from their terrestrial surroundings. A Window user can trade their Move action to gain a bonus Main Action that can only be used for cyberspace actions. Each time this is done in a scene, however, the user gains one System Strain. One dose lasts for one scene.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 0
   cost: 200
-  location: stowed
-  quality: stock
+  description: (Heal-1) A neurobooster favored among hackers and knowledge workers, Window augments the user's focus and mental reaction speed at the cost of distracting them from their terrestrial surroundings. A Window user can trade their Move action to gain a bonus Main Action that can only be used for cyberspace actions. Each time this is done in a scene, however, the user gains one System Strain. One dose lasts for one scene.
+  encumbrance: 0
   noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!fe9tlhjsw0ceg4ou'
+_key: '!items!m65736luhubz3gjs'

@@ -9,25 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405628
-  modifiedTime: 1741813405628
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: jdw7op8h9np5lms3
+_id: etimn4d0bk5hsggo
 system:
-  description: A lab suitable for investigating alien xenolife, planetary geology, esoteric technology, and other mysteries of the cosmos. The lab contains cold sleep pods adequate to contain alien samples, viro-shielded research cells, high-energy lasers, and other requisite tools. When used to investigate some pehomenon or object, any applicable skill rolls are improved by +1 for a frigate lab, +2 for a cruiser lab, and +3 for capital ship lab.
-  favorite: false
-  tl: null
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 10000
   costMultiplier: true
+  description: A lab suitable for investigating alien xenolife, planetary geology, esoteric technology, and other mysteries of the cosmos. The lab contains cold sleep pods adequate to contain alien samples, viro-shielded research cells, high-energy lasers, and other requisite tools. When used to investigate some pehomenon or object, any applicable skill rolls are improved by +1 for a frigate lab, +2 for a cruiser lab, and +3 for capital ship lab.
+  effect: Skill bonus for analysis and research
   mass: 2
   massMultiplier: false
+  minClass: frigate
   power: 1
   powerMultiplier: true
-  minClass: frigate
-  type: ship
-  effect: Skill bonus for analysis and research
 effects: []
-_key: '!items!jdw7op8h9np5lms3'
+_key: '!items!etimn4d0bk5hsggo'

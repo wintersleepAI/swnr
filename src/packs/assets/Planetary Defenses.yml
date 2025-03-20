@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988431
-  modifiedTime: 1739238988431
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: nfdhcer14i41vh2d
+_id: tc5ba89w90idiybp
 system:
+  assetType: force
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: Planetary defenses can only defend against attacks by Starship-type assets.
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 18
+  counter: 2d6+6
   description: Massive mag cannons and gravitic braker gun arrays designed to defend against starship bombardments and repel unauthorized landing. Planetary defenses can only defend against attacks by Starship-type assets.
-  favorite: false
-  category: cunning
-  type: Facility
   health:
     max: 20
     value: 20
-  rating: 6
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 18
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: S
+  rating: 6
+  tl: 4
+  turnRoll: ''
+  type: Facility
+  unusable: false
 effects: []
-_key: '!items!nfdhcer14i41vh2d'
+_key: '!items!tc5ba89w90idiybp'

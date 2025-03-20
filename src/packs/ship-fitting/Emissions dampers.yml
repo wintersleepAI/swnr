@@ -9,25 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405649
-  modifiedTime: 1741813405649
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: r45ksg09fkhgmcr9
+_id: lxfn4d26jf6a0j5h
 system:
-  description: Stealth systems can mask the ship's energy emissions through careful modulation of the output. All travel times inside a star system are doubled when the system is engaged, but any skill checks to avoid detection gain a +2 bonus.
-  favorite: false
-  tl: null
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 25000
   costMultiplier: true
+  description: Stealth systems can mask the ship's energy emissions through careful modulation of the output. All travel times inside a star system are doubled when the system is engaged, but any skill checks to avoid detection gain a +2 bonus.
+  effect: Adds +2 to skill checks to avoid detection
   mass: 1
   massMultiplier: true
+  minClass: fighter
   power: 1
   powerMultiplier: true
-  minClass: fighter
-  type: ship
-  effect: Adds +2 to skill checks to avoid detection
 effects: []
-_key: '!items!r45ksg09fkhgmcr9'
+_key: '!items!lxfn4d26jf6a0j5h'

@@ -9,19 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988714
-  modifiedTime: 1739238988714
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 9edt5veoxevvg4zn
+_id: 4p7a9z059mbabe7z
 system:
-  description: If a Device is successfully Sieged, its network connections are severed for everyone but the hacker, blocking transit, data, or drone control. Defenders can run Terminate Program against it from any adjacent node.
-  favorite: false
-  cost: 2500
-  type: verb
   accessCost: 1
-  target: Device
+  cost: 2500
+  description: If a Device is successfully Sieged, its network connections are severed for everyone but the hacker, blocking transit, data, or drone control. Defenders can run Terminate Program against it from any adjacent node.
   selfTerminating: false
-  useAffects: Cut off a device's node from the network
   skillCheckMod: '-2'
+  target: Device
+  type: verb
+  useAffects: Cut off a device's node from the network
 effects: []
-_key: '!items!9edt5veoxevvg4zn'
+_key: '!items!4p7a9z059mbabe7z'

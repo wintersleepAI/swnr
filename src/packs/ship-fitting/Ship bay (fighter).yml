@@ -9,25 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405661
-  modifiedTime: 1741813405661
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 8mttfyzu511qao0e
+_id: cigf82ewcwh3s7a4
 system:
-  description: These sophisticated docking bays provide all the necessary tools and support for launching a starship from the mother craft. They are rarely seen outside of dedicated capital-class carriers, but some cruisers make room to mount a fighter-class attack shuttle. Each bay allows room for one ship of the appropriate hull class. While the carried ship can support its own crew if necessary, most carriers fold their space wing into the mothership's crew roster. This fitting can be taken multiple times.
-  favorite: false
-  tl: null
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 200000
   costMultiplier: false
+  description: These sophisticated docking bays provide all the necessary tools and support for launching a starship from the mother craft. They are rarely seen outside of dedicated capital-class carriers, but some cruisers make room to mount a fighter-class attack shuttle. Each bay allows room for one ship of the appropriate hull class. While the carried ship can support its own crew if necessary, most carriers fold their space wing into the mothership's crew roster. This fitting can be taken multiple times.
+  effect: Carrier housing for a fighter
   mass: 2
   massMultiplier: false
+  minClass: cruiser
   power: 0
   powerMultiplier: false
-  minClass: cruiser
-  type: ship
-  effect: Carrier housing for a fighter
 effects: []
-_key: '!items!8mttfyzu511qao0e'
+_key: '!items!cigf82ewcwh3s7a4'
