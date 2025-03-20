@@ -396,7 +396,6 @@
         "all-items",
         "ammo-and-power",
         "armor",
-        "assets",
         "communications",
         "computing-gear",
         "cyberware",
@@ -406,6 +405,14 @@
         "pharmaceuticals",
         "ranged",
         "tools-and-medical"
+      ]
+    },
+    {
+      "name": "Factions",
+      "sorting": "a",
+      "color": "#666666",
+      "packs": [
+        "assets"
       ]
     },
     {
