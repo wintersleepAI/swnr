@@ -177,9 +177,13 @@ input[type="checkbox"].small-checkbox {
   .resource-group {
     border: 1px solid var(--border-color);
     border-radius: 2px;
-    margin: 0px;
     padding: 4px;
-    margin: 4px;
+    margin: 2px;
+  }
+
+  .thin-bar {
+    margin-top:-5px;
+    margin-bottom:-15px;
   }
 }
 
