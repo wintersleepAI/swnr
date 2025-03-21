@@ -277,6 +277,9 @@
   justify-content: flex-start;
   margin-bottom: 0px;
 }
+.swnr .sheet-header.column {
+  flex-direction: column;
+}
 .swnr .sheet-header .header-fields {
   flex: 1;
 }
@@ -585,6 +588,9 @@
   text-align: center;
   margin: 0 2px;
 }
+.swnr .items-list .item-controls a.item-toggle-prop.on {
+  color: white;
+}
 .swnr .items-list .item-controls-small {
   display: flex;
   flex: 0 0 50px;
@@ -710,6 +716,26 @@
 }
 .swnr .skill-list .trained {
   color: var(--swnr-c-dark);
+}
+.swnr .asset-prop {
+  font-size: 12px;
+  text-align: center;
+}
+.swnr .asset-prop .asset-rating {
+  flex: 0 1 20px;
+  padding: 0 8px;
+}
+.swnr .asset-prop .asset-hp {
+  flex: 0 1 20px;
+  padding: 0 8px;
+}
+.swnr .asset-prop .asset-location {
+  flex: 0 1 40px;
+  padding: 0 8px;
+}
+.swnr .asset-prop .asset-damage {
+  flex: 0 1 40px;
+  padding: 0 8px;
 }
 .swnr .effects-header {
   height: 28px;

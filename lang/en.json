@@ -36,6 +36,7 @@
     "Actor": {
       "Tabs": {
         "Biography": "Biography",
+        "Description": "Description",
         "Features": "Features",
         "Gear": "Inventory",
         "Powers": "Powers",
@@ -48,7 +49,10 @@
         "Cargo": "Cargo",
         "Mech": "Mech Details",
         "VehicleNotes": "Desc/Mods",
-        "Programs": "Program Details"
+        "Programs": "Program Details",
+        "Assets": "Assets",
+        "Tags": "Tags",
+        "Logs": "Logs"
       },
       "base": {
         "FIELDS": {
@@ -421,6 +425,34 @@
           "cost": {"label": "Cost"},
           "encumberance": {"label": "Encumberance"},
           "hacker": {"label": "Hacker"}
+        }
+      },
+      "Faction": {
+        "FIELDS": {
+          "forceRating": {
+            "label": "Force Rating"
+          },
+          "cunningRating": {
+            "label": "Cunning Rating"
+          },
+          "wealthRating": {
+            "label": "Wealth Rating"
+          },
+          "active": {
+            "label": "Active"
+          },
+          "facCreds": {
+            "label": "FacCreds"
+          },
+          "xp": {
+            "label": "XP"
+          },
+          "homeworld": {
+            "label": "Homeworld"
+          },
+          "factionGoal": {
+            "label": "Faction Goal"
+          }
         }
       }
     },
@@ -1441,12 +1473,6 @@
         }
       },
       "faction": {
-        "forceRating": "Force Rating",
-        "cunningRating": "Cunning Rating",
-        "wealthRating": "Wealth Rating",
-        "facCreds": "FacCreds",
-        "xp": "XP",
-        "homeworld": "Homeworld",
         "tags": "Tags",
         "assets": "Assets",
         "assetType": "Asset Type",
@@ -1461,6 +1487,11 @@
           "action": "A",
           "special": "S"
         },
+        "assetQualityTitles": {
+          "permission": "Permission",
+          "action": "Action",
+          "special": "Special"
+        },
         "attackSpecial": "Special Attack Note",
         "turnRoll": "On Turn Log/Roll",
         "locationRoll": "Location Note",
@@ -1472,22 +1503,24 @@
         "desc-tab": "Description",
         "tags-tab": "Tags",
         "log-tab": "Log",
-        "add-tag": "Add Tag",
-        "add-tag-custom": "Add Custom Tag",
-        "remove-tag": "Remove Tag",
-        "remove-log": "Remove Log Entry",
-        "add-log": "Add Manual Log Entry",
-        "remove-log-all": "Remove All Log Entries",
-        "active": "Active Faction",
+        "addTag": "Add Tag",
+        "editTag": "Edit Tag",
+        "addTagCustom": "Add Custom Tag",
+        "removeTag": "Remove Tag",
+        "tagEffectLabel": "Effect:",
+        "removeLog": "Remove Log Entry",
+        "addLog": "Add Manual Log Entry",
+        "editLog": "Edit Log Entry",
+        "removeLogAll": "Remove All Log Entries",
         "attack-roll": "Attack Hit Roll",
         "counter-roll": "Counter Hit Roll",
         "damage": "Damage",
+        "counter": "Counter",
         "attack": "Attack",
         "att-damage": "Attack Damage",
         "def-damage": "Counter Damage",
         "att-roll": "Attacker Roll",
         "def-roll": "Defender Roll",
-        "factionGoal": "Faction Goal",
         "factionGoalDesc": "Goal Description",
         "setGoal": "Set Goal",
         "location": "Location",
@@ -1496,7 +1529,33 @@
         "unusable": "Unusable",
         "turn": "Start Turn",
         "setHomeworld": "Set the faction homeworld to {name}?",
-        "abandonGoal": "Abandon current goal {name}? Will lose income and no actions this turn/"
+        "abandonGoal": "Abandon current goal {name}? Will lose income and no actions this turn/",
+        "addAsset": "Add Asset",
+        "addBase": "Add Base",
+        "addBaseDialog": {
+          "title": "Add New Base",
+          "confirm": "Expand Influence - New Base",
+          "content": "Adding a new base from Expand Influence Action.<br>Select HP (up to Faction max HP).<br>One FacCred per HP.",
+          "label": "Base HP",
+          "baseHpTooHigh": "Error: HP of new base ({baseHp}) cannot be greater than faction HP ({factionHp})}",
+          "notEnoughFacCredsForBase": "Error: HP of new base ({baseHp}) cannot be greater than facCreds ({facCreds})"
+        },
+        "editTagDialog": {
+          "tagName": "Tag Name",
+          "tagDesc": "Tag Description",
+          "tagEffect": "Tag Effect",
+          "noName": "Error: Tag name cannot be empty"
+          
+        },
+        "selectTagDialog": {
+          "selectTagDefault": "Choose A Tag"
+        },
+        "editLogDialog": {
+          "label": "Manual log entry.<br>To inline a roll use [[1dX]].",
+          "noText": "Error: Log cannot be empty" 
+        },
+        "tagIndexInvalid": "Error: Faction tag index {index} is invalid",
+        "logIndexInvalid": "Error: Log index {index} is invalid"
       },
       "ship": {
         "life-support-days": "Life Support Days",
