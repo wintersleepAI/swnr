@@ -43,7 +43,7 @@ jobs:
         run: |
           VERSION="${GITHUB_REF/refs\/tags\/v/}"
           mkdir -p release
-          zip -r "release/swnr-${VERSION}.zip" * -x "*.git*" "*.github*" "release/*" "node_modules/*" "packs/*" "foundry/*"
+          zip -r "release/swnr-${VERSION}.zip" * -x "*.git*" "*.github*" "release/*" "node_modules/*" "foundry/*"
 
       - name: Upload release zip to GitHub
         uses: softprops/action-gh-release@v1
