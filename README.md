@@ -1,4 +1,4 @@
-# SWN:R and CWN System for Foundry VTT
+# Systems Without Number (SWN, CWN, AWN) for Foundry VTT
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -6,33 +6,31 @@
 ![Foundry v12](https://img.shields.io/badge/foundry-v12-green)
 
 ## Warning
-This is a work in progress and is not yet ready for "real game" use and is currently in a (closed) Alpha Testing. If you are testing, please report any bug that you find to the issues tab here.
+This is a work in progress and is not yet ready for "real game" use and is currently in a Beta Testing. If you are testing, please report any bug that you find to the issues tab here.
 
-This is a system re-rewrite of the Stars Without Number Revised system for Foundry VTT.  The system was originally written by SpiceKing and taken over wintersleepAI. The prior system was written in TypeScript and was not compatible with the latest version of Foundry VTT and I had fallen far behind on maintaining the definitions. This system is a complete re-write in JavaScript (using the boilerplate) and is compatible with the latest version of Foundry VTT.  A hope of the rewrite is to open the system to more contributors and to make it easier to maintain. Several folks helped with the rewrite (see the contributors list) and I am grateful for their help. Stas, Sobran, and the all-stars on the Foundry VTT Discord server have been a great help in getting this system to where it is today.
+This is a system re-rewrite of the Stars Without Number Revised system for Foundry VTT.  The system was originally written by SpiceKing and taken over wintersleepAI. The prior system was written in TypeScript and was not compatible with the latest version of Foundry VTT and I had fallen far behind on maintaining the definitions. This system is a complete re-write in JavaScript (using the boilerplate) and is compatible with the latest version of Foundry VTT.  A hope of the rewrite is to open the system to more contributors and to make it easier to maintain. Several folks helped with the rewrite (see the contributors list) and I am grateful for their help. See the list of contributors below, along with Stas, Sobran, and the all-stars on the Foundry VTT Discord server have been a great help in getting this system to where it is today.
 
 ## Notes 
 
  - Some of the data organization is changed, but most of it follows the same structure as the original system.
  - The UI needs a clean up. A goal is to make the colors and fonts a bit more modular to allow for customization and settings for SWN, CWN, and AWN.
-  - CWN and SWN are both implemented. Much of CWN is enabled through system settings.
+  - CWN and SWN are both implemented. Much of CWN is enabled through system settings. AWN support is just started. We plan to add WWN support soon.
   - Characters have a lock button/toggle that is needed to edit skills. Other attributes will go under the locks soon. 
-  - Factions are WIP and should not be used yet.
-  - Old game worlds should not be migrated yet.
+  - Old game worlds should not be migrated ONLY after back up is made.
 
 ### Use 
 The background art for the system is taken from the SWN Revised book download and is able to be used per the license file. 
-The artwork is by Grzegorz Pedrycz.
+The artwork is by Grzegorz Pedrycz. The asset tokens were provided by Hawkin.
 
 ### Development 
 
-Contributing guide TBA. Msg me on Discord if you want to help out before making any significant PR. 
+Contributing guide TBA. Msg me on Discord if you want to help out before making any significant PR (eg something that changes the data model or core functionality). 
 
 [Seee tutorial on the Foundry Wiki for the new data model and appv2](https://foundryvtt.wiki/en/development/guides/SD-tutorial)!
 
 
 ### Compiling the CSS
 Run `npm run build` to compile the SCSS to CSS 
-
 
 
 ## Contributors ✨
