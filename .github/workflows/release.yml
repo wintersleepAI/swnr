@@ -43,7 +43,7 @@ jobs:
         run: |
           VERSION="${GITHUB_REF/refs\/tags\/v/}"
           mkdir -p release
-          zip -r "release/foundryvtt-system-${VERSION}.zip" * -x "*.git*" "*.github*" "release/*" "node_modules/*" "packs/*" "foundry/*"
+          zip -r "release/swnr-${VERSION}.zip" * -x "*.git*" "*.github*" "release/*" "node_modules/*" "packs/*" "foundry/*"
 
       - name: Upload release zip to GitHub
         uses: softprops/action-gh-release@v1
@@ -55,7 +55,7 @@ jobs:
       - name: Modify system.json download field
         run: |
           VERSION="${GITHUB_REF/refs\/tags\/v/}"
-          DOWNLOAD_URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/v${VERSION}/foundryvtt-system-${VERSION}.zip"
+          DOWNLOAD_URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/v${VERSION}/swnr-${VERSION}.zip"
           echo "Updating download URL in system.json to $DOWNLOAD_URL"
           jq --arg download_url "$DOWNLOAD_URL" '.download = $download_url' system.json > system.json.tmp && mv system.json.tmp system.json
 

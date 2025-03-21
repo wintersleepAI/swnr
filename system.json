@@ -1,6 +1,6 @@
 {
   "id": "swnr",
-  "title": "Stars Without Number (Cities and Ashes)",
+  "title": "Systems Without Number (Stars, Cities, and Ashes)",
   "description": "The Stars and Cities and Ashes Without Number System for FoundryVTT!",
   "authors": [
     {
@@ -83,10 +83,10 @@
       "paths": ["css", "lang", "templates"]
     }
   },
-  "url": "https://github.com/wintersleepAI/swnr-redux",
+  "url": "https://github.com/wintersleepAI/swnr",
   "license": "LICENSE.txt",
   "readme": "README.md",
-  "bugs": "https://github.com/wintersleepAI/swnr-redux/issues",
+  "bugs": "https://github.com/wintersleepAI/swnr/issues",
   "changelog": "CHANGELOG.md",
   "media": [
     {
@@ -95,7 +95,7 @@
       "thumbnail": "systems/swnr/assets/anvil-impact.png"
     }
   ],
-  "version": "2.0.0-Alpha",
+  "version": "",
   "compatibility": {
     "minimum": "12.328",
     "verified": "12.328"
