@@ -23,9 +23,9 @@ export default class SWNFaction extends foundry.abstract
     schema.xp = SWNShared.requiredNumber(0);
     schema.homeworld = SWNShared.requiredString("");
     
-    schema.forceRating = SWNShared.constrainedNumber(1, MAX_RATING);
-    schema.cunningRating = SWNShared.constrainedNumber(1, MAX_RATING);
-    schema.wealthRating = SWNShared.constrainedNumber(1, MAX_RATING);
+    schema.forceRating = SWNShared.constrainedNumber(1, MAX_RATING, 1);
+    schema.cunningRating = SWNShared.constrainedNumber(1, MAX_RATING, 1);
+    schema.wealthRating = SWNShared.constrainedNumber(1, MAX_RATING, 1);
 
     schema.factionGoal = SWNShared.requiredString("");
     schema.factionGoalDesc = SWNShared.requiredString("");

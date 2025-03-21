@@ -85,10 +85,10 @@ export default class SWNShared {
   }
   
   static techLevel(required = true, initialValue = null) {
-    return this.constrainedNumber(0, CONFIG.SWN.maxTL, required, initialValue);
+    return this.constrainedNumber(0, CONFIG.SWN.maxTL, initialValue, required);
   }
   
-  static constrainedNumber(min, max, required = true, initialValue = null) {
+  static constrainedNumber(min, max, initialValue = null, required = true,) {
     const fields = foundry.data.fields;
     return new fields.NumberField({ required: required, nullable: true, integer: true, min: min, max: max, initial: initialValue });
   }
