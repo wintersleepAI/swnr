@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988412
-  modifiedTime: 1739238988412
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: q1cllhltst4mf5ln
+_id: x0e6u3p08uaue6zr
 system:
+  assetType: force
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 10
+  counter: ''
   description: These facilities allow for transporting assets long distances. As an action, any one non-Starship asset, including itself, can be moved between any two worlds within two hexes of the extended theater, at a cost of 1 FacCred.
-  favorite: false
-  category: cunning
-  type: Facility
   health:
     max: 10
     value: 10
-  rating: 4
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 10
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: A
+  rating: 4
+  tl: 4
+  turnRoll: ''
+  type: Facility
+  unusable: false
 effects: []
-_key: '!items!q1cllhltst4mf5ln'
+_key: '!items!x0e6u3p08uaue6zr'

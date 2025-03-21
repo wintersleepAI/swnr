@@ -8,26 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988361
-  modifiedTime: 1739238988361
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: db4mmxxfobpojjfc
+_id: dj2y96d8q1vp877f
 system:
-  description: 'Rope: Light and sturdy. 40 meters in a bundle.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 2
   cost: 4
-  tl: 0
+  description: 'Rope: Light and sturdy. 40 meters in a bundle.'
+  encumbrance: 2
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 0
 effects: []
-_key: '!items!db4mmxxfobpojjfc'
+_key: '!items!dj2y96d8q1vp877f'

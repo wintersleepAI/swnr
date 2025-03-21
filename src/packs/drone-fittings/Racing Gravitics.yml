@@ -9,25 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405614
-  modifiedTime: 1741813405614
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: m41dgc5e016rb83i
+_id: sxailvfh1y24lfmq
 system:
-  description: The drone is tuned for extra speed. Its flight endurance is halved, but it can now move up to 60 meters per combat round and fly at up to 200 kph out of combat.
-  favorite: false
-  tl: 4
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 1000
   costMultiplier: true
+  description: The drone is tuned for extra speed. Its flight endurance is halved, but it can now move up to 60 meters per combat round and fly at up to 200 kph out of combat.
   mass: 1
   massMultiplier: false
   power: 0
   powerMultiplier: false
-  minClass: fighter
+  tl: 4
   type: drone
-  effect: ''
 effects: []
-_key: '!items!m41dgc5e016rb83i'
+_key: '!items!sxailvfh1y24lfmq'

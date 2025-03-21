@@ -9,25 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405646
-  modifiedTime: 1741813405646
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: g7ugr77gypv77si1
+_id: vsd5ay5nbpy75h99
 system:
-  description: A ship can improve its standard-issue drive-1 spike drive with additional phase filters and power throughput refinements. A captain needs to buy only the final grade of drive desired. He does not have to buy upgrades sequentially. Drives of rating 4 and higher are generally TL5 artifacts that cannot be built on most modern worlds.
-  favorite: false
-  tl: null
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 500000
   costMultiplier: true
+  description: A ship can improve its standard-issue drive-1 spike drive with additional phase filters and power throughput refinements. A captain needs to buy only the final grade of drive desired. He does not have to buy upgrades sequentially. Drives of rating 4 and higher are generally TL5 artifacts that cannot be built on most modern worlds.
+  effect: Upgrade a spike drive to drive-6 rating
   mass: 4
   massMultiplier: true
+  minClass: cruiser
   power: 3
   powerMultiplier: true
-  minClass: cruiser
-  type: ship
-  effect: Upgrade a spike drive to drive-6 rating
 effects: []
-_key: '!items!g7ugr77gypv77si1'
+_key: '!items!vsd5ay5nbpy75h99'

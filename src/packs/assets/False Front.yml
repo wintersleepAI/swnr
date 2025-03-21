@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988413
-  modifiedTime: 1739238988413
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 85qb1278sqjkiar7
+_id: vui36smf2emen1ek
 system:
+  assetType: cunning
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 1
+  counter: ''
   description: This asset allows a faction to preserve more valuable resources. If another asset on the planet suffers enough damage to destroy it, the faction can sacrifice the false front instead to nullify the killing blow.
-  favorite: false
-  category: cunning
-  type: Logistics Facility
   health:
     max: 2
     value: 2
-  rating: 1
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: S
+  rating: 1
+  tl: 0
+  turnRoll: ''
+  type: Logistics Facility
+  unusable: false
 effects: []
-_key: '!items!85qb1278sqjkiar7'
+_key: '!items!vui36smf2emen1ek'

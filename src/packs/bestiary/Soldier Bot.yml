@@ -9,53 +9,23 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741406949704
-  modifiedTime: 1741406949704
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: niv7xcfop1xcqw7c
+_id: gpmcnon3xwci0tt9
 system:
-  health:
-    value: 10
-    max: 10
-  biography: ''
-  species: ''
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 6
-  baseAc: 16
-  meleeAc: 10
   ab: 1
-  meleeAb: 1
-  systemStrain:
-    value: 0
-    permanent: 0
-  effort:
-    bonus: 0
-    current: 0
-    scene: 0
-    day: 0
-  speed: 10
-  cyberdecks: []
-  health_max_modified: 0
   armorType: street
-  skillBonus: 1
   attacks:
     bonusDamage: 0
     number: 1
+  baseAc: 16
+  description: PLACEHOLDER
   hitDice: 2
-  saves: 14
   moralScore: 10
-  reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
-    value: 0
-    max: 0
-  homeworld: ''
-  faction: ''
+  saves: 14
+  skillBonus: 1
+  speed: 10
 effects: []
 prototypeToken:
   name: Soldier Bot
@@ -133,7 +103,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!niv7xcfop1xcqw7c'
+_key: '!actors!gpmcnon3xwci0tt9'
 items:
   - name: D4 Weapon
     type: weapon
@@ -145,56 +115,23 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741406949704
-      modifiedTime: 1741406949704
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: qdcsjcuky7ag8cde
+    _id: a1nyy8wu2i1lemzb
     system:
-      description: ''
-      favorite: false
-      quantity: 1
-      bundle: &ref_0
-        bundled: false
-        amount: null
-      encumbrance: 0
-      cost: 0
-      tl: 4
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
       shock:
         dmg: 0
         ac: 15
-      ab: 0
-      ammo: &ref_1
-        longReload: false
-        suppress: false
-        type: ammo
-        max: 10
-        value: 10
-        burst: false
-      range: &ref_2
-        normal: 1
-        max: 2
       damage: d4
-      remember: &ref_3
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma: &ref_4
-        die: 1d6
-        rating: null
-      isTwoHanded: false
-      isNonLethal: false
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      permission:
+        default: 0
     effects: []
-    _key: '!actors.items!niv7xcfop1xcqw7c.qdcsjcuky7ag8cde'
+    _key: '!actors.items!gpmcnon3xwci0tt9.a1nyy8wu2i1lemzb'
   - name: D6 Weapon
     type: weapon
     folder: null
@@ -205,40 +142,23 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741406949704
-      modifiedTime: 1741406949704
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: t2hw7sz2xy48i92y
+    _id: jznn09ysevxa7mdd
     system:
-      description: ''
-      favorite: false
-      quantity: 1
-      bundle: *ref_0
-      encumbrance: 0
-      cost: 0
-      tl: 4
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
       shock:
         dmg: 0
         ac: 15
-      ab: 0
-      ammo: *ref_1
-      range: *ref_2
       damage: d6
-      remember: *ref_3
-      save: null
-      trauma: *ref_4
-      isTwoHanded: false
-      isNonLethal: false
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      permission:
+        default: 0
     effects: []
-    _key: '!actors.items!niv7xcfop1xcqw7c.t2hw7sz2xy48i92y'
+    _key: '!actors.items!gpmcnon3xwci0tt9.jznn09ysevxa7mdd'
   - name: D8 Weapon
     type: weapon
     folder: null
@@ -249,40 +169,23 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741406949704
-      modifiedTime: 1741406949704
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: 9eli0g9xn32j6f9v
+    _id: psdwsarkhfn309nf
     system:
-      description: ''
-      favorite: false
-      quantity: 1
-      bundle: *ref_0
-      encumbrance: 0
-      cost: 0
-      tl: 4
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
       shock:
         dmg: 0
         ac: 15
-      ab: 0
-      ammo: *ref_1
-      range: *ref_2
       damage: d8
-      remember: *ref_3
-      save: null
-      trauma: *ref_4
-      isTwoHanded: false
-      isNonLethal: false
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      permission:
+        default: 0
     effects: []
-    _key: '!actors.items!niv7xcfop1xcqw7c.9eli0g9xn32j6f9v'
+    _key: '!actors.items!gpmcnon3xwci0tt9.psdwsarkhfn309nf'
   - name: D10 Weapon
     type: weapon
     folder: null
@@ -293,40 +196,23 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741406949704
-      modifiedTime: 1741406949704
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: kuuq15dhe0iync67
+    _id: lrmp9m472t29e5q4
     system:
-      description: ''
-      favorite: false
-      quantity: 1
-      bundle: *ref_0
-      encumbrance: 0
-      cost: 0
-      tl: 4
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
       shock:
         dmg: 0
         ac: 15
-      ab: 0
-      ammo: *ref_1
-      range: *ref_2
       damage: d10
-      remember: *ref_3
-      save: null
-      trauma: *ref_4
-      isTwoHanded: false
-      isNonLethal: false
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      permission:
+        default: 0
     effects: []
-    _key: '!actors.items!niv7xcfop1xcqw7c.kuuq15dhe0iync67'
+    _key: '!actors.items!gpmcnon3xwci0tt9.lrmp9m472t29e5q4'
   - name: D12 Weapon
     type: weapon
     folder: null
@@ -337,37 +223,20 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741406949704
-      modifiedTime: 1741406949704
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: jxsq7x5yu3m49op4
+    _id: pm676mpxxyb0ckl8
     system:
-      description: ''
-      favorite: false
-      quantity: 1
-      bundle: *ref_0
-      encumbrance: 0
-      cost: 0
-      tl: 4
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
       shock:
         dmg: 0
         ac: 15
-      ab: 0
-      ammo: *ref_1
-      range: *ref_2
       damage: d12
-      remember: *ref_3
-      save: null
-      trauma: *ref_4
-      isTwoHanded: false
-      isNonLethal: false
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      permission:
+        default: 0
     effects: []
-    _key: '!actors.items!niv7xcfop1xcqw7c.jxsq7x5yu3m49op4'
+    _key: '!actors.items!gpmcnon3xwci0tt9.pm676mpxxyb0ckl8'

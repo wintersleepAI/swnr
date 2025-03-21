@@ -9,19 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988700
-  modifiedTime: 1739238988700
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ndkimm544288z5fz
+_id: utq6320ztk19vi4v
 system:
-  description: Decrypt a data file or radio transmission. This is often automatic for civilian encoding, though some files take Int/Program checks.
-  favorite: false
-  cost: 1000
-  type: verb
   accessCost: 1
-  target: Data
+  cost: 1000
+  description: Decrypt a data file or radio transmission. This is often automatic for civilian encoding, though some files take Int/Program checks.
   selfTerminating: true
-  useAffects: Decrypt a file or radio transmission
   skillCheckMod: 0
+  target: Data
+  type: verb
+  useAffects: Decrypt a file or radio transmission
 effects: []
-_key: '!items!ndkimm544288z5fz'
+_key: '!items!utq6320ztk19vi4v'

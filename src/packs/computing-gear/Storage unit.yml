@@ -8,26 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988517
-  modifiedTime: 1739238988517
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: qa1sfo2acq30louc
+_id: 4pmsuqp8nunt7n9v
 system:
-  description: 'Storage unit: While conventional dataslabs have ample space to hold any reasonable amount of data, sometimes a party needs to store or acquire a truly huge dataset. This standard TL4 storage unit is a portable but clumsy case hardened against anything short of intentional damage with a firearm, capable of interfacing with a wide variety of hardware to receive and upload data. A single storage unit can hold a tremendous amount of data that has been carefully compressed and optimized for it. If the user is simply ripping a database off a network and stuffing it into the unit, it can absorb up to a small corporation’s complete files.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 3
   cost: 500
-  tl: 4
+  description: 'Storage unit: While conventional dataslabs have ample space to hold any reasonable amount of data, sometimes a party needs to store or acquire a truly huge dataset. This standard TL4 storage unit is a portable but clumsy case hardened against anything short of intentional damage with a firearm, capable of interfacing with a wide variety of hardware to receive and upload data. A single storage unit can hold a tremendous amount of data that has been carefully compressed and optimized for it. If the user is simply ripping a database off a network and stuffing it into the unit, it can absorb up to a small corporation’s complete files.'
+  encumbrance: 3
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!qa1sfo2acq30louc'
+_key: '!items!4pmsuqp8nunt7n9v'

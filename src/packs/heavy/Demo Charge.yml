@@ -8,31 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988835
-  modifiedTime: 1739238988835
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ru2pzm7tzthett9y
+_id: 9mxvw4cu1unqmzj9
 system:
-  description: Demo Charges are the general run of placed explosives beloved of terrorists and adventurers the world over. The usual variety can be detonated by radio signals, timers, or electrical charges, and inflict their damage on any objects within twenty meters, with an Evasion saving throw for half damage. Victims within forty meters take half damage, with an Evasion save for none. The charge is sufficient to blow a four-meter wide hole in anything short of a reinforced wall. PCs with a background in demolitions or Fix-0 skill can shape the charge so it directs the blast in only one direction, sparing all but two meters of the rest.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 250
-  tl: 3
-  location: other
-  quality: stock
-  noEncReadied: false
-  stat: str
-  secondStat: none
-  skill: ''
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 15
-    dmg: 0
   ab: 0
   ammo:
     burst: false
@@ -41,20 +21,21 @@ system:
     suppress: false
     type: special
     value: 0
+  cost: 250
+  damage: 3d10
+  description: Demo Charges are the general run of placed explosives beloved of terrorists and adventurers the world over. The usual variety can be detonated by radio signals, timers, or electrical charges, and inflict their damage on any objects within twenty meters, with an Evasion saving throw for half damage. Victims within forty meters take half damage, with an Evasion save for none. The charge is sufficient to blow a four-meter wide hole in anything short of a reinforced wall. PCs with a background in demolitions or Fix-0 skill can shape the charge so it directs the blast in only one direction, sparing all but two meters of the rest.
+  encumbrance: 1
+  location: other
+  quality: stock
   range:
     max: 40
     normal: 20
-  damage: 3d10
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
-  trauma:
-    die: 1d6
-    rating: null
-  isTwoHanded: false
-  isNonLethal: false
+  secondStat: none
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: str
+  tl: 3
 effects: []
-_key: '!items!ru2pzm7tzthett9y'
+_key: '!items!9mxvw4cu1unqmzj9'

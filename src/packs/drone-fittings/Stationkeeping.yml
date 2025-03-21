@@ -9,25 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405617
-  modifiedTime: 1741813405617
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: z4m1tkjsrwlwhui4
+_id: vsub7rmauey1f83h
 system:
-  description: The drone does not need to be constantly controlled; when the operator does not spend a Main Action to pilot it, it simply remains stationary. If equipped with an Observation Suite, it can ping the operator if any anomalous reading is obtained.
-  favorite: false
-  tl: 4
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 1000
   costMultiplier: true
+  description: The drone does not need to be constantly controlled; when the operator does not spend a Main Action to pilot it, it simply remains stationary. If equipped with an Observation Suite, it can ping the operator if any anomalous reading is obtained.
   mass: 1
   massMultiplier: false
   power: 0
   powerMultiplier: false
-  minClass: fighter
+  tl: 4
   type: drone
-  effect: ''
 effects: []
-_key: '!items!z4m1tkjsrwlwhui4'
+_key: '!items!vsub7rmauey1f83h'

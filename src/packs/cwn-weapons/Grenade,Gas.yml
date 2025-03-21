@@ -9,52 +9,32 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988755
-  modifiedTime: 1739238988755
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: cgv0rm217nk940qh
+_id: 8ffgxtetg7l9r0pg
 system:
-  description: Grenades may be thrown at a point within range and always target AC 10. On a miss, the grenade bounces 1d10 meters in a random direction before exploding. Grenades have a 5-meter radius of effect. Gas grenades create a 10-meter-diameter cloud of opaque, choking, irritating gas that disperses in one round. They inflict non-lethal damage, halved on a successful Physical save, and are useless against targets with breathing protection. They provide full concealment for those within the gas. Smoke grenades are harmless, but provide the same 10-meter dome of concealment where it's necessary. Gas and smoke aren't enough to defeat IR or augmented visuals.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 50
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  stat: dex
-  secondStat: none
-  skill: ask
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 0
-    dmg: 0
-  ab: 0
   ammo:
     burst: false
     max: 0
     suppress: false
     type: none
     value: 0
+  cost: 50
+  damage: 1d10
+  description: Grenades may be thrown at a point within range and always target AC 10. On a miss, the grenade bounces 1d10 meters in a random direction before exploding. Grenades have a 5-meter radius of effect. Gas grenades create a 10-meter-diameter cloud of opaque, choking, irritating gas that disperses in one round. They inflict non-lethal damage, halved on a successful Physical save, and are useless against targets with breathing protection. They provide full concealment for those within the gas. Smoke grenades are harmless, but provide the same 10-meter dome of concealment where it's necessary. Gas and smoke aren't enough to defeat IR or augmented visuals.
+  encumbrance: 1
+  isNonLethal: true
   range:
     max: 30
     normal: 10
-  damage: 1d10
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
+  secondStat: none
+  shock:
+    ac: 0
+    dmg: 0
+  stat: dex
   trauma:
     die: None
     rating: None
-  isTwoHanded: false
-  isNonLethal: true
 effects: []
-_key: '!items!cgv0rm217nk940qh'
+_key: '!items!8ffgxtetg7l9r0pg'

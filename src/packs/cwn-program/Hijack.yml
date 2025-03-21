@@ -9,19 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988708
-  modifiedTime: 1739238988708
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: f7q1rxswcqc364pn
+_id: a5qme8pjtkc4zm5k
 system:
-  description: Seize control of a device, operating it as you wish within the limits of its functionality for as long as the program remains running. One command is free with the program's successful execution; others take a Main Action to issue.
-  favorite: false
-  cost: 5000
-  type: verb
   accessCost: 1
-  target: Device
+  cost: 5000
+  description: Seize control of a device, operating it as you wish within the limits of its functionality for as long as the program remains running. One command is free with the program's successful execution; others take a Main Action to issue.
   selfTerminating: false
-  useAffects: Take remote control of a device
   skillCheckMod: '-1'
+  target: Device
+  type: verb
+  useAffects: Take remote control of a device
 effects: []
-_key: '!items!f7q1rxswcqc364pn'
+_key: '!items!a5qme8pjtkc4zm5k'

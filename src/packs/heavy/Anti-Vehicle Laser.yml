@@ -8,31 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988835
-  modifiedTime: 1739238988835
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: meyrgqjryb2e2884
+_id: di4prpoz3v81xgcm
 system:
-  description: Anti-vehicle lasers are less useful against soft targets, but excel at penetrating vehicle armor. Against vehicles and other hard-skinned targets, damage is rolled twice and the better result is used.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 0
-  cost: 10000
-  tl: 4
-  location: other
-  quality: stock
-  noEncReadied: false
-  stat: dex
-  secondStat: none
-  skill: ''
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 15
-    dmg: 0
   ab: 0
   ammo:
     burst: false
@@ -41,20 +21,21 @@ system:
     suppress: false
     type: special
     value: 15
+  cost: 10000
+  damage: 3d10
+  description: Anti-vehicle lasers are less useful against soft targets, but excel at penetrating vehicle armor. Against vehicles and other hard-skinned targets, damage is rolled twice and the better result is used.
+  encumbrance: 0
+  location: other
+  quality: stock
   range:
     max: 4000
     normal: 2000
-  damage: 3d10
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
-  trauma:
-    die: 1d6
-    rating: null
-  isTwoHanded: false
-  isNonLethal: false
+  secondStat: none
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 4
 effects: []
-_key: '!items!meyrgqjryb2e2884'
+_key: '!items!di4prpoz3v81xgcm'

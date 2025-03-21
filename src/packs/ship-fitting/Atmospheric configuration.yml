@@ -9,25 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405633
-  modifiedTime: 1741813405633
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: mnej9jwcxb8o0erj
+_id: h655f580m3jdw3sx
 system:
-  description: This fitting must be put in place when the ship is built, and cannot be installed on cruiser-class or larger ships. A ship designed for atmospheric flight can land on most solid or aqueous surfaces.
-  favorite: false
-  tl: null
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 5000
   costMultiplier: true
+  description: This fitting must be put in place when the ship is built, and cannot be installed on cruiser-class or larger ships. A ship designed for atmospheric flight can land on most solid or aqueous surfaces.
+  effect: 'Can land: frigates and fighters only.'
   mass: 1
   massMultiplier: true
+  minClass: fighter
   power: 0
   powerMultiplier: false
-  minClass: fighter
-  type: ship
-  effect: 'Can land: frigates and fighters only.'
 effects: []
-_key: '!items!mnej9jwcxb8o0erj'
+_key: '!items!h655f580m3jdw3sx'

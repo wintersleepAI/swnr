@@ -9,25 +9,17 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405584
-  modifiedTime: 1741813405584
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: d2ep4be1v8hw50ud
+_id: b18i5d7e0o911rci
 system:
-  description: Small vehicles add 1 Crew, Medium ones add 2, and Large ones add 4. This fitting can be taken multiple times, and any vehicle amenities such as crash pods or living quarters extend to these additional Crew as well.
-  favorite: false
-  tl: null
-  broken: false
-  destroyed: false
-  juryRigged: false
   cost: 2500
-  costMultiplier: false
-  mass: 2
-  massMultiplier: false
-  power: 0
-  powerMultiplier: false
-  minClass: S
-  type: vehicle
+  description: Small vehicles add 1 Crew, Medium ones add 2, and Large ones add 4. This fitting can be taken multiple times, and any vehicle amenities such as crash pods or living quarters extend to these additional Crew as well.
   effect: Add additional Crew
+  mass: 2
+  minClass: S
+  power: 0
+  type: vehicle
 effects: []
-_key: '!items!d2ep4be1v8hw50ud'
+_key: '!items!b18i5d7e0o911rci'

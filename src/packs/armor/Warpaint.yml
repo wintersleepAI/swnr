@@ -8,35 +8,26 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988396
-  modifiedTime: 1739238988396
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: y5ziwhrtmr60q00a
+_id: qfmdww201to76dgu
 system:
-  description: Warpaint is the common term for the bizarre combat fashions and scrap-built street harness of gangers, cult enforcers, street toughs, and other marginal sorts with little money but much need for protection. Most warpaint is fashioned of scrounged scraps of TL4 materials that are exceptionally tough or rigid, filled out with gang colors, body paint, intimidating tattoos, and the usual threatening grimace. It is often exceedingly impractical but inspirational to its wearer; an NPC in warpaint that is meaningful to them gains a +1 Morale bonus. Most warpaint is either pieced together over years or taken from the dead. Actually purchasing a finished suit comes at the listed price, assuming someone can be found willing to part with theirs.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 0
-  cost: 300
-  tl: 4
-  location: other
-  quality: stock
-  noEncReadied: false
   ac: 12
-  shield: false
-  use: false
   meleeAc: 12
+  traumaDiePenalty: 0
+  isSubtle: false
   soak:
     value: 0
     max: 0
-  dr: 0
-  traumaDiePenalty: 0
-  isSubtle: false
-  isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
+  cost: 300
+  description: Warpaint is the common term for the bizarre combat fashions and scrap-built street harness of gangers, cult enforcers, street toughs, and other marginal sorts with little money but much need for protection. Most warpaint is fashioned of scrounged scraps of TL4 materials that are exceptionally tough or rigid, filled out with gang colors, body paint, intimidating tattoos, and the usual threatening grimace. It is often exceedingly impractical but inspirational to its wearer; an NPC in warpaint that is meaningful to them gains a +1 Morale bonus. Most warpaint is either pieced together over years or taken from the dead. Actually purchasing a finished suit comes at the listed price, assuming someone can be found willing to part with theirs.
+  encumbrance: 0
+  location: other
+  quality: stock
+  shield: false
+  tl: 4
+  type: street
+  use: false
 effects: []
-_key: '!items!y5ziwhrtmr60q00a'
+_key: '!items!qfmdww201to76dgu'

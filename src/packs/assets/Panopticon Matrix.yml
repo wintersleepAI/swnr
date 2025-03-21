@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988429
-  modifiedTime: 1739238988429
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: iujv1iq1q462uzm8
+_id: tubizuud0ptg4uaj
 system:
+  assetType: cunning
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 30
+  counter: 1d6
   description: These facilities weave braked-AI intelligence analysts into a web of observation capable of detecting the slightest evidence of intruders on a world. Every rival Stealthed asset on the planet must succeed in a Cunning vs. Cunning test at the beginning of every turn or lose their Stealth. The owner also gains an additional die on all Cunning attacks and defenses on that planet.
-  favorite: false
-  category: cunning
-  type: Logistics Facility
   health:
     max: 20
     value: 20
-  rating: 8
-  tl: 5
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 30
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: S
+  rating: 8
+  tl: 5
+  turnRoll: Every rival Stealthed asset on the planet must succeed in a Cunning vs. Cunning test at the beginning of every turn or lose their Stealth. The owner also gains an additional die on all Cunning attacks and defenses on that planet.
+  type: Logistics Facility
+  unusable: false
 effects: []
-_key: '!items!iujv1iq1q462uzm8'
+_key: '!items!tubizuud0ptg4uaj'

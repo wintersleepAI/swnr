@@ -8,31 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988944
-  modifiedTime: 1739238988944
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 9fwuu6mo5w2v2fff
+_id: mh3ia2673g5w7v4j
 system:
-  description: Submachine guns take pistol ammunition but fire it at a high rate of speed. These weapons can fire in burst mode.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 200
-  tl: 3
-  location: other
-  quality: stock
-  noEncReadied: false
-  stat: dex
-  secondStat: null
-  skill: ''
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 15
-    dmg: 0
   ab: 0
   ammo:
     burst: true
@@ -41,20 +21,20 @@ system:
     suppress: false
     type: ammo
     value: 20
+  cost: 200
+  damage: 1d8
+  description: Submachine guns take pistol ammunition but fire it at a high rate of speed. These weapons can fire in burst mode.
+  encumbrance: 1
+  location: other
+  quality: stock
   range:
     max: 100
     normal: 30
-  damage: 1d8
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
-  trauma:
-    die: 1d6
-    rating: null
-  isTwoHanded: false
-  isNonLethal: false
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 3
 effects: []
-_key: '!items!9fwuu6mo5w2v2fff'
+_key: '!items!mh3ia2673g5w7v4j'

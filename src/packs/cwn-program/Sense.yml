@@ -9,19 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988713
-  modifiedTime: 1739238988713
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: k53rfg03cbhaf7z9
+_id: gqdt5u0m1ztlbzkd
 system:
-  description: Piggyback on the sensory feed of a device or piece of cyber. Anything the device senses or records, the hacker can sense. Swapping focus from cyberspace to reality is an On Turn action.
-  favorite: false
-  cost: 1000
-  type: verb
   accessCost: 0
-  target: Device/Cyber
+  cost: 1000
+  description: Piggyback on the sensory feed of a device or piece of cyber. Anything the device senses or records, the hacker can sense. Swapping focus from cyberspace to reality is an On Turn action.
   selfTerminating: false
-  useAffects: Piggyback on a sensor feed or cyber
   skillCheckMod: 0
+  target: Device/Cyber
+  type: verb
+  useAffects: Piggyback on a sensor feed or cyber
 effects: []
-_key: '!items!k53rfg03cbhaf7z9'
+_key: '!items!gqdt5u0m1ztlbzkd'

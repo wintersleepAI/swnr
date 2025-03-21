@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988430
-  modifiedTime: 1739238988430
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ejbq463whrbyytea
+_id: 39i0kbi3vbt7j5im
 system:
+  assetType: cunning
+  attackDamage: 2d6
+  attackSource: cunning
+  attackSpecial: ''
+  attackTarget: cunning
+  baseOfInfluence: false
+  cost: 8
+  counter: 1d6
   description: Political blocks control particular cities or regions blocks that are firmly in control of the faction. Each turn, a Party Machine provides 1 FacCred to its owning faction.
-  favorite: false
-  category: cunning
-  type: Logistics Facility
   health:
     max: 10
     value: 10
-  rating: 4
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 8
   income: 1
   maintenance: 0
-  attackTarget: cunning
-  attackSource: cunning
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: S
+  rating: 4
+  tl: 0
+  turnRoll: ''
+  type: Logistics Facility
+  unusable: false
 effects: []
-_key: '!items!ejbq463whrbyytea'
+_key: '!items!39i0kbi3vbt7j5im'

@@ -9,25 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405615
-  modifiedTime: 1741813405615
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: kg2e1fo374hth4m0
+_id: qskfslgr5y485fh3
 system:
-  description: The drone is equipped with heavier plating and a sturdier internal frame. Its hit points are increased by 50%, rounded up.
-  favorite: false
-  tl: 4
   broken: false
-  destroyed: false
-  juryRigged: false
   cost: 1000
   costMultiplier: true
+  description: The drone is equipped with heavier plating and a sturdier internal frame. Its hit points are increased by 50%, rounded up.
   mass: 1
   massMultiplier: false
   power: 0
   powerMultiplier: false
-  minClass: fighter
+  tl: 4
   type: drone
-  effect: ''
 effects: []
-_key: '!items!kg2e1fo374hth4m0'
+_key: '!items!qskfslgr5y485fh3'

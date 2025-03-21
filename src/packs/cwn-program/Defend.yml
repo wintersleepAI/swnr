@@ -9,19 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988701
-  modifiedTime: 1739238988701
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 1gmnlfgk51odjkbz
+_id: jvws7zz5xhwk0mez
 system:
-  description: A special Verb that can only be targeted at a friendly device or allied cyberware user within range, and costs no Access to use. While the program remains running, any hostile hacking attempts aimed at that device or any of the target's cyber systems must first beat the user in an opposed Int/Program skill check before they can attempt their hack. This Verb cannot negate programs that are already running on the target.
-  favorite: false
-  cost: 1000
-  type: verb
   accessCost: 0
-  target: Device/Cyber
+  cost: 1000
+  description: A special Verb that can only be targeted at a friendly device or allied cyberware user within range, and costs no Access to use. While the program remains running, any hostile hacking attempts aimed at that device or any of the target's cyber systems must first beat the user in an opposed Int/Program skill check before they can attempt their hack. This Verb cannot negate programs that are already running on the target.
   selfTerminating: false
-  useAffects: Shield a friendly device or cyber system
   skillCheckMod: N/A
+  target: Device/Cyber
+  type: verb
+  useAffects: Shield a friendly device or cyber system
 effects: []
-_key: '!items!1gmnlfgk51odjkbz'
+_key: '!items!jvws7zz5xhwk0mez'

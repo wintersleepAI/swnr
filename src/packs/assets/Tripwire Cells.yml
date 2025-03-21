@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988448
-  modifiedTime: 1739238988448
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: rc63d06ggc3td9my
+_id: kxyp0zyr9i1nremz
 system:
+  assetType: cunning
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 12
+  counter: 1d4
   description: These observers are alert to the arrival of stealthed units. Whenever a stealthed asset lands or is purchased on a planet with tripwire cells, the Cells make an immediate Cunning vs. Cunning attack against the owning faction. If successful, the asset loses its stealth.
-  favorite: false
-  category: cunning
-  type: Special Forces
   health:
     max: 8
     value: 8
-  rating: 4
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 12
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: A,S
+  rating: 4
+  tl: 4
+  turnRoll: ''
+  type: Special Forces
+  unusable: false
 effects: []
-_key: '!items!rc63d06ggc3td9my'
+_key: '!items!kxyp0zyr9i1nremz'

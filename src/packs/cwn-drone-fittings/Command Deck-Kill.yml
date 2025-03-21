@@ -9,25 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405550
-  modifiedTime: 1741813405550
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: uzw9a4mdjdlwx25p
+_id: xq220jrrcre53yua
 system:
-  description: The drone has autonomous attack routines wired into it. As a Main Action, it can be ordered to kill one specific visible target. If the target is in range of its weapons, it will use its Main Action to attack; if no additional fittings are added, its autonomous attacks have a total hit bonus of +2. The drone will not automatically move to follow or engage its target or otherwise position itself tactically unless directly piloted to do so or operating under the Follow command.
-  favorite: false
-  tl: null
-  broken: false
-  destroyed: false
-  juryRigged: false
   cost: 0.25
-  costMultiplier: false
+  description: The drone has autonomous attack routines wired into it. As a Main Action, it can be ordered to kill one specific visible target. If the target is in range of its weapons, it will use its Main Action to attack; if no additional fittings are added, its autonomous attacks have a total hit bonus of +2. The drone will not automatically move to follow or engage its target or otherwise position itself tactically unless directly piloted to do so or operating under the Follow command.
   mass: 1
-  massMultiplier: false
-  power: 0
-  powerMultiplier: false
-  minClass: fighter
   type: drone
-  effect: ''
 effects: []
-_key: '!items!uzw9a4mdjdlwx25p'
+_key: '!items!xq220jrrcre53yua'

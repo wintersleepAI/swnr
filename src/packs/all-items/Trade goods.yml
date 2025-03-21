@@ -8,26 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988374
-  modifiedTime: 1739238988374
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 4brfjeht6gy227u4
+_id: b9a3xsoq5k3nl3y4
 system:
-  description: 'Trade goods: Glowbugs, ceramic fire lighters, antibiotics, ceraplast tools, and the other fruits of a TL4 civilization that might be valuable on more primitive worlds. A kilo of trade goods can usually be traded for at least a hundred credits worth of local products on more primitive worlds that are not well-served by interstellar merchants. The profit margin shrinks rapidly as interstellar trade becomes more common, and there is always the difficulty of finding local products that are actually worth a merchant’s journey.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 3
     bundled: false
-  encumbrance: 1
   cost: 50
-  tl: 4
+  description: 'Trade goods: Glowbugs, ceramic fire lighters, antibiotics, ceraplast tools, and the other fruits of a TL4 civilization that might be valuable on more primitive worlds. A kilo of trade goods can usually be traded for at least a hundred credits worth of local products on more primitive worlds that are not well-served by interstellar merchants. The profit margin shrinks rapidly as interstellar trade becomes more common, and there is always the difficulty of finding local products that are actually worth a merchant’s journey.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!4brfjeht6gy227u4'
+_key: '!items!b9a3xsoq5k3nl3y4'

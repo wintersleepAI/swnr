@@ -9,25 +9,17 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405587
-  modifiedTime: 1741813405587
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: s9uoks9x9ut5zsuq
+_id: r60k7h1dj2mwmy2f
 system:
-  description: The vehicle is wired to be controlled through a plugged-in cranial jack as well as a conventional wheel. While jacked in, the driver need only use a Move Action to control the vehicle rather than a Main Action.
-  favorite: false
-  tl: null
-  broken: false
-  destroyed: false
-  juryRigged: false
   cost: 5000
-  costMultiplier: false
-  mass: 0
-  massMultiplier: false
-  power: 2
-  powerMultiplier: false
-  minClass: S
-  type: vehicle
+  description: The vehicle is wired to be controlled through a plugged-in cranial jack as well as a conventional wheel. While jacked in, the driver need only use a Move Action to control the vehicle rather than a Main Action.
   effect: Can drive the vehicle via cranial jack
+  mass: 0
+  minClass: S
+  power: 2
+  type: vehicle
 effects: []
-_key: '!items!s9uoks9x9ut5zsuq'
+_key: '!items!r60k7h1dj2mwmy2f'

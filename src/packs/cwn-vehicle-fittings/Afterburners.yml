@@ -9,25 +9,17 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405577
-  modifiedTime: 1741813405577
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: kmf2rfujrd2p5218
+_id: 0z69n7o4mnlhkrgs
 system:
-  description: Once per scene, as an On Turn action, boost the vehicle's Speed by 1 for five rounds.
-  favorite: false
-  tl: null
-  broken: false
-  destroyed: false
-  juryRigged: false
   cost: 5000
-  costMultiplier: false
-  mass: 2
-  massMultiplier: false
-  power: 1
-  powerMultiplier: false
-  minClass: S
-  type: vehicle
+  description: Once per scene, as an On Turn action, boost the vehicle's Speed by 1 for five rounds.
   effect: Boost Speed briefly in combat
+  mass: 2
+  minClass: S
+  power: 1
+  type: vehicle
 effects: []
-_key: '!items!kmf2rfujrd2p5218'
+_key: '!items!0z69n7o4mnlhkrgs'

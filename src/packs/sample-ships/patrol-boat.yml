@@ -9,70 +9,47 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741824630116
-  modifiedTime: 1741824630116
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ifuaqfaa9o9agpy4
+_id: iqp5lrpk9wtokc5i
 system:
   health:
     max: 25
     value: 25
-  cost: 3523000
   ac: 14
-  traumaTarget: 6
   armor:
     max: 5
     value: 5
   speed: 4
-  crew:
-    min: 15
-    max: 20
-    current: 5
-  crewMembers: []
-  tl: 5
-  description: |-
-    Patrol boats are often the largest ships fielded by poor or backward frontier worlds that lack the shipyard fa- cilities or available resources to build bigger military craft. Even so, the ability to field two patrol boats for the yearly maintenance cost of one corvette often ap- peals even to richer worlds that need more coverage than their available craft can provide. 
-    Patrol boats are the smallest independent warships fielded by most navies, as fighters are not normally considered capable of extended independent opera- tion. They have considerable spike drive reach and are faster in-system than most of their potential targets. While their single mounted gun is vulnerable to being disabled by expert enemy gunners, the relatively thick armor of the ship and skilled damage control crew can mitigate that danger. A few patrol boats replace their survey sensor array with a sandthrower to up-gun the ship, but most prefer the additional edge in scanning potential smugglers.
-  mods: ''
   power:
     max: 115
   mass:
     max: 10
   hardpoints:
     max: 4
-  lifeSupportDays:
-    value: 1
-    max: 1
-  fuel:
-    value: 1
-    max: 1
+  crew:
+    min: 15
+    max: 20
+    current: 5
   cargo:
     value: 0
     max: 0
   spikeDrive:
     value: 2
     max: 2
-  operatingCost: 657000
-  maintenanceCost: 176000
-  amountOwed: 0
-  paymentAmount: 0
-  paymentMonths: 0
-  maintenanceMonths: 6
-  creditPool: 0
-  lastMaintenance:
-    year: 0
-    month: 0
-    day: 0
-  lastPayment:
-    year: 0
-    month: 0
-    day: 0
   commandPoints: 5
   npcCommandPoints: 5
   crewSkillBonus: 2
-  actionsTaken: []
-  supportingDept: ''
-  roleOrder: []
+  shipClass: frigate
+  shipHullType: patrolBoat
+  cost: 3523000
+  maintenanceCost: 176000
+  operatingCost: 657000
+  maintenanceMonths: 6
+  description: |-
+    Patrol boats are often the largest ships fielded by poor or backward frontier worlds that lack the shipyard fa- cilities or available resources to build bigger military craft. Even so, the ability to field two patrol boats for the yearly maintenance cost of one corvette often ap- peals even to richer worlds that need more coverage than their available craft can provide. 
+    Patrol boats are the smallest independent warships fielded by most navies, as fighters are not normally considered capable of extended independent opera- tion. They have considerable spike drive reach and are faster in-system than most of their potential targets. While their single mounted gun is vulnerable to being disabled by expert enemy gunners, the relatively thick armor of the ship and skilled damage control crew can mitigate that danger. A few patrol boats replace their survey sensor array with a sandthrower to up-gun the ship, but most prefer the additional edge in scanning potential smugglers.
 effects: []
 prototypeToken:
   name: Patrol Boat
@@ -150,7 +127,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!ifuaqfaa9o9agpy4'
+_key: '!actors!iqp5lrpk9wtokc5i'
 items:
   - name: Plasma Beam
     type: shipWeapon
@@ -163,43 +140,28 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741824630116
-      modifiedTime: 1741824630116
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: j0lim598ahxrrcac
+    _id: uwa7g9xw6lur2w85
     system:
-      description: With superior targeting and a smaller energy drain than a CPC, a plasma beam sacrifices some armor penetration.
-      favorite: false
-      tl: 4
       broken: false
-      destroyed: false
-      juryRigged: false
       cost: 700000
       costMultiplier: false
+      damage: 3d6
+      description: With superior targeting and a smaller energy drain than a CPC, a plasma beam sacrifices some armor penetration.
+      hardpoint: 2
       mass: 2
       massMultiplier: false
+      minClass: Frigate
       power: 5
       powerMultiplier: false
-      minClass: Frigate
-      type: ship
-      damage: 3d6
-      ab: 0
-      hardpoint: 2
       qualities: AP 10
-      ammo:
-        type: none
-        max: 4
-        value: 4
-      trauma:
-        die: 1d6
-        rating: ''
-        vehicle: false
-      range:
-        normal: 1
-        max: 2
-      stat: ask
+      tl: 4
+      permission:
+        default: 0
     effects: []
-    _key: '!actors.items!ifuaqfaa9o9agpy4.j0lim598ahxrrcac'
+    _key: '!actors.items!iqp5lrpk9wtokc5i.uwa7g9xw6lur2w85'
   - name: Spike Drive-2 upgrade
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/rocket-thruster.svg
@@ -211,28 +173,23 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741824630116
-      modifiedTime: 1741824630116
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: hg6muk1wtpvlt90q
+    _id: t7hq653q6q0is2s3
     system:
-      description: A ship can improve its standard-issue drive-1 spike drive with additional phase filters and power throughput refinements. A captain needs buy only the final grade of drive desired. He does not have to buy upgrades sequentially. Drives of rating 4 and higher are generally TL5 artifacts that cannot be built most modern worlds.
-      favorite: false
-      tl: null
       broken: false
-      destroyed: false
-      juryRigged: false
       cost: 10000
       costMultiplier: true
+      description: A ship can improve its standard-issue drive-1 spike drive with additional phase filters and power throughput refinements. A captain needs buy only the final grade of drive desired. He does not have to buy upgrades sequentially. Drives of rating 4 and higher are generally TL5 artifacts that cannot be built most modern worlds.
+      effect: Upgrade a spike drive to drive-2 rating
       mass: 1
       massMultiplier: true
+      minClass: fighter
       power: 1
       powerMultiplier: false
-      minClass: fighter
-      type: ship
-      effect: Upgrade a spike drive to drive-2 rating
     effects: []
-    _key: '!actors.items!ifuaqfaa9o9agpy4.hg6muk1wtpvlt90q'
+    _key: '!actors.items!iqp5lrpk9wtokc5i.t7hq653q6q0is2s3'
   - name: Atmospheric Configuration
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -244,28 +201,23 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741824630116
-      modifiedTime: 1741824630116
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: f9d7n45litb3f1vo
+    _id: hc5k0uobw455s5bq
     system:
-      description: This fitting must be put in place when the ship is built, and cannot be installed on cruiser-class or larger ships. A ship designed for atmospheric flight can land on most solid or aqueous surfaces.
-      favorite: false
-      tl: null
       broken: false
-      destroyed: false
-      juryRigged: false
       cost: 5000
       costMultiplier: true
+      description: This fitting must be put in place when the ship is built, and cannot be installed on cruiser-class or larger ships. A ship designed for atmospheric flight can land on most solid or aqueous surfaces.
+      effect: 'Can land: frigates and fighters only.'
       mass: 1
       massMultiplier: true
+      minClass: fighter
       power: 0
       powerMultiplier: false
-      minClass: fighter
-      type: ship
-      effect: 'Can land: frigates and fighters only.'
     effects: []
-    _key: '!actors.items!ifuaqfaa9o9agpy4.f9d7n45litb3f1vo'
+    _key: '!actors.items!iqp5lrpk9wtokc5i.hc5k0uobw455s5bq'
   - name: Extended Stores
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -277,28 +229,23 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741824630116
-      modifiedTime: 1741824630116
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: oei8pzz91dnkuzwa
+    _id: zaup553yjzwym0b2
     system:
-      description: A normal complement of ship’s stores can keep the maximum crew size supplied for two months. Each selection of Extended Stores doubles that time, and can be fitted multiple times.
-      favorite: false
-      tl: null
       broken: false
-      destroyed: false
-      juryRigged: false
       cost: 2500
       costMultiplier: true
+      description: A normal complement of ship’s stores can keep the maximum crew size supplied for two months. Each selection of Extended Stores doubles that time, and can be fitted multiple times.
+      effect: Maximum life support duration is doubled
       mass: 1
       massMultiplier: true
+      minClass: Fighter
       power: 0
       powerMultiplier: false
-      minClass: Fighter
-      type: ship
-      effect: Maximum life support duration is doubled
     effects: []
-    _key: '!actors.items!ifuaqfaa9o9agpy4.oei8pzz91dnkuzwa'
+    _key: '!actors.items!iqp5lrpk9wtokc5i.zaup553yjzwym0b2'
   - name: Boarding Tubes
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -310,28 +257,23 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741824630116
-      modifiedTime: 1741824630116
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: c2vdbezmyx1ekubu
+    _id: 69lenaqh8szpkj5q
     system:
-      description: Armored tubes equipped with laser cutter apertures can be used to forcibly invade a hostile ship, provided the target’s engines have been disabled. Ships without boarding tubes have to send invaders across empty space to either make an assault on a doubtless heavily-guarded airlock or cut their way in through the hull with laser cutters and half an hour of work.
-      favorite: false
-      tl: null
       broken: false
-      destroyed: false
-      juryRigged: false
       cost: 5000
       costMultiplier: true
+      description: Armored tubes equipped with laser cutter apertures can be used to forcibly invade a hostile ship, provided the target’s engines have been disabled. Ships without boarding tubes have to send invaders across empty space to either make an assault on a doubtless heavily-guarded airlock or cut their way in through the hull with laser cutters and half an hour of work.
+      effect: Allows boarding of a hostile disabled ship
       mass: 1
       massMultiplier: true
+      minClass: Frigate
       power: 0
       powerMultiplier: false
-      minClass: Frigate
-      type: ship
-      effect: Allows boarding of a hostile disabled ship
     effects: []
-    _key: '!actors.items!ifuaqfaa9o9agpy4.c2vdbezmyx1ekubu'
+    _key: '!actors.items!iqp5lrpk9wtokc5i.69lenaqh8szpkj5q'
   - name: Armory
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -343,28 +285,23 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741824630116
-      modifiedTime: 1741824630116
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: 5pvefdj4tu1uc1za
+    _id: ljmbbisqvxbl3h3h
     system:
-      description: Rather than maintaining lengthy lists of ship equipment, a captain can simply buy an armory. Ships so equipped have whatever amounts of TL4 military-grade weaponry and armor that a crew might require, and integral maintenance facilities for its upkeep. There is enough gear available to outfit the entire crew for normal use, but giving it away or losing it in use may deplete it.
-      favorite: false
-      tl: null
       broken: false
-      destroyed: false
-      juryRigged: false
       cost: 10000
       costMultiplier: true
+      description: Rather than maintaining lengthy lists of ship equipment, a captain can simply buy an armory. Ships so equipped have whatever amounts of TL4 military-grade weaponry and armor that a crew might require, and integral maintenance facilities for its upkeep. There is enough gear available to outfit the entire crew for normal use, but giving it away or losing it in use may deplete it.
+      effect: Weapons and armor for the crew
       mass: 0
       massMultiplier: true
+      minClass: Frigate
       power: 0
       powerMultiplier: false
-      minClass: Frigate
-      type: ship
-      effect: Weapons and armor for the crew
     effects: []
-    _key: '!actors.items!ifuaqfaa9o9agpy4.5pvefdj4tu1uc1za'
+    _key: '!actors.items!iqp5lrpk9wtokc5i.ljmbbisqvxbl3h3h'
   - name: Ship's Locker
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
@@ -376,28 +313,23 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741824630116
-      modifiedTime: 1741824630116
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: 8vvb2nj9s927gky8
+    _id: amin4xm3b3khxhql
     system:
-      description: Much like an armory, this option allows a captain to lay in a general supply of equipment likely to be useful to explorers and spacemen. Any TL4 equipment on the gear list can be found in the ship’s locker in amounts commensurate with the ship’s size. A few guns and some basic armor might be included as well, but for serious armament an armory is required. There is enough gear available to outfit the entire crew for normal use, but giving it away or losing it in use may deplete the locker until it is restocked.
-      favorite: false
-      tl: null
       broken: false
-      destroyed: false
-      juryRigged: false
       cost: 2000
       costMultiplier: true
+      description: Much like an armory, this option allows a captain to lay in a general supply of equipment likely to be useful to explorers and spacemen. Any TL4 equipment on the gear list can be found in the ship’s locker in amounts commensurate with the ship’s size. A few guns and some basic armor might be included as well, but for serious armament an armory is required. There is enough gear available to outfit the entire crew for normal use, but giving it away or losing it in use may deplete the locker until it is restocked.
+      effect: General equipment for the crew
       mass: 0
       massMultiplier: true
+      minClass: Frigate
       power: 0
       powerMultiplier: false
-      minClass: Frigate
-      type: ship
-      effect: General equipment for the crew
     effects: []
-    _key: '!actors.items!ifuaqfaa9o9agpy4.8vvb2nj9s927gky8'
+    _key: '!actors.items!iqp5lrpk9wtokc5i.amin4xm3b3khxhql'
   - name: Survey Sensors
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/sattelite.svg
@@ -409,25 +341,20 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741824630116
-      modifiedTime: 1741824630116
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: pfwas8pv1mbdsovj
+    _id: urtd4pv7vjw9fk4y
     system:
-      description: Most ships require only basic analysis of a star system, sufficient to identify population centers, do rough scanning of an object’s composition, and chart major navigational hazards. Survey sensor arrays greatly enhance the ship’s sensor abilities, allowing for finely-detailed mapping of objects and planets, along with broad-spectrum communications analysis. They also improve attempts to detect other craft when scanning a region for stealthy vessels. Any rolls with survey sensor arrays add +2 to skill checks.
-      favorite: false
-      tl: null
       broken: false
-      destroyed: false
-      juryRigged: false
       cost: 5000
       costMultiplier: true
+      description: Most ships require only basic analysis of a star system, sufficient to identify population centers, do rough scanning of an object’s composition, and chart major navigational hazards. Survey sensor arrays greatly enhance the ship’s sensor abilities, allowing for finely-detailed mapping of objects and planets, along with broad-spectrum communications analysis. They also improve attempts to detect other craft when scanning a region for stealthy vessels. Any rolls with survey sensor arrays add +2 to skill checks.
+      effect: Improved planetary sensory array
       mass: 1
       massMultiplier: true
+      minClass: Frigate
       power: 2
       powerMultiplier: false
-      minClass: Frigate
-      type: ship
-      effect: Improved planetary sensory array
     effects: []
-    _key: '!actors.items!ifuaqfaa9o9agpy4.pfwas8pv1mbdsovj'
+    _key: '!actors.items!iqp5lrpk9wtokc5i.urtd4pv7vjw9fk4y'

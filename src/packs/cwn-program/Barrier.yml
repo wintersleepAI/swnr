@@ -9,19 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988696
-  modifiedTime: 1739238988696
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: pj5hfbz7y3m4xhoi
+_id: e2m6tdli3ffnca9k
 system:
-  description: A network node barrier that blocks avatars from passing through a network connection.
-  favorite: false
-  cost: 1000
-  type: subject
   accessCost: 0
-  target: ' Data'
+  cost: 1000
+  description: A network node barrier that blocks avatars from passing through a network connection.
   selfTerminating: false
-  useAffects: Inter Node Barriers
   skillCheckMod: 0
+  target: ' Data'
+  type: subject
+  useAffects: Inter Node Barriers
 effects: []
-_key: '!items!pj5hfbz7y3m4xhoi'
+_key: '!items!e2m6tdli3ffnca9k'

@@ -9,35 +9,24 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988539
-  modifiedTime: 1739238988539
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: fxpyfiryi4mhwskh
+_id: 4xrx4rsbjsftdni9
 system:
-  description: Additional impact-absorbing buffer plates are added to the armor. Their bulk inflicts a -1 penalty to the user's Sneak and Exert checks.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 500
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
   ac: 0
-  shield: true
-  use: false
+  cost: 500
+  description: Additional impact-absorbing buffer plates are added to the armor. Their bulk inflicts a -1 penalty to the user's Sneak and Exert checks.
+  encumbrance: 1
+  isHeavy: true
+  isSubtle: true
   meleeAc: 0
+  shield: true
+  shieldACBonus: 2
+  shieldMeleeACBonus: 2
   soak:
     max: 3
     value: 3
-  dr: 0
   traumaDiePenalty: 0
-  isSubtle: true
-  isHeavy: true
-  shieldMeleeACBonus: 2
-  shieldACBonus: 2
 effects: []
-_key: '!items!fxpyfiryi4mhwskh'
+_key: '!items!4xrx4rsbjsftdni9'

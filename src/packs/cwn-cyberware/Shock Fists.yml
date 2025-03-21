@@ -9,20 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988593
-  modifiedTime: 1739238988593
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: y7xelmv9vhymljym
+_id: 7h2h6mw81o5anh0u
 system:
-  description: The user's hands are implanted with subdermal electrical webbing. As an Instant action, accept one System Strain; for the rest of the scene, the user's unarmed attacks do an additional 1d8 electrical damage on a successful hit. Unarmed attacks augmented with this mod are non-lethal if desired. This system does not stack with Body Blades.
-  favorite: false
-  tl: 4
-  cost: 10000
-  strain: 1
-  disabled: false
-  effect: Do electric fist damage
-  type: Limb
   concealment: Touch
-  complication: ''
+  cost: 10000
+  description: The user's hands are implanted with subdermal electrical webbing. As an Instant action, accept one System Strain; for the rest of the scene, the user's unarmed attacks do an additional 1d8 electrical damage on a successful hit. Unarmed attacks augmented with this mod are non-lethal if desired. This system does not stack with Body Blades.
+  effect: Do electric fist damage
+  strain: 1
+  type: Limb
 effects: []
-_key: '!items!y7xelmv9vhymljym'
+_key: '!items!7h2h6mw81o5anh0u'

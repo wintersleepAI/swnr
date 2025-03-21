@@ -8,26 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988322
-  modifiedTime: 1739238988322
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 2vtl0iom3hopovqa
+_id: 1b4g3fo4opxrt30t
 system:
-  description: 'Atmofilter: This face mask can filter out most atmospheric toxins. Attaching a standard vacc suit oxygen bottle to a belt-mounted feed will also supply a breathable atmosphere for up to six hours.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 1
   cost: 100
-  tl: 4
+  description: 'Atmofilter: This face mask can filter out most atmospheric toxins. Attaching a standard vacc suit oxygen bottle to a belt-mounted feed will also supply a breathable atmosphere for up to six hours.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!2vtl0iom3hopovqa'
+_key: '!items!1b4g3fo4opxrt30t'

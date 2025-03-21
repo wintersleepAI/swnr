@@ -9,40 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741813405602
-  modifiedTime: 1741813405602
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: rmcpkt90puykqaig
+_id: 3orc8jcpzclar262
 system:
-  description: Main tank gun attacks always target AC 10, and anyone within 10 meters of impact takes 1d20 damage if not behind heavy cover. They cannot be mounted on aircraft or anything smaller than a tank. Each round costs $1,000.
-  favorite: false
-  tl: null
-  broken: false
-  destroyed: false
-  juryRigged: false
-  cost: 100000
-  costMultiplier: false
-  mass: 4
-  massMultiplier: false
-  power: 1
-  powerMultiplier: false
-  minClass: l
-  type: vehicle
-  damage: 4d12
-  ab: 0
-  hardpoint: 1
-  qualities: ''
   ammo:
     max: 1
     type: ammo
     value: 1000
-  trauma:
-    die: 1d20
-    rating: 4
-    vehicle: true
+  cost: 100000
+  damage: 4d12
+  description: Main tank gun attacks always target AC 10, and anyone within 10 meters of impact takes 1d20 damage if not behind heavy cover. They cannot be mounted on aircraft or anything smaller than a tank. Each round costs $1,000.
+  effect: AC 10 to hit
+  mass: 4
+  minClass: l
+  power: 1
   range:
     max: 3000
     normal: 1000
   stat: dex
+  trauma:
+    die: 1d20
+    rating: 4
+    vehicle: true
+  type: vehicle
 effects: []
-_key: '!items!rmcpkt90puykqaig'
+_key: '!items!3orc8jcpzclar262'
