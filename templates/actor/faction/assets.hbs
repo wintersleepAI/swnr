@@ -77,20 +77,22 @@
                         {{/if}}
                     </div>
                     <div class="item-controls">
-                        <a
-                                class="item-control item-toggle-prop {{#if item.system.unusable}}on{{/if}}"
-                                title="{{localize 'swnr.sheet.break-item'}}"
-                                data-action="toggleProperty"
-                                data-property="unusable">
-                            <i class='fas fa-heart-broken'></i>
-                        </a>
-                        <a
-                                class="item-control item-toggle-prop {{#if item.system.stealthed}}on{{/if}}"
-                                title="{{localize 'swnr.sheet.faction.stealthed'}}"
-                                data-action="toggleProperty"
-                                data-property="stealthed">
-                            <i class='fas fa-user-ninja'></i>
-                        </a>
+                        <div class="toggles">
+                            <a
+                                    class="item-control item-toggle-prop {{#if item.system.unusable}}item-toggled{{/if}}"
+                                    title="{{localize 'swnr.sheet.break-item'}}"
+                                    data-action="toggleProperty"
+                                    data-property="unusable">
+                                <i class='fas fa-heart-broken'></i>
+                            </a>
+                            <a
+                                    class="item-control item-toggle-prop {{#if item.system.stealthed}}item-toggled{{/if}}"
+                                    title="{{localize 'swnr.sheet.faction.stealthed'}}"
+                                    data-action="toggleProperty"
+                                    data-property="stealthed">
+                                <i class='fas fa-user-ninja'></i>
+                            </a>
+                        </div>
                         <a 
                             class="item-control item-edit"
                             title="{{localize 'DOCUMENT.Update' type='asset'}}"
