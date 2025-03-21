@@ -5,6 +5,10 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write   # Required for uploading release assets
+  actions: write    # Required for interacting with releases
+
 jobs:
   release:
     runs-on: ubuntu-latest
