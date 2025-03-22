@@ -1,4 +1,4 @@
-# Systems Without Number (SWN, CWN, AWN) for Foundry VTT
+# Systems Without Number Redux (SWN, CWN, AWN) for Foundry VTT
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -6,9 +6,9 @@
 ![Foundry v12](https://img.shields.io/badge/foundry-v12-green)
 
 ## Warning
-This is a work in progress and is not yet ready for "real game" use and is currently in a Beta Testing. If you are testing, please report any bug that you find to the issues tab here.
+This system is almost ready for "real game" use and is currently in a Beta Testing. If you are testing, please report any bug that you find to the issues tab here.
 
-This is a system re-rewrite of the Stars Without Number Revised system for Foundry VTT.  The system was originally written by SpiceKing and taken over wintersleepAI. The prior system was written in TypeScript and was not compatible with the latest version of Foundry VTT and I had fallen far behind on maintaining the definitions. This system is a complete re-write in JavaScript (using the boilerplate) and is compatible with the latest version of Foundry VTT.  A hope of the rewrite is to open the system to more contributors and to make it easier to maintain. Several folks helped with the rewrite (see the contributors list) and I am grateful for their help. See the list of contributors below, along with Stas, Sobran, and the all-stars on the Foundry VTT Discord server have been a great help in getting this system to where it is today.
+This is a system re-rewrite of the Stars Without Number Revised system for Foundry VTT.  The system was originally written by SpiceKing and taken over wintersleepAI. The prior system was written in TypeScript and was not compatible with the latest version of Foundry VTT and I had fallen far behind on maintaining the definitions. This system is a complete re-write in JavaScript (using the boilerplate foundry system) and is compatible with the latest version of Foundry VTT.  A hope of the rewrite is to open the system to more contributors and to make it easier to maintain. This system will also add more support for AWN and WWN this year. Several folks helped with the rewrite and I am grateful for their help. See the list of contributors below, along with Stas, Sobran, and the all-stars on the Foundry VTT Discord server have been a great help in getting this system to where it is today.
 
 ## Notes 
 
