@@ -217,9 +217,23 @@ export function registerHandlebarHelpers() {
     Object.keys(stats).forEach(key => {
       const stat = stats[key];
       const localizedLabel = game.i18n.localize("swnr.stat.long." + key );
-      statChoices[key] = `${localizedLabel} +${stat.mod}`; // Format the string
+      statChoices[key] = `${localizedLabel} +${stat.mod}`; // Format the string 
     });
     return statChoices;
   });
   
+  Handlebars.registerHelper('getSkillChoices', function(skills, noSkillSetAsOption = false){
+    const skillChoices = {};
+    if(noSkillSetAsOption == true)
+    {
+      console.log("NO");
+      skillChoices[""] = game.i18n.localize("swnr.weapon.noSetSkill");
+    }
+    Object.keys(skills).forEach(key => {
+      const skill = skills[key];
+      skillChoices[skill.id] = `${skill.name} ${skill.system.rank}`; 
+    });
+    return skillChoices;
+  });
+
 }
