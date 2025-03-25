@@ -78,14 +78,14 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
     let dieString = "@attackRollDie + @weapon.ab";
 
     const hitRoll = new Roll(dieString, rollData);
-    await hitRoll.roll({ async: true });
+    await hitRoll.roll();
     const hitExplainTip = "1d20";
     rollData.hitRoll = +(hitRoll.dice[0].total?.toString() ?? 0);
     const damageRoll = new Roll(
       this.damage,
       rollData
     );
-    await damageRoll.roll({ async: true });
+    await damageRoll.roll();
     const damageExplainTip = "roll";
     const diceTooltip = {
       hit: await hitRoll.render(),
@@ -106,7 +106,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
       this.trauma.rating != null
     ) {
       const traumaRoll = new Roll(this.trauma.die);
-      await traumaRoll.roll({ async: true });
+      await traumaRoll.roll();
       traumaRollRender = await traumaRoll.render();
       if (
         traumaRoll &&
@@ -117,7 +117,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
         const traumaDamageRoll = new Roll(
           `${damageRoll.total} * ${this.trauma.rating}`
         );
-        await traumaDamageRoll.roll({ async: true });
+        await traumaDamageRoll.roll();
         traumaDamage = await traumaDamageRoll.render();
       }
     }

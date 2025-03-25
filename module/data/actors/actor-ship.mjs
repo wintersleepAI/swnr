@@ -183,7 +183,7 @@ export default class SWNShip extends SWNVehicleBase {
     };
     const skillRollStr = `${dice} + @skillMod + @statMod + @mod`;
     const skillRoll = new Roll(skillRollStr, rollData);
-    await skillRoll.roll({ async: true });
+    await skillRoll.roll();
   
     const poolRolls = [skillRoll];
   
@@ -192,7 +192,7 @@ export default class SWNShip extends SWNVehicleBase {
   
     if (rollingAs != "single") {
       opposedRoll = new Roll(`2d6 + @opposedMod`, { opposedMod });
-      await opposedRoll.roll({ async: true });
+      await opposedRoll.roll();
       poolRolls.push(opposedRoll);
       opposedRollStr = await opposedRoll.render();
     }
@@ -242,7 +242,7 @@ export default class SWNShip extends SWNVehicleBase {
     };
     const skillRollStr = `${dice} + @skillMod + @statMod + @mod`;
     const skillRoll = new Roll(skillRollStr, rollData);
-    await skillRoll.roll({ async: true });
+    await skillRoll.roll();
   
     const pass =
       skillRoll.total && skillRoll.total >= difficulty ? true : false;
@@ -250,12 +250,12 @@ export default class SWNShip extends SWNVehicleBase {
     let failText = null;
     if (!pass) {
       const failRoll = new Roll("3d6");
-      await failRoll.roll({ async: true });
+      await failRoll.roll();
       switch (failRoll.total) {
         case 3:
           // eslint-disable-next-line no-case-declarations
           const fRoll = new Roll("1d6");
-          await fRoll.roll({ async: true });
+          await fRoll.roll();
           failText = game.i18n.localize("swnr.chat.spike.fail3");
           failText += `<br> Rolled: ${fRoll.total}`;
           break;
