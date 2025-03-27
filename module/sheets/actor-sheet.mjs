@@ -23,7 +23,7 @@ export class SWNActorSheet extends SWNBaseSheet {
   static DEFAULT_OPTIONS = {
     classes: ['swnr', 'actor'],
     position: {
-      width: 760,
+      width: 780,
       height: 800,
     },
     actions: {

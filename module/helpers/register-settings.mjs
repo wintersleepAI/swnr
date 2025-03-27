@@ -112,6 +112,15 @@ export const registerSettings = function () {
     default: true,
   });
 
+  game.settings.register("swnr", "showAccess", {
+    name: "swnr.settings.showAccess",
+    hint: "swnr.settings.showAccessHint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: false,
+  });
+
   // game.settings.register("swnr", "search", {
   //   name: "swnr.settings.search",
   //   hint: "swnr.settings.searchHint",
@@ -155,6 +164,7 @@ export const getGameSettings = function () {
     useCWNArmor: game.settings.get("swnr", "useCWNArmor"),
     useCWNCyber: game.settings.get("swnr", "useCWNCyber"),
     useStress: game.settings.get("swnr", "useStress"),
+    showAccess: game.settings.get("swnr", "showAccess"),
     // search: game.settings.get("swnr", "search"),
   };
   return settings;

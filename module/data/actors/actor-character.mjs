@@ -133,6 +133,7 @@ export default class SWNCharacter extends SWNActorBase {
     if (programSkill && programSkill.length == 1) {
       this.access.max += programSkill[0].system.rank;
     }
+    this.access.max = Math.max(0, this.access.max);
 
     // Set up soak and trauma target
     const useCWNArmor = game.settings.get("swnr", "useCWNArmor") ? true : false;
@@ -257,6 +258,7 @@ export default class SWNCharacter extends SWNActorBase {
     const readiedItems = inventory.filter((i) => i.system.location === "readied");
 
     encumbrance.ready.value = readiedItems
+      .filter((i) => i.system.noEncReadied === false)
       .map(itemInvCost)
       .reduce((i, n) => i + n, 0);
     encumbrance.stowed.value = inventory

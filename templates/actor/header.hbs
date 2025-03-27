@@ -202,11 +202,14 @@
 
       {{/if}}
 
-      {{formGroup systemFields.access value=system.access localize=true widget=headerWidget readonly=1}}
-      
+      {{#if (eq gameSettings.showAccess true)}}
+        {{formGroup systemFields.access value=system.access localize=true widget=headerWidget readonly=1}}
+      {{/if}}
 
       {{#if (eq actor.type 'character')}}
-      {{formGroup systemFields.stress value=system.stress localize=true widget=headerWidget}}
+        {{#if (eq gameSettings.useStress true)}}
+          {{formGroup systemFields.stress value=system.stress localize=true widget=headerWidget}}
+        {{/if}}
       
       <div class='resource header-group flex-group-center grid-span-5'><!-- Saves -->
         <div class="flex flexrow">
