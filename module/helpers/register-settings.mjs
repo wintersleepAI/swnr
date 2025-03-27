@@ -112,23 +112,23 @@ export const registerSettings = function () {
     default: true,
   });
 
-  game.settings.register("swnr", "search", {
-    name: "swnr.settings.search",
-    hint: "swnr.settings.searchHint",
-    scope: "world",
-    config: true,
-    type: String,
-    choices: {
-      swnOnly: "Defined SWN Compendium Only",
-      cwnOnly: "Defined CWN Compendium Only",
-      swnCWN: "Defined SWN AND SWN Compendium",
-      search: "Compendium with the matching type exclusively",
-    },
-    default: "swnOnly", // The default value for the setting
-    onChange: (value) => {
-      // A callback function which triggers when the setting is changed
-    },
-  });
+  // game.settings.register("swnr", "search", {
+  //   name: "swnr.settings.search",
+  //   hint: "swnr.settings.searchHint",
+  //   scope: "world",
+  //   config: true,
+  //   type: String,
+  //   choices: {
+  //     swnOnly: "Defined SWN Compendium Only",
+  //     cwnOnly: "Defined CWN Compendium Only",
+  //     swnCWN: "Defined SWN AND CWN Compendium",
+  //     search: "Compendium with the matching type exclusively",
+  //   },
+  //   default: "swnOnly", // The default value for the setting
+  //   onChange: (value) => {
+  //     // A callback function which triggers when the setting is changed
+  //   },
+  // });
 
   //AWN Settings
   game.settings.register("swnr", "useStress", {
@@ -155,7 +155,7 @@ export const getGameSettings = function () {
     useCWNArmor: game.settings.get("swnr", "useCWNArmor"),
     useCWNCyber: game.settings.get("swnr", "useCWNCyber"),
     useStress: game.settings.get("swnr", "useStress"),
-    search: game.settings.get("swnr", "search"),
+    // search: game.settings.get("swnr", "search"),
   };
   return settings;
 };

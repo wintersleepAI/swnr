@@ -63,7 +63,7 @@ export default class SWNSkill extends SWNItemBase {
       modifier: modifier,
       stat: statMod,
     });
-    await roll.roll({ async: true });
+    await roll.roll();
     const title = `${game.i18n.localize(
       "swnr.chat.skillCheck"
     )}: ${statShortName}/${skillName}`;
@@ -102,7 +102,7 @@ export default class SWNSkill extends SWNItemBase {
           "Quick roll set, but dice or stat is set to ask"
         );
       } else {
-        const stat = this.actor?.system["stats"][defaultStat] || {
+        const stat = actor?.system["stats"][defaultStat] || {
           mod: 0,
         };
         const statShortName = game.i18n.localize(
@@ -149,7 +149,7 @@ export default class SWNSkill extends SWNItemBase {
         ui.notifications?.error("Dice must be set and not ask");
         return;
       }
-      const stat = this.actor?.system["stats"][statShortNameForm] || {
+      const stat = actor?.system["stats"][statShortNameForm] || {
         mod: 0,
       };
       const modifier = button.form.elements.modifier.value;

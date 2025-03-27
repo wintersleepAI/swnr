@@ -40,7 +40,7 @@ export default class SWNPower extends SWNItemBase {
       return;
     }
     const powerRoll = new Roll(this.roll ? this.roll : "0");
-    await powerRoll.roll({ async: true });
+    await powerRoll.roll();
     const dialogData = {
       actor: actor,
       power: item,
@@ -51,7 +51,7 @@ export default class SWNPower extends SWNItemBase {
     const template = "systems/swnr/templates/chat/power-roll.hbs";
     const chatContent = await renderTemplate(template, dialogData);
     const chatData = {
-      speaker: ChatMessage.getSpeaker({ actor: this.actor ?? undefined }),
+      speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),
       content: chatContent,
       roll: JSON.stringify(powerRoll),
       type: CONST.CHAT_MESSAGE_TYPES.ROLL,
