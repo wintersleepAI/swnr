@@ -291,7 +291,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
 
     // Set to not ask and just roll
     if (!shiftKey && this.remember && this.remember.use) {
-      const stat = actor["stats"]?.[statName] || {
+      const stat = actor.system["stats"]?.[statName] || {
         mod: 0,
       };
 
@@ -303,7 +303,16 @@ export default class SWNWeapon extends SWNBaseGearItem {
       if (skill) {
         skill?.rank < 0 ? -2 : skill.rank;
       } else {
-        ui.notifications?.info("No skill found, using -2");
+        ui.notifications?.info("No skill found, using -2. Unsetting remember.");
+        await this.parent.update({
+          system: {
+            remember: {
+              use: false,
+              burst: false,
+              modifier: 0,
+            },
+          }
+        });
       }
 
       if (actor?.type == "character") {
@@ -325,6 +334,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       statName: statName,
       skill: this.skill,
       burstFireHasAmmo,
+      stats: actor.system.stats,
     };
     const template = "systems/swnr/templates/dialogs/roll-attack.hbs";
     const html = await renderTemplate(template, dialogData);

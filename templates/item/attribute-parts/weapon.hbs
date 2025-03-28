@@ -30,6 +30,11 @@
    {{formGroup systemFields.isTwoHanded value=system.isTwoHanded localize=true widget=checkWidget}}
    {{formGroup systemFields.isNonLethal value=system.isNonLethal localize=true widget=checkWidget}}
   </div>
+  {{# if (eq system.remember.use true) }}
+  <div class="grid-span-4 thin-bar flex flexrow">
+    {{formGroup systemFields.remember.fields.use value=system.remember.use localize=true widget=checkWidget}}
+  </div>
+  {{/if}}
 
   <div class="resource">
    {{formGroup systemFields.ab value=system.ab localize=true}}
