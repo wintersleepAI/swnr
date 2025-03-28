@@ -24,8 +24,8 @@ export default class SWNCyberware extends SWNItemBase {
     schema.strain = SWNShared.requiredNumber(1,-20, false);
     schema.disabled = new fields.BooleanField({ initial: false });
     schema.effect = SWNShared.requiredString("None");
-    schema.type = SWNShared.stringChoices("none", CONFIG.SWN.cyberTypes);
-    schema.concealment = SWNShared.stringChoices("sight", CONFIG.SWN.cyberConcealmentTypes);
+    schema.type = SWNShared.stringChoices("None", CONFIG.SWN.cyberTypes);
+    schema.concealment = SWNShared.stringChoices("Sight", CONFIG.SWN.cyberConcealmentTypes);
     schema.complication = SWNShared.requiredString("");
     return schema;
   }

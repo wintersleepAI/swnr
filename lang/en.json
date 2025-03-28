@@ -1411,6 +1411,9 @@
           "sight": "Sight",
           "touch": "Touch",
           "medical": "Medical",
+          "Sight": "Sight",
+          "Touch": "Touch",
+          "Medical": "Medical",
           "None": ""
         },
         "types": {
@@ -1421,7 +1424,15 @@
           "nerve": "Nerve",
           "sensory": "Sensory",
           "medical": "Medical",
-          "none": "None"
+          "none": "None",
+          "Head": "Head",
+          "Body": "Body",
+          "Skin": "Skin",
+          "Limb": "Limb",
+          "Nerve": "Nerve",
+          "Sensory": "Sensory",
+          "Medical": "Medical",
+          "None": "None"
         }
       },
       "type": {
