@@ -701,6 +701,11 @@
           },
           "isNonLethal": {
             "label": "Non-Lethal"
+          }, 
+          "remember" : {
+            "use": {
+              "label": "Use Remembered Settings"
+            }
           }
         }
       },

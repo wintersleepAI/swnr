@@ -280,9 +280,10 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const secStatName = this.secondStat;
     // check if there is 2nd stat name and its mod is better
     if (
+      statName != "ask" &&
       secStatName != null &&
       secStatName != "none" &&
-        actor.system["stats"]?.[statName].mod <
+        actor.system["stats"]?.[statName]?.mod <
         actor.system["stats"]?.[secStatName].mod
     ) {
       statName = secStatName;
@@ -298,7 +299,12 @@ export default class SWNWeapon extends SWNBaseGearItem {
         "Item",
         this.skill
       );
-      const skillMod = skill.rank < 0 ? -2 : skill.rank;
+      let skillMod = -2; 
+      if (skill) {
+        skill?.rank < 0 ? -2 : skill.rank;
+      } else {
+        ui.notifications?.info("No skill found, using -2");
+      }
 
       if (actor?.type == "character") {
         dmgBonus = this.skillBoostsDamage ? skill.rank : 0;
