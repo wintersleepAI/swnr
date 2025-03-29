@@ -223,7 +223,7 @@ export default class SWNShip extends SWNVehicleBase {
       speaker: { alias: actorName },
       roll: JSON.stringify(diceData),
       content: chatContent,
-      type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+      type: CONST.CHAT_MESSAGE_STYLES.OTHER,
       whisper: gm_ids,
       blind,
     };
@@ -310,8 +310,7 @@ export default class SWNShip extends SWNVehicleBase {
     const chatData = {
       speaker: { alias: pilotName },
       roll: JSON.stringify(diceData),
-      content: chatContent,
-      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+      content: chatContent
     };
   
     getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);

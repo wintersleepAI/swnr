@@ -715,8 +715,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       {
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         roll: JSON.stringify(roll.toJSON()),
-        content: chatContent,
-        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+        content: chatContent
       }
     );
   }

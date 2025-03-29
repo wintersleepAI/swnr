@@ -105,8 +105,7 @@ function getRerollButton(
     const chatData = {
       speaker: ChatMessage.getSpeaker(),
       roll: JSON.stringify(roll),
-      content: chatContent,
-      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+      content: chatContent
     };
     getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
