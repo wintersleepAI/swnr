@@ -131,7 +131,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
       diceTooltip,
       traumaDamage,
       traumaRollRender,
-      ammoRatio: Math.clamped(
+      ammoRatio: Math.clamp(
         Math.floor((this.ammo.value * 20) / this.ammo.max),
         0,
         20

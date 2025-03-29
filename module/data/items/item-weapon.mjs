@@ -199,7 +199,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       modifier,
       effectiveSkillRank: rollData.effectiveSkillRank,
       diceTooltip,
-      ammoRatio: Math.clamped(
+      ammoRatio: Math.clamp(
         Math.floor((this.ammo.value * 20) / this.ammo.max),
         0,
         20

@@ -226,7 +226,6 @@ export function registerHandlebarHelpers() {
     const skillChoices = {};
     if(noSkillSetAsOption == true)
     {
-      console.log("NO");
       skillChoices[""] = game.i18n.localize("swnr.weapon.noSetSkill");
     }
     Object.keys(skills).forEach(key => {
