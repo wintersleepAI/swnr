@@ -205,7 +205,7 @@ export default class SWNShip extends SWNVehicleBase {
       typeDesc,
       otherDesc,
     };
-    const diceData = Roll.fromTerms([PoolTerm.fromRolls(poolRolls)]);
+    const diceData = Roll.fromTerms([foundry.dice.terms.PoolTerm.fromRolls(poolRolls)]);
     const chatContent = await renderTemplate(template, dialogData);
   
     let gm_ids = ChatMessage.getWhisperRecipients("GM")
@@ -305,7 +305,7 @@ export default class SWNShip extends SWNVehicleBase {
     if (failRoll) {
       poolRolls.push(failRoll);
     }
-    const diceData = Roll.fromTerms([PoolTerm.fromRolls(poolRolls)]);
+    const diceData = Roll.fromTerms([foundry.dice.terms.PoolTerm.fromRolls(poolRolls)]);
     const chatContent = await renderTemplate(template, dialogData);
     const chatData = {
       speaker: { alias: pilotName },

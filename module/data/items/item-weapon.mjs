@@ -210,7 +210,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       traumaRollRender,
     };
     const rollMode = game.settings.get("core", "rollMode");
-    const diceData = Roll.fromTerms([PoolTerm.fromRolls(rollArray)]);
+    const diceData = Roll.fromTerms([foundry.dice.terms.PoolTerm.fromRolls(rollArray)]);
     if (
       this.ammo.type !== "none" &&
       this.ammo.type !== "infinite"
