@@ -9,53 +9,32 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988770
-  modifiedTime: 1739238988770
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: gktn3n833sxxbju9
+_id: olcd6fvhfi5snm2m
 system:
-  description: A tool of assassins, a Viper Sting is a fang, fingernail needle, palm injector, or more exotic implement for injecting an unsuspecting target with a drug of the user's choice. A Viper Sting can be loaded with up to four doses of pharmaceuticals, dispensed as the user wishes. If loaded with a toxin, it does 1d12 damage with a 1d10/x3 Trauma Die. If a tranquilizer is used, the damage is the same, but unconsciousness will result instead of death. A Viper Sting can only be effectively used as part of an Execution Attack, as an alert opponent can avoid it easily. This cyber inflicts a -2 penalty on any check to detect its presence.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 0
-  cost: 25000
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  stat: dex
-  secondStat: none
-  skill: ask
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 0
-    dmg: 0
-  ab: 0
   ammo:
     burst: false
     max: 4
     suppress: false
     type: special
     value: 4
+  cost: 25000
+  damage: 1d12
+  description: A tool of assassins, a Viper Sting is a fang, fingernail needle, palm injector, or more exotic implement for injecting an unsuspecting target with a drug of the user's choice. A Viper Sting can be loaded with up to four doses of pharmaceuticals, dispensed as the user wishes. If loaded with a toxin, it does 1d12 damage with a 1d10/x3 Trauma Die. If a tranquilizer is used, the damage is the same, but unconsciousness will result instead of death. A Viper Sting can only be effectively used as part of an Execution Attack, as an alert opponent can avoid it easily. This cyber inflicts a -2 penalty on any check to detect its presence.
+  encumbrance: 0
+  isNonLethal: false
   range:
     max: 0
     normal: 0
-  damage: 1d12
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
+  secondStat: none
+  shock:
+    ac: 0
+    dmg: 0
+  stat: dex
   trauma:
     die: 1d10
     rating: 3
-  isTwoHanded: false
-  isNonLethal: false
 effects: []
-_key: '!items!gktn3n833sxxbju9'
+_key: '!items!olcd6fvhfi5snm2m'

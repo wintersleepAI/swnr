@@ -70,7 +70,7 @@ export default class SWNShared {
     let required = true;
     let stats = {...CONFIG.SWN.stats};
     if (none_allowed) {
-      //stats["none"] = "";
+      stats["none"] = "swnr.sheet.none";
       required = false;
     }
     if (ask_allowed) {
@@ -85,7 +85,11 @@ export default class SWNShared {
   }
   
   static techLevel(required = true, initialValue = null) {
+    return this.constrainedNumber(0, CONFIG.SWN.maxTL, initialValue, required);
+  }
+  
+  static constrainedNumber(min, max, initialValue = null, required = true,) {
     const fields = foundry.data.fields;
-    return new fields.NumberField({ required: required, nullable: true, integer: true, min: 0, max: CONFIG.SWN.maxTL, initial: initialValue });
+    return new fields.NumberField({ required: required, nullable: true, integer: true, min: min, max: max, initial: initialValue });
   }
 }

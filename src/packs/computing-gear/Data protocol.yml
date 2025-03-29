@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988513
-  modifiedTime: 1739238988513
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: q8nn68hqauageca7
+_id: zpvj2epemd9z81r2
 system:
-  description: 'Data protocol: Not so much a device as a collection of standard manuals on a world’s particular data formats and security methodologies. The price listed here are for black-market manuals on worlds where this information is rigidly restricted. On less paranoid planets, the equivalent information can be acquired for free.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 0
   cost: 1000
-  tl: 4
+  description: 'Data protocol: Not so much a device as a collection of standard manuals on a world’s particular data formats and security methodologies. The price listed here are for black-market manuals on worlds where this information is rigidly restricted. On less paranoid planets, the equivalent information can be acquired for free.'
+  encumbrance: 0
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!q8nn68hqauageca7'
+_key: '!items!zpvj2epemd9z81r2'

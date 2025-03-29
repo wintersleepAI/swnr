@@ -1,11 +1,14 @@
 {
   "id": "swnr",
-  "title": "Stars and Cities without Number",
-  "description": "The Stars and Cities without Number system for FoundryVTT!",
+  "title": "Systems Without Number (Stars, Cities, and Ashes)",
+  "description": "The Stars and Cities and Ashes Without Number System for FoundryVTT!",
   "authors": [
     {
       "name": "wintersleepAI",
       "discord": "wintersleep1832"
+    },
+    {
+      "name": "SpiceKing"
     }
   ],
   "documentTypes": {
@@ -80,19 +83,19 @@
       "paths": ["css", "lang", "templates"]
     }
   },
-  "url": "Replace this with a link to your public repository",
+  "url": "https://github.com/wintersleepAI/swnr",
   "license": "LICENSE.txt",
   "readme": "README.md",
-  "bugs": "Replace this with a link to file issues or tickets",
+  "bugs": "https://github.com/wintersleepAI/swnr/issues",
   "changelog": "CHANGELOG.md",
   "media": [
     {
       "type": "setup",
-      "url": "systems/swnr/assets/anvil-impact.png",
-      "thumbnail": "systems/swnr/assets/anvil-impact.png"
+      "url": "systems/swnr/assets/art/GrzegorzPedrycz_HEGEMON.webp",
+      "thumbnail": "systems/swnr/assets/art/GrzegorzPedrycz_HEGEMON.webp"
     }
   ],
-  "version": "2.0.0",
+  "version": "2.0.3",
   "compatibility": {
     "minimum": "12.328",
     "verified": "12.328"
@@ -201,7 +204,7 @@
       "name": "cwn-program",
       "label": "Cwn Program",
       "system": "swnr",
-      "type": "Actor"
+      "type": "Item"
     },
     {
       "name": "cwn-vehicle-fittings",
@@ -334,13 +337,164 @@
       "label": "Tools And Medical",
       "system": "swnr",
       "type": "Item"
+    },
+    {
+      "name": "cwn-tables",
+      "label": "CWN Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "one-roll-tables",
+      "label": "SWN Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "one-roll-backing",
+      "label": "SWN Backing Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-gm-sub-tables",
+      "label": "WWN Backing Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-gm-tables",
+      "label": "WWN Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-instinct",
+      "label": "WWN Instinct Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-magic-items",
+      "label": "WWN Magic Items Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-magic-tables",
+      "label": "WWN Magic Tables",
+      "system": "swnr",
+      "type": "RollTable"
     }
   ],
-  "packFolders": [],
+  "packFolders": [
+    {
+      "name": "Gear",
+      "sorting": "a",
+      "color": "#333333",
+      "packs": [
+        "all-items",
+        "ammo-and-power",
+        "armor",
+        "communications",
+        "computing-gear",
+        "cyberware",
+        "field-equipment",
+        "heavy",
+        "melee",
+        "pharmaceuticals",
+        "ranged",
+        "tools-and-medical"
+      ]
+    },
+    {
+      "name": "Factions",
+      "sorting": "a",
+      "color": "#555555",
+      "packs": [
+        "assets"
+      ]
+    },
+    {
+      "name": "Ship/Drone/Mech/Vehicle",
+      "sorting": "a",
+      "color": "#666666",
+      "packs": [
+        "drone-fittings",
+        "ship-defense",
+        "ship-fitting",
+        "ship-weapon"
+      ]
+    },
+    {
+      "name": "Psionics",
+      "sorting": "a",
+      "color": "#602a64",
+      "packs": [
+        "psi-biopsionics",
+        "psi-metapsionics",
+        "psi-precognition",
+        "psi-telekinesis",
+        "psi-telepathy",
+        "psi-teleportation"
+      ]
+    },
+    {
+      "name": "CWN",
+      "sorting": "a",
+      "color": "#cccccc",
+      "packs": [
+        "cwn-armor",
+        "cwn-cyberware",
+        "cwn-drone-fittings",
+        "cwn-drones",
+        "cwn-edges",
+        "cwn-foci",
+        "cwn-items",
+        "cwn-pharmaceuticals",
+        "cwn-program",
+        "cwn-vehicle-fittings",
+        "cwn-vehicle-weapons",
+        "cwn-weapons"
+      ]
+    }, 
+    {
+      "name": "Bestiary",
+      "sorting": "a",
+      "color": "#999999",
+      "packs": [
+        "bestiary",
+        "sample-ships"
+      ]
+    }, 
+    {
+      "name": "Character Options",
+      "sorting": "a",
+      "color": "#AAAAAA",
+      "packs": [
+        "foci"
+      ]
+    }, 
+    {
+      "name": "Tables",
+      "sorting": "a",
+      "color": "#CCCCCC",
+      "packs": [
+        "cwn-tables",
+        "one-roll-tables",
+        "one-roll-backing",
+        "wwn-gm-sub-tables",
+        "wwn-gm-tables",
+        "wwn-instinct",
+        "wwn-magic-items",
+        "wwn-magic-tables"
+      ]
+    }
+  ],
   "socket": false,
-  "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
-  "download": "This must link to a .zip file of the current version",
-  "background": "systems/swnr/assets/anvil-impact.png",
+  "manifest": "https://github.com/wintersleepAI/swnr/releases/latest/download/system.json", 
+  "download": "",
+  "background": "systems/swnr/assets/art/GrzegorzPedrycz_HEGEMON.webp",
   "grid": {
     "type": 1,
     "distance": 5,

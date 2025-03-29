@@ -9,11 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988617
-  modifiedTime: 1739238988617
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 6lqx188l2gv3i0on
-system: {}
+_id: va90vcmw4oyf5z0e
+system:
+  cost: 0.1
+  description: Most commonly installed on small ground drones, this web can be armed as a Main Action by the pilot. Until disarmed, any attempt to grab or pick up the drone automatically inflicts 2d6 non-lethal electrical damage on the grabber. This shock continues each round as long as the drone is held, with up to 5 discharges total before the battery must be recharged. The firm contact required makes it impractical to use the web as an offensive weapon.
+  mass: 1
+  type: drone
 effects: []
-_key: '!items!6lqx188l2gv3i0on'
+_key: '!items!va90vcmw4oyf5z0e'

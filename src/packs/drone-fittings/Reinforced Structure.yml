@@ -9,11 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988794
-  modifiedTime: 1739238988794
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: eqogmbur5duvw06b
-system: {}
+_id: qskfslgr5y485fh3
+system:
+  broken: false
+  cost: 1000
+  costMultiplier: true
+  description: The drone is equipped with heavier plating and a sturdier internal frame. Its hit points are increased by 50%, rounded up.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  tl: 4
+  type: drone
 effects: []
-_key: '!items!eqogmbur5duvw06b'
+_key: '!items!qskfslgr5y485fh3'

@@ -9,25 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988668
-  modifiedTime: 1739238988668
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: jaeorkuqx0obg9k5
+_id: z17fkvjzz4ae42wh
 system:
-  description: Bulky and uncomfortable, but once Readied it leaves the user immune to most inhaled gases, including tear gas grenades.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
   cost: 1000
-  location: stowed
-  quality: stock
+  description: Bulky and uncomfortable, but once Readied it leaves the user immune to most inhaled gases, including tear gas grenades.
+  encumbrance: 1
   noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!jaeorkuqx0obg9k5'
+_key: '!items!z17fkvjzz4ae42wh'

@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988812
-  modifiedTime: 1739238988812
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: rku1lp2p2sszhflm
+_id: a3kv148qcndtd3iw
 system:
-  description: 'Telescoping pole: Retracting to a 30-centimeter baton, this pole extends and locks into a 3.048-meter extension that can bear as much as a thousand kilograms of weight or serve as a makeshift club.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 0
   cost: 10
-  tl: 4
+  description: 'Telescoping pole: Retracting to a 30-centimeter baton, this pole extends and locks into a 3.048-meter extension that can bear as much as a thousand kilograms of weight or serve as a makeshift club.'
+  encumbrance: 0
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!rku1lp2p2sszhflm'
+_key: '!items!a3kv148qcndtd3iw'

@@ -8,32 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988945
-  modifiedTime: 1739238988945
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: y2g32jh7euo6ld0g
+_id: uriko9c9hcjx629p
 system:
-  description: Thermal pistols and their larger, two-handed plasma projector cousins replace the beam of a laser with a small sphere of magnetically-shaped plasma. The spheres tend to dissipate at much shorter ranges than a laser beam, but do significantly more damage to targets within range and are not affected by ambient particulates. They tend to be extremely loud in operation.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 300
-  tl: 4
-  location: other
-  quality: stock
-  noEncReadied: false
-  stat: dex
-  secondStat: null
-  skill: ''
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 15
-    dmg: 0
   ab: 1
   ammo:
     burst: false
@@ -42,20 +21,20 @@ system:
     suppress: false
     type: typeAPower
     value: 5
+  cost: 300
+  damage: 2d6
+  description: Thermal pistols and their larger, two-handed plasma projector cousins replace the beam of a laser with a small sphere of magnetically-shaped plasma. The spheres tend to dissipate at much shorter ranges than a laser beam, but do significantly more damage to targets within range and are not affected by ambient particulates. They tend to be extremely loud in operation.
+  encumbrance: 1
+  location: other
+  quality: stock
   range:
     max: 50
     normal: 25
-  damage: 2d6
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
-  trauma:
-    die: 1d6
-    rating: null
-  isTwoHanded: false
-  isNonLethal: false
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 4
 effects: []
-_key: '!items!y2g32jh7euo6ld0g'
+_key: '!items!uriko9c9hcjx629p'

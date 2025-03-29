@@ -9,32 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988449
-  modifiedTime: 1739238988449
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: rx82ajnyligtom5g
+_id: 7ibsfytalltwejb8
 system:
+  assetType: wealth
+  attackDamage: 1d4+1
+  attackSource: wealth
+  attackSpecial: ''
+  attackTarget: force
+  baseOfInfluence: false
+  cost: 4
+  counter: 1d4
   description: These bruisers don't much like scabs and management, and they're willing to take the faction's word on which people are which. They're lightly armed and poorly trained, but they can infiltrate to perform sabotage.
-  favorite: false
-  category: cunning
-  type: Military Unit
   health:
     max: 6
     value: 6
-  rating: 2
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 4
   income: 0
   maintenance: 0
-  attackTarget: force
-  attackSource: wealth
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: ''
+  rating: 2
+  tl: 0
+  turnRoll: ''
+  type: Military Unit
+  unusable: false
 effects: []
-_key: '!items!rx82ajnyligtom5g'
+_key: '!items!7ibsfytalltwejb8'

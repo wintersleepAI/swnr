@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988517
-  modifiedTime: 1739238988517
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: azupf3y5w5gtqzf4
+_id: fc1ixkf59deiitpz
 system:
-  description: 'Stiletto charge: These ancient Mandate-era polymorphic intrusion charges were originally made to allow Mandate agents to easily overcome primitive colonial data security measures. Each charge is a small interface plug the size of a human thumb. When used as part of a hack against a TL4 system, it causes the skill check to automatically succeed regardless of the difficulty. Without line shunts, however, the duration of the hack is still no more than the usual 1d4 rounds plus the hacker’s Program skill. These devices are single-use, and are prized so highly that they are almost always unavailable for conventional purchase. Favors to the right people and the looting of Mandate remnants are the only normal ways to acquire these devices.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 1
   cost: 0
-  tl: 5
+  description: 'Stiletto charge: These ancient Mandate-era polymorphic intrusion charges were originally made to allow Mandate agents to easily overcome primitive colonial data security measures. Each charge is a small interface plug the size of a human thumb. When used as part of a hack against a TL4 system, it causes the skill check to automatically succeed regardless of the difficulty. Without line shunts, however, the duration of the hack is still no more than the usual 1d4 rounds plus the hacker’s Program skill. These devices are single-use, and are prized so highly that they are almost always unavailable for conventional purchase. Favors to the right people and the looting of Mandate remnants are the only normal ways to acquire these devices.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 5
 effects: []
-_key: '!items!azupf3y5w5gtqzf4'
+_key: '!items!fc1ixkf59deiitpz'

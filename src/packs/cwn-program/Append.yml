@@ -9,20 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988695
-  modifiedTime: 1739238988695
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: wit3rcunrf0q2ug2
+_id: du5wk947klluqvkf
 system:
-  description: Add a new entry or new data into a file. These new entries can't overwrite or erase any existing data, however.
-  favorite: false
-  cost: 500
-  type: verb
   accessCost: 1
-  target: Data
+  cost: 500
+  description: Add a new entry or new data into a file. These new entries can't overwrite or erase any existing data, however.
   selfTerminating: true
-  useAffects: Add a new entry or data into a file
   skillCheckMod: 0
+  target: Data
+  type: verb
+  useAffects: Add a new entry or data into a file
 effects: []
-_key: '!items!wit3rcunrf0q2ug2'
+_key: '!items!du5wk947klluqvkf'

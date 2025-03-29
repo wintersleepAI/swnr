@@ -9,53 +9,32 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988762
-  modifiedTime: 1739238988762
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: rvo7cyo7yqes7a11
+_id: umf8yd3rs4sgd8k8
 system:
-  description: Rocket launchers include a wide variety of single-shot disposable launchers. Their general imprecision forces a -4 hit penalty against human-sized targets, but they inflict frag grenade damage on any target within 5 meters of the rocket's landing point. Specialized anti-armor warheads lose this frag grenade bonus, but do double damage to vehicles or obstacles. Operators who intend to take down enemy vehicles favor them for their effectiveness in that role. This weapon's Trauma Die can inflict Traumatic Hits on drones, vehicles, and other machines.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 2
-  cost: 5000
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  stat: dex
-  secondStat: none
-  skill: ask
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 0
-    dmg: 0
-  ab: 0
   ammo:
     burst: false
     max: 1
     suppress: false
     type: special
     value: 1
+  cost: 5000
+  damage: 3d10
+  description: Rocket launchers include a wide variety of single-shot disposable launchers. Their general imprecision forces a -4 hit penalty against human-sized targets, but they inflict frag grenade damage on any target within 5 meters of the rocket's landing point. Specialized anti-armor warheads lose this frag grenade bonus, but do double damage to vehicles or obstacles. Operators who intend to take down enemy vehicles favor them for their effectiveness in that role. This weapon's Trauma Die can inflict Traumatic Hits on drones, vehicles, and other machines.
+  encumbrance: 2
+  isNonLethal: false
   range:
     max: 4000
     normal: 2000
-  damage: 3d10
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
+  secondStat: none
+  shock:
+    ac: 0
+    dmg: 0
+  stat: dex
   trauma:
     die: 1d10
     rating: 3
-  isTwoHanded: false
-  isNonLethal: false
 effects: []
-_key: '!items!rvo7cyo7yqes7a11'
+_key: '!items!umf8yd3rs4sgd8k8'

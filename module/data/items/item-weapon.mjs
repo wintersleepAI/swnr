@@ -10,7 +10,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
-    schema.stat = SWNShared.stats("dex");
+    schema.stat = SWNShared.stats("dex", false, true);
     schema.secondStat = SWNShared.stats(null, true, false);
     schema.skill = SWNShared.requiredString("ask");
     schema.skillBoostsDamage = new fields.BooleanField({initial: false});
@@ -49,6 +49,19 @@ export default class SWNWeapon extends SWNBaseGearItem {
     schema.isNonLethal = new fields.BooleanField({initial: false});
 
     return schema;
+  }
+
+  static migrateData(data) {
+
+    if (data.trauma.rating == "none" || data.trauma.rating == "") {
+      data.trauma.rating = null;
+    }
+
+    if (!(data.stat in CONFIG.SWN.stats)) {
+      data.stat = "ask";
+    }
+
+    return data;
   }
 
   get canBurstFire() {
@@ -144,11 +157,12 @@ export default class SWNWeapon extends SWNBaseGearItem {
       damageExplain: damageExplainTip,
     };
 
-    console.log("TODO replace settings useTrauma");
     let traumaRollRender = null;
     let traumaDamage = null;
+    let useTrauma = (game.settings.get("swnr", "useTrauma") ? true : false);
+
     if (
-      this.settings?.useTrauma &&
+      useTrauma &&
       this.trauma.die != null &&
       this.trauma.die !== "none" &&
       this.trauma.rating != null
@@ -265,9 +279,10 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const secStatName = this.secondStat;
     // check if there is 2nd stat name and its mod is better
     if (
+      statName != "ask" &&
       secStatName != null &&
       secStatName != "none" &&
-        actor.system["stats"]?.[statName].mod <
+        actor.system["stats"]?.[statName]?.mod <
         actor.system["stats"]?.[secStatName].mod
     ) {
       statName = secStatName;
@@ -275,7 +290,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
 
     // Set to not ask and just roll
     if (!shiftKey && this.remember && this.remember.use) {
-      const stat = actor["stats"]?.[statName] || {
+      const stat = actor.system["stats"]?.[statName] || {
         mod: 0,
       };
 
@@ -283,7 +298,21 @@ export default class SWNWeapon extends SWNBaseGearItem {
         "Item",
         this.skill
       );
-      const skillMod = skill.rank < 0 ? -2 : skill.rank;
+      let skillMod = -2; 
+      if (skill) {
+        skill?.rank < 0 ? -2 : skill.rank;
+      } else {
+        ui.notifications?.info("No skill found, using -2. Unsetting remember.");
+        await this.parent.update({
+          system: {
+            remember: {
+              use: false,
+              burst: false,
+              modifier: 0,
+            },
+          }
+        });
+      }
 
       if (actor?.type == "character") {
         dmgBonus = this.skillBoostsDamage ? skill.rank : 0;
@@ -304,6 +333,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       statName: statName,
       skill: this.skill,
       burstFireHasAmmo,
+      stats: actor.system.stats,
     };
     const template = "systems/swnr/templates/dialogs/roll-attack.hbs";
     const html = await renderTemplate(template, dialogData);
@@ -311,7 +341,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const _rollForm = async (_event, button, html) => {
       const modifier = parseInt(button.form.elements.modifier.value);
       const burstFire = (button.form.elements.burstFire?.checked) ? true : false;
-      const skillId = button.form.elements.skill.value || this.skill;
+      const skillId = button.form.elements.skill?.value || this.skill;
 
       if (!actor) {
         console.log("Error actor no longer exists ");
@@ -324,7 +354,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
         skillId
       );
 
-      if (actor?.type == "npc" && html.find('[name="skilled"]')) {
+      if (actor?.type == "npc") {
         const npcSkillMod = button.form.elements.skilled?.checked ? actor.system.skillBonus : 0;
         if (npcSkillMod) skillMod = npcSkillMod;
       } else if (skill) {

@@ -25,7 +25,11 @@
   }
   .item-name-long {
     flex: 2 1 100px;
+  }
 
+  .item-search {
+    // TODO wsAI remove once search is implemented
+    display: none;
   }
 }
 
@@ -234,5 +238,30 @@
   }
   .trained {
     color: var(--swnr-c-dark);
+  }
+}
+
+.asset-prop {
+  font-size: 12px;
+  text-align: center;
+  
+  .asset-rating {
+    flex: 0 1 20px;
+    padding: 0 8px;
+  }
+
+  .asset-hp {
+    flex: 0 1 20px;
+    padding: 0 8px;
+  }
+
+  .asset-location {
+    flex: 0 1 40px;
+    padding: 0 8px;
+  }
+
+  .asset-damage {
+    flex: 0 1 40px;
+    padding: 0 8px;
   }
 }

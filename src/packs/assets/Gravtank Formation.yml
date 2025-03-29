@@ -9,32 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988415
-  modifiedTime: 1739238988415
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 5tpvy7yk0ji8b19j
+_id: auk9lmxqdoijfi0v
 system:
+  assetType: force
+  attackDamage: 2d10+4
+  attackSource: force
+  attackSpecial: ''
+  attackTarget: force
+  baseOfInfluence: false
+  cost: 25
+  counter: 1d10
   description: These tank formations are composed of advanced postech gravtank units that are capable of covering almost any terrain and cracking even the toughest defensive positions.
-  favorite: false
-  category: cunning
-  type: Military Unit
   health:
     max: 14
     value: 14
-  rating: 6
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 25
   income: 0
   maintenance: 0
-  attackTarget: force
-  attackSource: force
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: P
+  rating: 6
+  tl: 4
+  turnRoll: ''
+  type: Military Unit
+  unusable: false
 effects: []
-_key: '!items!5tpvy7yk0ji8b19j'
+_key: '!items!auk9lmxqdoijfi0v'

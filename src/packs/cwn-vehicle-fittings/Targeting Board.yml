@@ -9,11 +9,17 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988734
-  modifiedTime: 1739238988734
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 6joqa3goz00tc1tu
-system: {}
+_id: u6dh9jemjx19gvck
+system:
+  cost: 2500
+  description: A single unified targeting board allows one gunner to manage up to three vehicle weapons instead of the one gun per gunner that would usually be allowed.
+  effect: One gunner can run up to three guns
+  mass: 1
+  minClass: M
+  power: 1
+  type: vehicle
 effects: []
-_key: '!items!6joqa3goz00tc1tu'
+_key: '!items!u6dh9jemjx19gvck'

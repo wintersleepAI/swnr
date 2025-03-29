@@ -9,25 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988666
-  modifiedTime: 1739238988666
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: z19ppnatkdgk5rvj
+_id: z51nn5eazpppqqbe
 system:
-  description: Clothing has no Encumbrance when worn, but it`s sometimes prudent to have a spare outfit in your pack.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
   cost: 500
-  location: stowed
-  quality: stock
+  description: Clothing has no Encumbrance when worn, but it`s sometimes prudent to have a spare outfit in your pack.
+  encumbrance: 1
   noEncReadied: true
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!z19ppnatkdgk5rvj'
+_key: '!items!z51nn5eazpppqqbe'

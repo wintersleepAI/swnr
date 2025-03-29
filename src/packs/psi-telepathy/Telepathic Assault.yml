@@ -9,14 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988917
-  modifiedTime: 1739238988917
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ia31gl6lroe773fg
+_id: u1riczeoku7erafl
 system:
   description: <p>The telepath Commits Effort for the day as a Main Action to force a wave of metadimensional energy through the brain of a <em>Telepathic Contact</em> target. The assault does 6d6 damage, or 9d6 damage if the telepath has Telepathy-4 skill. The target may make a Mental saving throw to halve the damage. This assault cannot kill a target, but can knock them unconscious for an hour if they’re reduced to zero hit points, after which they wake up with one hit point. A victim cannot be targeted by an assault more than once per scene.</p>
-  favorite: false
-  powerLevel: 1
+  level: 3
+  source: telepathy
+  save: mental
+  effort: day
+  roll: 6d6
 effects: []
-_key: '!items!ia31gl6lroe773fg'
+_key: '!items!u1riczeoku7erafl'

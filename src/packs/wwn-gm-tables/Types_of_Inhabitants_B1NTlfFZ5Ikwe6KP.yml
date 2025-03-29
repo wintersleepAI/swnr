@@ -1,0 +1,155 @@
+_id: B1NTlfFZ5Ikwe6KP
+name: Types of Inhabitants
+img: icons/svg/d20-grey.svg
+description: >-
+  The types of inhabitants rolled or chosen here reflect the major figures in a
+  site, but they shouldn’t be taken as the only creatures to inhabit the area.
+  Some portion of a ruin or wilderness site’s inhabitants should be taken from
+  exotic beasts, unaffiliated sentients, or other figures of happenstance. Such
+  variety helps keep foes fresh.
+results:
+  - _id: 5KqItv40A5p1tqlE
+    type: text
+    text: <b>Ancient Sorcerer-King Ruin</b>
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    documentId: null
+    _key: '!tables.results!B1NTlfFZ5Ikwe6KP.5KqItv40A5p1tqlE'
+  - _id: bWkdjgfIjnjjyUvV
+    type: pack
+    text: Inhab-Ancient
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    documentCollection: wwn.gm-subtables
+    documentId: ypsDSboKIlu0mfxF
+    _key: '!tables.results!B1NTlfFZ5Ikwe6KP.bWkdjgfIjnjjyUvV'
+  - _id: lLWUliWBisMgteSe
+    type: text
+    text: <b>Alien <i>Arratu</i></b>
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    documentId: null
+    _key: '!tables.results!B1NTlfFZ5Ikwe6KP.lLWUliWBisMgteSe'
+  - _id: IoJUxIWWNkctrY58
+    type: pack
+    text: Inhab-Arratu
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    documentCollection: wwn.gm-subtables
+    documentId: H2ZU19ZHt0xV88kH
+    _key: '!tables.results!B1NTlfFZ5Ikwe6KP.IoJUxIWWNkctrY58'
+  - _id: hjdadjTxYjBEhaJM
+    type: text
+    text: <b>Subterranean Deep</b>
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    documentId: null
+    _key: '!tables.results!B1NTlfFZ5Ikwe6KP.hjdadjTxYjBEhaJM'
+  - _id: KJU8Oyznma20x8fZ
+    type: pack
+    text: Inhab-Deep
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    documentCollection: wwn.gm-subtables
+    documentId: fhbfYxLtgLoVlZp5
+    _key: '!tables.results!B1NTlfFZ5Ikwe6KP.KJU8Oyznma20x8fZ'
+  - _id: XmksRSmWb6vPtKhe
+    type: text
+    text: <b>Modern Ruin Site</b>
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    documentId: null
+    _key: '!tables.results!B1NTlfFZ5Ikwe6KP.XmksRSmWb6vPtKhe'
+  - _id: ju6HfZFBgoocvPLm
+    type: pack
+    text: Inhab-Modern
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    documentCollection: wwn.gm-subtables
+    documentId: vRgM3LCZL4IBvlEx
+    _key: '!tables.results!B1NTlfFZ5Ikwe6KP.ju6HfZFBgoocvPLm'
+  - _id: C9w9LHbTRFPAmyv2
+    type: text
+    text: <b>Trackless Wilderness</b>
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    documentId: null
+    _key: '!tables.results!B1NTlfFZ5Ikwe6KP.C9w9LHbTRFPAmyv2'
+  - _id: 9GBpCrYz5Xtr55wv
+    type: pack
+    text: Inhab-Wilderness
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    documentCollection: wwn.gm-subtables
+    documentId: AEt6C19UFsL8EnU1
+    _key: '!tables.results!B1NTlfFZ5Ikwe6KP.9GBpCrYz5Xtr55wv'
+formula: 1d1
+replacement: true
+displayRoll: true
+folder: null
+sort: 700000
+flags: {}
+ownership:
+  default: 0
+  mgBwP0sTLP1VFg1m: 3
+_stats:
+  systemId: wwn
+  systemVersion: 1.1.4
+  coreVersion: '12.324'
+  createdTime: null
+  modifiedTime: 1690569812651
+  lastModifiedBy: VPYTJCONjTybUwoI
+  compendiumSource: null
+  duplicateSource: null
+_key: '!tables!B1NTlfFZ5Ikwe6KP'
+

@@ -9,21 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988564
-  modifiedTime: 1739238988564
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: f2zbe4gqzxlnsm19
+_id: 1qwd0lntvjvbaezf
 system:
-  description: The user can navigate even in darkness or while blinded by means of ultrasonic sensors, being able to construct a crude map of people and obstacles in front of them out to 20 meters. This sense is the equivalent of vision, though it can't discern details more subtle than faces.
-  favorite: false
-  tl: 4
-  cost: 20000
-  strain: 0.5
-  disabled: false
-  effect: Sense surrounds as if visually
-  type: Sensory
   concealment: Medical
-  complication: ''
+  cost: 20000
+  description: The user can navigate even in darkness or while blinded by means of ultrasonic sensors, being able to construct a crude map of people and obstacles in front of them out to 20 meters. This sense is the equivalent of vision, though it can't discern details more subtle than faces.
+  effect: Sense surrounds as if visually
+  strain: 0.5
+  type: Sensory
 effects: []
-_key: '!items!f2zbe4gqzxlnsm19'
+_key: '!items!1qwd0lntvjvbaezf'

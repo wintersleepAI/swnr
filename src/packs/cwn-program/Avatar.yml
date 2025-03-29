@@ -9,20 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988696
-  modifiedTime: 1739238988696
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: iawez31mcca431b4
+_id: um6k4xwtka81akrn
 system:
-  description: A cyberspace avatar, whether one adopted by a hacker who's jacked into the network or a Demon program standing guard there.
-  favorite: false
-  cost: 500
-  type: subject
   accessCost: 0
-  target: Avatar
+  cost: 500
+  description: A cyberspace avatar, whether one adopted by a hacker who's jacked into the network or a Demon program standing guard there.
   selfTerminating: false
-  useAffects: Avatars and Demons
   skillCheckMod: 0
+  target: Avatar
+  type: subject
+  useAffects: Avatars and Demons
 effects: []
-_key: '!items!iawez31mcca431b4'
+_key: '!items!um6k4xwtka81akrn'

@@ -9,32 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988437
-  modifiedTime: 1739238988437
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 3191kdu5u56uc7rz
+_id: xyhdssq1e5oul836
 system:
+  assetType: wealth
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 18
+  counter: ''
   description: These allow the smooth extension of wealth-creation and industrial principles to the farthest reaches of the faction's operations. A faction with an R&D department may treat all planets as having tech level 4 for purposes of buying Wealth assets.
-  favorite: false
-  category: cunning
-  type: Facility
   health:
     max: 15
     value: 15
-  rating: 6
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 18
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: S
+  rating: 6
+  tl: 4
+  turnRoll: ''
+  type: Facility
+  unusable: false
 effects: []
-_key: '!items!3191kdu5u56uc7rz'
+_key: '!items!xyhdssq1e5oul836'

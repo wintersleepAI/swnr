@@ -9,21 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988588
-  modifiedTime: 1739238988588
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: xedlebci515jexeu
+_id: 9y1m9bb9k9raotzq
 system:
-  description: 'A number of support systems and blood purification filters are installed. The user can absorb up to four points of System Strain incurred from healing or wound stabilization effects; this is a separate pool that recovers one point every night at the same time as the user''s natural System Strain recovers. '
-  favorite: false
-  tl: 4
-  cost: 30000
-  strain: 1
-  disabled: false
-  effect: Gain 4 System Strain for heals
-  type: Body
   concealment: Medical
-  complication: ''
+  cost: 30000
+  description: 'A number of support systems and blood purification filters are installed. The user can absorb up to four points of System Strain incurred from healing or wound stabilization effects; this is a separate pool that recovers one point every night at the same time as the user''s natural System Strain recovers. '
+  effect: Gain 4 System Strain for heals
+  strain: 1
+  type: Body
 effects: []
-_key: '!items!xedlebci515jexeu'
+_key: '!items!9y1m9bb9k9raotzq'

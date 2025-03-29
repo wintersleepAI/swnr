@@ -9,36 +9,23 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988543
-  modifiedTime: 1739238988543
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: dac96aco7vu32nzd
+_id: 4cbgqkw9tknop7oj
 system:
-  description: Heavy security usually sports armor on this level, including police rapid response teams.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 3
-  cost: 10000
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
   ac: 18
-  shield: false
-  use: false
+  cost: 10000
+  description: Heavy security usually sports armor on this level, including police rapid response teams.
+  encumbrance: 3
+  isHeavy: false
+  isSubtle: false
   meleeAc: 14
+  shieldACBonus: 0
+  shieldMeleeACBonus: 0
   soak:
     max: 10
     value: 10
-  dr: 0
   traumaDiePenalty: 2
-  isSubtle: false
-  isHeavy: false
-  shieldMeleeACBonus: 0
-  shieldACBonus: 0
 effects: []
-_key: '!items!dac96aco7vu32nzd'
+_key: '!items!4cbgqkw9tknop7oj'

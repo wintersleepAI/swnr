@@ -9,11 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988982
-  modifiedTime: 1739238988982
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ishn7i1p40b25w0h
-system: {}
+_id: ib5k4xp66w97kjx0
+system:
+  broken: false
+  cost: 10000
+  costMultiplier: true
+  description: Forging new spike courses is too much an art to rely on computerized assistance, but an advanced nav computer can help on well-mapped routes. When navigating an interstellar drill course with charts less than a year old, the navigator decreases drill difficulty by 2.
+  effect: Adds +2 for traveling familiar spike courses
+  mass: 0
+  massMultiplier: false
+  minClass: frigate
+  power: 1
+  powerMultiplier: true
 effects: []
-_key: '!items!ishn7i1p40b25w0h'
+_key: '!items!ib5k4xp66w97kjx0'

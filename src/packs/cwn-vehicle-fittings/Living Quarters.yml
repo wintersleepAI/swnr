@@ -9,11 +9,17 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988729
-  modifiedTime: 1739238988729
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: z5r4w3dnzrohhnvd
-system: {}
+_id: 9topc71z82oacxw5
+system:
+  cost: 8000
+  description: Basic, cramped quarters are provided for sleeping, sanitation, and cooking for all crew. Permanent living in a vehicle costs and counts as a slum lifestyle, though occupants with the Ace Driver or Roamer Focus can treat it as middle-class for the same price.
+  effect: Cramped but usable living quarters
+  mass: 4
+  minClass: L
+  power: 0
+  type: vehicle
 effects: []
-_key: '!items!z5r4w3dnzrohhnvd'
+_key: '!items!9topc71z82oacxw5'

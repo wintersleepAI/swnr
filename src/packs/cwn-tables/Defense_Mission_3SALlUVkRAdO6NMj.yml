@@ -1,0 +1,107 @@
+name: Defense Mission
+description: >-
+  <p>A random table created from the contents of the Defense Mission
+  Folder.</p><ol><li><p>1. Why Can’t They Do It Themselves?</p></li><li><p>2.
+  What Kind of Patron Put Up the Job?</p></li><li><p>3. What Made Them
+  Fearful?</p></li><li><p>4. How Afraid Is the Target?</p></li><li><p>5. What
+  Needs To Be Defended?</p></li><li><p>6. Twists to the Situation</p></li></ol>
+results:
+  - text: 'Defense: Why Can’t They Do It Themselves?'
+    type: 1
+    documentCollection: RollTable
+    documentId: w1zPDsxUblNt0dyi
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: x6Idi0zHPEQchU3E
+    flags: {}
+    _key: '!tables.results!3SALlUVkRAdO6NMj.x6Idi0zHPEQchU3E'
+  - text: 'Defense: What kind of patron put up the job?'
+    type: 1
+    documentCollection: RollTable
+    documentId: 495s9ojHPGgjShx1
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: v8rn53hIdXV5KOGE
+    flags: {}
+    _key: '!tables.results!3SALlUVkRAdO6NMj.v8rn53hIdXV5KOGE'
+  - text: 'Defense: What made them fearful?'
+    type: 1
+    documentCollection: RollTable
+    documentId: 1KUkUnJSa0l3Y3nk
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: Hz1o8j2EBkerXvuW
+    flags: {}
+    _key: '!tables.results!3SALlUVkRAdO6NMj.Hz1o8j2EBkerXvuW'
+  - text: 'Defense: How Afraid is the Target?'
+    type: 1
+    documentCollection: RollTable
+    documentId: p6BCzNJuZJhOyOl2
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: nZ9BALms7KSjIIGG
+    flags: {}
+    _key: '!tables.results!3SALlUVkRAdO6NMj.nZ9BALms7KSjIIGG'
+  - text: 'Defense: What needs to be defended?'
+    type: 1
+    documentCollection: RollTable
+    documentId: TumD2cVL4v735Azf
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: tY90hbMbuFJCMuMp
+    flags: {}
+    _key: '!tables.results!3SALlUVkRAdO6NMj.tY90hbMbuFJCMuMp'
+  - text: 'Defense: Twists to the Situation'
+    type: 1
+    documentCollection: RollTable
+    documentId: O0zCGXT4328AfQ3K
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: 1r6Myy3myLY0hXqF
+    flags: {}
+    _key: '!tables.results!3SALlUVkRAdO6NMj.1r6Myy3myLY0hXqF'
+formula: 1d1
+_id: 3SALlUVkRAdO6NMj
+img: icons/svg/d20-grey.svg
+replacement: true
+displayRoll: false
+folder: oIaOQNsh4qvevc7h
+flags:
+  core: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '11.315'
+  createdTime: 1703901637655
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!3SALlUVkRAdO6NMj'
+

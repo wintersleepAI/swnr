@@ -9,20 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988706
-  modifiedTime: 1739238988706
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 4gf46d1j1emqx59r
+_id: 466c3m1i8jyx63et
 system:
-  description: A Frisk Cyber program can give a list of all the cyber implanted in a specific human target within 30 meters, assuming the hacker's skill check beats the cyber user's security difficulty.
-  favorite: false
-  cost: 500
-  type: verb
   accessCost: 0
-  target: Cyber
+  cost: 500
+  description: A Frisk Cyber program can give a list of all the cyber implanted in a specific human target within 30 meters, assuming the hacker's skill check beats the cyber user's security difficulty.
   selfTerminating: true
-  useAffects: Get a list of a target person's cyberware
   skillCheckMod: 1
+  target: Cyber
+  type: verb
+  useAffects: Get a list of a target person's cyberware
 effects: []
-_key: '!items!4gf46d1j1emqx59r'
+_key: '!items!466c3m1i8jyx63et'

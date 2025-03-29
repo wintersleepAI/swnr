@@ -1,0 +1,72 @@
+folder: u7THfw0EJBrCCH0Z
+name: 'Murder: How Exposed Is the Target?'
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: 0
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: x0dUijhHxmdrKZ64
+    text: Under constant guard at a remote location
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!XECaF642ElVUisB5.x0dUijhHxmdrKZ64'
+  - type: 0
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: nszjQJRmrnrlVlRB
+    text: Is closely guarded whenever in public
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!XECaF642ElVUisB5.nszjQJRmrnrlVlRB'
+  - type: 0
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: nknRJ5bUejgTNbCB
+    text: Has guards nearby in sensitive situations
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!XECaF642ElVUisB5.nknRJ5bUejgTNbCB'
+  - type: 0
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: cRoIjWvJXvGcEjx4
+    text: Is currently surprisingly ill-protected
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!XECaF642ElVUisB5.cRoIjWvJXvGcEjx4'
+replacement: true
+displayRoll: true
+flags:
+  core: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '11.315'
+  createdTime: 1703892045233
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+formula: 1d4
+_id: XECaF642ElVUisB5
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!XECaF642ElVUisB5'
+

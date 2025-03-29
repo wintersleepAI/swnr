@@ -9,11 +9,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988789
-  modifiedTime: 1739238988789
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: iafmb8re0coi8xtl
-system: {}
+_id: uf4f7id4tprz28o4
+system:
+  broken: false
+  cost: 5000
+  costMultiplier: true
+  description: The drone is loaded with sophisticated self-piloting software. It can be given a flight plan by its operator, have targets designated for its weapon, and respond to simple environmental cues. Each new command takes up a Main Action and commands with any conditional states may require an Int/Program skill check to get the drone to understand. The drone can fire only one weapon per round and uses a total attack bonus of +2 if attacking autonomously. Quantum ECM will scramble this lightweight system.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  type: drone
 effects: []
-_key: '!items!iafmb8re0coi8xtl'
+_key: '!items!uf4f7id4tprz28o4'

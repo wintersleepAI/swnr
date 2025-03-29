@@ -9,32 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988408
-  modifiedTime: 1739238988408
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: r50wy7swfvau25bq
+_id: 46hm7ij4565gxaq6
 system:
+  assetType: force
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 5
+  counter: 1d6+3
   description: This asset covers all the myriad stratagems of war, from induced landslides to spreading local diseases.
-  favorite: false
-  category: cunning
-  type: Tactic
   health:
     max: 2
     value: 2
-  rating: 3
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 5
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: ''
+  rating: 3
+  tl: 0
+  turnRoll: ''
+  type: Tactic
+  unusable: false
 effects: []
-_key: '!items!r50wy7swfvau25bq'
+_key: '!items!46hm7ij4565gxaq6'

@@ -9,11 +9,17 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988724
-  modifiedTime: 1739238988724
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 0w1c7uztq1kxn6bk
-system: {}
+_id: iqsrv4xpm8hv6kqs
+system:
+  cost: 5000
+  description: The vehicle's maximum hit points increase by 25%, rounded up.
+  effect: Increases maximum HP by 25%
+  mass: 4
+  minClass: M
+  power: 0
+  type: vehicle
 effects: []
-_key: '!items!0w1c7uztq1kxn6bk'
+_key: '!items!iqsrv4xpm8hv6kqs'

@@ -9,53 +9,32 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988745
-  modifiedTime: 1739238988745
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: iifadbyboj97olba
+_id: n5rmyzj8oxtr3h8r
 system:
-  description: Assorted retractable blades and spikes are implanted in the user's limbs. Their unarmed attacks do 1d8 damage, Shock of 2/15, Trauma Die 1d8/x3 and can be rolled with either Stab or Punch as the relevant combat skill. The Punch skill does not add damage to Body Blades attacks. When not in use, the blades are perceptible only to a medical scan.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 0
-  cost: 10000
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  stat: dex
-  secondStat: none
-  skill: ask
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 15
-    dmg: 2
-  ab: 0
   ammo:
     burst: false
     max: None
     suppress: false
     type: none
     value: None
+  cost: 10000
+  damage: 1d8
+  description: Assorted retractable blades and spikes are implanted in the user's limbs. Their unarmed attacks do 1d8 damage, Shock of 2/15, Trauma Die 1d8/x3 and can be rolled with either Stab or Punch as the relevant combat skill. The Punch skill does not add damage to Body Blades attacks. When not in use, the blades are perceptible only to a medical scan.
+  encumbrance: 0
+  isNonLethal: false
   range:
     max: 0
     normal: 0
-  damage: 1d8
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
+  secondStat: none
+  shock:
+    ac: 15
+    dmg: 2
+  stat: dex
   trauma:
     die: 1d8
     rating: 3
-  isTwoHanded: false
-  isNonLethal: false
 effects: []
-_key: '!items!iifadbyboj97olba'
+_key: '!items!n5rmyzj8oxtr3h8r'

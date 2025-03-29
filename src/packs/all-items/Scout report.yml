@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988362
-  modifiedTime: 1739238988362
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: bkzhog1db30vxg3y
+_id: 295o8m3nczt5wln8
 system:
-  description: 'Scout report: A collation of survey scans and merchant reports on a particular lost world or isolated colony. Scouting reports are available for all but the most unknown worlds and provide maps, basic information, and note any critical cultural taboos.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 0
   cost: 200
-  tl: 4
+  description: 'Scout report: A collation of survey scans and merchant reports on a particular lost world or isolated colony. Scouting reports are available for all but the most unknown worlds and provide maps, basic information, and note any critical cultural taboos.'
+  encumbrance: 0
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!bkzhog1db30vxg3y'
+_key: '!items!295o8m3nczt5wln8'

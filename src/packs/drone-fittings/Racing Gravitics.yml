@@ -9,11 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988793
-  modifiedTime: 1739238988793
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: uifci2wswr88o8di
-system: {}
+_id: sxailvfh1y24lfmq
+system:
+  broken: false
+  cost: 1000
+  costMultiplier: true
+  description: The drone is tuned for extra speed. Its flight endurance is halved, but it can now move up to 60 meters per combat round and fly at up to 200 kph out of combat.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  tl: 4
+  type: drone
 effects: []
-_key: '!items!uifci2wswr88o8di'
+_key: '!items!sxailvfh1y24lfmq'

@@ -9,11 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989003
-  modifiedTime: 1739238989003
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: qx9pdql2jgl84ss8
-system: {}
+_id: 3cpowpxqruy7qjyx
+system:
+  broken: false
+  cost: 2500
+  costMultiplier: true
+  description: A normal complement of ship's stores can keep the maximum crew size supplied for two months. Each selection of Extended Stores doubles that time, and can be fitted multiple times.
+  effect: Maximum life support duration is doubled
+  mass: 1
+  massMultiplier: true
+  minClass: fighter
+  power: 0
+  powerMultiplier: false
 effects: []
-_key: '!items!qx9pdql2jgl84ss8'
+_key: '!items!3cpowpxqruy7qjyx'

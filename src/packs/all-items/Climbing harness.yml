@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988334
-  modifiedTime: 1739238988334
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 62psk614h48rw2u1
+_id: sczn9ez3gxrxouby
 system:
-  description: 'Climbing harness: A collection of straps, ropes, pitons, and other climbing aids that grant a +1 bonus on any Exert climbing skill test. Using a climbing harness is noisy, and any Sneak skill checks while climbing with one suffer a -2 penalty.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 1
   cost: 50
-  tl: 3
+  description: 'Climbing harness: A collection of straps, ropes, pitons, and other climbing aids that grant a +1 bonus on any Exert climbing skill test. Using a climbing harness is noisy, and any Sneak skill checks while climbing with one suffer a -2 penalty.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
 effects: []
-_key: '!items!62psk614h48rw2u1'
+_key: '!items!sczn9ez3gxrxouby'

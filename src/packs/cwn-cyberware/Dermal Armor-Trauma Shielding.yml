@@ -9,21 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988561
-  modifiedTime: 1739238988561
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: hgatv11lnnbhj8wx
+_id: mwv0w0lxd9dxd357
 system:
-  description: A system that can only be installed on a user with at least one level of Dermal Armor, the trauma shielding addition adds +1 to the user's Trauma Target. This benefit stacks with any existing Dermal Armor bonus to the roll.
-  favorite: false
-  tl: 4
-  cost: 100000
-  strain: 1
-  disabled: false
-  effect: Add +1 to user's Trauma Target
-  type: Body
   concealment: Medical
-  complication: ''
+  cost: 100000
+  description: A system that can only be installed on a user with at least one level of Dermal Armor, the trauma shielding addition adds +1 to the user's Trauma Target. This benefit stacks with any existing Dermal Armor bonus to the roll.
+  effect: Add +1 to user's Trauma Target
+  strain: 1
+  type: Body
 effects: []
-_key: '!items!hgatv11lnnbhj8wx'
+_key: '!items!mwv0w0lxd9dxd357'

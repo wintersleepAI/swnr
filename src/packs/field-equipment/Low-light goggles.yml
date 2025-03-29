@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988806
-  modifiedTime: 1739238988806
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 4al060fmm6zmjpxx
+_id: 27sdyi6frfx7yxzo
 system:
-  description: 'Low-light goggles: These goggles provide a monochrome but serviceable view out to the wearer’s normal visual distance, provided that there is any illumination available at all. A type A power cell will operate these goggles for a week.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 1
   cost: 200
-  tl: 3
+  description: 'Low-light goggles: These goggles provide a monochrome but serviceable view out to the wearer’s normal visual distance, provided that there is any illumination available at all. A type A power cell will operate these goggles for a week.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
 effects: []
-_key: '!items!4al060fmm6zmjpxx'
+_key: '!items!27sdyi6frfx7yxzo'

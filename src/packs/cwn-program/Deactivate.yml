@@ -9,20 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988700
-  modifiedTime: 1739238988700
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: yc4r2e3c3rtc1vbi
+_id: crc1x6zimeu3jayf
 system:
-  description: Turn a device or piece of cyberware off. Most devices and cyber can be rebooted by the network or the user, but it'll take a Main Action and a round to do so. If a network alert hasn't been issued, the network may not notice a deactivated device until someone spots the problem.
-  favorite: false
-  cost: 2000
-  type: verb
   accessCost: 1
-  target: Device/Cyber
+  cost: 2000
+  description: Turn a device or piece of cyberware off. Most devices and cyber can be rebooted by the network or the user, but it'll take a Main Action and a round to do so. If a network alert hasn't been issued, the network may not notice a deactivated device until someone spots the problem.
   selfTerminating: true
-  useAffects: Turn off the target for at least a round
   skillCheckMod: 1
+  target: Device/Cyber
+  type: verb
+  useAffects: Turn off the target for at least a round
 effects: []
-_key: '!items!yc4r2e3c3rtc1vbi'
+_key: '!items!crc1x6zimeu3jayf'

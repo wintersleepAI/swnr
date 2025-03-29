@@ -9,21 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988601
-  modifiedTime: 1739238988601
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: grpy2kao01xk25mr
+_id: 01cg0frnurhm4af0
 system:
-  description: A set of customized medical and therapeutic implants are used to control the side-effects of a partially-successful cyberware implant. For each implantation of this system, the user can choose to ignore one implant side-effect they currently suffer. The skill check to implant this system can fail, but it never induces any side effects on its own.
-  favorite: false
-  tl: 4
-  cost: 25000
-  strain: 1
-  disabled: false
-  effect: Suppress an implant side-effect
-  type: Body
   concealment: Medical
-  complication: ''
+  cost: 25000
+  description: A set of customized medical and therapeutic implants are used to control the side-effects of a partially-successful cyberware implant. For each implantation of this system, the user can choose to ignore one implant side-effect they currently suffer. The skill check to implant this system can fail, but it never induces any side effects on its own.
+  effect: Suppress an implant side-effect
+  strain: 1
+  type: Body
 effects: []
-_key: '!items!grpy2kao01xk25mr'
+_key: '!items!01cg0frnurhm4af0'

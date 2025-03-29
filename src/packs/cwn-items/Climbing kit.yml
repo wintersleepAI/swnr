@@ -9,25 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988665
-  modifiedTime: 1739238988665
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: jg64ra739sewvwtg
+_id: j9qng0idzb8m5anj
 system:
-  description: Ultralight cord, a grapnel, some grip handholds, and a fast-acting, ultra-strong wall adhesive make up this kit.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 2
   cost: 150
-  location: stowed
-  quality: stock
+  description: Ultralight cord, a grapnel, some grip handholds, and a fast-acting, ultra-strong wall adhesive make up this kit.
+  encumbrance: 2
   noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!jg64ra739sewvwtg'
+_key: '!items!j9qng0idzb8m5anj'

@@ -9,11 +9,22 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989022
-  modifiedTime: 1739238989022
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 2x5ayr7twyqx4mav
-system: {}
+_id: tk1fctfk3kdjyth6
+system:
+  broken: false
+  cost: 100000
+  costMultiplier: false
+  damage: 1d4
+  description: Twinned assay and penetration lasers modulate the frequency of this beam for remarkable armor penetration. These weapons are popular choices for fighters intended for frigate or cruiser engagement.
+  mass: 1
+  massMultiplier: false
+  minClass: fighter
+  power: 5
+  powerMultiplier: false
+  qualities: AP 20
+  tl: 4
 effects: []
-_key: '!items!2x5ayr7twyqx4mav'
+_key: '!items!tk1fctfk3kdjyth6'

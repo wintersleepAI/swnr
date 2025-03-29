@@ -9,11 +9,23 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989018
-  modifiedTime: 1739238989018
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: g8liny8b4de8ndua
-system: {}
+_id: vg1zpzp4sdkyghmv
+system:
+  broken: false
+  cost: 500000
+  costMultiplier: false
+  damage: 2d6
+  description: A baseline frigate anti-fighter system, this battery fires waves of lasers or charged particles to knock down small craft.
+  hardpoint: 1
+  mass: 3
+  massMultiplier: false
+  minClass: frigate
+  power: 5
+  powerMultiplier: false
+  qualities: AP 10, Flak
+  tl: 4
 effects: []
-_key: '!items!g8liny8b4de8ndua'
+_key: '!items!vg1zpzp4sdkyghmv'

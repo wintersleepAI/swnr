@@ -9,25 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988678
-  modifiedTime: 1739238988678
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 4f9v4ylz4543g4gy
+_id: hrcdsa0lj7r87091
 system:
-  description: Corp-approved media devices are cheap and ubiquitous, but few operators trust them with sensitive information.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 0
   cost: 10
-  location: stowed
-  quality: stock
+  description: Corp-approved media devices are cheap and ubiquitous, but few operators trust them with sensitive information.
+  encumbrance: 0
   noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!4f9v4ylz4543g4gy'
+_key: '!items!hrcdsa0lj7r87091'

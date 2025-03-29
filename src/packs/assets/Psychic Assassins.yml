@@ -9,32 +9,31 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988437
-  modifiedTime: 1739238988437
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: tmyyw4fb19qmkgn8
+_id: n3gtm0rieb8gg0tu
 system:
+  assetType: force
+  attackDamage: 2d6+2
+  attackSource: cunning
+  attackSpecial: ''
+  attackTarget: cunning
+  baseOfInfluence: false
+  cost: 12
+  counter: ''
   description: Combat-trained psychics equipped with advanced pretech stealth gear and psitech weaponry. Psychic assassins automatically start Stealthed when purchased.
-  favorite: false
-  category: cunning
-  type: Special Forces
   health:
     max: 4
     value: 4
-  rating: 5
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: true
-  cost: 12
   income: 0
   maintenance: 0
-  attackTarget: cunning
-  attackSource: cunning
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: S
+  rating: 5
+  tl: 4
+  turnRoll: ''
+  type: Special Forces
+  unusable: false
+  stealthed: true
 effects: []
-_key: '!items!tmyyw4fb19qmkgn8'
+_key: '!items!n3gtm0rieb8gg0tu'

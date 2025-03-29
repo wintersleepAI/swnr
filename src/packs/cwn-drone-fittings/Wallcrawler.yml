@@ -9,11 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988623
-  modifiedTime: 1739238988623
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: albif713ytfoef9p
-system: {}
+_id: 2tqa140ei3kct4ik
+system:
+  cost: 0.2
+  description: Usable only on ground-based drones of Enc 3 or less, this fitting allows the drone to climb sheer surfaces at its normal movement rate, assuming the surface is sturdy enough to bear its weight. Most high-security buildings are constructed with veneers that defeat this fitting, but ordinary structures seldom have such measures.
+  mass: 1
+  type: drone
 effects: []
-_key: '!items!albif713ytfoef9p'
+_key: '!items!2tqa140ei3kct4ik'

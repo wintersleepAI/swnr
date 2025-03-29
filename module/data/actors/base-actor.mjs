@@ -14,7 +14,6 @@ export default class SWNActorBase extends foundry.abstract
 
     schema.access = SWNShared.resourceField(1,1); // CWN
     schema.traumaTarget = SWNShared.requiredNumber(6); // CWN
-    schema.hitDie = SWNShared.requiredString("d6");
     schema.baseAc = SWNShared.requiredNumber(10);
     // schema.ac = SWNShared.requiredString("");
     schema.meleeAc = SWNShared.requiredNumber(10);

@@ -1,0 +1,39 @@
+<section 
+    class="tab faction-logs sheet-body {{tab.cssClass}}"
+    data-group="primary"
+    data-tab="logs">
+    {{#if @root.editable}}
+        <div class="flexrow">
+            <button
+                data-action="editLog">
+                {{localize "swnr.sheet.faction.addLog"}}
+            </button>
+            <button
+                data-action="removeAllLogs">
+                {{localize "swnr.sheet.faction.removeLogAll"}}
+            </button>
+        </div>
+    {{/if}}
+    {{#each system.log as |log index|}}
+        <hr>
+        <div class="log">
+            {{#if @root.editable}}
+                <div class="item-controls align-right">
+                    <a class="item-control"
+                       title="{{localize "swnr.sheet.faction.editLog"}}"
+                       data-action="editLog"
+                       data-index="{{index}}">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <a class="item-control"
+                       title="{{localize "swnr.sheet.faction.removeLog"}}"
+                       data-action="removeLog"
+                       data-index="{{index}}">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </div>
+            {{/if}}
+            <p>{{log}}</p>
+        </div>
+    {{/each}}
+</section>

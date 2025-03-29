@@ -9,36 +9,23 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988547
-  modifiedTime: 1739238988547
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: acz3eeyvsisgeaul
+_id: u9lx97jitoy3y13i
 system:
-  description: Fashionable, aggressive, and often mismatched, 'street leathers' seldom have any non-synthetic leather in their makeup, but are light and comfortable enough to wear as a habit.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 0
-  cost: 250
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
   ac: 13
-  shield: false
-  use: false
+  cost: 250
+  description: Fashionable, aggressive, and often mismatched, 'street leathers' seldom have any non-synthetic leather in their makeup, but are light and comfortable enough to wear as a habit.
+  encumbrance: 0
+  isHeavy: false
+  isSubtle: true
   meleeAc: 12
+  shieldACBonus: 0
+  shieldMeleeACBonus: 0
   soak:
     max: 3
     value: 3
-  dr: 0
   traumaDiePenalty: 0
-  isSubtle: true
-  isHeavy: false
-  shieldMeleeACBonus: 0
-  shieldACBonus: 0
 effects: []
-_key: '!items!acz3eeyvsisgeaul'
+_key: '!items!u9lx97jitoy3y13i'

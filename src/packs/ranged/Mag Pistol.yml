@@ -8,32 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988934
-  modifiedTime: 1739238988934
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: fp3dbao50l2bp0eq
+_id: of63ddlqreirf5nr
 system:
-  description: Mag weaponry involves the magnetic acceleration of metal flechettes, while spike throwers are the shotgun equivalents of these weapons. Mag ammunition is packaged with integral power supplies, so no additional power cells are necessary to fire these weapons.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 400
-  tl: 4
-  location: other
-  quality: stock
-  noEncReadied: false
-  stat: dex
-  secondStat: null
-  skill: ''
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 15
-    dmg: 0
   ab: 0
   ammo:
     burst: false
@@ -42,20 +21,20 @@ system:
     suppress: false
     type: ammo
     value: 6
+  cost: 400
+  damage: 2d6+2
+  description: Mag weaponry involves the magnetic acceleration of metal flechettes, while spike throwers are the shotgun equivalents of these weapons. Mag ammunition is packaged with integral power supplies, so no additional power cells are necessary to fire these weapons.
+  encumbrance: 1
+  location: other
+  quality: stock
   range:
     max: 300
     normal: 100
-  damage: 2d6+2
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
-  trauma:
-    die: 1d6
-    rating: null
-  isTwoHanded: false
-  isNonLethal: false
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 4
 effects: []
-_key: '!items!fp3dbao50l2bp0eq'
+_key: '!items!of63ddlqreirf5nr'

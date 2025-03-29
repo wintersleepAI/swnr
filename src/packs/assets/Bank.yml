@@ -9,32 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988398
-  modifiedTime: 1739238988398
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 2bfz7javj4dtsyle
+_id: e9c0gfs2iw6mmv6a
 system:
+  assetType: wealth
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 12
+  counter: ''
   description: Once per turn, the faction can ignore one cost or FacCred loss imposed by another faction. This does not require an action. Multiple bank assets allow multiple losses to be ignored.
-  favorite: false
-  category: cunning
-  type: Facility
   health:
     max: 8
     value: 8
-  rating: 4
-  tl: 3
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 12
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: S
+  rating: 4
+  tl: 3
+  turnRoll: Once per turn, the faction can ignore one cost or FacCred loss imposed by another faction. This does not require an action. Multiple bank assets allow multiple losses to be ignored.
+  type: Facility
+  unusable: false
 effects: []
-_key: '!items!2bfz7javj4dtsyle'
+_key: '!items!e9c0gfs2iw6mmv6a'

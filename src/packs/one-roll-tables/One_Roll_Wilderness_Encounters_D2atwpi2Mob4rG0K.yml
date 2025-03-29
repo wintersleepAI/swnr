@@ -1,0 +1,118 @@
+_id: D2atwpi2Mob4rG0K
+description: >-
+  Building appropriate wilderness encounters will vary greatly with the planet
+  in question, but the tables below assume that the wilderness is on an
+  inhabited world with some vague analogs to Terran terrain and vegetation. If
+  the world is devoid of human inhabitants, replace the features with alien
+  relics or the remnants of scouts or lost colonies.
+
+
+  The tables below provide a suggested time of day and initial distance for the
+  encounter, but these baselines will vary depending on the choices and
+  capabilities of the PCs. Some encounters are unlikely to occur at night,
+  unless the parties involved are traveling or otherwise active despite the
+  dark. Suggestions are given for likely-hostile and likely-friendly creatures,
+  but a reaction roll will influence attitudes greatly.
+displayRoll: true
+flags:
+  core:
+    sourceId: RollTable.cwrQx1vn2LUjVXRX
+folder: null
+formula: 1d1
+img: icons/svg/d20-grey.svg
+name: One Roll Wilderness Encounters
+replacement: true
+results:
+  - _id: HKHQFNWLC2EG3eRf
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-grey.svg
+    range:
+      - 1
+      - 1
+    text: One Roll Wilderness Encounters - Weather and Lighting
+    type: pack
+    weight: 1
+    documentCollection: swnr.one-roll-backing
+    documentId: uQH3AOSTleJY4JUe
+    _key: '!tables.results!D2atwpi2Mob4rG0K.HKHQFNWLC2EG3eRf'
+  - _id: RopoQoPZjEMVCeZN
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-grey.svg
+    range:
+      - 1
+      - 1
+    text: One Roll Wilderness Encounters - Basic Nature of the Encounter
+    type: pack
+    weight: 1
+    documentCollection: swnr.one-roll-backing
+    documentId: VR1bkv4Psm3Huhos
+    _key: '!tables.results!D2atwpi2Mob4rG0K.RopoQoPZjEMVCeZN'
+  - _id: uJvll9c0EuT6liV9
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-grey.svg
+    range:
+      - 1
+      - 1
+    text: One Roll Wilderness Encounters - Types of Friendly Creatures
+    type: pack
+    weight: 1
+    documentCollection: swnr.one-roll-backing
+    documentId: s3KZrzV3qYchuGBg
+    _key: '!tables.results!D2atwpi2Mob4rG0K.uJvll9c0EuT6liV9'
+  - _id: SjK7oDdnAhFT8D09
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-grey.svg
+    range:
+      - 1
+      - 1
+    text: One Roll Wilderness Encounters - Initial Encounter Range
+    type: pack
+    weight: 1
+    documentCollection: swnr.one-roll-backing
+    documentId: zIw21r3Wn6gpFCsP
+    _key: '!tables.results!D2atwpi2Mob4rG0K.SjK7oDdnAhFT8D09'
+  - _id: lNkwHciKCDIzCOXu
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-grey.svg
+    range:
+      - 1
+      - 1
+    text: One Roll Wilderness Encounters - Types of Hostile Creatures
+    type: pack
+    weight: 1
+    documentCollection: swnr.one-roll-backing
+    documentId: dcRklF6JMDVNxlfz
+    _key: '!tables.results!D2atwpi2Mob4rG0K.lNkwHciKCDIzCOXu'
+  - _id: eAdknTQhi0wd2wXm
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-grey.svg
+    range:
+      - 1
+      - 1
+    text: One Roll Wilderness Encounters - Specific Nearby Feature of Relevance
+    type: pack
+    weight: 1
+    documentCollection: swnr.one-roll-backing
+    documentId: F02ylWSwz48YjPAy
+    _key: '!tables.results!D2atwpi2Mob4rG0K.eAdknTQhi0wd2wXm'
+sort: 0
+_stats:
+  coreVersion: '12.325'
+  systemId: null
+  systemVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+  compendiumSource: null
+  duplicateSource: null
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+_key: '!tables!D2atwpi2Mob4rG0K'
+

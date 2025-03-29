@@ -9,32 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988400
-  modifiedTime: 1739238988400
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 17wdolnwhj0ou6jh
+_id: vm53jjmh8l8ar4b4
 system:
+  assetType: cunning
+  attackDamage: 1d4+1
+  attackSource: cunning
+  attackSpecial: Any attempt to attack or defend against Blackmail loses any bonus dice earned by tags
+  attackTarget: cunning
+  baseOfInfluence: false
+  cost: 4
+  counter: ''
   description: Selectively degrade the effectiveness of an asset. Any attempt to attack or defend against Blackmail loses any bonus dice earned by tags.
-  favorite: false
-  category: cunning
-  type: Tactic
   health:
     max: 4
     value: 4
-  rating: 2
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 4
   income: 0
   maintenance: 0
-  attackTarget: cunning
-  attackSource: cunning
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: S
+  rating: 2
+  tl: 0
+  turnRoll: ''
+  type: Tactic
+  unusable: false
 effects: []
-_key: '!items!17wdolnwhj0ou6jh'
+_key: '!items!vm53jjmh8l8ar4b4'

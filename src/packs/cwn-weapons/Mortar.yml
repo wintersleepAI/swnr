@@ -9,55 +9,34 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988761
-  modifiedTime: 1739238988761
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: hlq9etdaapxjfxq7
+_id: c3rnfcof68fh7sj1
 system:
-  description: |-
-    Mortars are rare, but have their uses amid the tall buildings of an urban sprawl. They have a minimum range of 20 meters, but can lob indirect fire over buildings and obstacles. Mortars always target AC 20 at first, but each round of fire at the same target grants a +1 hit bonus if there's a forward spotter to adjust the aim. Mortar rounds act as frag grenades on the target point, but do 3d6 damage at base with a 10-meter radius. Armor doesn't lessen harm from mortar rounds.
-    Relatively simple as they are, a mortar round costs $50 and counts as one item of encumbrance.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 3
-  cost: 5000
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  stat: wis
-  secondStat: none
-  skill: ask
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 0
-    dmg: 0
-  ab: 0
   ammo:
     burst: false
     max: 1
     suppress: false
     type: special
     value: 1
+  cost: 5000
+  damage: 3d6
+  description: |-
+    Mortars are rare, but have their uses amid the tall buildings of an urban sprawl. They have a minimum range of 20 meters, but can lob indirect fire over buildings and obstacles. Mortars always target AC 20 at first, but each round of fire at the same target grants a +1 hit bonus if there's a forward spotter to adjust the aim. Mortar rounds act as frag grenades on the target point, but do 3d6 damage at base with a 10-meter radius. Armor doesn't lessen harm from mortar rounds.
+    Relatively simple as they are, a mortar round costs $50 and counts as one item of encumbrance.
+  encumbrance: 3
+  isNonLethal: false
   range:
     max: 2000
     normal: 1000
-  damage: 3d6
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
+  secondStat: none
+  shock:
+    ac: 0
+    dmg: 0
+  stat: wis
   trauma:
     die: 1d12
     rating: 3
-  isTwoHanded: false
-  isNonLethal: false
 effects: []
-_key: '!items!hlq9etdaapxjfxq7'
+_key: '!items!c3rnfcof68fh7sj1'

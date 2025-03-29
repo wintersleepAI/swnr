@@ -9,21 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988579
-  modifiedTime: 1739238988579
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 9skrkczbghr2ch0t
+_id: seu9af8rvgfsuz7g
 system:
-  description: A diagnostic system is interfaced with the user's biological processes, allowing a realtime analysis of their current health and any significant injuries. Aside from immediately alerting the user when they are poisoned, diseased, or injured, it grants any healing or medical support skill check a +2 bonus thanks to the diagnostic information and increases first aid or drug healing by +2 HP per application.
-  favorite: false
-  tl: 4
-  cost: 10000
-  strain: 0.25
-  disabled: false
-  effect: Gain +2 to Heal checks on you
-  type: Body
   concealment: Medical
-  complication: ''
+  cost: 10000
+  description: A diagnostic system is interfaced with the user's biological processes, allowing a realtime analysis of their current health and any significant injuries. Aside from immediately alerting the user when they are poisoned, diseased, or injured, it grants any healing or medical support skill check a +2 bonus thanks to the diagnostic information and increases first aid or drug healing by +2 HP per application.
+  effect: Gain +2 to Heal checks on you
+  strain: 0.25
+  type: Body
 effects: []
-_key: '!items!9skrkczbghr2ch0t'
+_key: '!items!seu9af8rvgfsuz7g'

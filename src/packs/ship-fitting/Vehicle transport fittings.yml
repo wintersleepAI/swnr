@@ -9,11 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989016
-  modifiedTime: 1739238989016
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: oaa5vqpb1tacfxet
-system: {}
+_id: ivqjns3hemaymqco
+system:
+  broken: false
+  cost: 2500
+  costMultiplier: true
+  description: The ship has been fitted with specialized mounts, bunking, cargo bays, and other facilities to expedite the transport of often unwieldy vehicles, including including mechs and other military craft. Any vehicles carried count as only half their usual cargo tonnage. Assuming trained operators, up to four vehicles can be offloaded or ramped onto the ship per round in cases where speed is critical.
+  effect: Halve tonnage space of carried vehicles
+  mass: 1
+  massMultiplier: true
+  minClass: frigate
+  power: 0
+  powerMultiplier: false
 effects: []
-_key: '!items!oaa5vqpb1tacfxet'
+_key: '!items!ivqjns3hemaymqco'

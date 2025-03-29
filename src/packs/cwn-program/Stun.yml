@@ -9,20 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988716
-  modifiedTime: 1739238988716
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 0u1vzf2i57slshj5
+_id: 8wc68z90eoprxgyn
 system:
-  description: Disrupt an avatar or Demon with sensory glitching, non-lethal current surges, and code corruption. Make an Int/Program skill check; beat an opposed Int/Program check for a human target, or a static 8+skill bonus target for a Demon. The target takes 1d10 non-lethal damage per Program level, to a minimum of 1d10.
-  favorite: false
-  cost: 1000
-  type: verb
   accessCost: 0
-  target: Avatar
+  cost: 1000
+  description: Disrupt an avatar or Demon with sensory glitching, non-lethal current surges, and code corruption. Make an Int/Program skill check; beat an opposed Int/Program check for a human target, or a static 8+skill bonus target for a Demon. The target takes 1d10 non-lethal damage per Program level, to a minimum of 1d10.
   selfTerminating: true
-  useAffects: Inflict non-lethal damage on an avatar
   skillCheckMod: 1
+  target: Avatar
+  type: verb
+  useAffects: Inflict non-lethal damage on an avatar
 effects: []
-_key: '!items!0u1vzf2i57slshj5'
+_key: '!items!8wc68z90eoprxgyn'

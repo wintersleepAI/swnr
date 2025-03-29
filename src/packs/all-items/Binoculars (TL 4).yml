@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988328
-  modifiedTime: 1739238988328
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: a6ozwqn2oxbbp5sg
+_id: sjn41sutalzra9t9
 system:
-  description: 'Binoculars (TL 4): This TL4 version are available that have integral low-light optics and up to 25x150 power. TL 4 binocs cost 200 credits and require a type A power cell for up to a week of regular usage.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 1
   cost: 20
-  tl: 4
+  description: 'Binoculars (TL 4): This TL4 version are available that have integral low-light optics and up to 25x150 power. TL 4 binocs cost 200 credits and require a type A power cell for up to a week of regular usage.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!a6ozwqn2oxbbp5sg'
+_key: '!items!sjn41sutalzra9t9'

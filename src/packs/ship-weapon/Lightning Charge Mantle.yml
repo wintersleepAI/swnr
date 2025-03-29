@@ -9,11 +9,23 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989020
-  modifiedTime: 1739238989020
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: bpx5goes1xwd0gve
-system: {}
+_id: dnwh23qrkox8avd5
+system:
+  broken: false
+  cost: 4000000
+  costMultiplier: false
+  damage: 1d20
+  description: Modulation of the ship's power core emits a cloak of MES lightning. While larger spike drive craft can shunt the energies away harmlessly, fighter-class ships are almost invariably destroyed if hit.
+  hardpoint: 2
+  mass: 5
+  massMultiplier: false
+  minClass: capital
+  power: 15
+  powerMultiplier: false
+  qualities: AP 5, Cloud
+  tl: 4
 effects: []
-_key: '!items!bpx5goes1xwd0gve'
+_key: '!items!dnwh23qrkox8avd5'

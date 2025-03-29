@@ -9,21 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988557
-  modifiedTime: 1739238988557
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: mb57dbwg9r8oygch
+_id: 6nsioy3cvrirjbp6
 system:
-  description: 'A set of standardized support implants provide a baseline degree of cyber-compatibility to a subject. They can ignore System Strain from cyber implants equal to 12 minus their Constitution score- so a PC with a Constitution of 9 could ignore three points worth of System Strain from cyber implants. PCs with a Con of 12 or more have no use for this system. '
-  favorite: false
-  tl: 4
-  cost: 20000
-  strain: 0
-  disabled: false
-  effect: Gain Con 12 for cyber purposes
-  type: Body
   concealment: Medical
-  complication: ''
+  cost: 20000
+  description: 'A set of standardized support implants provide a baseline degree of cyber-compatibility to a subject. They can ignore System Strain from cyber implants equal to 12 minus their Constitution score- so a PC with a Constitution of 9 could ignore three points worth of System Strain from cyber implants. PCs with a Con of 12 or more have no use for this system. '
+  effect: Gain Con 12 for cyber purposes
+  strain: 0
+  type: Body
 effects: []
-_key: '!items!mb57dbwg9r8oygch'
+_key: '!items!6nsioy3cvrirjbp6'

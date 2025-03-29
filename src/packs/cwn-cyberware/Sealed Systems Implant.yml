@@ -9,21 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988591
-  modifiedTime: 1739238988591
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: y41t84ronjbm60it
+_id: zy7fsa7u9u2o0zix
 system:
-  description: When triggered as an Instant action, implanted shields deploy and skinweaves energize to seal the user off from hostile external environments. For the next six hours, the user can operate as if wearing a vacuum suit, ignoring vacuum, contact poisons, non-immediately-lethal levels of radiation, toxic gases, low or high-pressure atmospheres, and environmental temperature hazards short of open flame. After deployment, the implant needs an equal time of recovery before it can be deployed again.
-  favorite: false
-  tl: 4
-  cost: 15000
-  strain: 1
-  disabled: false
-  effect: Trigger a temp space suit
-  type: Skin
   concealment: Medical
-  complication: ''
+  cost: 15000
+  description: When triggered as an Instant action, implanted shields deploy and skinweaves energize to seal the user off from hostile external environments. For the next six hours, the user can operate as if wearing a vacuum suit, ignoring vacuum, contact poisons, non-immediately-lethal levels of radiation, toxic gases, low or high-pressure atmospheres, and environmental temperature hazards short of open flame. After deployment, the implant needs an equal time of recovery before it can be deployed again.
+  effect: Trigger a temp space suit
+  strain: 1
+  type: Skin
 effects: []
-_key: '!items!y41t84ronjbm60it'
+_key: '!items!zy7fsa7u9u2o0zix'

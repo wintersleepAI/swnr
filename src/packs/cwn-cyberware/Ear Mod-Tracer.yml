@@ -9,21 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988564
-  modifiedTime: 1739238988564
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ce8285k510x5jjpa
+_id: x7as2t3os3m8bnt8
 system:
-  description: As an On Turn action, the user can nominate a target within 20 meters. Until they get more than 100 meters away from the user or pass behind a solid barrier, the implant's hyper-specific hearing can track their motions perfectly and overhear anything they say or that is said to them. The user can listen to one such target at a time.
-  favorite: false
-  tl: 4
-  cost: 10000
-  strain: 0.5
-  disabled: false
-  effect: Eavesdrop on specific targets
-  type: Sensory
   concealment: Medical
-  complication: ''
+  cost: 10000
+  description: As an On Turn action, the user can nominate a target within 20 meters. Until they get more than 100 meters away from the user or pass behind a solid barrier, the implant's hyper-specific hearing can track their motions perfectly and overhear anything they say or that is said to them. The user can listen to one such target at a time.
+  effect: Eavesdrop on specific targets
+  strain: 0.5
+  type: Sensory
 effects: []
-_key: '!items!ce8285k510x5jjpa'
+_key: '!items!x7as2t3os3m8bnt8'

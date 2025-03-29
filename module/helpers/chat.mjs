@@ -304,73 +304,86 @@ export async function applyHealthDrop(total) {
           }
         }
       }
-    }
-    if (game.settings.get("swnr", "useCWNArmor")) {
-      const armorWithSoak = 
-        actor.items.filter(
-          (i) =>
-            i.type === "armor" &&
-            i.system.use &&
-            i.system.location === "readied" &&
-            i.system.soak.value > 0
-        );
-      for (const armor of armorWithSoak) {
-        if (total > 0) {
-          const soakValue = armor.system.soak.value;
+    } else {
+      const armorWithDR = actor.items.filter(
+        (i) =>
+          i.type === "armor" &&
+          i.system.use &&
+          i.system.location === "readied" &&
+          i.system.dr > 0
+      );
+      const armorDRSum = armorWithDR.reduce((acc, i) => acc + i.system.dr, 0);
+      if (armorDRSum > 0) {
+        total -= armorDRSum;
+        total = Math.max(total, 0);
+      }
+      if (game.settings.get("swnr", "useCWNArmor")) {
+        const armorWithSoak = 
+          actor.items.filter(
+            (i) =>
+              i.type === "armor" &&
+              i.system.use &&
+              i.system.location === "readied" &&
+              i.system.soak.value > 0
+          );
+        for (const armor of armorWithSoak) {
+          if (total > 0) {
+            const soakValue = armor.system.soak.value;
+            const newSoak = Math.max(soakValue - total, 0);
+            total -= soakValue - newSoak;
+            await armor.update({ "system.soak.value": newSoak });
+            await showValueChange(t, "0xFFA500", soakValue - newSoak);
+          }
+        }
+        if (total > 0 && actor.type == "npc") {
+          const soakValue = actor.system.baseSoakTotal.value;
           const newSoak = Math.max(soakValue - total, 0);
           total -= soakValue - newSoak;
-          await armor.update({ "system.soak.value": newSoak });
+          await actor.update({ "system.baseSoakTotal.value": newSoak });
           await showValueChange(t, "0xFFA500", soakValue - newSoak);
         }
       }
-      if (total > 0 && actor.type == "npc") {
-        const soakValue = actor.system.baseSoakTotal.value;
-        const newSoak = Math.max(soakValue - total, 0);
-        total -= soakValue - newSoak;
-        await actor.update({ "system.baseSoakTotal.value": newSoak });
-        await showValueChange(t, "0xFFA500", soakValue - newSoak);
-      }
-    }
-    const oldHealth = actor.system.health.value;
-    if (total != 0) {
-      let newHealth = oldHealth - total;
-      if (newHealth < 0) {
-        newHealth = 0;
-      } else if (newHealth > actor.system.health.max) {
-        newHealth = actor.system.health.max;
-      }
-      //console.log(`Updating ${actor.name} health to ${newHealth}`);
-      await actor.update({ "system.health.value": newHealth });
-      // Taken from Mana
-      //https://gitlab.com/mkahvi/fvtt-micro-modules/-/blob/master/pf1-floating-health/floating-health.mjs#L182-194
-      const fillColor = total < 0 ? "0x00FF00" : "0xFF0000";
-      showValueChange(t, fillColor, total);
+      const oldHealth = actor.system.health.value;
+      if (total != 0) {
+        let newHealth = oldHealth - total;
+        if (newHealth < 0) {
+          newHealth = 0;
+        } else if (newHealth > actor.system.health.max) {
+          newHealth = actor.system.health.max;
+        }
+        //console.log(`Updating ${actor.name} health to ${newHealth}`);
+        await actor.update({ "system.health.value": newHealth });
+        // Taken from Mana
+        //https://gitlab.com/mkahvi/fvtt-micro-modules/-/blob/master/pf1-floating-health/floating-health.mjs#L182-194
+        const fillColor = total < 0 ? "0x00FF00" : "0xFF0000";
+        showValueChange(t, fillColor, total);
 
-      if (newHealth <= 0) {
-        isDefeated = true;
-      } else if (oldHealth <= 0) {
-        // token was at <=0 and now is not
-        isDefeated = false;
-      } else {
-        // we can return no status to update
-        return;
-      }
-      await t.combatant?.update({ defeated: isDefeated });
-      const status = CONFIG.statusEffects.find(
-        (e) => e.id === CONFIG.specialStatusEffects.DEFEATED
-      );
-      if (!status) return;
-      const effect = actor && status ? status : CONFIG.controlIcons.defeated;
-      if (t.object) {
-        await t.object.toggleEffect(effect, {
-          overlay: true,
-          active: isDefeated,
-        });
-      } else {
-        await t.toggleEffect(effect, {
-          overlay: true,
-          active: isDefeated,
-        });
+        if (newHealth <= 0) {
+          isDefeated = true;
+        } else if (oldHealth <= 0) {
+          // token was at <=0 and now is not
+          isDefeated = false;
+        } else {
+          // we can return no status to update
+          return;
+        }
+        await t.combatant?.update({ defeated: isDefeated });
+        const status = CONFIG.statusEffects.find(
+          (e) => e.id === CONFIG.specialStatusEffects.DEFEATED
+        );
+        if (!status) return;
+        const effect = actor && status ? status : CONFIG.controlIcons.defeated;
+        if (t.object) {
+          await t.object.toggleEffect(effect, {
+            overlay: true,
+            active: isDefeated,
+          });
+        } else {
+          await t.toggleEffect(effect, {
+            overlay: true,
+            active: isDefeated,
+          });
+        }
       }
     }
   }
@@ -416,7 +429,7 @@ export async function _onChatCardAction(
       //return (button.disabled = false);
     }
     for (const t of targets) {
-      await t.rollSave(button.dataset.save);
+      await t.system.rollSave(button.dataset.save);
     }
   } else if (action === "skill") {
     if (!targets.length) {
@@ -507,4 +520,19 @@ export async function _onChatCardAction(
       }
     }
   }
+}
+
+export async function welcomeMessage() {
+		const template = "systems/swnr/templates/chat/welcome.hbs";
+
+		const content = await renderTemplate(template, {});
+		const card = {
+			content,
+			user: game.user.id,
+			whisper: [game.user.id],
+			flags: { core: { canPopout: true } },
+			speaker: { alias: "wintersleepAI" },
+		};
+		await ChatMessage.create(card);
+
 }

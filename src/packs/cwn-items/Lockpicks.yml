@@ -9,25 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988674
-  modifiedTime: 1739238988674
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: socfhi0bhj4609bh
+_id: ar5zf1fsc4i6jvpb
 system:
-  description: Both manual lockpicks and a selection of useful electronic shims sufficient to threaten most modern locks.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
   cost: 100
-  location: stowed
-  quality: stock
+  description: Both manual lockpicks and a selection of useful electronic shims sufficient to threaten most modern locks.
+  encumbrance: 1
   noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!socfhi0bhj4609bh'
+_key: '!items!ar5zf1fsc4i6jvpb'

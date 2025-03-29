@@ -9,11 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988791
-  modifiedTime: 1739238988791
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: j4gpfa6twk7xb307
-system: {}
+_id: anbrilwbe242va5c
+system:
+  broken: false
+  cost: 2000
+  costMultiplier: true
+  description: While most drones can lift no more than a kilogram of excess weight, the drone’s gravitic units have been upgraded to carry up to twenty kilos of cargo. This can be fitted multiple times.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  tl: 4
+  type: drone
 effects: []
-_key: '!items!j4gpfa6twk7xb307'
+_key: '!items!anbrilwbe242va5c'

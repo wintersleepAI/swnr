@@ -1,6 +1,6 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
-import { headerFieldWidget, groupFieldWidget } from '../helpers/handlebar.mjs';
+import { headerFieldWidget, groupFieldWidget, groupFieldWidgetDupe} from '../helpers/handlebar.mjs';
 import { SWNBaseSheet } from './base-sheet.mjs';
 
 const { api, sheets } = foundry.applications;
@@ -168,6 +168,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       gameSettings: getGameSettings(),
       headerWidget: headerFieldWidget.bind(this),
       groupWidget: groupFieldWidget.bind(this),
+      groupWidgetDupe: groupFieldWidgetDupe.bind(this),
       crewArray: crewArray,
       actions: CONFIG.SWN.shipActions
     };
@@ -232,6 +233,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
   /**
    * Generates the data for the generic tab navigation template
    * @param {string[]} parts An array of named template parts to render
+   * @param {string} defaultTab The name of the default tab to render
    * @returns {Record<string, Partial<ApplicationTab>>}
    * @protected
    */

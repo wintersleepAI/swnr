@@ -9,25 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988684
-  modifiedTime: 1739238988684
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: k5fgottlkturhton
+_id: v6dczdh8qsk80q4v
 system:
-  description: A chemical that temporarily destroys a person's ability to form long-term memories, Control-Delete must be ingested in food or drink. Toxin-filtering cyber can fend it off, but it otherwise grants no saving throw. Once affected, the target will continue to act normally, but anything that happens to them between then and their next sleep or unconsciousness will be completely forgotten by the time they awake.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 0
   cost: 25
-  location: stowed
-  quality: stock
+  description: A chemical that temporarily destroys a person's ability to form long-term memories, Control-Delete must be ingested in food or drink. Toxin-filtering cyber can fend it off, but it otherwise grants no saving throw. Once affected, the target will continue to act normally, but anything that happens to them between then and their next sleep or unconsciousness will be completely forgotten by the time they awake.
+  encumbrance: 0
   noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!k5fgottlkturhton'
+_key: '!items!v6dczdh8qsk80q4v'

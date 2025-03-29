@@ -9,70 +9,43 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988963
-  modifiedTime: 1739238988963
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: unjuclbjq0guygzr
+_id: y5rtazy6ujtc79y0
 system:
   health:
     max: 15
     value: 15
-  cost: 210000
   ac: 11
-  traumaTarget: 6
   armor:
     max: 0
     value: 0
   speed: 3
-  crew:
-    min: 1
-    max: 20
-    current: 0
-  crewMembers: []
-  tl: 5
-  description: This craft is a conventional civilian shuttle, albeit one with a spike drive sufficient to get it to a neighboring system and enough passenger space to make it a minimally- acceptable transport for brave VIPs and light cargo. If used as an inter-system transport, however, at least three crew will be needed to safely navigate a drill. While cheap and flexible, the shuttle is entirely unarmed and acutely vulnerable to piracy or hostile warships. In such cases the pilot’s only recourse is to surrender or hope the small craft’s nimble maneuver drives can keep it away from the attacker long enough to get to safety.
-  mods: ''
   power:
     max: 3
   mass:
     max: 5
-  hardpoints:
-    value: 1
-    max: 1
-  lifeSupportDays:
-    value: 1
-    max: 1
-  fuel:
-    value: 1
-    max: 1
+  crew:
+    min: 1
+    max: 20
+    current: 0
   cargo:
     value: 6
     max: 6
   spikeDrive:
     value: 1
     max: 1
-  operatingCost: 43800
-  maintenanceCost: 10500
-  amountOwed: 0
-  paymentAmount: 0
-  paymentMonths: 0
-  maintenanceMonths: 6
-  creditPool: 0
-  lastMaintenance:
-    year: 0
-    month: 0
-    day: 0
-  lastPayment:
-    year: 0
-    month: 0
-    day: 0
   commandPoints: 4
   npcCommandPoints: 4
   crewSkillBonus: 1
-  actionsTaken: []
-  supportingDept: ''
-  roleOrder: []
+  shipClass: fighter
+  shipHullType: shuttle
+  cost: 210000
+  maintenanceCost: 10500
+  operatingCost: 43800
+  maintenanceMonths: 6
+  description: This craft is a conventional civilian shuttle, albeit one with a spike drive sufficient to get it to a neighboring system and enough passenger space to make it a minimally- acceptable transport for brave VIPs and light cargo. If used as an inter-system transport, however, at least three crew will be needed to safely navigate a drill. While cheap and flexible, the shuttle is entirely unarmed and acutely vulnerable to piracy or hostile warships. In such cases the pilot’s only recourse is to surrender or hope the small craft’s nimble maneuver drives can keep it away from the attacker long enough to get to safety.
 effects: []
 prototypeToken:
   name: Shuttle
@@ -150,7 +123,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!unjuclbjq0guygzr'
+_key: '!actors!y5rtazy6ujtc79y0'
 items:
   - name: Atmospheric Configuration
     type: shipFitting
@@ -163,14 +136,23 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988963
-      modifiedTime: 1739238988963
-      lastModifiedBy: systembuilder9000
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: 1nhpt90iw6scvndq
-    system: {}
+    _id: 5d1wyymgdlfwvi5o
+    system:
+      broken: false
+      cost: 5000
+      costMultiplier: true
+      description: This fitting must be put in place when the ship is built, and cannot be installed on cruiser-class or larger ships. A ship designed for atmospheric flight can land on most solid or aqueous surfaces.
+      effect: 'Can land: frigates and fighters only.'
+      mass: 1
+      massMultiplier: true
+      minClass: fighter
+      power: 0
+      powerMultiplier: false
     effects: []
-    _key: '!actors.items!unjuclbjq0guygzr.1nhpt90iw6scvndq'
+    _key: '!actors.items!y5rtazy6ujtc79y0.5d1wyymgdlfwvi5o'
   - name: Extended life support
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/fuel-tank.svg
@@ -182,11 +164,20 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1739238988963
-      modifiedTime: 1739238988963
-      lastModifiedBy: systembuilder9000
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: v4hgue8d1ed8kd0o
-    system: {}
+    _id: firocsaw8ybmvmns
+    system:
+      broken: false
+      cost: 5000
+      costMultiplier: true
+      description: The ship can be designed to accommodate a larger number of crew or passengers. Extended life support can be fitted multiple times; each time, the maximum crew rating of the ship increases by 100% of its normal maximum. Thus, a free merchant who installs this twice can have a maximum complement of 18 people.
+      effect: 'Can land: frigates and fighters only.'
+      mass: 1
+      massMultiplier: true
+      minClass: fighter
+      power: 1
+      powerMultiplier: false
     effects: []
-    _key: '!actors.items!unjuclbjq0guygzr.v4hgue8d1ed8kd0o'
+    _key: '!actors.items!y5rtazy6ujtc79y0.firocsaw8ybmvmns'

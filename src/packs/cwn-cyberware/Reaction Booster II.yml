@@ -9,21 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988587
-  modifiedTime: 1739238988587
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: wb1izaytf7xq5in6
+_id: lg6b4ormag3e53x6
 system:
-  description: As level one, but the user automatically wins initiative against targets that don't also automatically win initiative; if both have this ability, initiative is rolled without modifications. The user can act normally during surprise rounds.
-  favorite: false
-  tl: 4
-  cost: 100000
-  strain: 2
-  disabled: false
-  effect: Automatically win initiative
-  type: Nerve
   concealment: Medical
-  complication: ''
+  cost: 100000
+  description: As level one, but the user automatically wins initiative against targets that don't also automatically win initiative; if both have this ability, initiative is rolled without modifications. The user can act normally during surprise rounds.
+  effect: Automatically win initiative
+  strain: 2
+  type: Nerve
 effects: []
-_key: '!items!wb1izaytf7xq5in6'
+_key: '!items!lg6b4ormag3e53x6'

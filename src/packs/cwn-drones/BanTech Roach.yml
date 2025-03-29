@@ -9,12 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988624
-  modifiedTime: 1739238988624
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 0qv5ymdh9fjkl077
-system: {}
+_id: jq0ugxhse3n57r1g
+system:
+  ac: 13
+  cost: 1000
+  description: One of numerous similar models, the BanTech Roach is one of the smaller wheeled drones on the market, popular among pilots who need a little more usable mass and power than a flying drone this size could muster.
+  enc: 3
+  fittings:
+    max: 3
+  hardpoint:
+    max: 0
+  health:
+    max: 8
+    value: 8
+  moveType: ground
+  speed: 10
+  traumaTarget: 6
 effects: []
 prototypeToken:
   name: BanTech Roach
@@ -92,4 +105,4 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!0qv5ymdh9fjkl077'
+_key: '!actors!jq0ugxhse3n57r1g'

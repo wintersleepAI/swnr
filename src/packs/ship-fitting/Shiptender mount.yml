@@ -9,11 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989012
-  modifiedTime: 1739238989012
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: imh1yrizgiw3l887
-system: {}
+_id: p1eosfuyajzjwjwv
+system:
+  broken: false
+  cost: 25000
+  costMultiplier: true
+  description: The ship is designed with symbiosis mounts that allow other ships to "hitch" on the crat's spike drills. Each shiptender mount allows one craft of a hull size smaller than the tender to link up for intersystem drills. Mounts cannot be used for in-system travel. If the linking ship has been designed to be carried by a tender then establishing this link takes one hour. If not, it takes a full day to fit the ship into the mount. Ships can dismount from the tender with an hour's disentanglement. In an emergency, the carried ship can dismount instnatly, but the mountings are considered disable then until repairs are made. Carried ships cannot fight.
+  effect: Allow another ship to hitch on a spike drive
+  mass: 1
+  massMultiplier: false
+  minClass: frigate
+  power: 1
+  powerMultiplier: false
 effects: []
-_key: '!items!imh1yrizgiw3l887'
+_key: '!items!p1eosfuyajzjwjwv'

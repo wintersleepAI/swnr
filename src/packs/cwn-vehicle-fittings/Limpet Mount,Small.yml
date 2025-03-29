@@ -9,11 +9,17 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988728
-  modifiedTime: 1739238988728
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 2f3hzvsj9febk6cg
-system: {}
+_id: 25di52113pe6xqss
+system:
+  cost: 5000
+  description: An entire second vehicle can be mounted with this fitting, Medium vehicles taking Small parasites and Large ones taking Small or Medium. Adding a mount for a Small vehicle takes up 3 Mass while a Medium one takes 6. Modifying a vehicle to be mounted adds 10% to its base cost, but it can be launched even while the parent vehicle is underway. These parasite vehicles are destroyed if the parent is; otherwise, they take only half the damage the parent takes.
+  effect: Mount a smaller vehicle on it
+  mass: 3
+  minClass: M
+  power: 0
+  type: vehicle
 effects: []
-_key: '!items!2f3hzvsj9febk6cg'
+_key: '!items!25di52113pe6xqss'

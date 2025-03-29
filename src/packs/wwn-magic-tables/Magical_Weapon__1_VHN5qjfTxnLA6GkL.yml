@@ -1,0 +1,402 @@
+_id: VHN5qjfTxnLA6GkL
+name: Magical Weapon +1
+flags:
+  better-rolltables:
+    table-type: none
+    loot-amount-key: ''
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - _id: JB3vwEPjYHoAUq1M
+    flags: {}
+    type: text
+    text: Favored primary +1
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 30
+    drawn: false
+    documentId: null
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.JB3vwEPjYHoAUq1M'
+  - _id: jGYhT2VR15rRDrMF
+    flags: {}
+    type: text
+    text: Favored secondary +1
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 31
+      - 40
+    drawn: false
+    documentId: null
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.jGYhT2VR15rRDrMF'
+  - _id: zAndQ5r2JuUdV7Ce
+    flags: {}
+    type: text
+    text: Favored ranged +1
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 41
+      - 50
+    drawn: false
+    documentId: null
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.zAndQ5r2JuUdV7Ce'
+  - _id: QkLOOoCVE71lLhk6
+    flags: {}
+    type: pack
+    text: Axe, Hand +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 51
+      - 53
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: kmAvIpRfb57lB7b8
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.QkLOOoCVE71lLhk6'
+  - _id: Acmj12BkcYTIsbok
+    flags: {}
+    type: pack
+    text: Axe, War +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 54
+      - 54
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: QSHqlFbD0s4CcZw1
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.Acmj12BkcYTIsbok'
+  - _id: JVMoLXR7XmyHoIF3
+    flags: {}
+    type: pack
+    text: Blackjack +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 55
+      - 55
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: oZdyKVIwBWFoBnhW
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.JVMoLXR7XmyHoIF3'
+  - _id: vpwICCLNOyxQBCLk
+    flags: {}
+    type: pack
+    text: Bow, Large +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 56
+      - 58
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: N8BOxYMttiQ0KLLv
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.vpwICCLNOyxQBCLk'
+  - _id: v2FD640CHp4RkKmM
+    flags: {}
+    type: pack
+    text: Bow, Small +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 59
+      - 61
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: JLfYQo2UtUxSUqWU
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.v2FD640CHp4RkKmM'
+  - _id: 6roo5QIYAj4g4s2a
+    flags: {}
+    type: pack
+    text: Claw Blades +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 62
+      - 62
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: UTDTkL1t5LHFZ2od
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.6roo5QIYAj4g4s2a'
+  - _id: QtRsdjJbXGL9qZjh
+    flags: {}
+    type: pack
+    text: Club +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 63
+      - 63
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: gISVjuyIqPf9ziKs
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.QtRsdjJbXGL9qZjh'
+  - _id: UgO3puYaAHxM9DKc
+    flags: {}
+    type: pack
+    text: Club, Great +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 64
+      - 64
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: E8lX8Sp1VlHnl75n
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.UgO3puYaAHxM9DKc'
+  - _id: VlXtdnTYPsjDx7IK
+    flags: {}
+    type: pack
+    text: Crossbow +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 65
+      - 65
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: GWdsQcbUmLnujCdx
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.VlXtdnTYPsjDx7IK'
+  - _id: voozHb2hRiSSc1mA
+    flags: {}
+    type: pack
+    text: Dagger +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 66
+      - 68
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: m0ZvZB5dKYAWI8qI
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.voozHb2hRiSSc1mA'
+  - _id: W4SRnVDYgNEyt0B4
+    flags: {}
+    type: pack
+    text: Halberd +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 69
+      - 70
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: rdkgSkT3RpIUY4je
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.W4SRnVDYgNEyt0B4'
+  - _id: m5w0NDGd8pF1jt1f
+    flags: {}
+    type: pack
+    text: Hammer, Great +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 71
+      - 71
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: mw5Yxp5BpMHOfGHN
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.m5w0NDGd8pF1jt1f'
+  - _id: Es2lVqAAbQCCD7Ec
+    flags: {}
+    type: pack
+    text: Hammer, War +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 72
+      - 73
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: ANKhTQVjLwzfF8VT
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.Es2lVqAAbQCCD7Ec'
+  - _id: ripbW8v6sDyrWLoq
+    flags: {}
+    type: pack
+    text: Hurlant, Great +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 74
+      - 74
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: juM4B6cuR9fAKbuZ
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.ripbW8v6sDyrWLoq'
+  - _id: PaZAP3HRDa5GZkXn
+    flags: {}
+    type: pack
+    text: Hurlant, Hand +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 75
+      - 75
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: iEl19VQdFgdFLDwr
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.PaZAP3HRDa5GZkXn'
+  - _id: bx3JCneS5bf8saiu
+    flags: {}
+    type: pack
+    text: Hurlant, Long +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 76
+      - 76
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: 7VS7fUb0oPRDZqdo
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.bx3JCneS5bf8saiu'
+  - _id: WRs366VbARH6sIKT
+    flags: {}
+    type: pack
+    text: Mace +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 77
+      - 78
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: gkwiGmybWGsRKIvI
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.WRs366VbARH6sIKT'
+  - _id: 4Azjoh5MID0yBoc3
+    flags: {}
+    type: pack
+    text: Pike +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 79
+      - 80
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: CcQks7EuuV3QN4ty
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.4Azjoh5MID0yBoc3'
+  - _id: nlqxOSzK7QnHCw5W
+    flags: {}
+    type: pack
+    text: Spear, Heavy +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 81
+      - 85
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: L9UN0gTdLapUIgLh
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.nlqxOSzK7QnHCw5W'
+  - _id: 3SjiKUfLznUiqArs
+    flags: {}
+    type: pack
+    text: Spear, Light +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 86
+      - 89
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: 2BNK7sG7SEVhRcW5
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.3SjiKUfLznUiqArs'
+  - _id: YIswgi2kCVtNMfcb
+    flags: {}
+    type: pack
+    text: Staff +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 91
+      - 91
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: 4MEuoBGYuQ8c0VAh
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.YIswgi2kCVtNMfcb'
+  - _id: QCWIw8zhYEFfxz33
+    flags: {}
+    type: pack
+    text: Stiletto +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 92
+      - 92
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: hpnappMfUpKm7OcO
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.QCWIw8zhYEFfxz33'
+  - _id: cxO1Uq8niDhFnKSY
+    flags: {}
+    type: pack
+    text: Sword, Great +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 93
+      - 94
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: gM7Zb8ZS1wVxqr0u
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.cxO1Uq8niDhFnKSY'
+  - _id: ptTh232KqvUwH6LX
+    flags: {}
+    type: pack
+    text: Sword, Long +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 95
+      - 97
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: YOttVXL2JrjuOpMc
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.ptTh232KqvUwH6LX'
+  - _id: O2LLMHidcMQyNeDw
+    flags: {}
+    type: pack
+    text: Sword, Short +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 98
+      - 100
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: P2FdRD4JePN47U9w
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.O2LLMHidcMQyNeDw'
+  - _id: NZT4Sar0zEHNpZOo
+    flags: {}
+    type: pack
+    text: Throwing Blade +1
+    img: systems/wwn/assets/default/weapon.png
+    weight: 1
+    range:
+      - 90
+      - 90
+    drawn: false
+    documentCollection: wwn.magic-items
+    documentId: BNAGi179UTHKwlXO
+    _key: '!tables.results!VHN5qjfTxnLA6GkL.NZT4Sar0zEHNpZOo'
+formula: 1d100
+replacement: true
+displayRoll: true
+_stats:
+  coreVersion: '12.324'
+  systemId: null
+  systemVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+  compendiumSource: null
+  duplicateSource: null
+ownership:
+  default: 0
+  mgBwP0sTLP1VFg1m: 3
+folder: null
+sort: 0
+_key: '!tables!VHN5qjfTxnLA6GkL'
+

@@ -9,32 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988399
-  modifiedTime: 1739238988399
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: twmqtmuie36h0c93
+_id: 0n66148a6u0iyequ
 system:
+  assetType: force
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 10
+  counter: ''
   description: A collection of short-range, high-capacity spike drive ships capable of moving large numbers of troops. As an action, the asset may move any number of assets on the planet, including itself, to any world within one hex at a cost of one FacCred per asset moved.
-  favorite: false
-  category: cunning
-  type: Facility
   health:
     max: 10
     value: 10
-  rating: 4
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 10
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: A
+  rating: 4
+  tl: 4
+  turnRoll: ''
+  type: Facility
+  unusable: false
 effects: []
-_key: '!items!twmqtmuie36h0c93'
+_key: '!items!0n66148a6u0iyequ'

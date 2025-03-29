@@ -1,0 +1,76 @@
+_id: OzBWUwFIqCgpywLc
+name: Magical Armor Bonus, Major
+flags:
+  better-rolltables:
+    table-type: better
+    loot-amount-key: ''
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - _id: ql5AKeM5o95ihvOx
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: pack
+    text: Magical Armor +1
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 5
+    drawn: false
+    documentCollection: wwn.magic-tables
+    documentId: Ys9iNc9yg6sRHEif
+    _key: '!tables.results!OzBWUwFIqCgpywLc.ql5AKeM5o95ihvOx'
+  - _id: gyMNmqVKdQLEC48f
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: pack
+    text: Magical Armor +2
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 6
+      - 17
+    drawn: false
+    documentCollection: wwn.magic-tables
+    documentId: hyMSzrFzVObqBWF4
+    _key: '!tables.results!OzBWUwFIqCgpywLc.gyMNmqVKdQLEC48f'
+  - _id: g3tTmHV8qWddICuE
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: pack
+    text: Magical Armor +3
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 18
+      - 20
+    drawn: false
+    documentCollection: wwn.magic-tables
+    documentId: ryiuboUa1OyZH1K5
+    _key: '!tables.results!OzBWUwFIqCgpywLc.g3tTmHV8qWddICuE'
+formula: 1d20
+replacement: true
+displayRoll: true
+_stats:
+  coreVersion: '12.324'
+  systemId: null
+  systemVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+  compendiumSource: null
+  duplicateSource: null
+ownership:
+  default: 0
+  mgBwP0sTLP1VFg1m: 3
+folder: null
+sort: 0
+_key: '!tables!OzBWUwFIqCgpywLc'
+

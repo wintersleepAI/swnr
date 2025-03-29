@@ -9,32 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988420
-  modifiedTime: 1739238988420
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: w7z8c690yxbeow96
+_id: par17uprgkoazswh
 system:
+  assetType: wealth
+  attackDamage: 2d10
+  attackSource: wealth
+  attackSpecial: If a Hostile Takeover does enough damage to destroy an asset, the target is instead reduced to 1 hit point and acquired by the Hostile Takeover's owning faction.
+  attackTarget: wealth
+  baseOfInfluence: false
+  cost: 20
+  counter: 2d8
   description: This asset can seize control of damaged and poorly-controlled assets. If a Hostile Takeover does enough damage to destroy an asset, the target is instead reduced to 1 hit point and acquired by the Hostile Takeover's owning faction.
-  favorite: false
-  category: cunning
-  type: Tactic
   health:
     max: 10
     value: 10
-  rating: 7
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 20
   income: 0
   maintenance: 0
-  attackTarget: wealth
-  attackSource: wealth
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: S
+  rating: 7
+  tl: 4
+  turnRoll: ''
+  type: Tactic
+  unusable: false
 effects: []
-_key: '!items!w7z8c690yxbeow96'
+_key: '!items!par17uprgkoazswh'

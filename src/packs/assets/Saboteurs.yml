@@ -9,32 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988438
-  modifiedTime: 1739238988438
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: bqt1p0gs6tc7g8wk
+_id: gc6kd4g3mnqmdew9
 system:
+  assetType: cunning
+  attackDamage: 2d4
+  attackSource: cunning
+  attackSpecial: Minions rained in launching strikes against enemy operations. An asset attacked by saboteurs cannot apply any Use Asset Ability action until the start of the attacking faction's next turn. This applies whether or not the attack was successful.
+  attackTarget: cunning
+  baseOfInfluence: false
+  cost: 5
+  counter: ''
   description: Minions rained in launching strikes against enemy operations. An asset attacked by saboteurs cannot apply any Use Asset Ability action until the start of the attacking faction's next turn. This applies whether or not the attack was successful.
-  favorite: false
-  category: cunning
-  type: Special Forces
   health:
     max: 6
     value: 6
-  rating: 2
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 5
   income: 0
   maintenance: 0
-  attackTarget: cunning
-  attackSource: cunning
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: S
+  rating: 2
+  tl: 0
+  turnRoll: ''
+  type: Special Forces
+  unusable: false
 effects: []
-_key: '!items!bqt1p0gs6tc7g8wk'
+_key: '!items!gc6kd4g3mnqmdew9'

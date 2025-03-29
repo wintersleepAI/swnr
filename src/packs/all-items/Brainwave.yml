@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988332
-  modifiedTime: 1739238988332
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 64660qbnv6sa9o3f
+_id: rr98rz0kd15zf5ns
 system:
-  description: 'Brainwave (Heal-2): This psitech drug requires advanced TL5 facilities to compound, and the few remaining doses from pre-Silence periods are rarely available on the open market. Application of Brainwave gives a psychic 2 extra maximum Effort for one hour. At the end of that hour, they suffer 4 points of System Strain. If their Strain is maximized by this, they go unconscious for one hour. Only one dose can be active at a time.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 0
   cost: 1000
-  tl: 5
+  description: 'Brainwave (Heal-2): This psitech drug requires advanced TL5 facilities to compound, and the few remaining doses from pre-Silence periods are rarely available on the open market. Application of Brainwave gives a psychic 2 extra maximum Effort for one hour. At the end of that hour, they suffer 4 points of System Strain. If their Strain is maximized by this, they go unconscious for one hour. Only one dose can be active at a time.'
+  encumbrance: 0
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 5
 effects: []
-_key: '!items!64660qbnv6sa9o3f'
+_key: '!items!rr98rz0kd15zf5ns'

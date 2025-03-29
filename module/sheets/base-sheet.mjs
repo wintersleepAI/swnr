@@ -281,6 +281,30 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
   }
 
   /**
+   * Toggles a boolean property
+   * 
+   * @this SWNActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @private
+   */
+  static async _toggleProperty(event, target) {
+    const item = this._getEmbeddedDocument(target);
+    const property = target.dataset.property;
+    const value = item.system[property];
+    
+    if (value === undefined) {
+      console.log(`Unable to find ${property} property on item `, item.system);
+    }
+    
+    if (typeof  value != "boolean"){
+      console.log(`Property ${property} on item is not a boolean`);
+    }
+
+    await item.update({ [`system.${property}`]: !value });
+  }
+
+  /**
    * Handle clickable rolls.
    *
    * @this SWNActorSheet

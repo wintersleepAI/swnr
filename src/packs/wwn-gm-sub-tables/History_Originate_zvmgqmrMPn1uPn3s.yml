@@ -1,0 +1,122 @@
+_id: zvmgqmrMPn1uPn3s
+name: History-Originate
+img: icons/svg/d20-grey.svg
+description: How Did They Originate?
+results:
+  - _id: LOvP2JI5XeX3M1XS
+    flags: {}
+    type: text
+    text: Aboriginal peoples united in the area
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    img: null
+    documentId: null
+    _key: '!tables.results!zvmgqmrMPn1uPn3s.LOvP2JI5XeX3M1XS'
+  - _id: FHgZ7l3eQm8yR8yZ
+    flags: {}
+    type: text
+    text: They were refugees from a fallen land
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    img: null
+    documentId: null
+    _key: '!tables.results!zvmgqmrMPn1uPn3s.FHgZ7l3eQm8yR8yZ'
+  - _id: kxiggZWSYGAo5jG2
+    flags: {}
+    type: text
+    text: They were exiles or losers of some civil strife
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    img: null
+    documentId: null
+    _key: '!tables.results!zvmgqmrMPn1uPn3s.kxiggZWSYGAo5jG2'
+  - _id: 31ujKXkrQjgK9Xnt
+    flags: {}
+    type: text
+    text: They were colonists who became independent
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    img: null
+    documentId: null
+    _key: '!tables.results!zvmgqmrMPn1uPn3s.31ujKXkrQjgK9Xnt'
+  - _id: Vj18G2vxWwNRDnWv
+    flags: {}
+    type: text
+    text: They were magically created or shaped here
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    img: null
+    documentId: null
+    _key: '!tables.results!zvmgqmrMPn1uPn3s.Vj18G2vxWwNRDnWv'
+  - _id: knZ5kBKz0mkGnTxy
+    flags: {}
+    type: text
+    text: They all followed a faith or ideology here
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    img: null
+    documentId: null
+    _key: '!tables.results!zvmgqmrMPn1uPn3s.knZ5kBKz0mkGnTxy'
+  - _id: oesYgTcQkxkm5skI
+    flags: {}
+    type: text
+    text: They were a conquering army gone native
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: false
+    img: null
+    documentId: null
+    _key: '!tables.results!zvmgqmrMPn1uPn3s.oesYgTcQkxkm5skI'
+  - _id: vu0j5cl1yYAGlcUU
+    flags: {}
+    type: text
+    text: They migrated here for profit or plunder
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: false
+    img: null
+    documentId: null
+    _key: '!tables.results!zvmgqmrMPn1uPn3s.vu0j5cl1yYAGlcUU'
+formula: 1d8
+replacement: true
+displayRoll: true
+folder: null
+sort: 9300000
+flags:
+  better-rolltables: {}
+ownership:
+  default: 0
+  mgBwP0sTLP1VFg1m: 3
+_stats:
+  systemId: wwn
+  systemVersion: 1.1.4
+  coreVersion: '12.324'
+  createdTime: null
+  modifiedTime: 1690569840132
+  lastModifiedBy: VPYTJCONjTybUwoI
+  compendiumSource: null
+  duplicateSource: null
+_key: '!tables!zvmgqmrMPn1uPn3s'
+

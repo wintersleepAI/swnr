@@ -9,36 +9,23 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988545
-  modifiedTime: 1739238988545
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: xj1lqnpctjnohbd0
+_id: lpei0m3pukyke9e8
 system:
-  description: Subtle polymer sheets and reinforced weaves are used to provide a modicum of protection in this clothing without sacrificing taste.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 0
-  cost: 100
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
   ac: 13
-  shield: false
-  use: false
+  cost: 100
+  description: Subtle polymer sheets and reinforced weaves are used to provide a modicum of protection in this clothing without sacrificing taste.
+  encumbrance: 0
+  isHeavy: false
+  isSubtle: true
   meleeAc: 10
+  shieldACBonus: 0
+  shieldMeleeACBonus: 0
   soak:
     max: 2
     value: 2
-  dr: 0
   traumaDiePenalty: 0
-  isSubtle: true
-  isHeavy: false
-  shieldMeleeACBonus: 0
-  shieldACBonus: 0
 effects: []
-_key: '!items!xj1lqnpctjnohbd0'
+_key: '!items!lpei0m3pukyke9e8'

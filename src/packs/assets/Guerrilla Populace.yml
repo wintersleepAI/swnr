@@ -9,32 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988416
-  modifiedTime: 1739238988416
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: cufhcxzgfaieg67o
+_id: 76wr5eluaq1o3xpv
 system:
+  assetType: force
+  attackDamage: 1d4+1
+  attackSource: force
+  attackSpecial: ''
+  attackTarget: cunning
+  baseOfInfluence: false
+  cost: 4
+  counter: ''
   description: Such assets reflect popular support among the locals and a cadre of men and women willing to fight as partisans.
-  favorite: false
-  category: cunning
-  type: Military Unit
   health:
     max: 6
     value: 6
-  rating: 2
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 4
   income: 0
   maintenance: 0
-  attackTarget: cunning
-  attackSource: force
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: ''
+  rating: 2
+  tl: 0
+  turnRoll: ''
+  type: Military Unit
+  unusable: false
 effects: []
-_key: '!items!cufhcxzgfaieg67o'
+_key: '!items!76wr5eluaq1o3xpv'

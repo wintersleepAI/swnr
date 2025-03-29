@@ -9,25 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988689
-  modifiedTime: 1739238988689
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: etq5213lzbde0zdn
+_id: c38cm7d764now2lc
 system:
-  description: (Heal-0) A powerful sedative that requires medical expertise to administer properly, Pillow must be injected into a restrained or helpless subject, as vigorous physical action can disrupt the effects. Once injected, the subject falls into a torpor indistinguishable from death that lasts for 24 hours. They require only trace amounts of oxygen while in their trance, and can be identified as alive only through careful medical examination. If Pillow is administered with less than a 24-hour gap between doses, the victim must make a Physical save or die sometime before the dose ends.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 0
   cost: 10
-  location: stowed
-  quality: stock
+  description: (Heal-0) A powerful sedative that requires medical expertise to administer properly, Pillow must be injected into a restrained or helpless subject, as vigorous physical action can disrupt the effects. Once injected, the subject falls into a torpor indistinguishable from death that lasts for 24 hours. They require only trace amounts of oxygen while in their trance, and can be identified as alive only through careful medical examination. If Pillow is administered with less than a 24-hour gap between doses, the victim must make a Physical save or die sometime before the dose ends.
+  encumbrance: 0
   noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!etq5213lzbde0zdn'
+_key: '!items!c38cm7d764now2lc'

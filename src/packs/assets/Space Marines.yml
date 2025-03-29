@@ -9,32 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988444
-  modifiedTime: 1739238988444
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: j0m52ivdtg2c5und
+_id: xxwlq83hec646zzh
 system:
+  assetType: force
+  attackDamage: 2d8+2
+  attackSource: force
+  attackSpecial: ''
+  attackTarget: force
+  baseOfInfluence: false
+  cost: 30
+  counter: 2d8
   description: Heavily-armored specialist troops trained for ship boarding actions and opposed landings. As an action, they can move to any world within one hex of their current location, whether or not the planetary government permits it.
-  favorite: false
-  category: cunning
-  type: Military Unit
   health:
     max: 16
     value: 16
-  rating: 7
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 30
   income: 0
   maintenance: 0
-  attackTarget: force
-  attackSource: force
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: A
+  rating: 7
+  tl: 4
+  turnRoll: ''
+  type: Military Unit
+  unusable: false
 effects: []
-_key: '!items!j0m52ivdtg2c5und'
+_key: '!items!xxwlq83hec646zzh'

@@ -1,0 +1,200 @@
+name: Encounters, Human
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    documentCollection: ''
+    _id: YDXd2mOaDmgJ6WO9
+    text: Hopelessly lost merchant or peddler
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!asGIls00c59Fjj2V.YDXd2mOaDmgJ6WO9'
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    documentCollection: ''
+    _id: ryyjjDshYL9A3KSC
+    text: Hermit with a good reason to stay alone
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!asGIls00c59Fjj2V.ryyjjDshYL9A3KSC'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    documentCollection: ''
+    _id: roERIdW69pbuGq5a
+    text: Escaped slave or prisoner
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!asGIls00c59Fjj2V.roERIdW69pbuGq5a'
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    documentCollection: ''
+    _id: 7UtEohwtMwMhcVdG
+    text: Peasant perhaps moonlighting as a bandit
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!asGIls00c59Fjj2V.7UtEohwtMwMhcVdG'
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    documentCollection: ''
+    _id: 4vGTm0pBUku6bUgJ
+    text: Dangerous outlaw or outcast
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!asGIls00c59Fjj2V.4vGTm0pBUku6bUgJ'
+  - type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    documentCollection: ''
+    _id: HAvFv13ppaxmhluN
+    text: Explorer, scout, or surveyor
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!asGIls00c59Fjj2V.HAvFv13ppaxmhluN'
+  - type: text
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: false
+    documentCollection: ''
+    _id: UAEBgDLzqPpxy0EP
+    text: Patrol of the local authorities
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!asGIls00c59Fjj2V.UAEBgDLzqPpxy0EP'
+  - type: text
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: false
+    documentCollection: ''
+    _id: BgfQAKpPGKj3KqTC
+    text: Miners, woodsmen, hunters, or other workers
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!asGIls00c59Fjj2V.BgfQAKpPGKj3KqTC'
+  - type: text
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: false
+    documentCollection: ''
+    _id: 55OiNTta7W9oAXgi
+    text: Common traveler, perhaps lost
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!asGIls00c59Fjj2V.55OiNTta7W9oAXgi'
+  - type: text
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: false
+    documentCollection: ''
+    _id: 2B8Fsy1MgQ8AAdWe
+    text: Noble or other gentry on a journey
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!asGIls00c59Fjj2V.2B8Fsy1MgQ8AAdWe'
+  - type: text
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: false
+    documentCollection: ''
+    _id: g60KKv0TOvHHLRmn
+    text: Pilgrim, perhaps of a malevolent god
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!asGIls00c59Fjj2V.g60KKv0TOvHHLRmn'
+  - type: text
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: false
+    documentCollection: ''
+    _id: fCxDq43apd5AjFIl
+    text: Bandits, marauders, or other adventurers
+    img: icons/svg/d20-black.svg
+    documentId: null
+    flags: {}
+    _key: '!tables.results!asGIls00c59Fjj2V.fCxDq43apd5AjFIl'
+  - type: pack
+    documentCollection: wwn.gm-subtables
+    weight: 1
+    range:
+      - 1
+      - 12
+    drawn: false
+    text: Encounters-Sapient Activity
+    documentId: 57a0TQDT97SgrT6v
+    img: icons/svg/d20-grey.svg
+    _id: NcoJwfSVPYXnNdVi
+    flags: {}
+    _key: '!tables.results!asGIls00c59Fjj2V.NcoJwfSVPYXnNdVi'
+replacement: true
+displayRoll: true
+folder: null
+ownership:
+  default: 0
+  VPYTJCONjTybUwoI: 3
+flags:
+  exportSource:
+    world: niafel
+    system: wwn
+    coreVersion: '10.291'
+    systemVersion: 1.1.4
+  core: {}
+_stats:
+  systemId: wwn
+  systemVersion: 1.1.4
+  coreVersion: '12.324'
+  createdTime: 1684914988786
+  modifiedTime: 1690569921236
+  lastModifiedBy: VPYTJCONjTybUwoI
+  compendiumSource: null
+  duplicateSource: null
+formula: 1d12
+_id: asGIls00c59Fjj2V
+sort: 0
+_key: '!tables!asGIls00c59Fjj2V'
+

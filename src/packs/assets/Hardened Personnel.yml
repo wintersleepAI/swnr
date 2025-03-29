@@ -9,32 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988417
-  modifiedTime: 1739238988417
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: nsq75k194htkbro8
+_id: i3x43x5my6y1cwna
 system:
+  assetType: force
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 4
+  counter: 1d4+1
   description: These are the employees and support staff of the faction that have been trained in defensive fighting and equipped with supply caches and hardened fallback positions.
-  favorite: false
-  category: cunning
-  type: Special Forces
   health:
     max: 4
     value: 4
-  rating: 2
-  tl: 3
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 4
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: ''
+  rating: 2
+  tl: 3
+  turnRoll: ''
+  type: Special Forces
+  unusable: false
 effects: []
-_key: '!items!nsq75k194htkbro8'
+_key: '!items!i3x43x5my6y1cwna'

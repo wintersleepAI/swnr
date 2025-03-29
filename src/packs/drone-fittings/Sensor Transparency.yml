@@ -9,11 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988795
-  modifiedTime: 1739238988795
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 904qr40v0onxgfoq
-system: {}
+_id: hq3kywef02aj8j9n
+system:
+  broken: false
+  cost: 5000
+  costMultiplier: true
+  description: The drone is sheathed in anti-radar composites. Ordinary sensors will not detect it at observation range, and high-end military sensors can spot it only on an Int/Program check at difficulty 9.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  tl: 4
+  type: drone
 effects: []
-_key: '!items!904qr40v0onxgfoq'
+_key: '!items!hq3kywef02aj8j9n'

@@ -9,14 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988897
-  modifiedTime: 1739238988897
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: f0dk4iwybneiohhc
+_id: 2fkau63e8duwjt35
 system:
   description: <p>The adept’s precognition is sophisticated enough to clearly foresee several seconds into the future. As an Instant action, the psychic may Commit Effort for the day and declare that what they have just done or seen is a vision of the immediate future. Time rolls back to the start of the initiative count in a combat turn, or six seconds earlier if out of combat. Nothing that happened during that round has really come to pass yet.</p><p>This ability is tremendously draining, and can be used only once per day.</p>
-  favorite: false
-  powerLevel: 1
+  level: 3
+  source: precognition
+  effort: day
 effects: []
-_key: '!items!f0dk4iwybneiohhc'
+_key: '!items!2fkau63e8duwjt35'

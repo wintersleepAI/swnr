@@ -9,11 +9,17 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988721
-  modifiedTime: 1739238988721
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: y8c5smh2mxf56bog
-system: {}
+_id: 0uzh8mohxbzne3zt
+system:
+  cost: 5000
+  description: Increase the vehicle's Armor rating by 3 points. Medium vehicles can apply this fitting twice, and Large ones can apply it three times.
+  effect: Adds Armor to the vehicle
+  mass: 3
+  minClass: S
+  power: 0
+  type: vehicle
 effects: []
-_key: '!items!y8c5smh2mxf56bog'
+_key: '!items!0uzh8mohxbzne3zt'

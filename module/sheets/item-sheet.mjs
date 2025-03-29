@@ -1,6 +1,6 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
-import { groupFieldWidget } from '../helpers/handlebar.mjs';
+import { checkboxFieldWidget, groupFieldWidget } from '../helpers/handlebar.mjs';
 
 
 const { api, sheets } = foundry.applications;
@@ -168,10 +168,11 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'power':
         options.parts.push('attributesPower');
+        options.defaultTab = 'attributes';
         break;
       case 'weapon':
         options.parts.push('attributesWeapons');
-        options.defaultTab = 'attributes';
+        options.defaultTab = 'weapon';
         break;
       case 'armor':
         options.parts.push('attributesArmor');
@@ -231,6 +232,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       systemFields: this.document.system.schema.fields,
       gameSettings: getGameSettings(),
       groupWidget: groupFieldWidget.bind(this),
+      checkWidget: checkboxFieldWidget.bind(this),
 
     };
 

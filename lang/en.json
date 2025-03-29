@@ -36,6 +36,7 @@
     "Actor": {
       "Tabs": {
         "Biography": "Biography",
+        "Description": "Description",
         "Features": "Features",
         "Gear": "Inventory",
         "Powers": "Powers",
@@ -48,7 +49,10 @@
         "Cargo": "Cargo",
         "Mech": "Mech Details",
         "VehicleNotes": "Desc/Mods",
-        "Programs": "Program Details"
+        "Programs": "Program Details",
+        "Assets": "Assets",
+        "Tags": "Tags",
+        "Logs": "Logs"
       },
       "base": {
         "FIELDS": {
@@ -193,6 +197,12 @@
               "day": {
                 "label": "Day"
               }
+            },
+            "initiative": {
+              "label": "Initiative",
+              "mod": {
+                "label": "Initiative Mod"
+              }
             }
           },
           "class": {
@@ -203,6 +213,9 @@
           },
           "employer": {
             "label": "Employer"
+          }, 
+          "stress": {
+            "label": "Stress"
           }
         }
       },
@@ -413,6 +426,34 @@
           "encumberance": {"label": "Encumberance"},
           "hacker": {"label": "Hacker"}
         }
+      },
+      "Faction": {
+        "FIELDS": {
+          "forceRating": {
+            "label": "Force Rating"
+          },
+          "cunningRating": {
+            "label": "Cunning Rating"
+          },
+          "wealthRating": {
+            "label": "Wealth Rating"
+          },
+          "active": {
+            "label": "Active"
+          },
+          "facCreds": {
+            "label": "FacCreds"
+          },
+          "xp": {
+            "label": "XP"
+          },
+          "homeworld": {
+            "label": "Homeworld"
+          },
+          "factionGoal": {
+            "label": "Faction Goal"
+          }
+        }
       }
     },
     "Item": {
@@ -483,6 +524,31 @@
         "FIELDS": {
           "level": {
             "label": "Power Level"
+          },
+          "roll" : {
+            "label": "Roll"
+          },
+          "source" : {
+            "label": "Source"
+          },
+          "duration": {
+            "label": "Duration"
+          },
+          "range": {
+            "label": "Range"
+          },
+          "save": {
+            "label": "Save"
+          },
+          "skill": {
+            "label": "Skill",
+            "tooltip": "Skill to roll for the chat window (usually opposed effects)"
+          },
+          "prepared" : {
+            "label": "Prepared"
+          },
+          "effort": {
+            "label": "Effort"
           }
         },
         "PowerLVL": "Level {level} Power",
@@ -635,6 +701,11 @@
           },
           "isNonLethal": {
             "label": "Non-Lethal"
+          }, 
+          "remember" : {
+            "use": {
+              "label": "Use Remembered Settings"
+            }
           }
         }
       },
@@ -1261,6 +1332,7 @@
         "debug": "Sheet Debug",
         "skills": "Skills",
         "weapons": "Weapons",
+        "weapons-short": "Wpn.",
         "inventory": "Inventory",
         "armor": "Armor",
         "foci": "Foci",
@@ -1292,6 +1364,7 @@
       "fix-item": "Fix Item",
       "destroy-item": "Destroy Item",
       "ask": "Ask",
+      "type-label": "Type",
       "description": "Description:",
       "ammoType": "Ammo Type",
       "longReload": "Long Reload",
@@ -1324,6 +1397,7 @@
       "favorites": "Favorites",
       "rest-desc": "Apply a good night's rest (reset effort, drop strain, heal HP)?",
       "rest-title": "Apply a Good Night's Rest?",
+      "none": "None",
       "cyberware": {
         "disabled": "Disabled",
         "strain": "Strain",
@@ -1337,6 +1411,9 @@
           "sight": "Sight",
           "touch": "Touch",
           "medical": "Medical",
+          "Sight": "Sight",
+          "Touch": "Touch",
+          "Medical": "Medical",
           "None": ""
         },
         "types": {
@@ -1347,7 +1424,15 @@
           "nerve": "Nerve",
           "sensory": "Sensory",
           "medical": "Medical",
-          "none": "None"
+          "none": "None",
+          "Head": "Head",
+          "Body": "Body",
+          "Skin": "Skin",
+          "Limb": "Limb",
+          "Nerve": "Nerve",
+          "Sensory": "Sensory",
+          "Medical": "Medical",
+          "None": "None"
         }
       },
       "type": {
@@ -1404,12 +1489,6 @@
         }
       },
       "faction": {
-        "forceRating": "Force Rating",
-        "cunningRating": "Cunning Rating",
-        "wealthRating": "Wealth Rating",
-        "facCreds": "FacCreds",
-        "xp": "XP",
-        "homeworld": "Homeworld",
         "tags": "Tags",
         "assets": "Assets",
         "assetType": "Asset Type",
@@ -1424,6 +1503,11 @@
           "action": "A",
           "special": "S"
         },
+        "assetQualityTitles": {
+          "permission": "Permission",
+          "action": "Action",
+          "special": "Special"
+        },
         "attackSpecial": "Special Attack Note",
         "turnRoll": "On Turn Log/Roll",
         "locationRoll": "Location Note",
@@ -1435,22 +1519,24 @@
         "desc-tab": "Description",
         "tags-tab": "Tags",
         "log-tab": "Log",
-        "add-tag": "Add Tag",
-        "add-tag-custom": "Add Custom Tag",
-        "remove-tag": "Remove Tag",
-        "remove-log": "Remove Log Entry",
-        "add-log": "Add Manual Log Entry",
-        "remove-log-all": "Remove All Log Entries",
-        "active": "Active Faction",
+        "addTag": "Add Tag",
+        "editTag": "Edit Tag",
+        "addTagCustom": "Add Custom Tag",
+        "removeTag": "Remove Tag",
+        "tagEffectLabel": "Effect:",
+        "removeLog": "Remove Log Entry",
+        "addLog": "Add Manual Log Entry",
+        "editLog": "Edit Log Entry",
+        "removeLogAll": "Remove All Log Entries",
         "attack-roll": "Attack Hit Roll",
         "counter-roll": "Counter Hit Roll",
         "damage": "Damage",
+        "counter": "Counter",
         "attack": "Attack",
         "att-damage": "Attack Damage",
         "def-damage": "Counter Damage",
         "att-roll": "Attacker Roll",
         "def-roll": "Defender Roll",
-        "factionGoal": "Faction Goal",
         "factionGoalDesc": "Goal Description",
         "setGoal": "Set Goal",
         "location": "Location",
@@ -1459,7 +1545,33 @@
         "unusable": "Unusable",
         "turn": "Start Turn",
         "setHomeworld": "Set the faction homeworld to {name}?",
-        "abandonGoal": "Abandon current goal {name}? Will lose income and no actions this turn/"
+        "abandonGoal": "Abandon current goal {name}? Will lose income and no actions this turn/",
+        "addAsset": "Add Asset",
+        "addBase": "Add Base",
+        "addBaseDialog": {
+          "title": "Add New Base",
+          "confirm": "Expand Influence - New Base",
+          "content": "Adding a new base from Expand Influence Action.<br>Select HP (up to Faction max HP).<br>One FacCred per HP.",
+          "label": "Base HP",
+          "baseHpTooHigh": "Error: HP of new base ({baseHp}) cannot be greater than faction HP ({factionHp})}",
+          "notEnoughFacCredsForBase": "Error: HP of new base ({baseHp}) cannot be greater than facCreds ({facCreds})"
+        },
+        "editTagDialog": {
+          "tagName": "Tag Name",
+          "tagDesc": "Tag Description",
+          "tagEffect": "Tag Effect",
+          "noName": "Error: Tag name cannot be empty"
+          
+        },
+        "selectTagDialog": {
+          "selectTagDefault": "Choose A Tag"
+        },
+        "editLogDialog": {
+          "label": "Manual log entry.<br>To inline a roll use [[1dX]].",
+          "noText": "Error: Log cannot be empty" 
+        },
+        "tagIndexInvalid": "Error: Faction tag index {index} is invalid",
+        "logIndexInvalid": "Error: Log index {index} is invalid"
       },
       "ship": {
         "life-support-days": "Life Support Days",
@@ -1615,10 +1727,14 @@
       "attackRollHint": "What to roll for attacks?",
       "useTrauma": "Use Trauma?",
       "useTraumaHint": "Use CWN trauma dice for rolling attacks?",
+      "useStress": "Use Stress?",
+      "useStressHint": "Use AWN stress attribute for characters?",
       "useCWNArmor": "Use CWN Armor?",
       "useCWNArmorHint": "Use CWN armor options (soak, melee and ranged AC)?",
       "useCWNCyber": "Use CWN Cyber Options?",
       "useCWNCyberHint": "Use CWN cyber options (concealment, type, complications, etc)?",
+      "showAccess" : "Show Access?",
+      "showAccessHint" : "Show Access on the character sheet?",
       "search": "Compendium item search?",
       "searchHint": "What compendiums to search for items for in-sheet item adds?"
     },
@@ -1832,6 +1948,7 @@
       "edge": "Edge",
       "feature": "Feature"
     },
+    "featureLabel": "Features (Edge/Focus)",
     "vehicleTypes": {
       "ship": "Ship",
       "vehicle": "Vehicle",

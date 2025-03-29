@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988319
-  modifiedTime: 1739238988319
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: qml5nrfad7ojl3i1
+_id: klu5np0blbexcdq0
 system:
-  description: 'Ammunition: A few worlds are too primitive or too resource-poor to manufacture ammunition, but the vast majority of worlds provide cartridges in almost every conceivable caliber and make. Most local gunsmiths can load ammunition to any specification required by a buyer.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 3
     bundled: false
-  encumbrance: 1
   cost: 10
-  tl: 2
+  description: 'Ammunition: A few worlds are too primitive or too resource-poor to manufacture ammunition, but the vast majority of worlds provide cartridges in almost every conceivable caliber and make. Most local gunsmiths can load ammunition to any specification required by a buyer.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 2
 effects: []
-_key: '!items!qml5nrfad7ojl3i1'
+_key: '!items!klu5np0blbexcdq0'

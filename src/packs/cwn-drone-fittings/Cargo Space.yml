@@ -9,11 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988608
-  modifiedTime: 1739238988608
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: q4z8dtikmjhkq1ub
-system: {}
+_id: ok9f1ydddtyddrag
+system:
+  cost: 0.2
+  description: Most drones are designed to carry only their own weight. This fitting upgrades engines and adds cargo mounts to the drone`s exterior; it can carry up to 3 points of Encumbrance now, but the drone`s own Encumbrance value is increased by one. Any additional cargo it carries is added to this burden, of course. Carried cargo is sealed within the drone and requires a Main Action to dig out.
+  mass: 1
+  type: drone
 effects: []
-_key: '!items!q4z8dtikmjhkq1ub'
+_key: '!items!ok9f1ydddtyddrag'

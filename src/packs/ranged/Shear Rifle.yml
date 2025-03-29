@@ -8,32 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988940
-  modifiedTime: 1739238988940
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: gq4b23szxn2e9ozv
+_id: z7e7i4gpw5ool8tw
 system:
-  description: Shear rifles are the product of a relatively few functioning pretech manufactories. These weapons use miniaturized grav projectors to create dangerous repulsor fields inside a target, tearing the object apart along perfectly smooth planes. Shear rifles are completely silent in operation.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 2
-  cost: 600
-  tl: 5
-  location: other
-  quality: stock
-  noEncReadied: false
-  stat: dex
-  secondStat: null
-  skill: ''
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 15
-    dmg: 0
   ab: 1
   ammo:
     burst: true
@@ -42,20 +21,20 @@ system:
     suppress: false
     type: ammo
     value: 10
+  cost: 600
+  damage: 2d8
+  description: Shear rifles are the product of a relatively few functioning pretech manufactories. These weapons use miniaturized grav projectors to create dangerous repulsor fields inside a target, tearing the object apart along perfectly smooth planes. Shear rifles are completely silent in operation.
+  encumbrance: 2
+  location: other
+  quality: stock
   range:
     max: 300
     normal: 100
-  damage: 2d8
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
-  trauma:
-    die: 1d6
-    rating: null
-  isTwoHanded: false
-  isNonLethal: false
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 5
 effects: []
-_key: '!items!gq4b23szxn2e9ozv'
+_key: '!items!z7e7i4gpw5ool8tw'

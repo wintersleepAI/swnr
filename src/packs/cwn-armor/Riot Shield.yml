@@ -9,36 +9,24 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988546
-  modifiedTime: 1739238988546
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: wpuol975r30eqd4g
+_id: cfyme5bojecte578
 system:
-  description: These bulky, transparent shields are most effective in fending off melee attackers. They must be Readied in one hand; users with multiple cyberarms can benefit from only one shield at a time. A shield negates the first melee Shock damage a bearer takes in a round.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 2
-  cost: 1000
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
   ac: 0
-  shield: true
-  use: false
+  cost: 1000
+  description: These bulky, transparent shields are most effective in fending off melee attackers. They must be Readied in one hand; users with multiple cyberarms can benefit from only one shield at a time. A shield negates the first melee Shock damage a bearer takes in a round.
+  encumbrance: 2
+  isHeavy: false
+  isSubtle: false
   meleeAc: 0
+  shield: true
+  shieldACBonus: 4
+  shieldMeleeACBonus: 2
   soak:
     max: 0
     value: 0
-  dr: 0
   traumaDiePenalty: 0
-  isSubtle: false
-  isHeavy: false
-  shieldMeleeACBonus: 2
-  shieldACBonus: 4
 effects: []
-_key: '!items!wpuol975r30eqd4g'
+_key: '!items!cfyme5bojecte578'

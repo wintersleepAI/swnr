@@ -9,20 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988693
-  modifiedTime: 1739238988693
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 3hlyvctdb2dqi32f
+_id: 6osg2r3dl3o8vknl
 system:
-  description: Turn a device or piece of cyberware on. You can't control it or direct its function, but if it'sprogrammed to do something when activated, such as grant a bonus action in exchange for System Strain, it does it for one round or one action. The spasmodic activation of cyber outside of the wearer's turn is unlikely to do anything useful, but it eats System Strain as usual if relevant.
-  favorite: false
-  cost: 1000
-  type: verb
   accessCost: 1
-  target: Device/Cyber
+  cost: 1000
+  description: Turn a device or piece of cyberware on. You can't control it or direct its function, but if it'sprogrammed to do something when activated, such as grant a bonus action in exchange for System Strain, it does it for one round or one action. The spasmodic activation of cyber outside of the wearer's turn is unlikely to do anything useful, but it eats System Strain as usual if relevant.
   selfTerminating: true
-  useAffects: Turn on a device or piece of cyberware
   skillCheckMod: 1
+  target: Device/Cyber
+  type: verb
+  useAffects: Turn on a device or piece of cyberware
 effects: []
-_key: '!items!3hlyvctdb2dqi32f'
+_key: '!items!6osg2r3dl3o8vknl'

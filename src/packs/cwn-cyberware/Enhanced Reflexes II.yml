@@ -9,21 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988567
-  modifiedTime: 1739238988567
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: lupnjtc82pe97qv1
+_id: bzw49sv03icvezza
 system:
-  description: Once per scene, as an On Turn action, the user gains a bonus non-cyberspace Main Action and Move action. By accepting one System Strain, this ability can be used as an Instant action, potentially interrupting incoming attacks if the user moves out of reach.
-  favorite: false
-  tl: 4
-  cost: 250000
-  strain: 3
-  disabled: false
-  effect: 1/scene, bonus Main and Move
-  type: Nerve
   concealment: Medical
-  complication: ''
+  cost: 250000
+  description: Once per scene, as an On Turn action, the user gains a bonus non-cyberspace Main Action and Move action. By accepting one System Strain, this ability can be used as an Instant action, potentially interrupting incoming attacks if the user moves out of reach.
+  effect: 1/scene, bonus Main and Move
+  strain: 3
+  type: Nerve
 effects: []
-_key: '!items!lupnjtc82pe97qv1'
+_key: '!items!bzw49sv03icvezza'

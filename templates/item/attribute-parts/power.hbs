@@ -1,47 +1,17 @@
 {{! Attributes Tab }}
-<section
-  class='tab powers {{tab.cssClass}}'
-  data-group='primary'
-  data-tab='attributes'
->
+<section class='tab powers {{tab.cssClass}}' data-group='primary' data-tab='attributes'>
+  <div class='grid grid-4col'>
+    {{formGroup systemFields.level value=system.level localize=true}}
 
-  <div class='resource'>
-    <div class='grid grid-4col'>
-      <div class='grid-span-1'>
-        <label class='resource-label'>{{localize 'SWN.Item.Skill.FIELDS.rank.label'}}</label>
-        <input
-          type='text'
-          name='system.rank'
-          value='{{system.rank}}'
-          data-dtype='Number'
-        />
-      </div>
-      <div class='grid-span-1'>
-        <label class='resource-label'>{{localize 'SWN.Item.Skill.FIELDS.defaultStat.label'}}</label>
-        <input
-          type='text'
-          name='system.defaultStat'
-          value='{{system.defaultStat}}'
-          data-dtype='String'
-        />
-      </div>
-      <div class='grid-span-1'>
-        <label class='resource-label'>{{localize 'SWN.Item.Skill.FIELDS.pool.label'}}</label>
-        <input
-          type='text'
-          name='system.pool'
-          value='{{system.pool}}'
-          data-dtype='String'
-        />
-      </div>
-      <div class='grid-span-1'>
-        <label class='resource-label'>{{localize 'SWN.Item.Skill.FIELDS.source.label'}}</label>
-        <input
-          type='text'
-          name='system.source'
-          value='{{system.source}}'
-          data-dtype='String'
-        />
+    <div class="resource">
+      {{formGroup systemFields.roll value=system.roll localize=true}}
     </div>
+    {{formGroup systemFields.duration value=system.duration localize=true}}
+    {{formGroup systemFields.save value=system.save localize=true}}
+    {{formGroup systemFields.range value=system.range localize=true}}
+    {{formGroup systemFields.skill value=system.skill localize=true}}
+    {{formGroup systemFields.prepared value=system.prepared localize=true}}
+    {{formGroup systemFields.effort value=system.effort localize=true}}
+    {{formGroup systemFields.source value=system.source localize=true}}
   </div>
 </section>

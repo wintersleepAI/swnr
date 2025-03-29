@@ -1,0 +1,144 @@
+folder: ch7TJNmZ3AmSj004
+name: 'Theft: What’s the Biggest Obstacle?'
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: 0
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: Aum056dZ1iedMcVh
+    text: It’s physically hard to move around
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.Aum056dZ1iedMcVh'
+  - type: 0
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: XMfxRDjwSclj34zc
+    text: It’s in a fortified and well-guarded locale
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.XMfxRDjwSclj34zc'
+  - type: 0
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: Nh8kPSTuWnLkNxPN
+    text: It’s far away and hard to get to
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.Nh8kPSTuWnLkNxPN'
+  - type: 0
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: 6KwbbEtWlsEA3NQ3
+    text: It has numerous well-armed guards
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.6KwbbEtWlsEA3NQ3'
+  - type: 0
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: MolZp8Ky0sayD8I2
+    text: Their usual defender is dead or out of it
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.MolZp8Ky0sayD8I2'
+  - type: 0
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: Y3O3XZ9bM0ROxKLn
+    text: It’s extremely easy to track
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.Y3O3XZ9bM0ROxKLn'
+  - type: 0
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: false
+    _id: EDflthnR5kMYIDJB
+    text: The theft’s consequences would be dire
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.EDflthnR5kMYIDJB'
+  - type: 0
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: false
+    _id: wkBIXy08i7EbShJG
+    text: It exists in several separate components
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.wkBIXy08i7EbShJG'
+  - type: 0
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: false
+    _id: ptVM6aVGtakn2uUl
+    text: It’d be stolen from the thieves very quickly
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.ptVM6aVGtakn2uUl'
+  - type: 0
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: false
+    _id: d61thBFxzU9FNWcd
+    text: The genuine item is mixed with fakes
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.d61thBFxzU9FNWcd'
+replacement: true
+displayRoll: true
+flags:
+  core: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '11.315'
+  createdTime: 1703891968582
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+formula: 1d10
+_id: VgRg3CT3OHk6J3Fu
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!VgRg3CT3OHk6J3Fu'
+

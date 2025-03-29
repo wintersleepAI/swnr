@@ -53,7 +53,7 @@ export default class SWNAsset extends SWNItemBase {
   static migrateData(data) {
     data = this.migrateNote(data);
 
-    if (data.category == null) {
+    if (data.category == null && data.assetType != null) {
       data.category = data.assetType ?? 'cunning';
     }
 

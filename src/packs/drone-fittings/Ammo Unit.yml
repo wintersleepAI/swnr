@@ -9,11 +9,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988787
-  modifiedTime: 1739238988787
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: kjupi3jecz3kjfs2
-system: {}
+_id: a3v6ityi4903wlpi
+system:
+  broken: false
+  cost: 250
+  costMultiplier: true
+  description: The drone carries one power cell or magazine worth of ammunition for each of its onboard weapons, whether single or multiple. The operator can reload an ammo unit as a Main Action.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  type: drone
 effects: []
-_key: '!items!kjupi3jecz3kjfs2'
+_key: '!items!a3v6ityi4903wlpi'

@@ -8,32 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988939
-  modifiedTime: 1739238988939
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: kcjk836grh6x8axn
+_id: vpivyokhxck87w88
 system:
-  description: Rifles are the mainstays of most TL2 armies and hunters, thanks to their superior range and power.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 2
-  cost: 75
-  tl: 2
-  location: other
-  quality: stock
-  noEncReadied: false
-  stat: dex
-  secondStat: null
-  skill: ''
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 15
-    dmg: 0
   ab: 0
   ammo:
     burst: false
@@ -42,20 +21,20 @@ system:
     suppress: false
     type: ammo
     value: 6
+  cost: 75
+  damage: 1d10+2
+  description: Rifles are the mainstays of most TL2 armies and hunters, thanks to their superior range and power.
+  encumbrance: 2
+  location: other
+  quality: stock
   range:
     max: 400
     normal: 200
-  damage: 1d10+2
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
-  trauma:
-    die: 1d6
-    rating: null
-  isTwoHanded: false
-  isNonLethal: false
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 2
 effects: []
-_key: '!items!kcjk836grh6x8axn'
+_key: '!items!vpivyokhxck87w88'

@@ -9,11 +9,17 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988726
-  modifiedTime: 1739238988726
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 1ueghwvnqnp1xvuv
-system: {}
+_id: l41njuaeho2qe1yl
+system:
+  cost: 2500
+  description: The driver can order the vehicle directly or by radio or phone to go to particular places at particular times or perform other simple, direct actions on a given schedule. The onboard expert system can handle traffic-related challenges, but has no real intelligence to process more complicated problems.
+  effect: Limited AI driving capabilities
+  mass: 1
+  minClass: S
+  power: 1
+  type: vehicle
 effects: []
-_key: '!items!1ueghwvnqnp1xvuv'
+_key: '!items!l41njuaeho2qe1yl'

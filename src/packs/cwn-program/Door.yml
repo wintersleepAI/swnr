@@ -9,20 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988702
-  modifiedTime: 1739238988702
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: anc02x634n6b192f
+_id: wbu8gu7pe34ia004
 system:
-  description: A physical door, shutter, hatch, or other barrier with an electronic lock or opening mechanism.
-  favorite: false
-  cost: 500
-  type: subject
   accessCost: 0
-  target: Device
+  cost: 500
+  description: A physical door, shutter, hatch, or other barrier with an electronic lock or opening mechanism.
   selfTerminating: false
-  useAffects: Physical doors/barriers
   skillCheckMod: 0
+  target: Device
+  type: subject
+  useAffects: Physical doors/barriers
 effects: []
-_key: '!items!anc02x634n6b192f'
+_key: '!items!wbu8gu7pe34ia004'

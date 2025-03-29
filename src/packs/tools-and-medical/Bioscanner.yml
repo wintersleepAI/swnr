@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989032
-  modifiedTime: 1739238989032
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: p4a4ruhwy14kx8d0
+_id: 67ijb2a6pjlux32e
 system:
-  description: 'Bioscanner: While an untrained user can use this tool to discern internal bleeding, gross physical distress, or toxins in a plant or animal, it requires Heal-0 skill to use this tool to its fullest. Such operators can use the bioscanner for a full spectrum of diagnosis and DNA sequencing achievable in minutes. One type A power cell will power it for up to twenty-four hours of regular usage.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 1
   cost: 300
-  tl: 4
+  description: 'Bioscanner: While an untrained user can use this tool to discern internal bleeding, gross physical distress, or toxins in a plant or animal, it requires Heal-0 skill to use this tool to its fullest. Such operators can use the bioscanner for a full spectrum of diagnosis and DNA sequencing achievable in minutes. One type A power cell will power it for up to twenty-four hours of regular usage.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!p4a4ruhwy14kx8d0'
+_key: '!items!67ijb2a6pjlux32e'

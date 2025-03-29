@@ -15,6 +15,10 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-bottom: 0px;
+  
+  &.column {
+    flex-direction: column;
+  }
 
   .header-fields {
     flex: 1;
@@ -177,9 +181,14 @@ input[type="checkbox"].small-checkbox {
   .resource-group {
     border: 1px solid var(--border-color);
     border-radius: 2px;
-    margin: 0px;
     padding: 4px;
-    margin: 4px;
+    padding-top: 0px;
+    margin: 2px;
+  }
+
+  .thin-bar {
+    margin-top:-10px;
+    margin-bottom: 0px;
   }
 }
 
@@ -201,11 +210,18 @@ input[type="checkbox"].small-checkbox {
   }
 }
 
+.check-group label,
 .form-group label,
 .resource-label {
   font-weight: bold;
   font-size: 12px;
   margin: -5px 0;
+}
+
+.check-group {
+  margin: 0;
+  padding: 0;
+  display: ruby;
 }
 
 .form-group {

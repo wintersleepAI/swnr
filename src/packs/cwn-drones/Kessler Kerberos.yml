@@ -9,12 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988626
-  modifiedTime: 1739238988626
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: if56b2ao99mog59g
-system: {}
+_id: hgidm12gh2a6riy3
+system:
+  ac: 18
+  cost: 15000
+  description: Built on a large motorized tricycle chassis, the Kessler Kerberos is one of the largest ground drones  in  general  production.  Most  serve  as urban patrol units for municipal governments, though their heavy armor and sturdy construction have endeared them to operators in need of a heavy gun platform
+  enc: 99
+  fittings:
+    max: 6
+  hardpoint:
+    max: 3
+  health:
+    max: 25
+    value: 25
+  moveType: ground
+  speed: 20
+  traumaTarget: 8
 effects: []
 prototypeToken:
   name: Kessler Kerberos
@@ -92,4 +105,4 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!if56b2ao99mog59g'
+_key: '!actors!hgidm12gh2a6riy3'

@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988340
-  modifiedTime: 1739238988340
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 7ws8mn9c5y09er60
+_id: zmhgc68lskrcxpbs
 system:
-  description: 'Grapnel launcher: This launcher fires a rope up to forty meters. The rope can bear up to a metric ton of weight, though extremely heavy weights or a precarious hit can cause the grapnel to pull free. A Type A power cell fuels six shots from a launcher.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 1
   cost: 200
-  tl: 3
+  description: 'Grapnel launcher: This launcher fires a rope up to forty meters. The rope can bear up to a metric ton of weight, though extremely heavy weights or a precarious hit can cause the grapnel to pull free. A Type A power cell fuels six shots from a launcher.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
 effects: []
-_key: '!items!7ws8mn9c5y09er60'
+_key: '!items!zmhgc68lskrcxpbs'

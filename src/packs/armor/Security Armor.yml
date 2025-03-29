@@ -8,36 +8,26 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988394
-  modifiedTime: 1739238988394
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: yb3pp84tdqgaiu62
+_id: sjgjf6tpjmrzg4sr
 system:
-  description: Security armor is the ordinary working uniform of most law enforcement officials and security personnel. Various rigid plates and anti-ballistic panels provide protection for the wearer at minimal extra weight.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 700
-  tl: 4
-  location: other
-  quality: stock
-  noEncReadied: false
   ac: 14
-  shield: false
-  use: false
   meleeAc: 14
+  traumaDiePenalty: 1
+  isSubtle: false
   soak:
     value: 5
     max: 5
-  dr: 0
-  traumaDiePenalty: 1
-  isSubtle: false
-  isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
+  cost: 700
+  description: Security armor is the ordinary working uniform of most law enforcement officials and security personnel. Various rigid plates and anti-ballistic panels provide protection for the wearer at minimal extra weight.
+  encumbrance: 1
+  location: other
+  quality: stock
+  shield: false
+  tl: 4
+  type: combat
+  use: false
 effects: []
-_key: '!items!yb3pp84tdqgaiu62'
+_key: '!items!sjgjf6tpjmrzg4sr'

@@ -9,25 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988671
-  modifiedTime: 1739238988671
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: gcckgan729g8034n
+_id: z7xkl82x5e8im3vz
 system:
-  description: These bundles of gear are carefully packed for minimal weight. Toolkits give a tech the gear they need for basic repairs and construction, while medical kits provide first aid implements. Cyberdoc kits contain everything medical kits do, as well as gear for cyber maintenance or even emergency implantation. Survival kits are for badlands operations, with water filtration, firemaking tools, and other such gear for extended wilderness stays.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 2
   cost: 100
-  location: stowed
-  quality: stock
+  description: These bundles of gear are carefully packed for minimal weight. Toolkits give a tech the gear they need for basic repairs and construction, while medical kits provide first aid implements. Cyberdoc kits contain everything medical kits do, as well as gear for cyber maintenance or even emergency implantation. Survival kits are for badlands operations, with water filtration, firemaking tools, and other such gear for extended wilderness stays.
+  encumbrance: 2
   noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!gcckgan729g8034n'
+_key: '!items!z7xkl82x5e8im3vz'

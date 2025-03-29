@@ -9,11 +9,17 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988721
-  modifiedTime: 1739238988721
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: bchqip4terxdntax
-system: {}
+_id: 8kvuqg062hihu479
+system:
+  cost: 0
+  description: This fitting can be taken multiple times. Each time it adds 50 kg of protected cargo space for Small vehicles, 500 kg for Medium ones, and 2 metric tons for Large ones.
+  effect: Adds protected cargo space
+  mass: 1
+  minClass: S
+  power: 0
+  type: vehicle
 effects: []
-_key: '!items!bchqip4terxdntax'
+_key: '!items!8kvuqg062hihu479'

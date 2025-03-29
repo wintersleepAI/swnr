@@ -9,32 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988446
-  modifiedTime: 1739238988446
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 1p79mdkp5lcqyxtc
+_id: labow4ef352m7qyh
 system:
+  assetType: wealth
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 4
+  counter: 1d4
   description: Explore potential resource and investment options on worlds. The presence of a Surveyor crew allows one additional die to be rolled on Expand Influence actions. As an action, a surveyor crew can be moved to any world within two hexes.
-  favorite: false
-  category: cunning
-  type: Special Forces
   health:
     max: 4
     value: 4
-  rating: 2
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 4
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: A,S
+  rating: 2
+  tl: 4
+  turnRoll: ''
+  type: Special Forces
+  unusable: false
 effects: []
-_key: '!items!1p79mdkp5lcqyxtc'
+_key: '!items!labow4ef352m7qyh'

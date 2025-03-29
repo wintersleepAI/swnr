@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988355
-  modifiedTime: 1739238988355
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 7mx549yd6vxss6xz
+_id: 7iiarkq84yfge7qj
 system:
-  description: 'Power cells: One of the few standardized artifacts inherited from before the Silence, power cells are small cylindrical objects designed to take and hold electrical charges. These larger type B cells for vehicles and heavy gear. The engineering for the cells is substantially different, and they cannot be exchanged or recharge each other without a trained tech’s modifications or a converter unit. Power cells can be recharged off a ship’s power plant or other grid. Recharging requires 24 hours for a type B cell.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 1
   cost: 100
-  tl: 4
+  description: 'Power cells: One of the few standardized artifacts inherited from before the Silence, power cells are small cylindrical objects designed to take and hold electrical charges. These larger type B cells for vehicles and heavy gear. The engineering for the cells is substantially different, and they cannot be exchanged or recharge each other without a trained tech’s modifications or a converter unit. Power cells can be recharged off a ship’s power plant or other grid. Recharging requires 24 hours for a type B cell.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!7mx549yd6vxss6xz'
+_key: '!items!7iiarkq84yfge7qj'

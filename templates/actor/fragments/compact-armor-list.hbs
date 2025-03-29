@@ -14,10 +14,10 @@
   </li>
   <li>
     {{#if gameSettings.useTrauma}}
-    ({{localize 'swnr.sheet.traumaTarget'}}: {{actor.system.modifiedTraumaTarget}})
+      {{localize 'swnr.sheet.traumaTarget'}}: {{actor.system.modifiedTraumaTarget}}
     {{/if}}
     {{#if gameSettings.useCWNArmor}}
-    ({{localize 'swnr.armor.soak.label'}} Total: {{actor.system.soakTotal.value}}/{{actor.system.soakTotal.max}} )
+      {{localize 'swnr.armor.soak.label'}} Total: {{actor.system.soakTotal.value}}/{{actor.system.soakTotal.max}}
     {{/if}}
   </li>
   {{#each itemList as |item id|}}

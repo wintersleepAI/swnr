@@ -23,7 +23,7 @@ export class SWNActorSheet extends SWNBaseSheet {
   static DEFAULT_OPTIONS = {
     classes: ['swnr', 'actor'],
     position: {
-      width: 760,
+      width: 780,
       height: 800,
     },
     actions: {
@@ -48,6 +48,8 @@ export class SWNActorSheet extends SWNBaseSheet {
       toggleSection: this._toggleSection,
       reactionRoll: this._onReactionRoll,
       moraleRoll: this._onMoraleRoll,
+      resourceCreate: this._onResourceCreate,
+      resourceDelete: this._onResourceDelete,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -107,6 +109,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     },
     compactArmorList: {
       template: 'systems/swnr/templates/actor/fragments/compact-armor-list.hbs',
+    },
+    compactAbilitiesList: {
+      template: 'systems/swnr/templates/actor/fragments/compact-abilities-list.hbs',
     }
   };
 
@@ -301,10 +306,10 @@ export class SWNActorSheet extends SWNBaseSheet {
         items.push(i);
       }
       else if (i.type === 'armor') {
-        items.push(i); //TODO fix to new array
+        items.push(i); 
       }
       else if (i.type === 'weapon') {
-        items.push(i); //TODO fix to new array
+        items.push(i); 
       }
       // Append to features.
       else if (i.type === 'feature') {
@@ -315,8 +320,8 @@ export class SWNActorSheet extends SWNBaseSheet {
       }
       // Append to powers.
       else if (i.type === 'power') {
-        if (i.system.powerLevel != undefined) {
-          powers[i.system.powerLevel].push(i);
+        if (i.system.level != undefined) {
+          powers[i.system.level].push(i);
         }
       }
     }
@@ -338,6 +343,16 @@ export class SWNActorSheet extends SWNBaseSheet {
       if ((a.system.type || 0) > (b.system.type || 0)) { return 1; }
       return 0;
     });
+
+    if (this.actor.type === "npc") { 
+      const abilities = []
+      for (let i of this.document.items) {
+        if (i.type === 'power' || i.type === 'feature' || i.type === 'cyberware') {
+          abilities.push(i);
+        }
+      }
+      context.abilities = abilities;
+    }
   }
 
   /**
@@ -358,6 +373,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     // NOTE that 'click' events should just be actions like roll, rest, etc.
     this.element.querySelectorAll(".location-selector").forEach((d) =>
       d.addEventListener('change', this._onLocationChange.bind(this)));
+
+    this.element.querySelectorAll(".resource-list-val").forEach((d) =>
+      d.addEventListener('change', this._onResourceChange.bind(this)));
 
     // Toggle lock related elements after render depending on the lock state
     this.element?.querySelectorAll(".lock-icon").forEach((d) => {
@@ -777,5 +795,36 @@ export class SWNActorSheet extends SWNBaseSheet {
     } else {
       console.log("Morale rolls are only for NPCs");
     }
+  }
+
+  static async _onResourceCreate(event, _target) {
+    event.preventDefault();
+    let resourceList = this.actor.system.tweak.resourceList;
+    if (!resourceList) {
+      resourceList = [];
+    }
+    resourceList.push({ name: "Resource X", value: 0, max: 1 });
+    await this.actor.update({
+      "system.tweak.resourceList": resourceList,
+    });
+  }
+
+  static async _onResourceDelete(event, target) {
+    event.preventDefault();
+    const dataset = target.dataset;
+    const idx = dataset.rlIdx;
+    const resourceList = duplicate(this.actor.system.tweak.resourceList);
+    resourceList.splice(idx, 1);
+    await this.actor.update({ "system.tweak.resourceList": resourceList });
+  }
+
+  async _onResourceChange(event) {
+    event.preventDefault();
+    const value = event.target?.value;
+    const resourceType = $(event.currentTarget).data("rlType");
+    const idx = $(event.currentTarget).parents(".item").data("rlIdx");
+    const resourceList = duplicate(this.actor.system.tweak.resourceList);
+    resourceList[idx][resourceType] = value;
+    await this.actor.update({ "system.tweak.resourceList": resourceList });
   }
 }

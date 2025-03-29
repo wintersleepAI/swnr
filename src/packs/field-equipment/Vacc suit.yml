@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988816
-  modifiedTime: 1739238988816
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 5gb8ha6te0br5sdv
+_id: nxcd0n4r8n57q5bl
 system:
-  description: 'Vacc skin: A more advanced TL5 version of the vacc suit, this skin-tight suit can be worn as a readied item in conjunction with armor, though it grants no Armor Class bonus itself. It requires no oxygen tank, automatically cracking and recycling the wearer’s respiration, and can even recycle the wearer’s bodily waste into drinkable water if necessary. Vacc skins apply no penalty to hit rolls or skill checks for wearers. It suffers tears in the same way as a normal vacc suit, and requires a type A power cell for each 24 hours of operation.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 2
   cost: 100
-  tl: 4
+  description: 'Vacc skin: A more advanced TL5 version of the vacc suit, this skin-tight suit can be worn as a readied item in conjunction with armor, though it grants no Armor Class bonus itself. It requires no oxygen tank, automatically cracking and recycling the wearer’s respiration, and can even recycle the wearer’s bodily waste into drinkable water if necessary. Vacc skins apply no penalty to hit rolls or skill checks for wearers. It suffers tears in the same way as a normal vacc suit, and requires a type A power cell for each 24 hours of operation.'
+  encumbrance: 2
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!5gb8ha6te0br5sdv'
+_key: '!items!nxcd0n4r8n57q5bl'

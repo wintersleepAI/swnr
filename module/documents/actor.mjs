@@ -49,6 +49,40 @@ export class SWNActor extends Actor {
   * @param {ItemData} itemData  The source item data.
   * @returns {{img: string}}    Candidate item image.
   */
+  rollInitiative(options = {}) {
+    // For starship actors, use the pilot's initiative.
+    if (this.type === "ship") {
+      const pilotId = this.system.roles.bridge;
+      if (pilotId && pilotId !== "") {
+        const pilot = game.actors?.get(pilotId);
+        if (pilot && pilot.type === "character") {
+          const intMod = pilot.system.stats.int.mod;
+          const dexMod = pilot.system.stats.dex.mod;
+          const mod = intMod >= dexMod ? intMod : dexMod;
+          let tweakMod = pilot.system.tweak?.initiative.mod || '';
+          if (tweakMod !== '') {
+            tweakMod = ` + ${tweakMod}`;
+          }
+          // Use pilot's advInit flag if set.
+          const adv = pilot.system?.tweak?.advInit || false;
+          const formula = adv ? `2d8kh1 + ${mod}` : `1d8 + ${mod}${tweakMod}`;
+          return new Roll(formula, pilot.getRollData());
+        }
+      }
+    }
+  
+    // Regular initiative roll.
+    const adv = this.system?.tweak?.advInit || false;
+    let tweakMod = this.system.tweak?.initiative?.mod || '';
+    if (tweakMod !== '') {
+      tweakMod = ` + ${tweakMod}`;
+    }
+    const formula = adv
+      ? `2d8kh1 + @stats.dex.mod ${tweakMod}`
+      : `1d8 + @stats.dex.mod ${tweakMod}`;
+    return new Roll(formula, this.getRollData());
+  }
+  
   static getDefaultArtwork(itemData) {
     let itemType = itemData.type;
     if (itemType in CONFIG.SWN.defaultImg) {

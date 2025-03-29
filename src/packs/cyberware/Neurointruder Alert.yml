@@ -9,21 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988780
-  modifiedTime: 1739238988780
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: yv895uuwiwl7gt1j
+_id: rpj3rtaf41obglls
 system:
-  description: While somewhat primitive by pretech standards, this TL5 cybernetic implant allows the wearer to gain a +3 bonus on all saving throws to resist telepathic intrusion. Even if such a save is failed, the user will be aware that they are under telepathic assault, though some forms of mental control may not allow them to say as much until after the influence is ended. The warning does not indicate the source of the influence.
-  favorite: false
-  tl: 5
   cost: 50000
-  strain: 1
+  description: While somewhat primitive by pretech standards, this TL5 cybernetic implant allows the wearer to gain a +3 bonus on all saving throws to resist telepathic intrusion. Even if such a save is failed, the user will be aware that they are under telepathic assault, though some forms of mental control may not allow them to say as much until after the influence is ended. The warning does not indicate the source of the influence.
   disabled: false
   effect: Grants +3 to save vs. telepathy alerts of intrusion
-  type: none
-  concealment: sight
-  complication: ''
+  strain: 1
+  tl: 5
 effects: []
-_key: '!items!yv895uuwiwl7gt1j'
+_key: '!items!rpj3rtaf41obglls'

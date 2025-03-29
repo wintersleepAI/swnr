@@ -9,25 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988675
-  modifiedTime: 1739238988675
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: bpy6h04wz1ewnz62
+_id: bd57qul558prg71o
 system:
-  description: This food brick is unappetizing but contains the nutrition necessary for a day of heavy activity. Water can be included for an extra point of Encumbrance per day.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 2
   cost: 20
-  location: stowed
-  quality: stock
+  description: This food brick is unappetizing but contains the nutrition necessary for a day of heavy activity. Water can be included for an extra point of Encumbrance per day.
+  encumbrance: 2
   noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!bpy6h04wz1ewnz62'
+_key: '!items!bd57qul558prg71o'

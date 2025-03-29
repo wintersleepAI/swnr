@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988877
-  modifiedTime: 1739238988877
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 2lna52hpzl8sez1r
+_id: x4rvq0uqsyl9wxci
 system:
-  description: 'Reverie (Heal-1): This very dangerous combat drug completely subdues the subject’s fear centers and adrenaline production, leaving them perfectly calm and relaxed even in the midst of mortal danger. Their reaction speed is much slower as a consequence, and they may act only on even-numbered combat rounds; so on the second, fourth, and sixth rounds and so forth. Any damage they suffer is doubled as well due to their lack of vigilance. Their perfect calm allows them to shoot as if on the target range, however, and they can make Dex/Shoot skill checks to hit a target instead of hit rolls; the difficulty is 7 at point blank, 9 at normal ranges, and 11 at long ranges for the weapon. The target’s Armor Class is ignored. Melee attacks made under Reverie always hit. Reverie lasts for ten minutes and adds 2 System Strain to the target.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 0
   cost: 100
-  tl: 4
+  description: 'Reverie (Heal-1): This very dangerous combat drug completely subdues the subject’s fear centers and adrenaline production, leaving them perfectly calm and relaxed even in the midst of mortal danger. Their reaction speed is much slower as a consequence, and they may act only on even-numbered combat rounds; so on the second, fourth, and sixth rounds and so forth. Any damage they suffer is doubled as well due to their lack of vigilance. Their perfect calm allows them to shoot as if on the target range, however, and they can make Dex/Shoot skill checks to hit a target instead of hit rolls; the difficulty is 7 at point blank, 9 at normal ranges, and 11 at long ranges for the weapon. The target’s Armor Class is ignored. Melee attacks made under Reverie always hit. Reverie lasts for ten minutes and adds 2 System Strain to the target.'
+  encumbrance: 0
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!2lna52hpzl8sez1r'
+_key: '!items!x4rvq0uqsyl9wxci'

@@ -1,0 +1,175 @@
+_id: 1NHOPyyNc33qLePs
+name: MonShape-BodyParts
+img: icons/svg/d20-grey.svg
+results:
+  - _id: vDvzlQWocdWBOO6V
+    type: text
+    text: <b>Mammalian</b>
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    documentId: null
+    _key: '!tables.results!1NHOPyyNc33qLePs.vDvzlQWocdWBOO6V'
+  - _id: BAZ4RqO8nriTcfGV
+    type: pack
+    text: MonShape-Mammal
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    documentCollection: wwn.gm-subtables
+    documentId: nv1kNJWOqogGc3xF
+    _key: '!tables.results!1NHOPyyNc33qLePs.BAZ4RqO8nriTcfGV'
+  - _id: rZ1PCtUrwDvj0EX7
+    type: text
+    text: <b>Insectile</b>
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    documentId: null
+    _key: '!tables.results!1NHOPyyNc33qLePs.rZ1PCtUrwDvj0EX7'
+  - _id: IrJKeaxt55zmGRAx
+    type: pack
+    text: MonShape-Insectile
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    flags: {}
+    documentCollection: wwn.gm-subtables
+    documentId: LnYRxx97aMvxhsZC
+    _key: '!tables.results!1NHOPyyNc33qLePs.IrJKeaxt55zmGRAx'
+  - _id: IUpx42yufPLiZdIx
+    type: text
+    text: <b>Reptilian</b>
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    documentId: null
+    _key: '!tables.results!1NHOPyyNc33qLePs.IUpx42yufPLiZdIx'
+  - _id: R0Aa22SustycoV9J
+    type: pack
+    text: MonShape-Reptilian
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    flags: {}
+    documentCollection: wwn.gm-subtables
+    documentId: JaTMsCK45ghMQeQD
+    _key: '!tables.results!1NHOPyyNc33qLePs.R0Aa22SustycoV9J'
+  - _id: 3ssFfOzQ9OPN2bCW
+    type: text
+    text: <b>Avian</b>
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    documentId: null
+    _key: '!tables.results!1NHOPyyNc33qLePs.3ssFfOzQ9OPN2bCW'
+  - _id: oljEw0Qe6lhlajFT
+    type: pack
+    text: MonShape-Avian
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    flags: {}
+    documentCollection: wwn.gm-subtables
+    documentId: 8B2Lok6AUi0WKhtJ
+    _key: '!tables.results!1NHOPyyNc33qLePs.oljEw0Qe6lhlajFT'
+  - _id: pYahjBheBDtWBhSS
+    type: text
+    text: <b>Piscene</b>
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    documentId: null
+    _key: '!tables.results!1NHOPyyNc33qLePs.pYahjBheBDtWBhSS'
+  - _id: o2X5qBANjviXPu8D
+    type: pack
+    text: MonShape-Piscene
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    flags: {}
+    documentCollection: wwn.gm-subtables
+    documentId: MB3jM9F1dqlowjjb
+    _key: '!tables.results!1NHOPyyNc33qLePs.o2X5qBANjviXPu8D'
+  - _id: WAZeyn9Ne01A0Ecn
+    type: text
+    text: <b>Exotic</b>
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    documentId: null
+    _key: '!tables.results!1NHOPyyNc33qLePs.WAZeyn9Ne01A0Ecn'
+  - _id: 2xqVjMC9n7t412Et
+    type: pack
+    text: MonShape-Exotic
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    flags: {}
+    documentCollection: wwn.gm-subtables
+    documentId: i6YKl9iApC9wEPce
+    _key: '!tables.results!1NHOPyyNc33qLePs.2xqVjMC9n7t412Et'
+formula: 1d6
+replacement: true
+displayRoll: true
+folder: null
+sort: 300000
+flags: {}
+ownership:
+  default: 0
+  mgBwP0sTLP1VFg1m: 3
+description: ''
+_stats:
+  systemId: wwn
+  systemVersion: 1.1.4
+  coreVersion: '12.324'
+  createdTime: null
+  modifiedTime: 1690569840132
+  lastModifiedBy: VPYTJCONjTybUwoI
+  compendiumSource: null
+  duplicateSource: null
+_key: '!tables!1NHOPyyNc33qLePs'
+

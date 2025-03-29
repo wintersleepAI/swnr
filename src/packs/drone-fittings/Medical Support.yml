@@ -9,11 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988792
-  modifiedTime: 1739238988792
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: spl84m16dzyaam6r
-system: {}
+_id: wr287ait71dejg5b
+system:
+  broken: false
+  cost: 2000
+  costMultiplier: true
+  description: The drone can be loaded with up to a dozen units of medication, whether stim doses, lazarus patches, or less benevolent substances. It can launch a medication through a remote injector at a target within ten meters in lieu of a weapon attack. Immobile or willing targets are hit automatically, while hostiles require a normal hit roll. The drone is treated as having Heal-0 skill or the active pilot’s Heal skill, whichever is higher.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  tl: 4
+  type: drone
 effects: []
-_key: '!items!spl84m16dzyaam6r'
+_key: '!items!wr287ait71dejg5b'

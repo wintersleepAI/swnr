@@ -9,11 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988984
-  modifiedTime: 1739238988984
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: w2158qjyytf7kkqy
-system: {}
+_id: 8ncnbzasqebhl34n
+system:
+  broken: false
+  cost: 25000
+  costMultiplier: true
+  description: This fitting includes the benefits of the Atmospheric Configuration fitting, as well as allowing the ship to operate while immersed in a liquid medium. Submerged ships cannot be detected with conventional planetary traffic sensors and require military sonar and naval sensors to fix their position, resources often unavailable on less developed worlds. So long as the ship stays away from military naval craft and bases, is is almost impossible to track while submerged. Only fighter and frigate hull classes can mount this fitting.
+  effect: Can land and can operate under water
+  mass: 1
+  massMultiplier: true
+  minClass: fighter
+  power: 1
+  powerMultiplier: false
 effects: []
-_key: '!items!w2158qjyytf7kkqy'
+_key: '!items!8ncnbzasqebhl34n'

@@ -9,20 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988710
-  modifiedTime: 1739238988710
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 2r5ewkfth28z7gps
+_id: 4m96x4njjepvf0cx
 system:
-  description: On a successful opposed Int/Program skill check against the target, render a Demon or avatar incapable of moving out of a node or using the Alert the Network or Send Message actions while the program is running. Other cyberspace actions can be taken normally. Human hackers are also physically paralyzed while the program runs, incapable of moving in meatspace until the connection is cut or the program ends.
-  favorite: false
-  cost: 2000
-  type: verb
   accessCost: 1
-  target: Avatar
+  cost: 2000
+  description: On a successful opposed Int/Program skill check against the target, render a Demon or avatar incapable of moving out of a node or using the Alert the Network or Send Message actions while the program is running. Other cyberspace actions can be taken normally. Human hackers are also physically paralyzed while the program runs, incapable of moving in meatspace until the connection is cut or the program ends.
   selfTerminating: false
-  useAffects: Paralyze an avatar's owner via network
   skillCheckMod: '-1'
+  target: Avatar
+  type: verb
+  useAffects: Paralyze an avatar's owner via network
 effects: []
-_key: '!items!2r5ewkfth28z7gps'
+_key: '!items!4m96x4njjepvf0cx'

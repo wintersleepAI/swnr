@@ -1,0 +1,119 @@
+folder: soZ5iBeerOWF2rfk
+name: 'Defense: What kind of patron put up the job?'
+_id: 495s9ojHPGgjShx1
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: 0
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: fciZN0JMSRkVMg3R
+    text: A fixer trying to clean up a messy job
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!495s9ojHPGgjShx1.fciZN0JMSRkVMg3R'
+  - type: 0
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: gPLFPjGjNAUlwxyI
+    text: A loved one who’s worried about things
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!495s9ojHPGgjShx1.gPLFPjGjNAUlwxyI'
+  - type: 0
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: Ih3pMczwBWWvPuP6
+    text: A megacorp manager buying mercs
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!495s9ojHPGgjShx1.Ih3pMczwBWWvPuP6'
+  - type: 0
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: KQ1ccE77mHQwvIXU
+    text: A minion who had the job foisted on them
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!495s9ojHPGgjShx1.KQ1ccE77mHQwvIXU'
+  - type: 0
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: 66jshDOSFRMhI3wc
+    text: A gang leader with numerous enemies
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!495s9ojHPGgjShx1.66jshDOSFRMhI3wc'
+  - type: 0
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: EJ5hv4BWvtek49KO
+    text: A harried community elder or leader
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!495s9ojHPGgjShx1.EJ5hv4BWvtek49KO'
+  - type: 0
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: false
+    _id: 06EmJ5V6uIAM6pT6
+    text: The person targeted or a thing’s caretaker
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!495s9ojHPGgjShx1.06EmJ5V6uIAM6pT6'
+  - type: 0
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: false
+    _id: YU1cnCRNUHSXJv78
+    text: A business owner foreseeing trouble
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!495s9ojHPGgjShx1.YU1cnCRNUHSXJv78'
+replacement: true
+displayRoll: true
+flags: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '11.315'
+  createdTime: 1703891876808
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+formula: 1d8
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!495s9ojHPGgjShx1'
+

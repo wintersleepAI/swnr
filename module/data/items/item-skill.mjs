@@ -20,12 +20,7 @@ export default class SWNSkill extends SWNItemBase {
 
     schema.defaultStat = SWNShared.stats("ask", false, true);
 
-    schema.pool = SWNShared.stringChoices("2D6", {
-      "ask": "swnr.sheet.ask",
-      "2D6": "2D6",
-      "3D6": "3D6",
-      "4D6": "4D6"
-    });
+    schema.pool = SWNShared.stringChoices("2d6", CONFIG.SWN.pool);
 
     // Can possibly remove this field
     schema.source = new fields.StringField({
@@ -106,7 +101,7 @@ export default class SWNSkill extends SWNItemBase {
           "Quick roll set, but dice or stat is set to ask"
         );
       } else {
-        const stat = this.actor?.system["stats"][defaultStat] || {
+        const stat = actor?.system["stats"][defaultStat] || {
           mod: 0,
         };
         const statShortName = game.i18n.localize(
@@ -154,7 +149,7 @@ export default class SWNSkill extends SWNItemBase {
         ui.notifications?.error("Dice must be set and not ask");
         return;
       }
-      const stat = this.actor?.system["stats"][statShortNameForm] || {
+      const stat = actor?.system["stats"][statShortNameForm] || {
         mod: 0,
       };
       const modifier = button.form.elements.modifier.value;

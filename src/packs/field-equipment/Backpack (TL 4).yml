@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988799
-  modifiedTime: 1739238988799
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 1f5btqk05dk33fkw
+_id: 8extsj1qlasrgkgy
 system:
-  description: 'Backpack (TL 4): TL4 versions of this item are effectively without encumbrance, albeit they cost 50 credits. A worn backpack counts as a readied item, though objects stowed inside it still require the usual round to dig free. Characters without backpacks or similar carrying devices might have difficulty justifying the hauling of large amounts of gear.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 0
   cost: 50
-  tl: 4
+  description: 'Backpack (TL 4): TL4 versions of this item are effectively without encumbrance, albeit they cost 50 credits. A worn backpack counts as a readied item, though objects stowed inside it still require the usual round to dig free. Characters without backpacks or similar carrying devices might have difficulty justifying the hauling of large amounts of gear.'
+  encumbrance: 0
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!1f5btqk05dk33fkw'
+_key: '!items!8extsj1qlasrgkgy'

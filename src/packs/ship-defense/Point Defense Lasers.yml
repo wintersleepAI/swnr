@@ -9,11 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988979
-  modifiedTime: 1739238988979
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: te4921yhusffpvf0
-system: {}
+_id: s0be2oiammr8itiy
+system:
+  broken: false
+  cost: 10000
+  costMultiplier: true
+  description: Too small to damage ships, these point defence lasers can detonate or melt incoming munitions, improving the ships defences against torpedoes, fractal impact charges, and other ammunition-based weapons.
+  effect: +2 AC versus weapons that use ammo
+  mass: 2
+  massMultiplier: true
+  minClass: frigate
+  power: 3
+  powerMultiplier: false
 effects: []
-_key: '!items!te4921yhusffpvf0'
+_key: '!items!s0be2oiammr8itiy'

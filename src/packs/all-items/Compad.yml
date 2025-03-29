@@ -8,27 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988335
-  modifiedTime: 1739238988335
-  lastModifiedBy: systembuilder9000
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: q965gbqf5plleizt
+_id: vte0nb5zs4aubp6x
 system:
-  description: 'Compad: One of a host of different hand-held portable communications devices. Most TL4 worlds have global comm coverage, but primitive worlds render these devices useless without a nearby comm server to provide connectivity.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 0
   cost: 100
-  tl: 4
+  description: 'Compad: One of a host of different hand-held portable communications devices. Most TL4 worlds have global comm coverage, but primitive worlds render these devices useless without a nearby comm server to provide connectivity.'
+  encumbrance: 0
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!q965gbqf5plleizt'
+_key: '!items!vte0nb5zs4aubp6x'
