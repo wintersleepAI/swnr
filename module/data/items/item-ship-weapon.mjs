@@ -205,6 +205,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
     else {
       ui.notifications?.error("Ship weapon roll called on non-ship/drone/mech/vehicle actor");
     }
+
   }
 
   async rollAttack(

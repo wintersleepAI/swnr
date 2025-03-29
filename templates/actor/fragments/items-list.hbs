@@ -73,13 +73,7 @@
               data-item-id="{{item.id}}"
               class="location-selector"
             >
-              {{#select item.system.location}}
-              <option value="readied">
-                {{localize 'swnr.item.locationReadied'}}
-              </option>
-              <option value="stowed">{{localize 'swnr.item.locationStowed'}}</option>
-              <option value="other">{{localize 'swnr.item.locationOther'}}</option>
-              {{/select}}
+              {{selectOptions ../config/itemLocations selected=system.location localize=true}}
             </select>
           </div>
           <div class='item-formula item-prop'>
