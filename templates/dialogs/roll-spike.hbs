@@ -3,12 +3,8 @@
     <div class="grid grid-cols-4 gap-4">
       <div class="flex flex-col">
         <label for="pilotId">{{localize 'swnr.sheet.ship.station.bridge'}}:</label>
-        <select name="pilotId">
-          {{#select pilotId}}
-          {{#each crewArray }}
-          <option value="{{this.id}}">{{this.name}}</option>
-          {{/each}}
-          {{/select}}
+        <select name="pilotId" class="">
+          {{selectOptions crewArray selected=pilotId labelAttr="name" valueAttr="id"}}
         </select>
       </div>
 
@@ -38,11 +34,7 @@
         {{! stat}}
         <label for="stat">{{localize 'swnr.sheet.stats'}}: </label>
         <select name="stat">
-          {{#select defaultStat}}
-          {{#each pilot.system.stats as |box name |}}
-          <option value="{{name}}">{{localize (concat "swnr.stat.long." name)}}</option>
-          {{/each}}
-          {{/select}}
+          {{selectOptions (getStatChoices pilot.system.stats) selected=defaultStat}}
         </select>
       </div>
 

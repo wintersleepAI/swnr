@@ -10,11 +10,7 @@
         class=""
       {{/if}}
     >
-      {{#select (transformDicePool skill.system.pool)}}
-      <option value="2d6">2D6</option>
-      <option value="3d6kh2">3D6</option>
-      <option value="4d6kh2">4D6</option>
-      {{/select}}
+      {{selectOptions pool selected=(transformDicePool skill.system.pool) localize=true}}
     </select>
   </div>
   <div>
@@ -33,14 +29,7 @@
         class=""
       {{/if}}
     >
-      {{#select skill.system.defaultStat}}
-      {{#each stats as |box name |}}
-      <option value="{{name}}">
-        {{localize (concat "swnr.stat.long." name)}}: 
-        {{numberFormat box.mod decimals=0 sign=true}}
-      </option>
-      {{/each}}
-      {{/select}}
+      {{selectOptions (getStatChoices stats) selected=skill.system.defaultStat}}
     </select>
   </div>
   <div class="flex flexrow">

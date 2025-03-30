@@ -12,12 +12,7 @@
       <div class="flex flex-col">
         <label for="skill">{{localize 'swnr.sheet.skill'}}: </label>
         <select name="skill"  required > 
-          {{#select weapon.skill}}
-          <option value="">{{ localize 'swnr.weapon.noSetSkill'}}</option>
-          {{#each skills }}
-          <option value="{{this.id}}">{{this.name}} {{this.system.rank}}</option>
-          {{/each}}
-          {{/select}}
+          {{selectOptions (getSkillChoices skills true) selected=weapon.skill localize=true}}
         </select>
       </div>
       {{else}}

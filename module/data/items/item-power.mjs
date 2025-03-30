@@ -53,8 +53,7 @@ export default class SWNPower extends SWNItemBase {
     const chatData = {
       speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),
       content: chatContent,
-      roll: JSON.stringify(powerRoll),
-      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+      roll: JSON.stringify(powerRoll)
     };
     getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);

@@ -90,7 +90,6 @@ export default class SWNSkill extends SWNItemBase {
       return;
     }
     const skillName = item.name;
-
     // Set to not ask and just roll
     if (!shiftKey && this.remember && this.remember.use) {
       const modifier = this.remember.modifier;
@@ -129,8 +128,9 @@ export default class SWNSkill extends SWNItemBase {
       title: title,
       skillName: skillName,
       skill: item,
-      stats: actor.system.stats,
       modifier,
+      pool: CONFIG.SWN.pool,
+      stats: actor.system.stats
     };
 
     const content = await renderTemplate(template, dialogData);

@@ -205,6 +205,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
     else {
       ui.notifications?.error("Ship weapon roll called on non-ship/drone/mech/vehicle actor");
     }
+
   }
 
   async rollAttack(
@@ -308,15 +309,14 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
       // const formula = dice.map(d => (<any>d).formula).join(' + ');
       // const results = dice.reduce((a, b) => a.concat(b.results), [])
       const diceData = Roll.fromTerms([
-        PoolTerm.fromRolls([hitRoll, damageRoll]),
+        foundry.dice.terms.PoolTerm.fromRolls([hitRoll, damageRoll]),
       ]);
 
       const chatContent = await renderTemplate(template, dialogData);
       const chatData = {
         speaker: { alias: shooterName },
         roll: JSON.stringify(diceData),
-        content: chatContent,
-        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+        content: chatContent
       };
       getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
       getDocumentClass("ChatMessage").create(chatData);

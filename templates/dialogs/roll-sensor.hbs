@@ -4,12 +4,8 @@
 
     <div class="flex flex-col">
       <label for="commId">{{localize 'swnr.sheet.ship.station.comms'}}:</label>
-      <select name="commId">
-        {{#select commId}}
-        {{#each crewArray }}
-        <option value="{{this.id}}">{{this.name}}</option>
-        {{/each}}
-        {{/select}}
+      <select name="commId" class="">
+        {{selectOptions crewArray selected=commId labelAttr="name" valueAttr="id"}}
       </select>
     </div>
 
@@ -43,11 +39,7 @@
       {{! stat}}
       <label for="stat">{{localize 'swnr.sheet.stats'}}: </label>
       <select name="stat">
-        {{#select defaultStat}}
-        {{#each comm.system.stats as |box name |}}
-        <option value="{{name}}">{{localize (concat "swnr.stat.long." name)}}</option>
-        {{/each}}
-        {{/select}}
+        {{selectOptions (getStatChoices comm.system.stats) selected=defaultStat localize=true}}
       </select>
     </div>
 

@@ -702,7 +702,7 @@ export class SWNActorSheet extends SWNBaseSheet {
     }
     const formula = new Array(6).fill(dice).join("+");
     const roll = new Roll(formula);
-    await roll.roll({ async: true });
+    await roll.roll();
     const stats = {};
     ["str", "dex", "con", "int", "wis", "cha"].map((k, i) => {
       stats[k] = {
@@ -733,8 +733,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       {
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         roll: JSON.stringify(roll.toJSON()),
-        content: chatContent,
-        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+        content: chatContent
       }
     );
   }
