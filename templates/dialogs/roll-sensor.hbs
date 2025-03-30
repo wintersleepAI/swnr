@@ -39,7 +39,7 @@
       {{! stat}}
       <label for="stat">{{localize 'swnr.sheet.stats'}}: </label>
       <select name="stat">
-        {{selectOptions (getStatChoices comm.system.stats) selected=defaultStat}}
+        {{selectOptions (getStatChoices comm.system.stats) selected=defaultStat localize=true}}
       </select>
     </div>
 
