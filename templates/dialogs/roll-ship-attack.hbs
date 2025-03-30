@@ -9,8 +9,6 @@
         </select>
       </div>
 
-
-
       <div class="flex flex-col">
         <label for="skill">{{localize 'swnr.sheet.skill'}}: </label>
         <select name="skill">
@@ -38,9 +36,9 @@
       <div class="flex flex-col">
         {{! stat}}
         <label for="stat">{{localize 'swnr.sheet.stats'}}: </label>
-      <select name="stat">
-        {{selectOptions (getStatChoices gunner.system.stats) selected=defaultStat}}
-      </select>
+        <select name="stat">
+          {{selectOptions (getStatChoices gunner.system.stats) selected=defaultStat}}
+        </select>
       </div>
 
     </div>
