@@ -32,12 +32,6 @@ SWN.itemLocations = {
   other : 'swnr.item.locationOther',
 };
 
-SWN.itemLocationsOptions = {
-  readied: "swnr.item.locationReadied", 
-  stowed: "swnr.item.locationStowed", 
-  other : "swnr.item.locationOther",
-};
-
 SWN.itemQualities = {
   stock: 'swnr.item.quality.stock',
   juryRigged: 'swnr.item.quality.juryRigged',
