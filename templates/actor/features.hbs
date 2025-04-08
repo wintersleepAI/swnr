@@ -6,7 +6,7 @@
   data-tab='features'
 >
   <section class='sheet-cols'>
-    <aside class='sidebar' style="flex: 0 1 250px;margin-right:4px;">
+    <aside class='sidebar' style="flex: 0 1 280px;margin-right:4px;">
       {{! The grid classes are defined in scss/global/_grid.scss. To use,
           use both the "grid" and "grid-Ncol" class where "N" can be any number
           from 1 to 12 and will create that number of columns.  }}
@@ -22,6 +22,7 @@
           <div>{{localize 'swnr.sheet.boosts'}}</div>
           <div>{{localize 'swnr.sheet.bonus'}}</div>
           <div>{{localize 'swnr.sheet.modifier'}}</div>
+          <div data-tooltip="{{localize 'swnr.sheet.modModifierHint'}}">{{localize 'swnr.sheet.modModifier'}}</div>
         </li>
       </ol>
       <div class='stats flex flexcol'>
@@ -59,6 +60,14 @@
               data-label='{{localize (lookup @root.config.stats key)}}'
               style='font-weight: bold;'
             >{{numberFormat stat.mod decimals=0 sign=true}}</span>
+            <span class="" style="flex: 0 1;margin-inline: 2px;">+/-</span>
+            <input
+              type='text'
+              value='{{stat.modModifier}}'
+              name="system.stats.{{key}}.modModifier"
+              class="stat-score-small"
+              data-dtype='Number'
+            /> 
           </div>
         {{/each}}
       </div>
