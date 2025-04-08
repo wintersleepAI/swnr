@@ -454,7 +454,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
   static async _onResourceDelete(event, target) {
     event.preventDefault();
     event.stopPropagation();
-    const idx = target.dataset.rlIdx;
+    const idx = target.dataset.idx;
     const resourceList = duplicate(this.actor.system.cargoCarried);
     resourceList.splice(idx, 1);
     await this.actor.update({ "system.cargoCarried": resourceList });

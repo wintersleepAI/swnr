@@ -300,7 +300,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       );
       let skillMod = -2; 
       if (skill) {
-        skill?.rank < 0 ? -2 : skill.rank;
+        skillMod = skill?.system.rank < 0 ? -2 : skill.system.rank;
       } else {
         ui.notifications?.info("No skill found, using -2. Unsetting remember.");
         await this.parent.update({

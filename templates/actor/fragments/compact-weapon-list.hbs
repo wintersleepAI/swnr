@@ -2,7 +2,7 @@
   <li class='flex flexrow items-header'>
     <div class='item-name'>
       {{#if (eq actorType 'character')}}
-      {{localize 'swnr.item.locationReadied'}} 
+      {{localize 'swnr.item.locationReadied'}}
       {{/if}}
       {{localize 'swnr.sheet.tabs.weapons-short'}}
     </div>
@@ -24,6 +24,11 @@
     </div>
     <div class="item-dmg item-prop">{{item.system.damage}}</div>
     <div class='item-controls-small'>
+      {{#if (ne item.system.ammo.type "none")}}
+      <a class="item-control item-reload" data-action="reload" title="{{localize 'swnr.sheet.reload-item'}}">
+        <i class="fas fa-retweet"></i>
+      </a>
+      {{/if}}
       <a class='item-control item-edit' title='{{localize "DOCUMENT.Update" type=' Item'}}' data-action='viewDoc'>
         <i class='fas fa-edit'></i>
       </a>

@@ -21,6 +21,7 @@ export default class SWNCharacter extends SWNActorBase {
           bonus: SWNShared.requiredNumber(0),
           boost: SWNShared.requiredNumber(0),
           temp: SWNShared.requiredNumber(0,-18),
+          modModifier: SWNShared.nullableNumber(),
         });
         return obj;
       }, {})
@@ -88,7 +89,9 @@ export default class SWNCharacter extends SWNActorBase {
       this.stats[key].baseTotal = this.stats[key].base + this.stats[key].boost;
       this.stats[key].total = this.stats[key].baseTotal + this.stats[key].temp;
       this.stats[key].mod = calcMod(this.stats[key].total , this.stats[key].bonus) ;
-      
+      if (this.stats[key].modModifier) {
+        this.stats[key].mod += this.stats[key].modModifier;
+      }
       // Handle stat label localization.
       this.stats[key].label =
         game.i18n.localize(CONFIG.SWN.stats[key]) ?? key;
