@@ -15,7 +15,9 @@ export default class SWNSkill extends SWNItemBase {
       required: true,
       nullable: false,
       integer: true,
-      initial: -1
+      initial: -1,
+      min: -1,
+      max: CONFIG.SWN.maxSkillRank
     });
 
     schema.defaultStat = SWNShared.stats("ask", false, true);

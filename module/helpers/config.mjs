@@ -26,6 +26,8 @@ SWN.maxTL = 6;
 
 SWN.maxPowerLevel = 5;
 
+SWN.maxSkillRank = 4;
+
 SWN.itemLocations = {
   readied: 'swnr.item.locationReadied', 
   stowed: 'swnr.item.locationStowed', 
