@@ -171,7 +171,7 @@ export default class SWNSkill extends SWNItemBase {
               modifier: Number(modifier),
             },
             defaultStat: statShortNameForm,
-            pool: CONFIG.SWN.pool[dice],
+            pool: dice,
           },
         });
       }
