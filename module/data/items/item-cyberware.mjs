@@ -33,4 +33,21 @@ export default class SWNCyberware extends SWNItemBase {
   prepareDerivedData() {
     //this.strain.value = this.strain.base;
   }
+
+  static migrateData(data) {
+    // Migrate lowercase type to capitalized type
+    if (data.type != null && data.type.length > 0) {
+      if (data.type[0] === data.type[0].toLowerCase()) {
+        // Capitalize the first character and concatenate the rest of the string
+        data.type = data.type.charAt(0).toUpperCase() + data.type.slice(1);
+      }
+    }
+    if (data.concealment != null && data.concealment.length > 0) {
+      if (data.concealment[0] === data.concealment[0].toLowerCase()) {
+        // Capitalize the first character and concatenate the rest of the string
+        data.concealment = data.concealment.charAt(0).toUpperCase() + data.concealment.slice(1);
+      }
+    }
+    return data;
+  }
 }
