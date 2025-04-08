@@ -92,7 +92,7 @@ export default class SWNNPC extends SWNActorBase {
 
   async rollSave(_saveType) {
     const roll = new Roll("1d20");
-    await roll.roll({ async: true });
+    await roll.roll();
     const flavor = game.i18n.format(
       parseInt(roll.result) >= this.saves
         ? game.i18n.localize("swnr.npc.saving.success")
@@ -104,7 +104,7 @@ export default class SWNNPC extends SWNActorBase {
 
   async rollMorale() {
     const roll = new Roll("2d6");
-    await roll.roll({ async: true });
+    await roll.roll();
     const flavor =
       +(roll.terms[0]?.total ?? 0) > this.moralScore
         ? game.i18n.localize("swnr.npc.morale.failure")
@@ -172,7 +172,7 @@ export default class SWNNPC extends SWNActorBase {
     //For debug: console.log(`Updating health using ${hitDice} hit die. Roll ${dieRoll} `);
 
     const roll = new Roll(`${dieRoll}`);
-    await roll.roll({ async: true });
+    await roll.roll();
     if (roll != undefined && roll.total != undefined) {
       const newHealth = roll.total;
       await this.parent.update({

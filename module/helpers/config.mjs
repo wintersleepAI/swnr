@@ -30,7 +30,7 @@ SWN.itemLocations = {
   readied: 'swnr.item.locationReadied', 
   stowed: 'swnr.item.locationStowed', 
   other : 'swnr.item.locationOther',
-}
+};
 
 SWN.itemQualities = {
   stock: 'swnr.item.quality.stock',
@@ -53,14 +53,14 @@ SWN.programTypes = {
   subject: 'swnr.sheet.program.subject',
   dataFile: 'swnr.sheet.program.dataFile',
   running: 'swnr.sheet.program.running'
-}
+};
 
 SWN.saveTypes = {
   physical: 'swnr.sheet.saves.physical',
   mental: 'swnr.sheet.saves.mental',
   evasion: 'swnr.sheet.saves.evasion',
   luck: 'swnr.sheet.saves.luck',
-}
+};
 
 SWN.effortDurationTypes = {
   scene: 'swnr.effort.scene',
@@ -90,7 +90,7 @@ SWN.armorTypes = {
   combat: 'swnr.armor.type.combat',
   powered: 'swnr.armor.type.powered',
   primitive: 'swnr.armor.type.primitive',
-}
+};
 
 SWN.reactionTypes = {
   unknown: 'swnr.npc.reaction.unknown',
@@ -99,33 +99,33 @@ SWN.reactionTypes = {
   neutral: 'swnr.npc.reaction.neutral',
   positive: 'swnr.npc.reaction.positive',
   friendly: 'swnr.npc.reaction.friendly',
-}
+};
 
 SWN.vehicleTypes = {
   ship: 'TYPES.Actor.ship',
   vehicle: 'TYPES.Actor.vehicle',
   drone: 'TYPES.Actor.drone',
   mech: 'TYPES.Actor.mech',
-}
+};
 
 SWN.mechClasses = {
   suit: 'swnr.sheet.mech.mechClass.suit',
   light: 'swnr.sheet.mech.mechClass.light',
   heavy: 'swnr.sheet.mech.mechClass.heavy',
-}
+};
 
 SWN.shipClasses = {
   fighter: 'swnr.sheet.ship.shipClass.fighter',
   frigate: 'swnr.sheet.ship.shipClass.frigate',
   cruiser: 'swnr.sheet.ship.shipClass.cruiser',
   capital: 'swnr.sheet.ship.shipClass.capital',
-}
+};
 
 SWN.vehicleClasses = {
   s: 'swnr.sheet.vehicle.vehicle-class.s',
   m: 'swnr.sheet.vehicle.vehicle-class.m',
   l: 'swnr.sheet.vehicle.vehicle-class.l',
-}
+};
 
 SWN.allVehicleClasses = {
   ...SWN.mechClasses,
@@ -146,7 +146,7 @@ SWN.shipHullTypes = {
   carrier: 'swnr.sheet.ship.shipHullType.carrier',
   smallStation: 'swnr.sheet.ship.shipHullType.smallStation',
   largeStation: 'swnr.sheet.ship.shipHullType.largeStation'
-}
+};
 
 SWN.skills = {
   none: [],
@@ -232,20 +232,20 @@ SWN.assetCategories = {
   force: 'swnr.sheet.faction.assetCategories.force',
   cunning: 'swnr.sheet.faction.assetCategories.cunning',
   wealth: 'swnr.sheet.faction.assetCategories.wealth',
-}
+};
 
 SWN.pool = {
   "ask": "swnr.sheet.ask",
   "2d6": "2D6",
   "3d6kh2": "3D6",
   "4d6kh2": "4D6"
-}
+};
 
 SWN.featureTypes = {
   focus: 'swnr.featureTypes.focus',
   edge: 'swnr.featureTypes.edge',
   feature: 'swnr.featureTypes.feature'
-}
+};
 
 SWN.itemIconPath = "systems/swnr/assets/icons/game-icons.net/item-icons";
 SWN.actorIconPath = "systems/swnr/assets/icons";

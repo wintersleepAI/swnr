@@ -213,7 +213,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       modifier,
       effectiveSkillRank: rollData.effectiveSkillRank,
       diceTooltip,
-      ammoRatio: Math.clamped(
+      ammoRatio: Math.clamp(
         Math.floor((this.ammo.value * 20) / this.ammo.max),
         0,
         20
@@ -224,7 +224,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       traumaRollRender,
     };
     const rollMode = game.settings.get("core", "rollMode");
-    const diceData = Roll.fromTerms([PoolTerm.fromRolls(rollArray)]);
+    const diceData = Roll.fromTerms([foundry.dice.terms.PoolTerm.fromRolls(rollArray)]);
     if (
       this.ammo.type !== "none" &&
       this.ammo.type !== "infinite"
@@ -242,8 +242,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const chatData = {
       speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),
       roll: JSON.stringify(diceData),
-      content: chatContent,
-      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+      content: chatContent
     };
     getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
