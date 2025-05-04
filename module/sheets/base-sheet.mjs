@@ -231,7 +231,24 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    */
   static async _deleteDoc(event, target) {
     const doc = this._getEmbeddedDocument(target);
-    await doc.delete();
+    const confirm = target.dataset?.confirm ?? false;
+    
+    const executeDelete = async () => {
+      await doc.delete();
+    }
+
+    if (confirm) {
+      await executeDelete();
+      return;
+    }
+    
+    await foundry.applications.api.DialogV2.confirm({
+      window: { title: game.i18n.format("swnr.deleteTitle", { name: doc.name}) },
+      content: game.i18n.format("swnr.deleteContent", { name: doc.name, actor: doc.parent.name}),
+      yes: {
+        callback: executeDelete,
+      }
+    })
   }
 
   /**
