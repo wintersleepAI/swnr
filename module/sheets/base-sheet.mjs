@@ -231,13 +231,13 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    */
   static async _deleteDoc(event, target) {
     const doc = this._getEmbeddedDocument(target);
-    const confirm = target.dataset?.confirm ?? false;
+    const skipConfirmation = target.dataset?.skipconfirmation?.toLowerCase() === "true";
     
     const executeDelete = async () => {
       await doc.delete();
     }
 
-    if (confirm) {
+    if (skipConfirmation || event.shiftKey) {
       await executeDelete();
       return;
     }
