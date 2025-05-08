@@ -1062,6 +1062,84 @@
           "text": "This is a catch-all skill for professions not represented by other skills. Roll it to work at a particular profession, art, or trade"
         }
       },
+      "cwn": {
+        "administer": {
+          "name": "Administer",
+          "text": "Manage an organization, handle paperwork, analyze records, and keep an institution functioning on a daily basis. Roll it for bureaucratic expertise, organizational management, legal knowledge, dealing with government agencies, and understanding how institutions really work."
+        },
+        "connect": {
+          "name": "Connect",
+          "text": "Find people who can be helpful to your purposes and get them to cooperate with you. Roll it to make useful connections with others, find people you know, know where to get illicit goods and services, and be familiar with foreign cultures and languages. You can use it in place of Talk for persuading people you find via this skill."
+        },
+        "drive": {
+          "name": "Drive",
+          "text": "Drive vehicles, sail ships, fly planes, pilot drones, and perform maintenance and basic repairs on such devices. A PC’s background may incline them to a particular kind of driving, but with some practice this skill can be applied generally."
+        },
+        "exert": {
+          "name": "Exert",
+          "text": "Apply trained speed, strength, or stamina in some feat of physical exertion. Roll it to run, jump, lift, swim, climb, throw, and so forth. You can use it as a combat skill when throwing things, though it doesn’t qualify as a combat skill for other ends."
+        },
+        "fix": {
+          "name": "Fix",
+          "text": "Create and repair devices both simple and complex. How complex will depend on your character’s background; a lostworlder blacksmith is going to need some study time before he’s ready to fix that broken fusion reactor, though he can do it eventually. Roll it to fix things, build things, and identify what something is supposed to do."
+        },
+        "heal": {
+          "name": "Heal",
+          "text": "Employ medical and psychological treatment for the injured or disturbed. Roll it to cure diseases, stabilize the critically injured, treat psychological disorders, or diagnose illnesses."
+        },
+        "know": {
+          "name": "Know",
+          "text": "Know facts about academic or scientific fields. Roll it to understand planetary ecologies, remember relevant history, solve science mysteries, and know the basic facts about rare or esoteric topics."
+        },
+        "lead": {
+          "name": "Lead",
+          "text": "Convince others to also do whatever it is you’re trying to do. Talk might persuade them that following you is smart, but Lead can make them do it even when they think it’s a bad idea. Roll it to lead troops in combat, convince others to follow you, or maintain morale and discipline."
+        },
+        "notice": {
+          "name": "Notice",
+          "text": "Spot anomalies or interesting facts about your environment. Roll it for searching places, detecting ambushes, spotting things, and reading the emotional state of other people."
+        },
+        "perform": {
+          "name": "Perform",
+          "text": "Exhibit some performative skill. Roll it to dance, sing, orate, act, or otherwise put on a convincing or emotionally moving performance."
+        },
+        "program": {
+          "name": "Program",
+          "text": "Operating or hacking computing and communications hardware. Roll it to program or hack computers, control computer-operated hardware, operate communications tech, or decrypt things."
+        },
+        "punch": {
+          "name": "Punch",
+          "text": "Use it as a combat skill when fighting unarmed. If your PC means to make a habit of this rather than as a recourse of desperation, you should take the Unarmed Combatant focus described later."
+        },
+        "shoot": {
+          "name": "Shoot",
+          "text": "Use it as a combat skill when using ranged weaponry, whether hurled rocks, bows, laser pistols, combat rifles, or ship’s gunnery."
+        },
+        "sneak": {
+          "name": "Sneak",
+          "text": "Move without drawing notice. Roll it for stealth, disguise, infiltration, manual legerdemain, pickpocketing, and the defeat of security measures."
+        },
+        "stab": {
+          "name": "Stab",
+          "text": "Use it as a combat skill when wielding melee weapons, whether primitive or complex."
+        },
+        "survive": {
+          "name": "Survive",
+          "text": "Obtain the basics of food, water, and shelter in hostile environments, along with avoiding their natural perils. Roll it to handle animals, navigate difficult terrain, scrounge urban resources, make basic tools, and avoid wild beasts or gangs."
+        },
+        "talk": {
+          "name": "Talk",
+          "text": "Convince other people of the facts you want them to believe. What they do with that conviction may not be completely predictable. Roll it to persuade, charm, or deceive others in conversation."
+        },
+        "trade": {
+          "name": "Trade",
+          "text": "Find what you need on the market and sell what you have. Roll it to sell or buy things, figure out where to purchase hard-to-get or illicit goods, deal with customs agents, or run a business."
+        },
+        "work": {
+          "name": "Work",
+          "text": "This is a catch-all skill for professions not represented by other skills. Roll it to work at a particular profession, art, or trade"
+        }
+      },
       "spaceMagic": {
         "knowMagic": {
           "name": "Know Magic",
@@ -1289,6 +1367,7 @@
         "spaceMagic": "Space Magic",
         "classic": "Classic",
         "revised": "Revised",
+        "cwn": "CWN",
         "psionic": "Psionic"
       }
     },
