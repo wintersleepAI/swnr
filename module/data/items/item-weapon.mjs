@@ -315,7 +315,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       }
 
       if (actor?.type == "character") {
-        dmgBonus = this.skillBoostsDamage ? skill.rank : 0;
+        dmgBonus = this.skillBoostsDamage ? skill.system.rank : 0;
       }
       return this.rollAttack(
         dmgBonus,
