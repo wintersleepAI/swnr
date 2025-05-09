@@ -136,6 +136,15 @@ export default class SWNFaction extends foundry.abstract
     await this.parent.update({ "system.tags": newTags });
   }
   
+  getTag(index) {
+    if (index < 0 || index >= this.tags.length) {
+      ui.notifications?.error(game.i18n.format("swnr.sheet.faction.tagIndexInvalid", {index}));
+      return;
+    }
+    
+    return this.tags[index];
+  }
+  
   async addLog(log) {
     if (!log) {
       ui.notifications?.error(game.i18n.localize("swnr.sheet.faction.editLogDialog.noText"));

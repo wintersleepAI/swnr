@@ -330,7 +330,11 @@ export class SWNFactionSheet extends SWNBaseSheet {
       return;
     }
     
-    await this.actor.system.removeTag(tagIndex);
+    const removeTag = async () => await this.actor.system.removeTag(tagIndex);
+    
+    const tag = this.actor.system.getTag(tagIndex);
+    
+    await this._promptDelete(event, tag.name, this.actor.name, removeTag);
   }
   
   static async _onSelectTag(event, target){
