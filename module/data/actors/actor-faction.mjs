@@ -181,7 +181,7 @@ export default class SWNFaction extends foundry.abstract
     await this.parent.update({ "system.log": newTags });
   }
 
-  async removeAllLogs(index) {
+  async removeAllLogs() {
     await this.parent.update({ "system.log": [] });
   }
 }
