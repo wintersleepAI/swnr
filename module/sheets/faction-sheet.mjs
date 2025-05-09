@@ -424,8 +424,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       }
     })
   }
-
-  // TODO: Add confirm dialogs on all deletes
+  
   static async _onRemoveLog(event, target) {
     const logIndex = parseInt(target.dataset?.index);
 
@@ -433,12 +432,26 @@ export class SWNFactionSheet extends SWNBaseSheet {
       ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
       return;
     }
+    
+    const removeLog = async () => await this.actor.system.removeLog(logIndex);
 
-    await this.actor.system.removeLog(logIndex);
+    await this._promptDelete(
+        event, 
+        game.i18n.localize("swnr.sheet.faction.log"),
+        this.actor.name,
+        removeLog
+    );
   }
   
   static async _onRemoveAllLogs(event, target){
-    await this.actor.system.removeAllLogs();
+    const removeLogs = async () => this.actor.system.removeAllLogs();
+    
+    await this._promptDelete(
+        event, 
+        game.i18n.localize("swnr.sheet.faction.allLogs"),
+        this.actor.name,
+        removeLogs
+    )
   }
 
   /** Helper Functions */
