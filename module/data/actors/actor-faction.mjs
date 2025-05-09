@@ -172,7 +172,7 @@ export default class SWNFaction extends foundry.abstract
   }
 
   async removeLog(index) {
-    if (index < 0 || index >= this.tags.length) {
+    if (index < 0 || index >= this.log.length) {
       ui.notifications?.error(game.i18n.format("swnr.sheet.faction.logIndexInvalid", {index}));
       return;
     }
