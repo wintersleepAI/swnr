@@ -2,6 +2,17 @@
       <li class='flex flexrow items-header'>
         <div class='item-name item-name-long'>{{ localize 'swnr.npc.abilities'}}</div>
         <div class='item-controls-small'>
+            {{#if @root.editable}}
+              <a
+                class='item-control item-create'
+                title='Create Power'
+                data-action='createDoc'
+                data-document-class='Item'
+                data-type='power'
+              >
+                <i class='fas fa-plus'></i>
+              </a>
+            {{/if}}
         </div>
       </li>
       {{#each itemList as |item id|}}

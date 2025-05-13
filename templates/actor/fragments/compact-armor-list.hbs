@@ -10,6 +10,18 @@
       {{localize 'swnr.sheet.ac'}}
     </div>
     <div class="item-controls-small">
+      {{#if @root.editable}}
+        <a
+          class='item-control item-create'
+          title='Create Armor'
+          data-action='createDoc'
+          data-document-class='Item'
+          data-type='armor'
+          data-system.location='readied'
+        >
+          <i class='fas fa-plus'></i>
+        </a>
+      {{/if}}
     </div>
   </li>
   <li>
