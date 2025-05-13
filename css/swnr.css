@@ -416,6 +416,7 @@
   border: 1px solid var(--border-color);
   border-radius: 2px;
   padding: 4px;
+  padding-top: 0px;
   margin: 2px;
 }
 .swnr .sheet-body .thin-bar,
@@ -587,9 +588,6 @@
   font-size: 12px;
   text-align: center;
   margin: 0 2px;
-}
-.swnr .items-list .item-controls a.item-toggle-prop.on {
-  color: white;
 }
 .swnr .items-list .item-controls-small {
   display: flex;

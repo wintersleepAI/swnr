@@ -10,6 +10,18 @@
       {{localize 'swnr.weapon.damage'}}
     </div>
     <div class='item-controls-small'>
+      {{#if @root.editable}}
+        <a
+          class='item-control item-create'
+          title='Create Weapon'
+          data-action='createDoc'
+          data-document-class='Item'
+          data-type='weapon'
+          data-system.location='readied'
+        >
+          <i class='fas fa-plus'></i>
+        </a>
+      {{/if}}
     </div>
   </li>
   {{#each itemList as |item id|}}
