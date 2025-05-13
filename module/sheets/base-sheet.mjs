@@ -231,7 +231,43 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    */
   static async _deleteDoc(event, target) {
     const doc = this._getEmbeddedDocument(target);
-    await doc.delete();
+    const skipConfirmation = target.dataset?.skipconfirmation?.toLowerCase() === "true";
+    
+    const executeDelete = async () => {
+      await doc.delete();
+    }
+
+    if (skipConfirmation) {
+      await executeDelete();
+      return;
+    }
+    
+    await this._promptDelete(event, doc.name, doc.parent.name, executeDelete);
+  }
+
+  /**
+   * Displays a prompt to confirm deletion
+   * 
+   * @param {PointerEvent} event  The originating click event
+   * @param {String} name         The name of the item to delete
+   * @param {String} parentName   The name of the parent of the deleted item
+   * @param {Function} callback   The function to call on confirmed deletion
+   * @protected
+   */
+  async _promptDelete(event, name, parentName, callback) {
+    
+    if (event.shiftKey){
+      await callback();
+      return;
+    }
+    
+    await foundry.applications.api.DialogV2.confirm({
+      window: { title: game.i18n.format("swnr.deleteTitle", { name: name}) },
+      content: game.i18n.format("swnr.deleteContent", { name: name, actor: parentName}),
+      yes: {
+        callback: callback,
+      }
+    })
   }
 
   /**
