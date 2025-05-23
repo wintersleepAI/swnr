@@ -242,6 +242,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const chatData = {
       speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),
       roll: JSON.stringify(diceData),
+      rolls: rollArray, // Added for dice so nice trigger. 
       content: chatContent
     };
     getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);

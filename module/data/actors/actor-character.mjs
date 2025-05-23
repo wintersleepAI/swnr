@@ -349,6 +349,7 @@ export default class SWNCharacter extends SWNActorBase {
       const chatData = {
         speaker: ChatMessage.getSpeaker(),
         roll: JSON.stringify(roll),
+        rolls: [roll],
         content: chatContent
       };
       getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
