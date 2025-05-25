@@ -47,6 +47,8 @@ export default class SWNWeapon extends SWNBaseGearItem {
     });
     schema.isTwoHanded = new fields.BooleanField({initial: false});
     schema.isNonLethal = new fields.BooleanField({initial: false});
+    schema.isMelee = new fields.BooleanField({initial: false});
+
 
     return schema;
   }
@@ -134,7 +136,8 @@ export default class SWNWeapon extends SWNBaseGearItem {
       this.ammo.type == "none"
     ) {
       if (actor.type == "character" || actor.type == "npc") {
-        if (actor.system.meleeAb) {
+
+        if (item.system.isMelee && actor.system.meleeAb) {
           dieString =
             "@attackRollDie + @burstFire + @modifier + @actor.meleeAb + @weapon.ab + @stat + @effectiveSkillRank";
         }
