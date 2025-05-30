@@ -25,6 +25,7 @@ system:
   description: Knives, clubs, swords, and other simple melee weapons are available almost anywhere on the street. Particularly impoverished gangers sometimes fashion makeshift machetes and improvised shivs when better can’t be obtained. Such weapons are effectively free, but have a -1 penalty to hit and damage rolls due to their ungainly make. This is a two-handed weapon, making it impossible to have a Readied item in the user's off-hand
   encumbrance: 2
   isNonLethal: true
+  isMelee: true
   range:
     max: 0
     normal: 0
