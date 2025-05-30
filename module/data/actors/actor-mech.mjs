@@ -35,9 +35,9 @@ export default class SWNMech extends SWNVehicleBase {
     let shipHardpoint = this.hardpoints.max;
 
     let multiplier = 1;
-    if (mechClass == "light") {
+    if (this.mechClass == "light") {
       multiplier = 2;
-    } else if (mechClass == "heavy") {
+    } else if (this.mechClass == "heavy") {
       multiplier = 4;
     }
 
