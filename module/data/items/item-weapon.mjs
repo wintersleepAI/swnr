@@ -13,20 +13,20 @@ export default class SWNWeapon extends SWNBaseGearItem {
     schema.stat = SWNShared.stats("dex", false, true);
     schema.secondStat = SWNShared.stats(null, true, false);
     schema.skill = SWNShared.requiredString("ask");
-    schema.skillBoostsDamage = new fields.BooleanField({initial: false});
-    schema.skillBoostsShock = new fields.BooleanField({initial: false});
+    schema.skillBoostsDamage = new fields.BooleanField({ initial: false });
+    schema.skillBoostsShock = new fields.BooleanField({ initial: false });
     schema.shock = new fields.SchemaField({
       dmg: SWNShared.requiredNumber(0),
       ac: SWNShared.requiredNumber(10),
     });
     schema.ab = SWNShared.requiredNumber(0, -10);
     schema.ammo = new fields.SchemaField({
-      longReload: new fields.BooleanField({initial: false}),
-      suppress: new fields.BooleanField({initial: false}),
+      longReload: new fields.BooleanField({ initial: false }),
+      suppress: new fields.BooleanField({ initial: false }),
       type: SWNShared.stringChoices("ammo", CONFIG.SWN.ammoTypes),
       max: SWNShared.requiredNumber(10),
       value: SWNShared.requiredNumber(10),
-      burst: new fields.BooleanField({initial: false}),
+      burst: new fields.BooleanField({ initial: false }),
     });
     schema.range = new fields.SchemaField({
       normal: SWNShared.requiredNumber(1),
@@ -34,10 +34,10 @@ export default class SWNWeapon extends SWNBaseGearItem {
     });
     schema.damage = SWNShared.requiredString("1d6");
     schema.remember = new fields.SchemaField({
-      use: new fields.BooleanField({initial: false}),
-      burst: new fields.BooleanField({initial: false}),
+      use: new fields.BooleanField({ initial: false }),
+      burst: new fields.BooleanField({ initial: false }),
       modifier: SWNShared.requiredNumber(0),
-      isNonLethal: new fields.BooleanField({initial: false}),
+      isNonLethal: new fields.BooleanField({ initial: false }),
     });
     //schema.quantity = SWNShared.requiredNumber(1);
     schema.save = SWNShared.stringChoices(null, CONFIG.SWN.saveTypes, false);
@@ -45,9 +45,9 @@ export default class SWNWeapon extends SWNBaseGearItem {
       die: SWNShared.requiredString("1d6"),
       rating: SWNShared.nullableNumber(),
     });
-    schema.isTwoHanded = new fields.BooleanField({initial: false});
-    schema.isNonLethal = new fields.BooleanField({initial: false});
-    schema.isMelee = new fields.BooleanField({initial: false});
+    schema.isTwoHanded = new fields.BooleanField({ initial: false });
+    schema.isNonLethal = new fields.BooleanField({ initial: false });
+    schema.isMelee = new fields.BooleanField({ initial: false });
 
 
     return schema;
@@ -91,7 +91,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
   ) {
     let item = this.parent;
     const actor = item.actor;
-    
+
     if (!actor) {
       const message = `Called rollAttack on item without an actor.`;
       ui.notifications?.error(message);
@@ -127,25 +127,19 @@ export default class SWNWeapon extends SWNBaseGearItem {
       shockDmg: this.shock?.dmg > 0 ? this.shock.dmg : 0,
       attackRollDie,
     };
+    let hitExplainTip = "1d20 +burst +mod +CharAB +WpnAB +Stat +Skill";
+
     let dieString =
       "@attackRollDie + @burstFire + @modifier + @actor.ab + @weapon.ab + @stat + @effectiveSkillRank";
     const useA = game.settings.get("swnr", "useCWNArmor") ? true : false;
-    if (
-      useA &&
-      this.range.normal <= 1 &&
-      this.ammo.type == "none"
-    ) {
-      if (actor.type == "character" || actor.type == "npc") {
-
-        if (item.system.isMelee && actor.system.meleeAb) {
-          dieString =
-            "@attackRollDie + @burstFire + @modifier + @actor.meleeAb + @weapon.ab + @stat + @effectiveSkillRank";
-        }
-      }
+    if (useA && item.system.isMelee &&
+      (actor.type == "character" || actor.type == "npc")) {
+      dieString =
+        "@attackRollDie + @burstFire + @modifier + @actor.meleeAb + @weapon.ab + @stat + @effectiveSkillRank";
+      hitExplainTip = "1d20 +burst +mod +CharMeleeAB +WpnAB +Stat +Skill";
     }
     const hitRoll = new Roll(dieString, rollData);
     await hitRoll.roll();
-    const hitExplainTip = "1d20 +burst +mod +CharAB +WpnAB +Stat +Skill";
     rollData.hitRoll = +(hitRoll.dice[0].total?.toString() ?? 0);
     const damageRoll = new Roll(
       this.damage + " + @burstFire + @stat + @damageBonus",
@@ -197,7 +191,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
         shock_content = `Shock Damage  AC ${this.shock.ac}`;
         const _shockRoll = new Roll(
           " @shockDmg + @stat " +
-            (this.skillBoostsShock ? ` + ${damageBonus}` : ""),
+          (this.skillBoostsShock ? ` + ${damageBonus}` : ""),
           rollData
         );
         await _shockRoll.roll();
@@ -233,9 +227,9 @@ export default class SWNWeapon extends SWNBaseGearItem {
       this.ammo.type !== "infinite"
     ) {
       const newAmmoTotal = this.ammo.value - 1 - burstFire;
-      await this.parent.update({ 
+      await this.parent.update({
         system: {
-          "ammo.value": newAmmoTotal 
+          "ammo.value": newAmmoTotal
         }
       });
       if (newAmmoTotal === 0)
@@ -256,7 +250,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
   async roll(shiftKey = false) {
     let item = this.parent;
     const actor = item.actor;
-    
+
     if (!actor) {
       const message = `Called weapon.roll on item without an actor.`;
       ui.notifications?.error(message);
@@ -286,8 +280,8 @@ export default class SWNWeapon extends SWNBaseGearItem {
       statName != "ask" &&
       secStatName != null &&
       secStatName != "none" &&
-        actor.system["stats"]?.[statName]?.mod <
-        actor.system["stats"]?.[secStatName].mod
+      actor.system["stats"]?.[statName]?.mod <
+      actor.system["stats"]?.[secStatName].mod
     ) {
       statName = secStatName;
     }
@@ -302,7 +296,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
         "Item",
         this.skill
       );
-      let skillMod = -2; 
+      let skillMod = -2;
       if (skill) {
         skillMod = skill?.system.rank < 0 ? -2 : skill.system.rank;
       } else {
@@ -374,7 +368,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
         secStatName != null &&
         secStatName != "none" &&
         actor.system.stats[statName].mod <
-          actor.system.stats[secStatName].mod
+        actor.system.stats[secStatName].mod
       ) {
         statName = secStatName;
       }
