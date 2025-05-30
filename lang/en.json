@@ -147,6 +147,9 @@
           "ab": {
             "label": "Attack Bonus"
           },
+          "meleeAb": {
+            "label": "Melee Attack Bonus"
+          },
           "attributes": {
             "level.value": {
               "label": "Level"
@@ -701,6 +704,10 @@
           },
           "isNonLethal": {
             "label": "Non-Lethal"
+          },
+          "isMelee": {
+            "label": "Melee",
+            "hint": "Used for CWN armor and melee weapons"
           }, 
           "remember" : {
             "use": {

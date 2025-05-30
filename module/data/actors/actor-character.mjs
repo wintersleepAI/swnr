@@ -349,6 +349,7 @@ export default class SWNCharacter extends SWNActorBase {
       const chatData = {
         speaker: ChatMessage.getSpeaker(),
         roll: JSON.stringify(roll),
+        rolls: [roll],
         content: chatContent
       };
       getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
@@ -416,7 +417,8 @@ export default class SWNCharacter extends SWNActorBase {
         getDocumentClass("ChatMessage").create({
           speaker: ChatMessage.getSpeaker({ actor: this.parent }),
           flavor: msg,
-          roll: JSON.stringify(roll)
+          roll: JSON.stringify(roll),
+          rolls: [roll],
         });
       } else {
         console.log("Something went wrong with roll ", roll);

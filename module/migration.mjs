@@ -61,6 +61,16 @@ async function migrateFeature(item) {
   }
 }
 
+async function versionNote(version, note) {
+  const msg = `<b>Version ${version} note:</b> ${note}`;
+  console.log(msg);
+  ChatMessage.create({
+    user: game.user.id,
+    speaker: { alias: "wintersleepAI" },
+    content: msg,
+  });
+  ui.notifications?.info(msg);
+}
 /**
  * Object containing migration functions keyed by version.
  * Each migration function should perform all necessary updates for that version.
@@ -102,6 +112,10 @@ const migrations = {
       });
       ui.notifications?.error(msg);
     }
+  },
+  "2.0.8": async () => {
+    console.log('Running migration for 2.0.8');
+    versionNote("2.0.8", "This migration adds a 'melee' flag to weapons which is used for determining what attack bonus to use with CWN Armor setting enabled. <b>You will need to set this flag manually for existing items.</b>");
   },
   "2.1.0": async () => { 
     // Placeholders for future migrations

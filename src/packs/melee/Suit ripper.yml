@@ -26,6 +26,7 @@ system:
   description: Suit rippers are rods with fractal cutting surfaces designed to cripple vacc suit auto-repair routines. Every hit with a suit ripper counts as a suit tear on a vacc suit-wearing enemy. Unsurprisingly, these weapons are strictly illegal in space environments.
   encumbrance: 1
   location: other
+  isMelee: true
   quality: stock
   range:
     max: 0

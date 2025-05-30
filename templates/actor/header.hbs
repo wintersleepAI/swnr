@@ -179,7 +179,10 @@
       </div>
 
       {{#if (eq actor.type 'character')}}
-      {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget}}
+        {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget}}
+        {{#if (eq gameSettings.useCWNArmor true)}}
+        {{formGroup systemFields.meleeAb value=system.meleeAb localize=true widget=headerWidget}}
+        {{/if}}
       {{else}}
         {{#if (eq gameSettings.useCWNArmor true)}}
         <div class="resource flex-group-center"><!-- AC -->

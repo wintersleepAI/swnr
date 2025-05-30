@@ -26,6 +26,7 @@ system:
   description: Stun batons are common law enforcement tools. The damage they do can drop a target to zero hit points, but will not kill them, the victim awakening in ten minutes with one hit point. Stun batons trickle-charge from normal movement and will not run out of electrical energy under normal use conditions.
   encumbrance: 1
   location: other
+  isMelee: true
   quality: stock
   range:
     max: 0
