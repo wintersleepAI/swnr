@@ -246,22 +246,29 @@
 }
 
 .chat-message .card-buttons {
-  width: 60%;
-  padding: 4px;
-  margin: auto;
-}
-
-.chat-message .card-show-buttons {
-  width: 60%;
-  padding: 4px;
-  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.25rem;
 }
 
 .chat-message .chat-button-small {
-  width: 22px;
-  height: 22px;
+  height: 20px;
+  width: 20px;
+  padding: 0;
   font-size: 10px;
-  line-height: 1px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-message .dmgBtn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: 4px;
 }
 
 /* Styles limited to swnr sheets */
