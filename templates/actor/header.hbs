@@ -15,13 +15,13 @@
     >
       <i class="fa-solid fa-bed" style="font-size: 20px;"></i>
     </div>
-      <div class="portrait-button" 
-        title='{{localize 'swnr.sheet.scene'}}'
-        data-action='scene'
-        style="right:0; top:0"
-      >
-        <i class="fas fa-hourglass-end"></i>
-      </div>
+    <div class="portrait-button" 
+      title='{{localize 'swnr.sheet.scene'}}'
+      data-action='scene'
+      style="right:0; top:0"
+    >
+      <i class="fas fa-hourglass-end"></i>
+    </div>
     <div class="portrait-button" 
       title='{{localize 'swnr.sheet.hp'}}'
       data-action='hitDice'
@@ -81,6 +81,7 @@
     {{! The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
       from 1 to 12 and will create that number of columns.  }}
+    <div class='header-fields'>
     <div class='resources grid grid-5col'>
       
       <div class='document-name grid-span-2 flex flexrow'><!-- Name -->
@@ -248,6 +249,7 @@
         </svg> --}}
           {{!-- {{system.ac}} --}}
 
+    </div>
     </div>
   </div>
 </header>
