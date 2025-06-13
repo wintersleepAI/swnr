@@ -180,55 +180,6 @@
   grid-column-end: span 12;
 }
 
-.flex-group-center,
-.flex-group-left,
-.flex-group-right {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.flex-group-left {
-  justify-content: flex-start;
-  text-align: left;
-}
-
-.flex-group-right {
-  justify-content: flex-end;
-  text-align: right;
-}
-
-.flexshrink {
-  flex: 0;
-}
-
-.flexlarge {
-  flex: 2;
-}
-
-.flex-between {
-  justify-content: space-between;
-}
-
-.flex-evenly {
-  justify-content: space-evenly;
-}
-
-.align-left {
-  justify-content: flex-start;
-  text-align: left;
-}
-
-.align-right {
-  justify-content: flex-end;
-  text-align: right;
-}
-
-.align-center {
-  justify-content: center;
-  text-align: center;
-}
-
 .swnr {
   --background-portrait-image: url("../../../../ui/parchment-white.jpg");
   --portrait-icon-color: rgb(124,124,124);
@@ -403,46 +354,33 @@
 .swnr .sheet-tabs {
   flex: 0;
 }
-.swnr .sheet-body,
-.swnr .sheet-body .tab,
-.swnr .sheet-body .tab .editor {
+.swnr .sheet-body {
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
-.swnr .sheet-body .sheet-cols,
-.swnr .sheet-body .tab .sheet-cols,
-.swnr .sheet-body .tab .editor .sheet-cols {
+.swnr .sheet-body .tab {
+  height: auto;
+  overflow: visible;
+}
+.swnr .sheet-body .tab .editor {
+  height: auto;
+  overflow: visible;
+}
+.swnr .sheet-body .sheet-cols {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: flex-start;
 }
-.swnr .sheet-body .resource-group,
-.swnr .sheet-body .tab .resource-group,
-.swnr .sheet-body .tab .editor .resource-group {
+.swnr .sheet-body .resource-group {
   border: 1px solid var(--border-color);
   border-radius: 2px;
-  padding: 4px;
-  padding-top: 0px;
+  padding: 4px 4px 0 4px;
   margin: 2px;
 }
-.swnr .sheet-body .thin-bar,
-.swnr .sheet-body .tab .thin-bar,
-.swnr .sheet-body .tab .editor .thin-bar {
+.swnr .sheet-body .thin-bar {
   margin-top: -10px;
-  margin-bottom: 0px;
-}
-.swnr .tab.biography {
-  flex: 1;
-}
-.swnr .tab.biography .editor {
-  height: 100%;
-}
-.swnr .tox .tox-editor-container {
-  background: var(--swnr-c-white);
-}
-.swnr .tox .tox-edit-area {
-  padding: 0 8px;
+  margin-bottom: 0;
 }
 .swnr .check-group label,
 .swnr .form-group label,
@@ -462,6 +400,12 @@
   display: flex;
   flex-direction: column;
   align-items: inherit;
+}
+.swnr .editor-content {
+  position: static !important;
+  display: block;
+  min-height: 150px;
+  overflow-y: auto;
 }
 .swnr .resource-label {
   font-weight: bold;
