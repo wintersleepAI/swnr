@@ -6,68 +6,70 @@
   data-tab='features'
 >
   <section class='sheet-cols'>
-    <aside class='sidebar' style="flex: 0 1 280px;margin-right:4px;">
-      {{! The grid classes are defined in scss/global/_grid.scss. To use,
-          use both the "grid" and "grid-Ncol" class where "N" can be any number
-          from 1 to 12 and will create that number of columns.  }}
+    <aside class='sidebar' style="flex: 0 1 300px;margin-right:4px;">
       <ol class="items-list">
         <li class="flexrow items-header">
-          <div class"item-name">
-            {{localize 'swnr.sheet.stats'}}
+          <div class="stat-label">{{localize 'swnr.sheet.stats'}}
             <a class='item-control' title='{{localize "swnr.chat.statRoll"}}' data-action='rollStats'>
               <i class='fas fa-dice-d20'></i>
             </a>
           </div>
-          <div>{{localize 'swnr.sheet.base'}}</div>
-          <div>{{localize 'swnr.sheet.boosts'}}</div>
-          <div>{{localize 'swnr.sheet.bonus'}}</div>
-          <div>{{localize 'swnr.sheet.modifier'}}</div>
-          <div data-tooltip="{{localize 'swnr.sheet.modModifierHint'}}">{{localize 'swnr.sheet.modModifier'}}</div>
+          <div class="stat-base">{{localize 'swnr.sheet.base'}}</div>
+          <div class="stat-boost">{{localize 'swnr.sheet.boosts'}}</div>
+          <div class="stat-bonus">{{localize 'swnr.sheet.bonus'}}</div>
+          <div class="stat-mod">{{localize 'swnr.sheet.modifier'}}</div>
+          <div class="stat-modmod">{{localize 'swnr.sheet.modModifier'}}</div>
         </li>
       </ol>
       <div class='stats flex flexcol'>
         {{#each system.stats as |stat key|}}
           <div class='stat flexrow flex-group-center'>
-            <label
-              class='resource-label rollable flexlarge align-right'
-              data-action='roll'
-              data-roll='d20+@stats.{{key}}.mod'
-              data-label='{{localize (lookup @root.config.stats key)}}'
-              style="margin-right: 2px;"
-            >{{localize (lookup @root.config.statAbbreviations key)}}</label>
-            <input
-              type='text'
-              value='{{stat.base}}'
-              name="system.stats.{{key}}.base"
-              class="stat-score-small"
-              data-dtype='Number'
-            /> 
-            <span class="" style="flex: 0 1;margin-inline: 2px;">+</span> 
-            <input
-              type='text'
-              value='{{stat.boost}}'
-              name="system.stats.{{key}}.boost"
-              class="stat-score-small"
-              data-dtype='Number'
-            /> 
-            <span class="small-stat">
-              + {{ stat.temp }} = {{ stat.total }}
-            </span>
-            <span
-              class='stat-mod rollable'
-              data-action='roll'
-              data-roll='d20+@stats.{{key}}.mod'
-              data-label='{{localize (lookup @root.config.stats key)}}'
-              style='font-weight: bold;'
-            >{{numberFormat stat.mod decimals=0 sign=true}}</span>
-            <span class="" style="flex: 0 1;margin-inline: 2px;">+/-</span>
-            <input
-              type='text'
-              value='{{stat.modModifier}}'
-              name="system.stats.{{key}}.modModifier"
-              class="stat-score-small"
-              data-dtype='Number'
-            /> 
+            <div class="stat-label">
+              <label
+                class='resource-label rollable flexlarge align-right'
+                data-action='roll'
+                data-roll='d20+@stats.{{key}}.mod'
+                data-label='{{localize (lookup @root.config.stats key)}}'
+                style="margin-right: 2px;"
+              >{{localize (lookup @root.config.statAbbreviations key)}}</label>
+            </div>
+            <div class="stat-base">
+              <input type='text'
+                value='{{stat.base}}'
+                name="system.stats.{{key}}.base"
+                class="stat-score-small"
+                data-dtype='Number'
+              />
+            </div>
+            <div class="stat-boost">
+              <input type='text'
+                value='{{stat.boost}}'
+                name="system.stats.{{key}}.boost"
+                class="stat-score-small"
+                data-dtype='Number'
+              />
+            </div>
+            <div class="stat-bonus">
+              <span class="small-stat-math">+ {{stat.temp}} = {{stat.total}}</span>
+            </div>
+            <div class="stat-mod">
+              <span
+                class='stat-mod rollable'
+                data-action='roll'
+                data-roll='d20+@stats.{{key}}.mod'
+                data-label='{{localize (lookup @root.config.stats key)}}'
+                style='font-weight: bold;'
+              >{{numberFormat stat.mod decimals=0 sign=true}}</span>
+            </div>
+            <div class="stat-modmod">
+              <input
+                type='text'
+                value='{{stat.modModifier}}'
+                name="system.stats.{{key}}.modModifier"
+                class="stat-score-small"
+                data-dtype='Number'
+              />
+            </div>
           </div>
         {{/each}}
       </div>

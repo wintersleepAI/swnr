@@ -198,27 +198,32 @@ input[type="checkbox"].small-checkbox {
   margin-bottom: 0;
 }
 
-.check-group label,
-.form-group label,
-.resource-label {
-  font-weight: bold;
-  font-size: 12px;
-  margin: -5px 0;
+.swnr {
+  
+  .form-group {
+    margin: 2px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    box-sizing: border-box; // helps prevent padding/margin issues
+  }
+
+  .check-group {
+    margin: 0;
+    padding: 0;
+    display: ruby;
+  }
+
+  .form-group label,
+  .resource-label {
+    font-weight: bold;
+    font-size: 12px;
+    margin: -5px 0;
+  }
+
 }
 
-.check-group {
-  margin: 0;
-  padding: 0;
-  display: ruby;
-}
-
-.form-group {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: inherit;
-}
 .editor-content {
   position: static !important;
   display: block;

@@ -382,24 +382,24 @@
   margin-top: -10px;
   margin-bottom: 0;
 }
-.swnr .check-group label,
-.swnr .form-group label,
-.swnr .resource-label {
-  font-weight: bold;
-  font-size: 12px;
-  margin: -5px 0;
+.swnr .swnr .form-group {
+  margin: 2px;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  box-sizing: border-box;
 }
-.swnr .check-group {
+.swnr .swnr .check-group {
   margin: 0;
   padding: 0;
   display: ruby;
 }
-.swnr .form-group {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: inherit;
+.swnr .swnr .form-group label,
+.swnr .swnr .resource-label {
+  font-weight: bold;
+  font-size: 12px;
+  margin: -5px 0;
 }
 .swnr .editor-content {
   position: static !important;
@@ -413,12 +413,56 @@
 .swnr .stat {
   margin-bottom: 2px;
 }
+.swnr .stat.flexcol {
+  gap: 2px;
+}
 .swnr .stat-score,
 .swnr .stat-mod {
-  flex: 0 0 44px;
+  flex: 0 0 40px;
+  text-align: center;
 }
 .swnr .stat-score-small {
-  flex: 0 0 34px;
+  flex: 0 0 32px;
+  min-width: 32px;
+  max-width: 40px;
+  text-align: center;
+  padding: 0 2px;
+}
+.swnr .small-stat {
+  flex: 0 0 32px;
+  text-align: center;
+}
+.swnr .small-stat-math {
+  flex: 0 0 80px;
+  text-align: center;
+  white-space: nowrap;
+}
+.swnr .stat-label {
+  flex: 0 0 52px;
+  text-align: left;
+  padding-right: 4px;
+}
+.swnr .stat-base,
+.swnr .stat-boost {
+  flex: 0 0 32px;
+  text-align: center;
+  padding-right: 2px;
+}
+.swnr .stat-bonus {
+  flex: 0 0 80px;
+  text-align: center;
+  white-space: nowrap;
+}
+.swnr .stat-mod {
+  flex: 0 0 40px;
+  text-align: center;
+  padding-right: 2px;
+}
+.swnr .stat-modmod {
+  flex: 0 0 32px;
+  text-align: center;
+  white-space: nowrap;
+  justify-content: center;
 }
 .swnr .resource-bar {
   /* Sets the position of the resource-bar and sets it to the proper size. */

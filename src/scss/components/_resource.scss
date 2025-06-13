@@ -11,17 +11,64 @@
 
 .stat {
   margin-bottom: 2px;
+  
+  &.flexcol {
+    gap: 2px;
+  }
 }
 
 .stat-score,
 .stat-mod {
-  flex: 0 0 44px;
+  flex: 0 0 40px;
+  text-align: center;
 }
 
 .stat-score-small {
-  flex: 0 0 34px;
+  flex: 0 0 32px;
+  min-width: 32px;
+  max-width: 40px;
+  text-align: center;
+  padding: 0 2px;
 }
 
+.small-stat {
+  flex: 0 0 32px;
+  text-align: center;
+}
+
+.small-stat-math {
+  flex: 0 0 80px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.stat-label    { 
+  flex: 0 0 52px; 
+  text-align: left; 
+  padding-right: 4px; 
+}
+.stat-base,
+.stat-boost    { 
+  flex: 0 0 32px; 
+  text-align: center;
+  padding-right: 2px;
+}
+.stat-bonus    { 
+  flex: 0 0 80px; 
+  text-align: center; 
+  white-space: nowrap; 
+}
+.stat-mod      { 
+  flex: 0 0 40px; 
+  text-align: center; 
+  padding-right: 2px;
+}
+.stat-modmod   { 
+  flex: 0 0 32px; 
+  text-align: center;
+  white-space: nowrap;
+  justify-content: center;
+}
 
 .resource-bar {
   /* Sets the position of the resource-bar and sets it to the proper size. */
