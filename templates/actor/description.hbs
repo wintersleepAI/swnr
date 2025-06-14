@@ -1,14 +1,18 @@
-<section
-    class="tab description sheet-body {{tab.cssClass}}"
-    data-group="primary"
-    data-tab="description">
-    <div class="editor">
+<section class="tab description sheet-body {{tab.cssClass}}" data-group="primary" data-tab="description">
+    <div class="flex flex-col">
         {{#if editable}}
             <h4>{{localize 'SWN.Actor.Tabs.Description'}}</h4>
-            <prose-mirror name="system.description" data-document-u-u-i-d="{{actor.uuid}}" value="{{system.description}}" collaborate="true" toggled="true">
-                {{{enrichedDescription}}}
-            </prose-mirror>
-            {{else}} {{{enrichedDescription}}}
+            <div class="editor">
+                <prose-mirror name="system.description" data-document-u-u-i-d="{{actor.uuid}}" value="{{system.description}}" collaborate="true" toggled="true">
+                    {{{enrichedDescription}}}
+                </prose-mirror>
+            </div>
+        {{else}}
+            <div class="editor">
+                <div class="editor-content">
+                    {{{enrichedDescription}}}
+                </div>
+            </div>
         {{/if}}
     </div>
 </section>
