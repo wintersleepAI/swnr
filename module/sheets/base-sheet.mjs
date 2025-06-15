@@ -390,23 +390,96 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
         ui.notifications.error("This weapon does not use ammo.");
         return;
       }
-      if (item.system.ammo.type) {
-        const ammo_max = item.system.ammo?.max;
-        if (ammo_max != null) {
-          if (item.system.ammo.value < ammo_max) {
-            await item.update({ "system.ammo.value": ammo_max });
-            const content = `<p> Reloaded ${item.name} </p>`;
-            ChatMessage.create({
-              speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-              content: content,
-            });
-          } else {
-            ui.notifications?.info("Trying to reload a full item");
-          }
-        } else {
-          console.log("Unable to find ammo in item ", item.system);
-        }
+      
+      const ammoMax = item.system.ammo?.max;
+      if (ammoMax == null) {
+        console.log("Unable to find ammo max value in item", item.system);
+        return;
       }
+      
+      let currentAmmo = item.system.ammo.value;
+      let ammoNeeded = ammoMax - currentAmmo;
+      if (ammoNeeded <= 0) {
+        ui.notifications.info("Weapon already full.");
+        return;
+      }
+      
+      const ammoType = item.system.ammo.type;
+      
+      // For power cells, a full reload consumes the power cell.
+      if (ammoType === "typeAPower" || ammoType === "typeBPower") {
+        let powerCell = this.actor.items.find(i =>
+          i.type === 'item' &&
+          i.system.ammo &&
+          i.system.ammo.type === ammoType &&
+          i.system.ammo.value > 0
+        );
+        if (!powerCell) {
+          ui.notifications.error("No matching power cell found in your inventory.");
+          return;
+        }
+        await item.update({ "system.ammo.value": ammoMax });
+        await powerCell.update({ "system.ammo.value": 0 });
+        const content = `<p>Reloaded ${item.name} using power cell ${powerCell.name}.</p>`;
+        ChatMessage.create({
+          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+          content: content,
+        });
+        return;
+      }
+      // Find all matching ammo items in the actor's inventory with available ammo.
+      let ammoItems = this.actor.items.filter(i =>
+        i.type === 'item' &&
+        i.system.ammo &&
+        i.system.ammo.type === ammoType &&
+        i.system.ammo.value > 0
+      );
+      
+      
+      if (ammoItems.length === 0) {
+        ui.notifications.error("No matching ammo found in your inventory.");
+        return;
+      }
+      // Consume ammo from each item until the weapon is full or ammo runs out.
+      let ammoConsumedTotal = 0;
+      for (let ammoItem of ammoItems) {
+        if (ammoNeeded <= 0) break;
+        let availableAmmo = ammoItem.system.ammo.value || 0;
+        if (availableAmmo <= 0) continue;
+
+        let toConsume = Math.min(availableAmmo, ammoNeeded);
+        const newAmmoValue = availableAmmo - toConsume;
+
+        // For non-power cells, if the ammo holder is exhausted, delete it.
+        if (
+          (ammoType !== "typeAPower" || ammoType !== "typeBPower") &&
+          newAmmoValue === 0
+        ) {
+          await ammoItem.delete();
+        } else {
+          await ammoItem.update({ "system.ammo.value": newAmmoValue });
+        }
+
+        ammoConsumedTotal += toConsume;
+        ammoNeeded -= toConsume;
+      }
+      
+      // Update the weapon with the ammo that was consumed.
+      let newAmmoValue = currentAmmo + ammoConsumedTotal;
+      if (newAmmoValue > ammoMax) newAmmoValue = ammoMax;
+      
+      await item.update({ "system.ammo.value": newAmmoValue });
+      
+      let extraMessage = "";
+      if (item.system.ammo.longReload) {
+        extraMessage = " This weapon takes extra time to reload.";
+      }
+      
+      const content = `<p>Reloaded ${item.name} using ${ammoConsumedTotal} ammo from your inventory.${extraMessage}</p>`;
+      ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        content: content,
+      });
     }
 
     static async _onCreditChange(event, target) {

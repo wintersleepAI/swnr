@@ -1,10 +1,24 @@
 {{! Attributes Tab }}
-<section
-  class='tab attributes {{tab.cssClass}}'
-  data-group='primary'
-  data-tab='attributes'
->
-  {{! As you add new fields, add them in here! }}
+<section class='tab attributes {{tab.cssClass}}' data-group='primary' data-tab='attributes'>
+  
+  {{! Ammo Section }}
+  <div class='resource ammo-section'>
+    <div class="resource-group grid-span-3 flexrow"><!-- AMMO-->
+      <div class="resource">
+        {{formGroup systemFields.ammo.fields.type value=system.ammo.type localize=true}}
+      </div>
+      {{#if (and (ne system.ammo.type "none") (ne system.ammo.type "infinite"))}}
+        <div class="resource">
+          {{formGroup systemFields.ammo.fields.value value=system.ammo.value localize=true}}
+        </div>
+        <div class="resource">
+          {{formGroup systemFields.ammo.fields.max value=system.ammo.max localize=true}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+
+  {{! Roll Formula Section }}
   <div class='resource'>
     <label class='resource-label'>{{localize 'SWN.Item.Gear.FIELDS.rollFormula.label'}}:</label>
     <span>{{system.formula}}</span>
