@@ -165,69 +165,68 @@ input[type="checkbox"].small-checkbox {
   flex: 0;
 }
 
-.sheet-body,
-.sheet-body .tab,
-.sheet-body .tab .editor {
+.sheet-body {
   height: 100%;
-  overflow-y: scroll;
-
-  .sheet-cols {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-  }
-
-  .resource-group {
-    border: 1px solid var(--border-color);
-    border-radius: 2px;
-    padding: 4px;
-    padding-top: 0px;
-    margin: 2px;
-  }
-
-  .thin-bar {
-    margin-top:-10px;
-    margin-bottom: 0px;
-  }
+  overflow-y: auto; // scroll only the outer container
 }
 
-.tab.biography {
-  flex: 1;
-
-  .editor {
-    height: 100%;
-  }
+.sheet-body .tab {
+  height: auto;
+  overflow: visible; // don't fight .sheet-body
 }
 
-.tox {
-  .tox-editor-container {
-    background: var(--swnr-c-white);
-  }
-
-  .tox-edit-area {
-    padding: 0 8px;
-  }
+.sheet-body .tab .editor {
+  height: auto;
+  overflow: visible;
 }
-
-.check-group label,
-.form-group label,
-.resource-label {
-  font-weight: bold;
-  font-size: 12px;
-  margin: -5px 0;
-}
-
-.check-group {
-  margin: 0;
-  padding: 0;
-  display: ruby;
-}
-
-.form-group {
-  margin: 0;
-  padding: 0;
+.sheet-body .sheet-cols {
   display: flex;
-  flex-direction: column;
-  align-items: inherit;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.sheet-body .resource-group {
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  padding: 4px 4px 0 4px;
+  margin: 2px;
+}
+
+.sheet-body .thin-bar {
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+
+.swnr {
+  
+  .form-group {
+    margin: 2px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    box-sizing: border-box; // helps prevent padding/margin issues
+  }
+
+  .check-group {
+    margin: 0;
+    padding: 0;
+    display: ruby;
+  }
+
+  .form-group label,
+  .resource-label {
+    font-weight: bold;
+    font-size: 12px;
+    margin: -5px 0;
+  }
+
+}
+
+.editor-content {
+  position: static !important;
+  display: block;
+  min-height: 150px;
+  overflow-y: auto;
 }

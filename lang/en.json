@@ -1841,6 +1841,13 @@
       "totalModifier": "Total Modifier",
       "statRoll": "Roll stats for {name}",
       "savemoddesc": "(Positive makes easier, negative harder)",
+      "rerollButton": "Reroll",
+      "healthButtons": {
+        "fullDamage": "Apply full damage to selected token(s)",
+        "halfDamage": "Apply half damage to selected token(s)",
+        "fullHealing": "Apply full healing to selected token(s)",
+        "fullDamageModified": "Apply full damage with modifier to selected token(s)"
+      },
       "spike": {
         "fail3": "Catastrophic dimensional energy incursion.  Ship emerges around a star within 1d6 hexes  of the target destination with drive and all systems destroyed.",
         "fail4-5": "Shear surge overwhelms internal systems. Ship emerges around star nearest to drill origin. 50% chance for each system to be disabled until repaired. If the spike drive is disabled, treat as if a 3 were rolled.",

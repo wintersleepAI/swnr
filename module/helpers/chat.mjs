@@ -86,9 +86,10 @@ function getRerollButton(
   diceRoll,
   isAttack
 ) {
-  const rerollButton = $(
-    `<button class="dice-total-fullDamage-btn chat-button-small"><i class="fas fa-redo" title="Reroll"></i></button>`
-  );
+  const rerollButton = $("<button>")
+    .addClass("dice-total-reroll-btn chat-button-small")
+    .attr("title", game.i18n.localize("swnr.chat.rerollButton"))
+    .append($("<i>").addClass("fas fa-redo"));
   rerollButton.on("click", async (ev) => {
     const rollMode = game.settings.get("core", "rollMode");
     ev.stopPropagation();
@@ -127,12 +128,10 @@ export function _addRerollButton(html) {
     return;
   }
 
-  const btnContainer = $(
-    '<span class="dmgBtn-container" style="position:absolute; right:0; bottom:1px;"></span>'
-  );
+  const btnContainer = $('<div class="dmgBtn-container"></div>');
   const rerollButton = getRerollButton(diceRoll, false);
   btnContainer.append(rerollButton);
-  totalDiv.append(btnContainer);
+  totalDiv.parent().append(btnContainer);
 }
 
 export function _addHealthButtons(html) {
@@ -144,24 +143,27 @@ export function _addHealthButtons(html) {
   }
   const diceRoll = totalDiv.parent().find(".dice-formula").text();
 
-  const fullDamageButton = $(
-    `<button class="dice-total-fullDamage-btn chat-button-small"><i class="fas fa-user-minus" title="Click to apply full damage to selected token(s)."></i></button>`
-  );
-  const halfDamageButton = $(
-    `<button class="dice-total-halfDamage-btn chat-button-small"><i class="fas fa-user-shield" title="Click to apply half damage to selected token(s)."></i></button>`
-  );
-  // const doubleDamageButton = $(`<button class="dice-total-doubleDamage-btn" style="${btnStyling}"><i class="fas fa-user-injured" title="Click to apply double damage to selected token(s)."></i></button>`);
-  const fullHealingButton = $(
-    `<button class="dice-total-fullHealing-btn chat-button-small"><i class="fas fa-user-plus" title="Click to apply full healing to selected token(s)."></i></button>`
-  );
+  const fullDamageButton = $("<button>")
+    .addClass("dice-total-fullDamage-btn chat-button-small")
+    .attr("title", game.i18n.localize("swnr.chat.healthButtons.fullDamage"))
+    .append($("<i>").addClass("fas fa-user-minus"));
 
-  const fullDamageModifiedButton = $(
-    `<button class="dice-total-fullDamageMod-btn chat-button-small"><i class="fas fa-user-edit" title="Click to apply full damage with modifier prompt to selected token(s)."></i></button>`
-  );
+  const halfDamageButton = $("<button>")
+    .addClass("dice-total-halfDamage-btn chat-button-small")
+    .attr("title", game.i18n.localize("swnr.chat.healthButtons.halfDamage"))
+    .append($("<i>").addClass("fas fa-user-shield"));
 
-  const btnContainer = $(
-    '<span class="dmgBtn-container" style="position:absolute; right:0; bottom:1px;"></span>'
-  );
+  const fullHealingButton = $("<button>")
+    .addClass("dice-total-fullHealing-btn chat-button-small")
+    .attr("title", game.i18n.localize("swnr.chat.healthButtons.fullHealing"))
+    .append($("<i>").addClass("fas fa-user-plus"));
+
+  const fullDamageModifiedButton = $("<button>")
+    .addClass("dice-total-fullDamageMod-btn chat-button-small")
+    .attr("title", game.i18n.localize("swnr.chat.healthButtonsfullDamageModified"))
+    .append($("<i>").addClass("fas fa-user-edit"));
+
+  const btnContainer = $('<div class="dmgBtn-container"></div>');
 
   const rerollButton = getRerollButton(diceRoll, true);
   btnContainer.append(fullDamageButton);
@@ -169,10 +171,7 @@ export function _addHealthButtons(html) {
   btnContainer.append(halfDamageButton);
   // btnContainer.append(doubleDamageButton);
   btnContainer.append(fullHealingButton);
-  if (totalDiv.parent().parent().parent().hasClass("re-roll") == false) {
-    btnContainer.append(rerollButton);
-  }
-  totalDiv.append(btnContainer);
+  totalDiv.parent().append(btnContainer);
 
   // Handle button clicks
   fullDamageButton.on("click", (ev) => {
