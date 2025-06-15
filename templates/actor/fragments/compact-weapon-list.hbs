@@ -6,8 +6,8 @@
       {{/if}}
       {{localize 'swnr.sheet.tabs.weapons-short'}}
     </div>
-    <div class="item-dmg">
-      {{localize 'swnr.weapon.damage'}}
+    <div class="flex-group-center item-prop">
+      {{localize "swnr.weapon.damage"}}
     </div>
     <div class='item-controls-small'>
       {{#if @root.editable}}
@@ -23,28 +23,45 @@
         </a>
       {{/if}}
     </div>
+    <div class="flex-group-right item-controls-small"></div>
   </li>
+
+  <!-- ITEM ROWS (Uses Matching Grid Layout) -->
   {{#each itemList as |item id|}}
-  <li class='item flex flexrow' data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
-    <div class='item-name'>
-      <div class='item-image'>
-        <a class='rollable' data-roll-type='item' data-action='roll'>
-          <img src='{{item.img}}' title='{{item.name}}' width='24' height='24' />
+    <li class="item grid grid-4col" data-item-id="{{item._id}}" data-drag="true" data-document-class="Item">
+      <!-- Name Column -->
+      <div class="grid-span-2 flex-group-left item-name">
+        <div class="item-image">
+          <a class="rollable" data-roll-type="item" data-action="roll">
+            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+          </a>
+        </div>
+        <div>{{item.name}}</div>
+      </div>
+
+      <!-- Damage Column -->
+      <div class="flex-group-center item-prop">
+        {{item.system.damage}}
+      </div>
+
+      <!-- Ammo Column -->
+      <div class="flex-group-center item-prop">
+        {{#if (and item.system.ammo (ne item.system.ammo.type "none"))}}
+          <span>{{item.system.ammo.value}} / {{item.system.ammo.max}}</span>
+        {{/if}}
+      </div>
+
+      <!-- Controls -->
+      <div class="flex-group-right item-controls-small">
+        {{#if (and (eq item.type "weapon") (ne item.system.ammo.type "none"))}}
+          <a class="item-control item-reload" data-action="reload" title="{{localize 'swnr.sheet.reload-item'}}">
+            <i class="fas fa-retweet"></i>
+          </a>
+        {{/if}}
+        <a class="item-control item-edit" title="{{localize 'DOCUMENT.Update' type='Item'}}" data-action="viewDoc">
+          <i class="fas fa-edit"></i>
         </a>
       </div>
-      <div>{{item.name}}</div>
-    </div>
-    <div class="item-dmg item-prop">{{item.system.damage}}</div>
-    <div class='item-controls-small'>
-      {{#if (ne item.system.ammo.type "none")}}
-      <a class="item-control item-reload" data-action="reload" title="{{localize 'swnr.sheet.reload-item'}}">
-        <i class="fas fa-retweet"></i>
-      </a>
-      {{/if}}
-      <a class='item-control item-edit' title='{{localize "DOCUMENT.Update" type=' Item'}}' data-action='viewDoc'>
-        <i class='fas fa-edit'></i>
-      </a>
-    </div>
-  </li>
+    </li>
   {{/each}}
 </ol>
