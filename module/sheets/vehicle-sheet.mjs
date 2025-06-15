@@ -1,6 +1,6 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
-import { headerFieldWidget, groupFieldWidget } from '../helpers/handlebar.mjs';
+import { headerFieldWidget, groupFieldWidget, groupFieldWidgetDupe} from '../helpers/handlebar.mjs';
 import { SWNBaseSheet } from './base-sheet.mjs';
 
 const { api, sheets } = foundry.applications;
@@ -168,6 +168,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       gameSettings: getGameSettings(),
       headerWidget: headerFieldWidget.bind(this),
       groupWidget: groupFieldWidget.bind(this),
+      groupWidgetDupe: groupFieldWidgetDupe.bind(this),
       crewArray: crewArray,
       actions: CONFIG.SWN.shipActions
     };
@@ -232,6 +233,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
   /**
    * Generates the data for the generic tab navigation template
    * @param {string[]} parts An array of named template parts to render
+   * @param {string} defaultTab The name of the default tab to render
    * @returns {Record<string, Partial<ApplicationTab>>}
    * @protected
    */
@@ -452,7 +454,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
   static async _onResourceDelete(event, target) {
     event.preventDefault();
     event.stopPropagation();
-    const idx = target.dataset.rlIdx;
+    const idx = target.dataset.idx;
     const resourceList = duplicate(this.actor.system.cargoCarried);
     resourceList.splice(idx, 1);
     await this.actor.update({ "system.cargoCarried": resourceList });
@@ -568,6 +570,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       actor: crewActor,
       skills: skills,
       isChar,
+      pool: CONFIG.SWN.pool,
     };
     const template = "systems/swnr/templates/dialogs/roll-skill-crew.hbs";
     const html = await renderTemplate(template, dialogData);
@@ -608,7 +611,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       const title = `${game.i18n.localize(
         "swnr.chat.skillCheck"
       )}: ${statNameDisply}/${skillName}`;
-      await roll.roll({ async: true });
+      await roll.roll();
       roll.toMessage(
         {
           speaker: { alias: crewActor.name },
@@ -1282,7 +1285,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     const roll = new Roll(formula, {
       npcCrewSkill,
     });
-    await roll.roll({ async: true });
+    await roll.roll();
     const title = `Rolling generic skill with bonus ${npcCrewSkill}`;
     roll.toMessage(
       {
@@ -1549,7 +1552,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
               skillLevel,
               attrMod,
             });
-            await roll.roll({ async: true });
+            await roll.roll();
             const title = `<span title="${descText}">Rolling ${actionTitle} ${attrName}${action.skill} for ${defaultActor.name}<br>${noteText}${diffText}</span><br>${order}`;
             roll.toMessage(
               {
@@ -1571,7 +1574,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
             skillLevel,
             attrMod,
           });
-          await roll.roll({ async: true });
+          await roll.roll();
           const title = `<span title="${descText}">Rolling ${actionTitle} ${attrName}${action.skill}. No PC/NPC set to role/dept.<br>${noteText}${diffText}</span>`;
           roll.toMessage(
             {

@@ -9,10 +9,23 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989026
-  modifiedTime: 1739238989026
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 9i4o2mm30us9yhz8
-system: {}
+_id: b21zboj876l4p1zj
+system:
+  broken: false
+  cost: 100000
+  costMultiplier: false
+  damage: 3d4
+  description: Stepped tapping of the spike drive power plant allows for the emission of a torrent of charged particles. The particles have very little armor penetration, but can fry a small ship's power grid in a strike or two.
+  hardpoint: 1
+  mass: 1
+  massMultiplier: false
+  minClass: fighter
+  power: 4
+  powerMultiplier: false
+  qualities: Clumsy
+  tl: 4
 effects: []
-_key: '!items!9i4o2mm30us9yhz8'
+_key: '!items!b21zboj876l4p1zj'

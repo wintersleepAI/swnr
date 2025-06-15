@@ -9,10 +9,17 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988730
-  modifiedTime: 1739238988730
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: fpuldi41lak14i36
-system: {}
+_id: 3m5trnxj5sibjc91
+system:
+  cost: 10000
+  description: Surgical tools and medical support are provided for up to one critically-injured patient at a time. A medbay counts as an emergency clinic for purposes of treating Major Injuries, if someone with at least Heal-0 is available to tend to the patient.
+  effect: Emergency bay for one patient
+  mass: 2
+  minClass: M
+  power: 1
+  type: vehicle
 effects: []
-_key: '!items!fpuldi41lak14i36'
+_key: '!items!3m5trnxj5sibjc91'

@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988406
-  modifiedTime: 1739238988406
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ef8zwfaypxq85io7
+_id: t2bhnn2auybt16iy
 system:
+  assetType: cunning
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 8
+  counter: ''
   description: Quiet interstellar asset transport. Any one Special Forces unit can be moved between any worlds within three hexes of the Covert Shipping at the cost of one FacCred.
-  favorite: false
-  category: cunning
-  type: Logistics Facility
   health:
     max: 4
     value: 4
-  rating: 3
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 8
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: A,S
+  rating: 3
+  tl: 4
+  turnRoll: ''
+  type: Logistics Facility
+  unusable: false
 effects: []
-_key: '!items!ef8zwfaypxq85io7'
+_key: '!items!t2bhnn2auybt16iy'

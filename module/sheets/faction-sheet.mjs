@@ -16,8 +16,8 @@ export class SWNFactionSheet extends SWNBaseSheet {
   static DEFAULT_OPTIONS = {
     classes: ['swnr', 'actor'],
     position: {
-      width: 600,
-      height: 600,
+      width: 760,
+      height: 800,
     },
     actions: {
       onEditImage: this._onEditImage,
@@ -25,7 +25,15 @@ export class SWNFactionSheet extends SWNBaseSheet {
       createDoc: this._createDoc,
       deleteDoc: this._deleteDoc,
       toggleEffect: this._toggleEffect,
+      toggleProperty: this._toggleProperty,
       roll: this._onRoll,
+      createBase: this._onAddBase,
+      editTag: this._onEditTag,
+      removeTag: this._onRemoveTag,
+      selectTag: this._onSelectTag,
+      editLog: this._onEditLog,
+      removeLog: this._onRemoveLog,
+      removeAllLogs: this._onRemoveAllLogs,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -40,47 +48,38 @@ export class SWNFactionSheet extends SWNBaseSheet {
   /** @override */
   static PARTS = {
     header: {
-      template: 'systems/swnr/templates/actor/vehicle/header.hbs',
+      template: 'systems/swnr/templates/actor/faction/header.hbs',
     },
     tabs: {
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
     },
-    features: {
-      template: 'systems/swnr/templates/actor/features.hbs',
+    description: {
+      template: 'systems/swnr/templates/actor/description.hbs',
     },
-    biography: {
-      template: 'systems/swnr/templates/actor/biography.hbs',
+    assets: {
+      template: 'systems/swnr/templates/actor/faction/assets.hbs',
     },
-    gear: {
-      template: 'systems/swnr/templates/actor/gear.hbs',
+    tags: {
+      template: 'systems/swnr/templates/actor/faction/tags.hbs',
     },
-    power: {
-      template: 'systems/swnr/templates/actor/powers.hbs',
-    },
-    effects: {
-      template: 'systems/swnr/templates/actor/effects.hbs',
-    },
+    logs: {
+      template: 'systems/swnr/templates/actor/faction/logs.hbs',
+    }
   };
 
   /** @override */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
+    options.defaultTab = 'description';
+    
     // Not all parts always render
-    options.parts = ['header', 'tabs', 'biography'];
+    options.parts = ['header', 'tabs', 'description'];
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
-    // Control which parts show based on document subtype
-    switch (this.document.type) {
-      case 'mech':
-        //TODO
-        //options.parts.push('features', 'gear', 'powers', 'effects');
-        break;
-      case 'ship':
-        //TODO
-        //options.parts.push('gear', 'effects');
-        break;
-    }
+    
+    options.parts.push('assets', 'tags', 'logs');
+    options.defaultTab = 'assets';
   }
 
   /* -------------------------------------------- */
@@ -100,7 +99,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       flags: this.actor.flags,
       // Adding a pointer to CONFIG.SWN
       config: CONFIG.SWN,
-      tabs: this._getTabs(options.parts),
+      tabs: this._getTabs(options.parts, options.defaultTab),
       // Necessary for formInput and formFields helpers
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
@@ -114,8 +113,25 @@ export class SWNFactionSheet extends SWNBaseSheet {
 
   /** @override */
   async _preparePartContext(partId, context) {
-    // TODO copy from actor-sheet.mjs
-    console.log("TODO: Implement _preparePartContext");//TODO
+    context.tab = context.tabs[partId];
+    switch (partId) {
+      case 'description':
+        // Enrich description info for display
+        // Enrichment turns text like `[[/r 1d20]]` into buttons
+        context.enrichedDescription = await TextEditor.enrichHTML(
+            this.actor.system.description,
+            {
+              // Whether to show secret blocks in the finished html
+              secrets: this.document.isOwner,
+              // Data to fill in for inline rolls
+              rollData: this.actor.getRollData(),
+              // Relative UUID resolution
+              relativeTo: this.actor,
+            }
+        );
+        break;
+    }
+    
     return context;
   }
 
@@ -125,11 +141,11 @@ export class SWNFactionSheet extends SWNBaseSheet {
    * @returns {Record<string, Partial<ApplicationTab>>}
    * @protected
    */
-  _getTabs(parts) {
+  _getTabs(parts, defaultTab = 'description') {
     // If you have sub-tabs this is necessary to change
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
-    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'biography';
+    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = defaultTab;
     return parts.reduce((tabs, partId) => {
       const tab = {
         cssClass: 'sheet-body',
@@ -145,25 +161,21 @@ export class SWNFactionSheet extends SWNBaseSheet {
         case 'header':
         case 'tabs':
           return tabs;
-        case 'biography':
-          tab.id = 'biography';
-          tab.label += 'Biography';
+        case 'description':
+          tab.id = 'description';
+          tab.label += 'Description';
           break;
-        case 'features':
-          tab.id = 'features';
-          tab.label += 'Features';
+        case 'assets':
+          tab.id = 'assets';
+          tab.label += 'Assets';
           break;
-        case 'gear':
-          tab.id = 'gear';
-          tab.label += 'Gear';
+        case 'tags':
+          tab.id = 'tags';
+          tab.label += 'Tags';
           break;
-        case 'spells':
-          tab.id = 'spells';
-          tab.label += 'Spells';
-          break;
-        case 'effects':
-          tab.id = 'effects';
-          tab.label += 'Effects';
+        case 'logs':
+          tab.id = 'logs';
+          tab.label += 'Logs';
           break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
@@ -181,8 +193,33 @@ export class SWNFactionSheet extends SWNBaseSheet {
     // Initialize containers.
     // You can just use `this.document.itemTypes` instead
     // if you don't need to subdivide a given type like
-    // this sheet does with spells
-    console.log("TODO: Implement _prepareItems");//TODO
+    // this sheet does with assets
+    
+    const assets = {
+      [CONFIG.SWN.assetCategories.force]: [],
+      [CONFIG.SWN.assetCategories.wealth]: [],
+      [CONFIG.SWN.assetCategories.cunning]: []
+    }
+    
+    for (let i of this.document.items) {
+      if (i.type !== 'asset') {
+        continue;
+      }
+      
+      switch (i.system.category) {
+        case "force":
+          assets[CONFIG.SWN.assetCategories.force].push(i);
+          break;
+        case "wealth":
+          assets[CONFIG.SWN.assetCategories.wealth].push(i);
+          break;
+        case "cunning":
+          assets[CONFIG.SWN.assetCategories.cunning].push(i);
+          break;
+      }
+    }    
+    
+    context.assets = assets;
   }
 
   /**
@@ -206,6 +243,216 @@ export class SWNFactionSheet extends SWNBaseSheet {
    *   ACTIONS
    *
    **************/
+  
+  static async _onAddBase(event, target){
+    const category = target.dataset?.category;
+    
+    const _createBase = async (_event, button, _html) => {
+      const hp = parseInt(button.form.elements.hp.value);
+      if (isNaN(hp)) {
+        ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
+        return;
+      }
+      
+      await this.actor.system.addBase(category, hp)
+    }
+    
+    await foundry.applications.api.DialogV2.prompt({
+      window: { title: game.i18n.localize("swnr.sheet.faction.addBaseDialog.title") },
+      content: `<p>${game.i18n.localize("swnr.sheet.faction.addBaseDialog.content")}</p>`
+      + `<form></form><label>${game.i18n.localize("swnr.sheet.faction.addBaseDialog.label")}</label>`
+      + `<input type="text" name="hp"></form>`,
+      modal: false,
+      rejectClose: false,
+      ok: {
+        callback: _createBase,
+        icon: 'fas fa-check',
+        label: game.i18n.localize("swnr.sheet.faction.addBaseDialog.confirm")
+      }
+    })
+    
+  }
+  
+  static async _onEditTag(event, target) {
+    //TODO: localize and add edit
+    const index = parseInt(target.dataset?.index);
+    const editMode = !isNaN(index);
+    const tag = editMode ? this.actor.system.tags[index] : null;
+    
+    const title = editMode
+      ? game.i18n.localize("swnr.sheet.faction.editTag")
+      : game.i18n.localize("swnr.sheet.faction.addTagCustom");
+    
+    const dialogData = {
+      name: tag?.name ?? "",
+      desc: tag?.desc ?? "",
+      effect: tag?.effect ?? "",
+    }
+    const template = "systems/swnr/templates/dialogs/edit-faction-tag.hbs";
+    const html = await renderTemplate(template, dialogData);
+    
+    const _modifyTags = async (_event, button, _html) => {
+      const name = button.form.elements.tagName.value;
+      const desc = button.form.elements.tagDesc.value;
+      const effect = button.form.elements.tagEffect.value;
+      
+      if (editMode){
+        await this.actor.system.editTag({name, desc, effect}, index);
+      }else{
+        await this.actor.system.addTag({name, desc, effect});
+      }
+    }
+    
+    await foundry.applications.api.DialogV2.wait({
+      window: {
+        title: title
+      },
+      position: {
+        width: 500
+      },
+      content: html, 
+      modal: true,
+      rejectClose: false,
+      buttons: [
+          {
+            label: title, 
+            callback: _modifyTags
+          }
+      ],
+    })
+  }
+  
+  static async _onRemoveTag(event, target) {
+    const tagIndex = parseInt(target.dataset?.index);
+
+    if (isNaN(tagIndex)) {
+      ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
+      return;
+    }
+    
+    const removeTag = async () => await this.actor.system.removeTag(tagIndex);
+    
+    const tag = this.actor.system.getTag(tagIndex);
+    
+    await this._promptDelete(event, tag.name, this.actor.name, removeTag);
+  }
+  
+  static async _onSelectTag(event, target){
+    const title = game.i18n.localize("swnr.sheet.faction.addTag");
+    
+    const dialogData = {
+      tags: CONFIG.SWN.factionTags
+    }
+    const template = "systems/swnr/templates/dialogs/select-faction-tag.hbs";
+    const html = await renderTemplate(template, dialogData);
+    
+    const _modifyTags = async (_event, button, _html) => {
+      const selectedTagIndex = parseInt(button.form.elements.selectedTag.value);
+      
+      if (isNaN(selectedTagIndex)) {
+        return;
+      }
+      
+      const selectedTag = CONFIG.SWN.factionTags[selectedTagIndex];
+      await this.actor.system.addTag(selectedTag);
+    }
+    
+    const _addListener = (event,  dialog) => {
+      dialog.querySelector("#selectedTag")
+          .addEventListener("change", (event) => {
+            const value = event.target.value;
+            dialog.querySelector(".tag-list .tag-details:not(.hidden)")
+                ?.classList?.add("hidden");
+            dialog.querySelector(`.tag-list .tag-${value}`)
+                ?.classList?.remove("hidden");
+          });
+    }
+
+    await foundry.applications.api.DialogV2.wait({
+      window: {
+        title: title
+      },
+      position: {
+        width: 500
+      },
+      content: html,
+      modal: true,
+      rejectClose: false,
+      buttons: [
+          {
+            label: title, 
+            callback: _modifyTags
+          }
+      ],
+      render: _addListener
+    })
+  }
+  
+  // TODO: Add inline rolls to logs
+  static async _onEditLog(event, target) {
+    const index = parseInt(target.dataset?.index);
+    const editMode = !isNaN(index);
+    const log = editMode ? this.actor.system.log[index] : null;
+
+    const title = editMode
+        ? game.i18n.localize("swnr.sheet.faction.editLog")
+        : game.i18n.localize("swnr.sheet.faction.addLog");
+    
+    const _modifyLogs = async (_event, button, _html) => {
+      const logText = button.form.logText.value;
+      
+      if (editMode) {
+        await this.actor.system.editLog(logText, index);
+      } else {
+        await this.actor.system.addLog(logText);
+      }
+    }
+    
+    await foundry.applications.api.DialogV2.prompt({
+      window: {
+        title: title,
+      },
+      position: {
+        width: 500
+      },
+      modal: false,
+      content: `<label for="logText">${game.i18n.localize("swnr.sheet.faction.editLogDialog.label")}</label>`
+          +`<textarea name="logText" id="logText">${log ?? ""}</textarea>`,
+      ok: {
+        callback: _modifyLogs,
+        label: title
+      }
+    })
+  }
+  
+  static async _onRemoveLog(event, target) {
+    const logIndex = parseInt(target.dataset?.index);
+
+    if (isNaN(logIndex)) {
+      ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
+      return;
+    }
+    
+    const removeLog = async () => await this.actor.system.removeLog(logIndex);
+
+    await this._promptDelete(
+        event, 
+        game.i18n.localize("swnr.sheet.faction.log"),
+        this.actor.name,
+        removeLog
+    );
+  }
+  
+  static async _onRemoveAllLogs(event, target){
+    const removeLogs = async () => this.actor.system.removeAllLogs();
+    
+    await this._promptDelete(
+        event, 
+        game.i18n.localize("swnr.sheet.faction.allLogs"),
+        this.actor.name,
+        removeLogs
+    )
+  }
 
   /** Helper Functions */
 

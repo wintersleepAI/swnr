@@ -9,10 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988605
-  modifiedTime: 1739238988605
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ibsum4lkidfh7q7c
-system: {}
+_id: czb9kctft7eongnl
+system:
+  cost: 0.1
+  description: Most flying drones have an effective ceiling of 1,000 meters if there are no scramblers to lessen the effective control range. This unit increases a flying drone`s maximum altitude to 5,000 meters, making most effectively invisible to ordinary sight. Such height does, however, make it extremely conspicuous to aerial scanners used by city law enforcement and high-security corp buildings. The speed of their response will depend on the drone`s apparent threat.
+  mass: 1
+  type: drone
 effects: []
-_key: '!items!ibsum4lkidfh7q7c'
+_key: '!items!czb9kctft7eongnl'

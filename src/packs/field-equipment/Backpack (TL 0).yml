@@ -8,26 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988798
-  modifiedTime: 1739238988798
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 8aggz4c0kfr08lgx
+_id: bazicb6mdk5drto2
 system:
-  description: 'Backpack (TL 0): A worn backpack counts as a readied item, though objects stowed inside it still require the usual round to dig free. Characters without backpacks or similar carrying devices might have difficulty justifying the hauling of large amounts of gear.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 1
   cost: 5
-  tl: 0
+  description: 'Backpack (TL 0): A worn backpack counts as a readied item, though objects stowed inside it still require the usual round to dig free. Characters without backpacks or similar carrying devices might have difficulty justifying the hauling of large amounts of gear.'
+  encumbrance: 1
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 0
 effects: []
-_key: '!items!8aggz4c0kfr08lgx'
+_key: '!items!bazicb6mdk5drto2'

@@ -9,19 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988698
-  modifiedTime: 1739238988698
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 9fo5pignd8ex7jgb
+_id: otv7q88ik1rdiuw8
 system:
-  description: Any device that transmits audiovisual information. Some defensive hardware has its own onboard camera, which is susceptible to this target, while the others rely on a separate device's input.
-  favorite: false
-  cost: 500
-  type: subject
   accessCost: 0
-  target: Device
+  cost: 500
+  description: Any device that transmits audiovisual information. Some defensive hardware has its own onboard camera, which is susceptible to this target, while the others rely on a separate device's input.
   selfTerminating: false
-  useAffects: Audiovisual sensors
   skillCheckMod: 0
+  target: Device
+  type: subject
+  useAffects: Audiovisual sensors
 effects: []
-_key: '!items!9fo5pignd8ex7jgb'
+_key: '!items!otv7q88ik1rdiuw8'

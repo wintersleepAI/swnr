@@ -9,35 +9,24 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988541
-  modifiedTime: 1739238988541
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ls7ml2bd0xirhwjn
+_id: ux771i69ql63tynw
 system:
-  description: The weak points around limb joints are reinforced with extra layers of weave. The extra weave hinders movement, and applies a -1 penalty to the wearer's Sneak and Exert checks.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 0
-  cost: 250
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
   ac: 0
-  shield: true
-  use: false
+  cost: 250
+  description: The weak points around limb joints are reinforced with extra layers of weave. The extra weave hinders movement, and applies a -1 penalty to the wearer's Sneak and Exert checks.
+  encumbrance: 0
+  isHeavy: true
+  isSubtle: true
   meleeAc: 0
+  shield: true
+  shieldACBonus: 1
+  shieldMeleeACBonus: 1
   soak:
     max: 0
     value: 0
-  dr: 0
   traumaDiePenalty: 0
-  isSubtle: true
-  isHeavy: true
-  shieldMeleeACBonus: 1
-  shieldACBonus: 1
 effects: []
-_key: '!items!ls7ml2bd0xirhwjn'
+_key: '!items!ux771i69ql63tynw'

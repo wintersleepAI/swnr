@@ -9,10 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988618
-  modifiedTime: 1739238988618
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: xvupoeovzll3jitx
-system: {}
+_id: pdt5rf0usboariet
+system:
+  cost: 0.1
+  description: Sleep mode can be enabled with a Main Action command or ended with an On Turn command. While in sleep mode, a drone cannot fly, move, or perform actions, but it will continue to communicate with the pilot and observe its surroundings. A day of sleep mode counts as ten minutes of ordinary operation for battery drain purposes.
+  mass: 1
+  type: drone
 effects: []
-_key: '!items!xvupoeovzll3jitx'
+_key: '!items!pdt5rf0usboariet'

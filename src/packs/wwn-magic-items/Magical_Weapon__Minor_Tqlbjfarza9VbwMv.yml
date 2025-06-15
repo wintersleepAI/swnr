@@ -1,0 +1,91 @@
+_id: Tqlbjfarza9VbwMv
+name: Magical Weapon, Minor
+flags:
+  better-rolltables:
+    table-type: better
+    loot-amount-key: ''
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - _id: G1VRpvmCht0WMM4v
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: text
+    text: 'Origin Intended Users of the Weapon:'
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    documentId: null
+    _key: '!tables.results!Tqlbjfarza9VbwMv.G1VRpvmCht0WMM4v'
+  - _id: wqw8IVot8eJSbhWC
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: pack
+    text: Magical Weapon Origin
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    documentCollection: wwn.magic-tables
+    documentId: ZgBYyAHe1xdRwZvO
+    _key: '!tables.results!Tqlbjfarza9VbwMv.wqw8IVot8eJSbhWC'
+  - _id: 5LzDrjKqXxwxRTLs
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: pack
+    text: Magical Weapon Bonus, Minor
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    documentCollection: wwn.magic-tables
+    documentId: MSWL5kT3hZRlZsbJ
+    _key: '!tables.results!Tqlbjfarza9VbwMv.5LzDrjKqXxwxRTLs'
+  - _id: wCeKLBwlTIaOZGRX
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: pack
+    text: Magical Weapon SA, Minor
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    documentCollection: wwn.magic-tables
+    documentId: JWBdSsnxTDpxQEHs
+    _key: '!tables.results!Tqlbjfarza9VbwMv.wCeKLBwlTIaOZGRX'
+formula: 1d1
+replacement: true
+displayRoll: true
+_stats:
+  coreVersion: '12.324'
+  systemId: null
+  systemVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+  compendiumSource: null
+  duplicateSource: null
+ownership:
+  default: 0
+  mgBwP0sTLP1VFg1m: 3
+folder: null
+sort: 0
+_key: '!tables!Tqlbjfarza9VbwMv'
+

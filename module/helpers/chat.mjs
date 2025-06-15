@@ -86,14 +86,15 @@ function getRerollButton(
   diceRoll,
   isAttack
 ) {
-  const rerollButton = $(
-    `<button class="dice-total-fullDamage-btn chat-button-small"><i class="fas fa-redo" title="Reroll"></i></button>`
-  );
+  const rerollButton = $("<button>")
+    .addClass("dice-total-reroll-btn chat-button-small")
+    .attr("title", game.i18n.localize("swnr.chat.rerollButton"))
+    .append($("<i>").addClass("fas fa-redo"));
   rerollButton.on("click", async (ev) => {
     const rollMode = game.settings.get("core", "rollMode");
     ev.stopPropagation();
     const roll = new Roll(diceRoll);
-    await roll.roll({ async: true });
+    await roll.roll();
     const flavor = "Reroll";
     const chatTemplate = "systems/swnr/templates/chat/re-roll.hbs";
     const chatDialogData = {
@@ -105,8 +106,7 @@ function getRerollButton(
     const chatData = {
       speaker: ChatMessage.getSpeaker(),
       roll: JSON.stringify(roll),
-      content: chatContent,
-      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+      content: chatContent
     };
     getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
@@ -128,12 +128,10 @@ export function _addRerollButton(html) {
     return;
   }
 
-  const btnContainer = $(
-    '<span class="dmgBtn-container" style="position:absolute; right:0; bottom:1px;"></span>'
-  );
+  const btnContainer = $('<div class="dmgBtn-container"></div>');
   const rerollButton = getRerollButton(diceRoll, false);
   btnContainer.append(rerollButton);
-  totalDiv.append(btnContainer);
+  totalDiv.parent().append(btnContainer);
 }
 
 export function _addHealthButtons(html) {
@@ -145,24 +143,27 @@ export function _addHealthButtons(html) {
   }
   const diceRoll = totalDiv.parent().find(".dice-formula").text();
 
-  const fullDamageButton = $(
-    `<button class="dice-total-fullDamage-btn chat-button-small"><i class="fas fa-user-minus" title="Click to apply full damage to selected token(s)."></i></button>`
-  );
-  const halfDamageButton = $(
-    `<button class="dice-total-halfDamage-btn chat-button-small"><i class="fas fa-user-shield" title="Click to apply half damage to selected token(s)."></i></button>`
-  );
-  // const doubleDamageButton = $(`<button class="dice-total-doubleDamage-btn" style="${btnStyling}"><i class="fas fa-user-injured" title="Click to apply double damage to selected token(s)."></i></button>`);
-  const fullHealingButton = $(
-    `<button class="dice-total-fullHealing-btn chat-button-small"><i class="fas fa-user-plus" title="Click to apply full healing to selected token(s)."></i></button>`
-  );
+  const fullDamageButton = $("<button>")
+    .addClass("dice-total-fullDamage-btn chat-button-small")
+    .attr("title", game.i18n.localize("swnr.chat.healthButtons.fullDamage"))
+    .append($("<i>").addClass("fas fa-user-minus"));
 
-  const fullDamageModifiedButton = $(
-    `<button class="dice-total-fullDamageMod-btn chat-button-small"><i class="fas fa-user-edit" title="Click to apply full damage with modifier prompt to selected token(s)."></i></button>`
-  );
+  const halfDamageButton = $("<button>")
+    .addClass("dice-total-halfDamage-btn chat-button-small")
+    .attr("title", game.i18n.localize("swnr.chat.healthButtons.halfDamage"))
+    .append($("<i>").addClass("fas fa-user-shield"));
 
-  const btnContainer = $(
-    '<span class="dmgBtn-container" style="position:absolute; right:0; bottom:1px;"></span>'
-  );
+  const fullHealingButton = $("<button>")
+    .addClass("dice-total-fullHealing-btn chat-button-small")
+    .attr("title", game.i18n.localize("swnr.chat.healthButtons.fullHealing"))
+    .append($("<i>").addClass("fas fa-user-plus"));
+
+  const fullDamageModifiedButton = $("<button>")
+    .addClass("dice-total-fullDamageMod-btn chat-button-small")
+    .attr("title", game.i18n.localize("swnr.chat.healthButtonsfullDamageModified"))
+    .append($("<i>").addClass("fas fa-user-edit"));
+
+  const btnContainer = $('<div class="dmgBtn-container"></div>');
 
   const rerollButton = getRerollButton(diceRoll, true);
   btnContainer.append(fullDamageButton);
@@ -170,10 +171,7 @@ export function _addHealthButtons(html) {
   btnContainer.append(halfDamageButton);
   // btnContainer.append(doubleDamageButton);
   btnContainer.append(fullHealingButton);
-  if (totalDiv.parent().parent().parent().hasClass("re-roll") == false) {
-    btnContainer.append(rerollButton);
-  }
-  totalDiv.append(btnContainer);
+  totalDiv.parent().append(btnContainer);
 
   // Handle button clicks
   fullDamageButton.on("click", (ev) => {
@@ -305,73 +303,86 @@ export async function applyHealthDrop(total) {
           }
         }
       }
-    }
-    if (game.settings.get("swnr", "useCWNArmor")) {
-      const armorWithSoak = 
-        actor.items.filter(
-          (i) =>
-            i.type === "armor" &&
-            i.system.use &&
-            i.system.location === "readied" &&
-            i.system.soak.value > 0
-        );
-      for (const armor of armorWithSoak) {
-        if (total > 0) {
-          const soakValue = armor.system.soak.value;
+    } else {
+      const armorWithDR = actor.items.filter(
+        (i) =>
+          i.type === "armor" &&
+          i.system.use &&
+          i.system.location === "readied" &&
+          i.system.dr > 0
+      );
+      const armorDRSum = armorWithDR.reduce((acc, i) => acc + i.system.dr, 0);
+      if (armorDRSum > 0) {
+        total -= armorDRSum;
+        total = Math.max(total, 0);
+      }
+      if (game.settings.get("swnr", "useCWNArmor")) {
+        const armorWithSoak = 
+          actor.items.filter(
+            (i) =>
+              i.type === "armor" &&
+              i.system.use &&
+              i.system.location === "readied" &&
+              i.system.soak.value > 0
+          );
+        for (const armor of armorWithSoak) {
+          if (total > 0) {
+            const soakValue = armor.system.soak.value;
+            const newSoak = Math.max(soakValue - total, 0);
+            total -= soakValue - newSoak;
+            await armor.update({ "system.soak.value": newSoak });
+            await showValueChange(t, "0xFFA500", soakValue - newSoak);
+          }
+        }
+        if (total > 0 && actor.type == "npc") {
+          const soakValue = actor.system.baseSoakTotal.value;
           const newSoak = Math.max(soakValue - total, 0);
           total -= soakValue - newSoak;
-          await armor.update({ "system.soak.value": newSoak });
+          await actor.update({ "system.baseSoakTotal.value": newSoak });
           await showValueChange(t, "0xFFA500", soakValue - newSoak);
         }
       }
-      if (total > 0 && actor.type == "npc") {
-        const soakValue = actor.system.baseSoakTotal.value;
-        const newSoak = Math.max(soakValue - total, 0);
-        total -= soakValue - newSoak;
-        await actor.update({ "system.baseSoakTotal.value": newSoak });
-        await showValueChange(t, "0xFFA500", soakValue - newSoak);
-      }
-    }
-    const oldHealth = actor.system.health.value;
-    if (total != 0) {
-      let newHealth = oldHealth - total;
-      if (newHealth < 0) {
-        newHealth = 0;
-      } else if (newHealth > actor.system.health.max) {
-        newHealth = actor.system.health.max;
-      }
-      //console.log(`Updating ${actor.name} health to ${newHealth}`);
-      await actor.update({ "system.health.value": newHealth });
-      // Taken from Mana
-      //https://gitlab.com/mkahvi/fvtt-micro-modules/-/blob/master/pf1-floating-health/floating-health.mjs#L182-194
-      const fillColor = total < 0 ? "0x00FF00" : "0xFF0000";
-      showValueChange(t, fillColor, total);
+      const oldHealth = actor.system.health.value;
+      if (total != 0) {
+        let newHealth = oldHealth - total;
+        if (newHealth < 0) {
+          newHealth = 0;
+        } else if (newHealth > actor.system.health.max) {
+          newHealth = actor.system.health.max;
+        }
+        //console.log(`Updating ${actor.name} health to ${newHealth}`);
+        await actor.update({ "system.health.value": newHealth });
+        // Taken from Mana
+        //https://gitlab.com/mkahvi/fvtt-micro-modules/-/blob/master/pf1-floating-health/floating-health.mjs#L182-194
+        const fillColor = total < 0 ? "0x00FF00" : "0xFF0000";
+        showValueChange(t, fillColor, total);
 
-      if (newHealth <= 0) {
-        isDefeated = true;
-      } else if (oldHealth <= 0) {
-        // token was at <=0 and now is not
-        isDefeated = false;
-      } else {
-        // we can return no status to update
-        return;
-      }
-      await t.combatant?.update({ defeated: isDefeated });
-      const status = CONFIG.statusEffects.find(
-        (e) => e.id === CONFIG.specialStatusEffects.DEFEATED
-      );
-      if (!status) return;
-      const effect = actor && status ? status : CONFIG.controlIcons.defeated;
-      if (t.object) {
-        await t.object.toggleEffect(effect, {
-          overlay: true,
-          active: isDefeated,
-        });
-      } else {
-        await t.toggleEffect(effect, {
-          overlay: true,
-          active: isDefeated,
-        });
+        if (newHealth <= 0) {
+          isDefeated = true;
+        } else if (oldHealth <= 0) {
+          // token was at <=0 and now is not
+          isDefeated = false;
+        } else {
+          // we can return no status to update
+          return;
+        }
+        await t.combatant?.update({ defeated: isDefeated });
+        const status = CONFIG.statusEffects.find(
+          (e) => e.id === CONFIG.specialStatusEffects.DEFEATED
+        );
+        if (!status) return;
+        const effect = actor && status ? status : CONFIG.controlIcons.defeated;
+        if (t.object) {
+          await t.object.toggleEffect(effect, {
+            overlay: true,
+            active: isDefeated,
+          });
+        } else {
+          await t.toggleEffect(effect, {
+            overlay: true,
+            active: isDefeated,
+          });
+        }
       }
     }
   }
@@ -436,7 +447,7 @@ export async function _onChatCardAction(
       if (t.type == "npc") {
         const skill = t.system.skillBonus;
         const roll = new Roll("2d6 + @skill", { skill });
-        await roll.roll({ async: true });
+        await roll.roll();
         const flavor = game.i18n.format(
           game.i18n.localize("swnr.npc.skill.trained"),
           { actor: t.name }

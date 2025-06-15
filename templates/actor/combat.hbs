@@ -1,20 +1,20 @@
 <section class='tab combat sheet-body {{tab.cssClass}}' data-group='primary' data-tab='combat'>
   <div class='sheet-cols'>
-    <aside class='sidebar' style="flex: 0 1 160px;margin-right:2px;" >
+    <aside class='sidebar' style="flex: 0 1 200px;margin-right:2px;" >
       {{! The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
       from 1 to 12 and will create that number of columns. }}
-      <div class='stats flexcol'>
+      <div class='stat flexcol'>
         {{#each system.stats as |stat key|}}
-        <div class='stat flexrow flex-group-center'>
-          <label class='resource-label rollable flexlarge align-right' data-action='roll'
+        <div class='stat flexrow flex-group-center' style="gap: 2px;">
+          <label class='stat-label rollable' data-action='roll'
             data-roll='d20+@stats.{{key}}.mod' data-label='{{localize (lookup @root.config.stats key)}}'>
             {{localize (lookup @root.config.statAbbreviations key)}}
           </label>
-          <span class="small-stat">{{stat.baseTotal}}</span>
+          <span class="stat-score-small">{{stat.baseTotal}}</span>
           <input type='text' name='system.stats.{{key}}.temp' value='{{stat.temp}}' class="stat-score-small"
             data-dtype='Number' />
-          <span class="small-stat">{{stat.total}}</span>
+          <span class="stat-score-small">{{stat.total}}</span>
           <span class='stat-mod rollable' data-action='roll' data-roll='d20+@stats.{{key}}.mod'
             data-label='{{localize (lookup @root.config.stats key)}}'>{{numberFormat stat.mod decimals=0 sign=true}}</span>
         </div>
@@ -97,7 +97,13 @@
     <div class='main' style="flex: 1 1; margin-right:4px">
       <ol class='items-list'>
         <li class='flex flexrow items-header'>
-          <div class='item-name'>{{localize 'SWN.Actor.Tabs.Skills'}}</div>
+          <div class='item-name' data-tooltip="To edit use the unlock button">
+            {{localize 'SWN.Actor.Tabs.Skills'}}
+            <a class="resource-content" data-action="toggleLock" style="flex: 0 1; margin-left:4px;">
+              <div class="lock-toggle"><i class="fas fa-unlock"></i></div>
+              <div class="lock-icon" style="display:none;"><i class="fas fa-lock"></i></div>
+            </a>
+          </div>
           <div class='item-controls'>
             {{#if @root.editable}}
               <a

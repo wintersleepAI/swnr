@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988442
-  modifiedTime: 1739238988442
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: m94c8y7h4lmutyo7
+_id: u1lpjpsp85ls4ut2
 system:
+  assetType: cunning
+  attackDamage: 0
+  attackSource: cunning
+  attackSpecial: They and their male equivalents subvert the leadership of enemy assets. As an action, a Seductress can travel to any world within one hex. As an attack, a Seductress does no damage, but an asset that has been successfully attacked immediately reveals any other Stealthed assets of that faction on the planet. Only Special Forces units can attack a Seductress.
+  attackTarget: cunning
+  baseOfInfluence: false
+  cost: 4
+  counter: ''
   description: They and their male equivalents subvert the leadership of enemy assets. As an action, a Seductress can travel to any world within one hex. As an attack, a Seductress does no damage, but an asset that has been successfully attacked immediately reveals any other Stealthed assets of that faction on the planet. Only Special Forces units can attack a Seductress.
-  favorite: false
-  category: cunning
-  type: Special Forces
   health:
     max: 4
     value: 4
-  rating: 2
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 4
   income: 0
   maintenance: 0
-  attackTarget: cunning
-  attackSource: cunning
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: A,S
+  rating: 2
+  tl: 0
+  turnRoll: ''
+  type: Special Forces
+  unusable: false
 effects: []
-_key: '!items!m94c8y7h4lmutyo7'
+_key: '!items!u1lpjpsp85ls4ut2'

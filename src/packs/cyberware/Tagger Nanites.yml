@@ -9,20 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988785
-  modifiedTime: 1739238988785
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: s6lcu5o5xbw0ga4q
+_id: z7bvb3v9p49jef12
 system:
-  description: While true nanotechnology is beyond the grasp of standard TL4 science, this cyber allows for the implantation of very simple nanofactories in the user, ones that exude a constant imperceptible “smart dust”. Objects the user touches can be tagged by these nanites, which generate more of their kind for up to 48 hours after tagging. The dust then lays down a trail behind the tagged object, one that is visible to the user or to someone using a properly-keyed tracer. Only counter-nanite measures can remove the dust, as ordinary bathing or scrubbing is insufficient. The dust can be pinged by radio to announce its location to anyone within five kilometers, but most users prefer to leave the dust in passive mode, where it is undetectable to most TL4 sensors. Tagging an object adds one System Strain to the user.
-  favorite: false
-  tl: 4
   cost: 15000
-  strain: 1
+  description: While true nanotechnology is beyond the grasp of standard TL4 science, this cyber allows for the implantation of very simple nanofactories in the user, ones that exude a constant imperceptible “smart dust”. Objects the user touches can be tagged by these nanites, which generate more of their kind for up to 48 hours after tagging. The dust then lays down a trail behind the tagged object, one that is visible to the user or to someone using a properly-keyed tracer. Only counter-nanite measures can remove the dust, as ordinary bathing or scrubbing is insufficient. The dust can be pinged by radio to announce its location to anyone within five kilometers, but most users prefer to leave the dust in passive mode, where it is undetectable to most TL4 sensors. Tagging an object adds one System Strain to the user.
   disabled: false
   effect: Lets the user tag others with tracking nanites
-  type: none
-  concealment: sight
-  complication: ''
+  strain: 1
+  tl: 4
 effects: []
-_key: '!items!s6lcu5o5xbw0ga4q'
+_key: '!items!z7bvb3v9p49jef12'

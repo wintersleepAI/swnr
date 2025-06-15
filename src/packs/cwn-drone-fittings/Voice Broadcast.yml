@@ -9,10 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988622
-  modifiedTime: 1739238988622
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: hr95qmyo66k0apir
-system: {}
+_id: vahs8chsk62jvfkv
+system:
+  cost: 0.1
+  description: The pilot can speak through the drone or cause it to emit other noises at a volume loud enough to be heard clearly a hundred meters away.
+  mass: 1
+  type: drone
 effects: []
-_key: '!items!hr95qmyo66k0apir'
+_key: '!items!vahs8chsk62jvfkv'

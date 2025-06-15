@@ -9,10 +9,27 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989023
-  modifiedTime: 1739238989023
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: o9i7y14wksguwdhy
-system: {}
+_id: 9fi75ualaffav6ry
+system:
+  broken: false
+  cost: 50000
+  costMultiplier: false
+  damage: 0
+  description: Useless in ship-to-ship combat or against any other TL4 planet with working nuke snuffers, one of these missiles can still erase an entire lostworlder city without such protection.
+  hardpoint: 2
+  mass: 1
+  massMultiplier: false
+  minClass: frigate
+  power: 5
+  powerMultiplier: false
+  qualities: null
+  tl: 4
+  ammo:
+    max: 5
+    type: missile
+    value: 5
 effects: []
-_key: '!items!o9i7y14wksguwdhy'
+_key: '!items!9fi75ualaffav6ry'

@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988424
-  modifiedTime: 1739238988424
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: j0n2r7er0uxrfje5
+_id: ybmoj7gw8lsvclf8
 system:
+  assetType: wealth
+  attackDamage: 1d4-1
+  attackSource: wealth
+  attackSpecial: ''
+  attackTarget: wealth
+  baseOfInfluence: false
+  cost: 1
+  counter: ''
   description: These give the faction substantial influence over the commerce on a world. Any other faction that tries to buy an asset on that planet must pay one extra FacCred. This money is not given to the investments' owner, but is lost. This penalty is only applied once.
-  favorite: false
-  category: cunning
-  type: Facility
   health:
     max: 2
     value: 2
-  rating: 1
-  tl: 2
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
   income: 0
   maintenance: 0
-  attackTarget: wealth
-  attackSource: wealth
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: S
+  rating: 1
+  tl: 2
+  turnRoll: These give the faction substantial influence over the commerce on a world. Any other faction that tries to buy an asset on that planet must pay one extra FacCred. This money is not given to the investments' owner, but is lost. This penalty is only applied once.
+  type: Facility
+  unusable: false
 effects: []
-_key: '!items!j0n2r7er0uxrfje5'
+_key: '!items!ybmoj7gw8lsvclf8'

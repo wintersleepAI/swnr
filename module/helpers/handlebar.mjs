@@ -129,6 +129,87 @@ export function groupFieldWidget(field, _groupConfig, inputConfig) {
   return fg;
 }
 
+
+/** 
+ * Generate the HTML for group input elements.
+ * Only works for fields and derived /prepared data elements cannot be used.
+ * invoked like  {{formGroup systemFields.ab value=system.ab localize=true widget=groupWidget readonly=0}} 
+ * readonly is optional sets what attribute should be set to readonly
+ * for nested fields, the readonly attribute is to the index of the field in the nested fields object
+ * for non-nested, 0 means the field is readonly 
+ */
+export function checkboxFieldWidget(field, _groupConfig, inputConfig) {
+  const fg = document.createElement("div");
+  fg.classList.add("check-group");
+
+  const label = document.createElement("label");
+  label.innerHTML = field.label;
+  fg.appendChild(label);
+  const input = field.toInput({ value: inputConfig.value });
+  fg.appendChild(input);
+  return fg;
+}
+
+/** 
+ * Generate the HTML for group input elements with no name fields for 
+ * purely derived groups or duplicates.
+ * Only works for fields and derived /prepared data elements cannot be used.
+ * invoked like  {{formGroup systemFields.ab value=system.ab localize=true widget=groupWidgetDupe}} 
+ */
+export function groupFieldWidgetDupe(field, _groupConfig, inputConfig) {
+  const fg = document.createElement("div");
+  fg.classList.add("form-group");
+
+  const label = document.createElement("label");
+  // label.classList.add("resource-label");
+  label.innerHTML = field.label;
+  fg.appendChild(label);
+
+  const inputDiv = document.createElement("div");
+  inputDiv.classList.add("form-fields");
+
+  let input = null;
+  if (field.fields) {
+    const spanSep = document.createElement("span");
+    spanSep.classList.add("nested-sep");
+    spanSep.innerHTML = "/";
+    const fieldCount = Object.keys(field.fields).length;
+    input = document.createElement("div");
+    input.classList.add("field", "flex","flexrow");
+    let count = 0;
+    for (const [key, value] of Object.entries(field.fields)) {
+      // let subInput = document.createElement("space");
+      // subInput.innerHTML = key;
+      const val = inputConfig.value[key];
+      let subInput = value.toInput({ value: val });
+      subInput.classList.add("sub-field");
+      subInput.setAttribute("readonly", true);
+      subInput.classList.add("readonly");
+      subInput.removeAttribute("name");
+      input.appendChild(subInput);
+      if (count < fieldCount-1) {
+        input.appendChild(spanSep.cloneNode(true));
+      }
+      count++;
+    }
+  } else {
+    input = field.toInput({ value: inputConfig.value });
+    input.setAttribute("readonly", true);
+    input.classList.add("readonly");
+    input.removeAttribute("name");
+  }
+
+  if (input == null) {
+    input = document.createElement("span");
+    input.innerHTML = "error hlp";
+  }
+  inputDiv.appendChild(input);
+  fg.appendChild(inputDiv);
+
+
+  return fg;
+}
+
 export function registerHandlebarHelpers() {
 
   Handlebars.registerHelper("debug", function () {
@@ -213,4 +294,32 @@ export function registerHandlebarHelpers() {
     };
     return poolMap[pool] || pool;
   });
+
+  Handlebars.registerHelper('getStatChoices', function(stats) {
+    const statChoices = {};
+    Object.keys(stats).forEach(key => {
+      const stat = stats[key];
+      const localizedLabel = game.i18n.localize("swnr.stat.long." + key );
+      statChoices[key] = `${localizedLabel} +${stat.mod}`; // Format the string 
+    });
+    return statChoices;
+  });
+  
+  Handlebars.registerHelper('getSkillChoices', function(skills, noSkillSetAsOption = false){
+    const skillChoices = {};
+    if(noSkillSetAsOption == true)
+    {
+      skillChoices[""] = game.i18n.localize("swnr.weapon.noSetSkill");
+    }
+    Object.keys(skills).forEach(key => {
+      const skill = skills[key];
+      skillChoices[skill.id] = `${skill.name} ${skill.system.rank}`; 
+    });
+    return skillChoices;
+  });
+  
+  Handlebars.registerHelper('getAssetCategoryKey', function (category) {
+    return Object.keys(CONFIG.SWN.assetCategories)
+        .find(key => CONFIG.SWN.assetCategories[key] === category);
+  })
 }

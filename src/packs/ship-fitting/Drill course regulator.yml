@@ -9,10 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988994
-  modifiedTime: 1739238988994
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 8k7uctkv1smooems
-system: {}
+_id: 2snxufnpvuej90um
+system:
+  broken: false
+  cost: 25000
+  costMultiplier: true
+  description: Drills along a known spike drive route have no chance of failure so long as the route is no longer than twice the operating pilot's skill level and does not onvolve course trimming. Thus, a navigator with Pilot-1 skill would always succeed in making a drill of two hexes or less, provided the route was a known one. The drill course regulator requires a siphisticated technical base and compatible metadimensional energy conditions in a given sector; many sectors no longer have this technology or lack the right environment to use it. If the GM prefers a campaign where space travel is always at least somewhat dangerous, they may deny access to this fitting. Ships piloted by exceptionally talented navigators may choose not to mount it even the.
+  effect: Common drill routes become auto-successes
+  mass: 1
+  massMultiplier: false
+  minClass: frigate
+  power: 1
+  powerMultiplier: true
 effects: []
-_key: '!items!8k7uctkv1smooems'
+_key: '!items!2snxufnpvuej90um'

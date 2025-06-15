@@ -9,10 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988619
-  modifiedTime: 1739238988619
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ut97kpabct0md62e
-system: {}
+_id: cn3q080yjm8pbugn
+system:
+  cost: 0.25
+  description: With a Main Action command to detonate, the drone will explode, doing 3d6 damage to anyone within ten meters, with an Evasion save for half. Subjects behind solid cover further halve the damage. Drones reduced to zero hit points are too badly damaged to respond to detonation commands.
+  mass: 1
+  type: drone
 effects: []
-_key: '!items!ut97kpabct0md62e'
+_key: '!items!cn3q080yjm8pbugn'

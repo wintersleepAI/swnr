@@ -9,10 +9,23 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989020
-  modifiedTime: 1739238989020
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 4hdtnxbmwqgov01d
-system: {}
+_id: ibdy11uy0h6vcjbv
+system:
+  broken: false
+  cost: 2000000
+  costMultiplier: false
+  damage: 4d6
+  description: Using much the same principles as man-portable grav weaponry, the gravcannon causes targets to fall apart in a welter of mutually-antagonistic gravitic fields.
+  hardpoint: 3
+  mass: 4
+  massMultiplier: false
+  minClass: cruiser
+  power: 15
+  powerMultiplier: false
+  qualities: AP 20
+  tl: 4
 effects: []
-_key: '!items!4hdtnxbmwqgov01d'
+_key: '!items!ibdy11uy0h6vcjbv'

@@ -9,35 +9,23 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988548
-  modifiedTime: 1739238988548
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: ivflb8ewa1ds9c1w
+_id: sln95o9vdytly0s9
 system:
-  description: An upgraded form of street leathers, these outfits have sacrificed all discretion for whatever spare ballistic plates and advanced polymer weaves its owner can sew or bolt on. It's usually the best armor that local gangs or common thugs can afford.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 200
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
   ac: 13
-  shield: false
-  use: false
+  cost: 200
+  description: An upgraded form of street leathers, these outfits have sacrificed all discretion for whatever spare ballistic plates and advanced polymer weaves its owner can sew or bolt on. It's usually the best armor that local gangs or common thugs can afford.
+  encumbrance: 1
+  isHeavy: false
+  isSubtle: false
   meleeAc: 14
+  shieldACBonus: 0
+  shieldMeleeACBonus: 0
   soak:
     max: 5
     value: 5
-  dr: 0
   traumaDiePenalty: 0
-  isSubtle: false
-  isHeavy: false
-  shieldMeleeACBonus: 0
-  shieldACBonus: 0
 effects: []
-_key: '!items!ivflb8ewa1ds9c1w'
+_key: '!items!sln95o9vdytly0s9'

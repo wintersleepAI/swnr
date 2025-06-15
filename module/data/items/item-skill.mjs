@@ -15,17 +15,14 @@ export default class SWNSkill extends SWNItemBase {
       required: true,
       nullable: false,
       integer: true,
-      initial: -1
+      initial: -1,
+      min: -1,
+      max: CONFIG.SWN.maxSkillRank
     });
 
     schema.defaultStat = SWNShared.stats("ask", false, true);
 
-    schema.pool = SWNShared.stringChoices("2D6", {
-      "ask": "swnr.sheet.ask",
-      "2D6": "2D6",
-      "3D6": "3D6",
-      "4D6": "4D6"
-    });
+    schema.pool = SWNShared.stringChoices("2d6", CONFIG.SWN.pool);
 
     // Can possibly remove this field
     schema.source = new fields.StringField({
@@ -68,7 +65,7 @@ export default class SWNSkill extends SWNItemBase {
       modifier: modifier,
       stat: statMod,
     });
-    await roll.roll({ async: true });
+    await roll.roll();
     const title = `${game.i18n.localize(
       "swnr.chat.skillCheck"
     )}: ${statShortName}/${skillName}`;
@@ -95,7 +92,6 @@ export default class SWNSkill extends SWNItemBase {
       return;
     }
     const skillName = item.name;
-
     // Set to not ask and just roll
     if (!shiftKey && this.remember && this.remember.use) {
       const modifier = this.remember.modifier;
@@ -107,7 +103,7 @@ export default class SWNSkill extends SWNItemBase {
           "Quick roll set, but dice or stat is set to ask"
         );
       } else {
-        const stat = this.actor?.system["stats"][defaultStat] || {
+        const stat = actor?.system["stats"][defaultStat] || {
           mod: 0,
         };
         const statShortName = game.i18n.localize(
@@ -134,8 +130,9 @@ export default class SWNSkill extends SWNItemBase {
       title: title,
       skillName: skillName,
       skill: item,
-      stats: actor.system.stats,
       modifier,
+      pool: CONFIG.SWN.pool,
+      stats: actor.system.stats
     };
 
     const content = await renderTemplate(template, dialogData);
@@ -154,7 +151,7 @@ export default class SWNSkill extends SWNItemBase {
         ui.notifications?.error("Dice must be set and not ask");
         return;
       }
-      const stat = this.actor?.system["stats"][statShortNameForm] || {
+      const stat = actor?.system["stats"][statShortNameForm] || {
         mod: 0,
       };
       const modifier = button.form.elements.modifier.value;
@@ -176,7 +173,7 @@ export default class SWNSkill extends SWNItemBase {
               modifier: Number(modifier),
             },
             defaultStat: statShortNameForm,
-            pool: CONFIG.SWN.pool[dice],
+            pool: dice,
           },
         });
       }

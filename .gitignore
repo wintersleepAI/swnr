@@ -1,4 +1,9 @@
 foundry/*
-node_modules
+node_modules/
 .idea
 packs/
+scripts/input/*
+scripts/output/*
+scripts/conversion/input/*
+scripts/conversion/output/*
+.DS_Store

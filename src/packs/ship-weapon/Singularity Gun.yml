@@ -9,10 +9,23 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989027
-  modifiedTime: 1739238989027
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: qkxa37hwsau06loe
-system: {}
+_id: hbyoptzx1wjbuxvv
+system:
+  broken: false
+  cost: 20000000
+  costMultiplier: false
+  damage: 5d20
+  description: One of the few surviving pretech weapons in anything resembling wide currency, this apital-class weapons system fires something mathematically related to a minituarized black hole at a target.
+  hardpoint: 5
+  mass: 10
+  massMultiplier: false
+  minClass: capital
+  power: 25
+  powerMultiplier: false
+  qualities: AP 25
+  tl: 5
 effects: []
-_key: '!items!qkxa37hwsau06loe'
+_key: '!items!hbyoptzx1wjbuxvv'

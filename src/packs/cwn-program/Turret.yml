@@ -9,19 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988718
-  modifiedTime: 1739238988718
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: fg0vm6c4p7nox0lx
+_id: djs1iote98coq5zw
 system:
-  description: A security turret, emplaced gun, or other fixed automated weapon.
-  favorite: false
-  cost: 1000
-  type: subject
   accessCost: 0
-  target: Device
+  cost: 1000
+  description: A security turret, emplaced gun, or other fixed automated weapon.
   selfTerminating: false
-  useAffects: Automated weaponry
   skillCheckMod: 0
+  target: Device
+  type: subject
+  useAffects: Automated weaponry
 effects: []
-_key: '!items!fg0vm6c4p7nox0lx'
+_key: '!items!djs1iote98coq5zw'

@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988417
-  modifiedTime: 1739238988417
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: febule6or3mobwfg
+_id: thjemm1noi4wecb9
 system:
+  assetType: wealth
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 2
+  counter: 1d4
   description: 'These gather the natural resources of a world, whether ore, biologicals, or other unprocessed goods. As an action, the Harvesters'' owning faction may roll 1d6. On 3+, gain one FacCred. Roll: [[1d6]]'
-  favorite: false
-  category: cunning
-  type: Facility
   health:
     max: 4
     value: 4
-  rating: 1
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 2
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: A
+  rating: 1
+  tl: 0
+  turnRoll: ''
+  type: Facility
+  unusable: false
 effects: []
-_key: '!items!febule6or3mobwfg'
+_key: '!items!thjemm1noi4wecb9'

@@ -1,0 +1,96 @@
+folder: JCTtZt3gza36t9hX
+name: 'Scouting: Why Can’t They Just Go There?'
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: 0
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: ismiX5SkOYG607BB
+    text: The surrounding area is too dangerous
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!XeCK9RPARsdNAR4Y.ismiX5SkOYG607BB'
+  - type: 0
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: aa4YlM0hSG8BxmfZ
+    text: A hostile group there is keeping them out
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!XeCK9RPARsdNAR4Y.aa4YlM0hSG8BxmfZ'
+  - type: 0
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: edLBvg8xOHSSRr4d
+    text: They don’t have anyone with apposite skill
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!XeCK9RPARsdNAR4Y.edLBvg8xOHSSRr4d'
+  - type: 0
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: SHReMrrVhG4TZlFt
+    text: They’re spread too thin to take care of it
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!XeCK9RPARsdNAR4Y.SHReMrrVhG4TZlFt'
+  - type: 0
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: H6vtG6vdDKS1FJT6
+    text: Somebody’s watching them too closely
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!XeCK9RPARsdNAR4Y.H6vtG6vdDKS1FJT6'
+  - type: 0
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: anvdwmF5RaKvM3OV
+    text: The PCs would blend better than them
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!XeCK9RPARsdNAR4Y.anvdwmF5RaKvM3OV'
+replacement: true
+displayRoll: true
+flags:
+  core: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '11.315'
+  createdTime: 1703891799686
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+formula: 1d6
+_id: XeCK9RPARsdNAR4Y
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!XeCK9RPARsdNAR4Y'
+

@@ -9,19 +9,18 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988704
-  modifiedTime: 1739238988704
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: m84qz08nfr84i5yo
+_id: x1hem6w3sfdd4kj7
 system:
-  description: Erase a data file. This Verb is extremely thorough, and any on-site backups can be expected to be nuked as well, either immediately or as soon as the automatic backup protocols expose them.
-  favorite: false
-  cost: 500
-  type: verb
   accessCost: 1
-  target: Data
+  cost: 500
+  description: Erase a data file. This Verb is extremely thorough, and any on-site backups can be expected to be nuked as well, either immediately or as soon as the automatic backup protocols expose them.
   selfTerminating: true
-  useAffects: Erase a data file and corrupt backups
   skillCheckMod: 1
+  target: Data
+  type: verb
+  useAffects: Erase a data file and corrupt backups
 effects: []
-_key: '!items!m84qz08nfr84i5yo'
+_key: '!items!x1hem6w3sfdd4kj7'

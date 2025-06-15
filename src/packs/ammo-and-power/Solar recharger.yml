@@ -8,26 +8,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988382
-  modifiedTime: 1739238988382
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 7d4aacviukmx9o1x
+_id: uq7gornog2i1ha4c
 system:
-  description: 'Solar recharger: This recharger unfolds into a 2 meter by 2 meter square field of solar cells. Granted a primary star of roughly Earth-like intensity, it can recharge one type A power cell per day.'
-  favorite: false
-  quantity: 1
   bundle:
     amount: 1
     bundled: false
-  encumbrance: 3
   cost: 500
-  tl: 4
+  description: 'Solar recharger: This recharger unfolds into a 2 meter by 2 meter square field of solar cells. Granted a primary star of roughly Earth-like intensity, it can recharge one type A power cell per day.'
+  encumbrance: 3
   location: other
   quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
 effects: []
-_key: '!items!7d4aacviukmx9o1x'
+_key: '!items!uq7gornog2i1ha4c'

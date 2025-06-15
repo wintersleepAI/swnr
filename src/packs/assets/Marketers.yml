@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988425
-  modifiedTime: 1739238988425
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 0ucylrdp4jigr5a1
+_id: a5tu0hefph62vyl1
 system:
+  assetType: wealth
+  attackDamage: 1d6
+  attackSource: cunning
+  attackSpecial: ''
+  attackTarget: wealth
+  baseOfInfluence: false
+  cost: 10
+  counter: ''
   description: Deployed to confuse enemy factions into untimely investments. As an action, the marketers may test Cunning vs. Wealth against a rival faction's asset. If successful, the target faction must immediately pay half the asset's purchase cost, rounded down, or have it become disabled and useless until this price is paid.
-  favorite: false
-  category: cunning
-  type: Tactic
   health:
     max: 8
     value: 8
-  rating: 5
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 10
   income: 0
   maintenance: 0
-  attackTarget: wealth
-  attackSource: cunning
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: A
+  rating: 5
+  tl: 0
+  turnRoll: ''
+  type: Tactic
+  unusable: false
 effects: []
-_key: '!items!0ucylrdp4jigr5a1'
+_key: '!items!a5tu0hefph62vyl1'

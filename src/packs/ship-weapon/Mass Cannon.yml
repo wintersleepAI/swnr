@@ -9,10 +9,27 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989022
-  modifiedTime: 1739238989022
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: i556qore9nbggw3w
-system: {}
+_id: jfk0i3ujybsy3w08
+system:
+  broken: false
+  cost: 5000000
+  costMultiplier: false
+  damage: 2d20
+  description: By firing projectiles almost as large as fighter-scale craft, the mass cannon inflicts tremendous damage on a target. Serious ammunition limitations hamper its wider-scale use.
+  hardpoint: 4
+  mass: 5
+  massMultiplier: false
+  minClass: capital
+  power: 10
+  powerMultiplier: false
+  qualities: AP 20
+  tl: 4
+  ammo:
+    max: 4
+    type: special
+    value: 4
 effects: []
-_key: '!items!i556qore9nbggw3w'
+_key: '!items!jfk0i3ujybsy3w08'

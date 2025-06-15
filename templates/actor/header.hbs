@@ -15,13 +15,13 @@
     >
       <i class="fa-solid fa-bed" style="font-size: 20px;"></i>
     </div>
-      <div class="portrait-button" 
-        title='{{localize 'swnr.sheet.scene'}}'
-        data-action='scene'
-        style="right:0; top:0"
-      >
-        <i class="fas fa-hourglass-end"></i>
-      </div>
+    <div class="portrait-button" 
+      title='{{localize 'swnr.sheet.scene'}}'
+      data-action='scene'
+      style="right:0; top:0"
+    >
+      <i class="fas fa-hourglass-end"></i>
+    </div>
     <div class="portrait-button" 
       title='{{localize 'swnr.sheet.hp'}}'
       data-action='hitDice'
@@ -70,7 +70,8 @@
               name='system.systemStrain.max'
               value='{{system.systemStrain.max}}'
               data-dtype='Number'
-              class='nested-field short-field'
+              class='nested-field short-field readonly'
+              readonly
             />
         </div>
     </div>
@@ -80,6 +81,7 @@
     {{! The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
       from 1 to 12 and will create that number of columns.  }}
+    <div class='header-fields'>
     <div class='resources grid grid-5col'>
       
       <div class='document-name grid-span-2 flex flexrow'><!-- Name -->
@@ -178,7 +180,10 @@
       </div>
 
       {{#if (eq actor.type 'character')}}
-      {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget}}
+        {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget}}
+        {{#if (eq gameSettings.useCWNArmor true)}}
+        {{formGroup systemFields.meleeAb value=system.meleeAb localize=true widget=headerWidget}}
+        {{/if}}
       {{else}}
         {{#if (eq gameSettings.useCWNArmor true)}}
         <div class="resource flex-group-center"><!-- AC -->
@@ -202,10 +207,15 @@
 
       {{/if}}
 
-      {{formGroup systemFields.access value=system.access localize=true widget=headerWidget readonly=1}}
-      
+      {{#if (eq gameSettings.showAccess true)}}
+        {{formGroup systemFields.access value=system.access localize=true widget=headerWidget readonly=1}}
+      {{/if}}
 
       {{#if (eq actor.type 'character')}}
+        {{#if (eq gameSettings.useStress true)}}
+          {{formGroup systemFields.stress value=system.stress localize=true widget=headerWidget}}
+        {{/if}}
+      
       <div class='resource header-group flex-group-center grid-span-5'><!-- Saves -->
         <div class="flex flexrow">
             <div class="save-throw-button" data-save-type="physical" data-action="rollSave">
@@ -239,6 +249,7 @@
         </svg> --}}
           {{!-- {{system.ac}} --}}
 
+    </div>
     </div>
   </div>
 </header>

@@ -9,11 +9,25 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988627
-  modifiedTime: 1739238988627
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: fflakgsw670frulc
-system: {}
+_id: dl8nrynigtt67vq9
+system:
+  ac: 16
+  cost: 10000
+  description: NAMU's Javelin is a workhorse among operatives in need of a sturdy flying drone with a con -siderable equipment loadout. While bulky, even small-framed pilots can usually carry a packed Javelin along with their usual gear.
+  enc: 6
+  fittings:
+    max: 5
+  hardpoint:
+    max: 1
+  health:
+    max: 12
+    value: 12
+  moveType: fly
+  speed: 20
+  traumaTarget: 6
 effects: []
 prototypeToken:
   name: NAMU Javelin
@@ -91,4 +105,4 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!fflakgsw670frulc'
+_key: '!actors!dl8nrynigtt67vq9'

@@ -105,7 +105,6 @@
               {{ item.system.quantity }}
             </div>
           {{/if}}
-
           {{!-- Single Rounds column if ammo != none --}}
           {{#if (and (or (eq item.type "weapon") (eq item.type "item"))
                       (ne item.system.ammo.type "none"))}}
@@ -117,11 +116,7 @@
           <!-- Location (wider so it doesn’t truncate) -->
           <div class="item-loc item-prop" style="flex: 0 0 130px;">
             <select data-item-id="{{item.id}}" class="location-selector">
-              {{#select item.system.location}}
-                <option value="readied">{{ localize 'swnr.item.locationReadied' }}</option>
-                <option value="stowed">{{ localize 'swnr.item.locationStowed' }}</option>
-                <option value="other">{{ localize 'swnr.item.locationOther' }}</option>
-              {{/select}}
+              {{selectOptions ../config/itemLocations selected=system.location localize=true}}
             </select>
           </div>
 

@@ -1,12 +1,69 @@
 {{! powers Tab }}
 <section
-  class='tab powers {{tab.cssClass}}'
+  class='tab powers sheet-body {{tab.cssClass}}'
   data-group='primary'
   data-tab='powers'
 >
   {{#if system.tweak.showCyberware}}
     {{> "systems/swnr/templates/actor/fragments/cyberware-list.hbs" itemList=cyberware  type='cyberware' name='Cyberware' }}
   {{/if}}
+
+  {{#if system.tweak.showResourceList}}
+  <ol class='items-list'>
+    <li class='flexrow items-header'>
+      <div class="item-name">{{localize 'swnr.sheet.resources'}} </div>
+      <div class="item-leveltext-center"></div>
+      <div class="item-controls text-right flex-shrink">
+        <a class="item-control resource-create" data-action="resourceCreate"
+          title="{{localize 'swnr.sheet.add-item'}}">
+          <i class="fas fa-plus"></i>
+        </a> 
+      </div>
+    </li>
+    {{#each actor.system.tweak.resourceList as |item id|}}
+      <li
+        class='item flexrow'
+        data-item-id='{{item._id}}'
+        data-drag='false'
+        data-document-class='Item'
+      >
+        <div class="item flexrow" data-rl-idx="{{id}}">
+          <input
+            type="text"
+            name="resourceList-name-{{id}}"
+            class="resource-list-val"
+            value="{{item.name}}"
+            data-rl-type="name"
+          />
+          &nbsp; 
+
+          <input
+            type="number"
+            name="resourceList-value-{{id}}"
+            value="{{item.value}}"
+            class="resource-list-val"
+            data-dtype="Number"
+            data-rl-type="value"
+          />
+          / 
+          <input
+            type="number"
+            name="resourceList-max-{{id}}"
+            value="{{item.max}}"
+            class="resource-list-val"
+            data-dtype="Number"
+            data-rl-type="max"
+          />
+
+        <div class="item-controls text-right">
+          <a class="item-control" title='{{localize 'swnr.sheet.delete-item'}}' 
+            data-action="resourceDelete" data-rl-idx="{{id}}"><i class="fas fa-trash"></i></a>
+        </div>
+      </li> 
+    {{/each}}
+  </ol>
+  {{/if}}
+
 
   {{#if system.tweak.showPowers}}
   <ol class='items-list'>

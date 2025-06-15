@@ -9,10 +9,17 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988719
-  modifiedTime: 1739238988719
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 0it0e6ho5rsccu2w
-system: {}
+_id: tqvypztvz0yh5su5
+system:
+  cost: 8000
+  description: The vehicle is equipped with night vision, infrared sensors, and short-range radar good up to twenty kilometers of airspace. It can be driven safely even in pitch darkness.
+  effect: Adds night vision and more
+  mass: 0
+  minClass: S
+  power: 1
+  type: vehicle
 effects: []
-_key: '!items!0it0e6ho5rsccu2w'
+_key: '!items!tqvypztvz0yh5su5'

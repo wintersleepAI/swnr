@@ -9,10 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988618
-  modifiedTime: 1739238988618
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: o66u83dvylmzhovu
-system: {}
+_id: bv5gmj8o2w3v1yrt
+system:
+  cost: 0.25
+  description: Usable only on drones of Enc 3 or smaller, this fitting adds color-changing drone sheathing, noise damping, and thermal sealing to the unit. It gains an effective Sneak-1 skill when operating autonomously, or a +2 bonus to Sneak checks when being directly piloted.
+  mass: 1
+  type: drone
 effects: []
-_key: '!items!o66u83dvylmzhovu'
+_key: '!items!bv5gmj8o2w3v1yrt'

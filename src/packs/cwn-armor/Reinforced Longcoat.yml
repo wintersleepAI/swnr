@@ -9,35 +9,23 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988546
-  modifiedTime: 1739238988546
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: fmp5zkxd7vmhxjo7
+_id: yarpysoc8rc6hmct
 system:
-  description: Long, draping clothing is bolstered with advanced fabrics and discreetly- placed absorption plates, the whole remaining deniable as armor.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 500
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
   ac: 15
-  shield: false
-  use: false
+  cost: 500
+  description: Long, draping clothing is bolstered with advanced fabrics and discreetly- placed absorption plates, the whole remaining deniable as armor.
+  encumbrance: 1
+  isHeavy: false
+  isSubtle: true
   meleeAc: 13
+  shieldACBonus: 0
+  shieldMeleeACBonus: 0
   soak:
     max: 5
     value: 5
-  dr: 0
   traumaDiePenalty: 1
-  isSubtle: true
-  isHeavy: false
-  shieldMeleeACBonus: 0
-  shieldACBonus: 0
 effects: []
-_key: '!items!fmp5zkxd7vmhxjo7'
+_key: '!items!yarpysoc8rc6hmct'

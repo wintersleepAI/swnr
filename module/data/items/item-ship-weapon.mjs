@@ -33,6 +33,19 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
     return schema;
   }
 
+  static migrateData(data) {
+
+    if (data.trauma.rating == "none" || data.trauma.rating == "") {
+      data.trauma.rating = null;
+    }
+
+    if (!(data.stat in CONFIG.SWN.stats)) {
+      data.stat = "ask";
+    }
+
+    return data;
+  }
+
   async roll(shiftKey = false) {
     let item = this.parent;
     const actor = item.actor;
@@ -92,7 +105,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
       }
 
       const title = game.i18n.format("swnr.dialog.attackRoll", {
-        actorName: this.actor?.name,
+        actorName: actor?.name,
         weaponName: this.name,
       });
 
@@ -192,6 +205,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
     else {
       ui.notifications?.error("Ship weapon roll called on non-ship/drone/mech/vehicle actor");
     }
+
   }
 
   async rollAttack(
@@ -223,9 +237,9 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
         "@attackRollDie + @skillMod + @statMod + @abMod + @mod + @weaponAb + @npcSkill + @burstFire";
       const damageRollStr = `${this.damage} + @statMod + @burstFire`;
       const hitRoll = new Roll(hitRollStr, rollData);
-      await hitRoll.roll({ async: true });
+      await hitRoll.roll();
       const damageRoll = new Roll(damageRollStr, rollData);
-      await damageRoll.roll({ async: true });
+      await damageRoll.roll();
 
       let traumaRollRender = null;
       let traumaDamage = null;
@@ -238,7 +252,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
         this.trauma.rating != null
       ) {
         const traumaRoll = new Roll(this.system.trauma.die);
-        await traumaRoll.roll({ async: true });
+        await traumaRoll.roll();
         traumaRollRender = await traumaRoll.render();
         if (
           traumaRoll &&
@@ -249,7 +263,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
           const traumaDamageRoll = new Roll(
             `${damageRoll.total} * ${this.trauma.rating}`
           );
-          await traumaDamageRoll.roll({ async: true });
+          await traumaDamageRoll.roll();
           traumaDamage = await traumaDamageRoll.render();
         }
       }
@@ -295,15 +309,14 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
       // const formula = dice.map(d => (<any>d).formula).join(' + ');
       // const results = dice.reduce((a, b) => a.concat(b.results), [])
       const diceData = Roll.fromTerms([
-        PoolTerm.fromRolls([hitRoll, damageRoll]),
+        foundry.dice.terms.PoolTerm.fromRolls([hitRoll, damageRoll]),
       ]);
 
       const chatContent = await renderTemplate(template, dialogData);
       const chatData = {
         speaker: { alias: shooterName },
         roll: JSON.stringify(diceData),
-        content: chatContent,
-        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+        content: chatContent
       };
       getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
       getDocumentClass("ChatMessage").create(chatData);

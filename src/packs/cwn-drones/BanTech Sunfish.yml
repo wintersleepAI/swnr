@@ -9,11 +9,27 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988625
-  modifiedTime: 1739238988625
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 6qp3hdoqqj5tuinx
-system: {}
+_id: 4q9u5u5t5rop3ehe
+system:
+  ac: 15
+  cost: 1000
+  description: |2-
+     BanTech has tried to make an opening in the aquatic drone market with the Sunfish,
+    an easily-portable swimming drone that can still mount a few useful loadout options.
+  enc: 3
+  fittings:
+    max: 3
+  hardpoint:
+    max: 0
+  health:
+    max: 8
+    value: 8
+  moveType: swim
+  speed: 10
+  traumaTarget: 6
 effects: []
 prototypeToken:
   name: BanTech Sunfish
@@ -91,4 +107,4 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!6qp3hdoqqj5tuinx'
+_key: '!actors!4q9u5u5t5rop3ehe'

@@ -3,19 +3,21 @@
 :root {
   --swnr-c-dark: #191813;
   --swnr-c-faint: #c9c7b8;
-  --swnr-c-beige: #b5b3a4;
+  --swnr-c-beige: #67675d;
   --swnr-c-tan: #444444;
   --swnr-c-white: #ffffff;
   --swnr-c-black: #000000;
   --swnr-c-groove: #eeede0;
+  --border-color: rgb(170,170,170);
 }
 
 .theme-dark {
   --swnr-c-dark: #c9c7b8;
   --swnr-c-faint: #191813;
-  --swnr-c-beige: #444444;
+  --swnr-c-beige: #99998c;
   --swnr-c-tan: #b5b3a4;
   --swnr-c-white: #000000;
   --swnr-c-black: #ffffff;
   --swnr-c-groove: #11121f;
+  --border-color: rgb(100, 100, 100);
 }

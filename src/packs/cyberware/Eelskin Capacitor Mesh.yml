@@ -9,20 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988774
-  modifiedTime: 1739238988774
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: hkrrlfusqbeqkit5
+_id: hmw17cn5xqgxmoim
 system:
-  description: A hair-fine mesh of almost imperceptible wiring along the user’s palms and fingers allow them to trigger brief, controlled bursts of electrical energy at targets within five meters. As an Instant action it adds 2d4 non-lethal damage to a successful Punch attack. In its intended use, it also allows the user to override and disable most electronic locks and security systems with a successful Sneak or Fix skill check. Both triggering a burst and hacking a security system tax the user’s biology; one System Strain point is gained with each attack or skill check.
-  favorite: false
-  tl: 4
   cost: 25000
-  strain: 1
+  description: A hair-fine mesh of almost imperceptible wiring along the user’s palms and fingers allow them to trigger brief, controlled bursts of electrical energy at targets within five meters. As an Instant action it adds 2d4 non-lethal damage to a successful Punch attack. In its intended use, it also allows the user to override and disable most electronic locks and security systems with a successful Sneak or Fix skill check. Both triggering a burst and hacking a security system tax the user’s biology; one System Strain point is gained with each attack or skill check.
   disabled: false
   effect: Allows bare-handed hacking and electrical shocks
-  type: none
-  concealment: sight
-  complication: ''
+  strain: 1
+  tl: 4
 effects: []
-_key: '!items!hkrrlfusqbeqkit5'
+_key: '!items!hmw17cn5xqgxmoim'

@@ -1,6 +1,5 @@
 <form class="flex">
   <input type="hidden" name="actorId" value="{{actor._id}}">
-  <input type="hidden" name="statName" value="{{statName}}">
   <div class="flex flex-col">
     <div class="flex flexrow p-2 gap-2">
       {{#if (and weapon.ammo.burst (ne 'none' weapon.ammo.type)) }}
@@ -13,12 +12,7 @@
       <div class="flex flex-col">
         <label for="skill">{{localize 'swnr.sheet.skill'}}: </label>
         <select name="skill"  required > 
-          {{#select weapon.skill}}
-          <option value="">{{ localize 'swnr.weapon.noSetSkill'}}</option>
-          {{#each skills }}
-          <option value="{{this.id}}">{{this.name}} {{this.system.rank}}</option>
-          {{/each}}
-          {{/select}}
+          {{selectOptions (getSkillChoices skills true) selected=weapon.skill localize=true}}
         </select>
       </div>
       {{else}}
@@ -31,14 +25,32 @@
         <label for="modifier">{{localize 'swnr.chat.modifier'}}: </label>
         <input name="modifier" type="number" step="1" value="0" />
       </div>
-    </div> 
-    {{#if (eq actor.type 'character')}}
-      <div class="flex flexrow">
-        <div class="flex flexrow">
-          <label for="remember">{{localize 'swnr.weapon.remember'}}: </label>
-          <input type="checkbox" name="remember" id="remember">
+    </div>
+    <div class="flex flexrow">
+      
+      {{#if (eq 'ask' statName)}}
+        <div class="flex flex-col">
+          <label for="stat">{{localize 'swnr.sheet.stats'}}: </label>
+          <select name="stat">
+          {{#each stats as |box name |}}
+          <option value="{{name}}">
+            {{localize (concat "swnr.stat.long." name)}}: 
+            {{numberFormat box.mod decimals=0 sign=true}}
+          </option>
+          {{/each}}
+          </select>
         </div>
-      </div> 
-    {{/if}}
+      {{else}}
+        <input type="hidden" name="statName" value="{{statName}}">
+      {{/if}}
+      {{#if (eq actor.type 'character')}}
+        <div class="flex flexrow">
+            {{!-- <label for="remember"> --}}
+            {{localize 'swnr.weapon.remember'}}: 
+            {{!-- </label> --}}
+            <input type="checkbox" name="remember" id="remember">
+        </div> 
+      {{/if}}
+    </div>  
   </div>
 </form>

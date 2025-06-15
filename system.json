@@ -1,11 +1,15 @@
 {
   "id": "swnr",
-  "title": "Stars and Cities without Number",
-  "description": "The Stars and Cities without Number system for FoundryVTT!",
+  "title": "Systems Without Number (Stars, Cities, and Ashes)",
+  "description": "The Stars and Cities and Ashes Without Number System for FoundryVTT!",
+  "version": "2.0.9",
   "authors": [
     {
       "name": "wintersleepAI",
       "discord": "wintersleep1832"
+    },
+    {
+      "name": "SpiceKing"
     }
   ],
   "documentTypes": {
@@ -80,22 +84,21 @@
       "paths": ["css", "lang", "templates"]
     }
   },
-  "url": "Replace this with a link to your public repository",
+  "url": "https://github.com/wintersleepAI/swnr",
   "license": "LICENSE.txt",
   "readme": "README.md",
-  "bugs": "Replace this with a link to file issues or tickets",
+  "bugs": "https://github.com/wintersleepAI/swnr/issues",
   "changelog": "CHANGELOG.md",
   "media": [
     {
       "type": "setup",
-      "url": "systems/swnr/assets/anvil-impact.png",
-      "thumbnail": "systems/swnr/assets/anvil-impact.png"
+      "url": "systems/swnr/assets/art/GrzegorzPedrycz_HEGEMON.webp",
+      "thumbnail": "systems/swnr/assets/art/GrzegorzPedrycz_HEGEMON.webp"
     }
   ],
-  "version": "2.0.0-Alpha",
   "compatibility": {
     "minimum": "12.328",
-    "verified": "12.328"
+    "verified": "13.345"
   },
   "esmodules": ["module/swnr.mjs"],
   "styles": ["css/swnr.css"],
@@ -201,7 +204,7 @@
       "name": "cwn-program",
       "label": "Cwn Program",
       "system": "swnr",
-      "type": "Actor"
+      "type": "Item"
     },
     {
       "name": "cwn-vehicle-fittings",
@@ -334,6 +337,54 @@
       "label": "Tools And Medical",
       "system": "swnr",
       "type": "Item"
+    },
+    {
+      "name": "cwn-tables",
+      "label": "CWN Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "one-roll-tables",
+      "label": "SWN Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "one-roll-backing",
+      "label": "SWN Backing Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-gm-sub-tables",
+      "label": "WWN Backing Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-gm-tables",
+      "label": "WWN Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-instinct",
+      "label": "WWN Instinct Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-magic-items",
+      "label": "WWN Magic Items Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "wwn-magic-tables",
+      "label": "WWN Magic Tables",
+      "system": "swnr",
+      "type": "RollTable"
     }
   ],
   "packFolders": [
@@ -345,7 +396,6 @@
         "all-items",
         "ammo-and-power",
         "armor",
-        "assets",
         "communications",
         "computing-gear",
         "cyberware",
@@ -355,6 +405,14 @@
         "pharmaceuticals",
         "ranged",
         "tools-and-medical"
+      ]
+    },
+    {
+      "name": "Factions",
+      "sorting": "a",
+      "color": "#555555",
+      "packs": [
+        "assets"
       ]
     },
     {
@@ -416,10 +474,25 @@
       "packs": [
         "foci"
       ]
+    }, 
+    {
+      "name": "Tables",
+      "sorting": "a",
+      "color": "#CCCCCC",
+      "packs": [
+        "cwn-tables",
+        "one-roll-tables",
+        "one-roll-backing",
+        "wwn-gm-sub-tables",
+        "wwn-gm-tables",
+        "wwn-instinct",
+        "wwn-magic-items",
+        "wwn-magic-tables"
+      ]
     }
   ],
   "socket": false,
-  "manifest": "", 
+  "manifest": "https://github.com/wintersleepAI/swnr/releases/latest/download/system.json", 
   "download": "",
   "background": "systems/swnr/assets/art/GrzegorzPedrycz_HEGEMON.webp",
   "grid": {

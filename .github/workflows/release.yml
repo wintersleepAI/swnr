@@ -1,0 +1,71 @@
+name: Release FoundryVTT System
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write   # Required for uploading release assets
+  actions: write    # Required for interacting with releases
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js (for modifying system.json and running npm scripts)
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Run build
+        run: |
+          npm run build
+
+      - name: Run pack-compendium
+        run: |
+          npm run pack-compendium
+
+      - name: Modify system.json with version
+        run: |
+          VERSION="${GITHUB_REF/refs\/tags\/v/}"
+          echo "Updating system.json with version $VERSION"
+          jq --arg version "$VERSION" '.version = $version' system.json > system.json.tmp && mv system.json.tmp system.json
+
+      - name: Create zip package
+        run: |
+          VERSION="${GITHUB_REF/refs\/tags\/v/}"
+          mkdir -p release
+          zip -r "release/swnr-${VERSION}.zip" * -x "*.git*" "*.github*" "release/*" "node_modules/*" "foundry/*"
+
+      - name: Upload release zip to GitHub
+        uses: softprops/action-gh-release@v1
+        with:
+          files: release/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Modify system.json download field
+        run: |
+          VERSION="${GITHUB_REF/refs\/tags\/v/}"
+          DOWNLOAD_URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/v${VERSION}/swnr-${VERSION}.zip"
+          echo "Updating download URL in system.json to $DOWNLOAD_URL"
+          jq --arg download_url "$DOWNLOAD_URL" '.download = $download_url' system.json > system.json.tmp && mv system.json.tmp system.json
+
+      - name: Upload system.json to GitHub release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: system.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Clean up
+        run: |
+          rm -rf release

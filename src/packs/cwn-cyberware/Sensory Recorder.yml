@@ -9,20 +9,16 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988592
-  modifiedTime: 1739238988592
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: q7c4v3obhb0lq198
+_id: ao8kyj0opd350r5k
 system:
-  description: The user can record up to 180 minutes of sensory input. If they have a jack line into a transmitter or cyberware capable of transmitting data, they can share these recordings in real time or afterwards.
-  favorite: false
-  tl: 4
-  cost: 10000
-  strain: 0.5
-  disabled: false
-  effect: Record 3 hours of sense input
-  type: Sensory
   concealment: Medical
-  complication: ''
+  cost: 10000
+  description: The user can record up to 180 minutes of sensory input. If they have a jack line into a transmitter or cyberware capable of transmitting data, they can share these recordings in real time or afterwards.
+  effect: Record 3 hours of sense input
+  strain: 0.5
+  type: Sensory
 effects: []
-_key: '!items!q7c4v3obhb0lq198'
+_key: '!items!ao8kyj0opd350r5k'

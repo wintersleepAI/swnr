@@ -9,10 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988974
-  modifiedTime: 1739238988974
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: pbz07wewda81agkz
-system: {}
+_id: 5zq0saod63qd0fy6
+system:
+  broken: false
+  cost: 50000
+  costMultiplier: true
+  description: This system links with a ship's navigational subsystem and randomizes the motion vectors in sympathy with metadimensional gravitic currents. This agility gives any hit on the ship a 1 in 6 chance of being negated completely.
+  effect: 1 in 6 chance of any given attack missing.
+  mass: 2
+  massMultiplier: true
+  minClass: frigate
+  power: 5
+  powerMultiplier: false
 effects: []
-_key: '!items!pbz07wewda81agkz'
+_key: '!items!5zq0saod63qd0fy6'

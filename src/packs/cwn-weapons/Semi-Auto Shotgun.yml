@@ -9,52 +9,32 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988763
-  modifiedTime: 1739238988763
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: s3ud0wttik0q298x
+_id: untntwcmf7r1kko8
 system:
-  description: Shotguns of various stripes can be found under the counter of practically every bar and shop in a slum. Simple double-barrel models can be made by any home gunsmith with a pulse, but the finer tolerances and more elaborate machining of a burst-fire capable combat shotgun leaves them as a more selective product. Ranges and damages given are for shot shells; slugs double their normal and extreme ranges but apply a -1 penalty to hit rolls.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 2
-  cost: 1000
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  stat: dex
-  secondStat: none
-  skill: ask
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 0
-    dmg: 0
-  ab: 0
   ammo:
     burst: false
     max: 6
     suppress: false
     type: ammo
     value: 6
+  cost: 1000
+  damage: 3d4
+  description: Shotguns of various stripes can be found under the counter of practically every bar and shop in a slum. Simple double-barrel models can be made by any home gunsmith with a pulse, but the finer tolerances and more elaborate machining of a burst-fire capable combat shotgun leaves them as a more selective product. Ranges and damages given are for shot shells; slugs double their normal and extreme ranges but apply a -1 penalty to hit rolls.
+  encumbrance: 2
+  isNonLethal: false
   range:
     max: 30
     normal: 10
-  damage: 3d4
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
+  secondStat: none
+  shock:
+    ac: 0
+    dmg: 0
+  stat: dex
   trauma:
     die: 1d10
     rating: 3
-  isTwoHanded: false
-  isNonLethal: false
 effects: []
-_key: '!items!s3ud0wttik0q298x'
+_key: '!items!untntwcmf7r1kko8'

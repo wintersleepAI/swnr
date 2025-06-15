@@ -231,7 +231,43 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    */
   static async _deleteDoc(event, target) {
     const doc = this._getEmbeddedDocument(target);
-    await doc.delete();
+    const skipConfirmation = target.dataset?.skipconfirmation?.toLowerCase() === "true";
+    
+    const executeDelete = async () => {
+      await doc.delete();
+    }
+
+    if (skipConfirmation) {
+      await executeDelete();
+      return;
+    }
+    
+    await this._promptDelete(event, doc.name, doc.parent.name, executeDelete);
+  }
+
+  /**
+   * Displays a prompt to confirm deletion
+   * 
+   * @param {PointerEvent} event  The originating click event
+   * @param {String} name         The name of the item to delete
+   * @param {String} parentName   The name of the parent of the deleted item
+   * @param {Function} callback   The function to call on confirmed deletion
+   * @protected
+   */
+  async _promptDelete(event, name, parentName, callback) {
+    
+    if (event.shiftKey){
+      await callback();
+      return;
+    }
+    
+    await foundry.applications.api.DialogV2.confirm({
+      window: { title: game.i18n.format("swnr.deleteTitle", { name: name}) },
+      content: game.i18n.format("swnr.deleteContent", { name: name, actor: parentName}),
+      yes: {
+        callback: callback,
+      }
+    })
   }
 
   /**
@@ -278,6 +314,30 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
   static async _toggleEffect(event, target) {
     const effect = this._getEmbeddedDocument(target);
     await effect.update({ disabled: !effect.disabled });
+  }
+
+  /**
+   * Toggles a boolean property
+   * 
+   * @this SWNActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @private
+   */
+  static async _toggleProperty(event, target) {
+    const item = this._getEmbeddedDocument(target);
+    const property = target.dataset.property;
+    const value = item.system[property];
+    
+    if (value === undefined) {
+      console.log(`Unable to find ${property} property on item `, item.system);
+    }
+    
+    if (typeof  value != "boolean"){
+      console.log(`Property ${property} on item is not a boolean`);
+    }
+
+    await item.update({ [`system.${property}`]: !value });
   }
 
   /**

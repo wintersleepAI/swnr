@@ -159,10 +159,10 @@ Hooks.once('ready', function () {
 
   // If the stored version doesn't match the current system version, run migration
   if (storedVersion !== currentVersion) {
+    welcomeMessage();
     migrations.migrateWorld(storedVersion);
     game.settings.set('swnr', 'systemMigrationVersion', currentVersion);
   }
-  welcomeMessage();
 
   
 });
@@ -174,6 +174,20 @@ Hooks.once('ready', function () {
 Hooks.on("renderChatMessage", (message, html, _data) =>
   chatListeners(message, html)
 );
+
+/* -------------------------------------------- */
+/* Other Hooks                                */
+/* -------------------------------------------- */
+Hooks.on("createToken", (document, _options, userId) => {
+  if (game.settings.get("swnr", "useRollNPCHD")) {
+    if (game.user?.isGM && game.userId === userId) {
+      if (document.actor?.type == "npc") {
+        document.actor.system.rollHitDice(false);
+      }
+    }
+  }
+});
+
 
 
 /* -------------------------------------------- */
@@ -215,7 +229,15 @@ async function createDocMacro(data, slot) {
   game.user.assignHotbarMacro(macro, slot);
   return false;
 }
-
+Hooks.once("ready", () => {
+  const originalGetInitiativeRoll = Combatant.prototype.getInitiativeRoll;
+  Combatant.prototype.getInitiativeRoll = function () {
+    if (this.actor?.rollInitiative) {
+      return this.actor.rollInitiative();
+    }
+    return originalGetInitiativeRoll.call(this);
+  };
+});
 /**
  * Create a Macro from an Item drop.
  * Get an existing item macro if one exists, otherwise create a new one.

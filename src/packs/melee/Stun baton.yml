@@ -8,31 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988845
-  modifiedTime: 1739238988845
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 4s8hff4n3gvd45ac
+_id: 97qthf9em1y2eup7
 system:
-  description: Stun batons are common law enforcement tools. The damage they do can drop a target to zero hit points, but will not kill them, the victim awakening in ten minutes with one hit point. Stun batons trickle-charge from normal movement and will not run out of electrical energy under normal use conditions.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 50
-  tl: 4
-  location: other
-  quality: stock
-  noEncReadied: false
-  stat: str
-  secondStat: dex
-  skill: ''
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 15
-    dmg: 1
   ab: 0
   ammo:
     burst: false
@@ -41,20 +21,22 @@ system:
     suppress: false
     type: none
     value: 0
+  cost: 50
+  damage: 1d8
+  description: Stun batons are common law enforcement tools. The damage they do can drop a target to zero hit points, but will not kill them, the victim awakening in ten minutes with one hit point. Stun batons trickle-charge from normal movement and will not run out of electrical energy under normal use conditions.
+  encumbrance: 1
+  location: other
+  isMelee: true
+  quality: stock
   range:
     max: 0
     normal: 0
-  damage: 1d8
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
-  trauma:
-    die: 1d6
-    rating: null
-  isTwoHanded: false
-  isNonLethal: false
+  secondStat: dex
+  shock:
+    ac: 15
+    dmg: 1
+  skill: ''
+  stat: str
+  tl: 4
 effects: []
-_key: '!items!4s8hff4n3gvd45ac'
+_key: '!items!97qthf9em1y2eup7'

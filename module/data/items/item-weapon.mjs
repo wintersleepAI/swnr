@@ -10,23 +10,23 @@ export default class SWNWeapon extends SWNBaseGearItem {
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
-    schema.stat = SWNShared.stats("dex");
+    schema.stat = SWNShared.stats("dex", false, true);
     schema.secondStat = SWNShared.stats(null, true, false);
     schema.skill = SWNShared.requiredString("ask");
-    schema.skillBoostsDamage = new fields.BooleanField({initial: false});
-    schema.skillBoostsShock = new fields.BooleanField({initial: false});
+    schema.skillBoostsDamage = new fields.BooleanField({ initial: false });
+    schema.skillBoostsShock = new fields.BooleanField({ initial: false });
     schema.shock = new fields.SchemaField({
       dmg: SWNShared.requiredNumber(0),
       ac: SWNShared.requiredNumber(10),
     });
-    schema.ab = SWNShared.requiredNumber(0);
+    schema.ab = SWNShared.requiredNumber(0, -10);
     schema.ammo = new fields.SchemaField({
-      longReload: new fields.BooleanField({initial: false}),
-      suppress: new fields.BooleanField({initial: false}),
+      longReload: new fields.BooleanField({ initial: false }),
+      suppress: new fields.BooleanField({ initial: false }),
       type: SWNShared.stringChoices("ammo", CONFIG.SWN.ammoTypes),
       max: SWNShared.requiredNumber(10),
       value: SWNShared.requiredNumber(10),
-      burst: new fields.BooleanField({initial: false}),
+      burst: new fields.BooleanField({ initial: false }),
     });
     schema.range = new fields.SchemaField({
       normal: SWNShared.requiredNumber(1),
@@ -34,10 +34,10 @@ export default class SWNWeapon extends SWNBaseGearItem {
     });
     schema.damage = SWNShared.requiredString("1d6");
     schema.remember = new fields.SchemaField({
-      use: new fields.BooleanField({initial: false}),
-      burst: new fields.BooleanField({initial: false}),
+      use: new fields.BooleanField({ initial: false }),
+      burst: new fields.BooleanField({ initial: false }),
       modifier: SWNShared.requiredNumber(0),
-      isNonLethal: new fields.BooleanField({initial: false}),
+      isNonLethal: new fields.BooleanField({ initial: false }),
     });
     //schema.quantity = SWNShared.requiredNumber(1);
     schema.save = SWNShared.stringChoices(null, CONFIG.SWN.saveTypes, false);
@@ -45,10 +45,25 @@ export default class SWNWeapon extends SWNBaseGearItem {
       die: SWNShared.requiredString("1d6"),
       rating: SWNShared.nullableNumber(),
     });
-    schema.isTwoHanded = new fields.BooleanField({initial: false});
-    schema.isNonLethal = new fields.BooleanField({initial: false});
+    schema.isTwoHanded = new fields.BooleanField({ initial: false });
+    schema.isNonLethal = new fields.BooleanField({ initial: false });
+    schema.isMelee = new fields.BooleanField({ initial: false });
+
 
     return schema;
+  }
+
+  static migrateData(data) {
+
+    if (data.trauma.rating == "none" || data.trauma.rating == "") {
+      data.trauma.rating = null;
+    }
+
+    if (!(data.stat in CONFIG.SWN.stats)) {
+      data.stat = "ask";
+    }
+
+    return data;
   }
 
   get canBurstFire() {
@@ -76,7 +91,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
   ) {
     let item = this.parent;
     const actor = item.actor;
-    
+
     if (!actor) {
       const message = `Called rollAttack on item without an actor.`;
       ui.notifications?.error(message);
@@ -112,30 +127,25 @@ export default class SWNWeapon extends SWNBaseGearItem {
       shockDmg: this.shock?.dmg > 0 ? this.shock.dmg : 0,
       attackRollDie,
     };
+    let hitExplainTip = "1d20 +burst +mod +CharAB +WpnAB +Stat +Skill";
+
     let dieString =
       "@attackRollDie + @burstFire + @modifier + @actor.ab + @weapon.ab + @stat + @effectiveSkillRank";
     const useA = game.settings.get("swnr", "useCWNArmor") ? true : false;
-    if (
-      useA &&
-      this.range.normal <= 1 &&
-      this.ammo.type == "none"
-    ) {
-      if (actor.type == "character" || actor.type == "npc") {
-        if (actor.system.meleeAb) {
-          dieString =
-            "@attackRollDie + @burstFire + @modifier + @actor.meleeAb + @weapon.ab + @stat + @effectiveSkillRank";
-        }
-      }
+    if (useA && item.system.isMelee &&
+      (actor.type == "character" || actor.type == "npc")) {
+      dieString =
+        "@attackRollDie + @burstFire + @modifier + @actor.meleeAb + @weapon.ab + @stat + @effectiveSkillRank";
+      hitExplainTip = "1d20 +burst +mod +CharMeleeAB +WpnAB +Stat +Skill";
     }
     const hitRoll = new Roll(dieString, rollData);
-    await hitRoll.roll({ async: true });
-    const hitExplainTip = "1d20 +burst +mod +CharAB +WpnAB +Stat +Skill";
+    await hitRoll.roll();
     rollData.hitRoll = +(hitRoll.dice[0].total?.toString() ?? 0);
     const damageRoll = new Roll(
       this.damage + " + @burstFire + @stat + @damageBonus",
       rollData
     );
-    await damageRoll.roll({ async: true });
+    await damageRoll.roll();
     const damageExplainTip = "roll +burst +statBonus +dmgBonus";
     const diceTooltip = {
       hit: await hitRoll.render(),
@@ -155,7 +165,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       this.trauma.rating != null
     ) {
       const traumaRoll = new Roll(this.trauma.die);
-      await traumaRoll.roll({ async: true });
+      await traumaRoll.roll();
       traumaRollRender = await traumaRoll.render();
       if (
         traumaRoll &&
@@ -166,7 +176,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
         const traumaDamageRoll = new Roll(
           `${damageRoll.total} * ${this.trauma.rating}`
         );
-        await traumaDamageRoll.roll({ async: true });
+        await traumaDamageRoll.roll();
         traumaDamage = await traumaDamageRoll.render();
       }
     }
@@ -181,10 +191,10 @@ export default class SWNWeapon extends SWNBaseGearItem {
         shock_content = `Shock Damage  AC ${this.shock.ac}`;
         const _shockRoll = new Roll(
           " @shockDmg + @stat " +
-            (this.skillBoostsShock ? ` + ${damageBonus}` : ""),
+          (this.skillBoostsShock ? ` + ${damageBonus}` : ""),
           rollData
         );
-        await _shockRoll.roll({ async: true });
+        await _shockRoll.roll();
         shock_roll = await _shockRoll.render();
         rollArray.push(_shockRoll);
       }
@@ -200,7 +210,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       modifier,
       effectiveSkillRank: rollData.effectiveSkillRank,
       diceTooltip,
-      ammoRatio: Math.clamped(
+      ammoRatio: Math.clamp(
         Math.floor((this.ammo.value * 20) / this.ammo.max),
         0,
         20
@@ -211,15 +221,15 @@ export default class SWNWeapon extends SWNBaseGearItem {
       traumaRollRender,
     };
     const rollMode = game.settings.get("core", "rollMode");
-    const diceData = Roll.fromTerms([PoolTerm.fromRolls(rollArray)]);
+    const diceData = Roll.fromTerms([foundry.dice.terms.PoolTerm.fromRolls(rollArray)]);
     if (
       this.ammo.type !== "none" &&
       this.ammo.type !== "infinite"
     ) {
       const newAmmoTotal = this.ammo.value - 1 - burstFire;
-      await this.parent.update({ 
+      await this.parent.update({
         system: {
-          "ammo.value": newAmmoTotal 
+          "ammo.value": newAmmoTotal
         }
       });
       if (newAmmoTotal === 0)
@@ -229,8 +239,8 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const chatData = {
       speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),
       roll: JSON.stringify(diceData),
-      content: chatContent,
-      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+      rolls: rollArray, // Added for dice so nice trigger. 
+      content: chatContent
     };
     getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
@@ -240,7 +250,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
   async roll(shiftKey = false) {
     let item = this.parent;
     const actor = item.actor;
-    
+
     if (!actor) {
       const message = `Called weapon.roll on item without an actor.`;
       ui.notifications?.error(message);
@@ -267,17 +277,18 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const secStatName = this.secondStat;
     // check if there is 2nd stat name and its mod is better
     if (
+      statName != "ask" &&
       secStatName != null &&
       secStatName != "none" &&
-        actor.system["stats"]?.[statName].mod <
-        actor.system["stats"]?.[secStatName].mod
+      actor.system["stats"]?.[statName]?.mod <
+      actor.system["stats"]?.[secStatName].mod
     ) {
       statName = secStatName;
     }
 
     // Set to not ask and just roll
     if (!shiftKey && this.remember && this.remember.use) {
-      const stat = actor["stats"]?.[statName] || {
+      const stat = actor.system["stats"]?.[statName] || {
         mod: 0,
       };
 
@@ -285,10 +296,24 @@ export default class SWNWeapon extends SWNBaseGearItem {
         "Item",
         this.skill
       );
-      const skillMod = skill.rank < 0 ? -2 : skill.rank;
+      let skillMod = -2;
+      if (skill) {
+        skillMod = skill?.system.rank < 0 ? -2 : skill.system.rank;
+      } else {
+        ui.notifications?.info("No skill found, using -2. Unsetting remember.");
+        await this.parent.update({
+          system: {
+            remember: {
+              use: false,
+              burst: false,
+              modifier: 0,
+            },
+          }
+        });
+      }
 
       if (actor?.type == "character") {
-        dmgBonus = this.skillBoostsDamage ? skill.rank : 0;
+        dmgBonus = this.skillBoostsDamage ? skill.system.rank : 0;
       }
       return this.rollAttack(
         dmgBonus,
@@ -306,6 +331,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       statName: statName,
       skill: this.skill,
       burstFireHasAmmo,
+      stats: actor.system.stats,
     };
     const template = "systems/swnr/templates/dialogs/roll-attack.hbs";
     const html = await renderTemplate(template, dialogData);
@@ -342,7 +368,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
         secStatName != null &&
         secStatName != "none" &&
         actor.system.stats[statName].mod <
-          actor.system.stats[secStatName].mod
+        actor.system.stats[secStatName].mod
       ) {
         statName = secStatName;
       }

@@ -8,35 +8,26 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988386
-  modifiedTime: 1739238988386
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: fekxrqq2vu0t6oxp
+_id: 301btxxgu6mih2fd
 system:
-  description: A combat field uniform is sophisticated battle dress fabricated from TL4 ablative coatings, rigid plates, and shock-activated soft components. The CFU is the standard uniform for well-equipped TL4 front-line soldiers.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 1000
-  tl: 4
-  location: other
-  quality: stock
-  noEncReadied: false
   ac: 16
-  shield: false
-  use: false
   meleeAc: 16
+  traumaDiePenalty: 2
+  isSubtle: false
   soak:
     value: 5
     max: 5
-  dr: 0
-  traumaDiePenalty: 2
-  isSubtle: false
-  isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
+  cost: 1000
+  description: A combat field uniform is sophisticated battle dress fabricated from TL4 ablative coatings, rigid plates, and shock-activated soft components. The CFU is the standard uniform for well-equipped TL4 front-line soldiers.
+  encumbrance: 1
+  location: other
+  quality: stock
+  shield: false
+  tl: 4
+  type: combat
+  use: false
 effects: []
-_key: '!items!fekxrqq2vu0t6oxp'
+_key: '!items!301btxxgu6mih2fd'

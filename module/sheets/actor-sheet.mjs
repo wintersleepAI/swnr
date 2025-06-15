@@ -23,7 +23,7 @@ export class SWNActorSheet extends SWNBaseSheet {
   static DEFAULT_OPTIONS = {
     classes: ['swnr', 'actor'],
     position: {
-      width: 760,
+      width: 780,
       height: 800,
     },
     actions: {
@@ -48,6 +48,8 @@ export class SWNActorSheet extends SWNBaseSheet {
       toggleSection: this._toggleSection,
       reactionRoll: this._onReactionRoll,
       moraleRoll: this._onMoraleRoll,
+      resourceCreate: this._onResourceCreate,
+      resourceDelete: this._onResourceDelete,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -371,6 +373,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     // NOTE that 'click' events should just be actions like roll, rest, etc.
     this.element.querySelectorAll(".location-selector").forEach((d) =>
       d.addEventListener('change', this._onLocationChange.bind(this)));
+
+    this.element.querySelectorAll(".resource-list-val").forEach((d) =>
+      d.addEventListener('change', this._onResourceChange.bind(this)));
 
     // Toggle lock related elements after render depending on the lock state
     this.element?.querySelectorAll(".lock-icon").forEach((d) => {
@@ -697,7 +702,7 @@ export class SWNActorSheet extends SWNBaseSheet {
     }
     const formula = new Array(6).fill(dice).join("+");
     const roll = new Roll(formula);
-    await roll.roll({ async: true });
+    await roll.roll();
     const stats = {};
     ["str", "dex", "con", "int", "wis", "cha"].map((k, i) => {
       stats[k] = {
@@ -728,8 +733,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       {
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         roll: JSON.stringify(roll.toJSON()),
-        content: chatContent,
-        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+        content: chatContent
       }
     );
   }
@@ -791,5 +795,36 @@ export class SWNActorSheet extends SWNBaseSheet {
     } else {
       console.log("Morale rolls are only for NPCs");
     }
+  }
+
+  static async _onResourceCreate(event, _target) {
+    event.preventDefault();
+    let resourceList = this.actor.system.tweak.resourceList;
+    if (!resourceList) {
+      resourceList = [];
+    }
+    resourceList.push({ name: "Resource X", value: 0, max: 1 });
+    await this.actor.update({
+      "system.tweak.resourceList": resourceList,
+    });
+  }
+
+  static async _onResourceDelete(event, target) {
+    event.preventDefault();
+    const dataset = target.dataset;
+    const idx = dataset.rlIdx;
+    const resourceList = duplicate(this.actor.system.tweak.resourceList);
+    resourceList.splice(idx, 1);
+    await this.actor.update({ "system.tweak.resourceList": resourceList });
+  }
+
+  async _onResourceChange(event) {
+    event.preventDefault();
+    const value = event.target?.value;
+    const resourceType = $(event.currentTarget).data("rlType");
+    const idx = $(event.currentTarget).parents(".item").data("rlIdx");
+    const resourceList = duplicate(this.actor.system.tweak.resourceList);
+    resourceList[idx][resourceType] = value;
+    await this.actor.update({ "system.tweak.resourceList": resourceList });
   }
 }

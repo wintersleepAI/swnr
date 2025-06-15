@@ -9,10 +9,19 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988788
-  modifiedTime: 1739238988788
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: e11hgyyujcfm202b
-system: {}
+_id: ntrt4knnu39f1w24
+system:
+  broken: false
+  cost: 4000
+  costMultiplier: true
+  description: 'Environmental Power: The drone draws operating power from sunlight or thermal variances. It can operate indefinitely so long as it can draw power from its environment.'
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  type: drone
 effects: []
-_key: '!items!e11hgyyujcfm202b'
+_key: '!items!ntrt4knnu39f1w24'

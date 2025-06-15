@@ -21,6 +21,7 @@ export default class SWNCharacter extends SWNActorBase {
           bonus: SWNShared.requiredNumber(0),
           boost: SWNShared.requiredNumber(0),
           temp: SWNShared.requiredNumber(0,-18),
+          modModifier: SWNShared.nullableNumber(),
         });
         return obj;
       }, {})
@@ -46,6 +47,7 @@ export default class SWNCharacter extends SWNActorBase {
     schema.unspentSkillPoints = SWNShared.requiredNumber(0);
     schema.unspentPsySkillPoints = SWNShared.requiredNumber(0);
     schema.extra = SWNShared.resourceField(0, 10);
+    schema.stress = SWNShared.nullableNumber();
 
     schema.tweak = new fields.SchemaField({
       advInit: new fields.BooleanField({initial: false}),
@@ -72,6 +74,9 @@ export default class SWNCharacter extends SWNActorBase {
       debtDisplay: SWNShared.requiredString("Debt"),
       owedDisplay: SWNShared.requiredString("Owed"),
       balanceDisplay: SWNShared.requiredString("Balance"),
+      initiative: new fields.SchemaField({
+        mod: SWNShared.nullableNumber(),
+      })
     });
 
     return schema;
@@ -84,20 +89,20 @@ export default class SWNCharacter extends SWNActorBase {
       this.stats[key].baseTotal = this.stats[key].base + this.stats[key].boost;
       this.stats[key].total = this.stats[key].baseTotal + this.stats[key].temp;
       this.stats[key].mod = calcMod(this.stats[key].total , this.stats[key].bonus) ;
-      
+      if (this.stats[key].modModifier) {
+        this.stats[key].mod += this.stats[key].modModifier;
+      }
       // Handle stat label localization.
       this.stats[key].label =
         game.i18n.localize(CONFIG.SWN.stats[key]) ?? key;
     }
     //Cyberware
-    const cyberware = this.parent.items.filter((i) => i.type === "cyberware");
-    let cyberwareStrain = 0;
-    //Sum up cyberware strain. force to number
-    cyberwareStrain = cyberware.reduce(
-      (i, n) => i + Number(n.system.strain),
-      0
-    );
-
+    const cyberware = this.parent.items.filter((i) => i.type === "cyberware");       
+    
+    // Sum up cyberware strain, forcing to number
+    let cyberwareStrain = cyberware.reduce((acc, item) => {
+      return acc + Number(item.system.strain);
+    }, 0);
     // System Strain
     this.systemStrain.cyberware = cyberwareStrain;
     this.systemStrain.max = this.stats.con.total - this.systemStrain.cyberware - this.systemStrain.permanent;
@@ -131,6 +136,7 @@ export default class SWNCharacter extends SWNActorBase {
     if (programSkill && programSkill.length == 1) {
       this.access.max += programSkill[0].system.rank;
     }
+    this.access.max = Math.max(0, this.access.max);
 
     // Set up soak and trauma target
     const useCWNArmor = game.settings.get("swnr", "useCWNArmor") ? true : false;
@@ -196,22 +202,31 @@ export default class SWNCharacter extends SWNActorBase {
             game.i18n.localize("swnr.skills.labels.psionic").toLocaleLowerCase()
       );
     const effort = this.effort;
+    const useCyber = game.settings.get("swnr", "useCWNCyber");
+    const cyberStrain = useCyber ? this.systemStrain.cyberware : 0;
+    
     effort.max =
       Math.max(
         1,
         1 +
           Math.max(this.stats.con.mod, this.stats.wis.mod) +
           Math.max(0, ...psychicSkills.map((i) => i.system.rank))
-      ) + effort.bonus;
-    effort.value = effort.max - effort.current - effort.scene - effort.day;
-
+      ) +
+      effort.bonus -
+      cyberStrain;
+    
+    // Floor at 0.
+    effort.max = Math.max(0, effort.max);
+    
+    effort.value = effort.max - effort.current - effort.scene - effort.day;      
     // extra effort
     const extraEffort = this.tweak.extraEffort;
     extraEffort.value =
       extraEffort.max -
       extraEffort.current -
       extraEffort.scene -
-      extraEffort.day;
+      extraEffort.day -
+      cyberStrain;
 
     effort.percentage = Math.clamp((effort.value * 100) / effort.max, 0, 100);
 
@@ -246,6 +261,7 @@ export default class SWNCharacter extends SWNActorBase {
     const readiedItems = inventory.filter((i) => i.system.location === "readied");
 
     encumbrance.ready.value = readiedItems
+      .filter((i) => i.system.noEncReadied === false)
       .map(itemInvCost)
       .reduce((i, n) => i + n, 0);
     encumbrance.stowed.value = inventory
@@ -314,7 +330,7 @@ export default class SWNCharacter extends SWNActorBase {
         modifier,
         target: target,
       });
-      await roll.roll({ async: true });
+      await roll.roll();
       const success = roll.total ? roll.total >= target - modifier : false;
       const save_text = game.i18n.format(
         success
@@ -333,8 +349,8 @@ export default class SWNCharacter extends SWNActorBase {
       const chatData = {
         speaker: ChatMessage.getSpeaker(),
         roll: JSON.stringify(roll),
-        content: chatContent,
-        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+        rolls: [roll],
+        content: chatContent
       };
       getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
       getDocumentClass("ChatMessage").create(chatData);
@@ -346,9 +362,9 @@ export default class SWNCharacter extends SWNActorBase {
         modal: false,
         rejectClose: false,
         ok: {
-            label: game.i18n.localize("swnr.chat.roll"),
-            callback: _doRoll,
-          },
+          label: game.i18n.localize("swnr.chat.roll"),
+          callback: _doRoll,
+        },
       }
     );
   }
@@ -380,7 +396,7 @@ export default class SWNCharacter extends SWNActorBase {
 
       let msg = `Rolling Level ${currentLevel} HP: ${formula}<br>(Rolling a hitdice per level, with adding the CON mod. Each roll cannot be less than 1)<br>`;
       const roll = new Roll(formula);
-      await roll.roll({ async: true });
+      await roll.roll();
       if (roll.total) {
         let hpRoll = roll.total;
         msg += `Got a ${hpRoll}<br>`;
@@ -402,7 +418,7 @@ export default class SWNCharacter extends SWNActorBase {
           speaker: ChatMessage.getSpeaker({ actor: this.parent }),
           flavor: msg,
           roll: JSON.stringify(roll),
-          type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+          rolls: [roll],
         });
       } else {
         console.log("Something went wrong with roll ", roll);

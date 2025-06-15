@@ -9,53 +9,22 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1741406949684
-  modifiedTime: 1741406949684
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: 4g309adrnkbjsxyc
+_id: rs9zh6rsnx9v2tse
 system:
-  health:
-    value: 10
-    max: 10
-  biography: ''
-  species: ''
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 6
-  baseAc: 14
-  meleeAc: 10
   ab: 2
-  meleeAb: 1
-  systemStrain:
-    value: 0
-    permanent: 0
-  effort:
-    bonus: 0
-    current: 0
-    scene: 0
-    day: 0
-  speed: 15
-  cyberdecks: []
-  health_max_modified: 0
   armorType: primitive
-  skillBonus: 1
   attacks:
     bonusDamage: 0
     number: 1
+  baseAc: 14
   hitDice: 2
-  saves: 14
   moralScore: 9
-  reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
-    value: 0
-    max: 0
-  homeworld: ''
-  faction: ''
+  saves: 14
+  skillBonus: 1
+  speed: 15
 effects: []
 prototypeToken:
   name: Large Pack Hunter
@@ -133,7 +102,7 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!4g309adrnkbjsxyc'
+_key: '!actors!rs9zh6rsnx9v2tse'
 items:
   - name: Natural Attack
     type: weapon
@@ -145,53 +114,20 @@ items:
       coreVersion: '12.331'
       systemId: swnr
       systemVersion: 2.0.0
-      createdTime: 1741406949684
-      modifiedTime: 1741406949684
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
     sort: 0
-    _id: vjfg04yx24oasavi
+    _id: unvlc5bd1swfu2p7
     system:
-      description: ''
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      encumbrance: 0
-      cost: 0
-      tl: 4
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
       shock:
         dmg: 0
         ac: 15
-      ab: 0
-      ammo:
-        longReload: false
-        suppress: false
-        type: ammo
-        max: 10
-        value: 10
-        burst: false
-      range:
-        normal: 1
-        max: 2
       damage: d6
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma:
-        die: 1d6
-        rating: null
-      isTwoHanded: false
-      isNonLethal: false
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      permission:
+        default: 0
     effects: []
-    _key: '!actors.items!4g309adrnkbjsxyc.vjfg04yx24oasavi'
+    _key: '!actors.items!rs9zh6rsnx9v2tse.unvlc5bd1swfu2p7'

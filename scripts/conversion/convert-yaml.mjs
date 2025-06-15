@@ -2,9 +2,13 @@ import { readFile, writeFile, readdir, mkdir } from 'fs/promises';
 import path from 'path';
 import yaml from 'js-yaml';
 import { mapping } from './mapping.mjs';
+import { createHash } from 'crypto';
 
 const inputFolder = 'scripts/conversion/input';   // Path to your input YAML file
-const outputFolder = 'scripts/conversion/output'; // Path where you want to save the output YAML
+// const outputFolder = 'scripts/conversion/output'; // Path where you want to save the output YAML
+const outputFolder = 'src/packs'; // Path where you want to save the output YAML
+
+const time = 1739238988321; // Date.now() value to be used for createdTime and modifiedTime
 
 const transformAllYaml = async () => {
     try {
@@ -31,10 +35,10 @@ const transformYaml = async (inputFilePath, outputFilePath) => {
         const fileContents = await readFile(inputFilePath, 'utf8');
         const inputData = yaml.load(fileContents);
 
-        const outputData = mapToV12Format(inputData)
+        const outputData = mapToV12Format(inputData, inputFilePath)
         if (inputData?.items) {
             outputData.items = (inputData.items).map(item => {
-                const itemCompendium = mapToV12Format(item);
+                const itemCompendium = mapToV12Format(item, inputFilePath);
 
                 return {
                     ...itemCompendium,
@@ -53,7 +57,17 @@ const transformYaml = async (inputFilePath, outputFilePath) => {
     }
 };
 
-const generate16DigitString = () => {
+const generate16DigitStringx = (file_path) => {
+    // Create MD5 hash from the input string
+    const hash = createHash('md5').update(file_path.toString()).digest('hex');
+
+    // Return the first 16 characters of the hash
+    return hash.substring(0, 16);
+};
+
+
+
+const generate16DigitString = (name) => {
     const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
 
     let result = '';
@@ -64,8 +78,8 @@ const generate16DigitString = () => {
     return result;
 };
 
-const mapToV12Format = (compendium) => {
-    const uuid = generate16DigitString();
+const mapToV12Format = (compendium, inputFilePath) => {
+    const uuid = generate16DigitString(inputFilePath);
     const template = {
         name: compendium?.name,
         type: compendium?.type,
@@ -78,8 +92,8 @@ const mapToV12Format = (compendium) => {
             coreVersion: '12.331',
             systemId: 'swnr',
             systemVersion: '2.0.0',
-            createdTime: Date.now(),
-            modifiedTime: Date.now(),
+            createdTime: time,
+            modifiedTime: time,
             // Removing this line due to complaints in build
             // lastModifiedBy: 'systembuilder9000'
         },
@@ -89,12 +103,7 @@ const mapToV12Format = (compendium) => {
     const outputFormat = ['npc', 'cyberdeck', 'drone', 'faction', 'mech', 'ship', 'vehicle'].includes(compendium.type) ?
         {
             ...template,
-            system: Object.entries(compendium.data).reduce((acc, [key, value]) => {
-                if (key in (mapping?.[compendium.type] || {})) {
-                    acc[key] = value;
-                }
-                return acc;
-            }, { ...mapping?.[compendium.type] }),
+            system: compendium.data,
             effects: [],
             prototypeToken: {
                 name: compendium.name,
@@ -202,12 +211,7 @@ const mapToV12Format = (compendium) => {
             :
             {
                 ...template,
-                system: Object.entries(compendium.data).reduce((acc, [key, value]) => {
-                    if (key in (mapping?.[compendium.type] || {})) {
-                        acc[key] = value;
-                    }
-                    return acc;
-                }, { ...mapping?.[compendium.type] }),
+                system: compendium.data,
                 effects: [],
                 _key: `!items!${uuid}`
             }

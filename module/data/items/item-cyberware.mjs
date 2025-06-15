@@ -24,13 +24,30 @@ export default class SWNCyberware extends SWNItemBase {
     schema.strain = SWNShared.requiredNumber(1,-20, false);
     schema.disabled = new fields.BooleanField({ initial: false });
     schema.effect = SWNShared.requiredString("None");
-    schema.type = SWNShared.stringChoices("none", CONFIG.SWN.cyberTypes);
-    schema.concealment = SWNShared.stringChoices("sight", CONFIG.SWN.cyberConcealmentTypes);
+    schema.type = SWNShared.stringChoices("None", CONFIG.SWN.cyberTypes);
+    schema.concealment = SWNShared.stringChoices("Sight", CONFIG.SWN.cyberConcealmentTypes);
     schema.complication = SWNShared.requiredString("");
     return schema;
   }
 
   prepareDerivedData() {
     //this.strain.value = this.strain.base;
+  }
+
+  static migrateData(data) {
+    // Migrate lowercase type to capitalized type
+    if (data.type != null && data.type.length > 0) {
+      if (data.type[0] === data.type[0].toLowerCase()) {
+        // Capitalize the first character and concatenate the rest of the string
+        data.type = data.type.charAt(0).toUpperCase() + data.type.slice(1);
+      }
+    }
+    if (data.concealment != null && data.concealment.length > 0) {
+      if (data.concealment[0] === data.concealment[0].toLowerCase()) {
+        // Capitalize the first character and concatenate the rest of the string
+        data.concealment = data.concealment.charAt(0).toUpperCase() + data.concealment.slice(1);
+      }
+    }
+    return data;
   }
 }

@@ -8,35 +8,26 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988385
-  modifiedTime: 1739238988385
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: a80f7zdwmrmofngu
+_id: ilmm9wzmzfkurqam
 system:
-  description: An assault suit represents the most sophisticated armor in common use among TL4 worlds. An assault suit requires a type B power cell for 24 hours of operation, and provides integral encrypted military comms, low-light and infrared vision, and a built-in energy feed interface. The latter allows the wearer to connect the suit to any one weapon or device that uses a type A power cell as a Main Action. So long as the device remains connected to the suit, it is treated as having unlimited ammunition or operation time. The suit also functions as a vacc suit so long as it remains powered, one that cannot be torn by edged weapons.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 2
-  cost: 10000
-  tl: 4
-  location: other
-  quality: stock
-  noEncReadied: false
   ac: 18
-  shield: false
-  use: false
   meleeAc: 18
+  traumaDiePenalty: 3
+  isSubtle: false
   soak:
     value: 15
     max: 15
-  dr: 0
-  traumaDiePenalty: 3
-  isSubtle: false
-  isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
+  cost: 10000
+  description: An assault suit represents the most sophisticated armor in common use among TL4 worlds. An assault suit requires a type B power cell for 24 hours of operation, and provides integral encrypted military comms, low-light and infrared vision, and a built-in energy feed interface. The latter allows the wearer to connect the suit to any one weapon or device that uses a type A power cell as a Main Action. So long as the device remains connected to the suit, it is treated as having unlimited ammunition or operation time. The suit also functions as a vacc suit so long as it remains powered, one that cannot be torn by edged weapons.
+  encumbrance: 2
+  location: other
+  quality: stock
+  shield: false
+  tl: 4
+  type: powered
+  use: false
 effects: []
-_key: '!items!a80f7zdwmrmofngu'
+_key: '!items!ilmm9wzmzfkurqam'

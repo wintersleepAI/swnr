@@ -9,10 +9,20 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238989013
-  modifiedTime: 1739238989013
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: u67avbd24fcprxo6
-system: {}
+_id: 334984a8m58jbotu
+system:
+  broken: false
+  cost: 2500
+  costMultiplier: true
+  description: Carefully-designed storage space intended to conceal illicit cargo from customs inspection. Each installation of this fitting adds 200 kilograms of cargo space in a fighter, 2 tons in a frigate, 20 tons in a cruiser, or 200 tons in a capital ship. Cargo in smuggler's hold will never be found by a standard customs inspection. Careful investigation by a suspicious official can find it on a difficulty 10 check using their Wis/Notice skill, and a week-long search one step short of disassembly will find it on a difficulty 7 check.
+  effect: Small amount of well-hidden cargo space
+  mass: 1
+  massMultiplier: false
+  minClass: fighter
+  power: 0
+  powerMultiplier: false
 effects: []
-_key: '!items!u67avbd24fcprxo6'
+_key: '!items!334984a8m58jbotu'

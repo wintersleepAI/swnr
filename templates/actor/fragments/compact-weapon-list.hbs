@@ -1,14 +1,27 @@
-<ol class="items-list">
-  <!-- HEADER ROW (Uses Existing Classes) -->
-  <li class="items-header grid grid-4col">
-    <div class="grid-span-2 flex-group-left item-name">
-      {{localize "swnr.sheet.tabs.weapons-short"}}
+<ol class='items-list'>
+  <li class='flex flexrow items-header'>
+    <div class='item-name'>
+      {{#if (eq actorType 'character')}}
+      {{localize 'swnr.item.locationReadied'}}
+      {{/if}}
+      {{localize 'swnr.sheet.tabs.weapons-short'}}
     </div>
     <div class="flex-group-center item-prop">
       {{localize "swnr.weapon.damage"}}
     </div>
-    <div class="flex-group-center item-prop">
-      {{localize "swnr.item.ammo.short"}}
+    <div class='item-controls-small'>
+      {{#if @root.editable}}
+        <a
+          class='item-control item-create'
+          title='Create Weapon'
+          data-action='createDoc'
+          data-document-class='Item'
+          data-type='weapon'
+          data-system.location='readied'
+        >
+          <i class='fas fa-plus'></i>
+        </a>
+      {{/if}}
     </div>
     <div class="flex-group-right item-controls-small"></div>
   </li>

@@ -9,11 +9,27 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988630
-  modifiedTime: 1739238988630
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: cxd6v2c590oehfux
-system: {}
+_id: ngkb3qg70dzxdydm
+system:
+  ac: 15
+  cost: 2000
+  description: |2-
+     The Sui Hummingbird is the smallest flight-capable drone of any practical use
+    to most pilots. It has very limited loadout options, but its small size allows for several different drones to be carried by the pilot.
+  enc: 3
+  fittings:
+    max: 2
+  hardpoint:
+    max: 0
+  health:
+    max: 5
+    value: 5
+  moveType: fly
+  speed: 10
+  traumaTarget: 6
 effects: []
 prototypeToken:
   name: Sui Hummingbird
@@ -91,4 +107,4 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-_key: '!actors!cxd6v2c590oehfux'
+_key: '!actors!ngkb3qg70dzxdydm'

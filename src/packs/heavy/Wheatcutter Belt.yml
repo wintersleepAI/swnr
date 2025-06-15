@@ -8,31 +8,11 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988840
-  modifiedTime: 1739238988840
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: n5v1x0g10nx1s4k7
+_id: t0o3lk02vlu5oq24
 system:
-  description: Wheatcutter belts are one of several different antipersonnel measures often installed on gravtanks and other fighting vehicles. When triggered, a belt of explosives fires off a scything blast of shrapnel on any side of the vehicle. All creatures within 10 meters of that side of the vehicle must make an Evasion save for half damage. Those within 20 meters take half damage, and can make an Evasion save to take none at all. Wheatcutter belts do not ignore a vehicle’s Armor like other Heavy weapons do. Reloading a wheatcutter belt costs 200 credits per round.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 0
-  cost: 10000
-  tl: 4
-  location: other
-  quality: stock
-  noEncReadied: false
-  stat: dex
-  secondStat: none
-  skill: ''
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  shock:
-    ac: 15
-    dmg: 0
   ab: 0
   ammo:
     burst: false
@@ -41,20 +21,21 @@ system:
     suppress: false
     type: special
     value: 5
+  cost: 10000
+  damage: 2d12
+  description: Wheatcutter belts are one of several different antipersonnel measures often installed on gravtanks and other fighting vehicles. When triggered, a belt of explosives fires off a scything blast of shrapnel on any side of the vehicle. All creatures within 10 meters of that side of the vehicle must make an Evasion save for half damage. Those within 20 meters take half damage, and can make an Evasion save to take none at all. Wheatcutter belts do not ignore a vehicle’s Armor like other Heavy weapons do. Reloading a wheatcutter belt costs 200 credits per round.
+  encumbrance: 0
+  location: other
+  quality: stock
   range:
     max: 20
     normal: 10
-  damage: 2d12
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
-  trauma:
-    die: 1d6
-    rating: null
-  isTwoHanded: false
-  isNonLethal: false
+  secondStat: none
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 4
 effects: []
-_key: '!items!n5v1x0g10nx1s4k7'
+_key: '!items!t0o3lk02vlu5oq24'

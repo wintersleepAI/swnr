@@ -9,24 +9,14 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988691
-  modifiedTime: 1739238988691
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: z9xu1kjdo5mqh9zs
+_id: ejghjc4e93r2153c
 system:
-  description: A gritty powder trafficked to those addicts too poor to afford anything better, a snorted dose of Sand will put its user into a euphoric haze for as long as an hour, depending on tolerance. Beautiful visions and dreamy contentment give way to shooting pains and intense light sensitivity afterwards, with most heavy users dying within six to twelve months of picking up the habit.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 0
   cost: 2
-  location: stowed
-  quality: stock
+  description: A gritty powder trafficked to those addicts too poor to afford anything better, a snorted dose of Sand will put its user into a euphoric haze for as long as an hour, depending on tolerance. Beautiful visions and dreamy contentment give way to shooting pains and intense light sensitivity afterwards, with most heavy users dying within six to twelve months of picking up the habit.
+  encumbrance: 0
   noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-_key: '!items!z9xu1kjdo5mqh9zs'
+_key: '!items!ejghjc4e93r2153c'

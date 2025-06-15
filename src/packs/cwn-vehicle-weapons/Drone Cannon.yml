@@ -9,10 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988735
-  modifiedTime: 1739238988735
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: y9id1uhrgoljbvw4
-system: {}
+_id: ldx376zia7crola5
+system:
+  ammo:
+    max: 100
+    type: ammo
+    value: 10
+  cost: 5000
+  damage: 2d8
+  description: Drone cannons are heavy semi-automatic weapons too bulky for human portability. A round of firing costs $100 worth of ammunition.
+  effect: ''
+  mass: 1
+  minClass: m
+  power: 1
+  range:
+    max: 1000
+    normal: 200
+  stat: dex
+  trauma:
+    die: 1d10
+    rating: 3
+    vehicle: true
+  type: vehicle
 effects: []
-_key: '!items!y9id1uhrgoljbvw4'
+_key: '!items!ldx376zia7crola5'

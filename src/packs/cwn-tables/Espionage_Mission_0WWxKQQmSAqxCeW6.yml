@@ -1,0 +1,108 @@
+name: Espionage Mission
+description: >-
+  <p>A random table created from the contents of the Espionage Mission
+  Folder.</p><ul><li><p>1. Why Can’t They Get It Themselves?</p></li><li><p>2.
+  What Kind of Patron Put Up the Job?</p></li><li><p>3. What Profit Will It Give
+  a Thief?</p></li><li><p>4. How Obscure is the Secret?</p></li><li><p>5. Why Is
+  It Guarded Information?</p></li><li><p>6. Twists to the
+  Situation</p></li></ul>
+results:
+  - text: 'Espionage: Why Can’t They Do It Themselves?'
+    type: 1
+    documentCollection: RollTable
+    documentId: 4mFj0pG8bZoaDimj
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: gIbuq3mkof4yxB6R
+    flags: {}
+    _key: '!tables.results!0WWxKQQmSAqxCeW6.gIbuq3mkof4yxB6R'
+  - text: 'Espionage: What kind of patron put up the job? (Copy)'
+    type: 1
+    documentCollection: RollTable
+    documentId: Yp6e0c9VBjw2GRbC
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: CHjyAvpoubqxcfBr
+    flags: {}
+    _key: '!tables.results!0WWxKQQmSAqxCeW6.CHjyAvpoubqxcfBr'
+  - text: 'Espionage: What Profit Will It Give a Thief?'
+    type: 1
+    documentCollection: RollTable
+    documentId: XPioWPXtQjrrVyTW
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: jTsDHRgqLRsXP9qZ
+    flags: {}
+    _key: '!tables.results!0WWxKQQmSAqxCeW6.jTsDHRgqLRsXP9qZ'
+  - text: 'Espionage: How Obscure is the Secret?'
+    type: 1
+    documentCollection: RollTable
+    documentId: 4ADz1bOa9CM5hesp
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: MuiIYs0TUZxuLXkZ
+    flags: {}
+    _key: '!tables.results!0WWxKQQmSAqxCeW6.MuiIYs0TUZxuLXkZ'
+  - text: 'Espionage: Why Is It Guarded Information?'
+    type: 1
+    documentCollection: RollTable
+    documentId: 2refOqEtYXjb2aSx
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: epmpHctzREdTP0IV
+    flags: {}
+    _key: '!tables.results!0WWxKQQmSAqxCeW6.epmpHctzREdTP0IV'
+  - text: 'Espionage: Twists to the Situation'
+    type: 1
+    documentCollection: RollTable
+    documentId: dtpUNRVFMNhw4SHw
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: c32peqLF4Ym7XVSx
+    flags: {}
+    _key: '!tables.results!0WWxKQQmSAqxCeW6.c32peqLF4Ym7XVSx'
+formula: 1d1
+_id: 0WWxKQQmSAqxCeW6
+img: icons/svg/d20-grey.svg
+replacement: true
+displayRoll: false
+folder: oIaOQNsh4qvevc7h
+flags:
+  core: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '11.315'
+  createdTime: 1703902144239
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!0WWxKQQmSAqxCeW6'
+

@@ -10,14 +10,26 @@
       {{localize 'swnr.sheet.ac'}}
     </div>
     <div class="item-controls-small">
+      {{#if @root.editable}}
+        <a
+          class='item-control item-create'
+          title='Create Armor'
+          data-action='createDoc'
+          data-document-class='Item'
+          data-type='armor'
+          data-system.location='readied'
+        >
+          <i class='fas fa-plus'></i>
+        </a>
+      {{/if}}
     </div>
   </li>
   <li>
     {{#if gameSettings.useTrauma}}
-    ({{localize 'swnr.sheet.traumaTarget'}}: {{actor.system.modifiedTraumaTarget}})
+      {{localize 'swnr.sheet.traumaTarget'}}: {{actor.system.modifiedTraumaTarget}}
     {{/if}}
     {{#if gameSettings.useCWNArmor}}
-    ({{localize 'swnr.armor.soak.label'}} Total: {{actor.system.soakTotal.value}}/{{actor.system.soakTotal.max}} )
+      {{localize 'swnr.armor.soak.label'}} Total: {{actor.system.soakTotal.value}}/{{actor.system.soakTotal.max}}
     {{/if}}
   </li>
   {{#each itemList as |item id|}}

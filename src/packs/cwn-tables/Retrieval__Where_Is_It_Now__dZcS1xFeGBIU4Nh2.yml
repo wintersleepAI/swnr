@@ -1,0 +1,144 @@
+folder: m3tomO7DxaERV34f
+name: 'Retrieval: Where Is It Now?'
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: 0
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: Aum056dZ1iedMcVh
+    text: In a gang-infested urban war zone
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!dZcS1xFeGBIU4Nh2.Aum056dZ1iedMcVh'
+  - type: 0
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: XMfxRDjwSclj34zc
+    text: Somewhere beneath the city streets
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!dZcS1xFeGBIU4Nh2.XMfxRDjwSclj34zc'
+  - type: 0
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: Nh8kPSTuWnLkNxPN
+    text: In an abandoned zone of the city
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!dZcS1xFeGBIU4Nh2.Nh8kPSTuWnLkNxPN'
+  - type: 0
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: 6KwbbEtWlsEA3NQ3
+    text: In the nearby badlands somewhere
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!dZcS1xFeGBIU4Nh2.6KwbbEtWlsEA3NQ3'
+  - type: 0
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: MolZp8Ky0sayD8I2
+    text: In a chic hotel or upscale business tower
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!dZcS1xFeGBIU4Nh2.MolZp8Ky0sayD8I2'
+  - type: 0
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: Y3O3XZ9bM0ROxKLn
+    text: In a dump or other garbage zone
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!dZcS1xFeGBIU4Nh2.Y3O3XZ9bM0ROxKLn'
+  - type: 0
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: false
+    _id: EDflthnR5kMYIDJB
+    text: In an abandoned corp building or factory
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!dZcS1xFeGBIU4Nh2.EDflthnR5kMYIDJB'
+  - type: 0
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: false
+    _id: wkBIXy08i7EbShJG
+    text: On a former battlefield or slaughter site
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!dZcS1xFeGBIU4Nh2.wkBIXy08i7EbShJG'
+  - type: 0
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: false
+    _id: ptVM6aVGtakn2uUl
+    text: Natural disaster site that never got fixed
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!dZcS1xFeGBIU4Nh2.ptVM6aVGtakn2uUl'
+  - type: 0
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: false
+    _id: d61thBFxzU9FNWcd
+    text: Quarantine zone or plagued area
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _key: '!tables.results!dZcS1xFeGBIU4Nh2.d61thBFxzU9FNWcd'
+replacement: true
+displayRoll: true
+flags:
+  core: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '11.315'
+  createdTime: 1703891968582
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+formula: 1d10
+_id: dZcS1xFeGBIU4Nh2
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!dZcS1xFeGBIU4Nh2'
+

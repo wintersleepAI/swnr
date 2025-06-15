@@ -9,31 +9,30 @@ _stats:
   coreVersion: '12.331'
   systemId: swnr
   systemVersion: 2.0.0
-  createdTime: 1739238988401
-  modifiedTime: 1739238988401
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
 sort: 0
-_id: wumbydh3fpv2fspn
+_id: n5b1m9phjnmfz4f4
 system:
+  assetType: wealth
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 12
+  counter: 2d4
   description: These starship captains excel at transporting goods through unfriendly lines. As an action, a blockade runner can transfer itself or any one Military Unit or Special Forces to a world within three hexes for a cost of two FacCreds. They can even move units that would otherwise require planetary government permission to enter.
-  favorite: false
-  category: cunning
-  type: Starship
   health:
     max: 6
     value: 6
-  rating: 5
-  tl: 4
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 12
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
+  note: A
+  rating: 5
+  tl: 4
+  turnRoll: ''
+  type: Starship
+  unusable: false
 effects: []
-_key: '!items!wumbydh3fpv2fspn'
+_key: '!items!n5b1m9phjnmfz4f4'
