@@ -18,7 +18,8 @@ system:
   uses:
     max: 1
     value: 1
-  ammo: typeBPower
+    ammo: typeBPower
+    type: count
   consumable: true
   bundle:
     amount: 1

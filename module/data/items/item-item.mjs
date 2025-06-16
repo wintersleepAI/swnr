@@ -26,12 +26,23 @@ export default class SWNItemItem extends SWNBaseGearItem {
     });
 
     schema.formula = new fields.StringField({ blank: true });
-    schema.ammo = new fields.SchemaField({
-      type: SWNShared.stringChoices("none", CONFIG.SWN.ammoTypes),
+    schema.uses = new fields.SchemaField({
       max: SWNShared.requiredNumber(20),
       value: SWNShared.requiredNumber(20),
+      emptyQuantity: SWNShared.requiredNumber(0),
+      type: SWNShared.stringChoices('none', CONFIG.SWN.itemConsumableTypes),
+      ammo: SWNShared.stringChoices("none", CONFIG.SWN.ammoTypes),
+      keepEmpty: new fields.BooleanField({
+        initial: true,
+        required: true,
+        nullable: false,
+      }),
     });
-
+    schema.consumable = new fields.BooleanField({
+      initial: false,
+      required: true,
+      nullable: false,
+    });
     return schema;
   }
 

@@ -40,6 +40,11 @@ SWN.itemQualities = {
   mastercrafted: 'swnr.item.quality.mastercrafted',
 }
 
+SWN.itemConsumableTypes = {
+  none: 'swnr.item.consumable.none',
+  count: 'swnr.item.consumable.count'
+}
+
 SWN.ammoTypes = {
   none: 'swnr.ammo.none',
   typeAPower: 'swnr.ammo.typeAPower',

@@ -17,7 +17,10 @@ system:
   uses:
     max: 20
     value: 20
-  ammo: ammo
+    ammo: ammo
+    type: count
+    keepEmpty: false
+  consumable: true
   quantity: 1
   bundle:
     amount: 3
