@@ -104,7 +104,8 @@
     padding: 0 2px; // to align with the header border
     border-bottom: 1px solid var(--swnr-c-faint);
     &:last-child { border-bottom: none; }
-    .item-name {
+    .item-name,
+    .item-name-long {
       color: var(--swnr-c-dark);
       .item-image {
         flex: 0 0 30px;
