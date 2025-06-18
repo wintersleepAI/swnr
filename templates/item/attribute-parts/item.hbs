@@ -15,7 +15,9 @@
         {{formInput systemFields.uses.fields.value value=system.uses.value localize=true}} /
         {{formInput systemFields.uses.fields.max value=system.uses.max localize=true}}
       </div>
-      {{formGroup systemFields.uses.fields.emptyQuantity value=system.uses.emptyQuantity localize=true}}
+      <div class="grid-span-2">
+        {{formGroup systemFields.uses.fields.emptyQuantity value=system.uses.emptyQuantity localize=true}}
+      </div>
       {{formGroup systemFields.uses.fields.keepEmpty value=system.uses.keepEmpty localize=true widget=checkWidget}}
     {{/if}}
   </div>
