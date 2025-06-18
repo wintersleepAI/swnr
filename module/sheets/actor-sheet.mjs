@@ -35,6 +35,8 @@ export class SWNActorSheet extends SWNBaseSheet {
       roll: this._onRoll,
       reload: this._onReload,
       creditChange: this._onCreditChange,
+      addUse: this._onAddUse,
+      removeUse: this._onRemoveUse,
       rest: this._onRest,
       scene: this._onScene,
       rollSave: this._onRollSave,
@@ -97,6 +99,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     // FRAGMENTS
     itemsList: {
       template: 'systems/swnr/templates/actor/fragments/items-list.hbs',
+    },
+    consumablesList: {
+      template: 'systems/swnr/templates/actor/fragments/consumable-list.hbs',
     },
     skillFrag: {
       template: 'systems/swnr/templates/actor/fragments/skill.hbs',
@@ -826,5 +831,56 @@ export class SWNActorSheet extends SWNBaseSheet {
     const resourceList = duplicate(this.actor.system.tweak.resourceList);
     resourceList[idx][resourceType] = value;
     await this.actor.update({ "system.tweak.resourceList": resourceList });
+  }
+
+  static async _onAddUse(event, target) { 
+    event.preventDefault();
+    const itemId = target.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    if (item.type === "item" && item.system.uses.consumable !== "none") {
+      const uses = item.system.uses;
+      if (uses.value < uses.max) {
+        await item.update({ "system.uses.value": uses.value + 1 });
+      }
+    } else {
+      console.warn("Cannot add uses to non-item/gear type");
+    }
+  }
+
+  static async _onRemoveUse(event, target) {
+    event.preventDefault();
+    const itemId = target.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    if (item.type === "item" && item.system.uses.consumable !== "none") {
+      const uses = item.system.uses;
+      if (uses.value > 1) {
+        await item.update({ "system.uses.value": uses.value - 1 });
+      } else if (uses.value == 1) {
+        let newUses = 0;
+        if (item.quantity > 1) {
+          // If quantity is greater than 1, just reduce the quantity
+          newUses = item.system.uses.max;
+        }
+        // Uses up the item
+        if  (item.system.uses.keepEmpty) {
+          // If keepEmpty is true, just set to 0
+          const emptyQuantity = item.system.uses.emptyQuantity || 0;
+          await item.update({ "system.uses.value": newUses, "system.uses.emptyQuantity": emptyQuantity+1, "system.quantity": item.system.quantity - 1  });
+        } else {
+          if (item.system.quantity > 1) {
+            // If quantity is greater than 1, just reduce the quantity
+            await item.update({ "system.quantity": item.system.quantity - 1,  "system.uses.value": newUses });
+          } else {
+            // If quantity is 1, delete the item
+            ui.notifications?.info(
+              `Removing item ${item.name} as it has no uses left and it does not keep empties.`
+            );
+            await item.delete();
+          }
+        }
+      }
+    } else {
+      console.warn("Cannot remove uses from non-item/gear type");
+    }
   }
 }

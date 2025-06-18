@@ -119,12 +119,31 @@
         }
       }
     }
+
+    .round-btn {
+      width: 4px;
+      height: 16px;
+      border-radius: 70%;
+      border: none;
+      background-color: var(--swnr-c-white);
+      color: var(--swnr-c-dark);
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.2s ease;
+    }
+
+    .round-btn:hover {
+      background-color: var(--swnr-c-beige);
+    }
   }
 
   .item-prop {
     text-align: center;
-    border-left: 1px solid #c9c7b8;
-    border-right: 1px solid #c9c7b8;
+    // border-left: 1px solid #c9c7b8;
+    // border-right: 1px solid #c9c7b8;
     font-size: 12px;
   }
 
