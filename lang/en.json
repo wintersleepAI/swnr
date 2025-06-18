@@ -521,6 +521,27 @@
           "weight": {
             "label": "Weight"
           },
+          "uses": {
+            "label": "Uses",
+            "max": {
+              "label": "Max Uses"
+            },
+            "value": {
+              "label": "Current Uses"
+            },
+            "consumable": {
+              "label": "Consumable"
+            }, 
+            "ammo": {
+              "label": "Ammo"
+            },
+            "keepEmpty": {
+              "label": "Keep Empty?"
+            },
+            "emptyQuantity": {
+              "label": "Empty Quantity"
+            }
+          },
           "ammo": {
             "label": "Ammo",
             "type": {
@@ -1910,7 +1931,12 @@
       "range": "Range",
       "favorite": "Favorite",
       "noEncReadied": "No Encumbrance Readied",
-      "type": "Type"
+      "type": "Type",
+      "consumable": {
+        "none": "None",
+        "count": "Individual",
+        "bundle": "Bundle/Clip"
+      }
     },
     "weapon": {
       "shock": {

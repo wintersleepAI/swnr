@@ -20,9 +20,8 @@ system:
     max: 1
     value: 1
     ammo: missile
-    type: count
+    consumable: count
     keepEmpty: false
-  consumable: true
   bundle:
     amount: 1
     bundled: false

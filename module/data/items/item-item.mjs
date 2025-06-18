@@ -27,21 +27,16 @@ export default class SWNItemItem extends SWNBaseGearItem {
 
     schema.formula = new fields.StringField({ blank: true });
     schema.uses = new fields.SchemaField({
-      max: SWNShared.requiredNumber(20),
-      value: SWNShared.requiredNumber(20),
+      max: SWNShared.requiredNumber(1),
+      value: SWNShared.requiredNumber(1),
       emptyQuantity: SWNShared.requiredNumber(0),
-      type: SWNShared.stringChoices('none', CONFIG.SWN.itemConsumableTypes),
+      consumable: SWNShared.stringChoices('none', CONFIG.SWN.itemConsumableTypes),
       ammo: SWNShared.stringChoices("none", CONFIG.SWN.ammoTypes),
       keepEmpty: new fields.BooleanField({
         initial: true,
         required: true,
         nullable: false,
       }),
-    });
-    schema.consumable = new fields.BooleanField({
-      initial: false,
-      required: true,
-      nullable: false,
     });
     return schema;
   }

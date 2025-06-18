@@ -1,21 +1,23 @@
 {{! Attributes Tab }}
 <section class='tab attributes {{tab.cssClass}}' data-group='primary' data-tab='attributes'>
   
-  {{! Ammo Section }}
-  <div class='resource ammo-section'>
-    <div class="resource-group grid-span-3 flexrow"><!-- AMMO-->
-      <div class="resource">
-        {{formGroup systemFields.ammo.fields.type value=system.ammo.type localize=true}}
+   {{! Ammo Section }}
+  <div class='consumable-section resource-group grid grid-3col' style="border: 1px solid var(--border-color); border-radius: 2px; padding: 4px;">
+    <div class="grid-span-2">
+      {{formGroup systemFields.uses.fields.consumable value=system.uses.consumable localize=true}}
+    </div>  
+    {{#if (ne system.uses.consumable "none")}}
+      <div class="grid-span-2">
+        {{formGroup systemFields.uses.fields.ammo value=system.uses.ammo localize=true}}
       </div>
-      {{#if (and (ne system.ammo.type "none") (ne system.ammo.type "infinite"))}}
-        <div class="resource">
-          {{formGroup systemFields.ammo.fields.value value=system.ammo.value localize=true}}
-        </div>
-        <div class="resource">
-          {{formGroup systemFields.ammo.fields.max value=system.ammo.max localize=true}}
-        </div>
-      {{/if}}
-    </div>
+      <div class='resource flexrow'>
+        <label class='resource-label'>{{localize 'SWN.Item.Gear.FIELDS.uses.label'}}</label>
+        {{formInput systemFields.uses.fields.value value=system.uses.value localize=true}} /
+        {{formInput systemFields.uses.fields.max value=system.uses.max localize=true}}
+      </div>
+      {{formGroup systemFields.uses.fields.emptyQuantity value=system.uses.emptyQuantity localize=true}}
+      {{formGroup systemFields.uses.fields.keepEmpty value=system.uses.keepEmpty localize=true widget=checkWidget}}
+    {{/if}}
   </div>
 
   {{! Roll Formula Section }}

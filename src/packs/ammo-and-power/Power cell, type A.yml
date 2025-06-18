@@ -19,8 +19,7 @@ system:
     max: 1
     value: 1
     ammo: typeAPower
-    type: count
-  consumable: true
+    consumable: bundle
   bundle:
     amount: 6
     bundled: false

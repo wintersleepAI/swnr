@@ -42,7 +42,8 @@ SWN.itemQualities = {
 
 SWN.itemConsumableTypes = {
   none: 'swnr.item.consumable.none',
-  count: 'swnr.item.consumable.count'
+  count: 'swnr.item.consumable.count',
+  bundle: 'swnr.item.consumable.bundle',
 }
 
 SWN.ammoTypes = {

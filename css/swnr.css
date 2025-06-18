@@ -602,17 +602,20 @@
 .swnr .items-list .item:last-child {
   border-bottom: none;
 }
-.swnr .items-list .item .item-name {
+.swnr .items-list .item .item-name,
+.swnr .items-list .item .item-name-long {
   color: var(--swnr-c-dark);
 }
-.swnr .items-list .item .item-name .item-image {
+.swnr .items-list .item .item-name .item-image,
+.swnr .items-list .item .item-name-long .item-image {
   flex: 0 0 30px;
   height: 30px;
   background-size: 30px;
   border: none;
   margin-right: 5px;
 }
-.swnr .items-list .item .item-name .item-image img {
+.swnr .items-list .item .item-name .item-image img,
+.swnr .items-list .item .item-name-long .item-image img {
   border: none;
 }
 .swnr .items-list .item-prop {

@@ -242,10 +242,17 @@ export default class SWNCharacter extends SWNActorBase {
     
     const inventory = this.parent.items.filter(
         (i) => i.type === "item" || i.type === "weapon" || i.type === "armor");
+    let gear = [];
+    let consumables = [];
     const itemInvCost = function (i) {
       let itemSize = 1;
       if (i.type === "item") {
         const itemData = i.system;
+        if (itemData.uses.consumable === "none") {
+          gear.push(i);
+        } else {
+          consumables.push(i);
+        }
         const bundle = itemData.bundle;
         itemSize = Math.ceil(
           itemData.quantity / (bundle.bundled ? bundle.amount : 1)
@@ -286,6 +293,8 @@ export default class SWNCharacter extends SWNActorBase {
     this.favorites = this.parent.items.filter((i) => i.system["favorite"]);;
     this.readiedWeapons = readiedItems.filter((i) => i.type === "weapon");
     this.readiedArmor = readiedItems.filter((i) => i.type === "armor");
+    this.gear = gear;
+    this.consumables = consumables;
   }
 
   getRollData() {
