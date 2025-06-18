@@ -110,12 +110,15 @@
           <div class="item-rounds item-prop flexrow">
             {{item.system.uses.value}} / {{item.system.uses.max}}
               <!-- Buttons -->
-              <a class="round-btn" data-action="addUse" data-item-id="{{item._id}}"
->
+              <a 
+                class="item-control"
+                {{!-- class="round-btn" --}}
+                data-action="addUse" data-item-id="{{item._id}}"
+              >
                 <i class="fas fa-plus"></i>
               </a>
 
-              <a class="round-btn" data-action="removeUse"  data-item-id="{{item._id}}">
+              <a class="item-control" data-action="removeUse"  data-item-id="{{item._id}}">
                 <i class="fas fa-minus"></i>
               </a>
           </div>

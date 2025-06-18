@@ -839,9 +839,16 @@ export class SWNActorSheet extends SWNBaseSheet {
     const item = this.actor.items.get(itemId);
     if (item.type === "item" && item.system.uses.consumable !== "none") {
       const uses = item.system.uses;
-      if (uses.value < uses.max) {
+      if (uses.value == 0 && item.system.uses.keepEmpty && item.system.uses.emptyQuantity > 0) {
+        // If keepEmpty is true, just set to 1
+        await item.update({ "system.uses.value": 1, "system.uses.emptyQuantity": item.system.uses.emptyQuantity - 1, "system.quantity": item.system.quantity + 1 });
+        ui.notifications?.info(
+          `Removing an empty ${item.name} and adding uses.`
+        );
+      } else if (uses.value < uses.max) {
         await item.update({ "system.uses.value": uses.value + 1 });
-      }
+      } 
+
     } else {
       console.warn("Cannot add uses to non-item/gear type");
     }
@@ -866,6 +873,9 @@ export class SWNActorSheet extends SWNBaseSheet {
           // If keepEmpty is true, just set to 0
           const emptyQuantity = item.system.uses.emptyQuantity || 0;
           await item.update({ "system.uses.value": newUses, "system.uses.emptyQuantity": emptyQuantity+1, "system.quantity": item.system.quantity - 1  });
+          ui.notifications?.info(
+            `Removing a use and adding an empty ${item.name}.`
+          );
         } else {
           if (item.system.quantity > 1) {
             // If quantity is greater than 1, just reduce the quantity
