@@ -171,7 +171,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       groupWidget: groupFieldWidget.bind(this),
 
     };
-    
+
     // Offloading context prep to a helper function
     this._prepareItems(context);
 
@@ -311,10 +311,10 @@ export class SWNActorSheet extends SWNBaseSheet {
         items.push(i);
       }
       else if (i.type === 'armor') {
-        items.push(i); 
+        items.push(i);
       }
       else if (i.type === 'weapon') {
-        items.push(i); 
+        items.push(i);
       }
       // Append to features.
       else if (i.type === 'feature') {
@@ -349,7 +349,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       return 0;
     });
 
-    if (this.actor.type === "npc") { 
+    if (this.actor.type === "npc") {
       const abilities = []
       for (let i of this.document.items) {
         if (i.type === 'power' || i.type === 'feature' || i.type === 'cyberware') {
@@ -621,9 +621,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     await armor.update({ system: { use: !use } });
   }
 
-   /**
-   * @this SWNActorSheet
-   */  
+  /**
+  * @this SWNActorSheet
+  */
   static async _toggleLock(event, _target) {
     event.preventDefault();
     this.#toggleLock = !this.#toggleLock;
@@ -833,7 +833,7 @@ export class SWNActorSheet extends SWNBaseSheet {
     await this.actor.update({ "system.tweak.resourceList": resourceList });
   }
 
-  static async _onAddUse(event, target) { 
+  static async _onAddUse(event, target) {
     event.preventDefault();
     const itemId = target.dataset.itemId;
     const item = this.actor.items.get(itemId);
@@ -841,13 +841,20 @@ export class SWNActorSheet extends SWNBaseSheet {
       const uses = item.system.uses;
       if (uses.value == 0 && item.system.uses.keepEmpty && item.system.uses.emptyQuantity > 0) {
         // If keepEmpty is true, just set to 1
-        await item.update({ "system.uses.value": 1, "system.uses.emptyQuantity": item.system.uses.emptyQuantity - 1, "system.quantity": item.system.quantity + 1 });
+        await item.update({ "system.uses.value": 1, "system.uses.emptyQuantity": item.system.uses.emptyQuantity - 1});
+        // for modifying qty, "system.quantity": item.system.quantity + 1 });
         ui.notifications?.info(
           `Removing an empty ${item.name} and adding uses.`
         );
       } else if (uses.value < uses.max) {
         await item.update({ "system.uses.value": uses.value + 1 });
-      } 
+      } else if (uses.value >= uses.max && item.system.uses.keepEmpty && item.system.uses.emptyQuantity > 0) {
+        // start filling an emtpy item 
+        await item.update({ "system.uses.value": 1, "system.uses.emptyQuantity": item.system.uses.emptyQuantity - 1 });
+        ui.notifications?.info(
+          `Removing an empty ${item.name} and adding uses.`
+        );
+      }
 
     } else {
       console.warn("Cannot add uses to non-item/gear type");
@@ -863,23 +870,27 @@ export class SWNActorSheet extends SWNBaseSheet {
       if (uses.value > 1) {
         await item.update({ "system.uses.value": uses.value - 1 });
       } else if (uses.value == 1) {
+        // Last one
         let newUses = 0;
-        if (item.quantity > 1) {
-          // If quantity is greater than 1, just reduce the quantity
+        const remaining = item.system.quantity - item.system.uses.emptyQuantity;
+        if (remaining > 1) {
+          // If remaining is greater than 1, just reduce the quantity
           newUses = item.system.uses.max;
         }
         // Uses up the item
-        if  (item.system.uses.keepEmpty) {
+        if (item.system.uses.keepEmpty) {
           // If keepEmpty is true, just set to 0
           const emptyQuantity = item.system.uses.emptyQuantity || 0;
-          await item.update({ "system.uses.value": newUses, "system.uses.emptyQuantity": emptyQuantity+1, "system.quantity": item.system.quantity - 1  });
+          await item.update({ "system.uses.value": newUses, "system.uses.emptyQuantity": emptyQuantity + 1 });
+          // for updating qty, "system.quantity": item.system.quantity - 1 });
           ui.notifications?.info(
-            `Removing a use and adding an empty ${item.name}.`
+            `Adding an empty ${item.name}.`
           );
         } else {
+          // If keepEmpty is false, remove the item
           if (item.system.quantity > 1) {
             // If quantity is greater than 1, just reduce the quantity
-            await item.update({ "system.quantity": item.system.quantity - 1,  "system.uses.value": newUses });
+            await item.update({ "system.quantity": item.system.quantity - 1, "system.uses.value": newUses });
           } else {
             // If quantity is 1, delete the item
             ui.notifications?.info(
