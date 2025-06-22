@@ -27,6 +27,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       max: SWNShared.requiredNumber(10),
       value: SWNShared.requiredNumber(10),
       burst: new fields.BooleanField({ initial: false }),
+      current: new fields.DocumentIdField({readonly:false})
     });
     schema.range = new fields.SchemaField({
       normal: SWNShared.requiredNumber(1),

@@ -398,7 +398,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       ammo: ammo,
 
     };
-
+    return related;
   }
 
   /**************
