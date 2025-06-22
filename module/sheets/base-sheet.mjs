@@ -404,78 +404,56 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
         return;
       }
       
-      const ammoType = item.system.ammo.type;
-      
-      // For power cells, a full reload consumes the power cell.
-      if (ammoType === "typeAPower" || ammoType === "typeBPower") {
-        let powerCell = this.actor.items.find(i =>
-          i.type === 'item' &&
-          i.system.ammo &&
-          i.system.ammo.type === ammoType &&
-          i.system.ammo.value > 0
-        );
-        if (!powerCell) {
-          ui.notifications.error("No matching power cell found in your inventory.");
+      if (item.system.ammo.current == null || item.system.ammo.current == "") {
+        ui.notifications?.error("No ammo source currently set. Not reloading");
+        return;
+      }
+
+      let ammoItem = this.actor.items.get(item.system.ammo.current);
+      if (ammoItem == null) {
+        ui.notifications?.error("Selected ammo not found. Unsetting & select new ammo source. Not reloading.");
+        await item.update({ "system.ammo.current" : "" });
+        return;
+      }
+      let ammoToAdd = 0;
+      if (ammoItem.system.uses.consumable == 'bundle') {
+        if (ammoItem.system.quantity == 0 || ammoItem.system.uses.emptyQuantity == ammoItem.system.quantity) {
+          ui.notifications?.error(`All ${ammoItem.name} are empty.`);
           return;
         }
-        await item.update({ "system.ammo.value": ammoMax });
-        await powerCell.update({ "system.ammo.value": 0 });
-        const content = `<p>Reloaded ${item.name} using power cell ${powerCell.name}.</p>`;
-        ChatMessage.create({
-          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-          content: content,
-        });
-        return;
-      }
-      // Find all matching ammo items in the actor's inventory with available ammo.
-      let ammoItems = this.actor.items.filter(i =>
-        i.type === 'item' &&
-        i.system.ammo &&
-        i.system.ammo.type === ammoType &&
-        i.system.ammo.value > 0
-      );
-      
-      
-      if (ammoItems.length === 0) {
-        ui.notifications.error("No matching ammo found in your inventory.");
-        return;
-      }
-      // Consume ammo from each item until the weapon is full or ammo runs out.
-      let ammoConsumedTotal = 0;
-      for (let ammoItem of ammoItems) {
-        if (ammoNeeded <= 0) break;
-        let availableAmmo = ammoItem.system.ammo.value || 0;
-        if (availableAmmo <= 0) continue;
-
-        let toConsume = Math.min(availableAmmo, ammoNeeded);
-        const newAmmoValue = availableAmmo - toConsume;
-
-        // For non-power cells, if the ammo holder is exhausted, delete it.
-        if (
-          (ammoType !== "typeAPower" || ammoType !== "typeBPower") &&
-          newAmmoValue === 0
-        ) {
-          await ammoItem.delete();
+        //uses the whole clip with capacity set by the weapon
+        ammoToAdd = ammoMax;
+        ammoItem.system.removeOneUse();
+      }  else if (ammoItem.system.uses.consumable == "count") {
+        // take the value from the clip
+        if (ammoNeeded < ammoItem.system.uses.value) {
+          // Can partially reload
+          ammoToAdd = ammoNeeded;
+          await ammoItem.update({ "system.uses.value": ammoItem.system.uses.value - ammoToAdd});
         } else {
-          await ammoItem.update({ "system.ammo.value": newAmmoValue });
+          // Uses up clip
+          ammoToAdd = ammoItem.system.uses.value;
+          ammoItem.system.removeOneUse();
         }
-
-        ammoConsumedTotal += toConsume;
-        ammoNeeded -= toConsume;
+      } else {
+        ui.notifications.error("Item/Ammo consumable is not set to bundle or count");
+        return;
       }
-      
       // Update the weapon with the ammo that was consumed.
-      let newAmmoValue = currentAmmo + ammoConsumedTotal;
+      let newAmmoValue = currentAmmo + ammoToAdd;
       if (newAmmoValue > ammoMax) newAmmoValue = ammoMax;
       
       await item.update({ "system.ammo.value": newAmmoValue });
       
       let extraMessage = "";
       if (item.system.ammo.longReload) {
-        extraMessage = " This weapon takes extra time to reload.";
+        extraMessage = " This weapon takes extra time to reload.<br>";
+      }
+      if (ammoItem.system.location != "readied") {
+        extraMessage+=" Ammo source was not readied.";
       }
       
-      const content = `<p>Reloaded ${item.name} using ${ammoConsumedTotal} ammo from your inventory.${extraMessage}</p>`;
+      const content = `<p>Reloaded ${item.name} using ${ammoItem.name} from your inventory.${extraMessage}</p>`;
       ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         content: content,
