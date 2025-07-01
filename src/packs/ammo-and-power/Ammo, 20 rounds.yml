@@ -13,6 +13,12 @@ _stats:
 sort: 0
 _id: 13k1tjpye9u4suj8
 system:
+  favorite: false
+  uses:
+    max: 20
+    value: 20
+  ammo: ammo
+  quantity: 1
   bundle:
     amount: 3
     bundled: false
