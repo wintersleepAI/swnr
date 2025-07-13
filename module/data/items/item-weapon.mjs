@@ -278,6 +278,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const secStatName = this.secondStat;
     // check if there is 2nd stat name and its mod is better
     if (
+      actor.type == "character" &&
       statName != "ask" &&
       secStatName != null &&
       secStatName != "none" &&
@@ -366,6 +367,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       const secStatName = this.secondStat;
       // check if there is 2nd stat name and its mod is better
       if (
+        actor?.type == "character" &&
         secStatName != null &&
         secStatName != "none" &&
         actor.system.stats[statName].mod <
