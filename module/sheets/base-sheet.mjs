@@ -380,7 +380,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @protected
    */
-    static async _onReload(_event, target) {
+    static async _onReload(event, target) {
       const item = this._getEmbeddedDocument(target);
       if (!item || (item.type !== 'weapon' && item.type !== 'shipWeapon')) {
         ui.notifications.error("Only weapons can be reloaded.");
@@ -404,6 +404,8 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
         return;
       }
 
+      let shift = event?.shiftKey || false;
+
       // For specifying in chat msg where ammo comes from.
       let ammoReloadDesc = '';
       let extraMessage = "";
@@ -411,23 +413,23 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
         extraMessage = " This weapon takes extra time to reload.<br>";
       }
       let ammoToAdd = 0;
-      if (item.type == 'shipWeapon') {
+      if (item.type == 'shipWeapon' || shift) {
         ammoToAdd = ammoMax;
       } else {
         if (item.system.ammo.current == null || item.system.ammo.current == "") {
-          ui.notifications?.error("No ammo source currently set. Not reloading");
+          ui.notifications?.error("No ammo source currently set. Not reloading. Hold shift+click to bypass and reload.");
           return;
         }
 
         let ammoItem = this.actor.items.get(item.system.ammo.current);
         if (ammoItem == null) {
-          ui.notifications?.error("Selected ammo not found. Unsetting & select new ammo source. Not reloading.");
+          ui.notifications?.error("Selected ammo not found. Unsetting & select new ammo source. Not reloading. Hold shift+click to bypass and reload.");
           await item.update({ "system.ammo.current" : "" });
           return;
         }
         if (ammoItem.system.uses.consumable == 'bundle') {
           if (ammoItem.system.quantity == 0 || ammoItem.system.uses.emptyQuantity == ammoItem.system.quantity) {
-            ui.notifications?.error(`All ${ammoItem.name} are empty.`);
+            ui.notifications?.error(`All ${ammoItem.name} are empty. Hold shift+click to bypass and reload.`);
             return;
           }
           //uses the whole clip with capacity set by the weapon
