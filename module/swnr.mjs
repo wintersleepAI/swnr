@@ -141,8 +141,13 @@ registerHandlebarHelpers();
 Hooks.once('ready', function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on('hotbarDrop', (_bar, data, slot) => {
-    createDocMacro(data, slot);
-    return false;
+
+    if (data.type === 'Item' && (data.uuid?.includes('Actor.') || data.uuid?.includes('Token.'))) {
+      createDocMacro(data, slot);
+      return false;
+    }
+
+    return true;
   });
 
   if (!game.user.isGM) {
