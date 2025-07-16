@@ -16,6 +16,15 @@ _id: lwtnakiakbsb975l
 system:
   cost: 1
   description: Individual rounds are loaded into empty magazines that are specific to individual firearms.
+  favorite: false
+  quantity: 1
+  uses:
+    max: 10
+    value: 10
+  ammo: ammo
+  consumable: false
+  bundle:
+    bundled: false
   encumbrance: 0
   noEncReadied: false
 effects: []

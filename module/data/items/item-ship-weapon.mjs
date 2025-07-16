@@ -125,6 +125,10 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
         }
       }
 
+      if (defaultGunnerId == null) {
+        defaultGunnerId = "";
+      }
+
       const dialogData = {
         actor: actor,
         weapon: this,

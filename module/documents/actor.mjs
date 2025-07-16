@@ -86,7 +86,9 @@ export class SWNActor extends Actor {
   static getDefaultArtwork(itemData) {
     let itemType = itemData.type;
     if (itemType in CONFIG.SWN.defaultImg) {
-      return { img: `${CONFIG.SWN.actorIconPath}/${CONFIG.SWN.defaultImg[itemType]}` };
+      return { img: `${CONFIG.SWN.actorIconPath}/${CONFIG.SWN.defaultImg[itemType]}`,
+              texture: { src: `${CONFIG.SWN.actorIconPath}/${CONFIG.SWN.defaultImg[itemType]}` }
+       };
     } else {
       return { texture: { src: this.DEFAULT_ICON } };
     }

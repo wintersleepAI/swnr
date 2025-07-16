@@ -13,6 +13,13 @@ _stats:
 sort: 0
 _id: hwz5as793i1qh30v
 system:
+  favorite: false
+  quantity: 1
+  uses:
+    max: 1
+    value: 1
+    ammo: typeBPower
+    consumable: bundle
   bundle:
     amount: 1
     bundled: false

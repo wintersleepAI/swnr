@@ -56,8 +56,11 @@
 
   <div class="flex flex-col"> <!--items -->
     {{> "systems/swnr/templates/actor/fragments/items-list.hbs" itemList=actor.itemTypes.weapon  type='weapon' name='Weapons' locations=../config/itemLocations}}
+    {{> "systems/swnr/templates/actor/fragments/consumable-list.hbs" itemList=actor.system.consumables  type='item' name='Consumables/Ammo' }}
     {{> "systems/swnr/templates/actor/fragments/items-list.hbs" itemList=actor.itemTypes.armor  type='armor' name='Armor'}}
-    {{> "systems/swnr/templates/actor/fragments/items-list.hbs" itemList=actor.itemTypes.item  type='item' name='Items' }}
+    {{> "systems/swnr/templates/actor/fragments/items-list.hbs" itemList=actor.system.gear  type='item' name='Items' }}
+    {{!-- single item list {{> "systems/swnr/templates/actor/fragments/items-list.hbs" itemList=actor.itemTypes.item  type='item' name='Items' }} --}}
+
   </div>
 
 </section>

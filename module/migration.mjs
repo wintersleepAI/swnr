@@ -117,6 +117,10 @@ const migrations = {
     console.log('Running migration for 2.0.8');
     versionNote("2.0.8", "This migration adds a 'melee' flag to weapons which is used for determining what attack bonus to use with CWN Armor setting enabled. <b>You will need to set this flag manually for existing items.</b>");
   },
+  "2.0.11": async () => {
+    console.log('Running migration for 2.0.11');
+    versionNote("2.0.11", "This version adds the ability for items to be marked as consumable (partially for AWN support) with the ability to track empty 'containers'. Ammo is treated as a consumable, which means a weapon should have the ammo source selected to reload. Shift+clicking reload will bypass this logic.");
+    },
   "2.1.0": async () => { 
     // Placeholders for future migrations
     //console.log('Running migration for 2.1.0'); 

@@ -13,6 +13,15 @@ _stats:
 sort: 0
 _id: amyxdsh4tka6rdeo
 system:
+  description: 'Ammunition, missile: Some characters might have reason to pack along a man-portable rocket launcher, or have one mounted on their favorite gravcar. Heavy weapons and their ammunition are usually outlawed for civilians on most worlds, but this price is for locales where missiles can be bought.'
+  favorite: false
+  quantity: 1
+  uses:
+    max: 1
+    value: 1
+    ammo: missile
+    consumable: count
+    keepEmpty: false
   bundle:
     amount: 1
     bundled: false

@@ -233,9 +233,8 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       gameSettings: getGameSettings(),
       groupWidget: groupFieldWidget.bind(this),
       checkWidget: checkboxFieldWidget.bind(this),
-
+      related: this._getRelatedItems(),
     };
-
     return context;
   }
 
@@ -377,6 +376,29 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     // You may want to add other special handling here
     // Foundry comes with a large number of utility classes, e.g. SearchFilter
     // That you may want to implement yourself.
+  }
+
+  _getRelatedItems() {
+    // Get the related items for the owning parent (if any) for ammo
+    const item = this.item;
+    let ammo = [];
+    const parent = item.parent;
+    if (parent && parent.type === 'character' && item.type === 'weapon') {
+      //console.log(`Getting related items for ${item.name} with parent ${parent.name}`);
+      // Get the related
+      const ammoType = item.system.ammo?.type;
+      //console.log(`Ammo type for ${item.name} is ${ammoType}`);
+      if (ammoType && ammoType !== 'none') {
+        ammo = parent.items.filter(
+          (i) => i.type === 'item' &&  i.system.uses.consumable !== "none" && i.system.uses.ammo === ammoType
+        );
+      }
+    }
+    const related = {
+      ammo: ammo,
+
+    };
+    return related;
   }
 
   /**************

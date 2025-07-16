@@ -380,7 +380,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @protected
    */
-    static async _onReload(_event, target) {
+    static async _onReload(event, target) {
       const item = this._getEmbeddedDocument(target);
       if (!item || (item.type !== 'weapon' && item.type !== 'shipWeapon')) {
         ui.notifications.error("Only weapons can be reloaded.");
@@ -390,23 +390,87 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
         ui.notifications.error("This weapon does not use ammo.");
         return;
       }
-      if (item.system.ammo.type) {
-        const ammo_max = item.system.ammo?.max;
-        if (ammo_max != null) {
-          if (item.system.ammo.value < ammo_max) {
-            await item.update({ "system.ammo.value": ammo_max });
-            const content = `<p> Reloaded ${item.name} </p>`;
-            ChatMessage.create({
-              speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-              content: content,
-            });
+      
+      const ammoMax = item.system.ammo?.max;
+      if (ammoMax == null) {
+        console.log("Unable to find ammo max value in item", item.system);
+        return;
+      }
+      
+      let currentAmmo = item.system.ammo.value;
+      let ammoNeeded = ammoMax - currentAmmo;
+      if (ammoNeeded <= 0) {
+        ui.notifications.info("Weapon already full.");
+        return;
+      }
+
+      let shift = event?.shiftKey || false;
+
+      // For specifying in chat msg where ammo comes from.
+      let ammoReloadDesc = '';
+      let extraMessage = "";
+      if (item.system.ammo.longReload) {
+        extraMessage = " This weapon takes extra time to reload.<br>";
+      }
+      let ammoToAdd = 0;
+      if (item.type == 'shipWeapon' || shift) {
+        ammoToAdd = ammoMax;
+      } else {
+        if (item.system.ammo.current == null || item.system.ammo.current == "") {
+          ui.notifications?.error("No ammo source currently set. Not reloading. Hold shift+click to bypass and reload.");
+          return;
+        }
+
+        let ammoItem = this.actor.items.get(item.system.ammo.current);
+        if (ammoItem == null) {
+          ui.notifications?.error("Selected ammo not found. Unsetting & select new ammo source. Not reloading. Hold shift+click to bypass and reload.");
+          await item.update({ "system.ammo.current" : "" });
+          return;
+        }
+        if (ammoItem.system.uses.consumable == 'bundle') {
+          if (ammoItem.system.quantity == 0 || ammoItem.system.uses.emptyQuantity == ammoItem.system.quantity) {
+            ui.notifications?.error(`All ${ammoItem.name} are empty. Hold shift+click to bypass and reload.`);
+            return;
+          }
+          //uses the whole clip with capacity set by the weapon
+          ammoToAdd = ammoMax;
+          ammoItem.system.removeOneUse();
+        }  else if (ammoItem.system.uses.consumable == "count") {
+          // take the value from the clip
+          if (ammoNeeded < ammoItem.system.uses.value) {
+            // Can partially reload
+            ammoToAdd = ammoNeeded;
+            await ammoItem.update({ "system.uses.value": ammoItem.system.uses.value - ammoToAdd});
           } else {
-            ui.notifications?.info("Trying to reload a full item");
+            // Uses up clip
+            ammoToAdd = ammoItem.system.uses.value;
+            ammoItem.system.removeOneUse();
           }
         } else {
-          console.log("Unable to find ammo in item ", item.system);
+          ui.notifications.error("Item/Ammo consumable is not set to bundle or count");
+          return;
+        }
+        ammoReloadDesc = ` using ${ammoItem.name} from your inventory`;
+        if (ammoItem.system.location != "readied") {
+          extraMessage+=" Ammo source was not readied.";
         }
       }
+      // Update the weapon with the ammo that was consumed.
+      let newAmmoValue = currentAmmo + ammoToAdd;
+      if (newAmmoValue > ammoMax) newAmmoValue = ammoMax;
+      
+      await item.update({ "system.ammo.value": newAmmoValue });
+    
+      if (shift) {
+        // If shift is held, just reload the weapon without any checks.
+        extraMessage = " (Shift-clicked to bypass checks)";
+      }
+
+      const content = `<p>Reloaded ${item.name}${ammoReloadDesc}.${extraMessage}</p>`;
+      ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        content: content,
+      });
     }
 
     static async _onCreditChange(event, target) {

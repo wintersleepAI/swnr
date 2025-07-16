@@ -27,6 +27,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       max: SWNShared.requiredNumber(10),
       value: SWNShared.requiredNumber(10),
       burst: new fields.BooleanField({ initial: false }),
+      current: new fields.DocumentIdField({readonly:false})
     });
     schema.range = new fields.SchemaField({
       normal: SWNShared.requiredNumber(1),
@@ -277,6 +278,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const secStatName = this.secondStat;
     // check if there is 2nd stat name and its mod is better
     if (
+      actor.type == "character" &&
       statName != "ask" &&
       secStatName != null &&
       secStatName != "none" &&
@@ -365,6 +367,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       const secStatName = this.secondStat;
       // check if there is 2nd stat name and its mod is better
       if (
+        actor?.type == "character" &&
         secStatName != null &&
         secStatName != "none" &&
         actor.system.stats[statName].mod <

@@ -35,6 +35,8 @@ export class SWNActorSheet extends SWNBaseSheet {
       roll: this._onRoll,
       reload: this._onReload,
       creditChange: this._onCreditChange,
+      addUse: this._onAddUse,
+      removeUse: this._onRemoveUse,
       rest: this._onRest,
       scene: this._onScene,
       rollSave: this._onRollSave,
@@ -97,6 +99,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     // FRAGMENTS
     itemsList: {
       template: 'systems/swnr/templates/actor/fragments/items-list.hbs',
+    },
+    consumablesList: {
+      template: 'systems/swnr/templates/actor/fragments/consumable-list.hbs',
     },
     skillFrag: {
       template: 'systems/swnr/templates/actor/fragments/skill.hbs',
@@ -166,7 +171,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       groupWidget: groupFieldWidget.bind(this),
 
     };
-    
+
     // Offloading context prep to a helper function
     this._prepareItems(context);
 
@@ -306,10 +311,10 @@ export class SWNActorSheet extends SWNBaseSheet {
         items.push(i);
       }
       else if (i.type === 'armor') {
-        items.push(i); 
+        items.push(i);
       }
       else if (i.type === 'weapon') {
-        items.push(i); 
+        items.push(i);
       }
       // Append to features.
       else if (i.type === 'feature') {
@@ -344,7 +349,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       return 0;
     });
 
-    if (this.actor.type === "npc") { 
+    if (this.actor.type === "npc") {
       const abilities = []
       for (let i of this.document.items) {
         if (i.type === 'power' || i.type === 'feature' || i.type === 'cyberware') {
@@ -616,9 +621,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     await armor.update({ system: { use: !use } });
   }
 
-   /**
-   * @this SWNActorSheet
-   */  
+  /**
+  * @this SWNActorSheet
+  */
   static async _toggleLock(event, _target) {
     event.preventDefault();
     this.#toggleLock = !this.#toggleLock;
@@ -826,5 +831,23 @@ export class SWNActorSheet extends SWNBaseSheet {
     const resourceList = duplicate(this.actor.system.tweak.resourceList);
     resourceList[idx][resourceType] = value;
     await this.actor.update({ "system.tweak.resourceList": resourceList });
+  }
+
+  static async _onAddUse(event, target) {
+    event.preventDefault();
+    const itemId = target.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    if (item.type === "item" && item.system.uses.consumable !== "none") {
+      item.system.addOneUse();
+    }
+  }
+
+  static async _onRemoveUse(event, target) {
+    event.preventDefault();
+    const itemId = target.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    if (item.type === "item" && item.system.uses.consumable !== "none") {
+      item.system.removeOneUse();
+    }
   }
 }
