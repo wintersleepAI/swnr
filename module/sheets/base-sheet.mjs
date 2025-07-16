@@ -461,7 +461,11 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       
       await item.update({ "system.ammo.value": newAmmoValue });
     
-      
+      if (shift) {
+        // If shift is held, just reload the weapon without any checks.
+        extraMessage = " (Shift-clicked to bypass checks)";
+      }
+
       const content = `<p>Reloaded ${item.name}${ammoReloadDesc}.${extraMessage}</p>`;
       ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
