@@ -20,6 +20,7 @@ system:
     value: 1
     ammo: typeAPower
     consumable: bundle
+    keepEmpty: true
   bundle:
     amount: 6
     bundled: false

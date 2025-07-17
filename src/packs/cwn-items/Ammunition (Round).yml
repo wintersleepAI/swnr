@@ -21,8 +21,9 @@ system:
   uses:
     max: 10
     value: 10
-  ammo: ammo
-  consumable: false
+    ammo: ammo
+    consumable: bundle
+    keepEmpty: false
   bundle:
     bundled: false
   encumbrance: 0

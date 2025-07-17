@@ -13,6 +13,14 @@ _stats:
 sort: 0
 _id: 7iiarkq84yfge7qj
 system:
+  favorite: false
+  quantity: 1
+  uses:
+    max: 1
+    value: 1
+    ammo: typeBPower
+    consumable: bundle
+    keepEmpty: true
   bundle:
     amount: 1
     bundled: false

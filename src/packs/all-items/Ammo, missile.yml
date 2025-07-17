@@ -13,6 +13,14 @@ _stats:
 sort: 0
 _id: k7hzkae40001ufbj
 system:
+  favorite: false
+  quantity: 1
+  uses:
+    max: 1
+    value: 1
+    ammo: missile
+    consumable: count
+    keepEmpty: false
   bundle:
     amount: 1
     bundled: false
