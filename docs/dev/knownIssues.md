@@ -67,6 +67,13 @@ This document tracks known issues in the codebase that should be considered when
 - **Note**: No apparent validation system for pack/unpack operations
 - **Consider**: Adding validation scripts when working on compendium tooling
 
+### Unified Power System Implementation (v2.0)
+**Location**: `docs/dev/UnifiedPowerMagicSpecification.md`
+- **Note**: Major schema changes proposed for power items with pooled resources
+- **Risk**: High complexity migration, performance impact, UI complexity
+- **Consider**: Progressive implementation strategy (see `docs/dev/UnifiedPowerAnalysis.md`)
+- **Impact**: Intersects with migration validation issue (#4) and error handling (#2)
+
 ### Security Notes
 - Macro execution follows Foundry's standard pattern but uses direct command strings
 - No critical security issues identified, but follow Foundry best practices
