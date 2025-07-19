@@ -758,32 +758,10 @@
   height: 100%;
   overflow-y: auto;
 }
-.swnr .tab.attributes {
-  height: auto;
-  min-height: auto;
-}
-.swnr .swnr .sheet-body {
-  height: 500px !important;
-  overflow-y: scroll !important;
-  overflow-x: hidden !important;
-}
-.swnr .swnr .window-content {
-  height: 600px !important;
-  overflow-y: scroll !important;
-  overflow-x: hidden !important;
-}
-.swnr .swnr .tab {
-  height: auto !important;
-  overflow: visible !important;
-}
 .swnr .sheet-body .tab {
   height: auto;
   overflow: visible;
   padding-bottom: 2rem;
-}
-.swnr .sheet-body .tab.attributes {
-  max-height: none;
-  overflow-y: auto;
 }
 .swnr .sheet-body .tab .editor {
   height: auto;
