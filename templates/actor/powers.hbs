@@ -13,10 +13,10 @@
   <div class='resource-pools'>
     <div class="pools-container">
       <div class="pools-header">
-        <h4><i class="fas fa-battery-three-quarters"></i> {{localize "SWN.pools.title"}}</h4>
+        <h4><i class="fas fa-battery-three-quarters"></i> {{localize 'swnr.pools.title'}}</h4>
         {{#if owner}}
-        <button type="button" class="pool-manage-btn" data-action="poolManage" title="{{localize 'SWN.pools.manage'}}">
-          <i class="fas fa-cog"></i> {{localize "SWN.pools.manage"}}
+        <button type="button" class="pool-manage-btn" data-action="poolManage" title="{{localize 'swnr.pools.manage'}}">
+          <i class="fas fa-cog"></i> {{localize 'swnr.pools.manage'}}
         </button>
         {{/if}}
       </div>
@@ -45,7 +45,7 @@
                   {{#if (eq duration "commit")}}
                   <button type="button" class="release-commitment" data-action="releaseCommitment" 
                           data-pool-key="{{../key}}" data-power-id="{{powerId}}" 
-                          title="{{localize 'SWN.pools.commitment.release'}}">
+                          title="{{localize 'swnr.pools.commitment.release'}}">
                     <i class="fas fa-times"></i>
                   </button>
                   {{/if}}
@@ -63,8 +63,8 @@
   </div>
   {{else}}
     <div class="no-pools-message">
-      <p><i class="fas fa-info-circle"></i> {{localize "SWN.pools.noPoolsMessage"}}</p>
-      <p><em>{{localize "SWN.pools.poolsGrantedHint"}}</em></p>
+      <p><i class="fas fa-info-circle"></i> {{localize 'swnr.pools.noPoolsMessage'}}</p>
+      <p><em>{{localize 'swnr.pools.poolsGrantedHint'}}</em></p>
     </div>
   {{/if}}
 
@@ -143,9 +143,9 @@
             <li class='flexrow items-header power-level-header'>
               <div class='item-name'>
                 {{#if (eq powerLevel "0")}}
-                  {{localize "SWN.Item.Power.Level.unleveled"}}
+                  {{localize 'SWN.Item.Power.Level.unleveled'}}
                 {{else}}
-                  {{localize "SWN.Item.Power.Level.level" level=powerLevel}}
+                  {{localize 'SWN.Item.Power.Level.level' level=powerLevel}}
                 {{/if}}
               </div>
               <div class='item-controls'>

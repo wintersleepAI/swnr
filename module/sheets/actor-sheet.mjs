@@ -136,8 +136,19 @@ export class SWNActorSheet extends SWNBaseSheet {
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        // ws AI removing skills for now: ,'skills'
-        options.parts.push('combat', 'features', 'gear', 'powers', 'effects');
+        // Check if character has powers or resource pools before showing powers tab
+        const hasPowers = this.document.items.some(item => item.type === 'power');
+        const hasResourcePools = this.document.system.pools && Object.keys(this.document.system.pools).length > 0;
+        
+        // Base tabs for characters
+        options.parts.push('combat', 'features', 'gear');
+        
+        // Only add powers tab if character has powers or resource pools
+        if (hasPowers || hasResourcePools) {
+          options.parts.push('powers');
+        }
+        
+        options.parts.push('effects');
         options.defaultTab = 'combat';
         break;
       case 'npc':

@@ -175,13 +175,21 @@ const migrations = {
           console.log(`Migrating power item ${item.name} with system:`, item.system);
           
           try {
+            // Map old effort values to valid resourceLength choices
+            const effortToResourceLength = {
+              "scene": "scene",
+              "day": "day", 
+              "current": "commit"  // "current" maps to "commit" in new system
+            };
+            const resourceLength = effortToResourceLength[item.system.effort] || "scene";
+            
             const updateData = {
               "system.subType": "psychic",
               "system.resourceName": "Effort",
               "system.subResource": "Psychic",
               "system.resourceCost": 1,
               "system.sharedResource": true,
-              "system.resourceLength": item.system.effort || "scene",
+              "system.resourceLength": resourceLength,
               "system.leveledResource": false,
               "system.strainCost": 0,
               "system.internalResource": { value: 0, max: 1 },
@@ -206,13 +214,21 @@ const migrations = {
         for (const item of actor.items) {
           if (item.type === "power") {
             try {
+              // Map old effort values to valid resourceLength choices
+              const effortToResourceLength = {
+                "scene": "scene",
+                "day": "day", 
+                "current": "commit"  // "current" maps to "commit" in new system
+              };
+              const resourceLength = effortToResourceLength[item.system.effort] || "scene";
+              
               const updateData = {
                 "system.subType": "psychic",
                 "system.resourceName": "Effort",
                 "system.subResource": "Psychic",
                 "system.resourceCost": 1,
                 "system.sharedResource": true,
-                "system.resourceLength": item.system.effort || "scene",
+                "system.resourceLength": resourceLength,
                 "system.leveledResource": false,
                 "system.strainCost": 0,
                 "system.internalResource": { value: 0, max: 1 },
