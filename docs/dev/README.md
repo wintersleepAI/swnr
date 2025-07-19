@@ -10,12 +10,12 @@ Tracks known issues, code structure problems, and GitHub issues. **Check this be
 ### [UnifiedPowerMagicSpecification.md](UnifiedPowerMagicSpecification.md)
 Official specification for the v2.0 Unified Power & Magic system. Defines the schema and behavior for consolidating psychic powers, spells, arts, and other magical abilities into a single `power` item type.
 
-### [UnifiedPowerAnalysis.md](UnifiedPowerAnalysis.md)
-Technical analysis of the Unified Power specification, including:
-- Risk assessment and roadblocks
-- Implementation strategy recommendations  
-- Performance and migration considerations
-- Alternative approaches for complex features
+### [Sprint1-Planning.md](Sprint1-Planning.md)
+Detailed implementation plan for Sprint S-1 of the Unified Power system, including:
+- Task breakdown and dependencies
+- Migration strategy and risk mitigation
+- Testing framework setup
+- Success criteria and performance benchmarks
 
 ## Development Workflow
 
@@ -31,7 +31,7 @@ docs/dev/
 ├── README.md                           # This file
 ├── knownIssues.md                      # Known problems tracker
 ├── UnifiedPowerMagicSpecification.md   # v2.0 power system spec
-└── UnifiedPowerAnalysis.md             # Technical analysis of power spec
+└── Sprint1-Planning.md                 # S-1 implementation plan
 ```
 
 ## Contributing to Documentation
