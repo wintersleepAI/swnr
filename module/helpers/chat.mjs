@@ -518,6 +518,48 @@ export async function _onChatCardAction(
         await t.update({ [effort_key]: updated_effort });
       }
     }
+  } else if (action === "use-power") {
+    // Handle power resource spending with unified power system
+    const powerId = button.dataset.powerId;
+    const actorId = button.dataset.actorId;
+    
+    if (!powerId || !actorId) {
+      ui.notifications?.error("Missing power or actor ID for resource spending");
+      return;
+    }
+    
+    // Get the actor and power
+    const actor = game.actors?.get(actorId);
+    if (!actor) {
+      ui.notifications?.error("Could not find actor for power usage");
+      return;
+    }
+    
+    const power = actor.items.get(powerId);
+    if (!power) {
+      ui.notifications?.error("Could not find power on actor");
+      return;
+    }
+    
+    // Check if user can control this actor
+    if (!actor.isOwner && !game.user?.isGM) {
+      ui.notifications?.warn("You do not have permission to use this actor's powers");
+      return;
+    }
+    
+    try {
+      // Use the power's unified resource spending system
+      await power.system.use();
+      
+      // Disable the button to prevent multiple clicks
+      button.disabled = true;
+      button.style.opacity = "0.5";
+      button.innerHTML = "<i class='fas fa-check'></i> Resources Spent";
+      
+    } catch (error) {
+      ui.notifications?.error(`Failed to use power: ${error.message}`);
+      console.error("Power usage error:", error);
+    }
   }
 }
 

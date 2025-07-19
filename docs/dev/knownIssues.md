@@ -72,6 +72,13 @@ This document tracks known issues in the codebase that should be considered when
 - **Status**: Production ready, all major power types supported (psychic, art, adept, spell, mutation)
 - **Impact**: Resolved migration validation and error handling issues as part of implementation
 
+### ~~Feature-Based Pool Generation Architecture~~ ✅ **COMPLETED Sprint 2**
+**Location**: `module/data/items/item-feature.mjs`, `module/data/actors/actor-character.mjs`
+- **Resolution**: Fixed fundamental design flaw where pools were generated from Powers instead of Features/Foci/Edges
+- **Status**: Production ready, proper SWN/CWN game mechanics implemented
+- **Impact**: Features/Foci/Edges now grant pools, Powers consume from shared actor pools
+- **Migration**: v2.1.1 automatically converts existing power-based pools to feature-based
+
 ### Security Notes
 - Macro execution follows Foundry's standard pattern but uses direct command strings
 - No critical security issues identified, but follow Foundry best practices

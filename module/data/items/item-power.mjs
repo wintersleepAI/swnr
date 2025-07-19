@@ -27,18 +27,18 @@ export default class SWNPower extends SWNItemBase {
       max: new fields.NumberField({ initial: 1 })
     });
     schema.resourceLength = new fields.StringField({
-      choices: ["commit", "scene", "day", "rest", "user"],
+      choices: ["commit", "scene", "day"],
       initial: "scene"
     });
     schema.userResourceLength = new fields.StringField({
-      choices: ["commit", "scene", "day", "rest", "user"]
+      choices: ["commit", "scene", "day"]
     });
     schema.level =  new fields.NumberField({
       required: true,
       nullable: false,
       integer: true,
       initial: 1,
-      min: 1,
+      min: 0,
       max: CONFIG.SWN.maxPowerLevel,
       
     });
@@ -138,7 +138,7 @@ export default class SWNPower extends SWNItemBase {
     const pool = currentPools[resourceKey];
     const costToSpend = this.resourceCost || 0;
 
-    // Check if we have enough resources
+    // Check if we have enough available resources (not committed)
     if (pool.value < costToSpend) {
       const message = `Insufficient ${this.resourceName}: ${pool.value}/${pool.max} available, ${costToSpend} required`;
       ui.notifications?.warn(message);
@@ -151,9 +151,31 @@ export default class SWNPower extends SWNItemBase {
       };
     }
 
-    // Calculate new pool values
+    // Commit effort instead of spending it
     const poolsAfter = foundry.utils.deepClone(currentPools);
-    poolsAfter[resourceKey].value -= costToSpend;
+    
+    // Add commitment to effort tracking
+    const currentCommitments = foundry.utils.deepClone(actor.system.effortCommitments || {});
+    if (!currentCommitments[resourceKey]) {
+      currentCommitments[resourceKey] = [];
+    }
+    
+    // Create commitment record
+    const commitment = {
+      powerId: item.id,
+      powerName: item.name,
+      amount: costToSpend,
+      duration: this.resourceLength || "scene", // Use the power's resource duration
+      timestamp: Date.now()
+    };
+    
+    currentCommitments[resourceKey].push(commitment);
+    
+    // Update available effort (recalculate based on commitments)
+    const totalCommitted = currentCommitments[resourceKey].reduce((sum, c) => sum + c.amount, 0);
+    poolsAfter[resourceKey].value = Math.max(0, poolsAfter[resourceKey].max - totalCommitted);
+    poolsAfter[resourceKey].committed = totalCommitted;
+    poolsAfter[resourceKey].commitments = currentCommitments[resourceKey];
 
     // Handle internal resource increment if not shared
     if (!this.sharedResource && this.internalResource) {
@@ -178,8 +200,11 @@ export default class SWNPower extends SWNItemBase {
       await actor.update({ "system.systemStrain.value": newStrain });
     }
 
-    // Update actor pools
-    await actor.update({ "system.pools": poolsAfter });
+    // Update actor pools and effort commitments
+    await actor.update({ 
+      "system.pools": poolsAfter,
+      "system.effortCommitments": currentCommitments
+    });
 
     // Update internal resource if applicable
     if (!this.sharedResource && this.internalResource) {

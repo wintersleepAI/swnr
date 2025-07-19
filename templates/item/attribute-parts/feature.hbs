@@ -23,7 +23,6 @@
                 <option value="Effort" {{#if (eq pool.resourceName "Effort")}}selected{{/if}}>Effort</option>
                 <option value="Slots" {{#if (eq pool.resourceName "Slots")}}selected{{/if}}>Spell Slots</option>
                 <option value="Points" {{#if (eq pool.resourceName "Points")}}selected{{/if}}>Power Points</option>
-                <option value="Strain" {{#if (eq pool.resourceName "Strain")}}selected{{/if}}>System Strain</option>
                 <option value="Uses" {{#if (eq pool.resourceName "Uses")}}selected{{/if}}>Daily Uses</option>
               </select>
             </div>
@@ -38,10 +37,8 @@
               <label class="resource-label">Refresh Cadence</label>
               <select name="system.poolsGranted.{{index}}.cadence" data-dtype="String">
                 <option value="scene" {{#if (eq pool.cadence "scene")}}selected{{/if}}>Scene</option>
-                <option value="rest" {{#if (eq pool.cadence "rest")}}selected{{/if}}>Rest</option>
                 <option value="day" {{#if (eq pool.cadence "day")}}selected{{/if}}>Day</option>
-                <option value="commit" {{#if (eq pool.cadence "commit")}}selected{{/if}}>Commit (Long-term)</option>
-                <option value="user" {{#if (eq pool.cadence "user")}}selected{{/if}}>Custom</option>
+                <option value="commit" {{#if (eq pool.cadence "commit")}}selected{{/if}}>Commit (Manual)</option>
               </select>
             </div>
           </div>

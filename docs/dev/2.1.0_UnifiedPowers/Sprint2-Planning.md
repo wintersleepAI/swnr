@@ -2,8 +2,9 @@
 *Stars Without Number Redux v2.1.0 Unified Powers - Phase 2*
 
 **Sprint Duration**: 2-3 weeks  
-**Status**: Planning  
-**Previous Sprint**: S-1 completed (Actor-pool schema, migration, item-sheet partials)
+**Status**: ✅ COMPLETED  
+**Previous Sprint**: S-1 completed (Actor-pool schema, migration, item-sheet partials)  
+**Major Architectural Change**: Pool generation moved from Powers to Features/Foci/Edges
 
 ---
 
@@ -11,11 +12,12 @@
 
 **Primary Goal**: Implement robust chat-card refactor with mutex spend logic, refresh hooks, and GM-override dialog as outlined in the Unified Power Specification Section 7.
 
-**Success Criteria**:
-- Race-condition-free power usage with per-actor mutex
-- Comprehensive refresh hook system for scene/rest/day cycles
-- GM override dialog for direct pool manipulation
-- Chat cards properly reflect resource spending and status
+**Success Criteria**: ✅ ALL COMPLETED
+- ✅ Race-condition-free power usage with per-actor mutex
+- ✅ Comprehensive refresh hook system for scene/rest/day cycles
+- ✅ GM override dialog for direct pool manipulation
+- ✅ Chat cards properly reflect resource spending and status
+- ✅ **ARCHITECTURAL FIX**: Pool generation moved from Powers to Features/Foci/Edges
 
 ---
 
@@ -260,4 +262,45 @@ CONFIG.SWN.poolMutex = new Map(); // Per-actor locks
 
 ---
 
-*Planning Document Version 1.0 - Created for SWNR v2.1.0 Development*
+## ⚠️ CRITICAL ARCHITECTURAL CHANGE DISCOVERED DURING IMPLEMENTATION
+
+### Issue Identified:
+During Sprint 2 implementation, a fundamental design flaw was discovered: **pools were being generated from Powers (items that consume resources) rather than from Foci/Edges/Features (character progression elements that should grant pools)**.
+
+### Root Cause:
+The original design had Powers defining their own resource pools, but this contradicts how SWN/CWN actually works:
+- **Foci/Edges/Features** grant resource pools (e.g., "Psychic Training" grants Effort:Psychic pools)
+- **Powers** consume from those pools (e.g., "Telekinetic Manipulation" costs 1 Effort:Psychic)
+
+### Solution Implemented:
+1. **Redesigned pool generation** to use Features/Foci/Edges instead of Powers
+2. **Updated data models** to add `poolsGranted` field to Feature items
+3. **Fixed pool calculation logic** in `base-actor.mjs` to scan Features for pool grants
+4. **Added comprehensive UI** to Feature item sheets for pool configuration
+5. **Created migration** (v2.1.1) to convert existing power-based pools to feature-based
+
+### Files Modified for Architectural Fix:
+- `module/data/items/item-feature.mjs` - Added `poolsGranted` schema
+- `module/data/actors/actor-character.mjs` - Updated `_calculateResourcePools()` method
+- `module/sheets/item-sheet.mjs` - Added pool management UI to Feature sheets
+- `templates/item/attribute-parts/feature.hbs` - Pool configuration interface
+- `module/migration.mjs` - Added v2.1.1 migration for architectural change
+- `src/scss/components/_chat.scss` - Styling for pool configuration UI
+
+### Impact on Sprint 2:
+- ✅ **All original Sprint 2 goals achieved**
+- ✅ **Critical architectural flaw fixed**
+- ✅ **Proper SWN/CWN game mechanics now implemented**
+- ✅ **Migration path provided for existing data**
+
+### Testing Validated:
+- Pool generation now correctly comes from Features/Foci/Edges
+- Powers properly consume from shared actor pools
+- Feature item sheets provide full pool configuration UI
+- Migration successfully converts existing power-based pools
+
+This architectural change ensures the unified power system accurately reflects how Stars Without Number and Cities Without Number actually work, rather than just being technically functional.
+
+---
+
+*Planning Document Version 1.1 - Updated post-Sprint 2 completion with architectural changes*

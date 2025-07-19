@@ -53,6 +53,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       resourceCreate: this._onResourceCreate,
       poolManage: this._onPoolManage,
       resourceDelete: this._onResourceDelete,
+      releaseCommitment: this._onReleaseCommitment,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -300,12 +301,12 @@ export class SWNActorSheet extends SWNBaseSheet {
     const items = [];
     const features = [];
     const cyberware = [];
-    const powers = {
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
+    const powersByType = {
+      psychic: {},
+      art: {},
+      adept: {},
+      spell: {},
+      mutation: {}
     };
 
     // Iterate through items, allocating to containers
@@ -327,16 +328,45 @@ export class SWNActorSheet extends SWNBaseSheet {
       else if (i.type === 'cyberware') {
         cyberware.push(i);
       }
-      // Append to powers.
+      // Append to powers by type and level.
       else if (i.type === 'power') {
-        if (i.system.level != undefined) {
-          powers[i.system.level].push(i);
+        const powerType = i.system.subType || 'psychic';
+        const powerLevel = i.system.level || 0;
+        
+        // Initialize type structure if needed
+        if (!powersByType[powerType]) {
+          powersByType[powerType] = {};
+        }
+        
+        // For arts and mutations, create a flat list (no level grouping)
+        if (powerType === 'art' || powerType === 'mutation') {
+          if (!powersByType[powerType]['flat']) {
+            powersByType[powerType]['flat'] = [];
+          }
+          powersByType[powerType]['flat'].push(i);
+        } else {
+          // For other power types, group by level
+          if (!powersByType[powerType][powerLevel]) {
+            powersByType[powerType][powerLevel] = [];
+          }
+          powersByType[powerType][powerLevel].push(i);
         }
       }
     }
 
-    for (const s of Object.values(powers)) {
-      s.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    // Sort powers within each level
+    for (const powerType of Object.values(powersByType)) {
+      for (const levelArray of Object.values(powerType)) {
+        levelArray.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+      }
+    }
+
+    // Prepare powers for template - only include types that have powers
+    const powers = {};
+    for (const [powerType, levelsObj] of Object.entries(powersByType)) {
+      if (Object.keys(levelsObj).length > 0) {
+        powers[powerType] = levelsObj;
+      }
     }
 
     // Sort then assign
@@ -365,6 +395,94 @@ export class SWNActorSheet extends SWNBaseSheet {
   }
 
   /**
+   * Refresh pools by cadence type, releasing effort commitments
+   * @param {string} cadence - The cadence type to refresh ('scene', 'day')
+   */
+  async _refreshPoolsByCadence(cadence) {
+    const pools = this.actor.system.pools || {};
+    const commitments = this.actor.system.effortCommitments || {};
+    const poolUpdates = {};
+    const newCommitments = {};
+    let effortReleased = [];
+    
+    // Process each pool
+    for (const [poolKey, poolData] of Object.entries(pools)) {
+      // Handle effort commitments for effort pools
+      if (poolKey.startsWith("Effort:") && commitments[poolKey]) {
+        const remainingCommitments = [];
+        const releasedCommitments = [];
+        
+        // Filter commitments based on duration and cadence
+        for (const commitment of commitments[poolKey]) {
+          let shouldRelease = false;
+          
+          // Never auto-release "commit" duration - those are manual only
+          if (commitment.duration === "commit") {
+            shouldRelease = false;
+          } else if (cadence === "scene" && (commitment.duration === "scene" || commitment.duration === "instant")) {
+            shouldRelease = true;
+          } else if (cadence === "day" && (commitment.duration === "day" || commitment.duration === "scene" || commitment.duration === "instant")) {
+            shouldRelease = true;
+          }
+          
+          if (shouldRelease) {
+            releasedCommitments.push(commitment);
+            effortReleased.push(`${commitment.powerName} (${commitment.amount} ${poolKey})`);
+          } else {
+            remainingCommitments.push(commitment);
+          }
+        }
+        
+        newCommitments[poolKey] = remainingCommitments;
+        
+        // Recalculate available effort
+        const totalCommitted = remainingCommitments.reduce((sum, c) => sum + c.amount, 0);
+        const availableEffort = Math.max(0, poolData.max - totalCommitted);
+        
+        poolUpdates[`system.pools.${poolKey}.value`] = availableEffort;
+        poolUpdates[`system.pools.${poolKey}.committed`] = totalCommitted;
+        poolUpdates[`system.pools.${poolKey}.commitments`] = remainingCommitments;
+      } 
+      // Handle regular pool refresh
+      else if (poolData.cadence === cadence) {
+        poolUpdates[`system.pools.${poolKey}.value`] = poolData.max;
+      }
+    }
+    
+    // Update effort commitments
+    if (Object.keys(newCommitments).length > 0) {
+      poolUpdates["system.effortCommitments"] = newCommitments;
+    }
+    
+    if (Object.keys(poolUpdates).length > 0) {
+      await this.actor.update(poolUpdates);
+      
+      // Create chat message for refresh
+      const chatMessage = getDocumentClass("ChatMessage");
+      let content = `<div class="refresh-summary">
+        <h3><i class="fas fa-sync"></i> ${cadence === "scene" ? "Scene" : "Day"} Refresh</h3>`;
+      
+      if (effortReleased.length > 0) {
+        content += `<p><strong>Effort Released:</strong></p><ul>`;
+        effortReleased.forEach(effort => content += `<li>${effort}</li>`);
+        content += `</ul>`;
+      }
+      
+      const regularRefreshes = Object.keys(poolUpdates).filter(key => !key.includes("Effort:") && !key.includes("effortCommitments"));
+      if (regularRefreshes.length > 0) {
+        content += `<p>${regularRefreshes.length} pools restored to maximum.</p>`;
+      }
+      
+      content += `</div>`;
+      
+      chatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        content
+      });
+    }
+  }
+
+  /**
    * Prepare pool data for display in the sheet
    * @param {Object} context - The context object being prepared
    */
@@ -379,9 +497,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       if (!poolGroups[resourceName]) {
         poolGroups[resourceName] = {
           resourceName,
-          pools: [],
-          totalCurrent: 0,
-          totalMax: 0
+          pools: []
         };
       }
       
@@ -391,15 +507,16 @@ export class SWNActorSheet extends SWNBaseSheet {
         current: poolData.value,
         max: poolData.max,
         cadence: poolData.cadence,
+        committed: poolData.committed || 0,
+        commitments: poolData.commitments || [],
         percentage: poolData.max > 0 ? Math.round((poolData.value / poolData.max) * 100) : 0,
         isEmpty: poolData.value === 0,
         isFull: poolData.value >= poolData.max,
-        isLow: poolData.max > 0 && (poolData.value / poolData.max) < 0.25
+        isLow: poolData.max > 0 && (poolData.value / poolData.max) < 0.25,
+        hasCommitments: (poolData.committed || 0) > 0
       };
       
       poolGroups[resourceName].pools.push(poolInfo);
-      poolGroups[resourceName].totalCurrent += poolData.value;
-      poolGroups[resourceName].totalMax += poolData.max;
     }
     
     // Sort pools within each group by subResource
@@ -519,23 +636,21 @@ export class SWNActorSheet extends SWNBaseSheet {
         system: {
           systemStrain: { value: newStrain },
           health: { value: newHP },
-          effort: { scene: 0, day: 0 },
-          tweak: {
-            extraEffort: {
-              scene: 0,
-              day: 0,
-            },
-          },
         },
       });
+      
+      // Refresh pools with 'day' cadence (full rest)
+      await this._refreshPoolsByCadence('day');
     } else if (this.actor.type === "npc") {
       const newHP = this.actor.system.health.max;
       await this.actor.update({
         system: {
           health: { value: newHP },
-          effort: { scene: 0, day: 0 }
         },
       });
+      
+      // Refresh pools with 'day' cadence (full rest)
+      await this._refreshPoolsByCadence('day');
     }
     await this._resetSoak();
   }
@@ -543,11 +658,9 @@ export class SWNActorSheet extends SWNBaseSheet {
 
   static async _onScene(event, _target) {
     event.preventDefault();
-    let update = { system: { effort: { scene: 0 } } };
-    if (this.actor.type === "character") {
-      update["tweak.extraEffort.scene"] = 0;
-    }
-    await this.actor.update(update);
+    
+    // Refresh pools with 'scene' cadence
+    await this._refreshPoolsByCadence('scene');
     this._resetSoak();
   }
 
@@ -920,6 +1033,67 @@ export class SWNActorSheet extends SWNBaseSheet {
     const item = this.actor.items.get(itemId);
     if (item.type === "item" && item.system.uses.consumable !== "none") {
       item.system.removeOneUse();
+    }
+  }
+
+  /**
+   * Handle manual release of committed effort
+   * @param {Event} event   The originating click event
+   * @param {HTMLElement} target - The capturing HTML element which defined a [data-action]
+   */
+  static async _onReleaseCommitment(event, target) {
+    event.preventDefault();
+    const poolKey = target.dataset.poolKey;
+    const powerId = target.dataset.powerId;
+    
+    if (!poolKey || !powerId) {
+      ui.notifications?.error("Missing pool or power ID for commitment release");
+      return;
+    }
+    
+    const actor = this.actor;
+    const commitments = actor.system.effortCommitments || {};
+    const poolCommitments = commitments[poolKey] || [];
+    
+    // Find and remove the specific commitment
+    const commitmentIndex = poolCommitments.findIndex(c => c.powerId === powerId);
+    if (commitmentIndex === -1) {
+      ui.notifications?.warn("Could not find commitment to release");
+      return;
+    }
+    
+    const releasedCommitment = poolCommitments[commitmentIndex];
+    poolCommitments.splice(commitmentIndex, 1);
+    
+    // Update actor with released commitment
+    const newCommitments = { ...commitments };
+    newCommitments[poolKey] = poolCommitments;
+    
+    // Recalculate pool availability
+    const pools = actor.system.pools || {};
+    const pool = pools[poolKey];
+    if (pool) {
+      const totalCommitted = poolCommitments.reduce((sum, c) => sum + c.amount, 0);
+      const newValue = Math.max(0, pool.max - totalCommitted);
+      
+      await actor.update({
+        "system.effortCommitments": newCommitments,
+        [`system.pools.${poolKey}.value`]: newValue,
+        [`system.pools.${poolKey}.committed`]: totalCommitted,
+        [`system.pools.${poolKey}.commitments`]: poolCommitments
+      });
+      
+      // Create chat message for release
+      const chatMessage = getDocumentClass("ChatMessage");
+      chatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: actor }),
+        content: `<div class="effort-release">
+          <h3><i class="fas fa-unlock"></i> Effort Released</h3>
+          <p><strong>${releasedCommitment.powerName}:</strong> ${releasedCommitment.amount} ${poolKey} effort released</p>
+        </div>`
+      });
+      
+      ui.notifications?.info(`Released ${releasedCommitment.amount} effort from ${releasedCommitment.powerName}`);
     }
   }
 }

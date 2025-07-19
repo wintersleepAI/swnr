@@ -23,7 +23,7 @@ export default class SWNFeature extends SWNItemBase {
     // Pool configuration for features that grant resource pools
     schema.poolsGranted = new fields.ArrayField(new fields.SchemaField({
       resourceName: new fields.StringField({
-        choices: ["Effort", "Slots", "Points", "Strain", "Uses"],
+        choices: ["Effort", "Slots", "Points", "Uses"],
         initial: "Effort"
       }),
       subResource: new fields.StringField({
@@ -38,7 +38,7 @@ export default class SWNFeature extends SWNItemBase {
         min: 0
       }),
       cadence: new fields.StringField({
-        choices: ["commit", "scene", "day", "rest", "user"],
+        choices: ["commit", "scene", "day"],
         initial: "day"
       }),
       // Formula for dynamic calculation (e.g., "@level + @stats.cha.mod")

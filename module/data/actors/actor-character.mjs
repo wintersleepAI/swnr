@@ -303,6 +303,9 @@ export default class SWNCharacter extends SWNActorBase {
     this.readiedArmor = readiedItems.filter((i) => i.type === "armor");
     this.gear = gear;
     this.consumables = consumables;
+    
+    // Calculate resource pools from Features/Foci/Edges
+    this._calculateResourcePools();
   }
 
   getRollData() {
@@ -481,6 +484,7 @@ export default class SWNCharacter extends SWNActorBase {
       item.system.poolsGranted && 
       item.system.poolsGranted.length > 0
     );
+    
 
     for (const feature of poolGrantingItems) {
       for (const poolConfig of feature.system.poolsGranted) {
@@ -515,12 +519,17 @@ export default class SWNCharacter extends SWNActorBase {
           // Pool already exists from another feature, add to max
           pools[poolKey].max += maxValue;
         } else {
-          // Create new pool, preserving current value if it exists
-          const currentValue = this.pools[poolKey]?.value || 0;
+          // Calculate available effort (max - committed)
+          const commitments = this.effortCommitments[poolKey] || [];
+          const committedAmount = commitments.reduce((sum, commitment) => sum + commitment.amount, 0);
+          const availableEffort = Math.max(0, maxValue - committedAmount);
+          
           pools[poolKey] = {
-            value: Math.min(currentValue, maxValue), // Don't exceed new max
+            value: availableEffort,
             max: maxValue,
-            cadence: poolConfig.cadence
+            cadence: poolConfig.cadence,
+            committed: committedAmount,
+            commitments: commitments
           };
         }
       }

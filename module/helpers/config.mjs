@@ -24,7 +24,7 @@ SWN.statAbbreviations = {
 
 SWN.maxTL = 6;
 
-SWN.maxPowerLevel = 5;
+SWN.maxPowerLevel = 10;
 
 SWN.maxSkillRank = 4;
 

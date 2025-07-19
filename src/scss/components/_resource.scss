@@ -136,3 +136,46 @@
 .sheet-body .resource-bar {
   margin-bottom: 10px;
 }
+
+// Pool commitment styles
+.commitment-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem;
+  font-size: 0.8em;
+  
+  .power-name {
+    color: var(--color-text-dark-primary);
+  }
+  
+  .effort-amount {
+    font-weight: bold;
+    color: var(--color-text-light-highlight);
+    background: rgba(139, 69, 19, 0.2);
+    padding: 0.125rem 0.25rem;
+    border-radius: 3px;
+    min-width: 1.5rem;
+    text-align: center;
+  }
+  
+  .release-commitment {
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    border: none;
+    background: var(--color-border-light-tertiary);
+    color: var(--color-text-light-primary);
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover {
+      background: var(--color-border-light-primary);
+      color: var(--color-text-dark-primary);
+    }
+  }
+}

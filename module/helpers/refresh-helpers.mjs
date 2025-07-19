@@ -122,9 +122,7 @@ function getCadenceLevel(cadence) {
   const cadenceMap = {
     "commit": 0,  // Never auto-refresh
     "scene": 1,
-    "rest": 2,
-    "day": 3,
-    "user": 0     // Never auto-refresh
+    "day": 3
   };
   return cadenceMap[cadence] || 0;
 }

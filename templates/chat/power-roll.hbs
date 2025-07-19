@@ -56,10 +56,17 @@
   {{/if}}
 
 
-  {{#if power.system.effort}}
+  {{! Resource spending button for unified power system }}
+  {{#if (or power.system.resourceCost power.system.strainCost)}}
   <div class="card-buttons">
-      <button data-action="effort" data-effort="{{power.system.effort}}">
-          Use {{power.system.effort}} effort
+      <button data-action="use-power" data-power-id="{{power.id}}" data-actor-id="{{actor.id}}">
+          Spend Resources
+          {{#if power.system.resourceCost}}
+            ({{power.system.resourceCost}} {{power.system.resourceName}}{{#if power.system.subResource}}:{{power.system.subResource}}{{/if}})
+          {{/if}}
+          {{#if power.system.strainCost}}
+            {{#if power.system.resourceCost}}+{{/if}}({{power.system.strainCost}} SS)
+          {{/if}}
       </button>
   </div>
   {{/if}}

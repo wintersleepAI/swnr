@@ -33,6 +33,12 @@ export default class SWNActorBase extends foundry.abstract
       /* Dynamic keys: "${resourceName}:${subResource}" */
       /* Values: { value, max, cadence } */
     });
+
+    // Track effort commitments by power for proper SWN mechanics
+    schema.effortCommitments = new fields.ObjectField({
+      /* Dynamic keys: "${resourceName}:${subResource}" */
+      /* Values: Array of { powerId, powerName, amount, duration, timestamp } */
+    });
     schema.speed = SWNShared.requiredNumber(10);
     schema.cyberdecks = new fields.ArrayField(new fields.DocumentIdField()); 
     schema.health_max_modified = SWNShared.requiredNumber(0);

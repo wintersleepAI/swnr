@@ -259,14 +259,13 @@
             <div class="pool-group">
               <div class="pool-group-header">
                 <span class="resource-name">{{resourceName}}</span>
-                <span class="pool-summary">{{totalCurrent}}/{{totalMax}}</span>
               </div>
               <div class="pools-list">
                 {{#each pools}}
-                <div class="pool-badge {{#if isEmpty}}empty{{else if isLow}}low{{else if isFull}}full{{/if}}" 
-                     title="{{key}}: {{current}}/{{max}} ({{cadence}})">
+                <div class="pool-badge {{#if isEmpty}}empty{{else if isLow}}low{{else if isFull}}full{{/if}} {{#if hasCommitments}}has-commitments{{/if}}" 
+                     title="{{key}}: {{current}} available/{{max}} total{{#if committed}} ({{committed}} committed){{/if}} ({{cadence}})">
                   <span class="pool-label">{{#if (eq subResource "Default")}}{{../resourceName}}{{else}}{{subResource}}{{/if}}</span>
-                  <span class="pool-values">{{current}}/{{max}}</span>
+                  <span class="pool-values">{{current}}/{{max}}{{#if committed}}<small class="committed-indicator">-{{committed}}</small>{{/if}}</span>
                   <div class="pool-bar">
                     <div class="pool-fill" style="width: {{percentage}}%"></div>
                   </div>

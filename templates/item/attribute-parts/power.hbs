@@ -21,7 +21,7 @@
     
     <div class="resource">
       <label class="resource-label">Level</label>
-      <input type="number" name="system.level" value="{{system.level}}" data-dtype="Number" min="1" max="5" />
+      <input type="number" name="system.level" value="{{system.level}}" data-dtype="Number" min="0" max="10" placeholder="0 for unleveled" />
     </div>
     
     <div class="resource">
@@ -61,8 +61,6 @@
           <option value="commit" {{#if (eq system.resourceLength "commit")}}selected{{/if}}>Commit</option>
           <option value="scene" {{#if (eq system.resourceLength "scene")}}selected{{/if}}>Scene</option>
           <option value="day" {{#if (eq system.resourceLength "day")}}selected{{/if}}>Day</option>
-          <option value="rest" {{#if (eq system.resourceLength "rest")}}selected{{/if}}>Rest</option>
-          <option value="user" {{#if (eq system.resourceLength "user")}}selected{{/if}}>Custom</option>
         </select>
       </div>
       

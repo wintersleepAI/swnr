@@ -54,15 +54,22 @@ The system implements a comprehensive unified power system supporting all game v
 - Pool structure: `{ value, max, cadence }` for each resource
 - Runtime extensible via `CONFIG.SWN.poolResourceNames`
 
+**Feature-Based Pool Generation** (`SWNFeature` data model):
+- **Features/Foci/Edges grant resource pools** (proper SWN/CWN mechanics)
+- `poolsGranted` schema: resourceName, subResource, baseAmount, perLevel, cadence, formula, condition
+- Dynamic pool calculation based on character level and stats
+- Comprehensive UI in Feature item sheets for pool configuration
+
 **Power Schema** (`SWNPower` data model):
 - Unified schema supporting psychic, art, adept, spell, and mutation powers
+- **Powers consume from shared actor pools** (do not generate pools)
 - Resource configuration: type, cost, duration, sharing model
-- Internal vs shared resource management
-- Leveled vs unleveled resource systems
-- Forward-compatible design for future power types
+- Mutex-protected usage prevents race conditions
+- Enhanced chat cards with resource cost display
 
-**Migration System** (v2.1.0):
-- Automatic conversion of legacy effort system to pools
+**Migration System** (v2.1.0 & v2.1.1):
+- v2.1.0: Automatic conversion of legacy effort system to pools
+- v2.1.1: Architectural fix - converts power-based pools to feature-based
 - Comprehensive error handling and progress reporting
 - Backward-compatible during transition period
 
