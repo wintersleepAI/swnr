@@ -70,11 +70,6 @@ SWN.saveTypes = {
   luck: 'swnr.sheet.saves.luck',
 };
 
-SWN.effortDurationTypes = {
-  scene: 'swnr.effort.scene',
-  day: 'swnr.effort.day',
-  current: 'swnr.effort.current',
-}
 
 SWN.poolResourceNames = ["Effort", "Slots", "Points", "Strain", "Uses"];
 

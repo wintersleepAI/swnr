@@ -54,7 +54,6 @@ export default class SWNPower extends SWNItemBase {
     schema.save = SWNShared.stringChoices(null, CONFIG.SWN.saveTypes, false);
     schema.range = SWNShared.nullableString();
     schema.skill = SWNShared.nullableString();
-    schema.effort = SWNShared.stringChoices(null, CONFIG.SWN.effortDurationTypes, false);
     return schema;
   }
 

@@ -127,11 +127,5 @@
       {{formGroup systemFields.skill value=system.skill localize=true}}
     {{/if}}
     
-    {{! Legacy effort field - keep for backward compatibility during transition }}
-    {{#if system.effort}}
-      {{#if systemFields.effort}}
-        {{formGroup systemFields.effort value=system.effort localize=true}}
-      {{/if}}
-    {{/if}}
   </div>
 </section>
