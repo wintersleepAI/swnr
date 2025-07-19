@@ -122,22 +122,24 @@ export default class SWNNPC extends SWNActorBase {
         const poolKey = `${poolConfig.resourceName}:${poolConfig.subResource || ""}`;
         
         // Calculate pool maximum
-        let maxValue = poolConfig.baseAmount;
+        let maxValue = 0;
         
         // For NPCs, use hit dice number for level-based calculations
         const effectiveLevel = this._extractHitDiceNumber();
-        if (poolConfig.perLevel > 0) {
-          maxValue += poolConfig.perLevel * effectiveLevel;
-        }
         
-        // Apply formula if specified
+        // Use formula if specified, otherwise fall back to legacy base + per-level
         if (poolConfig.formula) {
           try {
             const formulaResult = this._evaluateFormula(poolConfig.formula, effectiveLevel);
             maxValue = formulaResult;
           } catch (error) {
             console.warn(`[SWN Pool] Failed to evaluate formula "${poolConfig.formula}" for ${feature.name}:`, error);
+            // Fall back to legacy calculation on formula error
+            maxValue = (poolConfig.baseAmount || 0) + ((poolConfig.perLevel || 0) * effectiveLevel);
           }
+        } else {
+          // Legacy base + per-level calculation
+          maxValue = (poolConfig.baseAmount || 0) + ((poolConfig.perLevel || 0) * effectiveLevel);
         }
 
         // Initialize or update pool
@@ -214,14 +216,39 @@ export default class SWNNPC extends SWNActorBase {
    * @private
    */
   _evaluateFormula(formula, effectiveLevel) {
+    // Validate formula contains only allowed patterns before substitution
+    const allowedPattern = /^[@\w\s+\-*/().MathMaxinflorceliwStrgmn,._]+$/;
+    if (!allowedPattern.test(formula)) {
+      throw new Error(`Unsafe formula: ${formula}`);
+    }
+    
+    // Get psychic skills for NPCs (if they have any)
+    const psychicSkills = this.parent.items.filter(
+      (i) =>
+        i.type === "skill" &&
+        i.system.source.toLocaleLowerCase() ===
+          game.i18n.localize("swnr.skills.labels.psionic").toLocaleLowerCase()
+    );
+    const highestPsychicSkill = Math.max(0, ...psychicSkills.map((i) => i.system.rank));
+    
     // Simple variable substitution for NPCs
     let expr = formula
       .replace(/@level/g, effectiveLevel)
-      .replace(/@hitdice/g, effectiveLevel);
+      .replace(/@hitdice/g, effectiveLevel)
+      .replace(/@skills\.psychic\.highest/g, highestPsychicSkill)
+      .replace(/@skills\.([^.]+)\.rank/g, (match, skillName) => {
+        // Replace underscores with spaces for skill names
+        const decodedSkillName = skillName.replace(/_/g, ' ');
+        const skill = this.parent.items.find(i => 
+          i.type === "skill" && 
+          i.name.toLocaleLowerCase() === decodedSkillName.toLocaleLowerCase()
+        );
+        return skill?.system.rank || -1; // -1 for untrained
+      });
     
-    // Basic safety check
-    if (!/^[\d\s+\-*/().]+$/.test(expr)) {
-      throw new Error(`Unsafe formula: ${formula}`);
+    // Final safety check - after substitution should only contain numbers and math
+    if (!/^[\d\s+\-*/().MathMaxinflorceliwStrgmn,]+$/.test(expr)) {
+      throw new Error(`Unsafe expression after substitution: ${expr}`);
     }
     
     const result = new Function('return ' + expr)();

@@ -1,5 +1,5 @@
 {{! Attributes Tab }}
-<section class='tab attributes {{tab.cssClass}}' data-group='primary' data-tab='attributes'>
+<section class='tab attributes sheet-body {{tab.cssClass}}' data-group='primary' data-tab='attributes'>
   
   {{! Pool Configuration }}
   <fieldset>
@@ -43,23 +43,14 @@
             </div>
           </div>
           
-          <div class='grid grid-3col'>
+          <div class='grid grid-1col'>
             <div class="resource">
-              <label class="resource-label">Base Amount</label>
-              <input type="number" name="system.poolsGranted.{{index}}.baseAmount" value="{{pool.baseAmount}}" 
-                     data-dtype="Number" min="0" />
-            </div>
-            
-            <div class="resource">
-              <label class="resource-label">Per Level</label>
-              <input type="number" name="system.poolsGranted.{{index}}.perLevel" value="{{pool.perLevel}}" 
-                     data-dtype="Number" min="0" step="0.5" />
-            </div>
-            
-            <div class="resource">
-              <label class="resource-label">Formula (Optional)</label>
+              <label class="resource-label">
+                Pool Amount Formula
+                <i class="fas fa-question-circle" title="Use @level for character level, @stats.wis.mod for stat modifiers, @skills.psychic.highest for highest psychic skill. Examples: '1' (fixed), '1 + @level' (base + per level), '@skills.psychic.highest + @stats.wis.mod' (psychic effort)"></i>
+              </label>
               <input type="text" name="system.poolsGranted.{{index}}.formula" value="{{pool.formula}}" 
-                     data-dtype="String" placeholder="@level + @stats.cha.mod" />
+                     data-dtype="String" placeholder="1 + @skills.psychic.highest + Math.max(@stats.wis.mod, @stats.con.mod)" />
             </div>
           </div>
           
@@ -75,14 +66,19 @@
             <details>
               <summary><i class="fas fa-question-circle"></i> Pool Configuration Help</summary>
               <div class="help-content">
-                <p><strong>Formula:</strong> Use @level for character level, @stats.str.mod for stat modifiers. If specified, overrides Base + Per Level calculation.</p>
+                <p><strong>Formula:</strong> JavaScript expression defining pool amount. Use @level for character level, @stats.wis.mod for stat modifiers.</p>
                 <p><strong>Condition:</strong> Pool only granted if condition is true (e.g., "@level >= 3" for level 3+).</p>
-                <p><strong>Examples:</strong></p>
+                <p><strong>Common Formulas:</strong></p>
                 <ul>
-                  <li><strong>Psychic Training:</strong> Effort:Psychic, Base: 1, Per Level: 1</li>
-                  <li><strong>Elementalist:</strong> Effort:Elementalist, Formula: "@level + @stats.cha.mod"</li>
-                  <li><strong>High Mage:</strong> Slots:Unleveled, Base: 2, Per Level: 1</li>
+                  <li><strong>Fixed Amount:</strong> <code>2</code> (always 2 points)</li>
+                  <li><strong>Base + Per Level:</strong> <code>1 + @level</code> (1 at level 1, 2 at level 2, etc.)</li>
+                  <li><strong>Psychic Effort (SWN):</strong> <code>1 + @skills.psychic.highest + Math.max(@stats.wis.mod, @stats.con.mod)</code></li>
+                  <li><strong>Elementalist CWN:</strong> <code>@level + @stats.cha.mod</code></li>
+                  <li><strong>Half Level:</strong> <code>(@level / 2)</code> (half level, auto-rounds down)</li>
+                  <li><strong>Custom Skill:</strong> <code>@skills.adept_training.rank</code> (for "Adept Training" skill)</li>
                 </ul>
+                <p><strong>Available Variables:</strong> @level, @stats.str.mod, @stats.dex.mod, @stats.con.mod, @stats.int.mod, @stats.wis.mod, @stats.cha.mod, @skills.psychic.highest, @skills.{skillName}.rank</p>
+                <p><strong>Note:</strong> For skill names with spaces, use underscores (e.g., @skills.adept_training.rank for "Adept Training" skill)</p>
               </div>
             </details>
           </div>

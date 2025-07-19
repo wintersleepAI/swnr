@@ -170,9 +170,49 @@ input[type="checkbox"].small-checkbox {
   overflow-y: auto; // scroll only the outer container
 }
 
+// Fix scrolling for Foundry V13 ApplicationV2
+// Since selectors work, focus on proper scrolling setup
+
+// Make the attributes tab grow to force overflow
+.tab.attributes {
+  // Remove fixed height, let content determine size
+  height: auto;
+  min-height: auto;
+}
+
+// Set up proper scrolling hierarchy - try different container approaches
+.swnr {
+  // Approach 1: Make sheet-body the scroll container
+  .sheet-body {
+    height: 500px !important; // Fixed height to force scrolling
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+  }
+  
+  // Approach 2: Also try window-content as scroll container
+  .window-content {
+    height: 600px !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+  }
+  
+  // Ensure tabs don't interfere with scrolling
+  .tab {
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+
 .sheet-body .tab {
   height: auto;
   overflow: visible; // don't fight .sheet-body
+  padding-bottom: 2rem; // ensure content isn't cut off at bottom
+  
+  // Specific handling for attributes tab
+  &.attributes {
+    max-height: none; // don't constrain height
+    overflow-y: auto; // allow scrolling when content overflows
+  }
 }
 
 .sheet-body .tab .editor {
