@@ -29,6 +29,10 @@ export default class SWNActorBase extends foundry.abstract
       scene: SWNShared.requiredNumber(0),
       day: SWNShared.requiredNumber(0)
     });
+    schema.pools = new fields.ObjectField({
+      /* Dynamic keys: "${resourceName}:${subResource}" */
+      /* Values: { value, max, cadence } */
+    });
     schema.speed = SWNShared.requiredNumber(10);
     schema.cyberdecks = new fields.ArrayField(new fields.DocumentIdField()); 
     schema.health_max_modified = SWNShared.requiredNumber(0);
