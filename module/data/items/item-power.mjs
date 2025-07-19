@@ -10,7 +10,29 @@ export default class SWNPower extends SWNItemBase {
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
+    schema.subType = new fields.StringField({
+      choices: ["psychic", "art", "adept", "spell", "mutation"],
+      initial: "psychic"
+    });
     schema.source = SWNShared.requiredString("");
+    schema.resourceName = new fields.StringField({
+      choices: ["Effort", "Slots", "Points", "Strain", "Uses"],
+      initial: "Effort"
+    });
+    schema.subResource = new fields.StringField();
+    schema.resourceCost = new fields.NumberField({ initial: 1 });
+    schema.sharedResource = new fields.BooleanField({ initial: true });
+    schema.internalResource = new fields.SchemaField({
+      value: new fields.NumberField({ initial: 0 }),
+      max: new fields.NumberField({ initial: 1 })
+    });
+    schema.resourceLength = new fields.StringField({
+      choices: ["commit", "scene", "day", "rest", "user"],
+      initial: "scene"
+    });
+    schema.userResourceLength = new fields.StringField({
+      choices: ["commit", "scene", "day", "rest", "user"]
+    });
     schema.level =  new fields.NumberField({
       required: true,
       nullable: false,
@@ -20,14 +42,24 @@ export default class SWNPower extends SWNItemBase {
       max: CONFIG.SWN.maxPowerLevel,
       
     });
+    schema.leveledResource = new fields.BooleanField({ initial: false });
+    schema.prepared = new fields.BooleanField({initial: false});
+    schema.strainCost = new fields.NumberField({ initial: 0 });
+    schema.uses = new fields.SchemaField({
+      value: new fields.NumberField({ initial: 0 }),
+      max: new fields.NumberField({ initial: 1 })
+    });
     schema.roll = SWNShared.nullableString();
     schema.duration = SWNShared.nullableString();
     schema.save = SWNShared.stringChoices(null, CONFIG.SWN.saveTypes, false);
     schema.range = SWNShared.nullableString();
     schema.skill = SWNShared.nullableString();
-    schema.prepared = new fields.BooleanField({initial: false});
     schema.effort = SWNShared.stringChoices(null, CONFIG.SWN.effortDurationTypes, false);
     return schema;
+  }
+
+  resourceKey() {
+    return `${this.resourceName}:${this.subResource || ""}`;
   }
 
   async doRoll(_shiftKey = false) {

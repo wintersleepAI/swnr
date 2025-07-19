@@ -23,7 +23,13 @@ This is a **Stars Without Number Redux (SWN, CWN, AWN)** system for Foundry VTT 
 
 ### Code Quality
 - ESLint configuration uses `@eslint/js` with stylistic rules enforcing 2-space indentation and semicolons
-- No specific test framework configured - check README or ask user for testing approach
+
+### Testing
+- `npm test` - Run unit tests with Mocha
+- `npm run test:watch` - Run tests in watch mode
+- Test framework: Mocha with Chai assertions
+- Test files located in `test/` directory with `.test.js` extension
+- Mock setup for Foundry VTT environment available in `test/setup.js`
 
 ## Architecture Overview
 

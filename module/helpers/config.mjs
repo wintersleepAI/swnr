@@ -76,6 +76,46 @@ SWN.effortDurationTypes = {
   current: 'swnr.effort.current',
 }
 
+SWN.poolResourceNames = ["Effort", "Slots", "Points", "Strain", "Uses"];
+
+SWN.powerPresets = {
+  psychic: { 
+    resourceName: "Effort", 
+    resourceCost: 1, 
+    subResource: "Psychic", 
+    sharedResource: true, 
+    resourceLength: "scene" 
+  },
+  art: { 
+    resourceName: "Effort", 
+    resourceCost: 1, 
+    subResource: "", 
+    sharedResource: true, 
+    resourceLength: "day" 
+  },
+  adept: { 
+    resourceName: "Effort", 
+    resourceCost: 1, 
+    subResource: "Adept", 
+    sharedResource: true, 
+    resourceLength: "day" 
+  },
+  spell: { 
+    resourceName: "Slots", 
+    resourceCost: 1, 
+    leveledResource: true, 
+    sharedResource: true, 
+    resourceLength: "day" 
+  },
+  mutation: { 
+    resourceName: "Uses", 
+    resourceCost: 0, 
+    subResource: "", 
+    sharedResource: false, 
+    resourceLength: "day" 
+  }
+};
+
 SWN.cyberTypes = {
   Head: 'swnr.sheet.cyberware.types.head',
   Body: 'swnr.sheet.cyberware.types.body',

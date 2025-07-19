@@ -4,7 +4,7 @@
 
 **Sprint Goal**: Establish actor pool schema, basic power schema migration, and unit tests for the unified power system foundation.
 
-**Target Version**: v2.1.0
+**Target Version**: v2.0.0
 
 ---
 

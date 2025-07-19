@@ -5,12 +5,18 @@
 export const migrateWorld = async function (storedVersion) {
   ui.notifications.info(`Applying SWN/CWN/AWN System Migration for version ${game.system.version}. Please be patient and do not close your game or shut down your server.`, { permanent: true });
 
-  // Migrate world depending on the version of the system
-  await runMigrationsSequentially(storedVersion);
+  try {
+    // Migrate world depending on the version of the system
+    await runMigrationsSequentially(storedVersion);
 
-  // Set the migration as complete
-  game.settings.set("swnr", "systemMigrationVersion", game.system.version);
-  ui.notifications.info(`SWN System Migration to version ${game.system.version} completed!`, { permanent: true });
+    // Set the migration as complete only if all migrations succeeded
+    await game.settings.set("swnr", "systemMigrationVersion", game.system.version);
+    ui.notifications.info(`SWN System Migration to version ${game.system.version} completed!`, { permanent: true });
+  } catch (err) {
+    console.error("Migration failed:", err);
+    ui.notifications.error(`Migration failed: ${err.message}. System version not updated. Please check console for details.`, { permanent: true });
+    throw err;
+  }
 };
 
 /**
@@ -121,9 +127,143 @@ const migrations = {
     console.log('Running migration for 2.0.11');
     versionNote("2.0.11", "This version adds the ability for items to be marked as consumable (partially for AWN support) with the ability to track empty 'containers'. Ammo is treated as a consumable, which means a weapon should have the ammo source selected to reload. Shift+clicking reload will bypass this logic.");
     },
-  "2.1.0": async () => { 
-    // Placeholders for future migrations
-    //console.log('Running migration for 2.1.0'); 
+  "2.1.0": async () => {
+    console.log('Running migration for 2.1.0 - Unified Power System');
+    
+    // Create backup before migration
+    const backupData = {
+      actors: [],
+      items: [],
+      timestamp: new Date().toISOString()
+    };
+    
+    let migrationErrors = [];
+    let actorsMigrated = 0;
+    let powerItemsMigrated = 0;
+    
+    try {
+      // Migrate Actors - transform effort to pools
+      for (const actor of game.actors) {
+        if (actor.system.effort) {
+          // Backup original data
+          backupData.actors.push({
+            id: actor.id,
+            effort: foundry.utils.deepClone(actor.system.effort)
+          });
+          
+          try {
+            const effortData = actor.system.effort;
+            const totalEffort = (effortData.bonus || 0) + (effortData.current || 0) + (effortData.scene || 0) + (effortData.day || 0);
+            
+            const pools = {
+              "Effort:Psychic": {
+                value: totalEffort,
+                max: totalEffort,
+                cadence: "scene"
+              }
+            };
+            
+            await actor.update({
+              "system.pools": pools,
+              "system.-=effort": null
+            });
+            
+            actorsMigrated++;
+          } catch (err) {
+            migrationErrors.push(`Actor ${actor.name} (${actor.id}): ${err.message}`);
+          }
+        }
+      }
+      
+      // Migrate Power Items - add new unified fields
+      for (const item of game.items) {
+        if (item.type === "power") {
+          // Backup original data
+          backupData.items.push({
+            id: item.id,
+            system: foundry.utils.deepClone(item.system)
+          });
+          
+          try {
+            const updateData = {
+              "system.subType": "psychic",
+              "system.resourceName": "Effort",
+              "system.subResource": "Psychic",
+              "system.resourceCost": 1,
+              "system.sharedResource": true,
+              "system.resourceLength": item.system.effort || "scene",
+              "system.leveledResource": false,
+              "system.strainCost": 0,
+              "system.internalResource": { value: 0, max: 1 },
+              "system.uses": { value: 0, max: 1 }
+            };
+            
+            // Remove old effort field
+            if (item.system.effort) {
+              updateData["system.-=effort"] = null;
+            }
+            
+            await item.update(updateData);
+            powerItemsMigrated++;
+          } catch (err) {
+            migrationErrors.push(`Power item ${item.name} (${item.id}): ${err.message}`);
+          }
+        }
+      }
+      
+      // Migrate embedded power items in actors
+      for (const actor of game.actors) {
+        for (const item of actor.items) {
+          if (item.type === "power") {
+            try {
+              const updateData = {
+                "system.subType": "psychic",
+                "system.resourceName": "Effort",
+                "system.subResource": "Psychic",
+                "system.resourceCost": 1,
+                "system.sharedResource": true,
+                "system.resourceLength": item.system.effort || "scene",
+                "system.leveledResource": false,
+                "system.strainCost": 0,
+                "system.internalResource": { value: 0, max: 1 },
+                "system.uses": { value: 0, max: 1 }
+              };
+              
+              if (item.system.effort) {
+                updateData["system.-=effort"] = null;
+              }
+              
+              await item.update(updateData);
+              powerItemsMigrated++;
+            } catch (err) {
+              migrationErrors.push(`Embedded power item ${item.name} in ${actor.name}: ${err.message}`);
+            }
+          }
+        }
+      }
+      
+      // Store backup data in case rollback is needed
+      await game.settings.set("swnr", "migration-2.1.0-backup", backupData);
+      
+      // Report migration results
+      const successMsg = `Migration 2.1.0 completed: ${actorsMigrated} actors migrated, ${powerItemsMigrated} power items updated.`;
+      console.log(successMsg);
+      
+      if (migrationErrors.length > 0) {
+        const errorMsg = `Migration completed with ${migrationErrors.length} errors. Check console for details.`;
+        console.warn("Migration errors:", migrationErrors);
+        ui.notifications?.warn(errorMsg);
+      } else {
+        ui.notifications?.info(successMsg);
+      }
+      
+      versionNote("2.1.0", "Unified Power System migration completed. Power items now use the new resource pool system. Old effort values have been converted to Effort:Psychic pools.");
+      
+    } catch (err) {
+      console.error("Critical migration error:", err);
+      ui.notifications?.error(`Migration 2.1.0 failed: ${err.message}. Check console for details.`);
+      throw err;
+    }
   },
   // "2.2.0": async () => { console.log('Running migration for 2.2.0'); 
 

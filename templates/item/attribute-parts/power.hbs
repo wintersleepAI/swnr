@@ -1,17 +1,139 @@
 {{! Attributes Tab }}
 <section class='tab powers {{tab.cssClass}}' data-group='primary' data-tab='attributes'>
+  
+  {{! Power Type and Source }}
   <div class='grid grid-4col'>
-    {{formGroup systemFields.level value=system.level localize=true}}
-
     <div class="resource">
-      {{formGroup systemFields.roll value=system.roll localize=true}}
+      <label class="resource-label">Power Type</label>
+      <select name="system.subType" data-dtype="String">
+        <option value="psychic" {{#if (eq system.subType "psychic")}}selected{{/if}}>Psychic</option>
+        <option value="art" {{#if (eq system.subType "art")}}selected{{/if}}>Art</option>
+        <option value="adept" {{#if (eq system.subType "adept")}}selected{{/if}}>Adept</option>
+        <option value="spell" {{#if (eq system.subType "spell")}}selected{{/if}}>Spell</option>
+        <option value="mutation" {{#if (eq system.subType "mutation")}}selected{{/if}}>Mutation</option>
+      </select>
     </div>
-    {{formGroup systemFields.duration value=system.duration localize=true}}
-    {{formGroup systemFields.save value=system.save localize=true}}
-    {{formGroup systemFields.range value=system.range localize=true}}
-    {{formGroup systemFields.skill value=system.skill localize=true}}
-    {{formGroup systemFields.prepared value=system.prepared localize=true}}
-    {{formGroup systemFields.effort value=system.effort localize=true}}
-    {{formGroup systemFields.source value=system.source localize=true}}
+    
+    <div class="resource">
+      <label class="resource-label">Source</label>
+      <input type="text" name="system.source" value="{{system.source}}" data-dtype="String" />
+    </div>
+    
+    <div class="resource">
+      <label class="resource-label">Level</label>
+      <input type="number" name="system.level" value="{{system.level}}" data-dtype="Number" min="1" max="5" />
+    </div>
+    
+    <div class="resource">
+      <label class="resource-label">Prepared</label>
+      <input type="checkbox" name="system.prepared" {{#if system.prepared}}checked{{/if}} data-dtype="Boolean" />
+    </div>
+  </div>
+
+  {{! Resource Configuration }}
+  <fieldset>
+    <legend>Resource Configuration</legend>
+    <div class='grid grid-4col'>
+      <div class="resource">
+        <label class="resource-label">Resource Type</label>
+        <select name="system.resourceName" data-dtype="String">
+          <option value="Effort" {{#if (eq system.resourceName "Effort")}}selected{{/if}}>Effort</option>
+          <option value="Slots" {{#if (eq system.resourceName "Slots")}}selected{{/if}}>Slots</option>
+          <option value="Points" {{#if (eq system.resourceName "Points")}}selected{{/if}}>Points</option>
+          <option value="Strain" {{#if (eq system.resourceName "Strain")}}selected{{/if}}>Strain</option>
+          <option value="Uses" {{#if (eq system.resourceName "Uses")}}selected{{/if}}>Uses</option>
+        </select>
+      </div>
+      
+      <div class="resource">
+        <label class="resource-label">Sub-Resource</label>
+        <input type="text" name="system.subResource" value="{{system.subResource}}" data-dtype="String" placeholder="e.g. Psychic, Lv1" />
+      </div>
+      
+      <div class="resource">
+        <label class="resource-label">Resource Cost</label>
+        <input type="number" name="system.resourceCost" value="{{system.resourceCost}}" data-dtype="Number" min="0" />
+      </div>
+      
+      <div class="resource">
+        <label class="resource-label">Duration</label>
+        <select name="system.resourceLength" data-dtype="String">
+          <option value="commit" {{#if (eq system.resourceLength "commit")}}selected{{/if}}>Commit</option>
+          <option value="scene" {{#if (eq system.resourceLength "scene")}}selected{{/if}}>Scene</option>
+          <option value="day" {{#if (eq system.resourceLength "day")}}selected{{/if}}>Day</option>
+          <option value="rest" {{#if (eq system.resourceLength "rest")}}selected{{/if}}>Rest</option>
+          <option value="user" {{#if (eq system.resourceLength "user")}}selected{{/if}}>Custom</option>
+        </select>
+      </div>
+      
+      <div class="resource">
+        <label class="resource-label">Shared Resource</label>
+        <input type="checkbox" name="system.sharedResource" {{#if system.sharedResource}}checked{{/if}} data-dtype="Boolean" />
+      </div>
+      
+      <div class="resource">
+        <label class="resource-label">Leveled Resource</label>
+        <input type="checkbox" name="system.leveledResource" {{#if system.leveledResource}}checked{{/if}} data-dtype="Boolean" />
+      </div>
+      
+      <div class="resource">
+        <label class="resource-label">Strain Cost</label>
+        <input type="number" name="system.strainCost" value="{{system.strainCost}}" data-dtype="Number" min="0" />
+      </div>
+    </div>
+
+    {{! Internal Resource }}
+    {{#unless system.sharedResource}}
+      <div class='grid grid-2col'>
+        <div class="resource">
+          <label class="resource-label">Internal Current</label>
+          <input type="number" name="system.internalResource.value" value="{{system.internalResource.value}}" data-dtype="Number" min="0" />
+        </div>
+        <div class="resource">
+          <label class="resource-label">Internal Max</label>
+          <input type="number" name="system.internalResource.max" value="{{system.internalResource.max}}" data-dtype="Number" min="0" />
+        </div>
+      </div>
+    {{/unless}}
+
+    {{! Uses (for AWN powers) }}
+    <div class='grid grid-2col'>
+      <div class="resource">
+        <label class="resource-label">Uses Current</label>
+        <input type="number" name="system.uses.value" value="{{system.uses.value}}" data-dtype="Number" min="0" />
+      </div>
+      <div class="resource">
+        <label class="resource-label">Uses Max</label>
+        <input type="number" name="system.uses.max" value="{{system.uses.max}}" data-dtype="Number" min="0" />
+      </div>
+    </div>
+  </fieldset>
+
+  {{! Activation and Effects }}
+  <div class='grid grid-4col'>
+    {{#if systemFields.roll}}
+      <div class="resource">
+        {{formGroup systemFields.roll value=system.roll localize=true}}
+      </div>
+    {{/if}}
+    {{#if systemFields.duration}}
+      {{formGroup systemFields.duration value=system.duration localize=true}}
+    {{/if}}
+    {{#if systemFields.save}}
+      {{formGroup systemFields.save value=system.save localize=true}}
+    {{/if}}
+    {{#if systemFields.range}}
+      {{formGroup systemFields.range value=system.range localize=true}}
+    {{/if}}
+    {{#if systemFields.skill}}
+      {{formGroup systemFields.skill value=system.skill localize=true}}
+    {{/if}}
+    
+    {{! Legacy effort field - keep for backward compatibility during transition }}
+    {{#if system.effort}}
+      {{#if systemFields.effort}}
+        {{formGroup systemFields.effort value=system.effort localize=true}}
+      {{/if}}
+    {{/if}}
   </div>
 </section>
