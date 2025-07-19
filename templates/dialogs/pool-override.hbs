@@ -1,0 +1,296 @@
+<div class="pool-override-dialog">
+  <div class="dialog-header">
+    <h2>Resource Pool Management</h2>
+    <p>Manage resource pools for <strong>{{actor.name}}</strong></p>
+  </div>
+
+  {{#if hasNoPools}}
+    <div class="no-pools">
+      <p><i class="fas fa-info-circle"></i> This actor has no resource pools yet.</p>
+      <p>Use the "Add Pool" button to create new pools.</p>
+    </div>
+  {{else}}
+    <div class="pools-container">
+      {{#each pools as |pool|}}
+        <div class="pool-row" data-pool-key="{{pool.key}}">
+          <div class="pool-header">
+            <h3 class="pool-name">
+              {{pool.resourceName}}
+              {{#if pool.subResource}}
+                <span class="sub-resource">({{pool.subResource}})</span>
+              {{/if}}
+            </h3>
+            <span class="pool-cadence">{{pool.cadence}}</span>
+          </div>
+
+          <div class="pool-controls">
+            <div class="pool-values">
+              <div class="value-group">
+                <label>Current:</label>
+                <input type="number" class="pool-current" value="{{pool.current}}" min="0" />
+                <span class="current-value">{{pool.current}}</span>
+              </div>
+              
+              <div class="value-group">
+                <label>Max:</label>
+                <input type="number" class="pool-max" value="{{pool.max}}" min="0" />
+                <span class="max-value">{{pool.max}}</span>
+              </div>
+            </div>
+
+            <div class="pool-progress-container">
+              <div class="pool-progress-bar">
+                <div class="pool-progress {{#if (lt pool.percentage 25)}}low{{else if (lt pool.percentage 50)}}medium{{else}}high{{/if}}" 
+                     style="width: {{pool.percentage}}%"></div>
+              </div>
+              <span class="percentage">{{pool.percentage}}%</span>
+            </div>
+
+            <div class="quick-actions">
+              <button type="button" class="quick-set-zero" title="Set to 0">
+                <i class="fas fa-ban"></i>
+              </button>
+              <button type="button" class="quick-modify" data-modifier="-1" title="Decrease by 1">
+                <i class="fas fa-minus"></i>
+              </button>
+              <button type="button" class="quick-modify" data-modifier="1" title="Increase by 1">
+                <i class="fas fa-plus"></i>
+              </button>
+              <button type="button" class="quick-set-max" title="Set to Max">
+                <i class="fas fa-arrow-up"></i>
+              </button>
+              <button type="button" class="remove-pool" title="Remove Pool">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+
+  <div class="dialog-actions">
+    <button type="button" class="add-pool">
+      <i class="fas fa-plus"></i>
+      Add Pool
+    </button>
+  </div>
+
+  <div class="dialog-help">
+    <details>
+      <summary><i class="fas fa-question-circle"></i> Pool Management Help</summary>
+      <div class="help-content">
+        <p><strong>Pool Types:</strong></p>
+        <ul>
+          <li><strong>Effort:</strong> Psychic powers and class abilities</li>
+          <li><strong>Slots:</strong> Spell slots for magic users</li>
+          <li><strong>Points:</strong> Spell points or similar resources</li>
+          <li><strong>Strain:</strong> System strain or stress</li>
+          <li><strong>Uses:</strong> Daily or per-encounter ability uses</li>
+        </ul>
+        
+        <p><strong>Cadence Types:</strong></p>
+        <ul>
+          <li><strong>scene:</strong> Refreshes after each scene/encounter</li>
+          <li><strong>rest:</strong> Refreshes after short rest</li>
+          <li><strong>day:</strong> Refreshes once per day</li>
+          <li><strong>commit:</strong> Long-term commitment (manual refresh only)</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</div>
+
+<style>
+.pool-override-dialog {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.dialog-header {
+  text-align: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.no-pools {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.pool-row {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f9f9f9;
+}
+
+.pool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.pool-name {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.sub-resource {
+  font-weight: normal;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.pool-cadence {
+  background: #e0e0e0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8em;
+  text-transform: capitalize;
+}
+
+.pool-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.pool-values {
+  display: flex;
+  gap: 1rem;
+}
+
+.value-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value-group label {
+  font-size: 0.8em;
+  margin-bottom: 0.2rem;
+}
+
+.value-group input {
+  width: 60px;
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+
+.current-value, .max-value {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.pool-progress-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pool-progress-bar {
+  flex: 1;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pool-progress {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.pool-progress.low { background: #e74c3c; }
+.pool-progress.medium { background: #f39c12; }
+.pool-progress.high { background: #27ae60; }
+
+.percentage {
+  font-size: 0.8em;
+  min-width: 3em;
+  text-align: right;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.quick-actions button {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 3px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.quick-actions button:hover {
+  background: #0056b3;
+}
+
+.remove-pool {
+  background: #dc3545 !important;
+}
+
+.remove-pool:hover {
+  background: #c82333 !important;
+}
+
+.dialog-actions {
+  text-align: center;
+  margin: 1rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.add-pool {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-pool:hover {
+  background: #218838;
+}
+
+.dialog-help {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.dialog-help summary {
+  cursor: pointer;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.help-content {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.help-content ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.help-content li {
+  margin-bottom: 0.3rem;
+}
+</style>

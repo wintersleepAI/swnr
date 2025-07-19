@@ -222,6 +222,364 @@
   margin-top: 4px;
 }
 
+.chat-message .power-usage .resource-cost {
+  background: var(--color-bg-btn);
+  border: 1px solid var(--color-border-dark-tertiary);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85em;
+}
+
+.chat-message .power-usage .resource-cost .resource-spent {
+  color: var(--color-text-light-7);
+}
+
+.chat-message .power-usage .resource-cost .resource-spent i {
+  color: var(--color-text-light-6);
+  margin-right: 0.25rem;
+}
+
+.chat-message .power-usage .resource-cost .strain-cost {
+  color: var(--color-text-light-7);
+}
+
+.chat-message .power-usage .resource-cost .strain-cost i {
+  color: #f39c12;
+  margin-right: 0.25rem;
+}
+
+.chat-message .power-usage .power-roll {
+  margin: 0.5rem 0;
+}
+
+.chat-message .power-usage .passive-indicator {
+  background: var(--color-bg-btn);
+  border: 1px solid var(--color-border-dark-tertiary);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.85em;
+  color: var(--color-text-light-6);
+  text-align: center;
+}
+
+.chat-message .power-usage .passive-indicator i {
+  margin-right: 0.25rem;
+  color: var(--color-text-light-5);
+}
+
+.chat-message .refresh-summary {
+  background: var(--color-bg-option);
+  border-left: 4px solid #27ae60;
+}
+
+.chat-message .refresh-summary h3 {
+  color: #27ae60;
+  margin-bottom: 0.5rem;
+}
+
+.chat-message .refresh-summary h3 i {
+  margin-right: 0.5rem;
+}
+
+.chat-message .refresh-summary ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.chat-message .refresh-summary ul li {
+  margin-bottom: 0.25rem;
+}
+
+.chat-message .test-summary {
+  background: var(--color-bg-option);
+}
+
+.chat-message .test-summary h3 {
+  margin-bottom: 0.5rem;
+}
+
+.chat-message .test-summary h3 i {
+  margin-right: 0.5rem;
+}
+
+.chat-message .test-summary ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.chat-message .test-summary ul li {
+  margin-bottom: 0.25rem;
+}
+
+.swnr .resource-pools .pools-container {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.swnr .resource-pools .pools-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border-dark-tertiary);
+  padding-bottom: 0.25rem;
+}
+
+.swnr .resource-pools .pools-header h4 {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--color-text-light-6);
+}
+
+.swnr .resource-pools .pools-header .pool-manage-btn {
+  background: var(--color-bg-btn);
+  border: 1px solid var(--color-border-dark-tertiary);
+  border-radius: 3px;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.swnr .resource-pools .pools-header .pool-manage-btn:hover {
+  background: var(--color-bg-option);
+}
+
+.swnr .resource-pools .pool-group {
+  margin-bottom: 0.75rem;
+}
+
+.swnr .resource-pools .pool-group:last-child {
+  margin-bottom: 0;
+}
+
+.swnr .resource-pools .pool-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.swnr .resource-pools .pool-group-header .resource-name {
+  font-weight: bold;
+  font-size: 0.85em;
+  color: var(--color-text-light-7);
+}
+
+.swnr .resource-pools .pool-group-header .pool-summary {
+  font-size: 0.8em;
+  color: var(--color-text-light-6);
+}
+
+.swnr .resource-pools .pools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.swnr .resource-pools .pool-badge {
+  background: var(--color-bg-option);
+  border: 1px solid var(--color-border-dark-tertiary);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  min-width: 4rem;
+  text-align: center;
+  font-size: 0.75em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.swnr .resource-pools .pool-badge:hover {
+  border-color: var(--color-border-light-primary);
+  box-shadow: 0 0 0 1px var(--color-border-light-primary);
+}
+
+.swnr .resource-pools .pool-badge.empty {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+}
+
+.swnr .resource-pools .pool-badge.low {
+  border-color: #f39c12;
+  background: rgba(243, 156, 18, 0.1);
+}
+
+.swnr .resource-pools .pool-badge.full {
+  border-color: #27ae60;
+  background: rgba(39, 174, 96, 0.1);
+}
+
+.swnr .resource-pools .pool-badge .pool-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.1rem;
+  color: var(--color-text-light-7);
+}
+
+.swnr .resource-pools .pool-badge .pool-values {
+  display: block;
+  color: var(--color-text-light-6);
+  font-size: 0.9em;
+}
+
+.swnr .resource-pools .pool-badge .pool-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-border-dark-tertiary);
+}
+
+.swnr .resource-pools .pool-badge .pool-fill {
+  height: 100%;
+  background: var(--color-text-light-5);
+  transition: width 0.3s ease;
+}
+
+.swnr .resource-pools .pool-badge.empty .pool-fill {
+  background: #e74c3c;
+}
+
+.swnr .resource-pools .pool-badge.low .pool-fill {
+  background: #f39c12;
+}
+
+.swnr .resource-pools .pool-badge.full .pool-fill {
+  background: #27ae60;
+}
+
+.swnr.item .pools-granted-container .pool-config {
+  border: 1px solid var(--color-border-dark-tertiary);
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--color-bg-option);
+}
+
+.swnr.item .pools-granted-container .pool-config .pool-config-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border-dark-tertiary);
+  padding-bottom: 0.5rem;
+}
+
+.swnr.item .pools-granted-container .pool-config .pool-config-header h4 {
+  margin: 0;
+  color: var(--color-text-light-7);
+  font-size: 1em;
+}
+
+.swnr.item .pools-granted-container .pool-config .pool-config-header .pool-remove-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.swnr.item .pools-granted-container .pool-config .pool-config-header .pool-remove-btn:hover {
+  background: #c82333;
+}
+
+.swnr.item .pools-granted-container .pool-config .pool-help {
+  margin-top: 0.75rem;
+}
+
+.swnr.item .pools-granted-container .pool-config .pool-help summary {
+  cursor: pointer;
+  padding: 0.5rem;
+  background: var(--color-bg-btn);
+  border-radius: 4px;
+  border: 1px solid var(--color-border-dark-tertiary);
+  font-size: 0.85em;
+}
+
+.swnr.item .pools-granted-container .pool-config .pool-help summary:hover {
+  background: var(--color-bg-option);
+}
+
+.swnr.item .pools-granted-container .pool-config .pool-help summary i {
+  margin-right: 0.5rem;
+  color: var(--color-text-light-5);
+}
+
+.swnr.item .pools-granted-container .pool-config .pool-help .help-content {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: var(--color-bg-btn);
+  border-radius: 4px;
+  font-size: 0.85em;
+  line-height: 1.4;
+}
+
+.swnr.item .pools-granted-container .pool-config .pool-help .help-content p {
+  margin: 0 0 0.5rem 0;
+}
+
+.swnr.item .pools-granted-container .pool-config .pool-help .help-content ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.swnr.item .pools-granted-container .pool-config .pool-help .help-content li {
+  margin-bottom: 0.25rem;
+}
+
+.swnr.item .pools-granted-container .no-pools-message {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-text-light-6);
+  background: var(--color-bg-btn);
+  border: 1px dashed var(--color-border-dark-tertiary);
+  border-radius: 4px;
+}
+
+.swnr.item .pools-granted-container .no-pools-message i {
+  margin-right: 0.5rem;
+  color: var(--color-text-light-5);
+}
+
+.swnr.item .pool-controls {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.swnr.item .pool-controls .add-pool-btn {
+  background: var(--color-bg-btn);
+  color: var(--color-text-light-primary);
+  border: 1px solid var(--color-border-dark-tertiary);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.swnr.item .pool-controls .add-pool-btn:hover {
+  background: var(--color-bg-option);
+  border-color: var(--color-border-light-primary);
+}
+
+.swnr.item .pool-controls .add-pool-btn i {
+  margin-right: 0.5rem;
+}
+
+.swnr.item .help-text {
+  font-style: italic;
+  color: var(--color-text-light-6);
+  margin-bottom: 1rem;
+  font-size: 0.9em;
+}
+
 /* Styles limited to swnr sheets */
 .swnr .item-form {
   font-family: "Roboto", sans-serif;

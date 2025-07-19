@@ -20,6 +20,37 @@ export default class SWNFeature extends SWNItemBase {
 
     schema.type = SWNShared.stringChoices("focus", CONFIG.SWN.featureTypes);
 
+    // Pool configuration for features that grant resource pools
+    schema.poolsGranted = new fields.ArrayField(new fields.SchemaField({
+      resourceName: new fields.StringField({
+        choices: ["Effort", "Slots", "Points", "Strain", "Uses"],
+        initial: "Effort"
+      }),
+      subResource: new fields.StringField({
+        initial: ""
+      }),
+      baseAmount: new fields.NumberField({
+        initial: 1,
+        min: 0
+      }),
+      perLevel: new fields.NumberField({
+        initial: 0,
+        min: 0
+      }),
+      cadence: new fields.StringField({
+        choices: ["commit", "scene", "day", "rest", "user"],
+        initial: "day"
+      }),
+      // Formula for dynamic calculation (e.g., "@level + @stats.cha.mod")
+      formula: new fields.StringField({
+        initial: ""
+      }),
+      // Only grant pool if this condition is met (e.g., "@level >= 3")
+      condition: new fields.StringField({
+        initial: ""
+      })
+    }), { initial: [] });
+
     return schema;
   }
 }

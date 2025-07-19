@@ -1,0 +1,89 @@
+<div class="chat-card power-usage">
+  <h3 title="{{ power.system.description }}">{{ power.name }}</h3>
+
+  {{#unless isPassive}}
+    <div class="resource-cost">
+      {{#if resourceSpent}}
+        <span class="resource-spent">
+          <i class="fas fa-minus-circle"></i>
+          {{resourceSpent}} {{resourceName}}{{#if power.system.subResource}} ({{power.system.subResource}}){{/if}}
+        </span>
+      {{/if}}
+      {{#if strainCost}}
+        <span class="strain-cost">
+          <i class="fas fa-bolt"></i>
+          {{strainCost}} System Strain
+        </span>
+      {{/if}}
+    </div>
+  {{/unless}}
+
+  <div class="chat-desc">
+    {{#if (wouldTrim power.system.description 200)}}
+      <span class="hiddenShort">
+        {{{trim power.system.description 200}}}
+        <div class="border border-gray-700 placeholder-blue-800 pt-0">
+          <button class="longShowDesc">Show Long Desc.</button>
+        </div>
+      </span>
+      <div class="border border-gray-700 placeholder-blue-800 pt-0">
+        <span style="display:none" class="hiddenLong">
+        {{{ power.system.description }}}
+        <button class="longHideDesc">Hide Long Desc.</button>
+        </span>
+      </div>
+    {{else}}
+      <span>
+        {{{power.system.description }}}
+      </span>
+    {{/if}}
+  </div>
+
+  {{#if power.system.range}}
+      <div>
+        {{localize 'swnr.sheet.powers.range'}}: {{ power.system.range }}
+      </div>
+  {{/if}}
+
+  {{#if power.system.duration}}
+      <div>
+        {{localize 'swnr.sheet.powers.duration'}}: {{ power.system.duration }}
+      </div>
+  {{/if}}
+
+  {{#if power.system.level}}
+      <div>
+        {{localize 'swnr.sheet.powers.level'}}: {{ power.system.level }}
+      </div>
+  {{/if}}
+
+  {{#if power.system.roll}}
+    <div class="power-roll">
+      <span>{{localize 'swnr.sheet.powers.roll'}}:</span>
+      <span class="roll roll-damage">{{{ powerRoll }}}</span>
+    </div>
+  {{/if}}
+
+  {{#if power.system.save}}
+  <div class="card-buttons">
+      <button data-action="save" data-save="{{power.system.save}}">
+          Save {{power.system.save}}
+      </button>
+  </div>
+  {{/if}}
+
+  {{#if power.system.skill}}
+  <div class="card-buttons">
+      <button data-action="skill" data-skill="{{power.system.skill}}">
+          {{power.system.skill}}
+      </button>
+  </div>
+  {{/if}}
+
+  {{#if isPassive}}
+    <div class="passive-indicator">
+      <i class="fas fa-info-circle"></i>
+      <span>Passive Ability</span>
+    </div>
+  {{/if}}
+</div>

@@ -462,7 +462,123 @@ export default class SWNCharacter extends SWNActorBase {
       ui.notifications?.info("Set the character's HitDie");
     }
 
+    // Calculate resource pools from Features/Foci/Edges
+    this._calculateResourcePools();
+
     return;
+  }
+
+  /**
+   * Calculate resource pools based on Features, Foci, and Edges
+   * @private
+   */
+  _calculateResourcePools() {
+    const pools = {};
+    
+    // Get all features that might grant pools
+    const poolGrantingItems = this.parent.items.filter(item => 
+      item.type === "feature" && 
+      item.system.poolsGranted && 
+      item.system.poolsGranted.length > 0
+    );
+
+    for (const feature of poolGrantingItems) {
+      for (const poolConfig of feature.system.poolsGranted) {
+        // Check condition if specified
+        if (poolConfig.condition && !this._evaluateCondition(poolConfig.condition)) {
+          continue;
+        }
+
+        // Build pool key
+        const poolKey = `${poolConfig.resourceName}:${poolConfig.subResource || ""}`;
+        
+        // Calculate pool maximum
+        let maxValue = poolConfig.baseAmount;
+        
+        // Add per-level bonus
+        if (poolConfig.perLevel > 0) {
+          maxValue += poolConfig.perLevel * this.level.value;
+        }
+        
+        // Apply formula if specified
+        if (poolConfig.formula) {
+          try {
+            const formulaResult = this._evaluateFormula(poolConfig.formula);
+            maxValue = formulaResult;
+          } catch (error) {
+            console.warn(`[SWN Pool] Failed to evaluate formula "${poolConfig.formula}" for ${feature.name}:`, error);
+          }
+        }
+
+        // Initialize or update pool
+        if (pools[poolKey]) {
+          // Pool already exists from another feature, add to max
+          pools[poolKey].max += maxValue;
+        } else {
+          // Create new pool, preserving current value if it exists
+          const currentValue = this.pools[poolKey]?.value || 0;
+          pools[poolKey] = {
+            value: Math.min(currentValue, maxValue), // Don't exceed new max
+            max: maxValue,
+            cadence: poolConfig.cadence
+          };
+        }
+      }
+    }
+
+    // Update the pools object
+    this.pools = pools;
+  }
+
+  /**
+   * Evaluate a condition string (e.g., "@level >= 3")
+   * @param {string} condition - The condition to evaluate
+   * @returns {boolean} - Whether the condition is met
+   * @private
+   */
+  _evaluateCondition(condition) {
+    try {
+      // Simple variable substitution
+      let expr = condition
+        .replace(/@level/g, this.level.value)
+        .replace(/@stats\.(\w+)\.mod/g, (match, stat) => this.stats[stat]?.mod || 0)
+        .replace(/@stats\.(\w+)\.total/g, (match, stat) => this.stats[stat]?.total || 0);
+      
+      // Basic safety check - only allow numbers, operators, and parentheses
+      if (!/^[\d\s+\-*/()>=<!&|.]+$/.test(expr)) {
+        console.warn(`[SWN Pool] Unsafe condition: ${condition}`);
+        return false;
+      }
+      
+      // Use Function constructor for evaluation (safer than eval)
+      return new Function('return ' + expr)();
+    } catch (error) {
+      console.warn(`[SWN Pool] Failed to evaluate condition "${condition}":`, error);
+      return false;
+    }
+  }
+
+  /**
+   * Evaluate a formula string (e.g., "@level + @stats.cha.mod")
+   * @param {string} formula - The formula to evaluate
+   * @returns {number} - The calculated value
+   * @private
+   */
+  _evaluateFormula(formula) {
+    // Simple variable substitution
+    let expr = formula
+      .replace(/@level/g, this.level.value)
+      .replace(/@stats\.(\w+)\.mod/g, (match, stat) => this.stats[stat]?.mod || 0)
+      .replace(/@stats\.(\w+)\.total/g, (match, stat) => this.stats[stat]?.total || 0);
+    
+    // Basic safety check
+    if (!/^[\d\s+\-*/().]+$/.test(expr)) {
+      throw new Error(`Unsafe formula: ${formula}`);
+    }
+    
+    // Use Function constructor for evaluation
+    const result = new Function('return ' + expr)();
+    return Math.max(0, Math.floor(result)); // Ensure non-negative integer
   }
 
 }

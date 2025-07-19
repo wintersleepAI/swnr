@@ -26,6 +26,8 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       createDoc: this._createEffect,
       deleteDoc: this._deleteEffect,
       toggleEffect: this._toggleEffect,
+      addPool: this._onAddPool,
+      removePool: this._onRemovePool,
     },
     form: {
       submitOnChange: true,
@@ -160,7 +162,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'feature':
+        options.parts.push('attributesFeature');
         options.parts.push('effects');
+        options.defaultTab = 'attributes';
         break;
       case 'item':
         options.parts.push('attributesItem');
@@ -506,6 +510,62 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
   static async _toggleEffect(event, target) {
     const effect = this._getEffect(target);
     await effect.update({ disabled: !effect.disabled });
+  }
+
+  /**
+   * Handle adding a new pool grant to a feature
+   * @param {Event} event   The originating click event
+   * @param {HTMLElement} target - The capturing HTML element which defined a [data-action]
+   */
+  static async _onAddPool(event, target) {
+    event.preventDefault();
+    
+    // Only allow on feature items
+    if (this.item.type !== "feature") {
+      return;
+    }
+
+    const currentPools = foundry.utils.deepClone(this.item.system.poolsGranted || []);
+    
+    // Add a new pool configuration with defaults
+    currentPools.push({
+      resourceName: "Effort",
+      subResource: "",
+      baseAmount: 1,
+      perLevel: 0,
+      cadence: "day",
+      formula: "",
+      condition: ""
+    });
+
+    await this.item.update({ "system.poolsGranted": currentPools });
+  }
+
+  /**
+   * Handle removing a pool grant from a feature
+   * @param {Event} event   The originating click event
+   * @param {HTMLElement} target - The capturing HTML element which defined a [data-action]
+   */
+  static async _onRemovePool(event, target) {
+    event.preventDefault();
+    
+    // Only allow on feature items
+    if (this.item.type !== "feature") {
+      return;
+    }
+
+    const poolIndex = parseInt(target.dataset.poolIndex);
+    if (isNaN(poolIndex)) {
+      console.warn("[SWN Pool] Invalid pool index for removal");
+      return;
+    }
+
+    const currentPools = foundry.utils.deepClone(this.item.system.poolsGranted || []);
+    
+    if (poolIndex >= 0 && poolIndex < currentPools.length) {
+      currentPools.splice(poolIndex, 1);
+      await this.item.update({ "system.poolsGranted": currentPools });
+    }
   }
 
   /** Helper Functions */

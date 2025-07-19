@@ -92,6 +92,140 @@ export default class SWNNPC extends SWNActorBase {
         }
       }
     }
+
+    // Calculate resource pools from Features/Foci/Edges
+    this._calculateResourcePools();
+  }
+
+  /**
+   * Calculate resource pools based on Features, Foci, and Edges (same as Character)
+   * @private
+   */
+  _calculateResourcePools() {
+    const pools = {};
+    
+    // Get all features that might grant pools
+    const poolGrantingItems = this.parent.items.filter(item => 
+      item.type === "feature" && 
+      item.system.poolsGranted && 
+      item.system.poolsGranted.length > 0
+    );
+
+    for (const feature of poolGrantingItems) {
+      for (const poolConfig of feature.system.poolsGranted) {
+        // Check condition if specified (NPCs use hit dice instead of level)
+        if (poolConfig.condition && !this._evaluateCondition(poolConfig.condition)) {
+          continue;
+        }
+
+        // Build pool key
+        const poolKey = `${poolConfig.resourceName}:${poolConfig.subResource || ""}`;
+        
+        // Calculate pool maximum
+        let maxValue = poolConfig.baseAmount;
+        
+        // For NPCs, use hit dice number for level-based calculations
+        const effectiveLevel = this._extractHitDiceNumber();
+        if (poolConfig.perLevel > 0) {
+          maxValue += poolConfig.perLevel * effectiveLevel;
+        }
+        
+        // Apply formula if specified
+        if (poolConfig.formula) {
+          try {
+            const formulaResult = this._evaluateFormula(poolConfig.formula, effectiveLevel);
+            maxValue = formulaResult;
+          } catch (error) {
+            console.warn(`[SWN Pool] Failed to evaluate formula "${poolConfig.formula}" for ${feature.name}:`, error);
+          }
+        }
+
+        // Initialize or update pool
+        if (pools[poolKey]) {
+          // Pool already exists from another feature, add to max
+          pools[poolKey].max += maxValue;
+        } else {
+          // Create new pool, preserving current value if it exists
+          const currentValue = this.pools[poolKey]?.value || 0;
+          pools[poolKey] = {
+            value: Math.min(currentValue, maxValue), // Don't exceed new max
+            max: maxValue,
+            cadence: poolConfig.cadence
+          };
+        }
+      }
+    }
+
+    // Update the pools object
+    this.pools = pools;
+  }
+
+  /**
+   * Extract hit dice number for level-based calculations
+   * @returns {number} The number of hit dice as effective level
+   * @private
+   */
+  _extractHitDiceNumber() {
+    const hitDice = this.hitDice;
+    if (SWNNPC.numberRegex.test(hitDice)) {
+      return parseInt(hitDice);
+    } else if (SWNNPC.hitDiceD8Regex.test(hitDice)) {
+      return parseInt(hitDice.replace('d', ''));
+    } else if (SWNNPC.hitDiceRegex.test(hitDice)) {
+      return parseInt(hitDice.split('d')[0]);
+    } else if (SWNNPC.hpRegex.test(hitDice)) {
+      return Math.floor(parseInt(hitDice.toLowerCase().replace(/hp/g, '').trim()) / 4); // Rough HP to level conversion
+    }
+    return 1; // Default to 1 if can't parse
+  }
+
+  /**
+   * Evaluate a condition string for NPCs (simplified, no stats)
+   * @param {string} condition - The condition to evaluate
+   * @returns {boolean} - Whether the condition is met
+   * @private
+   */
+  _evaluateCondition(condition) {
+    try {
+      const effectiveLevel = this._extractHitDiceNumber();
+      // Simple variable substitution for NPCs
+      let expr = condition
+        .replace(/@level/g, effectiveLevel)
+        .replace(/@hitdice/g, effectiveLevel);
+      
+      // Basic safety check
+      if (!/^[\d\s+\-*/()>=<!&|.]+$/.test(expr)) {
+        console.warn(`[SWN Pool] Unsafe condition: ${condition}`);
+        return false;
+      }
+      
+      return new Function('return ' + expr)();
+    } catch (error) {
+      console.warn(`[SWN Pool] Failed to evaluate condition "${condition}":`, error);
+      return false;
+    }
+  }
+
+  /**
+   * Evaluate a formula string for NPCs (simplified, no stats)
+   * @param {string} formula - The formula to evaluate
+   * @param {number} effectiveLevel - The NPC's effective level
+   * @returns {number} - The calculated value
+   * @private
+   */
+  _evaluateFormula(formula, effectiveLevel) {
+    // Simple variable substitution for NPCs
+    let expr = formula
+      .replace(/@level/g, effectiveLevel)
+      .replace(/@hitdice/g, effectiveLevel);
+    
+    // Basic safety check
+    if (!/^[\d\s+\-*/().]+$/.test(expr)) {
+      throw new Error(`Unsafe formula: ${formula}`);
+    }
+    
+    const result = new Function('return ' + expr)();
+    return Math.max(0, Math.floor(result));
   }
 
   async rollSave(_saveType) {

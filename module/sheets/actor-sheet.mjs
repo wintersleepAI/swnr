@@ -51,6 +51,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       reactionRoll: this._onReactionRoll,
       moraleRoll: this._onMoraleRoll,
       resourceCreate: this._onResourceCreate,
+      poolManage: this._onPoolManage,
       resourceDelete: this._onResourceDelete,
     },
     // Custom property that's merged into `this.options`
@@ -174,6 +175,9 @@ export class SWNActorSheet extends SWNBaseSheet {
 
     // Offloading context prep to a helper function
     this._prepareItems(context);
+    
+    // Prepare pool data for display
+    this._preparePools(context);
 
     return context;
   }
@@ -358,6 +362,63 @@ export class SWNActorSheet extends SWNBaseSheet {
       }
       context.abilities = abilities;
     }
+  }
+
+  /**
+   * Prepare pool data for display in the sheet
+   * @param {Object} context - The context object being prepared
+   */
+  _preparePools(context) {
+    const pools = this.actor.system.pools || {};
+    const poolGroups = {};
+    
+    // Group pools by resource name
+    for (const [poolKey, poolData] of Object.entries(pools)) {
+      const [resourceName, subResource] = poolKey.split(':');
+      
+      if (!poolGroups[resourceName]) {
+        poolGroups[resourceName] = {
+          resourceName,
+          pools: [],
+          totalCurrent: 0,
+          totalMax: 0
+        };
+      }
+      
+      const poolInfo = {
+        key: poolKey,
+        subResource: subResource || "Default",
+        current: poolData.value,
+        max: poolData.max,
+        cadence: poolData.cadence,
+        percentage: poolData.max > 0 ? Math.round((poolData.value / poolData.max) * 100) : 0,
+        isEmpty: poolData.value === 0,
+        isFull: poolData.value >= poolData.max,
+        isLow: poolData.max > 0 && (poolData.value / poolData.max) < 0.25
+      };
+      
+      poolGroups[resourceName].pools.push(poolInfo);
+      poolGroups[resourceName].totalCurrent += poolData.value;
+      poolGroups[resourceName].totalMax += poolData.max;
+    }
+    
+    // Sort pools within each group by subResource
+    for (const group of Object.values(poolGroups)) {
+      group.pools.sort((a, b) => {
+        // Put "Default" first, then sort alphabetically
+        if (a.subResource === "Default" && b.subResource !== "Default") return -1;
+        if (b.subResource === "Default" && a.subResource !== "Default") return 1;
+        return a.subResource.localeCompare(b.subResource);
+      });
+    }
+    
+    // Convert to array and sort by resource name
+    const poolGroupsArray = Object.values(poolGroups).sort((a, b) => 
+      a.resourceName.localeCompare(b.resourceName)
+    );
+    
+    context.poolGroups = poolGroupsArray;
+    context.hasAnyPools = poolGroupsArray.length > 0;
   }
 
   /**
@@ -812,6 +873,17 @@ export class SWNActorSheet extends SWNBaseSheet {
     await this.actor.update({
       "system.tweak.resourceList": resourceList,
     });
+  }
+
+  /**
+   * Handle pool management button clicks
+   * @param {Event} event   The originating click event
+   * @param {HTMLElement} target - The capturing HTML element which defined a [data-action]
+   */
+  static async _onPoolManage(event, target) {
+    event.preventDefault();
+    const { PoolOverrideDialog } = globalThis.swnr.applications;
+    await PoolOverrideDialog.show(this.actor);
   }
 
   static async _onResourceDelete(event, target) {
