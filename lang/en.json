@@ -588,7 +588,26 @@
           }
         },
         "PowerLVL": "Level {level} Power",
-        "AddLVL": "Add LVL {level}"
+        "AddLVL": "Add LVL {level}",
+        "Types": {
+          "psychic": "Psychic Powers", 
+          "art": "Arts",
+          "adept": "Adept Abilities",
+          "spell": "Spells",
+          "mutation": "Mutations"
+        },
+        "Add": {
+          "psychic": "Add Power",
+          "art": "Add Art", 
+          "adept": "Add Ability",
+          "spell": "Add Spell",
+          "mutation": "Add Mutation",
+          "unleveled": "Add Unleveled"
+        },
+        "Level": {
+          "unleveled": "Unleveled",
+          "level": "Level {level}"
+        }
       },
       "Skill": {
         "FIELDS": {
@@ -1973,6 +1992,21 @@
       "scene": "Scene",
       "title": "Effort",
       "max": "Max"
+    },
+    "pools": {
+      "title": "Resource Pools",
+      "manage": "Manage",
+      "noPoolsMessage": "No resource pools available.",
+      "poolsGrantedHint": "Resource pools are granted by Features, Foci, and Edges. Check the Features tab to configure pool grants.",
+      "effortReleased": "Effort Released",
+      "refreshSummary": {
+        "scene": "Scene Refresh",
+        "day": "Day Refresh"
+      },
+      "commitment": {
+        "release": "Release committed effort",
+        "released": "Effort Released"
+      }
     },
     "dialog": {
       "attackRoll": "{actorName} attacking with {weaponName}?",

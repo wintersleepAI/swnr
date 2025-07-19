@@ -13,10 +13,10 @@
   <div class='resource-pools'>
     <div class="pools-container">
       <div class="pools-header">
-        <h4><i class="fas fa-battery-three-quarters"></i> Resource Pools</h4>
+        <h4><i class="fas fa-battery-three-quarters"></i> {{localize "SWN.pools.title"}}</h4>
         {{#if owner}}
-        <button type="button" class="pool-manage-btn" data-action="poolManage" title="Manage Pools">
-          <i class="fas fa-cog"></i> Manage
+        <button type="button" class="pool-manage-btn" data-action="poolManage" title="{{localize 'SWN.pools.manage'}}">
+          <i class="fas fa-cog"></i> {{localize "SWN.pools.manage"}}
         </button>
         {{/if}}
       </div>
@@ -45,7 +45,7 @@
                   {{#if (eq duration "commit")}}
                   <button type="button" class="release-commitment" data-action="releaseCommitment" 
                           data-pool-key="{{../key}}" data-power-id="{{powerId}}" 
-                          title="Release committed effort">
+                          title="{{localize 'SWN.pools.commitment.release'}}">
                     <i class="fas fa-times"></i>
                   </button>
                   {{/if}}
@@ -63,8 +63,8 @@
   </div>
   {{else}}
     <div class="no-pools-message">
-      <p><i class="fas fa-info-circle"></i> No resource pools available.</p>
-      <p><em>Resource pools are granted by Features, Foci, and Edges. Check the Features tab to configure pool grants.</em></p>
+      <p><i class="fas fa-info-circle"></i> {{localize "SWN.pools.noPoolsMessage"}}</p>
+      <p><em>{{localize "SWN.pools.poolsGrantedHint"}}</em></p>
     </div>
   {{/if}}
 
@@ -73,11 +73,7 @@
   {{#each powers as |powersByLevel powerType|}}
     <div class="power-type-section">
       <h3 class="power-type-header">
-        {{#if (eq powerType "psychic")}}Psychic Powers{{/if}}
-        {{#if (eq powerType "art")}}Arts{{/if}}
-        {{#if (eq powerType "adept")}}Adept Abilities{{/if}}
-        {{#if (eq powerType "spell")}}Spells{{/if}}
-        {{#if (eq powerType "mutation")}}Mutations{{/if}}
+        {{localize (concat "SWN.Item.Power.Types." powerType)}}
         {{#if @root.editable}}
           <a
             class='item-control item-create power-type-create'
@@ -93,7 +89,7 @@
             {{/if}}
           >
             <i class='fas fa-plus'></i>
-            Add {{#if (eq powerType "psychic")}}Power{{/if}}{{#if (eq powerType "art")}}Art{{/if}}{{#if (eq powerType "adept")}}Ability{{/if}}{{#if (eq powerType "spell")}}Spell{{/if}}{{#if (eq powerType "mutation")}}Mutation{{/if}}
+            {{localize (concat "SWN.Item.Power.Add." powerType)}}
           </a>
         {{/if}}
       </h3>
@@ -147,9 +143,9 @@
             <li class='flexrow items-header power-level-header'>
               <div class='item-name'>
                 {{#if (eq powerLevel "0")}}
-                  Unleveled
+                  {{localize "SWN.Item.Power.Level.unleveled"}}
                 {{else}}
-                  Level {{powerLevel}}
+                  {{localize "SWN.Item.Power.Level.level" level=powerLevel}}
                 {{/if}}
               </div>
               <div class='item-controls'>
