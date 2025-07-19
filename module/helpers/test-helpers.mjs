@@ -377,15 +377,325 @@ async function createTestSummaryChatMessage(summary) {
   });
 }
 
+/**
+ * Test consumption data model functionality (new array-based system)
+ * @param {Actor} actor - Actor to create test powers on
+ * @returns {Promise<Object>} Test results
+ */
+async function testConsumptionDataModel(actor) {
+  console.log("[SWN Test] Testing consumption data model (array-based)...");
+  
+  try {
+    // Create a test power with new consumption array
+    const powerData = {
+      name: "Test Multi-Cost Power Array",
+      type: "power",
+      system: {
+        subType: "psychic",
+        resourceName: "Effort",
+        resourceCost: 1,
+        resourceLength: "scene",
+        sharedResource: true,
+        consumptions: [
+          {
+            type: "systemStrain",
+            usesCost: 2,
+            cadence: "day",
+            itemId: "",
+            uses: { value: 0, max: 1 }
+          },
+          {
+            type: "uses",
+            usesCost: 1,
+            cadence: "day",
+            itemId: "",
+            uses: { value: 3, max: 3 }
+          },
+          {
+            type: "sourceEffort",
+            usesCost: 1,
+            cadence: "commit",
+            itemId: "",
+            uses: { value: 0, max: 1 }
+          }
+        ]
+      }
+    };
+    
+    const power = await Item.create(powerData, { parent: actor });
+    console.log("[SWN Test] Created test power:", power.name);
+    
+    // Test helper methods
+    const hasConsumption = power.system.hasConsumption();
+    const consumptions = power.system.getConsumptions();
+    
+    console.log("[SWN Test] hasConsumption():", hasConsumption);
+    console.log("[SWN Test] getConsumptions():", consumptions);
+    console.log("[SWN Test] consumptions array:", power.system.consumptions);
+    
+    // Test add/remove methods
+    await power.system.addConsumption({
+      type: "spellPoints",
+      usesCost: 3,
+      cadence: "scene"
+    });
+    
+    const afterAdd = power.system.consumptions.length;
+    
+    await power.system.removeConsumption(0);
+    const afterRemove = power.system.consumptions.length;
+    
+    // Verify data structure and methods
+    const assertions = [
+      { name: "hasConsumption returns true", result: hasConsumption === true },
+      { name: "getConsumptions returns 3 items initially", result: consumptions.length === 3 },
+      { name: "consumptions array has 3 entries", result: power.system.consumptions.length === 3 },
+      { name: "first consumption type is systemStrain", result: power.system.consumptions[0].type === "systemStrain" },
+      { name: "second consumption type is uses", result: power.system.consumptions[1].type === "uses" },
+      { name: "third consumption type is sourceEffort", result: power.system.consumptions[2].type === "sourceEffort" },
+      { name: "addConsumption increases array length", result: afterAdd === 4 },
+      { name: "removeConsumption decreases array length", result: afterRemove === 3 },
+      { name: "systemStrain usesCost is 2", result: power.system.consumptions[0].usesCost === 2 },
+      { name: "uses consumption has max of 3", result: power.system.consumptions[1].uses.max === 3 }
+    ];
+    
+    const passed = assertions.filter(a => a.result).length;
+    const failed = assertions.filter(a => !a.result);
+    
+    console.log(`[SWN Test] Consumption data model test: ${passed}/${assertions.length} passed`);
+    if (failed.length > 0) {
+      console.warn("[SWN Test] Failed assertions:", failed);
+    }
+    
+    // Clean up
+    await power.delete();
+    
+    return {
+      success: failed.length === 0,
+      passed,
+      total: assertions.length,
+      failures: failed
+    };
+    
+  } catch (error) {
+    console.error("[SWN Test] Consumption data model test failed:", error);
+    return {
+      success: false,
+      error: error.message
+    };
+  }
+}
+
+/**
+ * Test consumption processing functionality (new array-based system)
+ * @param {Actor} actor - Actor to test with
+ * @returns {Promise<Object>} Test results
+ */
+async function testConsumptionProcessing(actor) {
+  console.log("[SWN Test] Testing consumption processing (array-based)...");
+  
+  try {
+    // Ensure actor has some resources
+    await actor.update({
+      "system.pools.Effort:Psychic": { value: 5, max: 5, cadence: "scene" },
+      "system.pools.Effort:Special": { value: 3, max: 3, cadence: "scene" },
+      "system.systemStrain.value": 0
+    });
+    
+    // Create a test power with multi-cost consumption using array
+    const powerData = {
+      name: "Test Multi-Cost Power Processing Array",
+      type: "power",
+      system: {
+        subType: "psychic",
+        resourceName: "Effort",
+        subResource: "Psychic",
+        resourceCost: 1,
+        resourceLength: "scene",
+        sharedResource: true,
+        consumptions: [
+          {
+            type: "systemStrain",
+            usesCost: 2,
+            cadence: "day",
+            itemId: "",
+            uses: { value: 0, max: 1 }
+          },
+          {
+            type: "uses",
+            usesCost: 1,
+            cadence: "day",
+            itemId: "",
+            uses: { value: 3, max: 3 }
+          },
+          {
+            type: "sourceEffort",
+            usesCost: 1,
+            cadence: "commit",
+            itemId: "",
+            uses: { value: 0, max: 1 }
+          }
+        ]
+      }
+    };
+    
+    const power = await Item.create(powerData, { parent: actor });
+    console.log("[SWN Test] Created test power:", power.name);
+    
+    // Test power usage
+    const usageResult = await power.system.use();
+    console.log("[SWN Test] Power usage result:", usageResult);
+    
+    // Verify results
+    const assertions = [
+      { name: "Power usage succeeded", result: usageResult.success === true },
+      { name: "Consumption results included", result: Array.isArray(usageResult.consumptions) },
+      { name: "Three consumptions processed", result: usageResult.consumptions?.length === 3 },
+      { name: "SystemStrain consumption succeeded", result: usageResult.consumptions?.some(c => c.type === "systemStrain" && c.success) },
+      { name: "Uses consumption succeeded", result: usageResult.consumptions?.some(c => c.type === "uses" && c.success) },
+      { name: "SourceEffort consumption succeeded", result: usageResult.consumptions?.some(c => c.type === "sourceEffort" && c.success) }
+    ];
+    
+    // Check actor state after usage
+    await actor.reload();
+    const afterStrain = actor.system.systemStrain?.value || 0;
+    const afterPowerUses = power.system.consumptions[1].uses.value;
+    
+    assertions.push(
+      { name: "System strain increased by 2", result: afterStrain === 2 },
+      { name: "Power uses decreased from 3 to 2", result: afterPowerUses === 2 }
+    );
+    
+    const passed = assertions.filter(a => a.result).length;
+    const failed = assertions.filter(a => !a.result);
+    
+    console.log(`[SWN Test] Consumption processing test: ${passed}/${assertions.length} passed`);
+    if (failed.length > 0) {
+      console.warn("[SWN Test] Failed assertions:", failed);
+    }
+    
+    // Clean up
+    await power.delete();
+    
+    return {
+      success: failed.length === 0,
+      passed,
+      total: assertions.length,
+      failures: failed
+    };
+    
+  } catch (error) {
+    console.error("[SWN Test] Consumption processing test failed:", error);
+    return {
+      success: false,
+      error: error.message
+    };
+  }
+}
+
+
+/**
+ * Run comprehensive multi-cost consumption test suite
+ * @param {Actor} actor - Actor to test with (should have powers)
+ * @returns {Promise<Object>} Complete test results
+ */
+async function runMultiCostTests(actor) {
+  if (!actor) {
+    throw new Error("Actor is required for testing");
+  }
+  
+  const testSuite = [];
+  
+  console.log(`[SWN Multi-Cost Test Suite] Starting comprehensive multi-cost consumption tests for ${actor.name}`);
+  const startTime = Date.now();
+  
+  // Run all consumption-specific tests
+  try {
+    testSuite.push(await testConsumptionDataModel(actor));
+    testSuite.push(await testConsumptionProcessing(actor));
+    
+    // Also run core power tests for compatibility
+    testSuite.push(await testPoolManagement(actor));
+    
+    // If actor has powers, test them too
+    const powers = actor.items.filter(i => i.type === "power" && i.system.resourceName !== "");
+    if (powers.length > 0) {
+      testSuite.push(await testPowerUsageFlow(actor, powers[0]));
+    }
+    
+  } catch (error) {
+    console.error("[SWN Multi-Cost Test Suite] Error during testing:", error);
+    return {
+      success: false,
+      error: error.message,
+      partialResults: testSuite
+    };
+  }
+  
+  const endTime = Date.now();
+  const allPassed = testSuite.every(test => test.passed);
+  
+  const summary = {
+    success: true,
+    overallPassed: allPassed,
+    duration: endTime - startTime,
+    testsRun: testSuite.length,
+    testsPassed: testSuite.filter(t => t.passed).length,
+    testsFailed: testSuite.filter(t => !t.passed).length,
+    results: testSuite,
+    testType: "multi-cost-consumption"
+  };
+  
+  // Create summary chat message
+  await createMultiCostTestSummaryChatMessage(summary);
+  
+  return summary;
+}
+
+/**
+ * Create a chat message summarizing multi-cost test results
+ */
+async function createMultiCostTestSummaryChatMessage(summary) {
+  const status = summary.overallPassed ? "✅ PASSED" : "❌ FAILED";
+  const color = summary.overallPassed ? "#27ae60" : "#e74c3c";
+  
+  let content = `<div class="chat-card test-summary" style="border-left: 4px solid ${color};">`;
+  content += `<h3><i class="fas fa-magic"></i> Multi-Cost Consumption Test Suite</h3>`;
+  content += `<p><strong>Status:</strong> ${status}</p>`;
+  content += `<p><strong>Duration:</strong> ${summary.duration}ms</p>`;
+  content += `<p><strong>Tests:</strong> ${summary.testsPassed}/${summary.testsRun} passed</p>`;
+  
+  if (!summary.overallPassed) {
+    content += `<h4>Failed Tests:</h4><ul>`;
+    for (const test of summary.results.filter(t => !t.passed)) {
+      content += `<li><strong>${test.testType || "Unknown"}:</strong> Check console for details</li>`;
+    }
+    content += `</ul>`;
+  }
+  
+  content += `<p><em>Multi-cost consumption system validation complete. Powers can now require unlimited resource combinations.</em></p>`;
+  content += `</div>`;
+  
+  await getDocumentClass("ChatMessage").create({
+    speaker: { alias: "Multi-Cost Test System" },
+    content: content,
+    whisper: game.users.filter(u => u.isGM).map(u => u.id)
+  });
+}
+
 // Export test functions
 export {
   testMutexConcurrency,
   testRefreshFunctionality,
   testPoolManagement,
   testPowerUsageFlow,
-  runComprehensiveTests
+  testConsumptionDataModel,
+  testConsumptionProcessing,
+  runComprehensiveTests,
+  runMultiCostTests
 };
 
 // Add to global swnr object for easy access
 globalThis.swnr = globalThis.swnr || {};
 globalThis.swnr.runTests = runComprehensiveTests;
+globalThis.swnr.runMultiCostTests = runMultiCostTests;

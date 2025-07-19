@@ -49,6 +49,25 @@ export default class SWNPower extends SWNItemBase {
       value: new fields.NumberField({ initial: 0 }),
       max: new fields.NumberField({ initial: 1 })
     });
+
+    // Multi-cost consumption system - expandable array
+    schema.consumptions = new fields.ArrayField(new fields.SchemaField({
+      type: new fields.StringField({
+        choices: Object.keys(CONFIG.SWN.consumptionTypes),
+        initial: "none"
+      }),
+      usesCost: new fields.NumberField({ initial: 1, min: 0 }),
+      cadence: new fields.StringField({
+        choices: Object.keys(CONFIG.SWN.consumptionCadences),
+        initial: "day"
+      }),
+      itemId: new fields.StringField({ initial: "" }),
+      uses: new fields.SchemaField({
+        value: new fields.NumberField({ initial: 0, min: 0 }),
+        max: new fields.NumberField({ initial: 1, min: 0 })
+      })
+    }), { initial: [] });
+
     schema.roll = SWNShared.nullableString();
     schema.duration = SWNShared.nullableString();
     schema.save = SWNShared.stringChoices(null, CONFIG.SWN.saveTypes, false);
@@ -59,6 +78,53 @@ export default class SWNPower extends SWNItemBase {
 
   resourceKey() {
     return `${this.resourceName}:${this.subResource || ""}`;
+  }
+
+  /**
+   * Check if this power has any additional consumption configured
+   * @returns {boolean} True if power has consumption beyond primary cost
+   */
+  hasConsumption() {
+    return this.consumptions && this.consumptions.length > 0 && 
+           this.consumptions.some(c => c.type !== "none");
+  }
+
+  /**
+   * Get array of active consumption configurations
+   * @returns {Array} Array of consumption objects that are not "none"
+   */
+  getConsumptions() {
+    if (!this.consumptions) return [];
+    return this.consumptions.filter(c => c.type !== "none");
+  }
+
+  /**
+   * Add a new consumption entry
+   * @param {Object} consumption - Consumption configuration
+   * @returns {Promise} Update promise
+   */
+  async addConsumption(consumption = {}) {
+    const newConsumption = {
+      type: consumption.type || "none",
+      usesCost: consumption.usesCost || 1,
+      cadence: consumption.cadence || "day",
+      itemId: consumption.itemId || "",
+      uses: consumption.uses || { value: 0, max: 1 }
+    };
+    
+    const consumptions = [...(this.consumptions || []), newConsumption];
+    return await this.parent.update({ "system.consumptions": consumptions });
+  }
+
+  /**
+   * Remove a consumption entry by index
+   * @param {number} index - Index to remove
+   * @returns {Promise} Update promise
+   */
+  async removeConsumption(index) {
+    const consumptions = [...(this.consumptions || [])];
+    consumptions.splice(index, 1);
+    return await this.parent.update({ "system.consumptions": consumptions });
   }
 
   /**
@@ -192,6 +258,29 @@ export default class SWNPower extends SWNItemBase {
       }
     }
 
+    // Process additional consumption types
+    const consumptionResults = [];
+    if (this.hasConsumption()) {
+      const consumptions = this.getConsumptions();
+      for (let i = 0; i < consumptions.length; i++) {
+        const consumes = consumptions[i];
+        const result = await this._processConsumption(actor, consumes, options, i);
+        if (!result.success) {
+          // Consumption failed - return early without applying any changes
+          ui.notifications?.warn(result.message || "Consumption failed");
+          return {
+            success: false,
+            reason: result.reason,
+            message: result.message,
+            poolsBefore: currentPools,
+            poolsAfter: currentPools,
+            consumptionFailure: result
+          };
+        }
+        consumptionResults.push(result);
+      }
+    }
+
     // Apply strain cost if any
     if (this.strainCost > 0) {
       const currentStrain = actor.system.systemStrain?.value || 0;
@@ -212,7 +301,7 @@ export default class SWNPower extends SWNItemBase {
     }
 
     // Execute power effect and create chat message
-    const result = await this._executePowerEffect();
+    const result = await this._executePowerEffect(consumptionResults);
     
     return {
       success: true,
@@ -220,6 +309,7 @@ export default class SWNPower extends SWNItemBase {
       strainApplied: this.strainCost,
       poolsBefore: currentPools,
       poolsAfter: poolsAfter,
+      consumptions: consumptionResults,
       ...result
     };
   }
@@ -228,7 +318,7 @@ export default class SWNPower extends SWNItemBase {
    * Execute passive power (no resource cost)
    */
   async _executePassivePower() {
-    const result = await this._executePowerEffect();
+    const result = await this._executePowerEffect([]);
     return {
       success: true,
       passive: true,
@@ -239,7 +329,7 @@ export default class SWNPower extends SWNItemBase {
   /**
    * Execute the actual power effect and create chat card
    */
-  async _executePowerEffect() {
+  async _executePowerEffect(consumptionResults = []) {
     const item = this.parent;
     const actor = item.actor;
 
@@ -251,7 +341,7 @@ export default class SWNPower extends SWNItemBase {
     }
 
     // Create enhanced chat card
-    const chatData = await this._createPowerChatCard(powerRoll);
+    const chatData = await this._createPowerChatCard(powerRoll, consumptionResults);
     const chatMessage = await getDocumentClass("ChatMessage").create(chatData);
 
     return {
@@ -263,7 +353,7 @@ export default class SWNPower extends SWNItemBase {
   /**
    * Create enhanced chat card with resource information
    */
-  async _createPowerChatCard(powerRoll = null) {
+  async _createPowerChatCard(powerRoll = null, consumptionResults = []) {
     const item = this.parent;
     const actor = item.actor;
     const rollMode = game.settings.get("core", "rollMode");
@@ -276,7 +366,8 @@ export default class SWNPower extends SWNItemBase {
       resourceName: this.resourceName,
       resourceKey: this.resourceKey(),
       strainCost: this.strainCost || 0,
-      isPassive: this.resourceName === ""
+      isPassive: this.resourceName === "",
+      consumptions: consumptionResults
     };
 
     const template = "systems/swnr/templates/chat/power-usage.hbs";
@@ -319,5 +410,196 @@ export default class SWNPower extends SWNItemBase {
     };
     getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
+  }
+
+  /**
+   * Process a single consumption requirement
+   * @param {Actor} actor - The actor using the power
+   * @param {Object} consumes - The consumption configuration
+   * @param {Object} options - Usage options
+   * @param {number} consumptionIndex - Index in consumptions array
+   * @returns {Promise<Object>} Consumption result
+   */
+  async _processConsumption(actor, consumes, options, consumptionIndex = -1) {
+    switch (consumes.type) {
+      case "sourceEffort":
+        return await this._processSourceEffort(actor, consumes);
+      case "spellPoints":
+        return await this._processSpellPoints(actor, consumes);
+      case "systemStrain":
+        return await this._processSystemStrain(actor, consumes);
+      case "consumableItem":
+        return await this._processConsumableItem(actor, consumes);
+      case "uses":
+        return await this._processInternalUses(consumes, consumptionIndex);
+      default:
+        return { success: true, type: consumes.type };
+    }
+  }
+
+  /**
+   * Process source-based effort consumption
+   */
+  async _processSourceEffort(actor, consumes) {
+    const source = this.parent.system.source || "";
+    const poolKey = `Effort:${source}`;
+    const pools = actor.system.pools || {};
+    const pool = pools[poolKey];
+    
+    if (!pool || pool.value < consumes.usesCost) {
+      return { 
+        success: false, 
+        reason: "insufficient-source-effort",
+        message: `Insufficient source effort: ${pool?.value || 0}/${pool?.max || 0} available, ${consumes.usesCost} required`,
+        poolKey,
+        required: consumes.usesCost,
+        available: pool?.value || 0
+      };
+    }
+    
+    // Create effort commitment if cadence is commit
+    if (consumes.cadence === "commit") {
+      const commitments = foundry.utils.deepClone(actor.system.effortCommitments || {});
+      if (!commitments[poolKey]) commitments[poolKey] = [];
+      
+      commitments[poolKey].push({
+        powerId: this.parent.id,
+        powerName: this.parent.name,
+        amount: consumes.usesCost,
+        duration: consumes.cadence,
+        timestamp: Date.now(),
+        consumption: true
+      });
+      
+      await actor.update({ "system.effortCommitments": commitments });
+      
+      // Update pool value
+      const newValue = Math.max(0, pool.max - commitments[poolKey].reduce((sum, c) => sum + c.amount, 0));
+      await actor.update({ [`system.pools.${poolKey}.value`]: newValue });
+    } else {
+      // Direct spending for scene/day cadence
+      await actor.update({ [`system.pools.${poolKey}.value`]: pool.value - consumes.usesCost });
+    }
+    
+    return { 
+      success: true, 
+      type: "sourceEffort",
+      poolKey,
+      spent: consumes.usesCost,
+      cadence: consumes.cadence
+    };
+  }
+
+  /**
+   * Process spell points consumption
+   */
+  async _processSpellPoints(actor, consumes) {
+    const poolKey = "Points:Spell";
+    const pools = actor.system.pools || {};
+    const pool = pools[poolKey];
+    
+    if (!pool || pool.value < consumes.usesCost) {
+      return { 
+        success: false, 
+        reason: "insufficient-spell-points",
+        message: `Insufficient spell points: ${pool?.value || 0}/${pool?.max || 0} available, ${consumes.usesCost} required`,
+        poolKey,
+        required: consumes.usesCost,
+        available: pool?.value || 0
+      };
+    }
+    
+    await actor.update({ [`system.pools.${poolKey}.value`]: pool.value - consumes.usesCost });
+    
+    return { 
+      success: true, 
+      type: "spellPoints",
+      poolKey,
+      spent: consumes.usesCost
+    };
+  }
+
+  /**
+   * Process system strain consumption
+   */
+  async _processSystemStrain(actor, consumes) {
+    const currentStrain = actor.system.systemStrain?.value || 0;
+    const newStrain = currentStrain + consumes.usesCost;
+    
+    await actor.update({ "system.systemStrain.value": newStrain });
+    
+    return { 
+      success: true, 
+      type: "systemStrain",
+      spent: consumes.usesCost,
+      newTotal: newStrain
+    };
+  }
+
+  /**
+   * Process consumable item consumption
+   */
+  async _processConsumableItem(actor, consumes) {
+    const item = actor.items.get(consumes.itemId);
+    if (!item) {
+      return { 
+        success: false, 
+        reason: "item-not-found",
+        message: `Required item not found: ${consumes.itemId}`,
+        itemId: consumes.itemId
+      };
+    }
+    
+    if (!item.system.uses || item.system.uses.value < consumes.usesCost) {
+      return {
+        success: false,
+        reason: "insufficient-item-uses",
+        message: `Insufficient ${item.name} uses: ${item.system.uses?.value || 0} available, ${consumes.usesCost} required`,
+        itemName: item.name,
+        required: consumes.usesCost,
+        available: item.system.uses?.value || 0
+      };
+    }
+    
+    // Consume the item uses
+    for (let i = 0; i < consumes.usesCost; i++) {
+      await item.system.removeOneUse();
+    }
+    
+    return { 
+      success: true, 
+      type: "consumableItem",
+      itemName: item.name,
+      spent: consumes.usesCost
+    };
+  }
+
+  /**
+   * Process internal power uses consumption
+   */
+  async _processInternalUses(consumes, consumptionIndex = -1) {
+    if (consumes.uses.value <= 0) {
+      return {
+        success: false,
+        reason: "no-uses-remaining",
+        message: `No uses remaining: 0/${consumes.uses.max}`,
+        maxUses: consumes.uses.max
+      };
+    }
+    
+    const newValue = consumes.uses.value - 1;
+    
+    // Update the consumption entry in the array
+    await this.parent.update({
+      [`system.consumptions.${consumptionIndex}.uses.value`]: newValue
+    });
+    
+    return { 
+      success: true, 
+      type: "uses",
+      spent: 1,
+      remaining: newValue,
+      max: consumes.uses.max
+    };
   }
 }

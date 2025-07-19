@@ -53,6 +53,34 @@
           margin-right: 0.25rem;
         }
       }
+      
+      .consumption-cost {
+        color: var(--color-text-light-7);
+        
+        i {
+          margin-right: 0.25rem;
+        }
+        
+        &.consumption-sourceEffort i {
+          color: #9b59b6;
+        }
+        
+        &.consumption-spellPoints i {
+          color: #3498db;
+        }
+        
+        &.consumption-systemStrain i {
+          color: #e74c3c;
+        }
+        
+        &.consumption-consumableItem i {
+          color: #2ecc71;
+        }
+        
+        &.consumption-uses i {
+          color: #95a5a6;
+        }
+      }
     }
 
     .power-roll {

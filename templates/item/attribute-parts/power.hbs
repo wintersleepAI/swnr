@@ -128,4 +128,91 @@
     {{/if}}
     
   </div>
+
+  {{! Additional Consumption Section }}
+  <fieldset>
+    <legend>{{localize "swnr.consumption.additionalConsumption"}}</legend>
+    
+    <div class="consumption-table-container">
+      {{#if system.consumptions.length}}
+        <table class="consumption-table">
+          <thead>
+            <tr>
+              <th>{{localize "swnr.consumption.type"}}</th>
+              <th>{{localize "swnr.consumption.cost"}}</th>
+              <th>{{localize "swnr.consumption.cadence"}}</th>
+              <th>{{localize "swnr.consumption.details"}}</th>
+              <th class="consumption-actions">{{localize "swnr.consumption.actions"}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each system.consumptions}}
+              <tr class="consumption-row" data-index="{{@index}}">
+                <td>
+                  <select name="system.consumptions.{{@index}}.type" class="consumption-type" data-dtype="String">
+                    {{#each ../consumptionTypes}}
+                      <option value="{{@key}}" {{#eq ../type @key}}selected{{/eq}}>{{localize this}}</option>
+                    {{/each}}
+                  </select>
+                </td>
+                <td>
+                  {{#unless (eq type "uses")}}
+                    <input type="number" name="system.consumptions.{{@index}}.usesCost" value="{{usesCost}}" data-dtype="Number" min="0" class="consumption-cost">
+                  {{else}}
+                    <span class="cost-placeholder">—</span>
+                  {{/unless}}
+                </td>
+                <td>
+                  {{#unless (eq type "consumableItem")}}
+                    <select name="system.consumptions.{{@index}}.cadence" class="consumption-cadence" data-dtype="String">
+                      {{#each ../consumptionCadences}}
+                        <option value="{{@key}}" {{#eq ../cadence @key}}selected{{/eq}}>{{localize this}}</option>
+                      {{/each}}
+                    </select>
+                  {{else}}
+                    <span class="cadence-placeholder">—</span>
+                  {{/unless}}
+                </td>
+                <td class="consumption-details-cell">
+                  {{#eq type "consumableItem"}}
+                    <select name="system.consumptions.{{@index}}.itemId" class="item-selector" data-dtype="String">
+                      <option value="">{{localize "swnr.consumption.selectItem"}}</option>
+                      {{#each ../consumableItems}}
+                        <option value="{{id}}" {{#eq ../itemId id}}selected{{/eq}}>{{name}}</option>
+                      {{/each}}
+                    </select>
+                  {{/eq}}
+                  {{#eq type "uses"}}
+                    <div class="uses-inputs">
+                      <input type="number" name="system.consumptions.{{@index}}.uses.value" value="{{uses.value}}" data-dtype="Number" min="0" max="{{uses.max}}" class="uses-current">
+                      <span>/</span>
+                      <input type="number" name="system.consumptions.{{@index}}.uses.max" value="{{uses.max}}" data-dtype="Number" min="1" class="uses-max">
+                    </div>
+                  {{/eq}}
+                  {{#unless (or (eq type "consumableItem") (eq type "uses"))}}
+                    <span class="details-placeholder">—</span>
+                  {{/unless}}
+                </td>
+                <td class="consumption-actions">
+                  <button type="button" class="remove-consumption" data-action="removeConsumption" data-index="{{@index}}" title="{{localize 'swnr.consumption.remove'}}">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      {{else}}
+        <div class="no-consumptions">
+          <p>{{localize "swnr.consumption.noAdditionalCosts"}}</p>
+        </div>
+      {{/if}}
+      
+      <div class="consumption-controls">
+        <button type="button" class="add-consumption" data-action="addConsumption">
+          <i class="fas fa-plus"></i> {{localize "swnr.consumption.addCost"}}
+        </button>
+      </div>
+    </div>
+  </fieldset>
 </section>

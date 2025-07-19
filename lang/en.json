@@ -2138,6 +2138,27 @@
     "deletePilot": "Do you want to remove {name} as the pilot?",
     "deleteContent": "Are you sure you want to delete {name} from the actor {actor}? (hold shift to skip confirm dialog)",
     "AddCurrency": "Add Currency",
-    "InvalidNumber": "Enter a valid whole number"
+    "InvalidNumber": "Enter a valid whole number",
+    "consumption": {
+      "additionalConsumption": "Additional Consumption",
+      "type": "Type",
+      "cost": "Cost",
+      "cadence": "Cadence",
+      "details": "Details",
+      "actions": "Actions",
+      "addCost": "Add Cost",
+      "remove": "Remove",
+      "noAdditionalCosts": "No additional consumption costs configured",
+      "selectItem": "Select Item...",
+      "none": "None",
+      "sourceEffort": "Source Effort",
+      "spellPoints": "Spell Points",
+      "systemStrain": "System Strain",
+      "consumableItem": "Consumable Item",
+      "uses": "Internal Uses",
+      "scene": "Per Scene",
+      "day": "Per Day", 
+      "commit": "Committed"
+    }
   }
 }

@@ -73,6 +73,21 @@ SWN.saveTypes = {
 
 SWN.poolResourceNames = ["Effort", "Slots", "Points", "Strain", "Uses"];
 
+SWN.consumptionTypes = {
+  none: 'swnr.consumption.none',
+  sourceEffort: 'swnr.consumption.sourceEffort', 
+  spellPoints: 'swnr.consumption.spellPoints',
+  systemStrain: 'swnr.consumption.systemStrain',
+  consumableItem: 'swnr.consumption.consumableItem',
+  uses: 'swnr.consumption.uses'
+};
+
+SWN.consumptionCadences = {
+  scene: 'swnr.consumption.scene',
+  day: 'swnr.consumption.day',
+  commit: 'swnr.consumption.commit'
+};
+
 SWN.powerPresets = {
   psychic: { 
     resourceName: "Effort", 

@@ -15,6 +15,32 @@
           {{strainCost}} System Strain
         </span>
       {{/if}}
+      {{#if consumptions}}
+        {{#each consumptions}}
+          <span class="consumption-cost consumption-{{type}}">
+            {{#eq type "sourceEffort"}}
+              <i class="fas fa-brain"></i>
+              {{spent}} Source Effort ({{cadence}})
+            {{/eq}}
+            {{#eq type "spellPoints"}}
+              <i class="fas fa-star"></i>
+              {{spent}} Spell Points
+            {{/eq}}
+            {{#eq type "systemStrain"}}
+              <i class="fas fa-exclamation-triangle"></i>
+              {{spent}} System Strain
+            {{/eq}}
+            {{#eq type "consumableItem"}}
+              <i class="fas fa-flask"></i>
+              {{spent}} {{itemName}}
+            {{/eq}}
+            {{#eq type "uses"}}
+              <i class="fas fa-battery-quarter"></i>
+              {{spent}} Internal Use ({{remaining}}/{{max}} remaining)
+            {{/eq}}
+          </span>
+        {{/each}}
+      {{/if}}
     </div>
   {{/unless}}
 

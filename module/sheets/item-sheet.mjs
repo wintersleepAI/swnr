@@ -28,6 +28,8 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       toggleEffect: this._toggleEffect,
       addPool: this._onAddPool,
       removePool: this._onRemovePool,
+      addConsumption: this._onAddConsumption,
+      removeConsumption: this._onRemoveConsumption,
     },
     form: {
       submitOnChange: true,
@@ -252,6 +254,23 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'attributesArmor':
       case 'attributesProgram':
       case 'attributesPower':
+        // Necessary for preserving active tab on re-render
+        context.tab = context.tabs[partId];
+        // Add consumption data for power items
+        if (partId === 'attributesPower') {
+          context.consumptionTypes = CONFIG.SWN.consumptionTypes;
+          context.consumptionCadences = CONFIG.SWN.consumptionCadences;
+          // Get consumable items from actor if available
+          const actor = this.document.actor;
+          if (actor) {
+            context.consumableItems = actor.items.filter(i => 
+              i.type === "item" && i.system.uses?.consumable !== "none"
+            ).map(i => ({ id: i.id, name: i.name }));
+          } else {
+            context.consumableItems = [];
+          }
+        }
+        break;
       case 'attributesSpell':
       case 'attributesWeapons':
       case 'attributesCyberware':
@@ -567,6 +586,60 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     if (poolIndex >= 0 && poolIndex < currentPools.length) {
       currentPools.splice(poolIndex, 1);
       await this.item.update({ "system.poolsGranted": currentPools });
+    }
+  }
+
+  /**
+   * Handle adding a new consumption to a power
+   * @param {Event} event   The originating click event
+   * @param {HTMLElement} target - The capturing HTML element which defined a [data-action]
+   */
+  static async _onAddConsumption(event, target) {
+    event.preventDefault();
+    
+    // Only allow on power items
+    if (this.item.type !== "power") {
+      return;
+    }
+
+    const currentConsumptions = foundry.utils.deepClone(this.item.system.consumptions || []);
+    
+    // Add a new consumption configuration with defaults
+    currentConsumptions.push({
+      type: "none",
+      usesCost: 1,
+      cadence: "day",
+      itemId: "",
+      uses: { value: 0, max: 1 }
+    });
+
+    await this.item.update({ "system.consumptions": currentConsumptions });
+  }
+
+  /**
+   * Handle removing a consumption from a power
+   * @param {Event} event   The originating click event
+   * @param {HTMLElement} target - The capturing HTML element which defined a [data-action]
+   */
+  static async _onRemoveConsumption(event, target) {
+    event.preventDefault();
+    
+    // Only allow on power items
+    if (this.item.type !== "power") {
+      return;
+    }
+
+    const consumptionIndex = parseInt(target.dataset.index);
+    if (isNaN(consumptionIndex)) {
+      console.warn("[SWN Consumption] Invalid consumption index for removal");
+      return;
+    }
+
+    const currentConsumptions = foundry.utils.deepClone(this.item.system.consumptions || []);
+    
+    if (consumptionIndex >= 0 && consumptionIndex < currentConsumptions.length) {
+      currentConsumptions.splice(consumptionIndex, 1);
+      await this.item.update({ "system.consumptions": currentConsumptions });
     }
   }
 

@@ -422,9 +422,6 @@ const migrations = {
       throw err;
     }
   },
-  // "2.2.0": async () => { console.log('Running migration for 2.2.0'); 
-
-  // },
 }
 
 function compareVersions(v1, v2) {

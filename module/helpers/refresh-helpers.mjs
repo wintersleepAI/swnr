@@ -106,10 +106,15 @@ async function refreshActorPools(actor, cadenceLevel) {
     await actor.update({ "system.pools": pools });
   }
 
+  // Refresh consumption uses for powers
+  const consumptionRefreshResults = await refreshConsumptionUses(actor, cadenceLevel);
+
   return {
     success: true,
     poolsRefreshed: refreshedPools.length,
-    pools: refreshedPools
+    pools: refreshedPools,
+    consumptionUsesRefreshed: consumptionRefreshResults.refreshedCount,
+    consumptionRefreshDetails: consumptionRefreshResults.refreshedItems
   };
 }
 
@@ -230,13 +235,75 @@ function getRefreshStatus() {
   return status;
 }
 
+/**
+ * Refresh consumption uses for powers based on cadence
+ * @param {Actor} actor - Actor to refresh consumption uses for
+ * @param {number} cadenceLevel - Numeric cadence level (1=scene, 2=rest, 3=day)
+ * @returns {Promise<Object>} Refresh results
+ */
+async function refreshConsumptionUses(actor, cadenceLevel) {
+  const cadenceMap = {
+    1: "scene",
+    2: "rest", 
+    3: "day"
+  };
+  
+  const currentCadence = cadenceMap[cadenceLevel];
+  const updates = {};
+  const refreshedItems = [];
+
+  // Check all power items for consumption uses that need refreshing
+  for (const item of actor.items) {
+    if (item.type !== "power") continue;
+    
+    const power = item.system;
+    let itemUpdated = false;
+    
+    // Check consumption array for "uses" type consumptions
+    if (power.consumptions && Array.isArray(power.consumptions)) {
+      for (let i = 0; i < power.consumptions.length; i++) {
+        const consumption = power.consumptions[i];
+        if (consumption.type === "uses" && consumption.cadence) {
+          const consumptionCadenceLevel = getCadenceLevel(consumption.cadence);
+          if (consumptionCadenceLevel <= cadenceLevel && consumption.uses.value < consumption.uses.max) {
+            updates[`items.${item.id}.system.consumptions.${i}.uses.value`] = consumption.uses.max;
+            refreshedItems.push({
+              itemName: item.name,
+              consumptionSlot: `consumption[${i}]`,
+              oldValue: consumption.uses.value,
+              newValue: consumption.uses.max,
+              cadence: consumption.cadence
+            });
+            itemUpdated = true;
+          }
+        }
+      }
+    }
+    
+    if (itemUpdated) {
+      console.log(`[SWN Refresh] Refreshing consumption uses for power: ${item.name}`);
+    }
+  }
+  
+  // Apply all updates at once
+  if (Object.keys(updates).length > 0) {
+    await actor.update(updates);
+  }
+  
+  return {
+    refreshedCount: refreshedItems.length,
+    refreshedItems
+  };
+}
+
 // Export functions for global access
 export {
   refreshPools,
   refreshActorPools,
   refreshSpecificPools,
   getRefreshStatus,
-  createRefreshChatMessage
+  createRefreshChatMessage,
+  refreshConsumptionUses
 };
 
 // Add to global swnr object
