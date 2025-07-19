@@ -23,13 +23,7 @@ This is a **Stars Without Number Redux (SWN, CWN, AWN)** system for Foundry VTT 
 
 ### Code Quality
 - ESLint configuration uses `@eslint/js` with stylistic rules enforcing 2-space indentation and semicolons
-
-### Testing
-- `npm test` - Run unit tests with Mocha
-- `npm run test:watch` - Run tests in watch mode
-- Test framework: Mocha with Chai assertions
-- Test files located in `test/` directory with `.test.js` extension
-- Mock setup for Foundry VTT environment available in `test/setup.js`
+- No specific test framework configured - check README or ask user for testing approach
 
 ## Architecture Overview
 
@@ -50,6 +44,27 @@ The system follows Foundry VTT's Document-DataModel-Sheet architecture:
 - `SWNCyberdeckSheet` - Cyberdeck actors
 - `SWNFactionSheet` - Faction management
 - `SWNItemSheet` - All item types
+
+### Unified Power System (v2.1.0+)
+The system implements a comprehensive unified power system supporting all game variants:
+
+**Actor Pool System** (`actor.system.pools`):
+- Dynamic resource pools using `${resourceName}:${subResource}` keys
+- Supports: Effort, Slots, Points, Strain, Uses, and custom types
+- Pool structure: `{ value, max, cadence }` for each resource
+- Runtime extensible via `CONFIG.SWN.poolResourceNames`
+
+**Power Schema** (`SWNPower` data model):
+- Unified schema supporting psychic, art, adept, spell, and mutation powers
+- Resource configuration: type, cost, duration, sharing model
+- Internal vs shared resource management
+- Leveled vs unleveled resource systems
+- Forward-compatible design for future power types
+
+**Migration System** (v2.1.0):
+- Automatic conversion of legacy effort system to pools
+- Comprehensive error handling and progress reporting
+- Backward-compatible during transition period
 
 ### Key Configuration
 - **Initiative**: `1d8 + @stats.dex.mod` with 2 decimal places
@@ -80,9 +95,10 @@ The system follows Foundry VTT's Document-DataModel-Sheet architecture:
 
 ### Important Notes
 - Characters have lock toggles that must be enabled to edit skills
-- Old game worlds should only be migrated after creating backups
+- **Migration from v2.0.x**: Foundry backup recommended before upgrading to v2.1.0+ (unified power system)
 - The system supports hot reload for CSS, HTML, HBS, and JSON files during development
 - Active Effects use modern transfer system (legacyTransferral: false)
+- **Power System**: Legacy effort data automatically converts to pool system on first load
 
 ### Common Patterns
 - Data models inherit from base classes (`base-actor.mjs`, `base-item.mjs`, etc.)

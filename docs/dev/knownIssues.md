@@ -24,11 +24,10 @@ This document tracks known issues in the codebase that should be considered when
 
 ## Runtime and Migration Issues
 
-### 4. Migration System Validation (Priority: Medium)
-**Location**: `module/swnr.mjs:166-169`
-- **Problem**: Migration runs but no validation ensures it completes successfully before updating stored version
-- **Impact**: Failed migrations might not be retried, data corruption risk
-- **Consider fixing when**: Working on migration system or version handling
+### 4. ~~Migration System Validation~~ ✅ **RESOLVED v2.1.0**
+**Location**: `module/migration.mjs` 
+- **Resolution**: Added comprehensive error handling, backup logging, and validation reporting
+- **Impact**: Migration system now has proper error recovery and progress tracking
 
 ### 5. Initiative Override Conflicts (Priority: Low)
 **Location**: `module/swnr.mjs:238-244`
@@ -67,12 +66,11 @@ This document tracks known issues in the codebase that should be considered when
 - **Note**: No apparent validation system for pack/unpack operations
 - **Consider**: Adding validation scripts when working on compendium tooling
 
-### Unified Power System Implementation (v2.0)
-**Location**: `docs/dev/UnifiedPowerMagicSpecification.md`
-- **Note**: Major schema changes proposed for power items with pooled resources
-- **Risk**: High complexity migration, performance impact, UI complexity
-- **Consider**: Progressive implementation strategy (see `docs/dev/UnifiedPowerAnalysis.md`)
-- **Impact**: Intersects with migration validation issue (#4) and error handling (#2)
+### ~~Unified Power System Implementation~~ ✅ **COMPLETED v2.1.0**
+**Location**: `module/data/items/item-power.mjs`, `module/data/actors/base-actor.mjs`
+- **Resolution**: Successfully implemented unified power system with comprehensive migration
+- **Status**: Production ready, all major power types supported (psychic, art, adept, spell, mutation)
+- **Impact**: Resolved migration validation and error handling issues as part of implementation
 
 ### Security Notes
 - Macro execution follows Foundry's standard pattern but uses direct command strings

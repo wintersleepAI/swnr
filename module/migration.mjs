@@ -130,12 +130,8 @@ const migrations = {
   "2.1.0": async () => {
     console.log('Running migration for 2.1.0 - Unified Power System');
     
-    // Create backup before migration
-    const backupData = {
-      actors: [],
-      items: [],
-      timestamp: new Date().toISOString()
-    };
+    // Log migration start for debugging purposes
+    console.log(`Starting migration 2.1.0 at ${new Date().toISOString()}`);
     
     let migrationErrors = [];
     let actorsMigrated = 0;
@@ -145,11 +141,8 @@ const migrations = {
       // Migrate Actors - transform effort to pools
       for (const actor of game.actors) {
         if (actor.system.effort) {
-          // Backup original data
-          backupData.actors.push({
-            id: actor.id,
-            effort: foundry.utils.deepClone(actor.system.effort)
-          });
+          // Log original effort data for debugging
+          console.log(`Migrating actor ${actor.name} with effort:`, actor.system.effort);
           
           try {
             const effortData = actor.system.effort;
@@ -178,11 +171,8 @@ const migrations = {
       // Migrate Power Items - add new unified fields
       for (const item of game.items) {
         if (item.type === "power") {
-          // Backup original data
-          backupData.items.push({
-            id: item.id,
-            system: foundry.utils.deepClone(item.system)
-          });
+          // Log original power data for debugging
+          console.log(`Migrating power item ${item.name} with system:`, item.system);
           
           try {
             const updateData = {
@@ -198,7 +188,7 @@ const migrations = {
               "system.uses": { value: 0, max: 1 }
             };
             
-            // Remove old effort field
+            // Remove old effort field if it exists
             if (item.system.effort) {
               updateData["system.-=effort"] = null;
             }
@@ -229,6 +219,7 @@ const migrations = {
                 "system.uses": { value: 0, max: 1 }
               };
               
+              // Remove old effort field if it exists
               if (item.system.effort) {
                 updateData["system.-=effort"] = null;
               }
@@ -242,8 +233,8 @@ const migrations = {
         }
       }
       
-      // Store backup data in case rollback is needed
-      await game.settings.set("swnr", "migration-2.1.0-backup", backupData);
+      // Migration completed successfully
+      console.log(`Migration 2.1.0 completed successfully at ${new Date().toISOString()}`);
       
       // Report migration results
       const successMsg = `Migration 2.1.0 completed: ${actorsMigrated} actors migrated, ${powerItemsMigrated} power items updated.`;

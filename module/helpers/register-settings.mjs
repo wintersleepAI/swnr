@@ -12,6 +12,7 @@ export const registerSettings = function () {
     default: "0.0",
   });
 
+
   game.settings.register("swnr", "useHomebrewLuckSave", {
     name: "swnr.settings.useHomebrewLuckSave",
     hint: "swnr.settings.useHomebrewLuckSaveHint",

@@ -205,20 +205,24 @@ export default class SWNCharacter extends SWNActorBase {
     const useCyber = game.settings.get("swnr", "useCWNCyber");
     const cyberStrain = useCyber ? this.systemStrain.cyberware : 0;
     
-    effort.max =
-      Math.max(
-        1,
-        1 +
-          Math.max(this.stats.con.mod, this.stats.wis.mod) +
-          Math.max(0, ...psychicSkills.map((i) => i.system.rank))
-      ) +
-      effort.bonus -
-      cyberStrain;
-    
-    // Floor at 0.
-    effort.max = Math.max(0, effort.max);
-    
-    effort.value = effort.max - effort.current - effort.scene - effort.day;      
+    // Skip effort calculations if effort field is undefined (during migration)
+    if (effort) {
+      effort.max =
+        Math.max(
+          1,
+          1 +
+            Math.max(this.stats.con.mod, this.stats.wis.mod) +
+            Math.max(0, ...psychicSkills.map((i) => i.system.rank))
+        ) +
+        effort.bonus -
+        cyberStrain;
+      
+      // Floor at 0.
+      effort.max = Math.max(0, effort.max);
+      
+      effort.value = effort.max - effort.current - effort.scene - effort.day;
+      effort.percentage = Math.clamp((effort.value * 100) / effort.max, 0, 100);
+    }      
     // extra effort
     const extraEffort = this.tweak.extraEffort;
     extraEffort.value =
@@ -227,8 +231,6 @@ export default class SWNCharacter extends SWNActorBase {
       extraEffort.scene -
       extraEffort.day -
       cyberStrain;
-
-    effort.percentage = Math.clamp((effort.value * 100) / effort.max, 0, 100);
 
     //encumbrance
     if (!this.encumbrance)

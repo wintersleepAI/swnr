@@ -28,7 +28,7 @@ export default class SWNActorBase extends foundry.abstract
       current: SWNShared.requiredNumber(0),
       scene: SWNShared.requiredNumber(0),
       day: SWNShared.requiredNumber(0)
-    });
+    }, { required: false });
     schema.pools = new fields.ObjectField({
       /* Dynamic keys: "${resourceName}:${subResource}" */
       /* Values: { value, max, cadence } */

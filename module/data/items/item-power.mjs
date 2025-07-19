@@ -81,7 +81,7 @@ export default class SWNPower extends SWNItemBase {
     const rollMode = game.settings.get("core", "rollMode");
 
     const template = "systems/swnr/templates/chat/power-roll.hbs";
-    const chatContent = await renderTemplate(template, dialogData);
+    const chatContent = await foundry.applications.handlebars.renderTemplate(template, dialogData);
     const chatData = {
       speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),
       content: chatContent,
