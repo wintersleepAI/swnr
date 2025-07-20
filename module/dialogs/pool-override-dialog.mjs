@@ -4,6 +4,9 @@
 export default class PoolOverrideDialog extends Dialog {
   
   constructor(actor, options = {}) {
+    // Store references before calling super
+    const actorRef = actor;
+    
     const dialogData = {
       title: `Manage Pools: ${actor.name}`,
       content: "",
@@ -11,12 +14,19 @@ export default class PoolOverrideDialog extends Dialog {
         save: {
           icon: '<i class="fas fa-save"></i>',
           label: "Save Changes",
-          callback: html => this.processChanges(html)
+          callback: (html) => {
+            console.log('[SWN Pool] Save button clicked');
+            // Use arrow function to preserve 'this' context
+            return this.processChanges.call(this, html);
+          }
         },
         refresh: {
           icon: '<i class="fas fa-sync-alt"></i>',
           label: "Refresh All",
-          callback: () => this.refreshAllPools()
+          callback: () => {
+            console.log('[SWN Pool] Refresh button clicked');
+            return this.refreshAllPools.call(this);
+          }
         },
         cancel: {
           icon: '<i class="fas fa-times"></i>',
@@ -29,9 +39,12 @@ export default class PoolOverrideDialog extends Dialog {
 
     super(dialogData, options);
     
-    this.actor = actor;
-    this.originalPools = foundry.utils.deepClone(actor.system.pools || {});
+    this.actor = actorRef;
+    this.originalPools = foundry.utils.deepClone(actorRef.system.pools || {});
     this.poolChanges = {};
+    
+    console.log('[SWN Pool] Dialog created for actor:', this.actor.name);
+    console.log('[SWN Pool] Original pools:', this.originalPools);
   }
 
   static get defaultOptions() {
@@ -48,8 +61,31 @@ export default class PoolOverrideDialog extends Dialog {
     const pools = this.actor.system.pools || {};
     const poolList = [];
 
-    // Convert pools object to array for template
+    // Convert pools object to array for template, incorporating any pending changes
     for (const [poolKey, poolData] of Object.entries(pools)) {
+      // Skip pools marked for deletion
+      if (this.poolChanges[poolKey] === null) continue;
+      
+      const [resourceName, subResource] = poolKey.split(':');
+      // Use changed values if available, otherwise original values
+      const currentData = this.poolChanges[poolKey] || poolData;
+      
+      poolList.push({
+        key: poolKey,
+        resourceName,
+        subResource: subResource || "Default",
+        current: currentData.value,
+        max: currentData.max,
+        cadence: currentData.cadence,
+        percentage: currentData.max > 0 ? Math.round((currentData.value / currentData.max) * 100) : 0
+      });
+    }
+    
+    // Add any new pools from changes
+    for (const [poolKey, poolData] of Object.entries(this.poolChanges)) {
+      // Skip deleted pools and existing pools
+      if (poolData === null || pools[poolKey]) continue;
+      
       const [resourceName, subResource] = poolKey.split(':');
       poolList.push({
         key: poolKey,
@@ -81,8 +117,8 @@ export default class PoolOverrideDialog extends Dialog {
   activateListeners(html) {
     super.activateListeners(html);
 
-    // Pool value change tracking
-    html.find('.pool-current, .pool-max').on('input', this._onPoolValueChange.bind(this));
+    // Pool value change tracking - use both input and change events
+    html.find('.pool-current, .pool-max').on('input change', this._onPoolValueChange.bind(this));
     
     // Quick set buttons
     html.find('.quick-set-zero').click(this._onQuickSetZero.bind(this));
@@ -96,7 +132,24 @@ export default class PoolOverrideDialog extends Dialog {
     html.find('.remove-pool').click(this._onRemovePool.bind(this));
 
     // Validate inputs
-    html.find('.pool-current, .pool-max').on('change', this._validateInput.bind(this));
+    html.find('.pool-current, .pool-max').on('blur', this._validateInput.bind(this));
+    
+    // Override dialog button handlers to ensure proper context
+    html.closest('.dialog').find('.dialog-button[data-button=\"save\"]').off('click').on('click', (event) => {
+      event.preventDefault();
+      console.log('[SWN Pool] Manual save button clicked');
+      this.processChanges(html);
+      this.close();
+    });
+    
+    html.closest('.dialog').find('.dialog-button[data-button=\"refresh\"]').off('click').on('click', (event) => {
+      event.preventDefault();
+      console.log('[SWN Pool] Manual refresh button clicked');
+      this.refreshAllPools();
+    });
+    
+    // Initial sync to ensure form fields match data
+    this._syncFormFields();
   }
 
   _onPoolValueChange(event) {
@@ -104,26 +157,48 @@ export default class PoolOverrideDialog extends Dialog {
     const poolKey = input.closest('.pool-row').dataset.poolKey;
     const field = input.classList.contains('pool-current') ? 'current' : 'max';
     const value = parseInt(input.value) || 0;
+    
+    console.log(`[SWN Pool] Field change: ${poolKey}.${field} = ${value}`);
 
+    // Ensure we have a baseline to work from
     if (!this.poolChanges[poolKey]) {
-      this.poolChanges[poolKey] = foundry.utils.deepClone(this.originalPools[poolKey]);
+      const basePool = this.originalPools[poolKey] || { value: 0, max: 1, cadence: "day" };
+      this.poolChanges[poolKey] = foundry.utils.deepClone(basePool);
+      console.log(`[SWN Pool] Initialized changes for ${poolKey}:`, this.poolChanges[poolKey]);
     }
 
+    // Update the change tracking
     if (field === 'current') {
       this.poolChanges[poolKey].value = value;
     } else {
       this.poolChanges[poolKey].max = value;
+      // If max changes, ensure current doesn't exceed it
+      if (this.poolChanges[poolKey].value > value) {
+        this.poolChanges[poolKey].value = value;
+        // Update the current field in the DOM to reflect this
+        const currentField = input.closest('.pool-row').querySelector('.pool-current');
+        if (currentField) {
+          currentField.value = value;
+        }
+      }
     }
+    
+    console.log(`[SWN Pool] Updated changes for ${poolKey}:`, this.poolChanges[poolKey]);
+    console.log(`[SWN Pool] All changes:`, this.poolChanges);
 
-    // Update visual feedback
+    // Update visual feedback immediately
     this._updatePoolVisual(poolKey, input.closest('.pool-row'));
+    
+    // Sync all form fields to ensure consistency
+    this._syncFormFields();
   }
 
   _onQuickSetZero(event) {
     const poolRow = event.currentTarget.closest('.pool-row');
     const currentInput = poolRow.querySelector('.pool-current');
     currentInput.value = 0;
-    currentInput.dispatchEvent(new Event('input'));
+    // Trigger both input and change events to ensure proper handling
+    $(currentInput).trigger('input').trigger('change');
   }
 
   _onQuickSetMax(event) {
@@ -131,16 +206,25 @@ export default class PoolOverrideDialog extends Dialog {
     const currentInput = poolRow.querySelector('.pool-current');
     const maxInput = poolRow.querySelector('.pool-max');
     currentInput.value = maxInput.value;
-    currentInput.dispatchEvent(new Event('input'));
+    // Trigger both input and change events to ensure proper handling
+    $(currentInput).trigger('input').trigger('change');
   }
 
   _onQuickModify(event) {
     const poolRow = event.currentTarget.closest('.pool-row');
     const currentInput = poolRow.querySelector('.pool-current');
     const modifier = parseInt(event.currentTarget.dataset.modifier) || 0;
-    const newValue = Math.max(0, parseInt(currentInput.value) + modifier);
-    currentInput.value = newValue;
-    currentInput.dispatchEvent(new Event('input'));
+    const currentValue = parseInt(currentInput.value) || 0;
+    const newValue = Math.max(0, currentValue + modifier);
+    
+    // Also respect max value constraint
+    const maxInput = poolRow.querySelector('.pool-max');
+    const maxValue = parseInt(maxInput.value) || 1;
+    const constrainedValue = Math.min(newValue, maxValue);
+    
+    currentInput.value = constrainedValue;
+    // Trigger both input and change events to ensure proper handling
+    $(currentInput).trigger('input').trigger('change');
   }
 
   async _onAddPool(event) {
@@ -166,7 +250,7 @@ export default class PoolOverrideDialog extends Dialog {
       cadence: "day"
     };
 
-    // Refresh dialog
+    // Refresh dialog to show new pool
     this.render(true);
   }
 
@@ -183,6 +267,7 @@ export default class PoolOverrideDialog extends Dialog {
     if (confirm) {
       // Mark for deletion
       this.poolChanges[poolKey] = null;
+      // Refresh dialog to hide removed pool
       this.render(true);
     }
   }
@@ -257,7 +342,8 @@ export default class PoolOverrideDialog extends Dialog {
     
     if (isNaN(value) || value < 0) {
       input.value = 0;
-      input.dispatchEvent(new Event('input'));
+      // Trigger change to update internal state
+      $(input).trigger('input');
     }
   }
 
@@ -268,10 +354,13 @@ export default class PoolOverrideDialog extends Dialog {
     const currentSpan = poolRow.querySelector('.current-value');
     const maxSpan = poolRow.querySelector('.max-value');
     const progressBar = poolRow.querySelector('.pool-progress');
+    const percentageSpan = poolRow.querySelector('.percentage');
 
+    // Update display values
     if (currentSpan) currentSpan.textContent = changes.value;
     if (maxSpan) maxSpan.textContent = changes.max;
     
+    // Update progress bar
     if (progressBar) {
       const percentage = changes.max > 0 ? (changes.value / changes.max) * 100 : 0;
       progressBar.style.width = `${Math.min(100, Math.max(0, percentage))}%`;
@@ -285,26 +374,107 @@ export default class PoolOverrideDialog extends Dialog {
         progressBar.className = 'pool-progress high';
       }
     }
+    
+    // Update percentage display
+    if (percentageSpan) {
+      const percentage = changes.max > 0 ? Math.round((changes.value / changes.max) * 100) : 0;
+      percentageSpan.textContent = `${percentage}%`;
+    }
+  }
+  
+  /**
+   * Sync form fields with current change state to prevent field value desync
+   */
+  _syncFormFields() {
+    for (const [poolKey, changes] of Object.entries(this.poolChanges)) {
+      const poolRow = this.element.find(`[data-pool-key="${poolKey}"]`);
+      if (!poolRow.length || !changes) continue;
+      
+      const currentInput = poolRow.find('.pool-current');
+      const maxInput = poolRow.find('.pool-max');
+      
+      // Only update if values differ to avoid cursor issues
+      if (currentInput.length && currentInput.val() != changes.value) {
+        currentInput.val(changes.value);
+      }
+      
+      if (maxInput.length && maxInput.val() != changes.max) {
+        maxInput.val(changes.max);
+      }
+    }
+  }
+  
+  /**
+   * Collect changes directly from form fields (backup method)
+   */
+  _collectFormChanges(html) {
+    const poolRows = html.find('.pool-row');
+    poolRows.each((i, row) => {
+      const $row = $(row);
+      const poolKey = $row.data('pool-key');
+      if (!poolKey) return;
+      
+      const currentInput = $row.find('.pool-current');
+      const maxInput = $row.find('.pool-max');
+      
+      if (currentInput.length && maxInput.length) {
+        const currentValue = parseInt(currentInput.val()) || 0;
+        const maxValue = parseInt(maxInput.val()) || 1;
+        
+        // Check if values differ from original
+        const originalData = this.originalPools[poolKey];
+        if (originalData && (currentValue !== originalData.value || maxValue !== originalData.max)) {
+          if (!this.poolChanges[poolKey]) {
+            this.poolChanges[poolKey] = foundry.utils.deepClone(originalData);
+          }
+          // Only update the specific fields that changed
+          this.poolChanges[poolKey].value = currentValue;
+          this.poolChanges[poolKey].max = maxValue;
+          console.log(`[SWN Pool] Collected change for ${poolKey}:`, this.poolChanges[poolKey]);
+        }
+      }
+    });
   }
 
   async processChanges(html) {
-    const updates = {};
+    console.log('[SWN Pool] processChanges called with changes:', this.poolChanges);
+    console.log('[SWN Pool] Original pools:', this.originalPools);
+    
+    // Also collect any changes directly from the form fields as a backup
+    this._collectFormChanges(html);
+    console.log('[SWN Pool] After collecting form changes:', this.poolChanges);
+    
+    // If no changes, nothing to do
+    if (Object.keys(this.poolChanges).length === 0) {
+      console.log('[SWN Pool] No changes to save');
+      ui.notifications.info('No changes to save');
+      return;
+    }
+    
     const newPools = foundry.utils.deepClone(this.originalPools);
+    console.log('[SWN Pool] Starting with pools:', newPools);
 
     // Apply changes
     for (const [poolKey, changes] of Object.entries(this.poolChanges)) {
+      console.log(`[SWN Pool] Processing change for ${poolKey}:`, changes);
       if (changes === null) {
         // Remove pool
         delete newPools[poolKey];
+        console.log(`[SWN Pool] Removed pool ${poolKey}`);
       } else {
         // Update or add pool
         newPools[poolKey] = changes;
+        console.log(`[SWN Pool] Updated pool ${poolKey}:`, changes);
       }
     }
+    
+    console.log('[SWN Pool] Final pools for update:', newPools);
 
     // Update actor
     try {
-      await this.actor.update({ "system.pools": newPools });
+      const updateResult = await this.actor.update({ "system.pools": newPools });
+      console.log('[SWN Pool] Actor update result:', updateResult);
+      console.log('[SWN Pool] Actor pools after update:', this.actor.system.pools);
       
       ui.notifications.info(`Updated resource pools for ${this.actor.name}`);
       
@@ -318,6 +488,7 @@ export default class PoolOverrideDialog extends Dialog {
     } catch (error) {
       console.error("Error updating actor pools:", error);
       ui.notifications.error("Failed to update actor pools");
+      throw error;
     }
   }
 
