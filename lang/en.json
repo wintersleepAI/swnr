@@ -2141,6 +2141,7 @@
     "InvalidNumber": "Enter a valid whole number",
     "consumption": {
       "additionalConsumption": "Additional Consumption",
+      "resourceConsumption": "Resource Consumption",
       "type": "Type",
       "cost": "Cost",
       "cadence": "Cadence",
@@ -2149,6 +2150,7 @@
       "addCost": "Add Cost",
       "remove": "Remove",
       "noAdditionalCosts": "No additional consumption costs configured",
+      "noResourceCosts": "No resource consumption costs configured",
       "selectItem": "Select Item...",
       "none": "None",
       "sourceEffort": "Source Effort",

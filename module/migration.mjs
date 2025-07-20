@@ -422,6 +422,226 @@ const migrations = {
       throw err;
     }
   },
+  "2.2.0": async () => {
+    console.log('Running migration for 2.2.0 - Unified Consumption System');
+    
+    // Log migration start for debugging purposes
+    console.log(`Starting migration 2.2.0 at ${new Date().toISOString()}`);
+    
+    let migrationErrors = [];
+    let powersMigrated = 0;
+    let itemsSkipped = 0;
+    
+    try {
+      // Migrate Power Items - convert legacy fields to consumption array
+      for (const item of game.items) {
+        if (item.type === "power") {
+          try {
+            const system = item.system;
+            const existingConsumptions = foundry.utils.deepClone(system.consumptions || []);
+            let newConsumptions = [];
+            let needsUpdate = false;
+            
+            // Convert primary resource cost to consumption entry
+            if (system.resourceName && system.resourceCost > 0) {
+              const primaryCost = {
+                type: "sourceEffort", // Map all primary costs to sourceEffort for now
+                usesCost: system.resourceCost,
+                cadence: system.resourceLength || "scene",
+                itemId: "",
+                uses: { value: 0, max: 1 }
+              };
+              
+              // Special handling for different resource types
+              if (system.resourceName === "Strain") {
+                primaryCost.type = "systemStrain";
+              } else if (system.resourceName === "Uses") {
+                primaryCost.type = "uses";
+                primaryCost.uses = {
+                  value: system.uses?.value || 0,
+                  max: system.uses?.max || 1
+                };
+              }
+              
+              newConsumptions.push(primaryCost);
+              needsUpdate = true;
+            }
+            
+            // Convert strain cost if separate from primary cost
+            if (system.strainCost > 0 && system.resourceName !== "Strain") {
+              newConsumptions.push({
+                type: "systemStrain",
+                usesCost: system.strainCost,
+                cadence: "day",
+                itemId: "",
+                uses: { value: 0, max: 1 }
+              });
+              needsUpdate = true;
+            }
+            
+            // Convert internal resource if used
+            if (!system.sharedResource && system.internalResource?.max > 0) {
+              newConsumptions.push({
+                type: "uses",
+                usesCost: 1,
+                cadence: "day",
+                itemId: "",
+                uses: {
+                  value: system.internalResource.value || 0,
+                  max: system.internalResource.max
+                }
+              });
+              needsUpdate = true;
+            }
+            
+            // Merge with existing consumptions, avoiding duplicates
+            const finalConsumptions = [...existingConsumptions, ...newConsumptions];
+            
+            if (needsUpdate) {
+              console.log(`Migrating power ${item.name} - converting legacy fields to consumptions`);
+              
+              const updateData = {
+                "system.consumptions": finalConsumptions,
+                // Remove legacy fields
+                "system.-=resourceName": null,
+                "system.-=subResource": null, 
+                "system.-=resourceCost": null,
+                "system.-=resourceLength": null,
+                "system.-=sharedResource": null,
+                "system.-=leveledResource": null,
+                "system.-=strainCost": null,
+                "system.-=internalResource": null,
+                "system.-=uses": null
+              };
+              
+              await item.update(updateData);
+              powersMigrated++;
+            } else {
+              itemsSkipped++;
+            }
+          } catch (err) {
+            migrationErrors.push(`Power item ${item.name} (${item.id}): ${err.message}`);
+          }
+        }
+      }
+      
+      // Migrate embedded power items in actors
+      for (const actor of game.actors) {
+        for (const item of actor.items) {
+          if (item.type === "power") {
+            try {
+              const system = item.system;
+              const existingConsumptions = foundry.utils.deepClone(system.consumptions || []);
+              let newConsumptions = [];
+              let needsUpdate = false;
+              
+              // Convert primary resource cost to consumption entry
+              if (system.resourceName && system.resourceCost > 0) {
+                const primaryCost = {
+                  type: "sourceEffort",
+                  usesCost: system.resourceCost,
+                  cadence: system.resourceLength || "scene",
+                  itemId: "",
+                  uses: { value: 0, max: 1 }
+                };
+                
+                // Special handling for different resource types
+                if (system.resourceName === "Strain") {
+                  primaryCost.type = "systemStrain";
+                } else if (system.resourceName === "Uses") {
+                  primaryCost.type = "uses";
+                  primaryCost.uses = {
+                    value: system.uses?.value || 0,
+                    max: system.uses?.max || 1
+                  };
+                }
+                
+                newConsumptions.push(primaryCost);
+                needsUpdate = true;
+              }
+              
+              // Convert strain cost if separate from primary cost
+              if (system.strainCost > 0 && system.resourceName !== "Strain") {
+                newConsumptions.push({
+                  type: "systemStrain",
+                  usesCost: system.strainCost,
+                  cadence: "day",
+                  itemId: "",
+                  uses: { value: 0, max: 1 }
+                });
+                needsUpdate = true;
+              }
+              
+              // Convert internal resource if used
+              if (!system.sharedResource && system.internalResource?.max > 0) {
+                newConsumptions.push({
+                  type: "uses",
+                  usesCost: 1,
+                  cadence: "day",
+                  itemId: "",
+                  uses: {
+                    value: system.internalResource.value || 0,
+                    max: system.internalResource.max
+                  }
+                });
+                needsUpdate = true;
+              }
+              
+              // Merge with existing consumptions
+              const finalConsumptions = [...existingConsumptions, ...newConsumptions];
+              
+              if (needsUpdate) {
+                console.log(`Migrating embedded power ${item.name} in ${actor.name} - converting legacy fields`);
+                
+                const updateData = {
+                  "system.consumptions": finalConsumptions,
+                  // Remove legacy fields
+                  "system.-=resourceName": null,
+                  "system.-=subResource": null,
+                  "system.-=resourceCost": null,
+                  "system.-=resourceLength": null,
+                  "system.-=sharedResource": null,
+                  "system.-=leveledResource": null,
+                  "system.-=strainCost": null,
+                  "system.-=internalResource": null,
+                  "system.-=uses": null
+                };
+                
+                await item.update(updateData);
+                powersMigrated++;
+              } else {
+                itemsSkipped++;
+              }
+            } catch (err) {
+              migrationErrors.push(`Embedded power ${item.name} in ${actor.name}: ${err.message}`);
+            }
+          }
+        }
+      }
+      
+      // Migration completed successfully
+      console.log(`Migration 2.2.0 completed successfully at ${new Date().toISOString()}`);
+      
+      // Report migration results
+      const successMsg = `Migration 2.2.0 completed: ${powersMigrated} power items migrated to unified consumption system, ${itemsSkipped} items skipped (already migrated).`;
+      console.log(successMsg);
+      
+      if (migrationErrors.length > 0) {
+        const errorMsg = `Migration completed with ${migrationErrors.length} errors. Check console for details.`;
+        console.warn("Migration errors:", migrationErrors);
+        ui.notifications?.warn(errorMsg);
+      } else {
+        ui.notifications?.info(successMsg);
+      }
+      
+      versionNote("2.2.0", "Unified Consumption System migration completed. All power resource costs have been converted to the expandable consumption array system. The legacy resource configuration fields have been removed for a cleaner, more consistent interface.");
+      
+    } catch (err) {
+      console.error("Critical migration error:", err);
+      ui.notifications?.error(`Migration 2.2.0 failed: ${err.message}. Check console for details.`);
+      throw err;
+    }
+  },
 }
 
 function compareVersions(v1, v2) {

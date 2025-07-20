@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **Stars Without Number Redux (SWN, CWN, AWN)** system for Foundry VTT - a complete JavaScript rewrite of the original TypeScript system. The system supports:
+This is a **Stars Without Number Redux (SWN, CWN, AWN)** system for Foundry VTT V13- The system supports:
 - **SWN** (Stars Without Number) - primary focus
 - **CWN** (Cities Without Number) - enabled through system settings
 - **AWN** (Ashes Without Number) - initial support

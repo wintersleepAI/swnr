@@ -30,82 +30,6 @@
     </div>
   </div>
 
-  {{! Resource Configuration }}
-  <fieldset>
-    <legend>Resource Configuration</legend>
-    <div class='grid grid-4col'>
-      <div class="resource">
-        <label class="resource-label">Resource Type</label>
-        <select name="system.resourceName" data-dtype="String">
-          <option value="Effort" {{#if (eq system.resourceName "Effort")}}selected{{/if}}>Effort</option>
-          <option value="Slots" {{#if (eq system.resourceName "Slots")}}selected{{/if}}>Slots</option>
-          <option value="Points" {{#if (eq system.resourceName "Points")}}selected{{/if}}>Points</option>
-          <option value="Strain" {{#if (eq system.resourceName "Strain")}}selected{{/if}}>Strain</option>
-          <option value="Uses" {{#if (eq system.resourceName "Uses")}}selected{{/if}}>Uses</option>
-        </select>
-      </div>
-      
-      <div class="resource">
-        <label class="resource-label">Sub-Resource</label>
-        <input type="text" name="system.subResource" value="{{system.subResource}}" data-dtype="String" placeholder="e.g. Psychic, Lv1" />
-      </div>
-      
-      <div class="resource">
-        <label class="resource-label">Resource Cost</label>
-        <input type="number" name="system.resourceCost" value="{{system.resourceCost}}" data-dtype="Number" min="0" />
-      </div>
-      
-      <div class="resource">
-        <label class="resource-label">Duration</label>
-        <select name="system.resourceLength" data-dtype="String">
-          <option value="commit" {{#if (eq system.resourceLength "commit")}}selected{{/if}}>Commit</option>
-          <option value="scene" {{#if (eq system.resourceLength "scene")}}selected{{/if}}>Scene</option>
-          <option value="day" {{#if (eq system.resourceLength "day")}}selected{{/if}}>Day</option>
-        </select>
-      </div>
-      
-      <div class="resource">
-        <label class="resource-label">Shared Resource</label>
-        <input type="checkbox" name="system.sharedResource" {{#if system.sharedResource}}checked{{/if}} data-dtype="Boolean" />
-      </div>
-      
-      <div class="resource">
-        <label class="resource-label">Leveled Resource</label>
-        <input type="checkbox" name="system.leveledResource" {{#if system.leveledResource}}checked{{/if}} data-dtype="Boolean" />
-      </div>
-      
-      <div class="resource">
-        <label class="resource-label">Strain Cost</label>
-        <input type="number" name="system.strainCost" value="{{system.strainCost}}" data-dtype="Number" min="0" />
-      </div>
-    </div>
-
-    {{! Internal Resource }}
-    {{#unless system.sharedResource}}
-      <div class='grid grid-2col'>
-        <div class="resource">
-          <label class="resource-label">Internal Current</label>
-          <input type="number" name="system.internalResource.value" value="{{system.internalResource.value}}" data-dtype="Number" min="0" />
-        </div>
-        <div class="resource">
-          <label class="resource-label">Internal Max</label>
-          <input type="number" name="system.internalResource.max" value="{{system.internalResource.max}}" data-dtype="Number" min="0" />
-        </div>
-      </div>
-    {{/unless}}
-
-    {{! Uses (for AWN powers) }}
-    <div class='grid grid-2col'>
-      <div class="resource">
-        <label class="resource-label">Uses Current</label>
-        <input type="number" name="system.uses.value" value="{{system.uses.value}}" data-dtype="Number" min="0" />
-      </div>
-      <div class="resource">
-        <label class="resource-label">Uses Max</label>
-        <input type="number" name="system.uses.max" value="{{system.uses.max}}" data-dtype="Number" min="0" />
-      </div>
-    </div>
-  </fieldset>
 
   {{! Activation and Effects }}
   <div class='grid grid-4col'>
@@ -129,9 +53,10 @@
     
   </div>
 
-  {{! Additional Consumption Section }}
+  {{! Resource Consumption Section }}
   <fieldset>
-    <legend>{{localize "swnr.consumption.additionalConsumption"}}</legend>
+    <legend>{{localize "swnr.consumption.resourceConsumption"}}</legend>
+    <p class="help-text">Configure all resource costs required to use this power. You can add multiple consumption types (effort, strain, spell points, consumable items, etc.)</p>
     
     <div class="consumption-table-container">
       {{#if system.consumptions.length}}
@@ -146,55 +71,45 @@
             </tr>
           </thead>
           <tbody>
-            {{#each system.consumptions}}
-              <tr class="consumption-row" data-index="{{@index}}">
+            {{#each system.consumptions as |consumption index|}}
+              <tr class="consumption-row" data-index="{{index}}">
                 <td>
-                  <select name="system.consumptions.{{@index}}.type" class="consumption-type" data-dtype="String">
-                    {{#each ../consumptionTypes}}
-                      <option value="{{@key}}" {{#eq ../type @key}}selected{{/eq}}>{{localize this}}</option>
+                  <select name="system.consumptions.{{index}}.type" class="consumption-type" data-dtype="String">
+                    {{#each @root.consumptionTypes}}
+                      <option value="{{@key}}" {{#eq consumption.type @key}}selected{{/eq}}>{{localize this}}</option>
                     {{/each}}
                   </select>
                 </td>
                 <td>
-                  {{#unless (eq type "uses")}}
-                    <input type="number" name="system.consumptions.{{@index}}.usesCost" value="{{usesCost}}" data-dtype="Number" min="0" class="consumption-cost">
-                  {{else}}
-                    <span class="cost-placeholder">—</span>
-                  {{/unless}}
+                  <input type="number" name="system.consumptions.{{index}}.usesCost" value="{{consumption.usesCost}}" data-dtype="Number" min="0">
                 </td>
                 <td>
-                  {{#unless (eq type "consumableItem")}}
-                    <select name="system.consumptions.{{@index}}.cadence" class="consumption-cadence" data-dtype="String">
-                      {{#each ../consumptionCadences}}
-                        <option value="{{@key}}" {{#eq ../cadence @key}}selected{{/eq}}>{{localize this}}</option>
-                      {{/each}}
-                    </select>
-                  {{else}}
-                    <span class="cadence-placeholder">—</span>
-                  {{/unless}}
+                  <select name="system.consumptions.{{index}}.cadence" data-dtype="String">
+                    {{#each @root.consumptionCadences}}
+                      <option value="{{@key}}" {{#eq consumption.cadence @key}}selected{{/eq}}>{{localize this}}</option>
+                    {{/each}}
+                  </select>
                 </td>
-                <td class="consumption-details-cell">
-                  {{#eq type "consumableItem"}}
-                    <select name="system.consumptions.{{@index}}.itemId" class="item-selector" data-dtype="String">
-                      <option value="">{{localize "swnr.consumption.selectItem"}}</option>
-                      {{#each ../consumableItems}}
-                        <option value="{{id}}" {{#eq ../itemId id}}selected{{/eq}}>{{name}}</option>
+                <td class="consumption-details">
+                  {{#if (eq consumption.type "consumableItem")}}
+                    <select name="system.consumptions.{{index}}.itemId" data-dtype="String">
+                      <option value="">Select Item...</option>
+                      {{#each @root.consumableItems}}
+                        <option value="{{id}}" {{#eq consumption.itemId id}}selected{{/eq}}>{{name}}</option>
                       {{/each}}
                     </select>
-                  {{/eq}}
-                  {{#eq type "uses"}}
-                    <div class="uses-inputs">
-                      <input type="number" name="system.consumptions.{{@index}}.uses.value" value="{{uses.value}}" data-dtype="Number" min="0" max="{{uses.max}}" class="uses-current">
+                  {{else if (eq consumption.type "uses")}}
+                    <div class="uses-counter">
+                      <input type="number" name="system.consumptions.{{index}}.uses.value" value="{{consumption.uses.value}}" data-dtype="Number" min="0" max="{{consumption.uses.max}}" style="width: 50px;">
                       <span>/</span>
-                      <input type="number" name="system.consumptions.{{@index}}.uses.max" value="{{uses.max}}" data-dtype="Number" min="1" class="uses-max">
+                      <input type="number" name="system.consumptions.{{index}}.uses.max" value="{{consumption.uses.max}}" data-dtype="Number" min="1" style="width: 50px;">
                     </div>
-                  {{/eq}}
-                  {{#unless (or (eq type "consumableItem") (eq type "uses"))}}
-                    <span class="details-placeholder">—</span>
-                  {{/unless}}
+                  {{else}}
+                    <span class="no-details">—</span>
+                  {{/if}}
                 </td>
-                <td class="consumption-actions">
-                  <button type="button" class="remove-consumption" data-action="removeConsumption" data-index="{{@index}}" title="{{localize 'swnr.consumption.remove'}}">
+                <td>
+                  <button type="button" data-action="removeConsumption" data-index="{{index}}">
                     <i class="fas fa-trash"></i>
                   </button>
                 </td>
@@ -204,7 +119,7 @@
         </table>
       {{else}}
         <div class="no-consumptions">
-          <p>{{localize "swnr.consumption.noAdditionalCosts"}}</p>
+          <p>{{localize "swnr.consumption.noResourceCosts"}}</p>
         </div>
       {{/if}}
       

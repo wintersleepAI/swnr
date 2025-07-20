@@ -15,40 +15,15 @@ export default class SWNPower extends SWNItemBase {
       initial: "psychic"
     });
     schema.source = SWNShared.requiredString("");
-    schema.resourceName = new fields.StringField({
-      choices: ["Effort", "Slots", "Points", "Strain", "Uses"],
-      initial: "Effort"
-    });
-    schema.subResource = new fields.StringField();
-    schema.resourceCost = new fields.NumberField({ initial: 1 });
-    schema.sharedResource = new fields.BooleanField({ initial: true });
-    schema.internalResource = new fields.SchemaField({
-      value: new fields.NumberField({ initial: 0 }),
-      max: new fields.NumberField({ initial: 1 })
-    });
-    schema.resourceLength = new fields.StringField({
-      choices: ["commit", "scene", "day"],
-      initial: "scene"
-    });
-    schema.userResourceLength = new fields.StringField({
-      choices: ["commit", "scene", "day"]
-    });
-    schema.level =  new fields.NumberField({
+    schema.level = new fields.NumberField({
       required: true,
       nullable: false,
       integer: true,
       initial: 1,
       min: 0,
       max: CONFIG.SWN.maxPowerLevel,
-      
     });
-    schema.leveledResource = new fields.BooleanField({ initial: false });
     schema.prepared = new fields.BooleanField({initial: false});
-    schema.strainCost = new fields.NumberField({ initial: 0 });
-    schema.uses = new fields.SchemaField({
-      value: new fields.NumberField({ initial: 0 }),
-      max: new fields.NumberField({ initial: 1 })
-    });
 
     // Multi-cost consumption system - expandable array
     schema.consumptions = new fields.ArrayField(new fields.SchemaField({
@@ -76,8 +51,36 @@ export default class SWNPower extends SWNItemBase {
     return schema;
   }
 
-  resourceKey() {
-    return `${this.resourceName}:${this.subResource || ""}`;
+  /** @override */
+  prepareDerivedData() {
+    super.prepareDerivedData();
+    
+    // Ensure all consumption entries have complete data structures
+    if (this.consumptions) {
+      this.consumptions.forEach(consumption => {
+        // Ensure uses object exists with proper defaults
+        if (!consumption.uses || typeof consumption.uses !== 'object') {
+          consumption.uses = { value: 0, max: 1 };
+        }
+        if (typeof consumption.uses.value !== 'number') {
+          consumption.uses.value = 0;
+        }
+        if (typeof consumption.uses.max !== 'number') {
+          consumption.uses.max = 1;
+        }
+        
+        // Ensure other properties have defaults
+        if (!consumption.itemId) {
+          consumption.itemId = "";
+        }
+        if (!consumption.usesCost || typeof consumption.usesCost !== 'number') {
+          consumption.usesCost = 1;
+        }
+        if (!consumption.cadence) {
+          consumption.cadence = "day";
+        }
+      });
+    }
   }
 
   /**
@@ -182,122 +185,45 @@ export default class SWNPower extends SWNItemBase {
     const actor = item.actor;
     const { skipCost = false } = options;
 
-    // Skip cost validation if this is a passive ability
-    if (this.resourceName === "" || skipCost) {
+    // Skip cost validation if skipCost is true or no consumptions defined
+    if (skipCost || !this.hasConsumption()) {
       return await this._executePassivePower();
     }
 
-    // Validate and spend resources
-    const resourceKey = this.resourceKey();
-    const currentPools = foundry.utils.deepClone(actor.system.pools || {});
+    // Process all consumption types
+    const consumptionResults = [];
+    const consumptions = this.getConsumptions();
     
-    // Auto-seed missing pool if needed
-    if (!currentPools[resourceKey]) {
-      currentPools[resourceKey] = {
-        value: 0,
-        max: 0,
-        cadence: this.resourceLength
-      };
-    }
-
-    const pool = currentPools[resourceKey];
-    const costToSpend = this.resourceCost || 0;
-
-    // Check if we have enough available resources (not committed)
-    if (pool.value < costToSpend) {
-      const message = `Insufficient ${this.resourceName}: ${pool.value}/${pool.max} available, ${costToSpend} required`;
-      ui.notifications?.warn(message);
-      return { 
-        success: false, 
-        reason: "insufficient-resources", 
-        message,
-        poolsBefore: currentPools,
-        poolsAfter: currentPools
-      };
-    }
-
-    // Commit effort instead of spending it
-    const poolsAfter = foundry.utils.deepClone(currentPools);
-    
-    // Add commitment to effort tracking
-    const currentCommitments = foundry.utils.deepClone(actor.system.effortCommitments || {});
-    if (!currentCommitments[resourceKey]) {
-      currentCommitments[resourceKey] = [];
-    }
-    
-    // Create commitment record
-    const commitment = {
-      powerId: item.id,
-      powerName: item.name,
-      amount: costToSpend,
-      duration: this.resourceLength || "scene", // Use the power's resource duration
-      timestamp: Date.now()
-    };
-    
-    currentCommitments[resourceKey].push(commitment);
-    
-    // Update available effort (recalculate based on commitments)
-    const totalCommitted = currentCommitments[resourceKey].reduce((sum, c) => sum + c.amount, 0);
-    poolsAfter[resourceKey].value = Math.max(0, poolsAfter[resourceKey].max - totalCommitted);
-    poolsAfter[resourceKey].committed = totalCommitted;
-    poolsAfter[resourceKey].commitments = currentCommitments[resourceKey];
-
-    // Handle internal resource increment if not shared
-    if (!this.sharedResource && this.internalResource) {
-      const newInternalValue = this.internalResource.value + costToSpend;
-      if (newInternalValue > this.internalResource.max) {
-        const message = `Internal resource limit exceeded: ${newInternalValue}/${this.internalResource.max}`;
-        ui.notifications?.warn(message);
-        return { 
-          success: false, 
-          reason: "internal-limit-exceeded", 
-          message,
-          poolsBefore: currentPools,
-          poolsAfter: currentPools
+    // First pass: validate all consumption requirements
+    for (let i = 0; i < consumptions.length; i++) {
+      const consumes = consumptions[i];
+      const validation = await this._validateConsumption(actor, consumes, i);
+      if (!validation.valid) {
+        ui.notifications?.warn(validation.message || "Consumption requirements not met");
+        return {
+          success: false,
+          reason: validation.reason,
+          message: validation.message,
+          consumptionFailure: validation
         };
       }
     }
-
-    // Process additional consumption types
-    const consumptionResults = [];
-    if (this.hasConsumption()) {
-      const consumptions = this.getConsumptions();
-      for (let i = 0; i < consumptions.length; i++) {
-        const consumes = consumptions[i];
-        const result = await this._processConsumption(actor, consumes, options, i);
-        if (!result.success) {
-          // Consumption failed - return early without applying any changes
-          ui.notifications?.warn(result.message || "Consumption failed");
-          return {
-            success: false,
-            reason: result.reason,
-            message: result.message,
-            poolsBefore: currentPools,
-            poolsAfter: currentPools,
-            consumptionFailure: result
-          };
-        }
-        consumptionResults.push(result);
+    
+    // Second pass: apply all consumption costs
+    for (let i = 0; i < consumptions.length; i++) {
+      const consumes = consumptions[i];
+      const result = await this._processConsumption(actor, consumes, options, i);
+      if (!result.success) {
+        // This shouldn't happen since we validated first, but safety check
+        ui.notifications?.warn(result.message || "Consumption processing failed");
+        return {
+          success: false,
+          reason: result.reason,
+          message: result.message,
+          consumptionFailure: result
+        };
       }
-    }
-
-    // Apply strain cost if any
-    if (this.strainCost > 0) {
-      const currentStrain = actor.system.systemStrain?.value || 0;
-      const newStrain = currentStrain + this.strainCost;
-      await actor.update({ "system.systemStrain.value": newStrain });
-    }
-
-    // Update actor pools and effort commitments
-    await actor.update({ 
-      "system.pools": poolsAfter,
-      "system.effortCommitments": currentCommitments
-    });
-
-    // Update internal resource if applicable
-    if (!this.sharedResource && this.internalResource) {
-      const newInternalValue = this.internalResource.value + costToSpend;
-      await item.update({ "system.internalResource.value": newInternalValue });
+      consumptionResults.push(result);
     }
 
     // Execute power effect and create chat message
@@ -305,10 +231,6 @@ export default class SWNPower extends SWNItemBase {
     
     return {
       success: true,
-      resourceSpent: costToSpend,
-      strainApplied: this.strainCost,
-      poolsBefore: currentPools,
-      poolsAfter: poolsAfter,
       consumptions: consumptionResults,
       ...result
     };
@@ -410,6 +332,82 @@ export default class SWNPower extends SWNItemBase {
     };
     getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
+  }
+
+  /**
+   * Validate a single consumption requirement without applying changes
+   * @param {Actor} actor - The actor using the power
+   * @param {Object} consumes - Consumption configuration
+   * @param {number} consumptionIndex - Index in consumptions array
+   * @returns {Promise<Object>} Validation result
+   */
+  async _validateConsumption(actor, consumes, consumptionIndex = 0) {
+    switch (consumes.type) {
+      case "sourceEffort":
+        const source = this.parent.system.source || "";
+        const poolKey = `Effort:${source}`;
+        const pools = actor.system.pools || {};
+        const pool = pools[poolKey];
+        
+        if (!pool || pool.value < consumes.usesCost) {
+          return { 
+            valid: false, 
+            reason: "insufficient-source-effort",
+            message: `Insufficient source effort: ${pool?.value || 0}/${pool?.max || 0} available, ${consumes.usesCost} required`
+          };
+        }
+        return { valid: true };
+        
+      case "spellPoints":
+        const spellPools = actor.system.pools || {};
+        const spellPool = spellPools["Points:Spell"];
+        
+        if (!spellPool || spellPool.value < consumes.usesCost) {
+          return { 
+            valid: false, 
+            reason: "insufficient-spell-points",
+            message: `Insufficient spell points: ${spellPool?.value || 0}/${spellPool?.max || 0} available, ${consumes.usesCost} required`
+          };
+        }
+        return { valid: true };
+        
+      case "systemStrain":
+        // System strain can always be applied (no maximum check needed)
+        return { valid: true };
+        
+      case "consumableItem":
+        if (!consumes.itemId) {
+          return { valid: false, reason: "no-item-selected", message: "No consumable item selected" };
+        }
+        
+        const consumableItem = actor.items.get(consumes.itemId);
+        if (!consumableItem) {
+          return { valid: false, reason: "item-not-found", message: "Consumable item not found in inventory" };
+        }
+        
+        const itemUses = consumableItem.system.uses;
+        if (!itemUses || itemUses.value < consumes.usesCost) {
+          return { 
+            valid: false, 
+            reason: "insufficient-item-uses",
+            message: `Insufficient ${consumableItem.name}: ${itemUses?.value || 0}/${itemUses?.max || 0} available, ${consumes.usesCost} required`
+          };
+        }
+        return { valid: true };
+        
+      case "uses":
+        if (consumes.uses.value < consumes.usesCost) {
+          return { 
+            valid: false, 
+            reason: "insufficient-internal-uses",
+            message: `Insufficient internal uses: ${consumes.uses.value}/${consumes.uses.max} available, ${consumes.usesCost} required`
+          };
+        }
+        return { valid: true };
+        
+      default:
+        return { valid: true };
+    }
   }
 
   /**

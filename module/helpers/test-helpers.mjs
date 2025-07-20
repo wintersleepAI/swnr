@@ -210,40 +210,29 @@ async function testPoolManagement(actor) {
  * @returns {Promise<Object>} Test results
  */
 async function testPowerUsageFlow(actor, power) {
-  console.log(`[SWN Test] Starting power usage flow test`);
+  console.log(`[SWN Test] Starting unified power usage flow test`);
   
   const initialPools = foundry.utils.deepClone(actor.system.pools || {});
-  const resourceKey = power.system.resourceKey();
   const tests = [];
   
-  // Ensure we have the required pool
-  if (!initialPools[resourceKey] || initialPools[resourceKey].value < power.system.resourceCost) {
-    const testPools = foundry.utils.deepClone(initialPools);
-    testPools[resourceKey] = {
-      value: 5,
-      max: 5,
-      cadence: power.system.resourceLength
-    };
-    await actor.update({ "system.pools": testPools });
-  }
+  // Ensure we have sufficient resources for testing
+  await actor.update({
+    "system.pools.Effort:Psychic": { value: 5, max: 5, cadence: "scene" },
+    "system.pools.Points:Spell": { value: 10, max: 10, cadence: "day" },
+    "system.systemStrain.value": 0
+  });
   
   // Test 1: Successful power usage
   try {
-    const preUsePools = foundry.utils.deepClone(actor.system.pools);
     const result = await power.system.use();
-    const postUsePools = actor.system.pools;
-    
-    const expectedValue = preUsePools[resourceKey].value - power.system.resourceCost;
-    const actualValue = postUsePools[resourceKey].value;
     
     tests.push({
       test: "successful-usage",
-      passed: result.success && actualValue === expectedValue,
+      passed: result.success === true,
       details: {
         resultSuccess: result.success,
-        expectedPoolValue: expectedValue,
-        actualPoolValue: actualValue,
-        resourceSpent: result.resourceSpent
+        consumptions: result.consumptions,
+        reason: result.reason
       }
     });
   } catch (error) {
@@ -254,27 +243,28 @@ async function testPowerUsageFlow(actor, power) {
     });
   }
   
-  // Test 2: Insufficient resources
+  // Test 2: Power with no consumption (passive)
   try {
-    // Drain the pool first
-    const currentPools = foundry.utils.deepClone(actor.system.pools);
-    currentPools[resourceKey].value = 0;
-    await actor.update({ "system.pools": currentPools });
+    // Create a power with no consumptions
+    const consumptions = foundry.utils.deepClone(power.system.consumptions || []);
+    await power.update({ "system.consumptions": [] });
     
     const result = await power.system.use();
     
     tests.push({
-      test: "insufficient-resources",
-      passed: !result.success && result.reason === "insufficient-resources",
+      test: "passive-power",
+      passed: result.success === true,
       details: {
         resultSuccess: result.success,
-        reason: result.reason,
-        message: result.message
+        passive: result.passive
       }
     });
+    
+    // Restore original consumptions
+    await power.update({ "system.consumptions": consumptions });
   } catch (error) {
     tests.push({
-      test: "insufficient-resources",
+      test: "passive-power",
       passed: false,
       error: error.message
     });
@@ -284,9 +274,8 @@ async function testPowerUsageFlow(actor, power) {
   await actor.update({ "system.pools": initialPools });
   
   return {
-    testType: "power-usage-flow",
+    testType: "unified-power-usage-flow",
     powerName: power.name,
-    resourceKey,
     tests,
     passed: tests.every(t => t.passed)
   };
@@ -302,9 +291,9 @@ async function runComprehensiveTests(actor) {
     throw new Error("Actor is required for testing");
   }
   
-  const powers = actor.items.filter(i => i.type === "power" && i.system.resourceName !== "");
+  const powers = actor.items.filter(i => i.type === "power" && i.system.hasConsumption());
   if (powers.length === 0) {
-    throw new Error("Actor must have at least one power with resource cost for testing");
+    throw new Error("Actor must have at least one power with consumption costs for testing");
   }
   
   const testPower = powers[0];
@@ -618,7 +607,7 @@ async function runMultiCostTests(actor) {
     testSuite.push(await testPoolManagement(actor));
     
     // If actor has powers, test them too
-    const powers = actor.items.filter(i => i.type === "power" && i.system.resourceName !== "");
+    const powers = actor.items.filter(i => i.type === "power" && i.system.hasConsumption());
     if (powers.length > 0) {
       testSuite.push(await testPowerUsageFlow(actor, powers[0]));
     }

@@ -263,9 +263,17 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
           // Get consumable items from actor if available
           const actor = this.document.actor;
           if (actor) {
-            context.consumableItems = actor.items.filter(i => 
-              i.type === "item" && i.system.uses?.consumable !== "none"
-            ).map(i => ({ id: i.id, name: i.name }));
+            // Filter for items that have uses and are consumable
+            const allItems = actor.items.filter(i => i.type === "item");
+            context.consumableItems = allItems.filter(i => {
+              const uses = i.system.uses;
+              // Include items that have uses configured OR are marked as consumable
+              return uses && (
+                (uses.consumable && uses.consumable !== "none") ||
+                (uses.max && uses.max > 0) ||
+                (uses.value !== undefined)
+              );
+            }).map(i => ({ id: i.id, name: i.name }));
           } else {
             context.consumableItems = [];
           }
@@ -395,13 +403,169 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
    */
   _onRender(context, options) {
     this.#dragDrop.forEach((d) => d.bind(this.element));
-    // Add a change listener for the location selector
-
-
-    // You may want to add other special handling here
-    // Foundry comes with a large number of utility classes, e.g. SearchFilter
-    // That you may want to implement yourself.
+    
+    // Add consumption field handlers for power items
+    if (this.document.type === "power") {
+      this._setupConsumptionFieldHandlers();
+    }
   }
+
+  _setupConsumptionFieldHandlers() {
+    // Add change listeners to all consumption fields
+    const consumptionFields = this.element.querySelectorAll('[name*="consumptions"]');
+    
+    consumptionFields.forEach((field) => {
+      field.addEventListener('change', async (event) => {
+        // Prevent the normal form submission for consumption fields
+        event.stopPropagation();
+        
+        // For Foundry v13, manually handle the form submission
+        await this._handleConsumptionFieldChange(event);
+      });
+    });
+    
+    // Sync form fields with document data on initial render
+    // This follows the established _onRender pattern in the codebase
+    this._syncFormFieldsWithDocument();
+    this._updateConsumptionFieldVisibility();
+  }
+
+  /**
+   * Handle consumption field changes manually since submitOnChange may not work reliably 
+   * with array fields in Foundry v13
+   */
+  async _handleConsumptionFieldChange(event) {
+    const field = event.target;
+    const fieldName = field.name;
+    const fieldValue = field.value;
+
+
+    try {
+      // Extract the array index and property from the field name
+      // e.g., "system.consumptions.0.type" -> index: 0, property: "type"
+      const match = fieldName.match(/system\.consumptions\.(\d+)\.(.+)/);
+      if (!match) {
+        return;
+      }
+
+      const index = parseInt(match[1]);
+      const property = match[2];
+
+      // Get current consumptions array
+      const consumptions = foundry.utils.deepClone(this.document.system.consumptions || []);
+
+      // Make sure the array has enough elements
+      while (consumptions.length <= index) {
+        consumptions.push({
+          type: "none",
+          usesCost: 1,
+          cadence: "day",
+          itemId: "",
+          uses: { value: 0, max: 1 }
+        });
+      }
+
+      // Update the specific property
+      // Handle numeric conversion for nested uses properties
+      if (property.startsWith('uses.') && !isNaN(fieldValue)) {
+        foundry.utils.setProperty(consumptions[index], property, parseInt(fieldValue));
+      } else {
+        foundry.utils.setProperty(consumptions[index], property, fieldValue);
+      }
+
+      // Update the document
+      await this.document.update({ "system.consumptions": consumptions });
+      
+      // Sync form fields after document update completes
+      // The field value should already be set correctly by the manual change,
+      // but we sync all fields to ensure consistency
+      this._syncFormFieldsWithDocument();
+      
+      // Update field visibility if type changed
+      if (property === 'type') {
+        this._updateConsumptionFieldVisibility();
+      }
+
+    } catch (error) {
+      console.error(`Error updating consumption field:`, error);
+    }
+  }
+
+  /**
+   * Sync all consumption form fields with the current document data
+   * This fixes Foundry v13 issue where form fields don't auto-update after manual document changes
+   */
+  _syncFormFieldsWithDocument() {
+    const consumptions = this.document.system.consumptions || [];
+    
+    consumptions.forEach((consumption, index) => {
+      // Update type field
+      const typeField = this.element.querySelector(`[name="system.consumptions.${index}.type"]`);
+      if (typeField && typeField.value !== consumption.type) {
+        typeField.value = consumption.type;
+      }
+      
+      // Update usesCost field
+      const costField = this.element.querySelector(`[name="system.consumptions.${index}.usesCost"]`);
+      if (costField && costField.value !== consumption.usesCost.toString()) {
+        costField.value = consumption.usesCost;
+      }
+      
+      // Update cadence field
+      const cadenceField = this.element.querySelector(`[name="system.consumptions.${index}.cadence"]`);
+      if (cadenceField && cadenceField.value !== consumption.cadence) {
+        cadenceField.value = consumption.cadence;
+      }
+      
+      // Update itemId field (for consumableItem type)
+      const itemIdField = this.element.querySelector(`[name="system.consumptions.${index}.itemId"]`);
+      if (itemIdField && itemIdField.value !== consumption.itemId) {
+        itemIdField.value = consumption.itemId;
+      }
+      
+      // Update internal uses fields (for uses type)
+      const usesValueField = this.element.querySelector(`[name="system.consumptions.${index}.uses.value"]`);
+      if (usesValueField && usesValueField.value !== consumption.uses.value.toString()) {
+        usesValueField.value = consumption.uses.value;
+      }
+      
+      const usesMaxField = this.element.querySelector(`[name="system.consumptions.${index}.uses.max"]`);
+      if (usesMaxField && usesMaxField.value !== consumption.uses.max.toString()) {
+        usesMaxField.value = consumption.uses.max;
+      }
+    });
+  }
+  
+  /**
+   * Update visibility of consumption detail fields based on type selection
+   */
+  _updateConsumptionFieldVisibility() {
+    const consumptions = this.document.system.consumptions || [];
+    
+    consumptions.forEach((consumption, index) => {
+      const row = this.element.querySelector(`.consumption-row[data-index="${index}"]`);
+      if (!row) return;
+      
+      const typeField = row.querySelector(`[name="system.consumptions.${index}.type"]`);
+      const detailsCell = row.querySelector('.consumption-details');
+      
+      if (!typeField || !detailsCell) return;
+      
+      const currentType = typeField.value;
+      
+      // Show/hide appropriate detail fields based on consumption type
+      if (currentType === 'none') {
+        detailsCell.style.opacity = '0.5';
+      } else {
+        detailsCell.style.opacity = '1';
+      }
+    });
+  }
+
+
+
+
+
 
   _getRelatedItems() {
     // Get the related items for the owning parent (if any) for ammo
