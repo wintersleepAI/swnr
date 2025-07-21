@@ -51,7 +51,6 @@ export class SWNActorSheet extends SWNBaseSheet {
       reactionRoll: this._onReactionRoll,
       moraleRoll: this._onMoraleRoll,
       resourceCreate: this._onResourceCreate,
-      poolManage: this._onPoolManage,
       resourceDelete: this._onResourceDelete,
       releaseCommitment: this._onReleaseCommitment,
     },
@@ -1007,11 +1006,6 @@ export class SWNActorSheet extends SWNBaseSheet {
    * @param {Event} event   The originating click event
    * @param {HTMLElement} target - The capturing HTML element which defined a [data-action]
    */
-  static async _onPoolManage(event, target) {
-    event.preventDefault();
-    const { PoolOverrideDialog } = globalThis.swnr.applications;
-    await PoolOverrideDialog.show(this.actor);
-  }
 
   static async _onResourceDelete(event, target) {
     event.preventDefault();

@@ -17,7 +17,6 @@ import * as refreshHelpers from './helpers/refresh-helpers.mjs';
 import * as testHelpers from './helpers/test-helpers.mjs';
 
 // Import dialog classes
-import PoolOverrideDialog from './dialogs/pool-override-dialog.mjs';
 
 // Import DataModel classes
 import * as models from './data/_module.mjs';
@@ -39,7 +38,6 @@ globalThis.swnr = {
   applications: {
     SWNActorSheet,
     SWNItemSheet,
-    PoolOverrideDialog,
   },
   utils: {
     rollItemMacro,

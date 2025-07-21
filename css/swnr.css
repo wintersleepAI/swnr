@@ -363,19 +363,6 @@
   color: var(--color-text-light-6);
 }
 
-.swnr .resource-pools .pools-header .pool-manage-btn {
-  background: var(--color-bg-btn);
-  border: 1px solid var(--color-border-dark-tertiary);
-  border-radius: 3px;
-  padding: 0.2rem 0.4rem;
-  cursor: pointer;
-  font-size: 0.8em;
-}
-
-.swnr .resource-pools .pools-header .pool-manage-btn:hover {
-  background: var(--color-bg-option);
-}
-
 .swnr .resource-pools .pool-group {
   margin-bottom: 0.75rem;
 }

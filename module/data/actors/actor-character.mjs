@@ -522,10 +522,18 @@ export default class SWNCharacter extends SWNActorBase {
           // Calculate available effort (max - committed)
           const commitments = this.effortCommitments[poolKey] || [];
           const committedAmount = commitments.reduce((sum, commitment) => sum + commitment.amount, 0);
+          
+          // Preserve existing current value from document source if it exists, otherwise calculate available effort
+          const sourcePoolData = this.parent._source.system.pools?.[poolKey];
+          const existingCurrentValue = sourcePoolData?.value;
+          const sourceMaxValue = sourcePoolData?.max;
           const availableEffort = Math.max(0, maxValue - committedAmount);
+          const currentValue = existingCurrentValue !== undefined ? 
+            Math.min(existingCurrentValue, maxValue) : availableEffort;
+          
           
           pools[poolKey] = {
-            value: availableEffort,
+            value: currentValue,
             max: maxValue,
             cadence: poolConfig.cadence,
             committed: committedAmount,

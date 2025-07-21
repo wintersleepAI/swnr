@@ -14,11 +14,6 @@
     <div class="pools-container">
       <div class="pools-header">
         <h4><i class="fas fa-battery-three-quarters"></i> {{localize 'swnr.pools.title'}}</h4>
-        {{#if owner}}
-        <button type="button" class="pool-manage-btn" data-action="poolManage" title="{{localize 'swnr.pools.manage'}}">
-          <i class="fas fa-cog"></i> {{localize 'swnr.pools.manage'}}
-        </button>
-        {{/if}}
       </div>
       <div class="pools-display">
         {{#each poolGroups}}
