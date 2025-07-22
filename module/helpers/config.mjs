@@ -83,7 +83,6 @@ SWN.consumptionTypes = {
 
 SWN.consumptionCadences = {
   scene: 'swnr.consumption.scene',
-  rest: 'swnr.consumption.rest',
   day: 'swnr.consumption.day',
   commit: 'swnr.consumption.commit'
 };

@@ -263,15 +263,6 @@ Hooks.on("deleteCombat", async (combat, options, userId) => {
   }
 });
 
-// Long rest integration (if available)
-Hooks.on("swnr.rest", async (restType) => {
-  if (game.user.isGM) {
-    console.log(`[SWN Refresh] Rest triggered: ${restType}`);
-    if (restType === "long" || restType === "full") {
-      await globalThis.swnr.refreshRest();
-    }
-  }
-});
 
 // Daily refresh on new day (time-based if available)
 Hooks.on("swnr.newDay", async () => {
