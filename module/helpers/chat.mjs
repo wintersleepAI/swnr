@@ -111,6 +111,12 @@ export function _addRerollButton(html) {
     return;
   }
 
+  // Check if reroll button already exists to prevent duplicates
+  const existingContainer = totalDiv.parent().find(".dmgBtn-container");
+  if (existingContainer.length > 0 && existingContainer.find(".dice-total-reroll-btn").length > 0) {
+    return;
+  }
+
   const diceRoll = totalDiv.parent().find(".dice-formula").text();
   const total = parseInt(totalDiv.text());
   if (isNaN(total)) {
@@ -118,17 +124,23 @@ export function _addRerollButton(html) {
     return;
   }
 
-  const btnContainer = $('<div class="dmgBtn-container"></div>');
+  // Use existing container or create new one
+  let btnContainer = existingContainer.length > 0 ? existingContainer : $('<div class="dmgBtn-container"></div>');
   const rerollButton = getRerollButton(diceRoll, false);
   btnContainer.append(rerollButton);
-  totalDiv.parent().append(btnContainer);
+  
+  // Only append if we created a new container
+  if (existingContainer.length === 0) {
+    totalDiv.parent().append(btnContainer);
+  }
 }
 
 export function _addHealthButtons(html) {
   const totalDiv = html.find(".dice-total");
   
   // Check if health buttons already exist to prevent duplicates
-  if (totalDiv.parent().find(".dmgBtn-container").length > 0) {
+  const existingContainer = totalDiv.parent().find(".dmgBtn-container");
+  if (existingContainer.length > 0 && existingContainer.find(".dice-total-fullDamage-btn").length > 0) {
     return;
   }
   
@@ -159,15 +171,19 @@ export function _addHealthButtons(html) {
     .attr("title", game.i18n.localize("swnr.chat.healthButtons.fullDamageModified"))
     .append($("<i>").addClass("fas fa-user-edit"));
 
-  const btnContainer = $('<div class="dmgBtn-container"></div>');
+  // Use existing container or create new one
+  let btnContainer = existingContainer.length > 0 ? existingContainer : $('<div class="dmgBtn-container"></div>');
 
-  const rerollButton = getRerollButton(diceRoll, true);
   btnContainer.append(fullDamageButton);
   btnContainer.append(fullDamageModifiedButton);
   btnContainer.append(halfDamageButton);
   // btnContainer.append(doubleDamageButton);
   btnContainer.append(fullHealingButton);
-  totalDiv.parent().append(btnContainer);
+  
+  // Only append if we created a new container
+  if (existingContainer.length === 0) {
+    totalDiv.parent().append(btnContainer);
+  }
 
   // Handle button clicks
   fullDamageButton.on("click", (ev) => {
@@ -555,8 +571,10 @@ export async function _onChatCardAction(
         let existingPowerRoll = null;
         
         if (existingRollElement.length > 0) {
-          // Get the full HTML content including the roll tooltip and data
-          existingPowerRoll = existingRollElement[0].outerHTML;
+          // Clone the element and remove any existing button containers to prevent duplication
+          const cleanedRoll = existingRollElement.clone();
+          cleanedRoll.find('.dmgBtn-container').remove();
+          existingPowerRoll = cleanedRoll[0].outerHTML;
         }
         const consumptionResults = result.consumptionResults || [];
         
