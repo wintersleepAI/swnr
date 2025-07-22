@@ -54,14 +54,6 @@ export default class SWNCharacter extends SWNActorBase {
       quickSkill1: SWNShared.emptyString(), //deprecated
       quickSkill2: SWNShared.emptyString(), //deprecated
       quickSkill3: SWNShared.emptyString(), //deprecated
-      extraEffortName: SWNShared.emptyString(),
-      extraEffort: new fields.SchemaField({
-        bonus: SWNShared.requiredNumber(0),
-        current: SWNShared.requiredNumber(0),
-        scene: SWNShared.requiredNumber(0),
-        day: SWNShared.requiredNumber(0),
-        max: SWNShared.requiredNumber(0)
-      }),
       extraHeader: SWNShared.emptyString(),
       showResourceList: new fields.BooleanField({initial: false}),
       showCyberware: new fields.BooleanField({initial: true}),
@@ -201,36 +193,8 @@ export default class SWNCharacter extends SWNActorBase {
           i.system.source.toLocaleLowerCase() ===
             game.i18n.localize("swnr.skills.labels.psionic").toLocaleLowerCase()
       );
-    const effort = this.effort;
     const useCyber = game.settings.get("swnr", "useCWNCyber");
     const cyberStrain = useCyber ? this.systemStrain.cyberware : 0;
-    
-    // Skip effort calculations if effort field is undefined (during migration)
-    if (effort) {
-      effort.max =
-        Math.max(
-          1,
-          1 +
-            Math.max(this.stats.con.mod, this.stats.wis.mod) +
-            Math.max(0, ...psychicSkills.map((i) => i.system.rank))
-        ) +
-        effort.bonus -
-        cyberStrain;
-      
-      // Floor at 0.
-      effort.max = Math.max(0, effort.max);
-      
-      effort.value = effort.max - effort.current - effort.scene - effort.day;
-      effort.percentage = Math.clamp((effort.value * 100) / effort.max, 0, 100);
-    }      
-    // extra effort
-    const extraEffort = this.tweak.extraEffort;
-    extraEffort.value =
-      extraEffort.max -
-      extraEffort.current -
-      extraEffort.scene -
-      extraEffort.day -
-      cyberStrain;
 
     //encumbrance
     if (!this.encumbrance)

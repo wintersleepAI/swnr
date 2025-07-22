@@ -14,7 +14,6 @@ import { registerSettings } from './helpers/register-settings.mjs';
 import { registerHandlebarHelpers } from './helpers/handlebar.mjs';
 import { chatListeners, welcomeMessage } from './helpers/chat.mjs';
 import * as refreshHelpers from './helpers/refresh-helpers.mjs';
-import * as testHelpers from './helpers/test-helpers.mjs';
 
 // Import dialog classes
 
@@ -42,7 +41,6 @@ globalThis.swnr = {
   utils: {
     rollItemMacro,
     ...refreshHelpers,
-    ...testHelpers,
   },
   models,
 };

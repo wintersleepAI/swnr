@@ -55,14 +55,6 @@ export default class SWNNPC extends SWNActorBase {
     // Any derived data should be calculated here and added to "this."
     super.prepareDerivedData();
 
-    const effort = this.effort;
-    
-    // Skip effort calculations if effort field is undefined (during migration)
-    if (effort) {
-      effort.max = effort.bonus;
-      effort.value = effort.bonus - effort.current - effort.scene - effort.day;
-      effort.percentage = Math.clamp((effort.value * 100) / effort.max, 0, 100);
-    }
 
     this.ac = this.baseAc;
     this.soakTotal = {

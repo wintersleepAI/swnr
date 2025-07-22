@@ -79,36 +79,6 @@
           <span style="flex: 4 0;">{{formGroup systemFields.saves value=system.saves localize=true}}</span>
         </div>
       </div>
-      <div class="resource-group">
-        <b>{{localize 'swnr.effort.title'}}</b>
-          <div class="resource-bar"><!-- The character effort bar -->
-          <div style="width:{{system.effort.percentage}}%" class="effort-fill"></div>
-            <div class="text">
-              {{localize 'swnr.effort.title'}}
-                <input
-                  type='text'
-                  value='{{system.effort.value}}'
-                  readonly
-                  data-dtype='Number'
-                  class='nested-field short-field align-right current-value'
-                />
-              <p>/</p>
-                <input
-                  type='text'
-                  value='{{system.effort.max}}'
-                  readonly
-                  data-dtype='Number'
-                  class='nested-field short-field'
-                />
-            </div>
-        </div><!-- End of the character effort bar -->
-        <div class="grid grid-2col">
-          {{ formGroup systemFields.effort.fields.bonus value=system.effort.bonus localize=true }}
-          {{ formGroup systemFields.effort.fields.current value=system.effort.current localize=true }}
-          {{ formGroup systemFields.effort.fields.scene value=system.effort.scene localize=true }}
-          {{ formGroup systemFields.effort.fields.day value=system.effort.day localize=true }}
-        </div>
-      </div>
     </div> <!-- End 2nd Column -->
     <div class="flex flex-col" style="flex: 1 0;"> <!-- 3rd Column -->
       {{> "systems/swnr/templates/actor/fragments/compact-weapon-list.hbs" itemList=actor.itemTypes.weapon actorType=actor.type }}

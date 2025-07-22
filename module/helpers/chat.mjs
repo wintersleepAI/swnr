@@ -510,26 +510,6 @@ export async function _onChatCardAction(
         }
       }
     }
-  } else if (action === "effort") {
-    if (!targets.length) {
-      ui.notifications?.warn(
-        `You must have one or more controlled Tokens in order to use this option.`
-      );
-      //return (button.disabled = false);
-    }
-    const effort = button.dataset.effort;
-
-    for (const t of targets) {
-      if (t.type === "character") {
-        if (t.system.effort.value == 0) {
-          ui.notifications?.info(`${t.name} has no available effort`);
-          return;
-        }
-        const updated_effort = t.system.effort[effort] + 1;
-        const effort_key = `system.effort.${effort}`;
-        await t.update({ [effort_key]: updated_effort });
-      }
-    }
   } else if (action === "use-power") {
     // Handle power resource spending with unified power system
     const powerId = button.dataset.powerId;
