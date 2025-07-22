@@ -540,8 +540,18 @@ export async function _onChatCardAction(
     }
     
     try {
+      // Check for selected token to target for costs
+      let targetActor = actor;
+      const controlled = canvas.tokens?.controlled;
+      if (controlled && controlled.length === 1) {
+        targetActor = controlled[0].actor;
+        if (targetActor !== actor) {
+          ui.notifications?.info(`Using selected token for costs: ${targetActor.name}`);
+        }
+      }
+      
       // Use the power's resource spending system (without creating new chat message)
-      const result = await power.system._performUseForChatUpdate();
+      const result = await power.system._performUseForChatUpdate(targetActor);
       
       if (result.success) {
         // Update the existing chat message with the new state showing recovery buttons
@@ -588,6 +598,128 @@ export async function _onChatCardAction(
     } catch (error) {
       ui.notifications?.error(`Failed to use power: ${error.message}`);
       console.error("Power usage error:", error);
+    }
+  } else if (action === "use-consumption") {
+    // Handle individual consumption spending with token targeting
+    const powerId = button.dataset.powerId;
+    const actorId = button.dataset.actorId;
+    const consumptionIndex = parseInt(button.dataset.consumptionIndex);
+    
+    if (!powerId || !actorId || isNaN(consumptionIndex)) {
+      ui.notifications?.error("Missing power, actor ID, or consumption index");
+      return;
+    }
+    
+    try {
+      // Get the original actor and power
+      const originalActor = game.actors?.get(actorId);
+      if (!originalActor) {
+        ui.notifications?.error("Could not find original actor");
+        return;
+      }
+      
+      const power = originalActor.items?.get(powerId);
+      if (!power) {
+        ui.notifications?.error("Could not find power");
+        return;
+      }
+      
+      // Determine target actor (selected token or original actor)
+      let targetActor = originalActor;
+      const controlled = canvas.tokens?.controlled;
+      if (controlled && controlled.length === 1) {
+        targetActor = controlled[0].actor;
+        if (targetActor !== originalActor) {
+          ui.notifications?.info(`Using selected token for cost: ${targetActor.name}`);
+        }
+      }
+      
+      // Get the specific consumption to process
+      const consumptions = power.system.getConsumptions();
+      if (consumptionIndex >= consumptions.length) {
+        ui.notifications?.error("Invalid consumption index");
+        return;
+      }
+      
+      const consumption = consumptions[consumptionIndex];
+      
+      // Process the single consumption
+      const result = await power.system._processConsumption(targetActor, consumption, {}, consumptionIndex);
+      
+      if (!result.success) {
+        ui.notifications?.error(result.error || "Failed to process consumption");
+        return;
+      }
+      
+      // Get existing consumption results from the current message
+      const chatCard = $(button).closest('.chat-message');
+      const messageId = chatCard.data('message-id');
+      const message = game.messages?.get(messageId);
+      
+      let existingConsumptions = [];
+      if (message) {
+        // Try to parse existing consumptions from message flags or content
+        const messageFlags = message.flags?.swnr?.consumptions;
+        if (messageFlags) {
+          existingConsumptions = messageFlags;
+        }
+      }
+      
+      // Add this consumption result with the index
+      result.consumptionIndex = consumptionIndex;
+      existingConsumptions.push(result);
+      
+      // Track which consumptions have been processed
+      let processedConsumptions = {};
+      if (message?.flags?.swnr?.processedConsumptions) {
+        processedConsumptions = message.flags.swnr.processedConsumptions;
+      }
+      processedConsumptions[consumptionIndex] = true;
+      
+      // Preserve existing power roll
+      let existingPowerRoll = null;
+      if (message) {
+        const existingRollElement = $(message.content).find('.roll');
+        if (existingRollElement.length > 0) {
+          const cleanedRoll = existingRollElement.clone();
+          cleanedRoll.find('.dmgBtn-container').remove();
+          existingPowerRoll = cleanedRoll[0].outerHTML;
+        }
+      }
+      
+      // Calculate total strain cost
+      const totalStrainCost = existingConsumptions
+        .filter(r => r.type === "systemStrain")
+        .reduce((sum, r) => sum + (r.spent || 0), 0);
+      
+      const templateData = {
+        actor: originalActor,
+        power: power,
+        powerRoll: existingPowerRoll,
+        strainCost: totalStrainCost,
+        isPassive: false,
+        consumptions: existingConsumptions,
+        processedConsumptions: processedConsumptions
+      };
+      
+      const template = "systems/swnr/templates/chat/power-usage.hbs";
+      const newContent = await foundry.applications.handlebars.renderTemplate(template, templateData);
+      
+      if (message) {
+        await message.update({ 
+          content: newContent,
+          flags: { 
+            swnr: { 
+              consumptions: existingConsumptions,
+              processedConsumptions: processedConsumptions
+            } 
+          }
+        });
+      }
+      
+    } catch (error) {
+      ui.notifications?.error(`Failed to use consumption: ${error.message}`);
+      console.error("Consumption usage error:", error);
     }
   } else if (action === "recover-resource") {
     // Handle resource recovery

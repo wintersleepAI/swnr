@@ -285,9 +285,9 @@ export default class SWNPower extends SWNItemBase {
   /**
    * Perform power usage without creating chat message (for chat updates)
    */
-  async _performUseForChatUpdate(options = {}) {
+  async _performUseForChatUpdate(targetActor = null, options = {}) {
     const item = this.parent;
-    const actor = item.actor;
+    const actor = targetActor || item.actor;
     const { skipCost = false } = options;
 
     // Skip cost validation if skipCost is true or no consumptions defined
