@@ -12,23 +12,19 @@
       {{#if strainCost}}
         <span class="strain-cost">
           <i class="fas fa-bolt"></i>
-          {{strainCost}} System Strain
+          {{strainCost}} {{localize "swnr.consumption.systemStrain"}}
         </span>
       {{/if}}
       {{#if consumptions}}
         {{#each consumptions}}
           <span class="consumption-cost consumption-{{type}}">
-            {{#eq type "sourceEffort"}}
-              <i class="fas fa-brain"></i>
-              {{spent}} Source Effort ({{cadence}})
-            {{/eq}}
-            {{#eq type "spellPoints"}}
-              <i class="fas fa-star"></i>
-              {{spent}} Spell Points
+            {{#eq type "poolResource"}}
+              <i class="fas fa-circle-minus"></i>
+              {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}} ({{#eq cadence "scene"}}{{localize "SWN.pools.refreshSummary.scene"}}{{/eq}}{{#eq cadence "day"}}{{localize "SWN.pools.refreshSummary.day"}}{{/eq}}{{#eq cadence "commit"}}{{localize "SWN.pools.commitment.release"}}{{/eq}})
             {{/eq}}
             {{#eq type "systemStrain"}}
               <i class="fas fa-exclamation-triangle"></i>
-              {{spent}} System Strain
+              {{spent}} {{localize "swnr.consumption.systemStrain"}}
             {{/eq}}
             {{#eq type "consumableItem"}}
               <i class="fas fa-flask"></i>
@@ -36,7 +32,7 @@
             {{/eq}}
             {{#eq type "uses"}}
               <i class="fas fa-battery-quarter"></i>
-              {{spent}} Internal Use ({{remaining}}/{{max}} remaining)
+              {{spent}} {{localize "swnr.consumption.uses"}} ({{remaining}}/{{max}} {{localize "swnr.consumption.remaining"}})
             {{/eq}}
           </span>
         {{/each}}
@@ -49,13 +45,13 @@
       <span class="hiddenShort">
         {{{trim power.system.description 200}}}
         <div class="border border-gray-700 placeholder-blue-800 pt-0">
-          <button class="longShowDesc">Show Long Desc.</button>
+          <button class="longShowDesc">{{localize "SWN.Actor.sheet.showLongDesc"}}</button>
         </div>
       </span>
       <div class="border border-gray-700 placeholder-blue-800 pt-0">
         <span style="display:none" class="hiddenLong">
         {{{ power.system.description }}}
-        <button class="longHideDesc">Hide Long Desc.</button>
+        <button class="longHideDesc">{{localize "SWN.Actor.sheet.hideLongDesc"}}</button>
         </span>
       </div>
     {{else}}
@@ -67,25 +63,25 @@
 
   {{#if power.system.range}}
       <div>
-        {{localize 'swnr.sheet.powers.range'}}: {{ power.system.range }}
+        {{localize 'SWN.Actor.sheet.powers.range'}}: {{ power.system.range }}
       </div>
   {{/if}}
 
   {{#if power.system.duration}}
       <div>
-        {{localize 'swnr.sheet.powers.duration'}}: {{ power.system.duration }}
+        {{localize 'SWN.Actor.sheet.powers.duration'}}: {{ power.system.duration }}
       </div>
   {{/if}}
 
   {{#if power.system.level}}
       <div>
-        {{localize 'swnr.sheet.powers.level'}}: {{ power.system.level }}
+        {{localize 'SWN.Actor.sheet.powers.level'}}: {{ power.system.level }}
       </div>
   {{/if}}
 
   {{#if power.system.roll}}
     <div class="power-roll">
-      <span>{{localize 'swnr.sheet.powers.roll'}}:</span>
+      <span>{{localize 'SWN.Actor.sheet.powers.roll'}}:</span>
       <span class="roll roll-damage">{{{ powerRoll }}}</span>
     </div>
   {{/if}}
@@ -93,7 +89,7 @@
   {{#if power.system.save}}
   <div class="card-buttons">
       <button data-action="save" data-save="{{power.system.save}}">
-          Save {{power.system.save}}
+          {{localize "SWN.Actor.sheet.powers.save"}} {{power.system.save}}
       </button>
   </div>
   {{/if}}
@@ -109,7 +105,45 @@
   {{#if isPassive}}
     <div class="passive-indicator">
       <i class="fas fa-info-circle"></i>
-      <span>Passive Ability</span>
+      <span>{{localize "SWN.Actor.sheet.passive"}}</span>
+    </div>
+  {{else}}
+    {{! Resource management buttons for active powers }}
+    <div class="card-buttons resource-management">
+      {{#if resourceSpent}}
+        <button data-action="recover-resource" data-pool-key="{{resourceKey}}" data-amount="{{resourceSpent}}" data-actor-id="{{actor.id}}">
+          <i class="fas fa-plus-circle"></i>
+          {{localize "swnr.consumption.recover"}} {{resourceSpent}} {{resourceName}}
+        </button>
+      {{/if}}
+      {{#if strainCost}}
+        <button data-action="recover-strain" data-amount="{{strainCost}}" data-actor-id="{{actor.id}}">
+          <i class="fas fa-heart"></i>
+          {{localize "swnr.consumption.recoverStrain"}} {{strainCost}}
+        </button>
+      {{/if}}
+      {{#if consumptions}}
+        {{#each consumptions}}
+          {{#eq type "poolResource"}}
+            <button data-action="recover-resource" data-pool-key="{{poolKey}}" data-amount="{{spent}}" data-actor-id="{{../actor.id}}">
+              <i class="fas fa-plus-circle"></i>
+              {{localize "swnr.consumption.recover"}} {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}}
+            </button>
+          {{/eq}}
+          {{#eq type "consumableItem"}}
+            <button data-action="recover-item" data-item-id="{{itemId}}" data-amount="{{spent}}" data-actor-id="{{../actor.id}}">
+              <i class="fas fa-flask"></i>
+              {{localize "swnr.consumption.recoverItem"}} {{spent}} {{itemName}}
+            </button>
+          {{/eq}}
+          {{#eq type "uses"}}
+            <button data-action="recover-uses" data-power-id="{{../power.id}}" data-consumption-index="{{@index}}" data-amount="{{spent}}" data-actor-id="{{../actor.id}}">
+              <i class="fas fa-battery-three-quarters"></i>
+              {{localize "swnr.consumption.recoverUses"}} {{spent}}
+            </button>
+          {{/eq}}
+        {{/each}}
+      {{/if}}
     </div>
   {{/if}}
 </div>

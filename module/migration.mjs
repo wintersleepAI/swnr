@@ -642,6 +642,151 @@ const migrations = {
       throw err;
     }
   },
+
+  "2.2.1": async () => {
+    console.log('Running migration for 2.2.1 - Populate Power Resource Fields');
+    
+    const migrationStart = Date.now();
+    let powersMigrated = 0;
+    let powersSkipped = 0;
+    let migrationErrors = [];
+
+    try {
+      // Migrate power items to populate resourceName and subResource from subType and source
+      for (const item of game.items) {
+        if (item.type === "power") {
+          try {
+            const system = foundry.utils.deepClone(item.system);
+            let needsUpdate = false;
+
+            // Only migrate if resourceName is null/undefined (avoid re-migration)
+            if (!system.resourceName) {
+              // Map subType to appropriate resourceName and subResource
+              switch (system.subType) {
+                case "psychic":
+                case "art":
+                case "adept":
+                  system.resourceName = "Effort";
+                  system.subResource = system.source || system.subType;
+                  needsUpdate = true;
+                  break;
+
+                case "spell":
+                  system.resourceName = "Slots";
+                  // Use spell level for subResource
+                  system.subResource = `Lv${system.level || 1}`;
+                  needsUpdate = true;
+                  break;
+
+                case "mutation":
+                  system.resourceName = "Uses";
+                  system.subResource = system.source || "";
+                  needsUpdate = true;
+                  break;
+
+                default:
+                  // Unknown subType - use source if available
+                  if (system.source) {
+                    system.resourceName = "Effort";
+                    system.subResource = system.source;
+                    needsUpdate = true;
+                  }
+                  break;
+              }
+
+              if (needsUpdate) {
+                await item.update({ "system": system });
+                powersMigrated++;
+                console.log(`Migrated power: ${item.name} (${system.subType}) -> ${system.resourceName}:${system.subResource}`);
+              } else {
+                powersSkipped++;
+              }
+            } else {
+              powersSkipped++;
+            }
+          } catch (itemError) {
+            const errorMsg = `Failed to migrate power ${item.name}: ${itemError.message}`;
+            console.error(errorMsg);
+            migrationErrors.push(errorMsg);
+          }
+        }
+      }
+
+      // Migrate actors' embedded powers
+      for (const actor of game.actors) {
+        const powerItems = actor.items.filter(i => i.type === "power");
+        for (const power of powerItems) {
+          try {
+            const system = foundry.utils.deepClone(power.system);
+            let needsUpdate = false;
+
+            if (!system.resourceName) {
+              switch (system.subType) {
+                case "psychic":
+                case "art": 
+                case "adept":
+                  system.resourceName = "Effort";
+                  system.subResource = system.source || system.subType;
+                  needsUpdate = true;
+                  break;
+
+                case "spell":
+                  system.resourceName = "Slots";
+                  system.subResource = `Lv${system.level || 1}`;
+                  needsUpdate = true;
+                  break;
+
+                case "mutation":
+                  system.resourceName = "Uses";
+                  system.subResource = system.source || "";
+                  needsUpdate = true;
+                  break;
+
+                default:
+                  if (system.source) {
+                    system.resourceName = "Effort";
+                    system.subResource = system.source;
+                    needsUpdate = true;
+                  }
+                  break;
+              }
+
+              if (needsUpdate) {
+                await power.update({ "system": system });
+                powersMigrated++;
+                console.log(`Migrated actor power: ${actor.name}.${power.name} -> ${system.resourceName}:${system.subResource}`);
+              } else {
+                powersSkipped++;
+              }
+            } else {
+              powersSkipped++;
+            }
+          } catch (itemError) {
+            const errorMsg = `Failed to migrate actor power ${actor.name}.${power.name}: ${itemError.message}`;
+            console.error(errorMsg);
+            migrationErrors.push(errorMsg);
+          }
+        }
+      }
+
+      const migrationTime = Date.now() - migrationStart;
+      const successMsg = `Migration 2.2.1 completed in ${migrationTime}ms: ${powersMigrated} powers migrated, ${powersSkipped} powers skipped (already migrated).`;
+      
+      console.log(successMsg);
+      
+      if (migrationErrors.length > 0) {
+        console.warn(`Migration 2.2.1 completed with ${migrationErrors.length} errors:`, migrationErrors);
+        ui.notifications?.warn(`Power migration completed with ${migrationErrors.length} errors. Check console for details.`);
+      } else {
+        ui.notifications?.info("Power resource field migration completed successfully.");
+      }
+
+    } catch (err) {
+      console.error("Critical migration 2.2.1 error:", err);
+      ui.notifications?.error(`Migration 2.2.1 failed: ${err.message}. Check console for details.`);
+      throw err;
+    }
+  },
 }
 
 function compareVersions(v1, v2) {

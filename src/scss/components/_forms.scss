@@ -223,6 +223,13 @@ input[type="checkbox"].small-checkbox {
     margin: -5px 0;
   }
 
+  .pool-key-display {
+    background-color: var(--color-form-disabled) !important;
+    color: var(--color-text-light-6) !important;
+    font-style: italic;
+    font-family: monospace;
+  }
+
 }
 
 .editor-content {

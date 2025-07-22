@@ -516,8 +516,24 @@ export default class SWNCharacter extends SWNActorBase {
 
         // Initialize or update pool
         if (pools[poolKey]) {
-          // Pool already exists from another feature, add to max
-          pools[poolKey].max += maxValue;
+          // Pool already exists from another feature, add to max and adjust value accordingly
+          const oldMax = pools[poolKey].max;
+          const newMax = oldMax + maxValue;
+          
+          // Preserve user-set value if possible, but allow it to increase if max increased
+          const sourcePoolData = this.parent._source.system.pools?.[poolKey];
+          const userSetValue = sourcePoolData?.value;
+          
+          if (userSetValue !== undefined) {
+            // User has manually set a value, respect it but cap at new max
+            pools[poolKey].value = Math.min(userSetValue, newMax);
+          } else {
+            // No user-set value, scale current value proportionally or set to new max if fully recovered
+            const wasAtMax = pools[poolKey].value >= pools[poolKey].max;
+            pools[poolKey].value = wasAtMax ? newMax : Math.min(pools[poolKey].value + maxValue, newMax);
+          }
+          
+          pools[poolKey].max = newMax;
         } else {
           // Calculate available effort (max - committed)
           const commitments = this.effortCommitments[poolKey] || [];

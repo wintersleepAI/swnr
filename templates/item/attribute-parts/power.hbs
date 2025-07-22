@@ -30,6 +30,8 @@
     </div>
   </div>
 
+  {{! Resource configuration now handled in consumption array below }}
+
 
   {{! Activation and Effects }}
   <div class='grid grid-4col'>
@@ -91,7 +93,18 @@
                   </select>
                 </td>
                 <td class="consumption-details">
-                  {{#if (eq consumption.type "consumableItem")}}
+                  {{#if (eq consumption.type "poolResource")}}
+                    <div class="pool-resource-config" style="display: flex; gap: 5px; flex-wrap: wrap;">
+                      <select name="system.consumptions.{{index}}.resourceName" data-dtype="String" style="flex: 1; min-width: 80px;">
+                        <option value="">Select Resource...</option>
+                        <option value="Effort" {{#if (eq consumption.resourceName "Effort")}}selected{{/if}}>Effort</option>
+                        <option value="Slots" {{#if (eq consumption.resourceName "Slots")}}selected{{/if}}>Slots</option>
+                        <option value="Points" {{#if (eq consumption.resourceName "Points")}}selected{{/if}}>Points</option>
+                        <option value="Uses" {{#if (eq consumption.resourceName "Uses")}}selected{{/if}}>Uses</option>
+                      </select>
+                      <input type="text" name="system.consumptions.{{index}}.subResource" value="{{#if consumption.subResource}}{{consumption.subResource}}{{/if}}" data-dtype="String" placeholder="Sub-resource" style="flex: 1; min-width: 80px;" />
+                    </div>
+                  {{else if (eq consumption.type "consumableItem")}}
                     <select name="system.consumptions.{{index}}.itemId" data-dtype="String">
                       <option value="">Select Item...</option>
                       {{#each @root.consumableItems}}

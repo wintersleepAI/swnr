@@ -1490,9 +1490,14 @@
         "save": "Save",
         "skill": "Skill Button (e.g. dex/pilot)",
         "range": "Range",
+        "level": "Level",
         "prepared": "Is Prepared?"
       },
       "resources": "Resources",
+      "passive": "Passive Ability",
+      "showLongDesc": "Show Long Desc.",
+      "hideLongDesc": "Hide Long Desc.",
+      "spendResources": "Spend Resources",
       "delete-item": "Delete Item",
       "show-item": "Show Item",
       "edit-item": "Edit Item",
@@ -2153,14 +2158,19 @@
       "noResourceCosts": "No resource consumption costs configured",
       "selectItem": "Select Item...",
       "none": "None",
-      "sourceEffort": "Source Effort",
-      "spellPoints": "Spell Points",
+      "poolResource": "Pool Resource",
       "systemStrain": "System Strain",
       "consumableItem": "Consumable Item",
       "uses": "Internal Uses",
+      "remaining": "remaining",
       "scene": "Per Scene",
       "day": "Per Day", 
-      "commit": "Committed"
+      "commit": "Committed",
+      "recover": "Recover",
+      "recoverResource": "Recover Resource",
+      "recoverStrain": "Recover System Strain",
+      "recoverItem": "Recover Item",
+      "recoverUses": "Recover Uses"
     }
   }
 }

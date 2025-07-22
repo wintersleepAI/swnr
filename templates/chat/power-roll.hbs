@@ -6,13 +6,13 @@
       <span class="hiddenShort">
         {{{trim power.system.description 200}}}
         <div class="border border-gray-700 placeholder-blue-800 pt-0">
-          <button class="longShowDesc">Show Long Desc.</button>
+          <button class="longShowDesc">{{localize "SWN.Actor.sheet.showLongDesc"}}</button>
         </div>
       </span>
       <div class="border border-gray-700 placeholder-blue-800 pt-0">
         <span style="display:none" class="hiddenLong">
         {{{ power.system.description }}}
-        <button class="longHideDesc">Hide Long Desc.</button>
+        <button class="longHideDesc">{{localize "SWN.Actor.sheet.hideLongDesc"}}</button>
         </span>
       </div>
     {{else}}
@@ -24,25 +24,25 @@
 
   {{#if power.system.range}}
       <div >
-        {{localize 'swnr.sheet.powers.range'}}: {{ power.system.range }}
+        {{localize 'SWN.Actor.sheet.powers.range'}}: {{ power.system.range }}
       </div>
   {{/if}}
 
   {{#if power.system.duration}}
       <div >
-        {{localize 'swnr.sheet.powers.duration'}}: {{ power.system.duration }}
+        {{localize 'SWN.Actor.sheet.powers.duration'}}: {{ power.system.duration }}
       </div>
   {{/if}}
 
   {{#if power.system.roll}}
-    <span>{{localize 'swnr.sheet.powers.roll'}}:</span>
+    <span>{{localize 'SWN.Actor.sheet.powers.roll'}}:</span>
     <span class="roll roll-damage">{{{ powerRoll }}}</span>
   {{/if}}
 
   {{#if power.system.save}}
   <div class="card-buttons">
       <button data-action="save" data-save="{{power.system.save}}">
-          Save {{power.system.save}}
+          {{localize "SWN.Actor.sheet.powers.save"}} {{power.system.save}}
       </button>
   </div>
   {{/if}}
@@ -57,16 +57,23 @@
 
 
   {{! Resource spending button for unified power system }}
-  {{#if (or power.system.resourceCost power.system.strainCost)}}
+  {{#if power.system.consumptions.length}}
   <div class="card-buttons">
       <button data-action="use-power" data-power-id="{{power.id}}" data-actor-id="{{actor.id}}">
-          Spend Resources
-          {{#if power.system.resourceCost}}
-            ({{power.system.resourceCost}} {{power.system.resourceName}}{{#if power.system.subResource}}:{{power.system.subResource}}{{/if}})
-          {{/if}}
-          {{#if power.system.strainCost}}
-            {{#if power.system.resourceCost}}+{{/if}}({{power.system.strainCost}} SS)
-          {{/if}}
+          {{localize "SWN.Actor.sheet.spendResources"}}
+          {{#each power.system.consumptions}}
+            {{#if (ne type "none")}}
+              {{#if (eq type "poolResource")}}
+                ({{usesCost}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}})
+              {{else if (eq type "systemStrain")}}
+                ({{usesCost}} {{localize "swnr.consumption.systemStrain"}})
+              {{else if (eq type "uses")}}
+                ({{usesCost}} {{localize "swnr.consumption.uses"}})
+              {{else if (eq type "consumableItem")}}
+                ({{usesCost}} {{localize "swnr.consumption.consumableItem"}})
+              {{/if}}
+            {{/if}}
+          {{/each}}
       </button>
   </div>
   {{/if}}

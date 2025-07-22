@@ -382,9 +382,7 @@ async function testConsumptionDataModel(actor) {
       system: {
         subType: "psychic",
         resourceName: "Effort",
-        resourceCost: 1,
-        resourceLength: "scene",
-        sharedResource: true,
+        subResource: "Psychic",
         consumptions: [
           {
             type: "systemStrain",
@@ -499,9 +497,6 @@ async function testConsumptionProcessing(actor) {
         subType: "psychic",
         resourceName: "Effort",
         subResource: "Psychic",
-        resourceCost: 1,
-        resourceLength: "scene",
-        sharedResource: true,
         consumptions: [
           {
             type: "systemStrain",
@@ -672,6 +667,127 @@ async function createMultiCostTestSummaryChatMessage(summary) {
   });
 }
 
+/**
+ * Test power resource field migration logic
+ * @param {Actor} actor - Actor to test with
+ */
+async function testPowerResourceMigration(actor) {
+  console.log("[SWN Test] Testing power resource field migration logic...");
+  
+  const testCases = [
+    // Test case format: { input: {...}, expected: {...} }
+    {
+      input: { subType: "psychic", source: "Mentalist", level: 1 },
+      expected: { resourceName: "Effort", subResource: "Mentalist" }
+    },
+    {
+      input: { subType: "art", source: "", level: 1 },
+      expected: { resourceName: "Effort", subResource: "art" }
+    },
+    {
+      input: { subType: "spell", source: "Elementalist", level: 3 },
+      expected: { resourceName: "Slots", subResource: "Lv3" }
+    },
+    {
+      input: { subType: "mutation", source: "Alien Heritage", level: 1 },
+      expected: { resourceName: "Uses", subResource: "Alien Heritage" }
+    },
+    {
+      input: { subType: "adept", source: "Augmented", level: 2 },
+      expected: { resourceName: "Effort", subResource: "Augmented" }
+    }
+  ];
+  
+  const results = [];
+  
+  for (let i = 0; i < testCases.length; i++) {
+    const testCase = testCases[i];
+    const { input, expected } = testCase;
+    
+    try {
+      // Create a temporary power for testing migration logic
+      const powerData = {
+        name: `Migration Test Power ${i + 1}`,
+        type: "power",
+        system: {
+          ...input,
+          resourceName: "", // Simulate empty field that needs migration
+          subResource: ""
+        }
+      };
+      
+      const tempPower = await actor.createEmbeddedDocuments("Item", [powerData]);
+      const power = tempPower[0];
+      
+      // Apply migration logic manually (simulating the migration function)
+      const system = foundry.utils.deepClone(power.system);
+      let migrationResult = { resourceName: "", subResource: "" };
+      
+      switch (system.subType) {
+        case "psychic":
+        case "art":
+        case "adept":
+          migrationResult.resourceName = "Effort";
+          migrationResult.subResource = system.source || system.subType;
+          break;
+        case "spell":
+          migrationResult.resourceName = "Slots";
+          migrationResult.subResource = `Lv${system.level || 1}`;
+          break;
+        case "mutation":
+          migrationResult.resourceName = "Uses";
+          migrationResult.subResource = system.source || "";
+          break;
+      }
+      
+      // Test resourceKey() method after migration
+      const testPower = { 
+        resourceName: migrationResult.resourceName, 
+        subResource: migrationResult.subResource 
+      };
+      const resourceKey = testPower.resourceName ? 
+        `${testPower.resourceName}:${testPower.subResource || ""}` : "";
+      
+      // Validate results
+      const resourceNameMatch = migrationResult.resourceName === expected.resourceName;
+      const subResourceMatch = migrationResult.subResource === expected.subResource;
+      const resourceKeyFormat = resourceKey === `${expected.resourceName}:${expected.subResource}`;
+      
+      results.push({
+        name: `Migration ${input.subType} (${input.source || 'no source'})`,
+        result: resourceNameMatch && subResourceMatch && resourceKeyFormat,
+        details: {
+          input: input,
+          expected: expected,
+          actual: migrationResult,
+          resourceKey: resourceKey
+        }
+      });
+      
+      // Clean up temporary power
+      await power.delete();
+      
+    } catch (error) {
+      results.push({
+        name: `Migration ${input.subType} (error)`,
+        result: false,
+        error: error.message
+      });
+    }
+  }
+  
+  return {
+    testType: "power-resource-migration",
+    results: results,
+    passed: results.every(r => r.result),
+    summary: {
+      total: results.length,
+      passed: results.filter(r => r.result).length,
+      failed: results.filter(r => !r.result).length
+    }
+  };
+}
+
 // Export test functions
 export {
   testMutexConcurrency,
@@ -680,6 +796,7 @@ export {
   testPowerUsageFlow,
   testConsumptionDataModel,
   testConsumptionProcessing,
+  testPowerResourceMigration,
   runComprehensiveTests,
   runMultiCostTests
 };

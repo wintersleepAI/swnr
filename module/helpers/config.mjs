@@ -75,8 +75,7 @@ SWN.poolResourceNames = ["Effort", "Slots", "Points", "Strain", "Uses"];
 
 SWN.consumptionTypes = {
   none: 'swnr.consumption.none',
-  sourceEffort: 'swnr.consumption.sourceEffort', 
-  spellPoints: 'swnr.consumption.spellPoints',
+  poolResource: 'swnr.consumption.poolResource',
   systemStrain: 'swnr.consumption.systemStrain',
   consumableItem: 'swnr.consumption.consumableItem',
   uses: 'swnr.consumption.uses'

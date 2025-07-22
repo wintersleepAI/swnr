@@ -25,11 +25,25 @@ export default class SWNPower extends SWNItemBase {
     });
     schema.prepared = new fields.BooleanField({initial: false});
 
+    // Resource consumption now handled entirely through consumption array
+
     // Multi-cost consumption system - expandable array
     schema.consumptions = new fields.ArrayField(new fields.SchemaField({
       type: new fields.StringField({
         choices: Object.keys(CONFIG.SWN.consumptionTypes),
         initial: "none"
+      }),
+      // Resource pool fields (for poolResource type)
+      resourceName: new fields.StringField({
+        choices: ["Effort", "Slots", "Points", "Uses"],
+        initial: null,
+        required: false,
+        nullable: true
+      }),
+      subResource: new fields.StringField({
+        initial: null,
+        required: false,
+        nullable: true
       }),
       usesCost: new fields.NumberField({ initial: 1, min: 0 }),
       cadence: new fields.StringField({
@@ -81,6 +95,17 @@ export default class SWNPower extends SWNItemBase {
         }
       });
     }
+  }
+
+  /**
+   * Helper to generate pool key from resourceName and subResource
+   * @param {string} resourceName - Resource name (e.g., "Effort")
+   * @param {string} subResource - Sub-resource (e.g., "Psychic")
+   * @returns {string} Pool key in format "ResourceName:SubResource"
+   */
+  _getPoolKey(resourceName, subResource) {
+    if (!resourceName) return "";
+    return `${resourceName}:${subResource || ""}`;
   }
 
   /**
@@ -280,15 +305,29 @@ export default class SWNPower extends SWNItemBase {
     const actor = item.actor;
     const rollMode = game.settings.get("core", "rollMode");
 
+    // Calculate total costs from consumption results
+    const poolResourceResults = consumptionResults.filter(r => r.type === "poolResource");
+    const totalResourceSpent = poolResourceResults
+      .reduce((sum, r) => sum + (r.spent || 0), 0);
+    
+    const totalStrainCost = consumptionResults
+      .filter(r => r.type === "systemStrain")
+      .reduce((sum, r) => sum + (r.spent || 0), 0);
+
+    // Get primary resource info from first pool resource consumption
+    const primaryResource = poolResourceResults[0];
+    const resourceName = primaryResource?.resourceName || "Resource";
+    const resourceKey = primaryResource?.poolKey || "";
+
     const templateData = {
       actor: actor,
       power: item,
       powerRoll: powerRoll ? await powerRoll.render() : null,
-      resourceSpent: this.resourceCost || 0,
-      resourceName: this.resourceName,
-      resourceKey: this.resourceKey(),
-      strainCost: this.strainCost || 0,
-      isPassive: this.resourceName === "",
+      resourceSpent: totalResourceSpent,
+      resourceName: resourceName,
+      resourceKey: resourceKey,
+      strainCost: totalStrainCost,
+      isPassive: !this.hasConsumption(),
       consumptions: consumptionResults
     };
 
@@ -343,9 +382,15 @@ export default class SWNPower extends SWNItemBase {
    */
   async _validateConsumption(actor, consumes, consumptionIndex = 0) {
     switch (consumes.type) {
-      case "sourceEffort":
-        const source = this.parent.system.source || "";
-        const poolKey = `Effort:${source}`;
+      case "poolResource":
+        const poolKey = this._getPoolKey(consumes.resourceName, consumes.subResource);
+        if (!poolKey) {
+          return { 
+            valid: false, 
+            reason: "no-resource-configured",
+            message: "Pool resource consumption requires resourceName to be configured"
+          };
+        }
         const pools = actor.system.pools || {};
         const pool = pools[poolKey];
         
@@ -354,19 +399,6 @@ export default class SWNPower extends SWNItemBase {
             valid: false, 
             reason: "insufficient-source-effort",
             message: `Insufficient source effort: ${pool?.value || 0}/${pool?.max || 0} available, ${consumes.usesCost} required`
-          };
-        }
-        return { valid: true };
-        
-      case "spellPoints":
-        const spellPools = actor.system.pools || {};
-        const spellPool = spellPools["Points:Spell"];
-        
-        if (!spellPool || spellPool.value < consumes.usesCost) {
-          return { 
-            valid: false, 
-            reason: "insufficient-spell-points",
-            message: `Insufficient spell points: ${spellPool?.value || 0}/${spellPool?.max || 0} available, ${consumes.usesCost} required`
           };
         }
         return { valid: true };
@@ -420,10 +452,8 @@ export default class SWNPower extends SWNItemBase {
    */
   async _processConsumption(actor, consumes, options, consumptionIndex = -1) {
     switch (consumes.type) {
-      case "sourceEffort":
-        return await this._processSourceEffort(actor, consumes);
-      case "spellPoints":
-        return await this._processSpellPoints(actor, consumes);
+      case "poolResource":
+        return await this._processPoolResource(actor, consumes);
       case "systemStrain":
         return await this._processSystemStrain(actor, consumes);
       case "consumableItem":
@@ -436,19 +466,26 @@ export default class SWNPower extends SWNItemBase {
   }
 
   /**
-   * Process source-based effort consumption
+   * Process generic pool resource consumption
    */
-  async _processSourceEffort(actor, consumes) {
-    const source = this.parent.system.source || "";
-    const poolKey = `Effort:${source}`;
+  async _processPoolResource(actor, consumes) {
+    const poolKey = this._getPoolKey(consumes.resourceName, consumes.subResource);
+    if (!poolKey) {
+      return { 
+        success: false, 
+        reason: "no-resource-configured",
+        message: "Pool resource consumption requires resourceName to be configured"
+      };
+    }
+
     const pools = actor.system.pools || {};
     const pool = pools[poolKey];
     
     if (!pool || pool.value < consumes.usesCost) {
       return { 
         success: false, 
-        reason: "insufficient-source-effort",
-        message: `Insufficient source effort: ${pool?.value || 0}/${pool?.max || 0} available, ${consumes.usesCost} required`,
+        reason: "insufficient-pool-resource",
+        message: `Insufficient ${consumes.resourceName}${consumes.subResource ? ':' + consumes.subResource : ''}: ${pool?.value || 0}/${pool?.max || 0} available, ${consumes.usesCost} required`,
         poolKey,
         required: consumes.usesCost,
         available: pool?.value || 0
@@ -481,41 +518,16 @@ export default class SWNPower extends SWNItemBase {
     
     return { 
       success: true, 
-      type: "sourceEffort",
+      type: "poolResource",
       poolKey,
+      resourceName: consumes.resourceName,
+      subResource: consumes.subResource,
       spent: consumes.usesCost,
       cadence: consumes.cadence
     };
   }
 
-  /**
-   * Process spell points consumption
-   */
-  async _processSpellPoints(actor, consumes) {
-    const poolKey = "Points:Spell";
-    const pools = actor.system.pools || {};
-    const pool = pools[poolKey];
-    
-    if (!pool || pool.value < consumes.usesCost) {
-      return { 
-        success: false, 
-        reason: "insufficient-spell-points",
-        message: `Insufficient spell points: ${pool?.value || 0}/${pool?.max || 0} available, ${consumes.usesCost} required`,
-        poolKey,
-        required: consumes.usesCost,
-        available: pool?.value || 0
-      };
-    }
-    
-    await actor.update({ [`system.pools.${poolKey}.value`]: pool.value - consumes.usesCost });
-    
-    return { 
-      success: true, 
-      type: "spellPoints",
-      poolKey,
-      spent: consumes.usesCost
-    };
-  }
+  // Legacy consumption handlers removed - now using generic poolResource type
 
   /**
    * Process system strain consumption

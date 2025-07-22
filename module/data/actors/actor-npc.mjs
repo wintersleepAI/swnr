@@ -144,8 +144,14 @@ export default class SWNNPC extends SWNActorBase {
 
         // Initialize or update pool
         if (pools[poolKey]) {
-          // Pool already exists from another feature, add to max
-          pools[poolKey].max += maxValue;
+          // Pool already exists from another feature, add to max and adjust value accordingly
+          const oldMax = pools[poolKey].max;
+          const newMax = oldMax + maxValue;
+          
+          // Preserve user-set value if possible, but allow it to increase if max increased
+          const wasAtMax = pools[poolKey].value >= pools[poolKey].max;
+          pools[poolKey].value = wasAtMax ? newMax : Math.min(pools[poolKey].value + maxValue, newMax);
+          pools[poolKey].max = newMax;
         } else {
           // Create new pool, preserving current value if it exists
           const currentValue = this.pools[poolKey]?.value || 0;

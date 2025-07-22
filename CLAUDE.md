@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-This file provides focused guidance for Claude Code when working with this **Foundry VTT V13** Stars Without Number Redux (SWNR) system.
+This file provides focused guidance for Claude Code when working with this **Foundry VTT V13** Stars Without Number Redux (SWNR) system. The system supports most features of the Kevin Crawford suite of compatable games including WWN, CWN, and AWN.
 
 ## 🚨 CRITICAL: Foundry V13 Context
 
@@ -37,11 +37,24 @@ export default class SWNSheet extends api.HandlebarsApplicationMixin(api.Applica
 
 - **Document Data**: `actor._source.system.pools` (stored values)
 - **Computed Data**: `actor.system.pools` (calculated values)
-- **Pool Keys**: `"ResourceName:SubResource"` (e.g., `"Effort:Psychic"`)
+- **Pool Keys**: `"ResourceName:SubResource"` (e.g., `"Effort:Psychic"`, `"Slots:Lv3"`)
 - **Pool Structure**: `{ value, max, cadence, committed?, commitments? }`
+
+### Power Resource Integration (v2.2.1)
+**Powers now have proper resource field integration:**
+
+- **Resource Fields**: Powers have `resourceName` (nullable) and `subResource` (nullable) fields
+- **Resource Key Method**: `power.system.resourceKey()` returns `"ResourceName:SubResource"` format
+- **Migration**: v2.2.1 automatically populates fields from existing power data
+- **UI Integration**: Power sheets include resource configuration section
+- **Pool Lookup**: Powers use `resourceKey()` method to find matching actor pools
 
 ### Pool Update Patterns
 ```javascript
+// WORKING: Using power's resourceKey() method (preferred for powers)
+const poolKey = power.system.resourceKey();
+await actor.update({ [`system.pools.${poolKey}.value`]: newValue });
+
 // WORKING: Targeted updates (preferred for single changes)
 await actor.update({ [`system.pools.${poolKey}.value`]: newValue });
 
@@ -62,6 +75,14 @@ const currentValue = sourceValue !== undefined ?
 - `npm run watch` - Auto-compile SCSS during development
 
 ## Development Patterns
+
+- dev documents are in ~/docs/dev and contains
+    - knownIssues.md
+        - use this document to track issues discovered but not directly addressed durring development
+        - check this document when working to see if a existing issue may be dealt with when working on your current task
+    - readme.md
+        - keep this updated with how you are using your developemnt documents
+    - various planning documents usually in .md format often in subfolders
 
 ### DO (V13 Modern)
 ```javascript

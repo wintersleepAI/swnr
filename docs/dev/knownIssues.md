@@ -66,11 +66,12 @@ This document tracks known issues in the codebase that should be considered when
 - **Note**: No apparent validation system for pack/unpack operations
 - **Consider**: Adding validation scripts when working on compendium tooling
 
-### ~~Unified Power System Implementation~~ ✅ **COMPLETED v2.1.0**
+### ~~Unified Power System Implementation~~ ✅ **COMPLETED v2.2.1**
 **Location**: `module/data/items/item-power.mjs`, `module/data/actors/base-actor.mjs`
-- **Resolution**: Successfully implemented unified power system with comprehensive migration
+- **Resolution**: Successfully implemented unified power system with comprehensive migration and resource field integration
 - **Status**: Production ready, all major power types supported (psychic, art, adept, spell, mutation)
-- **Impact**: Resolved migration validation and error handling issues as part of implementation
+- **Impact**: Resolved migration validation and error handling issues, implemented complete resource key architecture
+- **Features**: Powers now have proper `resourceName`/`subResource` fields with automatic migration from legacy data
 
 ### ~~Feature-Based Pool Generation Architecture~~ ✅ **COMPLETED Sprint 2**
 **Location**: `module/data/items/item-feature.mjs`, `module/data/actors/actor-character.mjs`
@@ -78,6 +79,39 @@ This document tracks known issues in the codebase that should be considered when
 - **Status**: Production ready, proper SWN/CWN game mechanics implemented
 - **Impact**: Features/Foci/Edges now grant pools, Powers consume from shared actor pools
 - **Migration**: v2.1.1 automatically converts existing power-based pools to feature-based
+
+### ~~Power Resource Field Implementation~~ ✅ **COMPLETED v2.2.1**
+**Location**: `module/data/items/item-power.mjs`, `module/migration.mjs`, `templates/item/attribute-parts/power.hbs`
+- **Resolution**: Implemented missing `resourceName` and `subResource` fields with proper schema validation
+- **Status**: Production ready, includes automatic migration and comprehensive UI
+- **Impact**: Powers can now properly reference actor resource pools using consistent `resourceKey()` method
+- **Migration**: v2.2.1 automatically populates resource fields from existing power data (subType, source, level)
+
+### TODO/Placeholder Code Issues
+
+### 6. Broken initCompendSkills Function (Priority: Medium)
+**Location**: `module/helpers/utils.mjs:102`
+- **Problem**: Function shows error notification "TODO - implement initCompendSkills" and returns early, with dead code after return
+- **Impact**: User-facing error message, unused function
+- **Consider fixing when**: Working on skill management or compendium integration
+
+### 7. Disabled Item Search Feature (Priority: Low)
+**Location**: `src/scss/components/_items.scss`
+- **Problem**: Item search UI is hidden with `display: none` and TODO comment "remove once search is implemented"
+- **Impact**: Missing search functionality in item lists
+- **Consider fixing when**: Working on item management or search features
+
+### 8. Commented Settings Code (Priority: Low)
+**Location**: `module/helpers/register-settings.mjs`
+- **Problem**: Commented-out `showTempAttrMod` setting with TODO comments
+- **Impact**: Code bloat, unclear whether feature should be implemented
+- **Consider fixing when**: Reviewing settings system or temporary attribute modifiers
+
+### 9. Dead calculateStats Code (Priority: Low)
+**Location**: `module/sheets/actor-sheet.mjs`
+- **Problem**: Commented `calculateStats(stats)` call with TODO "should we use this?"
+- **Impact**: Code clarity, uncertain about stat calculation requirements
+- **Consider fixing when**: Working on actor stat calculations
 
 ### Security Notes
 - Macro execution follows Foundry's standard pattern but uses direct command strings
