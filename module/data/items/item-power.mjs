@@ -256,8 +256,9 @@ export default class SWNPower extends SWNItemBase {
     
     return {
       success: true,
-      consumptions: consumptionResults,
-      ...result
+      consumptionResults: consumptionResults,
+      powerRoll: result.powerRoll,
+      chatMessage: result.chatMessage
     };
   }
 
@@ -270,6 +271,67 @@ export default class SWNPower extends SWNItemBase {
       success: true,
       passive: true,
       ...result
+    };
+  }
+
+  /**
+   * Perform power usage without creating chat message (for chat updates)
+   */
+  async _performUseForChatUpdate(options = {}) {
+    const item = this.parent;
+    const actor = item.actor;
+    const { skipCost = false } = options;
+
+    // Skip cost validation if skipCost is true or no consumptions defined
+    if (skipCost || !this.hasConsumption()) {
+      // Don't roll dice for passive powers in chat updates
+      return {
+        success: true,
+        passive: true,
+        consumptionResults: [],
+        powerRoll: null
+      };
+    }
+
+    // Process all consumption types
+    const consumptionResults = [];
+    const consumptions = this.getConsumptions();
+    
+    // First pass: validate all consumption requirements
+    for (let i = 0; i < consumptions.length; i++) {
+      const consumes = consumptions[i];
+      const validation = await this._validateConsumption(actor, consumes, i);
+      if (!validation.valid) {
+        ui.notifications?.warn(validation.message || "Consumption requirements not met");
+        return {
+          success: false,
+          reason: "insufficient-resources",
+          message: validation.message
+        };
+      }
+    }
+
+    // Second pass: apply consumption
+    for (let i = 0; i < consumptions.length; i++) {
+      const consumes = consumptions[i];
+      const result = await this._processConsumption(actor, consumes, options, i);
+      if (!result.success) {
+        ui.notifications?.warn(result.message || "Consumption processing failed");
+        return {
+          success: false,
+          reason: result.reason,
+          message: result.message,
+          consumptionFailure: result
+        };
+      }
+      consumptionResults.push(result);
+    }
+
+    // Don't roll dice - chat handler will preserve existing roll
+    return {
+      success: true,
+      consumptionResults: consumptionResults,
+      powerRoll: null
     };
   }
 
@@ -305,27 +367,15 @@ export default class SWNPower extends SWNItemBase {
     const actor = item.actor;
     const rollMode = game.settings.get("core", "rollMode");
 
-    // Calculate total costs from consumption results
-    const poolResourceResults = consumptionResults.filter(r => r.type === "poolResource");
-    const totalResourceSpent = poolResourceResults
-      .reduce((sum, r) => sum + (r.spent || 0), 0);
-    
+    // Calculate strain cost from consumption results
     const totalStrainCost = consumptionResults
       .filter(r => r.type === "systemStrain")
       .reduce((sum, r) => sum + (r.spent || 0), 0);
-
-    // Get primary resource info from first pool resource consumption
-    const primaryResource = poolResourceResults[0];
-    const resourceName = primaryResource?.resourceName || "Resource";
-    const resourceKey = primaryResource?.poolKey || "";
 
     const templateData = {
       actor: actor,
       power: item,
       powerRoll: powerRoll ? await powerRoll.render() : null,
-      resourceSpent: totalResourceSpent,
-      resourceName: resourceName,
-      resourceKey: resourceKey,
       strainCost: totalStrainCost,
       isPassive: !this.hasConsumption(),
       consumptions: consumptionResults
@@ -359,10 +409,13 @@ export default class SWNPower extends SWNItemBase {
       actor: actor,
       power: item,
       powerRoll: await powerRoll.render(),
+      strainCost: 0,
+      isPassive: !this.hasConsumption(),
+      consumptions: [] // Empty for initial state - shows "Spend Resources" button
     };
     const rollMode = game.settings.get("core", "rollMode");
 
-    const template = "systems/swnr/templates/chat/power-roll.hbs";
+    const template = "systems/swnr/templates/chat/power-usage.hbs";
     const chatContent = await foundry.applications.handlebars.renderTemplate(template, dialogData);
     const chatData = {
       speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),

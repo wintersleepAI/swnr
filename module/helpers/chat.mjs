@@ -5,7 +5,7 @@ export function chatListeners(message, html) {
     _addRerollButton($(div));
   });
   
-  // Add health buttons to damage rolls specifically
+  // Add health buttons to damage rolls
   html.find(".roll-damage").each((_i, div) => {
     _addHealthButtons($(div));
   });
@@ -126,6 +126,12 @@ export function _addRerollButton(html) {
 
 export function _addHealthButtons(html) {
   const totalDiv = html.find(".dice-total");
+  
+  // Check if health buttons already exist to prevent duplicates
+  if (totalDiv.parent().find(".dmgBtn-container").length > 0) {
+    return;
+  }
+  
   const total = parseInt(totalDiv.text());
   if (isNaN(total)) {
     console.log("Error in converting a string to a number " + totalDiv.text());
@@ -538,13 +544,48 @@ export async function _onChatCardAction(
     }
     
     try {
-      // Use the power's unified resource spending system
-      await power.system.use();
+      // Use the power's resource spending system (without creating new chat message)
+      const result = await power.system._performUseForChatUpdate();
       
-      // Disable the button to prevent multiple clicks
-      button.disabled = true;
-      button.style.opacity = "0.5";
-      button.innerHTML = "<i class='fas fa-check'></i> Resources Spent";
+      if (result.success) {
+        // Update the existing chat message with the new state showing recovery buttons
+        // Preserve the original power roll from the existing message (don't reroll!)
+        const chatCard = $(event.currentTarget).closest('.message');
+        const existingRollElement = chatCard.find('.roll');
+        let existingPowerRoll = null;
+        
+        if (existingRollElement.length > 0) {
+          // Get the full HTML content including the roll tooltip and data
+          existingPowerRoll = existingRollElement[0].outerHTML;
+        }
+        const consumptionResults = result.consumptionResults || [];
+        
+        // Calculate strain cost
+        const totalStrainCost = consumptionResults
+          .filter(r => r.type === "systemStrain")
+          .reduce((sum, r) => sum + (r.spent || 0), 0);
+
+        const templateData = {
+          actor: actor,
+          power: power,
+          powerRoll: existingPowerRoll, // Will be null if no roll exists
+          strainCost: totalStrainCost,
+          isPassive: !power.system.hasConsumption(),
+          consumptions: consumptionResults
+        };
+
+
+
+        const template = "systems/swnr/templates/chat/power-usage.hbs";
+        const newContent = await foundry.applications.handlebars.renderTemplate(template, templateData);
+        
+        // Update the current message
+        const messageId = chatCard.data('message-id');
+        const message = game.messages?.get(messageId);
+        if (message) {
+          await message.update({ content: newContent });
+        }
+      }
       
     } catch (error) {
       ui.notifications?.error(`Failed to use power: ${error.message}`);
@@ -727,6 +768,72 @@ export async function _onChatCardAction(
     } catch (error) {
       ui.notifications?.error(`Failed to recover uses: ${error.message}`);
       console.error("Uses recovery error:", error);
+    }
+  } else if (action === "releaseCommitment") {
+    // Handle manual release of committed effort from chat
+    const poolKey = button.dataset.poolKey;
+    const powerId = button.dataset.powerId;
+    const actorId = button.dataset.actorId;
+    
+    if (!poolKey || !powerId || !actorId) {
+      ui.notifications?.error("Missing data for commitment release");
+      return;
+    }
+    
+    const actor = game.actors?.get(actorId);
+    if (!actor) {
+      ui.notifications?.error("Could not find actor for commitment release");
+      return;
+    }
+    
+    // Check if user can control this actor
+    if (!actor.isOwner && !game.user?.isGM) {
+      ui.notifications?.warn("You do not have permission to modify this actor's commitments");
+      return;
+    }
+    
+    try {
+      const commitments = actor.system.effortCommitments || {};
+      const poolCommitments = commitments[poolKey] || [];
+      
+      // Find and remove the specific commitment
+      const commitmentIndex = poolCommitments.findIndex(c => c.powerId === powerId);
+      if (commitmentIndex === -1) {
+        ui.notifications?.warn("Could not find commitment to release");
+        return;
+      }
+      
+      const releasedCommitment = poolCommitments[commitmentIndex];
+      poolCommitments.splice(commitmentIndex, 1);
+      
+      // Update actor with released commitment
+      const newCommitments = { ...commitments };
+      newCommitments[poolKey] = poolCommitments;
+      
+      // Recalculate pool availability
+      const pools = actor.system.pools || {};
+      const pool = pools[poolKey];
+      if (pool) {
+        const totalCommitted = poolCommitments.reduce((sum, c) => sum + c.amount, 0);
+        const newValue = Math.min(pool.max, pool.value + releasedCommitment.amount);
+        
+        await actor.update({
+          "system.effortCommitments": newCommitments,
+          [`system.pools.${poolKey}.value`]: newValue,
+          [`system.pools.${poolKey}.committed`]: totalCommitted,
+          [`system.pools.${poolKey}.commitments`]: poolCommitments
+        });
+        
+        // Disable the button
+        button.disabled = true;
+        button.style.opacity = "0.5";
+        button.innerHTML = "<i class='fas fa-check'></i> Released";
+        
+        ui.notifications?.info(`Released ${releasedCommitment.amount} effort from ${releasedCommitment.powerName}`);
+      }
+    } catch (error) {
+      ui.notifications?.error(`Failed to release commitment: ${error.message}`);
+      console.error("Commitment release error:", error);
     }
   }
 }

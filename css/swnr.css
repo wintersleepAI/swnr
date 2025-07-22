@@ -233,15 +233,6 @@
   font-size: 0.85em;
 }
 
-.chat-message .power-usage .resource-cost .resource-spent {
-  color: var(--color-text-light-7);
-}
-
-.chat-message .power-usage .resource-cost .resource-spent i {
-  color: var(--color-text-light-6);
-  margin-right: 0.25rem;
-}
-
 .chat-message .power-usage .resource-cost .strain-cost {
   color: var(--color-text-light-7);
 }

@@ -1082,7 +1082,7 @@ export class SWNActorSheet extends SWNBaseSheet {
     const pool = pools[poolKey];
     if (pool) {
       const totalCommitted = poolCommitments.reduce((sum, c) => sum + c.amount, 0);
-      const newValue = Math.max(0, pool.max - totalCommitted);
+      const newValue = Math.min(pool.max, pool.value + releasedCommitment.amount);
       
       await actor.update({
         "system.effortCommitments": newCommitments,

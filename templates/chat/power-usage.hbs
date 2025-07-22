@@ -1,44 +1,23 @@
 <div class="chat-card power-usage">
   <h3 title="{{ power.system.description }}">{{ power.name }}</h3>
 
-  {{#unless isPassive}}
+  {{! Show resource costs if resources were spent }}
+  {{#if consumptions}}
     <div class="resource-cost">
-      {{#if resourceSpent}}
-        <span class="resource-spent">
-          <i class="fas fa-minus-circle"></i>
-          {{resourceSpent}} {{resourceName}}{{#if power.system.subResource}} ({{power.system.subResource}}){{/if}}
-        </span>
-      {{/if}}
       {{#if strainCost}}
         <span class="strain-cost">
           <i class="fas fa-bolt"></i>
-          {{strainCost}} {{localize "swnr.consumption.systemStrain"}}
+          {{strainCost}} System Strain
         </span>
       {{/if}}
-      {{#if consumptions}}
-        {{#each consumptions}}
-          <span class="consumption-cost consumption-{{type}}">
-            {{#eq type "poolResource"}}
-              <i class="fas fa-circle-minus"></i>
-              {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}} ({{#eq cadence "scene"}}{{localize "SWN.pools.refreshSummary.scene"}}{{/eq}}{{#eq cadence "rest"}}{{localize "SWN.pools.refreshSummary.rest"}}{{/eq}}{{#eq cadence "day"}}{{localize "SWN.pools.refreshSummary.day"}}{{/eq}}{{#eq cadence "commit"}}{{localize "SWN.pools.commitment.release"}}{{/eq}})
-            {{/eq}}
-            {{#eq type "systemStrain"}}
-              <i class="fas fa-exclamation-triangle"></i>
-              {{spent}} {{localize "swnr.consumption.systemStrain"}}
-            {{/eq}}
-            {{#eq type "consumableItem"}}
-              <i class="fas fa-flask"></i>
-              {{spent}} {{itemName}}
-            {{/eq}}
-            {{#eq type "uses"}}
-              <i class="fas fa-battery-quarter"></i>
-              {{spent}} {{localize "swnr.consumption.uses"}} ({{remaining}}/{{max}} {{localize "swnr.consumption.remaining"}})
-            {{/eq}}
-          </span>
-        {{/each}}
-      {{/if}}
+      {{#each consumptions}}
+        <span class="consumption-cost consumption-{{type}}">
+          <i class="fas fa-circle-minus"></i>
+          {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}} ({{cadence}})
+        </span>
+      {{/each}}
     </div>
-  {{/unless}}
+  {{/if}}
 
   <div class="chat-desc">
     {{#if (wouldTrim power.system.description 200)}}
@@ -108,41 +87,48 @@
       <span>{{localize "swnr.sheet.passive"}}</span>
     </div>
   {{else}}
-    {{! Resource management buttons for active powers }}
     <div class="card-buttons resource-management">
-      {{#if resourceSpent}}
-        <button data-action="recover-resource" data-pool-key="{{resourceKey}}" data-amount="{{resourceSpent}}" data-actor-id="{{actor.id}}">
-          <i class="fas fa-plus-circle"></i>
-          {{localize "swnr.consumption.recover"}} {{resourceSpent}} {{resourceName}}
-        </button>
-      {{/if}}
-      {{#if strainCost}}
-        <button data-action="recover-strain" data-amount="{{strainCost}}" data-actor-id="{{actor.id}}">
-          <i class="fas fa-heart"></i>
-          {{localize "swnr.consumption.recoverStrain"}} {{strainCost}}
-        </button>
-      {{/if}}
       {{#if consumptions}}
+        {{! Show recovery buttons if resources were spent }}
+        {{#if strainCost}}
+          <button data-action="recover-strain" data-amount="{{strainCost}}" data-actor-id="{{actor.id}}">
+            <i class="fas fa-heart"></i>
+            {{localize "swnr.consumption.recoverStrain"}} {{strainCost}}
+          </button>
+        {{/if}}
         {{#each consumptions}}
-          {{#eq type "poolResource"}}
+          {{#if (eq cadence "commit")}}
+            <button data-action="releaseCommitment" data-pool-key="{{poolKey}}" data-power-id="{{../power.id}}" data-actor-id="{{../actor.id}}">
+              <i class="fas fa-times"></i>
+              Release {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}}
+            </button>
+          {{else}}
             <button data-action="recover-resource" data-pool-key="{{poolKey}}" data-amount="{{spent}}" data-actor-id="{{../actor.id}}">
               <i class="fas fa-plus-circle"></i>
-              {{localize "swnr.consumption.recover"}} {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}}
+              Recover {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}}
             </button>
-          {{/eq}}
-          {{#eq type "consumableItem"}}
-            <button data-action="recover-item" data-item-id="{{itemId}}" data-amount="{{spent}}" data-actor-id="{{../actor.id}}">
-              <i class="fas fa-flask"></i>
-              {{localize "swnr.consumption.recoverItem"}} {{spent}} {{itemName}}
-            </button>
-          {{/eq}}
-          {{#eq type "uses"}}
-            <button data-action="recover-uses" data-power-id="{{../power.id}}" data-consumption-index="{{@index}}" data-amount="{{spent}}" data-actor-id="{{../actor.id}}">
-              <i class="fas fa-battery-three-quarters"></i>
-              {{localize "swnr.consumption.recoverUses"}} {{spent}}
-            </button>
-          {{/eq}}
+          {{/if}}
         {{/each}}
+      {{else}}
+        {{! Show spend resources button if no resources were spent yet }}
+        {{#if power.system.consumptions.length}}
+          <button data-action="use-power" data-power-id="{{power.id}}" data-actor-id="{{actor.id}}">
+            {{localize "swnr.sheet.spendResources"}}
+            {{#each power.system.consumptions}}
+              {{#if (ne type "none")}}
+                {{#if (eq type "poolResource")}}
+                  ({{usesCost}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}})
+                {{else if (eq type "systemStrain")}}
+                  ({{usesCost}} {{localize "swnr.consumption.systemStrain"}})
+                {{else if (eq type "uses")}}
+                  ({{usesCost}} {{localize "swnr.consumption.uses"}})
+                {{else if (eq type "consumableItem")}}
+                  ({{usesCost}} {{localize "swnr.consumption.consumableItem"}})
+                {{/if}}
+              {{/if}}
+            {{/each}}
+          </button>
+        {{/if}}
       {{/if}}
     </div>
   {{/if}}
