@@ -560,6 +560,184 @@ export async function _onChatCardAction(
       ui.notifications?.error(`Failed to use power: ${error.message}`);
       console.error("Power usage error:", error);
     }
+  } else if (action === "recover-resource") {
+    // Handle resource recovery
+    const poolKey = button.dataset.poolKey;
+    const amount = parseInt(button.dataset.amount);
+    const actorId = button.dataset.actorId;
+    
+    if (!poolKey || !amount || !actorId) {
+      ui.notifications?.error("Missing data for resource recovery");
+      return;
+    }
+    
+    const actor = game.actors?.get(actorId);
+    if (!actor) {
+      ui.notifications?.error("Could not find actor for resource recovery");
+      return;
+    }
+    
+    // Check if user can control this actor
+    if (!actor.isOwner && !game.user?.isGM) {
+      ui.notifications?.warn("You do not have permission to modify this actor's resources");
+      return;
+    }
+    
+    try {
+      const pools = foundry.utils.deepClone(actor.system.pools || {});
+      if (pools[poolKey]) {
+        const newValue = Math.min(pools[poolKey].value + amount, pools[poolKey].max);
+        await actor.update({ [`system.pools.${poolKey}.value`]: newValue });
+        
+        // Disable the button
+        button.disabled = true;
+        button.style.opacity = "0.5";
+        button.innerHTML = "<i class='fas fa-check'></i> Recovered";
+        
+        ui.notifications?.info(`Recovered ${amount} ${poolKey}`);
+      } else {
+        ui.notifications?.error(`Pool ${poolKey} not found on actor`);
+      }
+    } catch (error) {
+      ui.notifications?.error(`Failed to recover resource: ${error.message}`);
+      console.error("Resource recovery error:", error);
+    }
+  } else if (action === "recover-strain") {
+    // Handle system strain recovery
+    const amount = parseInt(button.dataset.amount);
+    const actorId = button.dataset.actorId;
+    
+    if (!amount || !actorId) {
+      ui.notifications?.error("Missing data for strain recovery");
+      return;
+    }
+    
+    const actor = game.actors?.get(actorId);
+    if (!actor) {
+      ui.notifications?.error("Could not find actor for strain recovery");
+      return;
+    }
+    
+    // Check if user can control this actor
+    if (!actor.isOwner && !game.user?.isGM) {
+      ui.notifications?.warn("You do not have permission to modify this actor's strain");
+      return;
+    }
+    
+    try {
+      const currentStrain = actor.system.systemStrain?.value || 0;
+      const newStrain = Math.max(currentStrain - amount, 0);
+      await actor.update({ "system.systemStrain.value": newStrain });
+      
+      // Disable the button
+      button.disabled = true;
+      button.style.opacity = "0.5";
+      button.innerHTML = "<i class='fas fa-check'></i> Recovered";
+      
+      ui.notifications?.info(`Recovered ${amount} system strain`);
+    } catch (error) {
+      ui.notifications?.error(`Failed to recover strain: ${error.message}`);
+      console.error("Strain recovery error:", error);
+    }
+  } else if (action === "recover-item") {
+    // Handle consumable item recovery
+    const itemId = button.dataset.itemId;
+    const amount = parseInt(button.dataset.amount);
+    const actorId = button.dataset.actorId;
+    
+    if (!itemId || !amount || !actorId) {
+      ui.notifications?.error("Missing data for item recovery");
+      return;
+    }
+    
+    const actor = game.actors?.get(actorId);
+    if (!actor) {
+      ui.notifications?.error("Could not find actor for item recovery");
+      return;
+    }
+    
+    // Check if user can control this actor
+    if (!actor.isOwner && !game.user?.isGM) {
+      ui.notifications?.warn("You do not have permission to modify this actor's items");
+      return;
+    }
+    
+    try {
+      const item = actor.items.get(itemId);
+      if (!item) {
+        ui.notifications?.error("Could not find item for recovery");
+        return;
+      }
+      
+      const currentUses = item.system.uses?.value || 0;
+      const maxUses = item.system.uses?.max || 0;
+      const newUses = Math.min(currentUses + amount, maxUses);
+      
+      await item.update({ "system.uses.value": newUses });
+      
+      // Disable the button
+      button.disabled = true;
+      button.style.opacity = "0.5";
+      button.innerHTML = "<i class='fas fa-check'></i> Recovered";
+      
+      ui.notifications?.info(`Recovered ${amount} uses of ${item.name}`);
+    } catch (error) {
+      ui.notifications?.error(`Failed to recover item: ${error.message}`);
+      console.error("Item recovery error:", error);
+    }
+  } else if (action === "recover-uses") {
+    // Handle power internal uses recovery
+    const powerId = button.dataset.powerId;
+    const consumptionIndex = parseInt(button.dataset.consumptionIndex);
+    const amount = parseInt(button.dataset.amount);
+    const actorId = button.dataset.actorId;
+    
+    if (!powerId || consumptionIndex === undefined || !amount || !actorId) {
+      ui.notifications?.error("Missing data for uses recovery");
+      return;
+    }
+    
+    const actor = game.actors?.get(actorId);
+    if (!actor) {
+      ui.notifications?.error("Could not find actor for uses recovery");
+      return;
+    }
+    
+    // Check if user can control this actor
+    if (!actor.isOwner && !game.user?.isGM) {
+      ui.notifications?.warn("You do not have permission to modify this actor's powers");
+      return;
+    }
+    
+    try {
+      const power = actor.items.get(powerId);
+      if (!power) {
+        ui.notifications?.error("Could not find power for recovery");
+        return;
+      }
+      
+      const consumption = power.system.consumptions?.[consumptionIndex];
+      if (!consumption || consumption.type !== "uses") {
+        ui.notifications?.error("Invalid consumption for uses recovery");
+        return;
+      }
+      
+      const currentUses = consumption.uses.value;
+      const maxUses = consumption.uses.max;
+      const newUses = Math.min(currentUses + amount, maxUses);
+      
+      await power.update({ [`system.consumptions.${consumptionIndex}.uses.value`]: newUses });
+      
+      // Disable the button
+      button.disabled = true;
+      button.style.opacity = "0.5";
+      button.innerHTML = "<i class='fas fa-check'></i> Recovered";
+      
+      ui.notifications?.info(`Recovered ${amount} uses of ${power.name}`);
+    } catch (error) {
+      ui.notifications?.error(`Failed to recover uses: ${error.message}`);
+      console.error("Uses recovery error:", error);
+    }
   }
 }
 

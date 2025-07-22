@@ -470,13 +470,13 @@ export class SWNActorSheet extends SWNBaseSheet {
       // Create chat message for refresh
       const chatMessage = getDocumentClass("ChatMessage");
       const refreshTitle = cadence === "scene" 
-        ? game.i18n.localize("SWN.pools.refreshSummary.scene")
-        : game.i18n.localize("SWN.pools.refreshSummary.day");
+        ? game.i18n.localize("swnr.pools.refreshSummary.scene")
+        : game.i18n.localize("swnr.pools.refreshSummary.day");
       let content = `<div class="refresh-summary">
         <h3><i class="fas fa-sync"></i> ${refreshTitle}</h3>`;
       
       if (effortReleased.length > 0) {
-        content += `<p><strong>${game.i18n.localize("SWN.pools.effortReleased")}:</strong></p><ul>`;
+        content += `<p><strong>${game.i18n.localize("swnr.pools.effortReleased")}:</strong></p><ul>`;
         effortReleased.forEach(effort => content += `<li>${effort}</li>`);
         content += `</ul>`;
       }
@@ -1096,7 +1096,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       chatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: actor }),
         content: `<div class="effort-release">
-          <h3><i class="fas fa-unlock"></i> ${game.i18n.localize("SWN.pools.commitment.released")}</h3>
+          <h3><i class="fas fa-unlock"></i> ${game.i18n.localize("swnr.pools.commitment.released")}</h3>
           <p><strong>${releasedCommitment.powerName}:</strong> ${releasedCommitment.amount} ${poolKey} effort released</p>
         </div>`
       });

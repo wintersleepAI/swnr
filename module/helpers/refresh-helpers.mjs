@@ -127,6 +127,7 @@ function getCadenceLevel(cadence) {
   const cadenceMap = {
     "commit": 0,  // Never auto-refresh
     "scene": 1,
+    "rest": 2,
     "day": 3
   };
   return cadenceMap[cadence] || 0;
@@ -147,7 +148,7 @@ async function createRefreshChatMessage(cadenceLevel, results) {
   const totalPoolsRefreshed = successfulRefreshes.reduce((sum, r) => sum + r.poolsRefreshed, 0);
   
   let content = `<div class="chat-card refresh-summary">`;
-  content += `<h3><i class="fas fa-sync-alt"></i> ${cadenceLevel.charAt(0).toUpperCase() + cadenceLevel.slice(1)} Refresh</h3>`;
+  content += `<h3><i class="fas fa-sync-alt"></i> ${game.i18n.localize(`SWN.pools.refreshSummary.${cadenceLevel}`) || (cadenceLevel.charAt(0).toUpperCase() + cadenceLevel.slice(1) + " Refresh")}</h3>`;
   content += `<p>Refreshed ${totalPoolsRefreshed} resource pools across ${successfulRefreshes.length} actors.</p>`;
   
   if (successfulRefreshes.length <= 5) {

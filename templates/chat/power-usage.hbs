@@ -20,7 +20,7 @@
           <span class="consumption-cost consumption-{{type}}">
             {{#eq type "poolResource"}}
               <i class="fas fa-circle-minus"></i>
-              {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}} ({{#eq cadence "scene"}}{{localize "SWN.pools.refreshSummary.scene"}}{{/eq}}{{#eq cadence "day"}}{{localize "SWN.pools.refreshSummary.day"}}{{/eq}}{{#eq cadence "commit"}}{{localize "SWN.pools.commitment.release"}}{{/eq}})
+              {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}} ({{#eq cadence "scene"}}{{localize "SWN.pools.refreshSummary.scene"}}{{/eq}}{{#eq cadence "rest"}}{{localize "SWN.pools.refreshSummary.rest"}}{{/eq}}{{#eq cadence "day"}}{{localize "SWN.pools.refreshSummary.day"}}{{/eq}}{{#eq cadence "commit"}}{{localize "SWN.pools.commitment.release"}}{{/eq}})
             {{/eq}}
             {{#eq type "systemStrain"}}
               <i class="fas fa-exclamation-triangle"></i>
@@ -45,13 +45,13 @@
       <span class="hiddenShort">
         {{{trim power.system.description 200}}}
         <div class="border border-gray-700 placeholder-blue-800 pt-0">
-          <button class="longShowDesc">{{localize "SWN.Actor.sheet.showLongDesc"}}</button>
+          <button class="longShowDesc">{{localize "swnr.sheet.showLongDesc"}}</button>
         </div>
       </span>
       <div class="border border-gray-700 placeholder-blue-800 pt-0">
         <span style="display:none" class="hiddenLong">
         {{{ power.system.description }}}
-        <button class="longHideDesc">{{localize "SWN.Actor.sheet.hideLongDesc"}}</button>
+        <button class="longHideDesc">{{localize "swnr.sheet.hideLongDesc"}}</button>
         </span>
       </div>
     {{else}}
@@ -63,25 +63,25 @@
 
   {{#if power.system.range}}
       <div>
-        {{localize 'SWN.Actor.sheet.powers.range'}}: {{ power.system.range }}
+        {{localize 'swnr.sheet.powers.range'}}: {{ power.system.range }}
       </div>
   {{/if}}
 
   {{#if power.system.duration}}
       <div>
-        {{localize 'SWN.Actor.sheet.powers.duration'}}: {{ power.system.duration }}
+        {{localize 'swnr.sheet.powers.duration'}}: {{ power.system.duration }}
       </div>
   {{/if}}
 
   {{#if power.system.level}}
       <div>
-        {{localize 'SWN.Actor.sheet.powers.level'}}: {{ power.system.level }}
+        {{localize 'swnr.sheet.powers.level'}}: {{ power.system.level }}
       </div>
   {{/if}}
 
   {{#if power.system.roll}}
     <div class="power-roll">
-      <span>{{localize 'SWN.Actor.sheet.powers.roll'}}:</span>
+      <span>{{localize 'swnr.sheet.powers.roll'}}:</span>
       <span class="roll roll-damage">{{{ powerRoll }}}</span>
     </div>
   {{/if}}
@@ -89,7 +89,7 @@
   {{#if power.system.save}}
   <div class="card-buttons">
       <button data-action="save" data-save="{{power.system.save}}">
-          {{localize "SWN.Actor.sheet.powers.save"}} {{power.system.save}}
+          {{localize "swnr.sheet.powers.save"}} {{power.system.save}}
       </button>
   </div>
   {{/if}}
@@ -105,7 +105,7 @@
   {{#if isPassive}}
     <div class="passive-indicator">
       <i class="fas fa-info-circle"></i>
-      <span>{{localize "SWN.Actor.sheet.passive"}}</span>
+      <span>{{localize "swnr.sheet.passive"}}</span>
     </div>
   {{else}}
     {{! Resource management buttons for active powers }}
