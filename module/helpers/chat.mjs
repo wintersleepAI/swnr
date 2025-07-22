@@ -1,21 +1,11 @@
 export function chatListeners(message, html) {
   html.on("click", ".card-buttons button", _onChatCardAction.bind(this));
-  const foundDiv = [];
-  html.find(".dice-roll").each((_i , _d) => {
-    foundDiv.push(_d);
+  // Add reroll buttons to all dice rolls
+  html.find(".roll").each((_i, div) => {
+    _addRerollButton($(div));
   });
-  if (foundDiv.length == 1) {
-    _addHealthButtons($(foundDiv[0]));
-  } else if (foundDiv.length > 1) {
-    for (const div of foundDiv) {
-      _addRerollButton($(div));
-    }
-  }
-  // //Reroll
-  // html.find(".dice-roll").each((_i, div) => {
-  //   _addRerollButton($(div));
-  // });
-  // Health Buttons
+  
+  // Add health buttons to damage rolls specifically
   html.find(".roll-damage").each((_i, div) => {
     _addHealthButtons($(div));
   });
@@ -160,7 +150,7 @@ export function _addHealthButtons(html) {
 
   const fullDamageModifiedButton = $("<button>")
     .addClass("dice-total-fullDamageMod-btn chat-button-small")
-    .attr("title", game.i18n.localize("swnr.chat.healthButtonsfullDamageModified"))
+    .attr("title", game.i18n.localize("swnr.chat.healthButtons.fullDamageModified"))
     .append($("<i>").addClass("fas fa-user-edit"));
 
   const btnContainer = $('<div class="dmgBtn-container"></div>');

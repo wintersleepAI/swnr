@@ -175,12 +175,14 @@
       
     }
     
+    .pools-display {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
     .pool-group {
-      margin-bottom: 0.75rem;
-      
-      &:last-child {
-        margin-bottom: 0;
-      }
+      margin-bottom: 0;
     }
     
     .pool-group-header {
@@ -293,7 +295,7 @@
       
       .commitment-details {
         margin-top: 0.25rem;
-        font-size: 0.7em;
+        font-size: 0.85em;
         
         .commitment-item {
           display: flex;
