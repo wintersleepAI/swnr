@@ -109,6 +109,14 @@ export default class SWNPower extends SWNItemBase {
   }
 
   /**
+   * Get the resource key for this power's primary resource consumption
+   * @returns {string} Pool key in format "ResourceName:SubResource"
+   */
+  resourceKey() {
+    return this._getPoolKey(this.resourceName, this.subResource);
+  }
+
+  /**
    * Check if this power has any additional consumption configured
    * @returns {boolean} True if power has consumption beyond primary cost
    */

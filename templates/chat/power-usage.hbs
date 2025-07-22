@@ -97,17 +97,19 @@
           </button>
         {{/if}}
         {{#each consumptions}}
-          {{#if (eq cadence "commit")}}
-            <button data-action="releaseCommitment" data-pool-key="{{poolKey}}" data-power-id="{{../power.id}}" data-actor-id="{{../actor.id}}">
-              <i class="fas fa-times"></i>
-              Release {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}}
-            </button>
-          {{else}}
-            <button data-action="recover-resource" data-pool-key="{{poolKey}}" data-amount="{{spent}}" data-actor-id="{{../actor.id}}">
-              <i class="fas fa-plus-circle"></i>
-              Recover {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}}
-            </button>
-          {{/if}}
+          {{#unless (eq type "systemStrain")}}
+            {{#if (eq cadence "commit")}}
+              <button data-action="releaseCommitment" data-pool-key="{{poolKey}}" data-power-id="{{../power.id}}" data-actor-id="{{../actor.id}}">
+                <i class="fas fa-times"></i>
+                Release {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}}
+              </button>
+            {{else}}
+              <button data-action="recover-resource" data-pool-key="{{poolKey}}" data-amount="{{spent}}" data-actor-id="{{../actor.id}}">
+                <i class="fas fa-plus-circle"></i>
+                Recover {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}}
+              </button>
+            {{/if}}
+          {{/unless}}
         {{/each}}
       {{else}}
         {{! Show spend resources button if no resources were spent yet }}

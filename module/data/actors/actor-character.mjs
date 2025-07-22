@@ -71,6 +71,11 @@ export default class SWNCharacter extends SWNActorBase {
       })
     });
 
+    schema.effortCommitments = new fields.ObjectField({
+      /* Dynamic keys: "${resourceName}:${subResource}" */
+      /* Values: array of { powerId, powerName, amount } */
+    });
+
     return schema;
   }
 
@@ -500,7 +505,7 @@ export default class SWNCharacter extends SWNActorBase {
           pools[poolKey].max = newMax;
         } else {
           // Calculate available effort (max - committed)
-          const commitments = this.effortCommitments[poolKey] || [];
+          const commitments = (this.parent.system.effortCommitments || {})[poolKey] || [];
           const committedAmount = commitments.reduce((sum, commitment) => sum + commitment.amount, 0);
           
           // Preserve existing current value from document source if it exists, otherwise calculate available effort
