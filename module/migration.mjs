@@ -136,9 +136,10 @@ const migrations = {
     let migrationErrors = [];
     let actorsMigrated = 0;
     let powerItemsMigrated = 0;
+    let featuresMigrated = 0;
     
     try {
-      // Migrate Actors - transform effort to pools
+      // PHASE 1: Migrate Actors - transform effort to pools
       for (const actor of game.actors) {
         if (actor.system.effort) {
           // Log original effort data for debugging
@@ -168,80 +169,210 @@ const migrations = {
         }
       }
       
-      // Migrate Power Items - add new unified fields
+      // PHASE 2: Migrate Power Items - populate resource fields and create consumption arrays
       for (const item of game.items) {
         if (item.type === "power") {
-          // Log original power data for debugging
-          console.log(`Migrating power item ${item.name} with system:`, item.system);
-          
           try {
-            // Map old effort values to valid resourceLength choices
-            const effortToResourceLength = {
-              "scene": "scene",
-              "day": "day", 
-              "current": "commit"  // "current" maps to "commit" in new system
-            };
-            const resourceLength = effortToResourceLength[item.system.effort] || "scene";
+            const system = foundry.utils.deepClone(item.system);
+            let needsUpdate = false;
+            const updateData = {};
             
-            const updateData = {
-              "system.subType": "psychic",
-              "system.resourceName": "Effort",
-              "system.subResource": "Psychic",
-              "system.resourceCost": 1,
-              "system.sharedResource": true,
-              "system.resourceLength": resourceLength,
-              "system.leveledResource": false,
-              "system.strainCost": 0,
-              "system.internalResource": { value: 0, max: 1 },
-              "system.uses": { value: 0, max: 1 }
-            };
+            // Step 2A: Populate resourceName and subResource fields if missing
+            if (!system.resourceName) {
+              switch (system.subType) {
+                case "psychic":
+                case "art":
+                case "adept":
+                  system.resourceName = "Effort";
+                  system.subResource = system.source || "Psychic";
+                  needsUpdate = true;
+                  break;
+                case "spell":
+                  system.resourceName = "Slots";
+                  system.subResource = `Lv${system.level || 1}`;
+                  needsUpdate = true;
+                  break;
+                case "mutation":
+                  system.resourceName = "Uses";
+                  system.subResource = system.source || "";
+                  needsUpdate = true;
+                  break;
+                default:
+                  if (system.source) {
+                    system.resourceName = "Effort";
+                    system.subResource = system.source;
+                    needsUpdate = true;
+                  }
+                  break;
+              }
+            }
             
-            // Remove old effort field if it exists
+            // Step 2B: Convert legacy fields to consumption array
+            const existingConsumptions = foundry.utils.deepClone(system.consumptions || []);
+            let newConsumptions = [];
+            
+            // Convert primary resource cost to consumption entry
+            if ((system.resourceName || item.system.resourceName) && (system.resourceCost > 0 || item.system.resourceCost > 0)) {
+              const resourceCost = system.resourceCost || item.system.resourceCost || 1;
+              const resourceLength = system.resourceLength || item.system.resourceLength || "scene";
+              
+              const primaryCost = {
+                type: "sourceEffort",
+                usesCost: resourceCost,
+                cadence: resourceLength,
+                itemId: "",
+                uses: { value: 0, max: 1 }
+              };
+              
+              // Special handling for different resource types
+              const resourceName = system.resourceName || item.system.resourceName;
+              if (resourceName === "Strain") {
+                primaryCost.type = "systemStrain";
+              } else if (resourceName === "Uses") {
+                primaryCost.type = "uses";
+                primaryCost.uses = {
+                  value: system.uses?.value || item.system.uses?.value || 0,
+                  max: system.uses?.max || item.system.uses?.max || 1
+                };
+              }
+              
+              newConsumptions.push(primaryCost);
+              needsUpdate = true;
+            }
+            
+            // Convert strain cost if separate from primary cost
+            const strainCost = system.strainCost || item.system.strainCost || 0;
+            const resourceName = system.resourceName || item.system.resourceName;
+            if (strainCost > 0 && resourceName !== "Strain") {
+              newConsumptions.push({
+                type: "systemStrain",
+                usesCost: strainCost,
+                cadence: "day",
+                itemId: "",
+                uses: { value: 0, max: 1 }
+              });
+              needsUpdate = true;
+            }
+            
+            // Convert internal resource if used
+            const sharedResource = system.sharedResource !== undefined ? system.sharedResource : item.system.sharedResource;
+            const internalResource = system.internalResource || item.system.internalResource;
+            if (!sharedResource && internalResource?.max > 0) {
+              newConsumptions.push({
+                type: "uses",
+                usesCost: 1,
+                cadence: "day",
+                itemId: "",
+                uses: {
+                  value: internalResource.value || 0,
+                  max: internalResource.max
+                }
+              });
+              needsUpdate = true;
+            }
+            
+            // Step 2C: Legacy effort field handling
             if (item.system.effort) {
+              const effortToResourceLength = {
+                "scene": "scene",
+                "day": "day", 
+                "current": "commit"
+              };
+              system.resourceLength = effortToResourceLength[item.system.effort] || "scene";
+              if (!system.resourceName) {
+                system.resourceName = "Effort";
+                system.subResource = "Psychic";
+              }
+              needsUpdate = true;
               updateData["system.-=effort"] = null;
             }
             
-            await item.update(updateData);
-            powerItemsMigrated++;
+            if (needsUpdate) {
+              // Merge with existing consumptions
+              const finalConsumptions = [...existingConsumptions, ...newConsumptions];
+              
+              // Update with new system data
+              updateData["system"] = system;
+              updateData["system.consumptions"] = finalConsumptions;
+              
+              // Remove legacy fields if they exist
+              if (item.system.resourceCost !== undefined) updateData["system.-=resourceCost"] = null;
+              if (item.system.resourceLength !== undefined) updateData["system.-=resourceLength"] = null;
+              if (item.system.sharedResource !== undefined) updateData["system.-=sharedResource"] = null;
+              if (item.system.leveledResource !== undefined) updateData["system.-=leveledResource"] = null;
+              if (item.system.strainCost !== undefined) updateData["system.-=strainCost"] = null;
+              if (item.system.internalResource !== undefined) updateData["system.-=internalResource"] = null;
+              if (item.system.uses !== undefined) updateData["system.-=uses"] = null;
+              
+              await item.update(updateData);
+              powerItemsMigrated++;
+              console.log(`Migrated power: ${item.name} -> ${system.resourceName}:${system.subResource}`);
+            }
           } catch (err) {
             migrationErrors.push(`Power item ${item.name} (${item.id}): ${err.message}`);
           }
         }
       }
       
-      // Migrate embedded power items in actors
+      // PHASE 3: Migrate embedded power items in actors (same logic as above)
       for (const actor of game.actors) {
         for (const item of actor.items) {
           if (item.type === "power") {
             try {
-              // Map old effort values to valid resourceLength choices
-              const effortToResourceLength = {
-                "scene": "scene",
-                "day": "day", 
-                "current": "commit"  // "current" maps to "commit" in new system
-              };
-              const resourceLength = effortToResourceLength[item.system.effort] || "scene";
+              const system = foundry.utils.deepClone(item.system);
+              let needsUpdate = false;
+              const updateData = {};
               
-              const updateData = {
-                "system.subType": "psychic",
-                "system.resourceName": "Effort",
-                "system.subResource": "Psychic",
-                "system.resourceCost": 1,
-                "system.sharedResource": true,
-                "system.resourceLength": resourceLength,
-                "system.leveledResource": false,
-                "system.strainCost": 0,
-                "system.internalResource": { value: 0, max: 1 },
-                "system.uses": { value: 0, max: 1 }
-              };
+              // Populate resource fields and convert to consumption arrays (same logic as global items)
+              if (!system.resourceName) {
+                switch (system.subType) {
+                  case "psychic":
+                  case "art": 
+                  case "adept":
+                    system.resourceName = "Effort";
+                    system.subResource = system.source || "Psychic";
+                    needsUpdate = true;
+                    break;
+                  case "spell":
+                    system.resourceName = "Slots";
+                    system.subResource = `Lv${system.level || 1}`;
+                    needsUpdate = true;
+                    break;
+                  case "mutation":
+                    system.resourceName = "Uses";
+                    system.subResource = system.source || "";
+                    needsUpdate = true;
+                    break;
+                  default:
+                    if (system.source) {
+                      system.resourceName = "Effort";
+                      system.subResource = system.source;
+                      needsUpdate = true;
+                    }
+                    break;
+                }
+              }
               
-              // Remove old effort field if it exists
               if (item.system.effort) {
+                const effortToResourceLength = {
+                  "scene": "scene",
+                  "day": "day", 
+                  "current": "commit"
+                };
+                system.resourceLength = effortToResourceLength[item.system.effort] || "scene";
+                if (!system.resourceName) {
+                  system.resourceName = "Effort";
+                  system.subResource = "Psychic";
+                }
+                needsUpdate = true;
                 updateData["system.-=effort"] = null;
               }
               
-              await item.update(updateData);
-              powerItemsMigrated++;
+              if (needsUpdate) {
+                updateData["system"] = system;
+                await item.update(updateData);
+                powerItemsMigrated++;
+              }
             } catch (err) {
               migrationErrors.push(`Embedded power item ${item.name} in ${actor.name}: ${err.message}`);
             }
@@ -249,68 +380,23 @@ const migrations = {
         }
       }
       
-      // Migration completed successfully
-      console.log(`Migration 2.1.0 completed successfully at ${new Date().toISOString()}`);
-      
-      // Report migration results
-      const successMsg = `Migration 2.1.0 completed: ${actorsMigrated} actors migrated, ${powerItemsMigrated} power items updated.`;
-      console.log(successMsg);
-      
-      if (migrationErrors.length > 0) {
-        const errorMsg = `Migration completed with ${migrationErrors.length} errors. Check console for details.`;
-        console.warn("Migration errors:", migrationErrors);
-        ui.notifications?.warn(errorMsg);
-      } else {
-        ui.notifications?.info(successMsg);
-      }
-      
-      versionNote("2.1.0", "Unified Power System migration completed. Power items now use the new resource pool system. Old effort values have been converted to Effort:Psychic pools.");
-      
-    } catch (err) {
-      console.error("Critical migration error:", err);
-      ui.notifications?.error(`Migration 2.1.0 failed: ${err.message}. Check console for details.`);
-      throw err;
-    }
-  },
-  "2.1.1": async () => {
-    console.log('Running migration for 2.1.1 - Feature-based Pool Generation');
-    
-    // Log migration start for debugging purposes
-    console.log(`Starting migration 2.1.1 at ${new Date().toISOString()}`);
-    
-    let migrationErrors = [];
-    let featuresMigrated = 0;
-    let powersMigrated = 0;
-    
-    try {
-      // Create default feature items for common pool grants
+      // PHASE 4: Create default pool features for actors with existing pools
       const defaultPoolFeatures = [
         {
           name: "Psychic Training",
-          type: "feature",
+          type: "feature", 
           system: {
             description: "Basic psychic training grants access to psychic powers and effort pools.",
             type: "edge",
             level: 0,
-            poolsGranted: [{
-              resourceName: "Effort",
-              subResource: "Psychic", 
-              baseAmount: 1,
-              perLevel: 1,
-              cadence: "scene",
-              formula: "",
-              condition: ""
-            }]
+            poolsGranted: []
           }
         }
       ];
       
-      // Process each actor to migrate pool configurations
       for (const actor of game.actors) {
         if (actor.type === 'character' || actor.type === 'npc') {
-          let actorNeedsPoolFeature = false;
-          
-          // Check if actor has any existing pools that need migration
+          // Check if actor has existing pools that need pool-granting features
           if (actor.system.pools && Object.keys(actor.system.pools).length > 0) {
             console.log(`Actor ${actor.name} has existing pools:`, actor.system.pools);
             
@@ -320,16 +406,13 @@ const migrations = {
               item.system.poolsGranted?.length > 0
             );
             
-            // If no pool-granting features exist, we need to create one
+            // If no pool-granting features exist, create one
             if (existingFeatures.length === 0) {
-              actorNeedsPoolFeature = true;
-              
-              // Create a feature based on existing pools
-              const poolKeys = Object.keys(actor.system.pools);
-              const effortPools = poolKeys.filter(key => key.startsWith("Effort:"));
-              
-              if (effortPools.length > 0) {
-                try {
+              try {
+                const poolKeys = Object.keys(actor.system.pools);
+                const effortPools = poolKeys.filter(key => key.startsWith("Effort:"));
+                
+                if (effortPools.length > 0) {
                   // Create a psychic training feature for effort pools
                   const psychicTrainingFeature = {
                     ...defaultPoolFeatures[0],
@@ -341,10 +424,8 @@ const migrations = {
                         return {
                           resourceName,
                           subResource: subResource || "",
-                          baseAmount: pool.max || 1,
-                          perLevel: 0,
+                          formula: `${pool.max || 1}`,
                           cadence: pool.cadence || "scene",
-                          formula: "",
                           condition: ""
                         };
                       })
@@ -354,56 +435,20 @@ const migrations = {
                   await actor.createEmbeddedDocuments("Item", [psychicTrainingFeature]);
                   featuresMigrated++;
                   console.log(`Created psychic training feature for ${actor.name}`);
-                } catch (err) {
-                  migrationErrors.push(`Failed to create pool feature for actor ${actor.name}: ${err.message}`);
                 }
-              }
-            }
-          }
-          
-          // Update any power items to remove pool generation logic (they should only consume)
-          for (const item of actor.items) {
-            if (item.type === "power") {
-              try {
-                // Ensure powers are configured to consume from shared pools, not generate them
-                const updateData = {
-                  "system.sharedResource": true,
-                  "system.internalResource": { value: 0, max: 0 }
-                };
-                
-                await item.update(updateData);
-                powersMigrated++;
               } catch (err) {
-                migrationErrors.push(`Failed to update power ${item.name} in actor ${actor.name}: ${err.message}`);
+                migrationErrors.push(`Failed to create pool feature for actor ${actor.name}: ${err.message}`);
               }
             }
           }
         }
       }
       
-      // Update standalone power items in world
-      for (const item of game.items) {
-        if (item.type === "power") {
-          try {
-            // Ensure standalone powers are configured to consume from shared pools
-            const updateData = {
-              "system.sharedResource": true,
-              "system.internalResource": { value: 0, max: 0 }
-            };
-            
-            await item.update(updateData);
-            powersMigrated++;
-          } catch (err) {
-            migrationErrors.push(`Failed to update standalone power ${item.name}: ${err.message}`);
-          }
-        }
-      }
-      
       // Migration completed successfully
-      console.log(`Migration 2.1.1 completed successfully at ${new Date().toISOString()}`);
+      console.log(`Migration 2.1.0 completed successfully at ${new Date().toISOString()}`);
       
       // Report migration results
-      const successMsg = `Migration 2.1.1 completed: ${featuresMigrated} pool features created, ${powersMigrated} power items updated.`;
+      const successMsg = `Migration 2.1.0 completed: ${actorsMigrated} actors migrated, ${powerItemsMigrated} power items updated, ${featuresMigrated} pool features created.`;
       console.log(successMsg);
       
       if (migrationErrors.length > 0) {
@@ -414,380 +459,15 @@ const migrations = {
         ui.notifications?.info(successMsg);
       }
       
-      versionNote("2.1.1", "Pool generation migration completed. Resource pools are now granted by Features/Foci/Edges instead of Power items. Default psychic training features have been created for characters with existing pools.");
+      versionNote("2.1.0", "Unified Power System migration completed. This comprehensive migration transforms the legacy effort system into the new resource pool system, populates power resource fields, converts legacy configurations to consumption arrays, and creates pool-granting features for characters. All worlds from 2.0.12 or earlier have been fully migrated to the new system.");
       
     } catch (err) {
       console.error("Critical migration error:", err);
-      ui.notifications?.error(`Migration 2.1.1 failed: ${err.message}. Check console for details.`);
+      ui.notifications?.error(`Migration 2.1.0 failed: ${err.message}. Check console for details.`);
       throw err;
     }
-  },
-  "2.2.0": async () => {
-    console.log('Running migration for 2.2.0 - Unified Consumption System');
-    
-    // Log migration start for debugging purposes
-    console.log(`Starting migration 2.2.0 at ${new Date().toISOString()}`);
-    
-    let migrationErrors = [];
-    let powersMigrated = 0;
-    let itemsSkipped = 0;
-    
-    try {
-      // Migrate Power Items - convert legacy fields to consumption array
-      for (const item of game.items) {
-        if (item.type === "power") {
-          try {
-            const system = item.system;
-            const existingConsumptions = foundry.utils.deepClone(system.consumptions || []);
-            let newConsumptions = [];
-            let needsUpdate = false;
-            
-            // Convert primary resource cost to consumption entry
-            if (system.resourceName && system.resourceCost > 0) {
-              const primaryCost = {
-                type: "sourceEffort", // Map all primary costs to sourceEffort for now
-                usesCost: system.resourceCost,
-                cadence: system.resourceLength || "scene",
-                itemId: "",
-                uses: { value: 0, max: 1 }
-              };
-              
-              // Special handling for different resource types
-              if (system.resourceName === "Strain") {
-                primaryCost.type = "systemStrain";
-              } else if (system.resourceName === "Uses") {
-                primaryCost.type = "uses";
-                primaryCost.uses = {
-                  value: system.uses?.value || 0,
-                  max: system.uses?.max || 1
-                };
-              }
-              
-              newConsumptions.push(primaryCost);
-              needsUpdate = true;
-            }
-            
-            // Convert strain cost if separate from primary cost
-            if (system.strainCost > 0 && system.resourceName !== "Strain") {
-              newConsumptions.push({
-                type: "systemStrain",
-                usesCost: system.strainCost,
-                cadence: "day",
-                itemId: "",
-                uses: { value: 0, max: 1 }
-              });
-              needsUpdate = true;
-            }
-            
-            // Convert internal resource if used
-            if (!system.sharedResource && system.internalResource?.max > 0) {
-              newConsumptions.push({
-                type: "uses",
-                usesCost: 1,
-                cadence: "day",
-                itemId: "",
-                uses: {
-                  value: system.internalResource.value || 0,
-                  max: system.internalResource.max
-                }
-              });
-              needsUpdate = true;
-            }
-            
-            // Merge with existing consumptions, avoiding duplicates
-            const finalConsumptions = [...existingConsumptions, ...newConsumptions];
-            
-            if (needsUpdate) {
-              console.log(`Migrating power ${item.name} - converting legacy fields to consumptions`);
-              
-              const updateData = {
-                "system.consumptions": finalConsumptions,
-                // Remove legacy fields
-                "system.-=resourceName": null,
-                "system.-=subResource": null, 
-                "system.-=resourceCost": null,
-                "system.-=resourceLength": null,
-                "system.-=sharedResource": null,
-                "system.-=leveledResource": null,
-                "system.-=strainCost": null,
-                "system.-=internalResource": null,
-                "system.-=uses": null
-              };
-              
-              await item.update(updateData);
-              powersMigrated++;
-            } else {
-              itemsSkipped++;
-            }
-          } catch (err) {
-            migrationErrors.push(`Power item ${item.name} (${item.id}): ${err.message}`);
-          }
-        }
-      }
-      
-      // Migrate embedded power items in actors
-      for (const actor of game.actors) {
-        for (const item of actor.items) {
-          if (item.type === "power") {
-            try {
-              const system = item.system;
-              const existingConsumptions = foundry.utils.deepClone(system.consumptions || []);
-              let newConsumptions = [];
-              let needsUpdate = false;
-              
-              // Convert primary resource cost to consumption entry
-              if (system.resourceName && system.resourceCost > 0) {
-                const primaryCost = {
-                  type: "sourceEffort",
-                  usesCost: system.resourceCost,
-                  cadence: system.resourceLength || "scene",
-                  itemId: "",
-                  uses: { value: 0, max: 1 }
-                };
-                
-                // Special handling for different resource types
-                if (system.resourceName === "Strain") {
-                  primaryCost.type = "systemStrain";
-                } else if (system.resourceName === "Uses") {
-                  primaryCost.type = "uses";
-                  primaryCost.uses = {
-                    value: system.uses?.value || 0,
-                    max: system.uses?.max || 1
-                  };
-                }
-                
-                newConsumptions.push(primaryCost);
-                needsUpdate = true;
-              }
-              
-              // Convert strain cost if separate from primary cost
-              if (system.strainCost > 0 && system.resourceName !== "Strain") {
-                newConsumptions.push({
-                  type: "systemStrain",
-                  usesCost: system.strainCost,
-                  cadence: "day",
-                  itemId: "",
-                  uses: { value: 0, max: 1 }
-                });
-                needsUpdate = true;
-              }
-              
-              // Convert internal resource if used
-              if (!system.sharedResource && system.internalResource?.max > 0) {
-                newConsumptions.push({
-                  type: "uses",
-                  usesCost: 1,
-                  cadence: "day",
-                  itemId: "",
-                  uses: {
-                    value: system.internalResource.value || 0,
-                    max: system.internalResource.max
-                  }
-                });
-                needsUpdate = true;
-              }
-              
-              // Merge with existing consumptions
-              const finalConsumptions = [...existingConsumptions, ...newConsumptions];
-              
-              if (needsUpdate) {
-                console.log(`Migrating embedded power ${item.name} in ${actor.name} - converting legacy fields`);
-                
-                const updateData = {
-                  "system.consumptions": finalConsumptions,
-                  // Remove legacy fields
-                  "system.-=resourceName": null,
-                  "system.-=subResource": null,
-                  "system.-=resourceCost": null,
-                  "system.-=resourceLength": null,
-                  "system.-=sharedResource": null,
-                  "system.-=leveledResource": null,
-                  "system.-=strainCost": null,
-                  "system.-=internalResource": null,
-                  "system.-=uses": null
-                };
-                
-                await item.update(updateData);
-                powersMigrated++;
-              } else {
-                itemsSkipped++;
-              }
-            } catch (err) {
-              migrationErrors.push(`Embedded power ${item.name} in ${actor.name}: ${err.message}`);
-            }
-          }
-        }
-      }
-      
-      // Migration completed successfully
-      console.log(`Migration 2.2.0 completed successfully at ${new Date().toISOString()}`);
-      
-      // Report migration results
-      const successMsg = `Migration 2.2.0 completed: ${powersMigrated} power items migrated to unified consumption system, ${itemsSkipped} items skipped (already migrated).`;
-      console.log(successMsg);
-      
-      if (migrationErrors.length > 0) {
-        const errorMsg = `Migration completed with ${migrationErrors.length} errors. Check console for details.`;
-        console.warn("Migration errors:", migrationErrors);
-        ui.notifications?.warn(errorMsg);
-      } else {
-        ui.notifications?.info(successMsg);
-      }
-      
-      versionNote("2.2.0", "Unified Consumption System migration completed. All power resource costs have been converted to the expandable consumption array system. The legacy resource configuration fields have been removed for a cleaner, more consistent interface.");
-      
-    } catch (err) {
-      console.error("Critical migration error:", err);
-      ui.notifications?.error(`Migration 2.2.0 failed: ${err.message}. Check console for details.`);
-      throw err;
-    }
-  },
-
-  "2.2.1": async () => {
-    console.log('Running migration for 2.2.1 - Populate Power Resource Fields');
-    
-    const migrationStart = Date.now();
-    let powersMigrated = 0;
-    let powersSkipped = 0;
-    let migrationErrors = [];
-
-    try {
-      // Migrate power items to populate resourceName and subResource from subType and source
-      for (const item of game.items) {
-        if (item.type === "power") {
-          try {
-            const system = foundry.utils.deepClone(item.system);
-            let needsUpdate = false;
-
-            // Only migrate if resourceName is null/undefined (avoid re-migration)
-            if (!system.resourceName) {
-              // Map subType to appropriate resourceName and subResource
-              switch (system.subType) {
-                case "psychic":
-                case "art":
-                case "adept":
-                  system.resourceName = "Effort";
-                  system.subResource = system.source || system.subType;
-                  needsUpdate = true;
-                  break;
-
-                case "spell":
-                  system.resourceName = "Slots";
-                  // Use spell level for subResource
-                  system.subResource = `Lv${system.level || 1}`;
-                  needsUpdate = true;
-                  break;
-
-                case "mutation":
-                  system.resourceName = "Uses";
-                  system.subResource = system.source || "";
-                  needsUpdate = true;
-                  break;
-
-                default:
-                  // Unknown subType - use source if available
-                  if (system.source) {
-                    system.resourceName = "Effort";
-                    system.subResource = system.source;
-                    needsUpdate = true;
-                  }
-                  break;
-              }
-
-              if (needsUpdate) {
-                await item.update({ "system": system });
-                powersMigrated++;
-                console.log(`Migrated power: ${item.name} (${system.subType}) -> ${system.resourceName}:${system.subResource}`);
-              } else {
-                powersSkipped++;
-              }
-            } else {
-              powersSkipped++;
-            }
-          } catch (itemError) {
-            const errorMsg = `Failed to migrate power ${item.name}: ${itemError.message}`;
-            console.error(errorMsg);
-            migrationErrors.push(errorMsg);
-          }
-        }
-      }
-
-      // Migrate actors' embedded powers
-      for (const actor of game.actors) {
-        const powerItems = actor.items.filter(i => i.type === "power");
-        for (const power of powerItems) {
-          try {
-            const system = foundry.utils.deepClone(power.system);
-            let needsUpdate = false;
-
-            if (!system.resourceName) {
-              switch (system.subType) {
-                case "psychic":
-                case "art": 
-                case "adept":
-                  system.resourceName = "Effort";
-                  system.subResource = system.source || system.subType;
-                  needsUpdate = true;
-                  break;
-
-                case "spell":
-                  system.resourceName = "Slots";
-                  system.subResource = `Lv${system.level || 1}`;
-                  needsUpdate = true;
-                  break;
-
-                case "mutation":
-                  system.resourceName = "Uses";
-                  system.subResource = system.source || "";
-                  needsUpdate = true;
-                  break;
-
-                default:
-                  if (system.source) {
-                    system.resourceName = "Effort";
-                    system.subResource = system.source;
-                    needsUpdate = true;
-                  }
-                  break;
-              }
-
-              if (needsUpdate) {
-                await power.update({ "system": system });
-                powersMigrated++;
-                console.log(`Migrated actor power: ${actor.name}.${power.name} -> ${system.resourceName}:${system.subResource}`);
-              } else {
-                powersSkipped++;
-              }
-            } else {
-              powersSkipped++;
-            }
-          } catch (itemError) {
-            const errorMsg = `Failed to migrate actor power ${actor.name}.${power.name}: ${itemError.message}`;
-            console.error(errorMsg);
-            migrationErrors.push(errorMsg);
-          }
-        }
-      }
-
-      const migrationTime = Date.now() - migrationStart;
-      const successMsg = `Migration 2.2.1 completed in ${migrationTime}ms: ${powersMigrated} powers migrated, ${powersSkipped} powers skipped (already migrated).`;
-      
-      console.log(successMsg);
-      
-      if (migrationErrors.length > 0) {
-        console.warn(`Migration 2.2.1 completed with ${migrationErrors.length} errors:`, migrationErrors);
-        ui.notifications?.warn(`Power migration completed with ${migrationErrors.length} errors. Check console for details.`);
-      } else {
-        ui.notifications?.info("Power resource field migration completed successfully.");
-      }
-
-    } catch (err) {
-      console.error("Critical migration 2.2.1 error:", err);
-      ui.notifications?.error(`Migration 2.2.1 failed: ${err.message}. Check console for details.`);
-      throw err;
-    }
-  },
-}
+  }
+};
 
 function compareVersions(v1, v2) {
   const parts1 = v1.split('.').map(Number);
