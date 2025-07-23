@@ -426,8 +426,8 @@ export async function _onChatCardAction(
   const button = event.currentTarget;
   //button.disabled = true;
   const card = button.closest(".chat-card");
-  //const messageId = card.closest(".message").dataset.messageId;
-  //const message = game.messages?.get(messageId);
+  const messageLi = button.closest(".message");
+  const message = game.messages.get(messageLi.dataset.messageId);
   const action = button.dataset.action;
 
   // Validate permission to proceed with the roll
@@ -611,10 +611,24 @@ export async function _onChatCardAction(
     }
     
     try {
-      // Get the original actor and power
-      const originalActor = game.actors?.get(actorId);
+      const messageLi = button.closest(".message");
+      const chatMsgLocal = game.messages.get(messageLi.dataset.messageId);
+      if (!chatMsgLocal) {
+        ui.notifications?.error("Could not find chat message");
+        return;
+      }
+
+      const speaker = message.speaker;
+      let originalActor;
+      if (speaker.token) {
+        const token = game.scenes.get(speaker.scene)?.tokens.get(speaker.token);
+        originalActor = token?.actor;
+      } else {
+        originalActor = game.actors?.get(speaker.actor);
+      }
+
       if (!originalActor) {
-        ui.notifications?.error("Could not find original actor");
+        ui.notifications?.error("Could not find the actor associated with the chat message.");
         return;
       }
       
@@ -654,12 +668,12 @@ export async function _onChatCardAction(
       // Get existing consumption results from the current message
       const chatCard = $(button).closest('.chat-message');
       const messageId = chatCard.data('message-id');
-      const message = game.messages?.get(messageId);
+      const chatMsg = game.messages?.get(messageId);
       
       let existingConsumptions = [];
-      if (message) {
+      if (chatMsg) {
         // Try to parse existing consumptions from message flags or content
-        const messageFlags = message.flags?.swnr?.consumptions;
+        const messageFlags = chatMsg.flags?.swnr?.consumptions;
         if (messageFlags) {
           existingConsumptions = messageFlags;
         }
@@ -671,15 +685,15 @@ export async function _onChatCardAction(
       
       // Track which consumptions have been processed
       let processedConsumptions = {};
-      if (message?.flags?.swnr?.processedConsumptions) {
-        processedConsumptions = message.flags.swnr.processedConsumptions;
+      if (chatMsg?.flags?.swnr?.processedConsumptions) {
+        processedConsumptions = chatMsg.flags.swnr.processedConsumptions;
       }
       processedConsumptions[consumptionIndex] = true;
       
       // Preserve existing power roll
       let existingPowerRoll = null;
-      if (message) {
-        const existingRollElement = $(message.content).find('.roll');
+      if (chatMsg) {
+        const existingRollElement = $(chatMsg.content).find('.roll');
         if (existingRollElement.length > 0) {
           const cleanedRoll = existingRollElement.clone();
           cleanedRoll.find('.dmgBtn-container').remove();
@@ -705,8 +719,8 @@ export async function _onChatCardAction(
       const template = "systems/swnr/templates/chat/power-usage.hbs";
       const newContent = await foundry.applications.handlebars.renderTemplate(template, templateData);
       
-      if (message) {
-        await message.update({ 
+      if (chatMsg) {
+        await chatMsg.update({ 
           content: newContent,
           flags: { 
             swnr: { 

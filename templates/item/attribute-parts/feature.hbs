@@ -22,8 +22,8 @@
               <select name="system.poolsGranted.{{index}}.resourceName" data-dtype="String">
                 <option value="Effort" {{#if (eq pool.resourceName "Effort")}}selected{{/if}}>Effort</option>
                 <option value="Slots" {{#if (eq pool.resourceName "Slots")}}selected{{/if}}>Spell Slots</option>
-                <option value="Points" {{#if (eq pool.resourceName "Points")}}selected{{/if}}>Power Points</option>
-                <option value="Uses" {{#if (eq pool.resourceName "Uses")}}selected{{/if}}>Daily Uses</option>
+                <option value="Points" {{#if (eq pool.resourceName "Points")}}selected{{/if}}>Points</option>
+                <option value="Uses" {{#if (eq pool.resourceName "Uses")}}selected{{/if}}>Uses</option>
               </select>
             </div>
             
@@ -33,6 +33,7 @@
                      data-dtype="String" placeholder="e.g. Psychic, Elementalist, Lv1" />
             </div>
             
+            {{#if (ne pool.resourceName "Effort")}}
             <div class="resource">
               <label class="resource-label">Refresh Cadence</label>
               <select name="system.poolsGranted.{{index}}.cadence" data-dtype="String">
@@ -41,6 +42,7 @@
                 <option value="commit" {{#if (eq pool.cadence "commit")}}selected{{/if}}>Commit (Manual)</option>
               </select>
             </div>
+            {{/if}}
           </div>
           
           <div class='grid grid-1col'>
