@@ -536,6 +536,24 @@
             "value": {
               "label": "Value"
             }
+          },
+          "container": {
+            "label": "Container",
+            "isContainer": {
+              "label": "Is Container"
+            },
+            "isOpen": {
+              "label": "Is Open"
+            },
+            "capacity": {
+              "label": "Capacity",
+              "max": {
+                "label": "Max Capacity"
+              },
+              "value": {
+                "label": "Used Capacity"
+              }
+            }
           }
         }
       },
@@ -1945,7 +1963,18 @@
         "none": "None",
         "count": "Individual",
         "bundle": "Bundle/Clip"
-      }
+      },
+      "container": {
+        "settings": "Container Settings",
+        "tooltip": "This item is a container",
+        "open": "Click to open container",
+        "close": "Click to close container",
+        "isContainer": "Is Container",
+        "isOpen": "Is Open",
+        "contained": "In Container"
+      },
+      "containers": "Containers",
+      "capacity": "Capacity"
     },
     "weapon": {
       "shock": {
