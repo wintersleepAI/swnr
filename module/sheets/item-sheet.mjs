@@ -12,9 +12,11 @@ const { api, sheets } = foundry.applications;
 export class SWNItemSheet extends api.HandlebarsApplicationMixin(
   sheets.ItemSheetV2
 ) {
+  #dragDrop;
+  
   constructor(options = {}) {
     super(options);
-    this.#dragDrop = this.#createDragDropHandlers();
+    this.#dragDrop = this._createDragDropHandlers();
   }
 
   /** @override */
@@ -408,6 +410,11 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     if (this.document.type === "power") {
       this._setupConsumptionFieldHandlers();
     }
+    
+    // Add container checkbox handlers for gear items
+    if (['item', 'armor', 'weapon'].includes(this.document.type)) {
+      this._setupContainerHandlers();
+    }
   }
 
   _setupConsumptionFieldHandlers() {
@@ -562,10 +569,39 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     });
   }
 
-
-
-
-
+  /**
+   * Setup container field interaction handlers
+   */
+  _setupContainerHandlers() {
+    const containerCheckbox = this.element.querySelector('input[name="system.container.isContainer"]');
+    const capacityField = this.element.querySelector('input[name="system.container.capacity"]');
+    const containerSelect = this.element.querySelector('select[name="system.containerId"]');
+    
+    if (containerCheckbox && capacityField) {
+      containerCheckbox.addEventListener('change', (event) => {
+        const isContainer = event.target.checked;
+        const capacityDiv = capacityField.closest('.resource');
+        
+        if (isContainer) {
+          capacityField.disabled = false;
+          capacityDiv.style.opacity = '1';
+          // Hide the container selection dropdown if this item becomes a container
+          if (containerSelect) {
+            const selectDiv = containerSelect.closest('.resource');
+            selectDiv.style.display = 'none';
+          }
+        } else {
+          capacityField.disabled = true;
+          capacityDiv.style.opacity = '0.5';
+          // Show the container selection dropdown if this item is not a container
+          if (containerSelect) {
+            const selectDiv = containerSelect.closest('.resource');
+            selectDiv.style.display = 'block';
+          }
+        }
+      });
+    }
+  }
 
   _getRelatedItems() {
     // Get the related items for the owning parent (if any) for ammo
@@ -1012,14 +1048,13 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
 
   // This is marked as private because there's no real need
   // for subclasses or external hooks to mess with it directly
-  #dragDrop;
 
   /**
    * Create drag-and-drop workflow handlers for this Application
    * @returns {DragDrop[]}     An array of DragDrop handlers
    * @private
    */
-  #createDragDropHandlers() {
+  _createDragDropHandlers() {
     return this.options.dragDrop.map((d) => {
       d.permissions = {
         dragstart: this._canDragStart.bind(this),
