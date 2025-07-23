@@ -637,6 +637,7 @@
   /* Responsive adjustments */
   /* Integration with existing power sheet styles */
   /* Dark mode support */
+  /* Container drag and drop styling */
 }
 .swnr .item-form {
   font-family: "Roboto", sans-serif;
@@ -1588,4 +1589,24 @@
   background: var(--color-bg-dark);
   border-color: var(--color-border-dark);
   color: var(--color-text-light-secondary);
+}
+.swnr .drop-target {
+  background-color: rgba(var(--accent-color), 0.3);
+  border: 2px dashed var(--accent-color);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.swnr .container-toggle {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.swnr .container-toggle:hover {
+  opacity: 1 !important;
+}
+.swnr .contained-item .item-image img {
+  opacity: 0.8;
+}
+.swnr .contained-item .item-name-long {
+  font-size: 0.9em;
+  opacity: 0.9;
 }

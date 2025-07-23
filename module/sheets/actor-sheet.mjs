@@ -12,12 +12,12 @@ const { api, sheets } = foundry.applications;
  * @extends {ActorSheetV2}
  */
 export class SWNActorSheet extends SWNBaseSheet {
+  // Private properties
+  #toggleLock = false;
+
   constructor(options = {}) {
     super(options);
   }
-
-  // Private properties
-  #toggleLock = false;
 
   /** @override */
   static DEFAULT_OPTIONS = {
@@ -45,6 +45,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       skillUp: this._onSkillUp,
       hitDice: this._onHitDice,
       toggleArmor: this._toggleArmor,
+      toggleContainer: this._toggleContainer,
       toggleLock: this._toggleLock,
       rollStats: this._onRollStats,
       toggleSection: this._toggleSection,
@@ -804,6 +805,18 @@ export class SWNActorSheet extends SWNBaseSheet {
     const armor = this.actor.items.get(armorID);
     const use = armor.system.use;
     await armor.update({ system: { use: !use } });
+  }
+
+  /**
+   * Toggle container open/closed state
+   * @this SWNActorSheet
+   */
+  static async _toggleContainer(event, target) {
+    event.preventDefault();
+    const itemId = target.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    const isOpen = item.system.container.isOpen;
+    await item.update({ "system.container.isOpen": !isOpen });
   }
 
   /**

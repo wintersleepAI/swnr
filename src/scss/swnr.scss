@@ -20,4 +20,32 @@
   @include meta.load-css('components/effects');
   @include meta.load-css("components/buttons");
   @include meta.load-css('components/consumption');
+
+  /* Container drag and drop styling */
+  .drop-target {
+    background-color: rgba(var(--accent-color), 0.3);
+    border: 2px dashed var(--accent-color);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+
+  .container-toggle {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+
+  .contained-item {
+    .item-image img {
+      opacity: 0.8;
+    }
+    
+    .item-name-long {
+      font-size: 0.9em;
+      opacity: 0.9;
+    }
+  }
 }
