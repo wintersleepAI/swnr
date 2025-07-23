@@ -429,12 +429,11 @@ export class SWNActorSheet extends SWNBaseSheet {
           // Never auto-release "commit" duration - those are manual only
           if (commitment.duration === "commit") {
             shouldRelease = false;
-          } else if (cadence === "scene" && (commitment.duration === "scene" || commitment.duration === "instant")) {
+          } else if (cadence === "scene" && (commitment.duration === "scene")) {
             shouldRelease = true;
-          } else if (cadence === "day" && (commitment.duration === "day" || commitment.duration === "scene" || commitment.duration === "instant")) {
+          } else if (cadence === "day" && (commitment.duration === "day" || commitment.duration === "scene")) {
             shouldRelease = true;
           }
-          
           if (shouldRelease) {
             releasedCommitments.push(commitment);
             effortReleased.push(`${commitment.powerName} (${commitment.amount} ${poolKey})`);

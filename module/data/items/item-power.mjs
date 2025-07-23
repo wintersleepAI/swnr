@@ -435,6 +435,30 @@ export default class SWNPower extends SWNItemBase {
   }
 
   /**
+   * @override
+   * @param {SWNRPower} item
+   * @param {SWNRActor} actor
+   */
+  static onApply(item, actor) {
+    const parentEffort = item.system.effort;
+    if (parentEffort.value && ["commit", "scene", "day"].includes(parentEffort.cadence)) {
+      actor.system.addEffort(parentEffort, item);
+    }
+  }
+
+  /**
+   * @override
+   * @param {SWNRPower} item
+   * @param {SWNRActor} actor
+   */
+  static onUnapply(item, actor) {
+    const parentEffort = item.system.effort;
+    if (parentEffort.value && ["commit", "scene", "day"].includes(parentEffort.cadence)) {
+      actor.system.removeEffort(parentEffort, item);
+    }
+  }
+
+  /**
    * Validate a single consumption requirement without applying changes
    * @param {Actor} actor - The actor using the power
    * @param {Object} consumes - Consumption configuration
@@ -554,7 +578,7 @@ export default class SWNPower extends SWNItemBase {
     }
     
     // Create effort commitment if cadence is commit
-    if (consumes.cadence === "commit") {
+    if (["commit", "scene", "day"].includes(consumes.cadence)) {
       const commitments = foundry.utils.deepClone(actor.system.effortCommitments || {});
       if (!commitments[poolKey]) commitments[poolKey] = [];
       
@@ -573,7 +597,7 @@ export default class SWNPower extends SWNItemBase {
       const newValue = Math.max(0, pool.max - commitments[poolKey].reduce((sum, c) => sum + c.amount, 0));
       await actor.update({ [`system.pools.${poolKey}.value`]: newValue });
     } else {
-      // Direct spending for scene/day cadence
+      // Direct spending for other cadences
       await actor.update({ [`system.pools.${poolKey}.value`]: pool.value - consumes.usesCost });
     }
     
