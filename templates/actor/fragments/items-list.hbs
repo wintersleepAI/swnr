@@ -17,9 +17,9 @@
         {{/if}}
 
         {{!-- Single “Rounds” column if weapon/item with ammo != none --}}
-        {{#if (eq item.type "weapon")}}
+        {{#if (eq type "weapon")}}
           <div class="item-rounds item-prop">
-            {{ localize 'swnr.item.ammo.value' }}
+            {{ localize 'swnr.item.ammo.ammo' }}
           </div>
         {{/if}}
 
