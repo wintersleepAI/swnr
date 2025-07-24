@@ -1,3 +1,31 @@
+/**
+ * Get predefined language lists based on preset selection
+ * @param {string} preset - The preset type ("none", "earth", "wwn", "both")
+ * @returns {Array<string>} Array of language names
+ */
+function getLanguagePresetList(preset) {
+  const earthLanguages = [
+    "English", "Mandarin Chinese", "Hindi", "Spanish", "French", 
+    "Standard Arabic", "Bengali", "Portuguese", "Russian", "Japanese"
+  ];
+  
+  const wwnLanguages = [
+    "Trade Cant", "Old Vothian", "Brass Speech", "Emedian", 
+    "Thurian", "Anak Speech", "Predecessant", "Preterite"
+  ];
+  
+  switch (preset) {
+    case "earth":
+      return earthLanguages;
+    case "wwn":
+      return wwnLanguages;
+    case "both":
+      return [...earthLanguages, ...wwnLanguages];
+    default:
+      return [];
+  }
+}
+
 export const registerSettings = function () {
   // Register any custom system settings here
 
@@ -150,6 +178,45 @@ export const registerSettings = function () {
     default: false,
   });
 
+  // Language Settings
+  game.settings.register("swnr", "languagePresetSelector", {
+    name: "swnr.settings.languagePresetSelector",
+    hint: "swnr.settings.languagePresetSelectorHint",
+    scope: "world",
+    config: true,
+    type: String,
+    choices: {
+      "none": "swnr.settings.languagePresets.none",
+      "earth": "swnr.settings.languagePresets.earth",
+      "wwn": "swnr.settings.languagePresets.wwn",
+      "both": "swnr.settings.languagePresets.both"
+    },
+    default: "none"
+  });
+
+  game.settings.register("swnr", "availableLanguages", {
+    name: "swnr.settings.availableLanguages",
+    hint: "swnr.settings.availableLanguagesHint", 
+    scope: "world",
+    config: true,
+    type: String,
+    default: "",
+    onChange: (value) => {
+      // Parse the language string for use by sheets
+      const languageList = value ? value.split(",").map(lang => lang.trim()).filter(lang => lang) : [];
+      // Store the parsed list for easy access
+      game.settings.set("swnr", "parsedLanguageList", languageList);
+    }
+  });
+
+  game.settings.register("swnr", "parsedLanguageList", {
+    name: "Parsed Language List",
+    scope: "world", 
+    config: false,
+    type: Array,
+    default: []
+  });
+
 };
 
 export const getGameSettings = function () {
@@ -167,6 +234,39 @@ export const getGameSettings = function () {
     useStress: game.settings.get("swnr", "useStress"),
     showAccess: game.settings.get("swnr", "showAccess"),
     // search: game.settings.get("swnr", "search"),
+    languagePresetSelector: game.settings.get("swnr", "languagePresetSelector"),
+    availableLanguages: game.settings.get("swnr", "availableLanguages"),
+    parsedLanguageList: game.settings.get("swnr", "parsedLanguageList"),
   };
   return settings;
 };
+
+/**
+ * Add a language preset to the available languages list
+ * @param {string} preset - The preset type to add
+ */
+export function addLanguagePreset(preset) {
+  const presetLanguages = getLanguagePresetList(preset);
+  
+  if (presetLanguages.length === 0) {
+    ui.notifications.warn("No languages to add from this preset.");
+    return;
+  }
+  
+  const currentLanguages = game.settings.get("swnr", "availableLanguages");
+  const currentList = currentLanguages ? currentLanguages.split(",").map(lang => lang.trim()).filter(lang => lang) : [];
+  
+  // Add new languages (avoiding duplicates)
+  const newLanguages = presetLanguages.filter(lang => !currentList.includes(lang));
+  
+  if (newLanguages.length === 0) {
+    ui.notifications.info("All languages from this preset are already in your list.");
+    return;
+  }
+  
+  const updatedList = [...currentList, ...newLanguages];
+  const languageString = updatedList.join(", ");
+  
+  game.settings.set("swnr", "availableLanguages", languageString);
+  ui.notifications.info(`Added ${newLanguages.length} language(s): ${newLanguages.join(", ")}`);
+}
