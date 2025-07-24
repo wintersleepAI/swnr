@@ -1,6 +1,6 @@
     <ol class="items-list">
-      {{!-- CONTAINERS SECTION (only for item type) --}}
-      {{#if (eq type "item")}}
+      {{!-- CONTAINERS SECTION (show for all types but only populate from gear/item containers) --}}
+      {{#if true}}
         {{!-- Two-pass approach: first check if any containers exist --}}
         {{#each itemList as |item id|}}
           {{#if item.system.container.isContainer}}
@@ -78,7 +78,7 @@
             
             {{!-- Show contained items when container is open --}}
             {{#if item.system.container.isOpen}}
-              {{#each ../itemList as |containedItem containedId|}}
+              {{#each @root.actor.items as |containedItem containedId|}}
                 {{#if (eq containedItem.system.containerId item.id)}}
                   <li class="item flex flexrow contained-item" data-item-id="{{containedItem._id}}" data-drag="true" data-document-class="Item" style="background-color: var(--color-bg-option); margin-left: 2em; border-left: 3px solid var(--accent-color);">
                     <div class="item-name-long" style="display: flex; align-items: center;">
