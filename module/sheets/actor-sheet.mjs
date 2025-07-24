@@ -121,6 +121,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     },
     compactAbilitiesList: {
       template: 'systems/swnr/templates/actor/fragments/compact-abilities-list.hbs',
+    },
+    compactCarriedList: {
+      template: 'systems/swnr/templates/actor/fragments/compact-carried-list.hbs',
     }
   };
 
