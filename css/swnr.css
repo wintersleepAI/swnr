@@ -1255,6 +1255,36 @@
   border-left: 2px solid var(--color-border-light-tertiary);
   padding-left: 0.5rem;
 }
+.swnr .power-type-section .item-description {
+  list-style: none;
+  background-color: var(--color-bg-option);
+  border-left: 3px solid var(--accent-color);
+  margin-left: 1em;
+  padding: 0.5em;
+  font-size: 0.9em;
+}
+.swnr .power-type-section .item-description .item-description-content {
+  color: var(--color-text-dark-primary);
+}
+.swnr .power-type-section .item-description .item-description-content strong {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+.swnr .power-type-section .item-description .item-description-content div {
+  margin-top: 0.25em;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
+.swnr .power-type-section span[data-action=toggleItemDescription] {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+.swnr .power-type-section span[data-action=toggleItemDescription]:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
 .swnr .effects-header {
   height: 28px;
   margin: 2px 0;

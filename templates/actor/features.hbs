@@ -193,6 +193,125 @@
               {{formGroup systemFields.tweak.fields.showMutation value=system.tweak.showMutation localize=true}}
               {{!-- {{formGroup systemFields.tweak.fields.extraHeader value=system.tweak.extraHeader localize=true}} --}}
             </div> <!-- End Tweak options -->
+    {{! For the main features list, span the right two columns }}
+    <section class='main' style="flex: 2 1;">
+      <div class="flex flexcol" style="gap:12px;">
+        <div class="grid grid-col3"> <!--Stats modifiers / features --> 
+          {{formGroup systemFields.baseAc value=system.baseAc localize=true}}
+          {{formGroup systemFields.hitDie value=system.hitDie localize=true}}
+          {{formGroup systemFields.traumaTarget value=system.traumaTarget localize=true}}
+          {{formGroup systemFields.systemStrain.fields.permanent value=system.systemStrain.permanent localize=true}}
+          <div class="form-group">
+            <label>{{localize 'SWN.Actor.base.FIELDS.systemStrain.cyberware'}}</label>
+            <input
+              type='text'
+              value='{{system.systemStrain.cyberware}}'
+              data-dtype='Number'
+              readonly
+            />
+          </div>
+        </div> <!-- End Stats modifiers / features -->
+        <ol class='items-list'> <!-- Features -->
+          <li class='flex flexrow items-header'>
+            <div class='item-name'>{{localize 'swnr.featureLabel'}}</div>
+            <div class="item-level">
+              {{localize 'swnr.sheet.type-label'}}
+            </div>
+            <div class='item-controls'>
+              {{#if @root.editable}}
+                <a
+                  class='item-control item-create'
+                  title='Create item'
+                  data-action='createDoc'
+                  data-document-class='Item'
+                  data-type='feature'
+                >
+                  <i class='fas fa-plus'></i>
+                  {{localize 'DOCUMENT.New' type='feature'}}
+                </a>
+              {{/if}}
+            </div>   
+          </li>
+          {{#each features as |item id|}}
+            <li
+              class='item flexrow'
+              data-item-id='{{item._id}}'
+              data-drag='true'
+              data-document-class='Item'
+            >
+              <div class='item-name'>
+                <div class='item-image'>
+                  <a class='rollable' data-roll-type='item' data-action='roll'>
+                    <img
+                      src='{{item.img}}'
+                      title='{{item.name}}'
+                      width='24'
+                      height='24'
+                    />
+                  </a>
+                </div>
+                <div>
+                  <span data-action="toggleItemDescription" data-item-id="{{item.id}}" style="cursor: pointer;">
+                    {{item.name}}
+                  </span>
+                </div>
+              </div>
+              <div class='item-level' style='display: flex; justify-content: center;'>
+                {{localize (concat 'swnr.featureTypes.' item.system.type)}}
+                {{#if item.system.level}}
+                  ({{item.system.level}})
+                {{/if}}
+              </div>
+              <div class='item-controls'>
+                <a
+                  class='item-control item-edit'
+                  title='{{localize "DOCUMENT.Update" type='feature'}}'
+                  data-action='viewDoc'
+                >
+                  <i class='fas fa-edit'></i>
+                </a>
+                {{#if @root.editable}}
+                  <a
+                    class='item-control item-delete'
+                    title='{{localize "DOCUMENT.Delete" type='feature'}}'
+                    data-action='deleteDoc'
+                  >
+                    <i class='fas fa-trash'></i>
+                  </a>
+                {{/if}}
+              </div>
+            </li>
+            <!-- Feature Description Row -->
+            <li class="item-description" style="display: {{#if (lookup @root.expandedDescriptions item.id)}}block{{else}}none{{/if}}; background-color: var(--color-bg-option); border-left: 3px solid var(--accent-color); margin-left: 1em; padding: 0.5em;">
+              <div class="item-description-content">
+                <strong>{{localize "SWN.Actor.Tabs.Description"}}:</strong>
+                <div style="margin-top: 0.25em; white-space: pre-wrap;">{{{item.system.description}}}</div>
+              </div>
+            </li>
+          {{/each}}
+        </ol> <!-- End Features -->
+        <div> <!-- Tweaks -->
+        
+          <ol class="items-list">
+            <li class="items-header flexrow">
+              <div class="item-name">
+                <a data-action="toggleSection" data-section="tweaks">
+                  <span id="tweaks-toggle">▼</span>
+                  {{localize "swnr.sheet.tweaks"}}
+                </a>
+              </div>
+          </ol>
+          <div class="grid grid-col2" id="tweaks">
+            {{formGroup systemFields.tweak.fields.advInit value=system.tweak.advInit localize=true}}
+            {{formGroup systemFields.tweak.fields.debtDisplay value=system.tweak.debtDisplay localize=true}}
+            {{formGroup systemFields.tweak.fields.balanceDisplay value=system.tweak.balanceDisplay localize=true}}            
+            {{formGroup systemFields.tweak.fields.showResourceList value=system.tweak.showResourceList localize=true}}
+            {{formGroup systemFields.tweak.fields.showCyberware value=system.tweak.showCyberware localize=true}}
+            {{formGroup systemFields.tweak.fields.showPowers value=system.tweak.showPowers localize=true}}
+            {{formGroup systemFields.tweak.fields.owedDisplay value=system.tweak.owedDisplay localize=true}}
+            {{formGroup systemFields.tweak.fields.initiative.fields.mod value=system.tweak.initiative.mod localize=true}}
+            {{!-- {{formGroup systemFields.tweak.fields.extraHeader value=system.tweak.extraHeader localize=true}} --}}
+            
           </div>
         </section>
       </section>

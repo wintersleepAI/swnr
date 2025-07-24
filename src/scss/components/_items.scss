@@ -341,4 +341,42 @@
       padding-left: 0.5rem;
     }
   }
+
+  // Item Description Styles
+  .item-description {
+    list-style: none;
+    background-color: var(--color-bg-option);
+    border-left: 3px solid var(--accent-color);
+    margin-left: 1em;
+    padding: 0.5em;
+    font-size: 0.9em;
+    
+    .item-description-content {
+      color: var(--color-text-dark-primary);
+      
+      strong {
+        color: var(--accent-color);
+        font-weight: bold;
+      }
+      
+      div {
+        margin-top: 0.25em;
+        white-space: pre-wrap;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  // Item Name Link Styles
+  span[data-action="toggleItemDescription"] {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+  }
 }

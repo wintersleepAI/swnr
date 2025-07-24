@@ -14,6 +14,7 @@ const { api, sheets } = foundry.applications;
 export class SWNActorSheet extends SWNBaseSheet {
   // Private properties
   #toggleLock = false;
+  static #expandedDescriptions = {};
 
   constructor(options = {}) {
     super(options);
@@ -47,6 +48,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       toggleArmor: this._toggleArmor,
       toggleContainer: this._toggleContainer,
       toggleLock: this._toggleLock,
+      toggleItemDescription: this._onToggleItemDescription,
       rollStats: this._onRollStats,
       toggleSection: this._toggleSection,
       reactionRoll: this._onReactionRoll,
@@ -186,6 +188,8 @@ export class SWNActorSheet extends SWNBaseSheet {
       gameSettings: getGameSettings(),
       headerWidget: headerFieldWidget.bind(this),
       groupWidget: groupFieldWidget.bind(this),
+      // Add expanded descriptions state for item description toggle functionality
+      expandedDescriptions: SWNActorSheet.#expandedDescriptions,
 
     };
 
@@ -1113,6 +1117,37 @@ export class SWNActorSheet extends SWNBaseSheet {
       });
       
       ui.notifications?.info(`Released ${releasedCommitment.amount} effort from ${releasedCommitment.powerName}`);
+    }
+  }
+
+  /**
+   * Toggle the display of an item's description
+   * @param {Event} event - The click event
+   * @param {HTMLElement} target - The clicked element
+   * @returns {Promise<void>}
+   * @static
+   */
+  static async _onToggleItemDescription(event, target) {
+    event.preventDefault();
+    
+    const itemId = target.dataset.itemId || target.closest('[data-item-id]')?.dataset.itemId;
+    if (!itemId) return;
+
+    // Toggle the expanded state (using object instead of Set)
+    if (SWNActorSheet.#expandedDescriptions[itemId]) {
+      delete SWNActorSheet.#expandedDescriptions[itemId];
+    } else {
+      SWNActorSheet.#expandedDescriptions[itemId] = true;
+    }
+
+    // Find and toggle the description row
+    const itemRow = target.closest('.item[data-item-id]');
+    if (!itemRow) return;
+
+    const descriptionRow = itemRow.nextElementSibling;
+    if (descriptionRow && descriptionRow.classList.contains('item-description')) {
+      const isExpanded = SWNActorSheet.#expandedDescriptions[itemId];
+      descriptionRow.style.display = isExpanded ? 'block' : 'none';
     }
   }
 }
