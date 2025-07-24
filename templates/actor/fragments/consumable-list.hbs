@@ -54,8 +54,9 @@
         </div>
       </li>
 
-      <!-- ITEM ROWS -->
+      <!-- ITEM ROWS (excluding contained items) -->
       {{#each itemList as |item id|}}
+        {{#unless item.system.containerId}}
         <li
           class="item flex flexrow"
           data-item-id="{{item._id}}"
@@ -155,5 +156,6 @@
             {{/if}}
           </div>
         </li>
+        {{/unless}}
       {{/each}}
     </ol>

@@ -93,17 +93,15 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
     // Get the drag source and drop target
     const items = this.actor.items;
     const dropTarget = event.target.closest('[data-item-id]');
-    if (!dropTarget) return;
-    const target = items.get(dropTarget.dataset.itemId);
 
-    // Don't sort on yourself
-    if (item.id === target.id) return;
-
-    // Check if this is a container drop
+    // Check if this is a container drop first (before checking for valid dropTarget)
     const containerInfo = ContainerHelper.getDropTargetContainer(event.target);
-    if (containerInfo && containerInfo.itemId === target.id) {
-      // This is a drop onto a container, handle it specially
-      return ContainerHelper.addItemToContainer(target, item);
+    if (containerInfo) {
+      const container = items.get(containerInfo.itemId);
+      if (container && container.id !== item.id) {
+        // This is a drop onto a container, handle it specially
+        return ContainerHelper.addItemToContainer(container, item);
+      }
     }
 
     // Check if item is being removed from a container (dropped outside of containers)
@@ -111,6 +109,13 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       // Item was in a container but dropped elsewhere, remove it from container
       await ContainerHelper.removeItemFromContainer(item);
     }
+
+    // If no valid drop target, we're done (item was just removed from container)
+    if (!dropTarget) return;
+    const target = items.get(dropTarget.dataset.itemId);
+
+    // Don't sort on yourself
+    if (item.id === target.id) return;
 
     // Identify sibling items based on adjacent HTML elements
     const siblings = [];
