@@ -757,4 +757,5 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       }
     }
   }
+
 }

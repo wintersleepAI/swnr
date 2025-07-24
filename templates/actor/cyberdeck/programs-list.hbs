@@ -93,8 +93,7 @@
                     />
                   </a>
                 </div>
-                <div>{{item.name}}
-                </div>
+                <span data-action="toggleItemDescription" data-item-id="{{item.id}}" style="cursor: pointer;">{{item.name}}</span>
               </div>
             {{#if (eq system.type "running")}}
               <div class="item-name">
@@ -133,6 +132,12 @@
                   </a>
                 {{/if}}
               </div>
+            </li>
+            <li class="item-description" style="display: {{#if (lookup @root.expandedDescriptions item.id)}}block{{else}}none{{/if}}; background-color: var(--color-bg-option); border-left: 3px solid var(--accent-color); margin-left: 1em; padding: 0.5em;">
+                <div class="item-description-content">
+                    <strong>{{localize "SWN.Actor.Tabs.Description"}}:</strong>
+                    <div style="margin-top: 0.25em; white-space: pre-wrap;">{{{item.system.description}}}</div>
+                </div>
             </li>
         {{/if}}
       {{/each}}
