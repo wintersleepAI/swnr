@@ -260,6 +260,10 @@ export function registerHandlebarHelpers() {
     return accum;
   });
 
+  Handlebars.registerHelper('includes', function (array, value) {
+    return array && array.includes && array.includes(value);
+  });
+
   Handlebars.registerHelper(
     "getPCStatModForWeapon",
     (
