@@ -5,6 +5,79 @@
   data-group='primary'
   data-tab='features'
 >
+  {{! Full width Features (edge/focus) section at top }}
+  <section class="full-width-features" style="margin-bottom: 12px;">
+    <ol class='items-list'> <!-- Features -->
+      <li class='flex flexrow items-header'>
+        <div class='item-name'>{{localize 'swnr.featureLabel'}}</div>
+        <div class="item-level">
+          {{localize 'swnr.sheet.type-label'}}
+        </div>
+        <div class='item-controls'>
+          {{#if @root.editable}}
+            <a
+              class='item-control item-create'
+              title='Create item'
+              data-action='createDoc'
+              data-document-class='Item'
+              data-type='feature'
+            >
+              <i class='fas fa-plus'></i>
+              {{localize 'DOCUMENT.New' type='feature'}}
+            </a>
+          {{/if}}
+        </div>   
+      </li>
+      {{#each features as |item id|}}
+        <li
+          class='item flexrow'
+          data-item-id='{{item._id}}'
+          data-drag='true'
+          data-document-class='Item'
+        >
+          <div class='item-name'>
+            <div class='item-image'>
+              <a class='rollable' data-roll-type='item' data-action='roll'>
+                <img
+                  src='{{item.img}}'
+                  title='{{item.name}}'
+                  width='24'
+                  height='24'
+                />
+              </a>
+            </div>
+            <div>{{item.name}}</div>
+          </div>
+          <div class='item-level' style='display: flex; justify-content: center;'>
+            {{localize (concat 'swnr.featureTypes.' item.system.type)}}
+            {{#if item.system.level}}
+              ({{item.system.level}})
+            {{/if}}
+          </div>
+          <div class='item-controls'>
+            <a
+              class='item-control item-edit'
+              title='{{localize "DOCUMENT.Update" type='feature'}}'
+              data-action='viewDoc'
+            >
+              <i class='fas fa-edit'></i>
+            </a>
+            {{#if @root.editable}}
+              <a
+                class='item-control item-delete'
+                title='{{localize "DOCUMENT.Delete" type='feature'}}'
+                data-action='deleteDoc'
+              >
+                <i class='fas fa-trash'></i>
+              </a>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </ol> <!-- End Features -->
+  </section>
+
+  {{! Two-column layout for everything else }}
   <section class='sheet-cols'>
     <aside class='sidebar' style="flex: 0 1 300px;margin-right:4px;">
       <ol class="items-list">
@@ -75,7 +148,7 @@
       </div>
     </aside>
 
-    {{! For the main features list, span the right two columns }}
+    {{! Main section with stats modifiers and tweaks }}
     <section class='main' style="flex: 2 1;">
       <div class="flex flexcol" style="gap:12px;">
         <div class="grid grid-col3"> <!--Stats modifiers / features --> 
@@ -93,76 +166,8 @@
             />
           </div>
         </div> <!-- End Stats modifiers / features -->
-        <ol class='items-list'> <!-- Features -->
-          <li class='flex flexrow items-header'>
-            <div class='item-name'>{{localize 'swnr.featureLabel'}}</div>
-            <div class="item-level">
-              {{localize 'swnr.sheet.type-label'}}
-            </div>
-            <div class='item-controls'>
-              {{#if @root.editable}}
-                <a
-                  class='item-control item-create'
-                  title='Create item'
-                  data-action='createDoc'
-                  data-document-class='Item'
-                  data-type='feature'
-                >
-                  <i class='fas fa-plus'></i>
-                  {{localize 'DOCUMENT.New' type='feature'}}
-                </a>
-              {{/if}}
-            </div>   
-          </li>
-          {{#each features as |item id|}}
-            <li
-              class='item flexrow'
-              data-item-id='{{item._id}}'
-              data-drag='true'
-              data-document-class='Item'
-            >
-              <div class='item-name'>
-                <div class='item-image'>
-                  <a class='rollable' data-roll-type='item' data-action='roll'>
-                    <img
-                      src='{{item.img}}'
-                      title='{{item.name}}'
-                      width='24'
-                      height='24'
-                    />
-                  </a>
-                </div>
-                <div>{{item.name}}</div>
-              </div>
-              <div class='item-level' style='display: flex; justify-content: center;'>
-                {{localize (concat 'swnr.featureTypes.' item.system.type)}}
-                {{#if item.system.level}}
-                  ({{item.system.level}})
-                {{/if}}
-              </div>
-              <div class='item-controls'>
-                <a
-                  class='item-control item-edit'
-                  title='{{localize "DOCUMENT.Update" type='feature'}}'
-                  data-action='viewDoc'
-                >
-                  <i class='fas fa-edit'></i>
-                </a>
-                {{#if @root.editable}}
-                  <a
-                    class='item-control item-delete'
-                    title='{{localize "DOCUMENT.Delete" type='feature'}}'
-                    data-action='deleteDoc'
-                  >
-                    <i class='fas fa-trash'></i>
-                  </a>
-                {{/if}}
-              </div>
-            </li>
-          {{/each}}
-        </ol> <!-- End Features -->
-        <div> <!-- Tweaks -->
         
+        <div> <!-- Tweaks -->
           <ol class="items-list">
             <li class="items-header flexrow">
               <div class="item-name">
@@ -175,22 +180,20 @@
           <div class="grid grid-col2" id="tweaks">
             {{formGroup systemFields.tweak.fields.advInit value=system.tweak.advInit localize=true}}
             {{formGroup systemFields.tweak.fields.debtDisplay value=system.tweak.debtDisplay localize=true}}
-            {{formGroup systemFields.tweak.fields.balanceDisplay value=system.tweak.balanceDisplay localize=true}}            
-            {{formGroup systemFields.tweak.fields.showResourceList value=system.tweak.showResourceList localize=true}}
+            {{formGroup systemFields.tweak.fields.balanceDisplay value=system.tweak.balanceDisplay localize=true}}
+            {{formGroup systemFields.tweak.fields.owedDisplay value=system.tweak.owedDisplay localize=true}}            
             {{formGroup systemFields.tweak.fields.showCyberware value=system.tweak.showCyberware localize=true}}
             {{formGroup systemFields.tweak.fields.showPsychic value=system.tweak.showPsychic localize=true}}
             {{formGroup systemFields.tweak.fields.showArts value=system.tweak.showArts localize=true}}
             {{formGroup systemFields.tweak.fields.showSpells value=system.tweak.showSpells localize=true}}
             {{formGroup systemFields.tweak.fields.showAdept value=system.tweak.showAdept localize=true}}
             {{formGroup systemFields.tweak.fields.showMutation value=system.tweak.showMutation localize=true}}
-            {{formGroup systemFields.tweak.fields.owedDisplay value=system.tweak.owedDisplay localize=true}}
             {{formGroup systemFields.tweak.fields.initiative.fields.mod value=system.tweak.initiative.mod localize=true}}
             {{!-- {{formGroup systemFields.tweak.fields.extraHeader value=system.tweak.extraHeader localize=true}} --}}
             
           </div>
         </div> <!-- End Tweaks -->
       </div>
-
     </section>
   </section>
 </section>
