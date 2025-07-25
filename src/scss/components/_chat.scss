@@ -23,4 +23,426 @@
     gap: 4px;
     margin-top: 4px;
   }
+
+  // Power Usage Chat Cards
+  .power-usage {
+    .resource-cost {
+      background: var(--color-bg-btn);
+      border: 1px solid var(--color-border-dark-tertiary);
+      border-radius: 4px;
+      padding: 0.25rem 0.5rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.85em;
+      
+      
+      .strain-cost {
+        color: var(--color-text-light-7);
+        
+        i {
+          color: #f39c12;
+          margin-right: 0.25rem;
+        }
+      }
+      
+      .consumption-cost {
+        color: var(--color-text-light-7);
+        
+        i {
+          margin-right: 0.25rem;
+        }
+        
+        &.consumption-sourceEffort i {
+          color: #9b59b6;
+        }
+        
+        &.consumption-spellPoints i {
+          color: #3498db;
+        }
+        
+        &.consumption-systemStrain i {
+          color: #e74c3c;
+        }
+        
+        &.consumption-consumableItem i {
+          color: #2ecc71;
+        }
+        
+        &.consumption-uses i {
+          color: #95a5a6;
+        }
+      }
+    }
+
+    .power-roll {
+      margin: 0.5rem 0;
+    }
+
+    .passive-indicator {
+      background: var(--color-bg-btn);
+      border: 1px solid var(--color-border-dark-tertiary);
+      border-radius: 4px;
+      padding: 0.25rem 0.5rem;
+      margin-top: 0.5rem;
+      font-size: 0.85em;
+      color: var(--color-text-light-6);
+      text-align: center;
+      
+      i {
+        margin-right: 0.25rem;
+        color: var(--color-text-light-5);
+      }
+    }
+  }
+
+  // Refresh Summary Cards
+  .refresh-summary {
+    background: var(--color-bg-option);
+    border-left: 4px solid #27ae60;
+    
+    h3 {
+      color: #27ae60;
+      margin-bottom: 0.5rem;
+      
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+    
+    ul {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      
+      li {
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+
+  // Test Summary Cards  
+  .test-summary {
+    background: var(--color-bg-option);
+    
+    h3 {
+      margin-bottom: 0.5rem;
+      
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+    
+    ul {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      
+      li {
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+}
+
+// Actor Sheet Pool Display
+.swnr {
+  .resource-pools {
+    .pools-container {
+      width: 100%;
+      padding: 0.5rem;
+    }
+    
+    .pools-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--color-border-dark-tertiary);
+      padding-bottom: 0.25rem;
+      
+      h4 {
+        margin: 0;
+        font-size: 0.9em;
+        color: var(--color-text-light-6);
+      }
+      
+    }
+    
+    .pools-display {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .pool-group {
+      margin-bottom: 0;
+    }
+    
+    .pool-group-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.25rem;
+      
+      .resource-name {
+        font-weight: bold;
+        font-size: 0.85em;
+        color: var(--color-text-light-7);
+      }
+      
+      .pool-summary {
+        font-size: 0.8em;
+        color: var(--color-text-light-6);
+      }
+    }
+    
+    .pools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    
+    .pool-badge {
+      background: var(--color-bg-option);
+      border: 1px solid var(--color-border-dark-tertiary);
+      border-radius: 4px;
+      padding: 0.25rem 0.5rem;
+      min-width: 4rem;
+      text-align: center;
+      font-size: 0.75em;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        border-color: var(--color-border-light-primary);
+        box-shadow: 0 0 0 1px var(--color-border-light-primary);
+      }
+      
+      &.empty {
+        border-color: #e74c3c;
+        background: rgba(231, 76, 60, 0.1);
+      }
+      
+      &.low {
+        border-color: #f39c12;
+        background: rgba(243, 156, 18, 0.1);
+      }
+      
+      &.full {
+        border-color: #27ae60;
+        background: rgba(39, 174, 96, 0.1);
+      }
+      
+      .pool-label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.1rem;
+        color: var(--color-text-light-7);
+      }
+      
+      .pool-values {
+        display: block;
+        color: var(--color-text-light-6);
+        font-size: 0.9em;
+      }
+      
+      .pool-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--color-border-dark-tertiary);
+      }
+      
+      .pool-fill {
+        height: 100%;
+        background: var(--color-text-light-5);
+        transition: width 0.3s ease;
+      }
+      
+      &.empty .pool-fill {
+        background: #e74c3c;
+      }
+      
+      &.low .pool-fill {
+        background: #f39c12;
+      }
+      
+      &.full .pool-fill {
+        background: #27ae60;
+      }
+      
+      &.has-commitments {
+        border-color: #9b59b6;
+        background: rgba(155, 89, 182, 0.1);
+      }
+      
+      .committed-indicator {
+        color: #9b59b6;
+        font-weight: bold;
+        margin-left: 0.25rem;
+      }
+      
+      .commitment-details {
+        margin-top: 0.25rem;
+        font-size: 0.85em;
+        
+        .commitment-item {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.1rem 0;
+          border-top: 1px solid var(--color-border-dark-tertiary);
+          
+          .power-name {
+            color: var(--color-text-light-6);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            flex: 1;
+          }
+          
+          .effort-amount {
+            color: #9b59b6;
+            font-weight: bold;
+            margin-left: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Feature Pool Configuration
+.swnr.item {
+  .pools-granted-container {
+    max-height: none; // allow unlimited height
+    overflow: visible; // let parent handle scrolling
+    .pool-config {
+      border: 1px solid var(--color-border-dark-tertiary);
+      border-radius: 4px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: var(--color-bg-option);
+      
+      .pool-config-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.75rem;
+        border-bottom: 1px solid var(--color-border-dark-tertiary);
+        padding-bottom: 0.5rem;
+        
+        h4 {
+          margin: 0;
+          color: var(--color-text-light-7);
+          font-size: 1em;
+        }
+        
+        .pool-remove-btn {
+          background: #dc3545;
+          color: white;
+          border: none;
+          border-radius: 3px;
+          padding: 0.25rem 0.5rem;
+          cursor: pointer;
+          font-size: 0.8em;
+          
+          &:hover {
+            background: #c82333;
+          }
+        }
+      }
+      
+      .pool-help {
+        margin-top: 0.75rem;
+        
+        summary {
+          cursor: pointer;
+          padding: 0.5rem;
+          background: var(--color-bg-btn);
+          border-radius: 4px;
+          border: 1px solid var(--color-border-dark-tertiary);
+          font-size: 0.85em;
+          
+          &:hover {
+            background: var(--color-bg-option);
+          }
+          
+          i {
+            margin-right: 0.5rem;
+            color: var(--color-text-light-5);
+          }
+        }
+        
+        .help-content {
+          margin-top: 0.5rem;
+          padding: 0.75rem;
+          background: var(--color-bg-btn);
+          border-radius: 4px;
+          font-size: 0.85em;
+          line-height: 1.4;
+          
+          p {
+            margin: 0 0 0.5rem 0;
+          }
+          
+          ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+          }
+          
+          li {
+            margin-bottom: 0.25rem;
+          }
+        }
+      }
+    }
+    
+    .no-pools-message {
+      text-align: center;
+      padding: 2rem;
+      color: var(--color-text-light-6);
+      background: var(--color-bg-btn);
+      border: 1px dashed var(--color-border-dark-tertiary);
+      border-radius: 4px;
+      
+      i {
+        margin-right: 0.5rem;
+        color: var(--color-text-light-5);
+      }
+    }
+  }
+  
+  .pool-controls {
+    text-align: center;
+    margin-top: 1rem;
+    
+    .add-pool-btn {
+      background: var(--color-bg-btn);
+      color: var(--color-text-light-primary);
+      border: 1px solid var(--color-border-dark-tertiary);
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-size: 0.9em;
+      
+      &:hover {
+        background: var(--color-bg-option);
+        border-color: var(--color-border-light-primary);
+      }
+      
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  
+  .help-text {
+    font-style: italic;
+    color: var(--color-text-light-6);
+    margin-bottom: 1rem;
+    font-size: 0.9em;
+  }
 }

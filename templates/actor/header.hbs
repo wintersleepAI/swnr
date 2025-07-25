@@ -242,6 +242,35 @@
       </div><!-- end resource-group -->
       {{/if}}
 
+      {{! Resource Pools Display}}
+      {{#if hasAnyPools}}
+      <div class='resource-pools header-group flex-group-center grid-span-5'>
+        <div class="pools-container">
+          <div class="pools-display">
+            {{#each poolGroups}}
+            <div class="pool-group">
+              <div class="pool-group-header">
+                <span class="resource-name">{{resourceName}}</span>
+              </div>
+              <div class="pools-list">
+                {{#each pools}}
+                <div class="pool-badge {{#if isEmpty}}empty{{else if isLow}}low{{else if isFull}}full{{/if}} {{#if hasCommitments}}has-commitments{{/if}}" 
+                     title="{{key}}: {{current}} available/{{max}} total{{#if committed}} ({{committed}} committed){{/if}} ({{cadence}})">
+                  <span class="pool-label">{{#if (eq subResource "Default")}}{{../resourceName}}{{else}}{{subResource}}{{/if}}</span>
+                  <span class="pool-values">{{current}}/{{max}}{{#if committed}}<small class="committed-indicator">-{{committed}}</small>{{/if}}</span>
+                  <div class="pool-bar">
+                    <div class="pool-fill" style="width: {{percentage}}%"></div>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+      {{/if}}
+
       {{!-- AC shield --}}
         {{!-- <svg version="1.1" x="0px" y="0px" viewBox="0 0 90 100" xml:space="preserve">
           <path d="M45,100C-2.6,79.3,0,12.6,0,12.6c0-2.2,1.8-4,4.4-4.6l39.1-7.9C44,0,44.5,0,45,0c0.5,0,1,0,1.4,0.1L85.5,8

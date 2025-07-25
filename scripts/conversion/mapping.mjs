@@ -203,7 +203,6 @@ const power = {
   range: "",
   skill: null,
   prepared: true,
-  effort: null,
 };
 
 const program = {

@@ -13,6 +13,9 @@ import { SWN } from './helpers/config.mjs';
 import { registerSettings } from './helpers/register-settings.mjs';
 import { registerHandlebarHelpers } from './helpers/handlebar.mjs';
 import { chatListeners, welcomeMessage } from './helpers/chat.mjs';
+import * as refreshHelpers from './helpers/refresh-helpers.mjs';
+
+// Import dialog classes
 
 // Import DataModel classes
 import * as models from './data/_module.mjs';
@@ -37,6 +40,7 @@ globalThis.swnr = {
   },
   utils: {
     rollItemMacro,
+    ...refreshHelpers,
   },
   models,
 };
@@ -44,6 +48,10 @@ globalThis.swnr = {
 Hooks.once('init', function () {
   // Add custom constants for configuration.
   CONFIG.SWN = SWN;
+
+  // Initialize power usage mutex system
+  CONFIG.SWN.poolMutex = new Map();
+  CONFIG.SWN.poolResourceNames = ["Effort", "Slots", "Points", "Strain", "Uses"];
 
   registerSettings();
 
@@ -83,6 +91,7 @@ Hooks.once('init', function () {
     cyberware: models.SWNCyberware,
     program: models.SWNProgram,
     asset: models.SWNAsset,
+    power: models.SWNPower,
     shipWeapon: models.SWNShipWeapon,
     shipFitting: models.SWNShipFitting,
     shipDefense: models.SWNShipDefense
@@ -169,7 +178,14 @@ Hooks.once('ready', function () {
     game.settings.set('swnr', 'systemMigrationVersion', currentVersion);
   }
 
-  
+  // Override initiative roll method (consolidated from duplicate hook)
+  const originalGetInitiativeRoll = Combatant.prototype.getInitiativeRoll;
+  Combatant.prototype.getInitiativeRoll = function () {
+    if (this.actor?.rollInitiative) {
+      return this.actor.rollInitiative();
+    }
+    return originalGetInitiativeRoll.call(this);
+  };
 });
 
 /* -------------------------------------------- */
@@ -234,15 +250,36 @@ async function createDocMacro(data, slot) {
   game.user.assignHotbarMacro(macro, slot);
   return false;
 }
-Hooks.once("ready", () => {
-  const originalGetInitiativeRoll = Combatant.prototype.getInitiativeRoll;
-  Combatant.prototype.getInitiativeRoll = function () {
-    if (this.actor?.rollInitiative) {
-      return this.actor.rollInitiative();
-    }
-    return originalGetInitiativeRoll.call(this);
-  };
+
+/* -------------------------------------------- */
+/*  Pool Refresh Hook Integration               */
+/* -------------------------------------------- */
+
+// Combat end - trigger scene refresh
+Hooks.on("deleteCombat", async (combat, options, userId) => {
+  if (game.user.isGM && combat.scene === canvas.scene) {
+    console.log("[SWN Refresh] Combat ended, triggering scene refresh");
+    await globalThis.swnr.refreshScene();
+  }
 });
+
+
+// Daily refresh on new day (time-based if available)
+Hooks.on("swnr.newDay", async () => {
+  if (game.user.isGM) {
+    console.log("[SWN Refresh] New day triggered");
+    await globalThis.swnr.refreshDay();
+  }
+});
+
+// Integration with Simple Calendar module if available
+Hooks.on("swnr.timeAdvanced", async (advancement) => {
+  if (game.user.isGM && advancement.days > 0) {
+    console.log("[SWN Refresh] Time advanced by days, triggering refresh");
+    await globalThis.swnr.refreshDay();
+  }
+});
+
 /**
  * Create a Macro from an Item drop.
  * Get an existing item macro if one exists, otherwise create a new one.

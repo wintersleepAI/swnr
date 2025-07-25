@@ -19,4 +19,5 @@
   @include meta.load-css('components/items');
   @include meta.load-css('components/effects');
   @include meta.load-css("components/buttons");
+  @include meta.load-css('components/consumption');
 }

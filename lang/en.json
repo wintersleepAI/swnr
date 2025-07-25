@@ -108,20 +108,6 @@
           "homeworld": {
             "label": "Homeworld"
           },
-          "effort": {
-            "bonus": {
-              "label": "Bonus"
-            },
-            "scene": {
-              "label": "Scene"
-            },
-            "current": {
-              "label": "Current"
-            },
-            "day": {
-              "label": "Day"
-            }
-          },
           "cost": {
             "label": "Cost"
           },
@@ -163,17 +149,26 @@
             "advInit": {
               "label": "'Advantage' on Init."
             },
-            "extraEffortName": {
-              "label": "Extra Effort Name (empty to not show)"
-            },
             "showResourceList": {
               "label": "Show Optional Resource List"
             },
             "showCyberware": {
               "label": "Show Cyberware"
             },
-            "showPowers": {
-              "label": "Show Powers"
+            "showPsychic": {
+              "label": "Show Psychic"
+            },
+            "showArts": {
+              "label": "Show Arts"
+            },
+            "showSpells": {
+              "label": "Show Spells"
+            },
+            "showAdept": {
+              "label": "Show Adept"
+            },
+            "showMutation": {
+              "label": "Show Mutation"
             },
             "debtDisplay": {
               "label": "Name of Currency 1"
@@ -588,7 +583,26 @@
           }
         },
         "PowerLVL": "Level {level} Power",
-        "AddLVL": "Add LVL {level}"
+        "AddLVL": "Add LVL {level}",
+        "Types": {
+          "psychic": "Psychic Powers", 
+          "art": "Arts",
+          "adept": "Adept Abilities",
+          "spell": "Spells",
+          "mutation": "Mutations"
+        },
+        "Add": {
+          "psychic": "Add Power",
+          "art": "Add Art", 
+          "adept": "Add Ability",
+          "spell": "Add Spell",
+          "mutation": "Add Mutation",
+          "unleveled": "Add Unleveled"
+        },
+        "Level": {
+          "unleveled": "Unleveled",
+          "level": "Level {level}"
+        }
       },
       "Skill": {
         "FIELDS": {
@@ -1471,9 +1485,14 @@
         "save": "Save",
         "skill": "Skill Button (e.g. dex/pilot)",
         "range": "Range",
+        "level": "Level",
         "prepared": "Is Prepared?"
       },
       "resources": "Resources",
+      "passive": "Passive Ability",
+      "showLongDesc": "Show Long Desc.",
+      "hideLongDesc": "Hide Long Desc.",
+      "spendResources": "Spend Resources",
       "delete-item": "Delete Item",
       "show-item": "Show Item",
       "edit-item": "Edit Item",
@@ -1975,6 +1994,22 @@
       "title": "Effort",
       "max": "Max"
     },
+    "pools": {
+      "title": "Resource Pools",
+      "manage": "Manage",
+      "noPoolsMessage": "No resource pools available.",
+      "poolsGrantedHint": "Resource pools are granted by Features, Foci, and Edges. Check the Features tab to configure pool grants.",
+      "effortReleased": "Effort Released",
+      "refreshSummary": {
+        "scene": "Scene Refresh",
+        "rest": "Rest Refresh",
+        "day": "Day Refresh"
+      },
+      "commitment": {
+        "release": "Release committed effort",
+        "released": "Effort Released"
+      }
+    },
     "dialog": {
       "attackRoll": "{actorName} attacking with {weaponName}?",
       "addCurrency": "Amount to add to {type}:",
@@ -2105,6 +2140,35 @@
     "deletePilot": "Do you want to remove {name} as the pilot?",
     "deleteContent": "Are you sure you want to delete {name} from the actor {actor}? (hold shift to skip confirm dialog)",
     "AddCurrency": "Add Currency",
-    "InvalidNumber": "Enter a valid whole number"
+    "InvalidNumber": "Enter a valid whole number",
+    "consumption": {
+      "additionalConsumption": "Additional Consumption",
+      "resourceConsumption": "Resource Consumption",
+      "type": "Type",
+      "cost": "Cost",
+      "cadence": "Cadence",
+      "details": "Details",
+      "actions": "Actions",
+      "addCost": "Add Cost",
+      "remove": "Remove",
+      "noAdditionalCosts": "No additional consumption costs configured",
+      "noResourceCosts": "No resource consumption costs configured",
+      "selectItem": "Select Item...",
+      "none": "None",
+      "poolResource": "Pool Resource",
+      "systemStrain": "System Strain",
+      "consumableItem": "Consumable Item",
+      "uses": "Internal Uses",
+      "remaining": "remaining",
+      "scene": "Per Scene",
+      "rest": "Per Rest",
+      "day": "Per Day", 
+      "commit": "Committed",
+      "recover": "Recover",
+      "recoverResource": "Recover Resource",
+      "recoverStrain": "Recover System Strain",
+      "recoverItem": "Recover Item",
+      "recoverUses": "Recover Uses"
+    }
   }
 }
