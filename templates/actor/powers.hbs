@@ -64,8 +64,12 @@
   {{/if}}
 
 
-  {{#if system.tweak.showPowers}}
   {{#each powers as |powersByLevel powerType|}}
+    {{#if (or (and (eq powerType "psychic") @root.system.tweak.showPsychic)
+              (and (eq powerType "art") @root.system.tweak.showArts)
+              (and (eq powerType "spell") @root.system.tweak.showSpells)
+              (and (eq powerType "adept") @root.system.tweak.showAdept)
+              (and (eq powerType "mutation") @root.system.tweak.showMutation))}}
     <div class="power-type-section">
       <h3 class="power-type-header">
         {{localize (concat "SWN.Item.Power.Types." powerType)}}
@@ -192,7 +196,7 @@
         {{/if}}
       </ol>
     </div>
+    {{/if}}
   {{/each}}
-  {{/if}}
 
 </section>

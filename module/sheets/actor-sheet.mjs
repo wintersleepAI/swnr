@@ -135,15 +135,19 @@ export class SWNActorSheet extends SWNBaseSheet {
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        // Check if character has powers or resource pools before showing powers tab
-        const hasPowers = this.document.items.some(item => item.type === 'power');
-        const hasResourcePools = this.document.system.pools && Object.keys(this.document.system.pools).length > 0;
+        // Check if any power toggles are enabled to show powers tab
+        const showAnyPowerType = this.document.system.tweak.showPsychic || 
+                                this.document.system.tweak.showArts || 
+                                this.document.system.tweak.showSpells || 
+                                this.document.system.tweak.showAdept || 
+                                this.document.system.tweak.showMutation ||
+                                this.document.system.tweak.showCyberware;
         
         // Base tabs for characters
         options.parts.push('combat', 'features', 'gear');
         
-        // Only add powers tab if character has powers or resource pools
-        if (hasPowers || hasResourcePools) {
+        // Only add powers tab if any power type toggles are enabled
+        if (showAnyPowerType) {
           options.parts.push('powers');
         }
         
@@ -371,13 +375,8 @@ export class SWNActorSheet extends SWNBaseSheet {
       }
     }
 
-    // Prepare powers for template - only include types that have powers
-    const powers = {};
-    for (const [powerType, levelsObj] of Object.entries(powersByType)) {
-      if (Object.keys(levelsObj).length > 0) {
-        powers[powerType] = levelsObj;
-      }
-    }
+    // Prepare powers for template - include all power types regardless of whether they have powers
+    const powers = powersByType;
 
     // Sort then assign
     context.items = items.sort((a, b) => (a.sort || 0) - (b.sort || 0));

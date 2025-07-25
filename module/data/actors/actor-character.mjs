@@ -57,7 +57,11 @@ export default class SWNCharacter extends SWNActorBase {
       extraHeader: SWNShared.emptyString(),
       showResourceList: new fields.BooleanField({initial: false}),
       showCyberware: new fields.BooleanField({initial: true}),
-      showPowers: new fields.BooleanField({initial: true}),
+      showPsychic: new fields.BooleanField({initial: true}),
+      showArts: new fields.BooleanField({initial: false}),
+      showSpells: new fields.BooleanField({initial: false}),
+      showAdept: new fields.BooleanField({initial: false}),
+      showMutation: new fields.BooleanField({initial: false}),
       resourceList: new fields.ArrayField(new fields.SchemaField({
         name: SWNShared.emptyString(),
         value: SWNShared.requiredNumber(0),
