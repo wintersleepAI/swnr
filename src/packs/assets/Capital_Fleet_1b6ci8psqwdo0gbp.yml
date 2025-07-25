@@ -1,0 +1,49 @@
+name: Capital Fleet
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 1b6ci8psqwdo0gbp
+system:
+  assetType: force
+  attackDamage: 3d10+4
+  attackSource: force
+  attackSpecial: ''
+  attackTarget: force
+  baseOfInfluence: false
+  cost: 40
+  counter: 3d8
+  description: >-
+    The pride of an empire, this is a collection of massive capital warships
+    without peer in most sectors. Capital fleets are expensive to keep flying,
+    and cost an additional 2 FacCreds of maintenance each turn. As an action,
+    they may move to any world within three hexes of their current location.
+    Planetary government permission is required to raise a capital fleet, but
+    not to move one into a system.
+  health:
+    max: 30
+    value: 30
+  income: 0
+  maintenance: 2
+  note: A,S
+  rating: 8
+  tl: 4
+  turnRoll: ''
+  type: Spaceship
+  unusable: false
+effects: []
+ownership:
+  default: 0
+_key: '!items!1b6ci8psqwdo0gbp'
+

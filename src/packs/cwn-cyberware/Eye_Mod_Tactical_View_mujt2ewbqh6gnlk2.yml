@@ -1,0 +1,33 @@
+name: Eye Mod/Tactical View
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: mujt2ewbqh6gnlk2
+system:
+  concealment: Medical
+  cost: 10000
+  description: >-
+    These eyes can receive text or video transmissions and play them on an inset
+    in the user's normal vision. Outline and pattern discrimination is enhanced;
+    when specifically looking for things or keeping watch, gain a +1 bonus to
+    any relevant Notice check.
+  effect: Get transmission, search better
+  strain: 0.5
+  type: Sensory
+effects: []
+ownership:
+  default: 0
+_key: '!items!mujt2ewbqh6gnlk2'
+

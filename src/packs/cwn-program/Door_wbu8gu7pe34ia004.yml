@@ -1,0 +1,33 @@
+name: Door
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: wbu8gu7pe34ia004
+system:
+  accessCost: 0
+  cost: 500
+  description: >-
+    A physical door, shutter, hatch, or other barrier with an electronic lock or
+    opening mechanism.
+  selfTerminating: false
+  skillCheckMod: 0
+  target: Device
+  type: subject
+  useAffects: Physical doors/barriers
+effects: []
+ownership:
+  default: 0
+_key: '!items!wbu8gu7pe34ia004'
+

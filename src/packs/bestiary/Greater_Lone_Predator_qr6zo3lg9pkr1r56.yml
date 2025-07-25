@@ -1,0 +1,148 @@
+name: Greater Lone Predator
+type: npc
+img: systems/swnr/assets/icons/alien-bug.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: qr6zo3lg9pkr1r56
+system:
+  ab: 6
+  armorType: primitive
+  attacks:
+    bonusDamage: 0
+    number: 2
+  baseAc: 15
+  hitDice: 5
+  moralScore: 9
+  saves: 12
+  skillBonus: 2
+  speed: 10
+effects: []
+prototypeToken:
+  name: Greater Lone Predator
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/alien-bug.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+items:
+  - name: Natural Attack
+    type: weapon
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
+      lastModifiedBy: null
+      exportSource: null
+    sort: 0
+    _id: a2bnoyfj2oiyr1lz
+    system:
+      shock:
+        dmg: 0
+        ac: 15
+      damage: d10
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      permission:
+        default: 0
+    effects: []
+    img: icons/svg/item-bag.svg
+    ownership:
+      default: 0
+    _key: '!actors.items!qr6zo3lg9pkr1r56.a2bnoyfj2oiyr1lz'
+ownership:
+  default: 0
+_key: '!actors!qr6zo3lg9pkr1r56'
+

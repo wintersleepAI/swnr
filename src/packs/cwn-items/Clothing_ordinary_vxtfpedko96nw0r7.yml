@@ -1,0 +1,29 @@
+name: Clothing,ordinary
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: vxtfpedko96nw0r7
+system:
+  cost: 25
+  description: >-
+    Clothing has no Encumbrance when worn, but it`s sometimes prudent to have a
+    spare outfit in your pack.
+  encumbrance: 1
+  noEncReadied: true
+effects: []
+ownership:
+  default: 0
+_key: '!items!vxtfpedko96nw0r7'
+

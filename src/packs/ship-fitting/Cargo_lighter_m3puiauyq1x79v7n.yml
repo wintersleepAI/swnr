@@ -1,0 +1,41 @@
+name: Cargo lighter
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: m3puiauyq1x79v7n
+system:
+  broken: false
+  cost: 25000
+  costMultiplier: false
+  description: >-
+    Cruisers and larger craft can't land on planetary bodies, so they require
+    small shuttlecraft for transport. A cargo lighter is only capable of
+    surface-to-orbit flight, which takes roughly twenty minutes either way, but
+    can latch on to a standard pressurized cargo container holding up to 200
+    tons of cargo and passengers. These containers are usually collapsible and
+    take up no significant space when compressed for storage, assuming they're
+    not simply disposable cargo shells. This fitting can be purchased multiple
+    times.
+  effect: Orbit-to-surface cargo shuttle
+  mass: 2
+  massMultiplier: false
+  minClass: frigate
+  power: 0
+  powerMultiplier: false
+effects: []
+ownership:
+  default: 0
+_key: '!items!m3puiauyq1x79v7n'
+

@@ -1,0 +1,45 @@
+name: Hitmen
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: crrfs4e1g42jiylx
+system:
+  assetType: force
+  attackDamage: 1d6
+  attackSource: force
+  attackSpecial: ''
+  attackTarget: cunning
+  baseOfInfluence: false
+  cost: 2
+  counter: ''
+  description: >-
+    Crudely-equipped thugs and assassins with minimal training that have been
+    aimed at a rival faction's leadership.
+  health:
+    max: 1
+    value: 1
+  income: 0
+  maintenance: 0
+  note: ''
+  rating: 1
+  tl: 0
+  turnRoll: ''
+  type: Special Forces
+  unusable: false
+effects: []
+ownership:
+  default: 0
+_key: '!items!crrfs4e1g42jiylx'
+

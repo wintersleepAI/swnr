@@ -1,0 +1,39 @@
+name: Advanced lab
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/circuitry.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: etimn4d0bk5hsggo
+system:
+  broken: false
+  cost: 10000
+  costMultiplier: true
+  description: >-
+    A lab suitable for investigating alien xenolife, planetary geology, esoteric
+    technology, and other mysteries of the cosmos. The lab contains cold sleep
+    pods adequate to contain alien samples, viro-shielded research cells,
+    high-energy lasers, and other requisite tools. When used to investigate some
+    pehomenon or object, any applicable skill rolls are improved by +1 for a
+    frigate lab, +2 for a cruiser lab, and +3 for capital ship lab.
+  effect: Skill bonus for analysis and research
+  mass: 2
+  massMultiplier: false
+  minClass: frigate
+  power: 1
+  powerMultiplier: true
+effects: []
+ownership:
+  default: 0
+_key: '!items!etimn4d0bk5hsggo'
+

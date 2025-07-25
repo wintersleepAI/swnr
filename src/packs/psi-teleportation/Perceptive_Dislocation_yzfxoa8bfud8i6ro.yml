@@ -1,0 +1,30 @@
+name: Perceptive Dislocation
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: yzfxoa8bfud8i6ro
+system:
+  description: >-
+    <p>Commit Effort for the day to sense any location the psychic could
+    teleport to. The psychic perceives the location as if there, lasting for
+    fifteen minutes at most.</p>
+  level: 2
+  source: teleportation
+  effort: day
+effects: []
+ownership:
+  default: 0
+_key: '!items!yzfxoa8bfud8i6ro'
+

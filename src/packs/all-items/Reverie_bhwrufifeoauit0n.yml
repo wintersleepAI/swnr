@@ -1,0 +1,44 @@
+name: Reverie
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: bhwrufifeoauit0n
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 100
+  description: >-
+    Reverie (Heal-1): This very dangerous combat drug completely subdues the
+    subject’s fear centers and adrenaline production, leaving them perfectly
+    calm and relaxed even in the midst of mortal danger. Their reaction speed is
+    much slower as a consequence, and they may act only on even-numbered combat
+    rounds; so on the second, fourth, and sixth rounds and so forth. Any damage
+    they suffer is doubled as well due to their lack of vigilance. Their perfect
+    calm allows them to shoot as if on the target range, however, and they can
+    make Dex/Shoot skill checks to hit a target instead of hit rolls; the
+    difficulty is 7 at point blank, 9 at normal ranges, and 11 at long ranges
+    for the weapon. The target’s Armor Class is ignored. Melee attacks made
+    under Reverie always hit. Reverie lasts for ten minutes and adds 2 System
+    Strain to the target.
+  encumbrance: 0
+  location: other
+  quality: stock
+  tl: 4
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+_key: '!items!bhwrufifeoauit0n'
+

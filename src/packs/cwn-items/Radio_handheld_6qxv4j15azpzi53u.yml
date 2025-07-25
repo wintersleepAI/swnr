@@ -1,0 +1,30 @@
+name: Radio,handheld
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 6qxv4j15azpzi53u
+system:
+  cost: 50
+  description: >-
+    Both conventional handheld radios and ultra-convenient headset or collar-tab
+    radios can be had. Ranges are one kilometer in the city and six in an open,
+    flat area.
+  encumbrance: 1
+  noEncReadied: false
+effects: []
+ownership:
+  default: 0
+_key: '!items!6qxv4j15azpzi53u'
+

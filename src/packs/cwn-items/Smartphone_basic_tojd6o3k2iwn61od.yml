@@ -1,0 +1,29 @@
+name: Smartphone,basic
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: tojd6o3k2iwn61od
+system:
+  cost: 50
+  description: >-
+    Corp-approved media devices are cheap and ubiquitous, but few operators
+    trust them with sensitive information.
+  encumbrance: 0
+  noEncReadied: false
+effects: []
+ownership:
+  default: 0
+_key: '!items!tojd6o3k2iwn61od'
+

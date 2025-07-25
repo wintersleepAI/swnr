@@ -1,0 +1,50 @@
+name: Spike Thrower
+type: weapon
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 188fr28563hk01zd
+system:
+  ab: 0
+  ammo:
+    burst: true
+    longReload: false
+    max: 15
+    suppress: false
+    type: ammo
+    value: 15
+  cost: 600
+  damage: 3d8
+  description: >-
+    Mag weaponry involves the magnetic acceleration of metal flechettes, while
+    spike throwers are the shotgun equivalents of these weapons. Mag ammunition
+    is packaged with integral power supplies, so no additional power cells are
+    necessary to fire these weapons.
+  encumbrance: 2
+  location: other
+  quality: stock
+  range:
+    max: 40
+    normal: 20
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 4
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+_key: '!items!188fr28563hk01zd'
+

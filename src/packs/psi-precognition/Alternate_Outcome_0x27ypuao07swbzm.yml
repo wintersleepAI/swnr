@@ -1,0 +1,33 @@
+name: Alternate Outcome
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 0x27ypuao07swbzm
+system:
+  description: >-
+    <p>The precog can sense impending failure and attempt to salvage the action.
+    As an Instant action, the precog can target a visible ally or their own self
+    and Commit Effort for the day to allow the target to reroll a failed hit
+    roll, saving throw, or skill check, taking the better of the two rolls. This
+    power disrupts delicate lines of probability, however, and cannot be used on
+    any given target more than once a day.</p>
+  level: 2
+  source: precognition
+  effort: day
+effects: []
+ownership:
+  default: 0
+_key: '!items!0x27ypuao07swbzm'
+

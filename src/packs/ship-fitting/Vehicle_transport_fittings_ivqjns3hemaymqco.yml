@@ -1,0 +1,39 @@
+name: Vehicle transport fittings
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: ivqjns3hemaymqco
+system:
+  broken: false
+  cost: 2500
+  costMultiplier: true
+  description: >-
+    The ship has been fitted with specialized mounts, bunking, cargo bays, and
+    other facilities to expedite the transport of often unwieldy vehicles,
+    including including mechs and other military craft. Any vehicles carried
+    count as only half their usual cargo tonnage. Assuming trained operators, up
+    to four vehicles can be offloaded or ramped onto the ship per round in cases
+    where speed is critical.
+  effect: Halve tonnage space of carried vehicles
+  mass: 1
+  massMultiplier: true
+  minClass: frigate
+  power: 0
+  powerMultiplier: false
+effects: []
+ownership:
+  default: 0
+_key: '!items!ivqjns3hemaymqco'
+

@@ -1,0 +1,57 @@
+name: Medium advanced weapon
+type: weapon
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 6gq70zz0hvxi0t4b
+system:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 0
+    suppress: false
+    type: none
+    value: 0
+  cost: 60
+  damage: 1d8+1
+  description: >-
+    Medium weapons are one-handed swords, axes, spears, or other obvious
+    implements of war. While they can’t be effectively concealed in anything
+    smaller than an enveloping cloak or coat, they’re also more damaging to an
+    unfortunate victim struck by them, albeit they’re somewhat less nimble when
+    the wielder needs to strike at unprotected flesh. Spears and similar
+    aerodynamic weapons can be thrown up to 30 meters. An advanced one has been
+    given a monoblade edge, kinetic sheathing, thermal wires, a chainsaw blade,
+    or some other TL4 touch. Advanced weapons can ignore primitive plate and
+    hide protections.
+  encumbrance: 1
+  location: other
+  isMelee: true
+  quality: stock
+  range:
+    max: 0
+    normal: 0
+  secondStat: dex
+  shock:
+    ac: 13
+    dmg: 2
+  skill: ''
+  stat: str
+  tl: 4
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+_key: '!items!6gq70zz0hvxi0t4b'
+

@@ -1,0 +1,36 @@
+name: Suspended Manifestation
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: pdpvikinz2u49g1h
+system:
+  description: >-
+    <p>The metapsion is capable of “hanging” a psychic power in their brain,
+    forming the energy patterns and then suspending them in a self-sustaining
+    loop until it’s time to trigger their release. The psychic must Commit
+    Effort for the day to hang a power, along with the Effort normally necessary
+    to trigger it. None of this Effort can be recovered until the power is
+    expended, after which it recovers at its usual speed. Activating the power
+    is an Instant action, or an On Turn action if it allows the target a saving
+    throw of some kind. Only one ability can be held suspended at any one
+    time.</p>
+  level: 2
+  source: metapsionics
+  effort: day
+effects: []
+ownership:
+  default: 0
+_key: '!items!pdpvikinz2u49g1h'
+

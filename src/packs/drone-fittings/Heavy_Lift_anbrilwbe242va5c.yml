@@ -1,0 +1,36 @@
+name: Heavy Lift
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/gps.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: anbrilwbe242va5c
+system:
+  broken: false
+  cost: 2000
+  costMultiplier: true
+  description: >-
+    While most drones can lift no more than a kilogram of excess weight, the
+    drone’s gravitic units have been upgraded to carry up to twenty kilos of
+    cargo. This can be fitted multiple times.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  tl: 4
+  type: drone
+effects: []
+ownership:
+  default: 0
+_key: '!items!anbrilwbe242va5c'
+

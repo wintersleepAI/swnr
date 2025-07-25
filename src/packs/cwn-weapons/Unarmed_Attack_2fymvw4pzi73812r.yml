@@ -1,0 +1,51 @@
+name: Unarmed Attack
+type: weapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 2fymvw4pzi73812r
+system:
+  ammo:
+    burst: false
+    max: 0
+    suppress: false
+    type: none
+    value: 0
+  cost: None
+  damage: 1d2
+  description: >-
+    Knives, clubs, swords, and other simple melee weapons are available almost
+    anywhere on the street. Particularly impoverished gangers sometimes fashion
+    makeshift machetes and improvised shivs when better can’t be obtained. Such
+    weapons are effectively free, but have a -1 penalty to hit and damage rolls
+    due to their ungainly make.
+  encumbrance: 0
+  isNonLethal: true
+  isMelee: true
+  range:
+    max: 0
+    normal: 0
+  secondStat: dex
+  shock:
+    ac: 0
+    dmg: 0
+  stat: str
+  trauma:
+    die: 1d6
+    rating: 1
+effects: []
+ownership:
+  default: 0
+_key: '!items!2fymvw4pzi73812r'
+

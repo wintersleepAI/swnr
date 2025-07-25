@@ -1,0 +1,37 @@
+name: Grav Eddy Displacer
+type: shipDefense
+img: systems/swnr/assets/icons/game-icons.net/item-icons/bubble-field.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 5zq0saod63qd0fy6
+system:
+  broken: false
+  cost: 50000
+  costMultiplier: true
+  description: >-
+    This system links with a ship's navigational subsystem and randomizes the
+    motion vectors in sympathy with metadimensional gravitic currents. This
+    agility gives any hit on the ship a 1 in 6 chance of being negated
+    completely.
+  effect: 1 in 6 chance of any given attack missing.
+  mass: 2
+  massMultiplier: true
+  minClass: frigate
+  power: 5
+  powerMultiplier: false
+effects: []
+ownership:
+  default: 0
+_key: '!items!5zq0saod63qd0fy6'
+

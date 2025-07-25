@@ -1,0 +1,35 @@
+name: Manipulator Tendrils
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: xtw0kc791fxelxqo
+system:
+  cost: 0.2
+  description: >-
+    One set of manipulators is added to the drone, whether a mechanical claw, an
+    articulated metal tendril, or some other device. With a Main Action command
+    from the pilot, it can function as a single human hand with an effective
+    Strength of 12, but it cannot effectively be used for an attack or to lift
+    anything heavier than the drone itself. The fitting can carry things for
+    short distances, but to haul weight any real distance the Cargo Space
+    fitting is required. This fitting can be added more than once if a pair of
+    `hands` are needed.
+  mass: 1
+  type: drone
+effects: []
+ownership:
+  default: 0
+_key: '!items!xtw0kc791fxelxqo'
+
