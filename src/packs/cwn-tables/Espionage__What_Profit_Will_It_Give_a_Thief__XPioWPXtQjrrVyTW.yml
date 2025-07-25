@@ -3,125 +3,225 @@ name: 'Espionage: What Profit Will It Give a Thief?'
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: Aum056dZ1iedMcVh
-    text: It’s worth a lot of money on the street
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It’s worth a lot of money on the street
+    name: ''
     _key: '!tables.results!XPioWPXtQjrrVyTW.Aum056dZ1iedMcVh'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: XMfxRDjwSclj34zc
-    text: It has directions to a cache of precious loot
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It has directions to a cache of precious loot
+    name: ''
     _key: '!tables.results!XPioWPXtQjrrVyTW.XMfxRDjwSclj34zc'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: Nh8kPSTuWnLkNxPN
-    text: A city gov will do favors to get it
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A city gov will do favors to get it
+    name: ''
     _key: '!tables.results!XPioWPXtQjrrVyTW.Nh8kPSTuWnLkNxPN'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: 6KwbbEtWlsEA3NQ3
-    text: A corp manager will pay a lot for it
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A corp manager will pay a lot for it
+    name: ''
     _key: '!tables.results!XPioWPXtQjrrVyTW.6KwbbEtWlsEA3NQ3'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     _id: MolZp8Ky0sayD8I2
-    text: It can hamstring a particular scheme
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It can hamstring a particular scheme
+    name: ''
     _key: '!tables.results!XPioWPXtQjrrVyTW.MolZp8Ky0sayD8I2'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     _id: Y3O3XZ9bM0ROxKLn
-    text: It has Access and info for a major network
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It has Access and info for a major network
+    name: ''
     _key: '!tables.results!XPioWPXtQjrrVyTW.Y3O3XZ9bM0ROxKLn'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 7
       - 7
     drawn: false
     _id: EDflthnR5kMYIDJB
-    text: It reveals a treacherous fixer or employer
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It reveals a treacherous fixer or employer
+    name: ''
     _key: '!tables.results!XPioWPXtQjrrVyTW.EDflthnR5kMYIDJB'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 8
       - 8
     drawn: false
     _id: wkBIXy08i7EbShJG
-    text: It shows a great profit opportunity
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It shows a great profit opportunity
+    name: ''
     _key: '!tables.results!XPioWPXtQjrrVyTW.wkBIXy08i7EbShJG'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 9
       - 9
     drawn: false
     _id: ptVM6aVGtakn2uUl
-    text: It grants access to an invite-only business
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It grants access to an invite-only business
+    name: ''
     _key: '!tables.results!XPioWPXtQjrrVyTW.ptVM6aVGtakn2uUl'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 10
       - 10
     drawn: false
     _id: d61thBFxzU9FNWcd
-    text: It’s of great sentimental value to someone
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It’s of great sentimental value to someone
+    name: ''
     _key: '!tables.results!XPioWPXtQjrrVyTW.d61thBFxzU9FNWcd'
 replacement: true
 displayRoll: true
@@ -130,10 +230,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703891968582
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 formula: 1d10
 _id: XPioWPXtQjrrVyTW
 sort: 0

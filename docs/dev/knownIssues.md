@@ -66,26 +66,26 @@ This document tracks known issues in the codebase that should be considered when
 - **Note**: No apparent validation system for pack/unpack operations
 - **Consider**: Adding validation scripts when working on compendium tooling
 
-### ~~Unified Power System Implementation~~ ✅ **COMPLETED v2.2.1**
+### ~~Unified Power System Implementation~~ ✅ **COMPLETED v2.1.0**
 **Location**: `module/data/items/item-power.mjs`, `module/data/actors/base-actor.mjs`
 - **Resolution**: Successfully implemented unified power system with comprehensive migration and resource field integration
 - **Status**: Production ready, all major power types supported (psychic, art, adept, spell, mutation)
 - **Impact**: Resolved migration validation and error handling issues, implemented complete resource key architecture
 - **Features**: Powers now have proper `resourceName`/`subResource` fields with automatic migration from legacy data
 
-### ~~Feature-Based Pool Generation Architecture~~ ✅ **COMPLETED Sprint 2**
+### ~~Feature-Based Pool Generation Architecture~~ ✅ **COMPLETED 2.1.0*
 **Location**: `module/data/items/item-feature.mjs`, `module/data/actors/actor-character.mjs`
 - **Resolution**: Fixed fundamental design flaw where pools were generated from Powers instead of Features/Foci/Edges
 - **Status**: Production ready, proper SWN/CWN game mechanics implemented
 - **Impact**: Features/Foci/Edges now grant pools, Powers consume from shared actor pools
 - **Migration**: v2.1.1 automatically converts existing power-based pools to feature-based
 
-### ~~Power Resource Field Implementation~~ ✅ **COMPLETED v2.2.1**
+### ~~Power Resource Field Implementation~~ ✅ **COMPLETED v2.1.0**
 **Location**: `module/data/items/item-power.mjs`, `module/migration.mjs`, `templates/item/attribute-parts/power.hbs`
 - **Resolution**: Implemented missing `resourceName` and `subResource` fields with proper schema validation
 - **Status**: Production ready, includes automatic migration and comprehensive UI
 - **Impact**: Powers can now properly reference actor resource pools using consistent `resourceKey()` method
-- **Migration**: v2.2.1 automatically populates resource fields from existing power data (subType, source, level)
+- **Migration**: v2.1.0 automatically populates resource fields from existing power data (subType, source, level)
 
 ### TODO/Placeholder Code Issues
 

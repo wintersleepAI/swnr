@@ -3,10 +3,7 @@ description: >-
   <ol><li><p>How Can You Get It?</p></li><li><p>Positive
   Quality</p></li><li><p>Negative Quality</p></li></ol>
 results:
-  - text: 'Cyber Product Line: How Can You Get It?'
-    type: 1
-    documentCollection: RollTable
-    documentId: xC3QBuGVxWHUifGg
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -15,11 +12,21 @@ results:
     drawn: false
     _id: BfWG7j91iCpWxGz5
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Cyber Product Line: How Can You Get It?'
+    documentUuid: RollTable.xC3QBuGVxWHUifGg
+    description: ''
     _key: '!tables.results!aLOswN5waX0feNd8.BfWG7j91iCpWxGz5'
-  - text: 'Cyber Product Line: Positive Quality'
-    type: 1
-    documentCollection: RollTable
-    documentId: 86ueVB5beJMB9lvJ
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -28,11 +35,21 @@ results:
     drawn: false
     _id: IlRIPsgUFgoWTkQ3
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Cyber Product Line: Positive Quality'
+    documentUuid: RollTable.86ueVB5beJMB9lvJ
+    description: ''
     _key: '!tables.results!aLOswN5waX0feNd8.IlRIPsgUFgoWTkQ3'
-  - text: 'Cyber Product Line: Negative Quality'
-    type: 1
-    documentCollection: RollTable
-    documentId: F4TxprREK2vBcsVC
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -41,6 +58,19 @@ results:
     drawn: false
     _id: 1Z41tjcRu8an4pHn
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Cyber Product Line: Negative Quality'
+    documentUuid: RollTable.F4TxprREK2vBcsVC
+    description: ''
     _key: '!tables.results!aLOswN5waX0feNd8.1Z41tjcRu8an4pHn'
 formula: 1d1
 _id: aLOswN5waX0feNd8
@@ -53,10 +83,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703915510176
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 sort: 0
 ownership:
   default: 0

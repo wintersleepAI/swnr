@@ -40,7 +40,7 @@ export default class SWNSheet extends api.HandlebarsApplicationMixin(api.Applica
 - **Pool Keys**: `"ResourceName:SubResource"` (e.g., `"Effort:Psychic"`, `"Slots:Lv3"`)
 - **Pool Structure**: `{ value, max, cadence, committed?, commitments? }`
 
-### Power Resource Integration (v2.2.1)
+### Power Resource Integration (v2.1.0)
 **Powers now have proper resource field integration:**
 
 - **Resource Fields**: Powers have `resourceName` (nullable) and `subResource` (nullable) fields

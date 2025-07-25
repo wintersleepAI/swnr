@@ -480,12 +480,11 @@ export default class SWNCharacter extends SWNActorBase {
             maxValue = formulaResult;
           } catch (error) {
             console.warn(`[SWN Pool] Failed to evaluate formula "${poolConfig.formula}" for ${feature.name}:`, error);
-            // Fall back to legacy calculation on formula error
-            maxValue = (poolConfig.baseAmount || 0) + ((poolConfig.perLevel || 0) * this.level.value);
+            maxValue = 0; // Default to 0 if formula fails
           }
         } else {
-          // Legacy base + per-level calculation
-          maxValue = (poolConfig.baseAmount || 0) + ((poolConfig.perLevel || 0) * this.level.value);
+          console.warn(`[SWN Pool] No formula provided for pool ${poolKey} in ${feature.name}`);
+          maxValue = 0;
         }
 
         // Initialize or update pool

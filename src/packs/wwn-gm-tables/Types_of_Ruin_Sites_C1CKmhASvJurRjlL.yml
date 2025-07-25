@@ -10,7 +10,6 @@ description: >-
 results:
   - _id: 7Ld9UI1z0dMyVXDb
     type: text
-    text: <b>Residential Site</b>
     weight: 1
     range:
       - 1
@@ -18,11 +17,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Residential Site</b>
+    name: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.7Ld9UI1z0dMyVXDb'
   - _id: U4W3kmi7bjcearWT
-    type: pack
-    text: Ruin-Residential
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -30,12 +39,22 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: f9Ej9D62dBkn95id
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Ruin-Residential
+    documentUuid: Compendium.wwn.gm-subtables.f9Ej9D62dBkn95id
+    description: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.U4W3kmi7bjcearWT'
   - _id: M7pXF3VG2uZbOLwF
     type: text
-    text: <b>Military Site</b>
     weight: 1
     range:
       - 2
@@ -43,11 +62,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Military Site</b>
+    name: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.M7pXF3VG2uZbOLwF'
   - _id: 9G5C8B8P7OtQKxXb
-    type: pack
-    text: Ruin-Military
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -55,12 +84,22 @@ results:
       - 2
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: 9F3PeDKeKv2aICLU
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Ruin-Military
+    documentUuid: Compendium.wwn.gm-subtables.9F3PeDKeKv2aICLU
+    description: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.9G5C8B8P7OtQKxXb'
   - _id: kANP9BCvFQ1Wr8gw
     type: text
-    text: <b>Production Site</b>
     weight: 1
     range:
       - 3
@@ -68,11 +107,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Production Site</b>
+    name: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.kANP9BCvFQ1Wr8gw'
   - _id: GEJXQ315tKDFoKfn
-    type: pack
-    text: Ruin-Production
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -80,12 +129,22 @@ results:
       - 3
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: d0JsJbQXJHLwrT6I
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Ruin-Production
+    documentUuid: Compendium.wwn.gm-subtables.d0JsJbQXJHLwrT6I
+    description: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.GEJXQ315tKDFoKfn'
   - _id: RSiQJym4LMmlKslj
     type: text
-    text: <b>Religious Site</b>
     weight: 1
     range:
       - 4
@@ -93,11 +152,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Religious Site</b>
+    name: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.RSiQJym4LMmlKslj'
   - _id: n1f6H2C4afstiLTR
-    type: pack
-    text: Ruin-Religious
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -105,12 +174,22 @@ results:
       - 4
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: VT5kUIdkZKXbmgm4
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Ruin-Religious
+    documentUuid: Compendium.wwn.gm-subtables.VT5kUIdkZKXbmgm4
+    description: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.n1f6H2C4afstiLTR'
   - _id: Lg1z7ZXyFdscqnOZ
     type: text
-    text: <b>Cultural Site</b>
     weight: 1
     range:
       - 5
@@ -118,11 +197,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Cultural Site</b>
+    name: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.Lg1z7ZXyFdscqnOZ'
   - _id: A99KUEGG9aVzkF42
-    type: pack
-    text: Ruin-Cultural
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -130,12 +219,22 @@ results:
       - 5
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: 2EgsngYETnfsMIXY
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Ruin-Cultural
+    documentUuid: Compendium.wwn.gm-subtables.2EgsngYETnfsMIXY
+    description: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.A99KUEGG9aVzkF42'
   - _id: 2Aq7Pt27EAUOIlCc
     type: text
-    text: <b>Infrastructure Site</b>
     weight: 1
     range:
       - 6
@@ -143,11 +242,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Infrastructure Site</b>
+    name: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.2Aq7Pt27EAUOIlCc'
   - _id: tRBUpzLeDbsMaRtJ
-    type: pack
-    text: Ruin-Infrastructure
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -155,8 +264,19 @@ results:
       - 6
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: D1d00cXACTQTvQhG
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Ruin-Infrastructure
+    documentUuid: Compendium.wwn.gm-subtables.D1d00cXACTQTvQhG
+    description: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.tRBUpzLeDbsMaRtJ'
 formula: 1d6
 replacement: true
@@ -170,11 +290,12 @@ ownership:
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   createdTime: null
   modifiedTime: 1690569812651
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!tables!C1CKmhASvJurRjlL'
 

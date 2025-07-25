@@ -25,6 +25,19 @@ export default class SWNPower extends SWNItemBase {
     });
     schema.prepared = new fields.BooleanField({initial: false});
 
+    // Main resource fields for primary resource consumption
+    schema.resourceName = new fields.StringField({
+      choices: CONFIG.SWN.poolResourceNames,
+      initial: null,
+      required: false,
+      nullable: true
+    });
+    schema.subResource = new fields.StringField({
+      initial: null,
+      required: false,
+      nullable: true
+    });
+
     // Resource consumption now handled entirely through consumption array
 
     // Multi-cost consumption system - expandable array

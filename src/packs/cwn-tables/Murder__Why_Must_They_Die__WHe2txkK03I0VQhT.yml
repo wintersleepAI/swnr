@@ -3,149 +3,269 @@ name: 'Murder: Why Must They Die?'
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: 4L3N1XVe5KgZZLWh
-    text: A mortal insult or offense to someone
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A mortal insult or offense to someone
+    name: ''
     _key: '!tables.results!WHe2txkK03I0VQhT.4L3N1XVe5KgZZLWh'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: 6Zz60c7HfPrYLKSr
-    text: It would ruin a particular scheme
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It would ruin a particular scheme
+    name: ''
     _key: '!tables.results!WHe2txkK03I0VQhT.6Zz60c7HfPrYLKSr'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: 7o0CBPlqAhZNdRKy
-    text: It would intimidate someone else
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It would intimidate someone else
+    name: ''
     _key: '!tables.results!WHe2txkK03I0VQhT.7o0CBPlqAhZNdRKy'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: TVEdNRqWYufYJY3r
-    text: It would make room for a promotion
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It would make room for a promotion
+    name: ''
     _key: '!tables.results!WHe2txkK03I0VQhT.TVEdNRqWYufYJY3r'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     _id: cOIOxfc0fKHwQyXw
-    text: It would solve an org power struggle
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It would solve an org power struggle
+    name: ''
     _key: '!tables.results!WHe2txkK03I0VQhT.cOIOxfc0fKHwQyXw'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     _id: wbzCEHGfDc6mB0UZ
-    text: If the client can’t have them, no one can
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: If the client can’t have them, no one can
+    name: ''
     _key: '!tables.results!WHe2txkK03I0VQhT.wbzCEHGfDc6mB0UZ'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 7
       - 7
     drawn: false
     _id: X6rdlL2knkSVGdqV
-    text: They’re blamed for some dire mistake
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They’re blamed for some dire mistake
+    name: ''
     _key: '!tables.results!WHe2txkK03I0VQhT.X6rdlL2knkSVGdqV'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 8
       - 8
     drawn: false
     _id: wkD9aCJNcuoszB4v
-    text: They have debts they refuse to pay
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They have debts they refuse to pay
+    name: ''
     _key: '!tables.results!WHe2txkK03I0VQhT.wkD9aCJNcuoszB4v'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 9
       - 9
     drawn: false
     _id: ZtH7KvSsxovaxdP9
-    text: Only they know a dangerous secret
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Only they know a dangerous secret
+    name: ''
     _key: '!tables.results!WHe2txkK03I0VQhT.ZtH7KvSsxovaxdP9'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 10
       - 10
     drawn: false
     _id: vhD30G9SeC5vl0Zh
-    text: They’re blocking a plan from happening
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They’re blocking a plan from happening
+    name: ''
     _key: '!tables.results!WHe2txkK03I0VQhT.vhD30G9SeC5vl0Zh'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 11
       - 11
     drawn: false
     _id: juS7YoYMfQYVYzwg
-    text: They support a rival of the client
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They support a rival of the client
+    name: ''
     _key: '!tables.results!WHe2txkK03I0VQhT.juS7YoYMfQYVYzwg'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 12
       - 12
     drawn: false
     _id: 6lDhJIgxzEs7QcbE
-    text: A private, obscure, inexplicable reason
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A private, obscure, inexplicable reason
+    name: ''
     _key: '!tables.results!WHe2txkK03I0VQhT.6lDhJIgxzEs7QcbE'
 replacement: true
 displayRoll: true
@@ -154,10 +274,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703892119741
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 formula: 1d12
 _id: WHe2txkK03I0VQhT
 sort: 0

@@ -45,7 +45,7 @@ Pools are computed dynamically. I must distinguish between stored and computed d
 - **Pool Keys**: Keys are strings in the format `"ResourceName:SubResource"` (e.g., `"Effort:Psychic"`, `"Slots:Lv3"`).
 - **Pool Structure**: `{ value, max, cadence, committed?, commitments? }`.
 
-### Power Resource Integration (v2.2.1)
+### Power Resource Integration (v2.1.0)
 Powers have specific fields for resource management:
 
 - **Resource Fields**: `resourceName` (nullable) and `subResource` (nullable).

@@ -5,10 +5,7 @@ description: >-
   Is It?</p></li><li><p>Complications To Transit</p></li><li><p>Twists to the
   Situation</p></li></ol>
 results:
-  - text: 'Smuggling: Why Must It Be Smuggled?'
-    type: 1
-    documentCollection: RollTable
-    documentId: RG1jZixjtqk5i6TG
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -17,11 +14,21 @@ results:
     drawn: false
     _id: rUAdcZNJGrwFfKMr
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Smuggling: Why Must It Be Smuggled?'
+    documentUuid: RollTable.RG1jZixjtqk5i6TG
+    description: ''
     _key: '!tables.results!EKB6PFHzFysIpZ1p.rUAdcZNJGrwFfKMr'
-  - text: 'Smuggling: What Kind of Patron Put Up the Job?'
-    type: 1
-    documentCollection: RollTable
-    documentId: 8Vs9J6rYMszXWp6V
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -30,11 +37,21 @@ results:
     drawn: false
     _id: MzhEt79qyPF0iNiR
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Smuggling: What Kind of Patron Put Up the Job?'
+    documentUuid: RollTable.8Vs9J6rYMszXWp6V
+    description: ''
     _key: '!tables.results!EKB6PFHzFysIpZ1p.MzhEt79qyPF0iNiR'
-  - text: 'Smuggling: The Value or Use of the Goods'
-    type: 1
-    documentCollection: RollTable
-    documentId: Ka92b5vsVoyqOTab
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -43,11 +60,21 @@ results:
     drawn: false
     _id: p5ymYxGzSV0J7q3f
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Smuggling: The Value or Use of the Goods'
+    documentUuid: RollTable.Ka92b5vsVoyqOTab
+    description: ''
     _key: '!tables.results!EKB6PFHzFysIpZ1p.p5ymYxGzSV0J7q3f'
-  - text: 'Smuggling: How Bulky Is It?'
-    type: 1
-    documentCollection: RollTable
-    documentId: d0inXgloEaQQfjk0
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -56,11 +83,21 @@ results:
     drawn: false
     _id: casVSkzzExt91zQm
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Smuggling: How Bulky Is It?'
+    documentUuid: RollTable.d0inXgloEaQQfjk0
+    description: ''
     _key: '!tables.results!EKB6PFHzFysIpZ1p.casVSkzzExt91zQm'
-  - text: 'Smuggling: Complications To Transit'
-    type: 1
-    documentCollection: RollTable
-    documentId: ndiFRvUdwRG4GaSo
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -69,11 +106,21 @@ results:
     drawn: false
     _id: buPYruiREb02Clgh
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Smuggling: Complications To Transit'
+    documentUuid: RollTable.ndiFRvUdwRG4GaSo
+    description: ''
     _key: '!tables.results!EKB6PFHzFysIpZ1p.buPYruiREb02Clgh'
-  - text: 'Smuggling: Twists to the Situation'
-    type: 1
-    documentCollection: RollTable
-    documentId: VZGtUxfUGScZLZYi
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -82,6 +129,19 @@ results:
     drawn: false
     _id: YI7EIxhOkUo3S7qQ
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Smuggling: Twists to the Situation'
+    documentUuid: RollTable.VZGtUxfUGScZLZYi
+    description: ''
     _key: '!tables.results!EKB6PFHzFysIpZ1p.YI7EIxhOkUo3S7qQ'
 formula: 1d1
 _id: EKB6PFHzFysIpZ1p
@@ -94,10 +154,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703914354011
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 sort: 0
 ownership:
   default: 0

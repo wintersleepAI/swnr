@@ -6,10 +6,7 @@ description: >-
   It Valuable to the Patron?</p></li><li><p>Twists to the
   Situation</p></li></ol>
 results:
-  - text: 'Theft: Why Can’t They Get It Themselves?'
-    type: 1
-    documentCollection: RollTable
-    documentId: xvG7oEYLdxtysh4w
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -18,11 +15,21 @@ results:
     drawn: false
     _id: RkbFpCFYupbdqjNf
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Theft: Why Can’t They Get It Themselves?'
+    documentUuid: RollTable.xvG7oEYLdxtysh4w
+    description: ''
     _key: '!tables.results!fr9D8n1daESt22Bw.RkbFpCFYupbdqjNf'
-  - text: 'Theft: What Kind of Patron Put Up the Job?'
-    type: 1
-    documentCollection: RollTable
-    documentId: w8uyzltm5P4pdpp2
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -31,11 +38,21 @@ results:
     drawn: false
     _id: 83WjUHZloidsebFh
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Theft: What Kind of Patron Put Up the Job?'
+    documentUuid: RollTable.w8uyzltm5P4pdpp2
+    description: ''
     _key: '!tables.results!fr9D8n1daESt22Bw.83WjUHZloidsebFh'
-  - text: 'Theft: What’s the Biggest Obstacle?'
-    type: 1
-    documentCollection: RollTable
-    documentId: VgRg3CT3OHk6J3Fu
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -44,11 +61,21 @@ results:
     drawn: false
     _id: MAbPnZb0nVDsaerK
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Theft: What’s the Biggest Obstacle?'
+    documentUuid: RollTable.VgRg3CT3OHk6J3Fu
+    description: ''
     _key: '!tables.results!fr9D8n1daESt22Bw.MAbPnZb0nVDsaerK'
-  - text: 'Theft: Who Else Knows About Its Value?'
-    type: 1
-    documentCollection: RollTable
-    documentId: fxyZpeHSqLSvcPXs
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -57,11 +84,21 @@ results:
     drawn: false
     _id: xeRaafk5lvsiDbsQ
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Theft: Who Else Knows About Its Value?'
+    documentUuid: RollTable.fxyZpeHSqLSvcPXs
+    description: ''
     _key: '!tables.results!fr9D8n1daESt22Bw.xeRaafk5lvsiDbsQ'
-  - text: 'Theft: Why Is It Valuable to the Patron?'
-    type: 1
-    documentCollection: RollTable
-    documentId: NiLLxNGhheqTud0P
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -70,11 +107,21 @@ results:
     drawn: false
     _id: pjJa884FmzBTyf1L
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Theft: Why Is It Valuable to the Patron?'
+    documentUuid: RollTable.NiLLxNGhheqTud0P
+    description: ''
     _key: '!tables.results!fr9D8n1daESt22Bw.pjJa884FmzBTyf1L'
-  - text: 'Theft: Twists to the Situation'
-    type: 1
-    documentCollection: RollTable
-    documentId: 1ohQIAHSGCEDgDUf
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -83,6 +130,19 @@ results:
     drawn: false
     _id: D44leOMgn00BU2rV
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Theft: Twists to the Situation'
+    documentUuid: RollTable.1ohQIAHSGCEDgDUf
+    description: ''
     _key: '!tables.results!fr9D8n1daESt22Bw.D44leOMgn00BU2rV'
 formula: 1d1
 _id: fr9D8n1daESt22Bw
@@ -95,10 +155,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703914548838
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 sort: 0
 ownership:
   default: 0

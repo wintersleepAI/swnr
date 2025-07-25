@@ -92,14 +92,24 @@ const focus = {
   description: '',
   favorite: false,
   level: 0,
-  type: 'focus'
+  type: 'focus',
+  poolsGranted: []
 };
 
 const edge = {
   description: '',
   favorite: false,
   level: 0,
-  type: 'edge'
+  type: 'edge',
+  poolsGranted: []
+};
+
+const feature = {
+  description: '',
+  favorite: false,
+  level: 0,
+  type: 'focus',
+  poolsGranted: []
 };
 
 const mech = {
@@ -196,13 +206,18 @@ const npc = {
 const power = {
   description: '',
   favorite: false,
+  subType: 'psychic',
   source: "",
   level: 1,
-  roll: "",
+  prepared: false,
+  resourceName: null,
+  subResource: null,
+  consumptions: [],
+  roll: null,
+  duration: null,
   save: null,
-  range: "",
-  skill: null,
-  prepared: true,
+  range: null,
+  skill: null
 };
 
 const program = {
@@ -519,6 +534,7 @@ export const mapping = {
   cyberware,
   focus,
   edge,
+  feature,
   mech,
   npc,
   power,

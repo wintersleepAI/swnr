@@ -6,74 +6,134 @@ results:
   - _id: 5GjDZt9xMMURAIZI
     flags: {}
     type: text
-    text: Sneer at the pitiful weaklings that oppose it
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Sneer at the pitiful weaklings that oppose it
+    name: ''
     _key: '!tables.results!MLYsyBmxy0cDjUst.5GjDZt9xMMURAIZI'
   - _id: CyPW3gXcImttlwaM
     flags: {}
     type: text
-    text: Boast of its inevitable victory
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 2
       - 2
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Boast of its inevitable victory
+    name: ''
     _key: '!tables.results!MLYsyBmxy0cDjUst.CyPW3gXcImttlwaM'
   - _id: sAR46NO32LY8qqfR
     flags: {}
     type: text
-    text: Gratuitous use of a power in an unhelpful way
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 3
       - 3
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Gratuitous use of a power in an unhelpful way
+    name: ''
     _key: '!tables.results!MLYsyBmxy0cDjUst.sAR46NO32LY8qqfR'
   - _id: L0KnX26s339N3nKO
     flags: {}
     type: text
-    text: Attack the last enemy to offend it somehow
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 4
       - 4
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Attack the last enemy to offend it somehow
+    name: ''
     _key: '!tables.results!MLYsyBmxy0cDjUst.L0KnX26s339N3nKO'
   - _id: LKiKbw96tJqG67PB
     flags: {}
     type: text
-    text: Urge on servitors, or demand surrender
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 5
       - 5
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Urge on servitors, or demand surrender
+    name: ''
     _key: '!tables.results!MLYsyBmxy0cDjUst.LKiKbw96tJqG67PB'
   - _id: QKIN8XED1mlXAKB3
     flags: {}
     type: text
-    text: Taunt the foe as it takes a <b>Total Defense</b>
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 6
       - 6
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Taunt the foe as it takes a <b>Total Defense</b>
+    name: ''
     _key: '!tables.results!MLYsyBmxy0cDjUst.QKIN8XED1mlXAKB3'
 formula: 1d6
 replacement: true
@@ -81,17 +141,17 @@ displayRoll: true
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: RollTable.0jqyqdjz2I1pOLjK
+  core: {}
 _stats:
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   systemId: null
   systemVersion: null
   createdTime: null
   modifiedTime: null
   lastModifiedBy: null
-  compendiumSource: null
+  compendiumSource: RollTable.0jqyqdjz2I1pOLjK
   duplicateSource: null
+  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3

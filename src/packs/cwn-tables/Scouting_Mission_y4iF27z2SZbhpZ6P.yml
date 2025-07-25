@@ -5,10 +5,7 @@ description: >-
   Needed?</p></li><li><p>How Far Away Is the Site?</p></li><li><p>What
   Complications Exist?</p></li><li><p>Twists to the Situation</p></li></ol>
 results:
-  - text: 'Scouting: Why Can’t They Just Go There?'
-    type: 1
-    documentCollection: RollTable
-    documentId: XeCK9RPARsdNAR4Y
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -17,11 +14,21 @@ results:
     drawn: false
     _id: eYJbc5SbZgqGRg59
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Scouting: Why Can’t They Just Go There?'
+    documentUuid: RollTable.XeCK9RPARsdNAR4Y
+    description: ''
     _key: '!tables.results!y4iF27z2SZbhpZ6P.eYJbc5SbZgqGRg59'
-  - text: 'Scouting: What Kind of Patron Put Up the Job?'
-    type: 1
-    documentCollection: RollTable
-    documentId: dVHxrgREQOEDAX0z
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -30,11 +37,21 @@ results:
     drawn: false
     _id: AYS3DUFjqRxO8x0w
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Scouting: What Kind of Patron Put Up the Job?'
+    documentUuid: RollTable.dVHxrgREQOEDAX0z
+    description: ''
     _key: '!tables.results!y4iF27z2SZbhpZ6P.AYS3DUFjqRxO8x0w'
-  - text: 'Scouting: What Crucial Facts Are Needed?'
-    type: 1
-    documentCollection: RollTable
-    documentId: Wdlfe87NG8JfqPP9
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -43,11 +60,21 @@ results:
     drawn: false
     _id: Regtb6yTDcbpQN8b
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Scouting: What Crucial Facts Are Needed?'
+    documentUuid: RollTable.Wdlfe87NG8JfqPP9
+    description: ''
     _key: '!tables.results!y4iF27z2SZbhpZ6P.Regtb6yTDcbpQN8b'
-  - text: 'Scouting: How Far Away Is the Site?'
-    type: 1
-    documentCollection: RollTable
-    documentId: IQeyoFxxCNx4rHiz
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -56,11 +83,21 @@ results:
     drawn: false
     _id: 7JZxXaFn79W5KjLE
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Scouting: How Far Away Is the Site?'
+    documentUuid: RollTable.IQeyoFxxCNx4rHiz
+    description: ''
     _key: '!tables.results!y4iF27z2SZbhpZ6P.7JZxXaFn79W5KjLE'
-  - text: 'Scouting: What Complications Exist?'
-    type: 1
-    documentCollection: RollTable
-    documentId: jcCi8pYnCWmfTpQz
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -69,11 +106,21 @@ results:
     drawn: false
     _id: 1tXyPBnvu3YL3mWN
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Scouting: What Complications Exist?'
+    documentUuid: RollTable.jcCi8pYnCWmfTpQz
+    description: ''
     _key: '!tables.results!y4iF27z2SZbhpZ6P.1tXyPBnvu3YL3mWN'
-  - text: 'Scouting: Twists to the Situation'
-    type: 1
-    documentCollection: RollTable
-    documentId: frxgXRAg0ANETQxS
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -82,6 +129,19 @@ results:
     drawn: false
     _id: Z65gF6L7CA3D4wEo
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Scouting: Twists to the Situation'
+    documentUuid: RollTable.frxgXRAg0ANETQxS
+    description: ''
     _key: '!tables.results!y4iF27z2SZbhpZ6P.Z65gF6L7CA3D4wEo'
 formula: 1d1
 _id: y4iF27z2SZbhpZ6P
@@ -94,10 +154,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703914182870
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 sort: 0
 ownership:
   default: 0

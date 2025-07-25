@@ -249,6 +249,12 @@
       "type": "Item"
     },
     {
+      "name": "features",
+      "label": "Features",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
       "name": "heavy",
       "label": "Heavy",
       "system": "swnr",
@@ -472,7 +478,8 @@
       "sorting": "a",
       "color": "#AAAAAA",
       "packs": [
-        "foci"
+        "foci",
+        "features"
       ]
     }, 
     {

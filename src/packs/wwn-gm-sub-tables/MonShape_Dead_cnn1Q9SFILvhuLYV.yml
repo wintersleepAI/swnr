@@ -4,7 +4,6 @@ img: icons/svg/d20-grey.svg
 description: Why Isn't It Dead Yet?
 results:
   - type: text
-    text: It requires very little food for survival
     weight: 1
     range:
       - 1
@@ -13,10 +12,20 @@ results:
     _id: 9slr8628b9kptoae
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It requires very little food for survival
+    name: ''
     _key: '!tables.results!cnn1Q9SFILvhuLYV.9slr8628b9kptoae'
   - type: text
-    text: It’s poisonous and repels its predators
     weight: 1
     range:
       - 2
@@ -25,10 +34,20 @@ results:
     _id: 9rane88cz790pg7k
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It’s poisonous and repels its predators
+    name: ''
     _key: '!tables.results!cnn1Q9SFILvhuLYV.9rane88cz790pg7k'
   - type: text
-    text: It eats something other creatures can’t
     weight: 1
     range:
       - 3
@@ -37,10 +56,20 @@ results:
     _id: mnh5s4wr0mma2zac
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It eats something other creatures can’t
+    name: ''
     _key: '!tables.results!cnn1Q9SFILvhuLYV.mnh5s4wr0mma2zac'
   - type: text
-    text: It’s newly introduced in the area
     weight: 1
     range:
       - 4
@@ -49,10 +78,20 @@ results:
     _id: hboqs8u5hps5955p
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It’s newly introduced in the area
+    name: ''
     _key: '!tables.results!cnn1Q9SFILvhuLYV.hboqs8u5hps5955p'
   - type: text
-    text: It doesn’t need food in a normal sense
     weight: 1
     range:
       - 5
@@ -61,10 +100,20 @@ results:
     _id: o2cir8uz1pu3uh5p
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It doesn’t need food in a normal sense
+    name: ''
     _key: '!tables.results!cnn1Q9SFILvhuLYV.o2cir8uz1pu3uh5p'
   - type: text
-    text: It exists in symbiosis with something else
     weight: 1
     range:
       - 6
@@ -73,7 +122,18 @@ results:
     _id: atvdiv2bzdv538qs
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It exists in symbiosis with something else
+    name: ''
     _key: '!tables.results!cnn1Q9SFILvhuLYV.atvdiv2bzdv538qs'
 formula: 1d6
 replacement: true
@@ -87,11 +147,12 @@ ownership:
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!tables!cnn1Q9SFILvhuLYV'
 

@@ -28,10 +28,9 @@ export default class SWNFeature extends SWNItemBase {
      * of "ResourceName:SubResource" (e.g., "Effort:Psychic", "Slots:Lv3").
      * 
      * Pool calculation flow:
-     * 1. baseAmount + (perLevel * feature.level) = base pool size
-     * 2. If formula is provided, it overrides the base calculation
-     * 3. If condition is provided, pool is only granted when condition is true
-     * 4. Final pool value is stored in actor.system.pools[poolKey]
+     * 1. Formula is evaluated to determine pool size (required)
+     * 2. If condition is provided, pool is only granted when condition is true
+     * 3. Final pool value is stored in actor.system.pools[poolKey]
      */
     schema.poolsGranted = new fields.ArrayField(new fields.SchemaField({
       // Main resource type - determines the pool category
@@ -44,26 +43,15 @@ export default class SWNFeature extends SWNItemBase {
       subResource: new fields.StringField({
         initial: ""
       }),
-      // Base amount granted at level 0 (minimum pool size)
-      baseAmount: new fields.NumberField({
-        initial: 1,
-        min: 0
-      }),
-      // Additional amount granted per feature level
-      // Final calculation: baseAmount + (perLevel * feature.level)
-      perLevel: new fields.NumberField({
-        initial: 0,
-        min: 0
-      }),
       // How often the pool refreshes - determines when resources regenerate
       cadence: new fields.StringField({
         choices: CONFIG.SWN.poolCadences, // ["commit", "scene", "day"]
         initial: "day"
       }),
-      // Optional: Formula for dynamic calculation (overrides baseAmount + perLevel)
-      // Can reference @level, @stats.cha.mod, etc. (e.g., "@level + @stats.cha.mod")
+      // Formula for dynamic calculation (required)
+      // Can reference @level, @stats.cha.mod, etc. (e.g., "1 + @level", "@level + @stats.cha.mod")
       formula: new fields.StringField({
-        initial: ""
+        initial: "1"
       }),
       // Optional: Condition that must be met for pool to be granted
       // Can reference @level, stats, etc. (e.g., "@level >= 3")

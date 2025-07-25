@@ -3,101 +3,181 @@ name: 'Rescue: What Kind of Patron Put Up the Job?'
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: fciZN0JMSRkVMg3R
-    text: Spouse, lover or family relation
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Spouse, lover or family relation
+    name: ''
     _key: '!tables.results!BQwJYV1Wm91Rg4zg.fciZN0JMSRkVMg3R'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: gPLFPjGjNAUlwxyI
-    text: Former employer wants them back
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Former employer wants them back
+    name: ''
     _key: '!tables.results!BQwJYV1Wm91Rg4zg.gPLFPjGjNAUlwxyI'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: Ih3pMczwBWWvPuP6
-    text: Old friend wants to dig them out
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Old friend wants to dig them out
+    name: ''
     _key: '!tables.results!BQwJYV1Wm91Rg4zg.Ih3pMczwBWWvPuP6'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: KQ1ccE77mHQwvIXU
-    text: Different captors want them
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Different captors want them
+    name: ''
     _key: '!tables.results!BQwJYV1Wm91Rg4zg.KQ1ccE77mHQwvIXU'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     _id: 66jshDOSFRMhI3wc
-    text: The captive managed to get a job placed
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: The captive managed to get a job placed
+    name: ''
     _key: '!tables.results!BQwJYV1Wm91Rg4zg.66jshDOSFRMhI3wc'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     _id: EJ5hv4BWvtek49KO
-    text: A rival corp has a use for them
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A rival corp has a use for them
+    name: ''
     _key: '!tables.results!BQwJYV1Wm91Rg4zg.EJ5hv4BWvtek49KO'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 7
       - 7
     drawn: false
     _id: 06EmJ5V6uIAM6pT6
-    text: A gang or community group wants them
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A gang or community group wants them
+    name: ''
     _key: '!tables.results!BQwJYV1Wm91Rg4zg.06EmJ5V6uIAM6pT6'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 8
       - 8
     drawn: false
     _id: YU1cnCRNUHSXJv78
-    text: A captor actually wants them gone
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A captor actually wants them gone
+    name: ''
     _key: '!tables.results!BQwJYV1Wm91Rg4zg.YU1cnCRNUHSXJv78'
 replacement: true
 displayRoll: true
@@ -106,10 +186,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703891876808
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 formula: 1d8
 _id: BQwJYV1Wm91Rg4zg
 sort: 0

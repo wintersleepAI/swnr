@@ -3,53 +3,93 @@ name: 'Sabotage: What Sort of Thing is the Target?'
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: x0dUijhHxmdrKZ64
-    text: A specific vehicle or piece of machinery
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A specific vehicle or piece of machinery
+    name: ''
     _key: '!tables.results!A00IwYk2SjDXOUmY.x0dUijhHxmdrKZ64'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: nszjQJRmrnrlVlRB
-    text: A factory, production, or research site
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A factory, production, or research site
+    name: ''
     _key: '!tables.results!A00IwYk2SjDXOUmY.nszjQJRmrnrlVlRB'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: nknRJ5bUejgTNbCB
-    text: A road or item of infrastructure
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A road or item of infrastructure
+    name: ''
     _key: '!tables.results!A00IwYk2SjDXOUmY.nknRJ5bUejgTNbCB'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: cRoIjWvJXvGcEjx4
-    text: An important piece of equipment
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: An important piece of equipment
+    name: ''
     _key: '!tables.results!A00IwYk2SjDXOUmY.cRoIjWvJXvGcEjx4'
 replacement: true
 displayRoll: true
@@ -58,10 +98,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703892045233
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 formula: 1d4
 _id: A00IwYk2SjDXOUmY
 sort: 0

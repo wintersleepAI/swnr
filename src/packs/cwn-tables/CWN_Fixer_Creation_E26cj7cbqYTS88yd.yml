@@ -5,10 +5,7 @@ description: >-
   Established Are They?</p></li><li><p>What Bad Rumors Exist About
   Them?</p></li><li><p>Style and/or Manner of Presentation</p></li></ol>
 results:
-  - text: Fixer Basic Background
-    type: 1
-    documentCollection: RollTable
-    documentId: jwZTMolLk5Kd5hUc
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -17,11 +14,21 @@ results:
     drawn: false
     _id: yWK6Dm0lRmPHg1JS
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Fixer Basic Background
+    documentUuid: RollTable.jwZTMolLk5Kd5hUc
+    description: ''
     _key: '!tables.results!E26cj7cbqYTS88yd.yWK6Dm0lRmPHg1JS'
-  - text: Fixer What Kind of Clients Do They Prefer?
-    type: 1
-    documentCollection: RollTable
-    documentId: 2W4uKN0RXfBTfm09
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -30,11 +37,21 @@ results:
     drawn: false
     _id: ET8mXIdC7GOKYWrt
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Fixer What Kind of Clients Do They Prefer?
+    documentUuid: RollTable.2W4uKN0RXfBTfm09
+    description: ''
     _key: '!tables.results!E26cj7cbqYTS88yd.ET8mXIdC7GOKYWrt'
-  - text: Fixer Why Are They Used By Operators?
-    type: 1
-    documentCollection: RollTable
-    documentId: Welmz9vDwoOrbUcI
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -43,11 +60,21 @@ results:
     drawn: false
     _id: O7JLfsLtI9tkDVXS
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Fixer Why Are They Used By Operators?
+    documentUuid: RollTable.Welmz9vDwoOrbUcI
+    description: ''
     _key: '!tables.results!E26cj7cbqYTS88yd.O7JLfsLtI9tkDVXS'
-  - text: Fixer How Established Are They?
-    type: 1
-    documentCollection: RollTable
-    documentId: AKYwQEZdZChAoEvM
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -56,11 +83,21 @@ results:
     drawn: false
     _id: hAhBls29m7SEF0TD
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Fixer How Established Are They?
+    documentUuid: RollTable.AKYwQEZdZChAoEvM
+    description: ''
     _key: '!tables.results!E26cj7cbqYTS88yd.hAhBls29m7SEF0TD'
-  - text: Fixer What Bad Rumors Exist About Them?
-    type: 1
-    documentCollection: RollTable
-    documentId: 6DxkppBFVrMLEmae
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -69,11 +106,21 @@ results:
     drawn: false
     _id: koqEBJW7MZ7ERZyc
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Fixer What Bad Rumors Exist About Them?
+    documentUuid: RollTable.6DxkppBFVrMLEmae
+    description: ''
     _key: '!tables.results!E26cj7cbqYTS88yd.koqEBJW7MZ7ERZyc'
-  - text: Fixer Style and/or Manner of Presentation
-    type: 1
-    documentCollection: RollTable
-    documentId: nfauTC9MMUp70I8y
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -82,6 +129,19 @@ results:
     drawn: false
     _id: C0M5qPV9TDnPUm2s
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Fixer Style and/or Manner of Presentation
+    documentUuid: RollTable.nfauTC9MMUp70I8y
+    description: ''
     _key: '!tables.results!E26cj7cbqYTS88yd.C0M5qPV9TDnPUm2s'
 formula: 1d1
 _id: E26cj7cbqYTS88yd
@@ -94,10 +154,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703914868080
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 sort: 0
 ownership:
   default: 0

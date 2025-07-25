@@ -3,77 +3,137 @@ name: 'Rescue: How Were They Snatched?'
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: ismiX5SkOYG607BB
-    text: Collateral damage from another clash
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Collateral damage from another clash
+    name: ''
     _key: '!tables.results!QGD8zEaQm1qI9Vre.ismiX5SkOYG607BB'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: aa4YlM0hSG8BxmfZ
-    text: Targeted kidnapping from their home
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Targeted kidnapping from their home
+    name: ''
     _key: '!tables.results!QGD8zEaQm1qI9Vre.aa4YlM0hSG8BxmfZ'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: edLBvg8xOHSSRr4d
-    text: Sold out by a supposed ally
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Sold out by a supposed ally
+    name: ''
     _key: '!tables.results!QGD8zEaQm1qI9Vre.edLBvg8xOHSSRr4d'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: SHReMrrVhG4TZlFt
-    text: They think this time the hit will be too strong
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They think this time the hit will be too strong
+    name: ''
     _key: '!tables.results!QGD8zEaQm1qI9Vre.SHReMrrVhG4TZlFt'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     _id: H6vtG6vdDKS1FJT6
-    text: Traded away by their former employer
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Traded away by their former employer
+    name: ''
     _key: '!tables.results!QGD8zEaQm1qI9Vre.H6vtG6vdDKS1FJT6'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     _id: anvdwmF5RaKvM3OV
-    text: Seized during a set-up meeting
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Seized during a set-up meeting
+    name: ''
     _key: '!tables.results!QGD8zEaQm1qI9Vre.anvdwmF5RaKvM3OV'
 replacement: true
 displayRoll: false
@@ -82,10 +142,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703891799686
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 formula: 1d6
 _id: QGD8zEaQm1qI9Vre
 sort: 0

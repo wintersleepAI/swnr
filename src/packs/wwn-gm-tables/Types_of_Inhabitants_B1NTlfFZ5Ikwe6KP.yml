@@ -10,7 +10,6 @@ description: >-
 results:
   - _id: 5KqItv40A5p1tqlE
     type: text
-    text: <b>Ancient Sorcerer-King Ruin</b>
     weight: 1
     range:
       - 1
@@ -18,11 +17,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Ancient Sorcerer-King Ruin</b>
+    name: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.5KqItv40A5p1tqlE'
   - _id: bWkdjgfIjnjjyUvV
-    type: pack
-    text: Inhab-Ancient
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -30,12 +39,22 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: ypsDSboKIlu0mfxF
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Inhab-Ancient
+    documentUuid: Compendium.wwn.gm-subtables.ypsDSboKIlu0mfxF
+    description: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.bWkdjgfIjnjjyUvV'
   - _id: lLWUliWBisMgteSe
     type: text
-    text: <b>Alien <i>Arratu</i></b>
     weight: 1
     range:
       - 1
@@ -43,11 +62,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Alien <i>Arratu</i></b>
+    name: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.lLWUliWBisMgteSe'
   - _id: IoJUxIWWNkctrY58
-    type: pack
-    text: Inhab-Arratu
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -55,12 +84,22 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: H2ZU19ZHt0xV88kH
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Inhab-Arratu
+    documentUuid: Compendium.wwn.gm-subtables.H2ZU19ZHt0xV88kH
+    description: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.IoJUxIWWNkctrY58'
   - _id: hjdadjTxYjBEhaJM
     type: text
-    text: <b>Subterranean Deep</b>
     weight: 1
     range:
       - 1
@@ -68,11 +107,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Subterranean Deep</b>
+    name: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.hjdadjTxYjBEhaJM'
   - _id: KJU8Oyznma20x8fZ
-    type: pack
-    text: Inhab-Deep
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -80,12 +129,22 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: fhbfYxLtgLoVlZp5
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Inhab-Deep
+    documentUuid: Compendium.wwn.gm-subtables.fhbfYxLtgLoVlZp5
+    description: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.KJU8Oyznma20x8fZ'
   - _id: XmksRSmWb6vPtKhe
     type: text
-    text: <b>Modern Ruin Site</b>
     weight: 1
     range:
       - 1
@@ -93,11 +152,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Modern Ruin Site</b>
+    name: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.XmksRSmWb6vPtKhe'
   - _id: ju6HfZFBgoocvPLm
-    type: pack
-    text: Inhab-Modern
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -105,12 +174,22 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: vRgM3LCZL4IBvlEx
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Inhab-Modern
+    documentUuid: Compendium.wwn.gm-subtables.vRgM3LCZL4IBvlEx
+    description: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.ju6HfZFBgoocvPLm'
   - _id: C9w9LHbTRFPAmyv2
     type: text
-    text: <b>Trackless Wilderness</b>
     weight: 1
     range:
       - 1
@@ -118,11 +197,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Trackless Wilderness</b>
+    name: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.C9w9LHbTRFPAmyv2'
   - _id: 9GBpCrYz5Xtr55wv
-    type: pack
-    text: Inhab-Wilderness
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -130,8 +219,19 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: AEt6C19UFsL8EnU1
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Inhab-Wilderness
+    documentUuid: Compendium.wwn.gm-subtables.AEt6C19UFsL8EnU1
+    description: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.9GBpCrYz5Xtr55wv'
 formula: 1d1
 replacement: true
@@ -145,11 +245,12 @@ ownership:
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   createdTime: null
   modifiedTime: 1690569812651
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!tables!B1NTlfFZ5Ikwe6KP'
 

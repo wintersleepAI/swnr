@@ -3,7 +3,6 @@ name: Combat-Urban
 img: icons/svg/d20-grey.svg
 results:
   - type: text
-    text: An inquisitive neighbor is always watching the place
     weight: 1
     range:
       - 1
@@ -12,12 +11,20 @@ results:
     _id: mrxhcepnurelrw7a
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: An inquisitive neighbor is always watching the place
+    name: ''
     _key: '!tables.results!8esBnK7LsZOIMqek.mrxhcepnurelrw7a'
   - type: text
-    text: >-
-      The guards are unusually vigilant and attentive to their duties for some
-      reason
     weight: 1
     range:
       - 2
@@ -26,10 +33,22 @@ results:
     _id: icq8nr6dr6sr43b0
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      The guards are unusually vigilant and attentive to their duties for some
+      reason
+    name: ''
     _key: '!tables.results!8esBnK7LsZOIMqek.icq8nr6dr6sr43b0'
   - type: text
-    text: The target’s living quarters are uncommonly difficult to access
     weight: 1
     range:
       - 3
@@ -38,10 +57,20 @@ results:
     _id: bojlxoocjy6pjeo5
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: The target’s living quarters are uncommonly difficult to access
+    name: ''
     _key: '!tables.results!8esBnK7LsZOIMqek.bojlxoocjy6pjeo5'
   - type: text
-    text: There’s a dangerous beast guarding the grounds of the place
     weight: 1
     range:
       - 4
@@ -50,10 +79,20 @@ results:
     _id: th29884dqsc8ay8g
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: There’s a dangerous beast guarding the grounds of the place
+    name: ''
     _key: '!tables.results!8esBnK7LsZOIMqek.th29884dqsc8ay8g'
   - type: text
-    text: The dwelling is unusually well-fortified
     weight: 1
     range:
       - 5
@@ -62,10 +101,20 @@ results:
     _id: m6c88ykmuy812va5
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: The dwelling is unusually well-fortified
+    name: ''
     _key: '!tables.results!8esBnK7LsZOIMqek.m6c88ykmuy812va5'
   - type: text
-    text: Servants and minions are thick in the halls
     weight: 1
     range:
       - 6
@@ -74,10 +123,20 @@ results:
     _id: d8eyxz23l8ipxsg4
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Servants and minions are thick in the halls
+    name: ''
     _key: '!tables.results!8esBnK7LsZOIMqek.d8eyxz23l8ipxsg4'
   - type: text
-    text: The owner has access to some kind of magical ward or divine blessing
     weight: 1
     range:
       - 7
@@ -86,12 +145,20 @@ results:
     _id: yyezoqn9n9bfgvam
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: The owner has access to some kind of magical ward or divine blessing
+    name: ''
     _key: '!tables.results!8esBnK7LsZOIMqek.yyezoqn9n9bfgvam'
   - type: text
-    text: >-
-      The place is right next to a very vigilant and dangerous neighbor that
-      will respond to alarms or disorders
     weight: 1
     range:
       - 8
@@ -100,10 +167,22 @@ results:
     _id: j4tqp6xg2cpg15kr
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      The place is right next to a very vigilant and dangerous neighbor that
+      will respond to alarms or disorders
+    name: ''
     _key: '!tables.results!8esBnK7LsZOIMqek.j4tqp6xg2cpg15kr'
   - type: text
-    text: The interior is mazey, abnormal, or difficult to navigate for some reason
     weight: 1
     range:
       - 9
@@ -112,12 +191,20 @@ results:
     _id: bgpfecl5ppbcagin
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: The interior is mazey, abnormal, or difficult to navigate for some reason
+    name: ''
     _key: '!tables.results!8esBnK7LsZOIMqek.bgpfecl5ppbcagin'
   - type: text
-    text: >-
-      Poor repairs or recent damage makes the place dangerous to unknowing
-      outsiders
     weight: 1
     range:
       - 10
@@ -126,10 +213,22 @@ results:
     _id: bqjvbmnmdwuegvzv
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      Poor repairs or recent damage makes the place dangerous to unknowing
+      outsiders
+    name: ''
     _key: '!tables.results!8esBnK7LsZOIMqek.bqjvbmnmdwuegvzv'
   - type: text
-    text: There are several traps or alarms there
     weight: 1
     range:
       - 11
@@ -138,10 +237,20 @@ results:
     _id: r0kdf3376lhz0flh
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: There are several traps or alarms there
+    name: ''
     _key: '!tables.results!8esBnK7LsZOIMqek.r0kdf3376lhz0flh'
   - type: text
-    text: It’s connected to some kind of underground passages or ancient tunnels
     weight: 1
     range:
       - 12
@@ -150,7 +259,18 @@ results:
     _id: djc6tqegy923e7xa
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: It’s connected to some kind of underground passages or ancient tunnels
+    name: ''
     _key: '!tables.results!8esBnK7LsZOIMqek.djc6tqegy923e7xa'
 formula: 1d12
 replacement: true
@@ -165,11 +285,12 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!tables!8esBnK7LsZOIMqek'
 
