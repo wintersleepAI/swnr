@@ -637,6 +637,7 @@
   /* Responsive adjustments */
   /* Integration with existing power sheet styles */
   /* Dark mode support */
+  /* Container drag and drop styling */
 }
 .swnr .item-form {
   font-family: "Roboto", sans-serif;
@@ -658,6 +659,7 @@
 }
 .swnr .sheet-header input[type=text],
 .swnr .sheet-header input[type=number],
+.swnr .sheet-header select,
 .swnr .sheet-header div.field {
   font-size: 14px;
   /* padding: 2px; */
@@ -828,6 +830,101 @@
   display: block;
   min-height: 150px;
   overflow-y: auto;
+}
+.swnr .languages-section .languages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px 0;
+}
+.swnr .languages-section .language-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 8px;
+  background-color: var(--color-form-disabled);
+  border-radius: 3px;
+  border: 1px solid var(--color-border-dark-tertiary);
+}
+.swnr .languages-section .language-item .language-name {
+  flex: 1;
+  font-size: 12px;
+}
+.swnr .languages-section .language-item .language-remove {
+  margin-left: 8px;
+  background: none;
+  border: none;
+  color: var(--swnr-c-faded);
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swnr .languages-section .language-item .language-remove:hover {
+  color: var(--swnr-c-white);
+  background-color: var(--swnr-c-dark);
+}
+.swnr .languages-section .language-item .language-remove:active {
+  transform: translateY(1px);
+}
+.swnr .languages-section .language-item .language-remove i {
+  font-size: 9px;
+}
+.swnr .languages-section .language-add-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.swnr .languages-section .language-add-container .language-select {
+  flex: 1;
+  font-size: 12px;
+}
+.swnr .languages-section .language-add-container .language-select:focus {
+  outline-color: var(--swnr-c-faded);
+}
+.swnr .languages-section .language-add-container .language-select option {
+  background-color: var(--color-form-field);
+  color: var(--color-text-dark-primary);
+  padding: 2px 5px;
+}
+.swnr .languages-section .language-add-container .language-add-btn {
+  background: var(--swnr-c-dark);
+  border: 1px solid var(--swnr-c-dark);
+  color: var(--swnr-c-white);
+  padding: 3px 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 24px;
+  height: var(--input-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swnr .languages-section .language-add-container .language-add-btn:hover {
+  background-color: var(--swnr-c-faded);
+  border-color: var(--swnr-c-faded);
+}
+.swnr .languages-section .language-add-container .language-add-btn:active {
+  transform: translateY(1px);
+}
+.swnr .languages-section .language-add-container .language-add-btn i {
+  font-size: 10px;
+}
+.swnr .languages-section .no-languages-warning {
+  padding: 8px;
+  font-size: 11px;
+  color: var(--color-text-light-6);
+  font-style: italic;
+  text-align: center;
+  background-color: var(--color-form-disabled);
+  border-radius: 3px;
+  border: 1px dashed var(--color-border-dark-tertiary);
 }
 .swnr .resource-label {
   font-weight: bold;
@@ -1254,6 +1351,36 @@
   border-left: 2px solid var(--color-border-light-tertiary);
   padding-left: 0.5rem;
 }
+.swnr .power-type-section .item-description {
+  list-style: none;
+  background-color: var(--color-bg-option);
+  border-left: 3px solid var(--accent-color);
+  margin-left: 1em;
+  padding: 0.5em;
+  font-size: 0.9em;
+}
+.swnr .power-type-section .item-description .item-description-content {
+  color: var(--color-text-dark-primary);
+}
+.swnr .power-type-section .item-description .item-description-content strong {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+.swnr .power-type-section .item-description .item-description-content div {
+  margin-top: 0.25em;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
+.swnr .power-type-section span[data-action=toggleItemDescription] {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+.swnr .power-type-section span[data-action=toggleItemDescription]:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
 .swnr .effects-header {
   height: 28px;
   margin: 2px 0;
@@ -1588,4 +1715,24 @@
   background: var(--color-bg-dark);
   border-color: var(--color-border-dark);
   color: var(--color-text-light-secondary);
+}
+.swnr .drop-target {
+  background-color: rgba(var(--accent-color), 0.3);
+  border: 2px dashed var(--accent-color);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.swnr .container-toggle {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.swnr .container-toggle:hover {
+  opacity: 1 !important;
+}
+.swnr .contained-item .item-image img {
+  opacity: 0.8;
+}
+.swnr .contained-item .item-name-long {
+  font-size: 0.9em;
+  opacity: 0.9;
 }

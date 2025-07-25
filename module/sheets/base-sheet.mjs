@@ -1,4 +1,5 @@
 const { api, sheets } = foundry.applications;
+import { ContainerHelper } from '../helpers/container-helper.mjs';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -7,9 +8,11 @@ const { api, sheets } = foundry.applications;
 export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
   sheets.ActorSheetV2
 ) {
+  #dragDrop;
+
   constructor(options = {}) {
     super(options);
-    this.#dragDrop = this.#createDragDropHandlers();
+    this.#dragDrop = this._createDragDropHandlers();
   }
 
   /* -------------------------------------------- */
@@ -24,7 +27,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    */
   _onRender(context, options) {
     this.#dragDrop.forEach((d) => d.bind(this.element));
-    this.#disableOverrides();
+    this._disableOverrides();
   }
 
   /**
@@ -86,10 +89,28 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    * @param {Item} item
    * @private
    */
-  _onSortItem(event, item) {
+  async _onSortItem(event, item) {
     // Get the drag source and drop target
     const items = this.actor.items;
     const dropTarget = event.target.closest('[data-item-id]');
+
+    // Check if this is a container drop first (before checking for valid dropTarget)
+    const containerInfo = ContainerHelper.getDropTargetContainer(event.target);
+    if (containerInfo) {
+      const container = items.get(containerInfo.itemId);
+      if (container && container.id !== item.id) {
+        // This is a drop onto a container, handle it specially
+        return ContainerHelper.addItemToContainer(container, item);
+      }
+    }
+
+    // Check if item is being removed from a container (dropped outside of containers)
+    if (item.system.containerId) {
+      // Item was in a container but dropped elsewhere, remove it from container
+      await ContainerHelper.removeItemFromContainer(item);
+    }
+
+    // If no valid drop target, we're done (item was just removed from container)
     if (!dropTarget) return;
     const target = items.get(dropTarget.dataset.itemId);
 
@@ -105,7 +126,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
     }
 
     // Perform the sort
-    const sortUpdates = SortingHelpers.performIntegerSort(item, {
+    const sortUpdates = foundry.utils.SortingHelpers.performIntegerSort(item, {
       target,
       siblings,
     });
@@ -131,14 +152,13 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
 
   // This is marked as private because there's no real need
   // for subclasses or external hooks to mess with it directly
-  #dragDrop;
 
   /**
    * Create drag-and-drop workflow handlers for this Application
    * @returns {DragDrop[]}     An array of DragDrop handlers
    * @private
    */
-  #createDragDropHandlers() {
+  _createDragDropHandlers() {
     return this.options.dragDrop.map((d) => {
       d.permissions = {
         dragstart: this._canDragStart.bind(this),
@@ -147,6 +167,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       d.callbacks = {
         dragstart: this._onDragStart.bind(this),
         dragover: this._onDragOver.bind(this),
+        dragleave: this._onDragLeave.bind(this),
         drop: this._onDrop.bind(this),
       };
       return new DragDrop(d);
@@ -560,7 +581,20 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    * @param {DragEvent} event       The originating DragEvent
    * @protected
    */
-  _onDragOver(event, target) { }
+  _onDragOver(event, target) {
+    // Handle container drag over visual feedback
+    ContainerHelper.handleContainerDragOver(event, target);
+  }
+
+  /**
+   * Callback actions which occur when a dragged element leaves a drop target.
+   * @param {DragEvent} event       The originating DragEvent
+   * @protected
+   */
+  _onDragLeave(event, target) {
+    // Handle container drag leave visual feedback
+    ContainerHelper.handleContainerDragLeave(event, target);
+  }
 
   /**
    * Callback actions which occur when a dragged element is dropped on a target.
@@ -712,8 +746,9 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
 
   /**
    * Disables inputs subject to active effects
+   * @private
    */
-  #disableOverrides() {
+  _disableOverrides() {
     const flatOverrides = foundry.utils.flattenObject(this.actor.overrides);
     for (const override of Object.keys(flatOverrides)) {
       const input = this.element.querySelector(`[name="${override}"]`);
@@ -722,4 +757,5 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       }
     }
   }
+
 }

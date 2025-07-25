@@ -12,12 +12,13 @@ const { api, sheets } = foundry.applications;
  * @extends {ActorSheetV2}
  */
 export class SWNActorSheet extends SWNBaseSheet {
+  // Private properties
+  #toggleLock = false;
+  static #expandedDescriptions = {};
+
   constructor(options = {}) {
     super(options);
   }
-
-  // Private properties
-  #toggleLock = false;
 
   /** @override */
   static DEFAULT_OPTIONS = {
@@ -45,7 +46,9 @@ export class SWNActorSheet extends SWNBaseSheet {
       skillUp: this._onSkillUp,
       hitDice: this._onHitDice,
       toggleArmor: this._toggleArmor,
+      toggleContainer: this._toggleContainer,
       toggleLock: this._toggleLock,
+      toggleItemDescription: this._onToggleItemDescription,
       rollStats: this._onRollStats,
       toggleSection: this._toggleSection,
       reactionRoll: this._onReactionRoll,
@@ -53,6 +56,9 @@ export class SWNActorSheet extends SWNBaseSheet {
       resourceCreate: this._onResourceCreate,
       resourceDelete: this._onResourceDelete,
       releaseCommitment: this._onReleaseCommitment,
+      addLanguage: this._onAddLanguage,
+      removeLanguage: this._onRemoveLanguage,
+      toggleLanguageAdd: this._onToggleLanguageAdd,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -118,6 +124,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     },
     compactAbilitiesList: {
       template: 'systems/swnr/templates/actor/fragments/compact-abilities-list.hbs',
+    },
+    compactCarriedList: {
+      template: 'systems/swnr/templates/actor/fragments/compact-carried-list.hbs',
     }
   };
 
@@ -185,6 +194,8 @@ export class SWNActorSheet extends SWNBaseSheet {
       gameSettings: getGameSettings(),
       headerWidget: headerFieldWidget.bind(this),
       groupWidget: groupFieldWidget.bind(this),
+      // Add expanded descriptions state for item description toggle functionality
+      expandedDescriptions: SWNActorSheet.#expandedDescriptions,
 
     };
 
@@ -223,6 +234,10 @@ export class SWNActorSheet extends SWNBaseSheet {
             relativeTo: this.actor,
           }
         );
+        // Add available languages for character language selection
+        if (this.actor.type === 'character') {
+          context.availableLanguages = game.settings.get("swnr", "parsedLanguageList") || [];
+        }
         break;
       case 'effects':
         context.tab = context.tabs[partId];
@@ -807,6 +822,18 @@ export class SWNActorSheet extends SWNBaseSheet {
   }
 
   /**
+   * Toggle container open/closed state
+   * @this SWNActorSheet
+   */
+  static async _toggleContainer(event, target) {
+    event.preventDefault();
+    const itemId = target.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    const isOpen = item.system.container.isOpen;
+    await item.update({ "system.container.isOpen": !isOpen });
+  }
+
+  /**
   * @this SWNActorSheet
   */
   static async _toggleLock(event, _target) {
@@ -1100,6 +1127,136 @@ export class SWNActorSheet extends SWNBaseSheet {
       });
       
       ui.notifications?.info(`Released ${releasedCommitment.amount} effort from ${releasedCommitment.powerName}`);
+    }
+  }
+
+  /**
+   * Toggle the display of an item's description
+   * @param {Event} event - The click event
+   * @param {HTMLElement} target - The clicked element
+   * @returns {Promise<void>}
+   * @static
+   */
+  static async _onToggleItemDescription(event, target) {
+    event.preventDefault();
+    
+    const itemId = target.dataset.itemId || target.closest('[data-item-id]')?.dataset.itemId;
+    if (!itemId) return;
+
+    // Toggle the expanded state (using object instead of Set)
+    if (SWNActorSheet.#expandedDescriptions[itemId]) {
+      delete SWNActorSheet.#expandedDescriptions[itemId];
+    } else {
+      SWNActorSheet.#expandedDescriptions[itemId] = true;
+    }
+
+    // Find and toggle the description row
+    const itemRow = target.closest('.item[data-item-id]');
+    if (!itemRow) return;
+
+    const descriptionRow = itemRow.nextElementSibling;
+    if (descriptionRow && descriptionRow.classList.contains('item-description')) {
+      const isExpanded = SWNActorSheet.#expandedDescriptions[itemId];
+      descriptionRow.style.display = isExpanded ? 'block' : 'none';
+    }
+  }
+
+  /**
+   * Handle adding a language to the character
+   * @param {Event} event - The originating click event
+   * @param {HTMLElement} target - The clicked element
+   * @private
+   */
+  static async _onAddLanguage(event, target) {
+    event.preventDefault();
+    
+    try {
+      const container = target.closest('.language-add-container');
+      if (!container) {
+        console.error("Language add container not found");
+        return;
+      }
+      
+      const languageSelect = container.querySelector('.language-select');
+      if (!languageSelect) {
+        console.error("Language select not found");
+        return;
+      }
+      
+      const selectedLanguage = languageSelect.value;
+      
+      if (!selectedLanguage || selectedLanguage === "") {
+        ui.notifications.warn("Please select a language to add.");
+        return;
+      }
+      
+      const currentLanguages = [...(this.actor.system.languages || [])];
+      
+      if (!currentLanguages.includes(selectedLanguage)) {
+        currentLanguages.push(selectedLanguage);
+        await this.actor.update({ "system.languages": currentLanguages });
+        
+        // Reset the select and hide the add section
+        languageSelect.value = "";
+        const addSection = container.closest('#language-add-section');
+        if (addSection) {
+          addSection.style.display = 'none';
+        }
+        
+        ui.notifications.info(`Added language: ${selectedLanguage}`);
+      } else {
+        ui.notifications.warn(`${selectedLanguage} is already known by this character.`);
+      }
+    } catch (error) {
+      console.error("Error adding language:", error);
+      ui.notifications.error("Error adding language. Check console for details.");
+    }
+  }
+
+  /**
+   * Handle removing a language from the character
+   * @param {Event} event - The originating click event  
+   * @param {HTMLElement} target - The clicked element
+   * @private
+   */
+  static async _onRemoveLanguage(event, target) {
+    event.preventDefault();
+    
+    const languageIndex = parseInt(target.dataset.langIndex);
+    
+    if (isNaN(languageIndex)) return;
+    
+    const currentLanguages = [...(this.actor.system.languages || [])];
+    if (languageIndex >= 0 && languageIndex < currentLanguages.length) {
+      const removedLanguage = currentLanguages[languageIndex];
+      currentLanguages.splice(languageIndex, 1);
+      await this.actor.update({ "system.languages": currentLanguages });
+      
+      ui.notifications.info(`Removed language: ${removedLanguage}`);
+    }
+  }
+
+  /**
+   * Handle toggling the language add section
+   * @param {Event} event - The originating click event
+   * @param {HTMLElement} target - The clicked element
+   * @private
+   */
+  static async _onToggleLanguageAdd(event, target) {
+    event.preventDefault();
+    
+    const addSection = target.closest('.languages-section').querySelector('#language-add-section');
+    if (addSection) {
+      const isVisible = addSection.style.display !== 'none';
+      addSection.style.display = isVisible ? 'none' : 'block';
+      
+      // Reset the select when showing
+      if (!isVisible) {
+        const select = addSection.querySelector('.language-select');
+        if (select) {
+          select.value = "";
+        }
+      }
     }
   }
 }

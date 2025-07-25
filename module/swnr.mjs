@@ -10,7 +10,7 @@ import { SWNFactionSheet } from './sheets/faction-sheet.mjs';
 
 // Import helper/utility classes and constants.
 import { SWN } from './helpers/config.mjs';
-import { registerSettings } from './helpers/register-settings.mjs';
+import { registerSettings, addLanguagePreset } from './helpers/register-settings.mjs';
 import { registerHandlebarHelpers } from './helpers/handlebar.mjs';
 import { chatListeners, welcomeMessage } from './helpers/chat.mjs';
 import * as refreshHelpers from './helpers/refresh-helpers.mjs';
@@ -142,6 +142,50 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 
 registerHandlebarHelpers();
 
+/**
+ * Initialize language settings on first load
+ */
+function initializeLanguageSettings() {
+  const availableLanguages = game.settings.get("swnr", "availableLanguages");
+  
+  // Only initialize if no languages are currently set
+  if (!availableLanguages || availableLanguages.trim() === "") {
+    const presetValue = game.settings.get("swnr", "languagePresetSelector");
+    
+    // Get predefined language lists
+    function getLanguagePresetList(preset) {
+      const earthLanguages = [
+        "English", "Mandarin Chinese", "Hindi", "Spanish", "French", 
+        "Standard Arabic", "Bengali", "Portuguese", "Russian", "Japanese"
+      ];
+      
+      const wwnLanguages = [
+        "Trade Cant", "Old Vothian", "Brass Speech", "Emedian", 
+        "Thurian", "Anak Speech", "Predecessant", "Preterite"
+      ];
+      
+      switch (preset) {
+        case "earth":
+          return earthLanguages;
+        case "wwn":
+          return wwnLanguages;
+        case "both":
+          return [...earthLanguages, ...wwnLanguages];
+        default:
+          return [];
+      }
+    }
+    
+    // Set initial languages from preset
+    const presetLanguages = getLanguagePresetList(presetValue);
+    const languageString = presetLanguages.join(", ");
+    game.settings.set("swnr", "availableLanguages", languageString);
+  } else {
+    // Parse existing languages to ensure the parsed list is up to date
+    const languageList = availableLanguages.split(",").map(lang => lang.trim()).filter(lang => lang);
+    game.settings.set("swnr", "parsedLanguageList", languageList);
+  }
+}
 
 /* -------------------------------------------- */
 /*  Ready Hook                                  */
@@ -178,6 +222,9 @@ Hooks.once('ready', function () {
     game.settings.set('swnr', 'systemMigrationVersion', currentVersion);
   }
 
+  // Initialize language settings on first load
+  initializeLanguageSettings();
+
   // Override initiative roll method (consolidated from duplicate hook)
   const originalGetInitiativeRoll = Combatant.prototype.getInitiativeRoll;
   Combatant.prototype.getInitiativeRoll = function () {
@@ -186,6 +233,116 @@ Hooks.once('ready', function () {
     }
     return originalGetInitiativeRoll.call(this);
   };
+});
+
+/* -------------------------------------------- */
+/*  Settings Enhancement Hook                   */
+/* -------------------------------------------- */
+
+Hooks.on('renderSettingsConfig', (app, html, data) => {
+  // Add a delay to ensure DOM is fully rendered
+  setTimeout(() => {
+    // The html parameter might be a jQuery object or array, try different approaches
+    let htmlElement;
+    
+    if (html.jquery) {
+      // jQuery object
+      htmlElement = html[0];
+    } else if (html instanceof Array && html.length > 0) {
+      // Array of elements
+      htmlElement = html[0];
+    } else if (html instanceof HTMLElement) {
+      // Direct HTML element
+      htmlElement = html;
+    } else {
+      // Try to find the settings form in the document
+      htmlElement = document.querySelector('#client-settings form') || 
+                   document.querySelector('form') ||
+                   document;
+    }
+    
+    // If we got a button or other wrong element, try to find the form
+    if (htmlElement && htmlElement.tagName !== 'FORM') {
+      const form = document.querySelector('#client-settings form') || 
+                   document.querySelector('form.flexcol') ||
+                   document.querySelector('.settings-config form');
+      if (form) {
+        htmlElement = form;
+      }
+    }
+    
+    // Try to find our specific field
+    let languagePresetField = htmlElement.querySelector('select[name="swnr.languagePresetSelector"]');
+    
+    // If not found, try alternative selectors
+    if (!languagePresetField) {
+      languagePresetField = htmlElement.querySelector('select[data-setting="swnr.languagePresetSelector"]');
+    }
+    
+    if (!languagePresetField) {
+      // Try to find by looking for the setting section
+      const settingDivs = htmlElement.querySelectorAll('.form-group');
+      for (const div of settingDivs) {
+        const label = div.querySelector('label');
+        if (label && label.textContent.includes('Add Language Preset')) {
+          languagePresetField = div.querySelector('select');
+          break;
+        }
+      }
+    }
+    
+    if (languagePresetField) {
+      console.log("Found language preset field, adding button");
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'add-preset-btn';
+      button.style.marginLeft = '5px';
+      button.style.padding = '2px 8px';
+      button.innerHTML = '<i class="fas fa-plus"></i> Add Preset';
+      
+      button.addEventListener('click', async (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        // Prevent double-clicks
+        if (button.disabled) return;
+        button.disabled = true;
+        
+        const selectedPreset = languagePresetField.value;
+        
+        if (selectedPreset && selectedPreset !== 'none') {
+          // Call addLanguagePreset and wait for it to complete
+          addLanguagePreset(selectedPreset);
+          
+          // Wait a moment for the setting to be saved, then update the field
+          setTimeout(() => {
+            const availableLanguagesField = htmlElement.querySelector('input[name="swnr.availableLanguages"]') ||
+                                            htmlElement.querySelector('input[data-setting="swnr.availableLanguages"]');
+            
+            if (availableLanguagesField) {
+              const currentValue = game.settings.get("swnr", "availableLanguages");
+              availableLanguagesField.value = currentValue;
+              
+              // Trigger input event to ensure Foundry recognizes the change
+              availableLanguagesField.dispatchEvent(new Event('input', { bubbles: true }));
+              availableLanguagesField.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            
+            // Re-enable button
+            button.disabled = false;
+          }, 100);
+        } else {
+          ui.notifications.warn("Please select a preset other than 'None' to add languages.");
+          button.disabled = false;
+        }
+      });
+      
+      languagePresetField.parentNode.insertBefore(button, languagePresetField.nextSibling);
+      console.log("Button added to settings");
+    } else {
+      console.log("Language preset field still not found after all attempts");
+    }
+  }, 200); // Increased delay
 });
 
 /* -------------------------------------------- */

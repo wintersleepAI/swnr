@@ -211,7 +211,10 @@
           },
           "employer": {
             "label": "Employer"
-          }, 
+          },
+          "languages": {
+            "label": "Languages"
+          },
           "stress": {
             "label": "Stress"
           }
@@ -547,6 +550,24 @@
             },
             "value": {
               "label": "Value"
+            }
+          },
+          "container": {
+            "label": "Container",
+            "isContainer": {
+              "label": "Is Container"
+            },
+            "isOpen": {
+              "label": "Is Open"
+            },
+            "capacity": {
+              "label": "Capacity",
+              "max": {
+                "label": "Max Capacity"
+              },
+              "value": {
+                "label": "Used Capacity"
+              }
             }
           }
         }
@@ -1514,6 +1535,12 @@
       "skill": "Skill",
       "loadSkills": "No skills? Click here to add some!",
       "employer": "Employer",
+      "languages": "Languages",
+      "addLanguage": "Add Language",
+      "selectLanguage": "Select a language...",
+      "removeLanguage": "Remove Language",
+      "availableLanguages": "Available Languages",
+      "noLanguagesConfigured": "No languages configured by GM",
       "source": "Source",
       "factionname": "Faction",
       "movement": "Movement",
@@ -1878,7 +1905,17 @@
       "showAccess" : "Show Access?",
       "showAccessHint" : "Show Access on the character sheet?",
       "search": "Compendium item search?",
-      "searchHint": "What compendiums to search for items for in-sheet item adds?"
+      "searchHint": "What compendiums to search for items for in-sheet item adds?",
+      "languagePresetSelector": "Add Language Preset",
+      "languagePresetSelectorHint": "Select a preset to add to your language list. Use the button below to add the selected preset languages to your available languages list.",
+      "availableLanguages": "Available Languages",
+      "availableLanguagesHint": "Comma-separated list of languages available to characters. Edit this list freely to add, remove, or modify languages for your world.",
+      "languagePresets": {
+        "none": "None - Custom Only",
+        "earth": "Earth Languages (Top 10)",
+        "wwn": "WWN Languages",
+        "both": "Both Earth and WWN Languages"
+      }
     },
     "chat": {
       "dicepool": "Dice Pool",
@@ -1957,7 +1994,18 @@
         "none": "None",
         "count": "Individual",
         "bundle": "Bundle/Clip"
-      }
+      },
+      "container": {
+        "settings": "Container Settings",
+        "tooltip": "This item is a container",
+        "open": "Click to open container",
+        "close": "Click to close container",
+        "isContainer": "Is Container",
+        "isOpen": "Is Open",
+        "contained": "In Container"
+      },
+      "containers": "Containers",
+      "capacity": "Capacity"
     },
     "weapon": {
       "shock": {

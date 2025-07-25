@@ -58,4 +58,22 @@
 
   </div>
 
+  {{! Container Settings Section }}
+  <div class='resource-group grid grid-4col' style="border: 1px solid var(--border-color); border-radius: 2px; padding: 4px; margin-top: 8px;">
+    <div class="grid-span-4">
+      <label class='resource-label'>{{localize 'swnr.item.container.settings'}}</label>
+    </div>
+    <div class="grid-span-4">
+      {{formGroup systemFields.container.fields.isContainer value=system.container.isContainer localize=true widget=checkWidget}}
+    </div>
+    {{#if system.container.isContainer}}
+      <div class="resource">
+        {{formGroup systemFields.container.fields.capacity.fields.max value=system.container.capacity.max localize=true}}
+      </div>
+      <div class="grid-span-2">
+        {{formGroup systemFields.container.fields.isOpen value=system.container.isOpen localize=true widget=checkWidget}}
+      </div>
+    {{/if}}
+  </div>
+
 </section>

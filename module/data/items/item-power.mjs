@@ -686,7 +686,8 @@ export default class SWNPower extends SWNItemBase {
     
     // Update the consumption entry in the array
     await this.parent.update({
-      [`system.consumptions.${consumptionIndex}.uses.value`]: newValue
+      [`system.consumptions.${consumptionIndex}.uses.value`]: newValue,
+      [`system.consumptions.${consumptionIndex}.type`]: "uses"
     });
     
     return { 
