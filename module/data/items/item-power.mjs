@@ -11,7 +11,7 @@ export default class SWNPower extends SWNItemBase {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
     schema.subType = new fields.StringField({
-      choices: ["psychic", "art", "adept", "spell", "mutation"],
+      choices: CONFIG.SWN.powerSubTypes,
       initial: "psychic"
     });
     schema.source = SWNShared.requiredString("");
@@ -35,7 +35,7 @@ export default class SWNPower extends SWNItemBase {
       }),
       // Resource pool fields (for poolResource type)
       resourceName: new fields.StringField({
-        choices: ["Effort", "Slots", "Points", "Uses"],
+        choices: CONFIG.SWN.poolResourceNames,
         initial: null,
         required: false,
         nullable: true

@@ -73,6 +73,10 @@ SWN.saveTypes = {
 
 SWN.poolResourceNames = ["Effort", "Slots", "Points", "Strain", "Uses"];
 
+SWN.poolCadences = ["commit", "scene", "day"];
+
+SWN.powerSubTypes = ["psychic", "art", "adept", "spell", "mutation"];
+
 SWN.consumptionTypes = {
   none: 'swnr.consumption.none',
   poolResource: 'swnr.consumption.poolResource',
