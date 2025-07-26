@@ -11,12 +11,10 @@
     
     <div class="severity-section">
       <h4 class="severity-total" style="margin: 10px 0;">
-        <a class="inline-roll" data-tooltip="Click to expand" style="cursor: pointer; text-decoration: none; color: inherit;">
-          <i class="fas fa-dice-d20"></i>
-          Severity {{severity}}
-        </a>
+        <i class="fas fa-dice-d20"></i>
+        Severity {{severity}}
       </h4>
-      <div class="dice-tooltip" style="display: none; background: #f0f0f0; padding: 8px; border-radius: 4px; margin: 5px 0; font-family: monospace; font-size: 0.9em;">
+      <div class="dice-calculation" style="background: #f0f0f0; padding: 8px; border-radius: 4px; margin: 5px 0; font-family: monospace; font-size: 0.9em;">
         <div class="dice-formula">
           1d12: [{{severityRoll}}] + {{injuryContribution}} ({{injuries}} injuries × 2) + {{excessDamage}} (excess damage) - {{critResistance}} (CR) = {{severity}}
         </div>

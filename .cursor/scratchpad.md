@@ -1,111 +1,108 @@
-# Goblin Punch Death & Dismemberment System - Implementation Complete
+# Debug "Click to Expand" Functionality
 
-## Executor's Report
+## Background and Motivation
+The "Click to expand" button in the Critical Injury chat message is not functioning properly. When clicked, it should reveal the detailed breakdown of the severity calculation, but it appears to be non-responsive. This is a critical UX issue as it prevents players from understanding how the injury severity was calculated.
 
-### Completed Tasks
+## Key Challenges and Analysis
+1. **Event Binding**: The click handler may not be properly bound to the expand button
+2. **Chat Message Rendering**: Foundry chat messages require special handling for interactive elements
+3. **CSS/HTML Structure**: The expandable content may have incorrect styling or structure
+4. **JavaScript Execution**: The handler code may have errors or may not be loaded
 
-1. **✅ Data Model Updates**
-   - Added `critResistance`, `injuries`, and `wounds` fields to `module/data/actors/base-actor.mjs`
-   - All fields default to 0
+## High-level Task Breakdown
 
-2. **✅ Character Sheet UI - PC**
-   - Added CR field after Attack Bonus in `templates/actor/header.hbs`
-   - Added editable Injuries/Wounds counters below System Strain bar
+### Task 1: Investigate Current Implementation
+**Success Criteria**: Understand how the expand functionality is currently implemented
+- [ ] Examine the wound-roll.hbs template for the expand button structure
+- [ ] Check chat.mjs for any click handlers related to chat messages
+- [ ] Look for any JavaScript that handles expandable content
+- [ ] Verify CSS classes for collapsible content
 
-3. **✅ Character Sheet UI - NPC**
-   - Added CR field after Attack Bonus in `templates/actor/npc.hbs`
-   - Added editable Injuries/Wounds counters in combat section
+### Task 2: Debug Event Handlers
+**Success Criteria**: Identify why click events aren't firing
+- [ ] Check if chat message click handlers are registered
+- [ ] Verify the data-action or class used for the expand button
+- [ ] Test if the handler is being called using console.log
+- [ ] Check browser console for JavaScript errors
 
-4. **✅ Settings Registration**
-   - Added `useDeathAndDismemberment` setting in `module/helpers/register-settings.mjs`
-   - Added localization strings in `lang/en.json`
-   - Setting defaults to false
+### Task 3: Analyze Foundry Chat Message Patterns
+**Success Criteria**: Understand best practices for interactive chat messages
+- [ ] Search for other expandable/collapsible content in the codebase
+- [ ] Check how other interactive chat elements work (e.g., roll buttons)
+- [ ] Review Foundry documentation for chat message interactivity
+- [ ] Identify the correct way to bind events to chat messages
 
-5. **✅ Damage Application Logic**
-   - Modified `module/helpers/chat.mjs` to check for death & dismemberment
-   - Triggers when HP reaches 0 or below (including exactly 0)
-   - Calculates excess damage correctly: `Math.max(0, total - oldHealth)`
-   - Wrapped defeated status to only apply when setting is disabled
+### Task 4: Fix the Click Handler
+**Success Criteria**: Implement working expand/collapse functionality
+- [ ] Add proper event listener for the expand button
+- [ ] Ensure event delegation works for dynamically added chat messages
+- [ ] Toggle visibility of the calculation breakdown
+- [ ] Update button text between "Click to expand" and "Click to collapse"
 
-6. **✅ Wound Application Method**
-   - Created `applyWounds()` method in `module/documents/actor.mjs`
-   - Implements full severity calculation: `1d12 + (injuries × 2) + excessDamage - critResistance`
-   - Rolls location (1d12) and applies appropriate descriptions
-   - Updates injury and wound counters based on severity thresholds
+### Task 5: Style the Expandable Content
+**Success Criteria**: Ensure smooth UX for expand/collapse
+- [ ] Add CSS transitions for smooth expand/collapse
+- [ ] Ensure proper spacing and layout when expanded
+- [ ] Test with various severity calculations
+- [ ] Verify mobile responsiveness
 
-7. **✅ Chat Template**
-   - Created `templates/chat/wound-roll.hbs` with:
-     - Location display with icon
-     - Severity number (no text labels)
-     - Expandable calculation breakdown
-     - Full effect descriptions
-     - Counter updates display
+### Task 6: Test and Validate
+**Success Criteria**: Confirm functionality works in all scenarios
+- [ ] Test with new wound rolls
+- [ ] Test with existing chat messages after reload
+- [ ] Verify multiple expandable messages work independently
+- [ ] Check for any performance issues
+- [ ] Test in different browsers
 
-### System Features Implemented
+## Project Status Board
+- [x] Task 1: Investigate Current Implementation
+- [x] Task 2: Debug Event Handlers
+- [x] Task 3: Analyze Foundry Chat Message Patterns
+- [x] Task 4: Fix the Click Handler
+- [ ] Task 5: Style the Expandable Content
+- [ ] Task 6: Test and Validate
 
-#### Severity Calculation
-- Formula: `1d12 + (injuries × 2) + excessDamage - critResistance`
-- 2x multiplier on injuries creates steeper death spiral
+## Executor's Feedback or Assistance Requests
+### Task 1 Progress: Investigated Current Implementation ✓
+- The wound-roll.hbs template has an expandable section using `.inline-roll` class and `.dice-tooltip` div
+- The inline-roll link is supposed to toggle the visibility of dice-tooltip div
+- However, there's NO click handler in chat.mjs for this specific pattern
 
-#### Location Table
-- 1-2: Left/Right Arm
-- 3-4: Left/Right Leg
-- 5-8: Torso
-- 9-12: Head
+### Task 2 Progress: Debugged Event Handlers ✓
+- Found existing expandable content pattern that WORKS in power-roll.hbs and program-roll.hbs
+- These use `.longShowDesc`/`.longHideDesc` buttons with `.hiddenShort`/`.hiddenLong` spans
+- These DO have working handlers in chat.mjs (lines 23-45)
+- The wound-roll template uses a different pattern that lacks a handler
 
-#### Effect Descriptions (Chat Only)
-- **Arms**: Disabled for X days, cannot hold items
-- **Legs**: Disabled for X days, prone, half movement
-- **Torso**: Blood Loss for X days, max HP -1 per HD
-- **Head**: Concussed for X days, act last, INT DC 12 for spells
+### Task 3 Progress: Analyzed Foundry Chat Message Patterns ✓
+- The `chatListeners` function in chat.mjs is called for ALL chat messages
+- This is where event handlers are attached to chat message elements
+- The existing expandable content uses event delegation with html.find() and .on("click")
+- Need to add a similar handler for `.inline-roll` elements in the chatListeners function
 
-#### Severity Thresholds
-- **< 11**: Temporary effects for `severity` days
-- **11-15**: +1 Wound, unconscious note, physical save reminder
-- **16+**: Additional wounds = severity - 15
+### Task 4 Progress: Fixed the Click Handler ✓
+- Added a click handler for `.inline-roll` elements in the chatListeners function
+- The handler:
+  - Prevents default action
+  - Finds the `.dice-tooltip` within the same `.severity-section`
+  - Toggles its visibility
+  - Updates the tooltip text between "Click to expand" and "Click to collapse"
+- Implementation follows the existing pattern used for other expandable content
 
-### What Was NOT Implemented
-Per user requirements:
-- ❌ Automatic unconscious condition application
-- ❌ Automatic effect application (all manual GM tracking)
-- ❌ Permanent effect tables/rolls
-- ❌ Save DCs (no DCs in SWN)
-- ❌ Integration with conditions system
-- ❌ Special NPC handling (works same as PCs)
+### UPDATE: Changed Approach
+- Click handler wasn't working as expected
+- User requested to show calculation always visible instead
+- Modified `wound-roll.hbs` template to:
+  - Remove the clickable link wrapper
+  - Show the dice calculation div by default (removed `display: none`)
+  - Changed class from `dice-tooltip` to `dice-calculation` for clarity
+- Removed the unused click handler from `chat.mjs`
 
-### Testing Instructions
+### Next Steps
+- Test the functionality in Foundry
+- Add CSS transitions for smooth expand/collapse if needed
 
-1. **Enable the System**
-   - Go to Settings → Configure Settings
-   - Find "Use Death & Dismemberment?" and enable it
-
-2. **Test Basic Functionality**
-   - Create a test character
-   - Set some injuries (e.g., 2)
-   - Deal damage to reduce HP to 0
-   - Verify wound roll occurs and chat message appears
-
-3. **Test Edge Cases**
-   - Exact damage to 0 HP (should trigger with 0 excess)
-   - Damage below 0 HP (should show correct excess)
-   - Healing (should NOT trigger wounds)
-   - NPCs (should work identically)
-
-4. **Verify Features**
-   - CR field reduces severity
-   - Injuries multiply by 2 in calculation
-   - Editable injury/wound counters
-   - No defeated status when setting enabled
-
-### Files Modified
-1. `module/data/actors/base-actor.mjs` - Added data fields
-2. `templates/actor/header.hbs` - Added CR and counters for PCs
-3. `templates/actor/npc.hbs` - Added CR and counters for NPCs
-4. `module/helpers/register-settings.mjs` - Added setting
-5. `lang/en.json` - Added localization
-6. `module/helpers/chat.mjs` - Added wound trigger logic
-7. `module/documents/actor.mjs` - Added applyWounds method
-8. `templates/chat/wound-roll.hbs` - Created chat template
-
-### System Ready
-The Goblin Punch death & dismemberment system is now fully implemented and ready for use!
+## Lessons
+- Foundry chat messages are rendered differently than regular HTML and require special event handling
+- The previous UI consistency update was successfully implemented and accepted
+- Sometimes simpler solutions (always visible) are better than complex interactions (expandable) when the content is important and not too large
