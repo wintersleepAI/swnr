@@ -185,6 +185,7 @@
         {{formGroup systemFields.meleeAb value=system.meleeAb localize=true widget=headerWidget}}
         {{/if}}
         
+        {{#if (eq gameSettings.useDeathAndDismemberment true)}}
         {{! Critical Resistance field }}
         <div class="resource flex-group-center">
           <div class="field resource-content">
@@ -220,6 +221,7 @@
           </div>
           <label class='resource-label'>Inj/Wnd</label>
         </div>
+        {{/if}}
       {{else}}
         {{#if (eq gameSettings.useCWNArmor true)}}
         <div class="resource flex-group-center"><!-- AC -->
@@ -268,6 +270,7 @@
         </div>
         {{/if}}
         
+        {{#if (eq gameSettings.useDeathAndDismemberment true)}}
         {{! Critical Resistance field for NPCs }}
         <div class="resource flex-group-center">
           <div class="field resource-content">
@@ -303,6 +306,7 @@
           </div>
           <label class='resource-label'>Inj/Wnd</label>
         </div>
+        {{/if}}
       {{/if}}
 
     

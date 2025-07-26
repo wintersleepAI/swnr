@@ -174,6 +174,7 @@ export const getGameSettings = function () {
     useCWNCyber: game.settings.get("swnr", "useCWNCyber"),
     useStress: game.settings.get("swnr", "useStress"),
     showAccess: game.settings.get("swnr", "showAccess"),
+    useDeathAndDismemberment: game.settings.get("swnr", "useDeathAndDismemberment"),
     // search: game.settings.get("swnr", "search"),
   };
   return settings;
