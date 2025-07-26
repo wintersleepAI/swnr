@@ -32,6 +32,12 @@ export default class SWNActorBase extends foundry.abstract
     schema.speed = SWNShared.requiredNumber(10);
     schema.cyberdecks = new fields.ArrayField(new fields.DocumentIdField()); 
     schema.health_max_modified = SWNShared.requiredNumber(0);
+    
+    // Death & Dismemberment fields
+    schema.critResistance = SWNShared.requiredNumber(0);
+    schema.injuries = SWNShared.requiredNumber(0);
+    schema.wounds = SWNShared.requiredNumber(0);
+    
     return schema;
   }
 

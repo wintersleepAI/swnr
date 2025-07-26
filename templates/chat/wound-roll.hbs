@@ -1,0 +1,47 @@
+<div class="swnr chat-message">
+  <div class="message-header">
+    <h3>Critical Injury!</h3>
+  </div>
+  
+  <div class="message-content">
+    <div class="injury-location" style="margin-bottom: 10px;">
+      <i class="fas fa-{{locationIcon}}" style="margin-right: 5px; color: #8B0000;"></i>
+      <strong>Location:</strong> {{location}}
+    </div>
+    
+    <div class="severity-section">
+      <h4 class="severity-total" style="margin: 10px 0;">
+        <a class="inline-roll" data-tooltip="Click to expand" style="cursor: pointer; text-decoration: none; color: inherit;">
+          <i class="fas fa-dice-d20"></i>
+          Severity {{severity}}
+        </a>
+      </h4>
+      <div class="dice-tooltip" style="display: none; background: #f0f0f0; padding: 8px; border-radius: 4px; margin: 5px 0; font-family: monospace; font-size: 0.9em;">
+        <div class="dice-formula">
+          1d12: [{{severityRoll}}] + {{injuryContribution}} ({{injuries}} injuries × 2) + {{excessDamage}} (excess damage) - {{critResistance}} (CR) = {{severity}}
+        </div>
+      </div>
+    </div>
+    
+    <div class="effect-description" style="margin: 10px 0; padding: 10px; background: #f5f5f5; border-radius: 4px;">
+      <p style="margin: 0;"><strong>Effect:</strong> {{effectDescription}}</p>
+    </div>
+    
+    <div class="counters-update" style="margin-top: 10px;">
+      <table style="width: 100%;">
+        <tr>
+          <td><strong>Injuries:</strong></td>
+          <td>{{injuryBefore}} → {{injuryAfter}}</td>
+        </tr>
+        <tr>
+          <td><strong>Wounds:</strong></td>
+          <td>{{woundBefore}} → {{woundAfter}}</td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="actor-status" style="margin-top: 10px; font-style: italic;">
+      <strong>{{actor.name}}</strong> now at 0 HP
+    </div>
+  </div>
+</div> 

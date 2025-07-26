@@ -94,6 +94,15 @@ export const registerSettings = function () {
     default: false,
   });
 
+  game.settings.register("swnr", "useDeathAndDismemberment", {
+    name: "swnr.settings.useDeathAndDismemberment",
+    hint: "swnr.settings.useDeathAndDismembermentHint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: false,
+  });
+
   game.settings.register("swnr", "useCWNArmor", {
     name: "swnr.settings.useCWNArmor",
     hint: "swnr.settings.useCWNArmorHint",

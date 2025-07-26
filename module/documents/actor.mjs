@@ -93,4 +93,120 @@ export class SWNActor extends Actor {
       return { texture: { src: this.DEFAULT_ICON } };
     }
   }
+
+  /**
+   * Apply wounds from death & dismemberment system
+   * @param {number} excessDamage - Damage that exceeded current HP
+   */
+  async applyWounds(excessDamage) {
+    // Roll for location (1d12)
+    const locationRoll = new Roll("1d12");
+    await locationRoll.roll();
+    const locationResult = locationRoll.total;
+    
+    // Determine location and icon
+    let location = "";
+    let locationIcon = "";
+    let side = "";
+    if (locationResult <= 2) {
+      location = "arm";
+      locationIcon = "hand";
+      const sideRoll = new Roll("1d2");
+      await sideRoll.roll();
+      side = sideRoll.total === 1 ? "Left " : "Right ";
+    } else if (locationResult <= 4) {
+      location = "leg";
+      locationIcon = "person-walking";
+      const sideRoll = new Roll("1d2");
+      await sideRoll.roll();
+      side = sideRoll.total === 1 ? "Left " : "Right ";
+    } else if (locationResult <= 8) {
+      location = "torso";
+      locationIcon = "vest";
+    } else {
+      location = "head";
+      locationIcon = "head-side";
+    }
+    
+    // Calculate severity
+    const injuries = this.system.injuries || 0;
+    const critResistance = this.system.critResistance || 0;
+    const severityRoll = new Roll("1d12");
+    await severityRoll.roll();
+    const severity = severityRoll.total + (injuries * 2) + excessDamage - critResistance;
+    
+    // Store current values before updating
+    const woundsBefore = this.system.wounds || 0;
+    
+    // Update injuries and wounds
+    let injuryIncrease = 1;
+    let woundIncrease = 0;
+    
+    if (severity >= 11) {
+      woundIncrease = 1;
+    }
+    if (severity >= 16) {
+      woundIncrease += (severity - 15);
+    }
+    
+    await this.update({
+      "system.injuries": injuries + injuryIncrease,
+      "system.wounds": woundsBefore + woundIncrease
+    });
+    
+    // Generate effect description
+    let effectDescription = "";
+    let duration = severity < 11 ? severity : "Until healed";
+    
+    if (location === "arm") {
+      effectDescription = `${side}arm disabled for ${duration} days. Cannot hold items, drops anything held.`;
+    } else if (location === "leg") {
+      effectDescription = `${side}leg disabled for ${duration} days. Falls prone, movement halved.`;
+    } else if (location === "torso") {
+      effectDescription = `Blood Loss for ${duration} days. Max HP reduced by 1 per HD.`;
+    } else if (location === "head") {
+      effectDescription = `Concussed for ${duration} days. Acts last in initiative, INT check DC 12 to cast spells.`;
+    }
+    
+    if (severity >= 11) {
+      effectDescription += " Character falls unconscious.";
+      if (severity < 16) {
+        effectDescription += " Physical save to avoid permanent injury.";
+      }
+    }
+    
+    if (severity >= 16) {
+      effectDescription += ` Takes ${severity - 15} additional wounds.`;
+    }
+    
+    // Create chat message
+    const template = "systems/swnr/templates/chat/wound-roll.hbs";
+    const chatData = {
+      actor: this,
+      location: side + location.charAt(0).toUpperCase() + location.slice(1),
+      locationIcon: locationIcon,
+      locationRoll: locationRoll.total,
+      severityRoll: severityRoll.total,
+      injuries: injuries,
+      injuryContribution: injuries * 2,
+      excessDamage: excessDamage,
+      critResistance: critResistance,
+      severity: severity,
+      injuryBefore: injuries,
+      injuryAfter: injuries + injuryIncrease,
+      woundBefore: woundsBefore,
+      woundAfter: woundsBefore + woundIncrease,
+      effectDescription: effectDescription
+    };
+    
+    const chatContent = await renderTemplate(template, chatData);
+    const rollMode = game.settings.get("core", "rollMode");
+    const messageData = {
+      speaker: ChatMessage.getSpeaker({ actor: this }),
+      content: chatContent
+    };
+    
+    ChatMessage.implementation.applyRollMode(messageData, rollMode);
+    await ChatMessage.create(messageData);
+  }
 }

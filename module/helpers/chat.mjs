@@ -352,28 +352,39 @@ export async function applyHealthDrop(total) {
         }
         //console.log(`Updating ${actor.name} health to ${newHealth}`);
         await actor.update({ "system.health.value": newHealth });
+        
+        // Check for death & dismemberment if enabled
+        if (game.settings.get("swnr", "useDeathAndDismemberment") && 
+            total > 0 && // Only on damage, not healing
+            newHealth <= 0) { // HP at 0 or below
+          const excessDamage = Math.max(0, total - oldHealth);
+          await actor.applyWounds(excessDamage);
+        }
+        
         // Taken from Mana
         //https://gitlab.com/mkahvi/fvtt-micro-modules/-/blob/master/pf1-floating-health/floating-health.mjs#L182-194
         const fillColor = total < 0 ? "0x00FF00" : "0xFF0000";
         showValueChange(t, fillColor, total);
 
-        if (newHealth <= 0) {
-          isDefeated = true;
-        } else if (oldHealth <= 0) {
-          // token was at <=0 and now is not
-          isDefeated = false;
-        } else {
-          // we can return no status to update
-          return;
-        }
-        await t.combatant?.update({ defeated: isDefeated });
-        const status = CONFIG.statusEffects.find(
-          (e) => e.id === CONFIG.specialStatusEffects.DEFEATED
-        );
-        if (!status) return;
-        const effect = actor && status ? status : CONFIG.controlIcons.defeated;
-        if (t.object) {
-          await t.object.toggleEffect(effect, {
+        // Only apply defeated status if death & dismemberment is disabled
+        if (!game.settings.get("swnr", "useDeathAndDismemberment")) {
+          if (newHealth <= 0) {
+            isDefeated = true;
+          } else if (oldHealth <= 0) {
+            // token was at <=0 and now is not
+            isDefeated = false;
+          } else {
+            // we can return no status to update
+            return;
+          }
+          await t.combatant?.update({ defeated: isDefeated });
+          const status = CONFIG.statusEffects.find(
+            (e) => e.id === CONFIG.specialStatusEffects.DEFEATED
+          );
+          if (!status) return;
+          const effect = actor && status ? status : CONFIG.controlIcons.defeated;
+          if (t.object) {
+            await t.object.toggleEffect(effect, {
             overlay: true,
             active: isDefeated,
           });
@@ -383,6 +394,7 @@ export async function applyHealthDrop(total) {
             active: isDefeated,
           });
         }
+        } // End of death & dismemberment check
       }
     }
   }

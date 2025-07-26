@@ -17,6 +17,20 @@
         {{else}}
         {{formGroup systemFields.ab value=system.ab localize=true}}
         {{/if}}
+        
+        {{! Critical Resistance field }}
+        <div class="form-group">
+          <label>CR</label>
+          <div class="field">
+            <input
+              type='number'
+              name='system.critResistance'
+              value='{{system.critResistance}}'
+              data-dtype='Number'
+            />
+          </div>
+        </div>
+        
         {{formGroup systemFields.attacks.fields.bonusDamage value=system.attacks.bonusDamage localize=true}}
         {{#if (eq gameSettings.useCWNArmor true)}}
         {{formGroup systemFields.baseSoakTotal value=system.baseSoakTotal localize=true widget=groupWidget}}
@@ -33,6 +47,28 @@
         {{#if (eq gameSettings.useTrauma true)}}
         {{formGroup systemFields.traumaTarget value=system.traumaTarget localize=true}}
         {{/if}}
+        
+        {{! Injuries and Wounds for Death & Dismemberment }}
+        <div class="form-group">
+          <label>Injuries / Wounds</label>
+          <div class="field flex flexrow">
+            <input
+              type='number'
+              name='system.injuries'
+              value='{{system.injuries}}'
+              data-dtype='Number'
+              style="width: 40px;"
+            />
+            <span class="nested-sep">/</span>
+            <input
+              type='number'
+              name='system.wounds'
+              value='{{system.wounds}}'
+              data-dtype='Number'
+              style="width: 40px;"
+            />
+          </div>
+        </div>
 
       </div>
     </div> <!-- End 1st Column -->
