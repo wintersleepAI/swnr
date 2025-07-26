@@ -199,7 +199,7 @@
           <label class='resource-label'>CR</label>
         </div>
         
-        {{! Injuries field }}
+        {{! Combined Injuries/Wounds field }}
         <div class="resource flex-group-center">
           <div class="field resource-content">
             <input
@@ -209,13 +209,7 @@
               data-dtype='Number'
               class='nested-field header'
             />
-          </div>
-          <label class='resource-label'>Injuries</label>
-        </div>
-        
-        {{! Wounds field }}
-        <div class="resource flex-group-center">
-          <div class="field resource-content">
+            <span class="nested-sep">/</span>
             <input
               type='number'
               name='system.wounds'
@@ -224,7 +218,7 @@
               class='nested-field header'
             />
           </div>
-          <label class='resource-label'>Wounds</label>
+          <label class='resource-label'>Inj/Wnd</label>
         </div>
       {{else}}
         {{#if (eq gameSettings.useCWNArmor true)}}
@@ -288,7 +282,7 @@
           <label class='resource-label'>CR</label>
         </div>
         
-        {{! Injuries field for NPCs }}
+        {{! Combined Injuries/Wounds field for NPCs }}
         <div class="resource flex-group-center">
           <div class="field resource-content">
             <input
@@ -298,13 +292,7 @@
               data-dtype='Number'
               class='nested-field header'
             />
-          </div>
-          <label class='resource-label'>Injuries</label>
-        </div>
-        
-        {{! Wounds field for NPCs }}
-        <div class="resource flex-group-center">
-          <div class="field resource-content">
+            <span class="nested-sep">/</span>
             <input
               type='number'
               name='system.wounds'
@@ -313,7 +301,7 @@
               class='nested-field header'
             />
           </div>
-          <label class='resource-label'>Wounds</label>
+          <label class='resource-label'>Inj/Wnd</label>
         </div>
       {{/if}}
 
