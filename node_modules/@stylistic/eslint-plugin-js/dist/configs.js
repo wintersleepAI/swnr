@@ -1,0 +1,232 @@
+'use strict';
+
+var utils = require('./utils.js');
+var arrayBracketNewline = require('./rules/array-bracket-newline.js');
+var arrayBracketSpacing = require('./rules/array-bracket-spacing.js');
+var arrayElementNewline = require('./rules/array-element-newline.js');
+var arrowParens = require('./rules/arrow-parens.js');
+var arrowSpacing = require('./rules/arrow-spacing.js');
+var blockSpacing = require('./rules/block-spacing.js');
+var braceStyle = require('./rules/brace-style.js');
+var commaDangle = require('./rules/comma-dangle.js');
+var commaSpacing = require('./rules/comma-spacing.js');
+var commaStyle = require('./rules/comma-style.js');
+var computedPropertySpacing = require('./rules/computed-property-spacing.js');
+var dotLocation = require('./rules/dot-location.js');
+var eolLast = require('./rules/eol-last.js');
+var functionCallArgumentNewline = require('./rules/function-call-argument-newline.js');
+var functionCallSpacing = require('./rules/function-call-spacing.js');
+var functionParenNewline = require('./rules/function-paren-newline.js');
+var generatorStarSpacing = require('./rules/generator-star-spacing.js');
+var implicitArrowLinebreak = require('./rules/implicit-arrow-linebreak.js');
+var indent = require('./rules/indent.js');
+var jsxQuotes = require('./rules/jsx-quotes.js');
+var keySpacing = require('./rules/key-spacing.js');
+var keywordSpacing = require('./rules/keyword-spacing.js');
+var lineCommentPosition = require('./rules/line-comment-position.js');
+var linebreakStyle = require('./rules/linebreak-style.js');
+var linesAroundComment = require('./rules/lines-around-comment.js');
+var linesBetweenClassMembers = require('./rules/lines-between-class-members.js');
+var maxLen = require('./rules/max-len.js');
+var maxStatementsPerLine = require('./rules/max-statements-per-line.js');
+var multilineCommentStyle = require('./rules/multiline-comment-style.js');
+var multilineTernary = require('./rules/multiline-ternary.js');
+var newParens = require('./rules/new-parens.js');
+var newlinePerChainedCall = require('./rules/newline-per-chained-call.js');
+var noConfusingArrow = require('./rules/no-confusing-arrow.js');
+var noExtraParens = require('./rules/no-extra-parens.js');
+var noExtraSemi = require('./rules/no-extra-semi.js');
+var noFloatingDecimal = require('./rules/no-floating-decimal.js');
+var noMixedOperators = require('./rules/no-mixed-operators.js');
+var noMixedSpacesAndTabs = require('./rules/no-mixed-spaces-and-tabs.js');
+var noMultiSpaces = require('./rules/no-multi-spaces.js');
+var noMultipleEmptyLines = require('./rules/no-multiple-empty-lines.js');
+var noTabs = require('./rules/no-tabs.js');
+var noTrailingSpaces = require('./rules/no-trailing-spaces.js');
+var noWhitespaceBeforeProperty = require('./rules/no-whitespace-before-property.js');
+var nonblockStatementBodyPosition = require('./rules/nonblock-statement-body-position.js');
+var objectCurlyNewline = require('./rules/object-curly-newline.js');
+var objectCurlySpacing = require('./rules/object-curly-spacing.js');
+var objectPropertyNewline = require('./rules/object-property-newline.js');
+var oneVarDeclarationPerLine = require('./rules/one-var-declaration-per-line.js');
+var operatorLinebreak = require('./rules/operator-linebreak.js');
+var paddedBlocks = require('./rules/padded-blocks.js');
+var paddingLineBetweenStatements = require('./rules/padding-line-between-statements.js');
+var quoteProps = require('./rules/quote-props.js');
+var quotes = require('./rules/quotes.js');
+var restSpreadSpacing = require('./rules/rest-spread-spacing.js');
+var semi = require('./rules/semi.js');
+var semiSpacing = require('./rules/semi-spacing.js');
+var semiStyle = require('./rules/semi-style.js');
+var spaceBeforeBlocks = require('./rules/space-before-blocks.js');
+var spaceBeforeFunctionParen = require('./rules/space-before-function-paren.js');
+var spaceInParens = require('./rules/space-in-parens.js');
+var spaceInfixOps = require('./rules/space-infix-ops.js');
+var spaceUnaryOps = require('./rules/space-unary-ops.js');
+var spacedComment = require('./rules/spaced-comment.js');
+var switchColonSpacing = require('./rules/switch-colon-spacing.js');
+var templateCurlySpacing = require('./rules/template-curly-spacing.js');
+var templateTagSpacing = require('./rules/template-tag-spacing.js');
+var wrapIife = require('./rules/wrap-iife.js');
+var wrapRegex = require('./rules/wrap-regex.js');
+var yieldStarSpacing = require('./rules/yield-star-spacing.js');
+
+var rules = {
+  "array-bracket-newline": arrayBracketNewline,
+  "array-bracket-spacing": arrayBracketSpacing,
+  "array-element-newline": arrayElementNewline,
+  "arrow-parens": arrowParens,
+  "arrow-spacing": arrowSpacing,
+  "block-spacing": blockSpacing,
+  "brace-style": braceStyle,
+  "comma-dangle": commaDangle,
+  "comma-spacing": commaSpacing,
+  "comma-style": commaStyle,
+  "computed-property-spacing": computedPropertySpacing,
+  "dot-location": dotLocation,
+  "eol-last": eolLast,
+  "func-call-spacing": functionCallSpacing,
+  "function-call-argument-newline": functionCallArgumentNewline,
+  "function-call-spacing": functionCallSpacing,
+  "function-paren-newline": functionParenNewline,
+  "generator-star-spacing": generatorStarSpacing,
+  "implicit-arrow-linebreak": implicitArrowLinebreak,
+  "indent": indent,
+  "jsx-quotes": jsxQuotes,
+  "key-spacing": keySpacing,
+  "keyword-spacing": keywordSpacing,
+  "line-comment-position": lineCommentPosition,
+  "linebreak-style": linebreakStyle,
+  "lines-around-comment": linesAroundComment,
+  "lines-between-class-members": linesBetweenClassMembers,
+  "max-len": maxLen,
+  "max-statements-per-line": maxStatementsPerLine,
+  "multiline-comment-style": multilineCommentStyle,
+  "multiline-ternary": multilineTernary,
+  "new-parens": newParens,
+  "newline-per-chained-call": newlinePerChainedCall,
+  "no-confusing-arrow": noConfusingArrow,
+  "no-extra-parens": noExtraParens,
+  "no-extra-semi": noExtraSemi,
+  "no-floating-decimal": noFloatingDecimal,
+  "no-mixed-operators": noMixedOperators,
+  "no-mixed-spaces-and-tabs": noMixedSpacesAndTabs,
+  "no-multi-spaces": noMultiSpaces,
+  "no-multiple-empty-lines": noMultipleEmptyLines,
+  "no-tabs": noTabs,
+  "no-trailing-spaces": noTrailingSpaces,
+  "no-whitespace-before-property": noWhitespaceBeforeProperty,
+  "nonblock-statement-body-position": nonblockStatementBodyPosition,
+  "object-curly-newline": objectCurlyNewline,
+  "object-curly-spacing": objectCurlySpacing,
+  "object-property-newline": objectPropertyNewline,
+  "one-var-declaration-per-line": oneVarDeclarationPerLine,
+  "operator-linebreak": operatorLinebreak,
+  "padded-blocks": paddedBlocks,
+  "padding-line-between-statements": paddingLineBetweenStatements,
+  "quote-props": quoteProps,
+  "quotes": quotes,
+  "rest-spread-spacing": restSpreadSpacing,
+  "semi": semi,
+  "semi-spacing": semiSpacing,
+  "semi-style": semiStyle,
+  "space-before-blocks": spaceBeforeBlocks,
+  "space-before-function-paren": spaceBeforeFunctionParen,
+  "space-in-parens": spaceInParens,
+  "space-infix-ops": spaceInfixOps,
+  "space-unary-ops": spaceUnaryOps,
+  "spaced-comment": spacedComment,
+  "switch-colon-spacing": switchColonSpacing,
+  "template-curly-spacing": templateCurlySpacing,
+  "template-tag-spacing": templateTagSpacing,
+  "wrap-iife": wrapIife,
+  "wrap-regex": wrapRegex,
+  "yield-star-spacing": yieldStarSpacing
+};
+
+var plugin = {
+  rules
+};
+
+const config = {
+  rules: {
+    "array-bracket-newline": 0,
+    "array-bracket-spacing": 0,
+    "array-element-newline": 0,
+    "arrow-parens": 0,
+    "arrow-spacing": 0,
+    "block-spacing": 0,
+    "brace-style": 0,
+    "comma-dangle": 0,
+    "comma-spacing": 0,
+    "comma-style": 0,
+    "computed-property-spacing": 0,
+    "dot-location": 0,
+    "eol-last": 0,
+    "func-call-spacing": 0,
+    "function-call-argument-newline": 0,
+    "function-paren-newline": 0,
+    "generator-star-spacing": 0,
+    "implicit-arrow-linebreak": 0,
+    "indent": 0,
+    "jsx-quotes": 0,
+    "key-spacing": 0,
+    "keyword-spacing": 0,
+    "line-comment-position": 0,
+    "linebreak-style": 0,
+    "lines-around-comment": 0,
+    "lines-between-class-members": 0,
+    "max-len": 0,
+    "max-statements-per-line": 0,
+    "multiline-comment-style": 0,
+    "multiline-ternary": 0,
+    "new-parens": 0,
+    "newline-per-chained-call": 0,
+    "no-confusing-arrow": 0,
+    "no-extra-parens": 0,
+    "no-extra-semi": 0,
+    "no-floating-decimal": 0,
+    "no-mixed-operators": 0,
+    "no-mixed-spaces-and-tabs": 0,
+    "no-multi-spaces": 0,
+    "no-multiple-empty-lines": 0,
+    "no-tabs": 0,
+    "no-trailing-spaces": 0,
+    "no-whitespace-before-property": 0,
+    "nonblock-statement-body-position": 0,
+    "object-curly-newline": 0,
+    "object-curly-spacing": 0,
+    "object-property-newline": 0,
+    "one-var-declaration-per-line": 0,
+    "operator-linebreak": 0,
+    "padded-blocks": 0,
+    "padding-line-between-statements": 0,
+    "quote-props": 0,
+    "quotes": 0,
+    "rest-spread-spacing": 0,
+    "semi": 0,
+    "semi-spacing": 0,
+    "semi-style": 0,
+    "space-before-blocks": 0,
+    "space-before-function-paren": 0,
+    "space-in-parens": 0,
+    "space-infix-ops": 0,
+    "space-unary-ops": 0,
+    "spaced-comment": 0,
+    "switch-colon-spacing": 0,
+    "template-curly-spacing": 0,
+    "template-tag-spacing": 0,
+    "wrap-iife": 0,
+    "wrap-regex": 0,
+    "yield-star-spacing": 0
+  }
+};
+
+const configs = {
+  "disable-legacy": config,
+  "all-flat": utils.createAllConfigs(plugin, "@stylistic/js", true),
+  "all-extends": utils.createAllConfigs(plugin, "@stylistic/js", false)
+};
+
+exports.configs = configs;
+exports.plugin = plugin;

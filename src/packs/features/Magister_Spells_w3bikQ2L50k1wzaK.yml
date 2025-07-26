@@ -8,42 +8,42 @@ system:
   type: focus
   poolsGranted:
     - resourceName: Slots
-      subResource: Lvl 1
+      subResource: Magister Lvl 1
       cadence: day
       formula: '3'
       condition: ''
     - resourceName: Slots
-      subResource: Lvl 1
+      subResource: Magister Lvl 1
       cadence: day
       formula: '1'
       condition: '@level >= 2'
     - resourceName: Slots
-      subResource: Lvl 1
+      subResource: Magister Lvl 1
       cadence: day
       formula: '1'
       condition: '@level >= 3'
     - resourceName: Slots
-      subResource: Lvl 1
+      subResource: Magister Lvl 1
       cadence: day
       formula: '1'
       condition: '@level >= 4'
     - resourceName: Slots
-      subResource: Lvl 2
+      subResource: Magister Lvl 2
       cadence: day
       formula: 1 + @level/2
       condition: '@level >= 3'
     - resourceName: Slots
-      subResource: Lvl 3
+      subResource: Magister Lvl 3
       cadence: day
       formula: '@level/2'
       condition: '@level >= 5'
     - resourceName: Slots
-      subResource: Lvl 4
+      subResource: Magister Lvl 4
       cadence: day
       formula: '@level/2 - 1'
       condition: '@level >= 7'
     - resourceName: Slots
-      subResource: Lvl 5
+      subResource: Magister Lvl 5
       cadence: day
       formula: '@level/2 - 2'
       condition: '@level >= 9'
@@ -61,7 +61,7 @@ _stats:
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1753486529561
-  modifiedTime: 1753486529561
+  modifiedTime: 1753558626463
   lastModifiedBy: iXDXVi7OlHcRwXw0
 _id: w3bikQ2L50k1wzaK
 sort: 0
