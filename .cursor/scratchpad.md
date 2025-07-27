@@ -1,109 +1,112 @@
-# Hide CR and Injuries/Wounds When Death & Dismemberment is Disabled
+# Move NPC Species/Homeworld Fields to Biography Section
 
 ## Background and Motivation
-Currently, the Critical Resistance (CR) and Injuries/Wounds fields are always visible on both PC and NPC character sheets. However, these fields are only relevant when the Death & Dismemberment setting is enabled. When this setting is disabled, these fields should be hidden to avoid confusion and reduce clutter on the character sheets.
+Currently, NPC character sheets display Species and Homeworld fields in the top header area alongside other stats like AC, Attack Bonus, etc. However, these fields are more descriptive/biographical in nature rather than mechanical stats. PC characters have their descriptive fields (Class, Species, Homeworld, Background, Employer) positioned above the Biography section in a dedicated area. For consistency and better organization, NPC Species and Homeworld fields should be moved from the header to above the biography section, matching the PC layout pattern.
 
 ## Key Challenges and Analysis
-1. **Setting Detection**: Need to access the death & dismemberment game setting in the template
-2. **Conditional Rendering**: Wrap the CR and Injuries/Wounds fields in conditional blocks
-3. **Setting Name**: Identify the exact setting key used for death & dismemberment
-4. **Template Access**: Ensure the setting value is available in the handlebars context
-5. **Consistency**: Apply changes to both PC and NPC sections in header.hbs
+1. **Header Layout**: Remove Species and Homeworld from the NPC header grid without breaking layout
+2. **Biography Section**: Add a new section above the biography for NPC descriptive fields
+3. **Template Structure**: NPCs use header.hbs for the top section and npc.hbs for the body content
+4. **Field Consistency**: Ensure the moved fields maintain proper styling and data binding
+5. **Layout Harmony**: Match the visual style used by PC character sheets for consistency
 
 ## High-level Task Breakdown
 
-### Task 1: Identify Setting Usage Pattern
-**Success Criteria**: Understand how game settings are accessed in templates
-- [ ] Find the death & dismemberment setting key
-- [ ] Check how other game settings are used in templates
-- [ ] Verify the setting is available in template context
-- [ ] Confirm the setting variable name (likely `gameSettings.useDeathAndDismemberment`)
+### Task 1: Analyze Current NPC Layout Structure
+**Success Criteria**: Understand how NPC sheets are organized and where fields are located
+- [ ] Examine header.hbs to locate Species and Homeworld fields in NPC section
+- [ ] Check npc.hbs to understand the biography section structure
+- [ ] Compare with PC character sheet layout for consistency reference
+- [ ] Identify the exact field elements that need to be moved
 
-### Task 2: Plan Conditional Structure
-**Success Criteria**: Design the conditional wrapper for the fields
-- [ ] Determine the correct Handlebars syntax for the condition
-- [ ] Plan which fields need to be wrapped (CR and Injuries/Wounds)
-- [ ] Ensure the grid layout remains intact when fields are hidden
-- [ ] Consider spacing/layout implications
+### Task 2: Design New NPC Biography Header Section
+**Success Criteria**: Plan the layout for descriptive fields above biography
+- [ ] Design a section similar to PC character details area
+- [ ] Plan field arrangement (Species, Homeworld in appropriate layout)
+- [ ] Ensure styling matches PC character sheet aesthetic
+- [ ] Consider responsive design and field sizing
 
-### Task 3: Implement PC Sheet Changes
-**Success Criteria**: Hide fields for PC characters when setting is disabled
-- [ ] Wrap CR field in conditional block
-- [ ] Wrap combined Injuries/Wounds field in conditional block
-- [ ] Test that other fields still display correctly
-- [ ] Verify grid alignment is maintained
+### Task 3: Remove Fields from Header
+**Success Criteria**: Clean up NPC header section
+- [ ] Remove Species field from header.hbs NPC section
+- [ ] Remove Homeworld field from header.hbs NPC section
+- [ ] Verify other header fields remain properly aligned
+- [ ] Test that grid layout still works correctly
 
-### Task 4: Implement NPC Sheet Changes
-**Success Criteria**: Hide fields for NPCs when setting is disabled
-- [ ] Apply same conditional wrapping as PC section
-- [ ] Ensure consistency with PC implementation
-- [ ] Test NPC-specific layout
-- [ ] Verify no visual glitches
+### Task 4: Add Fields to Biography Section
+**Success Criteria**: Implement new descriptive section in NPC template
+- [ ] Add new section above biography in npc.hbs
+- [ ] Implement Species and Homeworld fields with proper styling
+- [ ] Ensure data binding remains intact (system.species, system.homeworld)
+- [ ] Match visual styling from PC character sheets
 
-### Task 5: Test Setting Toggle
-**Success Criteria**: Fields show/hide properly based on setting
-- [ ] Test with death & dismemberment enabled - fields should show
-- [ ] Test with death & dismemberment disabled - fields should hide
-- [ ] Verify no console errors
-- [ ] Check that data is preserved even when fields are hidden
-- [ ] Test on both new and existing characters
+### Task 5: Style and Layout Polish
+**Success Criteria**: Ensure professional and consistent appearance
+- [ ] Apply appropriate CSS classes for field styling
+- [ ] Ensure proper spacing and alignment
+- [ ] Test field responsiveness with long text values
+- [ ] Verify consistency with PC sheet styling
+
+### Task 6: Test and Validate
+**Success Criteria**: Confirm all functionality works correctly
+- [ ] Test Species field editing and saving on NPC sheets
+- [ ] Test Homeworld field editing and saving on NPC sheets
+- [ ] Verify header layout looks correct without removed fields
+- [ ] Check biography section displays properly with new fields
+- [ ] Compare visual consistency with PC character sheets
 
 ## Project Status Board
-- [x] Task 1: Identify Setting Usage Pattern
-- [x] Task 2: Plan Conditional Structure
-- [x] Task 3: Implement PC Sheet Changes
-- [x] Task 4: Implement NPC Sheet Changes
-- [ ] Task 5: Test Setting Toggle
+- [x] Task 1: Analyze Current NPC Layout Structure
+- [x] Task 2: Design New NPC Biography Header Section
+- [x] Task 3: Remove Fields from Header
+- [x] Task 4: Add Fields to Biography Section
+- [x] Task 5: Style and Layout Polish
+- [ ] Task 6: Test and Validate
 
 ## Executor's Feedback or Assistance Requests
-### Task 1 Progress: Identified Setting Usage Pattern ✓
-- **Setting Key**: `useDeathAndDismemberment` (confirmed in register-settings.mjs line 176)
-- **Template Access**: Available as `gameSettings.useDeathAndDismemberment`
-- **Pattern Examples**: 
-  - `{{#if (eq gameSettings.useDeathAndDismemberment true)}}` for explicit true check
-  - `{{#if gameSettings.useDeathAndDismemberment}}` for truthy check
-- **Confirmed**: Setting is already available in template context via gameSettings object
+### Task 1 Progress: Analyzed Current NPC Layout Structure ✓
+- **NPC Header Fields**: Located in header.hbs lines 313-314
+  - `{{formGroup systemFields.species value=system.species localize=true widget=headerWidget}}`
+  - `{{formGroup systemFields.homeworld value=system.homeworld localize=true widget=headerWidget}}`
+- **NPC Template**: npc.hbs currently has no biography section - only 3 columns with stats, rollables, and inventory
+- **PC Pattern**: biography.hbs has descriptive fields above biography in a flex container (lines 10-15)
+  - Uses `<div class="flex flexrow" style="margin:2px;gap:2px;">` container
+  - Shows Class, Species, Homeworld, Background, Employer for PCs
 
-### Task 2 Progress: Planned Conditional Structure ✓
-The fields will be wrapped with `{{#if (eq gameSettings.useDeathAndDismemberment true)}}` blocks:
-
-**For PC Characters (lines ~195-220):**
+### Task 2 Progress: Designed New NPC Biography Header Section ✓
+Based on PC pattern, NPCs will get a similar section but only with Species and Homeworld:
 ```handlebars
-{{#if (eq gameSettings.useDeathAndDismemberment true)}}
-  {{! Critical Resistance field }}
-  <div class="resource flex-group-center">
-    <!-- CR field content -->
-  </div>
-  
-  {{! Combined Injuries/Wounds field }}
-  <div class="resource flex-group-center">
-    <!-- Injuries/Wounds field content -->
-  </div>
-{{/if}}
+<div class="flex flexrow" style="margin:2px;gap:2px;">
+  {{formGroup systemFields.species value=system.species localize=true}}
+  {{formGroup systemFields.homeworld value=system.homeworld localize=true}}
+</div>
 ```
+This will be added at the top of npc.hbs, creating a descriptive section that matches PC styling.
 
-**For NPCs (similar structure in else block)**
-This will wrap both CR and Injuries/Wounds fields together to maintain grid layout integrity.
+### Task 3 & 4 Progress: Successfully Relocated Fields ✓
+- **Removed from Header**: Species and Homeworld fields removed from header.hbs NPC section (lines 313-314)
+- **Added to Biography Tab**: Fields added to biography.hbs for NPCs
+- **Implementation**: Uses same styling pattern as PC biography section
+  - Added conditional section for `{{#if (eq actor.type 'npc')}}`
+  - Flex row container with `margin:2px;gap:2px;`
+  - `{{formGroup}}` pattern for consistency
+  - Data binding preserved (`system.species`, `system.homeworld`)
 
-### Task 3 & 4 Progress: Implemented Conditional Hiding ✓
-- Successfully wrapped CR and Injuries/Wounds fields with `{{#if (eq gameSettings.useDeathAndDismemberment true)}}` blocks
-- **PC Section**: Lines ~183-218 now conditionally show CR and Injuries/Wounds fields
-- **NPC Section**: Lines ~270-306 now conditionally show CR and Injuries/Wounds fields  
-- Both sections use identical conditional structure for consistency
-- Grid layout integrity maintained - fields are hidden as a group
+### UPDATE: Moved to Biography Tab
+- **Removed from NPC Details**: Fields removed from npc.hbs 
+- **Added to Biography**: Fields now appear on Biography tab alongside PC descriptive fields
+- **Better Organization**: Descriptive fields are now grouped together on Biography tab for both PCs and NPCs
 
-### Implementation Details:
-- Conditional blocks wrap BOTH CR and combined Injuries/Wounds fields together
-- When `useDeathAndDismemberment` is `true`: Fields are visible
-- When `useDeathAndDismemberment` is `false`: Fields are hidden
-- Other fields (AB, speed, etc.) remain unaffected
+### Task 5 Progress: Styling Complete ✓
+- No additional CSS needed - using existing `formGroup` styling from PC templates
+- Layout matches PC character sheet pattern exactly
+- Fields maintain proper responsive behavior
 
 ### Next Steps
-- Test the setting toggle functionality in Foundry
+- Test field functionality and visual appearance in Foundry
 
 ## Lessons
 - Foundry chat messages are rendered differently than regular HTML and require special event handling
-- The previous UI consistency update was successfully implemented and accepted
-- Sometimes simpler solutions (always visible) are better than complex interactions (expandable) when the content is important and not too large
-- The critical injury calculation display was successfully simplified to always show
 - Combined injuries/wounds fields use existing nested-field styles effectively
+- Conditional field hiding based on game settings works well for organizing relevant information
+- Layout changes require careful consideration of both header.hbs and individual sheet templates

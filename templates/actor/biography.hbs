@@ -13,6 +13,10 @@
         {{formGroup systemFields.background value=system.background localize=true}}
         {{formGroup systemFields.employer value=system.employer localize=true}}
       {{/if}}
+      {{#if (eq actor.type 'npc')}}
+        {{formGroup systemFields.species value=system.species localize=true}}
+        {{formGroup systemFields.homeworld value=system.homeworld localize=true}}
+      {{/if}}
     </div>
     
     <div>
