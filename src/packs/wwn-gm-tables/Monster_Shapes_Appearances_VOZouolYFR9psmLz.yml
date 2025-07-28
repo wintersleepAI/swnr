@@ -4,7 +4,6 @@ img: icons/svg/d20-grey.svg
 results:
   - _id: DBJkrzBC4XsRzM9N
     type: text
-    text: <b>What Kind of Animal Is It Most Like?</b>
     weight: 1
     range:
       - 1
@@ -12,11 +11,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>What Kind of Animal Is It Most Like?</b>
+    name: ''
     _key: '!tables.results!VOZouolYFR9psmLz.DBJkrzBC4XsRzM9N'
   - _id: vUkPy64YkcPUNAZA
-    type: pack
-    text: MonShape-Animal
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -24,12 +33,22 @@ results:
       - 3
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: M2Pq5BOLo2zwJLTu
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonShape-Animal
+    documentUuid: Compendium.wwn.gm-subtables.M2Pq5BOLo2zwJLTu
+    description: ''
     _key: '!tables.results!VOZouolYFR9psmLz.vUkPy64YkcPUNAZA'
   - _id: TacuhLMjfCjLxK3L
     type: text
-    text: <b>What Is Its Basic Body Plan?</b>
     weight: 1
     range:
       - 1
@@ -37,11 +56,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>What Is Its Basic Body Plan?</b>
+    name: ''
     _key: '!tables.results!VOZouolYFR9psmLz.TacuhLMjfCjLxK3L'
   - _id: Vm5Wuz1ucseteMMV
-    type: pack
-    text: MonShape-Body
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -49,12 +78,22 @@ results:
       - 3
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: bLqSjTCeespavhPy
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonShape-Body
+    documentUuid: Compendium.wwn.gm-subtables.bLqSjTCeespavhPy
+    description: ''
     _key: '!tables.results!VOZouolYFR9psmLz.Vm5Wuz1ucseteMMV'
   - _id: PHyBYFWX6TwFfAbV
     type: text
-    text: <b>How Does It Usually Hunt?</b>
     weight: 1
     range:
       - 1
@@ -62,11 +101,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>How Does It Usually Hunt?</b>
+    name: ''
     _key: '!tables.results!VOZouolYFR9psmLz.PHyBYFWX6TwFfAbV'
   - _id: onCjBJ602sv7nwOO
-    type: pack
-    text: MonShape-Hunt
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -74,12 +123,22 @@ results:
       - 3
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: PBB9cEfT2jt7pIj0
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonShape-Hunt
+    documentUuid: Compendium.wwn.gm-subtables.PBB9cEfT2jt7pIj0
+    description: ''
     _key: '!tables.results!VOZouolYFR9psmLz.onCjBJ602sv7nwOO'
   - _id: gbtcjJPV65zQM8Zx
     type: text
-    text: <b>Why Isn't It Dead Yet?</b>
     weight: 1
     range:
       - 1
@@ -87,11 +146,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Why Isn't It Dead Yet?</b>
+    name: ''
     _key: '!tables.results!VOZouolYFR9psmLz.gbtcjJPV65zQM8Zx'
   - _id: mtDeceWHapAruZ9E
-    type: pack
-    text: MonShape-Dead
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -99,14 +168,22 @@ results:
       - 3
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: cnn1Q9SFILvhuLYV
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonShape-Dead
+    documentUuid: Compendium.wwn.gm-subtables.cnn1Q9SFILvhuLYV
+    description: ''
     _key: '!tables.results!VOZouolYFR9psmLz.mtDeceWHapAruZ9E'
   - _id: JBs54MXCckjW8Sgi
     type: text
-    text: >-
-      <b>Characteristic Body Parts or Creature Elements</b> - mix and match as
-      desired
     weight: 1
     range:
       - 1
@@ -114,11 +191,23 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      <b>Characteristic Body Parts or Creature Elements</b> - mix and match as
+      desired
+    name: ''
     _key: '!tables.results!VOZouolYFR9psmLz.JBs54MXCckjW8Sgi'
   - _id: LnXsDjMXpZzfi11P
-    type: pack
-    text: MonShape-BodyParts
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -126,12 +215,22 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: 1NHOPyyNc33qLePs
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonShape-BodyParts
+    documentUuid: Compendium.wwn.gm-subtables.1NHOPyyNc33qLePs
+    description: ''
     _key: '!tables.results!VOZouolYFR9psmLz.LnXsDjMXpZzfi11P'
   - _id: skCk5wkg7dpGQ5Lw
-    type: pack
-    text: MonShape-BodyParts
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -139,12 +238,22 @@ results:
       - 2
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: 1NHOPyyNc33qLePs
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonShape-BodyParts
+    documentUuid: Compendium.wwn.gm-subtables.1NHOPyyNc33qLePs
+    description: ''
     _key: '!tables.results!VOZouolYFR9psmLz.skCk5wkg7dpGQ5Lw'
   - _id: kLgt1mh57rGj3TOj
-    type: pack
-    text: MonShape-BodyParts
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -152,8 +261,19 @@ results:
       - 3
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: 1NHOPyyNc33qLePs
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonShape-BodyParts
+    documentUuid: Compendium.wwn.gm-subtables.1NHOPyyNc33qLePs
+    description: ''
     _key: '!tables.results!VOZouolYFR9psmLz.kLgt1mh57rGj3TOj'
 formula: 1d3
 replacement: true
@@ -168,11 +288,12 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   createdTime: null
   modifiedTime: 1690569812651
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!tables!VOZouolYFR9psmLz'
 

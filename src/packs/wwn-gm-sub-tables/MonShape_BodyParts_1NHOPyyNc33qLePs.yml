@@ -4,7 +4,6 @@ img: icons/svg/d20-grey.svg
 results:
   - _id: vDvzlQWocdWBOO6V
     type: text
-    text: <b>Mammalian</b>
     weight: 1
     range:
       - 1
@@ -12,11 +11,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Mammalian</b>
+    name: ''
     _key: '!tables.results!1NHOPyyNc33qLePs.vDvzlQWocdWBOO6V'
   - _id: BAZ4RqO8nriTcfGV
-    type: pack
-    text: MonShape-Mammal
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -24,12 +33,22 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: nv1kNJWOqogGc3xF
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonShape-Mammal
+    documentUuid: Compendium.wwn.gm-subtables.nv1kNJWOqogGc3xF
+    description: ''
     _key: '!tables.results!1NHOPyyNc33qLePs.BAZ4RqO8nriTcfGV'
   - _id: rZ1PCtUrwDvj0EX7
     type: text
-    text: <b>Insectile</b>
     weight: 1
     range:
       - 2
@@ -37,11 +56,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Insectile</b>
+    name: ''
     _key: '!tables.results!1NHOPyyNc33qLePs.rZ1PCtUrwDvj0EX7'
   - _id: IrJKeaxt55zmGRAx
-    type: pack
-    text: MonShape-Insectile
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -49,12 +78,22 @@ results:
       - 2
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: LnYRxx97aMvxhsZC
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonShape-Insectile
+    documentUuid: Compendium.wwn.gm-subtables.LnYRxx97aMvxhsZC
+    description: ''
     _key: '!tables.results!1NHOPyyNc33qLePs.IrJKeaxt55zmGRAx'
   - _id: IUpx42yufPLiZdIx
     type: text
-    text: <b>Reptilian</b>
     weight: 1
     range:
       - 3
@@ -62,11 +101,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Reptilian</b>
+    name: ''
     _key: '!tables.results!1NHOPyyNc33qLePs.IUpx42yufPLiZdIx'
   - _id: R0Aa22SustycoV9J
-    type: pack
-    text: MonShape-Reptilian
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -74,12 +123,22 @@ results:
       - 3
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: JaTMsCK45ghMQeQD
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonShape-Reptilian
+    documentUuid: Compendium.wwn.gm-subtables.JaTMsCK45ghMQeQD
+    description: ''
     _key: '!tables.results!1NHOPyyNc33qLePs.R0Aa22SustycoV9J'
   - _id: 3ssFfOzQ9OPN2bCW
     type: text
-    text: <b>Avian</b>
     weight: 1
     range:
       - 4
@@ -87,11 +146,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Avian</b>
+    name: ''
     _key: '!tables.results!1NHOPyyNc33qLePs.3ssFfOzQ9OPN2bCW'
   - _id: oljEw0Qe6lhlajFT
-    type: pack
-    text: MonShape-Avian
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -99,12 +168,22 @@ results:
       - 4
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: 8B2Lok6AUi0WKhtJ
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonShape-Avian
+    documentUuid: Compendium.wwn.gm-subtables.8B2Lok6AUi0WKhtJ
+    description: ''
     _key: '!tables.results!1NHOPyyNc33qLePs.oljEw0Qe6lhlajFT'
   - _id: pYahjBheBDtWBhSS
     type: text
-    text: <b>Piscene</b>
     weight: 1
     range:
       - 5
@@ -112,11 +191,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Piscene</b>
+    name: ''
     _key: '!tables.results!1NHOPyyNc33qLePs.pYahjBheBDtWBhSS'
   - _id: o2X5qBANjviXPu8D
-    type: pack
-    text: MonShape-Piscene
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -124,12 +213,22 @@ results:
       - 5
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: MB3jM9F1dqlowjjb
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonShape-Piscene
+    documentUuid: Compendium.wwn.gm-subtables.MB3jM9F1dqlowjjb
+    description: ''
     _key: '!tables.results!1NHOPyyNc33qLePs.o2X5qBANjviXPu8D'
   - _id: WAZeyn9Ne01A0Ecn
     type: text
-    text: <b>Exotic</b>
     weight: 1
     range:
       - 6
@@ -137,11 +236,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Exotic</b>
+    name: ''
     _key: '!tables.results!1NHOPyyNc33qLePs.WAZeyn9Ne01A0Ecn'
   - _id: 2xqVjMC9n7t412Et
-    type: pack
-    text: MonShape-Exotic
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -149,8 +258,19 @@ results:
       - 6
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: i6YKl9iApC9wEPce
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonShape-Exotic
+    documentUuid: Compendium.wwn.gm-subtables.i6YKl9iApC9wEPce
+    description: ''
     _key: '!tables.results!1NHOPyyNc33qLePs.2xqVjMC9n7t412Et'
 formula: 1d6
 replacement: true
@@ -165,11 +285,12 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!tables!1NHOPyyNc33qLePs'
 

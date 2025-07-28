@@ -1,0 +1,54 @@
+name: Unarmed attack
+type: weapon
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: wldnuashyrhj5pqc
+system:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 0
+    suppress: false
+    type: none
+    value: 0
+  cost: 0
+  damage: 1d2
+  description: >-
+    Unarmed attacks reflect ordinary kicks and punches. Unarmed attacks always
+    add the attacker’s Punch skill to damage rolls, unlike other weapons.
+    Kinesis wraps, spiked knuckles, and other small fist weapons may be treated
+    as small advanced or primitive weapons that use the Punch skill and add the
+    skill level to their rolled damage, but not to Shock. Such weapons do not
+    augment a hero with the Unarmed Combatant focus.
+  encumbrance: 0
+  location: other
+  isMelee: true
+  quality: stock
+  range:
+    max: 0
+    normal: 0
+  secondStat: dex
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: str
+  tl: 0
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+_key: '!items!wldnuashyrhj5pqc'
+

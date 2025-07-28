@@ -1,0 +1,33 @@
+name: Crash Pod
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: ibmm2pv8zp3fmqse
+system:
+  cost: 2500
+  description: >-
+    If the vehicle crashes, the occupants can each reroll one failed crash save.
+    If they make any of their saves, their HP can't be reduced below 1 point by
+    the crash.
+  effect: Protects in case of crash
+  mass: 2
+  minClass: M
+  power: 0
+  type: vehicle
+effects: []
+ownership:
+  default: 0
+_key: '!items!ibmm2pv8zp3fmqse'
+

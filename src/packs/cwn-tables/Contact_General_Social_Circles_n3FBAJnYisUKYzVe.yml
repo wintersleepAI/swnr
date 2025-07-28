@@ -4,77 +4,137 @@ _id: n3FBAJnYisUKYzVe
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: SfCNZH9IH5F4403y
-    text: Street people, gangs, and criminal types
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Street people, gangs, and criminal types
+    name: ''
     _key: '!tables.results!n3FBAJnYisUKYzVe.SfCNZH9IH5F4403y'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: U15MrMtYetWVb8FY
-    text: Corpers and other “respectable people”
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Corpers and other “respectable people”
+    name: ''
     _key: '!tables.results!n3FBAJnYisUKYzVe.U15MrMtYetWVb8FY'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: bwBWRdUveaUr0ozZ
-    text: Soldiers, mercs, or martial professionals
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Soldiers, mercs, or martial professionals
+    name: ''
     _key: '!tables.results!n3FBAJnYisUKYzVe.bwBWRdUveaUr0ozZ'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: CRM1JfGJRYMx2iNs
-    text: Entertainers, artists, or the demimonde
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Entertainers, artists, or the demimonde
+    name: ''
     _key: '!tables.results!n3FBAJnYisUKYzVe.CRM1JfGJRYMx2iNs'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     _id: 6JqHmbq6ZdHeXmvr
-    text: Badlanders, backwoodsmen, and ruralists
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Badlanders, backwoodsmen, and ruralists
+    name: ''
     _key: '!tables.results!n3FBAJnYisUKYzVe.6JqHmbq6ZdHeXmvr'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     _id: L3mA7H61CoOJOASF
-    text: Docs, techs, hackers, or other skilled pros
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Docs, techs, hackers, or other skilled pros
+    name: ''
     _key: '!tables.results!n3FBAJnYisUKYzVe.L3mA7H61CoOJOASF'
 replacement: true
 displayRoll: true
@@ -82,10 +142,13 @@ flags: {}
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703881653364
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 formula: 1d6
 sort: 0
 ownership:

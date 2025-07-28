@@ -6,10 +6,7 @@ description: >-
   Fearful?</p></li><li><p>4. How Afraid Is the Target?</p></li><li><p>5. What
   Needs To Be Defended?</p></li><li><p>6. Twists to the Situation</p></li></ol>
 results:
-  - text: 'Defense: Why Can’t They Do It Themselves?'
-    type: 1
-    documentCollection: RollTable
-    documentId: w1zPDsxUblNt0dyi
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -18,11 +15,21 @@ results:
     drawn: false
     _id: x6Idi0zHPEQchU3E
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Defense: Why Can’t They Do It Themselves?'
+    documentUuid: RollTable.w1zPDsxUblNt0dyi
+    description: ''
     _key: '!tables.results!3SALlUVkRAdO6NMj.x6Idi0zHPEQchU3E'
-  - text: 'Defense: What kind of patron put up the job?'
-    type: 1
-    documentCollection: RollTable
-    documentId: 495s9ojHPGgjShx1
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -31,11 +38,21 @@ results:
     drawn: false
     _id: v8rn53hIdXV5KOGE
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Defense: What kind of patron put up the job?'
+    documentUuid: RollTable.495s9ojHPGgjShx1
+    description: ''
     _key: '!tables.results!3SALlUVkRAdO6NMj.v8rn53hIdXV5KOGE'
-  - text: 'Defense: What made them fearful?'
-    type: 1
-    documentCollection: RollTable
-    documentId: 1KUkUnJSa0l3Y3nk
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -44,11 +61,21 @@ results:
     drawn: false
     _id: Hz1o8j2EBkerXvuW
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Defense: What made them fearful?'
+    documentUuid: RollTable.1KUkUnJSa0l3Y3nk
+    description: ''
     _key: '!tables.results!3SALlUVkRAdO6NMj.Hz1o8j2EBkerXvuW'
-  - text: 'Defense: How Afraid is the Target?'
-    type: 1
-    documentCollection: RollTable
-    documentId: p6BCzNJuZJhOyOl2
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -57,11 +84,21 @@ results:
     drawn: false
     _id: nZ9BALms7KSjIIGG
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Defense: How Afraid is the Target?'
+    documentUuid: RollTable.p6BCzNJuZJhOyOl2
+    description: ''
     _key: '!tables.results!3SALlUVkRAdO6NMj.nZ9BALms7KSjIIGG'
-  - text: 'Defense: What needs to be defended?'
-    type: 1
-    documentCollection: RollTable
-    documentId: TumD2cVL4v735Azf
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -70,11 +107,21 @@ results:
     drawn: false
     _id: tY90hbMbuFJCMuMp
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Defense: What needs to be defended?'
+    documentUuid: RollTable.TumD2cVL4v735Azf
+    description: ''
     _key: '!tables.results!3SALlUVkRAdO6NMj.tY90hbMbuFJCMuMp'
-  - text: 'Defense: Twists to the Situation'
-    type: 1
-    documentCollection: RollTable
-    documentId: O0zCGXT4328AfQ3K
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -83,6 +130,19 @@ results:
     drawn: false
     _id: 1r6Myy3myLY0hXqF
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Defense: Twists to the Situation'
+    documentUuid: RollTable.O0zCGXT4328AfQ3K
+    description: ''
     _key: '!tables.results!3SALlUVkRAdO6NMj.1r6Myy3myLY0hXqF'
 formula: 1d1
 _id: 3SALlUVkRAdO6NMj
@@ -95,10 +155,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703901637655
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 sort: 0
 ownership:
   default: 0

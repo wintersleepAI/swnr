@@ -1,0 +1,33 @@
+name: Barrier
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: e2m6tdli3ffnca9k
+system:
+  accessCost: 0
+  cost: 1000
+  description: >-
+    A network node barrier that blocks avatars from passing through a network
+    connection.
+  selfTerminating: false
+  skillCheckMod: 0
+  target: ' Data'
+  type: subject
+  useAffects: Inter Node Barriers
+effects: []
+ownership:
+  default: 0
+_key: '!items!e2m6tdli3ffnca9k'
+

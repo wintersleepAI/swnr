@@ -5,10 +5,7 @@ description: >-
   Target?</p><p>What Does Its Owner Need It For?</p><p>Twists to the
   Situation</p>
 results:
-  - text: 'Sabotage: What’s The Motivation Behind It?'
-    type: 1
-    documentCollection: RollTable
-    documentId: pxObf4SPt0cmtrdS
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -17,11 +14,21 @@ results:
     drawn: false
     _id: nOgsLfTF3AzzA3fv
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Sabotage: What’s The Motivation Behind It?'
+    documentUuid: RollTable.pxObf4SPt0cmtrdS
+    description: ''
     _key: '!tables.results!2Oeq71YPjMqzfsPx.nOgsLfTF3AzzA3fv'
-  - text: 'Sabotage: What Kind of Patron Put Up the Job?'
-    type: 1
-    documentCollection: RollTable
-    documentId: oylPHByzRf2BJHiK
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -30,11 +37,21 @@ results:
     drawn: false
     _id: WFYge7kyciIJ3HdE
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Sabotage: What Kind of Patron Put Up the Job?'
+    documentUuid: RollTable.oylPHByzRf2BJHiK
+    description: ''
     _key: '!tables.results!2Oeq71YPjMqzfsPx.WFYge7kyciIJ3HdE'
-  - text: 'Sabotage: How Is It Defended?'
-    type: 1
-    documentCollection: RollTable
-    documentId: D6LLVnHiLJ5LCzHl
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -43,11 +60,21 @@ results:
     drawn: false
     _id: xuOSiUAKRhSMTOwa
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Sabotage: How Is It Defended?'
+    documentUuid: RollTable.D6LLVnHiLJ5LCzHl
+    description: ''
     _key: '!tables.results!2Oeq71YPjMqzfsPx.xuOSiUAKRhSMTOwa'
-  - text: 'Sabotage: What Sort of Thing is the Target?'
-    type: 1
-    documentCollection: RollTable
-    documentId: A00IwYk2SjDXOUmY
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -56,11 +83,21 @@ results:
     drawn: false
     _id: 5Cx3WXDLideiYBWv
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Sabotage: What Sort of Thing is the Target?'
+    documentUuid: RollTable.A00IwYk2SjDXOUmY
+    description: ''
     _key: '!tables.results!2Oeq71YPjMqzfsPx.5Cx3WXDLideiYBWv'
-  - text: 'Sabotage: What Does Its Owner Need It For?'
-    type: 1
-    documentCollection: RollTable
-    documentId: pLLeIKIZbefWwxGf
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -69,11 +106,21 @@ results:
     drawn: false
     _id: poLZypax2FoCkp6d
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Sabotage: What Does Its Owner Need It For?'
+    documentUuid: RollTable.pLLeIKIZbefWwxGf
+    description: ''
     _key: '!tables.results!2Oeq71YPjMqzfsPx.poLZypax2FoCkp6d'
-  - text: 'Sabotage: Twists to the Situation'
-    type: 1
-    documentCollection: RollTable
-    documentId: s3AYdKziuFodZEvV
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -82,6 +129,19 @@ results:
     drawn: false
     _id: 17KHVCG8AwrCsQYq
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Sabotage: Twists to the Situation'
+    documentUuid: RollTable.s3AYdKziuFodZEvV
+    description: ''
     _key: '!tables.results!2Oeq71YPjMqzfsPx.17KHVCG8AwrCsQYq'
 formula: '1'
 _id: 2Oeq71YPjMqzfsPx
@@ -94,10 +154,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703913901680
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 sort: 0
 ownership:
   default: 0

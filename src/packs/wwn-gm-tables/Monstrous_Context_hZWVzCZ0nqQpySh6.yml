@@ -4,7 +4,6 @@ img: icons/svg/d20-grey.svg
 results:
   - _id: fMzFfiNgmhoKq2C2
     type: text
-    text: <b>How Did the Monster Arise?</b>
     weight: 1
     range:
       - 1
@@ -12,11 +11,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>How Did the Monster Arise?</b>
+    name: ''
     _key: '!tables.results!hZWVzCZ0nqQpySh6.fMzFfiNgmhoKq2C2'
   - _id: hGcdxwQhCg0E5orw
-    type: pack
-    text: MonContext-Arise
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -24,12 +33,22 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: auvkXvLBr7VUuASw
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonContext-Arise
+    documentUuid: Compendium.wwn.gm-subtables.auvkXvLBr7VUuASw
+    description: ''
     _key: '!tables.results!hZWVzCZ0nqQpySh6.hGcdxwQhCg0E5orw'
   - _id: lvi2WNhpDEiXKnhf
     type: text
-    text: <b>How Much Local Contact Does It Have?</b>
     weight: 1
     range:
       - 1
@@ -37,11 +56,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>How Much Local Contact Does It Have?</b>
+    name: ''
     _key: '!tables.results!hZWVzCZ0nqQpySh6.lvi2WNhpDEiXKnhf'
   - _id: tg5CU1BRtf9Hx3Io
-    type: pack
-    text: MonContext-Contact
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -49,12 +78,22 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: gZR5Svdf8ulbUuEI
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonContext-Contact
+    documentUuid: Compendium.wwn.gm-subtables.gZR5Svdf8ulbUuEI
+    description: ''
     _key: '!tables.results!hZWVzCZ0nqQpySh6.tg5CU1BRtf9Hx3Io'
   - _id: m9w2hAPBPdMlcNPF
     type: text
-    text: <b>How Do the Locals React To Its Drive?</b>
     weight: 1
     range:
       - 1
@@ -62,11 +101,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>How Do the Locals React To Its Drive?</b>
+    name: ''
     _key: '!tables.results!hZWVzCZ0nqQpySh6.m9w2hAPBPdMlcNPF'
   - _id: PgWNHONyYnLSbAa5
-    type: pack
-    text: MonContext-React
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -74,12 +123,22 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: K9PxMGuSFYjWLTqu
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonContext-React
+    documentUuid: Compendium.wwn.gm-subtables.K9PxMGuSFYjWLTqu
+    description: ''
     _key: '!tables.results!hZWVzCZ0nqQpySh6.PgWNHONyYnLSbAa5'
   - _id: EZd3q6NlhXQJCbrM
     type: text
-    text: <b>What Scars Has It Left Here?</b>
     weight: 1
     range:
       - 1
@@ -87,11 +146,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>What Scars Has It Left Here?</b>
+    name: ''
     _key: '!tables.results!hZWVzCZ0nqQpySh6.EZd3q6NlhXQJCbrM'
   - _id: cqFkNWQQi5hwAYvM
-    type: pack
-    text: MonContext-Scars
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -99,12 +168,22 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: otkjQvQjnq7LbrRR
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonContext-Scars
+    documentUuid: Compendium.wwn.gm-subtables.otkjQvQjnq7LbrRR
+    description: ''
     _key: '!tables.results!hZWVzCZ0nqQpySh6.cqFkNWQQi5hwAYvM'
   - _id: Gb2C7xT8HQEwuifh
     type: text
-    text: <b>What Is Its Connection With the Past?</b>
     weight: 1
     range:
       - 1
@@ -112,11 +191,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>What Is Its Connection With the Past?</b>
+    name: ''
     _key: '!tables.results!hZWVzCZ0nqQpySh6.Gb2C7xT8HQEwuifh'
   - _id: SlqHmssJFhtT7Lm5
-    type: pack
-    text: MonContext-Past
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -124,12 +213,22 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: V6fG3Prqi8W7VZex
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonContext-Past
+    documentUuid: Compendium.wwn.gm-subtables.V6fG3Prqi8W7VZex
+    description: ''
     _key: '!tables.results!hZWVzCZ0nqQpySh6.SlqHmssJFhtT7Lm5'
   - _id: fuHOvdx9AqvAg5FV
     type: text
-    text: <b>A Twist To Its Activities</b>
     weight: 1
     range:
       - 1
@@ -137,11 +236,21 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>A Twist To Its Activities</b>
+    name: ''
     _key: '!tables.results!hZWVzCZ0nqQpySh6.fuHOvdx9AqvAg5FV'
   - _id: n5v3HXHQEWmRx79D
-    type: pack
-    text: MonContext-Twist
+    type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -149,8 +258,19 @@ results:
       - 1
     drawn: false
     flags: {}
-    documentCollection: wwn.gm-subtables
-    documentId: pIksunKKG6P3RsF7
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: MonContext-Twist
+    documentUuid: Compendium.wwn.gm-subtables.pIksunKKG6P3RsF7
+    description: ''
     _key: '!tables.results!hZWVzCZ0nqQpySh6.n5v3HXHQEWmRx79D'
 formula: 1d1
 replacement: true
@@ -165,11 +285,12 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   createdTime: null
   modifiedTime: 1690569812651
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!tables!hZWVzCZ0nqQpySh6'
 

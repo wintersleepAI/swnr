@@ -9,10 +9,7 @@ description: >-
   Strengths</p><p>4). Recent Events</p><p>5). Goals</p><p>6 &amp; 7). Name
   Elements</p>
 results:
-  - text: Megacorp Main Focus
-    type: 1
-    documentCollection: RollTable
-    documentId: EoLXuivpmKvEIDUf
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -21,11 +18,21 @@ results:
     drawn: false
     _id: hibr6HVpEMoMDdkn
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Megacorp Main Focus
+    documentUuid: RollTable.EoLXuivpmKvEIDUf
+    description: ''
     _key: '!tables.results!iTXZqeQEicR4TJf3.hibr6HVpEMoMDdkn'
-  - text: Megacorp Style
-    type: 1
-    documentCollection: RollTable
-    documentId: 2fn90r0sfqGhQ4nv
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -34,11 +41,21 @@ results:
     drawn: false
     _id: fDcisyTZ7tQzrwVQ
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Megacorp Style
+    documentUuid: RollTable.2fn90r0sfqGhQ4nv
+    description: ''
     _key: '!tables.results!iTXZqeQEicR4TJf3.fDcisyTZ7tQzrwVQ'
-  - text: Corp Strengths
-    type: 1
-    documentCollection: RollTable
-    documentId: QnOoIH4TvRw3v6f3
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -47,11 +64,21 @@ results:
     drawn: false
     _id: 0JkBBS9FadUiNjT2
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Corp Strengths
+    documentUuid: RollTable.QnOoIH4TvRw3v6f3
+    description: ''
     _key: '!tables.results!iTXZqeQEicR4TJf3.0JkBBS9FadUiNjT2'
-  - text: Recent Corp Events
-    type: 1
-    documentCollection: RollTable
-    documentId: SHdVcW7dkF5g3OVs
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -60,11 +87,21 @@ results:
     drawn: false
     _id: 9PgB4ITe31dWBc4U
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Recent Corp Events
+    documentUuid: RollTable.SHdVcW7dkF5g3OVs
+    description: ''
     _key: '!tables.results!iTXZqeQEicR4TJf3.9PgB4ITe31dWBc4U'
-  - text: Current Corp Goals
-    type: 1
-    documentCollection: RollTable
-    documentId: o2yXZkQtygdwyDKa
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -73,11 +110,21 @@ results:
     drawn: false
     _id: GUzTrRoGQXed4dNz
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Current Corp Goals
+    documentUuid: RollTable.o2yXZkQtygdwyDKa
+    description: ''
     _key: '!tables.results!iTXZqeQEicR4TJf3.GUzTrRoGQXed4dNz'
-  - text: Corp Name Element
-    type: 1
-    documentCollection: RollTable
-    documentId: HZFRS6P1Q6gnnCsm
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -86,11 +133,21 @@ results:
     drawn: false
     _id: MwkP3dbNIyQSmNhH
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Corp Name Element
+    documentUuid: RollTable.HZFRS6P1Q6gnnCsm
+    description: ''
     _key: '!tables.results!iTXZqeQEicR4TJf3.MwkP3dbNIyQSmNhH'
-  - text: Corp Element
-    type: 1
-    documentCollection: RollTable
-    documentId: qInEYhO5fU68lztI
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -99,6 +156,19 @@ results:
     drawn: false
     _id: OxhJuaHpc0eowmpm
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Corp Element
+    documentUuid: RollTable.qInEYhO5fU68lztI
+    description: ''
     _key: '!tables.results!iTXZqeQEicR4TJf3.OxhJuaHpc0eowmpm'
 formula: 1d1
 _id: iTXZqeQEicR4TJf3
@@ -110,10 +180,13 @@ flags: {}
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703841309034
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 sort: 0
 ownership:
   default: 0

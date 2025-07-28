@@ -3,101 +3,181 @@ name: 'Retrieval: What Kind of Patron Put Up the Job?'
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: fciZN0JMSRkVMg3R
-    text: Sole survivor who knows about its loss
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Sole survivor who knows about its loss
+    name: ''
     _key: '!tables.results!ZjEl4wcwd0DlTwuM.fciZN0JMSRkVMg3R'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: gPLFPjGjNAUlwxyI
-    text: Corp property retrieval department
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Corp property retrieval department
+    name: ''
     _key: '!tables.results!ZjEl4wcwd0DlTwuM.gPLFPjGjNAUlwxyI'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: Ih3pMczwBWWvPuP6
-    text: Local scavenger with a lead on it
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Local scavenger with a lead on it
+    name: ''
     _key: '!tables.results!ZjEl4wcwd0DlTwuM.Ih3pMczwBWWvPuP6'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: KQ1ccE77mHQwvIXU
-    text: Gang boss who wants it for their gang
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Gang boss who wants it for their gang
+    name: ''
     _key: '!tables.results!ZjEl4wcwd0DlTwuM.KQ1ccE77mHQwvIXU'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     _id: 66jshDOSFRMhI3wc
-    text: Local with an inside line on its location
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Local with an inside line on its location
+    name: ''
     _key: '!tables.results!ZjEl4wcwd0DlTwuM.66jshDOSFRMhI3wc'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     _id: EJ5hv4BWvtek49KO
-    text: The former owner wants it back
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: The former owner wants it back
+    name: ''
     _key: '!tables.results!ZjEl4wcwd0DlTwuM.EJ5hv4BWvtek49KO'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 7
       - 7
     drawn: false
     _id: 06EmJ5V6uIAM6pT6
-    text: Collector wants it for their collection
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Collector wants it for their collection
+    name: ''
     _key: '!tables.results!ZjEl4wcwd0DlTwuM.06EmJ5V6uIAM6pT6'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 8
       - 8
     drawn: false
     _id: YU1cnCRNUHSXJv78
-    text: A tech needs it to finish a unique project
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A tech needs it to finish a unique project
+    name: ''
     _key: '!tables.results!ZjEl4wcwd0DlTwuM.YU1cnCRNUHSXJv78'
 replacement: true
 displayRoll: true
@@ -106,10 +186,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703891876808
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 formula: 1d8
 _id: ZjEl4wcwd0DlTwuM
 sort: 0

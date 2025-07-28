@@ -3,7 +3,6 @@ name: Combat-Twists
 img: icons/svg/d20-grey.svg
 results:
   - type: text
-    text: They are or have access to spellcasters or mages of some kind
     weight: 1
     range:
       - 1
@@ -12,10 +11,20 @@ results:
     _id: g189nk6jpqs7cfqj
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They are or have access to spellcasters or mages of some kind
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.g189nk6jpqs7cfqj'
   - type: text
-    text: They have a useful magical power uncommon to their kind
     weight: 1
     range:
       - 2
@@ -24,10 +33,20 @@ results:
     _id: tbz5u0xy9zan4vhs
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They have a useful magical power uncommon to their kind
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.tbz5u0xy9zan4vhs'
   - type: text
-    text: An unusually strong ally serves the group’s leader for its own reasons
     weight: 1
     range:
       - 3
@@ -36,12 +55,20 @@ results:
     _id: 8daf2ct1zk8afw37
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: An unusually strong ally serves the group’s leader for its own reasons
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.8daf2ct1zk8afw37'
   - type: text
-    text: >-
-      The group is divided into parties or factions that cooperate poorly with
-      each other
     weight: 1
     range:
       - 4
@@ -50,10 +77,22 @@ results:
     _id: 4zi1tom84zmduj6h
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      The group is divided into parties or factions that cooperate poorly with
+      each other
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.4zi1tom84zmduj6h'
   - type: text
-    text: Killing them would enrage a seemingly unrelated person or group
     weight: 1
     range:
       - 5
@@ -62,10 +101,20 @@ results:
     _id: 7oulz1ip7xe9fj9q
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Killing them would enrage a seemingly unrelated person or group
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.7oulz1ip7xe9fj9q'
   - type: text
-    text: They have some reason to mistake the PCs for allies or hirelings
     weight: 1
     range:
       - 6
@@ -74,10 +123,20 @@ results:
     _id: oelg8jp9l194osl8
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They have some reason to mistake the PCs for allies or hirelings
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.oelg8jp9l194osl8'
   - type: text
-    text: One member is a secret traitor in service to some other cause or group
     weight: 1
     range:
       - 7
@@ -86,12 +145,20 @@ results:
     _id: ug27sb6bwbinmyq4
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: One member is a secret traitor in service to some other cause or group
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.ug27sb6bwbinmyq4'
   - type: text
-    text: >-
-      Another group would pay very well or be very pleased at the death of the
-      target
     weight: 1
     range:
       - 8
@@ -100,12 +167,22 @@ results:
     _id: beiswc5zkevx4c33
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      Another group would pay very well or be very pleased at the death of the
+      target
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.beiswc5zkevx4c33'
   - type: text
-    text: >-
-      Eliminating this target would somehow release or remove a check on a dire
-      foe
     weight: 1
     range:
       - 9
@@ -114,12 +191,22 @@ results:
     _id: hohyjl4bi0w5a23j
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      Eliminating this target would somehow release or remove a check on a dire
+      foe
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.hohyjl4bi0w5a23j'
   - type: text
-    text: >-
-      The target wants to get a member of their group killed in a deniable way,
-      and will try to use the PCs to do it
     weight: 1
     range:
       - 10
@@ -128,12 +215,22 @@ results:
     _id: 3sx9ljfp12g7fr1d
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      The target wants to get a member of their group killed in a deniable way,
+      and will try to use the PCs to do it
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.3sx9ljfp12g7fr1d'
   - type: text
-    text: >-
-      They’re religious zealots who may or may not have some blessing or
-      affiliation that fits
     weight: 1
     range:
       - 11
@@ -142,12 +239,22 @@ results:
     _id: akptl0x5x4jrnzpm
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      They’re religious zealots who may or may not have some blessing or
+      affiliation that fits
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.akptl0x5x4jrnzpm'
   - type: text
-    text: >-
-      They’re searching for something that the PCs may or may not be able to
-      help them find
     weight: 1
     range:
       - 12
@@ -156,12 +263,22 @@ results:
     _id: lubu0ju4vg61fjbf
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      They’re searching for something that the PCs may or may not be able to
+      help them find
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.lubu0ju4vg61fjbf'
   - type: text
-    text: >-
-      The leader is desperately in love with one of their underlings or
-      vice-versa
     weight: 1
     range:
       - 13
@@ -170,12 +287,22 @@ results:
     _id: fa3u2uffblw2k2kq
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      The leader is desperately in love with one of their underlings or
+      vice-versa
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.fa3u2uffblw2k2kq'
   - type: text
-    text: >-
-      They’re tampering with some object or structural feature that’s extremely
-      dangerous
     weight: 1
     range:
       - 14
@@ -184,12 +311,22 @@ results:
     _id: rvd1pdcslekrjdna
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      They’re tampering with some object or structural feature that’s extremely
+      dangerous
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.rvd1pdcslekrjdna'
   - type: text
-    text: >-
-      They’re foreign to the other examples of their creature type around here,
-      having come from far off for their own reasons
     weight: 1
     range:
       - 15
@@ -198,10 +335,22 @@ results:
     _id: wu02jton6mh1by8i
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      They’re foreign to the other examples of their creature type around here,
+      having come from far off for their own reasons
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.wu02jton6mh1by8i'
   - type: text
-    text: They fight in an effective but abnormal way for their type or nature
     weight: 1
     range:
       - 16
@@ -210,12 +359,20 @@ results:
     _id: pv5nyuddqvldk8xu
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They fight in an effective but abnormal way for their type or nature
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.pv5nyuddqvldk8xu'
   - type: text
-    text: >-
-      Their leader has ensured that some dire consequence will ensue if they are
-      killed
     weight: 1
     range:
       - 17
@@ -224,12 +381,22 @@ results:
     _id: ldtpqk7w6m9ncvf0
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      Their leader has ensured that some dire consequence will ensue if they are
+      killed
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.ldtpqk7w6m9ncvf0'
   - type: text
-    text: >-
-      Some portion of the group would really rather not fight but are feeling
-      compelled by their peers or the leader
     weight: 1
     range:
       - 18
@@ -238,12 +405,22 @@ results:
     _id: bck3gvz9tsor28sg
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      Some portion of the group would really rather not fight but are feeling
+      compelled by their peers or the leader
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.bck3gvz9tsor28sg'
   - type: text
-    text: >-
-      Some other group has a spy or observer who is watching during a potential
-      conflict
     weight: 1
     range:
       - 19
@@ -252,12 +429,22 @@ results:
     _id: 2kg4bn240xt2i6by
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      Some other group has a spy or observer who is watching during a potential
+      conflict
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.2kg4bn240xt2i6by'
   - type: text
-    text: >-
-      The leader is an impostor or catspaw of some power that would normally be
-      their enemy, and acts as best they can to serve them
     weight: 1
     range:
       - 20
@@ -266,7 +453,20 @@ results:
     _id: 10co51y7mzyvqmxf
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      The leader is an impostor or catspaw of some power that would normally be
+      their enemy, and acts as best they can to serve them
+    name: ''
     _key: '!tables.results!5UayvelPuOvIqgnn.10co51y7mzyvqmxf'
 formula: 1d20
 replacement: true
@@ -281,11 +481,12 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!tables!5UayvelPuOvIqgnn'
 

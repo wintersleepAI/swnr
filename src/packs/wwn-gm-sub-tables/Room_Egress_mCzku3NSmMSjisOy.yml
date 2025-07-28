@@ -3,7 +3,6 @@ name: Room-Egress
 img: icons/svg/d20-grey.svg
 results:
   - type: text
-    text: North
     weight: 1
     range:
       - 1
@@ -12,10 +11,20 @@ results:
     _id: yivwahrqzupn3s6o
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: North
+    name: ''
     _key: '!tables.results!mCzku3NSmMSjisOy.yivwahrqzupn3s6o'
   - type: text
-    text: Northeast
     weight: 1
     range:
       - 3
@@ -24,10 +33,20 @@ results:
     _id: nyc4hydvae3p703y
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Northeast
+    name: ''
     _key: '!tables.results!mCzku3NSmMSjisOy.nyc4hydvae3p703y'
   - type: text
-    text: East
     weight: 1
     range:
       - 4
@@ -36,10 +55,20 @@ results:
     _id: a1nofsjfjoowhj3a
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: East
+    name: ''
     _key: '!tables.results!mCzku3NSmMSjisOy.a1nofsjfjoowhj3a'
   - type: text
-    text: Southeast
     weight: 1
     range:
       - 6
@@ -48,10 +77,20 @@ results:
     _id: vcv5skoa4e6nyyl9
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Southeast
+    name: ''
     _key: '!tables.results!mCzku3NSmMSjisOy.vcv5skoa4e6nyyl9'
   - type: text
-    text: South
     weight: 1
     range:
       - 7
@@ -60,10 +99,20 @@ results:
     _id: sr0aqz71nos9r925
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: South
+    name: ''
     _key: '!tables.results!mCzku3NSmMSjisOy.sr0aqz71nos9r925'
   - type: text
-    text: Southwest
     weight: 1
     range:
       - 9
@@ -72,10 +121,20 @@ results:
     _id: 0z1cxewhtq8up62r
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Southwest
+    name: ''
     _key: '!tables.results!mCzku3NSmMSjisOy.0z1cxewhtq8up62r'
   - type: text
-    text: West
     weight: 1
     range:
       - 10
@@ -84,10 +143,20 @@ results:
     _id: wl3q064oklabty7i
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: West
+    name: ''
     _key: '!tables.results!mCzku3NSmMSjisOy.wl3q064oklabty7i'
   - type: text
-    text: Northwest
     weight: 1
     range:
       - 12
@@ -96,7 +165,18 @@ results:
     _id: t3nq9nqkhwrx4a29
     flags: {}
     img: icons/svg/d20-black.svg
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Northwest
+    name: ''
     _key: '!tables.results!mCzku3NSmMSjisOy.t3nq9nqkhwrx4a29'
 formula: 1d12
 replacement: true
@@ -111,11 +191,12 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!tables!mCzku3NSmMSjisOy'
 

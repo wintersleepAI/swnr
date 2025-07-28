@@ -5,74 +5,134 @@ results:
   - _id: j9oRCKuLjlMnfEQG
     flags: {}
     type: text
-    text: Snarl and growl, but don't attack anyone
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Snarl and growl, but don't attack anyone
+    name: ''
     _key: '!tables.results!AdhcClvUZ5b3p3vH.j9oRCKuLjlMnfEQG'
   - _id: 16V4vkxCIUbh6LGZ
     flags: {}
     type: text
-    text: Pull back and get away from nearby threats
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 2
       - 2
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Pull back and get away from nearby threats
+    name: ''
     _key: '!tables.results!AdhcClvUZ5b3p3vH.16V4vkxCIUbh6LGZ'
   - _id: KeUdtaKYI0JinrE7
     flags: {}
     type: text
-    text: Attack the last enemy to have hurt it
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 3
       - 3
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Attack the last enemy to have hurt it
+    name: ''
     _key: '!tables.results!AdhcClvUZ5b3p3vH.KeUdtaKYI0JinrE7'
   - _id: wk0Qg3xzj7ov0csg
     flags: {}
     type: text
-    text: Attack the last enemy it managed to hurt
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 4
       - 4
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Attack the last enemy it managed to hurt
+    name: ''
     _key: '!tables.results!AdhcClvUZ5b3p3vH.wk0Qg3xzj7ov0csg'
   - _id: bBLIdrWvilsYHNz7
     flags: {}
     type: text
-    text: Take a bite out of a downed enemy
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 5
       - 5
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Take a bite out of a downed enemy
+    name: ''
     _key: '!tables.results!AdhcClvUZ5b3p3vH.bBLIdrWvilsYHNz7'
   - _id: TbbpnHCUU1rh4Z8R
     flags: {}
     type: text
-    text: Panic and make a Morale check
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 6
       - 6
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Panic and make a Morale check
+    name: ''
     _key: '!tables.results!AdhcClvUZ5b3p3vH.TbbpnHCUU1rh4Z8R'
 formula: 1d6
 replacement: true
@@ -80,17 +140,17 @@ displayRoll: true
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.wwn.instinct.AdhcClvUZ5b3p3vH
+  core: {}
 _stats:
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   systemId: null
   systemVersion: null
   createdTime: null
   modifiedTime: null
   lastModifiedBy: null
-  compendiumSource: null
+  compendiumSource: Compendium.wwn.instinct.AdhcClvUZ5b3p3vH
   duplicateSource: null
+  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3

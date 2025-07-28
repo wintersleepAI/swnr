@@ -1,8 +1,7 @@
 _id: qNA0nQa49YFsa9Cl
 displayRoll: true
 flags:
-  core:
-    sourceId: RollTable.6RVIa7spNNMbCdkU
+  core: {}
 folder: null
 formula: 1d4
 img: icons/svg/d20-grey.svg
@@ -15,11 +14,21 @@ results:
     range:
       - 1
       - 1
-    text: 'What’s the Conflict About?: Money, extortion, payment due, debts'
     type: text
     weight: 1
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'What’s the Conflict About?: Money, extortion, payment due, debts'
+    name: ''
     _key: '!tables.results!qNA0nQa49YFsa9Cl.CvLCoaiFhiymuS7b'
   - _id: ay80xdOFOR5QyIpB
     drawn: false
@@ -27,11 +36,21 @@ results:
     range:
       - 2
       - 2
-    text: 'What’s the Conflict About?: Respect, submission to social authority'
     type: text
     weight: 1
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'What’s the Conflict About?: Respect, submission to social authority'
+    name: ''
     _key: '!tables.results!qNA0nQa49YFsa9Cl.ay80xdOFOR5QyIpB'
   - _id: aFCBxaSqLv1bPeAB
     drawn: false
@@ -39,11 +58,21 @@ results:
     range:
       - 3
       - 3
-    text: 'What’s the Conflict About?: Grudges, ethnic resentment, gang payback'
     type: text
     weight: 1
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'What’s the Conflict About?: Grudges, ethnic resentment, gang payback'
+    name: ''
     _key: '!tables.results!qNA0nQa49YFsa9Cl.aFCBxaSqLv1bPeAB'
   - _id: PgLdYCgfXua9umKO
     drawn: false
@@ -51,22 +80,33 @@ results:
     range:
       - 4
       - 4
-    text: 'What’s the Conflict About?: Politics, religion, or other ideology'
     type: text
     weight: 1
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'What’s the Conflict About?: Politics, religion, or other ideology'
+    name: ''
     _key: '!tables.results!qNA0nQa49YFsa9Cl.PgLdYCgfXua9umKO'
 sort: 0
 _stats:
-  coreVersion: '12.325'
+  coreVersion: '13.346'
   systemId: null
   systemVersion: null
   createdTime: null
   modifiedTime: null
   lastModifiedBy: null
-  compendiumSource: null
+  compendiumSource: RollTable.6RVIa7spNNMbCdkU
   duplicateSource: null
+  exportSource: null
 ownership:
   P3lRTKxUBvk8Gei6: 3
   default: 0

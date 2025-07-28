@@ -1,0 +1,38 @@
+name: Black slab
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: pwwm8mtdi1w1d9rw
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 10000
+  description: >-
+    Black slab: While a “black slab” appears to be a normal dataslab to casual
+    examination, these devices are packed with intrusion-optimization hardware
+    and integral line tapping tools. They function as a metatool for purposes of
+    accessing data lines and grant a +1 bonus to all hacking attempts made with
+    them. They are also quite illegal on most worlds, available only from black
+    market dealers and private sales from hackers.
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 4
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+_key: '!items!pwwm8mtdi1w1d9rw'
+

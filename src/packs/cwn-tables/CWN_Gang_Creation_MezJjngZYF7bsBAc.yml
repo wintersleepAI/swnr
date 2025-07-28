@@ -16,10 +16,7 @@ description: >-
   Style</p><p>3). Strengths</p><p>4). Recent Events</p><p>5). Goals</p><p>6
   &amp; 7). Name Elements</p>
 results:
-  - text: Gang Main Income
-    type: 1
-    documentCollection: RollTable
-    documentId: p8nkgVQleixsfrcU
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -28,11 +25,21 @@ results:
     drawn: false
     _id: mWeEuHJy5hiwfYlP
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Gang Main Income
+    documentUuid: RollTable.p8nkgVQleixsfrcU
+    description: ''
     _key: '!tables.results!MezJjngZYF7bsBAc.mWeEuHJy5hiwfYlP'
-  - text: Gang Style
-    type: 1
-    documentCollection: RollTable
-    documentId: nQzG07tPef5jsoNW
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -41,11 +48,21 @@ results:
     drawn: false
     _id: NxiEihvbfu8aBER1
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Gang Style
+    documentUuid: RollTable.nQzG07tPef5jsoNW
+    description: ''
     _key: '!tables.results!MezJjngZYF7bsBAc.NxiEihvbfu8aBER1'
-  - text: Gang Strengths
-    type: 1
-    documentCollection: RollTable
-    documentId: TZTnCmSvCTmFaPZZ
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -54,11 +71,21 @@ results:
     drawn: false
     _id: N6uhwoZxgZioS2Nq
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Gang Strengths
+    documentUuid: RollTable.TZTnCmSvCTmFaPZZ
+    description: ''
     _key: '!tables.results!MezJjngZYF7bsBAc.N6uhwoZxgZioS2Nq'
-  - text: Recent Gang Events
-    type: 1
-    documentCollection: RollTable
-    documentId: xurreOpI4FFN5oSs
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -67,11 +94,21 @@ results:
     drawn: false
     _id: 9YXAewuRbIC0edrm
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Recent Gang Events
+    documentUuid: RollTable.xurreOpI4FFN5oSs
+    description: ''
     _key: '!tables.results!MezJjngZYF7bsBAc.9YXAewuRbIC0edrm'
-  - text: Current Gang Goals
-    type: 1
-    documentCollection: RollTable
-    documentId: kc4z3XTYfxH3s3wx
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -80,11 +117,21 @@ results:
     drawn: false
     _id: qmic7vaZ2bs6J6Lw
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Current Gang Goals
+    documentUuid: RollTable.kc4z3XTYfxH3s3wx
+    description: ''
     _key: '!tables.results!MezJjngZYF7bsBAc.qmic7vaZ2bs6J6Lw'
-  - text: Gang Name Element
-    type: 1
-    documentCollection: RollTable
-    documentId: i7kaiDoAPIwQb724
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -93,11 +140,21 @@ results:
     drawn: false
     _id: BljLzQTcG2lyvXbN
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Gang Name Element
+    documentUuid: RollTable.i7kaiDoAPIwQb724
+    description: ''
     _key: '!tables.results!MezJjngZYF7bsBAc.BljLzQTcG2lyvXbN'
-  - text: Gang Element
-    type: 1
-    documentCollection: RollTable
-    documentId: gymQMMa1K3uzWmzU
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -106,6 +163,19 @@ results:
     drawn: false
     _id: eN8emuGQZEudBROf
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Gang Element
+    documentUuid: RollTable.gymQMMa1K3uzWmzU
+    description: ''
     _key: '!tables.results!MezJjngZYF7bsBAc.eN8emuGQZEudBROf'
 formula: 1d1
 _id: MezJjngZYF7bsBAc
@@ -117,10 +187,13 @@ flags: {}
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703842605067
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 sort: 0
 ownership:
   default: 0

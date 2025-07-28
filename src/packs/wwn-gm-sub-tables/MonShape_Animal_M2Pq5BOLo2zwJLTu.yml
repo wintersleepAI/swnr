@@ -4,7 +4,6 @@ img: icons/svg/d20-grey.svg
 description: What Kind of Animal Is It Most Like?
 results:
   - type: text
-    text: 'Apish: Distorted humanoid outlines'
     weight: 1
     range:
       - 1
@@ -13,10 +12,20 @@ results:
     _id: uix9b2widecd87t1
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Apish: Distorted humanoid outlines'
+    name: ''
     _key: '!tables.results!M2Pq5BOLo2zwJLTu.uix9b2widecd87t1'
   - type: text
-    text: 'Arachnid: Webs, many limbs, many eyes'
     weight: 1
     range:
       - 2
@@ -25,10 +34,20 @@ results:
     _id: 24irk5b18g9pkv18
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Arachnid: Webs, many limbs, many eyes'
+    name: ''
     _key: '!tables.results!M2Pq5BOLo2zwJLTu.24irk5b18g9pkv18'
   - type: text
-    text: 'Avian: Feathers, beak, talons, light weight'
     weight: 1
     range:
       - 3
@@ -37,10 +56,20 @@ results:
     _id: 596l245n0cbbbc6r
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Avian: Feathers, beak, talons, light weight'
+    name: ''
     _key: '!tables.results!M2Pq5BOLo2zwJLTu.596l245n0cbbbc6r'
   - type: text
-    text: 'Beetle-like: Rounded body and armor'
     weight: 1
     range:
       - 4
@@ -49,10 +78,20 @@ results:
     _id: fpz4x9t08ab9ic3p
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Beetle-like: Rounded body and armor'
+    name: ''
     _key: '!tables.results!M2Pq5BOLo2zwJLTu.fpz4x9t08ab9ic3p'
   - type: text
-    text: 'Canine: Muzzle, tail, paws'
     weight: 1
     range:
       - 5
@@ -61,10 +100,20 @@ results:
     _id: 0mt7diyicn0lglga
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Canine: Muzzle, tail, paws'
+    name: ''
     _key: '!tables.results!M2Pq5BOLo2zwJLTu.0mt7diyicn0lglga'
   - type: text
-    text: 'Equine: Hooves, speed, manes'
     weight: 1
     range:
       - 6
@@ -73,10 +122,20 @@ results:
     _id: gki24nblcwiinkkg
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Equine: Hooves, speed, manes'
+    name: ''
     _key: '!tables.results!M2Pq5BOLo2zwJLTu.gki24nblcwiinkkg'
   - type: text
-    text: 'Feline: Fangs, claws, litheness'
     weight: 1
     range:
       - 7
@@ -85,10 +144,20 @@ results:
     _id: ak7sireuxgglnh58
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Feline: Fangs, claws, litheness'
+    name: ''
     _key: '!tables.results!M2Pq5BOLo2zwJLTu.ak7sireuxgglnh58'
   - type: text
-    text: 'Piscene: Googly eyes, scales, fins'
     weight: 1
     range:
       - 8
@@ -97,10 +166,20 @@ results:
     _id: 6foxgy75ptawwvvn
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Piscene: Googly eyes, scales, fins'
+    name: ''
     _key: '!tables.results!M2Pq5BOLo2zwJLTu.6foxgy75ptawwvvn'
   - type: text
-    text: 'Reptilian: Frills, side-slung limbs, scales'
     weight: 1
     range:
       - 9
@@ -109,10 +188,20 @@ results:
     _id: ib403goba3cqutd1
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Reptilian: Frills, side-slung limbs, scales'
+    name: ''
     _key: '!tables.results!M2Pq5BOLo2zwJLTu.ib403goba3cqutd1'
   - type: text
-    text: 'Serpentine: Limbless, venomous, slim'
     weight: 1
     range:
       - 10
@@ -121,10 +210,20 @@ results:
     _id: q71n5jc1akg1wd1n
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Serpentine: Limbless, venomous, slim'
+    name: ''
     _key: '!tables.results!M2Pq5BOLo2zwJLTu.q71n5jc1akg1wd1n'
   - type: text
-    text: 'Ursine: Broad body, thick hide, claws'
     weight: 1
     range:
       - 11
@@ -133,10 +232,20 @@ results:
     _id: caou7syiekt7aua0
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Ursine: Broad body, thick hide, claws'
+    name: ''
     _key: '!tables.results!M2Pq5BOLo2zwJLTu.caou7syiekt7aua0'
   - type: text
-    text: 'Wasp-like: Wings, narrow thorax, sting'
     weight: 1
     range:
       - 12
@@ -145,7 +254,18 @@ results:
     _id: k1d20poiq5iwa5u1
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Wasp-like: Wings, narrow thorax, sting'
+    name: ''
     _key: '!tables.results!M2Pq5BOLo2zwJLTu.k1d20poiq5iwa5u1'
 formula: 1d12
 replacement: true
@@ -159,11 +279,12 @@ ownership:
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!tables!M2Pq5BOLo2zwJLTu'
 

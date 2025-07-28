@@ -1,0 +1,50 @@
+name: Semi-Auto Pistol
+type: weapon
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 4fnnkj4vr3s2g476
+system:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 12
+    suppress: false
+    type: ammo
+    value: 12
+  cost: 75
+  damage: 1d6+1
+  description: >-
+    Semi-automatic pistols trade some of the reliability of the revolver for a
+    larger magazine size. They tend to be the favorite sidearm for locals on
+    planets that lack the harsh conditions or uncertain maintenance
+    opportunities of a frontier world.
+  encumbrance: 1
+  location: other
+  quality: stock
+  range:
+    max: 100
+    normal: 30
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 3
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+_key: '!items!4fnnkj4vr3s2g476'
+

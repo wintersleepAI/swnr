@@ -3,7 +3,6 @@ name: Ruin-Infrastructure
 img: icons/svg/d20-grey.svg
 results:
   - type: text
-    text: Psychic or tech communications site
     weight: 1
     range:
       - 1
@@ -12,10 +11,20 @@ results:
     _id: h2tsu69biqs9xhdt
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Psychic or tech communications site
+    name: ''
     _key: '!tables.results!D1d00cXACTQTvQhG.h2tsu69biqs9xhdt'
   - type: text
-    text: Canal or aqueduct control center
     weight: 1
     range:
       - 2
@@ -24,10 +33,20 @@ results:
     _id: 25935ri8eiq9sxa3
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Canal or aqueduct control center
+    name: ''
     _key: '!tables.results!D1d00cXACTQTvQhG.25935ri8eiq9sxa3'
   - type: text
-    text: Reality-stabilizing Working ruin
     weight: 1
     range:
       - 3
@@ -36,10 +55,20 @@ results:
     _id: upex4mtr3vl6d9w2
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Reality-stabilizing Working ruin
+    name: ''
     _key: '!tables.results!D1d00cXACTQTvQhG.upex4mtr3vl6d9w2'
   - type: text
-    text: Massive bridge or tunnel
     weight: 1
     range:
       - 4
@@ -48,10 +77,20 @@ results:
     _id: 0bcd67rmsrdm13x0
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Massive bridge or tunnel
+    name: ''
     _key: '!tables.results!D1d00cXACTQTvQhG.0bcd67rmsrdm13x0'
   - type: text
-    text: Ancient power production center
     weight: 1
     range:
       - 5
@@ -60,10 +99,20 @@ results:
     _id: 1zh2a90pl83k6auy
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Ancient power production center
+    name: ''
     _key: '!tables.results!D1d00cXACTQTvQhG.1zh2a90pl83k6auy'
   - type: text
-    text: Semi-ruined teleportation node
     weight: 1
     range:
       - 6
@@ -72,10 +121,20 @@ results:
     _id: czddxyv9kivqvr81
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Semi-ruined teleportation node
+    name: ''
     _key: '!tables.results!D1d00cXACTQTvQhG.czddxyv9kivqvr81'
   - type: text
-    text: Subterranean transit tunnels
     weight: 1
     range:
       - 7
@@ -84,10 +143,20 @@ results:
     _id: 751btvuf0n5pyzsl
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Subterranean transit tunnels
+    name: ''
     _key: '!tables.results!D1d00cXACTQTvQhG.751btvuf0n5pyzsl'
   - type: text
-    text: Weather-control Working ruin
     weight: 1
     range:
       - 8
@@ -96,10 +165,20 @@ results:
     _id: fqdxolrucvvx9rzo
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Weather-control Working ruin
+    name: ''
     _key: '!tables.results!D1d00cXACTQTvQhG.fqdxolrucvvx9rzo'
   - type: text
-    text: Ancient road through an obstacle
     weight: 1
     range:
       - 9
@@ -108,10 +187,20 @@ results:
     _id: j8yrjbjupumv0bfp
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Ancient road through an obstacle
+    name: ''
     _key: '!tables.results!D1d00cXACTQTvQhG.j8yrjbjupumv0bfp'
   - type: text
-    text: Huge ancient dam
     weight: 1
     range:
       - 10
@@ -120,10 +209,20 @@ results:
     _id: 8iwnwar3tirwihab
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Huge ancient dam
+    name: ''
     _key: '!tables.results!D1d00cXACTQTvQhG.8iwnwar3tirwihab'
   - type: text
-    text: Outsider xenoforming engine
     weight: 1
     range:
       - 11
@@ -132,10 +231,20 @@ results:
     _id: l5x7zfxtvsddrhue
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Outsider xenoforming engine
+    name: ''
     _key: '!tables.results!D1d00cXACTQTvQhG.l5x7zfxtvsddrhue'
   - type: text
-    text: Now-incomprehensible wreckage
     weight: 1
     range:
       - 12
@@ -144,7 +253,18 @@ results:
     _id: 0cv2reln7t6f82eh
     flags: {}
     img: null
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Now-incomprehensible wreckage
+    name: ''
     _key: '!tables.results!D1d00cXACTQTvQhG.0cv2reln7t6f82eh'
 formula: 1d12
 replacement: true
@@ -159,11 +279,12 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
+  exportSource: null
 _key: '!tables!D1d00cXACTQTvQhG'
 

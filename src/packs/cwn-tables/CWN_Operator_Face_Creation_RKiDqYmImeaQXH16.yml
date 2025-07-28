@@ -1,10 +1,7 @@
 name: CWN Operator Face Creation
 description: <p>1). Face with…</p><p>2). …who…</p><p>3). …and is currently…</p>
 results:
-  - text: Face with...
-    type: 1
-    documentCollection: RollTable
-    documentId: 76DfHGPl7WviKiZ2
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -13,11 +10,21 @@ results:
     drawn: false
     _id: e3uoxPPzqc4ffQrw
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Face with...
+    documentUuid: RollTable.76DfHGPl7WviKiZ2
+    description: ''
     _key: '!tables.results!RKiDqYmImeaQXH16.e3uoxPPzqc4ffQrw'
-  - text: ...who...
-    type: 1
-    documentCollection: RollTable
-    documentId: uF4Cs24zoW6zO8SA
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -26,11 +33,21 @@ results:
     drawn: false
     _id: XXLf8nlFy1i9MzlH
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: ...who...
+    documentUuid: RollTable.uF4Cs24zoW6zO8SA
+    description: ''
     _key: '!tables.results!RKiDqYmImeaQXH16.XXLf8nlFy1i9MzlH'
-  - text: ...and is currently...
-    type: 1
-    documentCollection: RollTable
-    documentId: gUoawEkVZJOR4k37
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -39,6 +56,19 @@ results:
     drawn: false
     _id: nh950tXiHQYjsUGU
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: ...and is currently...
+    documentUuid: RollTable.gUoawEkVZJOR4k37
+    description: ''
     _key: '!tables.results!RKiDqYmImeaQXH16.nh950tXiHQYjsUGU'
 formula: 1d1
 img: icons/svg/d20-grey.svg
@@ -50,10 +80,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703888129778
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 _id: RKiDqYmImeaQXH16
 sort: 0
 ownership:

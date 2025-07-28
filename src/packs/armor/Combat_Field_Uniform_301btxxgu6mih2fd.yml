@@ -1,0 +1,42 @@
+name: Combat Field Uniform
+type: armor
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 301btxxgu6mih2fd
+system:
+  ac: 16
+  meleeAc: 16
+  traumaDiePenalty: 2
+  isSubtle: false
+  soak:
+    value: 5
+    max: 5
+  cost: 1000
+  description: >-
+    A combat field uniform is sophisticated battle dress fabricated from TL4
+    ablative coatings, rigid plates, and shock-activated soft components. The
+    CFU is the standard uniform for well-equipped TL4 front-line soldiers.
+  encumbrance: 1
+  location: other
+  quality: stock
+  shield: false
+  tl: 4
+  type: combat
+  use: false
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+_key: '!items!301btxxgu6mih2fd'
+

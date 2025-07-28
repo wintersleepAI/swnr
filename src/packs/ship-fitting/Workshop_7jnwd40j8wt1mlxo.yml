@@ -1,0 +1,39 @@
+name: Workshop
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 7jnwd40j8wt1mlxo
+system:
+  broken: false
+  cost: 500
+  costMultiplier: true
+  description: >-
+    On-board workshops can be bought at smaller than maximum sizes than a hull
+    would allow, if additional TL4 tech facilities aren't strictly needed. A
+    frigate-sized workshop is sufficient for modding any personal gear as per
+    the modification rules on page 90. A cruiser-sized workshop handles vehicle
+    modding and starship maintenance, and a capital-class workshop can build
+    vehicles or similar large work from scratch at full cost.
+  effect: Automated tech workshops for maintenance
+  mass: 0.5
+  massMultiplier: true
+  minClass: frigate
+  power: 1
+  powerMultiplier: false
+effects: []
+ownership:
+  default: 0
+_key: '!items!7jnwd40j8wt1mlxo'
+

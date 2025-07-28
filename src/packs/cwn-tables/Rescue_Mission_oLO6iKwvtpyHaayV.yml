@@ -5,10 +5,7 @@ description: >-
   They Taken?</p></li><li><p>What Use Are They To Their
   Captors?</p></li><li><p>Twists to the Situation</p></li></ol>
 results:
-  - text: 'Rescue: How Were They Snatched?'
-    type: 1
-    documentCollection: RollTable
-    documentId: QGD8zEaQm1qI9Vre
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -17,11 +14,21 @@ results:
     drawn: false
     _id: Vquu7XGVs3McE447
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Rescue: How Were They Snatched?'
+    documentUuid: RollTable.QGD8zEaQm1qI9Vre
+    description: ''
     _key: '!tables.results!oLO6iKwvtpyHaayV.Vquu7XGVs3McE447'
-  - text: 'Rescue: What Kind of Patron Put Up the Job?'
-    type: 1
-    documentCollection: RollTable
-    documentId: BQwJYV1Wm91Rg4zg
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -30,11 +37,21 @@ results:
     drawn: false
     _id: kFcJNjY0Dl1J26zo
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Rescue: What Kind of Patron Put Up the Job?'
+    documentUuid: RollTable.BQwJYV1Wm91Rg4zg
+    description: ''
     _key: '!tables.results!oLO6iKwvtpyHaayV.kFcJNjY0Dl1J26zo'
-  - text: 'Rescue: Who Snatched Them?'
-    type: 1
-    documentCollection: RollTable
-    documentId: KEbVRBNEOEAwm9yy
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -43,11 +60,21 @@ results:
     drawn: false
     _id: G3uj86El1muxUvTd
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Rescue: Who Snatched Them?'
+    documentUuid: RollTable.KEbVRBNEOEAwm9yy
+    description: ''
     _key: '!tables.results!oLO6iKwvtpyHaayV.G3uj86El1muxUvTd'
-  - text: 'Rescue: How Long Ago Were They Taken?'
-    type: 1
-    documentCollection: RollTable
-    documentId: mDWoY0IVNopVqPTU
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -56,11 +83,21 @@ results:
     drawn: false
     _id: 0HjRST4jL9H1Cr2E
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Rescue: How Long Ago Were They Taken?'
+    documentUuid: RollTable.mDWoY0IVNopVqPTU
+    description: ''
     _key: '!tables.results!oLO6iKwvtpyHaayV.0HjRST4jL9H1Cr2E'
-  - text: 'Rescue: What Use Are They To Their Captors?'
-    type: 1
-    documentCollection: RollTable
-    documentId: VA9w4aqaYU96YKw5
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -69,11 +106,21 @@ results:
     drawn: false
     _id: SD23joMk8gOorxHR
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Rescue: What Use Are They To Their Captors?'
+    documentUuid: RollTable.VA9w4aqaYU96YKw5
+    description: ''
     _key: '!tables.results!oLO6iKwvtpyHaayV.SD23joMk8gOorxHR'
-  - text: 'Rescue: Twists to the Situation'
-    type: 1
-    documentCollection: RollTable
-    documentId: nHF1HwdItDVu0Oeq
+  - type: document
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -82,6 +129,19 @@ results:
     drawn: false
     _id: bea8c21IMX4Gbz4B
     flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: 'Rescue: Twists to the Situation'
+    documentUuid: RollTable.nHF1HwdItDVu0Oeq
+    description: ''
     _key: '!tables.results!oLO6iKwvtpyHaayV.bea8c21IMX4Gbz4B'
 formula: 1d1
 _id: oLO6iKwvtpyHaayV
@@ -94,10 +154,13 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703913362677
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 sort: 0
 ownership:
   default: 0

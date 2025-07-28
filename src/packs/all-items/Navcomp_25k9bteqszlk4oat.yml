@@ -1,0 +1,38 @@
+name: Navcomp
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 25k9bteqszlk4oat
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 500
+  description: >-
+    Navcomp: A combination of low-tech compasses, automappers, astronomic
+    charts, and gyroscopes packed into a flat, one-kilo case. A character with a
+    navcomp will never get lost on worlds with GPS satellites. They can also
+    make a crude but serviceable automatic map of all buildings or landscapes
+    they travel through. Other terrestrial navigation skill checks are made at a
+    +1 bonus.
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 4
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+_key: '!items!25k9bteqszlk4oat'
+

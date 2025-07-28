@@ -4,101 +4,181 @@ _id: YjCO3BSRQw7diCwK
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: VmAdxoCEmiYzf8JB
-    text: You bailed them out of a bad situation
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: You bailed them out of a bad situation
+    name: ''
     _key: '!tables.results!YjCO3BSRQw7diCwK.VmAdxoCEmiYzf8JB'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: 3ipvWAayFnHZFEI0
-    text: A wild carouse from a shared payday
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A wild carouse from a shared payday
+    name: ''
     _key: '!tables.results!YjCO3BSRQw7diCwK.3ipvWAayFnHZFEI0'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: vTlKsCptkHToMMEn
-    text: A minor job gone wrong for both of you
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A minor job gone wrong for both of you
+    name: ''
     _key: '!tables.results!YjCO3BSRQw7diCwK.vTlKsCptkHToMMEn'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: HsGZotmR94fPKF4G
-    text: You got a problem person off their back
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: You got a problem person off their back
+    name: ''
     _key: '!tables.results!YjCO3BSRQw7diCwK.HsGZotmR94fPKF4G'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     _id: T2PuJ0buHzeICHNT
-    text: You used your Edges to solve their problem
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: You used your Edges to solve their problem
+    name: ''
     _key: '!tables.results!YjCO3BSRQw7diCwK.T2PuJ0buHzeICHNT'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     _id: Yf0WrH3ZwDVKd0sh
-    text: A minor argument over different ideals
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A minor argument over different ideals
+    name: ''
     _key: '!tables.results!YjCO3BSRQw7diCwK.Yf0WrH3ZwDVKd0sh'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 7
       - 7
     drawn: false
     _id: n11fFqHpa7MaCzvV
-    text: Helped them with their day job a bit
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Helped them with their day job a bit
+    name: ''
     _key: '!tables.results!YjCO3BSRQw7diCwK.n11fFqHpa7MaCzvV'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 8
       - 8
     drawn: false
     _id: OGB1vzXcVuPuqaH0
-    text: Did a favor for someone important to them
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Did a favor for someone important to them
+    name: ''
     _key: '!tables.results!YjCO3BSRQw7diCwK.OGB1vzXcVuPuqaH0'
 replacement: true
 displayRoll: true
@@ -106,10 +186,13 @@ flags: {}
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703881699034
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 formula: 1d8
 sort: 0
 ownership:

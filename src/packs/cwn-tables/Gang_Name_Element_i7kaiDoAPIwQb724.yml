@@ -3,245 +3,445 @@ name: Gang Name Element
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: DzelhT2YDKE8mQSc
-    text: Street name
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Street name
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.DzelhT2YDKE8mQSc'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: IQU9DKOQsErEKiG8
-    text: Color
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Color
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.IQU9DKOQsErEKiG8'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: xqawID0JKC8wRqKM
-    text: Violent action
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Violent action
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.xqawID0JKC8wRqKM'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: O4tPQiAAoNYsjxs2
-    text: Animal
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Animal
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.O4tPQiAAoNYsjxs2'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     _id: oYTLzhfIhPraGpQi
-    text: Direction
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Direction
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.oYTLzhfIhPraGpQi'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     _id: gvc2VsN3hGCJM17F
-    text: Fashion item
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Fashion item
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.gvc2VsN3hGCJM17F'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 7
       - 7
     drawn: false
     _id: TogKiE97OK0WkhCk
-    text: Leader’s name
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Leader’s name
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.TogKiE97OK0WkhCk'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 8
       - 8
     drawn: false
     _id: 9tMFKiEz1tgkpszF
-    text: Religious figure
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Religious figure
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.9tMFKiEz1tgkpszF'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 9
       - 9
     drawn: false
     _id: QnueqG9NOnR2mW6Q
-    text: Geographic location
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Geographic location
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.QnueqG9NOnR2mW6Q'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 10
       - 10
     drawn: false
     _id: gHX40ywkh0UD28t2
-    text: District name
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: District name
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.gHX40ywkh0UD28t2'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 11
       - 11
     drawn: false
     _id: ZsbMFj0J8tLlhjkT
-    text: Important date
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Important date
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.ZsbMFj0J8tLlhjkT'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 12
       - 12
     drawn: false
     _id: APtjQTU7n8vVXUEp
-    text: Drug name
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Drug name
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.APtjQTU7n8vVXUEp'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 13
       - 13
     drawn: false
     _id: yPfC3MRIwG6JZpg6
-    text: Building name
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Building name
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.yPfC3MRIwG6JZpg6'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 14
       - 14
     drawn: false
     _id: OhGtg76hcZKTFLw2
-    text: Nation name
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Nation name
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.OhGtg76hcZKTFLw2'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 15
       - 15
     drawn: false
     _id: yEO7fFQpPJaya8qF
-    text: Physical trait
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Physical trait
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.yEO7fFQpPJaya8qF'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 16
       - 16
     drawn: false
     _id: pjy3vc2gCrFhIF2Q
-    text: Favorite cyber
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Favorite cyber
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.pjy3vc2gCrFhIF2Q'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 17
       - 17
     drawn: false
     _id: Q6H6qGkf8WJuNVJ6
-    text: Intimidating adjective
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Intimidating adjective
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.Q6H6qGkf8WJuNVJ6'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 18
       - 18
     drawn: false
     _id: Kbu4R8RUotGZJZs7
-    text: Weapon
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Weapon
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.Kbu4R8RUotGZJZs7'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 19
       - 19
     drawn: false
     _id: lLhQmEOIMleFcPgL
-    text: Barbarous habit
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Barbarous habit
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.lLhQmEOIMleFcPgL'
-  - type: 0
+  - type: text
     weight: 1
     range:
       - 20
       - 20
     drawn: false
     _id: v6Zj8QqzrwIXr9Um
-    text: The gang’s mission
-    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: The gang’s mission
+    name: ''
     _key: '!tables.results!i7kaiDoAPIwQb724.v6Zj8QqzrwIXr9Um'
 replacement: true
 displayRoll: true
@@ -249,10 +449,13 @@ flags: {}
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '11.315'
+  coreVersion: '13.346'
   createdTime: 1703840545437
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
 formula: 1d20
 _id: i7kaiDoAPIwQb724
 sort: 0

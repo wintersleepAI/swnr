@@ -1,0 +1,33 @@
+name: Spatial Awareness
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 11e3ii7ofvknb8e0
+system:
+  description: >-
+    <p>The psychic may Commit Effort as an On Turn action to gain an intuitive
+    360-degree awareness of their physical surroundings. The sense is roughly
+    equivalent to sight out to 100 meters, though it cannot read text or
+    distinguish colors. It is blocked by solid objects but is unimpeded by
+    darkness, mist, blinding light, holograms, or optical illusions. The sense
+    lasts as long as the Effort remains Committed to the technique.</p>
+  level: 1
+  source: teleportation
+  effort: current
+effects: []
+ownership:
+  default: 0
+_key: '!items!11e3ii7ofvknb8e0'
+

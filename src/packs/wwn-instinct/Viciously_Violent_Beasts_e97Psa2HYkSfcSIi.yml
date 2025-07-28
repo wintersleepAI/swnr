@@ -6,74 +6,134 @@ results:
   - _id: GN95RleZS05dVLww
     flags: {}
     type: text
-    text: Roar savagely at the foe, but don't attack
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Roar savagely at the foe, but don't attack
+    name: ''
     _key: '!tables.results!e97Psa2HYkSfcSIi.GN95RleZS05dVLww'
   - _id: VTSgQM9O4q24PviN
     flags: {}
     type: text
-    text: Attack the last foe it hit in blind fury
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 2
       - 2
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Attack the last foe it hit in blind fury
+    name: ''
     _key: '!tables.results!e97Psa2HYkSfcSIi.VTSgQM9O4q24PviN'
   - _id: oXbc7ZANl6iGFpVr
     flags: {}
     type: text
-    text: Charge the last enemy to get its attention
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 3
       - 3
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Charge the last enemy to get its attention
+    name: ''
     _key: '!tables.results!e97Psa2HYkSfcSIi.oXbc7ZANl6iGFpVr'
   - _id: WXeLZKn9BVgOkxRv
     flags: {}
     type: text
-    text: Gnaw on a downed enemy
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 4
       - 4
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Gnaw on a downed enemy
+    name: ''
     _key: '!tables.results!e97Psa2HYkSfcSIi.WXeLZKn9BVgOkxRv'
   - _id: lKO1wyjBNsqfWR1l
     flags: {}
     type: text
-    text: Charge the biggest cluster of targets
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 5
       - 5
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Charge the biggest cluster of targets
+    name: ''
     _key: '!tables.results!e97Psa2HYkSfcSIi.lKO1wyjBNsqfWR1l'
   - _id: FoOUVUZZ6RK90NNk
     flags: {}
     type: text
-    text: Attack the largest enemy on the field
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 6
       - 6
     drawn: false
-    documentId: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Attack the largest enemy on the field
+    name: ''
     _key: '!tables.results!e97Psa2HYkSfcSIi.FoOUVUZZ6RK90NNk'
 formula: 1d6
 replacement: true
@@ -81,17 +141,17 @@ displayRoll: true
 folder: null
 sort: 0
 flags:
-  core:
-    sourceId: Compendium.wwn.instinct.e97Psa2HYkSfcSIi
+  core: {}
 _stats:
-  coreVersion: '12.324'
+  coreVersion: '13.346'
   systemId: null
   systemVersion: null
   createdTime: null
   modifiedTime: null
   lastModifiedBy: null
-  compendiumSource: null
+  compendiumSource: Compendium.wwn.instinct.e97Psa2HYkSfcSIi
   duplicateSource: null
+  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3
