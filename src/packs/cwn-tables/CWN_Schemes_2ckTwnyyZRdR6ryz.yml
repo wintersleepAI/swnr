@@ -3,7 +3,10 @@ description: >-
   <p>1). Scheme Goal</p><p>2). NPC-Related Milestone</p><p>3). Resource-Related
   Milestone</p><p>4). Business-Related Milestone</p>
 results:
-  - type: document
+  - text: Scheme Goal Examples
+    type: 1
+    documentCollection: RollTable
+    documentId: ZBNI27KRoC8GsTiS
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -12,21 +15,11 @@ results:
     drawn: false
     _id: Jde2MCbTPb59KzTL
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Scheme Goal Examples
-    documentUuid: RollTable.ZBNI27KRoC8GsTiS
-    description: ''
     _key: '!tables.results!2ckTwnyyZRdR6ryz.Jde2MCbTPb59KzTL'
-  - type: document
+  - text: Scheme NPC-Related Milestones
+    type: 1
+    documentCollection: RollTable
+    documentId: ys5IO6rDAMbkjawr
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -35,21 +28,11 @@ results:
     drawn: false
     _id: 9ydqfDoJezT1lpNA
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Scheme NPC-Related Milestones
-    documentUuid: RollTable.ys5IO6rDAMbkjawr
-    description: ''
     _key: '!tables.results!2ckTwnyyZRdR6ryz.9ydqfDoJezT1lpNA'
-  - type: document
+  - text: Scheme Resource-Related Milestones
+    type: 1
+    documentCollection: RollTable
+    documentId: 1eIoVxubb6yE2LWv
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -58,21 +41,11 @@ results:
     drawn: false
     _id: Ddac1zfcdamyF7QB
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Scheme Resource-Related Milestones
-    documentUuid: RollTable.1eIoVxubb6yE2LWv
-    description: ''
     _key: '!tables.results!2ckTwnyyZRdR6ryz.Ddac1zfcdamyF7QB'
-  - type: document
+  - text: Scheme Business-Related Milestones
+    type: 1
+    documentCollection: RollTable
+    documentId: caCbrxSdImSbNcbW
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -81,19 +54,6 @@ results:
     drawn: false
     _id: Squpbx85SMEZ8gQ6
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Scheme Business-Related Milestones
-    documentUuid: RollTable.caCbrxSdImSbNcbW
-    description: ''
     _key: '!tables.results!2ckTwnyyZRdR6ryz.Squpbx85SMEZ8gQ6'
 formula: 1d1
 _id: 2ckTwnyyZRdR6ryz
@@ -105,13 +65,10 @@ flags: {}
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '13.346'
+  coreVersion: '11.315'
   createdTime: 1703884731254
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
 sort: 0
 ownership:
   default: 0

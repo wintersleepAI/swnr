@@ -3,137 +3,77 @@ name: 'Retrieval: Why Do They Need It?'
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: ismiX5SkOYG607BB
+    text: It’s too valuable to abandon it
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s too valuable to abandon it
-    name: ''
     _key: '!tables.results!p4As4xco7e4vGkc0.ismiX5SkOYG607BB'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: aa4YlM0hSG8BxmfZ
+    text: It’s evidence they need concealed
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s evidence they need concealed
-    name: ''
     _key: '!tables.results!p4As4xco7e4vGkc0.aa4YlM0hSG8BxmfZ'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: edLBvg8xOHSSRr4d
+    text: A rival must be kept from getting it
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: A rival must be kept from getting it
-    name: ''
     _key: '!tables.results!p4As4xco7e4vGkc0.edLBvg8xOHSSRr4d'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: SHReMrrVhG4TZlFt
+    text: It’s key to one of their current schemes
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s key to one of their current schemes
-    name: ''
     _key: '!tables.results!p4As4xco7e4vGkc0.SHReMrrVhG4TZlFt'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     _id: H6vtG6vdDKS1FJT6
+    text: It has great sentimental value to them
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It has great sentimental value to them
-    name: ''
     _key: '!tables.results!p4As4xco7e4vGkc0.H6vtG6vdDKS1FJT6'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     _id: anvdwmF5RaKvM3OV
+    text: They need it for parts or data in it
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They need it for parts or data in it
-    name: ''
     _key: '!tables.results!p4As4xco7e4vGkc0.anvdwmF5RaKvM3OV'
 replacement: true
 displayRoll: true
@@ -142,13 +82,10 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '13.346'
+  coreVersion: '11.315'
   createdTime: 1703891799686
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
 formula: 1d6
 _id: p4As4xco7e4vGkc0
 sort: 0

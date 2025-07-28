@@ -5,134 +5,74 @@ results:
   - _id: TQ54AJwqEo1NnN3b
     flags: {}
     type: text
+    text: Stand immobile in confusion and fear
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Stand immobile in confusion and fear
-    name: ''
+    documentId: null
     _key: '!tables.results!xq6rwhNERi8vSReO.TQ54AJwqEo1NnN3b'
   - _id: fBDTZaGoXsBZdrsx
     flags: {}
     type: text
+    text: Punch or kick a foe instead of using a weapon
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 2
       - 2
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Punch or kick a foe instead of using a weapon
-    name: ''
+    documentId: null
     _key: '!tables.results!xq6rwhNERi8vSReO.fBDTZaGoXsBZdrsx'
   - _id: 0wKHjg8RN6cL6sAX
     flags: {}
     type: text
+    text: Cringe, taking the <b>Total Defense</b> action
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 3
       - 3
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Cringe, taking the <b>Total Defense</b> action
-    name: ''
+    documentId: null
     _key: '!tables.results!xq6rwhNERi8vSReO.0wKHjg8RN6cL6sAX'
   - _id: L9on0iSAcFBwINRD
     flags: {}
     type: text
+    text: Panic and make a Morale check
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 4
       - 4
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Panic and make a Morale check
-    name: ''
+    documentId: null
     _key: '!tables.results!xq6rwhNERi8vSReO.L9on0iSAcFBwINRD'
   - _id: Rc5tRDJdXDAL8sKw
     flags: {}
     type: text
+    text: Shout threats or pleas, but don't attack
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 5
       - 5
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Shout threats or pleas, but don't attack
-    name: ''
+    documentId: null
     _key: '!tables.results!xq6rwhNERi8vSReO.Rc5tRDJdXDAL8sKw'
   - _id: ZHqJzXtZhmkUP95V
     flags: {}
     type: text
+    text: Reposition to get close to the nearest ally
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 6
       - 6
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Reposition to get close to the nearest ally
-    name: ''
+    documentId: null
     _key: '!tables.results!xq6rwhNERi8vSReO.ZHqJzXtZhmkUP95V'
 formula: 1d6
 replacement: true
@@ -142,17 +82,17 @@ sort: 0
 flags:
   wwn:
     treasure: false
-  core: {}
+  core:
+    sourceId: RollTable.cy1JeOBRMUcWpYPM
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   systemId: null
   systemVersion: null
   createdTime: null
   modifiedTime: null
   lastModifiedBy: null
-  compendiumSource: RollTable.cy1JeOBRMUcWpYPM
+  compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3

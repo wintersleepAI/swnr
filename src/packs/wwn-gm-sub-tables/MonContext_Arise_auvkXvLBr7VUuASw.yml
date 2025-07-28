@@ -3,6 +3,7 @@ name: MonContext-Arise
 img: icons/svg/d20-grey.svg
 results:
   - type: text
+    text: It’s a relict of the malice of the Outsiders
     weight: 1
     range:
       - 1
@@ -11,20 +12,10 @@ results:
     _id: 88b6mwnrtnuhc5kp
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s a relict of the malice of the Outsiders
-    name: ''
+    documentId: null
     _key: '!tables.results!auvkXvLBr7VUuASw.88b6mwnrtnuhc5kp'
   - type: text
+    text: It’s the product of human sorcerer-kings
     weight: 1
     range:
       - 2
@@ -33,20 +24,10 @@ results:
     _id: 1z8osq3h19g5i5nb
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s the product of human sorcerer-kings
-    name: ''
+    documentId: null
     _key: '!tables.results!auvkXvLBr7VUuASw.1z8osq3h19g5i5nb'
   - type: text
+    text: It’s an accident of magic or nature
     weight: 1
     range:
       - 3
@@ -55,20 +36,10 @@ results:
     _id: qn06pyf7qbrc3c43
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s an accident of magic or nature
-    name: ''
+    documentId: null
     _key: '!tables.results!auvkXvLBr7VUuASw.qn06pyf7qbrc3c43'
   - type: text
+    text: It’s a decayed form of something once noble
     weight: 1
     range:
       - 4
@@ -77,18 +48,7 @@ results:
     _id: c0lywnk3f4bkz4fp
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s a decayed form of something once noble
-    name: ''
+    documentId: null
     _key: '!tables.results!auvkXvLBr7VUuASw.c0lywnk3f4bkz4fp'
 formula: 1d4
 replacement: true
@@ -103,12 +63,11 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!auvkXvLBr7VUuASw'
 

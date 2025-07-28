@@ -11,7 +11,8 @@ description: >-
   possessions might be appropriate for someone in their social circumstance.
 displayRoll: true
 flags:
-  core: {}
+  core:
+    sourceId: RollTable.C9hemRvTGLVYsl0R
 folder: null
 formula: 1d1
 img: icons/svg/d20-grey.svg
@@ -25,21 +26,11 @@ results:
     range:
       - 1
       - 1
-    type: document
+    text: One Roll NPCs - Age
+    type: pack
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: One Roll NPCs - Age
-    documentUuid: Compendium.swnr.one-roll-backing.RollTable.esm8N14kEFl5Y6QB
-    description: ''
+    documentCollection: swnr.one-roll-backing
+    documentId: esm8N14kEFl5Y6QB
     _key: '!tables.results!e0HKruZ6WAPtCgHn.PHA8Vyy8EH92aEX8'
   - _id: tpje92eOfKMfxTSY
     drawn: false
@@ -48,21 +39,11 @@ results:
     range:
       - 1
       - 1
-    type: document
+    text: One Roll NPCs - Background
+    type: pack
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: One Roll NPCs - Background
-    documentUuid: Compendium.swnr.one-roll-backing.RollTable.WYrAlfwA9t3pPl1n
-    description: ''
+    documentCollection: swnr.one-roll-backing
+    documentId: WYrAlfwA9t3pPl1n
     _key: '!tables.results!e0HKruZ6WAPtCgHn.tpje92eOfKMfxTSY'
   - _id: Adp9qlU3Eys5MDGR
     drawn: false
@@ -71,21 +52,11 @@ results:
     range:
       - 1
       - 1
-    type: document
+    text: One Roll NPCs - Desire
+    type: pack
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: One Roll NPCs - Desire
-    documentUuid: Compendium.swnr.one-roll-backing.RollTable.nSdCqa06jqPekm8M
-    description: ''
+    documentCollection: swnr.one-roll-backing
+    documentId: nSdCqa06jqPekm8M
     _key: '!tables.results!e0HKruZ6WAPtCgHn.Adp9qlU3Eys5MDGR'
   - _id: TAo6hNCHqhTWbjhw
     drawn: false
@@ -94,21 +65,11 @@ results:
     range:
       - 1
       - 1
-    type: document
+    text: One Roll NPCs - Problem
+    type: pack
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: One Roll NPCs - Problem
-    documentUuid: Compendium.swnr.one-roll-backing.RollTable.kgqwCmui0vFPDTHu
-    description: ''
+    documentCollection: swnr.one-roll-backing
+    documentId: kgqwCmui0vFPDTHu
     _key: '!tables.results!e0HKruZ6WAPtCgHn.TAo6hNCHqhTWbjhw'
   - _id: 3x6v8nfEh43YWaB3
     drawn: false
@@ -117,21 +78,11 @@ results:
     range:
       - 1
       - 1
-    type: document
+    text: One Roll NPCs - Role
+    type: pack
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: One Roll NPCs - Role
-    documentUuid: Compendium.swnr.one-roll-backing.RollTable.Dj1g6s5hDb6pvZ4S
-    description: ''
+    documentCollection: swnr.one-roll-backing
+    documentId: Dj1g6s5hDb6pvZ4S
     _key: '!tables.results!e0HKruZ6WAPtCgHn.3x6v8nfEh43YWaB3'
   - _id: zfNMPrlsUl6ki7QD
     drawn: false
@@ -140,33 +91,22 @@ results:
     range:
       - 1
       - 1
-    type: document
+    text: One Roll NPCs - Trait
+    type: pack
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: One Roll NPCs - Trait
-    documentUuid: Compendium.swnr.one-roll-backing.RollTable.Mci0jWP2mXFfjvoQ
-    description: ''
+    documentCollection: swnr.one-roll-backing
+    documentId: Mci0jWP2mXFfjvoQ
     _key: '!tables.results!e0HKruZ6WAPtCgHn.zfNMPrlsUl6ki7QD'
 sort: 0
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.325'
   systemId: null
   systemVersion: null
   createdTime: null
   modifiedTime: null
   lastModifiedBy: null
-  compendiumSource: RollTable.C9hemRvTGLVYsl0R
+  compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   P3lRTKxUBvk8Gei6: 3
   default: 0

@@ -4,285 +4,165 @@ _id: F4TxprREK2vBcsVC
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: 79x0AtNHxiQ4Q4y9
+    text: Demanding, with a 25% increased System Strain cost
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Demanding, with a 25% increased System Strain cost
-    name: ''
     _key: '!tables.results!F4TxprREK2vBcsVC.79x0AtNHxiQ4Q4y9'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: VRZqYsvtunzX7yOp
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
+    text: >-
       Draining, inflicting a -5 penalty on the user’s maximum HP, down to a
       minimum of 1.
-    name: ''
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
     _key: '!tables.results!F4TxprREK2vBcsVC.VRZqYsvtunzX7yOp'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: UiSg1dqbbYP0OrYg
+    text: Expensive, costing 150% of the base cyber cost.
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Expensive, costing 150% of the base cyber cost.
-    name: ''
     _key: '!tables.results!F4TxprREK2vBcsVC.UiSg1dqbbYP0OrYg'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: 6DgnbI7Uv0fry3sz
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
+    text: >-
       Finicky Install, with a -1 penalty on the skill check for installing the
       cyberware.
-    name: ''
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
     _key: '!tables.results!F4TxprREK2vBcsVC.6DgnbI7Uv0fry3sz'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     _id: F3REsQu7DkU3ZqpU
+    text: Fussy, with all maintenance costs doubled.
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Fussy, with all maintenance costs doubled.
-    name: ''
     _key: '!tables.results!F4TxprREK2vBcsVC.F3REsQu7DkU3ZqpU'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     _id: VKeRfCo4B3Qx7rWY
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
+    text: >-
       Jealous, adding 10% to the SS cost of all competing cyber systems
       installed of the same cyber location type.
-    name: ''
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
     _key: '!tables.results!F4TxprREK2vBcsVC.VKeRfCo4B3Qx7rWY'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 7
       - 7
     drawn: false
     _id: ZE98nVyAlYXMXIVl
+    text: Noisy, with its active use audibly noticeable up to 5 meters away.
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Noisy, with its active use audibly noticeable up to 5 meters away.
-    name: ''
     _key: '!tables.results!F4TxprREK2vBcsVC.ZE98nVyAlYXMXIVl'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 8
       - 8
     drawn: false
     _id: 7tlOeWeguvUzBhuK
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
+    text: >-
       Obvious, with the cyber’s obviousness level increased by one step up to
       “Sight”
-    name: ''
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
     _key: '!tables.results!F4TxprREK2vBcsVC.7tlOeWeguvUzBhuK'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 9
       - 9
     drawn: false
     _id: vy11CnrFkieijdCn
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
+    text: >-
       Overtuned, with any cyberware mods counting double for Maintenance
       purposes.
-    name: ''
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
     _key: '!tables.results!F4TxprREK2vBcsVC.vy11CnrFkieijdCn'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 10
       - 10
     drawn: false
     _id: UQy01UNiIX05mDhq
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
+    text: >-
       Unreliable, with a 1 in 12 chance of simply not working for a scene the
       first time it’s important each day.
-    name: ''
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
     _key: '!tables.results!F4TxprREK2vBcsVC.UQy01UNiIX05mDhq'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 11
       - 11
     drawn: false
     _id: 0rzm4fuus4p69pzj
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
+    text: >-
       Unsupported, with all maintenance costs increasing by x5 at a point 2d4
       months from now.
-    name: ''
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
     _key: '!tables.results!F4TxprREK2vBcsVC.0rzm4fuus4p69pzj'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 12
       - 12
     drawn: false
     _id: EGLatcyayVSXrdFe
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
+    text: >-
       Vulnerable, granting hacking attempts against it a +1 bonus to the skill
       roll.
-    name: ''
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
     _key: '!tables.results!F4TxprREK2vBcsVC.EGLatcyayVSXrdFe'
 replacement: true
 displayRoll: false
@@ -290,13 +170,10 @@ flags: {}
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '13.346'
+  coreVersion: '11.315'
   createdTime: 1703915380938
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
 formula: 1d12
 sort: 0
 ownership:

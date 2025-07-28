@@ -4,7 +4,8 @@ img: icons/svg/d20-grey.svg
 description: Generate both room contents and exits.
 results:
   - _id: qmsjMKKTMZj1I3dw
-    type: document
+    type: pack
+    text: Stocking Rooms
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -12,22 +13,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Stocking Rooms
-    documentUuid: Compendium.wwn.gm-master-tables.CGBVZvWlHBCJh7Oi
-    description: ''
+    documentCollection: wwn.gm-master-tables
+    documentId: CGBVZvWlHBCJh7Oi
     _key: '!tables.results!sb3m8C6v2gQRmMlu.qmsjMKKTMZj1I3dw'
   - _id: GR7qvGDvBXI12Zs0
-    type: document
+    type: pack
+    text: Room Layout
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -35,19 +26,8 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Room Layout
-    documentUuid: Compendium.wwn.gm-master-tables.0aHNowVvpqcOitxG
-    description: ''
+    documentCollection: wwn.gm-master-tables
+    documentId: 0aHNowVvpqcOitxG
     _key: '!tables.results!sb3m8C6v2gQRmMlu.GR7qvGDvBXI12Zs0'
 formula: 1d1
 replacement: true
@@ -61,12 +41,11 @@ ownership:
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569812651
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!sb3m8C6v2gQRmMlu'
 

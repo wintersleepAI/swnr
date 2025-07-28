@@ -6,7 +6,10 @@ description: >-
   Interaction</p><p>3). What they get out of acquantince</p><p>4). How well know
   each other</p><p>5). How first met</p><p>6). What they can do for you</p>
 results:
-  - type: document
+  - text: Contact General Social Circles
+    type: 1
+    documentCollection: RollTable
+    documentId: n3FBAJnYisUKYzVe
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -15,21 +18,11 @@ results:
     drawn: false
     _id: dZ0EW2zBt4tkxwHh
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Contact General Social Circles
-    documentUuid: RollTable.n3FBAJnYisUKYzVe
-    description: ''
     _key: '!tables.results!YjApHmDxCsdOTSjo.dZ0EW2zBt4tkxwHh'
-  - type: document
+  - text: Contact Last Significant Interaction
+    type: 1
+    documentCollection: RollTable
+    documentId: YjCO3BSRQw7diCwK
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -38,21 +31,11 @@ results:
     drawn: false
     _id: wT5m9n7UKnuwMrcW
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Contact Last Significant Interaction
-    documentUuid: RollTable.YjCO3BSRQw7diCwK
-    description: ''
     _key: '!tables.results!YjApHmDxCsdOTSjo.wT5m9n7UKnuwMrcW'
-  - type: document
+  - text: Contact What They get out of this?
+    type: 1
+    documentCollection: RollTable
+    documentId: 3o5qeLAcbfMRtatW
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -61,21 +44,11 @@ results:
     drawn: false
     _id: 74tEsvVAyZZIPqGO
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Contact What They get out of this?
-    documentUuid: RollTable.3o5qeLAcbfMRtatW
-    description: ''
     _key: '!tables.results!YjApHmDxCsdOTSjo.74tEsvVAyZZIPqGO'
-  - type: document
+  - text: Contact How Well do you Know Them?
+    type: 1
+    documentCollection: RollTable
+    documentId: BnImIQqyydlPnQoZ
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -84,21 +57,11 @@ results:
     drawn: false
     _id: 5yOfcqKxRHLcfzll
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Contact How Well do you Know Them?
-    documentUuid: RollTable.BnImIQqyydlPnQoZ
-    description: ''
     _key: '!tables.results!YjApHmDxCsdOTSjo.5yOfcqKxRHLcfzll'
-  - type: document
+  - text: Contact How First Met
+    type: 1
+    documentCollection: RollTable
+    documentId: 13czr5kIgbUfLqeV
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -107,21 +70,11 @@ results:
     drawn: false
     _id: X6tSB9Q7rWs84whF
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Contact How First Met
-    documentUuid: RollTable.13czr5kIgbUfLqeV
-    description: ''
     _key: '!tables.results!YjApHmDxCsdOTSjo.X6tSB9Q7rWs84whF'
-  - type: document
+  - text: Contact What they can do for You
+    type: 1
+    documentCollection: RollTable
+    documentId: aEIsJCCT9ZZ2Wg8u
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -130,19 +83,6 @@ results:
     drawn: false
     _id: M7KHJnKdoEOHsL5v
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Contact What they can do for You
-    documentUuid: RollTable.aEIsJCCT9ZZ2Wg8u
-    description: ''
     _key: '!tables.results!YjApHmDxCsdOTSjo.M7KHJnKdoEOHsL5v'
 formula: 1d1
 _id: YjApHmDxCsdOTSjo
@@ -154,13 +94,10 @@ flags: {}
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '13.346'
+  coreVersion: '11.315'
   createdTime: 1703883524198
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
 sort: 0
 ownership:
   default: 0

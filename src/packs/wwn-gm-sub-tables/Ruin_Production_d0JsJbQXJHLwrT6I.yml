@@ -3,6 +3,7 @@ name: Ruin-Production
 img: icons/svg/d20-grey.svg
 results:
   - type: text
+    text: Illicit manufactory for illegal goods
     weight: 1
     range:
       - 1
@@ -11,20 +12,10 @@ results:
     _id: dif5cw1kgm5vlwwg
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Illicit manufactory for illegal goods
-    name: ''
+    documentId: null
     _key: '!tables.results!d0JsJbQXJHLwrT6I.dif5cw1kgm5vlwwg'
   - type: text
+    text: Sacred shrine for holy product
     weight: 1
     range:
       - 2
@@ -33,20 +24,10 @@ results:
     _id: pzxxc5crky0hb8kr
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Sacred shrine for holy product
-    name: ''
+    documentId: null
     _key: '!tables.results!d0JsJbQXJHLwrT6I.pzxxc5crky0hb8kr'
   - type: text
+    text: Destroyed camp or extraction site
     weight: 1
     range:
       - 3
@@ -55,20 +36,10 @@ results:
     _id: l6fnphm9prf8lwxc
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Destroyed camp or extraction site
-    name: ''
+    documentId: null
     _key: '!tables.results!d0JsJbQXJHLwrT6I.l6fnphm9prf8lwxc'
   - type: text
+    text: Inexplicable ancient manufactory
     weight: 1
     range:
       - 4
@@ -77,20 +48,10 @@ results:
     _id: 4sbbzgizn6xm8ldy
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Inexplicable ancient manufactory
-    name: ''
+    documentId: null
     _key: '!tables.results!d0JsJbQXJHLwrT6I.4sbbzgizn6xm8ldy'
   - type: text
+    text: Outsider goods production site
     weight: 1
     range:
       - 5
@@ -99,20 +60,10 @@ results:
     _id: xrarwahjm6abod03
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Outsider goods production site
-    name: ''
+    documentId: null
     _key: '!tables.results!d0JsJbQXJHLwrT6I.xrarwahjm6abod03'
   - type: text
+    text: Magical production facility
     weight: 1
     range:
       - 6
@@ -121,20 +72,10 @@ results:
     _id: 0ratfox0evmeilyc
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Magical production facility
-    name: ''
+    documentId: null
     _key: '!tables.results!d0JsJbQXJHLwrT6I.0ratfox0evmeilyc'
   - type: text
+    text: Mine or open pit for excavation
     weight: 1
     range:
       - 7
@@ -143,20 +84,10 @@ results:
     _id: szp853o9sgfz53io
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Mine or open pit for excavation
-    name: ''
+    documentId: null
     _key: '!tables.results!d0JsJbQXJHLwrT6I.szp853o9sgfz53io'
   - type: text
+    text: Overgrown ancient plantation
     weight: 1
     range:
       - 8
@@ -165,20 +96,10 @@ results:
     _id: coq9i0mdf5im7vxg
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Overgrown ancient plantation
-    name: ''
+    documentId: null
     _key: '!tables.results!d0JsJbQXJHLwrT6I.coq9i0mdf5im7vxg'
   - type: text
+    text: Managed woodland gone feral
     weight: 1
     range:
       - 9
@@ -187,20 +108,10 @@ results:
     _id: 5ka3xmjhth3gzpha
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Managed woodland gone feral
-    name: ''
+    documentId: null
     _key: '!tables.results!d0JsJbQXJHLwrT6I.5ka3xmjhth3gzpha'
   - type: text
+    text: Farm for now-feral valuable beasts
     weight: 1
     range:
       - 10
@@ -209,20 +120,10 @@ results:
     _id: rqs1nwnai7901ost
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Farm for now-feral valuable beasts
-    name: ''
+    documentId: null
     _key: '!tables.results!d0JsJbQXJHLwrT6I.rqs1nwnai7901ost'
   - type: text
+    text: Repurposed ancient manufactory
     weight: 1
     range:
       - 11
@@ -231,20 +132,10 @@ results:
     _id: 6aqd7c8kwkqyry46
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Repurposed ancient manufactory
-    name: ''
+    documentId: null
     _key: '!tables.results!d0JsJbQXJHLwrT6I.6aqd7c8kwkqyry46'
   - type: text
+    text: Fishery or salt extraction site
     weight: 1
     range:
       - 12
@@ -253,18 +144,7 @@ results:
     _id: j044gmtn3vf1jlpd
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Fishery or salt extraction site
-    name: ''
+    documentId: null
     _key: '!tables.results!d0JsJbQXJHLwrT6I.j044gmtn3vf1jlpd'
 formula: 1d12
 replacement: true
@@ -279,12 +159,11 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!d0JsJbQXJHLwrT6I'
 

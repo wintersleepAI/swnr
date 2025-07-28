@@ -12,58 +12,38 @@ results:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Armor Bonus, Major
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Armor Bonus, Major
-    documentUuid: Compendium.wwn.magic-tables.OzBWUwFIqCgpywLc
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: OzBWUwFIqCgpywLc
     _key: '!tables.results!kq55LHVtcIN4nLgn.H6HCJKgRJ1MYCDxk'
   - _id: DZbzx1yPqWYeOZoe
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Armor SA, Major
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Armor SA, Major
-    documentUuid: Compendium.wwn.magic-tables.qiIOpJe7I7RSTtlH
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: qiIOpJe7I7RSTtlH
     _key: '!tables.results!kq55LHVtcIN4nLgn.DZbzx1yPqWYeOZoe'
 formula: 1d1
 replacement: true
 displayRoll: true
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   systemId: null
   systemVersion: null
   createdTime: null
@@ -71,7 +51,6 @@ _stats:
   lastModifiedBy: null
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3

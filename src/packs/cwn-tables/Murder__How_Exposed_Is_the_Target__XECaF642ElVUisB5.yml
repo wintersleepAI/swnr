@@ -3,93 +3,53 @@ name: 'Murder: How Exposed Is the Target?'
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: x0dUijhHxmdrKZ64
+    text: Under constant guard at a remote location
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Under constant guard at a remote location
-    name: ''
     _key: '!tables.results!XECaF642ElVUisB5.x0dUijhHxmdrKZ64'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: nszjQJRmrnrlVlRB
+    text: Is closely guarded whenever in public
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Is closely guarded whenever in public
-    name: ''
     _key: '!tables.results!XECaF642ElVUisB5.nszjQJRmrnrlVlRB'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: nknRJ5bUejgTNbCB
+    text: Has guards nearby in sensitive situations
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Has guards nearby in sensitive situations
-    name: ''
     _key: '!tables.results!XECaF642ElVUisB5.nknRJ5bUejgTNbCB'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: cRoIjWvJXvGcEjx4
+    text: Is currently surprisingly ill-protected
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Is currently surprisingly ill-protected
-    name: ''
     _key: '!tables.results!XECaF642ElVUisB5.cRoIjWvJXvGcEjx4'
 replacement: true
 displayRoll: true
@@ -98,13 +58,10 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '13.346'
+  coreVersion: '11.315'
   createdTime: 1703892045233
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
 formula: 1d4
 _id: XECaF642ElVUisB5
 sort: 0

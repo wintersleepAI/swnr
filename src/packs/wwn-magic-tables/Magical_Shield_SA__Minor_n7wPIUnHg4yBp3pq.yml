@@ -6,7 +6,8 @@ flags:
     table-currency-string: ''
     loot-actor-name: ''
     loot-amount-key: ''
-  core: {}
+  core:
+    sourceId: RollTable.I5XpJocjcsqY7zcS
 img: icons/svg/d20-grey.svg
 description: ''
 results:
@@ -15,40 +16,29 @@ results:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Armor and Shield Abilities
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 20
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Armor and Shield Abilities
-    documentUuid: Compendium.wwn.magic-tables.pPZG8CuQQKPynEFb
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: pPZG8CuQQKPynEFb
     _key: '!tables.results!n7wPIUnHg4yBp3pq.u9lmxfYTcelSjQ6X'
 formula: 1d20
 replacement: true
 displayRoll: true
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   systemId: null
   systemVersion: null
   createdTime: null
   modifiedTime: null
   lastModifiedBy: null
-  compendiumSource: RollTable.I5XpJocjcsqY7zcS
+  compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3

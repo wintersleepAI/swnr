@@ -9,115 +9,65 @@ description: >-
   object’s value. Better rates require a Contact or other special efforts, in
   which case up to 25% of the item’s worth can be obtained.</p>
 results:
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: guGk9SnuvMxI5VHx
+    text: None
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: None
-    name: ''
     _key: '!tables.results!LcZ8SSM72sMGTE2l.guGk9SnuvMxI5VHx'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 3
       - 4
     drawn: false
     _id: 2iWyChD4ECJ9rTXI
+    text: +50%
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: +50%
-    name: ''
     _key: '!tables.results!LcZ8SSM72sMGTE2l.2iWyChD4ECJ9rTXI'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 5
       - 9
     drawn: false
     _id: iH3hLzmbVtknKynC
+    text: +100%
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: +100%
-    name: ''
     _key: '!tables.results!LcZ8SSM72sMGTE2l.iH3hLzmbVtknKynC'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 10
       - 11
     drawn: false
     _id: lMNtxfM9oxuaIHKW
+    text: +150%
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: +150%
-    name: ''
     _key: '!tables.results!LcZ8SSM72sMGTE2l.lMNtxfM9oxuaIHKW'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 12
       - 12
     drawn: false
     _id: mfpx7DKrIe2p4zxT
+    text: +200%
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: +200%
-    name: ''
     _key: '!tables.results!LcZ8SSM72sMGTE2l.mfpx7DKrIe2p4zxT'
 replacement: true
 displayRoll: true
@@ -125,13 +75,10 @@ flags: {}
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '13.346'
+  coreVersion: '11.315'
   createdTime: 1703901313546
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
 formula: 2d6
 sort: 0
 ownership:

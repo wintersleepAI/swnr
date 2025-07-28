@@ -2,7 +2,13 @@ _id: x6etGYYrrVZCt1hP
 description: ''
 displayRoll: true
 flags:
-  core: {}
+  core:
+    sourceId: RollTable.ZvXbgyCbBiD2NptU
+  exportSource:
+    coreVersion: 0.8.8
+    system: swnr
+    systemVersion: 0.5.0
+    world: a
 folder: null
 formula: 1d4
 img: icons/svg/d20-grey.svg
@@ -16,20 +22,10 @@ results:
     range:
       - 1
       - 1
+    text: 'Background: The local underclass or poorest natives'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Background: The local underclass or poorest natives'
-    name: ''
+    documentId: null
     _key: '!tables.results!x6etGYYrrVZCt1hP.o7k1MlGQX9Qrn5JH'
   - _id: CoaqpDTqLHENvWFn
     drawn: false
@@ -38,20 +34,10 @@ results:
     range:
       - 2
       - 2
+    text: 'Background: Common laborers or cube workers'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Background: Common laborers or cube workers'
-    name: ''
+    documentId: null
     _key: '!tables.results!x6etGYYrrVZCt1hP.CoaqpDTqLHENvWFn'
   - _id: I3Q2alrTTTkW9ltT
     drawn: false
@@ -60,20 +46,10 @@ results:
     range:
       - 3
       - 3
+    text: 'Background: Aspiring bourgeoise or upper class'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Background: Aspiring bourgeoise or upper class'
-    name: ''
+    documentId: null
     _key: '!tables.results!x6etGYYrrVZCt1hP.I3Q2alrTTTkW9ltT'
   - _id: mAzFKzVS4WJIPbXv
     drawn: false
@@ -82,37 +58,21 @@ results:
     range:
       - 4
       - 4
+    text: 'Background: The elite of this society'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Background: The elite of this society'
-    name: ''
+    documentId: null
     _key: '!tables.results!x6etGYYrrVZCt1hP.mAzFKzVS4WJIPbXv'
 sort: 0
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.325'
   systemId: null
   systemVersion: null
   createdTime: null
   modifiedTime: null
   lastModifiedBy: null
-  compendiumSource: RollTable.ZvXbgyCbBiD2NptU
+  compendiumSource: null
   duplicateSource: null
-  exportSource:
-    worldId: a
-    uuid: null
-    coreVersion: 0.8.8
-    systemId: swnr
-    systemVersion: 0.5.0
 ownership:
   P3lRTKxUBvk8Gei6: 3
   default: 0

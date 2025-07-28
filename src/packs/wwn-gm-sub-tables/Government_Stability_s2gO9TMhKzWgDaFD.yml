@@ -6,90 +6,50 @@ results:
   - _id: 2BgrK7OruHdB3PB3
     flags: {}
     type: text
+    text: Precarious, its authority questioned by some
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Precarious, its authority questioned by some
-    name: ''
+    documentId: null
     _key: '!tables.results!s2gO9TMhKzWgDaFD.2BgrK7OruHdB3PB3'
   - _id: YFfSfQX59DM3MSAq
     flags: {}
     type: text
+    text: It has significant problems, but it functions
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It has significant problems, but it functions
-    name: ''
+    documentId: null
     _key: '!tables.results!s2gO9TMhKzWgDaFD.YFfSfQX59DM3MSAq'
   - _id: 8U2aI43aZve17AG1
     flags: {}
     type: text
+    text: Relatively stable, with strong legitimacy
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Relatively stable, with strong legitimacy
-    name: ''
+    documentId: null
     _key: '!tables.results!s2gO9TMhKzWgDaFD.8U2aI43aZve17AG1'
   - _id: LRu0TwkZTmD89SiN
     flags: {}
     type: text
+    text: Stable, able to endure even fierce shocks
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Stable, able to endure even fierce shocks
-    name: ''
+    documentId: null
     _key: '!tables.results!s2gO9TMhKzWgDaFD.LRu0TwkZTmD89SiN'
 formula: 1d4
 replacement: true
@@ -104,12 +64,11 @@ ownership:
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!s2gO9TMhKzWgDaFD'
 

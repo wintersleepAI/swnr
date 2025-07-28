@@ -8,6 +8,7 @@ description: >-
 results:
   - _id: mXpY25pT0grpkPyS
     type: text
+    text: <b>Important Inhabitants</b>
     weight: 1
     range:
       - 1
@@ -15,21 +16,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>Important Inhabitants</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!fpOK3on7vvI7mzHc.mXpY25pT0grpkPyS'
   - _id: lJpBsBzav2jlBgB1
-    type: document
+    type: pack
+    text: Frame-Inhabitants
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -37,22 +28,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Frame-Inhabitants
-    documentUuid: Compendium.wwn.gm-subtables.9qD60NfjUfz8tDgt
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: 9qD60NfjUfz8tDgt
     _key: '!tables.results!fpOK3on7vvI7mzHc.lJpBsBzav2jlBgB1'
   - _id: wanBRZv6OzxiC6JE
     type: text
+    text: <b>Possible Causes for Alliances</b>
     weight: 1
     range:
       - 1
@@ -60,21 +41,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>Possible Causes for Alliances</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!fpOK3on7vvI7mzHc.wanBRZv6OzxiC6JE'
   - _id: 7PfF2Wo1LGJB9Igv
-    type: document
+    type: pack
+    text: Frame-Alliance
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -82,22 +53,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Frame-Alliance
-    documentUuid: Compendium.wwn.gm-subtables.z9G7h7BPWNRptelc
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: z9G7h7BPWNRptelc
     _key: '!tables.results!fpOK3on7vvI7mzHc.7PfF2Wo1LGJB9Igv'
   - _id: 2wYQf8oOPxTdlgpS
     type: text
+    text: <b>Possible Causes for Hostility</b>
     weight: 1
     range:
       - 1
@@ -105,21 +66,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>Possible Causes for Hostility</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!fpOK3on7vvI7mzHc.2wYQf8oOPxTdlgpS'
   - _id: qKFsGrApmfqvgx4P
-    type: document
+    type: pack
+    text: Frame-Hostility
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -127,22 +78,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Frame-Hostility
-    documentUuid: Compendium.wwn.gm-subtables.KdCTJHRyWT4egCTJ
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: KdCTJHRyWT4egCTJ
     _key: '!tables.results!fpOK3on7vvI7mzHc.qKFsGrApmfqvgx4P'
   - _id: a77pKvcDP4DDls3f
     type: text
+    text: <b>Why Did They Come Here?</b>
     weight: 1
     range:
       - 1
@@ -150,21 +91,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>Why Did They Come Here?</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!fpOK3on7vvI7mzHc.a77pKvcDP4DDls3f'
   - _id: v10MKmU0kC914ONe
-    type: document
+    type: pack
+    text: Frame-Arrive
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -172,22 +103,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Frame-Arrive
-    documentUuid: Compendium.wwn.gm-subtables.NmnQjz3CKiOtkCFm
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: NmnQjz3CKiOtkCFm
     _key: '!tables.results!fpOK3on7vvI7mzHc.v10MKmU0kC914ONe'
   - _id: 6zKnA134qjyhSbfG
     type: text
+    text: <b>Why Are They Staying Here?</b>
     weight: 1
     range:
       - 1
@@ -195,21 +116,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>Why Are They Staying Here?</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!fpOK3on7vvI7mzHc.6zKnA134qjyhSbfG'
   - _id: wrIm2gaeFVh7ZwIL
-    type: document
+    type: pack
+    text: Frame-Stay
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -217,19 +128,8 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Frame-Stay
-    documentUuid: Compendium.wwn.gm-subtables.07slhaavL0Y2GlC8
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: 07slhaavL0Y2GlC8
     _key: '!tables.results!fpOK3on7vvI7mzHc.wrIm2gaeFVh7ZwIL'
 formula: 1d1
 replacement: true
@@ -243,12 +143,11 @@ ownership:
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569812651
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!fpOK3on7vvI7mzHc'
 

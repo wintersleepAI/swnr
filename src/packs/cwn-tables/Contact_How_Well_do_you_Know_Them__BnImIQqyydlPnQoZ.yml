@@ -4,93 +4,53 @@ _id: BnImIQqyydlPnQoZ
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: PnnewI2oyQ1iVXIZ
+    text: You just met them within the past month
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: You just met them within the past month
-    name: ''
     _key: '!tables.results!BnImIQqyydlPnQoZ.PnnewI2oyQ1iVXIZ'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: t7iABHgim6ZcSDqg
+    text: You’ve known them for several jobs so far
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: You’ve known them for several jobs so far
-    name: ''
     _key: '!tables.results!BnImIQqyydlPnQoZ.t7iABHgim6ZcSDqg'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: 1dB4emfAh7k09bYA
+    text: You go back a long time together
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: You go back a long time together
-    name: ''
     _key: '!tables.results!BnImIQqyydlPnQoZ.1dB4emfAh7k09bYA'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: 7eKlbpf9THoVwKtg
+    text: You’ve known them since you were young
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: You’ve known them since you were young
-    name: ''
     _key: '!tables.results!BnImIQqyydlPnQoZ.7eKlbpf9THoVwKtg'
 replacement: true
 displayRoll: true
@@ -98,13 +58,10 @@ flags: {}
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '13.346'
+  coreVersion: '11.315'
   createdTime: 1703881840613
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
 formula: 1d4
 sort: 0
 ownership:

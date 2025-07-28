@@ -3,7 +3,8 @@ name: Tags, Ruin
 img: icons/svg/d20-grey.svg
 results:
   - _id: 8DgGpeHzo4X6hTFQ
-    type: document
+    type: pack
+    text: Ancient Archives
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -11,22 +12,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Ancient Archives
-    documentUuid: Compendium.wwn.tags.uON5ihbcSMYbzf0t
-    description: ''
+    documentCollection: wwn.tags
+    documentId: uON5ihbcSMYbzf0t
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.8DgGpeHzo4X6hTFQ'
   - _id: CiFNYluXHg4EE4uX
-    type: document
+    type: pack
+    text: Aspiring Conqueror
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -34,22 +25,12 @@ results:
       - 2
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Aspiring Conqueror
-    documentUuid: Compendium.wwn.tags.a691l3EcHrPkpNdK
-    description: ''
+    documentCollection: wwn.tags
+    documentId: a691l3EcHrPkpNdK
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.CiFNYluXHg4EE4uX'
   - _id: 3zNNIDPhO7wjCmZX
-    type: document
+    type: pack
+    text: Automaton Servants
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -57,22 +38,12 @@ results:
       - 3
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Automaton Servants
-    documentUuid: Compendium.wwn.tags.KHQmWrue6znAtUeI
-    description: ''
+    documentCollection: wwn.tags
+    documentId: KHQmWrue6znAtUeI
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.3zNNIDPhO7wjCmZX'
   - _id: WO9VpNGYi3yNdbWj
-    type: document
+    type: pack
+    text: Birthing Cyst
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -80,22 +51,12 @@ results:
       - 4
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Birthing Cyst
-    documentUuid: Compendium.wwn.tags.yfqZCuY9Msafs7NN
-    description: ''
+    documentCollection: wwn.tags
+    documentId: yfqZCuY9Msafs7NN
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.WO9VpNGYi3yNdbWj'
   - _id: TElnY0YrLQ1i0oLG
-    type: document
+    type: pack
+    text: Bitter Remnants
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -103,22 +64,12 @@ results:
       - 5
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Bitter Remnants
-    documentUuid: Compendium.wwn.tags.OZGwvYhdYLZIpcEa
-    description: ''
+    documentCollection: wwn.tags
+    documentId: OZGwvYhdYLZIpcEa
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.TElnY0YrLQ1i0oLG'
   - _id: ke3F0wi8k695WszV
-    type: document
+    type: pack
+    text: Civil War
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -126,22 +77,12 @@ results:
       - 6
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Civil War
-    documentUuid: Compendium.wwn.tags.IqwQfaVVAcDb98lX
-    description: ''
+    documentCollection: wwn.tags
+    documentId: IqwQfaVVAcDb98lX
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.ke3F0wi8k695WszV'
   - _id: Hmz53TLwYn0nlPoh
-    type: document
+    type: pack
+    text: Cyclical Doom
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -149,22 +90,12 @@ results:
       - 7
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Cyclical Doom
-    documentUuid: Compendium.wwn.tags.3cQ6rLUCses1ugI4
-    description: ''
+    documentCollection: wwn.tags
+    documentId: 3cQ6rLUCses1ugI4
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.Hmz53TLwYn0nlPoh'
   - _id: cuIumYlTa0Hm6KNg
-    type: document
+    type: pack
+    text: Decrepit Structure
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -172,22 +103,12 @@ results:
       - 8
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Decrepit Structure
-    documentUuid: Compendium.wwn.tags.aIQNCD33n68FiHDF
-    description: ''
+    documentCollection: wwn.tags
+    documentId: aIQNCD33n68FiHDF
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.cuIumYlTa0Hm6KNg'
   - _id: uJI6h6RrSfhPF9wm
-    type: document
+    type: pack
+    text: Desperate Hunger
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -195,22 +116,12 @@ results:
       - 9
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Desperate Hunger
-    documentUuid: Compendium.wwn.tags.dwubrG9b0FLhljzf
-    description: ''
+    documentCollection: wwn.tags
+    documentId: dwubrG9b0FLhljzf
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.uJI6h6RrSfhPF9wm'
   - _id: DhPz3QFzudAxf8nK
-    type: document
+    type: pack
+    text: Dire Tombs
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -218,22 +129,12 @@ results:
       - 10
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Dire Tombs
-    documentUuid: Compendium.wwn.tags.epFwYjPBReiXDXfV
-    description: ''
+    documentCollection: wwn.tags
+    documentId: epFwYjPBReiXDXfV
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.DhPz3QFzudAxf8nK'
   - _id: sjg18NvNwPkdpShs
-    type: document
+    type: pack
+    text: Distant Gate
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -241,22 +142,12 @@ results:
       - 11
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Distant Gate
-    documentUuid: Compendium.wwn.tags.xdiABio9E52GZmUC
-    description: ''
+    documentCollection: wwn.tags
+    documentId: xdiABio9E52GZmUC
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.sjg18NvNwPkdpShs'
   - _id: nZ3wCovrRFFcqhqV
-    type: document
+    type: pack
+    text: Dungeon Heart
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -264,22 +155,12 @@ results:
       - 12
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Dungeon Heart
-    documentUuid: Compendium.wwn.tags.i7poDrJmWon6aFii
-    description: ''
+    documentCollection: wwn.tags
+    documentId: i7poDrJmWon6aFii
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.nZ3wCovrRFFcqhqV'
   - _id: AeTskUBDF12eIMUS
-    type: document
+    type: pack
+    text: Experimental Lab
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -287,22 +168,12 @@ results:
       - 13
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Experimental Lab
-    documentUuid: Compendium.wwn.tags.SLmO6oBpdXFUVBNK
-    description: ''
+    documentCollection: wwn.tags
+    documentId: SLmO6oBpdXFUVBNK
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.AeTskUBDF12eIMUS'
   - _id: wlYWpPXzTqoValnp
-    type: document
+    type: pack
+    text: Failed Intrusion
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -310,22 +181,12 @@ results:
       - 14
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Failed Intrusion
-    documentUuid: Compendium.wwn.tags.vHdIvT6o84WcDGSo
-    description: ''
+    documentCollection: wwn.tags
+    documentId: vHdIvT6o84WcDGSo
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.wlYWpPXzTqoValnp'
   - _id: yjQMMno3jDrXdeAy
-    type: document
+    type: pack
+    text: Fallen Sanctuary
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -333,22 +194,12 @@ results:
       - 15
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Fallen Sanctuary
-    documentUuid: Compendium.wwn.tags.SJE2QfldgSORUoJG
-    description: ''
+    documentCollection: wwn.tags
+    documentId: SJE2QfldgSORUoJG
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.yjQMMno3jDrXdeAy'
   - _id: qKuCsuSrzP3mdnm5
-    type: document
+    type: pack
+    text: False Front
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -356,22 +207,12 @@ results:
       - 16
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: False Front
-    documentUuid: Compendium.wwn.tags.i6DSNYMHBCKgVxOp
-    description: ''
+    documentCollection: wwn.tags
+    documentId: i6DSNYMHBCKgVxOp
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.qKuCsuSrzP3mdnm5'
   - _id: a2Zjv7DRc27uXB5Z
-    type: document
+    type: pack
+    text: Feral Magic
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -379,22 +220,12 @@ results:
       - 17
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Feral Magic
-    documentUuid: Compendium.wwn.tags.oc8CBmrlvgx7BpCm
-    description: ''
+    documentCollection: wwn.tags
+    documentId: oc8CBmrlvgx7BpCm
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.a2Zjv7DRc27uXB5Z'
   - _id: PzfBPV10ylqXvSVC
-    type: document
+    type: pack
+    text: Flooded Halls
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -402,22 +233,12 @@ results:
       - 18
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Flooded Halls
-    documentUuid: Compendium.wwn.tags.Um5yQjgl0WFYtYkt
-    description: ''
+    documentCollection: wwn.tags
+    documentId: Um5yQjgl0WFYtYkt
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.PzfBPV10ylqXvSVC'
   - _id: defCMW2UOoLFgJJa
-    type: document
+    type: pack
+    text: Freshly Looted
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -425,22 +246,12 @@ results:
       - 19
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Freshly Looted
-    documentUuid: Compendium.wwn.tags.5hAAdGv9A3irdvWC
-    description: ''
+    documentCollection: wwn.tags
+    documentId: 5hAAdGv9A3irdvWC
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.defCMW2UOoLFgJJa'
   - _id: BCx9JGl41BskxDEJ
-    type: document
+    type: pack
+    text: Friendly Foes
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -448,22 +259,12 @@ results:
       - 20
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Friendly Foes
-    documentUuid: Compendium.wwn.tags.tb7FuUgADER1e21s
-    description: ''
+    documentCollection: wwn.tags
+    documentId: tb7FuUgADER1e21s
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.BCx9JGl41BskxDEJ'
   - _id: 8VwLw3zTQu7Elg1c
-    type: document
+    type: pack
+    text: Hidden Within
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -471,22 +272,12 @@ results:
       - 21
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Hidden Within
-    documentUuid: Compendium.wwn.tags.3eXR0wM6lLZCDfIF
-    description: ''
+    documentCollection: wwn.tags
+    documentId: 3eXR0wM6lLZCDfIF
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.8VwLw3zTQu7Elg1c'
   - _id: j5YOG2zkaJZcdItV
-    type: document
+    type: pack
+    text: Hiveminded Natives
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -494,22 +285,12 @@ results:
       - 22
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Hiveminded Natives
-    documentUuid: Compendium.wwn.tags.Wbk9H8VPs8CzETUT
-    description: ''
+    documentCollection: wwn.tags
+    documentId: Wbk9H8VPs8CzETUT
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.j5YOG2zkaJZcdItV'
   - _id: UQ2skY61EnJB1ul8
-    type: document
+    type: pack
+    text: Hospitable Natives
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -517,22 +298,12 @@ results:
       - 23
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Hospitable Natives
-    documentUuid: Compendium.wwn.tags.eNlnJDaw2VZCSYRH
-    description: ''
+    documentCollection: wwn.tags
+    documentId: eNlnJDaw2VZCSYRH
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.UQ2skY61EnJB1ul8'
   - _id: zXS72L9DjXfInMOK
-    type: document
+    type: pack
+    text: Hostile Environment
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -540,22 +311,12 @@ results:
       - 24
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Hostile Environment
-    documentUuid: Compendium.wwn.tags.4ptwizWVwI0hIFPW
-    description: ''
+    documentCollection: wwn.tags
+    documentId: 4ptwizWVwI0hIFPW
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.zXS72L9DjXfInMOK'
   - _id: 5nitZoVXN9ldHo8V
-    type: document
+    type: pack
+    text: Infectious Miasma
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -563,22 +324,12 @@ results:
       - 25
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Infectious Miasma
-    documentUuid: Compendium.wwn.tags.GPNkc2PVKj2hnXmN
-    description: ''
+    documentCollection: wwn.tags
+    documentId: GPNkc2PVKj2hnXmN
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.5nitZoVXN9ldHo8V'
   - _id: FacxKHDrdkKtKNl7
-    type: document
+    type: pack
+    text: Invincible Delusion
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -586,22 +337,12 @@ results:
       - 26
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Invincible Delusion
-    documentUuid: Compendium.wwn.tags.Ku1Oppfjk47IrdnX
-    description: ''
+    documentCollection: wwn.tags
+    documentId: Ku1Oppfjk47IrdnX
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.FacxKHDrdkKtKNl7'
   - _id: lpDVaC7KY9SMOK4P
-    type: document
+    type: pack
+    text: Lethal Treasure
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -609,22 +350,12 @@ results:
       - 27
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Lethal Treasure
-    documentUuid: Compendium.wwn.tags.Nbg69H85xvsb7qvV
-    description: ''
+    documentCollection: wwn.tags
+    documentId: Nbg69H85xvsb7qvV
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.lpDVaC7KY9SMOK4P'
   - _id: G99BP42QjHs2nZw9
-    type: document
+    type: pack
+    text: Limited Access
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -632,22 +363,12 @@ results:
       - 28
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Limited Access
-    documentUuid: Compendium.wwn.tags.vQNBCzAyVjnD9hvF
-    description: ''
+    documentCollection: wwn.tags
+    documentId: vQNBCzAyVjnD9hvF
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.G99BP42QjHs2nZw9'
   - _id: EUsm7WY8LlE9Irq9
-    type: document
+    type: pack
+    text: Lingering Curse
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -655,22 +376,12 @@ results:
       - 29
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Lingering Curse
-    documentUuid: Compendium.wwn.tags.XR9d0qQLOw5b760F
-    description: ''
+    documentCollection: wwn.tags
+    documentId: XR9d0qQLOw5b760F
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.EUsm7WY8LlE9Irq9'
   - _id: JwmvilxlioWJiHN4
-    type: document
+    type: pack
+    text: Living Dungeon
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -678,22 +389,12 @@ results:
       - 30
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Living Dungeon
-    documentUuid: Compendium.wwn.tags.X7y5iAO1NcaD4pqC
-    description: ''
+    documentCollection: wwn.tags
+    documentId: X7y5iAO1NcaD4pqC
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.JwmvilxlioWJiHN4'
   - _id: ipTRq8NqXMfJ5IR5
-    type: document
+    type: pack
+    text: Lost Colony
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -701,22 +402,12 @@ results:
       - 31
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Lost Colony
-    documentUuid: Compendium.wwn.tags.2SSdu658sRV1ZKSE
-    description: ''
+    documentCollection: wwn.tags
+    documentId: 2SSdu658sRV1ZKSE
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.ipTRq8NqXMfJ5IR5'
   - _id: hPydTNHrmBtwhui9
-    type: document
+    type: pack
+    text: Magical Wonder
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -724,22 +415,12 @@ results:
       - 32
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Wonder
-    documentUuid: Compendium.wwn.tags.C2w5ixRPuwJo7xW5
-    description: ''
+    documentCollection: wwn.tags
+    documentId: C2w5ixRPuwJo7xW5
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.hPydTNHrmBtwhui9'
   - _id: psErofJUlJspyaJr
-    type: document
+    type: pack
+    text: Monster Forge
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -747,22 +428,12 @@ results:
       - 33
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Monster Forge
-    documentUuid: Compendium.wwn.tags.IEaPuxkvbH1YyVjk
-    description: ''
+    documentCollection: wwn.tags
+    documentId: IEaPuxkvbH1YyVjk
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.psErofJUlJspyaJr'
   - _id: 4KGy1F738XAQCP6B
-    type: document
+    type: pack
+    text: Outsider Domain
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -770,22 +441,12 @@ results:
       - 34
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Outsider Domain
-    documentUuid: Compendium.wwn.tags.DrS16fhDU82rIk1q
-    description: ''
+    documentCollection: wwn.tags
+    documentId: DrS16fhDU82rIk1q
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.4KGy1F738XAQCP6B'
   - _id: ofFA64hT5NkYhwO8
-    type: document
+    type: pack
+    text: Precious Resource
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -793,22 +454,12 @@ results:
       - 35
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Precious Resource
-    documentUuid: Compendium.wwn.tags.Bcsj1VqanDaKcZSW
-    description: ''
+    documentCollection: wwn.tags
+    documentId: Bcsj1VqanDaKcZSW
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.ofFA64hT5NkYhwO8'
   - _id: IavVePw7h9gIDid5
-    type: document
+    type: pack
+    text: Raider Lair
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -816,22 +467,12 @@ results:
       - 36
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Raider Lair
-    documentUuid: Compendium.wwn.tags.55yexSE1tE9SOBJ2
-    description: ''
+    documentCollection: wwn.tags
+    documentId: 55yexSE1tE9SOBJ2
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.IavVePw7h9gIDid5'
   - _id: RIt61C3q74lI5MqP
-    type: document
+    type: pack
+    text: Recruiting Drive
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -839,22 +480,12 @@ results:
       - 37
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Recruiting Drive
-    documentUuid: Compendium.wwn.tags.hCaZe0Hn7IIGiIuP
-    description: ''
+    documentCollection: wwn.tags
+    documentId: hCaZe0Hn7IIGiIuP
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.RIt61C3q74lI5MqP'
   - _id: MKTbEkar22Qzbkl8
-    type: document
+    type: pack
+    text: Religious Zealots
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -862,22 +493,12 @@ results:
       - 38
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Religious Zealots
-    documentUuid: Compendium.wwn.tags.3LNnEOKIKr9tgace
-    description: ''
+    documentCollection: wwn.tags
+    documentId: 3LNnEOKIKr9tgace
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.MKTbEkar22Qzbkl8'
   - _id: 4FBDxZJgo61aZkmM
-    type: document
+    type: pack
+    text: Rigid Hierarchy
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -885,22 +506,12 @@ results:
       - 39
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Rigid Hierarchy
-    documentUuid: Compendium.wwn.tags.RpNEDywelhh5AYHr
-    description: ''
+    documentCollection: wwn.tags
+    documentId: RpNEDywelhh5AYHr
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.4FBDxZJgo61aZkmM'
   - _id: 9eknieDmFTHXCII0
-    type: document
+    type: pack
+    text: Royal Refuge
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -908,22 +519,12 @@ results:
       - 40
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Royal Refuge
-    documentUuid: Compendium.wwn.tags.fIuZFvoXU0pnMfBB
-    description: ''
+    documentCollection: wwn.tags
+    documentId: fIuZFvoXU0pnMfBB
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.9eknieDmFTHXCII0'
   - _id: WRZiZhRfOKp1W7Hs
-    type: document
+    type: pack
+    text: Sacrificial Bargain
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -931,22 +532,12 @@ results:
       - 41
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Sacrificial Bargain
-    documentUuid: Compendium.wwn.tags.aOwyjBI9esLTlCkE
-    description: ''
+    documentCollection: wwn.tags
+    documentId: aOwyjBI9esLTlCkE
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.WRZiZhRfOKp1W7Hs'
   - _id: 1WhQ3fXS8YPSRHZx
-    type: document
+    type: pack
+    text: Sealed Evil
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -954,22 +545,12 @@ results:
       - 42
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Sealed Evil
-    documentUuid: Compendium.wwn.tags.Dzj2R2yJGropVJU3
-    description: ''
+    documentCollection: wwn.tags
+    documentId: Dzj2R2yJGropVJU3
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.1WhQ3fXS8YPSRHZx'
   - _id: IaAKlk1DAeFYwQi0
-    type: document
+    type: pack
+    text: Secret Alliance
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -977,22 +558,12 @@ results:
       - 43
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Secret Alliance
-    documentUuid: Compendium.wwn.tags.AHyproow4jNiOh1q
-    description: ''
+    documentCollection: wwn.tags
+    documentId: AHyproow4jNiOh1q
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.IaAKlk1DAeFYwQi0'
   - _id: pxfAt6hvxa5ZMrMp
-    type: document
+    type: pack
+    text: Shifting Interior
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -1000,22 +571,12 @@ results:
       - 44
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Shifting Interior
-    documentUuid: Compendium.wwn.tags.MEsCFhwglUIvtyTz
-    description: ''
+    documentCollection: wwn.tags
+    documentId: MEsCFhwglUIvtyTz
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.pxfAt6hvxa5ZMrMp'
   - _id: jYAL1YvqaFW2EgOM
-    type: document
+    type: pack
+    text: Spatial Flux
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -1023,22 +584,12 @@ results:
       - 45
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Spatial Flux
-    documentUuid: Compendium.wwn.tags.DNwdmxZFAahIiK1e
-    description: ''
+    documentCollection: wwn.tags
+    documentId: DNwdmxZFAahIiK1e
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.jYAL1YvqaFW2EgOM'
   - _id: xkEDbcifX2wtChOt
-    type: document
+    type: pack
+    text: Surfacer Hideout
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -1046,22 +597,12 @@ results:
       - 46
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Surfacer Hideout
-    documentUuid: Compendium.wwn.tags.3RQdQfPmBgWEW27l
-    description: ''
+    documentCollection: wwn.tags
+    documentId: 3RQdQfPmBgWEW27l
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.xkEDbcifX2wtChOt'
   - _id: T38uWHEiqExEzXjE
-    type: document
+    type: pack
+    text: Taboo Place
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -1069,22 +610,12 @@ results:
       - 47
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Taboo Place
-    documentUuid: Compendium.wwn.tags.Pz6nTOEu6iUyKLtl
-    description: ''
+    documentCollection: wwn.tags
+    documentId: Pz6nTOEu6iUyKLtl
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.T38uWHEiqExEzXjE'
   - _id: yy9OMYs4OVCNfyPJ
-    type: document
+    type: pack
+    text: Things Below
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -1092,22 +623,12 @@ results:
       - 48
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Things Below
-    documentUuid: Compendium.wwn.tags.5q2wuqOeJ5xnjk5P
-    description: ''
+    documentCollection: wwn.tags
+    documentId: 5q2wuqOeJ5xnjk5P
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.yy9OMYs4OVCNfyPJ'
   - _id: AXs8daVr04O2MdKp
-    type: document
+    type: pack
+    text: Useless Treasure
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -1115,22 +636,12 @@ results:
       - 49
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Useless Treasure
-    documentUuid: Compendium.wwn.tags.hTPHs0HSt9qcpng6
-    description: ''
+    documentCollection: wwn.tags
+    documentId: hTPHs0HSt9qcpng6
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.AXs8daVr04O2MdKp'
   - _id: BtMaa8WKUeqUKT1N
-    type: document
+    type: pack
+    text: Wizard’s Lair
     img: icons/svg/d20-black.svg
     weight: 1
     range:
@@ -1138,19 +649,8 @@ results:
       - 50
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Wizard’s Lair
-    documentUuid: Compendium.wwn.tags.to2iA234j99cP8XD
-    description: ''
+    documentCollection: wwn.tags
+    documentId: to2iA234j99cP8XD
     _key: '!tables.results!GMnFWw5Ez9WTfBVj.BtMaa8WKUeqUKT1N'
 formula: 1d50
 replacement: true
@@ -1165,12 +665,11 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569812651
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!GMnFWw5Ez9WTfBVj'
 

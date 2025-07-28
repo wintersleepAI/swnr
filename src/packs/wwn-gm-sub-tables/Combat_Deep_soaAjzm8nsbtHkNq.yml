@@ -3,6 +3,7 @@ name: Combat-Deep
 img: icons/svg/d20-grey.svg
 results:
   - type: text
+    text: A dangerous standing magical effect is present in the room
     weight: 1
     range:
       - 1
@@ -11,20 +12,10 @@ results:
     _id: 871aw1o5otk9l6j4
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: A dangerous standing magical effect is present in the room
-    name: ''
+    documentId: null
     _key: '!tables.results!soaAjzm8nsbtHkNq.871aw1o5otk9l6j4'
   - type: text
+    text: Part of the structure is fragile and prone to collapse if damaged
     weight: 1
     range:
       - 2
@@ -33,20 +24,10 @@ results:
     _id: 06bhqii7i0mxacja
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Part of the structure is fragile and prone to collapse if damaged
-    name: ''
+    documentId: null
     _key: '!tables.results!soaAjzm8nsbtHkNq.06bhqii7i0mxacja'
   - type: text
+    text: There’s some noxious gas or substance tainting certain areas
     weight: 1
     range:
       - 3
@@ -55,20 +36,10 @@ results:
     _id: ejtkbkyr00lih4d5
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: There’s some noxious gas or substance tainting certain areas
-    name: ''
+    documentId: null
     _key: '!tables.results!soaAjzm8nsbtHkNq.ejtkbkyr00lih4d5'
   - type: text
+    text: A dangerous fall is possible in some part of the room
     weight: 1
     range:
       - 4
@@ -77,20 +48,10 @@ results:
     _id: qiwvhqs0j4luede9
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: A dangerous fall is possible in some part of the room
-    name: ''
+    documentId: null
     _key: '!tables.results!soaAjzm8nsbtHkNq.qiwvhqs0j4luede9'
   - type: text
+    text: An ancient guardian risks being awakened by disturbances here
     weight: 1
     range:
       - 5
@@ -99,20 +60,12 @@ results:
     _id: fobzwsvkpqootval
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: An ancient guardian risks being awakened by disturbances here
-    name: ''
+    documentId: null
     _key: '!tables.results!soaAjzm8nsbtHkNq.fobzwsvkpqootval'
   - type: text
+    text: >-
+      Strange ancient engines churn nearby and can cause dire injury to the
+      careless
     weight: 1
     range:
       - 6
@@ -121,22 +74,10 @@ results:
     _id: 1uo27rkh11eyg4kl
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
-      Strange ancient engines churn nearby and can cause dire injury to the
-      careless
-    name: ''
+    documentId: null
     _key: '!tables.results!soaAjzm8nsbtHkNq.1uo27rkh11eyg4kl'
   - type: text
+    text: There are secret passages here
     weight: 1
     range:
       - 7
@@ -145,20 +86,10 @@ results:
     _id: 8cka2qzhkqi7aigo
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: There are secret passages here
-    name: ''
+    documentId: null
     _key: '!tables.results!soaAjzm8nsbtHkNq.8cka2qzhkqi7aigo'
   - type: text
+    text: The room is very vertical in its shape
     weight: 1
     range:
       - 8
@@ -167,20 +98,12 @@ results:
     _id: y76y9lhcq4l6kq8m
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The room is very vertical in its shape
-    name: ''
+    documentId: null
     _key: '!tables.results!soaAjzm8nsbtHkNq.y76y9lhcq4l6kq8m'
   - type: text
+    text: >-
+      A certain path must be known to safely cross a particularly treacherous
+      surface
     weight: 1
     range:
       - 9
@@ -189,22 +112,10 @@ results:
     _id: z1ctl781xfqlplea
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
-      A certain path must be known to safely cross a particularly treacherous
-      surface
-    name: ''
+    documentId: null
     _key: '!tables.results!soaAjzm8nsbtHkNq.z1ctl781xfqlplea'
   - type: text
+    text: It’s somehow prone to flooding or currently a swampy mess
     weight: 1
     range:
       - 10
@@ -213,20 +124,10 @@ results:
     _id: roqv2miawsz9k1g6
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s somehow prone to flooding or currently a swampy mess
-    name: ''
+    documentId: null
     _key: '!tables.results!soaAjzm8nsbtHkNq.roqv2miawsz9k1g6'
   - type: text
+    text: A valuable object here is extremely fragile
     weight: 1
     range:
       - 11
@@ -235,20 +136,12 @@ results:
     _id: 2ysgqdnutcindrow
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: A valuable object here is extremely fragile
-    name: ''
+    documentId: null
     _key: '!tables.results!soaAjzm8nsbtHkNq.2ysgqdnutcindrow'
   - type: text
+    text: >-
+      Some ancient magic or Deep functionality has been repurposed for a purpose
+      convenient to the current occupants
     weight: 1
     range:
       - 12
@@ -257,20 +150,7 @@ results:
     _id: rthgzpuof5zj3j7v
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
-      Some ancient magic or Deep functionality has been repurposed for a purpose
-      convenient to the current occupants
-    name: ''
+    documentId: null
     _key: '!tables.results!soaAjzm8nsbtHkNq.rthgzpuof5zj3j7v'
 formula: 1d12
 replacement: true
@@ -285,12 +165,11 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!soaAjzm8nsbtHkNq'
 

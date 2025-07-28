@@ -3,225 +3,125 @@ name: 'Sabotage: How Is It Defended?'
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: Aum056dZ1iedMcVh
+    text: Its operators or keepers are well-armed
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Its operators or keepers are well-armed
-    name: ''
     _key: '!tables.results!D6LLVnHiLJ5LCzHl.Aum056dZ1iedMcVh'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: XMfxRDjwSclj34zc
+    text: It’s hard to reach, distant or perilous
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s hard to reach, distant or perilous
-    name: ''
     _key: '!tables.results!D6LLVnHiLJ5LCzHl.XMfxRDjwSclj34zc'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: Nh8kPSTuWnLkNxPN
+    text: It’s next to a major corp or LEO site
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s next to a major corp or LEO site
-    name: ''
     _key: '!tables.results!D6LLVnHiLJ5LCzHl.Nh8kPSTuWnLkNxPN'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: 6KwbbEtWlsEA3NQ3
+    text: It’s in an area restricted to allies only
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s in an area restricted to allies only
-    name: ''
     _key: '!tables.results!D6LLVnHiLJ5LCzHl.6KwbbEtWlsEA3NQ3'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     _id: MolZp8Ky0sayD8I2
+    text: It’s moved around regularly
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s moved around regularly
-    name: ''
     _key: '!tables.results!D6LLVnHiLJ5LCzHl.MolZp8Ky0sayD8I2'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     _id: Y3O3XZ9bM0ROxKLn
+    text: It’s in a well-fortified location
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s in a well-fortified location
-    name: ''
     _key: '!tables.results!D6LLVnHiLJ5LCzHl.Y3O3XZ9bM0ROxKLn'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 7
       - 7
     drawn: false
     _id: EDflthnR5kMYIDJB
+    text: There is a decoy site or object
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: There is a decoy site or object
-    name: ''
     _key: '!tables.results!D6LLVnHiLJ5LCzHl.EDflthnR5kMYIDJB'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 8
       - 8
     drawn: false
     _id: wkBIXy08i7EbShJG
+    text: Its true location is well-hidden
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Its true location is well-hidden
-    name: ''
     _key: '!tables.results!D6LLVnHiLJ5LCzHl.wkBIXy08i7EbShJG'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 9
       - 9
     drawn: false
     _id: ptVM6aVGtakn2uUl
+    text: There’s some dire guardian lairing there
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: There’s some dire guardian lairing there
-    name: ''
     _key: '!tables.results!D6LLVnHiLJ5LCzHl.ptVM6aVGtakn2uUl'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 10
       - 10
     drawn: false
     _id: d61thBFxzU9FNWcd
+    text: Its destruction brings a grim consequence
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Its destruction brings a grim consequence
-    name: ''
     _key: '!tables.results!D6LLVnHiLJ5LCzHl.d61thBFxzU9FNWcd'
 replacement: true
 displayRoll: true
@@ -230,13 +130,10 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '13.346'
+  coreVersion: '11.315'
   createdTime: 1703891968582
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
 formula: 1d10
 _id: D6LLVnHiLJ5LCzHl
 sort: 0

@@ -12,58 +12,38 @@ results:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Armor Bonus, Great
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Armor Bonus, Great
-    documentUuid: Compendium.wwn.magic-tables.XnG3k3VB5azXC5ZY
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: XnG3k3VB5azXC5ZY
     _key: '!tables.results!ImxXh34XKLm9B4Z9.H6HCJKgRJ1MYCDxk'
   - _id: DZbzx1yPqWYeOZoe
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Armor SA, Great
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Armor SA, Great
-    documentUuid: Compendium.wwn.magic-tables.rQZeiqnlbhXB9831
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: rQZeiqnlbhXB9831
     _key: '!tables.results!ImxXh34XKLm9B4Z9.DZbzx1yPqWYeOZoe'
 formula: 1d1
 replacement: true
 displayRoll: true
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   systemId: null
   systemVersion: null
   createdTime: null
@@ -71,7 +51,6 @@ _stats:
   lastModifiedBy: null
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3

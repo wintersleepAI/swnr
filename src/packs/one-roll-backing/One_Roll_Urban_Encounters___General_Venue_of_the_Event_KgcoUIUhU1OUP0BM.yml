@@ -1,7 +1,8 @@
 _id: KgcoUIUhU1OUP0BM
 displayRoll: true
 flags:
-  core: {}
+  core:
+    sourceId: RollTable.EO8Vg8sgXu49tiCh
 folder: null
 formula: 1d6
 img: icons/svg/d20-grey.svg
@@ -14,21 +15,11 @@ results:
     range:
       - 1
       - 1
+    text: 'General Venue of the Event: In the middle of the street'
     type: text
     weight: 1
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'General Venue of the Event: In the middle of the street'
-    name: ''
+    documentId: null
     _key: '!tables.results!KgcoUIUhU1OUP0BM.ONgsKmZ8X1iVqqAY'
   - _id: e55OvP3KzCKHvnCZ
     drawn: false
@@ -36,21 +27,11 @@ results:
     range:
       - 2
       - 2
+    text: 'General Venue of the Event: In a public plaza'
     type: text
     weight: 1
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'General Venue of the Event: In a public plaza'
-    name: ''
+    documentId: null
     _key: '!tables.results!KgcoUIUhU1OUP0BM.e55OvP3KzCKHvnCZ'
   - _id: RraBFHQfRo9a4LG0
     drawn: false
@@ -58,21 +39,11 @@ results:
     range:
       - 3
       - 3
+    text: 'General Venue of the Event: Down a side alley'
     type: text
     weight: 1
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'General Venue of the Event: Down a side alley'
-    name: ''
+    documentId: null
     _key: '!tables.results!KgcoUIUhU1OUP0BM.RraBFHQfRo9a4LG0'
   - _id: jeKictLCD0BHPuAh
     drawn: false
@@ -80,21 +51,11 @@ results:
     range:
       - 4
       - 4
+    text: 'General Venue of the Event: Inside a local business'
     type: text
     weight: 1
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'General Venue of the Event: Inside a local business'
-    name: ''
+    documentId: null
     _key: '!tables.results!KgcoUIUhU1OUP0BM.jeKictLCD0BHPuAh'
   - _id: TQCkMXgPkzHv3tvp
     drawn: false
@@ -102,21 +63,11 @@ results:
     range:
       - 5
       - 5
+    text: 'General Venue of the Event: Next to or in a public park'
     type: text
     weight: 1
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'General Venue of the Event: Next to or in a public park'
-    name: ''
+    documentId: null
     _key: '!tables.results!KgcoUIUhU1OUP0BM.TQCkMXgPkzHv3tvp'
   - _id: ZZawZPbawmQGbqsb
     drawn: false
@@ -124,33 +75,22 @@ results:
     range:
       - 6
       - 6
+    text: 'General Venue of the Event: At a mass-transit station'
     type: text
     weight: 1
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'General Venue of the Event: At a mass-transit station'
-    name: ''
+    documentId: null
     _key: '!tables.results!KgcoUIUhU1OUP0BM.ZZawZPbawmQGbqsb'
 sort: 0
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.325'
   systemId: null
   systemVersion: null
   createdTime: null
   modifiedTime: null
   lastModifiedBy: null
-  compendiumSource: RollTable.EO8Vg8sgXu49tiCh
+  compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   P3lRTKxUBvk8Gei6: 3
   default: 0

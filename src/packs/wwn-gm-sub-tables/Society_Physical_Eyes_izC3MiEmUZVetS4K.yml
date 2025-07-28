@@ -6,178 +6,98 @@ results:
   - _id: D0dpuyg6SQ1KZwIb
     flags: {}
     type: text
+    text: Black or extremely dark brown
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Black or extremely dark brown
-    name: ''
+    documentId: null
     _key: '!tables.results!izC3MiEmUZVetS4K.D0dpuyg6SQ1KZwIb'
   - _id: 5Sc0mZb8s6hmA2vo
     flags: {}
     type: text
+    text: Hazel or olive
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Hazel or olive
-    name: ''
+    documentId: null
     _key: '!tables.results!izC3MiEmUZVetS4K.5Sc0mZb8s6hmA2vo'
   - _id: YZ8uVL8Q47sFKY4t
     flags: {}
     type: text
+    text: Blues in varying shades
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Blues in varying shades
-    name: ''
+    documentId: null
     _key: '!tables.results!izC3MiEmUZVetS4K.YZ8uVL8Q47sFKY4t'
   - _id: Yn7qMiN20pS5WJEV
     flags: {}
     type: text
+    text: Grays, whether flat or metallic
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Grays, whether flat or metallic
-    name: ''
+    documentId: null
     _key: '!tables.results!izC3MiEmUZVetS4K.Yn7qMiN20pS5WJEV'
   - _id: Y4W9f2C9uFoeWymv
     flags: {}
     type: text
+    text: Ambers and yellows
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Ambers and yellows
-    name: ''
+    documentId: null
     _key: '!tables.results!izC3MiEmUZVetS4K.Y4W9f2C9uFoeWymv'
   - _id: TAV5XEwuMK6e0s7Y
     flags: {}
     type: text
+    text: Greens in different shades
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Greens in different shades
-    name: ''
+    documentId: null
     _key: '!tables.results!izC3MiEmUZVetS4K.TAV5XEwuMK6e0s7Y'
   - _id: O0Vtv2nzPwkRd39s
     flags: {}
     type: text
+    text: An unusual or luminous color
     weight: 1
     range:
       - 7
       - 7
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: An unusual or luminous color
-    name: ''
+    documentId: null
     _key: '!tables.results!izC3MiEmUZVetS4K.O0Vtv2nzPwkRd39s'
   - _id: r6e1ggBOMYaFezWK
     flags: {}
     type: text
+    text: Slit or unusual pupils; roll again for color
     weight: 1
     range:
       - 8
       - 8
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Slit or unusual pupils; roll again for color
-    name: ''
+    documentId: null
     _key: '!tables.results!izC3MiEmUZVetS4K.r6e1ggBOMYaFezWK'
 formula: 1d8
 replacement: true
@@ -192,12 +112,11 @@ ownership:
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!izC3MiEmUZVetS4K'
 

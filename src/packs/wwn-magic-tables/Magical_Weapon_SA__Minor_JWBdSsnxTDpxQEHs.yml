@@ -13,82 +13,52 @@ results:
         brt-result-formula:
           formula: ''
     type: text
+    text: No special abilities.
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 8
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: No special abilities.
-    name: ''
+    documentId: null
     _key: '!tables.results!JWBdSsnxTDpxQEHs.XEpAZIf6LdeH6lGs'
   - _id: T4TjoYKqPGapJrRV
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Weapon Abilities
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 9
       - 12
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Weapon Abilities
-    documentUuid: Compendium.wwn.magic-tables.sEzwkDybTVwodMFV
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: sEzwkDybTVwodMFV
     _key: '!tables.results!JWBdSsnxTDpxQEHs.T4TjoYKqPGapJrRV'
   - _id: Hiw3WJ5KGexr0iUw
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Weapon Abilities
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 12
       - 12
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Weapon Abilities
-    documentUuid: Compendium.wwn.magic-tables.sEzwkDybTVwodMFV
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: sEzwkDybTVwodMFV
     _key: '!tables.results!JWBdSsnxTDpxQEHs.Hiw3WJ5KGexr0iUw'
 formula: 1d12
 replacement: true
 displayRoll: true
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   systemId: null
   systemVersion: null
   createdTime: null
@@ -96,7 +66,6 @@ _stats:
   lastModifiedBy: null
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3

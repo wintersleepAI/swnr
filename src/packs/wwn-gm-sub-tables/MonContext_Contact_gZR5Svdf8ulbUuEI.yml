@@ -3,6 +3,7 @@ name: MonContext-Contact
 img: icons/svg/d20-grey.svg
 results:
   - type: text
+    text: The locals have no idea it exists
     weight: 1
     range:
       - 1
@@ -11,20 +12,10 @@ results:
     _id: eyesccoyirh3uzqq
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The locals have no idea it exists
-    name: ''
+    documentId: null
     _key: '!tables.results!gZR5Svdf8ulbUuEI.eyesccoyirh3uzqq'
   - type: text
+    text: The locals make wild guesses and myths of it
     weight: 1
     range:
       - 2
@@ -33,20 +24,10 @@ results:
     _id: g6bkzxbkspu10g86
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The locals make wild guesses and myths of it
-    name: ''
+    documentId: null
     _key: '!tables.results!gZR5Svdf8ulbUuEI.g6bkzxbkspu10g86'
   - type: text
+    text: They’ve had a few significant encounters
     weight: 1
     range:
       - 3
@@ -55,20 +36,10 @@ results:
     _id: 61dl2cse2jjar4ie
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They’ve had a few significant encounters
-    name: ''
+    documentId: null
     _key: '!tables.results!gZR5Svdf8ulbUuEI.61dl2cse2jjar4ie'
   - type: text
+    text: They know it’s there and a little of its wants
     weight: 1
     range:
       - 4
@@ -77,20 +48,10 @@ results:
     _id: gh7kxeu4zwwblk91
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They know it’s there and a little of its wants
-    name: ''
+    documentId: null
     _key: '!tables.results!gZR5Svdf8ulbUuEI.gh7kxeu4zwwblk91'
   - type: text
+    text: It’s a regular threat they need to deal with
     weight: 1
     range:
       - 5
@@ -99,20 +60,10 @@ results:
     _id: hirww6my4mygu0j7
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s a regular threat they need to deal with
-    name: ''
+    documentId: null
     _key: '!tables.results!gZR5Svdf8ulbUuEI.hirww6my4mygu0j7'
   - type: text
+    text: They know its nature and needs very well
     weight: 1
     range:
       - 6
@@ -121,18 +72,7 @@ results:
     _id: whusp3sfcrgaw5r3
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They know its nature and needs very well
-    name: ''
+    documentId: null
     _key: '!tables.results!gZR5Svdf8ulbUuEI.whusp3sfcrgaw5r3'
 formula: 1d6
 replacement: true
@@ -147,12 +87,11 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!gZR5Svdf8ulbUuEI'
 

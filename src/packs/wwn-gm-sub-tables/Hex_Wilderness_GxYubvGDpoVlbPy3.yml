@@ -3,6 +3,7 @@ name: Hex-Wilderness
 img: icons/svg/d20-grey.svg
 results:
   - type: text
+    text: Cavern or cave complex
     weight: 1
     range:
       - 1
@@ -11,20 +12,10 @@ results:
     _id: 0s3xw5f9szuxiwps
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Cavern or cave complex
-    name: ''
+    documentId: null
     _key: '!tables.results!GxYubvGDpoVlbPy3.0s3xw5f9szuxiwps'
   - type: text
+    text: Extreme example of the native terrain
     weight: 1
     range:
       - 2
@@ -33,20 +24,10 @@ results:
     _id: ipp48zq4xwv1ef2v
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Extreme example of the native terrain
-    name: ''
+    documentId: null
     _key: '!tables.results!GxYubvGDpoVlbPy3.ipp48zq4xwv1ef2v'
   - type: text
+    text: Valuable natural resource site of some kind
     weight: 1
     range:
       - 3
@@ -55,20 +36,10 @@ results:
     _id: x4pxz0u8s6dtt5a8
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Valuable natural resource site of some kind
-    name: ''
+    documentId: null
     _key: '!tables.results!GxYubvGDpoVlbPy3.x4pxz0u8s6dtt5a8'
   - type: text
+    text: Lake, spring, or major water source
     weight: 1
     range:
       - 4
@@ -77,20 +48,10 @@ results:
     _id: 4m5iafncut71w5rt
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Lake, spring, or major water source
-    name: ''
+    documentId: null
     _key: '!tables.results!GxYubvGDpoVlbPy3.4m5iafncut71w5rt'
   - type: text
+    text: Crevasse, rift, or broken ground
     weight: 1
     range:
       - 5
@@ -99,20 +60,10 @@ results:
     _id: 5drc16f7p91az1ot
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Crevasse, rift, or broken ground
-    name: ''
+    documentId: null
     _key: '!tables.results!GxYubvGDpoVlbPy3.5drc16f7p91az1ot'
   - type: text
+    text: Megastructure remnants or fragments
     weight: 1
     range:
       - 6
@@ -121,20 +72,10 @@ results:
     _id: rdm02xo57eoygyms
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Megastructure remnants or fragments
-    name: ''
+    documentId: null
     _key: '!tables.results!GxYubvGDpoVlbPy3.rdm02xo57eoygyms'
   - type: text
+    text: Traces of a long-lost road or canal bed
     weight: 1
     range:
       - 7
@@ -143,20 +84,10 @@ results:
     _id: xt0qwrec0t30vj5r
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Traces of a long-lost road or canal bed
-    name: ''
+    documentId: null
     _key: '!tables.results!GxYubvGDpoVlbPy3.xt0qwrec0t30vj5r'
   - type: text
+    text: Mountain, high hill, or commanding height
     weight: 1
     range:
       - 8
@@ -165,20 +96,10 @@ results:
     _id: 3zqi3j9jua2gxhxe
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Mountain, high hill, or commanding height
-    name: ''
+    documentId: null
     _key: '!tables.results!GxYubvGDpoVlbPy3.3zqi3j9jua2gxhxe'
   - type: text
+    text: Treacherous ground suited to the terrain
     weight: 1
     range:
       - 9
@@ -187,20 +108,10 @@ results:
     _id: 1oraajjsyo3927b9
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Treacherous ground suited to the terrain
-    name: ''
+    documentId: null
     _key: '!tables.results!GxYubvGDpoVlbPy3.1oraajjsyo3927b9'
   - type: text
+    text: Pocket of unusual or atypical terrain type
     weight: 1
     range:
       - 10
@@ -209,18 +120,7 @@ results:
     _id: o7758ba5yjkl15op
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Pocket of unusual or atypical terrain type
-    name: ''
+    documentId: null
     _key: '!tables.results!GxYubvGDpoVlbPy3.o7758ba5yjkl15op'
 formula: 1d10
 replacement: true
@@ -235,12 +135,11 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!GxYubvGDpoVlbPy3'
 

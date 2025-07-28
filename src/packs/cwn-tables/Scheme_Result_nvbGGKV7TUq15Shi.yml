@@ -7,122 +7,72 @@ description: >-
   src="worlds/cyberpunk-lone-star-extraction/assets/tables/image-rRuaynFm9P7MpvZa.png"
   />
 results:
-  - type: text
+  - type: 0
     weight: 1
     range:
       - -10
       - 2
     drawn: false
     _id: Ofqbi4t3zw9mrWdW
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
+    text: >-
       Not only did they fail, but they somehow managed to make the situation
       much worse for their patron with two unfortunate consequences for the team
       and one for the actual patron
-    name: ''
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
     _key: '!tables.results!nvbGGKV7TUq15Shi.Ofqbi4t3zw9mrWdW'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 3
       - 5
     drawn: false
     _id: bxtUD0it0g1ALPW0
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
+    text: >-
       The mission was a failure, and two unfortunate consequences were suffered
       as collateral damage
-    name: ''
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
     _key: '!tables.results!nvbGGKV7TUq15Shi.bxtUD0it0g1ALPW0'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 6
       - 8
     drawn: false
     _id: LeQt5brwI3wzUgjt
+    text: The mission was a success, but one unfortunate consequence resulted
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The mission was a success, but one unfortunate consequence resulted
-    name: ''
     _key: '!tables.results!nvbGGKV7TUq15Shi.LeQt5brwI3wzUgjt'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 9
       - 11
     drawn: false
     _id: m5U9BRqiLvPZ1WM2
+    text: A solid success with no real missteps
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: A solid success with no real missteps
-    name: ''
     _key: '!tables.results!nvbGGKV7TUq15Shi.m5U9BRqiLvPZ1WM2'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 12
       - 30
     drawn: false
     _id: ReNpq63vD2v0dSEa
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
+    text: >-
       Perfectly smooth job that accomplished everything desired without the
       slightest collateral damage
-    name: ''
+    documentId: null
+    flags: {}
+    img: icons/svg/d20-black.svg
     _key: '!tables.results!nvbGGKV7TUq15Shi.ReNpq63vD2v0dSEa'
 replacement: true
 displayRoll: true
@@ -130,13 +80,10 @@ flags: {}
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '13.346'
+  coreVersion: '11.315'
   createdTime: 1703888648638
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
 formula: 2d6
 sort: 0
 ownership:

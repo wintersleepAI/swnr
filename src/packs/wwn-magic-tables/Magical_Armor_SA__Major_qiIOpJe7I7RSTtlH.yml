@@ -15,82 +15,52 @@ results:
         brt-result-formula:
           formula: ''
     type: text
+    text: No special abilities.
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 16
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: No special abilities.
-    name: ''
+    documentId: null
     _key: '!tables.results!qiIOpJe7I7RSTtlH.nSkPKXXe5poPY9pb'
   - _id: u9lmxfYTcelSjQ6X
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Armor and Shield Abilities
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 17
       - 20
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Armor and Shield Abilities
-    documentUuid: Compendium.wwn.magic-tables.pPZG8CuQQKPynEFb
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: pPZG8CuQQKPynEFb
     _key: '!tables.results!qiIOpJe7I7RSTtlH.u9lmxfYTcelSjQ6X'
   - _id: YxeHWyrVQSpQcHQu
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Armor and Shield Abilities
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 20
       - 20
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Armor and Shield Abilities
-    documentUuid: Compendium.wwn.magic-tables.pPZG8CuQQKPynEFb
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: pPZG8CuQQKPynEFb
     _key: '!tables.results!qiIOpJe7I7RSTtlH.YxeHWyrVQSpQcHQu'
 formula: 1d20
 replacement: true
 displayRoll: true
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   systemId: null
   systemVersion: null
   createdTime: null
@@ -98,7 +68,6 @@ _stats:
   lastModifiedBy: null
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3

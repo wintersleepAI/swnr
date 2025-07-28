@@ -10,6 +10,10 @@ description: >-
 results:
   - _id: Jilu1xbaIhr2oXEF
     type: text
+    text: >-
+      <b>Creature</b> - assign an existing creature or generate a new one using
+      the appropriate tables. This room also contains treasure if the following
+      die is a 3 or lower: [[1d6]]
     weight: 1
     range:
       - 1
@@ -17,24 +21,13 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
-      <b>Creature</b> - assign an existing creature or generate a new one using
-      the appropriate tables. This room also contains treasure if the following
-      die is a 3 or lower: [[1d6]]
-    name: ''
+    documentId: null
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.Jilu1xbaIhr2oXEF'
   - _id: mzOSVcPOKdxmshnp
     type: text
+    text: >-
+      <b>Hazard</b> - This room also contains treasure if the following die is a
+      2 or lower: [[1d6]]
     weight: 1
     range:
       - 3
@@ -42,23 +35,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
-      <b>Hazard</b> - This room also contains treasure if the following die is a
-      2 or lower: [[1d6]]
-    name: ''
+    documentId: null
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.mzOSVcPOKdxmshnp'
   - _id: Y9TT9cr9yqviiULK
-    type: document
+    type: pack
+    text: Room-Hazard
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -66,22 +47,14 @@ results:
       - 3
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Room-Hazard
-    documentUuid: Compendium.wwn.gm-subtables.m0SIV8ejdxKnElhp
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: m0SIV8ejdxKnElhp
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.Y9TT9cr9yqviiULK'
   - _id: uBck6ZYdgi0yJvP1
     type: text
+    text: >-
+      <b>Enigma</b> - This room also contains treasure if the following die is a
+      2 or lower: [[1d6]]
     weight: 1
     range:
       - 4
@@ -89,23 +62,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
-      <b>Enigma</b> - This room also contains treasure if the following die is a
-      2 or lower: [[1d6]]
-    name: ''
+    documentId: null
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.uBck6ZYdgi0yJvP1'
   - _id: BzCM921IWxN1NRcw
-    type: document
+    type: pack
+    text: Room-Enigma
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -113,22 +74,14 @@ results:
       - 4
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Room-Enigma
-    documentUuid: Compendium.wwn.gm-subtables.4uAIygVNERLjC7s1
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: 4uAIygVNERLjC7s1
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.BzCM921IWxN1NRcw'
   - _id: PwTVK8tCB0K0TcIY
     type: text
+    text: >-
+      <b>Distractor</b> - This room also contains treasure if the following die
+      is a 1 or lower: [[1d6]]
     weight: 1
     range:
       - 5
@@ -136,23 +89,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
-      <b>Distractor</b> - This room also contains treasure if the following die
-      is a 1 or lower: [[1d6]]
-    name: ''
+    documentId: null
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.PwTVK8tCB0K0TcIY'
   - _id: zrRp1NpbC3x0loaH
-    type: document
+    type: pack
+    text: Room-Distractor
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -160,22 +101,14 @@ results:
       - 6
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Room-Distractor
-    documentUuid: Compendium.wwn.gm-subtables.0SVWjpyVal6Ji6Lz
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: 0SVWjpyVal6Ji6Lz
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.zrRp1NpbC3x0loaH'
   - _id: QDlRT6Fy6LjhaOY0
     type: text
+    text: >-
+      <b>Empty</b> - This room contains treasure if the following die is a 1:
+      [[1d6]]
     weight: 1
     range:
       - 7
@@ -183,23 +116,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: >-
-      <b>Empty</b> - This room contains treasure if the following die is a 1:
-      [[1d6]]
-    name: ''
+    documentId: null
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.QDlRT6Fy6LjhaOY0'
   - _id: BcL4KTbvGroLmpqu
     type: text
+    text: <b>Possible Treasure Locations</b>
     weight: 1
     range:
       - 1
@@ -207,21 +128,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>Possible Treasure Locations</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.BcL4KTbvGroLmpqu'
   - _id: 24oIMHRhVkhz6xqL
-    type: document
+    type: pack
+    text: Room-Treasure
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -229,19 +140,8 @@ results:
       - 8
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Room-Treasure
-    documentUuid: Compendium.wwn.gm-subtables.DM1jZFeude9HBs1i
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: DM1jZFeude9HBs1i
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.24oIMHRhVkhz6xqL'
 formula: 1d8
 replacement: true
@@ -255,12 +155,11 @@ ownership:
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569812651
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!CGBVZvWlHBCJh7Oi'
 

@@ -7,7 +7,10 @@ description: >-
   It Guarded Information?</p></li><li><p>6. Twists to the
   Situation</p></li></ul>
 results:
-  - type: document
+  - text: 'Espionage: Why Can’t They Do It Themselves?'
+    type: 1
+    documentCollection: RollTable
+    documentId: 4mFj0pG8bZoaDimj
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -16,21 +19,11 @@ results:
     drawn: false
     _id: gIbuq3mkof4yxB6R
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: 'Espionage: Why Can’t They Do It Themselves?'
-    documentUuid: RollTable.4mFj0pG8bZoaDimj
-    description: ''
     _key: '!tables.results!0WWxKQQmSAqxCeW6.gIbuq3mkof4yxB6R'
-  - type: document
+  - text: 'Espionage: What kind of patron put up the job? (Copy)'
+    type: 1
+    documentCollection: RollTable
+    documentId: Yp6e0c9VBjw2GRbC
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -39,21 +32,11 @@ results:
     drawn: false
     _id: CHjyAvpoubqxcfBr
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: 'Espionage: What kind of patron put up the job? (Copy)'
-    documentUuid: RollTable.Yp6e0c9VBjw2GRbC
-    description: ''
     _key: '!tables.results!0WWxKQQmSAqxCeW6.CHjyAvpoubqxcfBr'
-  - type: document
+  - text: 'Espionage: What Profit Will It Give a Thief?'
+    type: 1
+    documentCollection: RollTable
+    documentId: XPioWPXtQjrrVyTW
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -62,21 +45,11 @@ results:
     drawn: false
     _id: jTsDHRgqLRsXP9qZ
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: 'Espionage: What Profit Will It Give a Thief?'
-    documentUuid: RollTable.XPioWPXtQjrrVyTW
-    description: ''
     _key: '!tables.results!0WWxKQQmSAqxCeW6.jTsDHRgqLRsXP9qZ'
-  - type: document
+  - text: 'Espionage: How Obscure is the Secret?'
+    type: 1
+    documentCollection: RollTable
+    documentId: 4ADz1bOa9CM5hesp
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -85,21 +58,11 @@ results:
     drawn: false
     _id: MuiIYs0TUZxuLXkZ
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: 'Espionage: How Obscure is the Secret?'
-    documentUuid: RollTable.4ADz1bOa9CM5hesp
-    description: ''
     _key: '!tables.results!0WWxKQQmSAqxCeW6.MuiIYs0TUZxuLXkZ'
-  - type: document
+  - text: 'Espionage: Why Is It Guarded Information?'
+    type: 1
+    documentCollection: RollTable
+    documentId: 2refOqEtYXjb2aSx
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -108,21 +71,11 @@ results:
     drawn: false
     _id: epmpHctzREdTP0IV
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: 'Espionage: Why Is It Guarded Information?'
-    documentUuid: RollTable.2refOqEtYXjb2aSx
-    description: ''
     _key: '!tables.results!0WWxKQQmSAqxCeW6.epmpHctzREdTP0IV'
-  - type: document
+  - text: 'Espionage: Twists to the Situation'
+    type: 1
+    documentCollection: RollTable
+    documentId: dtpUNRVFMNhw4SHw
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -131,19 +84,6 @@ results:
     drawn: false
     _id: c32peqLF4Ym7XVSx
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: 'Espionage: Twists to the Situation'
-    documentUuid: RollTable.dtpUNRVFMNhw4SHw
-    description: ''
     _key: '!tables.results!0WWxKQQmSAqxCeW6.c32peqLF4Ym7XVSx'
 formula: 1d1
 _id: 0WWxKQQmSAqxCeW6
@@ -156,13 +96,10 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '13.346'
+  coreVersion: '11.315'
   createdTime: 1703902144239
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
 sort: 0
 ownership:
   default: 0

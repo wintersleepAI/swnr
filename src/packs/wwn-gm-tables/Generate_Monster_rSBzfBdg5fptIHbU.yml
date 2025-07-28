@@ -6,7 +6,8 @@ description: >-
   monster using the rules on pages 288-289 to add Uncanny Powers and Abilities.
 results:
   - _id: sDXZMGhiTGrEKOP8
-    type: document
+    type: pack
+    text: Monster Shapes/Appearances
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -14,22 +15,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Monster Shapes/Appearances
-    documentUuid: Compendium.wwn.gm-master-tables.VOZouolYFR9psmLz
-    description: ''
+    documentCollection: wwn.gm-master-tables
+    documentId: VOZouolYFR9psmLz
     _key: '!tables.results!rSBzfBdg5fptIHbU.sDXZMGhiTGrEKOP8'
   - _id: RWXIeCIFz5Wa8hVS
-    type: document
+    type: pack
+    text: Monstrous Drives
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -37,22 +28,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Monstrous Drives
-    documentUuid: Compendium.wwn.gm-master-tables.PCLAI4OSumQSA2NE
-    description: ''
+    documentCollection: wwn.gm-master-tables
+    documentId: PCLAI4OSumQSA2NE
     _key: '!tables.results!rSBzfBdg5fptIHbU.RWXIeCIFz5Wa8hVS'
   - _id: JPebFzNCV1JFANOq
-    type: document
+    type: pack
+    text: Monstrous Context
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -60,19 +41,8 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Monstrous Context
-    documentUuid: Compendium.wwn.gm-master-tables.hZWVzCZ0nqQpySh6
-    description: ''
+    documentCollection: wwn.gm-master-tables
+    documentId: hZWVzCZ0nqQpySh6
     _key: '!tables.results!rSBzfBdg5fptIHbU.JPebFzNCV1JFANOq'
 formula: 1d1
 replacement: true
@@ -86,12 +56,11 @@ ownership:
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569812651
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!rSBzfBdg5fptIHbU'
 

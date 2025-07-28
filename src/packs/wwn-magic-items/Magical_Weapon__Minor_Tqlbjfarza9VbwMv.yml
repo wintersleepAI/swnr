@@ -13,108 +13,68 @@ results:
         brt-result-formula:
           formula: ''
     type: text
+    text: 'Origin Intended Users of the Weapon:'
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Origin Intended Users of the Weapon:'
-    name: ''
+    documentId: null
     _key: '!tables.results!Tqlbjfarza9VbwMv.G1VRpvmCht0WMM4v'
   - _id: wqw8IVot8eJSbhWC
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Weapon Origin
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Weapon Origin
-    documentUuid: Compendium.wwn.magic-tables.ZgBYyAHe1xdRwZvO
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: ZgBYyAHe1xdRwZvO
     _key: '!tables.results!Tqlbjfarza9VbwMv.wqw8IVot8eJSbhWC'
   - _id: 5LzDrjKqXxwxRTLs
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Weapon Bonus, Minor
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Weapon Bonus, Minor
-    documentUuid: Compendium.wwn.magic-tables.MSWL5kT3hZRlZsbJ
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: MSWL5kT3hZRlZsbJ
     _key: '!tables.results!Tqlbjfarza9VbwMv.5LzDrjKqXxwxRTLs'
   - _id: wCeKLBwlTIaOZGRX
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Weapon SA, Minor
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Weapon SA, Minor
-    documentUuid: Compendium.wwn.magic-tables.JWBdSsnxTDpxQEHs
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: JWBdSsnxTDpxQEHs
     _key: '!tables.results!Tqlbjfarza9VbwMv.wCeKLBwlTIaOZGRX'
 formula: 1d1
 replacement: true
 displayRoll: true
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   systemId: null
   systemVersion: null
   createdTime: null
@@ -122,7 +82,6 @@ _stats:
   lastModifiedBy: null
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3

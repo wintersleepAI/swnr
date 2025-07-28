@@ -12,84 +12,54 @@ results:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Weapon +1
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Weapon +1
-    documentUuid: Compendium.wwn.magic-tables.VHN5qjfTxnLA6GkL
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: VHN5qjfTxnLA6GkL
     _key: '!tables.results!PPy2nvGxZZiY3TNw.i6ivYzmipnKd5JWh'
   - _id: wNvg58bfViBgvtyQ
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Weapon +2
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 2
       - 4
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Weapon +2
-    documentUuid: Compendium.wwn.magic-tables.kzzW4WurYXaXOHg0
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: kzzW4WurYXaXOHg0
     _key: '!tables.results!PPy2nvGxZZiY3TNw.wNvg58bfViBgvtyQ'
   - _id: xw1jYiNvMZDFkKMB
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Magical Weapon +3
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 5
       - 20
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Magical Weapon +3
-    documentUuid: Compendium.wwn.magic-tables.jQFwHVqq9zoWVegm
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: jQFwHVqq9zoWVegm
     _key: '!tables.results!PPy2nvGxZZiY3TNw.xw1jYiNvMZDFkKMB'
 formula: 1d20
 replacement: true
 displayRoll: true
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   systemId: null
   systemVersion: null
   createdTime: null
@@ -97,7 +67,6 @@ _stats:
   lastModifiedBy: null
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3

@@ -3,6 +3,7 @@ name: Frame-Hostility
 img: icons/svg/d20-grey.svg
 results:
   - type: text
+    text: They raided us and stole our resources
     weight: 1
     range:
       - 1
@@ -11,20 +12,10 @@ results:
     _id: p2qdxjhdgeowdx2m
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They raided us and stole our resources
-    name: ''
+    documentId: null
     _key: '!tables.results!KdCTJHRyWT4egCTJ.p2qdxjhdgeowdx2m'
   - type: text
+    text: They’re from a rival religion
     weight: 1
     range:
       - 2
@@ -33,20 +24,10 @@ results:
     _id: ppgsk2ybbwokmqou
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They’re from a rival religion
-    name: ''
+    documentId: null
     _key: '!tables.results!KdCTJHRyWT4egCTJ.ppgsk2ybbwokmqou'
   - type: text
+    text: Our kinds naturally hate each other
     weight: 1
     range:
       - 3
@@ -55,20 +36,10 @@ results:
     _id: 7oo2unbjsr7i6yw0
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Our kinds naturally hate each other
-    name: ''
+    documentId: null
     _key: '!tables.results!KdCTJHRyWT4egCTJ.7oo2unbjsr7i6yw0'
   - type: text
+    text: They took advantage of us in the past
     weight: 1
     range:
       - 4
@@ -77,20 +48,10 @@ results:
     _id: q9ozyiaw7iqbgl9s
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They took advantage of us in the past
-    name: ''
+    documentId: null
     _key: '!tables.results!KdCTJHRyWT4egCTJ.q9ozyiaw7iqbgl9s'
   - type: text
+    text: They’re weak and ripe for plunder
     weight: 1
     range:
       - 5
@@ -99,20 +60,10 @@ results:
     _id: rucu0bt9xxir419r
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They’re weak and ripe for plunder
-    name: ''
+    documentId: null
     _key: '!tables.results!KdCTJHRyWT4egCTJ.rucu0bt9xxir419r'
   - type: text
+    text: They broke an alliance in a treacherous way
     weight: 1
     range:
       - 6
@@ -121,20 +72,10 @@ results:
     _id: y06h0cjmufidyz6a
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They broke an alliance in a treacherous way
-    name: ''
+    documentId: null
     _key: '!tables.results!KdCTJHRyWT4egCTJ.y06h0cjmufidyz6a'
   - type: text
+    text: They caused a local disaster or problem
     weight: 1
     range:
       - 7
@@ -143,20 +84,10 @@ results:
     _id: 2mdy9orlw8hnrq67
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They caused a local disaster or problem
-    name: ''
+    documentId: null
     _key: '!tables.results!KdCTJHRyWT4egCTJ.2mdy9orlw8hnrq67'
   - type: text
+    text: Our leader has a personal hatred for them
     weight: 1
     range:
       - 8
@@ -165,20 +96,10 @@ results:
     _id: a5rqg416zqwencsy
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Our leader has a personal hatred for them
-    name: ''
+    documentId: null
     _key: '!tables.results!KdCTJHRyWT4egCTJ.a5rqg416zqwencsy'
   - type: text
+    text: Local resources are insufficient for us both
     weight: 1
     range:
       - 9
@@ -187,20 +108,10 @@ results:
     _id: w4ohpej7kfamk3ob
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Local resources are insufficient for us both
-    name: ''
+    documentId: null
     _key: '!tables.results!KdCTJHRyWT4egCTJ.w4ohpej7kfamk3ob'
   - type: text
+    text: They’re crowding into our territory
     weight: 1
     range:
       - 10
@@ -209,20 +120,10 @@ results:
     _id: pvnrmpy3yjruhzaa
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They’re crowding into our territory
-    name: ''
+    documentId: null
     _key: '!tables.results!KdCTJHRyWT4egCTJ.pvnrmpy3yjruhzaa'
   - type: text
+    text: They tricked us and led us into a disaster
     weight: 1
     range:
       - 11
@@ -231,20 +132,10 @@ results:
     _id: yjyl8zen6y0bh7ex
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They tricked us and led us into a disaster
-    name: ''
+    documentId: null
     _key: '!tables.results!KdCTJHRyWT4egCTJ.yjyl8zen6y0bh7ex'
   - type: text
+    text: They stole a treasure or an important slave
     weight: 1
     range:
       - 12
@@ -253,18 +144,7 @@ results:
     _id: wxy9d1rdxz9pt2ux
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They stole a treasure or an important slave
-    name: ''
+    documentId: null
     _key: '!tables.results!KdCTJHRyWT4egCTJ.wxy9d1rdxz9pt2ux'
 formula: 1d12
 replacement: true
@@ -279,12 +159,11 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!KdCTJHRyWT4egCTJ'
 

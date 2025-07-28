@@ -15,20 +15,10 @@ results:
     range:
       - 1
       - 1
+    text: 'Background: The local underclass or poorest natives'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Background: The local underclass or poorest natives'
-    name: ''
+    documentId: null
     _key: '!tables.results!WYrAlfwA9t3pPl1n.o7k1MlGQX9Qrn5JH'
   - _id: CoaqpDTqLHENvWFn
     drawn: false
@@ -37,20 +27,10 @@ results:
     range:
       - 2
       - 2
+    text: 'Background: Common laborers or cube workers'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Background: Common laborers or cube workers'
-    name: ''
+    documentId: null
     _key: '!tables.results!WYrAlfwA9t3pPl1n.CoaqpDTqLHENvWFn'
   - _id: I3Q2alrTTTkW9ltT
     drawn: false
@@ -59,20 +39,10 @@ results:
     range:
       - 3
       - 3
+    text: 'Background: Aspiring bourgeoise or upper class'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Background: Aspiring bourgeoise or upper class'
-    name: ''
+    documentId: null
     _key: '!tables.results!WYrAlfwA9t3pPl1n.I3Q2alrTTTkW9ltT'
   - _id: mAzFKzVS4WJIPbXv
     drawn: false
@@ -81,20 +51,10 @@ results:
     range:
       - 4
       - 4
+    text: 'Background: The elite of this society'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Background: The elite of this society'
-    name: ''
+    documentId: null
     _key: '!tables.results!WYrAlfwA9t3pPl1n.mAzFKzVS4WJIPbXv'
   - _id: n434U2frKi7wLibx
     drawn: false
@@ -103,20 +63,10 @@ results:
     range:
       - 5
       - 5
+    text: 'Background: Minority or foreigners; reroll on 1d4'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Background: Minority or foreigners; reroll on 1d4'
-    name: ''
+    documentId: null
     _key: '!tables.results!WYrAlfwA9t3pPl1n.n434U2frKi7wLibx'
   - _id: t2VrwMA4fyHOMern
     drawn: false
@@ -125,20 +75,10 @@ results:
     range:
       - 6
       - 6
+    text: 'Background: Offworlders or exotics; reroll on 1d4'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Background: Offworlders or exotics; reroll on 1d4'
-    name: ''
+    documentId: null
     _key: '!tables.results!WYrAlfwA9t3pPl1n.t2VrwMA4fyHOMern'
   - _id: VpJK52HvF9Fc5nVS
     drawn: false
@@ -147,25 +87,15 @@ results:
     range:
       - 5
       - 6
-    type: document
+    text: One Roll NPCs - Background - 1d4
+    type: pack
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: One Roll NPCs - Background - 1d4
-    documentUuid: Compendium.swnr.one-roll-backing.RollTable.x6etGYYrrVZCt1hP
-    description: ''
+    documentCollection: swnr.one-roll-backing
+    documentId: x6etGYYrrVZCt1hP
     _key: '!tables.results!WYrAlfwA9t3pPl1n.VpJK52HvF9Fc5nVS'
 sort: 0
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.325'
   systemId: null
   systemVersion: null
   createdTime: null
@@ -173,7 +103,6 @@ _stats:
   lastModifiedBy: null
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   P3lRTKxUBvk8Gei6: 3
   default: 0

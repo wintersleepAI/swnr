@@ -15,20 +15,10 @@ results:
     range:
       - 1
       - 1
+    text: 'Role: Criminal, thug, thief, swindler'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Role: Criminal, thug, thief, swindler'
-    name: ''
+    documentId: null
     _key: '!tables.results!Dj1g6s5hDb6pvZ4S.H44ppOUStcgFYbOI'
   - _id: 2bgwVio9pPSfpsrf
     drawn: false
@@ -37,20 +27,10 @@ results:
     range:
       - 2
       - 2
+    text: 'Role: Menial, cleaner, retail worker, servant'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Role: Menial, cleaner, retail worker, servant'
-    name: ''
+    documentId: null
     _key: '!tables.results!Dj1g6s5hDb6pvZ4S.2bgwVio9pPSfpsrf'
   - _id: jrrW0t9u4yMiQvHX
     drawn: false
@@ -59,20 +39,10 @@ results:
     range:
       - 3
       - 3
+    text: 'Role: Unskilled heavy labor, porter, construction'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Role: Unskilled heavy labor, porter, construction'
-    name: ''
+    documentId: null
     _key: '!tables.results!Dj1g6s5hDb6pvZ4S.jrrW0t9u4yMiQvHX'
   - _id: RJUaBX8iBzrayE5e
     drawn: false
@@ -81,20 +51,10 @@ results:
     range:
       - 4
       - 4
+    text: 'Role: Skilled trade, electrician, mechanic, pilot'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Role: Skilled trade, electrician, mechanic, pilot'
-    name: ''
+    documentId: null
     _key: '!tables.results!Dj1g6s5hDb6pvZ4S.RJUaBX8iBzrayE5e'
   - _id: qq6fbXaRgfw8fQiu
     drawn: false
@@ -103,20 +63,10 @@ results:
     range:
       - 5
       - 5
+    text: 'Role: Idea worker, programmer, writer'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Role: Idea worker, programmer, writer'
-    name: ''
+    documentId: null
     _key: '!tables.results!Dj1g6s5hDb6pvZ4S.qq6fbXaRgfw8fQiu'
   - _id: 13McgyJO1KO2JJBN
     drawn: false
@@ -125,20 +75,10 @@ results:
     range:
       - 6
       - 6
+    text: 'Role: Merchant, business owner, trader, banker'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Role: Merchant, business owner, trader, banker'
-    name: ''
+    documentId: null
     _key: '!tables.results!Dj1g6s5hDb6pvZ4S.13McgyJO1KO2JJBN'
   - _id: 6XyT1XSvSdkD7GBt
     drawn: false
@@ -147,20 +87,10 @@ results:
     range:
       - 7
       - 7
+    text: 'Role: Official, bureaucrat, courtier, clerk'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Role: Official, bureaucrat, courtier, clerk'
-    name: ''
+    documentId: null
     _key: '!tables.results!Dj1g6s5hDb6pvZ4S.6XyT1XSvSdkD7GBt'
   - _id: kaJuME5XLgLwNoa2
     drawn: false
@@ -169,24 +99,14 @@ results:
     range:
       - 8
       - 8
+    text: 'Role: Military, soldier, enforcer, law officer'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Role: Military, soldier, enforcer, law officer'
-    name: ''
+    documentId: null
     _key: '!tables.results!Dj1g6s5hDb6pvZ4S.kaJuME5XLgLwNoa2'
 sort: 0
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.325'
   systemId: null
   systemVersion: null
   createdTime: null
@@ -194,7 +114,6 @@ _stats:
   lastModifiedBy: null
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   P3lRTKxUBvk8Gei6: 3
   default: 0

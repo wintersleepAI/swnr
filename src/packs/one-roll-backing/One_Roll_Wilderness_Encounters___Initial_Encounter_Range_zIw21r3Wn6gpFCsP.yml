@@ -2,7 +2,8 @@ _id: zIw21r3Wn6gpFCsP
 description: ''
 displayRoll: true
 flags:
-  core: {}
+  core:
+    sourceId: RollTable.S7QgE7MObAgn7CX1
 folder: null
 formula: 1d4
 img: icons/svg/d20-grey.svg
@@ -16,20 +17,10 @@ results:
     range:
       - 1
       - 1
+    text: 'Initial Encounter Range: Visible from a long distance away'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Initial Encounter Range: Visible from a long distance away'
-    name: ''
+    documentId: null
     _key: '!tables.results!zIw21r3Wn6gpFCsP.IOO173IoVne3m8Hj'
   - _id: 6h4HwsiUUxDX4Rjt
     drawn: false
@@ -38,20 +29,10 @@ results:
     range:
       - 2
       - 2
+    text: 'Initial Encounter Range: Noticed [[1d4 * 100]] meters away'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Initial Encounter Range: Noticed [[1d4 * 100]] meters away'
-    name: ''
+    documentId: null
     _key: '!tables.results!zIw21r3Wn6gpFCsP.6h4HwsiUUxDX4Rjt'
   - _id: wrq6OGU7uLwxrBCs
     drawn: false
@@ -60,20 +41,10 @@ results:
     range:
       - 3
       - 3
+    text: 'Initial Encounter Range: Noticed only within [[1d6 * 10]] meters'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Initial Encounter Range: Noticed only within [[1d6 * 10]] meters'
-    name: ''
+    documentId: null
     _key: '!tables.results!zIw21r3Wn6gpFCsP.wrq6OGU7uLwxrBCs'
   - _id: kR9LFxBTuifyWCAU
     drawn: false
@@ -82,32 +53,21 @@ results:
     range:
       - 4
       - 4
+    text: 'Initial Encounter Range: Noticed only when adjacent to the event'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Initial Encounter Range: Noticed only when adjacent to the event'
-    name: ''
+    documentId: null
     _key: '!tables.results!zIw21r3Wn6gpFCsP.kR9LFxBTuifyWCAU'
 sort: 0
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.325'
   systemId: null
   systemVersion: null
   createdTime: null
   modifiedTime: null
   lastModifiedBy: null
-  compendiumSource: RollTable.S7QgE7MObAgn7CX1
+  compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   P3lRTKxUBvk8Gei6: 3
   default: 0

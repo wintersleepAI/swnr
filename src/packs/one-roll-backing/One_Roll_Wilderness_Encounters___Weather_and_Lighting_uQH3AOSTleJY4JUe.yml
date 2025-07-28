@@ -1,7 +1,8 @@
 _id: uQH3AOSTleJY4JUe
 displayRoll: true
 flags:
-  core: {}
+  core:
+    sourceId: RollTable.1iZAZC7qTf3m9tDw
 folder: null
 formula: 1d6
 img: icons/svg/d20-grey.svg
@@ -14,21 +15,11 @@ results:
     range:
       - 1
       - 1
+    text: 'Weather and Lighting: Takes place in daylight and clear weather'
     type: text
     weight: 1
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Weather and Lighting: Takes place in daylight and clear weather'
-    name: ''
+    documentId: null
     _key: '!tables.results!uQH3AOSTleJY4JUe.vCockL5UjkDbhmHw'
   - _id: vL54ovfB1lV0DHMH
     drawn: false
@@ -36,21 +27,11 @@ results:
     range:
       - 2
       - 2
+    text: 'Weather and Lighting: Daylight, but fog, mist, rain or the like'
     type: text
     weight: 1
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Weather and Lighting: Daylight, but fog, mist, rain or the like'
-    name: ''
+    documentId: null
     _key: '!tables.results!uQH3AOSTleJY4JUe.vL54ovfB1lV0DHMH'
   - _id: 3QKa1WhyMTFumriQ
     drawn: false
@@ -58,21 +39,11 @@ results:
     range:
       - 3
       - 3
+    text: 'Weather and Lighting: Daylight, but harsh seasonal weather'
     type: text
     weight: 1
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Weather and Lighting: Daylight, but harsh seasonal weather'
-    name: ''
+    documentId: null
     _key: '!tables.results!uQH3AOSTleJY4JUe.3QKa1WhyMTFumriQ'
   - _id: rfAEKWy5s2EwzA4P
     drawn: false
@@ -80,21 +51,11 @@ results:
     range:
       - 4
       - 4
+    text: 'Weather and Lighting: Night encounter, but clear weather'
     type: text
     weight: 1
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Weather and Lighting: Night encounter, but clear weather'
-    name: ''
+    documentId: null
     _key: '!tables.results!uQH3AOSTleJY4JUe.rfAEKWy5s2EwzA4P'
   - _id: bsC77fZA44k27iEl
     drawn: false
@@ -102,21 +63,11 @@ results:
     range:
       - 5
       - 5
+    text: 'Weather and Lighting: Night, with rain or other obscuring effects'
     type: text
     weight: 1
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Weather and Lighting: Night, with rain or other obscuring effects'
-    name: ''
+    documentId: null
     _key: '!tables.results!uQH3AOSTleJY4JUe.bsC77fZA44k27iEl'
   - _id: 0G5gARtw7knGd09G
     drawn: false
@@ -124,33 +75,22 @@ results:
     range:
       - 6
       - 6
+    text: 'Weather and Lighting: Night, with terrible weather and wind'
     type: text
     weight: 1
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Weather and Lighting: Night, with terrible weather and wind'
-    name: ''
+    documentId: null
     _key: '!tables.results!uQH3AOSTleJY4JUe.0G5gARtw7knGd09G'
 sort: 0
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.325'
   systemId: null
   systemVersion: null
   createdTime: null
   modifiedTime: null
   lastModifiedBy: null
-  compendiumSource: RollTable.1iZAZC7qTf3m9tDw
+  compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   P3lRTKxUBvk8Gei6: 3
   default: 0

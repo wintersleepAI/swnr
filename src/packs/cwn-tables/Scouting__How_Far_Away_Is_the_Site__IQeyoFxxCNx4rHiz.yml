@@ -3,93 +3,53 @@ name: 'Scouting: How Far Away Is the Site?'
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: x0dUijhHxmdrKZ64
+    text: Right in the same neighborhood
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Right in the same neighborhood
-    name: ''
     _key: '!tables.results!IQeyoFxxCNx4rHiz.x0dUijhHxmdrKZ64'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: nszjQJRmrnrlVlRB
+    text: In the same district
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: In the same district
-    name: ''
     _key: '!tables.results!IQeyoFxxCNx4rHiz.nszjQJRmrnrlVlRB'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: nknRJ5bUejgTNbCB
+    text: In the same city or general zone
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: In the same city or general zone
-    name: ''
     _key: '!tables.results!IQeyoFxxCNx4rHiz.nknRJ5bUejgTNbCB'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: cRoIjWvJXvGcEjx4
+    text: Somewhere in the badlands
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Somewhere in the badlands
-    name: ''
     _key: '!tables.results!IQeyoFxxCNx4rHiz.cRoIjWvJXvGcEjx4'
 replacement: true
 displayRoll: true
@@ -98,13 +58,10 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '13.346'
+  coreVersion: '11.315'
   createdTime: 1703892045233
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
 formula: 1d4
 _id: IQeyoFxxCNx4rHiz
 sort: 0

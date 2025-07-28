@@ -3,445 +3,245 @@ name: 'Espionage: Twists to the Situation'
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: y1jMNAmQXJMikRFc
+    text: False data was placed as a decoy
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: False data was placed as a decoy
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.y1jMNAmQXJMikRFc'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: uUltVOWS9gukKKhe
+    text: The data will actually harm the client
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The data will actually harm the client
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.uUltVOWS9gukKKhe'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: OsehWtPkUk28bcnE
+    text: Someone else is stealing the data as well
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Someone else is stealing the data as well
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.OsehWtPkUk28bcnE'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: ls7xUBojp2DfUtWd
+    text: The data is worthless unless stolen quickly
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The data is worthless unless stolen quickly
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.ls7xUBojp2DfUtWd'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     _id: zzq7rxM8m3ydLWUO
+    text: The data is only in a single person’s head
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The data is only in a single person’s head
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.zzq7rxM8m3ydLWUO'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     _id: Rz3MQKNY9TWCswLD
+    text: Obtaining the data will hurt an innocent
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Obtaining the data will hurt an innocent
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.Rz3MQKNY9TWCswLD'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 7
       - 7
     drawn: false
     _id: i9OZg8v8QBgC2hX1
+    text: There’s unexpected info in the data
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: There’s unexpected info in the data
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.i9OZg8v8QBgC2hX1'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 8
       - 8
     drawn: false
     _id: EyznWh7PKyLkUXpM
+    text: The data is kept in a very remote location
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The data is kept in a very remote location
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.EyznWh7PKyLkUXpM'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 9
       - 9
     drawn: false
     _id: 9ypll6IpMjNDtVcW
+    text: The data is attached to a precious object
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The data is attached to a precious object
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.9ypll6IpMjNDtVcW'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 10
       - 10
     drawn: false
     _id: SHyahYbjPXLamiAa
+    text: An important figure keeps the data near
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: An important figure keeps the data near
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.SHyahYbjPXLamiAa'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 11
       - 11
     drawn: false
     _id: K5A5fInSgQdb79R1
+    text: The data is only accessible at certain times
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The data is only accessible at certain times
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.K5A5fInSgQdb79R1'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 12
       - 12
     drawn: false
     _id: 1HPs019iDW9w89KS
+    text: There’s a key needed to decode the data
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: There’s a key needed to decode the data
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.1HPs019iDW9w89KS'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 13
       - 13
     drawn: false
     _id: IiIf7HDqX8Vn6LCl
+    text: A copy of the data has been mislaid
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: A copy of the data has been mislaid
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.IiIf7HDqX8Vn6LCl'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 14
       - 14
     drawn: false
     _id: zebkso86489JDQVI
+    text: Somebody in the org wants the data stolen
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Somebody in the org wants the data stolen
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.zebkso86489JDQVI'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 15
       - 15
     drawn: false
     _id: Qpaa7mdkZYmZQbZg
+    text: The data was stolen and hid by someone
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The data was stolen and hid by someone
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.Qpaa7mdkZYmZQbZg'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 16
       - 16
     drawn: false
     _id: zFDdSirfGPwxzNwK
+    text: The data is a unique physical object
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The data is a unique physical object
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.zFDdSirfGPwxzNwK'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 17
       - 17
     drawn: false
     _id: ZWfKgZXqtGHGJ9JW
+    text: Stealing it will enrage a third party
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Stealing it will enrage a third party
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.ZWfKgZXqtGHGJ9JW'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 18
       - 18
     drawn: false
     _id: fgETgSg5w36BC1KZ
+    text: Its guardians are focused on a different file
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Its guardians are focused on a different file
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.fgETgSg5w36BC1KZ'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 19
       - 19
     drawn: false
     _id: YklNPsil5rDhoghZ
+    text: It’s really just a pointer to the real data
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: It’s really just a pointer to the real data
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.YklNPsil5rDhoghZ'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 20
       - 20
     drawn: false
     _id: IzvOoXSqvAqovxi0
+    text: The data’s in a dangerous ruin site
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The data’s in a dangerous ruin site
-    name: ''
     _key: '!tables.results!dtpUNRVFMNhw4SHw.IzvOoXSqvAqovxi0'
 replacement: true
 displayRoll: true
@@ -450,13 +250,10 @@ flags:
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '13.346'
+  coreVersion: '11.315'
   createdTime: 1703894336132
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
 formula: 1d20
 _id: dtpUNRVFMNhw4SHw
 sort: 0

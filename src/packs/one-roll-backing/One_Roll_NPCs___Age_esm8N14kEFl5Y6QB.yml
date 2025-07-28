@@ -15,20 +15,10 @@ results:
     range:
       - 1
       - 1
+    text: 'Age: Unusually young or old for their role'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Age: Unusually young or old for their role'
-    name: ''
+    documentId: null
     _key: '!tables.results!esm8N14kEFl5Y6QB.PEf7mDWwmIbMMTED'
   - _id: B1O5UhgDZFJa3vjp
     drawn: false
@@ -37,20 +27,10 @@ results:
     range:
       - 2
       - 2
+    text: 'Age: Young adult'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Age: Young adult'
-    name: ''
+    documentId: null
     _key: '!tables.results!esm8N14kEFl5Y6QB.B1O5UhgDZFJa3vjp'
   - _id: XuUaN3b57uYdmO3c
     drawn: false
@@ -59,20 +39,10 @@ results:
     range:
       - 3
       - 3
+    text: 'Age: Mature prime'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Age: Mature prime'
-    name: ''
+    documentId: null
     _key: '!tables.results!esm8N14kEFl5Y6QB.XuUaN3b57uYdmO3c'
   - _id: jx1XhOfUaCIOgJJA
     drawn: false
@@ -81,24 +51,14 @@ results:
     range:
       - 4
       - 4
+    text: 'Age: Middle-aged or elderly'
     type: text
     weight: 1
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'Age: Middle-aged or elderly'
-    name: ''
+    documentId: null
     _key: '!tables.results!esm8N14kEFl5Y6QB.jx1XhOfUaCIOgJJA'
 sort: 0
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.325'
   systemId: null
   systemVersion: null
   createdTime: null
@@ -106,7 +66,6 @@ _stats:
   lastModifiedBy: null
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   P3lRTKxUBvk8Gei6: 3
   default: 0

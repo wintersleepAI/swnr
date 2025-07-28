@@ -8,50 +8,30 @@ results:
         brt-result-formula:
           formula: ''
     type: text
+    text: <b>How Populated is the Feature?</b>
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>How Populated is the Feature?</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!55aOU9Rip9LYjdnI.QG5DmcGu93l7F2Ya'
   - _id: w2cfz19EgajbjOmj
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Terrain-Populated
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Terrain-Populated
-    documentUuid: Compendium.wwn.gm-subtables.ISDRWsin1bQiH0uj
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: ISDRWsin1bQiH0uj
     _key: '!tables.results!55aOU9Rip9LYjdnI.w2cfz19EgajbjOmj'
   - _id: KQFEMXJcEWIBno0s
     flags:
@@ -59,50 +39,30 @@ results:
         brt-result-formula:
           formula: ''
     type: text
+    text: <b>How Dangerous is the Feature?</b>
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>How Dangerous is the Feature?</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!55aOU9Rip9LYjdnI.KQFEMXJcEWIBno0s'
   - _id: 2XRVYvpbseuFL0YN
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Terrain-Dangerous
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Terrain-Dangerous
-    documentUuid: Compendium.wwn.gm-subtables.kDxLNuNpJywuvx7D
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: kDxLNuNpJywuvx7D
     _key: '!tables.results!55aOU9Rip9LYjdnI.2XRVYvpbseuFL0YN'
   - _id: avPNyIETyiJzOtFp
     flags:
@@ -110,50 +70,30 @@ results:
         brt-result-formula:
           formula: ''
     type: text
+    text: <b>What Use is the Feature?</b>
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>What Use is the Feature?</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!55aOU9Rip9LYjdnI.avPNyIETyiJzOtFp'
   - _id: rqujGfLXjzINw6Cd
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Terrain-Use
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Terrain-Use
-    documentUuid: Compendium.wwn.gm-subtables.QOju0I5ESGWgjLZY
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: QOju0I5ESGWgjLZY
     _key: '!tables.results!55aOU9Rip9LYjdnI.rqujGfLXjzINw6Cd'
   - _id: q8ESpk2tAItT9GQO
     flags:
@@ -161,50 +101,30 @@ results:
         brt-result-formula:
           formula: ''
     type: text
+    text: <b>What Kind of Event Last Happened There?</b>
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>What Kind of Event Last Happened There?</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!55aOU9Rip9LYjdnI.q8ESpk2tAItT9GQO'
   - _id: TovoHQFqmbSiQ7TJ
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Terrain-Event
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Terrain-Event
-    documentUuid: Compendium.wwn.gm-subtables.kWt6ysHZqNgAUME9
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: kWt6ysHZqNgAUME9
     _key: '!tables.results!55aOU9Rip9LYjdnI.TovoHQFqmbSiQ7TJ'
   - _id: atkfZ9OmhRkZrzvS
     flags:
@@ -212,50 +132,30 @@ results:
         brt-result-formula:
           formula: ''
     type: text
+    text: <b>What Antagonists are Common There?</b>
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>What Antagonists are Common There?</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!55aOU9Rip9LYjdnI.atkfZ9OmhRkZrzvS'
   - _id: 5tv8pwSytbSOgMXw
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Terrain-Antagonists
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Terrain-Antagonists
-    documentUuid: Compendium.wwn.gm-subtables.lVSyfLFtJB2R3Jnu
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: lVSyfLFtJB2R3Jnu
     _key: '!tables.results!55aOU9Rip9LYjdnI.5tv8pwSytbSOgMXw'
   - _id: f4uSCEVKnQJi65xE
     flags:
@@ -263,50 +163,30 @@ results:
         brt-result-formula:
           formula: ''
     type: text
+    text: <b>Optional Quirk of the Feature</b>
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>Optional Quirk of the Feature</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!55aOU9Rip9LYjdnI.f4uSCEVKnQJi65xE'
   - _id: HP5iUTLaNoid4kZm
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Terrain-Quirk
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Terrain-Quirk
-    documentUuid: Compendium.wwn.gm-subtables.JPhfXfsCtzXNnRvc
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: JPhfXfsCtzXNnRvc
     _key: '!tables.results!55aOU9Rip9LYjdnI.HP5iUTLaNoid4kZm'
 formula: 1d1
 replacement: true
@@ -324,12 +204,11 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569812651
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!55aOU9Rip9LYjdnI'
 

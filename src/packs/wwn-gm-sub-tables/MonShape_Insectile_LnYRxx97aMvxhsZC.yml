@@ -3,6 +3,7 @@ name: MonShape-Insectile
 img: icons/svg/d20-grey.svg
 results:
   - type: text
+    text: Compound eyes
     weight: 1
     range:
       - 1
@@ -11,20 +12,10 @@ results:
     _id: d7n37bwtc7sd2674
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Compound eyes
-    name: ''
+    documentId: null
     _key: '!tables.results!LnYRxx97aMvxhsZC.d7n37bwtc7sd2674'
   - type: text
+    text: Stings
     weight: 1
     range:
       - 2
@@ -33,20 +24,10 @@ results:
     _id: 4340nqchvogc4zxx
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Stings
-    name: ''
+    documentId: null
     _key: '!tables.results!LnYRxx97aMvxhsZC.4340nqchvogc4zxx'
   - type: text
+    text: Mandibles
     weight: 1
     range:
       - 3
@@ -55,20 +36,10 @@ results:
     _id: 0799y3vlnbquqyp3
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Mandibles
-    name: ''
+    documentId: null
     _key: '!tables.results!LnYRxx97aMvxhsZC.0799y3vlnbquqyp3'
   - type: text
+    text: Spinnerets
     weight: 1
     range:
       - 4
@@ -77,20 +48,10 @@ results:
     _id: ukaotdptkjj9mrot
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Spinnerets
-    name: ''
+    documentId: null
     _key: '!tables.results!LnYRxx97aMvxhsZC.ukaotdptkjj9mrot'
   - type: text
+    text: Swarms
     weight: 1
     range:
       - 5
@@ -99,20 +60,10 @@ results:
     _id: 24a86in5ti99xdfb
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Swarms
-    name: ''
+    documentId: null
     _key: '!tables.results!LnYRxx97aMvxhsZC.24a86in5ti99xdfb'
   - type: text
+    text: Membrane wings
     weight: 1
     range:
       - 6
@@ -121,20 +72,10 @@ results:
     _id: ndxcusi59552qb21
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Membrane wings
-    name: ''
+    documentId: null
     _key: '!tables.results!LnYRxx97aMvxhsZC.ndxcusi59552qb21'
   - type: text
+    text: Egg sacs
     weight: 1
     range:
       - 7
@@ -143,20 +84,10 @@ results:
     _id: l236qkq1eflc531v
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Egg sacs
-    name: ''
+    documentId: null
     _key: '!tables.results!LnYRxx97aMvxhsZC.l236qkq1eflc531v'
   - type: text
+    text: Blood-sucking
     weight: 1
     range:
       - 8
@@ -165,20 +96,10 @@ results:
     _id: 9zik0n1gaqrbmw8k
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Blood-sucking
-    name: ''
+    documentId: null
     _key: '!tables.results!LnYRxx97aMvxhsZC.9zik0n1gaqrbmw8k'
   - type: text
+    text: Parasitizing
     weight: 1
     range:
       - 9
@@ -187,20 +108,10 @@ results:
     _id: ee7zl8wibunvemk1
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Parasitizing
-    name: ''
+    documentId: null
     _key: '!tables.results!LnYRxx97aMvxhsZC.ee7zl8wibunvemk1'
   - type: text
+    text: Larval forms
     weight: 1
     range:
       - 10
@@ -209,20 +120,10 @@ results:
     _id: ozd71b60y7n6myk5
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Larval forms
-    name: ''
+    documentId: null
     _key: '!tables.results!LnYRxx97aMvxhsZC.ozd71b60y7n6myk5'
   - type: text
+    text: Leaping
     weight: 1
     range:
       - 11
@@ -231,20 +132,10 @@ results:
     _id: kmgp38m9kgjbghgb
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Leaping
-    name: ''
+    documentId: null
     _key: '!tables.results!LnYRxx97aMvxhsZC.kmgp38m9kgjbghgb'
   - type: text
+    text: Numerous legs
     weight: 1
     range:
       - 12
@@ -253,18 +144,7 @@ results:
     _id: mitv39is3h9bxckm
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Numerous legs
-    name: ''
+    documentId: null
     _key: '!tables.results!LnYRxx97aMvxhsZC.mitv39is3h9bxckm'
 formula: 1d12
 replacement: true
@@ -279,12 +159,11 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!LnYRxx97aMvxhsZC'
 

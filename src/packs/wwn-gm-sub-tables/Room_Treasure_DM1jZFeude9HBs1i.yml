@@ -3,6 +3,7 @@ name: Room-Treasure
 img: icons/svg/d20-grey.svg
 results:
   - type: text
+    text: Stored in a visible chest or coffer
     weight: 1
     range:
       - 1
@@ -11,20 +12,10 @@ results:
     _id: uqzzedeh85aolsrb
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Stored in a visible chest or coffer
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.uqzzedeh85aolsrb'
   - type: text
+    text: Hidden in a pool of liquid
     weight: 1
     range:
       - 2
@@ -33,20 +24,10 @@ results:
     _id: fmhv7rag83pj9met
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Hidden in a pool of liquid
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.fmhv7rag83pj9met'
   - type: text
+    text: Behind a stone in the wall
     weight: 1
     range:
       - 3
@@ -55,20 +36,10 @@ results:
     _id: gpoqm6thouahffft
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Behind a stone in the wall
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.gpoqm6thouahffft'
   - type: text
+    text: Underneath a floor tile
     weight: 1
     range:
       - 4
@@ -77,20 +48,10 @@ results:
     _id: 8fhd7qfqemxsz4cp
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Underneath a floor tile
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.8fhd7qfqemxsz4cp'
   - type: text
+    text: Hidden inside a creature’s body
     weight: 1
     range:
       - 5
@@ -99,20 +60,10 @@ results:
     _id: 2udff1mgi65qn4c1
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Hidden inside a creature’s body
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.2udff1mgi65qn4c1'
   - type: text
+    text: Inside an ordinary furniture drawer
     weight: 1
     range:
       - 6
@@ -121,20 +72,10 @@ results:
     _id: 5cj14wyyurw03eba
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Inside an ordinary furniture drawer
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.5cj14wyyurw03eba'
   - type: text
+    text: Slid beneath a bed or other furnishing
     weight: 1
     range:
       - 7
@@ -143,20 +84,10 @@ results:
     _id: fbf3olwa5ejfgpt1
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Slid beneath a bed or other furnishing
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.fbf3olwa5ejfgpt1'
   - type: text
+    text: Placed openly on a shelf for display
     weight: 1
     range:
       - 8
@@ -165,20 +96,10 @@ results:
     _id: 2c87ie8c84zbkemf
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Placed openly on a shelf for display
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.2c87ie8c84zbkemf'
   - type: text
+    text: Hidden in a pile of other junk
     weight: 1
     range:
       - 9
@@ -187,20 +108,10 @@ results:
     _id: tizrq0ud7id4hqoj
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Hidden in a pile of other junk
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.tizrq0ud7id4hqoj'
   - type: text
+    text: Tucked into a secret furniture space
     weight: 1
     range:
       - 10
@@ -209,20 +120,10 @@ results:
     _id: euy5oidss4i6yfpi
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Tucked into a secret furniture space
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.euy5oidss4i6yfpi'
   - type: text
+    text: Slid behind a tapestry or painting
     weight: 1
     range:
       - 11
@@ -231,20 +132,10 @@ results:
     _id: gluxqsyz3npsd60k
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Slid behind a tapestry or painting
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.gluxqsyz3npsd60k'
   - type: text
+    text: Heavy, protective locked chest or safe
     weight: 1
     range:
       - 12
@@ -253,20 +144,10 @@ results:
     _id: zl0or599wz8yuw6o
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Heavy, protective locked chest or safe
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.zl0or599wz8yuw6o'
   - type: text
+    text: Buried under heavy or dangerous debris
     weight: 1
     range:
       - 13
@@ -275,20 +156,10 @@ results:
     _id: sl6gxkj3v6rs6xv5
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Buried under heavy or dangerous debris
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.sl6gxkj3v6rs6xv5'
   - type: text
+    text: In the pockets of clothes stored here
     weight: 1
     range:
       - 14
@@ -297,20 +168,10 @@ results:
     _id: dsi7fkezvq61hdor
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: In the pockets of clothes stored here
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.dsi7fkezvq61hdor'
   - type: text
+    text: The treasure’s a creature’s precious body part
     weight: 1
     range:
       - 15
@@ -319,20 +180,10 @@ results:
     _id: 8qtvv3k86ctvorr9
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The treasure’s a creature’s precious body part
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.8qtvv3k86ctvorr9'
   - type: text
+    text: Scattered carelessly on the floor
     weight: 1
     range:
       - 16
@@ -341,20 +192,10 @@ results:
     _id: rv9t4qlbj0sy2xz8
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Scattered carelessly on the floor
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.rv9t4qlbj0sy2xz8'
   - type: text
+    text: Tucked into a pillow or cushion
     weight: 1
     range:
       - 17
@@ -363,20 +204,10 @@ results:
     _id: 06qzi9vu95h32vjg
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Tucked into a pillow or cushion
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.06qzi9vu95h32vjg'
   - type: text
+    text: Hung on a statue or display frame
     weight: 1
     range:
       - 18
@@ -385,20 +216,10 @@ results:
     _id: kj5ijoo02nsn195j
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Hung on a statue or display frame
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.kj5ijoo02nsn195j'
   - type: text
+    text: Hidden atop a ceiling beam
     weight: 1
     range:
       - 19
@@ -407,20 +228,10 @@ results:
     _id: gp21f26dejbei8fl
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Hidden atop a ceiling beam
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.gp21f26dejbei8fl'
   - type: text
+    text: Resting atop a desk or table
     weight: 1
     range:
       - 20
@@ -429,18 +240,7 @@ results:
     _id: 57a4wrp3viggswqu
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Resting atop a desk or table
-    name: ''
+    documentId: null
     _key: '!tables.results!DM1jZFeude9HBs1i.57a4wrp3viggswqu'
 formula: 1d20
 replacement: true
@@ -455,12 +255,11 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!DM1jZFeude9HBs1i'
 

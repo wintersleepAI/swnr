@@ -11,6 +11,7 @@ description: >-
 results:
   - _id: vM3W8t6QwNbuLL8z
     type: text
+    text: <b>What's Going On Right Now?</b>
     weight: 1
     range:
       - 1
@@ -18,21 +19,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>What's Going On Right Now?</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!hCEqBi3WTcwU5pnx.vM3W8t6QwNbuLL8z'
   - _id: UDyrKdhG5yr0VlE6
-    type: document
+    type: pack
+    text: Combat-Happening
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -40,22 +31,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Combat-Happening
-    documentUuid: Compendium.wwn.gm-subtables.ridAamiJNb8FjfYw
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: ridAamiJNb8FjfYw
     _key: '!tables.results!hCEqBi3WTcwU5pnx.UDyrKdhG5yr0VlE6'
   - _id: TaOiloYhGNXa6Nj9
     type: text
+    text: <b>What Problems Do They Have?</b>
     weight: 1
     range:
       - 1
@@ -63,21 +44,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>What Problems Do They Have?</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!hCEqBi3WTcwU5pnx.TaOiloYhGNXa6Nj9'
   - _id: hhPzJFGQBH32sEui
-    type: document
+    type: pack
+    text: Combat-Problems
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -85,22 +56,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Combat-Problems
-    documentUuid: Compendium.wwn.gm-subtables.ISghrbzq7VJ7wqxA
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: ISghrbzq7VJ7wqxA
     _key: '!tables.results!hCEqBi3WTcwU5pnx.hhPzJFGQBH32sEui'
   - _id: 6RmAiYimx8EvB4c8
     type: text
+    text: <b>Twists About the Target or their Allies</b>
     weight: 1
     range:
       - 1
@@ -108,21 +69,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>Twists About the Target or their Allies</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!hCEqBi3WTcwU5pnx.6RmAiYimx8EvB4c8'
   - _id: sAeOg55zZyhQvHtX
-    type: document
+    type: pack
+    text: Combat-Twists
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -130,22 +81,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Combat-Twists
-    documentUuid: Compendium.wwn.gm-subtables.5UayvelPuOvIqgnn
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: 5UayvelPuOvIqgnn
     _key: '!tables.results!hCEqBi3WTcwU5pnx.sAeOg55zZyhQvHtX'
   - _id: NLT4UwTVdvva9tkW
     type: text
+    text: <b>What's That Bestial Monster Doing?</b>
     weight: 1
     range:
       - 1
@@ -153,21 +94,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>What's That Bestial Monster Doing?</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!hCEqBi3WTcwU5pnx.NLT4UwTVdvva9tkW'
   - _id: zdWaoCf76mYj6Eet
-    type: document
+    type: pack
+    text: Combat-Bestial
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -175,22 +106,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Combat-Bestial
-    documentUuid: Compendium.wwn.gm-subtables.x3mT0GDELCfeMUvT
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: x3mT0GDELCfeMUvT
     _key: '!tables.results!hCEqBi3WTcwU5pnx.zdWaoCf76mYj6Eet'
   - _id: HP5bjUjhvwKGaBUD
     type: text
+    text: <b>Urban Dwelling Complication</b>
     weight: 1
     range:
       - 1
@@ -198,21 +119,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>Urban Dwelling Complication</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!hCEqBi3WTcwU5pnx.HP5bjUjhvwKGaBUD'
   - _id: p8a9rcMzEG3k7N6y
-    type: document
+    type: pack
+    text: Combat-Urban
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -220,22 +131,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Combat-Urban
-    documentUuid: Compendium.wwn.gm-subtables.8esBnK7LsZOIMqek
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: 8esBnK7LsZOIMqek
     _key: '!tables.results!hCEqBi3WTcwU5pnx.p8a9rcMzEG3k7N6y'
   - _id: kyW6OAf7bz7RvLEd
     type: text
+    text: <b>Wilderness Lair Complication</b>
     weight: 1
     range:
       - 1
@@ -243,21 +144,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>Wilderness Lair Complication</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!hCEqBi3WTcwU5pnx.kyW6OAf7bz7RvLEd'
   - _id: odJ5P4fjonw37kC7
-    type: document
+    type: pack
+    text: Combat-Wilderness
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -265,22 +156,12 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Combat-Wilderness
-    documentUuid: Compendium.wwn.gm-subtables.2mDgEl64SQMhUpU8
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: 2mDgEl64SQMhUpU8
     _key: '!tables.results!hCEqBi3WTcwU5pnx.odJ5P4fjonw37kC7'
   - _id: J7tAJ8MafkKeVss4
     type: text
+    text: <b>Deep Chamber Complication</b>
     weight: 1
     range:
       - 1
@@ -288,21 +169,11 @@ results:
     drawn: false
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: <b>Deep Chamber Complication</b>
-    name: ''
+    documentId: null
     _key: '!tables.results!hCEqBi3WTcwU5pnx.J7tAJ8MafkKeVss4'
   - _id: WKRo8mImvm415366
-    type: document
+    type: pack
+    text: Combat-Deep
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
@@ -310,19 +181,8 @@ results:
       - 1
     drawn: false
     flags: {}
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Combat-Deep
-    documentUuid: Compendium.wwn.gm-subtables.soaAjzm8nsbtHkNq
-    description: ''
+    documentCollection: wwn.gm-subtables
+    documentId: soaAjzm8nsbtHkNq
     _key: '!tables.results!hCEqBi3WTcwU5pnx.WKRo8mImvm415366'
 formula: 1d1
 replacement: true
@@ -336,12 +196,11 @@ ownership:
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569812651
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!hCEqBi3WTcwU5pnx'
 

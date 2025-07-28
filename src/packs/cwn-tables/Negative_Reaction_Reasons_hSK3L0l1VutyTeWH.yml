@@ -4,181 +4,101 @@ _id: hSK3L0l1VutyTeWH
 img: icons/svg/d20-grey.svg
 description: ''
 results:
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     _id: C1kONRsozojiuxzl
+    text: A plan of theirs just went wrong
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: A plan of theirs just went wrong
-    name: ''
     _key: '!tables.results!hSK3L0l1VutyTeWH.C1kONRsozojiuxzl'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     _id: HQMSAMKYWFLfjl5a
+    text: They’re prejudiced against a PC type
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They’re prejudiced against a PC type
-    name: ''
     _key: '!tables.results!hSK3L0l1VutyTeWH.HQMSAMKYWFLfjl5a'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     _id: NG1PRBbrVzZx8AIW
+    text: They’re offended or insulted by something
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They’re offended or insulted by something
-    name: ''
     _key: '!tables.results!hSK3L0l1VutyTeWH.NG1PRBbrVzZx8AIW'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     _id: oHsj63znNranm1pA
+    text: They’ve had a terrible day so far
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They’ve had a terrible day so far
-    name: ''
     _key: '!tables.results!hSK3L0l1VutyTeWH.oHsj63znNranm1pA'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 5
       - 5
     drawn: false
     _id: 9LKMInQPphssJ2DD
+    text: The PCs have just made them more work
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The PCs have just made them more work
-    name: ''
     _key: '!tables.results!hSK3L0l1VutyTeWH.9LKMInQPphssJ2DD'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 6
       - 6
     drawn: false
     _id: J47rbSiyOfWlV9To
+    text: They’re afraid of being seen associating
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They’re afraid of being seen associating
-    name: ''
     _key: '!tables.results!hSK3L0l1VutyTeWH.J47rbSiyOfWlV9To'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 7
       - 7
     drawn: false
     _id: P1twp8zYdxIz0pH7
+    text: The PCs look like easy prey to them
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The PCs look like easy prey to them
-    name: ''
     _key: '!tables.results!hSK3L0l1VutyTeWH.P1twp8zYdxIz0pH7'
-  - type: text
+  - type: 0
     weight: 1
     range:
       - 8
       - 8
     drawn: false
     _id: VXJSasHVolaFUaAJ
+    text: They just don’t want to deal with them
+    documentId: null
     flags: {}
     img: icons/svg/d20-black.svg
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: They just don’t want to deal with them
-    name: ''
     _key: '!tables.results!hSK3L0l1VutyTeWH.VXJSasHVolaFUaAJ'
 replacement: true
 displayRoll: true
@@ -186,13 +106,10 @@ flags: {}
 _stats:
   systemId: swnr
   systemVersion: 1.1.0
-  coreVersion: '13.346'
+  coreVersion: '11.315'
   createdTime: 1703839336585
   modifiedTime: 1703915663438
   lastModifiedBy: IdcfL6SpjG7rJP4D
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
 formula: 1d8
 sort: 0
 ownership:

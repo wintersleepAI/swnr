@@ -6,134 +6,74 @@ results:
   - _id: rw1nFSl60aGyXzls
     flags: {}
     type: text
+    text: Moan at the torment of their condition
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 1
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Moan at the torment of their condition
-    name: ''
+    documentId: null
     _key: '!tables.results!ODWKbUBbnFxGLvgg.rw1nFSl60aGyXzls'
   - _id: dVlhozgZRtg4fSWj
     flags: {}
     type: text
+    text: Savagely attack the most vital, lively enemy
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 2
       - 2
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Savagely attack the most vital, lively enemy
-    name: ''
+    documentId: null
     _key: '!tables.results!ODWKbUBbnFxGLvgg.dVlhozgZRtg4fSWj'
   - _id: JfSWu4a3jzZTh0IB
     flags: {}
     type: text
+    text: Blindly assault a downed foe or corpse
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 3
       - 3
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Blindly assault a downed foe or corpse
-    name: ''
+    documentId: null
     _key: '!tables.results!ODWKbUBbnFxGLvgg.JfSWu4a3jzZTh0IB'
   - _id: 5AElUM9vLxo9lc0s
     flags: {}
     type: text
+    text: Seek to terrify a foe rather than directly attack
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 4
       - 4
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Seek to terrify a foe rather than directly attack
-    name: ''
+    documentId: null
     _key: '!tables.results!ODWKbUBbnFxGLvgg.5AElUM9vLxo9lc0s'
   - _id: d2w0aEAQND2vD4tm
     flags: {}
     type: text
+    text: Target the foe with the weakest life force
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 5
       - 5
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Target the foe with the weakest life force
-    name: ''
+    documentId: null
     _key: '!tables.results!ODWKbUBbnFxGLvgg.d2w0aEAQND2vD4tm'
   - _id: sE4mXb8Mp8ab0FxJ
     flags: {}
     type: text
+    text: Do nothing, instinctively craving an end
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 6
       - 6
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Do nothing, instinctively craving an end
-    name: ''
+    documentId: null
     _key: '!tables.results!ODWKbUBbnFxGLvgg.sE4mXb8Mp8ab0FxJ'
 formula: 1d6
 replacement: true
@@ -141,17 +81,17 @@ displayRoll: true
 folder: null
 sort: 0
 flags:
-  core: {}
+  core:
+    sourceId: Compendium.wwn.instinct.ODWKbUBbnFxGLvgg
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   systemId: null
   systemVersion: null
   createdTime: null
   modifiedTime: null
   lastModifiedBy: null
-  compendiumSource: Compendium.wwn.instinct.ODWKbUBbnFxGLvgg
+  compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3

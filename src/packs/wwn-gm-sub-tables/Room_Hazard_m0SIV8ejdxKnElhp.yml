@@ -3,6 +3,7 @@ name: Room-Hazard
 img: icons/svg/d20-grey.svg
 results:
   - type: text
+    text: Tripwire alarm or other alerts
     weight: 1
     range:
       - 1
@@ -11,20 +12,10 @@ results:
     _id: aacqg6zouwjh5iws
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Tripwire alarm or other alerts
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.aacqg6zouwjh5iws'
   - type: text
+    text: Unstable floor that crumbles under weight
     weight: 1
     range:
       - 2
@@ -33,20 +24,10 @@ results:
     _id: 0yon53h8949mei4q
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Unstable floor that crumbles under weight
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.0yon53h8949mei4q'
   - type: text
+    text: Dangerous fumes or miasma
     weight: 1
     range:
       - 3
@@ -55,20 +36,10 @@ results:
     _id: gjsvbe56fwrg9re3
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Dangerous fumes or miasma
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.gjsvbe56fwrg9re3'
   - type: text
+    text: Trapped containers or portals
     weight: 1
     range:
       - 4
@@ -77,20 +48,10 @@ results:
     _id: u23fhtamj2ja5wxn
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Trapped containers or portals
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.u23fhtamj2ja5wxn'
   - type: text
+    text: Explosive dust or gases
     weight: 1
     range:
       - 5
@@ -99,20 +60,10 @@ results:
     _id: 6vqaulozfhllh50p
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Explosive dust or gases
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.6vqaulozfhllh50p'
   - type: text
+    text: An object makes a loud noise if disturbed
     weight: 1
     range:
       - 6
@@ -121,20 +72,10 @@ results:
     _id: w9zpdkuvs4f6a3qc
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: An object makes a loud noise if disturbed
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.w9zpdkuvs4f6a3qc'
   - type: text
+    text: Damaged supports that give way in combat
     weight: 1
     range:
       - 7
@@ -143,20 +84,10 @@ results:
     _id: iufavo66acg02qjd
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Damaged supports that give way in combat
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.iufavo66acg02qjd'
   - type: text
+    text: Dangerously high or deep water
     weight: 1
     range:
       - 8
@@ -165,20 +96,10 @@ results:
     _id: svoa6iln7eemco1o
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Dangerously high or deep water
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.svoa6iln7eemco1o'
   - type: text
+    text: Trap set on a path of travel
     weight: 1
     range:
       - 9
@@ -187,20 +108,10 @@ results:
     _id: rcesge03amk4va4k
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Trap set on a path of travel
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.rcesge03amk4va4k'
   - type: text
+    text: Device here is dangerously broken in use
     weight: 1
     range:
       - 10
@@ -209,20 +120,10 @@ results:
     _id: n5hxj3op8tv3f4oi
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Device here is dangerously broken in use
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.n5hxj3op8tv3f4oi'
   - type: text
+    text: Trap that seals intruders into an area
     weight: 1
     range:
       - 11
@@ -231,20 +132,10 @@ results:
     _id: vwra3ct7jeq0hyba
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Trap that seals intruders into an area
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.vwra3ct7jeq0hyba'
   - type: text
+    text: Treacherous footing over dangerous terrain
     weight: 1
     range:
       - 12
@@ -253,20 +144,10 @@ results:
     _id: 6ydbc2jijvs9r51d
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Treacherous footing over dangerous terrain
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.6ydbc2jijvs9r51d'
   - type: text
+    text: Uncontrolled flames or dangerous heat
     weight: 1
     range:
       - 13
@@ -275,20 +156,10 @@ results:
     _id: 3px6n5zimog071uk
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Uncontrolled flames or dangerous heat
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.3px6n5zimog071uk'
   - type: text
+    text: Torch-extinguishing winds or vapors
     weight: 1
     range:
       - 14
@@ -297,20 +168,10 @@ results:
     _id: it49vyjjfziadi1b
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Torch-extinguishing winds or vapors
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.it49vyjjfziadi1b'
   - type: text
+    text: Ordinary-seeming object harms handlers
     weight: 1
     range:
       - 15
@@ -319,20 +180,10 @@ results:
     _id: i8vgmr5h6aawxdtx
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Ordinary-seeming object harms handlers
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.i8vgmr5h6aawxdtx'
   - type: text
+    text: Crushingly heavy object is going to tip over
     weight: 1
     range:
       - 16
@@ -341,20 +192,10 @@ results:
     _id: w1tvc7dty2589wxc
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Crushingly heavy object is going to tip over
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.w1tvc7dty2589wxc'
   - type: text
+    text: A savage foe can be attracted by accident
     weight: 1
     range:
       - 17
@@ -363,20 +204,10 @@ results:
     _id: mw8habkyc6uh7cad
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: A savage foe can be attracted by accident
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.mw8habkyc6uh7cad'
   - type: text
+    text: Something here is cursed by dark powers
     weight: 1
     range:
       - 18
@@ -385,20 +216,10 @@ results:
     _id: kz1snxmtfvaz4vs7
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Something here is cursed by dark powers
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.kz1snxmtfvaz4vs7'
   - type: text
+    text: Seeming treasure is used as bait for a trap
     weight: 1
     range:
       - 19
@@ -407,20 +228,10 @@ results:
     _id: 93pj55uxodq8gx0c
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Seeming treasure is used as bait for a trap
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.93pj55uxodq8gx0c'
   - type: text
+    text: A contagious disease is on something here
     weight: 1
     range:
       - 20
@@ -429,18 +240,7 @@ results:
     _id: rgjmxnica1jak9yd
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: A contagious disease is on something here
-    name: ''
+    documentId: null
     _key: '!tables.results!m0SIV8ejdxKnElhp.rgjmxnica1jak9yd'
 formula: 1d20
 replacement: true
@@ -455,12 +255,11 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!m0SIV8ejdxKnElhp'
 

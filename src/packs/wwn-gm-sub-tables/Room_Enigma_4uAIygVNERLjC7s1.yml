@@ -3,6 +3,7 @@ name: Room-Enigma
 img: icons/svg/d20-grey.svg
 results:
   - type: text
+    text: Magical fountain or pool
     weight: 1
     range:
       - 1
@@ -11,20 +12,10 @@ results:
     _id: 0pzx3mtmeyde24u0
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Magical fountain or pool
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.0pzx3mtmeyde24u0'
   - type: text
+    text: Control that opens paths elsewhere
     weight: 1
     range:
       - 2
@@ -33,20 +24,10 @@ results:
     _id: tr64j2o83henoth9
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Control that opens paths elsewhere
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.tr64j2o83henoth9'
   - type: text
+    text: Spatial warp between locations
     weight: 1
     range:
       - 3
@@ -55,20 +36,10 @@ results:
     _id: pnenkx5g2chbh5vs
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Spatial warp between locations
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.pnenkx5g2chbh5vs'
   - type: text
+    text: Enchanted statue or art object
     weight: 1
     range:
       - 4
@@ -77,20 +48,10 @@ results:
     _id: bxx0qq0l58i0x5av
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Enchanted statue or art object
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.bxx0qq0l58i0x5av'
   - type: text
+    text: Magically-animated room components
     weight: 1
     range:
       - 5
@@ -99,20 +60,10 @@ results:
     _id: yaaoj6l9948huyhc
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Magically-animated room components
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.yaaoj6l9948huyhc'
   - type: text
+    text: Substance with physically impossible traits
     weight: 1
     range:
       - 6
@@ -121,20 +72,10 @@ results:
     _id: rmm1pk82g4816nt8
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Substance with physically impossible traits
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.rmm1pk82g4816nt8'
   - type: text
+    text: Altered or augmented gravity
     weight: 1
     range:
       - 7
@@ -143,20 +84,10 @@ results:
     _id: ze11w1f67dnuu22e
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Altered or augmented gravity
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.ze11w1f67dnuu22e'
   - type: text
+    text: Zone that empowers foes or magic types
     weight: 1
     range:
       - 8
@@ -165,20 +96,10 @@ results:
     _id: 29b5j8k785qhnxby
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Zone that empowers foes or magic types
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.29b5j8k785qhnxby'
   - type: text
+    text: Magical ward or seal on a summoned thing
     weight: 1
     range:
       - 9
@@ -187,20 +108,10 @@ results:
     _id: 1013cleqqbd1r8uq
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Magical ward or seal on a summoned thing
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.1013cleqqbd1r8uq'
   - type: text
+    text: Oracular object or far-scrying device
     weight: 1
     range:
       - 10
@@ -209,20 +120,10 @@ results:
     _id: 7pm0fv7r0fw4i6lw
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Oracular object or far-scrying device
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.7pm0fv7r0fw4i6lw'
   - type: text
+    text: Standing magical effect in the area
     weight: 1
     range:
       - 11
@@ -231,20 +132,10 @@ results:
     _id: 7mmu9lmb0cjn5f4d
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Standing magical effect in the area
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.7mmu9lmb0cjn5f4d'
   - type: text
+    text: Temporal distortion or visions of other times
     weight: 1
     range:
       - 12
@@ -253,20 +144,10 @@ results:
     _id: kh75sbuu7ed3kzt2
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Temporal distortion or visions of other times
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.kh75sbuu7ed3kzt2'
   - type: text
+    text: Sounds being shifted over long distances
     weight: 1
     range:
       - 13
@@ -275,20 +156,10 @@ results:
     _id: 0vlxd1af7lxcu0cb
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Sounds being shifted over long distances
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.0vlxd1af7lxcu0cb'
   - type: text
+    text: Zones of darkness or blinding light
     weight: 1
     range:
       - 14
@@ -297,20 +168,10 @@ results:
     _id: 5lnlntdd6jfkdyy1
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Zones of darkness or blinding light
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.5lnlntdd6jfkdyy1'
   - type: text
+    text: Enchanted seals visibly locking up loot
     weight: 1
     range:
       - 15
@@ -319,20 +180,10 @@ results:
     _id: rkbz0dtq0utocv1q
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Enchanted seals visibly locking up loot
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.rkbz0dtq0utocv1q'
   - type: text
+    text: Magical or elemental force emitting unit
     weight: 1
     range:
       - 16
@@ -341,20 +192,10 @@ results:
     _id: h59a2r00qhwfmztw
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Magical or elemental force emitting unit
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.h59a2r00qhwfmztw'
   - type: text
+    text: Enchantment tailored to the site’s original use
     weight: 1
     range:
       - 17
@@ -363,20 +204,10 @@ results:
     _id: atwy0s953xt1yof5
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Enchantment tailored to the site’s original use
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.atwy0s953xt1yof5'
   - type: text
+    text: Unnatural heat or chill in an area
     weight: 1
     range:
       - 18
@@ -385,20 +216,10 @@ results:
     _id: pjjapbui5ztupwtz
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Unnatural heat or chill in an area
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.pjjapbui5ztupwtz'
   - type: text
+    text: Magically-altered plant life here
     weight: 1
     range:
       - 19
@@ -407,20 +228,10 @@ results:
     _id: ussvihjpiasvlokf
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Magically-altered plant life here
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.ussvihjpiasvlokf'
   - type: text
+    text: Restorative magical device
     weight: 1
     range:
       - 20
@@ -429,18 +240,7 @@ results:
     _id: s0az8c70q1da83op
     flags: {}
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Restorative magical device
-    name: ''
+    documentId: null
     _key: '!tables.results!4uAIygVNERLjC7s1.s0az8c70q1da83op'
 formula: 1d20
 replacement: true
@@ -455,12 +255,11 @@ description: ''
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!4uAIygVNERLjC7s1'
 

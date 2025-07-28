@@ -6,90 +6,50 @@ results:
   - _id: 58uVz77Z8rH5IeYY
     flags: {}
     type: text
+    text: Smaller and slighter than their neighbors
     weight: 1
     range:
       - 1
       - 1
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Smaller and slighter than their neighbors
-    name: ''
+    documentId: null
     _key: '!tables.results!O68XOXXDKgxnLjUZ.58uVz77Z8rH5IeYY'
   - _id: DUAmv1CKa0ahhEtI
     flags: {}
     type: text
+    text: Same height and weight as the neighbors
     weight: 1
     range:
       - 2
       - 2
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Same height and weight as the neighbors
-    name: ''
+    documentId: null
     _key: '!tables.results!O68XOXXDKgxnLjUZ.DUAmv1CKa0ahhEtI'
   - _id: CfY8dp9arQZkhArd
     flags: {}
     type: text
+    text: Either short and stocky or tall and slender
     weight: 1
     range:
       - 3
       - 3
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Either short and stocky or tall and slender
-    name: ''
+    documentId: null
     _key: '!tables.results!O68XOXXDKgxnLjUZ.CfY8dp9arQZkhArd'
   - _id: 4E9UQqXxAiAw5FJs
     flags: {}
     type: text
+    text: Much bigger and bulkier than neighbors
     weight: 1
     range:
       - 4
       - 4
     drawn: false
     img: null
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Much bigger and bulkier than neighbors
-    name: ''
+    documentId: null
     _key: '!tables.results!O68XOXXDKgxnLjUZ.4E9UQqXxAiAw5FJs'
 formula: 1d4
 replacement: true
@@ -104,12 +64,11 @@ ownership:
 _stats:
   systemId: wwn
   systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   createdTime: null
   modifiedTime: 1690569840132
   lastModifiedBy: VPYTJCONjTybUwoI
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 _key: '!tables!O68XOXXDKgxnLjUZ'
 

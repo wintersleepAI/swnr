@@ -13,50 +13,30 @@ results:
         brt-result-formula:
           formula: ''
     type: text
+    text: 'The Elixir''s Form:'
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 100
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: 'The Elixir''s Form:'
-    name: ''
+    documentId: null
     _key: '!tables.results!15l8vsBmHeKyd3cc.gId8C0F8tBWO8xTr'
   - _id: fZvFCrBYitItBBa4
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Elixir Form
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 100
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Elixir Form
-    documentUuid: Compendium.wwn.magic-tables.ZCHmVjjO4Qi2Rf1h
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: ZCHmVjjO4Qi2Rf1h
     _key: '!tables.results!15l8vsBmHeKyd3cc.fZvFCrBYitItBBa4'
   - _id: rYJLPytXmpoPvgsA
     flags:
@@ -64,706 +44,436 @@ results:
         brt-result-formula:
           formula: ''
     type: text
+    text: The Elixir's Quirks of Appearance
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 100
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: The Elixir's Quirks of Appearance
-    name: ''
+    documentId: null
     _key: '!tables.results!15l8vsBmHeKyd3cc.rYJLPytXmpoPvgsA'
   - _id: KesZZGLQTNHJEfCf
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Elixir Quirk
     img: icons/svg/d20-grey.svg
     weight: 1
     range:
       - 1
       - 100
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Elixir Quirk
-    documentUuid: Compendium.wwn.magic-tables.xG26UX9BribuXuH9
-    description: ''
+    documentCollection: wwn.magic-tables
+    documentId: xG26UX9BribuXuH9
     _key: '!tables.results!15l8vsBmHeKyd3cc.KesZZGLQTNHJEfCf'
   - _id: zU7wucE5ClayDKSU
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Anchoring Draught
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 1
       - 4
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Anchoring Draught
-    documentUuid: Compendium.wwn.magic-items.xiQ8ywxGkOsI40v4
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: xiQ8ywxGkOsI40v4
     _key: '!tables.results!15l8vsBmHeKyd3cc.zU7wucE5ClayDKSU'
   - _id: UrzaEC2Ll53GDQSh
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Bestial Form
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 5
       - 8
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Bestial Form
-    documentUuid: Compendium.wwn.magic-items.Gye2WhyHo0E4g2D4
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: Gye2WhyHo0E4g2D4
     _key: '!tables.results!15l8vsBmHeKyd3cc.UrzaEC2Ll53GDQSh'
   - _id: hfLsORE0JOc0X07D
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Blood of Boiling Rage
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 9
       - 12
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Blood of Boiling Rage
-    documentUuid: Compendium.wwn.magic-items.HNZF3Vbf47ZmHSg6
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: HNZF3Vbf47ZmHSg6
     _key: '!tables.results!15l8vsBmHeKyd3cc.hfLsORE0JOc0X07D'
   - _id: yeZVM527Z462DwJB
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Bodily Innervation
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 13
       - 15
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Bodily Innervation
-    documentUuid: Compendium.wwn.magic-items.dBFsfn8SFv7khWwA
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: dBFsfn8SFv7khWwA
     _key: '!tables.results!15l8vsBmHeKyd3cc.yeZVM527Z462DwJB'
   - _id: 7kGpDquIHfCz4cVO
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Borrowed Flesh
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 16
       - 20
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Borrowed Flesh
-    documentUuid: Compendium.wwn.magic-items.IzwD0q0YQIBlFBLL
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: IzwD0q0YQIBlFBLL
     _key: '!tables.results!15l8vsBmHeKyd3cc.7kGpDquIHfCz4cVO'
   - _id: XOKPqefwixqDtjhN
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Cold Courage
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 21
       - 24
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Cold Courage
-    documentUuid: Compendium.wwn.magic-items.7z36Ig4YwznfKeR5
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: 7z36Ig4YwznfKeR5
     _key: '!tables.results!15l8vsBmHeKyd3cc.XOKPqefwixqDtjhN'
   - _id: Ibif2ICK6bJT2UAH
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Congealed Winter
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 25
       - 28
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Congealed Winter
-    documentUuid: Compendium.wwn.magic-items.gfjkbiGywL2AYlh1
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: gfjkbiGywL2AYlh1
     _key: '!tables.results!15l8vsBmHeKyd3cc.Ibif2ICK6bJT2UAH'
   - _id: ZA9eDJOm4Kslv9Wx
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Deep Sight
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 29
       - 32
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Deep Sight
-    documentUuid: Compendium.wwn.magic-items.J16DXL0OKIMX1PwG
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: J16DXL0OKIMX1PwG
     _key: '!tables.results!15l8vsBmHeKyd3cc.ZA9eDJOm4Kslv9Wx'
   - _id: 2EcTTorhWMydtNaT
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Energetic Impermeability
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 33
       - 38
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Energetic Impermeability
-    documentUuid: Compendium.wwn.magic-items.Pj6Qtrbf7xsjU37k
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: Pj6Qtrbf7xsjU37k
     _key: '!tables.results!15l8vsBmHeKyd3cc.2EcTTorhWMydtNaT'
   - _id: 3lG8LjtmA9E1plE1
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Inverted Entropy
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 39
       - 42
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Inverted Entropy
-    documentUuid: Compendium.wwn.magic-items.0OEKlKmwlyTfghKY
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: 0OEKlKmwlyTfghKY
     _key: '!tables.results!15l8vsBmHeKyd3cc.3lG8LjtmA9E1plE1'
   - _id: KoSZbLpLuziMLckg
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Murderous Anointing
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 43
       - 46
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Murderous Anointing
-    documentUuid: Compendium.wwn.magic-items.6w4hBdWdv6YxrHhQ
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: 6w4hBdWdv6YxrHhQ
     _key: '!tables.results!15l8vsBmHeKyd3cc.KoSZbLpLuziMLckg'
   - _id: 8yeWo69nWBAlHYAB
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Nectar of Immortality
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 47
       - 47
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Nectar of Immortality
-    documentUuid: Compendium.wwn.magic-items.MIuGWPikf2SoxAPe
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: MIuGWPikf2SoxAPe
     _key: '!tables.results!15l8vsBmHeKyd3cc.8yeWo69nWBAlHYAB'
   - _id: CKVAmPH2MzKEr930
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Nepenthe
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 48
       - 49
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Nepenthe
-    documentUuid: Compendium.wwn.magic-items.UHPUzEKAxjpbXzE7
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: UHPUzEKAxjpbXzE7
     _key: '!tables.results!15l8vsBmHeKyd3cc.CKVAmPH2MzKEr930'
   - _id: imPshe0T76N99q9N
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Omened Visions
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 50
       - 53
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Omened Visions
-    documentUuid: Compendium.wwn.magic-items.vGHsZ0Qa2OX4VE5A
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: vGHsZ0Qa2OX4VE5A
     _key: '!tables.results!15l8vsBmHeKyd3cc.imPshe0T76N99q9N'
   - _id: 4OCXdv12I3pLhUVk
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Persistent Luminescence
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 54
       - 58
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Persistent Luminescence
-    documentUuid: Compendium.wwn.magic-items.43X5QtAdqBX9xJzJ
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: 43X5QtAdqBX9xJzJ
     _key: '!tables.results!15l8vsBmHeKyd3cc.4OCXdv12I3pLhUVk'
   - _id: cKufaqER8UkfFnOO
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Plasmic Molding
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 59
       - 62
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Plasmic Molding
-    documentUuid: Compendium.wwn.magic-items.NvSLrgJi8iQMbd8u
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: NvSLrgJi8iQMbd8u
     _key: '!tables.results!15l8vsBmHeKyd3cc.cKufaqER8UkfFnOO'
   - _id: KcSdrHSPdCrzB6gP
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Quintessence of the Hour
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 63
       - 64
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Quintessence of the Hour
-    documentUuid: Compendium.wwn.magic-items.6dFKvkJIPU33mzfy
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: 6dFKvkJIPU33mzfy
     _key: '!tables.results!15l8vsBmHeKyd3cc.KcSdrHSPdCrzB6gP'
   - _id: dnGffwnFaFqMrie5
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Sacrificial Strength
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 65
       - 68
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Sacrificial Strength
-    documentUuid: Compendium.wwn.magic-items.3obnzkq1h45mZdQb
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: 3obnzkq1h45mZdQb
     _key: '!tables.results!15l8vsBmHeKyd3cc.dnGffwnFaFqMrie5'
   - _id: t5r8dLpMXpczxh3h
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Sanctified Healing
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 69
       - 76
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Sanctified Healing
-    documentUuid: Compendium.wwn.magic-items.QvOaRyzJF60YR2pC
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: QvOaRyzJF60YR2pC
     _key: '!tables.results!15l8vsBmHeKyd3cc.t5r8dLpMXpczxh3h'
   - _id: LEQHB0v6lUwx8Gjx
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Scalding Breath
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 77
       - 79
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Scalding Breath
-    documentUuid: Compendium.wwn.magic-items.wAG73rYCCTuHMMDI
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: wAG73rYCCTuHMMDI
     _key: '!tables.results!15l8vsBmHeKyd3cc.LEQHB0v6lUwx8Gjx'
   - _id: gAIqh0rbEbS6HAw5
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Soul Sight
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 80
       - 83
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Soul Sight
-    documentUuid: Compendium.wwn.magic-items.4hcenJZmuhWqaC0Y
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: 4hcenJZmuhWqaC0Y
     _key: '!tables.results!15l8vsBmHeKyd3cc.gAIqh0rbEbS6HAw5'
   - _id: 14FoVRF6GI2K6h5L
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Thaumic Vitality
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 84
       - 85
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Thaumic Vitality
-    documentUuid: Compendium.wwn.magic-items.UBHoTA27Y3a5Caij
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: UBHoTA27Y3a5Caij
     _key: '!tables.results!15l8vsBmHeKyd3cc.14FoVRF6GI2K6h5L'
   - _id: FVc53eZ8juYGvxJ0
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: The Great and the Small
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 86
       - 90
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: The Great and the Small
-    documentUuid: Compendium.wwn.magic-items.2HErh3n4wK7x3PqJ
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: 2HErh3n4wK7x3PqJ
     _key: '!tables.results!15l8vsBmHeKyd3cc.FVc53eZ8juYGvxJ0'
   - _id: X4ECQ61E0KV4UqqT
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Truthspeaking
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 91
       - 94
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Truthspeaking
-    documentUuid: Compendium.wwn.magic-items.RGma6GCDJphOUbEI
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: RGma6GCDJphOUbEI
     _key: '!tables.results!15l8vsBmHeKyd3cc.X4ECQ61E0KV4UqqT'
   - _id: 3OgSw6RvCwCFTRI1
     flags:
       better-rolltables:
         brt-result-formula:
           formula: ''
-    type: document
+    type: pack
+    text: Wrathful Detonation
     img: icons/tools/laboratory/vial-orange.webp
     weight: 1
     range:
       - 95
       - 100
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Wrathful Detonation
-    documentUuid: Compendium.wwn.magic-items.5MdKYICedy1jJQbD
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: 5MdKYICedy1jJQbD
     _key: '!tables.results!15l8vsBmHeKyd3cc.3OgSw6RvCwCFTRI1'
 formula: 1d100
 replacement: true
 displayRoll: true
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   systemId: null
   systemVersion: null
   createdTime: null
@@ -771,7 +481,6 @@ _stats:
   lastModifiedBy: null
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3

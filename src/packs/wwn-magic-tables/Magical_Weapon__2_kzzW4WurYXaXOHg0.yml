@@ -10,672 +10,382 @@ results:
   - _id: JB3vwEPjYHoAUq1M
     flags: {}
     type: text
+    text: Favored primary +2
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 1
       - 30
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Favored primary +2
-    name: ''
+    documentId: null
     _key: '!tables.results!kzzW4WurYXaXOHg0.JB3vwEPjYHoAUq1M'
   - _id: jGYhT2VR15rRDrMF
     flags: {}
     type: text
+    text: Favored secondary +2
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 31
       - 40
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Favored secondary +2
-    name: ''
+    documentId: null
     _key: '!tables.results!kzzW4WurYXaXOHg0.jGYhT2VR15rRDrMF'
   - _id: zAndQ5r2JuUdV7Ce
     flags: {}
     type: text
+    text: Favored ranged +2
     img: icons/svg/d20-black.svg
     weight: 1
     range:
       - 41
       - 50
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    description: Favored ranged +2
-    name: ''
+    documentId: null
     _key: '!tables.results!kzzW4WurYXaXOHg0.zAndQ5r2JuUdV7Ce'
   - _id: QkLOOoCVE71lLhk6
     flags: {}
-    type: document
+    type: pack
+    text: Axe, Hand +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 51
       - 53
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Axe, Hand +2
-    documentUuid: Compendium.wwn.magic-items.TDoA8dpv4V66CVQl
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: TDoA8dpv4V66CVQl
     _key: '!tables.results!kzzW4WurYXaXOHg0.QkLOOoCVE71lLhk6'
   - _id: Acmj12BkcYTIsbok
     flags: {}
-    type: document
+    type: pack
+    text: Axe, War +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 54
       - 54
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Axe, War +2
-    documentUuid: Compendium.wwn.magic-items.wwv69AOqPFLaZ9rA
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: wwv69AOqPFLaZ9rA
     _key: '!tables.results!kzzW4WurYXaXOHg0.Acmj12BkcYTIsbok'
   - _id: JVMoLXR7XmyHoIF3
     flags: {}
-    type: document
+    type: pack
+    text: Blackjack +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 55
       - 55
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Blackjack +2
-    documentUuid: Compendium.wwn.magic-items.KGXQkiaofvKWLyqL
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: KGXQkiaofvKWLyqL
     _key: '!tables.results!kzzW4WurYXaXOHg0.JVMoLXR7XmyHoIF3'
   - _id: vpwICCLNOyxQBCLk
     flags: {}
-    type: document
+    type: pack
+    text: Bow, Large +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 56
       - 58
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Bow, Large +2
-    documentUuid: Compendium.wwn.magic-items.YnbikwLRQTRtsZvp
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: YnbikwLRQTRtsZvp
     _key: '!tables.results!kzzW4WurYXaXOHg0.vpwICCLNOyxQBCLk'
   - _id: v2FD640CHp4RkKmM
     flags: {}
-    type: document
+    type: pack
+    text: Bow, Small +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 59
       - 61
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Bow, Small +2
-    documentUuid: Compendium.wwn.magic-items.fTuNxL4mBAB1mgwd
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: fTuNxL4mBAB1mgwd
     _key: '!tables.results!kzzW4WurYXaXOHg0.v2FD640CHp4RkKmM'
   - _id: 6roo5QIYAj4g4s2a
     flags: {}
-    type: document
+    type: pack
+    text: Claw Blades +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 62
       - 62
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Claw Blades +2
-    documentUuid: Compendium.wwn.magic-items.rlau9PoYNpYuOiFf
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: rlau9PoYNpYuOiFf
     _key: '!tables.results!kzzW4WurYXaXOHg0.6roo5QIYAj4g4s2a'
   - _id: QtRsdjJbXGL9qZjh
     flags: {}
-    type: document
+    type: pack
+    text: Club +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 63
       - 63
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Club +2
-    documentUuid: Compendium.wwn.magic-items.54Ht50fXvrRY4mnB
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: 54Ht50fXvrRY4mnB
     _key: '!tables.results!kzzW4WurYXaXOHg0.QtRsdjJbXGL9qZjh'
   - _id: UgO3puYaAHxM9DKc
     flags: {}
-    type: document
+    type: pack
+    text: Club, Great +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 64
       - 64
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Club, Great +2
-    documentUuid: Compendium.wwn.magic-items.eziPRZskLEnaTCpJ
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: eziPRZskLEnaTCpJ
     _key: '!tables.results!kzzW4WurYXaXOHg0.UgO3puYaAHxM9DKc'
   - _id: VlXtdnTYPsjDx7IK
     flags: {}
-    type: document
+    type: pack
+    text: Crossbow +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 65
       - 65
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Crossbow +2
-    documentUuid: Compendium.wwn.magic-items.yAEU7PMwdk7wrCSz
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: yAEU7PMwdk7wrCSz
     _key: '!tables.results!kzzW4WurYXaXOHg0.VlXtdnTYPsjDx7IK'
   - _id: voozHb2hRiSSc1mA
     flags: {}
-    type: document
+    type: pack
+    text: Dagger +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 66
       - 68
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Dagger +2
-    documentUuid: Compendium.wwn.magic-items.QR5v7PS6HveCnIxs
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: QR5v7PS6HveCnIxs
     _key: '!tables.results!kzzW4WurYXaXOHg0.voozHb2hRiSSc1mA'
   - _id: W4SRnVDYgNEyt0B4
     flags: {}
-    type: document
+    type: pack
+    text: Halberd +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 69
       - 70
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Halberd +2
-    documentUuid: Compendium.wwn.magic-items.evvd8ct8sYfbhCsx
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: evvd8ct8sYfbhCsx
     _key: '!tables.results!kzzW4WurYXaXOHg0.W4SRnVDYgNEyt0B4'
   - _id: m5w0NDGd8pF1jt1f
     flags: {}
-    type: document
+    type: pack
+    text: Hammer, Great +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 71
       - 71
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Hammer, Great +2
-    documentUuid: Compendium.wwn.magic-items.l14SC8YoKMkwKfHh
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: l14SC8YoKMkwKfHh
     _key: '!tables.results!kzzW4WurYXaXOHg0.m5w0NDGd8pF1jt1f'
   - _id: Es2lVqAAbQCCD7Ec
     flags: {}
-    type: document
+    type: pack
+    text: Hammer, War +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 72
       - 73
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Hammer, War +2
-    documentUuid: Compendium.wwn.magic-items.7ix30hveplHBXINH
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: 7ix30hveplHBXINH
     _key: '!tables.results!kzzW4WurYXaXOHg0.Es2lVqAAbQCCD7Ec'
   - _id: ripbW8v6sDyrWLoq
     flags: {}
-    type: document
+    type: pack
+    text: Hurlant, Great +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 74
       - 74
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Hurlant, Great +2
-    documentUuid: Compendium.wwn.magic-items.FYG39orGKw06pQqm
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: FYG39orGKw06pQqm
     _key: '!tables.results!kzzW4WurYXaXOHg0.ripbW8v6sDyrWLoq'
   - _id: PaZAP3HRDa5GZkXn
     flags: {}
-    type: document
+    type: pack
+    text: Hurlant, Hand +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 75
       - 75
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Hurlant, Hand +2
-    documentUuid: Compendium.wwn.magic-items.WQUbfR5eJDCAjHyM
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: WQUbfR5eJDCAjHyM
     _key: '!tables.results!kzzW4WurYXaXOHg0.PaZAP3HRDa5GZkXn'
   - _id: bx3JCneS5bf8saiu
     flags: {}
-    type: document
+    type: pack
+    text: Hurlant, Long +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 76
       - 76
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Hurlant, Long +2
-    documentUuid: Compendium.wwn.magic-items.xUU3hS1qRCcqnapj
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: xUU3hS1qRCcqnapj
     _key: '!tables.results!kzzW4WurYXaXOHg0.bx3JCneS5bf8saiu'
   - _id: WRs366VbARH6sIKT
     flags: {}
-    type: document
+    type: pack
+    text: Mace +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 77
       - 78
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Mace +2
-    documentUuid: Compendium.wwn.magic-items.JNad4Rj9qRZSgXLJ
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: JNad4Rj9qRZSgXLJ
     _key: '!tables.results!kzzW4WurYXaXOHg0.WRs366VbARH6sIKT'
   - _id: 4Azjoh5MID0yBoc3
     flags: {}
-    type: document
+    type: pack
+    text: Pike +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 79
       - 80
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Pike +2
-    documentUuid: Compendium.wwn.magic-items.Igx3I5cFTxZp6x1r
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: Igx3I5cFTxZp6x1r
     _key: '!tables.results!kzzW4WurYXaXOHg0.4Azjoh5MID0yBoc3'
   - _id: nlqxOSzK7QnHCw5W
     flags: {}
-    type: document
+    type: pack
+    text: Spear, Heavy +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 81
       - 85
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Spear, Heavy +2
-    documentUuid: Compendium.wwn.magic-items.UfzW0ZWALLbtdb6g
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: UfzW0ZWALLbtdb6g
     _key: '!tables.results!kzzW4WurYXaXOHg0.nlqxOSzK7QnHCw5W'
   - _id: 3SjiKUfLznUiqArs
     flags: {}
-    type: document
+    type: pack
+    text: Spear, Light +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 86
       - 89
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Spear, Light +2
-    documentUuid: Compendium.wwn.magic-items.lYYNiMk8UdWSnUC7
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: lYYNiMk8UdWSnUC7
     _key: '!tables.results!kzzW4WurYXaXOHg0.3SjiKUfLznUiqArs'
   - _id: NZT4Sar0zEHNpZOo
     flags: {}
-    type: document
+    type: pack
+    text: Throwing Blade +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 90
       - 90
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Throwing Blade +2
-    documentUuid: Compendium.wwn.magic-items.ZN5qk2XEc19smlRj
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: ZN5qk2XEc19smlRj
     _key: '!tables.results!kzzW4WurYXaXOHg0.NZT4Sar0zEHNpZOo'
   - _id: YIswgi2kCVtNMfcb
     flags: {}
-    type: document
+    type: pack
+    text: Staff +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 91
       - 91
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Staff +2
-    documentUuid: Compendium.wwn.magic-items.IBhZKyJWftJRk72z
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: IBhZKyJWftJRk72z
     _key: '!tables.results!kzzW4WurYXaXOHg0.YIswgi2kCVtNMfcb'
   - _id: QCWIw8zhYEFfxz33
     flags: {}
-    type: document
+    type: pack
+    text: Stiletto +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 92
       - 92
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Stiletto +2
-    documentUuid: Compendium.wwn.magic-items.7C0GUQY3hPtqbzvB
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: 7C0GUQY3hPtqbzvB
     _key: '!tables.results!kzzW4WurYXaXOHg0.QCWIw8zhYEFfxz33'
   - _id: cxO1Uq8niDhFnKSY
     flags: {}
-    type: document
+    type: pack
+    text: Sword, Great +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 93
       - 94
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Sword, Great +2
-    documentUuid: Compendium.wwn.magic-items.3Dx7Y6hg04OQyLRO
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: 3Dx7Y6hg04OQyLRO
     _key: '!tables.results!kzzW4WurYXaXOHg0.cxO1Uq8niDhFnKSY'
   - _id: ptTh232KqvUwH6LX
     flags: {}
-    type: document
+    type: pack
+    text: Sword, Long +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 95
       - 97
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Sword, Long +2
-    documentUuid: Compendium.wwn.magic-items.fRM5qoixNED3iLIQ
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: fRM5qoixNED3iLIQ
     _key: '!tables.results!kzzW4WurYXaXOHg0.ptTh232KqvUwH6LX'
   - _id: O2LLMHidcMQyNeDw
     flags: {}
-    type: document
+    type: pack
+    text: Sword, Short +2
     img: systems/wwn/assets/default/weapon.png
     weight: 1
     range:
       - 98
       - 100
     drawn: false
-    _stats:
-      coreVersion: '13.346'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-    name: Sword, Short +2
-    documentUuid: Compendium.wwn.magic-items.ay1EKQHvSc5Vulx0
-    description: ''
+    documentCollection: wwn.magic-items
+    documentId: ay1EKQHvSc5Vulx0
     _key: '!tables.results!kzzW4WurYXaXOHg0.O2LLMHidcMQyNeDw'
 formula: 1d100
 replacement: true
 displayRoll: true
 _stats:
-  coreVersion: '13.346'
+  coreVersion: '12.324'
   systemId: null
   systemVersion: null
   createdTime: null
@@ -683,7 +393,6 @@ _stats:
   lastModifiedBy: null
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
 ownership:
   default: 0
   mgBwP0sTLP1VFg1m: 3
