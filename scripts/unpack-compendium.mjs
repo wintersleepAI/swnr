@@ -120,8 +120,27 @@ fs.readdir(`${SYSTEM_ID}/packs`)
             console.log(`Unpacking ${pack}`);
             const directory = `${SYSTEM_ID}/src/packs/${pack}`;
 
-            // Note: Not deleting existing files to preserve git tracking
-            // Files will be overwritten during extraction if they exist
+            // Delete all the pack files in the source directory.
+            fs.readdir(directory)
+                .then(files => {
+                    for (const file of files) {
+                        fs.unlink(path.join(directory, file))
+                            .catch(err => {
+                                if (err.code === 'ENOENT') {
+                                    console.log(`No files inside of ${pack}`);
+                                } else {
+                                    throw err;
+                                }
+                            });
+                    }
+                })
+                .catch(err => {
+                    if (err.code === 'ENOENT') {
+                        console.log(`No files inside of ${pack}`);
+                    } else {
+                        throw err;
+                    }
+                });
 
             extractPack(
                 `${SYSTEM_ID}/packs/${pack}`,
