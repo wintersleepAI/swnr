@@ -1,3 +1,6 @@
+// possible script to unpack compendium packs while preserving git tracking
+// This script is not added to package.json scripts yet
+
 import { extractPack } from "@foundryvtt/foundryvtt-cli";
 import { execSync } from 'child_process';
 import { promises as fs } from "fs";

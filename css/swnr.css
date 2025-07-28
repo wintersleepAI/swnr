@@ -638,6 +638,9 @@
   /* Integration with existing power sheet styles */
   /* Dark mode support */
   /* Container drag and drop styling */
+  /* Power prepared icon styling */
+  /* Power consumption display styling */
+  /* Consumption timing styling */
 }
 .swnr .item-form {
   font-family: "Roboto", sans-serif;
@@ -1735,4 +1738,53 @@
 .swnr .contained-item .item-name-long {
   font-size: 0.9em;
   opacity: 0.9;
+}
+.swnr .power-prepared-container {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5em;
+}
+.swnr .power-prepared-icon {
+  font-size: 16px;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+.swnr .power-prepared-icon.fas {
+  color: var(--accent-color);
+}
+.swnr .power-prepared-icon.far {
+  color: var(--color-text-dark-secondary);
+  opacity: 0.6;
+}
+.swnr .power-prepared-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.swnr .power-consumption-display {
+  font-size: 0.8em;
+  color: var(--color-text-dark-secondary);
+  margin-top: 0.2em;
+}
+.swnr .power-consumption-display .consumption-uses {
+  background: rgba(var(--accent-color), 0.1);
+  border: 1px solid rgba(var(--accent-color), 0.3);
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+  margin-right: 0.3em;
+  font-weight: bold;
+}
+.swnr .consumption-timing {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+.swnr .consumption-timing .spend-on-prep-container {
+  font-size: 0.8em;
+}
+.swnr .consumption-timing .spend-on-prep-container label {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  margin: 0;
+  cursor: pointer;
 }

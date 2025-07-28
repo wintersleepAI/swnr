@@ -114,10 +114,30 @@
                     />
                   </a>
                 </div>
+                {{! Only show prepared icon for powers with prep costs }}
+                {{#if item.hasPrepCosts}}
+                  <div class="power-prepared-container">
+                    <i class="power-prepared-icon {{#if item.system.prepared}}fas fa-brain{{else}}far fa-brain{{/if}}" 
+                       data-item-id="{{item.id}}"
+                       title="{{#if item.system.prepared}}Prepared{{else}}Not Prepared{{/if}}"
+                       {{#if @root.editable}}style="cursor: pointer;"{{/if}}></i>
+                  </div>
+                {{/if}}
                 <div>
                   <span data-action="toggleItemDescription" data-item-id="{{item.id}}" style="cursor: pointer;">
                     {{item.name}}
                   </span>
+                  {{#if item.system.consumptions}}
+                    <div class="power-consumption-display">
+                      {{#each item.system.consumptions as |consumption|}}
+                        {{#if (eq consumption.type "uses")}}
+                          <span class="consumption-uses" title="{{consumption.type}} uses">
+                            ({{consumption.uses.value}}/{{consumption.uses.max}})
+                          </span>
+                        {{/if}}
+                      {{/each}}
+                    </div>
+                  {{/if}}
                 </div>
               </div>
               <div class='item-controls'>
@@ -181,10 +201,30 @@
                       />
                     </a>
                   </div>
+                  {{! Only show prepared icon for powers with prep costs }}
+                  {{#if item.hasPrepCosts}}
+                    <div class="power-prepared-container">
+                      <i class="power-prepared-icon {{#if item.system.prepared}}fas fa-brain{{else}}far fa-brain{{/if}}" 
+                         data-item-id="{{item.id}}"
+                         title="{{#if item.system.prepared}}Prepared{{else}}Not Prepared{{/if}}"
+                         {{#if @root.editable}}style="cursor: pointer;"{{/if}}></i>
+                    </div>
+                  {{/if}}
                   <div>
                   <span data-action="toggleItemDescription" data-item-id="{{item.id}}" style="cursor: pointer;">
                     {{item.name}}
                   </span>
+                  {{#if item.system.consumptions}}
+                    <div class="power-consumption-display">
+                      {{#each item.system.consumptions as |consumption|}}
+                        {{#if (eq consumption.type "uses")}}
+                          <span class="consumption-uses" title="{{consumption.type}} uses">
+                            ({{consumption.uses.value}}/{{consumption.uses.max}})
+                          </span>
+                        {{/if}}
+                      {{/each}}
+                    </div>
+                  {{/if}}
                 </div>
                 </div>
                 <div class='item-controls'>

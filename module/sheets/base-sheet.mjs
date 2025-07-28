@@ -255,6 +255,10 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
     const skipConfirmation = target.dataset?.skipconfirmation?.toLowerCase() === "true";
     
     const executeDelete = async () => {
+      // Clean up any consumed resources before deletion
+      if (doc.type === "power") {
+        await SWNBaseSheet._cleanupPowerResourcesBeforeDeletion(doc);
+      }
       await doc.delete();
     }
 
@@ -289,6 +293,104 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
         callback: callback,
       }
     })
+  }
+
+  /**
+   * Clean up any consumed resources before a power is deleted
+   * @param {Item} power - The power being deleted
+   * @private
+   */
+  static async _cleanupPowerResourcesBeforeDeletion(power) {
+    try {
+      const actor = power.parent;
+      if (!actor || power.type !== "power") return;
+
+      const pools = actor.system.pools || {};
+      const poolUpdates = {};
+      let restoredResources = [];
+
+      // Check if power is prepared - restore preparation costs
+      if (power.system.prepared) {
+        const prepConsumptions = power.system.consumptions?.filter(c => c.spendOnPrep) || [];
+        
+        for (const consumption of prepConsumptions) {
+          if (consumption.type === "poolResource" && consumption.resourceName) {
+            const poolKey = `${consumption.resourceName}:${consumption.subResource || "Default"}`;
+            const pool = pools[poolKey];
+            
+            if (pool && consumption.usesCost > 0) {
+              const newValue = Math.min(pool.max, pool.value + consumption.usesCost);
+              poolUpdates[`system.pools.${poolKey}.value`] = newValue;
+              restoredResources.push(`${consumption.usesCost} ${consumption.resourceName}${consumption.subResource ? `:${consumption.subResource}` : ""} (prep cost)`);
+            }
+          }
+        }
+      }
+
+      // Clean up any committed effort for this power
+      const commitments = actor.system.effortCommitments || {};
+      const newCommitments = {};
+      let hasCommitmentChanges = false;
+
+      for (const [poolKey, poolCommitments] of Object.entries(commitments)) {
+        const remainingCommitments = poolCommitments.filter(c => c.powerId !== power.id);
+        
+        if (remainingCommitments.length !== poolCommitments.length) {
+          // Some commitments were removed
+          hasCommitmentChanges = true;
+          newCommitments[poolKey] = remainingCommitments;
+          
+          // Calculate restored effort
+          const releasedCommitments = poolCommitments.filter(c => c.powerId === power.id);
+          const releasedAmount = releasedCommitments.reduce((sum, c) => sum + c.amount, 0);
+          
+          if (releasedAmount > 0 && pools[poolKey]) {
+            const totalCommitted = remainingCommitments.reduce((sum, c) => sum + c.amount, 0);
+            const newValue = Math.min(pools[poolKey].max, pools[poolKey].value + releasedAmount);
+            
+            poolUpdates[`system.pools.${poolKey}.value`] = newValue;
+            poolUpdates[`system.pools.${poolKey}.committed`] = totalCommitted;
+            poolUpdates[`system.pools.${poolKey}.commitments`] = remainingCommitments;
+            
+            restoredResources.push(`${releasedAmount} ${poolKey} (committed effort)`);
+          }
+        } else {
+          newCommitments[poolKey] = poolCommitments;
+        }
+      }
+
+      // Update commitments if changed
+      if (hasCommitmentChanges) {
+        poolUpdates["system.effortCommitments"] = newCommitments;
+      }
+
+      // Apply updates if any resources need to be restored
+      if (Object.keys(poolUpdates).length > 0) {
+        await actor.update(poolUpdates);
+        
+        // Create chat message about resource restoration
+        if (restoredResources.length > 0) {
+          let content = `<div class="power-deletion-cleanup">
+            <h3><i class="fas fa-recycle"></i> Resources Restored</h3>
+            <p><strong>${power.name}</strong> was deleted and the following resources were restored:</p>
+            <ul>`;
+          
+          restoredResources.forEach(resource => {
+            content += `<li>${resource}</li>`;
+          });
+          
+          content += `</ul></div>`;
+          
+          ChatMessage.create({
+            speaker: ChatMessage.getSpeaker({ actor: actor }),
+            content
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Error cleaning up power resources before deletion:", error);
+      // Don't prevent deletion even if cleanup fails
+    }
   }
 
   /**

@@ -113,9 +113,9 @@
         {{/unless}}
       {{/each}}
 
-      {{! Show consumption buttons for unprocessed consumptions }}
+      {{! Show consumption buttons for unprocessed casting consumptions only (spendOnPrep: false) }}
       {{#each power.system.consumptions}}
-        {{#if (ne type "none")}}
+        {{#if (and (ne type "none") (not spendOnPrep))}}
           {{! Check if this consumption has already been processed }}
           {{#unless (lookup ../processedConsumptions @index)}}
             <button data-action="use-consumption" data-power-id="{{../power.id}}" data-actor-id="{{../actor.id}}" data-consumption-index="{{@index}}">

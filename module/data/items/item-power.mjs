@@ -67,7 +67,10 @@ export default class SWNPower extends SWNItemBase {
       uses: new fields.SchemaField({
         value: new fields.NumberField({ initial: 0, min: 0 }),
         max: new fields.NumberField({ initial: 1, min: 0 })
-      })
+      }),
+      // When true, this cost is paid during preparation (not shown in chat)
+      // When false, this cost is paid during casting (shown in chat, normal behavior)
+      spendOnPrep: new fields.BooleanField({ initial: false })
     }), { initial: [] });
 
     schema.roll = SWNShared.nullableString();
@@ -105,6 +108,9 @@ export default class SWNPower extends SWNItemBase {
         }
         if (!consumption.cadence) {
           consumption.cadence = "day";
+        }
+        if (typeof consumption.spendOnPrep !== 'boolean') {
+          consumption.spendOnPrep = false; // Default to casting cost
         }
       });
     }
@@ -236,13 +242,16 @@ export default class SWNPower extends SWNItemBase {
       return await this._executePassivePower();
     }
 
-    // Process all consumption types
+    // Process only casting consumption types (spendOnPrep: false)
     const consumptionResults = [];
-    const consumptions = this.getConsumptions();
+    const allConsumptions = this.getConsumptions();
+    const castingConsumptions = allConsumptions.filter(c => !c.spendOnPrep);
     
-    // First pass: validate all consumption requirements
-    for (let i = 0; i < consumptions.length; i++) {
-      const consumes = consumptions[i];
+    // First pass: validate all casting consumption requirements
+    for (let i = 0; i < allConsumptions.length; i++) {
+      const consumes = allConsumptions[i];
+      if (consumes.spendOnPrep) continue; // Skip preparation costs during casting
+      
       const validation = await this._validateConsumption(actor, consumes, i);
       if (!validation.valid) {
         ui.notifications?.warn(validation.message || "Consumption requirements not met");
@@ -255,9 +264,11 @@ export default class SWNPower extends SWNItemBase {
       }
     }
     
-    // Second pass: apply all consumption costs
-    for (let i = 0; i < consumptions.length; i++) {
-      const consumes = consumptions[i];
+    // Second pass: apply all casting consumption costs
+    for (let i = 0; i < allConsumptions.length; i++) {
+      const consumes = allConsumptions[i];
+      if (consumes.spendOnPrep) continue; // Skip preparation costs during casting
+      
       const result = await this._processConsumption(actor, consumes, options, i);
       if (!result.success) {
         // This shouldn't happen since we validated first, but safety check
@@ -314,13 +325,15 @@ export default class SWNPower extends SWNItemBase {
       };
     }
 
-    // Process all consumption types
+    // Process only casting consumption types (spendOnPrep: false)
     const consumptionResults = [];
-    const consumptions = this.getConsumptions();
+    const allConsumptions = this.getConsumptions();
     
-    // First pass: validate all consumption requirements
-    for (let i = 0; i < consumptions.length; i++) {
-      const consumes = consumptions[i];
+    // First pass: validate all casting consumption requirements
+    for (let i = 0; i < allConsumptions.length; i++) {
+      const consumes = allConsumptions[i];
+      if (consumes.spendOnPrep) continue; // Skip preparation costs during casting
+      
       const validation = await this._validateConsumption(actor, consumes, i);
       if (!validation.valid) {
         ui.notifications?.warn(validation.message || "Consumption requirements not met");
@@ -332,9 +345,11 @@ export default class SWNPower extends SWNItemBase {
       }
     }
 
-    // Second pass: apply consumption
-    for (let i = 0; i < consumptions.length; i++) {
-      const consumes = consumptions[i];
+    // Second pass: apply casting consumption
+    for (let i = 0; i < allConsumptions.length; i++) {
+      const consumes = allConsumptions[i];
+      if (consumes.spendOnPrep) continue; // Skip preparation costs during casting
+      
       const result = await this._processConsumption(actor, consumes, options, i);
       if (!result.success) {
         ui.notifications?.warn(result.message || "Consumption processing failed");
@@ -393,13 +408,17 @@ export default class SWNPower extends SWNItemBase {
       .filter(r => r.type === "systemStrain")
       .reduce((sum, r) => sum + (r.spent || 0), 0);
 
+    // Check if power has casting costs (spendOnPrep: false)
+    const castingConsumptions = this.getConsumptions().filter(c => !c.spendOnPrep);
+    const hasCastingCosts = castingConsumptions.length > 0;
+    
     const templateData = {
       actor: actor,
       power: item,
       powerRoll: powerRoll ? await powerRoll.render() : null,
       strainCost: totalStrainCost,
-      isPassive: !this.hasConsumption(),
-      consumptions: consumptionResults
+      isPassive: !hasCastingCosts,
+      consumptions: consumptionResults // Only contains casting costs due to filtering in use()
     };
 
     const template = "systems/swnr/templates/chat/power-usage.hbs";
@@ -426,13 +445,17 @@ export default class SWNPower extends SWNItemBase {
     }
     const powerRoll = new Roll(this.roll ? this.roll : "0");
     await powerRoll.roll();
+    // Check if power has casting costs (spendOnPrep: false)
+    const castingConsumptions = this.getConsumptions().filter(c => !c.spendOnPrep);
+    const hasCastingCosts = castingConsumptions.length > 0;
+    
     const dialogData = {
       actor: actor,
       power: item,
       powerRoll: await powerRoll.render(),
       strainCost: 0,
-      isPassive: !this.hasConsumption(),
-      consumptions: [] // Empty for initial state - shows "Spend Resources" button
+      isPassive: !hasCastingCosts,
+      consumptions: [] // Empty for initial state - shows "Spend Resources" button if has casting costs
     };
     const rollMode = game.settings.get("core", "rollMode");
 
@@ -710,5 +733,231 @@ export default class SWNPower extends SWNItemBase {
       remaining: newValue,
       max: consumes.uses.max
     };
+  }
+
+  /**
+   * Prepare this power by spending resource cost
+   * @returns {Promise<Object>} Preparation result
+   */
+  async prepare() {
+    const item = this.parent;
+    const actor = item.actor;
+    
+    if (!actor) {
+      return { 
+        success: false, 
+        reason: "no-actor", 
+        message: "Cannot prepare power without an actor" 
+      };
+    }
+
+    if (this.prepared) {
+      return { 
+        success: false, 
+        reason: "already-prepared", 
+        message: "Power is already prepared" 
+      };
+    }
+
+    // Check if power has resource cost to deduct
+    if (!this.hasConsumption()) {
+      // Powers with no cost can be prepared freely
+      await item.update({ "system.prepared": true });
+      return { success: true, message: "Power prepared (no resource cost)" };
+    }
+
+    // Get only preparation consumptions (spendOnPrep: true)
+    const allConsumptions = this.getConsumptions();
+    const prepConsumptions = allConsumptions.filter(c => c.spendOnPrep);
+    
+    // Validate all preparation consumption requirements
+    for (let i = 0; i < allConsumptions.length; i++) {
+      const consumes = allConsumptions[i];
+      if (!consumes.spendOnPrep) continue; // Skip casting costs during preparation
+      
+      const validation = await this._validateConsumption(actor, consumes, i);
+      if (!validation.valid) {
+        return {
+          success: false,
+          reason: validation.reason,
+          message: `Cannot prepare: ${validation.message}`
+        };
+      }
+    }
+
+    // Deduct resources for preparation (only spendOnPrep: true)
+    const consumptionResults = [];
+    for (let i = 0; i < allConsumptions.length; i++) {
+      const consumes = allConsumptions[i];
+      if (!consumes.spendOnPrep) continue; // Skip casting costs during preparation
+      
+      const result = await this._processConsumption(actor, consumes, {}, i);
+      if (!result.success) {
+        return {
+          success: false,
+          reason: result.reason,
+          message: `Preparation failed: ${result.message}`
+        };
+      }
+      consumptionResults.push(result);
+    }
+
+    // Mark as prepared
+    await item.update({ "system.prepared": true });
+
+    return {
+      success: true,
+      message: "Power prepared successfully",
+      consumptionResults
+    };
+  }
+
+  /**
+   * Unprepare this power and restore resource cost
+   * @returns {Promise<Object>} Unpreparation result
+   */
+  async unprepare() {
+    const item = this.parent;
+    const actor = item.actor;
+    
+    if (!actor) {
+      return { 
+        success: false, 
+        reason: "no-actor", 
+        message: "Cannot unprepare power without an actor" 
+      };
+    }
+
+    if (!this.prepared) {
+      return { 
+        success: false, 
+        reason: "not-prepared", 
+        message: "Power is not prepared" 
+      };
+    }
+
+    // Check if power has resource cost to restore
+    if (!this.hasConsumption()) {
+      // Powers with no cost can be unprepared freely
+      await item.update({ "system.prepared": false });
+      return { success: true, message: "Power unprepared (no resource cost)" };
+    }
+
+    // Restore resources for unpreparation (only spendOnPrep: true)
+    const consumptions = this.getConsumptions();
+    const restorationResults = [];
+    
+    for (const consumes of consumptions) {
+      if (!consumes.spendOnPrep) continue; // Skip casting costs during unpreparation
+      
+      const result = await this._restoreConsumption(actor, consumes);
+      if (result.success) {
+        restorationResults.push(result);
+      }
+    }
+
+    // Mark as unprepared
+    await item.update({ "system.prepared": false });
+
+    return {
+      success: true,
+      message: "Power unprepared successfully",
+      restorationResults
+    };
+  }
+
+  /**
+   * Restore resources for a consumption when unpreparing
+   * @param {Actor} actor - The actor
+   * @param {Object} consumes - Consumption configuration
+   * @returns {Promise<Object>} Restoration result
+   */
+  async _restoreConsumption(actor, consumes) {
+    switch (consumes.type) {
+      case "poolResource":
+        return await this._restorePoolResource(actor, consumes);
+      case "systemStrain":
+        // System strain typically can't be restored
+        return { success: false, type: "systemStrain", message: "System strain cannot be restored" };
+      case "consumableItem":
+        // Consumable items typically can't be restored
+        return { success: false, type: "consumableItem", message: "Consumable items cannot be restored" };
+      case "uses":
+        // Internal uses typically can't be restored
+        return { success: false, type: "uses", message: "Internal uses cannot be restored" };
+      default:
+        return { success: true, type: consumes.type };
+    }
+  }
+
+  /**
+   * Restore pool resource when unpreparing
+   */
+  async _restorePoolResource(actor, consumes) {
+    const poolKey = this._getPoolKey(consumes.resourceName, consumes.subResource);
+    if (!poolKey) {
+      return { 
+        success: false, 
+        reason: "no-resource-configured",
+        message: "Pool resource restoration requires resourceName to be configured"
+      };
+    }
+
+    const pools = actor.system.pools || {};
+    const pool = pools[poolKey];
+    
+    if (!pool) {
+      return { 
+        success: false, 
+        reason: "pool-not-found",
+        message: `Pool ${poolKey} not found`
+      };
+    }
+
+    // Handle committed resources differently
+    if (["commit", "scene", "day"].includes(consumes.cadence)) {
+      const commitments = foundry.utils.deepClone(actor.system.effortCommitments || {});
+      if (commitments[poolKey]) {
+        // Remove commitment for this power
+        const commitmentIndex = commitments[poolKey].findIndex(c => 
+          c.powerId === this.parent.id && c.consumption === true
+        );
+        
+        if (commitmentIndex >= 0) {
+          commitments[poolKey].splice(commitmentIndex, 1);
+          await actor.update({ "system.effortCommitments": commitments });
+          
+          // Recalculate pool value
+          const newValue = Math.max(0, pool.max - commitments[poolKey].reduce((sum, c) => sum + c.amount, 0));
+          await actor.update({ [`system.pools.${poolKey}.value`]: newValue });
+          
+          return { 
+            success: true, 
+            type: "poolResource",
+            poolKey,
+            resourceName: consumes.resourceName,
+            subResource: consumes.subResource,
+            restored: consumes.usesCost,
+            cadence: consumes.cadence
+          };
+        }
+      }
+    } else {
+      // Direct restoration for other cadences
+      const newValue = Math.min(pool.max, pool.value + consumes.usesCost);
+      await actor.update({ [`system.pools.${poolKey}.value`]: newValue });
+      
+      return { 
+        success: true, 
+        type: "poolResource",
+        poolKey,
+        resourceName: consumes.resourceName,
+        subResource: consumes.subResource,
+        restored: consumes.usesCost,
+        cadence: consumes.cadence
+      };
+    }
+
+    return { success: false, message: "Unable to restore pool resource" };
   }
 }

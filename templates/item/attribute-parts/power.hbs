@@ -67,7 +67,7 @@
             <tr>
               <th>{{localize "swnr.consumption.type"}}</th>
               <th>{{localize "swnr.consumption.cost"}}</th>
-              <th>{{localize "swnr.consumption.cadence"}}</th>
+              <th>Timing</th>
               <th>{{localize "swnr.consumption.details"}}</th>
               <th class="consumption-actions">{{localize "swnr.consumption.actions"}}</th>
             </tr>
@@ -86,15 +86,23 @@
                   <input type="number" name="system.consumptions.{{index}}.usesCost" value="{{consumption.usesCost}}" data-dtype="Number" min="0">
                 </td>
                 <td>
-                  {{#if (or (eq consumption.type "uses") (and (eq consumption.type "poolResource") (eq consumption.resourceName "Effort")))}}
-                    <select name="system.consumptions.{{index}}.cadence" data-dtype="String">
-                      {{#each @root.consumptionCadences}}
-                        <option value="{{@key}}" {{#eq consumption.cadence @key}}selected{{/eq}}>{{localize this}}</option>
-                      {{/each}}
-                    </select>
-                  {{else}}
-                    <span class="no-cadence">—</span>
-                  {{/if}}
+                  <div class="consumption-timing">
+                    <div class="spend-on-prep-container">
+                      <label title="When checked: Cost is paid during preparation. When unchecked: Cost is paid during casting.">
+                        <input type="checkbox" name="system.consumptions.{{index}}.spendOnPrep" {{#if consumption.spendOnPrep}}checked{{/if}} data-dtype="Boolean">
+                        {{#if consumption.spendOnPrep}}Pay on Prep{{else}}Pay on Cast{{/if}}
+                      </label>
+                    </div>
+                    {{#if (or (eq consumption.type "uses") (and (eq consumption.type "poolResource") (eq consumption.resourceName "Effort")))}}
+                      <select name="system.consumptions.{{index}}.cadence" data-dtype="String">
+                        {{#each @root.consumptionCadences}}
+                          <option value="{{@key}}" {{#eq consumption.cadence @key}}selected{{/eq}}>{{localize this}}</option>
+                        {{/each}}
+                      </select>
+                    {{else}}
+                      <span class="no-cadence">—</span>
+                    {{/if}}
+                  </div>
                 </td>
                 <td class="consumption-details">
                   {{#if (eq consumption.type "poolResource")}}

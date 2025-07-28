@@ -607,9 +607,16 @@ export default class SWNCharacter extends SWNActorBase {
       throw new Error(`Unsafe expression after substitution: ${expr}`);
     }
     
-    // Use Function constructor for evaluation
-    const result = new Function('return ' + expr)();
-    return Math.max(0, Math.floor(result)); // Ensure non-negative integer
+    // Use Function constructor for evaluation with Math object available
+    const result = new Function('Math', 'return ' + expr)(Math);
+    
+    // If the formula already used Math.ceil or Math.floor, don't apply additional rounding
+    // Otherwise, default to Math.floor (current behavior)
+    if (formula.includes('Math.ceil') || formula.includes('Math.floor')) {
+      return Math.max(0, Math.round(result)); // Use round to preserve existing rounding
+    } else {
+      return Math.max(0, Math.floor(result)); // Default behavior: round down
+    }
   }
 
 }

@@ -362,6 +362,9 @@ export class SWNActorSheet extends SWNBaseSheet {
         const powerType = i.system.subType || 'psychic';
         const powerLevel = i.system.level || 0;
         
+        // Add hasPrepCosts property to the power item
+        i.hasPrepCosts = i.system.consumptions?.some(c => c.spendOnPrep) || false;
+        
         // Initialize type structure if needed
         if (!powersByType[powerType]) {
           powersByType[powerType] = {};
@@ -585,6 +588,9 @@ export class SWNActorSheet extends SWNBaseSheet {
 
     this.element.querySelectorAll(".resource-list-val").forEach((d) =>
       d.addEventListener('change', this._onResourceChange.bind(this)));
+
+    this.element.querySelectorAll(".power-prepared-icon").forEach((d) =>
+      d.addEventListener('click', this._onPowerPreparedToggle.bind(this)));
 
     // Toggle lock related elements after render depending on the lock state
     this.element?.querySelectorAll(".lock-icon").forEach((d) => {
@@ -1049,6 +1055,64 @@ export class SWNActorSheet extends SWNBaseSheet {
     const resourceList = duplicate(this.actor.system.tweak.resourceList);
     resourceList[idx][resourceType] = value;
     await this.actor.update({ "system.tweak.resourceList": resourceList });
+  }
+
+  /**
+   * Handle power prepared icon clicks
+   * @param {Event} event The click event
+   */
+  async _onPowerPreparedToggle(event) {
+    event.preventDefault();
+    
+    // Only handle if editable
+    if (!this.isEditable) return;
+    
+    const icon = event.target;
+    const itemId = icon.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    
+    if (!item || item.type !== "power") {
+      ui.notifications?.error("Power not found");
+      return;
+    }
+
+    const power = item.system;
+    const currentlyPrepared = power.prepared;
+    
+    try {
+      if (!currentlyPrepared) {
+        // Prepare the power
+        const result = await power.prepare();
+        if (!result.success) {
+          ui.notifications?.warn(result.message || "Failed to prepare power");
+          return;
+        }
+        ui.notifications?.info(`${item.name} prepared successfully`);
+      } else {
+        // Unprepare the power
+        const result = await power.unprepare();
+        if (!result.success) {
+          ui.notifications?.warn(result.message || "Failed to unprepare power");
+          return;
+        }
+        ui.notifications?.info(`${item.name} unprepared successfully`);
+      }
+      
+      // Update icon classes immediately for visual feedback
+      if (!currentlyPrepared) {
+        icon.classList.remove('far');
+        icon.classList.add('fas');
+        icon.title = "Prepared";
+      } else {
+        icon.classList.remove('fas');
+        icon.classList.add('far');
+        icon.title = "Not Prepared";
+      }
+      
+    } catch (error) {
+      console.error("Error handling power preparation:", error);
+      ui.notifications?.error("An error occurred while changing power preparation");
+    }
   }
 
   static async _onAddUse(event, target) {

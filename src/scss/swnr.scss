@@ -48,4 +48,66 @@
       opacity: 0.9;
     }
   }
+
+  /* Power prepared icon styling */
+  .power-prepared-container {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5em;
+  }
+
+  .power-prepared-icon {
+    font-size: 16px;
+    margin: 0;
+    transition: color 0.2s ease;
+    
+    &.fas {
+      color: var(--accent-color); // Filled brain when prepared
+    }
+    
+    &.far {
+      color: var(--color-text-dark-secondary); // Empty brain when not prepared
+      opacity: 0.6;
+    }
+    
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  /* Power consumption display styling */
+  .power-consumption-display {
+    font-size: 0.8em;
+    color: var(--color-text-dark-secondary);
+    margin-top: 0.2em;
+    
+    .consumption-uses {
+      background: rgba(var(--accent-color), 0.1);
+      border: 1px solid rgba(var(--accent-color), 0.3);
+      border-radius: 3px;
+      padding: 0.1em 0.3em;
+      margin-right: 0.3em;
+      font-weight: bold;
+    }
+  }
+
+  /* Consumption timing styling */
+  .consumption-timing {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    
+    .spend-on-prep-container {
+      font-size: 0.8em;
+      
+      label {
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+        margin: 0;
+        cursor: pointer;
+      }
+    }
+  }
 }

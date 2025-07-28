@@ -52,7 +52,7 @@
                 <i class="fas fa-question-circle" title="Use @level for character level, @stats.wis.mod for stat modifiers, @skills.psychic.highest for highest psychic skill. Examples: '1' (fixed), '1 + @level' (base + per level), '@skills.psychic.highest + @stats.wis.mod' (psychic effort)"></i>
               </label>
               <input type="text" name="system.poolsGranted.{{index}}.formula" value="{{pool.formula}}" 
-                     data-dtype="String" placeholder="1 + @skills.psychic.highest + Math.max(@stats.wis.mod, @stats.con.mod)" />
+                     data-dtype="String" placeholder="Math.max(1, 1 + @skills.psychic.highest + Math.max(@stats.wis.mod, @stats.con.mod))" />
             </div>
           </div>
           
@@ -74,7 +74,7 @@
                 <ul>
                   <li><strong>Fixed Amount:</strong> <code>2</code> (always 2 points)</li>
                   <li><strong>Base + Per Level:</strong> <code>1 + @level</code> (1 at level 1, 2 at level 2, etc.)</li>
-                  <li><strong>Psychic Effort (SWN):</strong> <code>1 + @skills.psychic.highest + Math.max(@stats.wis.mod, @stats.con.mod)</code></li>
+                  <li><strong>Psychic Effort (SWN):</strong> <code>Math.max(1, 1 + @skills.psychic.highest + Math.max(@stats.wis.mod, @stats.con.mod))</code></li>
                   <li><strong>Half Level:</strong> <code>(@level / 2)</code> (half level, auto-rounds down)</li>
                   <li><strong>Custom Skill:</strong> <code>@skills.adept_training.rank</code> (for "Adept Training" skill)</li>
                 </ul>

@@ -468,7 +468,8 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
           usesCost: 1,
           cadence: "day",
           itemId: "",
-          uses: { value: 0, max: 1 }
+          uses: { value: 0, max: 1 },
+          spendOnPrep: false
         });
       }
 
@@ -476,6 +477,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       // Handle numeric conversion for nested uses properties
       if (property.startsWith('uses.') && !isNaN(fieldValue)) {
         foundry.utils.setProperty(consumptions[index], property, parseInt(fieldValue));
+      } else if (property === 'spendOnPrep') {
+        // Handle boolean conversion for spendOnPrep checkbox
+        foundry.utils.setProperty(consumptions[index], property, field.checked);
       } else {
         foundry.utils.setProperty(consumptions[index], property, fieldValue);
       }
@@ -539,6 +543,12 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       const usesMaxField = this.element.querySelector(`[name="system.consumptions.${index}.uses.max"]`);
       if (usesMaxField && usesMaxField.value !== consumption.uses.max.toString()) {
         usesMaxField.value = consumption.uses.max;
+      }
+      
+      // Update spendOnPrep field
+      const spendOnPrepField = this.element.querySelector(`[name="system.consumptions.${index}.spendOnPrep"]`);
+      if (spendOnPrepField && spendOnPrepField.checked !== consumption.spendOnPrep) {
+        spendOnPrepField.checked = consumption.spendOnPrep;
       }
     });
   }
