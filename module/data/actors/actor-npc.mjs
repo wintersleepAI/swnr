@@ -88,6 +88,27 @@ export default class SWNNPC extends SWNActorBase {
         }
       }
     }
+
+    // Process inventory into gear and consumables (same as Character)
+    const inventory = this.parent.items.filter(
+      (i) => i.type === "item" || i.type === "weapon" || i.type === "armor"
+    );
+    let gear = [];
+    let consumables = [];
+
+    // Partition the item inventory into gear and consumables
+    inventory.filter((i) => i.type === "item").map((i) => {
+      const itemData = i.system;
+      if (itemData.uses.consumable === "none") {
+        gear.push(i);
+      } else {
+        consumables.push(i);
+      }
+    });
+
+    this.gear = gear;
+    this.consumables = consumables;
+
   }
 
   async rollSave(_saveType) {
