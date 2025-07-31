@@ -1,0 +1,267 @@
+name: Animal Influence
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: aYwv93i2o6zH2RY6
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Beetle
+    name: ''
+    _key: '!tables.results!jE1b2v190ds8kMRu.aYwv93i2o6zH2RY6'
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: yA7hHf7kI2Pf9J7K
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Bird
+    name: ''
+    _key: '!tables.results!jE1b2v190ds8kMRu.yA7hHf7kI2Pf9J7K'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: vWQZLzoF6hcqp3th
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Bovine
+    name: ''
+    _key: '!tables.results!jE1b2v190ds8kMRu.vWQZLzoF6hcqp3th'
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: pBG2EZ5sV8KXvcBr
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Canine
+    name: ''
+    _key: '!tables.results!jE1b2v190ds8kMRu.pBG2EZ5sV8KXvcBr'
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: MPXfVVJJTIpl7MR1
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Equine
+    name: ''
+    _key: '!tables.results!jE1b2v190ds8kMRu.MPXfVVJJTIpl7MR1'
+  - type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: yl3q04yQRmbgmIx2
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Feline
+    name: ''
+    _key: '!tables.results!jE1b2v190ds8kMRu.yl3q04yQRmbgmIx2'
+  - type: text
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: false
+    _id: MYlAWqs3dz2aoBO6
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Fish
+    name: ''
+    _key: '!tables.results!jE1b2v190ds8kMRu.MYlAWqs3dz2aoBO6'
+  - type: text
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: false
+    _id: MrupInI75ngvrC1X
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Lizard
+    name: ''
+    _key: '!tables.results!jE1b2v190ds8kMRu.MrupInI75ngvrC1X'
+  - type: text
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: false
+    _id: Osv9SbkeHUB5C4go
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Mollusk
+    name: ''
+    _key: '!tables.results!jE1b2v190ds8kMRu.Osv9SbkeHUB5C4go'
+  - type: text
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: false
+    _id: mviEJgXMGK1ozX8E
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Snake
+    name: ''
+    _key: '!tables.results!jE1b2v190ds8kMRu.mviEJgXMGK1ozX8E'
+  - type: text
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: false
+    _id: oTgQMqTooNLpSMBc
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Spider
+    name: ''
+    _key: '!tables.results!jE1b2v190ds8kMRu.oTgQMqTooNLpSMBc'
+  - type: text
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: false
+    _id: hsk4a8xDwUYfKBxu
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Turtle
+    name: ''
+    _key: '!tables.results!jE1b2v190ds8kMRu.hsk4a8xDwUYfKBxu'
+replacement: true
+displayRoll: true
+folder: ZsrKd0EZcB4THIIm
+ownership:
+  default: 0
+  AjdlQlPXkJlcOy63: 3
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1753926180531
+  modifiedTime: 1753926183405
+  lastModifiedBy: lKC5x4Yf023Bizof
+formula: 1d12
+_id: jE1b2v190ds8kMRu
+sort: 100000
+_key: '!tables!jE1b2v190ds8kMRu'
+

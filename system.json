@@ -391,6 +391,18 @@
       "label": "WWN Magic Tables",
       "system": "swnr",
       "type": "RollTable"
+    },
+    {
+      "name": "awn-items",
+      "label": "AWN Items",
+      "type": "Item",
+      "system": "swnr"
+    },
+    {
+      "name": "awn-roll-tables",
+      "label": "AWN Roll Tabels",
+      "system": "swnr",
+      "type": "RollTable"
     }
   ],
   "packFolders": [
@@ -495,6 +507,15 @@
         "wwn-instinct",
         "wwn-magic-items",
         "wwn-magic-tables"
+      ]
+    },
+    {
+      "name": "AWN",
+      "sorting": "a",
+      "color": "#FFCC00",
+      "packs": [
+        "awn-items",
+        "awn-roll-tables"
       ]
     }
   ],
