@@ -1,0 +1,42 @@
+name: Precognition
+type: power
+sort: 0
+system:
+  description: Glimpse possible futures to avoid danger
+  favorite: false
+  subType: psychic
+  source: precognition
+  level: 2
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Precognitive
+      usesCost: 1
+      cadence: activation
+      spendOnPrep: false
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: skg8a9sbn0us9vsu
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: "13.346"
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1753952624091
+  modifiedTime: 1753952624091
+  lastModifiedBy: null
+  exportSource: null
+folder: null
+flags: {}
+_key: "!items!skg8a9sbn0us9vsu"
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0

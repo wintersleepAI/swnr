@@ -1,10 +1,10 @@
-name: High Mage Spells - Full
+name: High Mage
 type: feature
-img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+sort: 0
 system:
-  description: ''
+  description: Advanced magical training for spellcasters
   favorite: false
-  level: 0
+  level: 1
   type: focus
   poolsGranted:
     - resourceName: Slots
@@ -31,24 +31,22 @@ system:
       subResource: HighMage
       cadence: day
       formula: 'Math.max(1, @skills.magic.rank + Math.max(@stats.int.mod, @stats.cha.mod))'
-      condition: ''      
-effects: []
-folder: null
-ownership:
-  default: 0
-flags: {}
+      condition: ''
+_id: 630jiepwm0j5ji4v
 _stats:
   compendiumSource: null
   duplicateSource: null
-  exportSource: null
-  coreVersion: '13.346'
+  coreVersion: "13.346"
   systemId: swnr
   systemVersion: 2.1.0
-  createdTime:
-  modifiedTime:
-  lastModifiedBy:
-_id: 
-sort: 
-_key: 
-
-
+  createdTime: 1753952624087
+  modifiedTime: 1753952624087
+  lastModifiedBy: null
+  exportSource: null
+folder: null
+flags: {}
+_key: "!items!630jiepwm0j5ji4v"
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0

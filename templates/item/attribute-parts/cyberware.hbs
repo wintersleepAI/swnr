@@ -1,0 +1,41 @@
+<section
+  class='tab {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='attributes'
+>
+  <div class="resource">
+    {{formGroup systemFields.effect value=system.effect localize=true}}
+  </div>
+  <div class='grid grid-4col'>
+    <div class="resource">
+      {{formGroup systemFields.tl value=system.tl localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.strain value=system.strain localize=true}}
+      {{!-- <div class="form-group">
+        <label>{{localize 'SWN.Item.Cyberware.FIELDS.strain.label'}}</label>
+        <div class="form-fields">
+          <input
+            type="number"
+            name="system.strain"
+            value="{{system.strain}}"
+            min="0"
+            step=".05"
+          >
+        </div>
+      </div> --}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.disabled value=system.disabled localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.type value=system.type localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.concealment value=system.concealment localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.complication value=system.complication localize=true}}
+    </div>
+  </div>
+</section>

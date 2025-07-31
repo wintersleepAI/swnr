@@ -4,8 +4,10 @@ import { stringify } from "yaml";
 import path from "path";
 import { mapping } from "../conversion/mapping.mjs";
 
-const SYSTEM_VERSION = "2.0.0";
+const SYSTEM_VERSION = "2.1.0";
 const CORE_VERSION = "13.346";
+const CSV_BASE_PATH = "scripts/csv-import/data";
+const OUTPUT_BASE_PATH = "scripts/csv-import/output";
 
 /**
  * Converts CSV data to Foundry-compatible YAML files using proper field mappings
@@ -395,8 +397,13 @@ function sanitizeFilename(name) {
         .trim();
 }
 
-async function convertCsvToYaml(csvPath, outputDir) {
+async function convertCsvToYaml(csvFile) {
     try {
+        // Construct paths
+        const csvPath = path.join(CSV_BASE_PATH, csvFile);
+        const csvBaseName = path.basename(csvFile, '.csv');
+        const outputDir = path.join(OUTPUT_BASE_PATH, csvBaseName);
+        
         // Read and parse CSV
         const csvContent = await fs.readFile(csvPath, 'utf-8');
         const records = parse(csvContent, {
@@ -408,7 +415,7 @@ async function convertCsvToYaml(csvPath, outputDir) {
         // Ensure output directory exists
         await fs.mkdir(outputDir, { recursive: true });
 
-        console.log(`Converting ${records.length} records from ${csvPath}...`);
+        console.log(`Converting ${records.length} records from ${csvFile}...`);
 
         // Convert each row to YAML
         for (let i = 0; i < records.length; i++) {
@@ -434,22 +441,52 @@ async function convertCsvToYaml(csvPath, outputDir) {
             console.log(`✓ Created ${filename}`);
         }
 
-        console.log(`\n✅ Successfully converted ${records.length} items to ${outputDir}`);
+        console.log(`✅ Successfully converted ${records.length} items to ${csvBaseName}/`);
+        return records.length;
+
+    } catch (error) {
+        console.error(`❌ Error converting ${csvFile}:`, error.message);
+        return 0;
+    }
+}
+
+async function convertAllCsvFiles() {
+    try {
+        // Ensure directories exist
+        await fs.mkdir(CSV_BASE_PATH, { recursive: true });
+        await fs.mkdir(OUTPUT_BASE_PATH, { recursive: true });
+
+        // Find all CSV files
+        const files = await fs.readdir(CSV_BASE_PATH);
+        const csvFiles = files.filter(file => file.endsWith('.csv'));
+
+        if (csvFiles.length === 0) {
+            console.log(`No CSV files found in ${CSV_BASE_PATH}`);
+            console.log('Copy templates from templates/ to data/ and edit them to get started.');
+            return;
+        }
+
+        console.log(`Found ${csvFiles.length} CSV file(s) to convert...\n`);
+
+        let totalConverted = 0;
+        for (const csvFile of csvFiles) {
+            const converted = await convertCsvToYaml(csvFile);
+            totalConverted += converted;
+        }
+
+        console.log(`\n🎉 Conversion complete! Converted ${totalConverted} total items.`);
+        console.log(`📁 Output directory: ${OUTPUT_BASE_PATH}`);
         console.log(`📝 Run 'npm run build' to pack into compendium`);
 
     } catch (error) {
-        console.error('❌ Error converting CSV to YAML:', error);
+        console.error('❌ Error during bulk conversion:', error);
         process.exit(1);
     }
 }
 
-// CLI usage
-const args = process.argv.slice(2);
-if (args.length !== 2) {
-    console.log('Usage: node scripts/csv-to-yaml.mjs <input.csv> <output-directory>');
-    console.log('Example: node scripts/csv-to-yaml.mjs data/new-items.csv src/packs/new-items/');
-    process.exit(1);
-}
+// Main execution
+console.log('SWNR CSV to YAML Converter');
+console.log(`Input directory: ${CSV_BASE_PATH}`);
+console.log(`Output directory: ${OUTPUT_BASE_PATH}\n`);
 
-const [csvPath, outputDir] = args;
-convertCsvToYaml(csvPath, outputDir);
+convertAllCsvFiles();

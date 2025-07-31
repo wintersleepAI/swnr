@@ -1,0 +1,40 @@
+<header id='header-ship' class='sheet-header'>
+  <div class='flex flex-col'>
+    <div class="flex flexrow">
+      <div class='item-img'>
+        <img class='item-img' src='{{item.img}}' data-edit='img' data-action='onEditImage' title='{{item.name}}' />
+      </div>
+      <div class='header-fields'>
+        <div class='document-name'>
+          <input name='name' type='text' value='{{item.name}}' placeholder='Name' />
+        </div>
+        <div class='grid grid-3col'>
+          <div class='resource grid-span-3 thin-bar' style="text-align:right;">
+            <label class='resource-label'>{{localize 'swnr.item.favorite'}}</label>
+            <input type="checkbox" class="small-checkbox" name="system.favorite" {{#if system.favorite}}checked{{/if}} />
+          </div>
+          {{formGroup systemFields.type value=system.type localize=true}}
+          {{formGroup systemFields.minClass value=system.minClass localize=true}}
+          <div class="grid-span-3 thin-bar flex flexrow">
+            {{formGroup systemFields.broken value=system.broken localize=true widget=checkWidget}}
+            {{formGroup systemFields.destroyed value=system.destroyed localize=true widget=checkWidget}}
+            {{formGroup systemFields.juryRigged value=system.juryRigged localize=true widget=checkWidget}}
+          </div>
+        </div> <!-- grid -->
+      </div> <!-- header-fields -->
+    </div> <!-- flexrow -->
+    <div class="flex flexrow">
+      <div class='grid grid-3col'>
+        {{formGroup systemFields.cost value=system.cost localize=true}}
+        {{formGroup systemFields.power value=system.power localize=true}}
+        {{formGroup systemFields.mass value=system.mass localize=true}}
+        <div class="grid-span-3 thin-bar flex flexrow">
+          {{formGroup systemFields.costMultiplier value=system.costMultiplier localize=true widget=checkWidget}}
+          {{formGroup systemFields.powerMultiplier value=system.powerMultiplier localize=true widget=checkWidget}}
+          {{formGroup systemFields.massMultiplier value=system.massMultiplier localize=true widget=checkWidget}}
+        </div>
+      </div> <!-- grid -->
+    {{!-- </div> <!-- header-fields --> --}}
+    </div> <!-- flexrow -->
+  </div> <!-- flex-col -->
+</header>

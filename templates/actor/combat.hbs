@@ -1,0 +1,187 @@
+<section class='tab combat sheet-body {{tab.cssClass}}' data-group='primary' data-tab='combat'>
+  <div class='sheet-cols'>
+    <aside class='sidebar' style="flex: 0 1 200px;margin-right:2px;" >
+      {{! The grid classes are defined in scss/global/_grid.scss. To use,
+      use both the "grid" and "grid-Ncol" class where "N" can be any number
+      from 1 to 12 and will create that number of columns. }}
+      <div class='stat flexcol'>
+        {{#each system.stats as |stat key|}}
+        <div class='stat flexrow flex-group-center' style="gap: 2px;">
+          <label class='stat-label rollable' data-action='roll'
+            data-roll='d20+@stats.{{key}}.mod' data-label='{{localize (lookup @root.config.stats key)}}'>
+            {{localize (lookup @root.config.statAbbreviations key)}}
+          </label>
+          <span class="stat-score-small">{{stat.baseTotal}}</span>
+          <input type='text' name='system.stats.{{key}}.temp' value='{{stat.temp}}' class="stat-score-small"
+            data-dtype='Number' />
+          <span class="stat-score-small">{{stat.total}}</span>
+          <span class='stat-mod rollable' data-action='roll' data-roll='d20+@stats.{{key}}.mod'
+            data-label='{{localize (lookup @root.config.stats key)}}'>{{numberFormat stat.mod decimals=0 sign=true}}</span>
+        </div>
+        {{/each}}
+      </div>
+    </aside>
+
+    {{! For the skills list, span the middle two columns }}
+    <div class='main' style="flex: 1 1; margin-right:4px">
+      <ol class='items-list'>
+        <li class='flex flexrow items-header'>
+          <div class='item-name' data-tooltip="To edit use the unlock button">
+            {{localize 'SWN.Actor.Tabs.Skills'}}
+            <a class="resource-content" data-action="toggleLock" style="flex: 0 1; margin-left:4px;">
+              <div class="lock-toggle"><i class="fas fa-unlock"></i></div>
+              <div class="lock-icon" style="display:none;"><i class="fas fa-lock"></i></div>
+            </a>
+          </div>
+          <div class='item-controls'>
+            {{#if @root.editable}}
+              <a
+                class='item-control item-create'
+                title='Create item'
+                data-action='createDoc'
+                data-document-class='Item'
+                data-type='skill'
+              >
+                <i class='fas fa-plus'></i>
+                {{localize 'DOCUMENT.New' type=''}}
+              </a>
+            {{/if}}
+          </div>
+        </li> 
+      </ol>
+
+      {{#if (ne actor.itemTypes.skill.length 0)}}
+      
+        <div class="grid grid-cols-2 ">
+          <div>
+            <ol class="items-list skill-list">
+            {{#each actor.itemTypes.skill as |item id|}}
+        {{#if (halfway @root.actor.itemTypes.skill @index)}}          
+            </ol>
+          </div>
+          <div> 
+            <ol class="items-list skill-list">
+                
+          {{/if}}
+            <li data-item-id="{{item.id}}" data-action="rollSkill" data-drag='true' data-document-class='Item'
+              class="skill skillRoll combat-skill  flex-col
+              {{#if (mod2 @index) }}
+               {{!-- alt-row --}}
+              {{/if}}
+              {{#if (eq item.system.rank -1)}}
+                {{!-- untrained --}}
+                untrained
+              {{else}}
+                {{!-- trained --}}
+                trained
+              {{/if}}
+              ">
+              <a class="inline-flex flex-wrap gap-2">
+                <i class="fas fa-dice-d20"></i>
+                {{item.name}}
+                {{numberFormat item.system.rank decimals=0 sign=true}}
+              </a>
+        
+              <div class="item-controls-small lock-toggle" style="display:none;">
+                <a class='item-control item-edit' title='{{localize "DOCUMENT.Update" type=' Item'}}' data-action='viewDoc'>
+                  <i class='fas fa-edit'></i>
+                </a>
+                {{#if @root.editable}}
+                <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type=' Item'}}' data-action='deleteDoc'>
+                  <i class='fas fa-trash'></i>
+                </a>
+                {{/if}}
+                <a class="item-control item-level-up" title="{{localize 'swnr.sheet.level-up'}}" data-item-id="{{item.id}}" data-action="skillUp">
+                  <i class="fas fa-level-up-alt"></i>
+                </a>
+              </div>
+            </li>  
+            {{/each}}
+          </div>
+        </div>
+  <div class="flex flexrow gap" style="column-gap:30%;align-items:flex-start;">
+    <div class="flex flex-col items-center">
+      {{formInput systemFields.unspentSkillPoints value=system.unspentSkillPoints localize=true}}
+      <label>{{localize 'swnr.sheet.unspent-skill'}}</label>
+    </div>
+    <div class="flex flex-col items-center">
+      {{formInput systemFields.unspentPsySkillPoints value=system.unspentPsySkillPoints localize=true}}
+      <label>{{localize 'swnr.sheet.unspent-psy-skill'}}</label>
+    </div>
+    {{!-- <div class="flex flex-col items-center">
+      <a class="item-control item-create"
+        title="{{localize 'swnr.sheet.add-item'}}" 
+        data-action='createDoc'
+        data-document-class='Item'
+        data-type='skill'
+        data-item-name="Skill"
+      >
+        <i class="fas fa-plus"></i>
+        <label>{{localize 'swnr.sheet.add-skill'}}</label>
+      </a>
+    </div> --}}
+
+  </div>    
+      {{else}}
+      <button class="skill-load-button" type="button" data-action="loadSkills">
+        {{localize 'swnr.sheet.loadSkills'}}
+      </button>
+      {{/if}}
+    </div>
+
+
+    {{! For the quick items list, span the right two columns }}
+    <div class='main' style="flex: 0 1 220px;">
+      {{#if actor.system.favorites.length }}
+      <ol class='items-list'>
+        <li class='flex flexrow items-header'>
+          <div class='item-name'>
+            {{localize 'swnr.sheet.favorites'}}
+          </div>
+          <div class="item-qty"> {{ localize 'swnr.item.qty' }} </div>
+          <div class='item-controls-small'>
+          </div>
+        </li>
+      {{#each actor.system.favorites as |item|}}
+        <li
+          class='item flex flexrow'
+          data-item-id='{{item._id}}'
+          data-drag='true'
+          data-document-class='Item'
+        >
+          <div class='item-name'>
+            <div class='item-image'>
+              <a class='rollable' data-roll-type='item' data-action='roll'>
+                <img
+                  src='{{item.img}}'
+                  title='{{item.name}}'
+                  width='24'
+                  height='24'
+                />
+              </a>
+            </div>
+            <div>{{item.name}}</div>
+          </div>
+          <div class="item-qty"> {{ item.system.quantity }} </div>
+          <div class='item-controls-small'>
+            <a
+              class='item-control item-edit'
+              title='{{localize "DOCUMENT.Update" type='Item'}}'
+              data-action='viewDoc'
+            >
+              <i class='fas fa-edit'></i>
+            </a>
+          </div>
+        </li>
+      {{/each}}
+      </ol>
+      {{/if}}
+
+      {{!-- Readied Weapons --}}
+      {{> "systems/swnr/templates/actor/fragments/compact-weapon-list.hbs" itemList=actor.system.readiedWeapons actorType=actor.type }}
+
+      {{!-- Readied Armor --}}
+      {{> "systems/swnr/templates/actor/fragments/compact-armor-list.hbs" itemList=actor.system.readiedArmor actorType=actor.type }}
+    </div>
+  </div>
+</section>

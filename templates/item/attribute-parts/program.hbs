@@ -1,0 +1,64 @@
+<section class='tab {{tab.cssClass}}' data-group='primary' data-tab='program'>
+  <div class='grid grid-2col'> <!-- program -->
+    <div class="resource">
+      {{formGroup systemFields.type value=system.type localize=true}}
+    </div>
+
+    {{#if (eq item.system.type "verb")}}
+    <div class="resource">
+      <label class='resource-label flexlarge align-left'>
+        {{localize 'swnr.sheet.program.targetAllowed'}}
+      </label>
+      {{formInput systemFields.target value=system.target localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.accessCost value=system.accessCost localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.skillCheckMod value=system.skillCheckMod localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.selfTerminating value=system.selfTerminating localize=true}}
+    </div>
+    <div class="resource grid-span-2">
+      {{formGroup systemFields.useAffects value=system.useAffects localize=true}}
+    </div>
+    {{/if}}
+
+    {{#if (eq item.system.type "subject")}}
+    <div class="resource">
+      <label class='resource-label flexlarge align-left'>
+        {{localize 'swnr.sheet.program.target'}}
+      </label>
+      {{formInput systemFields.target value=system.target localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.skillCheckMod value=system.skillCheckMod localize=true}}
+    </div>
+    <div class="resource grid-span-2">
+      <div class="resource">
+        <label class='resource-label flexlarge align-left'>
+          {{localize 'swnr.sheet.program.affect'}}
+        </label>
+        {{formInput systemFields.useAffects value=system.useAffects localize=true}}
+      </div>
+    </div>
+    {{/if}}
+
+    {{#if (eq item.system.type "running")}}
+    <div class="resource">
+      <label class='resource-label flexlarge align-left'>
+        {{localize 'swnr.sheet.program.targetAllowed'}}
+      </label>
+      {{formInput systemFields.target value=system.target localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.skillCheckMod value=system.skillCheckMod localize=true}}
+    </div>
+    <div class="resource grid-span-2">
+      {{formGroup systemFields.useAffects value=system.useAffects localize=true}}
+    </div>
+    {{/if}}
+  </div><!-- end grid-col program  -->
+
+</section>

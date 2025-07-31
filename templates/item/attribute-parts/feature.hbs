@@ -1,0 +1,102 @@
+{{! Attributes Tab }}
+<section class='tab attributes sheet-body {{tab.cssClass}}' data-group='primary' data-tab='attributes'>
+  
+  {{! Pool Configuration }}
+  <fieldset>
+    <legend>Resource Pool Grants</legend>
+    <p class="help-text">Configure what resource pools this Feature/Focus/Edge grants to the character.</p>
+    
+    <div class="pools-granted-container">
+      {{#each system.poolsGranted as |pool index|}}
+        <div class="pool-config" data-pool-index="{{index}}">
+          <div class="pool-config-header">
+            <h4>Pool Grant {{@index}}</h4>
+            <button type="button" class="pool-remove-btn" data-action="removePool" data-pool-index="{{index}}" title="Remove Pool">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+          
+          <div class='grid grid-3col'>
+            <div class="resource">
+              <label class="resource-label">Resource Type</label>
+              <select name="system.poolsGranted.{{index}}.resourceName" data-dtype="String">
+                <option value="Effort" {{#if (eq pool.resourceName "Effort")}}selected{{/if}}>Effort</option>
+                <option value="Slots" {{#if (eq pool.resourceName "Slots")}}selected{{/if}}>Spell Slots</option>
+                <option value="Points" {{#if (eq pool.resourceName "Points")}}selected{{/if}}>Points</option>
+                <option value="Uses" {{#if (eq pool.resourceName "Uses")}}selected{{/if}}>Uses</option>
+              </select>
+            </div>
+            
+            <div class="resource">
+              <label class="resource-label">Sub-Resource</label>
+              <input type="text" name="system.poolsGranted.{{index}}.subResource" value="{{pool.subResource}}" 
+                     data-dtype="String" placeholder="e.g. Psychic, Elementalist, Lv1" />
+            </div>
+            
+            {{#if (ne pool.resourceName "Effort")}}
+            <div class="resource">
+              <label class="resource-label">Refresh Cadence</label>
+              <select name="system.poolsGranted.{{index}}.cadence" data-dtype="String">
+                <option value="scene" {{#if (eq pool.cadence "scene")}}selected{{/if}}>Scene</option>
+                <option value="day" {{#if (eq pool.cadence "day")}}selected{{/if}}>Day</option>
+                <option value="commit" {{#if (eq pool.cadence "commit")}}selected{{/if}}>Commit (Manual)</option>
+              </select>
+            </div>
+            {{/if}}
+          </div>
+          
+          <div class='grid grid-1col'>
+            <div class="resource">
+              <label class="resource-label">
+                Pool Amount Formula
+                <i class="fas fa-question-circle" title="Use @level for character level, @stats.wis.mod for stat modifiers, @skills.psychic.highest for highest psychic skill. Examples: '1' (fixed), '1 + @level' (base + per level), '@skills.psychic.highest + @stats.wis.mod' (psychic effort)"></i>
+              </label>
+              <input type="text" name="system.poolsGranted.{{index}}.formula" value="{{pool.formula}}" 
+                     data-dtype="String" placeholder="Math.max(1, 1 + @skills.psychic.highest + Math.max(@stats.wis.mod, @stats.con.mod))" />
+            </div>
+          </div>
+          
+          <div class='grid grid-1col'>
+            <div class="resource">
+              <label class="resource-label">Condition (Optional)</label>
+              <input type="text" name="system.poolsGranted.{{index}}.condition" value="{{pool.condition}}" 
+                     data-dtype="String" placeholder="@level >= 3" />
+            </div>
+          </div>
+          
+          <div class="pool-help">
+            <details>
+              <summary><i class="fas fa-question-circle"></i> Pool Configuration Help</summary>
+              <div class="help-content">
+                <p><strong>Formula:</strong> JavaScript expression defining pool amount. Use @level for character level, @stats.wis.mod for stat modifiers.</p>
+                <p><strong>Condition:</strong> Pool only granted if condition is true (e.g., "@level >= 3" for level 3+).</p>
+                <p><strong>Common Formulas:</strong></p>
+                <ul>
+                  <li><strong>Fixed Amount:</strong> <code>2</code> (always 2 points)</li>
+                  <li><strong>Base + Per Level:</strong> <code>1 + @level</code> (1 at level 1, 2 at level 2, etc.)</li>
+                  <li><strong>Psychic Effort (SWN):</strong> <code>Math.max(1, 1 + @skills.psychic.highest + Math.max(@stats.wis.mod, @stats.con.mod))</code></li>
+                  <li><strong>Half Level:</strong> <code>(@level / 2)</code> (half level, auto-rounds down)</li>
+                  <li><strong>Custom Skill:</strong> <code>@skills.adept_training.rank</code> (for "Adept Training" skill)</li>
+                </ul>
+                <p><strong>Available Variables:</strong> @level, @stats.str.mod, @stats.dex.mod, @stats.con.mod, @stats.int.mod, @stats.wis.mod, @stats.cha.mod, @skills.psychic.highest, @skills.{skillName}.rank</p>
+                <p><strong>Note:</strong> For skill names with spaces, use underscores (e.g., @skills.adept_training.rank for "Adept Training" skill)</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      {{/each}}
+      
+      {{#unless system.poolsGranted.length}}
+        <div class="no-pools-message">
+          <p><i class="fas fa-info-circle"></i> This feature does not grant any resource pools. Click "Add Pool Grant" to configure pools.</p>
+        </div>
+      {{/unless}}
+    </div>
+    
+    <div class="pool-controls">
+      <button type="button" class="add-pool-btn" data-action="addPool">
+        <i class="fas fa-plus"></i> Add Pool Grant
+      </button>
+    </div>
+  </fieldset>
+</section>

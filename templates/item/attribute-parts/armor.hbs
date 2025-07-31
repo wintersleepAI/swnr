@@ -1,0 +1,43 @@
+<section
+  class='tab armor {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='armor'
+>
+
+<div class='grid grid-4col'> <!-- SWNRArmorData extends SWNRBaseItemData -->
+  <div class="resource">
+   {{formGroup systemFields.ac value=system.ac localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.shield value=system.shield localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.use value=system.use localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.meleeAc value=system.meleeAc localize=true}}
+  </div>
+  
+  <div class="resource">
+   {{formGroup systemFields.soak value=system.soak localize=true widget=groupWidget}}
+  </div>
+
+  <div class="resource">
+   {{formGroup systemFields.dr value=system.dr localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.traumaDiePenalty value=system.traumaDiePenalty localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.isSubtle value=system.isSubtle localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.isHeavy value=system.isHeavy localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.shieldMeleeACBonus value=system.shieldMeleeACBonus localize=true}}
+  </div>
+  <div class="resource">
+   {{formGroup systemFields.shieldACBonus value=system.shieldACBonus localize=true}}
+  </div> 
+</div><!-- end grid-col SWNRArmorData extends SWNRBaseItemData  -->

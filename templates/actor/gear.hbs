@@ -1,0 +1,65 @@
+{{! Gear Tab }}
+<section class='tab gear sheet-body {{tab.cssClass}}' data-group='primary' data-tab='gear'>
+  {{#if (eq actor.type 'character')}}
+  <div class="flex flexrow gap" style="column-gap:10%">
+    <div class="flex flex-col items-center">
+      {{formInput systemFields.credits.fields.debt value=system.credits.debt localize=true}}
+      <label for="system.credits.debt">{{system.tweak.debtDisplay}}
+      <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
+        title="{{localize 'swnr.sheet.credit-change'}} {{system.tweak.debtDisplay}}"
+        data-credit-type="debt" data-action="creditChange">
+          <i class="fas fa-coins"></i>
+      </a> 
+      </label>
+    </div>
+    <div class="flex flex-col items-center">
+      {{formInput systemFields.credits.fields.balance value=system.credits.balance localize=true}}
+      <label for="system.credits.balance">{{system.tweak.balanceDisplay}}
+      <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
+        title="{{localize 'swnr.sheet.credit-change'}} {{system.tweak.balanceDisplay}}"
+        data-credit-type="balance" data-action="creditChange">
+          <i class="fas fa-coins"></i>
+      </a> 
+      </label>
+    </div>
+    <div class="flex flex-col items-center">
+      {{formInput systemFields.credits.fields.owed value=system.credits.owed localize=true}}
+      <label for="system.credits.owed">{{system.tweak.owedDisplay}}
+      <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
+        title="{{localize 'swnr.sheet.credit-change'}} {{system.tweak.owedDisplay}}"
+        data-credit-type="owed" data-action="creditChange">
+          <i class="fas fa-coins"></i>
+      </a>
+      </label>
+    </div>
+  </div>
+
+  <div class="flex flexrow gap" style="column-gap:10%;"><!-- Encum -->
+
+    <div class="resource-bar"><!-- The readied bar -->
+      <div style="width:{{actor.system.encumbrance.ready.percentage}}%" class="ready-fill"></div>
+        <div class="text">
+          {{localize 'swnr.item.locationReadied'}}:
+          {{actor.system.encumbrance.ready.value}}/{{actor.system.encumbrance.ready.max}}
+        </div>
+    </div>
+
+    <div class="resource-bar"><!-- The stowed bar -->
+      <div style="width:{{actor.system.encumbrance.stowed.percentage}}%" class="stowed-fill"></div>
+        <div class="text">
+           {{localize 'swnr.item.locationStowed'}}:
+        {{actor.system.encumbrance.stowed.value}}/{{actor.system.encumbrance.stowed.max}}
+       </div>
+    </div>
+  </div>
+  {{/if}}
+
+  <div class="flex flex-col"> <!--items -->
+    {{> "systems/swnr/templates/actor/fragments/items-list.hbs" itemList=actor.itemTypes.weapon  type='weapon' name='Weapons' locations=../config/itemLocations}}
+    {{> "systems/swnr/templates/actor/fragments/consumable-list.hbs" itemList=actor.system.consumables  type='item' name='Consumables/Ammo' }}
+    {{> "systems/swnr/templates/actor/fragments/items-list.hbs" itemList=actor.itemTypes.armor  type='armor' name='Armor'}}
+    {{> "systems/swnr/templates/actor/fragments/items-list.hbs" itemList=actor.system.gear  type='item' name='Items' }}
+
+  </div>
+
+</section>

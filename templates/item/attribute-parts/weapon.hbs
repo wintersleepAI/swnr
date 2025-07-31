@@ -1,0 +1,136 @@
+<section class='tab {{tab.cssClass}} sheet-body' data-group='primary' data-tab='weapon'>
+  <div class='grid grid-4col'> <!-- Weapon -->
+
+
+    <div class="resource">
+      {{formGroup systemFields.damage value=system.damage localize=true}}
+    </div>
+    <div class="resource-group grid-span-2 flex flexrow">
+      <div class="resource" style="margin-right:2px;">
+        {{formGroup systemFields.shock.fields.dmg value=system.shock.dmg localize=true}}
+      </div>
+      <div class="resource">
+        {{formGroup systemFields.shock.fields.ac value=system.shock.ac localize=true}}
+      </div>
+    </div><!-- end resource-group -->
+    <div class="resource">
+      {{formGroup systemFields.save value=system.save localize=true}}
+    </div>
+
+    <div class="grid-span-4 thin-bar flex flexrow">
+      {{formGroup systemFields.skillBoostsDamage value=system.skillBoostsDamage localize=true widget=checkWidget}}
+      {{formGroup systemFields.skillBoostsShock value=system.skillBoostsShock localize=true widget=checkWidget}}
+    </div>
+
+    <div class="grid-span-4 thin-bar flex flexrow">
+      {{formGroup systemFields.isTwoHanded value=system.isTwoHanded localize=true widget=checkWidget}}
+      {{formGroup systemFields.isNonLethal value=system.isNonLethal localize=true widget=checkWidget}}
+    </div>
+    <div class="grid-span-4 thin-bar flex flexrow">
+      {{formGroup systemFields.isMelee value=system.isMelee localize=true widget=checkWidget}}
+
+      {{# if (eq system.remember.use true) }}
+        {{formGroup systemFields.remember.fields.use value=system.remember.use localize=true widget=checkWidget}}
+      {{/if}}
+    </div>
+
+    <div class="resource">
+      {{formGroup systemFields.ab value=system.ab localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.stat value=system.stat localize=true}}
+    </div>
+    <div class="resource">
+      {{formGroup systemFields.secondStat value=system.secondStat localize=true}}
+    </div>
+    <div class="resource">
+      {{#if item.parent}}
+      {{#if (eq item.parent.type 'character')}}
+      {{!-- {{selectOptions item.parent.itemTypes.skill selected=item.skill labelAttr="skill" valueAttr="skill"
+      blank=""}} --}}
+      {{!-- {{formGroup systemFields.skill value=system.skill localize=true}} --}}
+
+      <label>{{localize 'swnr.sheet.skill'}}:</label>
+      <select name="system.skill">
+        {{#select system.skill}}
+        <option value="">{{ localize 'swnr.weapon.noSetSkill'}}</option>
+        {{#each item.parent.itemTypes.skill }}
+        <option value="{{this.id}}">
+          {{this.name}} {{this.system.rank}}
+        </option>
+        {{/each}} {{/select}}
+      </select>
+      {{/if}}
+      {{/if}}
+    </div>
+
+
+    <div class="resource-group grid-span-4"><!-- AMMO-->
+      <div class="grid grid-4col" style="margin-top:0px;">
+        <!-- Ammo selector -->
+        {{#if (and (ne system.ammo.type "none") (ne system.ammo.type "infinite"))}}
+        <div>{{localize 'swnr.weapon.currentAmmo'}}: </div>
+        <div class="grid-span-3">
+          {{#if related.ammo}}
+            <select name="system.ammo.current" class="">
+              {{selectOptions related.ammo selected=system.ammo.current labelAttr="name" valueAttr="id" blank=""}}
+            </select>
+          {{else}}
+            {{localize 'swnr.weapon.ammotNotFound'}}
+          {{/if}}
+        </div>
+        {{/if}}
+
+        <div class="resource grid-span-2">
+          {{formGroup systemFields.ammo.fields.type value=system.ammo.type localize=true}}
+        </div>
+        {{#if (and (ne system.ammo.type "none") (ne system.ammo.type "infinite"))}}
+        <div class="resource">
+          {{formGroup systemFields.ammo.fields.value value=system.ammo.value localize=true}}
+        </div>
+        <div class="resource">
+          {{formGroup systemFields.ammo.fields.max value=system.ammo.max localize=true}}
+        </div>
+        {{else}}
+        <div class="resource grid-span-2"> </div>
+        {{/if}}
+      </div>
+      <div class="grid-span-4 thin-bar flex flexrow">
+        {{formGroup systemFields.ammo.fields.longReload value=system.ammo.longReload localize=true widget=checkWidget}}
+        {{formGroup systemFields.ammo.fields.suppress value=system.ammo.suppress localize=true widget=checkWidget}}
+        {{formGroup systemFields.ammo.fields.burst value=system.ammo.burst localize=true widget=checkWidget}}
+      </div>
+    </div><!-- AMMO Properties  -->
+    <div class="resource-group grid-span-2">
+      <label class="resource-label" style="margin-left: -2px;">
+        {{localize 'SWN.Item.Weapon.FIELDS.range.label'}}
+      </label>
+      <div class="flex flexrow" style="gap: 2px;">
+        <div class="resource">
+          {{formGroup systemFields.range.fields.normal value=system.range.normal localize=true}}
+        </div>
+        <div class="resource">
+          {{formGroup systemFields.range.fields.max value=system.range.max localize=true}}
+        </div>
+      </div>
+
+    </div><!-- end resource-group -->
+
+    <div class="resource-group grid-span-2">
+
+      <label class="resource-label" style="margin-left: -2px;">
+        {{localize 'SWN.Item.Weapon.FIELDS.trauma.label'}}
+      </label>
+      <div class="flex flexrow" style="gap: 2px;">
+        <div class="resource">
+          {{formGroup systemFields.trauma.fields.die value=system.trauma.die localize=true}}
+        </div>
+        <div class="resource">
+          {{formGroup systemFields.trauma.fields.rating value=system.trauma.rating localize=true}}
+        </div>
+      </div>
+    </div><!-- end resource-group -->
+
+  </div><!-- end grid-col weapon  -->
+
+</section>
