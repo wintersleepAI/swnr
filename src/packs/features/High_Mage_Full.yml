@@ -1,0 +1,54 @@
+name: High Mage Spells - Full
+type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+system:
+  description: ''
+  favorite: false
+  level: 0
+  type: focus
+  poolsGranted:
+    - resourceName: Slots
+      subResource: SpellsCast
+      cadence: day
+      formula: 'Math.ceiling(@level/2)'
+      condition: ''
+    - resourceName: Slots
+      subResource: SpellsPrepared
+      cadence: day
+      formula: '@level + 1'
+      condition: ''
+    - resourceName: Slots
+      subResource: SpellsPrepared
+      cadence: day
+      formula: '+1'
+      condition: '@level <= 1'
+    - resourceName: Slots
+      subResource: SpellsPrepared
+      cadence: day
+      formula: '+2'
+      condition: '@level >= 10'
+    - resourceName: Effort
+      subResource: HighMage
+      cadence: day
+      formula: 'Math.max(1, @skills.magic.rank + Math.max(@stats.int.mod, @stats.cha.mod))'
+      condition: ''      
+effects: []
+folder: null
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime:
+  modifiedTime:
+  lastModifiedBy:
+_id: 
+sort: 
+_key: 
+
+

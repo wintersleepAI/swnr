@@ -1,0 +1,3 @@
+name,type,description,level,subtype,source,prepared,consumptions,duration,range,save
+"Telekinetic Manipulation",power,"Move objects with the power of the mind",1,psychic,biopsionics,false,"poolResource;Effort:Telekinetic;1;scene;false","Scene","Close","None"
+"Psychic Succor",power,"Heal injuries through mental projection",1,psychic,biopsionics,false,"poolResource;Effort:Biopsychic;1;scene;false|systemStrain;1","Instant","Touch","None"

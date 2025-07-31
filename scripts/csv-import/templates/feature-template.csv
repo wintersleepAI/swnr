@@ -1,0 +1,3 @@
+name,type,description,level,feature_type,pools_granted
+"Psychic Training",feature,"Basic training in psychic disciplines",1,focus,"Effort:Psychic;day;1+@skills.psychic.highest+Math.max(@stats.wis.mod,@stats.con.mod)"
+"High Mage",feature,"Advanced magical training for spellcasters",1,focus,"Slots:Lv1;day;@stats.int.mod|Slots:Lv2;day;Math.max(0,@stats.int.mod-1);@lvl >= 3"
