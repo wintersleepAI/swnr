@@ -28,7 +28,16 @@ system:
     up, they automatically fail their saving throw.</p>
   level: 3
   source: metapsionics
-  effort: day
+  consumptions:
+    [
+      {
+      type: "poolResource",
+      resourceName: "Effort",
+      subResource: "Psychic",
+      cadence: "day",
+      usesCost: 1,
+      }
+    ]
 effects: []
 ownership:
   default: 0

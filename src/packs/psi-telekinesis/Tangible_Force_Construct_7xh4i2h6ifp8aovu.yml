@@ -27,7 +27,16 @@ system:
     smashed with 20 points of damage against AC 15.</p>
   level: 3
   source: telekInesIs
-  effort: scene
+  consumptions:
+   [
+     {
+     type: "poolResource",
+     resourceName: "Effort",
+     subResource: "Psychic",
+     cadence: "scene",
+     usesCost: 1,
+     }
+   ]
 effects: []
 ownership:
   default: 0

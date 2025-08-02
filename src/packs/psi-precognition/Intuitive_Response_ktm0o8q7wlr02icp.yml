@@ -26,7 +26,16 @@ system:
     surprised.</p>
   level: 1
   source: precognition
-  effort: scene
+  consumptions:
+   [
+     {
+     type: "poolResource",
+     resourceName: "Effort",
+     subResource: "Psychic",
+     cadence: "scene",
+     usesCost: 1,
+     }
+   ]
 effects: []
 ownership:
   default: 0

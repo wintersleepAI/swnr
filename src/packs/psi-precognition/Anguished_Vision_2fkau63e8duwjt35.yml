@@ -27,7 +27,16 @@ system:
     per day.</p>
   level: 3
   source: precognition
-  effort: day
+  consumptions:
+    [
+      {
+      type: "poolResource",
+      resourceName: "Effort",
+      subResource: "Psychic",
+      cadence: "day",
+      usesCost: 1,
+      }
+    ]
 effects: []
 ownership:
   default: 0

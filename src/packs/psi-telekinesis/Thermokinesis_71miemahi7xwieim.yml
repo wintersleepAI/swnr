@@ -30,7 +30,16 @@ system:
     technique is applied to them.</p>
   level: 2
   source: telekInesIs
-  effort: scene
+  consumptions:
+   [
+     {
+     type: "poolResource",
+     resourceName: "Effort",
+     subResource: "Psychic",
+     cadence: "scene",
+     usesCost: 1,
+     }
+   ]
   roll: 2d12
 effects: []
 ownership:

@@ -30,7 +30,16 @@ system:
     were struck by a Heavy weapon.</p>
   level: 3
   source: telekInesIs
-  effort: scene
+  consumptions:
+   [
+     {
+     type: "poolResource",
+     resourceName: "Effort",
+     subResource: "Psychic",
+     cadence: "scene",
+     usesCost: 1,
+     }
+   ]
   roll: 5d12
 effects: []
 ownership:

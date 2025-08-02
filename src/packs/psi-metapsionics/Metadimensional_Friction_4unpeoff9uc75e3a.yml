@@ -26,7 +26,16 @@ system:
     Only one application of this friction can affect a target at once.</p>
   level: 3
   source: metapsionics
-  effort: scene
+  consumptions:
+   [
+     {
+     type: "poolResource",
+     resourceName: "Effort",
+     subResource: "Psychic",
+     cadence: "scene",
+     usesCost: 1,
+     }
+   ]
   roll: 3d8
   save: mental
 effects: []

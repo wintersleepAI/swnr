@@ -28,7 +28,16 @@ system:
   level: 3
   source: telepathy
   save: mental
-  effort: day
+  consumptions:
+    [
+      {
+      type: "poolResource",
+      resourceName: "Effort",
+      subResource: "Psychic",
+      cadence: "day",
+      usesCost: 1,
+      }
+    ]
   roll: 6d6
 effects: []
 ownership:

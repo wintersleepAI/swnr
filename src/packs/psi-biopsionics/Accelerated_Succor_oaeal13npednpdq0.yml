@@ -24,7 +24,16 @@ system:
     succor apply normally, such as with <em>Tissue Integrity Field</em>.</p>
   level: 3
   source: biopsionics
-  effort: day
+  consumptions:
+    [
+      {
+      type: "poolResource",
+      resourceName: "Effort",
+      subResource: "Psychic",
+      cadence: "day",
+      usesCost: 1,
+      }
+    ]
 effects: []
 ownership:
   default: 0

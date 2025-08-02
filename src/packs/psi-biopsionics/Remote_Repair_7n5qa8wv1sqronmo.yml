@@ -25,7 +25,16 @@ system:
   level: 1
   source: biopsionics
   range: 100m
-  effort: scene
+  consumptions:
+    [
+      {
+      type: "poolResource",
+      resourceName: "Effort",
+      subResource: "Psychic",
+      cadence: "scene",
+      usesCost: 1,
+      }
+    ]
 effects: []
 ownership:
   default: 0

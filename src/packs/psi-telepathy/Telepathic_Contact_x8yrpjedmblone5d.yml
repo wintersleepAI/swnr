@@ -50,7 +50,16 @@ system:
   level: 0
   source: telepathy
   save: mental
-  effort: day
+  consumptions:
+   [
+     {
+     type: "poolResource",
+     resourceName: "Effort",
+     subResource: "Psychic",
+     cadence: "day",
+     usesCost: 1,
+     }
+   ]
 effects: []
 ownership:
   default: 0

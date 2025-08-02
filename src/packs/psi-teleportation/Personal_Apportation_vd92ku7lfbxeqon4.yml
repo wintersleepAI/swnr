@@ -43,7 +43,16 @@ system:
     surface or near orbit.</p>
   level: 0
   source: teleportation
-  effort: scene
+  consumptions:
+   [
+     {
+     type: "poolResource",
+     resourceName: "Effort",
+     subResource: "Psychic",
+     cadence: "scene",
+     usesCost: 1,
+     }
+   ]
 effects: []
 ownership:
   default: 0

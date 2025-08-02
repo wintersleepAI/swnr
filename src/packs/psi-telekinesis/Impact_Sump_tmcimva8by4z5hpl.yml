@@ -23,7 +23,16 @@ system:
     after damage is rolled.</p>
   level: 2
   source: telekInesIs
-  effort: day
+  consumptions:
+   [
+     {
+     type: "poolResource",
+     resourceName: "Effort",
+     subResource: "Psychic",
+     cadence: "day",
+     usesCost: 1,
+     }
+   ]
 effects: []
 ownership:
   default: 0

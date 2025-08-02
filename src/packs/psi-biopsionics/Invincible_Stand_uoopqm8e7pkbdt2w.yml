@@ -28,7 +28,16 @@ system:
     target, regardless of this technique.</p>
   level: 2
   source: biopsionics
-  effort: scene
+  consumptions:
+    [
+      {
+      type: "poolResource",
+      resourceName: "Effort",
+      subResource: "Psychic",
+      cadence: "scene",
+      usesCost: 1,
+      }
+    ]
 effects: []
 ownership:
   default: 0
