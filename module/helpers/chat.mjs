@@ -661,7 +661,7 @@ export async function _onChatCardAction(
       const result = await power.system._processConsumption(targetActor, consumption, {}, consumptionIndex);
       
       if (!result.success) {
-        ui.notifications?.error(result.error || "Failed to process consumption");
+        ui.notifications?.error(result.message || "Failed to process consumption");
         return;
       }
       
