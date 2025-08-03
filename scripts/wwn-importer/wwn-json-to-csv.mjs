@@ -1,13 +1,16 @@
 import { promises as fs } from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
 /**
  * Converts WWN JSON data to SWNR-compatible CSV format
  * Usage: node scripts/wwn-importer/wwn-json-to-csv.mjs
  */
 
-const INPUT_DIR = "./data";
-const OUTPUT_DIR = "./output";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const INPUT_DIR = path.join(__dirname, "data");
+const OUTPUT_DIR = path.join(__dirname, "output");
 
 // CSV headers for different types
 const CSV_HEADERS = {
@@ -26,6 +29,39 @@ const CSV_HEADERS = {
     journal: "name,type,description,content,img",
     rolltable: "name,type,description,formula,results,img"
 };
+
+function generateRandomID(length = 16) {
+    const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+    let result = "";
+    for (let i = 0; i < length; i++) {
+        result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return result;
+}
+
+// Simplified metadata for embedded items
+function generateFoundryItemMetadata(type, id) {
+    const now = Date.now();
+    return {
+        _id: id,
+        _stats: {
+            compendiumSource: null,
+            duplicateSource: null,
+            coreVersion: "13.346",
+            systemId: "swnr",
+            systemVersion: "2.1.0",
+            createdTime: now,
+            modifiedTime: now,
+            lastModifiedBy: null,
+            exportSource: null
+        },
+        folder: null,
+        flags: {},
+        sort: 0,
+        ownership: { default: 0 },
+        effects: []
+    };
+}
 
 function sanitizeText(text) {
     if (!text) return "";
@@ -128,7 +164,7 @@ function mapWwnArmorToSwnr(wwnArmor) {
         description: sanitizeText(system.description),
         cost: system.price || 0,
         ac: totalAc,
-        melee_ac: system.meleeAc || null,
+        melee_ac: system.meleeAc || totalAc,
         trauma_penalty: 0, // WWN doesn't have trauma penalties
         soak_value: system.soak?.value || 0,
         soak_max: system.soak?.max || 0,
@@ -183,16 +219,92 @@ function mapWwnSpellToSwnr(wwnSpell) {
 function mapWwnActorToSwnr(wwnActor) {
     const system = wwnActor.system;
     
-    // Extract saves values (WWN has evasion, mental, physical, luck)
+    // Extract saves values
     const saves = system.saves ? {
         evasion: system.saves.evasion?.value || 15,
         mental: system.saves.mental?.value || 15,
         physical: system.saves.physical?.value || 15,
         luck: system.saves.luck?.value || 15
     } : { evasion: 15, mental: 15, physical: 15, luck: 15 };
-    
-    // Serialize items array for CSV storage
-    const items = wwnActor.items ? JSON.stringify(wwnActor.items) : '[]';
+
+    // Map and structure items into a valid format
+    const mappedItems = (wwnActor.items || []).map(item => {
+        let itemSystemData = {};
+        let itemType = item.type;
+        let itemName = item.name;
+        let itemImg = item.img;
+
+        switch (item.type) {
+            case 'weapon':
+                const weaponData = mapWwnWeaponToSwnr(item);
+                itemType = 'weapon';
+                itemName = weaponData.name;
+                itemImg = weaponData.img;
+                itemSystemData = {
+                    description: weaponData.description,
+                    cost: weaponData.cost,
+                    damage: weaponData.damage,
+                    range: { normal: weaponData.range_normal, max: weaponData.range_max },
+                    shock: { dmg: weaponData.shock_damage, ac: weaponData.shock_ac },
+                    ammo: { max: weaponData.mag, type: weaponData.ammo_type, burst: weaponData.burst },
+                    isTwoHanded: weaponData.two_handed,
+                    stat: weaponData.stat,
+                    skill: weaponData.skill,
+                    ab: weaponData.attack_bonus,
+                    encumbrance: weaponData.encumbrance,
+                    quality: weaponData.quality,
+                    tl: weaponData.tl
+                };
+                break;
+            case 'armor':
+                const armorData = mapWwnArmorToSwnr(item);
+                itemType = 'armor';
+                itemName = armorData.name;
+                itemImg = armorData.img;
+                itemSystemData = {
+                    description: armorData.description,
+                    cost: armorData.cost,
+                    ac: armorData.ac,
+                    meleeAc: armorData.melee_ac,
+                    traumaDiePenalty: armorData.trauma_penalty,
+                    soak: { value: armorData.soak_value, max: armorData.soak_max },
+                    isSubtle: armorData.subtle,
+                    shield: armorData.shield,
+                    encumbrance: armorData.encumbrance,
+                    quality: armorData.quality,
+                    tl: armorData.tl
+                };
+                break;
+            default:
+                const genericData = mapWwnItemToSwnr(item);
+                itemType = 'item';
+                itemName = genericData.name;
+                itemImg = genericData.img;
+                itemSystemData = {
+                    description: genericData.description,
+                    cost: genericData.cost,
+                    quantity: genericData.quantity,
+                    encumbrance: genericData.encumbrance,
+                    location: genericData.location,
+                    quality: genericData.quality,
+                    tl: genericData.tl
+                };
+                break;
+        }
+
+        const itemId = generateRandomID(16);
+        const metadata = generateFoundryItemMetadata(itemType, itemId);
+
+        return {
+            name: itemName,
+            type: itemType,
+            img: itemImg || 'icons/svg/item-bag.svg',
+            system: itemSystemData,
+            ...metadata
+        };
+    });
+
+    const items = JSON.stringify(mappedItems);
     
     return {
         name: wwnActor.name,

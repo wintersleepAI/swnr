@@ -393,6 +393,18 @@
       "type": "RollTable"
     },
     {
+      "name": "wwn-items",
+      "label": "WWN Items",
+      "type": "Item",
+      "system": "swnr"
+    },
+    {
+      "name": "wwn-actors",
+      "label": "WWN Actors",
+      "type": "Actor",
+      "system": "swnr"
+    },    
+    {
       "name": "awn-items",
       "label": "AWN Items",
       "type": "Item",

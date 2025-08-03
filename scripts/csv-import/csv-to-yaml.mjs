@@ -2,12 +2,16 @@ import { promises as fs } from "fs";
 import { parse } from "csv-parse/sync";
 import { stringify } from "yaml";
 import path from "path";
+import { fileURLToPath } from "url";
 import { mapping } from "../conversion/mapping.mjs";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const SYSTEM_VERSION = "2.1.0";
 const CORE_VERSION = "13.346";
-const CSV_BASE_PATH = "./data";
-const OUTPUT_BASE_PATH = "./output";
+const CSV_BASE_PATH = path.join(__dirname, "data");
+const OUTPUT_BASE_PATH = path.join(__dirname, "output");
 
 /**
  * Converts CSV data to Foundry-compatible YAML files using proper field mappings
@@ -160,6 +164,32 @@ function mapCsvFieldsToSystem(row, type) {
         mapFieldValue(systemData, csvField, value, type);
     });
 
+    if (type === 'npc') {
+        const cleanedSystem = {};
+
+        // Fields from working example
+        cleanedSystem.ab = systemData.ab || 0;
+        cleanedSystem.armorType = systemData.armorType || 'primitive';
+        cleanedSystem.attacks = systemData.attacks || { bonusDamage: 0, number: 1 };
+        cleanedSystem.baseAc = systemData.baseAc || 10;
+        cleanedSystem.hitDice = systemData.hitDice || 0;
+        cleanedSystem.moralScore = systemData.moralScore || 0;
+        
+        // Handle saves: pick one, e.g., physical
+        if (systemData.saves) {
+            cleanedSystem.saves = systemData.saves.physical || 10;
+        } else {
+            cleanedSystem.saves = 10;
+        }
+        
+        cleanedSystem.skillBonus = systemData.skillBonus || 0;
+        cleanedSystem.speed = systemData.speed || 10;
+        cleanedSystem.biography = systemData.biography || "";
+        cleanedSystem.species = systemData.species || "";
+
+        return cleanedSystem;
+    }
+
     return systemData;
 }
 
@@ -305,6 +335,15 @@ function setNestedValue(obj, path, value) {
 }
 
 function parseValue(value, field) {
+    // Handle dice expressions for HD
+    if (field === 'hd') {
+        const match = value.match(/^(\d+)/);
+        if (match) {
+            const num = parseInt(match[1]);
+            return isNaN(num) ? 0 : num;
+        }
+    }
+
     // Parse boolean fields
     if (['burst', 'two_handed', 'subtle', 'shield', 'prepared', 'base_of_influence'].includes(field)) {
         return value === 'true' || value === '1' || value === 'yes';
@@ -420,10 +459,26 @@ function csvRowToYaml(row, sortIndex) {
         yamlData.img = row.img;
     }
     
-    // Handle items array for NPCs
+    // Handle items array for NPCs, ensuring each item has a valid _key
     if (type === 'npc' && row.items) {
         try {
-            yamlData.items = JSON.parse(row.items);
+            const items = JSON.parse(row.items);
+            yamlData.items = items.map(item => {
+                if (!item._id) {
+                    item._id = generateRandomID(16);
+                }
+                // Construct the key required by Foundry
+                item._key = `!actors.items!${id}.${item._id}`;
+                
+                // Ensure basic fields are present
+                item.folder = item.folder || null;
+                item.flags = item.flags || {};
+                item.ownership = item.ownership || { default: 0 };
+                item.effects = item.effects || [];
+                item._stats = item._stats || generateFoundryMetadata('item', item._id)._stats;
+
+                return item;
+            });
         } catch (error) {
             console.warn(`Error parsing items for ${row.name}:`, error);
             yamlData.items = [];
