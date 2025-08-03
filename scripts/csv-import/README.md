@@ -75,13 +75,13 @@ node scripts/csv-import/csv-to-yaml.mjs
 **Format:** `"type;parameter1;parameter2;..."`
 
 #### poolResource Type
-**Format:** `"poolResource;ResourceName:SubResource;cost;cadence;spendOnPrep"`
+**Format:** `"poolResource;ResourceName:SubResource;cost;cadence;timing"`
 
 **Field Descriptions:**
 - **ResourceName:SubResource** - Pool to consume from (must match a granted pool)
 - **cost** - Number of points to consume (integer)
 - **cadence** - Consumption duration: `scene`, `day`, `hour`, `activation`, `permanent`
-- **spendOnPrep** - When to spend: `true` (when prepared), `false` (when activated)
+- **timing** - When to consume: `preparation` (when prepared), `manual` (via chat buttons), `immediate` (when sent to chat)
 
 #### systemStrain Type
 **Format:** `"systemStrain;cost"`
@@ -97,20 +97,27 @@ node scripts/csv-import/csv-to-yaml.mjs
 
 **Consumption Examples:**
 ```csv
-# Basic effort consumption
-"poolResource;Effort:Psychic;1;scene;false"
+# Basic effort consumption (via chat buttons)
+"poolResource;Effort:Psychic;1;scene;manual"
 
 # Spell slot consumption when prepared
-"poolResource;Slots:Lv1;1;day;true"
+"poolResource;Slots:Lv1;1;day;preparation"
+
+# Immediate consumption when sent to chat
+"poolResource;Effort:Biopsychic;1;scene;immediate"
 
 # Multiple consumption types
-"poolResource;Effort:Biopsychic;1;scene;false|systemStrain;1"
+"poolResource;Effort:Biopsychic;1;scene;manual|systemStrain;1"
 
 # High-cost power
-"poolResource;Effort:Telekinetic;2;day;false|systemStrain;2"
+"poolResource;Effort:Telekinetic;2;day;manual|systemStrain;2"
 
 # Power with internal uses
 "uses;1"
+
+# Legacy format still supported (converts automatically)
+"poolResource;Effort:Psychic;1;scene;true"   # converts to preparation
+"poolResource;Effort:Psychic;1;scene;false"  # converts to manual
 ```
 
 **Common Resource Pool Names:**

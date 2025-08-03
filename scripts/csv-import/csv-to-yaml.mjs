@@ -325,14 +325,22 @@ function parseConsumptions(value) {
     if (!value || value.trim() === '') return [];
     
     try {
-        // Format: "poolResource;Effort:Psychic;1;scene;false|systemStrain;1"
+        // Format: "poolResource;Effort:Psychic;1;scene;manual|systemStrain;1"
         return value.split('|').map(consStr => {
             const parts = consStr.split(';');
             const type = parts[0].trim();
             
             if (type === 'poolResource') {
-                const [, resourceKey, usesCost, cadence, spendOnPrep] = parts;
+                const [, resourceKey, usesCost, cadence, timing] = parts;
                 const [resourceName, subResource] = resourceKey.split(':');
+                
+                // Map legacy boolean values to new timing enum
+                let parsedTiming = timing ? timing.trim() : 'manual';
+                if (parsedTiming === 'true') {
+                    parsedTiming = 'preparation';
+                } else if (parsedTiming === 'false') {
+                    parsedTiming = 'manual';
+                }
                 
                 return {
                     type: 'poolResource',
@@ -340,7 +348,7 @@ function parseConsumptions(value) {
                     subResource: subResource ? subResource.trim() : null,
                     usesCost: parseInt(usesCost) || 1,
                     cadence: cadence.trim(),
-                    spendOnPrep: spendOnPrep === 'true'
+                    timing: parsedTiming
                 };
             } else if (type === 'systemStrain') {
                 return {
