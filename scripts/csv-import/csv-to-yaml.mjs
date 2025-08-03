@@ -6,8 +6,8 @@ import { mapping } from "../conversion/mapping.mjs";
 
 const SYSTEM_VERSION = "2.1.0";
 const CORE_VERSION = "13.346";
-const CSV_BASE_PATH = "scripts/csv-import/data";
-const OUTPUT_BASE_PATH = "scripts/csv-import/output";
+const CSV_BASE_PATH = "./data";
+const OUTPUT_BASE_PATH = "./output";
 
 /**
  * Converts CSV data to Foundry-compatible YAML files using proper field mappings
@@ -189,6 +189,7 @@ function mapFieldValue(systemData, csvField, value, type) {
         two_handed: 'isTwoHanded',
         stat: 'stat',
         skill: 'skill',
+        attack_bonus: 'ab',
         
         // Armor fields  
         ac: 'ac',
@@ -230,11 +231,16 @@ function mapFieldValue(systemData, csvField, value, type) {
         base_of_influence: 'baseOfInfluence',
         
         // NPC fields
+        biography: 'biography',
         species: 'species',
         hd: 'hitDice',
         hp: 'health.value',
         hp_max: 'health.max',
-        saves: 'saves',
+        ac: 'baseAc',
+        saves_evasion: 'saves.evasion',
+        saves_mental: 'saves.mental', 
+        saves_physical: 'saves.physical',
+        saves_luck: 'saves.luck',
         morale: 'moralScore',
         ab: 'ab',
         movement: 'speed',
@@ -261,6 +267,25 @@ function mapFieldValue(systemData, csvField, value, type) {
     
     if (csvField === 'consumptions' && type === 'power') {
         systemData.consumptions = parseConsumptions(value);
+    }
+    
+    // Handle items field for NPCs
+    if (csvField === 'items' && type === 'npc') {
+        // Items will be handled in the main YAML structure, not in system data
+        return; // Skip setting in system data
+    }
+    
+    // Handle journal content field
+    if (csvField === 'content' && type === 'journal') {
+        systemData.content = value;
+    }
+    
+    // Handle roll table fields
+    if (csvField === 'formula' && type === 'rolltable') {
+        systemData.formula = value;
+    }
+    if (csvField === 'results' && type === 'rolltable') {
+        systemData.results = value;
     }
 }
 
@@ -290,7 +315,8 @@ function parseValue(value, field) {
          'shock_damage', 'shock_ac', 'mag', 'strain', 'level', 'rating', 'maintenance',
          'income', 'saves', 'morale', 'ab', 'movement', 'hp', 'hp_max', 'health',
          'health_max', 'mass', 'power', 'hardpoints', 'crew_min', 'crew_max',
-         'armor_value', 'spike_drive', 'range_normal', 'range_max', 'soak_value', 'soak_max'].includes(field)) {
+         'armor_value', 'spike_drive', 'range_normal', 'range_max', 'soak_value', 'soak_max', 'attack_bonus',
+         'saves_evasion', 'saves_mental', 'saves_physical', 'saves_luck'].includes(field)) {
         const num = parseInt(value);
         return isNaN(num) ? 0 : num;
     }
@@ -392,6 +418,16 @@ function csvRowToYaml(row, sortIndex) {
     // Set image
     if (row.img) {
         yamlData.img = row.img;
+    }
+    
+    // Handle items array for NPCs
+    if (type === 'npc' && row.items) {
+        try {
+            yamlData.items = JSON.parse(row.items);
+        } catch (error) {
+            console.warn(`Error parsing items for ${row.name}:`, error);
+            yamlData.items = [];
+        }
     }
 
     return yamlData;

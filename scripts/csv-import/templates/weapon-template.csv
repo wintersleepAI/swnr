@@ -1,3 +1,3 @@
-name,type,description,cost,damage,range_normal,range_max,shock_damage,shock_ac,mag,ammo_type,burst,two_handed,stat,skill,encumbrance,quality,tl
-"Laser Pistol",weapon,"A compact energy weapon that fires focused beams",500,1d6+1,100,300,1,13,20,power_cell,false,false,dex,shoot,1,pretech,4
-"Combat Rifle",weapon,"Military-grade projectile weapon for infantry use",300,1d12,400,1200,2,15,30,ammo,true,true,dex,shoot,2,stock,3
+name,type,description,cost,damage,range_normal,range_max,shock_damage,shock_ac,mag,ammo_type,burst,two_handed,stat,skill,attack_bonus,encumbrance,quality,tl
+"Laser Pistol",weapon,"A compact energy weapon that fires focused beams",500,1d6+1,100,300,1,13,20,power_cell,false,false,dex,shoot,0,1,pretech,4
+"Combat Rifle",weapon,"Military-grade projectile weapon for infantry use",300,1d12,400,1200,2,15,30,ammo,true,true,dex,shoot,0,2,stock,3

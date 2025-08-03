@@ -138,6 +138,8 @@ Located in `scripts/csv-import/templates/`:
 - `power-advanced-template.csv` - Powers with consumptions
 - `feature-template.csv` - Features with poolsGranted
 - `npc-template.csv` - NPCs with combat stats
+- `journal-template.csv` - Journal entries with rich content
+- `rolltable-template.csv` - Random tables with dice formulas
 
 ## Workflow
 
@@ -151,7 +153,7 @@ Located in `scripts/csv-import/templates/`:
 
 ### Common Fields (All Types)
 - **name** - Item/document name (required)
-- **type** - Document type: `item`, `weapon`, `armor`, `cyberware`, `power`, `feature`, `npc`, etc. (required)
+- **type** - Document type: `item`, `weapon`, `armor`, `cyberware`, `power`, `feature`, `npc`, `journal`, `rolltable`, etc. (required)
 - **description** - Full text description
 - **cost** - Cost in credits (integer)
 - **tl** - Tech Level 0-5 (integer)
@@ -175,6 +177,7 @@ Located in `scripts/csv-import/templates/`:
 - **two_handed** - Two-handed weapon: `true`/`false`
 - **stat** - Primary attribute: `str`, `dex`, `con`, `int`, `wis`, `cha`
 - **skill** - Required skill name (e.g., `shoot`, `stab`, `punch`)
+- **attack_bonus** - Attack roll bonus (integer, can be negative)
 
 ### Armor Fields
 - **ac** - Armor Class rating (integer)
@@ -235,6 +238,21 @@ Located in `scripts/csv-import/templates/`:
 - **crew_max** - Maximum crew capacity (integer)
 - **armor_value** - Armor rating (integer)
 - **spike_drive** - Spike drive rating (integer, 0-6)
+
+### Journal Fields
+- **content** - Rich text content with formatting, multiple paragraphs supported
+- **img** - Icon/image for the journal entry
+
+### Roll Table Fields
+- **formula** - Dice expression (e.g., `1d6`, `1d20`, `1d100`)
+- **results** - Table results in format `"range: description | range: description"`
+- **img** - Icon/image for the roll table
+
+**Roll Table Results Format:**
+```
+"1-2: First result | 3-4: Second result | 5-6: Third result"
+"1: Single result | 2: Another result | 3-6: Range result"
+```
 
 ## Example
 

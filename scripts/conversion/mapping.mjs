@@ -187,7 +187,12 @@ const npc = {
     number: 0
   },
   hitDice: '1d8',
-  saves: 0,
+  saves: {
+    evasion: 15,
+    mental: 15,
+    physical: 15,
+    luck: 15
+  },
   moralScore: 6,
   reaction: 'unknown',
   notes: {
@@ -527,6 +532,19 @@ const shipDefense = {
   effect: ""
 };
 
+const journal = {
+  description: '',
+  content: '',
+  favorite: false
+};
+
+const rolltable = {
+  description: '',
+  formula: '1d100',
+  results: '',
+  favorite: false
+};
+
 export const mapping = {
   item,
   armor,
@@ -548,4 +566,6 @@ export const mapping = {
   shipWeapon,
   shipFitting,
   shipDefense,
+  journal,
+  rolltable
 };
