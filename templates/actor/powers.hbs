@@ -114,19 +114,17 @@
                     />
                   </a>
                 </div>
-                {{! Only show prepared icon for powers with prep costs }}
-                {{#if item.hasPrepCosts}}
-                  <div class="power-prepared-container">
-                    <i class="power-prepared-icon {{#if item.system.prepared}}fas fa-brain{{else}}far fa-brain{{/if}}" 
-                       data-item-id="{{item.id}}"
-                       title="{{#if item.system.prepared}}Prepared{{else}}Not Prepared{{/if}}"
-                       {{#if @root.editable}}style="cursor: pointer;"{{/if}}></i>
-                  </div>
-                {{/if}}
                 <div>
                   <span data-action="toggleItemDescription" data-item-id="{{item.id}}" style="cursor: pointer;">
                     {{item.name}}
                   </span>
+                  {{! Only show prepared icon for powers with prep costs }}
+                  {{#if item.hasPrepCosts}}
+                    <i class="power-prepared-icon {{#if item.system.prepared}}fas fa-brain{{else}}far fa-brain{{/if}}" 
+                       data-item-id="{{item.id}}"
+                       title="{{#if item.system.prepared}}Prepared{{else}}Not Prepared{{/if}}"
+                       {{#if @root.editable}}style="cursor: pointer; margin-left: 0.25em;"{{else}}style="margin-left: 0.25em;"{{/if}}></i>
+                  {{/if}}
                   {{#if item.system.consumptions}}
                     <div class="power-consumption-display">
                       {{#each item.system.consumptions as |consumption|}}
@@ -201,19 +199,17 @@
                       />
                     </a>
                   </div>
-                  {{! Only show prepared icon for powers with prep costs }}
-                  {{#if item.hasPrepCosts}}
-                    <div class="power-prepared-container">
-                      <i class="power-prepared-icon {{#if item.system.prepared}}fas fa-brain{{else}}far fa-brain{{/if}}" 
-                         data-item-id="{{item.id}}"
-                         title="{{#if item.system.prepared}}Prepared{{else}}Not Prepared{{/if}}"
-                         {{#if @root.editable}}style="cursor: pointer;"{{/if}}></i>
-                    </div>
-                  {{/if}}
                   <div>
                   <span data-action="toggleItemDescription" data-item-id="{{item.id}}" style="cursor: pointer;">
                     {{item.name}}
                   </span>
+                  {{! Only show prepared icon for powers with prep costs }}
+                  {{#if item.hasPrepCosts}}
+                    <i class="power-prepared-icon {{#if item.system.prepared}}fas fa-brain{{else}}far fa-brain{{/if}}" 
+                       data-item-id="{{item.id}}"
+                       title="{{#if item.system.prepared}}Prepared{{else}}Not Prepared{{/if}}"
+                       {{#if @root.editable}}style="cursor: pointer; margin-left: 0.25em;"{{else}}style="margin-left: 0.25em;"{{/if}}></i>
+                  {{/if}}
                   {{#if item.system.consumptions}}
                     <div class="power-consumption-display">
                       {{#each item.system.consumptions as |consumption|}}

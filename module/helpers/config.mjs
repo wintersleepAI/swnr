@@ -91,6 +91,12 @@ SWN.consumptionCadences = {
   commit: 'swnr.consumption.commit'
 };
 
+SWN.consumptionTiming = {
+  preparation: 'swnr.consumption.timing.preparation',
+  manual: 'swnr.consumption.timing.manual',
+  immediate: 'swnr.consumption.timing.immediate'
+};
+
 SWN.powerPresets = {
   psychic: { 
     resourceName: "Effort", 

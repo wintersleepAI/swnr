@@ -87,10 +87,13 @@
                 </td>
                 <td>
                   <div class="consumption-timing">
-                    <div class="spend-on-prep-container">
-                      <label title="When checked: Cost is paid during preparation. When unchecked: Cost is paid during casting.">
-                        <input type="checkbox" name="system.consumptions.{{index}}.spendOnPrep" {{#if consumption.spendOnPrep}}checked{{/if}} data-dtype="Boolean">
-                        {{#if consumption.spendOnPrep}}Pay on Prep{{else}}Pay on Cast{{/if}}
+                    <div class="timing-container">
+                      <label title="Controls when this resource cost is paid: Preparation (during prep), Manual (via chat buttons), or Immediate (when sending to chat).">
+                        <select name="system.consumptions.{{index}}.timing" data-dtype="String">
+                          {{#each @root.consumptionTiming}}
+                            <option value="{{@key}}" {{#eq consumption.timing @key}}selected{{/eq}}>{{localize this}}</option>
+                          {{/each}}
+                        </select>
                       </label>
                     </div>
                     {{#if (or (eq consumption.type "uses") (and (eq consumption.type "poolResource") (eq consumption.resourceName "Effort")))}}

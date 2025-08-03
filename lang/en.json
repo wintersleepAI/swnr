@@ -2215,7 +2215,12 @@
       "recoverResource": "Recover Resource",
       "recoverStrain": "Recover System Strain",
       "recoverItem": "Recover Item",
-      "recoverUses": "Recover Uses"
+      "recoverUses": "Recover Uses",
+      "timing": {
+        "preparation": "Pay on Prep",
+        "manual": "Pay via Chat",
+        "immediate": "Pay Immediately"
+      }
     }
   }
 }

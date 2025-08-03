@@ -262,6 +262,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         if (partId === 'attributesPower') {
           context.consumptionTypes = CONFIG.SWN.consumptionTypes;
           context.consumptionCadences = CONFIG.SWN.consumptionCadences;
+          context.consumptionTiming = CONFIG.SWN.consumptionTiming;
           // Get consumable items from actor if available
           const actor = this.document.actor;
           if (actor) {
@@ -469,7 +470,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
           cadence: "day",
           itemId: "",
           uses: { value: 0, max: 1 },
-          spendOnPrep: false
+          timing: "manual"
         });
       }
 
@@ -477,9 +478,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       // Handle numeric conversion for nested uses properties
       if (property.startsWith('uses.') && !isNaN(fieldValue)) {
         foundry.utils.setProperty(consumptions[index], property, parseInt(fieldValue));
-      } else if (property === 'spendOnPrep') {
-        // Handle boolean conversion for spendOnPrep checkbox
-        foundry.utils.setProperty(consumptions[index], property, field.checked);
+      } else if (property === 'timing') {
+        // Handle string conversion for timing dropdown
+        foundry.utils.setProperty(consumptions[index], property, fieldValue);
       } else {
         foundry.utils.setProperty(consumptions[index], property, fieldValue);
       }
@@ -545,10 +546,10 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         usesMaxField.value = consumption.uses.max;
       }
       
-      // Update spendOnPrep field
-      const spendOnPrepField = this.element.querySelector(`[name="system.consumptions.${index}.spendOnPrep"]`);
-      if (spendOnPrepField && spendOnPrepField.checked !== consumption.spendOnPrep) {
-        spendOnPrepField.checked = consumption.spendOnPrep;
+      // Update timing field
+      const timingField = this.element.querySelector(`[name="system.consumptions.${index}.timing"]`);
+      if (timingField && timingField.value !== consumption.timing) {
+        timingField.value = consumption.timing;
       }
     });
   }

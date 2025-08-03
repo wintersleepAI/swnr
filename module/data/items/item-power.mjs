@@ -68,9 +68,14 @@ export default class SWNPower extends SWNItemBase {
         value: new fields.NumberField({ initial: 0, min: 0 }),
         max: new fields.NumberField({ initial: 1, min: 0 })
       }),
-      // When true, this cost is paid during preparation (not shown in chat)
-      // When false, this cost is paid during casting (shown in chat, normal behavior)
-      spendOnPrep: new fields.BooleanField({ initial: false })
+      // Controls when this consumption is processed:
+      // "preparation": Cost paid during power preparation (not shown in chat)
+      // "manual": Cost paid via chat card buttons (normal behavior)
+      // "immediate": Cost paid immediately when sending to chat (no buttons shown)
+      timing: new fields.StringField({
+        choices: Object.keys(CONFIG.SWN.consumptionTiming),
+        initial: "manual"
+      })
     }), { initial: [] });
 
     schema.roll = SWNShared.nullableString();
@@ -109,8 +114,8 @@ export default class SWNPower extends SWNItemBase {
         if (!consumption.cadence) {
           consumption.cadence = "day";
         }
-        if (typeof consumption.spendOnPrep !== 'boolean') {
-          consumption.spendOnPrep = false; // Default to casting cost
+        if (!consumption.timing || !Object.keys(CONFIG.SWN.consumptionTiming).includes(consumption.timing)) {
+          consumption.timing = "manual"; // Default to manual timing
         }
       });
     }
@@ -242,15 +247,15 @@ export default class SWNPower extends SWNItemBase {
       return await this._executePassivePower();
     }
 
-    // Process only casting consumption types (spendOnPrep: false)
+    // Process only immediate consumption types (timing: "immediate")
     const consumptionResults = [];
     const allConsumptions = this.getConsumptions();
-    const castingConsumptions = allConsumptions.filter(c => !c.spendOnPrep);
+    const immediateConsumptions = allConsumptions.filter(c => c.timing === "immediate");
     
-    // First pass: validate all casting consumption requirements
+    // First pass: validate all immediate consumption requirements
     for (let i = 0; i < allConsumptions.length; i++) {
       const consumes = allConsumptions[i];
-      if (consumes.spendOnPrep) continue; // Skip preparation costs during casting
+      if (consumes.timing !== "immediate") continue; // Skip preparation and manual costs during casting
       
       const validation = await this._validateConsumption(actor, consumes, i);
       if (!validation.valid) {
@@ -264,10 +269,10 @@ export default class SWNPower extends SWNItemBase {
       }
     }
     
-    // Second pass: apply all casting consumption costs
+    // Second pass: apply all immediate consumption costs
     for (let i = 0; i < allConsumptions.length; i++) {
       const consumes = allConsumptions[i];
-      if (consumes.spendOnPrep) continue; // Skip preparation costs during casting
+      if (consumes.timing !== "immediate") continue; // Skip preparation and manual costs during casting
       
       const result = await this._processConsumption(actor, consumes, options, i);
       if (!result.success) {
@@ -325,14 +330,14 @@ export default class SWNPower extends SWNItemBase {
       };
     }
 
-    // Process only casting consumption types (spendOnPrep: false)
+    // Process only manual consumption types (timing: "manual")
     const consumptionResults = [];
     const allConsumptions = this.getConsumptions();
     
-    // First pass: validate all casting consumption requirements
+    // First pass: validate all manual consumption requirements
     for (let i = 0; i < allConsumptions.length; i++) {
       const consumes = allConsumptions[i];
-      if (consumes.spendOnPrep) continue; // Skip preparation costs during casting
+      if (consumes.timing !== "manual") continue; // Skip preparation and immediate costs during manual processing
       
       const validation = await this._validateConsumption(actor, consumes, i);
       if (!validation.valid) {
@@ -345,10 +350,10 @@ export default class SWNPower extends SWNItemBase {
       }
     }
 
-    // Second pass: apply casting consumption
+    // Second pass: apply manual consumption
     for (let i = 0; i < allConsumptions.length; i++) {
       const consumes = allConsumptions[i];
-      if (consumes.spendOnPrep) continue; // Skip preparation costs during casting
+      if (consumes.timing !== "manual") continue; // Skip preparation and immediate costs during manual processing
       
       const result = await this._processConsumption(actor, consumes, options, i);
       if (!result.success) {
@@ -408,17 +413,22 @@ export default class SWNPower extends SWNItemBase {
       .filter(r => r.type === "systemStrain")
       .reduce((sum, r) => sum + (r.spent || 0), 0);
 
-    // Check if power has casting costs (spendOnPrep: false)
-    const castingConsumptions = this.getConsumptions().filter(c => !c.spendOnPrep);
-    const hasCastingCosts = castingConsumptions.length > 0;
+    // Check if power has manual costs (timing: "manual")
+    const manualConsumptions = this.getConsumptions().filter(c => c.timing === "manual");
+    const hasManualCosts = manualConsumptions.length > 0;
+    
+    // Check if power has any runtime costs (immediate or manual)
+    const allConsumptions = this.getConsumptions();
+    const runtimeConsumptions = allConsumptions.filter(c => c.timing === "immediate" || c.timing === "manual");
+    const hasRuntimeCosts = runtimeConsumptions.length > 0;
     
     const templateData = {
       actor: actor,
       power: item,
       powerRoll: powerRoll ? await powerRoll.render() : null,
       strainCost: totalStrainCost,
-      isPassive: !hasCastingCosts,
-      consumptions: consumptionResults // Only contains casting costs due to filtering in use()
+      isPassive: !hasRuntimeCosts, // Passive only if no immediate or manual costs
+      consumptions: consumptionResults // Contains immediate costs due to filtering in use()
     };
 
     const template = "systems/swnr/templates/chat/power-usage.hbs";
@@ -443,19 +453,36 @@ export default class SWNPower extends SWNItemBase {
       new Error(message);
       return;
     }
+    
+    // Check if power has immediate costs - if so, use the full usage flow
+    const allConsumptions = this.getConsumptions();
+    const immediateConsumptions = allConsumptions.filter(c => c.timing === "immediate");
+    const hasImmediateCosts = immediateConsumptions.length > 0;
+    
+    if (hasImmediateCosts) {
+      // Use the full power usage flow which will process immediate costs and create chat card
+      return await this.use();
+    }
+    
+    // For powers without immediate costs, use the simple roll-to-chat flow
     const powerRoll = new Roll(this.roll ? this.roll : "0");
     await powerRoll.roll();
-    // Check if power has casting costs (spendOnPrep: false)
-    const castingConsumptions = this.getConsumptions().filter(c => !c.spendOnPrep);
-    const hasCastingCosts = castingConsumptions.length > 0;
+    
+    // Check if power has manual costs (timing: "manual")
+    const manualConsumptions = allConsumptions.filter(c => c.timing === "manual");
+    const hasManualCosts = manualConsumptions.length > 0;
+    
+    // Check if power has any runtime costs (immediate or manual)
+    const runtimeConsumptions = allConsumptions.filter(c => c.timing === "immediate" || c.timing === "manual");
+    const hasRuntimeCosts = runtimeConsumptions.length > 0;
     
     const dialogData = {
       actor: actor,
       power: item,
       powerRoll: await powerRoll.render(),
       strainCost: 0,
-      isPassive: !hasCastingCosts,
-      consumptions: [] // Empty for initial state - shows "Spend Resources" button if has casting costs
+      isPassive: !hasRuntimeCosts, // Passive only if no immediate or manual costs
+      consumptions: [] // Empty for initial state - shows "Spend Resources" button if has manual costs
     };
     const rollMode = game.settings.get("core", "rollMode");
 
@@ -766,14 +793,14 @@ export default class SWNPower extends SWNItemBase {
       return { success: true, message: "Power prepared (no resource cost)" };
     }
 
-    // Get only preparation consumptions (spendOnPrep: true)
+    // Get only preparation consumptions (timing: "preparation")
     const allConsumptions = this.getConsumptions();
-    const prepConsumptions = allConsumptions.filter(c => c.spendOnPrep);
+    const prepConsumptions = allConsumptions.filter(c => c.timing === "preparation");
     
     // Validate all preparation consumption requirements
     for (let i = 0; i < allConsumptions.length; i++) {
       const consumes = allConsumptions[i];
-      if (!consumes.spendOnPrep) continue; // Skip casting costs during preparation
+      if (consumes.timing !== "preparation") continue; // Skip manual and immediate costs during preparation
       
       const validation = await this._validateConsumption(actor, consumes, i);
       if (!validation.valid) {
@@ -785,11 +812,11 @@ export default class SWNPower extends SWNItemBase {
       }
     }
 
-    // Deduct resources for preparation (only spendOnPrep: true)
+    // Deduct resources for preparation (only timing: "preparation")
     const consumptionResults = [];
     for (let i = 0; i < allConsumptions.length; i++) {
       const consumes = allConsumptions[i];
-      if (!consumes.spendOnPrep) continue; // Skip casting costs during preparation
+      if (consumes.timing !== "preparation") continue; // Skip manual and immediate costs during preparation
       
       const result = await this._processConsumption(actor, consumes, {}, i);
       if (!result.success) {
@@ -843,12 +870,12 @@ export default class SWNPower extends SWNItemBase {
       return { success: true, message: "Power unprepared (no resource cost)" };
     }
 
-    // Restore resources for unpreparation (only spendOnPrep: true)
+    // Restore resources for unpreparation (only timing: "preparation")
     const consumptions = this.getConsumptions();
     const restorationResults = [];
     
     for (const consumes of consumptions) {
-      if (!consumes.spendOnPrep) continue; // Skip casting costs during unpreparation
+      if (consumes.timing !== "preparation") continue; // Skip manual and immediate costs during unpreparation
       
       const result = await this._restoreConsumption(actor, consumes);
       if (result.success) {

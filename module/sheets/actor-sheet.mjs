@@ -363,7 +363,7 @@ export class SWNActorSheet extends SWNBaseSheet {
         const powerLevel = i.system.level || 0;
         
         // Add hasPrepCosts property to the power item
-        i.hasPrepCosts = i.system.consumptions?.some(c => c.spendOnPrep) || false;
+        i.hasPrepCosts = i.system.consumptions?.some(c => c.timing === "preparation") || false;
         
         // Initialize type structure if needed
         if (!powersByType[powerType]) {

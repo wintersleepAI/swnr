@@ -45,9 +45,20 @@ export default class SWNSheet extends api.HandlebarsApplicationMixin(api.Applica
 
 - **Resource Fields**: Powers have `resourceName` (nullable) and `subResource` (nullable) fields
 - **Resource Key Method**: `power.system.resourceKey()` returns `"ResourceName:SubResource"` format
-- **Migration**: v2.2.1 automatically populates fields from existing power data
+- **Migration**: v2.1.0 automatically populates fields from existing power data
 - **UI Integration**: Power sheets include resource configuration section
 - **Pool Lookup**: Powers use `resourceKey()` method to find matching actor pools
+
+### Power Consumption Timing (v2.1.0)
+**Enhanced timing system for resource consumption:**
+
+- **Three Timing Options**: Replaces old boolean `spendOnPrep` with string enum:
+  - `"preparation"` - Resources consumed during power preparation (no chat buttons)
+  - `"manual"` - Resources consumed via chat card buttons (original default behavior)
+  - `"immediate"` - Resources consumed immediately when power is sent to chat (new option)
+- **Config-Driven**: Uses `CONFIG.SWN.consumptionTiming` for extensibility
+- **UI Integration**: Dropdown selector in power consumption configuration
+- **Logic Flow**: Different code paths handle each timing mode appropriately
 
 ### Pool Update Patterns
 ```javascript
