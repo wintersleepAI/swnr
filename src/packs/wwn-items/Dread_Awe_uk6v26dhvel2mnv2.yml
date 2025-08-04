@@ -1,0 +1,47 @@
+name: Dread Awe
+type: power
+sort: 0
+system:
+  description: >-
+    Your kind are figures of fear and mistrust. Gain a +1 bonus on all skill
+    checks related to intimidation or threat. You can spend a Main Action
+    cursing your foes in battle; those who hear suffer a -1 penalty to their
+    next Morale check. You can do this only once per scene.
+  favorite: false
+  subType: arcane
+  source: Wise
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Wise
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: uk6v26dhvel2mnv2
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456787
+  modifiedTime: 1754277456787
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/wise_art.png
+ownership:
+  default: 0
+_key: '!items!uk6v26dhvel2mnv2'
+

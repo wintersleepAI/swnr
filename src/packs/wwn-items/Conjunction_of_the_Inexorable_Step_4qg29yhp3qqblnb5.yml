@@ -1,0 +1,56 @@
+name: Conjunction of the Inexorable Step
+type: power
+sort: 0
+system:
+  description: >-
+    A visible target within a hundred feet is immediately teleported to any
+    visible, solid resting point within a half-mile, provided the target point
+    has enough room to accept them and it is not a position of imminent physical
+    peril. Unattended objects can be translocated by the spell, but they can be
+    no larger than a horse. Unwilling creatures targeted by this spell may make
+    a Mental saving throw to resist; on a success, it is the caster who is
+    transported to the intended destination instead.
+  favorite: false
+  subType: arcane
+  source: High Mage
+  level: 2
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: mental
+  range: 100 ft.
+  skill: null
+_id: 4qg29yhp3qqblnb5
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456894
+  modifiedTime: 1754277456894
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!4qg29yhp3qqblnb5'
+

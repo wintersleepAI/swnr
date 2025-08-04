@@ -1,0 +1,64 @@
+name: Raise Dead
+type: power
+sort: 1600000
+system:
+  description: >-
+    Duration: Instant Range: 120' This spell has two uses: 1. Restore life: To a
+    recently deceased human or demihuman. See below. 2. Destroy undead: A single
+    undead monster is destroyed, if it fails a Physical save. Restoring life:
+    When used to restore life, the following stipulations apply: ▶ Time limit:
+    The caster can raise a person that has been dead for no longer than four
+    days per level of the caster above 7th. For example, a 10th level caster can
+    revive a character that has been dead for twelve days (three levels above
+    7th &times; four days). ▶ Weakness: Returning from death is an ordeal. Until
+    the subject gets two full weeks of bed rest, they are fragile, move at half
+    the normal rate, cannot carry heavy items, and cannot attack, cast spells,
+    or use other class abilities. This period of weakness may not be shortened
+    by any magical healing. Reversed: Finger of Death Directs a ray of deadly
+    magic at a single target. If the target fails a Physical save, it dies
+    instantly. Casting finger of death is a chaotic act; it will only be used by
+    lawful casters in desperate situations.
+  favorite: false
+  subType: arcane
+  source: Cleric
+  level: 5
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: physical
+  range: 120'
+  skill: null
+_id: 68fj8aqy495l9prx
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457068
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!68fj8aqy495l9prx'
+

@@ -1,0 +1,49 @@
+name: Fortification Program
+type: asset
+sort: 0
+system:
+  description: >-
+    A program of organized fortification and supply caching has been undertaken
+    around the Asset's location, hardening allied communities and friendly
+    Assets. Once per turn, when an enemy makes an Attack that targets the
+    faction's Force rating, the faction can use the Fortification Program to
+    defend if the Asset is within a turn's move from the attack.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 18
+    max: 18
+  rating: 6
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: pjzgg8luhmuk10qx
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456956
+  modifiedTime: 1754277456956
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/force.png
+ownership:
+  default: 0
+_key: '!items!pjzgg8luhmuk10qx'
+

@@ -1,0 +1,48 @@
+name: Smite the Wicked
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the day as a On Turn action whenever you attack or take
+    some damaging action toward a single target. You gain a +4 bonus to any hit
+    roll, you inflict your character level as automatic damage, and you can roll
+    any damage dice twice and take the higher result. This ability can only be
+    used once per scene on a given target.
+  favorite: false
+  subType: arcane
+  source: Blood Priest
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Blood Priest
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 7adihptdi2slwz85
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456801
+  modifiedTime: 1754277456801
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/bloodPriest_art.png
+ownership:
+  default: 0
+_key: '!items!7adihptdi2slwz85'
+

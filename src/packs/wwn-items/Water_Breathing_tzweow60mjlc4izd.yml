@@ -1,0 +1,53 @@
+name: Water Breathing
+type: power
+sort: 100098
+system:
+  description: >-
+    Duration: 1 day Range: 30' The subject can breathe water freely by means of
+    this spell. ▶ Breathing air: The spell does not affect the subject's ability
+    to breathe air. ▶ Swimming: No additional proficiency at swimming is
+    granted.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 3
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 1 day
+  save: None
+  range: 30'
+  skill: null
+_id: tzweow60mjlc4izd
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457060
+  modifiedTime: 1754277918698
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!tzweow60mjlc4izd'
+

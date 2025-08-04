@@ -1,0 +1,55 @@
+name: Scaled Armor +2
+type: armor
+sort: 0
+system:
+  description: >-
+    Scaled armor includes both armor of metal scales on a flexible backing,
+    brigandine, jacks of plate, and other armor made up of small, connected
+    plates that cover most of the wearer's body. Most are noisy, heavy suits,
+    albeit flexible ones. Medium armor is significantly noisier and more overt;
+    it cannot be worn discreetly and applies its encumbrance as a penalty to any
+    physical Sneak rolls made by the wearer.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 2
+  cost: 500
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 10
+  shield: false
+  use: false
+  meleeAc: 18
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+  baseAc: 18
+_id: d6wa0kg1h1srypew
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456976
+  modifiedTime: 1754277456976
+  lastModifiedBy: null
+  exportSource: null
+folder: CKqMh5qEXioiEqoU
+flags: {}
+effects: []
+img: systems/wwn/assets/default/armor.png
+ownership:
+  default: 0
+_key: '!items!d6wa0kg1h1srypew'
+

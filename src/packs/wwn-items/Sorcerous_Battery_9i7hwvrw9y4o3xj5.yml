@@ -1,0 +1,46 @@
+name: Sorcerous Battery
+type: power
+sort: 0
+system:
+  description: >-
+    Once per day, as an On Turn action, Commit Effort for the day. You or a
+    visible ally refresh the spell slot of a spell that has been cast since the
+    start of the prior round. Gain one System Strain.
+  favorite: false
+  subType: arcane
+  source: Accursed
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Accursed
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 9i7hwvrw9y4o3xj5
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456777
+  modifiedTime: 1754277456777
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/accursed_art.png
+ownership:
+  default: 0
+_key: '!items!9i7hwvrw9y4o3xj5'
+

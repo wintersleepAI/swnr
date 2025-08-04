@@ -1,0 +1,49 @@
+name: Far Speech
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the scene as an On Turn action and target an intelligent
+    creature known to you that is within two hundred feet per level. If they
+    consent, you forge a telepathic link with them that can convey thoughts,
+    speech, and images even without a common language. The link lasts for the
+    rest of the scene. While linked with someone, both of you may reroll failed
+    Mental saving throws and neither of you can be surprised unless both are.
+  favorite: false
+  subType: arcane
+  source: Thought Noble
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Thought Noble
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: ahriq1gks5q22aol
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456763
+  modifiedTime: 1754277456763
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/thoughtNoble_art.png
+ownership:
+  default: 0
+_key: '!items!ahriq1gks5q22aol'
+

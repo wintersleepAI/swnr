@@ -1,0 +1,50 @@
+name: Favored Weapon
+type: power
+sort: 0
+system:
+  description: >-
+    Choose one specific type of non-unarmed melee weapon from the list on page
+    37. You begin play with such a weapon, and when using this type you may use
+    the Favored Weapon attack bonus column on the Duelist table to determine
+    your base hit bonus, unless it's already better for some other reason. If
+    your second partial class is Partial Warrior, your class' base hit bonus
+    with the weapon is instead equal to your level. You cannot apply this or
+    other Duelist arts to thrown weapons.
+  favorite: false
+  subType: arcane
+  source: Duelist
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Duelist
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: v27ngdiqp3d0orw9
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456819
+  modifiedTime: 1754277456819
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/duelistArt_art.png
+ownership:
+  default: 0
+_key: '!items!v27ngdiqp3d0orw9'
+

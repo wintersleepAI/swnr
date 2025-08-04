@@ -1,0 +1,63 @@
+name: Raise Corpse
+type: power
+sort: 0
+system:
+  description: >-
+    The necromancer targets a mostly-intact skeleton or corpse, imbuing it with
+    a semblance of life. Whatever the creature's attributes were in life, it now
+    has 1 HD, an AC of 13, a Move of 30'/round, a +0 skill bonus, saves of 15+,
+    a +1/1d6 unarmed melee attack, Instinct 0, and a Morale of 12. Its decay or
+    dissolution immediately ceases, and it becomes suicidally loyal to its
+    creator. The corpse has no natural volition, but will obey commands with a
+    human degree of intelligence. It has only vague memories of its prior life,
+    and while it may retain human tics or habits it had in life it can answer
+    only the simplest and most self-evident questions. Damage to a corpse can be
+    repaired only by casting this spell on it again, which restores it to its
+    original "health". The corpse continues to exist until it is reduced to zero
+    hit points or its creator releases it. A necromancer cannot have more active
+    subjects of this spell than their character level.
+    @Compendium[wwn.creatures-of-a-far-age.woucJaiYHq9f0jcX]{Raised Corpse}
+  favorite: false
+  subType: arcane
+  source: Necromancer
+  level: 2
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Until destroyed or released
+  save: None
+  range: Self
+  skill: null
+_id: lmrh3dsh1al2hz19
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456895
+  modifiedTime: 1754277456895
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/new/necromancer_spell.png
+ownership:
+  default: 0
+_key: '!items!lmrh3dsh1al2hz19'
+

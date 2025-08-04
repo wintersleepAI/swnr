@@ -1,0 +1,64 @@
+name: Ineluctable Shackles of Volition
+type: power
+sort: 0
+system:
+  description: >-
+    The mage targets a visible living creature within 100 feet. The subject must
+    immediately make a Mental saving throw at a penalty equal to the caster's
+    Magic skill or become enthralled to the caster's will. Such victims will
+    obey any physical commands issued by the caster, barring ones that seem
+    suicidal or patently meant to result in their murder. The caster cannot
+    order the creature to answer questions or perform acts that require
+    independent judgment, nor to use non-physical abilities or spells, but it
+    will fight for the caster or to defend its own life. Enchanted victims
+    appear torpid and dazed, and will act only to defend themselves or satisfy
+    their needs. The spell lasts until dispelled, or until the caster dies or
+    releases them. Every time this spell is cast, however, all prior subjects
+    get an immediate unmodified Mental saving throw to throw it off. If the
+    creature has more hit dice than the caster, it gets an unmodified saving
+    throw to end the effect the first time each day it's ordered to do something
+    it finds strongly objectionable.
+  favorite: false
+  subType: arcane
+  source: High Mage
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Until dispelled
+  save: mental
+  range: 100 ft.
+  skill: null
+_id: iyd7sjtnvilgytij
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456919
+  modifiedTime: 1754277456919
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!iyd7sjtnvilgytij'
+

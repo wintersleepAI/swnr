@@ -1,0 +1,53 @@
+name: Move Earth
+type: power
+sort: 3100000
+system:
+  description: >-
+    Duration: 6 turns Range: 240' Earth (but not stone) within range is
+    rearranged as the caster wishes. ▶ Movement rate: The caster can move earth
+    in the area at up to 60' per turn. ▶ Excavations: The range of the spell
+    also extends downwards, allowing excavations to be made.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 6
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 6 turns
+  save: None
+  range: 240'
+  skill: null
+_id: vvoewm58qmr1puk3
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457101
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!vvoewm58qmr1puk3'
+

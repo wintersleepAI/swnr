@@ -1,0 +1,55 @@
+name: Pieced Armor +3
+type: armor
+sort: 0
+system:
+  description: >-
+    Pieced armor is assembled of a thicker or more durable chestpiece and
+    piecework limb armor. While less effective than a proper cuirass and
+    greaves, it's often the best that scavengers or poor adventurers can get.
+    Light armor may be decidedly heavy, but it is loose and flexible enough to
+    offer minimal hindrance to the wearer's actions. Some varieties are also
+    discreet enough to be worn politely in common society.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 1
+  cost: 100
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 10
+  shield: false
+  use: false
+  meleeAc: 17
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+  baseAc: 17
+_id: k31wfys4zf3gx341
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456974
+  modifiedTime: 1754277456974
+  lastModifiedBy: null
+  exportSource: null
+folder: CKqMh5qEXioiEqoU
+flags: {}
+effects: []
+img: systems/wwn/assets/default/armor.png
+ownership:
+  default: 0
+_key: '!items!k31wfys4zf3gx341'
+

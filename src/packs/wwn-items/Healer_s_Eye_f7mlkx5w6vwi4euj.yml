@@ -1,0 +1,48 @@
+name: Healer's Eye
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort as an On Turn action; while the Effort remains committed, you
+    can use a Main Action to visually detect diseases and poisons, diagnose
+    creatures flawlessly, perceive their physiology, and learn their current hit
+    point totals. As a side effect, you can detect living creatures by sight
+    regardless of available light or obscuring mists.
+  favorite: false
+  subType: arcane
+  source: Healer
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Healer
+      usesCost: 1
+      cadence: active
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: f7mlkx5w6vwi4euj
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456811
+  modifiedTime: 1754277456811
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/healer_art.png
+ownership:
+  default: 0
+_key: '!items!f7mlkx5w6vwi4euj'
+

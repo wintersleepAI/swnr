@@ -1,0 +1,48 @@
+name: Serpent’s Kiss
+type: power
+sort: 0
+system:
+  description: >-
+    This shape can exude a venom on its claws or fangs. Successful hits allow
+    you to Commit Effort for the scene as an Instant action to inflict an
+    additional 1d8 damage plus your Survive skill. You can elect to make the
+    toxin paralytic rather than fatal; foes reduced to zero hit points by such a
+    blow are paralyzed and helpless for an hour rather than mortally wounded.
+  favorite: false
+  subType: arcane
+  source: Skinshifter
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Skinshifter
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 6j6brl7rm0tumzau
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456754
+  modifiedTime: 1754277456754
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/skinshifter_art.png
+ownership:
+  default: 0
+_key: '!items!6j6brl7rm0tumzau'
+

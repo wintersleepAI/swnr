@@ -1,0 +1,61 @@
+name: Compel Flesh
+type: power
+sort: 0
+system:
+  description: >-
+    A visible living creature or physically-bodied undead within 100 feet is
+    ensorceled by this spell, their flesh and bones becoming temporarily
+    enthralled to the caster's will. The target becomes paralyzed unless
+    commanded by the caster as an On Turn action; once given a command, their
+    body will dutifully carry it out on their next turn. The user's mind is not
+    affected by this spell, so they cannot be made to cast spells, answer
+    questions, or perform other intellectual tasks, but they will fight, move,
+    and perform other non-suicidal physical acts as normal. The target may make
+    a Physical saving throw at the start of each of their turns to throw off the
+    effect, but they will inevitably suffer one point of damage per caster level
+    with each attempt as their flesh writhes and tears. If not thrown off
+    earlier, the spell lasts until the end of the scene.
+  favorite: false
+  subType: arcane
+  source: Necromancer
+  level: 3
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Scene
+  save: physical
+  range: 100 ft.
+  skill: null
+_id: ike3ptyb4znk35ig
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456914
+  modifiedTime: 1754277456914
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/new/necromancer_spell.png
+ownership:
+  default: 0
+_key: '!items!ike3ptyb4znk35ig'
+

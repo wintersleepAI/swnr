@@ -1,0 +1,54 @@
+name: Hallucinatory Terrain
+type: power
+sort: 5400000
+system:
+  description: >-
+    Duration: Until touched Range: 240' Hallucinatory terrain either conjures an
+    illusory terrain feature (e.g. a hill, wood, marsh, etc.) or hides an
+    existing terrain feature. ▶ Area: The illusion must fit completely within
+    the spell's range. ▶ Touching: If the illusion is touched by an intelligent
+    being, the spell is negated.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 4
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Until touched
+  save: None
+  range: 240'
+  skill: null
+_id: 2lqsu37idqm7llad
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457078
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!2lqsu37idqm7llad'
+

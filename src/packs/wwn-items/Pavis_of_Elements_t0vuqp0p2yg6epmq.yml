@@ -1,0 +1,47 @@
+name: Pavis of Elements
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort as an On Turn action to conjure an elemental barrier around
+    yourself. The barrier improves your Armor Class by +4 and remains as long as
+    the Effort remains Committed. This bonus stacks with other effects, but
+    cannot increase AC above 18, regardless of the combinations.
+  favorite: false
+  subType: arcane
+  source: Elementalist
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Elementalist
+      usesCost: 1
+      cadence: active
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: t0vuqp0p2yg6epmq
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456819
+  modifiedTime: 1754277456819
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/elementalist_art.png
+ownership:
+  default: 0
+_key: '!items!t0vuqp0p2yg6epmq'
+

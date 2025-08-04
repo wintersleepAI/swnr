@@ -1,0 +1,41 @@
+name: Deadeye
+type: feature
+sort: 0
+system:
+  description: >-
+    You have a gift with ranged weapons. While this talent most commonly applies
+    to bows, it is also applicable to thrown weapons or other ranged weapons
+    that can be used with the Shoot skill. For thrown weapons, you can't use the
+    benefits of the Armsmaster Focus at the same time as Deadeye. Level 1: Gain
+    Shoot as a bonus skill. You can Ready a Stowed ranged weapon as an Instant
+    action. You may use a bow or two-handed ranged weapon even when an enemy is
+    within melee range, albeit at a -4 hit penalty. You may add your Shoot skill
+    level to a ranged weapon's damage roll. Level 2: You can reload crossbows or
+    other slow-loading weapons as an On Turn action, provided they don't take
+    more than a round to reload. You can use ranged weapons of any size in melee
+    without penalty. Once per scene, as an On Turn action when target shooting
+    at an inanimate, non-creature target, you automatically hit unless you roll
+    a 2 on your Shoot skill check or the shot is physically impossible.
+  favorite: false
+  level: 1
+  type: focus
+  poolsGranted: []
+_id: sf6setkyvcoj76s5
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456870
+  modifiedTime: 1754277456870
+  lastModifiedBy: null
+  exportSource: null
+folder: XpfSdfJBDfjFSauP
+flags: {}
+effects: []
+img: systems/wwn/assets/default/focus.png
+ownership:
+  default: 0
+_key: '!items!sf6setkyvcoj76s5'
+

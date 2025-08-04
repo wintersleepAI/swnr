@@ -1,0 +1,48 @@
+name: Purity Rites
+type: asset
+sort: 0
+system:
+  description: >-
+    A rigorous program of regular mental inspection and counterintelligence
+    measures has been undertaken by the faction. This Asset can only defend
+    against attacks that target the faction's Cunning, but it allows the faction
+    to roll an extra die to defend.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 10
+    max: 10
+  rating: 7
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: pw3pubffum65fbhf
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456945
+  modifiedTime: 1754277456945
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/force.png
+ownership:
+  default: 0
+_key: '!items!pw3pubffum65fbhf'
+

@@ -1,0 +1,57 @@
+name: Snake Charm
+type: power
+sort: 500000
+system:
+  description: >-
+    Duration: [[1d4+1]] rounds or turns Range: 60' One or more snakes are
+    rendered non-hostile, rearing up and swaying to and fro but not attacking. ▶
+    HD affected: The spell affects snakes whose total Hit Dice do not exceed the
+    caster's level. For example, a 7th level caster can affect 7 HD of snakes,
+    which can equal seven 1 HD snakes, or two 3 HD snakes and one 1 HD snake, or
+    any other combination. ▶ Duration: When cast on snakes that are already
+    attacking, the spell lasts for 1d4+1 rounds. Otherwise, it lasts for 1d4+1
+    turns.
+  favorite: false
+  subType: arcane
+  source: Cleric
+  level: 2
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 1d4+1 rounds/turns
+  save: None
+  range: 60'
+  skill: null
+_id: yyovhid4umrr33sc
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457105
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!yyovhid4umrr33sc'
+

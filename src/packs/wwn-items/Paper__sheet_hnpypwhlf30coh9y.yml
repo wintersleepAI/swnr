@@ -1,0 +1,38 @@
+name: Paper, sheet
+type: item
+sort: 0
+system:
+  description: This item is effectively weightless in modest numbers.
+  favorite: false
+  quantity: 10
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 1
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
+_id: hnpypwhlf30coh9y
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456708
+  modifiedTime: 1754277456708
+  lastModifiedBy: null
+  exportSource: null
+folder: OSCezLcl3H6szsim
+flags: {}
+effects: []
+img: icons/sundries/documents/paper-plain-white.webp
+ownership:
+  default: 0
+_key: '!items!hnpypwhlf30coh9y'
+

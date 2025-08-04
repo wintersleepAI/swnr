@@ -1,0 +1,47 @@
+name: Golden Prosperity
+type: asset
+sort: 0
+system:
+  description: >-
+    Each turn, as a free action, the faction gains 1d6 Treasure that can be used
+    to fix damaged Assets as if by the Repair Assets action. Any of this
+    Treasure not spent on such purposes is lost.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 30
+    max: 30
+  rating: 8
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: taae2cjqlw96zw14
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456950
+  modifiedTime: 1754277456950
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/wealth.png
+ownership:
+  default: 0
+_key: '!items!taae2cjqlw96zw14'
+

@@ -1,0 +1,50 @@
+name: Stutterhatchet
+type: item
+sort: 0
+system:
+  description: >-
+    This small workman's hatchet has a flat hammer-poll on its opposite side and
+    a blade that cannot be dulled by anything short of intentional effort to
+    damage it. It functions as a hand axe +1 if used in combat, but when applied
+    to inanimate objects its true function becomes plain. Whatever inanimate
+    matter the stutterhatchet damages, smashes, or cuts will return to its
+    perfect, unbroken state at the next dawn, or sooner if the flat of the axe
+    is tapped against a fragment of it. Fragments or pieces of the object will
+    disappear when the object reforms. If the object is broken into several
+    pieces, it is restored around the largest one, or around the one the wielder
+    taps with the hatchet if it's triggered early. If fragments are burned,
+    melted, or destroyed with equivalent thoroughness they will be missing from
+    the reformed object.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 0
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
+_id: yrcxdzor58m67z6a
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456993
+  modifiedTime: 1754277456993
+  lastModifiedBy: null
+  exportSource: null
+folder: jXrFh0x6b5Auj9IZ
+flags: {}
+effects: []
+img: systems/wwn/assets/default/item.png
+ownership:
+  default: 0
+_key: '!items!yrcxdzor58m67z6a'
+

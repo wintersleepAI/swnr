@@ -1,0 +1,61 @@
+name: Sleep
+type: power
+sort: 600000
+system:
+  description: >-
+    Duration: [[4d4]] turns Range: 240' A sleep spell causes a magical slumber
+    to come upon creatures, excluding the undead. The spell may target either: A
+    single creature with 4+1 Hit Dice. A total of [[2d8]] Hit Dice of creatures
+    of 4 HD or lower each. When targeting creatures of 4 HD or less, the
+    following rules apply: ▶ Weakest first: Targets with the least HD are
+    affected first. ▶ HD: Calculate monsters with less than 1 HD as having 1 HD
+    and monsters with a bonus to HD as having the flat amount. (For example, a
+    3+2 HD monster would be calculated as having 3 HD.) ▶ Excess: Rolled Hit
+    Dice that are not sufficient to affect a creature are wasted. Killing:
+    Creatures enchanted by this spell are helpless and can be killed instantly
+    with a bladed weapon. Awakening: Slapping or wounding awakens an affected
+    creature.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: '[[4d4 turns]]'
+  save: None
+  range: 240'
+  skill: null
+_id: nxe29jnkkh7l4cou
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457095
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!nxe29jnkkh7l4cou'
+

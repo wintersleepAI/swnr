@@ -1,0 +1,38 @@
+name: Hurlant Bolts
+type: item
+sort: 0
+system:
+  description: ''
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 20
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
+_id: f1jkq1xxy0isfz58
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456721
+  modifiedTime: 1754277456721
+  lastModifiedBy: null
+  exportSource: null
+folder: OSCezLcl3H6szsim
+flags: {}
+effects: []
+img: icons/weapons/ammunition/shot-round-blue.webp
+ownership:
+  default: 0
+_key: '!items!f1jkq1xxy0isfz58'
+

@@ -1,0 +1,47 @@
+name: Gentleman’s Withdrawal
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the scene as a Move action. As part of this, you may move
+    at your full movement rate without being hindered by armed foes unless they
+    completely block your path. You count as having made a Fighting Withdrawal
+    against any enemies engaged with you at the time.
+  favorite: false
+  subType: arcane
+  source: Duelist
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Duelist
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: gaeyg2zx1f8odsl4
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456797
+  modifiedTime: 1754277456797
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/duelistArt_art.png
+ownership:
+  default: 0
+_key: '!items!gaeyg2zx1f8odsl4'
+

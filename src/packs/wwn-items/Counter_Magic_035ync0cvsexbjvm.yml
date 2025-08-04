@@ -1,0 +1,48 @@
+name: Counter Magic
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the day as an Instant action when a visible enemy mage
+    casts a spell. Both of you make opposed Int/Magic or Cha/Magic skill checks;
+    if you win, their spell fizzles and is wasted. This art only works on actual
+    spellcasters and not creatures that merely activate magical powers. You can
+    use this art no more than once per round.
+  favorite: false
+  subType: arcane
+  source: High Mage
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: High Mage
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 035ync0cvsexbjvm
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456791
+  modifiedTime: 1754277456791
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/art.png
+ownership:
+  default: 0
+_key: '!items!035ync0cvsexbjvm'
+

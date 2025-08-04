@@ -1,0 +1,48 @@
+name: Smuggling Fleet
+type: asset
+sort: 0
+system:
+  description: >-
+    Once per turn, as a free action, they may move themselves and any one Asset
+    at their current location to any other water-accessible location within one
+    move. Any Asset they move with them gains the Subtle quality until they take
+    some action at the destination.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 6
+    max: 6
+  rating: 5
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: qdjff9xvs0azdl5u
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456937
+  modifiedTime: 1754277456937
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/wealth.png
+ownership:
+  default: 0
+_key: '!items!qdjff9xvs0azdl5u'
+

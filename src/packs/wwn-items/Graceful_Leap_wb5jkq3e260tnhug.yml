@@ -1,0 +1,47 @@
+name: Graceful Leap
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the scene as an On Turn action to immediately leap up to
+    ten feet horizontally or vertically, counting it as a Fighting Withdrawal.
+    You can't use this art more than once per round or after you've attacked.
+    You are immune to falling damage from plunges of less than 30 feet.
+  favorite: false
+  subType: arcane
+  source: Duelist
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Duelist
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: wb5jkq3e260tnhug
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456823
+  modifiedTime: 1754277456823
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/duelistArt_art.png
+ownership:
+  default: 0
+_key: '!items!wb5jkq3e260tnhug'
+

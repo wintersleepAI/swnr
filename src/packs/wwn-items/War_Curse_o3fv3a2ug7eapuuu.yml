@@ -1,0 +1,48 @@
+name: War Curse
+type: power
+sort: 0
+system:
+  description: >-
+    As a Main Action, curse a visible enemy. They suffer a -2 penalty to hit
+    rolls, damage rolls, and Shock damage for the rest of the scene. If they
+    miss an attack with a raw to-hit die roll less than the Wise's Magic skill,
+    they accidentally hurt themselves for normal damage. Only one war curse can
+    be applied at a time.
+  favorite: false
+  subType: arcane
+  source: Wise
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Wise
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: o3fv3a2ug7eapuuu
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456836
+  modifiedTime: 1754277456836
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/wise_art.png
+ownership:
+  default: 0
+_key: '!items!o3fv3a2ug7eapuuu'
+

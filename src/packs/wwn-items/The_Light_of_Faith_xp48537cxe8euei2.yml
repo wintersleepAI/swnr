@@ -1,0 +1,47 @@
+name: The Light of Faith
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort as an On Turn action; while it remains Committed, you can cast
+    a clear, bright radiance that extends up to thirty feet away from you. At
+    your discretion, this light is visible only to you and your comrades,
+    including up to a dozen allies.
+  favorite: false
+  subType: arcane
+  source: Blood Priest
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Blood Priest
+      usesCost: 1
+      cadence: active
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: xp48537cxe8euei2
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456786
+  modifiedTime: 1754277456786
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/bloodPriest_art.png
+ownership:
+  default: 0
+_key: '!items!xp48537cxe8euei2'
+

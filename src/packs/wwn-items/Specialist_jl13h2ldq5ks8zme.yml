@@ -1,0 +1,35 @@
+name: Specialist
+type: feature
+sort: 0
+system:
+  description: >-
+    You are remarkably talented at a particular skill. Whether a marvelous cat
+    burglar, a famed athlete, a brilliant scholar, or some other savant, your
+    expertise is extremely reliable. You may take this Focus more than once for
+    different skills. Level 1: Gain any skill as a bonus, except for Magic,
+    Stab, Shoot, or Punch. Roll 3d6 and drop the lowest die for all skill checks
+    in this skill. Level 2: Roll 4d6 and drop the two lowest dice for all skill
+    checks in this skill.
+  favorite: false
+  level: 1
+  type: focus
+  poolsGranted: []
+_id: jl13h2ldq5ks8zme
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456857
+  modifiedTime: 1754277456857
+  lastModifiedBy: null
+  exportSource: null
+folder: XpfSdfJBDfjFSauP
+flags: {}
+effects: []
+img: systems/wwn/assets/default/focus.png
+ownership:
+  default: 0
+_key: '!items!jl13h2ldq5ks8zme'
+

@@ -1,0 +1,46 @@
+name: Magebane
+type: power
+sort: 0
+system:
+  description: >-
+    You add half your level, rounded up, to all damage you inflict on casters
+    from any source, be it by weapon, Shock, or violent action. This does not
+    stack with a Warrior's Killing Blow class ability.
+  favorite: false
+  subType: arcane
+  source: Mageslayer
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Mageslayer
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: brmuz7mvac14067c
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456770
+  modifiedTime: 1754277456770
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/mageslayer_art.png
+ownership:
+  default: 0
+_key: '!items!brmuz7mvac14067c'
+

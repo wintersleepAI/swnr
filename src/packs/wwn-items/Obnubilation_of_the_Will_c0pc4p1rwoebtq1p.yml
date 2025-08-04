@@ -1,0 +1,59 @@
+name: Obnubilation of the Will
+type: power
+sort: 0
+system:
+  description: >-
+    This spell can only be applied to a helpless or restrained living victim,
+    who gets a Mental saving throw to resist it and be ever after immune to its
+    effects. On a failure, the target becomes hopelessly subject to the caster
+    via a series of psychic fetters, obediently carrying out their will. The
+    target must be able to understand the caster's wishes, but will obey them to
+    the best of its intelligence, capability, and initiative. They must make a
+    Mental saving throw to resist performing even suicidal acts. The spell lasts
+    until it is dispelled or the caster releases the target. A caster can have
+    no more creatures under this spell than twice their level or hit dice; if
+    this number is exceeded, the earliest thrall is freed first.
+  favorite: false
+  subType: arcane
+  source: High Mage
+  level: 4
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Until dispelled or released
+  save: mental
+  range: Self
+  skill: null
+_id: c0pc4p1rwoebtq1p
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456884
+  modifiedTime: 1754277456884
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!c0pc4p1rwoebtq1p'
+

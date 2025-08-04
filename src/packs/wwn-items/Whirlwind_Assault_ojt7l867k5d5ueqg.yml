@@ -1,0 +1,36 @@
+name: Whirlwind Assault
+type: feature
+sort: 0
+system:
+  description: >-
+    You are a frenzy of bloody havoc in melee combat, and can hack down numerous
+    lesser foes in close combat&hellip; assuming you survive being surrounded.
+    Level 1: Gain Stab as a bonus skill. Once per scene, as an On Turn action,
+    apply your Shock damage to all foes within melee range, assuming they're
+    susceptible to your Shock. Level 2: The first time you kill someone in a
+    round with a normal attack, either with its rolled damage on a hit or with
+    the Shock damage it inflicts, instantly gain a second attack on any target
+    within range using any Ready weapon you have.
+  favorite: false
+  level: 1
+  type: focus
+  poolsGranted: []
+_id: ojt7l867k5d5ueqg
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456863
+  modifiedTime: 1754277456863
+  lastModifiedBy: null
+  exportSource: null
+folder: XpfSdfJBDfjFSauP
+flags: {}
+effects: []
+img: systems/wwn/assets/default/focus.png
+ownership:
+  default: 0
+_key: '!items!ojt7l867k5d5ueqg'
+

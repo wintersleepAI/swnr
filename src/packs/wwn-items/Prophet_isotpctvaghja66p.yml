@@ -1,0 +1,46 @@
+name: Prophet
+type: asset
+sort: 0
+system:
+  description: >-
+    Whether a religious prophet, charismatic philosopher, rebel leader, or other
+    figure of popular appeal, the Asset is firmly under the faction's control.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 10
+    max: 10
+  rating: 6
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: isotpctvaghja66p
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456962
+  modifiedTime: 1754277456962
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/cunning.png
+ownership:
+  default: 0
+_key: '!items!isotpctvaghja66p'
+

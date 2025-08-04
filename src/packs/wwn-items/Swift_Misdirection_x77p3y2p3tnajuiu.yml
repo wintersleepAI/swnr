@@ -1,0 +1,49 @@
+name: Swift Misdirection
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the scene as a Main Action and target one intelligent
+    creature within earshot. Tell them something in no more than one sentence;
+    unless what you say is physically impossible or emotionally unendurable,
+    they must make a Mental save or believe it for one round. After that, they
+    can judge your words with their normal reason. This art can affect a
+    creature only once per scene.
+  favorite: false
+  subType: arcane
+  source: Bard
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Bard
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: x77p3y2p3tnajuiu
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456783
+  modifiedTime: 1754277456783
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/bard_art.png
+ownership:
+  default: 0
+_key: '!items!x77p3y2p3tnajuiu'
+

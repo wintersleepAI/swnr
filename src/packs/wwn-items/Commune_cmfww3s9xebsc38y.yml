@@ -1,0 +1,55 @@
+name: Commune
+type: power
+sort: 8500000
+system:
+  description: >-
+    Duration: 3 turns Range: The caster The caster calls upon divine powers in
+    order to seek knowledge. ▶ Questions: The caster may ask three questions per
+    casting. Once per year, the caster may instead ask six questions. ▶ Answers:
+    Each question receives a simple "yes" or "no" answer. ▶ Usage limit: Commune
+    may only be cast once per week. If the referee feels this spell is being
+    overused, its usage may be limited to once per month.
+  favorite: false
+  subType: arcane
+  source: Cleric
+  level: 5
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 3 turns
+  save: None
+  range: Caster
+  skill: null
+_id: cmfww3s9xebsc38y
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457094
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!cmfww3s9xebsc38y'
+

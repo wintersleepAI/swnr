@@ -1,0 +1,53 @@
+name: Anti-Magic Shell
+type: power
+sort: 9100000
+system:
+  description: >-
+    Duration: 12 turns Range: The caster An anti-magic barrier is created around
+    the caster. ▶ Blocks magic: No spells or spell effects can pass through this
+    barrier, whether from inside or outside. ▶ Dismissing: The caster may end
+    this spell at any time before the duration has expired.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 6
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 12 turns
+  save: None
+  range: Caster
+  skill: null
+_id: o55d2ckddbrw7t7e
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457094
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!o55d2ckddbrw7t7e'
+

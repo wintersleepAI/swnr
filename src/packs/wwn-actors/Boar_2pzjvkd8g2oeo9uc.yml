@@ -1,0 +1,156 @@
+name: Boar
+type: npc
+sort: 0
+system:
+  ab: 2
+  armorType: street
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  baseAc: 12
+  hitDice: 3
+  moralScore: 9
+  saves: 14
+  skillBonus: 0
+  speed: 50
+  biography: >-
+    Omnivorous wild boars that dwell primarily in forests. Can be irascible and
+    dangerous, if disturbed.
+  species: monster
+_id: 2pzjvkd8g2oeo9uc
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456526
+  modifiedTime: 1754277456526
+  lastModifiedBy: null
+  exportSource: null
+folder: EvdqxETxotoAuVI8
+flags: {}
+effects: []
+prototypeToken:
+  name: Boar
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/cowled.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+img: icons/svg/cowled.svg
+items:
+  - name: Tusk
+    type: weapon
+    img: systems/wwn/assets/default/weapon.png
+    system:
+      description: ''
+      cost: 0
+      damage: 2d4
+      range:
+        normal: 0
+        max: 0
+      shock:
+        dmg: 1
+        ac: 13
+      ammo:
+        max: 0
+        type: ammo
+        burst: false
+      isTwoHanded: false
+      stat: str
+      skill: punch
+      ab: 0
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    _id: 968m8nsxb7g02pt5
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920812
+      modifiedTime: 1754273920812
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!2pzjvkd8g2oeo9uc.968m8nsxb7g02pt5'
+_key: '!actors!2pzjvkd8g2oeo9uc'
+

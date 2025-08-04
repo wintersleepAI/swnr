@@ -1,0 +1,72 @@
+name: Savage Talons (L3)
+type: weapon
+sort: 0
+system:
+  description: >-
+    This shape has extremely dangerous claws, fangs, pincers, or other body
+    weapons. At first level these weapons do 1d8 damage, use either Str or Dex
+    as the modifying attribute, Punch as the combat skill, and have a Shock
+    value of 2/AC 13. At level 3 the damage and Shock increase by +1, at level 6
+    they increase to +2, and at level 9 they increase to +3. These weapons can
+    harm even creatures immune to non-magical weaponry.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 1
+  cost: 0
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  stat: str
+  secondStat: null
+  skill: punch
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  shock:
+    dmg: 3
+    ac: 13
+  ab: 0
+  ammo:
+    longReload: false
+    suppress: false
+    type: ammo
+    max: 10
+    value: 10
+    burst: false
+  range:
+    normal: 1
+    max: 2
+  damage: 1d8+1
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+    rating: null
+  isTwoHanded: false
+  isNonLethal: false
+_id: qgr81z4zuxbdqspr
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456736
+  modifiedTime: 1754277456736
+  lastModifiedBy: null
+  exportSource: null
+folder: 9q3JsMH989xk3k0D
+flags: {}
+effects: []
+img: systems/wwn/assets/default/skinshifter_art.png
+ownership:
+  default: 0
+_key: '!items!qgr81z4zuxbdqspr'
+

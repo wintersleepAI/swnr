@@ -1,0 +1,48 @@
+name: Entangle Incantation
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the scene as an Instant action when an foe within 60'
+    incants a spell. Your voice tangles with their words, forcing them to make
+    an opposed Int/Magic vs Cha/Perform skill check against you, with a +2 bonus
+    to your roll. If you tie or succeed, the spell fizzles and is wasted. This
+    art can be used only once per round.
+  favorite: false
+  subType: arcane
+  source: Bard
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Bard
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: hf7rz4nokbk1xkwg
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456755
+  modifiedTime: 1754277456755
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/bard_art.png
+ownership:
+  default: 0
+_key: '!items!hf7rz4nokbk1xkwg'
+

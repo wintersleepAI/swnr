@@ -1,0 +1,51 @@
+name: Bind Companion
+type: power
+sort: 0
+system:
+  description: >-
+    With a day's work in a location you can find and bind a suitable animal
+    companion. If looking for a particular type of companion, it must be found
+    in the area and may require a Wis/Survive skill check at a difficulty of 10
+    or more if it's a particularly rare creature. If you encounter a suitable
+    animal on an adventure, you may bind it as a Main Action, with the creature
+    allowed a Mental saving throw to resist and become impervious to your
+    powers. You may release a companion as a Main Action if you no longer wish
+    its service or want to bind a different beast.
+  favorite: false
+  subType: arcane
+  source: Beastmaster
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Beastmaster
+      usesCost: 1
+      cadence: active
+      timing: manual
+  roll: null
+  duration: Instant
+  save: mental
+  range: Self
+  skill: null
+_id: du7y1hvqen2rh4nr
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456821
+  modifiedTime: 1754277456821
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/beastmaster_art.png
+ownership:
+  default: 0
+_key: '!items!du7y1hvqen2rh4nr'
+

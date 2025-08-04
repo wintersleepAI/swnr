@@ -1,0 +1,38 @@
+name: Gifted Chirurgeon
+type: feature
+sort: 0
+system:
+  description: >-
+    You have an unusual gift for saving mortally-wounded allies and quickening
+    the natural recovery of the wounded in your care. Level 1: Gain Heal as a
+    bonus skill. You may attempt to stabilize one Mortally Wounded adjacent
+    person per round as an On Turn action. When rolling Heal skill checks, roll
+    3d6 and drop the lowest die. You heal twice as many hit points as usual when
+    applying first aid after a battle, as described on page 48. Level 2: Your
+    curative gifts count as magical healing. You can heal 1d6+Heal skill in
+    damage to an adjacent wounded ally as a Main Action. Each such application
+    of healing adds 1 System Strain to the target, and the gift cannot be used
+    on targets already at their maximum System Strain.
+  favorite: false
+  level: 1
+  type: focus
+  poolsGranted: []
+_id: gboyinxuwn3nhavj
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456873
+  modifiedTime: 1754277456873
+  lastModifiedBy: null
+  exportSource: null
+folder: XpfSdfJBDfjFSauP
+flags: {}
+effects: []
+img: systems/wwn/assets/default/focus.png
+ownership:
+  default: 0
+_key: '!items!gboyinxuwn3nhavj'
+

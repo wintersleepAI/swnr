@@ -1,0 +1,54 @@
+name: Remove Fear
+type: power
+sort: 1100000
+system:
+  description: >-
+    Duration: 2 turns Range: The caster or a creature touched The creature
+    touched is calmed and purged of fear. Magically induced fear may be
+    dispelled, but this requires the subject to make a Mental save. The save is
+    modified by -1 per level of the caster. Reversed: Cause Fear Will cause a
+    target within 120' to flee for the duration unless it saves versus spells.
+  favorite: false
+  subType: arcane
+  source: Cleric
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 2 turns
+  save: mental
+  range: Caster
+  skill: null
+_id: pdato15qmipmqer3
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457101
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!pdato15qmipmqer3'
+

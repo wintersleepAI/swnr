@@ -1,0 +1,46 @@
+name: Purified Body
+type: power
+sort: 0
+system:
+  description: >-
+    You may Commit Effort for the day as an Instant action to cure any disease
+    or poison currently affecting you, or instead to negate any need for sleep,
+    food, water, or air for the next 24 hours.
+  favorite: false
+  subType: arcane
+  source: Vowed
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Vowed
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: hqyrv3vp816slf7y
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456795
+  modifiedTime: 1754277456795
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/vowed_art.png
+ownership:
+  default: 0
+_key: '!items!hqyrv3vp816slf7y'
+

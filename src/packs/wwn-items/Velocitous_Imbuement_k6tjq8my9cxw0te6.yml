@@ -1,0 +1,59 @@
+name: Velocitous Imbuement
+type: power
+sort: 0
+system:
+  description: >-
+    Unlike most spells, this one may be cast as a simple On Turn action,
+    targeting up to one visible willing creature per caster level within one
+    hundred feet. Enchanted creatures become incredibly fleet of foot, doubling
+    their usual ground movement rate and becoming capable of running up walls
+    and across ceilings without falling, provided they end their round upright
+    on a navigable surface. They may also move away from melee opponents without
+    needing to make a Fighting Withdrawal to avoid a parting attack, and may
+    pass through and around armed foes who do not completely physically block
+    their path. The spell lasts for the remainder of the scene and adds 1 System
+    Strain to those who take advantage of it.
+  favorite: false
+  subType: arcane
+  source: High Mage
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Scene
+  save: None
+  range: 100 ft.
+  skill: null
+_id: k6tjq8my9cxw0te6
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456903
+  modifiedTime: 1754277456903
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!k6tjq8my9cxw0te6'
+

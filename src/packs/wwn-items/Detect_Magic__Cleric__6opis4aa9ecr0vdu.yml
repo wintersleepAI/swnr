@@ -1,0 +1,51 @@
+name: Detect Magic (Cleric)
+type: power
+sort: 6900000
+system:
+  description: >-
+    Duration: 2 turns Range: 60' Enchanted objects, areas, or creatures are
+    caused to glow. Both permanent and temporary enchantments are revealed.
+  favorite: false
+  subType: arcane
+  source: Cleric
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 2 turns
+  save: None
+  range: 60'
+  skill: null
+_id: 6opis4aa9ecr0vdu
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457082
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!6opis4aa9ecr0vdu'
+

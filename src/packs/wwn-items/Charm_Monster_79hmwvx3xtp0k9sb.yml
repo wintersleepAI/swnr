@@ -1,0 +1,64 @@
+name: Charm Monster
+type: power
+sort: 8900000
+system:
+  description: >-
+    Duration: One or more days (see below) Range: 120' This spell places a charm
+    upon either [[3d6]] creatures of 3 HD or less or a single creature of more
+    than 3 HD. Each subject must make a Mental save or be charmed as follows: ▶
+    Friendship: The subject regards the caster as its trusted friend and ally
+    and will come to the caster's defence. ▶ Commands: If they share a language,
+    the caster may give the charmed creature commands, which it will obey. ▶
+    Subject's nature: Commands that contradict the charmed creature's habits or
+    alignment may be ignored. ▶ Suicidal commands: An affected creature never
+    obeys suicidal or obviously harmful orders. Restrictions: Undead are not
+    affected. Duration: The charm lasts indefinitely, but the subject is allowed
+    to make further Mental saves at intervals, depending on its INT score. If
+    one of these saves succeeds, the spell ends. ▶ INT 3&ndash;8: The creature
+    gains a new save once every month. ▶ INT 9&ndash;12: The creature gains a
+    new save each week ▶ INT 13&ndash;18: The creature gains a new save once
+    every day.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 4
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: one or more days
+  save: mental
+  range: 120'
+  skill: null
+_id: 79hmwvx3xtp0k9sb
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457108
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!79hmwvx3xtp0k9sb'
+

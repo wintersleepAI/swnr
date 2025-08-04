@@ -1,0 +1,48 @@
+name: Revivifying Breath
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the day as an On Turn action to heal yourself for 1d6 hit
+    points plus your level. This healing does not increase System Strain. This
+    ability may be used on your turn even when you are at zero hit points, but
+    in such a case it Commits all your remaining Effort for the day. This art
+    can be used only once per scene.
+  favorite: false
+  subType: arcane
+  source: Vowed
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Vowed
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: pvfk56lfcpcrxbc5
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456814
+  modifiedTime: 1754277456814
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/vowed_art.png
+ownership:
+  default: 0
+_key: '!items!pvfk56lfcpcrxbc5'
+

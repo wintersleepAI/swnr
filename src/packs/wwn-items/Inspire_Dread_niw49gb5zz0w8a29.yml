@@ -1,0 +1,47 @@
+name: Inspire Dread
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the day as an Instant action when your enemies are forced
+    to make a Morale check. You goad their fears, forcing them to make two
+    Morale checks instead of one. Those who succeed on both must still make an
+    Instinct check immediately after.
+  favorite: false
+  subType: arcane
+  source: Bard
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Bard
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: niw49gb5zz0w8a29
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456829
+  modifiedTime: 1754277456829
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/bard_art.png
+ownership:
+  default: 0
+_key: '!items!niw49gb5zz0w8a29'
+

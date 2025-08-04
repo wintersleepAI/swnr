@@ -1,0 +1,53 @@
+name: Find Traps
+type: power
+sort: 9200000
+system:
+  description: >-
+    Duration: 2 turns Range: 30' Trapped objects or areas within range of the
+    caster glow with a magical blue light. ▶ Magical and mechanical traps: Are
+    both detected. ▶ No knowledge: About the nature of the trap or how to
+    deactivate it is granted.
+  favorite: false
+  subType: arcane
+  source: Cleric
+  level: 2
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 2 turns
+  save: None
+  range: 30'
+  skill: null
+_id: hpkugd0hvg9skmhs
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457072
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!hpkugd0hvg9skmhs'
+

@@ -1,0 +1,45 @@
+name: Bestial Form
+type: item
+sort: 0
+system:
+  description: >-
+    The user of this potion transforms into a normal animal of their choice no
+    larger than a horse nor smaller than a rat. Their own attributes and
+    statistics are retained, though they gain the chosen creature's movement
+    modes and speed. Their belongings meld with them on the transformation,
+    still applying their benefits, but they cannot be removed until the change
+    ends. The transformation lasts until the user ends it as an On Turn action,
+    they die, or the next dawn.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 0
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
+_id: 9uiwax4t4kxojab2
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456987
+  modifiedTime: 1754277456987
+  lastModifiedBy: null
+  exportSource: null
+folder: jXrFh0x6b5Auj9IZ
+flags: {}
+effects: []
+img: icons/tools/laboratory/vial-orange.webp
+ownership:
+  default: 0
+_key: '!items!9uiwax4t4kxojab2'
+

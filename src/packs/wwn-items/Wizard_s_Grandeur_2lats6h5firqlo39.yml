@@ -1,0 +1,49 @@
+name: Wizard's Grandeur
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort as an On Turn action. As long as it remains Committed, you
+    will not become dirty, sweaty, stained, or rumpled regardless of the
+    circumstances. Noxious substances will slide off you without staining and
+    you will remain comfortable regardless of your attire in any normal climate.
+    You may sleep comfortably without shelter or bedding as per the privation
+    rules on page 51.
+  favorite: false
+  subType: arcane
+  source: High Mage
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: High Mage
+      usesCost: 1
+      cadence: active
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 2lats6h5firqlo39
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456834
+  modifiedTime: 1754277456834
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/art.png
+ownership:
+  default: 0
+_key: '!items!2lats6h5firqlo39'
+

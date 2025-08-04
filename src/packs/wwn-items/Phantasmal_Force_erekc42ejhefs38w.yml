@@ -1,0 +1,65 @@
+name: Phantasmal Force
+type: power
+sort: 2700000
+system:
+  description: >-
+    Duration: Concentration Range: 240' A visual illusion of the caster's
+    choosing manifests in a 20' cube area. Three types of illusions may be
+    created: 1. An illusionary monster: That can be directed to attack. The
+    monster has an Armour Class of 10 and will vanish if hit in combat. 2. An
+    illusionary attack: For example, an avalanche, a falling ceiling, a magic
+    missile, etc. Targets who make a Mental save are unaffected. 3. A scene:
+    Either changing the appearance of the affected area or creating the
+    appearance of something new. The scene disappears if touched. Stipulations:
+    The following apply: ▶ Concentration: Is required to maintain the illusion.
+    If the caster moves or loses concentration, the spell ends. ▶ Illusionary
+    monsters or attacks: May appear to be harmful but no real damage is ever
+    inflicted. A character who appears to die actually falls unconscious, a
+    character turned to stone will actually be paralysed, and so on. Such
+    effects last for 1d4 turns. ▶ Illusions from imagination: If the illusion is
+    of something the caster has not personally seen, the referee should grant
+    targets a bonus to any applicable saving throws.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 2
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Concentration
+  save: mental
+  range: Self
+  skill: null
+_id: erekc42ejhefs38w
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457061
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!erekc42ejhefs38w'
+

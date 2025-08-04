@@ -1,0 +1,882 @@
+name: Brigand Mage
+type: npc
+sort: 0
+system:
+  ab: 9
+  armorType: street
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  baseAc: 12
+  hitDice: 10
+  moralScore: 6
+  saves: 10
+  skillBonus: 0
+  speed: 40
+  biography: >-
+    Outlaws and mercenaries who make a living by raiding settlements and
+    attacking travellers. Footmen: Half the group has: leather armour, shield,
+    sword, shortbow. Cavalry: The other half is mounted on riding horses and
+    has: chainmail, shield, sword. Leaders and commanders: For every 20
+    brigands, there is a leader (2nd level fighter). For every 40 brigands,
+    there is a commander (4th level fighter). Leaders ride war horses (with
+    barding) and have: plate mail, sword, lance. Fortified camps: Bands commonly
+    combine and live in a camp of 5d6 &times; 10 brigands. Camp leaders:
+    Combined camps are led by a 9th level fighter, plus a 5th level fighter for
+    every 50 brigands. Also 50% chance of a magic-user (level 1d3 + 8); 30%
+    chance of a cleric (8th level).
+  species: monster
+_id: 93ok00gbdwypubht
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456546
+  modifiedTime: 1754277456546
+  lastModifiedBy: null
+  exportSource: null
+folder: EvdqxETxotoAuVI8
+flags: {}
+effects: []
+prototypeToken:
+  name: Brigand Mage
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/cowled.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+img: icons/svg/cowled.svg
+items:
+  - name: Sword, Long
+    type: weapon
+    img: systems/wwn/assets/default/weapon.png
+    system:
+      description: >-
+        Swords are common sidearms throughout the Latter Earth. The expense of
+        forging a large blade makes it a symbol of wealth and status in many
+        cultures, and its convenience makes it a favored arm for street wear.
+      cost: 100
+      damage: 1d8
+      range:
+        normal: 0
+        max: 0
+      shock:
+        dmg: 2
+        ac: 13
+      ammo:
+        max: 0
+        type: ammo
+        burst: false
+      isTwoHanded: false
+      stat: str
+      skill: stab
+      ab: 0
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    _id: 0e804wi9oxlbe090
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.0e804wi9oxlbe090'
+  - name: Crossbow
+    type: weapon
+    img: systems/wwn/assets/default/weapon.png
+    system:
+      description: >-
+        Crossbows come in heavier varieties than the one listed, but such slow,
+        bulky arbalests are rarely in the hands of adventurers. Reloading a
+        crossbow of this size takes a full Main Action, but due to the
+        simplicity of their operation, someone without Shoot-0 can still use
+        them at no unskilled hit penalty.
+      cost: 10
+      damage: 1d10
+      range:
+        normal: 100
+        max: 300
+      shock:
+        dmg: 0
+        ac: 15
+      ammo:
+        max: 0
+        type: ammo
+        burst: false
+      isTwoHanded: true
+      stat: dex
+      skill: shoot
+      ab: 0
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    _id: j3uf5267zn58g5dv
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.j3uf5267zn58g5dv'
+  - name: Light (Mage)
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: 6 turns + 1 per level Range: 120' This spell has three usages:
+        Conjuring light: In a 15' radius. The magical light is sufficient for
+        reading, but is not as bright as daylight. The spell may be cast upon an
+        object, in which case the light moves with the object. Blinding a
+        creature: By casting the spell upon its eyes. If the target fails an
+        Evasion save, it is blinded for the duration. A blind creature cannot
+        attack. Cancelling darkness: Light may cancel a darkness spell (see
+        below). Reversed: Darkness Creates a 15' radius area of magical
+        blackness, preventing normal sight (but not infravision). Like light, it
+        may alternatively be used to blind creatures or to dispel a light spell.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: 186wkhjl3qr6ku6m
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.186wkhjl3qr6ku6m'
+  - name: Magic Missile
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: 1 turn Range: 150' This spell conjures a glowing dart of
+        energy that the caster may choose to shoot at a visible target within
+        range. ▶ Hit: The missile hits unerringly (no attack roll or saving
+        throw is required). ▶ Damage: The missile inflicts 1d6+1 damage. ▶
+        Higher level casters: May conjure more missiles: two additional missiles
+        are conjured per five experience levels the caster has gained (i.e.
+        three missiles at 6th&ndash;10th level, five missiles at 11th&ndash;15th
+        level, etc.). Multiple missiles may be directed at a single target.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: gzzpq7j2vr9s9nwr
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.gzzpq7j2vr9s9nwr'
+  - name: Shield
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: 2 turns Range: The caster Shield creates an invisible field of
+        force that protects the caster: ▶ Against missile attacks: The caster's
+        AC is 17. ▶ Against other attacks: The caster's AC is 15.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: vbsjwoqee7m753si
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.vbsjwoqee7m753si'
+  - name: Invisibility
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: Permanent (but may be broken, see below) Range: 240' The
+        caster or another creature or object within range becomes invisible: ▶
+        If cast on a creature: Any gear the subject is carrying is also rendered
+        invisible (this includes clothing and armour). Items dropped or put down
+        by an invisible creature become visible. If the subject attacks or casts
+        a spell, the invisibility is broken, ending the spell. ▶ If cast on an
+        object: The invisibility is permanent. ▶ Light sources: If a light
+        source is made invisible (either as part of a creature's gear or as an
+        individual object), the light it casts is unaffected.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: 48pme9f97j16wmsu
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.48pme9f97j16wmsu'
+  - name: Web
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: 48 turns Range: 10' Web conjures a many-layered mass of
+        strong, sticky threads, blocking a 10' cube area. ▶ Entanglement:
+        Creatures caught within a web become entangled among the gluey fibres.
+        Entangled creatures can't move, but can break free depending on their
+        strength (see below). ▶ Flammable: The strands of the web are flammable
+        and can be destroyed by fire in two rounds. All creatures caught within
+        flaming webs suffer 1d6 points of damage from the flames. Breaking free:
+        Depends on STR: ▶ Normal human range: The creature can break free in 2d4
+        turns. ▶ Magically augmented STR above 18: The creature can break free
+        in 4 rounds. ▶ Giant strength: The creature can break free in two
+        rounds.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: ovx8anpdno7p371r
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.ovx8anpdno7p371r'
+  - name: Knock
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: 1 round Range: 60' The knock spell opens stuck, barred, or
+        locked doors, gates, chests, and so forth. ▶ Magically held doors: Are
+        affected (e.g. hold portal, wizard lock). ▶ Secret doors: May be opened,
+        but they must be known to the caster.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: h3lvva3gg4cfu6yu
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.h3lvva3gg4cfu6yu'
+  - name: Lightning Bolt
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: Instant Range: 180' A powerful stroke of electrical energy,
+        60' long and 5' wide, is conjured. ▶ Damage: Creatures caught in the
+        lightning bolt suffer 1d6 damage per level of the caster, with a
+        successful Evasion save indicating half damage. ▶ Bouncing: If the
+        lightning bolt hits a solid barrier before its full length is reached,
+        it is reflected and travels for any remaining distance of its full
+        length in the direction of the caster.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: vqmejcv940awaia6
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.vqmejcv940awaia6'
+  - name: Hallucinatory Terrain
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: Until touched Range: 240' Hallucinatory terrain either
+        conjures an illusory terrain feature (e.g. a hill, wood, marsh, etc.) or
+        hides an existing terrain feature. ▶ Area: The illusion must fit
+        completely within the spell's range. ▶ Touching: If the illusion is
+        touched by an intelligent being, the spell is negated.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: zg5rkjmqkwbeis7y
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.zg5rkjmqkwbeis7y'
+  - name: Polymorph Self
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: 6 turns +1 per level Range: The caster The caster transforms
+        themselves into another being: ▶ HD: The new form may not have higher
+        Hit Dice than the caster's level. ▶ Stats: The caster retains their own
+        intelligence, hit points, saving throws, and attack probabilities. ▶
+        Physical capabilities: Of the new form (e.g. strength, physical attack
+        forms, modes of movement) are acquired. ▶ Non-physical special
+        abilities: (e.g. immunities, breath weapons, spell casting) are not
+        acquired. ▶ Casting spells: While polymorphed, the caster is unable to
+        cast spells. ▶ Specific individuals: The spell cannot be used to
+        duplicate a specific individual. ▶ Reversion: If the caster dies while
+        polymorphed, they return to their original form.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: 327704y0xp0quova
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.327704y0xp0quova'
+  - name: Polymorph Others
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: Permanent Range: 60' A living subject is changed into another
+        type of creature, as chosen by the caster: ▶ HD: The spell fails if the
+        new form's HD is more than twice the subject's HD. ▶ Hit points: The
+        subject retains the same number of hit points. ▶ Abilities: The subject
+        truly becomes the new form: all special abilities are acquired, along
+        with behavioural patterns, tendencies, and intelligence. ▶ Specific
+        individuals: The spell cannot be used to duplicate a specific
+        individual. ▶ Reversion: If the subject dies, it returns to its original
+        form. ▶ An unwilling subject: May make a Mental save to negate the
+        effect.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: 8n92c6h4b2u5sabx
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.8n92c6h4b2u5sabx'
+  - name: Wall of Ice
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: 12 turns Range: 120' An immobile, translucent, wall of ice
+        springs into existence. ▶ Size: The wall can be any size, and may be
+        shaped in any manner and to any dimensions the caster desires, up to
+        1,200 sq. ft. For example, it may be a straight wall or curved into a
+        protective circle. ▶ Location: The wall must rest upon a solid surface
+        and may not be evoked so that it appears where objects are. ▶ Monsters
+        with fewer than 4 HD: Cannot pass the wall of ice. ▶ Monsters with 4 or
+        more HD: Can break through the wall, but suffer 1d6 hit points of damage
+        when doing so. The wall deals double damage to creatures that use fire
+        or are accustomed to fire.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: znik4sd8bjt8xj7c
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.znik4sd8bjt8xj7c'
+  - name: Teleport
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: Instant Range: 10' The caster or a chosen creature vanishes
+        and reappears at a location of the caster's choosing. ▶ Gear: The
+        subject is teleported with all its gear, up to its maximum load. ▶
+        Unwilling subjects: May make a Mental save to prevent the teleportation.
+        ▶ Destination: May be at any distance, but must be known to the caster.
+        The destination must be an open space at ground level. (It is not
+        possible to intentionally teleport the subject into mid-air or into
+        solid matter.) ▶ Risk: There is a risk, when teleporting, of
+        accidentally arriving above or below ground level. The chance of a
+        successful teleportation depends on the caster's knowledge of the
+        destination (see right). Roll d% and consult the table below. Knowledge
+        of Destination Ground Level Too High Too Low Scant 01-50 51-75 76-100
+        Moderate 01-80 81-90 91-100 Exact 01-95 96-99 100 Ground level: The
+        subject appears at the desired destination. Too high: The subject
+        appears 1d10&times;10' above the intended destination. Should this
+        location already be occupied by solid matter, the subject is instantly
+        killed. Otherwise, the subject falls from a height. Too low: The subject
+        appears in the ground and is killed instantly. Knowledge of destination:
+        The caster's knowledge of the destination is rated as follows: ▶ Scant:
+        A location that the caster has visited once or twice, has seen by
+        magical scrying, or has heard of from descriptions. ▶ Moderate: A
+        location that the caster has visited often or has studied via scrying
+        for several weeks. ▶ Exact: A location that the caster has made a
+        detailed study of, in person.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: vt2ipk4goqopo86s
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.vt2ipk4goqopo86s'
+  - name: Conjure Elemental
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: Permanent (until dismissed or slain) Range: 240' A 16 Hit Dice
+        elemental&mdash;a being formed of pure elemental matter&mdash;is
+        summoned from an elemental plane of the caster's choice (air, earth,
+        fire, water) to do the caster's bidding. ▶ Materials: The summons
+        requires a large volume of the appropriate element. ▶ Concentration: Is
+        required to command an elemental. ▶ Dismissing: While control over the
+        elemental is maintained, the caster may dismiss it at any time, sending
+        it back to its plane of origin. ▶ Disruption: If the caster moves at
+        more than half speed or their concentration is disturbed, the command
+        over the elemental ends. It is, henceforth, a freewilled entity and will
+        immediately try to kill the caster and any who get in its way. ▶
+        Dispelling: A conjured elemental may be dispelled by dispel magic or
+        dispel evil. Restrictions: The caster may summon at most one elemental
+        from each plane in a single day. Air Elemental Huge vortexes of whirling
+        air. AC 21, HD 16* (72hp), Att 1 &times; blow (3d8), Bonus +11, MV 360'
+        (120') flying, SV 7, ML 10, AL Neutral, XP 2,300 ▶ Size: 32' tall, 8'
+        across. ▶ Whirlwind: Creatures with less than 2HD swept aside (save
+        versus death). ▶ Mundane damage immunity: Can only be harmed by magical
+        attacks. ▶ Harm flying creatures: Inflict extra 1d8 damage. Earth
+        Elemental Huge humanoid figures of earth or stone. AC 21, HD 16* (72hp),
+        Att 1 &times; blow (3d8), Bonus +11, MV 60' (20'), SV 7, ML 10, AL
+        Neutral, XP 2,300 ▶ Size: 16' tall. ▶ Blocked by water: Cannot cross a
+        channel wider than own height. ▶ Mundane damage immunity: Can only be
+        harmed by magical attacks. ▶ Harm creatures on the ground: Inflict extra
+        1d8 damage. Fire Elemental Whirling columns of fire. AC &ndash;21, HD
+        16* (72hp), Att 1 &times; blow (3d8), Bonus +11, MV 120' (40'), SV 7, ML
+        10, AL Neutral, XP 2,300 ▶ Size: 16' tall, 16' across. ▶ Blocked by
+        water: Cannot cross a channel wider than own diameter. ▶ Mundane damage
+        immunity: Can only be harmed by magical attacks. ▶ Harm cold-based
+        creatures: Inflict extra 1d8 damage. Water Elemental Huge waves of
+        water. AC 21, HD 16* (72hp), Att 1 &times; blow (3d8), Bonus +11, MV 60'
+        (20') / 180' (60') swimming, SV 7, ML 10, AL Neutral, XP 2,300 ▶ Size:
+        8' tall, 32' across. ▶ Water-bound: Must remain within 60' of water. ▶
+        Mundane damage immunity: Can only be harmed by magical attacks. ▶ Harm
+        creatures in water: Inflict extra 1d8 damage.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: cne859n73tcmn55h
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920815
+      modifiedTime: 1754273920815
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.cne859n73tcmn55h'
+  - name: Cloudkill
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: 6 turns Range: 30' A poisonous fog streams from the caster's
+        fingertips, filling a 30' diameter area. ▶ Movement: The fog moves at
+        60' per turn (20' per round), driven by the wind (or away from the
+        caster, in still conditions). ▶ Sinking: Because the fog is heavier than
+        air, it sinks to the lowest level of the land, even pouring down den or
+        sinkhole openings. ▶ Damage: All creatures in contact with the vapours
+        suffer 1 hit point of damage per round of contact. ▶ Creatures with less
+        than 5 Hit Dice: Must also make a physical save (once per round of
+        contact) or die.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: 71f8za7nz2v42nvw
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920815
+      modifiedTime: 1754273920815
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.71f8za7nz2v42nvw'
+  - name: Fire Ball
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: Instant Range: 240' Flame streaks towards a point within range
+        and detonates in a 20' radius sphere. ▶ Damage: Creatures caught in the
+        fire ball suffer 1d6 damage per level of the caster, with a successful
+        Evasion save indicating half damage
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: 9oxoe7k7sib67u47
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920815
+      modifiedTime: 1754273920815
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.9oxoe7k7sib67u47'
+  - name: Fly
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: [[1d6 turns]] +1 per level Range: The caster or a creature
+        touched The subject gains the ability to fly through the air. ▶ Movement
+        rate: Up to 360' (120'). ▶ Free movement: Is possible in any direction,
+        including the ability to levitate and to hover in mid-air.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: x8nh4z1vcfaxh825
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920815
+      modifiedTime: 1754273920815
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.x8nh4z1vcfaxh825'
+  - name: Protection from Evil (Mage)
+    type: item
+    img: systems/wwn/assets/default/spell.png
+    system:
+      description: >-
+        Duration: 6 turns Range: The caster This spell wards the caster from
+        attacks by creatures of another alignment, as follows: ▶ Bonuses: The
+        caster gains a +1 bonus to saving throws against attacks or special
+        abilities of affected creatures. ▶ Affected creatures' attacks: Against
+        the caster are penalised by &ndash;1. ▶ Enchanted, constructed, or
+        summoned creatures: The spell additionally prevents such creatures from
+        attacking the caster in melee, though they may still make ranged
+        attacks. If the caster engages such a creature in melee, this protection
+        is broken (the caster still gains the save and attack bonuses mentioned
+        above).
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: mpp961n3i0l0nw47
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920815
+      modifiedTime: 1754273920815
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!93ok00gbdwypubht.mpp961n3i0l0nw47'
+_key: '!actors!93ok00gbdwypubht'
+

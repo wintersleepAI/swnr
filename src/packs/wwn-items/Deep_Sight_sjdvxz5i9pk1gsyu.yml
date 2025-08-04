@@ -1,0 +1,46 @@
+name: Deep Sight
+type: item
+sort: 0
+system:
+  description: >-
+    This substance allows an imbiber to briefly subconsciously integrate with a
+    Deep's basic structure, gaining an insight into the general layout of
+    proximate areas. The GM gives the PC a map of the four nearest rooms of
+    interest to the PC and instructions on how to get to them. For places with a
+    detailed map, a radius of 100' is discerned. Each room's original purpose is
+    revealed in a few words, though nothing can be discerned of its contents.
+    This elixir will work inside any structure that was intentionally
+    constructed by an intelligent being.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 0
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
+_id: sjdvxz5i9pk1gsyu
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456989
+  modifiedTime: 1754277456989
+  lastModifiedBy: null
+  exportSource: null
+folder: jXrFh0x6b5Auj9IZ
+flags: {}
+effects: []
+img: icons/tools/laboratory/vial-orange.webp
+ownership:
+  default: 0
+_key: '!items!sjdvxz5i9pk1gsyu'
+

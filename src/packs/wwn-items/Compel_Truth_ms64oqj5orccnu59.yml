@@ -1,0 +1,50 @@
+name: Compel Truth
+type: power
+sort: 0
+system:
+  description: >-
+    The diviner compels a person to drink a particular brew, participate in a
+    specific ritual, or otherwise undergo a scene-long ordeal. Afterwards, the
+    diviner may ask the target a single question and the GM secretly rolls a
+    Cha/Magic skill check against a difficulty of the target's Morale+1, or
+    level+6 for PCs. On a success, the subject must answer the question
+    truthfully and fully. On a failure, they may give any answer they wish. The
+    same or substantially same question may not be asked twice with this art.
+  favorite: false
+  subType: arcane
+  source: Wise
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Wise
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: ms64oqj5orccnu59
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456765
+  modifiedTime: 1754277456765
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/wise_art.png
+ownership:
+  default: 0
+_key: '!items!ms64oqj5orccnu59'
+

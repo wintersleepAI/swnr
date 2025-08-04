@@ -1,0 +1,53 @@
+name: Mirror Image
+type: power
+sort: 3200000
+system:
+  description: >-
+    Duration: 6 turns Range: The caster [[1d4]] illusory duplicate(s) of the
+    caster appear. ▶ Behaviour: The mirror images look and behave exactly as the
+    caster. ▶ Attacks on the caster: Destroy one of the mirror images (even if
+    the attack misses).
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 2
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 6yvzfzdrn63u9zof
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457051
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!6yvzfzdrn63u9zof'
+

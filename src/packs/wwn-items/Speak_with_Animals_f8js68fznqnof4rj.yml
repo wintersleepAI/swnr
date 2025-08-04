@@ -1,0 +1,56 @@
+name: Speak with Animals
+type: power
+sort: 400000
+system:
+  description: >-
+    Duration: 6 turns Range: 30' The caster can communicate with one type of
+    animal within range when the spell is cast. ▶ Type of animal: Ordinary
+    animals or giant versions of ordinary animals may be targeted. ▶ Questions:
+    The caster can ask questions of and receive answers from animals of the
+    chosen kind, although the spell doesn't make animals any more friendly or
+    cooperative than normal (a reaction roll may be required). ▶ Services: If an
+    animal is friendly toward the caster, it may perform some favour or service.
+  favorite: false
+  subType: arcane
+  source: Cleric
+  level: 2
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 6 turns
+  save: None
+  range: 30'
+  skill: null
+_id: f8js68fznqnof4rj
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457060
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!f8js68fznqnof4rj'
+

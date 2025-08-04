@@ -1,0 +1,46 @@
+name: Summoned Hunter
+type: asset
+sort: 0
+system:
+  description: >-
+    A skilled sorcerer has summoned a magical beast or mentally bound a usefully
+    disposable assassin into the faction's service.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 4
+    max: 4
+  rating: 1
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: rkb0y17rz0ssw0fb
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456960
+  modifiedTime: 1754277456960
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/force.png
+ownership:
+  default: 0
+_key: '!items!rkb0y17rz0ssw0fb'
+

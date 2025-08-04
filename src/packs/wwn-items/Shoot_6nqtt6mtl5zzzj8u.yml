@@ -1,0 +1,39 @@
+name: Shoot
+type: item
+sort: 0
+system:
+  description: >-
+    Fire a bow or crossbow or throw a hurled weapon. Maintain ranged weaponry
+    and fletch arrows.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 0
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+_id: 6nqtt6mtl5zzzj8u
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457114
+  modifiedTime: 1754277457114
+  lastModifiedBy: null
+  exportSource: null
+folder: 9gsuaJcejB0mhHRg
+flags: {}
+effects: []
+img: /systems/wwn/assets/skills/shoot.png
+ownership:
+  default: 0
+_key: '!items!6nqtt6mtl5zzzj8u'
+

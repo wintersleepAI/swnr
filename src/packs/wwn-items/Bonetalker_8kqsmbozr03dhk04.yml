@@ -1,0 +1,51 @@
+name: Bonetalker
+type: power
+sort: 0
+system:
+  description: >-
+    You can see and communicate with any undead creature, regardless of a shared
+    language or the creature's natural state of invisibility. By Committing
+    Effort for the scene you can sense the surface thoughts of any visible
+    undead, including an impression of any commands or behavior it has been
+    ordered to carry out. Unintelligent undead will not attack you or your
+    companions unless specifically compelled to do so by a command or a master.
+    Even intelligent undead will generally pause at least for an initial parley
+    before attacking.
+  favorite: false
+  subType: arcane
+  source: Necromancer
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Necromancer
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 8kqsmbozr03dhk04
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456834
+  modifiedTime: 1754277456834
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/necromancer_art.png
+ownership:
+  default: 0
+_key: '!items!8kqsmbozr03dhk04'
+

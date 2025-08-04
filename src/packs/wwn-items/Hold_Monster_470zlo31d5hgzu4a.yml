@@ -1,0 +1,54 @@
+name: Hold Monster
+type: power
+sort: 5300000
+system:
+  description: >-
+    Duration: 6 turns +1 per level Range: 120' This spell causes one or more
+    creatures to be paralysed if they fail a Mental save. It may be cast in two
+    ways: Against an individual: The target's saving throw is penalised by
+    &ndash;2. Against a group: 1d4 individuals in the group are targeted.
+    Restrictions: Undead are not affected.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 5
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 6 turns + 1 / level
+  save: None
+  range: 120'
+  skill: null
+_id: 470zlo31d5hgzu4a
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457065
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!470zlo31d5hgzu4a'
+

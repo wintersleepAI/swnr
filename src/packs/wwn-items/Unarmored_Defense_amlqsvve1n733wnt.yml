@@ -1,0 +1,45 @@
+name: Unarmored Defense
+type: power
+sort: 0
+system:
+  description: >-
+    When not wearing armor or using a shield, your base AC is equal to 13 plus
+    half your character level, rounded down.
+  favorite: false
+  subType: arcane
+  source: Vowed
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Vowed
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: amlqsvve1n733wnt
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456832
+  modifiedTime: 1754277456832
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/vowed_art.png
+ownership:
+  default: 0
+_key: '!items!amlqsvve1n733wnt'
+

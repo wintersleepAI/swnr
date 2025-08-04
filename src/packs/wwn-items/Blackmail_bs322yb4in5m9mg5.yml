@@ -1,0 +1,47 @@
+name: Blackmail
+type: asset
+sort: 0
+system:
+  description: >-
+    When a Blackmail asset is in a location, hostile factions can't roll more
+    than one die during Attacks made by or against them there, even if they have
+    tags or Assets that usually grant bonus dice.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 4
+    max: 4
+  rating: 2
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: bs322yb4in5m9mg5
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456946
+  modifiedTime: 1754277456946
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/cunning.png
+ownership:
+  default: 0
+_key: '!items!bs322yb4in5m9mg5'
+

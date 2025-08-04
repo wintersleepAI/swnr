@@ -1,0 +1,61 @@
+name: Prudentially Transient Abnegation of Life
+type: power
+sort: 0
+system:
+  description: >-
+    This spell may be cast as an Instant action, even if another spell has been
+    cast the same round, and targets either the caster or a willing visible
+    target. It can only be used in immediate response to an injury that reduces
+    the target to zero hit points. When it does, the target suffers dramatic and
+    ostentatiously obvious death, with mortal blows cleaving them asunder or
+    gorily butchering them. They are dead to all mundane or magical examination.
+    Up to two hours later however, at the target's discretion, the various
+    remains of the target flow back together and restore their body with two hit
+    points per caster level and two additional System Strain points gained. If
+    the target's remains are intentionally scattered widely, incinerated, or
+    entirely eaten, however, they cannot revive. The subject is aware of their
+    surroundings while "dead".
+  favorite: false
+  subType: arcane
+  source: High Mage
+  level: 2
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Up to 2 hours
+  save: None
+  range: Visible
+  skill: null
+_id: h29k12apfajvne1z
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456905
+  modifiedTime: 1754277456905
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!h29k12apfajvne1z'
+

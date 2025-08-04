@@ -1,0 +1,47 @@
+name: Front Merchant
+type: asset
+sort: 0
+system:
+  description: >-
+    Whenever the Front Merchant successfully Attacks an enemy Asset, the target
+    faction loses 1 Treasure, if they have any, and the Front Merchant's owner
+    gains it. Such a loss can occur only once per turn.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 3
+    max: 3
+  rating: 1
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: 7ff0wkxcwtlqrhsx
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456937
+  modifiedTime: 1754277456937
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/wealth.png
+ownership:
+  default: 0
+_key: '!items!7ff0wkxcwtlqrhsx'
+

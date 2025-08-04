@@ -1,0 +1,57 @@
+name: Shield, Small
+type: armor
+sort: 0
+system:
+  description: >-
+    Shields come in two general varieties. Small ones, often made of costlier
+    metal, can be strapped to the wearer's arm and allow them to hold and
+    manipulate objects with that hand, albeit not wield a weapon with it. Larger
+    shields are of cheaper wood and require a good grip. A small shield user has
+    a base AC of 13, while a large shield user has a base AC of 14. Unlike other
+    armor, however, if the user is already wearing equal or better armor the
+    shield grants a +1 bonus to their AC. Shields allow the bearer to ignore the
+    first instance of Shock they might otherwise suffer in a round.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 1
+  cost: 20
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 10
+  shield: true
+  use: false
+  meleeAc: 13
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+  baseAc: 13
+_id: 5trar78qv0ez4hrh
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456693
+  modifiedTime: 1754277456693
+  lastModifiedBy: null
+  exportSource: null
+folder: MiJwkaqEfKd6620L
+flags: {}
+effects: []
+img: icons/equipment/shield/shield-round-boss-wood-brown.webp
+ownership:
+  default: 0
+_key: '!items!5trar78qv0ez4hrh'
+
