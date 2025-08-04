@@ -31,15 +31,11 @@ system:
   level: 2
   source: telekInesIs
   consumptions:
-   [
-     {
-     type: "poolResource",
-     resourceName: "Effort",
-     subResource: "Psychic",
-     cadence: "scene",
-     usesCost: 1,
-     }
-   ]
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: scene
+      usesCost: 1
   roll: 2d12
 effects: []
 ownership:

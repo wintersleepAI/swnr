@@ -171,6 +171,23 @@
       "type": "Item"
     },
     {
+      "name": "cwn-actors",
+      "label": "Cwn actors",
+      "system": "swnr",
+      "type": "Actor"
+    },
+    {
+      "name": "cwn-roll-tables",
+      "label": "Cwn Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"},
+    {
+      "name": "cwn-journals",
+      "label": "Cwn Journals",
+      "system": "swnr",
+      "type": "JournalEntry"
+    },
+    {
       "name": "cwn-drones",
       "label": "Cwn Drones",
       "system": "swnr",
@@ -393,6 +410,42 @@
       "type": "RollTable"
     },
     {
+      "name": "swn-items",
+      "label": "SWN Items",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "swn-actors",
+      "label": "SWN Actors",
+      "system": "swnr",
+      "type": "Actor"
+    },
+    {
+      "name": "swn-roll-tables",
+      "label": "SWN Roll Tables",
+      "system": "swnr",
+      "type": "RollTable"
+    },
+    {
+      "name": "swn-journals",
+      "label": "SWN Journals",
+      "system": "swnr",
+      "type": "JournalEntry"
+    },
+    {
+      "name": "wwn-roll-tables",
+      "label": "WWN Roll Tables",
+      "type": "RollTable",
+      "system": "swnr"
+    },
+    {
+      "name": "wwn-journals",
+      "label": "WWN Journals",
+      "type": "JournalEntry",
+      "system": "swnr"
+    },        
+    {
       "name": "wwn-items",
       "label": "WWN Items",
       "type": "Item",
@@ -403,7 +456,19 @@
       "label": "WWN Actors",
       "type": "Actor",
       "system": "swnr"
-    },    
+    },
+    {
+      "name": "awn-actors",
+      "label": "AWN Actors",
+      "type": "Actor",
+      "system": "swnr"
+    },
+    {
+      "name": "awn-journals",
+      "label": "AWN Journals",
+      "type": "JournalEntry",
+      "system": "swnr"
+    },
     {
       "name": "awn-items",
       "label": "AWN Items",
@@ -470,17 +535,17 @@
       ]
     },
     {
-      "name": "CWN",
+      "name": "CWN-legacy",
       "sorting": "a",
       "color": "#cccccc",
       "packs": [
+        "cwn-actors",
         "cwn-armor",
         "cwn-cyberware",
         "cwn-drone-fittings",
         "cwn-drones",
         "cwn-edges",
         "cwn-foci",
-        "cwn-items",
         "cwn-pharmaceuticals",
         "cwn-program",
         "cwn-vehicle-fittings",
@@ -522,12 +587,47 @@
       ]
     },
     {
+      "name": "WWN",
+      "sorting": "a",
+      "color": "#FF9900",
+      "packs": [
+        "wwn-actors",
+        "wwn-items",
+        "wwn-roll-tables",
+        "wwn-journals"
+      ]
+    },
+    {
+      "name": "SWN",
+      "sorting": "a",
+      "color": "#FF6600",
+      "packs": [
+        "swn-actors",
+        "swn-items",
+        "swn-roll-tables",
+        "swn-journals"
+      ]
+    },
+    {
+      "name": "CWN",
+      "sorting": "a",
+      "color": "#00FF00",
+      "packs": [
+        "cwn-actors",
+        "cwn-items",
+        "cwn-roll-tables",
+        "cwn-journals"
+      ] 
+    },
+    {
       "name": "AWN",
       "sorting": "a",
       "color": "#FFCC00",
       "packs": [
         "awn-items",
-        "awn-roll-tables"
+        "awn-roll-tables",
+        "awn-actors",
+        "awn-journals"
       ]
     }
   ],

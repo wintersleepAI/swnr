@@ -36,15 +36,11 @@ system:
   source: teleportation
   save: mental
   consumptions:
-   [
-     {
-     type: "poolResource",
-     resourceName: "Effort",
-     subResource: "Psychic",
-     cadence: "day",
-     usesCost: 1,
-     }
-   ]
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
 effects: []
 ownership:
   default: 0

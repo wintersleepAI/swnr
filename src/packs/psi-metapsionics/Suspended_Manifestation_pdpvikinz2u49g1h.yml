@@ -29,15 +29,11 @@ system:
   level: 2
   source: metapsionics
   consumptions:
-    [
-      {
-      type: "poolResource",
-      resourceName: "Effort",
-      subResource: "Psychic",
-      cadence: "day",
-      usesCost: 1,
-      }
-    ]
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
 effects: []
 ownership:
   default: 0

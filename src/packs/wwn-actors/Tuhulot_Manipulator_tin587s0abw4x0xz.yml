@@ -1,0 +1,295 @@
+name: Tuhulot Manipulator
+type: npc
+sort: 8100000
+system:
+  ab: 12
+  armorType: street
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  baseAc: 15
+  hitDice: 10
+  moralScore: 7
+  saves: 10
+  skillBonus: 0
+  speed: 50
+  biography: >-
+    Tuhulot have several magical powers specific to their kind, most usable as a
+    Main Action three times per day.
+  species: monster
+_id: tin587s0abw4x0xz
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754261531011
+  modifiedTime: 1754262349549
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: yuCSyWQzWJj1hYKH
+flags: {}
+effects: []
+prototypeToken:
+  name: Tuhulot Manipulator
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/mystery-man.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+img: icons/svg/mystery-man.svg
+items:
+  - name: Distorted Space-Time
+    type: weapon
+    img: systems/wwn/assets/default/weapon.png
+    system:
+      description: ''
+      cost: 0
+      damage: 2d8
+      range:
+        normal: 100
+        max: 100
+      shock:
+        dmg: 4
+        ac: 15
+      ammo:
+        max: 0
+        type: ammo
+        burst: false
+      isTwoHanded: false
+      stat: str
+      skill: punch
+      ab: 0
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    _id: jyhinqzzhxhdqx43
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754261503146
+      modifiedTime: 1754261503146
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!tin587s0abw4x0xz.jyhinqzzhxhdqx43'
+  - name: Scrying Gaze
+    type: item
+    img: systems/wwn/assets/default/art.png
+    system:
+      description: >-
+        Scrying gaze allows them to observe a particular point within ten miles
+        for up to a scene as if they were standing there, assuming magical wards
+        don't forfend them.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: 2ymipzscjlwudyxs
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754261503146
+      modifiedTime: 1754261503146
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!tin587s0abw4x0xz.2ymipzscjlwudyxs'
+  - name: Blandishing Voice
+    type: item
+    img: systems/wwn/assets/default/art.png
+    system:
+      description: >-
+        Blandishing voice bends the mind of a single target on a failed Mental
+        save, making it friendly toward the Tuhulot until the creature does
+        something obviously hostile.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: uuquavlym46xb3xa
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754261503146
+      modifiedTime: 1754261503146
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!tin587s0abw4x0xz.uuquavlym46xb3xa'
+  - name: Sidewards Step
+    type: item
+    img: systems/wwn/assets/default/art.png
+    system:
+      description: >-
+        Sidewards step lets them teleport to any location within a mile they've
+        occupied before, provided neither their current location nor their
+        destination is directly illuminated by sunlight.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: ggug1mnkgm1efpr2
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754261503146
+      modifiedTime: 1754261503146
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!tin587s0abw4x0xz.ggug1mnkgm1efpr2'
+  - name: Soul Consumption
+    type: item
+    img: systems/wwn/assets/default/art.png
+    system:
+      description: >-
+        Soul consumption power allows them to eat the memories and identity of a
+        helpless sentient victim over the course of a torturous hour. The victim
+        becomes a passive meat puppet for the Tuhulot, carrying out its orders
+        with total obedience and human levels of intellect, but with all trace
+        of its former personality erased. The only way to cure the victim is for
+        the Tuhulot to give back the soul, a thing which it will do only for a
+        suitable price.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: 3e73lkd0j0gotal7
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754261503146
+      modifiedTime: 1754261503146
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!tin587s0abw4x0xz.3e73lkd0j0gotal7'
+ownership:
+  default: 0
+_key: '!actors!tin587s0abw4x0xz'
+

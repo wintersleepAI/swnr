@@ -27,15 +27,11 @@ system:
   level: 1
   source: telepathy
   consumptions:
-   [
-     {
-     type: "poolResource",
-     resourceName: "Effort",
-     subResource: "Psychic",
-     cadence: "scene",
-     usesCost: 1,
-     }
-   ]
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: scene
+      usesCost: 1
 effects: []
 ownership:
   default: 0

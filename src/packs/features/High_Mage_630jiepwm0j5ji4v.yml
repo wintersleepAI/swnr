@@ -10,7 +10,7 @@ system:
     - resourceName: Slots
       subResource: SpellsCast
       cadence: day
-      formula: 'Math.ceiling(@level/2)'
+      formula: Math.ceiling(@level/2)
       condition: ''
     - resourceName: Slots
       subResource: SpellsPrepared
@@ -30,13 +30,15 @@ system:
     - resourceName: Effort
       subResource: HighMage
       cadence: day
-      formula: 'Math.max(1, @skills.magic.rank + Math.max(@stats.int.mod, @stats.cha.mod))'
+      formula: >-
+        Math.max(1, @skills.magic.rank + Math.max(@stats.int.mod,
+        @stats.cha.mod))
       condition: ''
 _id: 630jiepwm0j5ji4v
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: "13.346"
+  coreVersion: '13.346'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1753952624087
@@ -45,8 +47,9 @@ _stats:
   exportSource: null
 folder: null
 flags: {}
-_key: "!items!630jiepwm0j5ji4v"
 effects: []
 img: icons/svg/item-bag.svg
 ownership:
   default: 0
+_key: '!items!630jiepwm0j5ji4v'
+

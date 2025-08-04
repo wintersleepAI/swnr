@@ -28,15 +28,12 @@ system:
     loaded laser pistol.</p>
   level: 1
   source: precognition
-  consumptions: [
-      {
-      type: "poolResource",
-      resourceName: "Effort",
-      subResource: "Psychic",
-      cadence: "day",
-      usesCost: 1,
-      }
-    ]
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
 effects: []
 ownership:
   default: 0

@@ -1,3 +1,3 @@
-name,type,description,cost,ac,melee_ac,trauma_penalty,soak_value,soak_max,subtle,shield,encumbrance,quality,tl
-"Combat Armor",armor,"Standard military protection for infantry operations",2000,16,16,1,5,5,false,false,2,stock,3
-"Stealth Suit",armor,"Low-profile armor designed for covert operations",5000,14,14,0,0,0,true,false,1,pretech,4
+name,type,description,cost,ac,melee_ac,trauma_penalty,soak_value,soak_max,subtle,shield,encumbrance,quality,tl,folder
+"Combat Armor",armor,"Standard military protection for infantry operations",2000,16,16,1,5,5,false,false,2,stock,3,
+"Stealth Suit",armor,"Low-profile armor designed for covert operations",5000,14,14,0,0,0,true,false,1,pretech,4,

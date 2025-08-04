@@ -29,15 +29,11 @@ system:
   source: telepathy
   save: mental
   consumptions:
-    [
-      {
-      type: "poolResource",
-      resourceName: "Effort",
-      subResource: "Psychic",
-      cadence: "day",
-      usesCost: 1,
-      }
-    ]
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
   roll: 6d6
 effects: []
 ownership:

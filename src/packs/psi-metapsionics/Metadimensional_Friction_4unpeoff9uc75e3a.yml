@@ -27,15 +27,11 @@ system:
   level: 3
   source: metapsionics
   consumptions:
-   [
-     {
-     type: "poolResource",
-     resourceName: "Effort",
-     subResource: "Psychic",
-     cadence: "scene",
-     usesCost: 1,
-     }
-   ]
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: scene
+      usesCost: 1
   roll: 3d8
   save: mental
 effects: []

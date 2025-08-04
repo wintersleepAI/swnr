@@ -1,4 +1,4 @@
-name,type,description,content,img
+name,type,description,content,img,folder
 "Sample Journal Entry",journal,"A basic journal entry example","# Sample Journal Entry
 
 This is the main content of the journal entry. You can include multiple paragraphs, formatting, and detailed information.
@@ -11,7 +11,7 @@ Additional content can be added here.
 
 ---
 
-**Note:** Use this template to create journal entries with rich content.",icons/svg/book.svg
+**Note:** Use this template to create journal entries with rich content.",icons/svg/book.svg,
 "Adventure Location",journal,"A detailed location for adventures","# The Forgotten Tower
 
 ## Description
@@ -34,7 +34,7 @@ Built centuries ago by the mad wizard Kaleth, the tower was abandoned after his 
 ## Hooks
 - Merchant caravan reports strange lights
 - Local lord offers reward for investigation
-- Sage seeks ancient tome rumored to be inside",icons/svg/castle.svg
+- Sage seeks ancient tome rumored to be inside",icons/svg/castle.svg,
 "NPC Profile",journal,"Template for detailed NPC information","# Captain Sera Blackwater
 
 ## Basic Information
@@ -69,4 +69,4 @@ Former naval officer who turned to smuggling after being framed for corruption b
 ## Plot Hooks
 - Needs discrete passage arranged
 - Has information about Imperial movements
-- Owes favor to local crime boss",icons/svg/mystery-man.svg
+- Owes favor to local crime boss",icons/svg/mystery-man.svg,

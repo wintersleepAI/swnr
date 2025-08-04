@@ -14,20 +14,20 @@ const OUTPUT_DIR = path.join(__dirname, "output");
 
 // CSV headers for different types
 const CSV_HEADERS = {
-    weapon: "name,type,description,cost,damage,range_normal,range_max,shock_damage,shock_ac,mag,ammo_type,burst,two_handed,stat,skill,attack_bonus,encumbrance,quality,tl,img",
-    armor: "name,type,description,cost,ac,melee_ac,trauma_penalty,soak_value,soak_max,subtle,shield,encumbrance,quality,tl,img",
-    item: "name,type,description,cost,quantity,encumbrance,location,quality,tl,img",
-    spell: "name,type,description,level,subtype,source,consumptions,duration,range,save,img",
-    power: "name,type,description,level,subtype,source,consumptions,duration,range,save,img",
-    feature: "name,type,description,level,feature_type,pools_granted,img",
-    focus: "name,type,description,level,feature_type,pools_granted,img",
-    art: "name,type,description,level,subtype,source,consumptions,duration,range,save,img",
-    asset: "name,type,description,category,asset_type,health,health_max,rating,maintenance,income,base_of_influence,img",
-    skill: "name,type,description,img",
-    npc: "name,type,biography,species,hd,hp,hp_max,ac,saves_evasion,saves_mental,saves_physical,saves_luck,morale,ab,movement,items,img",
-    monster: "name,type,biography,species,hd,hp,hp_max,ac,saves_evasion,saves_mental,saves_physical,saves_luck,morale,ab,movement,items,img",
-    journal: "name,type,description,content,img",
-    rolltable: "name,type,description,formula,results,img"
+    weapon: "name,type,description,cost,damage,range_normal,range_max,shock_damage,shock_ac,mag,ammo_type,burst,two_handed,stat,skill,attack_bonus,encumbrance,quality,tl,img,folder",
+    armor: "name,type,description,cost,ac,melee_ac,trauma_penalty,soak_value,soak_max,subtle,shield,encumbrance,quality,tl,img,folder",
+    item: "name,type,description,cost,quantity,encumbrance,location,quality,tl,img,folder",
+    spell: "name,type,description,level,subtype,source,consumptions,duration,range,save,img,folder",
+    power: "name,type,description,level,subtype,source,consumptions,duration,range,save,img,folder",
+    feature: "name,type,description,level,feature_type,pools_granted,img,folder",
+    focus: "name,type,description,level,feature_type,pools_granted,img,folder",
+    art: "name,type,description,level,subtype,source,consumptions,duration,range,save,img,folder",
+    asset: "name,type,description,category,asset_type,health,health_max,rating,maintenance,income,base_of_influence,img,folder",
+    skill: "name,type,description,img,folder",
+    npc: "name,type,biography,species,hd,hp,hp_max,ac,saves_evasion,saves_mental,saves_physical,saves_luck,morale,ab,movement,items,img,folder",
+    monster: "name,type,biography,species,hd,hp,hp_max,ac,saves_evasion,saves_mental,saves_physical,saves_luck,morale,ab,movement,items,img,folder",
+    journal: "name,type,description,content,img,folder",
+    rolltable: "name,type,description,formula,results,img,folder"
 };
 
 function generateRandomID(length = 16) {
@@ -155,8 +155,9 @@ function mapWwnWeaponToSwnr(wwnWeapon) {
 function mapWwnArmorToSwnr(wwnArmor) {
     const system = wwnArmor.system;
     
-    // WWN uses aac.value + aac.mod for total AC, not the separate ac field
-    const totalAc = (system.aac?.value || 10) + (system.aac?.mod || 0);
+    // Correctly calculate total AC, allowing for a base of 0
+    const baseAc = system.aac?.value;
+    const totalAc = (baseAc !== undefined ? baseAc : 10) + (system.aac?.mod || 0);
     
     return {
         name: wwnArmor.name,

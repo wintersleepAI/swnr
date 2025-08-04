@@ -11,12 +11,12 @@ system:
       subResource: Psychic
       cadence: day
       formula: 1+@skills.psychic.highest+Math.max(@stats.wis.mod,@stats.con.mod)
-      condition: ""
+      condition: ''
 _id: nh277bhp6n5m0jna
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: "13.346"
+  coreVersion: '13.346'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1753952624082
@@ -25,8 +25,9 @@ _stats:
   exportSource: null
 folder: null
 flags: {}
-_key: "!items!nh277bhp6n5m0jna"
 effects: []
 img: icons/svg/item-bag.svg
 ownership:
   default: 0
+_key: '!items!nh277bhp6n5m0jna'
+

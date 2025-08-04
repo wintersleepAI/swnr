@@ -443,6 +443,7 @@ function csvRowToYaml(row, sortIndex) {
     const yamlData = {
         name: row.name,
         type: type,
+        folder: row.folder || null, // Add folder field
         sort: sortIndex * 100000,
         system: mapCsvFieldsToSystem(row, type),
         ...metadata

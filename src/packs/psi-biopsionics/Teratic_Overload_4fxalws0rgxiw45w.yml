@@ -33,15 +33,11 @@ system:
   level: 3
   roll: 3d6
   consumptions:
-    [
-      {
-      type: "poolResource",
-      resourceName: "Effort",
-      subResource: "Psychic",
-      cadence: "scene",
-      usesCost: 1,
-      }
-    ]
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: scene
+      usesCost: 1
   save: physical
   source: biopsionics
 effects: []

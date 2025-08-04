@@ -1,0 +1,206 @@
+name: Legion Scytheman
+type: npc
+sort: 4800000
+system:
+  ab: 5
+  armorType: street
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  baseAc: 18
+  hitDice: 3
+  moralScore: 12
+  saves: 14
+  skillBonus: 0
+  speed: 30
+  biography: >-
+    Scythemen are the line troops of the Legion, each one equipped with a large
+    bronze scythe or iron crossbow. Note: All Brass Legion automatons are immune
+    to damage from non-magical weapons or minor environmental hazards.
+  species: monster
+_id: whctlaqnzdsa54ne
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754261530955
+  modifiedTime: 1754262323052
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: yuCSyWQzWJj1hYKH
+flags: {}
+effects: []
+prototypeToken:
+  name: Legion Scytheman
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/mystery-man.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+img: icons/svg/mystery-man.svg
+items:
+  - name: Bronze Scythe
+    type: weapon
+    img: systems/wwn/assets/default/weapon.png
+    system:
+      description: ''
+      cost: 0
+      damage: 1d10+2
+      range:
+        normal: 0
+        max: 0
+      shock:
+        dmg: 5
+        ac: 15
+      ammo:
+        max: 0
+        type: ammo
+        burst: false
+      isTwoHanded: false
+      stat: str
+      skill: punch
+      ab: 0
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    _id: 5993q9056vguq3fb
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754261503143
+      modifiedTime: 1754261503143
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!whctlaqnzdsa54ne.5993q9056vguq3fb'
+  - name: Iron Crossbow
+    type: weapon
+    img: systems/wwn/assets/default/weapon.png
+    system:
+      description: ''
+      cost: 0
+      damage: 1d10+2
+      range:
+        normal: 100
+        max: 300
+      shock:
+        dmg: 0
+        ac: 15
+      ammo:
+        max: 0
+        type: ammo
+        burst: false
+      isTwoHanded: false
+      stat: str
+      skill: punch
+      ab: 0
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    _id: 23ei783nzazuh5au
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754261503143
+      modifiedTime: 1754261503143
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!whctlaqnzdsa54ne.23ei783nzazuh5au'
+ownership:
+  default: 0
+_key: '!actors!whctlaqnzdsa54ne'
+
