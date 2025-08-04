@@ -1,0 +1,157 @@
+name: Murder Mission
+description: >-
+  <ul><li><p>1. How Alert Are They?</p></li><li><p>2. What kind of patron put up
+  the job?</p></li><li><p>3. Particular Complications To
+  Murder</p></li><li><p>4. How Exposed Is the Target?</p></li><li><p>5. Why Must
+  They Die?</p></li><li><p>6. Twists to the Situation</p></li></ul>
+results:
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: s1ztL9WojPU4hCIC
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: 'Murder: How Alert Are They?'
+    documentUuid: RollTable.441BRrI420h46M5A
+    description: ''
+    _key: '!tables.results!odM6HDqwHebMCJMU.s1ztL9WojPU4hCIC'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: qhMKT5hiA4DNsrwo
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: 'Murder: What kind of patron put up the job?'
+    documentUuid: RollTable.EAEC58fTE1VGzWAQ
+    description: ''
+    _key: '!tables.results!odM6HDqwHebMCJMU.qhMKT5hiA4DNsrwo'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: ibJrSaboA1Z59NEd
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: 'Murder: Particular Complications To Murder'
+    documentUuid: RollTable.m8vSR5I4BhnQ6YFM
+    description: ''
+    _key: '!tables.results!odM6HDqwHebMCJMU.ibJrSaboA1Z59NEd'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: UTqXt6lr901sPADn
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: 'Murder: How Exposed Is the Target?'
+    documentUuid: RollTable.XECaF642ElVUisB5
+    description: ''
+    _key: '!tables.results!odM6HDqwHebMCJMU.UTqXt6lr901sPADn'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: r1AXO6I8L664ohtl
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: 'Murder: Why Must They Die?'
+    documentUuid: RollTable.WHe2txkK03I0VQhT
+    description: ''
+    _key: '!tables.results!odM6HDqwHebMCJMU.r1AXO6I8L664ohtl'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: RuQDFNHB3VBQxWgf
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: 'Murder: Twists to the Situation'
+    documentUuid: RollTable.br7VEvItXWSBA7Bu
+    description: ''
+    _key: '!tables.results!odM6HDqwHebMCJMU.RuQDFNHB3VBQxWgf'
+formula: 1d1
+_id: odM6HDqwHebMCJMU
+img: icons/svg/d20-grey.svg
+replacement: true
+displayRoll: false
+folder: oIaOQNsh4qvevc7h
+flags:
+  core: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-tables.RollTable.odM6HDqwHebMCJMU
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754272613626
+  modifiedTime: 1754272613626
+  lastModifiedBy: lKC5x4Yf023Bizof
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!tables!odM6HDqwHebMCJMU'
+

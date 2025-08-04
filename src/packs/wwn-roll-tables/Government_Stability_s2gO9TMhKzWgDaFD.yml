@@ -1,0 +1,107 @@
+_id: s2gO9TMhKzWgDaFD
+name: Government-Stability
+img: icons/svg/d20-grey.svg
+description: How Stable is the Government?
+results:
+  - _id: 2BgrK7OruHdB3PB3
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    img: null
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Precarious, its authority questioned by some
+    name: ''
+    _key: '!tables.results!s2gO9TMhKzWgDaFD.2BgrK7OruHdB3PB3'
+  - _id: YFfSfQX59DM3MSAq
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    img: null
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: It has significant problems, but it functions
+    name: ''
+    _key: '!tables.results!s2gO9TMhKzWgDaFD.YFfSfQX59DM3MSAq'
+  - _id: 8U2aI43aZve17AG1
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    img: null
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Relatively stable, with strong legitimacy
+    name: ''
+    _key: '!tables.results!s2gO9TMhKzWgDaFD.8U2aI43aZve17AG1'
+  - _id: LRu0TwkZTmD89SiN
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    img: null
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Stable, able to endure even fierce shocks
+    name: ''
+    _key: '!tables.results!s2gO9TMhKzWgDaFD.LRu0TwkZTmD89SiN'
+formula: 1d4
+replacement: true
+displayRoll: true
+folder: fhkT8z8QarD3U3n2
+flags:
+  better-rolltables: {}
+_stats:
+  compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.s2gO9TMhKzWgDaFD
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754271915093
+  modifiedTime: 1754271915093
+  lastModifiedBy: lKC5x4Yf023Bizof
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!tables!s2gO9TMhKzWgDaFD'
+

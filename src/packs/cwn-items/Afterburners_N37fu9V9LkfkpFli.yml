@@ -1,0 +1,41 @@
+name: Afterburners
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: aPPngDkp3e5tzGZ9
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-vehicle-fittings.Item.0z69n7o4mnlhkrgs
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267290515
+  modifiedTime: 1754267290515
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 5000
+  description: >-
+    Once per scene, as an On Turn action, boost the vehicle's Speed by 1 for
+    five rounds.
+  effect: Boost Speed briefly in combat
+  mass: 2
+  minClass: fighter
+  power: 1
+  type: vehicle
+  favorite: false
+  tl: 4
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  broken: false
+  destroyed: false
+  juryRigged: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: N37fu9V9LkfkpFli
+sort: 0
+_key: '!items!N37fu9V9LkfkpFli'
+

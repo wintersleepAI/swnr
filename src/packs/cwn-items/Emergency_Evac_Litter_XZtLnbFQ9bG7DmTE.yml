@@ -1,0 +1,49 @@
+name: Emergency Evac Litter
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: 4ctWevVXyy54aHh0
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.7f7qi5yby2d4ss4a
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266949107
+  modifiedTime: 1754266949107
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 0
+  description: >-
+    Functioning only for ground based drones of Enc 3 or greater, the drone is
+    equipped with a retractable litter that can fit one human patient, along
+    with manipulators sufficient to get a prone victim onto the litter with a
+    Main Action. Onboard meds allow for remote Heal skill checks to stabilize a
+    Mortally Wounded target, with one attempt allowed as part of the loading
+    action. A loaded patient can`t be harmed until the drone is destroyed or
+    opens the litter, but if the drone dies, the patient does too. As a Main
+    Action, the drone can be ordered to autonomously take the patient to a
+    particular location. As an On Turn action, an onboard transmitter can also
+    place a call for medical assistance to a pre-arranged number.
+  mass: 1
+  type: drone
+  favorite: false
+  tl: 4
+  power: 1
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: fighter
+  broken: false
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: XZtLnbFQ9bG7DmTE
+sort: 0
+_key: '!items!XZtLnbFQ9bG7DmTE'
+

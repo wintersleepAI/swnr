@@ -1,0 +1,57 @@
+name: Main Tank Gun
+type: shipWeapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+folder: 8DIMaIn7MuHyezDm
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-vehicle-weapons.Item.3orc8jcpzclar262
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267303980
+  modifiedTime: 1754267303980
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  ammo:
+    max: 1
+    type: ammo
+    value: 1000
+  cost: 100000
+  damage: 4d12
+  description: >-
+    Main tank gun attacks always target AC 10, and anyone within 10 meters of
+    impact takes 1d20 damage if not behind heavy cover. They cannot be mounted
+    on aircraft or anything smaller than a tank. Each round costs $1,000.
+  mass: 4
+  minClass: l
+  power: 1
+  range:
+    max: 3000
+    normal: 1000
+  stat: dex
+  trauma:
+    die: 1d20
+    rating: 4
+    vehicle: true
+  type: vehicle
+  favorite: false
+  tl: 4
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  broken: false
+  destroyed: false
+  juryRigged: false
+  ab: 0
+  hardpoint: 1
+  qualities: ''
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: Nx7tv8i8rHPUc0SQ
+sort: 0
+_key: '!items!Nx7tv8i8rHPUc0SQ'
+

@@ -1,0 +1,54 @@
+name: Lockpicks
+type: item
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: HG41JQWj742oQIK1
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-items.Item.ar5zf1fsc4i6jvpb
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754265737053
+  modifiedTime: 1754265737053
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 100
+  description: >-
+    Both manual lockpicks and a selection of useful electronic shims sufficient
+    to threaten most modern locks.
+  encumbrance: 1
+  noEncReadied: false
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  tl: null
+  location: stowed
+  quality: stock
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: V6yxrPaKM3xcr0H2
+sort: 1200000
+_key: '!items!V6yxrPaKM3xcr0H2'
+

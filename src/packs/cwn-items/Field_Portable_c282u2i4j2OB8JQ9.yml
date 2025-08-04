@@ -1,0 +1,44 @@
+name: Field Portable
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: aPPngDkp3e5tzGZ9
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-vehicle-fittings.Item.plsszrgd0x1qrj3v
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267290515
+  modifiedTime: 1754267290515
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 1000
+  description: >-
+    Only Small or Medium vehicles can take this option, allowing them to be
+    broken down into easily-portable parts packages. Small vehicles turn into 30
+    items of Encumbrance and Medium ones into 150. Disassembly takes 30 minutes
+    for a Small vehicle and 3 hours for a Medium one, with reassembly taking
+    four times as long.
+  effect: Break it down into portable components
+  mass: 2
+  minClass: fighter
+  power: 0
+  type: vehicle
+  favorite: false
+  tl: 4
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  broken: false
+  destroyed: false
+  juryRigged: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: c282u2i4j2OB8JQ9
+sort: 0
+_key: '!items!c282u2i4j2OB8JQ9'
+

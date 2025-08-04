@@ -1,0 +1,40 @@
+name: Sabotage
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: YSjeg2WqEsCIXk0y
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-program.Item.twvk13c71mwq4d4q
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267253955
+  modifiedTime: 1754267253955
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  accessCost: 1
+  cost: 2000
+  description: >-
+    Cause a physical device or cyberware system to damage itself through violent
+    movement or self-destructive current surges. Devices smaller than a car will
+    usually be disabled until repaired. Cyberware users do not take damage, but
+    must make two Physical saves to resist the effect; if they fail both, the
+    targeted system is disabled until the next maintenance, and if they fail
+    one, it's frozen for one round. A device or cyber can be targeted by this
+    Verb only once per scene.
+  selfTerminating: true
+  skillCheckMod: -1
+  target: Device/Cyber
+  type: verb
+  useAffects: Make the target damage itself
+  favorite: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: NCt2AoI3DIfI7ycv
+sort: 400000
+_key: '!items!NCt2AoI3DIfI7ycv'
+

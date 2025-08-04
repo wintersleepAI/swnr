@@ -1,0 +1,42 @@
+name: Targeting Board
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: aPPngDkp3e5tzGZ9
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-vehicle-fittings.Item.u6dh9jemjx19gvck
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267290515
+  modifiedTime: 1754267290515
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 2500
+  description: >-
+    A single unified targeting board allows one gunner to manage up to three
+    vehicle weapons instead of the one gun per gunner that would usually be
+    allowed.
+  effect: One gunner can run up to three guns
+  mass: 1
+  minClass: fighter
+  power: 1
+  type: vehicle
+  favorite: false
+  tl: 4
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  broken: false
+  destroyed: false
+  juryRigged: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: 81mmCotY2uNFRfrS
+sort: 0
+_key: '!items!81mmCotY2uNFRfrS'
+

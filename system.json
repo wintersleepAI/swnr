@@ -111,12 +111,6 @@
   ],
   "packs": [
     {
-      "name": "all-items",
-      "label": "All Items",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
       "name": "ammo-and-power",
       "label": "Ammo And Power",
       "system": "swnr",
@@ -153,24 +147,6 @@
       "type": "Item"
     },
     {
-      "name": "cwn-armor",
-      "label": "Cwn Armor",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-cyberware",
-      "label": "Cwn Cyberware",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-drone-fittings",
-      "label": "Cwn Drone Fittings",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
       "name": "cwn-actors",
       "label": "Cwn actors",
       "system": "swnr",
@@ -188,56 +164,8 @@
       "type": "JournalEntry"
     },
     {
-      "name": "cwn-drones",
-      "label": "Cwn Drones",
-      "system": "swnr",
-      "type": "Actor"
-    },
-    {
-      "name": "cwn-edges",
-      "label": "Cwn Edges",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-foci",
-      "label": "Cwn Foci",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
       "name": "cwn-items",
       "label": "Cwn Items",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-pharmaceuticals",
-      "label": "Cwn Pharmaceuticals",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-program",
-      "label": "Cwn Program",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-vehicle-fittings",
-      "label": "Cwn Vehicle Fittings",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-vehicle-weapons",
-      "label": "Cwn Vehicle Weapons",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-weapons",
-      "label": "Cwn Weapons",
       "system": "swnr",
       "type": "Item"
     },
@@ -362,12 +290,6 @@
       "type": "Item"
     },
     {
-      "name": "cwn-tables",
-      "label": "CWN Roll Tables",
-      "system": "swnr",
-      "type": "RollTable"
-    },
-    {
       "name": "one-roll-tables",
       "label": "SWN Roll Tables",
       "system": "swnr",
@@ -376,36 +298,6 @@
     {
       "name": "one-roll-backing",
       "label": "SWN Backing Roll Tables",
-      "system": "swnr",
-      "type": "RollTable"
-    },
-    {
-      "name": "wwn-gm-sub-tables",
-      "label": "WWN Backing Roll Tables",
-      "system": "swnr",
-      "type": "RollTable"
-    },
-    {
-      "name": "wwn-gm-tables",
-      "label": "WWN Roll Tables",
-      "system": "swnr",
-      "type": "RollTable"
-    },
-    {
-      "name": "wwn-instinct",
-      "label": "WWN Instinct Tables",
-      "system": "swnr",
-      "type": "RollTable"
-    },
-    {
-      "name": "wwn-magic-items",
-      "label": "WWN Magic Items Tables",
-      "system": "swnr",
-      "type": "RollTable"
-    },
-    {
-      "name": "wwn-magic-tables",
-      "label": "WWN Magic Tables",
       "system": "swnr",
       "type": "RollTable"
     },
@@ -535,25 +427,6 @@
       ]
     },
     {
-      "name": "CWN-legacy",
-      "sorting": "a",
-      "color": "#cccccc",
-      "packs": [
-        "cwn-actors",
-        "cwn-armor",
-        "cwn-cyberware",
-        "cwn-drone-fittings",
-        "cwn-drones",
-        "cwn-edges",
-        "cwn-foci",
-        "cwn-pharmaceuticals",
-        "cwn-program",
-        "cwn-vehicle-fittings",
-        "cwn-vehicle-weapons",
-        "cwn-weapons"
-      ]
-    }, 
-    {
       "name": "Bestiary",
       "sorting": "a",
       "color": "#999999",
@@ -576,14 +449,8 @@
       "sorting": "a",
       "color": "#CCCCCC",
       "packs": [
-        "cwn-tables",
         "one-roll-tables",
-        "one-roll-backing",
-        "wwn-gm-sub-tables",
-        "wwn-gm-tables",
-        "wwn-instinct",
-        "wwn-magic-items",
-        "wwn-magic-tables"
+        "one-roll-backing"
       ]
     },
     {
