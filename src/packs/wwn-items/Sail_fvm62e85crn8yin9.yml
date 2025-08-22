@@ -1,0 +1,41 @@
+name: Sail
+type: item
+sort: 0
+system:
+  description: >-
+    Sail or repair a ship, build small craft, navigate by the stars, read sea
+    weather, manage sailors, and otherwise conduct the business of a
+    professional mariner. This skill may apply to more esoteric means of
+    vehicular travel in some societies.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 0
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+_id: fvm62e85crn8yin9
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457115
+  modifiedTime: 1754277457115
+  lastModifiedBy: null
+  exportSource: null
+folder: 9gsuaJcejB0mhHRg
+flags: {}
+effects: []
+img: /systems/wwn/assets/skills/sail.png
+ownership:
+  default: 0
+_key: '!items!fvm62e85crn8yin9'
+

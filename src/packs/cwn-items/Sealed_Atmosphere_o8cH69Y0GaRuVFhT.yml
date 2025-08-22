@@ -1,0 +1,44 @@
+name: Sealed Atmosphere
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: aPPngDkp3e5tzGZ9
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-vehicle-fittings.Item.n3ao3wnbqqb3er26
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267290515
+  modifiedTime: 1754267290515
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 5000
+  description: >-
+    For up to two hours per day the vehicle can seal itself entirely from the
+    outside atmosphere, with internal air tanks and positive pressure to keep
+    out external toxins. At all times it can maintain a comfortable interior
+    temperature in any terrestrial climate. Aircraft do not need this fitting to
+    function normally at high altitudes.
+  effect: Pressurized, temp-controlled interior
+  mass: 1
+  minClass: fighter
+  power: 1
+  type: vehicle
+  favorite: false
+  tl: 4
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  broken: false
+  destroyed: false
+  juryRigged: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: o8cH69Y0GaRuVFhT
+sort: 0
+_key: '!items!o8cH69Y0GaRuVFhT'
+

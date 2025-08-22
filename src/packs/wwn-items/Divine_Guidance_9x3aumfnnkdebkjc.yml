@@ -1,0 +1,48 @@
+name: Divine Guidance
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the day as a Main Action and meditate upon a choice or
+    potential action before you. The GM will tell you whether the likely outcome
+    of that choice is weal, woe, a mix of both, or nothing significant, using
+    their own best estimation. This insight cannot perceive likely outcomes more
+    than an hour or so into the future.
+  favorite: false
+  subType: arcane
+  source: Blood Priest
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Blood Priest
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 9x3aumfnnkdebkjc
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456794
+  modifiedTime: 1754277456794
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/bloodPriest_art.png
+ownership:
+  default: 0
+_key: '!items!9x3aumfnnkdebkjc'
+

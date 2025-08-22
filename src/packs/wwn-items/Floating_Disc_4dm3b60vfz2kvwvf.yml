@@ -1,0 +1,56 @@
+name: Floating Disc
+type: power
+sort: 6000000
+system:
+  description: >-
+    Duration: 6 turns Range: 6' The caster conjures a slightly concave, circular
+    disc of magical force that follows them about and carries loads. ▶
+    Dimensions: The disc is 3 feet in diameter and 1 inch deep at its centre. ▶
+    Load: It can hold a maximum load of 5,000 coins (500 pounds). ▶ Motion: The
+    disc floats at waist height and remains level, floating along horizontally
+    within spell range. ▶ End: When the disc winks out at the end of the spell's
+    duration, anything it was supporting is dropped.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 6 turns
+  save: None
+  range: 6'
+  skill: null
+_id: 4dm3b60vfz2kvwvf
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457082
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!4dm3b60vfz2kvwvf'
+

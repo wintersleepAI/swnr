@@ -1,0 +1,149 @@
+_id: FvNCFUCYTqYZT4C7
+name: Government-Rulers
+img: icons/svg/d20-grey.svg
+description: Number of Rulers
+results:
+  - _id: Zv50LKpOplxVmrfh
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: There is a single nominal monarch
+    name: ''
+    _key: '!tables.results!FvNCFUCYTqYZT4C7.Zv50LKpOplxVmrfh'
+  - _id: nnd5hcJ6DUC9NNRJ
+    flags: {}
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Government-SingleRuler
+    documentUuid: Compendium.wwn.gm-subtables.S5LfTFOCY9w6H9h1
+    description: ''
+    _key: '!tables.results!FvNCFUCYTqYZT4C7.nnd5hcJ6DUC9NNRJ'
+  - _id: uxrU5hzbMHYYnWUY
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: There is a monarch and several under-kings
+    name: ''
+    _key: '!tables.results!FvNCFUCYTqYZT4C7.uxrU5hzbMHYYnWUY'
+  - _id: f4Mvebabics7Lhld
+    flags: {}
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 2
+      - 4
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Government-MultipleRulers
+    documentUuid: Compendium.wwn.gm-subtables.b5m1mBU2Uq7TtRFc
+    description: ''
+    _key: '!tables.results!FvNCFUCYTqYZT4C7.f4Mvebabics7Lhld'
+  - _id: zcaXvYcauYMrJOdc
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: There is a group of approximate equals
+    name: ''
+    _key: '!tables.results!FvNCFUCYTqYZT4C7.zcaXvYcauYMrJOdc'
+  - _id: gyPcr0uS8iUbUMKW
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: There are a large number of small rulers
+    name: ''
+    _key: '!tables.results!FvNCFUCYTqYZT4C7.gyPcr0uS8iUbUMKW'
+formula: 1d4
+replacement: true
+displayRoll: true
+folder: fhkT8z8QarD3U3n2
+flags:
+  better-rolltables: {}
+_stats:
+  compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.FvNCFUCYTqYZT4C7
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754271915093
+  modifiedTime: 1754271915093
+  lastModifiedBy: lKC5x4Yf023Bizof
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!tables!FvNCFUCYTqYZT4C7'
+

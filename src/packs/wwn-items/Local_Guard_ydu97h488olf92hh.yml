@@ -1,0 +1,47 @@
+name: Local Guard
+type: asset
+sort: 0
+system:
+  description: >-
+    Ordinary citizens are enlisted into night watch patrols and local guard
+    units. They're most effective when defending from behind a fortified
+    position, but they have some idea of how to use their weapons.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 4
+    max: 4
+  rating: 1
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: ydu97h488olf92hh
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456933
+  modifiedTime: 1754277456933
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/force.png
+ownership:
+  default: 0
+_key: '!items!ydu97h488olf92hh'
+

@@ -1,0 +1,46 @@
+name: Petty Seers
+type: asset
+sort: 0
+system:
+  description: >-
+    A cadre of skilled fortune-tellers and minor oracles have been enlisted by
+    the faction to foresee perils and allow swift counterattacks.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 2
+    max: 2
+  rating: 1
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: d2a2fe3x28wr9ry1
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456950
+  modifiedTime: 1754277456950
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/cunning.png
+ownership:
+  default: 0
+_key: '!items!d2a2fe3x28wr9ry1'
+

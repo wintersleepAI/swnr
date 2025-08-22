@@ -1,0 +1,276 @@
+name: Hellhound, 3 HD
+type: npc
+sort: 0
+system:
+  ab: 3
+  armorType: street
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  baseAc: 16
+  hitDice: 3
+  moralScore: 9
+  saves: 14
+  skillBonus: 0
+  speed: 40
+  biography: >-
+    Monstrous, cunning, and very intelligent hounds, the size of a small pony.
+    Breathe fire and love heat. Dwell in dungeons or near volcanoes.
+  species: monster
+_id: 7ct0t4tdull5tesl
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456605
+  modifiedTime: 1754277456605
+  lastModifiedBy: null
+  exportSource: null
+folder: EvdqxETxotoAuVI8
+flags: {}
+effects: []
+prototypeToken:
+  name: Hellhound, 3 HD
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/cowled.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+img: icons/svg/cowled.svg
+items:
+  - name: Bite
+    type: weapon
+    img: /systems/wwn/assets/default/weapon.png
+    system:
+      description: ''
+      cost: 0
+      damage: 1d6
+      range:
+        normal: 0
+        max: 0
+      shock:
+        dmg: 1
+        ac: 13
+      ammo:
+        max: 0
+        type: ammo
+        burst: false
+      isTwoHanded: false
+      stat: str
+      skill: punch
+      ab: 0
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    _id: nzjv249hmqr09rxt
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920819
+      modifiedTime: 1754273920819
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!7ct0t4tdull5tesl.nzjv249hmqr09rxt'
+  - name: Fire Breath
+    type: item
+    img: /systems/wwn/assets/default/ability.png
+    system:
+      description: >-
+        [[/r 1d6]]: 2-in-6 chance per round of breathing fire. One target. Save
+        for half damage. 1d6 damage per HD.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: 9c5p2vbodsyap3fi
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920819
+      modifiedTime: 1754273920819
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!7ct0t4tdull5tesl.9c5p2vbodsyap3fi'
+  - name: Fire Immunity
+    type: item
+    img: /systems/wwn/assets/default/ability.png
+    system:
+      description: Unharmed by non-magical fire.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: ta729kinp93irp81
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920819
+      modifiedTime: 1754273920819
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!7ct0t4tdull5tesl.ta729kinp93irp81'
+  - name: Detect Invisible
+    type: item
+    img: /systems/wwn/assets/default/ability.png
+    system:
+      description: >-
+        Receives an opposed Dex/Sneak check with a +4 bonus to detect invisible
+        creatures. Check once each round. 60' range.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: bkfinj56onbb554q
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920819
+      modifiedTime: 1754273920819
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!7ct0t4tdull5tesl.bkfinj56onbb554q'
+  - name: Pets
+    type: item
+    img: /systems/wwn/assets/default/ability.png
+    system:
+      description: Sometimes found with other creatures with an affinity for fire.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: mix13m1iyiig8svp
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920819
+      modifiedTime: 1754273920819
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!7ct0t4tdull5tesl.mix13m1iyiig8svp'
+_key: '!actors!7ct0t4tdull5tesl'
+

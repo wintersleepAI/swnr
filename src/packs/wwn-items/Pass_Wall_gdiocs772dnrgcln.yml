@@ -1,0 +1,51 @@
+name: Pass-Wall
+type: power
+sort: 2800000
+system:
+  description: >-
+    Duration: 3 turns Range: 30' A 5' diameter hole is temporarily opened in
+    solid rock or stone, forming a passageway up to 10' deep.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 5
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 3 turns
+  save: None
+  range: 30'
+  skill: null
+_id: gdiocs772dnrgcln
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457066
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!gdiocs772dnrgcln'
+

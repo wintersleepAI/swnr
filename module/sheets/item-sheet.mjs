@@ -12,9 +12,11 @@ const { api, sheets } = foundry.applications;
 export class SWNItemSheet extends api.HandlebarsApplicationMixin(
   sheets.ItemSheetV2
 ) {
+  #dragDrop;
+  
   constructor(options = {}) {
     super(options);
-    this.#dragDrop = this.#createDragDropHandlers();
+    this.#dragDrop = this._createDragDropHandlers();
   }
 
   /** @override */
@@ -26,6 +28,10 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       createDoc: this._createEffect,
       deleteDoc: this._deleteEffect,
       toggleEffect: this._toggleEffect,
+      addPool: this._onAddPool,
+      removePool: this._onRemovePool,
+      addConsumption: this._onAddConsumption,
+      removeConsumption: this._onRemoveConsumption,
     },
     form: {
       submitOnChange: true,
@@ -33,7 +39,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
     window: {
-      resizable: true
+      resizable: true,
+      height: 600, // Set minimum height to allow scrolling
+      minHeight: 400
     }
   };
 
@@ -160,7 +168,9 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'feature':
+        options.parts.push('attributesFeature');
         options.parts.push('effects');
+        options.defaultTab = 'attributes';
         break;
       case 'item':
         options.parts.push('attributesItem');
@@ -246,6 +256,32 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'attributesArmor':
       case 'attributesProgram':
       case 'attributesPower':
+        // Necessary for preserving active tab on re-render
+        context.tab = context.tabs[partId];
+        // Add consumption data for power items
+        if (partId === 'attributesPower') {
+          context.consumptionTypes = CONFIG.SWN.consumptionTypes;
+          context.consumptionCadences = CONFIG.SWN.consumptionCadences;
+          context.consumptionTiming = CONFIG.SWN.consumptionTiming;
+          // Get consumable items from actor if available
+          const actor = this.document.actor;
+          if (actor) {
+            // Filter for items that have uses and are consumable
+            const allItems = actor.items.filter(i => i.type === "item");
+            context.consumableItems = allItems.filter(i => {
+              const uses = i.system.uses;
+              // Include items that have uses configured OR are marked as consumable
+              return uses && (
+                (uses.consumable && uses.consumable !== "none") ||
+                (uses.max && uses.max > 0) ||
+                (uses.value !== undefined)
+              );
+            }).map(i => ({ id: i.id, name: i.name }));
+          } else {
+            context.consumableItems = [];
+          }
+        }
+        break;
       case 'attributesSpell':
       case 'attributesWeapons':
       case 'attributesCyberware':
@@ -261,7 +297,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         context.tab = context.tabs[partId];
         // Enrich description info for display
         // Enrichment turns text like `[[/r 1d20]]` into buttons
-        context.enrichedDescription = await TextEditor.enrichHTML(
+        context.enrichedDescription = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
           this.item.system.description,
           {
             // Whether to show secret blocks in the finished html
@@ -370,12 +406,212 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
    */
   _onRender(context, options) {
     this.#dragDrop.forEach((d) => d.bind(this.element));
-    // Add a change listener for the location selector
+    
+    // Add consumption field handlers for power items
+    if (this.document.type === "power") {
+      this._setupConsumptionFieldHandlers();
+    }
+    
+    // Add container checkbox handlers for gear items
+    if (['item', 'armor', 'weapon'].includes(this.document.type)) {
+      this._setupContainerHandlers();
+    }
+  }
+
+  _setupConsumptionFieldHandlers() {
+    // Add change listeners to all consumption fields
+    const consumptionFields = this.element.querySelectorAll('[name*="consumptions"]');
+    
+    consumptionFields.forEach((field) => {
+      field.addEventListener('change', async (event) => {
+        // Prevent the normal form submission for consumption fields
+        event.stopPropagation();
+        
+        // For Foundry v13, manually handle the form submission
+        await this._handleConsumptionFieldChange(event);
+      });
+    });
+    
+    // Sync form fields with document data on initial render
+    // This follows the established _onRender pattern in the codebase
+    this._syncFormFieldsWithDocument();
+    this._updateConsumptionFieldVisibility();
+  }
+
+  /**
+   * Handle consumption field changes manually since submitOnChange may not work reliably 
+   * with array fields in Foundry v13
+   */
+  async _handleConsumptionFieldChange(event) {
+    const field = event.target;
+    const fieldName = field.name;
+    const fieldValue = field.value;
 
 
-    // You may want to add other special handling here
-    // Foundry comes with a large number of utility classes, e.g. SearchFilter
-    // That you may want to implement yourself.
+    try {
+      // Extract the array index and property from the field name
+      // e.g., "system.consumptions.0.type" -> index: 0, property: "type"
+      const match = fieldName.match(/system\.consumptions\.(\d+)\.(.+)/);
+      if (!match) {
+        return;
+      }
+
+      const index = parseInt(match[1]);
+      const property = match[2];
+
+      // Get current consumptions array
+      const consumptions = foundry.utils.deepClone(this.document.system.consumptions || []);
+
+      // Make sure the array has enough elements
+      while (consumptions.length <= index) {
+        consumptions.push({
+          type: "none",
+          usesCost: 1,
+          cadence: "day",
+          itemId: "",
+          uses: { value: 0, max: 1 },
+          timing: "manual"
+        });
+      }
+
+      // Update the specific property
+      // Handle numeric conversion for nested uses properties
+      if (property.startsWith('uses.') && !isNaN(fieldValue)) {
+        foundry.utils.setProperty(consumptions[index], property, parseInt(fieldValue));
+      } else if (property === 'timing') {
+        // Handle string conversion for timing dropdown
+        foundry.utils.setProperty(consumptions[index], property, fieldValue);
+      } else {
+        foundry.utils.setProperty(consumptions[index], property, fieldValue);
+      }
+
+      // Update the document
+      await this.document.update({ "system.consumptions": consumptions });
+      
+      // Sync form fields after document update completes
+      // The field value should already be set correctly by the manual change,
+      // but we sync all fields to ensure consistency
+      this._syncFormFieldsWithDocument();
+      
+      // Update field visibility if type changed
+      if (property === 'type') {
+        this._updateConsumptionFieldVisibility();
+      }
+
+    } catch (error) {
+      console.error(`Error updating consumption field:`, error);
+    }
+  }
+
+  /**
+   * Sync all consumption form fields with the current document data
+   * This fixes Foundry v13 issue where form fields don't auto-update after manual document changes
+   */
+  _syncFormFieldsWithDocument() {
+    const consumptions = this.document.system.consumptions || [];
+    
+    consumptions.forEach((consumption, index) => {
+      // Update type field
+      const typeField = this.element.querySelector(`[name="system.consumptions.${index}.type"]`);
+      if (typeField && typeField.value !== consumption.type) {
+        typeField.value = consumption.type;
+      }
+      
+      // Update usesCost field
+      const costField = this.element.querySelector(`[name="system.consumptions.${index}.usesCost"]`);
+      if (costField && costField.value !== consumption.usesCost.toString()) {
+        costField.value = consumption.usesCost;
+      }
+      
+      // Update cadence field
+      const cadenceField = this.element.querySelector(`[name="system.consumptions.${index}.cadence"]`);
+      if (cadenceField && cadenceField.value !== consumption.cadence) {
+        cadenceField.value = consumption.cadence;
+      }
+      
+      // Update itemId field (for consumableItem type)
+      const itemIdField = this.element.querySelector(`[name="system.consumptions.${index}.itemId"]`);
+      if (itemIdField && itemIdField.value !== consumption.itemId) {
+        itemIdField.value = consumption.itemId;
+      }
+      
+      // Update internal uses fields (for uses type)
+      const usesValueField = this.element.querySelector(`[name="system.consumptions.${index}.uses.value"]`);
+      if (usesValueField && usesValueField.value !== consumption.uses.value.toString()) {
+        usesValueField.value = consumption.uses.value;
+      }
+      
+      const usesMaxField = this.element.querySelector(`[name="system.consumptions.${index}.uses.max"]`);
+      if (usesMaxField && usesMaxField.value !== consumption.uses.max.toString()) {
+        usesMaxField.value = consumption.uses.max;
+      }
+      
+      // Update timing field
+      const timingField = this.element.querySelector(`[name="system.consumptions.${index}.timing"]`);
+      if (timingField && timingField.value !== consumption.timing) {
+        timingField.value = consumption.timing;
+      }
+    });
+  }
+  
+  /**
+   * Update visibility of consumption detail fields based on type selection
+   */
+  _updateConsumptionFieldVisibility() {
+    const consumptions = this.document.system.consumptions || [];
+    
+    consumptions.forEach((consumption, index) => {
+      const row = this.element.querySelector(`.consumption-row[data-index="${index}"]`);
+      if (!row) return;
+      
+      const typeField = row.querySelector(`[name="system.consumptions.${index}.type"]`);
+      const detailsCell = row.querySelector('.consumption-details');
+      
+      if (!typeField || !detailsCell) return;
+      
+      const currentType = typeField.value;
+      
+      // Show/hide appropriate detail fields based on consumption type
+      if (currentType === 'none') {
+        detailsCell.style.opacity = '0.5';
+      } else {
+        detailsCell.style.opacity = '1';
+      }
+    });
+  }
+
+  /**
+   * Setup container field interaction handlers
+   */
+  _setupContainerHandlers() {
+    const containerCheckbox = this.element.querySelector('input[name="system.container.isContainer"]');
+    const capacityField = this.element.querySelector('input[name="system.container.capacity"]');
+    const containerSelect = this.element.querySelector('select[name="system.containerId"]');
+    
+    if (containerCheckbox && capacityField) {
+      containerCheckbox.addEventListener('change', (event) => {
+        const isContainer = event.target.checked;
+        const capacityDiv = capacityField.closest('.resource');
+        
+        if (isContainer) {
+          capacityField.disabled = false;
+          capacityDiv.style.opacity = '1';
+          // Hide the container selection dropdown if this item becomes a container
+          if (containerSelect) {
+            const selectDiv = containerSelect.closest('.resource');
+            selectDiv.style.display = 'none';
+          }
+        } else {
+          capacityField.disabled = true;
+          capacityDiv.style.opacity = '0.5';
+          // Show the container selection dropdown if this item is not a container
+          if (containerSelect) {
+            const selectDiv = containerSelect.closest('.resource');
+            selectDiv.style.display = 'block';
+          }
+        }
+      });
+    }
   }
 
   _getRelatedItems() {
@@ -506,6 +742,116 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
   static async _toggleEffect(event, target) {
     const effect = this._getEffect(target);
     await effect.update({ disabled: !effect.disabled });
+  }
+
+  /**
+   * Handle adding a new pool grant to a feature
+   * @param {Event} event   The originating click event
+   * @param {HTMLElement} target - The capturing HTML element which defined a [data-action]
+   */
+  static async _onAddPool(event, target) {
+    event.preventDefault();
+    
+    // Only allow on feature items
+    if (this.item.type !== "feature") {
+      return;
+    }
+
+    const currentPools = foundry.utils.deepClone(this.item.system.poolsGranted || []);
+    
+    // Add a new pool configuration with defaults
+    currentPools.push({
+      resourceName: "Effort",
+      subResource: "",
+      baseAmount: 1,
+      perLevel: 0,
+      cadence: "day",
+      formula: "",
+      condition: ""
+    });
+
+    await this.item.update({ "system.poolsGranted": currentPools });
+  }
+
+  /**
+   * Handle removing a pool grant from a feature
+   * @param {Event} event   The originating click event
+   * @param {HTMLElement} target - The capturing HTML element which defined a [data-action]
+   */
+  static async _onRemovePool(event, target) {
+    event.preventDefault();
+    
+    // Only allow on feature items
+    if (this.item.type !== "feature") {
+      return;
+    }
+
+    const poolIndex = parseInt(target.dataset.poolIndex);
+    if (isNaN(poolIndex)) {
+      console.warn("[SWN Pool] Invalid pool index for removal");
+      return;
+    }
+
+    const currentPools = foundry.utils.deepClone(this.item.system.poolsGranted || []);
+    
+    if (poolIndex >= 0 && poolIndex < currentPools.length) {
+      currentPools.splice(poolIndex, 1);
+      await this.item.update({ "system.poolsGranted": currentPools });
+    }
+  }
+
+  /**
+   * Handle adding a new consumption to a power
+   * @param {Event} event   The originating click event
+   * @param {HTMLElement} target - The capturing HTML element which defined a [data-action]
+   */
+  static async _onAddConsumption(event, target) {
+    event.preventDefault();
+    
+    // Only allow on power items
+    if (this.item.type !== "power") {
+      return;
+    }
+
+    const currentConsumptions = foundry.utils.deepClone(this.item.system.consumptions || []);
+    
+    // Add a new consumption configuration with defaults
+    currentConsumptions.push({
+      type: "none",
+      usesCost: 1,
+      cadence: "day",
+      itemId: "",
+      uses: { value: 0, max: 1 }
+    });
+
+    await this.item.update({ "system.consumptions": currentConsumptions });
+  }
+
+  /**
+   * Handle removing a consumption from a power
+   * @param {Event} event   The originating click event
+   * @param {HTMLElement} target - The capturing HTML element which defined a [data-action]
+   */
+  static async _onRemoveConsumption(event, target) {
+    event.preventDefault();
+    
+    // Only allow on power items
+    if (this.item.type !== "power") {
+      return;
+    }
+
+    const consumptionIndex = parseInt(target.dataset.index);
+    if (isNaN(consumptionIndex)) {
+      console.warn("[SWN Consumption] Invalid consumption index for removal");
+      return;
+    }
+
+    const currentConsumptions = foundry.utils.deepClone(this.item.system.consumptions || []);
+    
+    if (consumptionIndex >= 0 && consumptionIndex < currentConsumptions.length) {
+      currentConsumptions.splice(consumptionIndex, 1);
+      await this.item.update({ "system.consumptions": currentConsumptions });
+    }
   }
 
   /** Helper Functions */
@@ -713,14 +1059,13 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
 
   // This is marked as private because there's no real need
   // for subclasses or external hooks to mess with it directly
-  #dragDrop;
 
   /**
    * Create drag-and-drop workflow handlers for this Application
    * @returns {DragDrop[]}     An array of DragDrop handlers
    * @private
    */
-  #createDragDropHandlers() {
+  _createDragDropHandlers() {
     return this.options.dragDrop.map((d) => {
       d.permissions = {
         dragstart: this._canDragStart.bind(this),

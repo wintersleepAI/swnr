@@ -1,0 +1,253 @@
+name: Brigand Cavalry
+type: npc
+sort: 0
+system:
+  ab: 1
+  armorType: street
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  baseAc: 15
+  hitDice: 1
+  moralScore: 8
+  saves: 15
+  skillBonus: 0
+  speed: 40
+  biography: >-
+    Outlaws and mercenaries who make a living by raiding settlements and
+    attacking travellers. Footmen: Half the group has: leather armour, shield,
+    sword, shortbow. Cavalry: The other half is mounted on riding horses and
+    has: chainmail, shield, sword. Leaders and commanders: For every 20
+    brigands, there is a leader (2nd level fighter). For every 40 brigands,
+    there is a commander (4th level fighter). Leaders ride war horses (with
+    barding) and have: plate mail, sword, lance. Fortified camps: Bands commonly
+    combine and live in a camp of 5d6 &times; 10 brigands. Camp leaders:
+    Combined camps are led by a 9th level fighter, plus a 5th level fighter for
+    every 50 brigands. Also 50% chance of a magic-user (level 1d3 + 8); 30%
+    chance of a cleric (8th level).
+  species: monster
+_id: mrkslfbvn8y2og63
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456540
+  modifiedTime: 1754277456540
+  lastModifiedBy: null
+  exportSource: null
+folder: EvdqxETxotoAuVI8
+flags: {}
+effects: []
+prototypeToken:
+  name: Brigand Cavalry
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/cowled.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+img: icons/svg/cowled.svg
+items:
+  - name: Small Shield
+    type: armor
+    img: systems/wwn/assets/default/armor.png
+    system:
+      description: >-
+        Shields come in two general varieties. Small ones, often made of metal,
+        can be strapped to the wearer's arm and allow them to hold and
+        manipulate objects with that hand. Larger shields require the use of a
+        gripping hand, but are usually of cheaper, lighter wood. A small shield
+        user has a base AC of 13, while a large shield user has a base AC of 14.
+        Unlike other armor, however, if the user is already wearing equal or
+        better armor the shield grants a +1 bonus to their AC. Shields allow the
+        bearer to ignore the first instance of Shock they might otherwise suffer
+        in a round.
+      cost: 20
+      ac: 1
+      meleeAc: 1
+      traumaDiePenalty: 0
+      soak:
+        value: 0
+        max: 0
+      isSubtle: false
+      shield: true
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    _id: cibpf2dqr3j258f6
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!mrkslfbvn8y2og63.cibpf2dqr3j258f6'
+  - name: Sword, Long
+    type: weapon
+    img: systems/wwn/assets/default/weapon.png
+    system:
+      description: >-
+        Swords are common sidearms throughout the Latter Earth. The expense of
+        forging a large blade makes it a symbol of wealth and status in many
+        cultures, and its convenience makes it a favored arm for street wear.
+      cost: 100
+      damage: 1d8
+      range:
+        normal: 0
+        max: 0
+      shock:
+        dmg: 2
+        ac: 13
+      ammo:
+        max: 0
+        type: ammo
+        burst: false
+      isTwoHanded: false
+      stat: str
+      skill: stab
+      ab: 0
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    _id: k5yt2flnvwublxp2
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!mrkslfbvn8y2og63.k5yt2flnvwublxp2'
+  - name: Mail Shirt
+    type: armor
+    img: systems/wwn/assets/default/armor.png
+    system:
+      description: >-
+        Mail shirts are usually of iron or steel wire, though bronze and other
+        more exotic materials are not unknown. Such shirts cover only the vitals
+        of the wearer, but are much less burdensome than a full hauberk. Medium
+        armor is significantly noisier and more overt; it cannot be worn
+        discreetly and applies its encumbrance as a penalty to any physical
+        Sneak rolls made by the wearer.
+      cost: 250
+      ac: 14
+      meleeAc: 14
+      traumaDiePenalty: 0
+      soak:
+        value: 0
+        max: 0
+      isSubtle: false
+      shield: false
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    _id: k7q07q4ecgzxltv2
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920814
+      modifiedTime: 1754273920814
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!mrkslfbvn8y2og63.k7q07q4ecgzxltv2'
+_key: '!actors!mrkslfbvn8y2og63'
+

@@ -1,0 +1,55 @@
+name: Mail Shirt
+type: armor
+sort: 0
+system:
+  description: >-
+    Mail shirts are usually of iron or steel wire, though bronze and other more
+    exotic materials are not unknown. Such shirts cover only the vitals of the
+    wearer, but are much less burdensome than a full hauberk. Medium armor is
+    significantly noisier and more overt; it cannot be worn discreetly and
+    applies its encumbrance as a penalty to any physical Sneak rolls made by the
+    wearer.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 1
+  cost: 250
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 10
+  shield: false
+  use: false
+  meleeAc: 14
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+  baseAc: 14
+_id: 6h24sp7iu8amxpyo
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456698
+  modifiedTime: 1754277456698
+  lastModifiedBy: null
+  exportSource: null
+folder: MiJwkaqEfKd6620L
+flags: {}
+effects: []
+img: icons/equipment/head/hood-chain-worn.webp
+ownership:
+  default: 0
+_key: '!items!6h24sp7iu8amxpyo'
+

@@ -108,20 +108,6 @@
           "homeworld": {
             "label": "Homeworld"
           },
-          "effort": {
-            "bonus": {
-              "label": "Bonus"
-            },
-            "scene": {
-              "label": "Scene"
-            },
-            "current": {
-              "label": "Current"
-            },
-            "day": {
-              "label": "Day"
-            }
-          },
           "cost": {
             "label": "Cost"
           },
@@ -163,17 +149,26 @@
             "advInit": {
               "label": "'Advantage' on Init."
             },
-            "extraEffortName": {
-              "label": "Extra Effort Name (empty to not show)"
-            },
             "showResourceList": {
               "label": "Show Optional Resource List"
             },
             "showCyberware": {
               "label": "Show Cyberware"
             },
-            "showPowers": {
-              "label": "Show Powers"
+            "showPsychic": {
+              "label": "Show Psychic"
+            },
+            "showArts": {
+              "label": "Show Arts"
+            },
+            "showSpells": {
+              "label": "Show Spells"
+            },
+            "showAdept": {
+              "label": "Show Adept"
+            },
+            "showMutation": {
+              "label": "Show Mutation"
             },
             "debtDisplay": {
               "label": "Name of Currency 1"
@@ -216,7 +211,10 @@
           },
           "employer": {
             "label": "Employer"
-          }, 
+          },
+          "languages": {
+            "label": "Languages"
+          },
           "stress": {
             "label": "Stress"
           }
@@ -553,6 +551,24 @@
             "value": {
               "label": "Value"
             }
+          },
+          "container": {
+            "label": "Container",
+            "isContainer": {
+              "label": "Is Container"
+            },
+            "isOpen": {
+              "label": "Is Open"
+            },
+            "capacity": {
+              "label": "Capacity",
+              "max": {
+                "label": "Max Capacity"
+              },
+              "value": {
+                "label": "Used Capacity"
+              }
+            }
           }
         }
       },
@@ -588,7 +604,26 @@
           }
         },
         "PowerLVL": "Level {level} Power",
-        "AddLVL": "Add LVL {level}"
+        "AddLVL": "Add LVL {level}",
+        "Types": {
+          "psychic": "Psychic Powers", 
+          "art": "Arts",
+          "adept": "Adept Abilities",
+          "spell": "Spells",
+          "mutation": "Mutations"
+        },
+        "Add": {
+          "psychic": "Add Power",
+          "art": "Add Art", 
+          "adept": "Add Ability",
+          "spell": "Add Spell",
+          "mutation": "Add Mutation",
+          "unleveled": "Add Unleveled"
+        },
+        "Level": {
+          "unleveled": "Unleveled",
+          "level": "Level {level}"
+        }
       },
       "Skill": {
         "FIELDS": {
@@ -1471,9 +1506,14 @@
         "save": "Save",
         "skill": "Skill Button (e.g. dex/pilot)",
         "range": "Range",
+        "level": "Level",
         "prepared": "Is Prepared?"
       },
       "resources": "Resources",
+      "passive": "Passive Ability",
+      "showLongDesc": "Show Long Desc.",
+      "hideLongDesc": "Hide Long Desc.",
+      "spendResources": "Spend Resources",
       "delete-item": "Delete Item",
       "show-item": "Show Item",
       "edit-item": "Edit Item",
@@ -1495,6 +1535,12 @@
       "skill": "Skill",
       "loadSkills": "No skills? Click here to add some!",
       "employer": "Employer",
+      "languages": "Languages",
+      "addLanguage": "Add Language",
+      "selectLanguage": "Select a language...",
+      "removeLanguage": "Remove Language",
+      "availableLanguages": "Available Languages",
+      "noLanguagesConfigured": "No languages configured by GM",
       "source": "Source",
       "factionname": "Faction",
       "movement": "Movement",
@@ -1859,7 +1905,17 @@
       "showAccess" : "Show Access?",
       "showAccessHint" : "Show Access on the character sheet?",
       "search": "Compendium item search?",
-      "searchHint": "What compendiums to search for items for in-sheet item adds?"
+      "searchHint": "What compendiums to search for items for in-sheet item adds?",
+      "languagePresetSelector": "Add Language Preset",
+      "languagePresetSelectorHint": "Select a preset to add to your language list. Use the button below to add the selected preset languages to your available languages list.",
+      "availableLanguages": "Available Languages",
+      "availableLanguagesHint": "Comma-separated list of languages available to characters. Edit this list freely to add, remove, or modify languages for your world.",
+      "languagePresets": {
+        "none": "None - Custom Only",
+        "earth": "Earth Languages (Top 10)",
+        "wwn": "WWN Languages",
+        "both": "Both Earth and WWN Languages"
+      }
     },
     "chat": {
       "dicepool": "Dice Pool",
@@ -1939,7 +1995,18 @@
         "none": "None",
         "count": "Individual",
         "bundle": "Bundle/Clip"
-      }
+      },
+      "container": {
+        "settings": "Container Settings",
+        "tooltip": "This item is a container",
+        "open": "Click to open container",
+        "close": "Click to close container",
+        "isContainer": "Is Container",
+        "isOpen": "Is Open",
+        "contained": "In Container"
+      },
+      "containers": "Containers",
+      "capacity": "Capacity"
     },
     "weapon": {
       "shock": {
@@ -1974,6 +2041,22 @@
       "scene": "Scene",
       "title": "Effort",
       "max": "Max"
+    },
+    "pools": {
+      "title": "Resource Pools",
+      "manage": "Manage",
+      "noPoolsMessage": "No resource pools available.",
+      "poolsGrantedHint": "Resource pools are granted by Features, Foci, and Edges. Check the Features tab to configure pool grants.",
+      "effortReleased": "Effort Released",
+      "refreshSummary": {
+        "scene": "Scene Refresh",
+        "rest": "Rest Refresh",
+        "day": "Day Refresh"
+      },
+      "commitment": {
+        "release": "Release committed effort",
+        "released": "Effort Released"
+      }
     },
     "dialog": {
       "attackRoll": "{actorName} attacking with {weaponName}?",
@@ -2105,6 +2188,40 @@
     "deletePilot": "Do you want to remove {name} as the pilot?",
     "deleteContent": "Are you sure you want to delete {name} from the actor {actor}? (hold shift to skip confirm dialog)",
     "AddCurrency": "Add Currency",
-    "InvalidNumber": "Enter a valid whole number"
+    "InvalidNumber": "Enter a valid whole number",
+    "consumption": {
+      "additionalConsumption": "Additional Consumption",
+      "resourceConsumption": "Resource Consumption",
+      "type": "Type",
+      "cost": "Cost",
+      "cadence": "Cadence",
+      "details": "Details",
+      "actions": "Actions",
+      "addCost": "Add Cost",
+      "remove": "Remove",
+      "noAdditionalCosts": "No additional consumption costs configured",
+      "noResourceCosts": "No resource consumption costs configured",
+      "selectItem": "Select Item...",
+      "none": "None",
+      "poolResource": "Pool Resource",
+      "systemStrain": "System Strain",
+      "consumableItem": "Consumable Item",
+      "uses": "Internal Uses",
+      "remaining": "remaining",
+      "scene": "Per Scene",
+      "rest": "Per Rest",
+      "day": "Per Day", 
+      "commit": "Committed",
+      "recover": "Recover",
+      "recoverResource": "Recover Resource",
+      "recoverStrain": "Recover System Strain",
+      "recoverItem": "Recover Item",
+      "recoverUses": "Recover Uses",
+      "timing": {
+        "preparation": "Pay on Prep",
+        "manual": "Pay via Chat",
+        "immediate": "Pay Immediately"
+      }
+    }
   }
 }

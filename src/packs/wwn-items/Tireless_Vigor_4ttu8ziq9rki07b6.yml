@@ -1,0 +1,46 @@
+name: Tireless Vigor
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort; while it remains Committed your need to eat, drink, breathe,
+    or sleep does not grow further. You may exert yourself tirelessly and
+    regenerate 1 lost hit point per hour.
+  favorite: false
+  subType: arcane
+  source: Healer
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Healer
+      usesCost: 1
+      cadence: active
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 4ttu8ziq9rki07b6
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456801
+  modifiedTime: 1754277456801
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/healer_art.png
+ownership:
+  default: 0
+_key: '!items!4ttu8ziq9rki07b6'
+

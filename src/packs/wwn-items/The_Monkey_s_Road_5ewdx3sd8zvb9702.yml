@@ -1,0 +1,48 @@
+name: The Monkey’s Road
+type: power
+sort: 0
+system:
+  description: >-
+    This shape has an arboreal agility when it comes to climbing. You can travel
+    up sheer surfaces at your usual movement rate provided at least three limbs
+    are available for use and the surface is not glassily smooth. If you fall,
+    you can halt your plunge without damage so long as a serviceable surface to
+    cling to is within ten feet of you.
+  favorite: false
+  subType: arcane
+  source: Skinshifter
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Skinshifter
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 5ewdx3sd8zvb9702
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456816
+  modifiedTime: 1754277456816
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/skinshifter_art.png
+ownership:
+  default: 0
+_key: '!items!5ewdx3sd8zvb9702'
+

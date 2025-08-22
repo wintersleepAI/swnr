@@ -1,0 +1,40 @@
+name: Oil, one pint
+type: item
+sort: 0
+system:
+  description: >-
+    This item can be bundled in units of three for the same encumbrance, with a
+    Main Action to break open a bundle to get at the contents.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 0
+  cost: 1
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
+_id: p8agh2yf5bc65vqv
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456716
+  modifiedTime: 1754277456716
+  lastModifiedBy: null
+  exportSource: null
+folder: OSCezLcl3H6szsim
+flags: {}
+effects: []
+img: icons/consumables/potions/flask-corked-yellow-glow.webp
+ownership:
+  default: 0
+_key: '!items!p8agh2yf5bc65vqv'
+

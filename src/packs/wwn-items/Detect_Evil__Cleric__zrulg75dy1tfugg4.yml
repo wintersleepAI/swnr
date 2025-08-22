@@ -1,0 +1,55 @@
+name: Detect Evil (Cleric)
+type: power
+sort: 7200000
+system:
+  description: >-
+    Duration: 6 turns Range: 120' Objects enchanted for evil purposes or living
+    beings with evil intentions are caused to magically glow. ▶ Intent only:
+    This spell does not grant the ability to read minds, but only grants a
+    general sense of evil intent. ▶ Definition of evil: The referee must decide
+    what is "evil". Some things that are potentially harmful, like traps, are
+    not "evil."
+  favorite: false
+  subType: arcane
+  source: Cleric
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 6 turns
+  save: None
+  range: 120'
+  skill: null
+_id: zrulg75dy1tfugg4
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457086
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!zrulg75dy1tfugg4'
+

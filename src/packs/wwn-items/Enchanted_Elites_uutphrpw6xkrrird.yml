@@ -1,0 +1,46 @@
+name: Enchanted Elites
+type: asset
+sort: 0
+system:
+  description: >-
+    A carefully-selected group of skilled warriors are given magical armaments
+    and arcane blessings to boost their effectiveness.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 6
+    max: 6
+  rating: 3
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: uutphrpw6xkrrird
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456954
+  modifiedTime: 1754277456954
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/force.png
+ownership:
+  default: 0
+_key: '!items!uutphrpw6xkrrird'
+

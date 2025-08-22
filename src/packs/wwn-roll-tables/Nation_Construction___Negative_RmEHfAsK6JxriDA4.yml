@@ -1,0 +1,288 @@
+_id: RmEHfAsK6JxriDA4
+name: Nation Construction - Negative
+img: icons/svg/d20-grey.svg
+description: This uses the Nation Construction tables with only negative themes.
+results:
+  - _id: QLAKevPhTDMxigV3
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>Disputes With a Neighboring State</b>
+    name: ''
+    _key: '!tables.results!RmEHfAsK6JxriDA4.QLAKevPhTDMxigV3'
+  - _id: 0OnCv0xPi7YNOfiQ
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Nation-Disputes
+    documentUuid: Compendium.wwn.gm-subtables.jeCuXrdZZZvm1ej0
+    description: ''
+    _key: '!tables.results!RmEHfAsK6JxriDA4.0OnCv0xPi7YNOfiQ'
+  - _id: He0Ttf8bbhCG74na
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>Positive Ties With a Neighboring State</b>
+    name: ''
+    _key: '!tables.results!RmEHfAsK6JxriDA4.He0Ttf8bbhCG74na'
+  - _id: lxGNlmNuBXmJn97d
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Nation-Ties
+    documentUuid: Compendium.wwn.gm-subtables.2DPPH7wJPoPnQ0Pj
+    description: ''
+    _key: '!tables.results!RmEHfAsK6JxriDA4.lxGNlmNuBXmJn97d'
+  - _id: iVKBkJqsZEY7HyCJ
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>Current National Problems</b>
+    name: ''
+    _key: '!tables.results!RmEHfAsK6JxriDA4.iVKBkJqsZEY7HyCJ'
+  - _id: tUgXXdmRFPxrzNna
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Nation-Problems
+    documentUuid: Compendium.wwn.gm-subtables.xR9vJU4cLdDuKN1U
+    description: ''
+    _key: '!tables.results!RmEHfAsK6JxriDA4.tUgXXdmRFPxrzNna'
+  - _id: PrZHpyBTur8Ab5pC
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>Good Things Happening Right Now</b>
+    name: ''
+    _key: '!tables.results!RmEHfAsK6JxriDA4.PrZHpyBTur8Ab5pC'
+  - _id: 70ZDBfn1MJaoDBD4
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Nation-Good
+    documentUuid: Compendium.wwn.gm-subtables.c5eQWf7iNFptBEcH
+    description: ''
+    _key: '!tables.results!RmEHfAsK6JxriDA4.70ZDBfn1MJaoDBD4'
+  - _id: 4XS3oHCRE0bAtdj8
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>Thematic Elements</b>
+    name: ''
+    _key: '!tables.results!RmEHfAsK6JxriDA4.4XS3oHCRE0bAtdj8'
+  - _id: Hbcm5BsFUQoEW9CX
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Nation-Theme-Negative
+    documentUuid: Compendium.wwn.gm-subtables.FmylTEcaxCeuVxjg
+    description: ''
+    _key: '!tables.results!RmEHfAsK6JxriDA4.Hbcm5BsFUQoEW9CX'
+  - _id: VS1VkKxsoBdw0Ef5
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Nation-Theme-Negative
+    documentUuid: Compendium.wwn.gm-subtables.FmylTEcaxCeuVxjg
+    description: ''
+    _key: '!tables.results!RmEHfAsK6JxriDA4.VS1VkKxsoBdw0Ef5'
+formula: 1d1
+replacement: true
+displayRoll: true
+folder: NcNmE2NSqwIFlKia
+flags:
+  better-rolltables:
+    table-type: better
+    loot-amount-key: ''
+_stats:
+  compendiumSource: Compendium.swnr.wwn-gm-tables.RollTable.RmEHfAsK6JxriDA4
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754271920613
+  modifiedTime: 1754271920613
+  lastModifiedBy: lKC5x4Yf023Bizof
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!tables!RmEHfAsK6JxriDA4'
+

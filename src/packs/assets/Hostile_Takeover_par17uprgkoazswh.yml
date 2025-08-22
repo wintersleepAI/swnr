@@ -1,0 +1,50 @@
+name: Hostile Takeover
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: par17uprgkoazswh
+system:
+  assetType: wealth
+  attackDamage: 2d10
+  attackSource: wealth
+  attackSpecial: >-
+    If a Hostile Takeover does enough damage to destroy an asset, the target is
+    instead reduced to 1 hit point and acquired by the Hostile Takeover's owning
+    faction.
+  attackTarget: wealth
+  baseOfInfluence: false
+  cost: 20
+  counter: 2d8
+  description: >-
+    This asset can seize control of damaged and poorly-controlled assets. If a
+    Hostile Takeover does enough damage to destroy an asset, the target is
+    instead reduced to 1 hit point and acquired by the Hostile Takeover's owning
+    faction.
+  health:
+    max: 10
+    value: 10
+  income: 0
+  maintenance: 0
+  note: S
+  rating: 7
+  tl: 4
+  turnRoll: ''
+  type: Tactic
+  unusable: false
+effects: []
+ownership:
+  default: 0
+_key: '!items!par17uprgkoazswh'
+

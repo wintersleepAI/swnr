@@ -1,0 +1,48 @@
+name: Temple Fanatics
+type: asset
+sort: 0
+system:
+  description: >-
+    Fanatical servants of a cult, ideology, or larger religion, these
+    enthusiasts wreak havoc on enemies without a thought for their own lives.
+    After every time the Temple Fanatics defend or successfully attack, they
+    take 1d4 damage.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 6
+    max: 6
+  rating: 3
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: ro7vvrjnu9j8rxng
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456961
+  modifiedTime: 1754277456961
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/force.png
+ownership:
+  default: 0
+_key: '!items!ro7vvrjnu9j8rxng'
+

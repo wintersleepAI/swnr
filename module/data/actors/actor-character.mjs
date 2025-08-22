@@ -39,6 +39,7 @@ export default class SWNCharacter extends SWNActorBase {
     schema.background = SWNShared.requiredString("");
     schema.employer = SWNShared.requiredString("");
     schema.biography = SWNShared.requiredString("");
+    schema.languages = new fields.ArrayField(SWNShared.requiredString(""));
     schema.credits = new fields.SchemaField({
       debt: SWNShared.requiredNumber(0),
       balance: SWNShared.requiredNumber(0),
@@ -54,18 +55,14 @@ export default class SWNCharacter extends SWNActorBase {
       quickSkill1: SWNShared.emptyString(), //deprecated
       quickSkill2: SWNShared.emptyString(), //deprecated
       quickSkill3: SWNShared.emptyString(), //deprecated
-      extraEffortName: SWNShared.emptyString(),
-      extraEffort: new fields.SchemaField({
-        bonus: SWNShared.requiredNumber(0),
-        current: SWNShared.requiredNumber(0),
-        scene: SWNShared.requiredNumber(0),
-        day: SWNShared.requiredNumber(0),
-        max: SWNShared.requiredNumber(0)
-      }),
       extraHeader: SWNShared.emptyString(),
       showResourceList: new fields.BooleanField({initial: false}),
       showCyberware: new fields.BooleanField({initial: true}),
-      showPowers: new fields.BooleanField({initial: true}),
+      showPsychic: new fields.BooleanField({initial: true}),
+      showArts: new fields.BooleanField({initial: false}),
+      showSpells: new fields.BooleanField({initial: false}),
+      showAdept: new fields.BooleanField({initial: false}),
+      showMutation: new fields.BooleanField({initial: false}),
       resourceList: new fields.ArrayField(new fields.SchemaField({
         name: SWNShared.emptyString(),
         value: SWNShared.requiredNumber(0),
@@ -77,6 +74,11 @@ export default class SWNCharacter extends SWNActorBase {
       initiative: new fields.SchemaField({
         mod: SWNShared.nullableNumber(),
       })
+    });
+
+    schema.effortCommitments = new fields.ObjectField({
+      /* Dynamic keys: "${resourceName}:${subResource}" */
+      /* Values: array of { powerId, powerName, amount } */
     });
 
     return schema;
@@ -201,34 +203,8 @@ export default class SWNCharacter extends SWNActorBase {
           i.system.source.toLocaleLowerCase() ===
             game.i18n.localize("swnr.skills.labels.psionic").toLocaleLowerCase()
       );
-    const effort = this.effort;
     const useCyber = game.settings.get("swnr", "useCWNCyber");
     const cyberStrain = useCyber ? this.systemStrain.cyberware : 0;
-    
-    effort.max =
-      Math.max(
-        1,
-        1 +
-          Math.max(this.stats.con.mod, this.stats.wis.mod) +
-          Math.max(0, ...psychicSkills.map((i) => i.system.rank))
-      ) +
-      effort.bonus -
-      cyberStrain;
-    
-    // Floor at 0.
-    effort.max = Math.max(0, effort.max);
-    
-    effort.value = effort.max - effort.current - effort.scene - effort.day;      
-    // extra effort
-    const extraEffort = this.tweak.extraEffort;
-    extraEffort.value =
-      extraEffort.max -
-      extraEffort.current -
-      extraEffort.scene -
-      extraEffort.day -
-      cyberStrain;
-
-    effort.percentage = Math.clamp((effort.value * 100) / effort.max, 0, 100);
 
     //encumbrance
     if (!this.encumbrance)
@@ -301,6 +277,9 @@ export default class SWNCharacter extends SWNActorBase {
     this.readiedArmor = readiedItems.filter((i) => i.type === "armor");
     this.gear = gear;
     this.consumables = consumables;
+    
+    // Calculate resource pools from Features/Foci/Edges
+    this._calculateResourcePools();
   }
 
   getRollData() {
@@ -460,7 +439,184 @@ export default class SWNCharacter extends SWNActorBase {
       ui.notifications?.info("Set the character's HitDie");
     }
 
+    // Calculate resource pools from Features/Foci/Edges
+    this._calculateResourcePools();
+
     return;
+  }
+
+  /**
+   * Calculate resource pools based on Features, Foci, and Edges
+   * @private
+   */
+  _calculateResourcePools() {
+    const pools = {};
+    
+    // Get all features that might grant pools
+    const poolGrantingItems = this.parent.items.filter(item => 
+      item.type === "feature" && 
+      item.system.poolsGranted && 
+      item.system.poolsGranted.length > 0
+    );
+    
+
+    for (const feature of poolGrantingItems) {
+      for (const poolConfig of feature.system.poolsGranted) {
+        // Check condition if specified
+        if (poolConfig.condition && !this._evaluateCondition(poolConfig.condition)) {
+          continue;
+        }
+
+        // Build pool key
+        const poolKey = `${poolConfig.resourceName}:${poolConfig.subResource || ""}`;
+        
+        // Calculate pool maximum
+        let maxValue = 0;
+        
+        // Use formula if specified, otherwise fall back to legacy base + per-level
+        if (poolConfig.formula) {
+          try {
+            const formulaResult = this._evaluateFormula(poolConfig.formula);
+            maxValue = formulaResult;
+          } catch (error) {
+            console.warn(`[SWN Pool] Failed to evaluate formula "${poolConfig.formula}" for ${feature.name}:`, error);
+            maxValue = 0; // Default to 0 if formula fails
+          }
+        } else {
+          console.warn(`[SWN Pool] No formula provided for pool ${poolKey} in ${feature.name}`);
+          maxValue = 0;
+        }
+
+        // Initialize or update pool
+        if (pools[poolKey]) {
+          // Pool already exists from another feature, add to max and adjust value accordingly
+          const oldMax = pools[poolKey].max;
+          const newMax = oldMax + maxValue;
+          
+          // Preserve user-set value if possible, but allow it to increase if max increased
+          const sourcePoolData = this.parent._source.system.pools?.[poolKey];
+          const userSetValue = sourcePoolData?.value;
+          
+          if (userSetValue !== undefined) {
+            // User has manually set a value, respect it but cap at new max
+            pools[poolKey].value = Math.min(userSetValue, newMax);
+          } else {
+            // No user-set value, scale current value proportionally or set to new max if fully recovered
+            const wasAtMax = pools[poolKey].value >= pools[poolKey].max;
+            pools[poolKey].value = wasAtMax ? newMax : Math.min(pools[poolKey].value + maxValue, newMax);
+          }
+          
+          pools[poolKey].max = newMax;
+        } else {
+          // Calculate available effort (max - committed)
+          const commitments = (this.parent.system.effortCommitments || {})[poolKey] || [];
+          const committedAmount = commitments.reduce((sum, commitment) => sum + commitment.amount, 0);
+          
+          // Preserve existing current value from document source if it exists, otherwise calculate available effort
+          const sourcePoolData = this.parent._source.system.pools?.[poolKey];
+          const existingCurrentValue = sourcePoolData?.value;
+          const sourceMaxValue = sourcePoolData?.max;
+          const availableEffort = Math.max(0, maxValue - committedAmount);
+          const currentValue = existingCurrentValue !== undefined ? 
+            Math.min(existingCurrentValue, maxValue) : availableEffort;
+          
+          
+          pools[poolKey] = {
+            value: currentValue,
+            max: maxValue,
+            cadence: poolConfig.cadence,
+            committed: committedAmount,
+            commitments: commitments
+          };
+        }
+      }
+    }
+
+    // Update the pools object
+    this.pools = pools;
+  }
+
+  /**
+   * Evaluate a condition string (e.g., "@level >= 3")
+   * @param {string} condition - The condition to evaluate
+   * @returns {boolean} - Whether the condition is met
+   * @private
+   */
+  _evaluateCondition(condition) {
+    try {
+      // Simple variable substitution
+      let expr = condition
+        .replace(/@level/g, this.level.value)
+        .replace(/@stats\.(\w+)\.mod/g, (match, stat) => this.stats[stat]?.mod || 0)
+        .replace(/@stats\.(\w+)\.total/g, (match, stat) => this.stats[stat]?.total || 0);
+      
+      // Basic safety check - only allow numbers, operators, and parentheses
+      if (!/^[\d\s+\-*/()>=<!&|.]+$/.test(expr)) {
+        console.warn(`[SWN Pool] Unsafe condition: ${condition}`);
+        return false;
+      }
+      
+      // Use Function constructor for evaluation (safer than eval)
+      return new Function('return ' + expr)();
+    } catch (error) {
+      console.warn(`[SWN Pool] Failed to evaluate condition "${condition}":`, error);
+      return false;
+    }
+  }
+
+  /**
+   * Evaluate a formula string (e.g., "@level + @stats.cha.mod")
+   * @param {string} formula - The formula to evaluate
+   * @returns {number} - The calculated value
+   * @private
+   */
+  _evaluateFormula(formula) {
+    // Validate formula contains only allowed patterns before substitution
+    const allowedPattern = /^[@\w\s+\-*/().MathMaxinflorceliwStrgmn,._]+$/;
+    if (!allowedPattern.test(formula)) {
+      throw new Error(`Unsafe formula: ${formula}`);
+    }
+    
+    // Get psychic skills for special psychic calculations
+    const psychicSkills = this.parent.items.filter(
+      (i) =>
+        i.type === "skill" &&
+        i.system.source.toLocaleLowerCase() ===
+          game.i18n.localize("swnr.skills.labels.psionic").toLocaleLowerCase()
+    );
+    const highestPsychicSkill = Math.max(0, ...psychicSkills.map((i) => i.system.rank));
+    
+    // Simple variable substitution
+    let expr = formula
+      .replace(/@level/g, this.level.value)
+      .replace(/@stats\.(\w+)\.mod/g, (match, stat) => this.stats[stat]?.mod || 0)
+      .replace(/@stats\.(\w+)\.total/g, (match, stat) => this.stats[stat]?.total || 0)
+      .replace(/@skills\.psychic\.highest/g, highestPsychicSkill)
+      .replace(/@skills\.([^.]+)\.rank/g, (match, skillName) => {
+        // Replace underscores with spaces for skill names
+        const decodedSkillName = skillName.replace(/_/g, ' ');
+        const skill = this.parent.items.find(i => 
+          i.type === "skill" && 
+          i.name.toLocaleLowerCase() === decodedSkillName.toLocaleLowerCase()
+        );
+        return skill?.system.rank || -1; // -1 for untrained
+      });
+    
+    // Final safety check - after substitution should only contain numbers and math
+    if (!/^[\d\s+\-*/().MathMaxinflorceliwStrgmn,]+$/.test(expr)) {
+      throw new Error(`Unsafe expression after substitution: ${expr}`);
+    }
+    
+    // Use Function constructor for evaluation with Math object available
+    const result = new Function('Math', 'return ' + expr)(Math);
+    
+    // If the formula already used Math.ceil or Math.floor, don't apply additional rounding
+    // Otherwise, default to Math.floor (current behavior)
+    if (formula.includes('Math.ceil') || formula.includes('Math.floor')) {
+      return Math.max(0, Math.round(result)); // Use round to preserve existing rounding
+    } else {
+      return Math.max(0, Math.floor(result)); // Default behavior: round down
+    }
   }
 
 }

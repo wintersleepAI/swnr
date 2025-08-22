@@ -1,0 +1,264 @@
+_id: IxwO3c0z8umxW82Z
+name: History Construction - Extant
+img: icons/svg/d20-grey.svg
+description: This generates a history with a single Crisis that the populace overcame.
+results:
+  - _id: eQUWJuAtzTjlPxgQ
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>How Did They Originate?</b>
+    name: ''
+    _key: '!tables.results!IxwO3c0z8umxW82Z.eQUWJuAtzTjlPxgQ'
+  - _id: Cs7yobzyCjJsfUUF
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: History-Originate
+    documentUuid: Compendium.wwn.gm-subtables.zvmgqmrMPn1uPn3s
+    description: ''
+    _key: '!tables.results!IxwO3c0z8umxW82Z.Cs7yobzyCjJsfUUF'
+  - _id: yKWMM6grji7lFdCT
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>What Became of the Original Inhabitants?</b>
+    name: ''
+    _key: '!tables.results!IxwO3c0z8umxW82Z.yKWMM6grji7lFdCT'
+  - _id: s2KpZo3jhCk5M53j
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: History-Became
+    documentUuid: Compendium.wwn.gm-subtables.ezfbdMP34zjIv8SN
+    description: ''
+    _key: '!tables.results!IxwO3c0z8umxW82Z.s2KpZo3jhCk5M53j'
+  - _id: yWkFTRGaILzBswYV
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>Historical Crisis</b>
+    name: ''
+    _key: '!tables.results!IxwO3c0z8umxW82Z.yWkFTRGaILzBswYV'
+  - _id: DUZL2GbvjDaWvFzD
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: History-Crises
+    documentUuid: Compendium.wwn.gm-subtables.aWN0p6WmxZusXM12
+    description: ''
+    _key: '!tables.results!IxwO3c0z8umxW82Z.DUZL2GbvjDaWvFzD'
+  - _id: zIalJedYHs4RBOR6
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>How Did They Overcome the Crisis?</b>
+    name: ''
+    _key: '!tables.results!IxwO3c0z8umxW82Z.zIalJedYHs4RBOR6'
+  - _id: WOwLODRc5YWdKxe2
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: History-Overcome-Crisis
+    documentUuid: Compendium.wwn.gm-subtables.H0VclxkStddyMzu2
+    description: ''
+    _key: '!tables.results!IxwO3c0z8umxW82Z.WOwLODRc5YWdKxe2'
+  - _id: mI8XpPE1sNYl416M
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>What Was Great About Its Peak?</b>
+    name: ''
+    _key: '!tables.results!IxwO3c0z8umxW82Z.mI8XpPE1sNYl416M'
+  - _id: Nj151Xx0ZrsnDMQY
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: History-Peak
+    documentUuid: Compendium.wwn.gm-subtables.viCbnbWQusdkEbIM
+    description: ''
+    _key: '!tables.results!IxwO3c0z8umxW82Z.Nj151Xx0ZrsnDMQY'
+formula: 1d1
+replacement: true
+displayRoll: true
+folder: NcNmE2NSqwIFlKia
+flags:
+  better-rolltables:
+    table-type: better
+    loot-amount-key: ''
+_stats:
+  compendiumSource: Compendium.swnr.wwn-gm-tables.RollTable.IxwO3c0z8umxW82Z
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754271920613
+  modifiedTime: 1754271920613
+  lastModifiedBy: lKC5x4Yf023Bizof
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!tables!IxwO3c0z8umxW82Z'
+

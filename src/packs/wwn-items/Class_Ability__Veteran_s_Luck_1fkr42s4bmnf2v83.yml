@@ -1,0 +1,38 @@
+name: 'Class Ability: Veteran''s Luck'
+type: feature
+sort: 0
+system:
+  description: >-
+    Once per scene, as an Instant action, the Warrior may turn a missed attack
+    they have made into a hit. Alternately, they may turn a successful attack
+    against them into a miss, also as an Instant action. This ability is
+    particularly lethal when used with the Make a Snap Attack action and leveled
+    against weaker monsters or ordinary human warriors, as explained on page 44.
+    Only one exercise of this ability is possible in a scene, either to force a
+    miss or ensure a hit on a foe; both options may not be employed in the same
+    fight. A Warrior may use this ability with crew-served weapons they are
+    assisting in firing. This ability cannot be used to negate environmental
+    damage or damage done to a vehicle or mount they are riding.
+  favorite: false
+  level: 1
+  type: focus
+  poolsGranted: []
+_id: 1fkr42s4bmnf2v83
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456868
+  modifiedTime: 1754277456868
+  lastModifiedBy: null
+  exportSource: null
+folder: XpfSdfJBDfjFSauP
+flags: {}
+effects: []
+img: systems/wwn/assets/default/class%20ability.png
+ownership:
+  default: 0
+_key: '!items!1fkr42s4bmnf2v83'
+

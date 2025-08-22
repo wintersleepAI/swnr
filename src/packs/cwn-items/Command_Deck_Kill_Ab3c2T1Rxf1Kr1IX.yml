@@ -1,0 +1,46 @@
+name: Command Deck/Kill
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: 4ctWevVXyy54aHh0
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.xq220jrrcre53yua
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266949107
+  modifiedTime: 1754266949107
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 0
+  description: >-
+    The drone has autonomous attack routines wired into it. As a Main Action, it
+    can be ordered to kill one specific visible target. If the target is in
+    range of its weapons, it will use its Main Action to attack; if no
+    additional fittings are added, its autonomous attacks have a total hit bonus
+    of +2. The drone will not automatically move to follow or engage its target
+    or otherwise position itself tactically unless directly piloted to do so or
+    operating under the Follow command.
+  mass: 1
+  type: drone
+  favorite: false
+  tl: 4
+  power: 1
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: fighter
+  broken: false
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: Ab3c2T1Rxf1Kr1IX
+sort: 0
+_key: '!items!Ab3c2T1Rxf1Kr1IX'
+

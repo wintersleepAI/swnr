@@ -1,0 +1,47 @@
+name: Cursed Tune
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the scene as a Main Action while targeting an intelligent
+    creature. Your imprecations cause them to falter, inflicting a -1 penalty to
+    their hit, damage, and saving throw rolls for one round per level. At 4th
+    level this penalty becomes -2, and at 9th it becomes -3.
+  favorite: false
+  subType: arcane
+  source: Bard
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Bard
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: jssn4mednyf7skb4
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456765
+  modifiedTime: 1754277456765
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/bard_art.png
+ownership:
+  default: 0
+_key: '!items!jssn4mednyf7skb4'
+

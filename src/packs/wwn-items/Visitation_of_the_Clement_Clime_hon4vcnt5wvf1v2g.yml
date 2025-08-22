@@ -1,0 +1,55 @@
+name: Visitation of the Clement Clime
+type: power
+sort: 0
+system:
+  description: >-
+    The caster and up to three visible allies per caster level are shielded from
+    the excesses of hostile elemental energies, becoming immune to mundane
+    extremes of heat and cold and natural acids or electrical discharges.
+    Against magical harm of this nature, they automatically take only half the
+    damage they normally would, or none if they make a successful Physical
+    saving throw. This spell lasts for one hour per caster level.
+  favorite: false
+  subType: arcane
+  source: High Mage
+  level: 2
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 1 hour per level
+  save: None
+  range: Visible
+  skill: null
+_id: hon4vcnt5wvf1v2g
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456912
+  modifiedTime: 1754277456912
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!hon4vcnt5wvf1v2g'
+

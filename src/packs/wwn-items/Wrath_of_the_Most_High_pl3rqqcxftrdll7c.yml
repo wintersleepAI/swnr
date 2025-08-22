@@ -1,0 +1,46 @@
+name: Wrath of the Most High
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the scene as a Main Action while you rebuke a visible
+    target. The first time the target takes damage before the end of the next
+    round, it suffers automatic additional damage equal to 1d8 plus your level.
+  favorite: false
+  subType: arcane
+  source: Blood Priest
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Blood Priest
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: pl3rqqcxftrdll7c
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456773
+  modifiedTime: 1754277456773
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/bloodPriest_art.png
+ownership:
+  default: 0
+_key: '!items!pl3rqqcxftrdll7c'
+

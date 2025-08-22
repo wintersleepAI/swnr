@@ -1,0 +1,33 @@
+name: 'Origin Focus: Elf, Civilized'
+type: feature
+sort: 0
+system:
+  description: >-
+    This style of elf represents the city-dwelling, magic-loving, sophisticated
+    interpretation of elvishness favored in some worlds. Level 1: Gain Know and
+    Magic as bonus skills. Your Dexterity or Intelligence modifier increases by
+    +1 and your Constitution modifier decreases by -1. You can see clearly in
+    any light level above complete darkness.
+  favorite: false
+  level: 1
+  type: focus
+  poolsGranted: []
+_id: y054vq0hrngjgsq2
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456869
+  modifiedTime: 1754277456869
+  lastModifiedBy: null
+  exportSource: null
+folder: XpfSdfJBDfjFSauP
+flags: {}
+effects: []
+img: systems/wwn/assets/default/origin_focus.png
+ownership:
+  default: 0
+_key: '!items!y054vq0hrngjgsq2'
+

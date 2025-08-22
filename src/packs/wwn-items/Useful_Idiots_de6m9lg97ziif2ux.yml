@@ -1,0 +1,49 @@
+name: Useful Idiots
+type: asset
+sort: 0
+system:
+  description: >-
+    Hirelings, catspaws, foolish idealists, and other disposable minions are
+    gathered together in this Asset. If another Asset within one turn's move of
+    the Useful Idiots is struck by an Attack, the faction can instead sacrifice
+    the Useful Idiots to negate the attack. Only one band of Useful Idiots can
+    be sacrificed on any one turn.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 2
+    max: 2
+  rating: 1
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: de6m9lg97ziif2ux
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456945
+  modifiedTime: 1754277456945
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/cunning.png
+ownership:
+  default: 0
+_key: '!items!de6m9lg97ziif2ux'
+

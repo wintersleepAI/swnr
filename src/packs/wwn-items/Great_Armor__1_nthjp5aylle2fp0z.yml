@@ -1,0 +1,55 @@
+name: Great Armor +1
+type: armor
+sort: 0
+system:
+  description: >-
+    Great armor is less finely tailored, relying instead on stacking layer upon
+    layer of mail, plates, hide, cloth, and other protective materials until a
+    suit almost too heavy for movement is finally assembled. Heavy armor is the
+    thickest, toughest panoply available on the market, and its bulk and noise
+    make its encumbrance apply as a penalty to Sneak or Exert checks made by the
+    wearer.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 2
+  cost: 4000
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 10
+  shield: false
+  use: false
+  meleeAc: 20
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+  baseAc: 20
+_id: nthjp5aylle2fp0z
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456970
+  modifiedTime: 1754277456970
+  lastModifiedBy: null
+  exportSource: null
+folder: CKqMh5qEXioiEqoU
+flags: {}
+effects: []
+img: systems/wwn/assets/default/armor.png
+ownership:
+  default: 0
+_key: '!items!nthjp5aylle2fp0z'
+

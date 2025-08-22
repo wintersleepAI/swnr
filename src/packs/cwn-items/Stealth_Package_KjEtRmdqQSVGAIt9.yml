@@ -1,0 +1,43 @@
+name: Stealth Package
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: 4ctWevVXyy54aHh0
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.bv5gmj8o2w3v1yrt
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266949107
+  modifiedTime: 1754266949107
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 0
+  description: >-
+    Usable only on drones of Enc 3 or smaller, this fitting adds color-changing
+    drone sheathing, noise damping, and thermal sealing to the unit. It gains an
+    effective Sneak-1 skill when operating autonomously, or a +2 bonus to Sneak
+    checks when being directly piloted.
+  mass: 1
+  type: drone
+  favorite: false
+  tl: 4
+  power: 1
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: fighter
+  broken: false
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: KjEtRmdqQSVGAIt9
+sort: 0
+_key: '!items!KjEtRmdqQSVGAIt9'
+

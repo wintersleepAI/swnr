@@ -1,0 +1,46 @@
+name: Thermal Shield
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the scene as an Instant action to immediately negate one
+    instance of fire or frost damage to any single visible ally or object. This
+    defense lasts only long enough to nullify the single instance of damage
+  favorite: false
+  subType: arcane
+  source: Elementalist
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Elementalist
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: yf9dnv2c45i1dbo1
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456834
+  modifiedTime: 1754277456834
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/elementalist_art.png
+ownership:
+  default: 0
+_key: '!items!yf9dnv2c45i1dbo1'
+

@@ -1,0 +1,147 @@
+name: Combat-Trained Humanoids
+img: icons/svg/d20-grey.svg
+results:
+  - _id: fSPfHm5xsiUviFVz
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Freeze in confusion, doing nothing this round
+    name: ''
+    _key: '!tables.results!skx6kJjjpjmxdIcI.fSPfHm5xsiUviFVz'
+  - _id: hHysPrMWnwfzqzVO
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Reposition to get a better place to fight from
+    name: ''
+    _key: '!tables.results!skx6kJjjpjmxdIcI.hHysPrMWnwfzqzVO'
+  - _id: fPp1lYY4egmk28rr
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Duck, taking the <b>Total Defense</b> action
+    name: ''
+    _key: '!tables.results!skx6kJjjpjmxdIcI.fPp1lYY4egmk28rr'
+  - _id: 68Q2iFiR0cFlYzxH
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Spend a round looking around the battlefield
+    name: ''
+    _key: '!tables.results!skx6kJjjpjmxdIcI.68Q2iFiR0cFlYzxH'
+  - _id: xvufoZTnVAFDwTI0
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Blindly attack the nearest enemy
+    name: ''
+    _key: '!tables.results!skx6kJjjpjmxdIcI.xvufoZTnVAFDwTI0'
+  - _id: EuZ4iBI67uFC2TMk
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Attack an object, barrier, or downed foe
+    name: ''
+    _key: '!tables.results!skx6kJjjpjmxdIcI.EuZ4iBI67uFC2TMk'
+formula: 1d6
+replacement: true
+displayRoll: true
+folder: tCjobZPuAK5KxMZQ
+flags:
+  core: {}
+_stats:
+  compendiumSource: Compendium.swnr.wwn-instinct.RollTable.pCayfwBEwsfFc4Hn
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754272494042
+  modifiedTime: 1754272494042
+  lastModifiedBy: lKC5x4Yf023Bizof
+description: ''
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: skx6kJjjpjmxdIcI
+sort: 0
+_key: '!tables!skx6kJjjpjmxdIcI'
+

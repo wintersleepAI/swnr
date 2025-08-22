@@ -1,0 +1,46 @@
+name: Rally
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the day as a Main Action to exhort a wounded or fallen
+    ally, removing any Frailty. The target regains 2d6 plus your level in hit
+    points, but you incur one System Strain.
+  favorite: false
+  subType: arcane
+  source: Bard
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Bard
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: uqkjh3u4cva7grd2
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456778
+  modifiedTime: 1754277456778
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/bard_art.png
+ownership:
+  default: 0
+_key: '!items!uqkjh3u4cva7grd2'
+

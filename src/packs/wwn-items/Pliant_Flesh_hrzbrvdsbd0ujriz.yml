@@ -1,0 +1,49 @@
+name: Pliant Flesh
+type: power
+sort: 0
+system:
+  description: >-
+    You've mastered your shapeshifting skills, and Change Form can be used as an
+    On Turn action, albeit only once per round. Alternately, it can take as long
+    as a minute but cost no Effort. Whenever you spend Effort to shift shape,
+    you heal lost hit points equal to 1d6 plus your level; this does not apply
+    when merely reverting a form's change. This art is intrinsic to you, and
+    doesn't count against the total number of arts allowed to apply to a form.
+  favorite: false
+  subType: arcane
+  source: Skinshifter
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Skinshifter
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: hrzbrvdsbd0ujriz
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456758
+  modifiedTime: 1754277456758
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/skinshifter_art.png
+ownership:
+  default: 0
+_key: '!items!hrzbrvdsbd0ujriz'
+

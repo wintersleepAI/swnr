@@ -1,0 +1,47 @@
+name: Compelling Shriek
+type: power
+sort: 0
+system:
+  description: >-
+    Once per scene, Commit Effort for the day as a Main Action and shout a
+    command of no more than seven words. Chosen targets who hear and understand
+    must make a Mental save or perform that action for one round, provided it is
+    not totally contrary to their character.
+  favorite: false
+  subType: arcane
+  source: Accursed
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Accursed
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: mental
+  range: Self
+  skill: null
+_id: 12zqz2filk85bwgj
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456801
+  modifiedTime: 1754277456801
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/accursed_art.png
+ownership:
+  default: 0
+_key: '!items!12zqz2filk85bwgj'
+

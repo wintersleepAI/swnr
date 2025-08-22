@@ -1,0 +1,61 @@
+name: Continual Light (Cleric)
+type: power
+sort: 8100000
+system:
+  description: >-
+    Duration: Permanent Range: 120' This spell has three usages: 1. Conjuring
+    light: In a 30' radius. The magical light is as bright as full daylight
+    (creatures that suffer attack penalties in daylight are affected). The spell
+    may be cast upon an object, in which case, the light moves with the object.
+    2. Blinding a creature: By casting the spell upon its eyes. If the target
+    fails an Evasion save, it is blinded. A blind creature cannot attack. 3.
+    Cancelling darkness: Continual light may cancel a continual darkness spell
+    (see below). Reversed: Continual Darkness Creates a 30' radius area of
+    magical blackness, preventing both normal sight and infravision. Light
+    sources brought within the area of darkness do not illuminate it. Like
+    continual light, it may alternatively be used to blind creatures or to
+    dispel a continual light spell.
+  favorite: false
+  subType: arcane
+  source: Cleric
+  level: 3
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Permanent
+  save: mental
+  range: 120'
+  skill: null
+_id: 4c8dxzzfqoko5pv8
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457090
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!4c8dxzzfqoko5pv8'
+

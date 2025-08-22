@@ -1,0 +1,52 @@
+name: Shield
+type: power
+sort: 800000
+system:
+  description: >-
+    Duration: 2 turns Range: The caster Shield creates an invisible field of
+    force that protects the caster: ▶ Against missile attacks: The caster's AC
+    is 17. ▶ Against other attacks: The caster's AC is 15.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 2 turns
+  save: None
+  range: Caster
+  skill: null
+_id: rxiq23o28cmuvv3i
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457068
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!rxiq23o28cmuvv3i'
+

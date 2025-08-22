@@ -1,0 +1,55 @@
+name: Buff Coat +1
+type: armor
+sort: 0
+system:
+  description: >-
+    Buff coats are long coats of thick, supple hide, sometimes worn to cushion
+    the bite of heavier armor and sometimes sported as ornamented street
+    clothing for the gentry who can afford such luxuries Light armor may be
+    decidedly heavy, but it is loose and flexible enough to offer minimal
+    hindrance to the wearer's actions. Some varieties are also discreet enough
+    to be worn politely in common society.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 1
+  cost: 50
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 10
+  shield: false
+  use: false
+  meleeAc: 13
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+  baseAc: 13
+_id: cycl3gzg19hmeqgv
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456975
+  modifiedTime: 1754277456975
+  lastModifiedBy: null
+  exportSource: null
+folder: CKqMh5qEXioiEqoU
+flags: {}
+effects: []
+img: systems/wwn/assets/default/armor.png
+ownership:
+  default: 0
+_key: '!items!cycl3gzg19hmeqgv'
+

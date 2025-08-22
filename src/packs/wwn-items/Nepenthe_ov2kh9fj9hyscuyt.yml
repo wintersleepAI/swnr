@@ -1,0 +1,43 @@
+name: Nepenthe
+type: item
+sort: 0
+system:
+  description: >-
+    This liquid eases a tormented mind and can cure mental illnesses and temper
+    the pain of past traumas. Madness induced by magical causes forces the
+    subject to make a Mental saving throw; on a failure, the draught cannot
+    break the curse. A subject can benefit from Nepenthe only once in their
+    life.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 0
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
+_id: ov2kh9fj9hyscuyt
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456992
+  modifiedTime: 1754277456992
+  lastModifiedBy: null
+  exportSource: null
+folder: jXrFh0x6b5Auj9IZ
+flags: {}
+effects: []
+img: icons/tools/laboratory/vial-orange.webp
+ownership:
+  default: 0
+_key: '!items!ov2kh9fj9hyscuyt'
+

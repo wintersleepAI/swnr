@@ -1,0 +1,55 @@
+name: Lightning Bolt
+type: power
+sort: 3800000
+system:
+  description: >-
+    Duration: Instant Range: 180' A powerful stroke of electrical energy, 60'
+    long and 5' wide, is conjured. ▶ Damage: Creatures caught in the lightning
+    bolt suffer 1d6 damage per level of the caster, with a successful Evasion
+    save indicating half damage. ▶ Bouncing: If the lightning bolt hits a solid
+    barrier before its full length is reached, it is reflected and travels for
+    any remaining distance of its full length in the direction of the caster.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 3
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: evasion
+  range: 180'
+  skill: null
+_id: wh5lobs4azu8sc7y
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457084
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!wh5lobs4azu8sc7y'
+

@@ -1,0 +1,47 @@
+name: Dancing Girls
+type: asset
+sort: 0
+system:
+  description: >-
+    Dancing Girls or other charming distractions are immune to Attack or
+    Counterattack damage from Force Assets, but they cannot be used to defend
+    against Attacks from Force Assets.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 3
+    max: 3
+  rating: 2
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: 1uj4plct6qazphxn
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456942
+  modifiedTime: 1754277456942
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/cunning.png
+ownership:
+  default: 0
+_key: '!items!1uj4plct6qazphxn'
+

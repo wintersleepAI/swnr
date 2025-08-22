@@ -2,7 +2,7 @@
   "id": "swnr",
   "title": "Systems Without Number (Stars, Cities, and Ashes)",
   "description": "The Stars and Cities and Ashes Without Number System for FoundryVTT!",
-  "version": "2.0.12",
+  "version": "2.1.0",
   "authors": [
     {
       "name": "wintersleepAI",
@@ -111,12 +111,6 @@
   ],
   "packs": [
     {
-      "name": "all-items",
-      "label": "All Items",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
       "name": "ammo-and-power",
       "label": "Ammo And Power",
       "system": "swnr",
@@ -153,74 +147,25 @@
       "type": "Item"
     },
     {
-      "name": "cwn-armor",
-      "label": "Cwn Armor",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-cyberware",
-      "label": "Cwn Cyberware",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-drone-fittings",
-      "label": "Cwn Drone Fittings",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-drones",
-      "label": "Cwn Drones",
+      "name": "cwn-actors",
+      "label": "Cwn actors",
       "system": "swnr",
       "type": "Actor"
     },
     {
-      "name": "cwn-edges",
-      "label": "Cwn Edges",
+      "name": "cwn-roll-tables",
+      "label": "Cwn Roll Tables",
       "system": "swnr",
-      "type": "Item"
-    },
+      "type": "RollTable"},
     {
-      "name": "cwn-foci",
-      "label": "Cwn Foci",
+      "name": "cwn-journals",
+      "label": "Cwn Journals",
       "system": "swnr",
-      "type": "Item"
+      "type": "JournalEntry"
     },
     {
       "name": "cwn-items",
       "label": "Cwn Items",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-pharmaceuticals",
-      "label": "Cwn Pharmaceuticals",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-program",
-      "label": "Cwn Program",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-vehicle-fittings",
-      "label": "Cwn Vehicle Fittings",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-vehicle-weapons",
-      "label": "Cwn Vehicle Weapons",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-weapons",
-      "label": "Cwn Weapons",
       "system": "swnr",
       "type": "Item"
     },
@@ -245,6 +190,12 @@
     {
       "name": "foci",
       "label": "Foci",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "features",
+      "label": "Features",
       "system": "swnr",
       "type": "Item"
     },
@@ -339,12 +290,6 @@
       "type": "Item"
     },
     {
-      "name": "cwn-tables",
-      "label": "CWN Roll Tables",
-      "system": "swnr",
-      "type": "RollTable"
-    },
-    {
       "name": "one-roll-tables",
       "label": "SWN Roll Tables",
       "system": "swnr",
@@ -357,32 +302,74 @@
       "type": "RollTable"
     },
     {
-      "name": "wwn-gm-sub-tables",
-      "label": "WWN Backing Roll Tables",
+      "name": "swn-items",
+      "label": "SWN Items",
+      "system": "swnr",
+      "type": "Item"
+    },
+    {
+      "name": "swn-actors",
+      "label": "SWN Actors",
+      "system": "swnr",
+      "type": "Actor"
+    },
+    {
+      "name": "swn-roll-tables",
+      "label": "SWN Roll Tables",
       "system": "swnr",
       "type": "RollTable"
     },
     {
-      "name": "wwn-gm-tables",
+      "name": "swn-journals",
+      "label": "SWN Journals",
+      "system": "swnr",
+      "type": "JournalEntry"
+    },
+    {
+      "name": "wwn-roll-tables",
       "label": "WWN Roll Tables",
-      "system": "swnr",
-      "type": "RollTable"
+      "type": "RollTable",
+      "system": "swnr"
     },
     {
-      "name": "wwn-instinct",
-      "label": "WWN Instinct Tables",
-      "system": "swnr",
-      "type": "RollTable"
+      "name": "wwn-journals",
+      "label": "WWN Journals",
+      "type": "JournalEntry",
+      "system": "swnr"
+    },        
+    {
+      "name": "wwn-items",
+      "label": "WWN Items",
+      "type": "Item",
+      "system": "swnr"
     },
     {
-      "name": "wwn-magic-items",
-      "label": "WWN Magic Items Tables",
-      "system": "swnr",
-      "type": "RollTable"
+      "name": "wwn-actors",
+      "label": "WWN Actors",
+      "type": "Actor",
+      "system": "swnr"
     },
     {
-      "name": "wwn-magic-tables",
-      "label": "WWN Magic Tables",
+      "name": "awn-actors",
+      "label": "AWN Actors",
+      "type": "Actor",
+      "system": "swnr"
+    },
+    {
+      "name": "awn-journals",
+      "label": "AWN Journals",
+      "type": "JournalEntry",
+      "system": "swnr"
+    },
+    {
+      "name": "awn-items",
+      "label": "AWN Items",
+      "type": "Item",
+      "system": "swnr"
+    },
+    {
+      "name": "awn-roll-tables",
+      "label": "AWN Roll Tabels",
       "system": "swnr",
       "type": "RollTable"
     }
@@ -440,25 +427,6 @@
       ]
     },
     {
-      "name": "CWN",
-      "sorting": "a",
-      "color": "#cccccc",
-      "packs": [
-        "cwn-armor",
-        "cwn-cyberware",
-        "cwn-drone-fittings",
-        "cwn-drones",
-        "cwn-edges",
-        "cwn-foci",
-        "cwn-items",
-        "cwn-pharmaceuticals",
-        "cwn-program",
-        "cwn-vehicle-fittings",
-        "cwn-vehicle-weapons",
-        "cwn-weapons"
-      ]
-    }, 
-    {
       "name": "Bestiary",
       "sorting": "a",
       "color": "#999999",
@@ -472,7 +440,8 @@
       "sorting": "a",
       "color": "#AAAAAA",
       "packs": [
-        "foci"
+        "foci",
+        "features"
       ]
     }, 
     {
@@ -480,14 +449,52 @@
       "sorting": "a",
       "color": "#CCCCCC",
       "packs": [
-        "cwn-tables",
         "one-roll-tables",
-        "one-roll-backing",
-        "wwn-gm-sub-tables",
-        "wwn-gm-tables",
-        "wwn-instinct",
-        "wwn-magic-items",
-        "wwn-magic-tables"
+        "one-roll-backing"
+      ]
+    },
+    {
+      "name": "WWN",
+      "sorting": "a",
+      "color": "#FF9900",
+      "packs": [
+        "wwn-actors",
+        "wwn-items",
+        "wwn-roll-tables",
+        "wwn-journals"
+      ]
+    },
+    {
+      "name": "SWN",
+      "sorting": "a",
+      "color": "#FF6600",
+      "packs": [
+        "swn-actors",
+        "swn-items",
+        "swn-roll-tables",
+        "swn-journals"
+      ]
+    },
+    {
+      "name": "CWN",
+      "sorting": "a",
+      "color": "#00FF00",
+      "packs": [
+        "cwn-actors",
+        "cwn-items",
+        "cwn-roll-tables",
+        "cwn-journals"
+      ] 
+    },
+    {
+      "name": "AWN",
+      "sorting": "a",
+      "color": "#FFCC00",
+      "packs": [
+        "awn-items",
+        "awn-roll-tables",
+        "awn-actors",
+        "awn-journals"
       ]
     }
   ],

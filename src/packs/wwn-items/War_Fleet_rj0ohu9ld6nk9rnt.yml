@@ -1,0 +1,48 @@
+name: War Fleet
+type: asset
+sort: 0
+system:
+  description: >-
+    While a war fleet can only Attack assets and locations within reach of the
+    waterways, once per turn it can freely relocate itself to any coastal area
+    within movement range. The Asset itself must be based out of some landward
+    location to provide for supply and refitting.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 8
+    max: 8
+  rating: 4
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: rj0ohu9ld6nk9rnt
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456947
+  modifiedTime: 1754277456947
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/force.png
+ownership:
+  default: 0
+_key: '!items!rj0ohu9ld6nk9rnt'
+

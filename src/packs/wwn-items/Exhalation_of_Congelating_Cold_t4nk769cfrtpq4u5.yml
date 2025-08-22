@@ -1,0 +1,57 @@
+name: Exhalation of Congelating Cold
+type: power
+sort: 0
+system:
+  description: >-
+    The caster invokes a gust of deepest winter on a point within one hundred
+    feet per level, freezing everything in a radius up to ten feet per caster
+    level. All liquids freeze solid down to a depth of two feet and all living
+    creatures not impervious to arctic cold must suffer 1d6 damage per two
+    levels of the caster, with a Physical save for half damage. Those who fail
+    their Physical saves are numbed by the cold and lose their Move action each
+    round for the next [[/roll 1d4]] rounds. The frozen area warms again at the
+    usual rate for the surrounding environment.
+  favorite: false
+  subType: arcane
+  source: High Mage
+  level: 3
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: physical
+  range: radius of 10 ft. per level, within 100 ft. per level
+  skill: null
+_id: t4nk769cfrtpq4u5
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456918
+  modifiedTime: 1754277456918
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!t4nk769cfrtpq4u5'
+

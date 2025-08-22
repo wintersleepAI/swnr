@@ -1,0 +1,47 @@
+name: Personal Impunity
+type: power
+sort: 0
+system:
+  description: >-
+    You bear signs of sanctity, and physically harming you is considered taboo
+    in this region. Only the most vicious or desperate humans will initiate
+    violence against you, though any will fight if you attack them. Hostile
+    groups will hesitate to attack your companions unless provoked.
+  favorite: false
+  subType: arcane
+  source: Wise
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Wise
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 428vei8lmip75a35
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456753
+  modifiedTime: 1754277456753
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/wise_art.png
+ownership:
+  default: 0
+_key: '!items!428vei8lmip75a35'
+

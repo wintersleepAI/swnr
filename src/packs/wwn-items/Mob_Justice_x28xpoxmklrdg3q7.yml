@@ -1,0 +1,49 @@
+name: Mob Justice
+type: power
+sort: 0
+system:
+  description: >-
+    As an Instant action, Commit Effort for the day to become impervious to the
+    Make a Swarm Attack maneuver as described on page 44. Your assailants cannot
+    use this maneuver against you for the rest of the scene, and you become
+    immune to Shock as long as you remain in melee with at least two foes.
+    Making use of this benefit disrupts any spellcasting you may attempt,
+    however, due to the violent motion required.
+  favorite: false
+  subType: arcane
+  source: Vowed
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Vowed
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: x28xpoxmklrdg3q7
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456753
+  modifiedTime: 1754277456753
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/vowed_art.png
+ownership:
+  default: 0
+_key: '!items!x28xpoxmklrdg3q7'
+

@@ -1,0 +1,276 @@
+name: Veteran Fighter
+type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: v6929qltwuw7zygo
+system:
+  ab: 2
+  armorType: street
+  attacks:
+    bonusDamage: 1
+    number: 1
+  baseAc: 14
+  hitDice: 2
+  moralScore: 9
+  saves: 14
+  skillBonus: 1
+  speed: 10
+effects: []
+prototypeToken:
+  name: Veteran Fighter
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/blankface.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+items:
+  - name: D4 Weapon
+    type: weapon
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
+      lastModifiedBy: null
+      exportSource: null
+    sort: 0
+    _id: kjh4q8jwcvxu6ril
+    system:
+      shock:
+        dmg: 0
+        ac: 15
+      damage: d4
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      permission:
+        default: 0
+    effects: []
+    img: icons/svg/item-bag.svg
+    ownership:
+      default: 0
+    _key: '!actors.items!v6929qltwuw7zygo.kjh4q8jwcvxu6ril'
+  - name: D6 Weapon
+    type: weapon
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
+      lastModifiedBy: null
+      exportSource: null
+    sort: 0
+    _id: 98b7z9zky6h0n0nv
+    system:
+      shock:
+        dmg: 0
+        ac: 15
+      damage: d6
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      permission:
+        default: 0
+    effects: []
+    img: icons/svg/item-bag.svg
+    ownership:
+      default: 0
+    _key: '!actors.items!v6929qltwuw7zygo.98b7z9zky6h0n0nv'
+  - name: D8 Weapon
+    type: weapon
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
+      lastModifiedBy: null
+      exportSource: null
+    sort: 0
+    _id: 8lhcy2rpke78nfeb
+    system:
+      shock:
+        dmg: 0
+        ac: 15
+      damage: d8
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      permission:
+        default: 0
+    effects: []
+    img: icons/svg/item-bag.svg
+    ownership:
+      default: 0
+    _key: '!actors.items!v6929qltwuw7zygo.8lhcy2rpke78nfeb'
+  - name: D10 Weapon
+    type: weapon
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
+      lastModifiedBy: null
+      exportSource: null
+    sort: 0
+    _id: 161iz7xlzyavcuf7
+    system:
+      shock:
+        dmg: 0
+        ac: 15
+      damage: d10
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      permission:
+        default: 0
+    effects: []
+    img: icons/svg/item-bag.svg
+    ownership:
+      default: 0
+    _key: '!actors.items!v6929qltwuw7zygo.161iz7xlzyavcuf7'
+  - name: D12 Weapon
+    type: weapon
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.0.0
+      createdTime: 1739238988321
+      modifiedTime: 1739238988321
+      lastModifiedBy: null
+      exportSource: null
+    sort: 0
+    _id: 4p22fpc6o0f9oynq
+    system:
+      shock:
+        dmg: 0
+        ac: 15
+      damage: d12
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      permission:
+        default: 0
+    effects: []
+    img: icons/svg/item-bag.svg
+    ownership:
+      default: 0
+    _key: '!actors.items!v6929qltwuw7zygo.4p22fpc6o0f9oynq'
+ownership:
+  default: 0
+_key: '!actors!v6929qltwuw7zygo'
+

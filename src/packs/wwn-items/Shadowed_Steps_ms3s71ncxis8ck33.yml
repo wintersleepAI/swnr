@@ -1,0 +1,46 @@
+name: Shadowed Steps
+type: power
+sort: 0
+system:
+  description: >-
+    As a Move Action, Commit Effort for the scene and teleport up to your Move
+    distance. You cannot bypass walls or physical obstacles, but you can
+    teleport vertically or into high places.
+  favorite: false
+  subType: arcane
+  source: Accursed
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Accursed
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: ms3s71ncxis8ck33
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456785
+  modifiedTime: 1754277456785
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/accursed_art.png
+ownership:
+  default: 0
+_key: '!items!ms3s71ncxis8ck33'
+

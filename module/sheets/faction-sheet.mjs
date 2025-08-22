@@ -8,6 +8,8 @@ const { api, sheets } = foundry.applications;
  * @extends {ActorSheetV2}
  */
 export class SWNFactionSheet extends SWNBaseSheet {
+  static _expandedDescriptions = {};
+
   constructor(options = {}) {
     super(options);
   }
@@ -34,6 +36,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       editLog: this._onEditLog,
       removeLog: this._onRemoveLog,
       removeAllLogs: this._onRemoveAllLogs,
+      toggleItemDescription: this._onToggleItemDescription,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -103,6 +106,8 @@ export class SWNFactionSheet extends SWNBaseSheet {
       // Necessary for formInput and formFields helpers
       fields: this.document.schema.fields,
       systemFields: this.document.system.schema.fields,
+      // Add expanded descriptions state for item description toggle functionality
+      expandedDescriptions: SWNFactionSheet._expandedDescriptions,
     };
 
     // Offloading context prep to a helper function
@@ -456,5 +461,34 @@ export class SWNFactionSheet extends SWNBaseSheet {
 
   /** Helper Functions */
 
+  /**
+   * Toggle the display of an item's description
+   * @param {Event} event - The click event
+   * @param {HTMLElement} target - The clicked element
+   * @returns {Promise<void>}
+   * @static
+   */
+  static async _onToggleItemDescription(event, target) {
+    event.preventDefault();
+    const itemId = target.dataset.itemId || target.closest('[data-item-id]')?.dataset.itemId;
+    if (!itemId) return;
+
+    // Toggle the expanded state
+    if (SWNFactionSheet._expandedDescriptions[itemId]) {
+      delete SWNFactionSheet._expandedDescriptions[itemId];
+    } else {
+      SWNFactionSheet._expandedDescriptions[itemId] = true;
+    }
+
+    // Find and toggle the description row
+    const itemRow = target.closest('.item[data-item-id]');
+    if (!itemRow) return;
+
+    const descriptionRow = itemRow.nextElementSibling;
+    if (descriptionRow && descriptionRow.classList.contains('item-description')) {
+      const isExpanded = SWNFactionSheet._expandedDescriptions[itemId];
+      descriptionRow.style.display = isExpanded ? 'block' : 'none';
+    }
+  }
 
 }

@@ -1,21 +1,11 @@
 export function chatListeners(message, html) {
   html.on("click", ".card-buttons button", _onChatCardAction.bind(this));
-  const foundDiv = [];
-  html.find(".dice-roll").each((_i , _d) => {
-    foundDiv.push(_d);
+  // Add reroll buttons to all dice rolls
+  html.find(".roll").each((_i, div) => {
+    _addRerollButton($(div));
   });
-  if (foundDiv.length == 1) {
-    _addHealthButtons($(foundDiv[0]));
-  } else if (foundDiv.length > 1) {
-    for (const div of foundDiv) {
-      _addRerollButton($(div));
-    }
-  }
-  // //Reroll
-  // html.find(".dice-roll").each((_i, div) => {
-  //   _addRerollButton($(div));
-  // });
-  // Health Buttons
+  
+  // Add health buttons to damage rolls
   html.find(".roll-damage").each((_i, div) => {
     _addHealthButtons($(div));
   });
@@ -121,6 +111,12 @@ export function _addRerollButton(html) {
     return;
   }
 
+  // Check if reroll button already exists to prevent duplicates
+  const existingContainer = totalDiv.parent().find(".dmgBtn-container");
+  if (existingContainer.length > 0 && existingContainer.find(".dice-total-reroll-btn").length > 0) {
+    return;
+  }
+
   const diceRoll = totalDiv.parent().find(".dice-formula").text();
   const total = parseInt(totalDiv.text());
   if (isNaN(total)) {
@@ -128,14 +124,26 @@ export function _addRerollButton(html) {
     return;
   }
 
-  const btnContainer = $('<div class="dmgBtn-container"></div>');
+  // Use existing container or create new one
+  let btnContainer = existingContainer.length > 0 ? existingContainer : $('<div class="dmgBtn-container"></div>');
   const rerollButton = getRerollButton(diceRoll, false);
   btnContainer.append(rerollButton);
-  totalDiv.parent().append(btnContainer);
+  
+  // Only append if we created a new container
+  if (existingContainer.length === 0) {
+    totalDiv.parent().append(btnContainer);
+  }
 }
 
 export function _addHealthButtons(html) {
   const totalDiv = html.find(".dice-total");
+  
+  // Check if health buttons already exist to prevent duplicates
+  const existingContainer = totalDiv.parent().find(".dmgBtn-container");
+  if (existingContainer.length > 0 && existingContainer.find(".dice-total-fullDamage-btn").length > 0) {
+    return;
+  }
+  
   const total = parseInt(totalDiv.text());
   if (isNaN(total)) {
     console.log("Error in converting a string to a number " + totalDiv.text());
@@ -160,18 +168,22 @@ export function _addHealthButtons(html) {
 
   const fullDamageModifiedButton = $("<button>")
     .addClass("dice-total-fullDamageMod-btn chat-button-small")
-    .attr("title", game.i18n.localize("swnr.chat.healthButtonsfullDamageModified"))
+    .attr("title", game.i18n.localize("swnr.chat.healthButtons.fullDamageModified"))
     .append($("<i>").addClass("fas fa-user-edit"));
 
-  const btnContainer = $('<div class="dmgBtn-container"></div>');
+  // Use existing container or create new one
+  let btnContainer = existingContainer.length > 0 ? existingContainer : $('<div class="dmgBtn-container"></div>');
 
-  const rerollButton = getRerollButton(diceRoll, true);
   btnContainer.append(fullDamageButton);
   btnContainer.append(fullDamageModifiedButton);
   btnContainer.append(halfDamageButton);
   // btnContainer.append(doubleDamageButton);
   btnContainer.append(fullHealingButton);
-  totalDiv.parent().append(btnContainer);
+  
+  // Only append if we created a new container
+  if (existingContainer.length === 0) {
+    totalDiv.parent().append(btnContainer);
+  }
 
   // Handle button clicks
   fullDamageButton.on("click", (ev) => {
@@ -414,8 +426,8 @@ export async function _onChatCardAction(
   const button = event.currentTarget;
   //button.disabled = true;
   const card = button.closest(".chat-card");
-  //const messageId = card.closest(".message").dataset.messageId;
-  //const message = game.messages?.get(messageId);
+  const messageLi = button.closest(".message");
+  const message = game.messages.get(messageLi.dataset.messageId);
   const action = button.dataset.action;
 
   // Validate permission to proceed with the roll
@@ -498,25 +510,474 @@ export async function _onChatCardAction(
         }
       }
     }
-  } else if (action === "effort") {
-    if (!targets.length) {
-      ui.notifications?.warn(
-        `You must have one or more controlled Tokens in order to use this option.`
-      );
-      //return (button.disabled = false);
+  } else if (action === "use-power") {
+    // Handle power resource spending with unified power system
+    const powerId = button.dataset.powerId;
+    const actorId = button.dataset.actorId;
+    
+    if (!powerId || !actorId) {
+      ui.notifications?.error("Missing power or actor ID for resource spending");
+      return;
     }
-    const effort = button.dataset.effort;
-
-    for (const t of targets) {
-      if (t.type === "character") {
-        if (t.system.effort.value == 0) {
-          ui.notifications?.info(`${t.name} has no available effort`);
-          return;
+    
+    // Get the actor and power
+    const actor = game.actors?.get(actorId);
+    if (!actor) {
+      ui.notifications?.error("Could not find actor for power usage");
+      return;
+    }
+    
+    const power = actor.items.get(powerId);
+    if (!power) {
+      ui.notifications?.error("Could not find power on actor");
+      return;
+    }
+    
+    // Check if user can control this actor
+    if (!actor.isOwner && !game.user?.isGM) {
+      ui.notifications?.warn("You do not have permission to use this actor's powers");
+      return;
+    }
+    
+    try {
+      // Check for selected token to target for costs
+      let targetActor = actor;
+      const controlled = canvas.tokens?.controlled;
+      if (controlled && controlled.length === 1) {
+        targetActor = controlled[0].actor;
+        if (targetActor !== actor) {
+          ui.notifications?.info(`Using selected token for costs: ${targetActor.name}`);
         }
-        const updated_effort = t.system.effort[effort] + 1;
-        const effort_key = `system.effort.${effort}`;
-        await t.update({ [effort_key]: updated_effort });
       }
+      
+      // Use the power's resource spending system (without creating new chat message)
+      const result = await power.system._performUseForChatUpdate(targetActor);
+      
+      if (result.success) {
+        // Update the existing chat message with the new state showing recovery buttons
+        // Preserve the original power roll from the existing message (don't reroll!)
+        const chatCard = $(event.currentTarget).closest('.message');
+        const existingRollElement = chatCard.find('.roll');
+        let existingPowerRoll = null;
+        
+        if (existingRollElement.length > 0) {
+          // Clone the element and remove any existing button containers to prevent duplication
+          const cleanedRoll = existingRollElement.clone();
+          cleanedRoll.find('.dmgBtn-container').remove();
+          existingPowerRoll = cleanedRoll[0].outerHTML;
+        }
+        const consumptionResults = result.consumptionResults || [];
+        
+        // Calculate strain cost
+        const totalStrainCost = consumptionResults
+          .filter(r => r.type === "systemStrain")
+          .reduce((sum, r) => sum + (r.spent || 0), 0);
+
+        const templateData = {
+          actor: actor,
+          power: power,
+          powerRoll: existingPowerRoll, // Will be null if no roll exists
+          strainCost: totalStrainCost,
+          isPassive: !power.system.hasConsumption(),
+          consumptions: consumptionResults
+        };
+
+
+
+        const template = "systems/swnr/templates/chat/power-usage.hbs";
+        const newContent = await foundry.applications.handlebars.renderTemplate(template, templateData);
+        
+        // Update the current message
+        const messageId = chatCard.data('message-id');
+        const message = game.messages?.get(messageId);
+        if (message) {
+          await message.update({ content: newContent });
+        }
+      }
+      
+    } catch (error) {
+      ui.notifications?.error(`Failed to use power: ${error.message}`);
+      console.error("Power usage error:", error);
+    }
+  } else if (action === "use-consumption") {
+    // Handle individual consumption spending with token targeting
+    const powerId = button.dataset.powerId;
+    const actorId = button.dataset.actorId;
+    const consumptionIndex = parseInt(button.dataset.consumptionIndex);
+    
+    if (!powerId || !actorId || isNaN(consumptionIndex)) {
+      ui.notifications?.error("Missing power, actor ID, or consumption index");
+      return;
+    }
+    
+    try {
+      const messageLi = button.closest(".message");
+      const chatMsgLocal = game.messages.get(messageLi.dataset.messageId);
+      if (!chatMsgLocal) {
+        ui.notifications?.error("Could not find chat message");
+        return;
+      }
+
+      const speaker = message.speaker;
+      let originalActor;
+      if (speaker.token) {
+        const token = game.scenes.get(speaker.scene)?.tokens.get(speaker.token);
+        originalActor = token?.actor;
+      } else {
+        originalActor = game.actors?.get(speaker.actor);
+      }
+
+      if (!originalActor) {
+        ui.notifications?.error("Could not find the actor associated with the chat message.");
+        return;
+      }
+      
+      const power = originalActor.items?.get(powerId);
+      if (!power) {
+        ui.notifications?.error("Could not find power");
+        return;
+      }
+      
+      // Determine target actor (selected token or original actor)
+      let targetActor = originalActor;
+      const controlled = canvas.tokens?.controlled;
+      if (controlled && controlled.length === 1) {
+        targetActor = controlled[0].actor;
+        if (targetActor !== originalActor) {
+          ui.notifications?.info(`Using selected token for cost: ${targetActor.name}`);
+        }
+      }
+      
+      // Get the specific consumption to process
+      const consumptions = power.system.getConsumptions();
+      if (consumptionIndex >= consumptions.length) {
+        ui.notifications?.error("Invalid consumption index");
+        return;
+      }
+      
+      const consumption = consumptions[consumptionIndex];
+      
+      // Process the single consumption
+      const result = await power.system._processConsumption(targetActor, consumption, {}, consumptionIndex);
+      
+      if (!result.success) {
+        ui.notifications?.error(result.message || "Failed to process consumption");
+        return;
+      }
+      
+      // Get existing consumption results from the current message
+      const chatCard = $(button).closest('.chat-message');
+      const messageId = chatCard.data('message-id');
+      const chatMsg = game.messages?.get(messageId);
+      
+      let existingConsumptions = [];
+      if (chatMsg) {
+        // Try to parse existing consumptions from message flags or content
+        const messageFlags = chatMsg.flags?.swnr?.consumptions;
+        if (messageFlags) {
+          existingConsumptions = messageFlags;
+        }
+      }
+      
+      // Add this consumption result with the index
+      result.consumptionIndex = consumptionIndex;
+      existingConsumptions.push(result);
+      
+      // Track which consumptions have been processed
+      let processedConsumptions = {};
+      if (chatMsg?.flags?.swnr?.processedConsumptions) {
+        processedConsumptions = chatMsg.flags.swnr.processedConsumptions;
+      }
+      processedConsumptions[consumptionIndex] = true;
+      
+      // Preserve existing power roll
+      let existingPowerRoll = null;
+      if (chatMsg) {
+        const existingRollElement = $(chatMsg.content).find('.roll');
+        if (existingRollElement.length > 0) {
+          const cleanedRoll = existingRollElement.clone();
+          cleanedRoll.find('.dmgBtn-container').remove();
+          existingPowerRoll = cleanedRoll[0].outerHTML;
+        }
+      }
+      
+      // Calculate total strain cost
+      const totalStrainCost = existingConsumptions
+        .filter(r => r.type === "systemStrain")
+        .reduce((sum, r) => sum + (r.spent || 0), 0);
+      
+      const templateData = {
+        actor: originalActor,
+        power: power,
+        powerRoll: existingPowerRoll,
+        strainCost: totalStrainCost,
+        isPassive: false,
+        consumptions: existingConsumptions,
+        processedConsumptions: processedConsumptions
+      };
+      
+      const template = "systems/swnr/templates/chat/power-usage.hbs";
+      const newContent = await foundry.applications.handlebars.renderTemplate(template, templateData);
+      
+      if (chatMsg) {
+        await chatMsg.update({ 
+          content: newContent,
+          flags: { 
+            swnr: { 
+              consumptions: existingConsumptions,
+              processedConsumptions: processedConsumptions
+            } 
+          }
+        });
+      }
+      
+    } catch (error) {
+      ui.notifications?.error(`Failed to use consumption: ${error.message}`);
+      console.error("Consumption usage error:", error);
+    }
+  } else if (action === "recover-resource") {
+    // Handle resource recovery
+    const poolKey = button.dataset.poolKey;
+    const amount = parseInt(button.dataset.amount);
+    const actorId = button.dataset.actorId;
+    
+    if (!poolKey || !amount || !actorId) {
+      ui.notifications?.error("Missing data for resource recovery");
+      return;
+    }
+    
+    const actor = game.actors?.get(actorId);
+    if (!actor) {
+      ui.notifications?.error("Could not find actor for resource recovery");
+      return;
+    }
+    
+    // Check if user can control this actor
+    if (!actor.isOwner && !game.user?.isGM) {
+      ui.notifications?.warn("You do not have permission to modify this actor's resources");
+      return;
+    }
+    
+    try {
+      const pools = foundry.utils.deepClone(actor.system.pools || {});
+      if (pools[poolKey]) {
+        const newValue = Math.min(pools[poolKey].value + amount, pools[poolKey].max);
+        await actor.update({ [`system.pools.${poolKey}.value`]: newValue });
+        
+        // Disable the button
+        button.disabled = true;
+        button.style.opacity = "0.5";
+        button.innerHTML = "<i class='fas fa-check'></i> Recovered";
+        
+        ui.notifications?.info(`Recovered ${amount} ${poolKey}`);
+      } else {
+        ui.notifications?.error(`Pool ${poolKey} not found on actor`);
+      }
+    } catch (error) {
+      ui.notifications?.error(`Failed to recover resource: ${error.message}`);
+      console.error("Resource recovery error:", error);
+    }
+  } else if (action === "recover-strain") {
+    // Handle system strain recovery
+    const amount = parseInt(button.dataset.amount);
+    const actorId = button.dataset.actorId;
+    
+    if (!amount || !actorId) {
+      ui.notifications?.error("Missing data for strain recovery");
+      return;
+    }
+    
+    const actor = game.actors?.get(actorId);
+    if (!actor) {
+      ui.notifications?.error("Could not find actor for strain recovery");
+      return;
+    }
+    
+    // Check if user can control this actor
+    if (!actor.isOwner && !game.user?.isGM) {
+      ui.notifications?.warn("You do not have permission to modify this actor's strain");
+      return;
+    }
+    
+    try {
+      const currentStrain = actor.system.systemStrain?.value || 0;
+      const newStrain = Math.max(currentStrain - amount, 0);
+      await actor.update({ "system.systemStrain.value": newStrain });
+      
+      // Disable the button
+      button.disabled = true;
+      button.style.opacity = "0.5";
+      button.innerHTML = "<i class='fas fa-check'></i> Recovered";
+      
+      ui.notifications?.info(`Recovered ${amount} system strain`);
+    } catch (error) {
+      ui.notifications?.error(`Failed to recover strain: ${error.message}`);
+      console.error("Strain recovery error:", error);
+    }
+  } else if (action === "recover-item") {
+    // Handle consumable item recovery
+    const itemId = button.dataset.itemId;
+    const amount = parseInt(button.dataset.amount);
+    const actorId = button.dataset.actorId;
+    
+    if (!itemId || !amount || !actorId) {
+      ui.notifications?.error("Missing data for item recovery");
+      return;
+    }
+    
+    const actor = game.actors?.get(actorId);
+    if (!actor) {
+      ui.notifications?.error("Could not find actor for item recovery");
+      return;
+    }
+    
+    // Check if user can control this actor
+    if (!actor.isOwner && !game.user?.isGM) {
+      ui.notifications?.warn("You do not have permission to modify this actor's items");
+      return;
+    }
+    
+    try {
+      const item = actor.items.get(itemId);
+      if (!item) {
+        ui.notifications?.error("Could not find item for recovery");
+        return;
+      }
+      
+      const currentUses = item.system.uses?.value || 0;
+      const maxUses = item.system.uses?.max || 0;
+      const newUses = Math.min(currentUses + amount, maxUses);
+      
+      await item.update({ "system.uses.value": newUses });
+      
+      // Disable the button
+      button.disabled = true;
+      button.style.opacity = "0.5";
+      button.innerHTML = "<i class='fas fa-check'></i> Recovered";
+      
+      ui.notifications?.info(`Recovered ${amount} uses of ${item.name}`);
+    } catch (error) {
+      ui.notifications?.error(`Failed to recover item: ${error.message}`);
+      console.error("Item recovery error:", error);
+    }
+  } else if (action === "recover-uses") {
+    // Handle power internal uses recovery
+    const powerId = button.dataset.powerId;
+    const consumptionIndex = parseInt(button.dataset.consumptionIndex);
+    const amount = parseInt(button.dataset.amount);
+    const actorId = button.dataset.actorId;
+    
+    if (!powerId || consumptionIndex === undefined || !amount || !actorId) {
+      ui.notifications?.error("Missing data for uses recovery");
+      return;
+    }
+    
+    const actor = game.actors?.get(actorId);
+    if (!actor) {
+      ui.notifications?.error("Could not find actor for uses recovery");
+      return;
+    }
+    
+    // Check if user can control this actor
+    if (!actor.isOwner && !game.user?.isGM) {
+      ui.notifications?.warn("You do not have permission to modify this actor's powers");
+      return;
+    }
+    
+    try {
+      const power = actor.items.get(powerId);
+      if (!power) {
+        ui.notifications?.error("Could not find power for recovery");
+        return;
+      }
+      
+      const consumption = power.system.consumptions?.[consumptionIndex];
+      if (!consumption || consumption.type !== "uses") {
+        ui.notifications?.error("Invalid consumption for uses recovery");
+        return;
+      }
+      
+      const currentUses = consumption.uses.value;
+      const maxUses = consumption.uses.max;
+      const newUses = Math.min(currentUses + amount, maxUses);
+      
+      await power.update({ [`system.consumptions.${consumptionIndex}.uses.value`]: newUses });
+      
+      // Disable the button
+      button.disabled = true;
+      button.style.opacity = "0.5";
+      button.innerHTML = "<i class='fas fa-check'></i> Recovered";
+      
+      ui.notifications?.info(`Recovered ${amount} uses of ${power.name}`);
+    } catch (error) {
+      ui.notifications?.error(`Failed to recover uses: ${error.message}`);
+      console.error("Uses recovery error:", error);
+    }
+  } else if (action === "releaseCommitment") {
+    // Handle manual release of committed effort from chat
+    const poolKey = button.dataset.poolKey;
+    const powerId = button.dataset.powerId;
+    const actorId = button.dataset.actorId;
+    
+    if (!poolKey || !powerId || !actorId) {
+      ui.notifications?.error("Missing data for commitment release");
+      return;
+    }
+    
+    const actor = game.actors?.get(actorId);
+    if (!actor) {
+      ui.notifications?.error("Could not find actor for commitment release");
+      return;
+    }
+    
+    // Check if user can control this actor
+    if (!actor.isOwner && !game.user?.isGM) {
+      ui.notifications?.warn("You do not have permission to modify this actor's commitments");
+      return;
+    }
+    
+    try {
+      const commitments = actor.system.effortCommitments || {};
+      const poolCommitments = commitments[poolKey] || [];
+      
+      // Find and remove the specific commitment
+      const commitmentIndex = poolCommitments.findIndex(c => c.powerId === powerId);
+      if (commitmentIndex === -1) {
+        ui.notifications?.warn("Could not find commitment to release");
+        return;
+      }
+      
+      const releasedCommitment = poolCommitments[commitmentIndex];
+      poolCommitments.splice(commitmentIndex, 1);
+      
+      // Update actor with released commitment
+      const newCommitments = { ...commitments };
+      newCommitments[poolKey] = poolCommitments;
+      
+      // Recalculate pool availability
+      const pools = actor.system.pools || {};
+      const pool = pools[poolKey];
+      if (pool) {
+        const totalCommitted = poolCommitments.reduce((sum, c) => sum + c.amount, 0);
+        const newValue = Math.min(pool.max, pool.value + releasedCommitment.amount);
+        
+        await actor.update({
+          "system.effortCommitments": newCommitments,
+          [`system.pools.${poolKey}.value`]: newValue,
+          [`system.pools.${poolKey}.committed`]: totalCommitted,
+          [`system.pools.${poolKey}.commitments`]: poolCommitments
+        });
+        
+        // Disable the button
+        button.disabled = true;
+        button.style.opacity = "0.5";
+        button.innerHTML = "<i class='fas fa-check'></i> Released";
+        
+        ui.notifications?.info(`Released ${releasedCommitment.amount} effort from ${releasedCommitment.powerName}`);
+      }
+    } catch (error) {
+      ui.notifications?.error(`Failed to release commitment: ${error.message}`);
+      console.error("Commitment release error:", error);
     }
   }
 }

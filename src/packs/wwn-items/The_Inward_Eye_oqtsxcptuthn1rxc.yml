@@ -1,0 +1,47 @@
+name: The Inward Eye
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort as an On Turn action. For as long as it remains Committed, you
+    are mystically aware of your surroundings with a sense equivalent to normal
+    eyesight regardless of darkness, obscuring mists, or your actual eyes being
+    closed or blinded.
+  favorite: false
+  subType: arcane
+  source: Vowed
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Vowed
+      usesCost: 1
+      cadence: active
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: oqtsxcptuthn1rxc
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456840
+  modifiedTime: 1754277456840
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/vowed_art.png
+ownership:
+  default: 0
+_key: '!items!oqtsxcptuthn1rxc'
+

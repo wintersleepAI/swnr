@@ -1,0 +1,42 @@
+name: Offroad Package
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: aPPngDkp3e5tzGZ9
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-vehicle-fittings.Item.3pui8f9jvb4ypsp9
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267290515
+  modifiedTime: 1754267290515
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 5000
+  description: >-
+    While any modern vehicle can handle abandoned roads and mostly-flat terrain,
+    this package includes winches, tire armor, chassis reinforcement, and other
+    upgrades needed to go through all but the most impassible terrain.
+  effect: Enables deep wilderness operation
+  mass: 3
+  minClass: fighter
+  power: 1
+  type: vehicle
+  favorite: false
+  tl: 4
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  broken: false
+  destroyed: false
+  juryRigged: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: 2rzEoEV0zuJdaZkG
+sort: 0
+_key: '!items!2rzEoEV0zuJdaZkG'
+

@@ -1,0 +1,47 @@
+name: Martial Style
+type: power
+sort: 0
+system:
+  description: >-
+    Regardless of class, your hit die can't be worse than 1d6 per level. When
+    attacking with the Punch skill, your class hit bonus can be no worse than
+    that of an Expert of your same character level. At third level, any attack
+    using the Punch skill counts as a magic weapon.
+  favorite: false
+  subType: arcane
+  source: Vowed
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Vowed
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: rbm7g3hio5omhpsq
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456806
+  modifiedTime: 1754277456806
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/vowed_art.png
+ownership:
+  default: 0
+_key: '!items!rbm7g3hio5omhpsq'
+

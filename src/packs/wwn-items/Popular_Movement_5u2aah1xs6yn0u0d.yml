@@ -1,0 +1,49 @@
+name: Popular Movement
+type: asset
+sort: 0
+system:
+  description: >-
+    Any friendly Asset is allowed movement into the same location as the Popular
+    Movement, even if it would normally be forbidden by its owners and lacks the
+    Subtle quality. If the Popular Movement later moves or is destroyed, such
+    Assets must also leave or suffer the usual consequences of a non-Subtle
+    Asset in a hostile area.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 16
+    max: 16
+  rating: 7
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: 5u2aah1xs6yn0u0d
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456961
+  modifiedTime: 1754277456961
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/cunning.png
+ownership:
+  default: 0
+_key: '!items!5u2aah1xs6yn0u0d'
+

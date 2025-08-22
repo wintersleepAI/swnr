@@ -16,8 +16,7 @@ description: >-
   get free.
 displayRoll: true
 flags:
-  core:
-    sourceId: RollTable.RYiLqhTibV7PQRu1
+  core: {}
 folder: null
 formula: 1d1
 img: icons/svg/d20-grey.svg
@@ -31,11 +30,21 @@ results:
     range:
       - 1
       - 1
-    text: One Roll Urban Encounters - General Venue of the Event
-    type: pack
+    type: document
     weight: 1
-    documentCollection: swnr.one-roll-backing
-    documentId: KgcoUIUhU1OUP0BM
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: One Roll Urban Encounters - General Venue of the Event
+    documentUuid: Compendium.swnr.one-roll-backing.RollTable.KgcoUIUhU1OUP0BM
+    description: ''
     _key: '!tables.results!vAr81DZH1QO8htTC.v6RzBDzpXwiMBZG9'
   - _id: 2CUxg5jLK85VJE0F
     drawn: false
@@ -44,11 +53,21 @@ results:
     range:
       - 1
       - 1
-    text: One Roll Urban Encounters - Why are the PCs Involved?
-    type: pack
+    type: document
     weight: 1
-    documentCollection: swnr.one-roll-backing
-    documentId: DqCC7bBmaVvHfHbE
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: One Roll Urban Encounters - Why are the PCs Involved?
+    documentUuid: Compendium.swnr.one-roll-backing.RollTable.DqCC7bBmaVvHfHbE
+    description: ''
     _key: '!tables.results!vAr81DZH1QO8htTC.2CUxg5jLK85VJE0F'
   - _id: TIBoFtyCDXgV2leX
     drawn: false
@@ -57,11 +76,21 @@ results:
     range:
       - 1
       - 1
-    text: One Roll Urban Encounters - What’s the Nature of the Event?
-    type: pack
+    type: document
     weight: 1
-    documentCollection: swnr.one-roll-backing
-    documentId: AlNUzSQ6FzErbE5N
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: One Roll Urban Encounters - What’s the Nature of the Event?
+    documentUuid: Compendium.swnr.one-roll-backing.RollTable.AlNUzSQ6FzErbE5N
+    description: ''
     _key: '!tables.results!vAr81DZH1QO8htTC.TIBoFtyCDXgV2leX'
   - _id: wcjQjjgKp9YfY0pW
     drawn: false
@@ -70,11 +99,21 @@ results:
     range:
       - 1
       - 1
-    text: One Roll Urban Encounters - What’s the Conflict About?
-    type: pack
+    type: document
     weight: 1
-    documentCollection: swnr.one-roll-backing
-    documentId: qNA0nQa49YFsa9Cl
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: One Roll Urban Encounters - What’s the Conflict About?
+    documentUuid: Compendium.swnr.one-roll-backing.RollTable.qNA0nQa49YFsa9Cl
+    description: ''
     _key: '!tables.results!vAr81DZH1QO8htTC.wcjQjjgKp9YfY0pW'
   - _id: tB16wIEfeq6wPvVK
     drawn: false
@@ -83,11 +122,21 @@ results:
     range:
       - 1
       - 1
-    text: One Roll Urban Encounters - What Antagonists are Involved?
-    type: pack
+    type: document
     weight: 1
-    documentCollection: swnr.one-roll-backing
-    documentId: PzZ8CYHn7hjcNjEQ
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: One Roll Urban Encounters - What Antagonists are Involved?
+    documentUuid: Compendium.swnr.one-roll-backing.RollTable.PzZ8CYHn7hjcNjEQ
+    description: ''
     _key: '!tables.results!vAr81DZH1QO8htTC.tB16wIEfeq6wPvVK'
   - _id: YdkLvPQR5XSU1Qx4
     drawn: false
@@ -96,22 +145,33 @@ results:
     range:
       - 1
       - 1
-    text: One Roll Urban Encounters - Relevant Urban Features
-    type: pack
+    type: document
     weight: 1
-    documentCollection: swnr.one-roll-backing
-    documentId: K5sf38gmdvFM2xR9
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: One Roll Urban Encounters - Relevant Urban Features
+    documentUuid: Compendium.swnr.one-roll-backing.RollTable.K5sf38gmdvFM2xR9
+    description: ''
     _key: '!tables.results!vAr81DZH1QO8htTC.YdkLvPQR5XSU1Qx4'
 sort: 0
 _stats:
-  coreVersion: '12.325'
+  coreVersion: '13.346'
   systemId: null
   systemVersion: null
   createdTime: null
   modifiedTime: null
   lastModifiedBy: null
-  compendiumSource: null
+  compendiumSource: RollTable.RYiLqhTibV7PQRu1
   duplicateSource: null
+  exportSource: null
 ownership:
   P3lRTKxUBvk8Gei6: 3
   default: 0

@@ -1,0 +1,38 @@
+name: Shovel, pick, or similar tool
+type: item
+sort: 0
+system:
+  description: ''
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 2
+  cost: 4
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
+_id: 2tc29qgkq593qafk
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456705
+  modifiedTime: 1754277456705
+  lastModifiedBy: null
+  exportSource: null
+folder: OSCezLcl3H6szsim
+flags: {}
+effects: []
+img: icons/tools/hand/shovel-spade-steel-grey.webp
+ownership:
+  default: 0
+_key: '!items!2tc29qgkq593qafk'
+

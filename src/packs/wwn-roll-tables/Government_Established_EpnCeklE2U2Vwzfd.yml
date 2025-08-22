@@ -1,0 +1,147 @@
+_id: EpnCeklE2U2Vwzfd
+name: Government-Established
+img: icons/svg/d20-grey.svg
+description: How Established is the Current Ruler?
+results:
+  - _id: xlgxbyZn61whF2T6
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    img: null
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: They’re an outsider with few existing allies
+    name: ''
+    _key: '!tables.results!EpnCeklE2U2Vwzfd.xlgxbyZn61whF2T6'
+  - _id: tJtCxnP5PhiFb4zd
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    img: null
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: They’re newly-ascended to the throne
+    name: ''
+    _key: '!tables.results!EpnCeklE2U2Vwzfd.tJtCxnP5PhiFb4zd'
+  - _id: 0Q3GMURpBRAuSfDM
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    img: null
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: They have some basic ties with strong allies
+    name: ''
+    _key: '!tables.results!EpnCeklE2U2Vwzfd.0Q3GMURpBRAuSfDM'
+  - _id: x8flLMxoksCbhkzP
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    img: null
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: They have a hard core of useful supporters
+    name: ''
+    _key: '!tables.results!EpnCeklE2U2Vwzfd.x8flLMxoksCbhkzP'
+  - _id: VJykvVsYoXMjwgQN
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    img: null
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: They have an extensive support network
+    name: ''
+    _key: '!tables.results!EpnCeklE2U2Vwzfd.VJykvVsYoXMjwgQN'
+  - _id: A2fQTyg0Wayg199e
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    img: null
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: They’re practically an institution of their own
+    name: ''
+    _key: '!tables.results!EpnCeklE2U2Vwzfd.A2fQTyg0Wayg199e'
+formula: 1d6
+replacement: true
+displayRoll: true
+folder: fhkT8z8QarD3U3n2
+flags:
+  better-rolltables: {}
+_stats:
+  compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.EpnCeklE2U2Vwzfd
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754271915093
+  modifiedTime: 1754271915093
+  lastModifiedBy: lKC5x4Yf023Bizof
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!tables!EpnCeklE2U2Vwzfd'
+

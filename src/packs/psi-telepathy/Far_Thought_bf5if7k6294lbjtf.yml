@@ -1,0 +1,33 @@
+name: Far Thought
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: bf5if7k6294lbjtf
+system:
+  description: >-
+    <p>Once a telepath has made a <em>Telepathic Contact</em> with a target,
+    they can thereafter activate the technique whenever that target is within
+    100 kilometers, whether or not the psychic knows where they are. At
+    Telepathy-3 the range increases to 1,000 kilometers, and at Telepathy-4 it
+    extends over an entire planet and up to orbital distances. This distant
+    connection is tenuous, however, and the psychic cannot use any technique
+    through it that would allow the target a saving throw to resist.</p>
+  level: 2
+  source: telepathy
+effects: []
+ownership:
+  default: 0
+_key: '!items!bf5if7k6294lbjtf'
+

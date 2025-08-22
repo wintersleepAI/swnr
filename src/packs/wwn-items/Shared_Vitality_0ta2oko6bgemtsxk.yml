@@ -1,0 +1,49 @@
+name: Shared Vitality
+type: power
+sort: 0
+system:
+  description: >-
+    The animal companions you bind have hit dice no lower than your level, even
+    if they normally have far fewer. Thus, a 2 hit die beast bound by a 7th
+    level Beastmaster would have 7 hit dice while it remained bound. Its hit
+    bonus can't be less than half its hit dice, rounded up. A Beastmaster can
+    stabilize a Mortally Wounded companion by Committing Effort for the scene as
+    an Instant action.
+  favorite: false
+  subType: arcane
+  source: Beastmaster
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Beastmaster
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 0ta2oko6bgemtsxk
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456781
+  modifiedTime: 1754277456781
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/beastmaster_art.png
+ownership:
+  default: 0
+_key: '!items!0ta2oko6bgemtsxk'
+

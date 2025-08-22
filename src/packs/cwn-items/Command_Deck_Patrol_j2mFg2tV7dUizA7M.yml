@@ -1,0 +1,43 @@
+name: Command Deck/Patrol
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: 4ctWevVXyy54aHh0
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.ihcxwngqhmzd07ld
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266949107
+  modifiedTime: 1754266949107
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 0
+  description: >-
+    As a Main Action, the drone can be ordered to autonomously move to one or
+    more waypoints on whatever schedule the pilot wishes. The drone can also be
+    ordered to loiter at a particular location until it gets an On Turn command
+    to proceed to the next location.
+  mass: 1
+  type: drone
+  favorite: false
+  tl: 4
+  power: 1
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: fighter
+  broken: false
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: j2mFg2tV7dUizA7M
+sort: 0
+_key: '!items!j2mFg2tV7dUizA7M'
+

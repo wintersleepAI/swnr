@@ -8,128 +8,253 @@
     {{> "systems/swnr/templates/actor/fragments/cyberware-list.hbs" itemList=cyberware  type='cyberware' name='Cyberware' }}
   {{/if}}
 
-  {{#if system.tweak.showResourceList}}
-  <ol class='items-list'>
-    <li class='flexrow items-header'>
-      <div class="item-name">{{localize 'swnr.sheet.resources'}} </div>
-      <div class="item-leveltext-center"></div>
-      <div class="item-controls text-right flex-shrink">
-        <a class="item-control resource-create" data-action="resourceCreate"
-          title="{{localize 'swnr.sheet.add-item'}}">
-          <i class="fas fa-plus"></i>
-        </a> 
+  {{! Resource Pools Display }}
+  {{#if hasAnyPools}}
+  <div class='resource-pools'>
+    <div class="pools-container">
+      <div class="pools-header">
+        <h4><i class="fas fa-battery-three-quarters"></i> {{localize 'swnr.pools.title'}}</h4>
       </div>
-    </li>
-    {{#each actor.system.tweak.resourceList as |item id|}}
-      <li
-        class='item flexrow'
-        data-item-id='{{item._id}}'
-        data-drag='false'
-        data-document-class='Item'
-      >
-        <div class="item flexrow" data-rl-idx="{{id}}">
-          <input
-            type="text"
-            name="resourceList-name-{{id}}"
-            class="resource-list-val"
-            value="{{item.name}}"
-            data-rl-type="name"
-          />
-          &nbsp; 
-
-          <input
-            type="number"
-            name="resourceList-value-{{id}}"
-            value="{{item.value}}"
-            class="resource-list-val"
-            data-dtype="Number"
-            data-rl-type="value"
-          />
-          / 
-          <input
-            type="number"
-            name="resourceList-max-{{id}}"
-            value="{{item.max}}"
-            class="resource-list-val"
-            data-dtype="Number"
-            data-rl-type="max"
-          />
-
-        <div class="item-controls text-right">
-          <a class="item-control" title='{{localize 'swnr.sheet.delete-item'}}' 
-            data-action="resourceDelete" data-rl-idx="{{id}}"><i class="fas fa-trash"></i></a>
-        </div>
-      </li> 
-    {{/each}}
-  </ol>
-  {{/if}}
-
-
-  {{#if system.tweak.showPowers}}
-  <ol class='items-list'>
-    {{#each powers as |powers powerLevel|}}
-      <li class='flexrow items-header'>
-        <div class='item-name'>
-          {{localize 'SWN.Item.Power.PowerLVL' level=powerLevel}}
-        </div>
-        <div class='item-controls'>
-          {{#if @root.editable}}
-            <a
-              class='item-control item-create'
-              title='{{localize "DOCUMENT.Create" type='Power'}}'
-              data-action='createDoc'
-              data-document-class='Item'
-              data-type='power'
-              data-system.level='{{powerLevel}}'
-            >
-              <i class='fas fa-plus'></i>
-              {{localize 'SWN.Item.Power.AddLVL' level=powerLevel}}
-            </a>
-          {{/if}}
-        </div>
-      </li>
-      {{#each powers as |item id|}}
-        <li
-          class='item flexrow'
-          data-item-id='{{item._id}}'
-          data-drag='true'
-          data-document-class='Item'
-        >
-          <div class='item-name flexrow'>
-            <div class='item-image'>
-              <a class='rollable' data-roll-type='item' data-action='roll'>
-                <img
-                  src='{{item.img}}'
-                  title='{{item.name}}'
-                  width='24'
-                  height='24'
-                />
-              </a>
+      <div class="pools-display">
+        {{#each poolGroups}}
+        <div class="pool-group">
+          <div class="pool-group-header">
+            <span class="resource-name">{{resourceName}}</span>
+          </div>
+          <div class="pools-list">
+            {{#each pools}}
+            <div class="pool-badge {{#if isEmpty}}empty{{else if isLow}}low{{else if isFull}}full{{/if}} {{#if hasCommitments}}has-commitments{{/if}}" 
+                 title="{{key}}: {{current}} available/{{max}} total{{#if committed}} ({{committed}} committed){{/if}} ({{cadence}})" 
+                 data-pool-key="{{key}}">
+              <span class="pool-label">{{#if (eq subResource "Default")}}{{../resourceName}}{{else}}{{subResource}}{{/if}}</span>
+              <span class="pool-values">{{current}}/{{max}}{{#if committed}}<small class="committed-indicator">-{{committed}}</small>{{/if}}</span>
+              <div class="pool-bar">
+                <div class="pool-fill" style="width: {{percentage}}%"></div>
+              </div>
+              {{#if hasCommitments}}
+              <div class="commitment-details">
+                {{#each commitments}}
+                <div class="commitment-item" title="{{powerName}}: {{amount}} effort ({{duration}})">
+                  <span class="power-name">{{powerName}}</span>
+                  <span class="effort-amount">{{amount}}</span>
+                  {{#if (eq duration "commit")}}
+                  <button type="button" class="release-commitment" data-action="releaseCommitment" 
+                          data-pool-key="{{../key}}" data-power-id="{{powerId}}" 
+                          title="{{localize 'swnr.pools.commitment.release'}}">
+                    <i class="fas fa-times"></i>
+                  </button>
+                  {{/if}}
+                </div>
+                {{/each}}
+              </div>
+              {{/if}}
             </div>
-            <div>{{item.name}}</div>
+            {{/each}}
           </div>
-          <div class='item-controls'>
-            <a
-              class='item-control item-edit'
-              title='{{localize "DOCUMENT.Update" type='power'}}'
-              data-action='viewDoc'
-            >
-              <i class='fas fa-edit'></i>
-            </a>
-            {{#if @root.editable}}
-              <a
-                class='item-control item-delete'
-                title='{{localize "DOCUMENT.Delete" type='power'}}'
-                data-action='deleteDoc'
-              >
-                <i class='fas fa-trash'></i>
-              </a>
-            {{/if}}
-          </div>
-        </li>
-      {{/each}}
-    {{/each}}
-  </ol>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  {{else}}
+    <div class="no-pools-message">
+      <p><i class="fas fa-info-circle"></i> {{localize 'swnr.pools.noPoolsMessage'}}</p>
+      <p><em>{{localize 'swnr.pools.poolsGrantedHint'}}</em></p>
+    </div>
   {{/if}}
+
+
+  {{#each powers as |powersByLevel powerType|}}
+    {{#if (or (and (eq powerType "psychic") @root.system.tweak.showPsychic)
+              (and (eq powerType "art") @root.system.tweak.showArts)
+              (and (eq powerType "spell") @root.system.tweak.showSpells)
+              (and (eq powerType "adept") @root.system.tweak.showAdept)
+              (and (eq powerType "mutation") @root.system.tweak.showMutation))}}
+    <div class="power-type-section">
+      <h3 class="power-type-header">
+        {{localize (concat "SWN.Item.Power.Types." powerType)}}
+        {{#if @root.editable}}
+          <a
+            class='item-control item-create power-type-create'
+            title='{{localize "DOCUMENT.Create" type="Power"}}'
+            data-action='createDoc'
+            data-document-class='Item'
+            data-type='power'
+            data-system.sub-type='{{powerType}}'
+            {{#if (or (eq powerType "art") (eq powerType "mutation"))}}
+              data-system.level='0'
+            {{else}}
+              data-system.level='1'
+            {{/if}}
+          >
+            <i class='fas fa-plus'></i>
+            {{localize (concat "SWN.Item.Power.Add." powerType)}}
+          </a>
+        {{/if}}
+      </h3>
+      
+      <ol class='items-list power-type-list'>
+        {{#if (or (eq powerType "art") (eq powerType "mutation"))}}
+          {{! Flat display for arts and mutations - no level headers }}
+          {{#each powersByLevel.flat as |item id|}}
+            <li
+              class='item flexrow power-item'
+              data-item-id='{{item._id}}'
+              data-drag='true'
+              data-document-class='Item'
+            >
+              <div class='item-name flexrow'>
+                <div class='item-image'>
+                  <a class='rollable' data-roll-type='item' data-action='roll'>
+                    <img
+                      src='{{item.img}}'
+                      title='{{item.name}}'
+                      width='24'
+                      height='24'
+                    />
+                  </a>
+                </div>
+                <div>
+                  <span data-action="toggleItemDescription" data-item-id="{{item.id}}" style="cursor: pointer;">
+                    {{item.name}}
+                  </span>
+                  {{! Only show prepared icon for powers with prep costs }}
+                  {{#if item.hasPrepCosts}}
+                    <i class="power-prepared-icon {{#if item.system.prepared}}fas fa-brain{{else}}far fa-brain{{/if}}" 
+                       data-item-id="{{item.id}}"
+                       title="{{#if item.system.prepared}}Prepared{{else}}Not Prepared{{/if}}"
+                       {{#if @root.editable}}style="cursor: pointer; margin-left: 0.25em;"{{else}}style="margin-left: 0.25em;"{{/if}}></i>
+                  {{/if}}
+                  {{#if item.system.consumptions}}
+                    <div class="power-consumption-display">
+                      {{#each item.system.consumptions as |consumption|}}
+                        {{#if (eq consumption.type "uses")}}
+                          <span class="consumption-uses" title="{{consumption.type}} uses">
+                            ({{consumption.uses.value}}/{{consumption.uses.max}})
+                          </span>
+                        {{/if}}
+                      {{/each}}
+                    </div>
+                  {{/if}}
+                </div>
+              </div>
+              <div class='item-controls'>
+                <a
+                  class='item-control item-edit'
+                  title='{{localize "DOCUMENT.Update" type="power"}}'
+                  data-action='viewDoc'
+                >
+                  <i class='fas fa-edit'></i>
+                </a>
+                {{#if @root.editable}}
+                  <a
+                    class='item-control item-delete'
+                    title='{{localize "DOCUMENT.Delete" type="power"}}'
+                    data-action='deleteDoc'
+                  >
+                    <i class='fas fa-trash'></i>
+                  </a>
+                {{/if}}
+              </div>
+            </li>
+            <!-- Power Description Row -->
+            <li class="item-description" style="display: {{#if (lookup @root.expandedDescriptions item.id)}}block{{else}}none{{/if}}; background-color: var(--color-bg-option); border-left: 3px solid var(--accent-color); margin-left: 1em; padding: 0.5em;">
+              <div class="item-description-content">
+                <strong>{{localize "SWN.Actor.Tabs.Description"}}:</strong>
+                <div style="margin-top: 0.25em; white-space: pre-wrap;">{{{item.system.description}}}</div>
+              </div>
+            </li>
+          {{/each}}
+        {{else}}
+          {{! Level-based display for other power types }}
+          {{#each powersByLevel as |powersAtLevel powerLevel|}}
+            <li class='flexrow items-header power-level-header'>
+              <div class='item-name'>
+                {{#if (eq powerLevel "0")}}
+                  {{localize 'SWN.Item.Power.Level.unleveled'}}
+                {{else}}
+                  {{localize 'SWN.Item.Power.Level.level' level=powerLevel}}
+                {{/if}}
+              </div>
+              <div class='item-controls'>
+                {{! No add button here - use the main type-level button instead }}
+              </div>
+            </li>
+            
+            {{#each powersAtLevel as |item id|}}
+              <li
+                class='item flexrow power-item'
+                data-item-id='{{item._id}}'
+                data-drag='true'
+                data-document-class='Item'
+              >
+                <div class='item-name flexrow'>
+                  <div class='item-image'>
+                    <a class='rollable' data-roll-type='item' data-action='roll'>
+                      <img
+                        src='{{item.img}}'
+                        title='{{item.name}}'
+                        width='24'
+                        height='24'
+                      />
+                    </a>
+                  </div>
+                  <div>
+                  <span data-action="toggleItemDescription" data-item-id="{{item.id}}" style="cursor: pointer;">
+                    {{item.name}}
+                  </span>
+                  {{! Only show prepared icon for powers with prep costs }}
+                  {{#if item.hasPrepCosts}}
+                    <i class="power-prepared-icon {{#if item.system.prepared}}fas fa-brain{{else}}far fa-brain{{/if}}" 
+                       data-item-id="{{item.id}}"
+                       title="{{#if item.system.prepared}}Prepared{{else}}Not Prepared{{/if}}"
+                       {{#if @root.editable}}style="cursor: pointer; margin-left: 0.25em;"{{else}}style="margin-left: 0.25em;"{{/if}}></i>
+                  {{/if}}
+                  {{#if item.system.consumptions}}
+                    <div class="power-consumption-display">
+                      {{#each item.system.consumptions as |consumption|}}
+                        {{#if (eq consumption.type "uses")}}
+                          <span class="consumption-uses" title="{{consumption.type}} uses">
+                            ({{consumption.uses.value}}/{{consumption.uses.max}})
+                          </span>
+                        {{/if}}
+                      {{/each}}
+                    </div>
+                  {{/if}}
+                </div>
+                </div>
+                <div class='item-controls'>
+                  <a
+                    class='item-control item-edit'
+                    title='{{localize "DOCUMENT.Update" type="power"}}'
+                    data-action='viewDoc'
+                  >
+                    <i class='fas fa-edit'></i>
+                  </a>
+                  {{#if @root.editable}}
+                    <a
+                      class='item-control item-delete'
+                      title='{{localize "DOCUMENT.Delete" type="power"}}'
+                      data-action='deleteDoc'
+                    >
+                      <i class='fas fa-trash'></i>
+                    </a>
+                  {{/if}}
+                </div>
+              </li>
+              <!-- Power Description Row -->
+              <li class="item-description" style="display: {{#if (lookup @root.expandedDescriptions item.id)}}block{{else}}none{{/if}}; background-color: var(--color-bg-option); border-left: 3px solid var(--accent-color); margin-left: 1em; padding: 0.5em;">
+                <div class="item-description-content">
+                  <strong>{{localize "SWN.Actor.Tabs.Description"}}:</strong>
+                  <div style="margin-top: 0.25em; white-space: pre-wrap;">{{{item.system.description}}}</div>
+                </div>
+              </li>
+            {{/each}}
+          {{/each}}
+        {{/if}}
+      </ol>
+    </div>
+    {{/if}}
+  {{/each}}
 
 </section>

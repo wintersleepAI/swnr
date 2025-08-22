@@ -1,0 +1,49 @@
+name: Unaging
+type: power
+sort: 0
+system:
+  description: >-
+    You no longer naturally age, and will remain perfectly hale and vigorous up
+    to your species' natural maximum age plus 20% per character level, after
+    which you will collapse into dust and decay. Immortality beyond this point
+    is possible, but generally requires consistent supplies of life energy,
+    occult materials, or other difficult-to-acquire or morally questionable
+    materials. You also become immune to poisons and diseases.
+  favorite: false
+  subType: arcane
+  source: Necromancer
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Necromancer
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: t2vwsjt0ysirxy4h
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456774
+  modifiedTime: 1754277456774
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/necromancer_art.png
+ownership:
+  default: 0
+_key: '!items!t2vwsjt0ysirxy4h'
+

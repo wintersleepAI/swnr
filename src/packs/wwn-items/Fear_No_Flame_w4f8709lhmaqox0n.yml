@@ -1,0 +1,47 @@
+name: Fear No Flame
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the day as an On Turn action while nominating a visible
+    target. For the rest of the scene, they are immune to non-magical flame,
+    smoke, or explosive damage, and decrease any sources of such magical damage
+    they take by five points per level of Pray you have.
+  favorite: false
+  subType: arcane
+  source: Blood Priest
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Blood Priest
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: w4f8709lhmaqox0n
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456768
+  modifiedTime: 1754277456768
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/bloodPriest_art.png
+ownership:
+  default: 0
+_key: '!items!w4f8709lhmaqox0n'
+

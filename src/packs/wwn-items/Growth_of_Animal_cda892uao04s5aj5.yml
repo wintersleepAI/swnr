@@ -1,0 +1,55 @@
+name: Growth of Animal
+type: power
+sort: 5700000
+system:
+  description: >-
+    Duration: 12 turns Range: 120' One non-magical, normal animal is doubled in
+    size and strength when this spell is cast upon it. ▶ Damage: The damage
+    inflicted by the animal's attacks is doubled. ▶ Load: The amount of weight
+    the animal can carry is doubled. Restrictions: This spell may be used on
+    giant versions of normal animals, but intelligent animals and fantastic
+    monsters are unaffected.
+  favorite: false
+  subType: arcane
+  source: Cleric
+  level: 3
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 12 turns
+  save: None
+  range: 120'
+  skill: null
+_id: cda892uao04s5aj5
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457106
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!cda892uao04s5aj5'
+

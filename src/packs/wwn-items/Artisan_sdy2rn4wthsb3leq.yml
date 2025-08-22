@@ -1,0 +1,41 @@
+name: Artisan
+type: feature
+sort: 0
+system:
+  description: >-
+    You have considerable gifts as a crafter and know numerous secrets for
+    employing arcane salvage and magical materials. You are able to create mods
+    for equipment even if you are not an Expert, as per the rules on page 56.
+    Level 1: Gain Craft as a bonus skill. Your Craft skill is treated as one
+    level higher, up to a maximum of 5, for purposes of crafting and maintaining
+    mods. Mods you build require one fewer unit of arcane salvage, down to a
+    minimum of one. Level 2: The first mod you add to an item requires no
+    Maintenance and only half the silver piece price usually required. This
+    benefit is in addition to the benefits of installing a mod in masterwork
+    gear you build. You automatically succeed at any attempt to build masterwork
+    gear appropriate to your background or past practice, and once per month you
+    can reduce a created mod's salvage price by one further unit, down to a
+    minimum of zero.
+  favorite: false
+  level: 1
+  type: focus
+  poolsGranted: []
+_id: sdy2rn4wthsb3leq
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456875
+  modifiedTime: 1754277456875
+  lastModifiedBy: null
+  exportSource: null
+folder: XpfSdfJBDfjFSauP
+flags: {}
+effects: []
+img: systems/wwn/assets/default/focus.png
+ownership:
+  default: 0
+_key: '!items!sdy2rn4wthsb3leq'
+

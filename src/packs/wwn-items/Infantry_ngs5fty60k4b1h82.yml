@@ -1,0 +1,47 @@
+name: Infantry
+type: asset
+sort: 0
+system:
+  description: >-
+    Common foot soldiers have been organized and armed by the faction. While
+    rarely particularly heroic in their capabilities, they have the advantage of
+    numbers.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 6
+    max: 6
+  rating: 3
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: ngs5fty60k4b1h82
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456943
+  modifiedTime: 1754277456943
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/force.png
+ownership:
+  default: 0
+_key: '!items!ngs5fty60k4b1h82'
+

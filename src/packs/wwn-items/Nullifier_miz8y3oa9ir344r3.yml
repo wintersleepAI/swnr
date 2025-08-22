@@ -1,0 +1,40 @@
+name: Nullifier
+type: feature
+sort: 0
+system:
+  description: >-
+    Something about your hero interferes with easy use of magic on them. It may
+    be a strangely powerful birth blessing, a particular supernatural bloodline,
+    or simple occult incompatibility. This Focus cannot be taken by Mages or
+    Partial Mages. Level 1: You and all allies within twenty feet gain a +2
+    bonus to all saving throws against magical effects. As an On Turn action,
+    you can feel the presence or use of magic within twenty feet of you, though
+    you can't discern details about it or the specific source. The first failed
+    saving throw against a magical effect you suffer in a day is turned into a
+    success. Level 2: Once per day, as an Instant action, you are simply not
+    affected by an unwanted magical effect or supernatural monstrous ability,
+    even if it wouldn't normally allow a saving throw. Immunity to a persistent
+    effect lasts for the rest of the scene.
+  favorite: false
+  level: 1
+  type: focus
+  poolsGranted: []
+_id: miz8y3oa9ir344r3
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456866
+  modifiedTime: 1754277456866
+  lastModifiedBy: null
+  exportSource: null
+folder: XpfSdfJBDfjFSauP
+flags: {}
+effects: []
+img: systems/wwn/assets/default/focus.png
+ownership:
+  default: 0
+_key: '!items!miz8y3oa9ir344r3'
+

@@ -92,14 +92,24 @@ const focus = {
   description: '',
   favorite: false,
   level: 0,
-  type: 'focus'
+  type: 'focus',
+  poolsGranted: []
 };
 
 const edge = {
   description: '',
   favorite: false,
   level: 0,
-  type: 'edge'
+  type: 'edge',
+  poolsGranted: []
+};
+
+const feature = {
+  description: '',
+  favorite: false,
+  level: 0,
+  type: 'focus',
+  poolsGranted: []
 };
 
 const mech = {
@@ -177,7 +187,12 @@ const npc = {
     number: 0
   },
   hitDice: '1d8',
-  saves: 0,
+  saves: {
+    evasion: 15,
+    mental: 15,
+    physical: 15,
+    luck: 15
+  },
   moralScore: 6,
   reaction: 'unknown',
   notes: {
@@ -196,14 +211,18 @@ const npc = {
 const power = {
   description: '',
   favorite: false,
+  subType: 'psychic',
   source: "",
   level: 1,
-  roll: "",
+  prepared: false,
+  resourceName: null,
+  subResource: null,
+  consumptions: [],
+  roll: null,
+  duration: null,
   save: null,
-  range: "",
-  skill: null,
-  prepared: true,
-  effort: null,
+  range: null,
+  skill: null
 };
 
 const program = {
@@ -513,6 +532,19 @@ const shipDefense = {
   effect: ""
 };
 
+const journal = {
+  description: '',
+  content: '',
+  favorite: false
+};
+
+const rolltable = {
+  description: '',
+  formula: '1d100',
+  results: '',
+  favorite: false
+};
+
 export const mapping = {
   item,
   armor,
@@ -520,6 +552,7 @@ export const mapping = {
   cyberware,
   focus,
   edge,
+  feature,
   mech,
   npc,
   power,
@@ -533,4 +566,6 @@ export const mapping = {
   shipWeapon,
   shipFitting,
   shipDefense,
+  journal,
+  rolltable
 };

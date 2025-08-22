@@ -1,4 +1,5 @@
 const { api, sheets } = foundry.applications;
+import { ContainerHelper } from '../helpers/container-helper.mjs';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -7,9 +8,11 @@ const { api, sheets } = foundry.applications;
 export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
   sheets.ActorSheetV2
 ) {
+  #dragDrop;
+
   constructor(options = {}) {
     super(options);
-    this.#dragDrop = this.#createDragDropHandlers();
+    this.#dragDrop = this._createDragDropHandlers();
   }
 
   /* -------------------------------------------- */
@@ -24,7 +27,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    */
   _onRender(context, options) {
     this.#dragDrop.forEach((d) => d.bind(this.element));
-    this.#disableOverrides();
+    this._disableOverrides();
   }
 
   /**
@@ -86,10 +89,28 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    * @param {Item} item
    * @private
    */
-  _onSortItem(event, item) {
+  async _onSortItem(event, item) {
     // Get the drag source and drop target
     const items = this.actor.items;
     const dropTarget = event.target.closest('[data-item-id]');
+
+    // Check if this is a container drop first (before checking for valid dropTarget)
+    const containerInfo = ContainerHelper.getDropTargetContainer(event.target);
+    if (containerInfo) {
+      const container = items.get(containerInfo.itemId);
+      if (container && container.id !== item.id) {
+        // This is a drop onto a container, handle it specially
+        return ContainerHelper.addItemToContainer(container, item);
+      }
+    }
+
+    // Check if item is being removed from a container (dropped outside of containers)
+    if (item.system.containerId) {
+      // Item was in a container but dropped elsewhere, remove it from container
+      await ContainerHelper.removeItemFromContainer(item);
+    }
+
+    // If no valid drop target, we're done (item was just removed from container)
     if (!dropTarget) return;
     const target = items.get(dropTarget.dataset.itemId);
 
@@ -105,7 +126,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
     }
 
     // Perform the sort
-    const sortUpdates = SortingHelpers.performIntegerSort(item, {
+    const sortUpdates = foundry.utils.SortingHelpers.performIntegerSort(item, {
       target,
       siblings,
     });
@@ -131,14 +152,13 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
 
   // This is marked as private because there's no real need
   // for subclasses or external hooks to mess with it directly
-  #dragDrop;
 
   /**
    * Create drag-and-drop workflow handlers for this Application
    * @returns {DragDrop[]}     An array of DragDrop handlers
    * @private
    */
-  #createDragDropHandlers() {
+  _createDragDropHandlers() {
     return this.options.dragDrop.map((d) => {
       d.permissions = {
         dragstart: this._canDragStart.bind(this),
@@ -147,6 +167,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       d.callbacks = {
         dragstart: this._onDragStart.bind(this),
         dragover: this._onDragOver.bind(this),
+        dragleave: this._onDragLeave.bind(this),
         drop: this._onDrop.bind(this),
       };
       return new DragDrop(d);
@@ -234,6 +255,10 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
     const skipConfirmation = target.dataset?.skipconfirmation?.toLowerCase() === "true";
     
     const executeDelete = async () => {
+      // Clean up any consumed resources before deletion
+      if (doc.type === "power") {
+        await SWNBaseSheet._cleanupPowerResourcesBeforeDeletion(doc);
+      }
       await doc.delete();
     }
 
@@ -268,6 +293,104 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
         callback: callback,
       }
     })
+  }
+
+  /**
+   * Clean up any consumed resources before a power is deleted
+   * @param {Item} power - The power being deleted
+   * @private
+   */
+  static async _cleanupPowerResourcesBeforeDeletion(power) {
+    try {
+      const actor = power.parent;
+      if (!actor || power.type !== "power") return;
+
+      const pools = actor.system.pools || {};
+      const poolUpdates = {};
+      let restoredResources = [];
+
+      // Check if power is prepared - restore preparation costs
+      if (power.system.prepared) {
+        const prepConsumptions = power.system.consumptions?.filter(c => c.spendOnPrep) || [];
+        
+        for (const consumption of prepConsumptions) {
+          if (consumption.type === "poolResource" && consumption.resourceName) {
+            const poolKey = `${consumption.resourceName}:${consumption.subResource || "Default"}`;
+            const pool = pools[poolKey];
+            
+            if (pool && consumption.usesCost > 0) {
+              const newValue = Math.min(pool.max, pool.value + consumption.usesCost);
+              poolUpdates[`system.pools.${poolKey}.value`] = newValue;
+              restoredResources.push(`${consumption.usesCost} ${consumption.resourceName}${consumption.subResource ? `:${consumption.subResource}` : ""} (prep cost)`);
+            }
+          }
+        }
+      }
+
+      // Clean up any committed effort for this power
+      const commitments = actor.system.effortCommitments || {};
+      const newCommitments = {};
+      let hasCommitmentChanges = false;
+
+      for (const [poolKey, poolCommitments] of Object.entries(commitments)) {
+        const remainingCommitments = poolCommitments.filter(c => c.powerId !== power.id);
+        
+        if (remainingCommitments.length !== poolCommitments.length) {
+          // Some commitments were removed
+          hasCommitmentChanges = true;
+          newCommitments[poolKey] = remainingCommitments;
+          
+          // Calculate restored effort
+          const releasedCommitments = poolCommitments.filter(c => c.powerId === power.id);
+          const releasedAmount = releasedCommitments.reduce((sum, c) => sum + c.amount, 0);
+          
+          if (releasedAmount > 0 && pools[poolKey]) {
+            const totalCommitted = remainingCommitments.reduce((sum, c) => sum + c.amount, 0);
+            const newValue = Math.min(pools[poolKey].max, pools[poolKey].value + releasedAmount);
+            
+            poolUpdates[`system.pools.${poolKey}.value`] = newValue;
+            poolUpdates[`system.pools.${poolKey}.committed`] = totalCommitted;
+            poolUpdates[`system.pools.${poolKey}.commitments`] = remainingCommitments;
+            
+            restoredResources.push(`${releasedAmount} ${poolKey} (committed effort)`);
+          }
+        } else {
+          newCommitments[poolKey] = poolCommitments;
+        }
+      }
+
+      // Update commitments if changed
+      if (hasCommitmentChanges) {
+        poolUpdates["system.effortCommitments"] = newCommitments;
+      }
+
+      // Apply updates if any resources need to be restored
+      if (Object.keys(poolUpdates).length > 0) {
+        await actor.update(poolUpdates);
+        
+        // Create chat message about resource restoration
+        if (restoredResources.length > 0) {
+          let content = `<div class="power-deletion-cleanup">
+            <h3><i class="fas fa-recycle"></i> Resources Restored</h3>
+            <p><strong>${power.name}</strong> was deleted and the following resources were restored:</p>
+            <ul>`;
+          
+          restoredResources.forEach(resource => {
+            content += `<li>${resource}</li>`;
+          });
+          
+          content += `</ul></div>`;
+          
+          ChatMessage.create({
+            speaker: ChatMessage.getSpeaker({ actor: actor }),
+            content
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Error cleaning up power resources before deletion:", error);
+      // Don't prevent deletion even if cleanup fails
+    }
   }
 
   /**
@@ -560,7 +683,20 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    * @param {DragEvent} event       The originating DragEvent
    * @protected
    */
-  _onDragOver(event, target) { }
+  _onDragOver(event, target) {
+    // Handle container drag over visual feedback
+    ContainerHelper.handleContainerDragOver(event, target);
+  }
+
+  /**
+   * Callback actions which occur when a dragged element leaves a drop target.
+   * @param {DragEvent} event       The originating DragEvent
+   * @protected
+   */
+  _onDragLeave(event, target) {
+    // Handle container drag leave visual feedback
+    ContainerHelper.handleContainerDragLeave(event, target);
+  }
 
   /**
    * Callback actions which occur when a dragged element is dropped on a target.
@@ -712,8 +848,9 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
 
   /**
    * Disables inputs subject to active effects
+   * @private
    */
-  #disableOverrides() {
+  _disableOverrides() {
     const flatOverrides = foundry.utils.flattenObject(this.actor.overrides);
     for (const override of Object.keys(flatOverrides)) {
       const input = this.element.querySelector(`[name="${override}"]`);
@@ -722,4 +859,5 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       }
     }
   }
+
 }
