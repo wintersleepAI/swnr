@@ -50,7 +50,24 @@ The `module/helpers/config.mjs` file exports a comprehensive SWN object containi
 - `SWN.defaultImg` - Default images for different item types
 
 ## Import Usage
-When working with CONFIG.SWN definitions, import them like this:
+The codebase uses `CONFIG.SWN` which is assigned from the imported `SWN` object. In the main module file (`module/swnr.mjs`), you'll see:
+
+```javascript
+import { SWN } from './helpers/config.mjs';
+
+// Later in the init hook:
+CONFIG.SWN = SWN;
+```
+
+When working with CONFIG.SWN definitions in your code, you can reference them directly:
+```javascript
+// Access CONFIG.SWN properties
+CONFIG.SWN.stats
+CONFIG.SWN.skills.classic
+CONFIG.SWN.vehicleTypes
+```
+
+Or import SWN directly for local use:
 ```javascript
 import { SWN } from './module/helpers/config.mjs';
 ```
