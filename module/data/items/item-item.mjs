@@ -104,11 +104,17 @@ export default class SWNItemItem extends SWNBaseGearItem {
             // If quantity is greater than 1, just reduce the quantity
             await item.update({ "system.quantity": this.quantity - 1, "system.uses.value": newUses });
           } else {
-            // If quantity is 1, delete the item
             ui.notifications?.info(
-              `Removing item ${item.name} as it has no uses left and it does not keep empties.`
+              `Setting item ${item.name} to quantity 0. Delete if no longer needed.`
             );
-            await item.delete();
+            await item.update({ "system.quantity": 0, "system.uses.value": 0 });
+
+            // OLD CODE for deletintg the item
+            // // If quantity is 1, delete the item
+            // ui.notifications?.info(
+            //   `Removing item ${item.name} as it has no uses left and it does not keep empties.`
+            // );
+            // await item.delete();
           }
         }
       }
