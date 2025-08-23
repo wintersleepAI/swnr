@@ -1,0 +1,35 @@
+name: 'Class Ability: Killing Blow'
+type: feature
+sort: 0
+system:
+  description: >-
+    Whenever a Warrior inflicts damage with any attack, spell, or special
+    ability they may add half their character level, rounded up, to the damage
+    done. This damage is also added to any Shock they may inflict. Combined with
+    Foci meant to improve Shock attacks such as Armsmaster, Close Combatant, or
+    Shocking Assault, this ability ensures that an experienced Warrior will
+    almost always kill any ordinary human soldier or minor monster, regardless
+    of their attack roll result.
+  favorite: false
+  level: 1
+  type: focus
+  poolsGranted: []
+_id: m5rc26tm0xa3e9ht
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456860
+  modifiedTime: 1754277456860
+  lastModifiedBy: null
+  exportSource: null
+folder: XpfSdfJBDfjFSauP
+flags: {}
+effects: []
+img: systems/wwn/assets/default/class%20ability.png
+ownership:
+  default: 0
+_key: '!items!m5rc26tm0xa3e9ht'
+

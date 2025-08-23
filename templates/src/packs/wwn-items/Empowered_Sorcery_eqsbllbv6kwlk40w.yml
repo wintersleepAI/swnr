@@ -1,0 +1,46 @@
+name: Empowered Sorcery
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the day as an Instant action to re-roll any variable die
+    roll associated with a spell's effects, such as a damage roll; take the roll
+    you prefer.
+  favorite: false
+  subType: arcane
+  source: High Mage
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: High Mage
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: eqsbllbv6kwlk40w
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456792
+  modifiedTime: 1754277456792
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/art.png
+ownership:
+  default: 0
+_key: '!items!eqsbllbv6kwlk40w'
+

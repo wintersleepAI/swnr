@@ -1,0 +1,41 @@
+name: Power System,Small
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: aPPngDkp3e5tzGZ9
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-vehicle-fittings.Item.kvm5krw7x9d1rb54
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267290515
+  modifiedTime: 1754267290515
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 1000
+  description: >-
+    This fitting adds extra Power in battery capacity and computing support at
+    the cost of an additional Mass burden.
+  effect: Adds Power at a cost in Mass
+  mass: 2
+  minClass: fighter
+  power: 0
+  type: vehicle
+  favorite: false
+  tl: 4
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  broken: false
+  destroyed: false
+  juryRigged: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: htIKUw3YO3l9uVi9
+sort: 0
+_key: '!items!htIKUw3YO3l9uVi9'
+

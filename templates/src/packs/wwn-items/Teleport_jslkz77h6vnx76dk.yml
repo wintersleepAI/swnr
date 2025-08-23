@@ -1,0 +1,71 @@
+name: Teleport
+type: power
+sort: 106250
+system:
+  description: >-
+    Duration: Instant Range: 10' The caster or a chosen creature vanishes and
+    reappears at a location of the caster's choosing. ▶ Gear: The subject is
+    teleported with all its gear, up to its maximum load. ▶ Unwilling subjects:
+    May make a Mental save to prevent the teleportation. ▶ Destination: May be
+    at any distance, but must be known to the caster. The destination must be an
+    open space at ground level. (It is not possible to intentionally teleport
+    the subject into mid-air or into solid matter.) ▶ Risk: There is a risk,
+    when teleporting, of accidentally arriving above or below ground level. The
+    chance of a successful teleportation depends on the caster's knowledge of
+    the destination (see right). Roll d% and consult the table below. Knowledge
+    of Destination Ground Level Too High Too Low Scant 01-50 51-75 76-100
+    Moderate 01-80 81-90 91-100 Exact 01-95 96-99 100 Ground level: The subject
+    appears at the desired destination. Too high: The subject appears
+    1d10&times;10' above the intended destination. Should this location already
+    be occupied by solid matter, the subject is instantly killed. Otherwise, the
+    subject falls from a height. Too low: The subject appears in the ground and
+    is killed instantly. Knowledge of destination: The caster's knowledge of the
+    destination is rated as follows: ▶ Scant: A location that the caster has
+    visited once or twice, has seen by magical scrying, or has heard of from
+    descriptions. ▶ Moderate: A location that the caster has visited often or
+    has studied via scrying for several weeks. ▶ Exact: A location that the
+    caster has made a detailed study of, in person.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 5
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: mental
+  range: 10'
+  skill: null
+_id: jslkz77h6vnx76dk
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457087
+  modifiedTime: 1754277913362
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!jslkz77h6vnx76dk'
+

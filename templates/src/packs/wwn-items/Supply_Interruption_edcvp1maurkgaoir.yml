@@ -1,0 +1,48 @@
+name: Supply Interruption
+type: asset
+sort: 0
+system:
+  description: >-
+    As a free action, once per turn, the Asset can make a Cunning vs. Wealth
+    check against an Asset in the same location. On a success, the owning
+    faction must sacrifice Treasure equal to half the target Asset's purchase
+    cost, or else it is disabled and useless until this price is paid.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 8
+    max: 8
+  rating: 5
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: edcvp1maurkgaoir
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456951
+  modifiedTime: 1754277456951
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/wealth.png
+ownership:
+  default: 0
+_key: '!items!edcvp1maurkgaoir'
+

@@ -1,0 +1,147 @@
+name: Ordinary Predatory Beasts
+img: icons/svg/d20-grey.svg
+results:
+  - _id: j9oRCKuLjlMnfEQG
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Snarl and growl, but don't attack anyone
+    name: ''
+    _key: '!tables.results!PD7LTHKY4TXcQNI3.j9oRCKuLjlMnfEQG'
+  - _id: 16V4vkxCIUbh6LGZ
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Pull back and get away from nearby threats
+    name: ''
+    _key: '!tables.results!PD7LTHKY4TXcQNI3.16V4vkxCIUbh6LGZ'
+  - _id: KeUdtaKYI0JinrE7
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Attack the last enemy to have hurt it
+    name: ''
+    _key: '!tables.results!PD7LTHKY4TXcQNI3.KeUdtaKYI0JinrE7'
+  - _id: wk0Qg3xzj7ov0csg
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Attack the last enemy it managed to hurt
+    name: ''
+    _key: '!tables.results!PD7LTHKY4TXcQNI3.wk0Qg3xzj7ov0csg'
+  - _id: bBLIdrWvilsYHNz7
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Take a bite out of a downed enemy
+    name: ''
+    _key: '!tables.results!PD7LTHKY4TXcQNI3.bBLIdrWvilsYHNz7'
+  - _id: TbbpnHCUU1rh4Z8R
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Panic and make a Morale check
+    name: ''
+    _key: '!tables.results!PD7LTHKY4TXcQNI3.TbbpnHCUU1rh4Z8R'
+formula: 1d6
+replacement: true
+displayRoll: true
+folder: tCjobZPuAK5KxMZQ
+flags:
+  core: {}
+_stats:
+  compendiumSource: Compendium.swnr.wwn-instinct.RollTable.AdhcClvUZ5b3p3vH
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754272494042
+  modifiedTime: 1754272494042
+  lastModifiedBy: lKC5x4Yf023Bizof
+description: ''
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: PD7LTHKY4TXcQNI3
+sort: 0
+_key: '!tables!PD7LTHKY4TXcQNI3'
+

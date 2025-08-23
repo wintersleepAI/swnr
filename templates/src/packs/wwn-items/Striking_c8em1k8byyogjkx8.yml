@@ -1,0 +1,52 @@
+name: Striking
+type: power
+sort: 125000
+system:
+  description: >-
+    Duration: 1 turn Range: 30' A single weapon is enchanted: ▶ Damage: It deals
+    an additional 1d6 damage. ▶ Treated as magical: It is able to harm monsters
+    which are normally only harmed by magical weapons.
+  favorite: false
+  subType: arcane
+  source: Cleric
+  level: 3
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 1 turn
+  save: None
+  range: 30'
+  skill: null
+_id: c8em1k8byyogjkx8
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457099
+  modifiedTime: 1754277910927
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!c8em1k8byyogjkx8'
+

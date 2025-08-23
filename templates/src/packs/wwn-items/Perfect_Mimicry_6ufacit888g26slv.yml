@@ -1,0 +1,47 @@
+name: Perfect Mimicry
+type: power
+sort: 0
+system:
+  description: >-
+    This alternate form can exactly duplicate another creature, provided you
+    either have a lock of their hair, a still-liquid drop of their blood, or ten
+    minutes of observation of them from within five feet. Once learned, you need
+    no further samples.
+  favorite: false
+  subType: arcane
+  source: Skinshifter
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Skinshifter
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 6ufacit888g26slv
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456785
+  modifiedTime: 1754277456785
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/skinshifter_art.png
+ownership:
+  default: 0
+_key: '!items!6ufacit888g26slv'
+

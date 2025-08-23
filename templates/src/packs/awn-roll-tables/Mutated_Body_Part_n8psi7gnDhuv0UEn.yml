@@ -1,0 +1,147 @@
+name: Mutated Body Part
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: 4dNx8ZQvpDGjWUGA
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Head
+    name: ''
+    _key: '!tables.results!n8psi7gnDhuv0UEn.4dNx8ZQvpDGjWUGA'
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: ehzdkEbqtOhIjZm5
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Arm or Arms
+    name: ''
+    _key: '!tables.results!n8psi7gnDhuv0UEn.ehzdkEbqtOhIjZm5'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: COHVRBxUtmVWoQdE
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Leg or Legs
+    name: ''
+    _key: '!tables.results!n8psi7gnDhuv0UEn.COHVRBxUtmVWoQdE'
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: EZIMNTY5GyUYXwN1
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Torso
+    name: ''
+    _key: '!tables.results!n8psi7gnDhuv0UEn.EZIMNTY5GyUYXwN1'
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: tsXry7jWtfmWc43f
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Eyes, Ears, or Hands
+    name: ''
+    _key: '!tables.results!n8psi7gnDhuv0UEn.tsXry7jWtfmWc43f'
+  - type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: jDtkONPyH12UdzUc
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Roll again and add that extra part
+    name: ''
+    _key: '!tables.results!n8psi7gnDhuv0UEn.jDtkONPyH12UdzUc'
+replacement: true
+displayRoll: true
+folder: ZsrKd0EZcB4THIIm
+ownership:
+  default: 0
+  AjdlQlPXkJlcOy63: 3
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1753926183383
+  modifiedTime: 1753926183405
+  lastModifiedBy: lKC5x4Yf023Bizof
+formula: 1d6
+_id: n8psi7gnDhuv0UEn
+sort: 200000
+_key: '!tables!n8psi7gnDhuv0UEn'
+

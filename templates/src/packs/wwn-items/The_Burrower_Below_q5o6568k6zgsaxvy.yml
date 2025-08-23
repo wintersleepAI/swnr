@@ -1,0 +1,59 @@
+name: The Burrower Below
+type: power
+sort: 0
+system:
+  description: >-
+    A passage is carved through natural stone or earth, forming a tunnel up to
+    twenty feet long per caster level and up to ten feet wide and tall. The
+    caster can cause the earth to compress and pack itself so as to stabilize
+    the tunnel even in very sandy or burdened soil, or they can allow it to
+    collapse naturally if burdened by some large structure or unstable
+    surroundings. This spell can function against worked stone, but the length
+    of the tunnel is much shorter, being only two feet per level. Magical stone
+    or earth cannot be altered by this spell. The caster has basic control over
+    the direction and interior features of the tunnel, and can form stairs or
+    other simple structures within it.
+  favorite: false
+  subType: arcane
+  source: Elementalist
+  level: 2
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 20 ft. per level
+  save: None
+  range: Self
+  skill: null
+_id: q5o6568k6zgsaxvy
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456907
+  modifiedTime: 1754277456907
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/new/elementalist_spell.png
+ownership:
+  default: 0
+_key: '!items!q5o6568k6zgsaxvy'
+

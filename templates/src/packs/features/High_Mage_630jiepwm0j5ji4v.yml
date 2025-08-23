@@ -1,0 +1,55 @@
+name: High Mage
+type: feature
+sort: 0
+system:
+  description: Advanced magical training for spellcasters
+  favorite: false
+  level: 1
+  type: focus
+  poolsGranted:
+    - resourceName: Slots
+      subResource: SpellsCast
+      cadence: day
+      formula: Math.ceiling(@level/2)
+      condition: ''
+    - resourceName: Slots
+      subResource: SpellsPrepared
+      cadence: day
+      formula: '@level + 1'
+      condition: ''
+    - resourceName: Slots
+      subResource: SpellsPrepared
+      cadence: day
+      formula: '+1'
+      condition: '@level <= 1'
+    - resourceName: Slots
+      subResource: SpellsPrepared
+      cadence: day
+      formula: '+2'
+      condition: '@level >= 10'
+    - resourceName: Effort
+      subResource: HighMage
+      cadence: day
+      formula: >-
+        Math.max(1, @skills.magic.rank + Math.max(@stats.int.mod,
+        @stats.cha.mod))
+      condition: ''
+_id: 630jiepwm0j5ji4v
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1753952624087
+  modifiedTime: 1753952624087
+  lastModifiedBy: null
+  exportSource: null
+folder: null
+flags: {}
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+ownership:
+  default: 0
+_key: '!items!630jiepwm0j5ji4v'
+

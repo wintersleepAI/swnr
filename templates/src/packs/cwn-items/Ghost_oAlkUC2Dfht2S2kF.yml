@@ -1,0 +1,37 @@
+name: Ghost
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: YSjeg2WqEsCIXk0y
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-program.Item.sf1l4a6p6m15o5cb
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267253955
+  modifiedTime: 1754267253955
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  accessCost: 1
+  cost: 2000
+  description: >-
+    Renders the targeted friendly avatar or Demon 'invisible' until they take
+    some cyberspace action other than Move Nodes. Observers in a node get an
+    automatic opposed Int/Program check to detect a ghosted avatar's presence,
+    ending the program.
+  selfTerminating: false
+  skillCheckMod: 0
+  target: Avatar
+  type: verb
+  useAffects: Turn 'invisible' so long as you only move
+  favorite: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: oAlkUC2Dfht2S2kF
+sort: 1100000
+_key: '!items!oAlkUC2Dfht2S2kF'
+

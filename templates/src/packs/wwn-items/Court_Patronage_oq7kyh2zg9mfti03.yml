@@ -1,0 +1,47 @@
+name: Court Patronage
+type: asset
+sort: 0
+system:
+  description: >-
+    Powerful nobles or officials are appointing their agents to useful posts of
+    profit. A Court Patronage Asset automatically grants 1 Treasure to its
+    owning faction each turn.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 8
+    max: 8
+  rating: 4
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 1
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: oq7kyh2zg9mfti03
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456946
+  modifiedTime: 1754277456946
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/cunning.png
+ownership:
+  default: 0
+_key: '!items!oq7kyh2zg9mfti03'
+

@@ -1,0 +1,49 @@
+name: Seditionists
+type: asset
+sort: 0
+system:
+  description: >-
+    In place of an Attack action, the Seditionists' owners may spend 1d4
+    Treasure and attach the Asset to a hostile Asset in the same location. Until
+    the Seditionists are destroyed, infest another Asset, or leave the same
+    location, the rebelling Asset cannot be used for anything and grants no
+    benefits.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 8
+    max: 8
+  rating: 4
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: 6v9li468h2hv2fuo
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456963
+  modifiedTime: 1754277456963
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/cunning.png
+ownership:
+  default: 0
+_key: '!items!6v9li468h2hv2fuo'
+

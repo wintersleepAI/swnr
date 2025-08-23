@@ -1,0 +1,51 @@
+name: Psychic Succor
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: eszwn9iri35ej5xr
+system:
+  description: >-
+    <p>The adept’s touch stabilizes critically-wounded organisms. More
+    sophisticated practitioners can heal tissue injuries, though curing
+    diseases, detoxifying poisons, and fixing congenital deformities require
+    additional techniques. Each use of <em>Psychic Succor</em> adds one point of
+    System Strain to the target, or two points if they were mortally wounded at
+    the time.</p><p>Activating <em>Psychic Succor</em> requires the biopsion to
+    Commit Effort for the day. Once used, they can continue to use it for the
+    rest of that scene without Committing Effort again.</p><p>Level-0: The
+    psychic’s touch can automatically stabilize a mortally-wounded target as a
+    Main Action. This power must be used on a target within six rounds of their
+    collapse, and does not function on targets that have been decapitated or
+    killed by Heavy weapons. It’s the GM’s decision as to whether a target is
+    intact enough for this power to work.</p><p>Level-1: As level-0, and heal
+    1d6+1 hit points of damage. If used on a mortally-wounded target, they
+    revive with the rolled hit points and can act normally on the next
+    round.</p><p>Level-2: As level-1, but healing 2d6+2 hit points
+    instead.</p><p>Level-3: As level-2, but healing 2d6+6 hit points
+    instead.</p><p>Level-4: As level-3, but healing 3d6+8 hit points
+    instead.</p>
+  level: 0
+  source: biopsionics
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
+effects: []
+ownership:
+  default: 0
+_key: '!items!eszwn9iri35ej5xr'
+

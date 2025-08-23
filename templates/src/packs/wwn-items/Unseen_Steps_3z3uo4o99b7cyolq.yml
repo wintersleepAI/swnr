@@ -1,0 +1,46 @@
+name: Unseen Steps
+type: power
+sort: 0
+system:
+  description: >-
+    As an On Turn action, Commit Effort for the day to turn invisible for 1d6
+    rounds plus your level. This invisibility breaks before you attack, cast
+    spells, or perform other vigorous or violent actions.
+  favorite: false
+  subType: arcane
+  source: Accursed
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Accursed
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 3z3uo4o99b7cyolq
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456756
+  modifiedTime: 1754277456756
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/accursed_art.png
+ownership:
+  default: 0
+_key: '!items!3z3uo4o99b7cyolq'
+

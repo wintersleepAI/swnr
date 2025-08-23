@@ -1,0 +1,107 @@
+folder: JCTtZt3gza36t9hX
+name: 'Scouting: How Far Away Is the Site?'
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: x0dUijhHxmdrKZ64
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Right in the same neighborhood
+    name: ''
+    _key: '!tables.results!IQeyoFxxCNx4rHiz.x0dUijhHxmdrKZ64'
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: nszjQJRmrnrlVlRB
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: In the same district
+    name: ''
+    _key: '!tables.results!IQeyoFxxCNx4rHiz.nszjQJRmrnrlVlRB'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: nknRJ5bUejgTNbCB
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: In the same city or general zone
+    name: ''
+    _key: '!tables.results!IQeyoFxxCNx4rHiz.nknRJ5bUejgTNbCB'
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: cRoIjWvJXvGcEjx4
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Somewhere in the badlands
+    name: ''
+    _key: '!tables.results!IQeyoFxxCNx4rHiz.cRoIjWvJXvGcEjx4'
+replacement: true
+displayRoll: true
+flags:
+  core: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-tables.RollTable.IQeyoFxxCNx4rHiz
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754272613626
+  modifiedTime: 1754272613626
+  lastModifiedBy: lKC5x4Yf023Bizof
+formula: 1d4
+_id: IQeyoFxxCNx4rHiz
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!tables!IQeyoFxxCNx4rHiz'
+

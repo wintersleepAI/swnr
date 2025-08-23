@@ -1,0 +1,46 @@
+name: Night-Black Eyes
+type: power
+sort: 0
+system:
+  description: >-
+    ou can see clearly in perfect darkness. As a Main Action, focus on a
+    particular visible object, person, or location; you can tell if it is
+    enchanted, though no details about the magic are seen.
+  favorite: false
+  subType: arcane
+  source: Accursed
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Accursed
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 1szcs3xp1mvminky
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456779
+  modifiedTime: 1754277456779
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/accursed_art.png
+ownership:
+  default: 0
+_key: '!items!1szcs3xp1mvminky'
+

@@ -1,0 +1,150 @@
+name: Sprite
+type: npc
+sort: 0
+system:
+  ab: 1
+  armorType: street
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  baseAc: 14
+  hitDice: 1
+  moralScore: 7
+  saves: 15
+  skillBonus: 0
+  speed: 60
+  biography: >-
+    1' tall, winged humanoids, related to pixies and elves. They are shy, but
+    driven by curiosity and their odd sense of humour. Curse: Five sprites can
+    collectively curse a target (no attack roll; Mental save). The effect is
+    determined by the referee, but will always be used to comical effect (e.g.
+    target trips, target's nose grows). Pranksters: Even if attacked, sprites
+    have no interest in killing, merely in making practical jokes.
+  species: monster
+_id: wvhkuv6h31ib8nte
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456521
+  modifiedTime: 1754277456521
+  lastModifiedBy: null
+  exportSource: null
+folder: EvdqxETxotoAuVI8
+flags: {}
+effects: []
+prototypeToken:
+  name: Sprite
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/cowled.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+img: icons/svg/cowled.svg
+items:
+  - name: Curse
+    type: item
+    img: /systems/wwn/assets/default/ability.png
+    system:
+      description: >-
+        Five sprites can collectively curse a target (no attack roll; Mental
+        save). The effect is determined by the referee, but will always be used
+        to comical effect (e.g. target trips, target's nose grows).
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: 5j47smx88xero6tl
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920811
+      modifiedTime: 1754273920811
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!wvhkuv6h31ib8nte.5j47smx88xero6tl'
+_key: '!actors!wvhkuv6h31ib8nte'
+

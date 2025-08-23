@@ -1,0 +1,55 @@
+name: Resounding Temporal Echo
+type: power
+sort: 0
+system:
+  description: >-
+    The caster imbues one visible ally per caster level with a burst of
+    tremendous speed as their localized time begins to flow more rapidly. For
+    1d4+1 rounds, all subjects get an extra Main Action during their turn. This
+    Main Action may not be used to cast spells or use Arts. This spell severely
+    taxes those who take advantage of it, adding 1 System Strain for each round
+    in which the recipient takes the bonus action.
+  favorite: false
+  subType: arcane
+  source: High Mage
+  level: 2
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 1d4+1 rounds
+  save: None
+  range: Visible
+  skill: null
+_id: ovzyhp8inyoogtru
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456893
+  modifiedTime: 1754277456893
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!ovzyhp8inyoogtru'
+

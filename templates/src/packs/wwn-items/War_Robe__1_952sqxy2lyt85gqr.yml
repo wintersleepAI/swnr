@@ -1,0 +1,56 @@
+name: War Robe +1
+type: armor
+sort: 0
+system:
+  description: >-
+    A war robe is a catchall term for various outfits involving layers of
+    reinforced cloth or leather. Bits of metal, layers of thick hide, or weaves
+    of tough cordage might all go into the various layers of the suit, making it
+    a very heavy, if effective, piece of equipment. Light armor may be decidedly
+    heavy, but it is loose and flexible enough to offer minimal hindrance to the
+    wearer's actions. Some varieties are also discreet enough to be worn
+    politely in common society.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 2
+  cost: 50
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 10
+  shield: false
+  use: false
+  meleeAc: 15
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+  baseAc: 15
+_id: 952sqxy2lyt85gqr
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456968
+  modifiedTime: 1754277456968
+  lastModifiedBy: null
+  exportSource: null
+folder: CKqMh5qEXioiEqoU
+flags: {}
+effects: []
+img: systems/wwn/assets/default/armor.png
+ownership:
+  default: 0
+_key: '!items!952sqxy2lyt85gqr'
+

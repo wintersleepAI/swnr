@@ -1,0 +1,133 @@
+name: CWN NPC Creation
+description: >-
+  <p>1). Main Strengths</p><p>2). Virtues and/or Qualities</p><p>3). Personality
+  Flaws</p><p>4). Current Problems</p><p>5). Current Desires</p>
+results:
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: lrdtme7aBrZ9u5np
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: NPC Main Strengths
+    documentUuid: RollTable.9Xbkvzp6gKKKlU7b
+    description: ''
+    _key: '!tables.results!i3YhSteKx9RW50p0.lrdtme7aBrZ9u5np'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: ssIoiofthLA8HQYz
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: NPC Virtues and Qualities
+    documentUuid: RollTable.m821SKLTIPRiKrb8
+    description: ''
+    _key: '!tables.results!i3YhSteKx9RW50p0.ssIoiofthLA8HQYz'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: lMCwP1s0XpQyXzXm
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: NPC Personality Flaws
+    documentUuid: RollTable.k9zmqAqfaZ9a7HMN
+    description: ''
+    _key: '!tables.results!i3YhSteKx9RW50p0.lMCwP1s0XpQyXzXm'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: fhakqfpmHcUArXAv
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: NPC Current Problems
+    documentUuid: RollTable.8IJouo8HX8ybsHjw
+    description: ''
+    _key: '!tables.results!i3YhSteKx9RW50p0.fhakqfpmHcUArXAv'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: WSGq824aogSUMzTa
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: NPC Current Desires
+    documentUuid: RollTable.vkmIe7cOgXgH02Jz
+    description: ''
+    _key: '!tables.results!i3YhSteKx9RW50p0.WSGq824aogSUMzTa'
+formula: 1d1
+_id: i3YhSteKx9RW50p0
+img: icons/svg/d20-grey.svg
+replacement: true
+displayRoll: false
+folder: Kaj67bsHMHUR6kI2
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-tables.RollTable.i3YhSteKx9RW50p0
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754272613626
+  modifiedTime: 1754272613626
+  lastModifiedBy: lKC5x4Yf023Bizof
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!tables!i3YhSteKx9RW50p0'
+

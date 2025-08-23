@@ -1,0 +1,44 @@
+name: Thaumic Vitality
+type: item
+sort: 0
+system:
+  description: >-
+    A rare and precious potion, this elixir allows a mage to cast one prepared
+    spell within the next scene without it counting against their allowed spells
+    for the day. This force exerts a severe cost on their bodily constitution,
+    however, and they gain Systm Strain equal to the spell's level after it is
+    cast. If this cost is more than their Constitution can bear, they fall
+    unconscious and wake up in fifteen minutes with maximized System Strain.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 0
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
+_id: hjcjtyhjytc5n0ge
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456992
+  modifiedTime: 1754277456992
+  lastModifiedBy: null
+  exportSource: null
+folder: jXrFh0x6b5Auj9IZ
+flags: {}
+effects: []
+img: icons/tools/laboratory/vial-orange.webp
+ownership:
+  default: 0
+_key: '!items!hjcjtyhjytc5n0ge'
+

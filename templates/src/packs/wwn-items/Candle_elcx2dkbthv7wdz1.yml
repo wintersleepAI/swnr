@@ -1,0 +1,38 @@
+name: Candle
+type: item
+sort: 0
+system:
+  description: This item is effectively weightless in modest numbers.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 0
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
+_id: elcx2dkbthv7wdz1
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456717
+  modifiedTime: 1754277456717
+  lastModifiedBy: null
+  exportSource: null
+folder: OSCezLcl3H6szsim
+flags: {}
+effects: []
+img: icons/sundries/lights/candle-lit-yellow.webp
+ownership:
+  default: 0
+_key: '!items!elcx2dkbthv7wdz1'
+

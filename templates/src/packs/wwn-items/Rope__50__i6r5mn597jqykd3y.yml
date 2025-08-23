@@ -1,0 +1,38 @@
+name: Rope, 50'
+type: item
+sort: 0
+system:
+  description: ''
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 2
+  cost: 2
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
+_id: i6r5mn597jqykd3y
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456708
+  modifiedTime: 1754277456708
+  lastModifiedBy: null
+  exportSource: null
+folder: OSCezLcl3H6szsim
+flags: {}
+effects: []
+img: icons/sundries/survival/rope-wrapped-yellow.webp
+ownership:
+  default: 0
+_key: '!items!i6r5mn597jqykd3y'
+

@@ -1,0 +1,48 @@
+name: Flamesight
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort as an On Turn action. While the Effort remains Committed, you
+    can see thermal gradients sufficient to distinguish surfaces and living
+    creatures, even in perfect darkness. Optionally, you may cause your own eyes
+    to cast a light sufficient to illuminate your surroundings clearly out to a
+    range of 30 feet.
+  favorite: false
+  subType: arcane
+  source: Elementalist
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Elementalist
+      usesCost: 1
+      cadence: active
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: ileza1tw6bwfkfpd
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456790
+  modifiedTime: 1754277456790
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/elementalist_art.png
+ownership:
+  default: 0
+_key: '!items!ileza1tw6bwfkfpd'
+

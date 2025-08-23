@@ -1,0 +1,47 @@
+name: Cavalry
+type: asset
+sort: 0
+system:
+  description: >-
+    Mounted troops, chariots, or other mobile soldiers are in service to the
+    faction. While weak on defense, they can harry logistics and mount powerful
+    charges.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 12
+    max: 12
+  rating: 4
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: hz1b9q3y9vtud70d
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456957
+  modifiedTime: 1754277456957
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/force.png
+ownership:
+  default: 0
+_key: '!items!hz1b9q3y9vtud70d'
+

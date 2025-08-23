@@ -1,0 +1,46 @@
+name: Swift Healer
+type: power
+sort: 0
+system:
+  description: >-
+    Your Healing Touch ability is improved, and may be used as an On Turn action
+    once per day per character level, though not more than once per scene on any
+    given target.
+  favorite: false
+  subType: arcane
+  source: Healer
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Healer
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 1amjzgh8vu43pd4q
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456797
+  modifiedTime: 1754277456797
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/healer_art.png
+ownership:
+  default: 0
+_key: '!items!1amjzgh8vu43pd4q'
+

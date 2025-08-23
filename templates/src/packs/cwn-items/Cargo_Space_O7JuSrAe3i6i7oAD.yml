@@ -1,0 +1,45 @@
+name: Cargo Space
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: 4ctWevVXyy54aHh0
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.ok9f1ydddtyddrag
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266949107
+  modifiedTime: 1754266949107
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 0
+  description: >-
+    Most drones are designed to carry only their own weight. This fitting
+    upgrades engines and adds cargo mounts to the drone`s exterior; it can carry
+    up to 3 points of Encumbrance now, but the drone`s own Encumbrance value is
+    increased by one. Any additional cargo it carries is added to this burden,
+    of course. Carried cargo is sealed within the drone and requires a Main
+    Action to dig out.
+  mass: 1
+  type: drone
+  favorite: false
+  tl: 4
+  power: 1
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: fighter
+  broken: false
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: O7JuSrAe3i6i7oAD
+sort: 0
+_key: '!items!O7JuSrAe3i6i7oAD'
+

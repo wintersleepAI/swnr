@@ -1,0 +1,42 @@
+name: Enhanced Structure
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: 4ctWevVXyy54aHh0
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.1byayz38y345m4mw
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266949107
+  modifiedTime: 1754266949107
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 0
+  description: >-
+    The drone`s maximum hit points increase by 25% of its unmodified base,
+    rounded up. As with Improved Armor, this fitting is ineffective on drones
+    that aren`t man-portable.
+  mass: 1
+  type: drone
+  favorite: false
+  tl: 4
+  power: 1
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: fighter
+  broken: false
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: X2Ivqu12w8nvitQh
+sort: 0
+_key: '!items!X2Ivqu12w8nvitQh'
+

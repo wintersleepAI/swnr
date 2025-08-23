@@ -1,0 +1,46 @@
+name: Assisted Boost Burner
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: 4ctWevVXyy54aHh0
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.mnb3gbv5n35dw58t
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266949107
+  modifiedTime: 1754266949107
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 0
+  description: >-
+    The drone is equipped with reactive chemical booster that can be ignited to
+    give it a very brief burst of tremendous speed. When activated as a Move
+    action, the burner launches the drone up to 500 meters in a straight line.
+    The boost is not precise enough to use as an aimed weapon, but solid
+    obstacles in front of the drone will suffer half the drone`s HP in damage
+    and inflict all of theirs on the drone. The burner functions only once
+    before it require a scene to regenerate its charge.
+  mass: 1
+  type: drone
+  favorite: false
+  tl: 4
+  power: 1
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: fighter
+  broken: false
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: lALzApfL02DAuQW4
+sort: 0
+_key: '!items!lALzApfL02DAuQW4'
+

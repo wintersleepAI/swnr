@@ -1,0 +1,47 @@
+name: Snaring Speech
+type: power
+sort: 0
+system:
+  description: >-
+    Once per round as an Instant action, Commit Effort for the day when failing
+    a skill check to persuade or tempt someone. They must make a Mental save or
+    agree with your proposal if it's something they would normally consider
+    doing. Gain one System Strain when using this art.
+  favorite: false
+  subType: arcane
+  source: Accursed
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Accursed
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: mental
+  range: Self
+  skill: null
+_id: t34qozoe13evqq2i
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456789
+  modifiedTime: 1754277456789
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/accursed_art.png
+ownership:
+  default: 0
+_key: '!items!t34qozoe13evqq2i'
+

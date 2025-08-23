@@ -1,0 +1,56 @@
+name: Normal Clothing/Unarmored
+type: armor
+_id: RpKnh6T8gsYZPsZb
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+system:
+  description: ''
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 0
+  cost: 0
+  tl: 0
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 10
+  shield: false
+  use: false
+  meleeAc: 10
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: true
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+effects: []
+folder: aqEeYcgNBqyFHmfk
+sort: 100000
+ownership:
+  default: 0
+  AjdlQlPXkJlcOy63: 3
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1753923584465
+  modifiedTime: 1753923584465
+  lastModifiedBy: lKC5x4Yf023Bizof
+_key: '!items!RpKnh6T8gsYZPsZb'
+

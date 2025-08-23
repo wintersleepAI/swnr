@@ -1,0 +1,42 @@
+name: Ablative Code Buffer
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: 4ctWevVXyy54aHh0
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.2yc1ccgx8erpbjic
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266949107
+  modifiedTime: 1754266949107
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 0
+  description: >-
+    Numerous self-correcting back- up circuits are wired in to delay any hostile
+    hack- ing intrusions. The drone automatically succeeds on the first opposed
+    skill check made against a hostile hacker in a given scene.
+  mass: 1
+  type: drone
+  favorite: false
+  tl: 4
+  power: 1
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: fighter
+  broken: false
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: 7423BQGTouzbltlu
+sort: 0
+_key: '!items!7423BQGTouzbltlu'
+

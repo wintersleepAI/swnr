@@ -1,0 +1,54 @@
+name: Dispel Magic
+type: power
+sort: 6500000
+system:
+  description: >-
+    Duration: Instant Range: 120' Dispel magic ends spells of non-instantaneous
+    duration within a 20' cube area. ▶ Caster levels: If the level of the caster
+    of the effect to be dispelled is higher than the level of the caster of
+    dispel magic, there is a 5% chance per level difference that the attempt to
+    dispel will fail. ▶ Magic items: Are unaffected.
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 3
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: 120'
+  skill: null
+_id: vvac9tkd1sbstueb
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457103
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!vvac9tkd1sbstueb'
+

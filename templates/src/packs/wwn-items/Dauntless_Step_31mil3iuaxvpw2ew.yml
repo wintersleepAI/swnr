@@ -1,0 +1,47 @@
+name: Dauntless Step
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the scene as an On Turn action. The Move actions you make
+    for the rest of the round can cross vertical surfaces or difficult terrain
+    at your full normal movement rate, provided you end the round standing
+    upright on a surface that can bear your weight.
+  favorite: false
+  subType: arcane
+  source: Duelist
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Duelist
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 31mil3iuaxvpw2ew
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456812
+  modifiedTime: 1754277456812
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/duelistArt_art.png
+ownership:
+  default: 0
+_key: '!items!31mil3iuaxvpw2ew'
+

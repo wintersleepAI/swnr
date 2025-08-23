@@ -1,0 +1,61 @@
+name: Pierce the Pallid Gate
+type: power
+sort: 0
+system:
+  description: >-
+    The caster opens a short-ranged spatial rift between two points within one
+    hundred feet per level, provided they can see or have physically occupied
+    both points at some prior time and provided the two points are at least
+    twenty feet apart. The rift forms a gateway that connects the two points,
+    one large enough to drive a cart through, and allows subjects on either side
+    to see through and pass through the gate. Ambient environmental qualities
+    such as liquids or atmospheres will not pass through the portal; only
+    intentionally-directed creatures and objects will transfer. Once the
+    creature has passed through a portal, it cannot pass through again until its
+    next turn. The portal remains open for up to one round per caster level, but
+    can be shut as an Instant action by the caster. Creatures partially in a
+    rift when it closes are spat out on the far side.
+  favorite: false
+  subType: arcane
+  source: High Mage
+  level: 4
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 1 round per level
+  save: None
+  range: 100 ft. per level
+  skill: null
+_id: 9a207i4a3hiwjwds
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456893
+  modifiedTime: 1754277456893
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!9a207i4a3hiwjwds'
+

@@ -1,0 +1,46 @@
+name: Elemental Resilience
+type: power
+sort: 0
+system:
+  description: >-
+    You are unharmed by mundane extremes of cold or by heat less than that of a
+    furnace. You suffer only half damage from magical or extremely intense flame
+    or frost attacks.
+  favorite: false
+  subType: arcane
+  source: Elementalist
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Elementalist
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: mr7iq1sldajmwwof
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456837
+  modifiedTime: 1754277456837
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/elementalist_art.png
+ownership:
+  default: 0
+_key: '!items!mr7iq1sldajmwwof'
+

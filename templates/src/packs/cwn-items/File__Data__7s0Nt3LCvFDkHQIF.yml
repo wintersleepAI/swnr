@@ -1,0 +1,35 @@
+name: File (Data)
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: eBbZVBq3zmvZSDXd
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-program.Item.2w5t7ktcappbbwqc
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267253955
+  modifiedTime: 1754267253955
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  accessCost: 0
+  cost: 0
+  description: >-
+    A file of data, whether a text document, a video, a program, or something
+    else. Consumes 1 memory
+  selfTerminating: false
+  skillCheckMod: 0
+  target: ''
+  type: subject
+  useAffects: A file of data
+  favorite: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: 7s0Nt3LCvFDkHQIF
+sort: 300000
+_key: '!items!7s0Nt3LCvFDkHQIF'
+

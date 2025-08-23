@@ -1,0 +1,47 @@
+name: Eyes of the Hawk
+type: power
+sort: 0
+system:
+  description: >-
+    This shape has remarkably acute senses. You can scent trails and objects
+    like a dog, hear very faint noises, see objects clearly enough to identify
+    faces at a thousand feet of distance, and see clearly in anything short of
+    complete darkness. You gain a +2 bonus on all sensory Notice checks.
+  favorite: false
+  subType: arcane
+  source: Skinshifter
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Skinshifter
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: khub280oj7h3gnph
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456831
+  modifiedTime: 1754277456831
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/skinshifter_art.png
+ownership:
+  default: 0
+_key: '!items!khub280oj7h3gnph'
+

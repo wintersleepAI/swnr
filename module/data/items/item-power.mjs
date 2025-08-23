@@ -65,7 +65,7 @@ export default class SWNPower extends SWNItemBase {
       }),
       itemId: new fields.StringField({ initial: "" }),
       uses: new fields.SchemaField({
-        value: new fields.NumberField({ initial: 0, min: 0 }),
+        value: new fields.NumberField({ initial: 1, min: 0 }),
         max: new fields.NumberField({ initial: 1, min: 0 })
       }),
       // Controls when this consumption is processed:
@@ -92,16 +92,25 @@ export default class SWNPower extends SWNItemBase {
     
     // Ensure all consumption entries have complete data structures
     if (this.consumptions) {
-      this.consumptions.forEach(consumption => {
-        // Ensure uses object exists with proper defaults
+      const sourceConsumptions = this.parent._source?.system?.consumptions || [];
+      
+      this.consumptions.forEach((consumption, index) => {
+        const sourceConsumption = sourceConsumptions[index] || {};
+        
+        // Ensure uses object exists with proper defaults, but preserve stored values
         if (!consumption.uses || typeof consumption.uses !== 'object') {
-          consumption.uses = { value: 0, max: 1 };
+          consumption.uses = { value: 1, max: 1 };
         }
+        
+        // Preserve stored value if it exists, otherwise use computed default
+        const storedValue = sourceConsumption.uses?.value;
+        const storedMax = sourceConsumption.uses?.max;
+        
         if (typeof consumption.uses.value !== 'number') {
-          consumption.uses.value = 0;
+          consumption.uses.value = (typeof storedValue === 'number') ? storedValue : consumption.uses.max;
         }
         if (typeof consumption.uses.max !== 'number') {
-          consumption.uses.max = 1;
+          consumption.uses.max = (typeof storedMax === 'number') ? storedMax : 1;
         }
         
         // Ensure other properties have defaults
@@ -169,7 +178,7 @@ export default class SWNPower extends SWNItemBase {
       usesCost: consumption.usesCost || 1,
       cadence: consumption.cadence || "day",
       itemId: consumption.itemId || "",
-      uses: consumption.uses || { value: 0, max: 1 }
+      uses: consumption.uses || { value: 1, max: 1 }
     };
     
     const consumptions = [...(this.consumptions || []), newConsumption];

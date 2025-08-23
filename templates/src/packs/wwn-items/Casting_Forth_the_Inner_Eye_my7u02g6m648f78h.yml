@@ -1,0 +1,63 @@
+name: Casting Forth the Inner Eye
+type: power
+sort: 0
+system:
+  description: >-
+    A pool of water, mirror, open flame, polished crystal, or other luminous or
+    reflective surface is used to peer at a distant location. The location must
+    either be within one hundred feet per caster level or be a location the
+    caster has physically occupied before. The caster perceives the location as
+    if he were standing at the targeted point within it, seeing and hearing
+    events there as if he were present. This spell cannot scry locations that
+    have been magically warded, and scrying the same location repeatedly is
+    hindered by the resonance created by the spell. The spell cannot perceive
+    the same area twice within the same week, or position its target point so as
+    to overlap a prior area with its perceptions within that time. If a target
+    present in the area has more hit dice than the caster has levels, they get a
+    Mental saving throw to get an uncanny sense of being watched, something that
+    will alert those cognizant of this spell. This spell lasts until the caster
+    performs some action other than focusing on the scrying.
+  favorite: false
+  subType: arcane
+  source: High Mage
+  level: 2
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Until another action is performed
+  save: mental
+  range: 100 ft. per level
+  skill: null
+_id: my7u02g6m648f78h
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456905
+  modifiedTime: 1754277456905
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!my7u02g6m648f78h'
+

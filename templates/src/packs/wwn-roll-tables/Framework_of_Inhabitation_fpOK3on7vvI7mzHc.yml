@@ -1,0 +1,234 @@
+_id: fpOK3on7vvI7mzHc
+name: Framework of Inhabitation
+img: icons/svg/d20-grey.svg
+description: >-
+  Some sites will have no significant inhabitants: no monsters, no skulking
+  raiders, no wild beasts or abominable flora worth mentioning. Most, however,
+  will have something dwelling in the place.
+results:
+  - _id: mXpY25pT0grpkPyS
+    type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>Important Inhabitants</b>
+    name: ''
+    _key: '!tables.results!fpOK3on7vvI7mzHc.mXpY25pT0grpkPyS'
+  - _id: lJpBsBzav2jlBgB1
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Frame-Inhabitants
+    documentUuid: Compendium.wwn.gm-subtables.9qD60NfjUfz8tDgt
+    description: ''
+    _key: '!tables.results!fpOK3on7vvI7mzHc.lJpBsBzav2jlBgB1'
+  - _id: wanBRZv6OzxiC6JE
+    type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>Possible Causes for Alliances</b>
+    name: ''
+    _key: '!tables.results!fpOK3on7vvI7mzHc.wanBRZv6OzxiC6JE'
+  - _id: 7PfF2Wo1LGJB9Igv
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Frame-Alliance
+    documentUuid: Compendium.wwn.gm-subtables.z9G7h7BPWNRptelc
+    description: ''
+    _key: '!tables.results!fpOK3on7vvI7mzHc.7PfF2Wo1LGJB9Igv'
+  - _id: 2wYQf8oOPxTdlgpS
+    type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>Possible Causes for Hostility</b>
+    name: ''
+    _key: '!tables.results!fpOK3on7vvI7mzHc.2wYQf8oOPxTdlgpS'
+  - _id: qKFsGrApmfqvgx4P
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Frame-Hostility
+    documentUuid: Compendium.wwn.gm-subtables.KdCTJHRyWT4egCTJ
+    description: ''
+    _key: '!tables.results!fpOK3on7vvI7mzHc.qKFsGrApmfqvgx4P'
+  - _id: a77pKvcDP4DDls3f
+    type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>Why Did They Come Here?</b>
+    name: ''
+    _key: '!tables.results!fpOK3on7vvI7mzHc.a77pKvcDP4DDls3f'
+  - _id: v10MKmU0kC914ONe
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Frame-Arrive
+    documentUuid: Compendium.wwn.gm-subtables.NmnQjz3CKiOtkCFm
+    description: ''
+    _key: '!tables.results!fpOK3on7vvI7mzHc.v10MKmU0kC914ONe'
+  - _id: 6zKnA134qjyhSbfG
+    type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: <b>Why Are They Staying Here?</b>
+    name: ''
+    _key: '!tables.results!fpOK3on7vvI7mzHc.6zKnA134qjyhSbfG'
+  - _id: wrIm2gaeFVh7ZwIL
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Frame-Stay
+    documentUuid: Compendium.wwn.gm-subtables.07slhaavL0Y2GlC8
+    description: ''
+    _key: '!tables.results!fpOK3on7vvI7mzHc.wrIm2gaeFVh7ZwIL'
+formula: 1d1
+replacement: true
+displayRoll: true
+folder: NcNmE2NSqwIFlKia
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.wwn-gm-tables.RollTable.fpOK3on7vvI7mzHc
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754271920613
+  modifiedTime: 1754271920613
+  lastModifiedBy: lKC5x4Yf023Bizof
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!tables!fpOK3on7vvI7mzHc'
+

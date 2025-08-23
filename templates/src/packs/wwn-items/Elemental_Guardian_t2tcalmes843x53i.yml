@@ -1,0 +1,67 @@
+name: Elemental Guardian
+type: power
+sort: 0
+system:
+  description: >-
+    The elementalist imbues a human-sized mass of earth, water, fire, or air
+    with a crude awareness and an eagerness to defend them. Whatever the
+    substance used, it now has 4 HD, AC 15, a Move of 40'/action, a +1 skill
+    bonus, saves of 13+, Morale of 12, and a melee attack of +6/1d10 with no
+    Shock. If called from earth, it has 6 hit dice, albeit its other stats don't
+    change. If called from fire, it does 5/- Shock damage. If summoned from
+    water, it has an AC of 18, and if called from air, it can fly at its usual
+    movement rate. It has a human degree of intelligence, can communicate with
+    others and manipulate objects, and serves with suicidal devotion. Only one
+    elemental guardian can be summoned at any one time, and if destroyed, a new
+    one cannot be called that same scene. A guardian persists until destroyed or
+    until the dawn after they have been summoned.
+    @Compendium[wwn.creatures-of-a-far-age.rjx3Ic2iC4DgUsh2]{Elemental Guardian
+    (Air)} @Compendium[wwn.creatures-of-a-far-age.68DcmqWOIZrPrFJ6]{Elemental
+    Guardian (Earth)}
+    @Compendium[wwn.creatures-of-a-far-age.iG481rhPc2RCO35T]{Elemental Guardian
+    (Fire)} @Compendium[wwn.creatures-of-a-far-age.L3DGZfHkKo6DM7Hk]{Elemental
+    Guardian (Water)}
+  favorite: false
+  subType: arcane
+  source: Elementalist
+  level: 4
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Until destroyed or dawn
+  save: None
+  range: Self
+  skill: null
+_id: t2tcalmes843x53i
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456885
+  modifiedTime: 1754277456885
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/new/elementalist_spell.png
+ownership:
+  default: 0
+_key: '!items!t2tcalmes843x53i'
+

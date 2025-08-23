@@ -1,0 +1,46 @@
+name: Occult Infiltrators
+type: asset
+sort: 0
+system:
+  description: >-
+    Magically-gifted spies and assassins are enlisted to serve the faction.
+    Occult Infiltrator Assets always begin play with the Stealth quality.
+  favorite: false
+  category: cunning
+  type: Facility
+  health:
+    value: 4
+    max: 4
+  rating: 3
+  tl: 0
+  baseOfInfluence: false
+  unusable: false
+  stealthed: false
+  cost: 1
+  income: 0
+  maintenance: 0
+  attackTarget: null
+  attackSource: null
+  qualities:
+    permission: false
+    action: false
+    special: false
+_id: j7sxtq3eho2vi2aw
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456944
+  modifiedTime: 1754277456944
+  lastModifiedBy: null
+  exportSource: null
+folder: S49e8FcOEsIjDzK3
+flags: {}
+effects: []
+img: systems/wwn/assets/cunning.png
+ownership:
+  default: 0
+_key: '!items!j7sxtq3eho2vi2aw'
+

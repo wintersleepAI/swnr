@@ -1,0 +1,45 @@
+name: Glider Grips
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: 4ctWevVXyy54aHh0
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.kv43s3gz1vahw5xj
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266949107
+  modifiedTime: 1754266949107
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 0
+  description: >-
+    Usable only by flying drones of Enc 3 size or greater, this fitting allows a
+    human-sized mass to use the drone as a form of parachute-glider. As a Main
+    Action, a user can leap off a high place after grabbing the drone and
+    descend safely to the ground at a distance as far from the initial point as
+    that point was above the ground. Similar weights can be sent safely to the
+    ground in the same way.
+  mass: 1
+  type: drone
+  favorite: false
+  tl: 4
+  power: 1
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: fighter
+  broken: false
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: IdnAlU9KXz2RmhS5
+sort: 0
+_key: '!items!IdnAlU9KXz2RmhS5'
+

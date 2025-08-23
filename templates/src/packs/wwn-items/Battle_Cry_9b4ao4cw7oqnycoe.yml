@@ -1,0 +1,46 @@
+name: Battle Cry
+type: power
+sort: 0
+system:
+  description: >-
+    Commit Effort for the day as an On Turn action to bolster your allies. They
+    gain +1 to hit, saving throws, and damage, including Shock, for one round
+    per level. At 4th level this bonus increases to +2, and at 9th, to +3.
+  favorite: false
+  subType: arcane
+  source: Bard
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Bard
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: 9b4ao4cw7oqnycoe
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456813
+  modifiedTime: 1754277456813
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/bard_art.png
+ownership:
+  default: 0
+_key: '!items!9b4ao4cw7oqnycoe'
+

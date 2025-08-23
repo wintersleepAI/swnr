@@ -1,0 +1,57 @@
+name: Terrible Liveliness
+type: power
+sort: 0
+system:
+  description: >-
+    A necromancer can give an undead creature the semblence of a healthy, normal
+    living being with this spell. The target appears as it did in life, at any
+    point in its lifespan that the necromancer so desires, and is capable of
+    performing all normal human activities that its cognition allows it to
+    perform. The spell uses the creature's nature as a template for its effects,
+    so the disguise is tangible and physically real until dispelled or the
+    necromancer drops the effect. A necromancer can maintain only one such
+    disguise per level, and it does not work on sentient unwilling targets.
+  favorite: false
+  subType: arcane
+  source: Necromancer
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Until dispelled or dismissed
+  save: None
+  range: Self
+  skill: null
+_id: ts39pu012m81mrji
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456889
+  modifiedTime: 1754277456889
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/new/necromancer_spell.png
+ownership:
+  default: 0
+_key: '!items!ts39pu012m81mrji'
+

@@ -1,0 +1,58 @@
+name: Confusion
+type: power
+sort: 8400000
+system:
+  description: >-
+    Duration: 12 rounds Range: 120' This spell causes [[3d6]] subjects within
+    60' of one another to become confused, making them unable to independently
+    determine what they will do. ▶ Subjects of 2+1 HD or greater: May make a
+    Mental save each round to resist the spell's effect, acting with free will
+    that round if they make the save. ▶ Subjects of 2 HD or lower: May not make
+    a saving throw. ▶ Behaviour: Roll on the following table separately for each
+    affected subject each round to determine how that subject acts that round:
+    Confusion: Subject Behaviour 2d6 Behavior 2-5 Attack caster's group 6-8 No
+    action 9-12 Attack subject's group
+  favorite: false
+  subType: arcane
+  source: Mage
+  level: 4
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: 12 rounds
+  save: mental
+  range: 120'
+  skill: null
+_id: rlpiwhvyxig5j75z
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457058
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: Oa54k573WAw15y2A
+flags: {}
+effects: []
+img: systems/wwn/assets/default/spell.png
+ownership:
+  default: 0
+_key: '!items!rlpiwhvyxig5j75z'
+

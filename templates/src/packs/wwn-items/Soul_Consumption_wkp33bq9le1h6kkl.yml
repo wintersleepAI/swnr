@@ -1,0 +1,46 @@
+name: Soul Consumption
+type: power
+sort: 0
+system:
+  description: >-
+    As an Instant action, Commit Effort for the day when you fell an intelligent
+    target with Accursed Bolt or Accursed Blade. They die instantly. You heal
+    1d6 hit points plus your level and lose one accumulated System Strain.
+  favorite: false
+  subType: arcane
+  source: Accursed
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Accursed
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: wkp33bq9le1h6kkl
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456838
+  modifiedTime: 1754277456838
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/accursed_art.png
+ownership:
+  default: 0
+_key: '!items!wkp33bq9le1h6kkl'
+

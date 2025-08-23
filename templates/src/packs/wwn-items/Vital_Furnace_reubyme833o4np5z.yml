@@ -1,0 +1,50 @@
+name: Vital Furnace
+type: power
+sort: 0
+system:
+  description: >-
+    Your tremendous life energy can be used to instantly regenerate any
+    non-mortal wound you have received. Commit Effort for the day as an Instant
+    action to negate the damage from an injury you just received that did not
+    reduce you to zero hit points. Aside from this ability, you automatically
+    stabilize if reduced to zero hit points and awaken ten minutes later with 1
+    hit point. This ability cannot undo damage you intentionally inflict on
+    yourself via some power or magical exchange.
+  favorite: false
+  subType: arcane
+  source: Healer
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Healer
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: reubyme833o4np5z
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456812
+  modifiedTime: 1754277456812
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/new/healer_art.png
+ownership:
+  default: 0
+_key: '!items!reubyme833o4np5z'
+

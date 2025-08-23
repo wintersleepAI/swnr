@@ -1,0 +1,232 @@
+name: Bear, Black
+type: npc
+sort: 0
+system:
+  ab: 3
+  armorType: street
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  baseAc: 13
+  hitDice: 4
+  moralScore: 7
+  saves: 13
+  skillBonus: 0
+  speed: 40
+  biography: >-
+    6' tall; favour eating berries and roots. Defensive: Adults will protect
+    their young with their lives, but otherwise only attack if cornered. Camp
+    raids: Sometimes raid camps, for food (especially fish and sweet treats).
+  species: monster
+_id: 4kr2bxg6ntk3uevv
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456436
+  modifiedTime: 1754277456436
+  lastModifiedBy: null
+  exportSource: null
+folder: EvdqxETxotoAuVI8
+flags: {}
+effects: []
+prototypeToken:
+  name: Bear, Black
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/cowled.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  hexagonalShape: 0
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+img: icons/svg/cowled.svg
+items:
+  - name: Claw
+    type: weapon
+    img: /systems/wwn/assets/default/weapon.png
+    system:
+      description: >-
+        Bear hug: If a victim is hit by both paws in the same round, the bear
+        hugs for an extra 2d8 automatic damage.
+      cost: 0
+      damage: 1d3
+      range:
+        normal: 0
+        max: 0
+      shock:
+        dmg: 1
+        ac: 12
+      ammo:
+        max: 0
+        type: ammo
+        burst: false
+      isTwoHanded: false
+      stat: str
+      skill: punch
+      ab: 0
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    _id: 7u05al321ze4lnv1
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920801
+      modifiedTime: 1754273920801
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!4kr2bxg6ntk3uevv.7u05al321ze4lnv1'
+  - name: Bite
+    type: weapon
+    img: /systems/wwn/assets/default/weapon.png
+    system:
+      description: ''
+      cost: 0
+      damage: 1d6
+      range:
+        normal: 0
+        max: 0
+      shock:
+        dmg: 1
+        ac: 13
+      ammo:
+        max: 0
+        type: ammo
+        burst: false
+      isTwoHanded: false
+      stat: str
+      skill: punch
+      ab: 0
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    _id: za7nse2qkt6ndd6d
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920801
+      modifiedTime: 1754273920801
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!4kr2bxg6ntk3uevv.za7nse2qkt6ndd6d'
+  - name: Bear Hug
+    type: item
+    img: /systems/wwn/assets/new/ability.png
+    system:
+      description: >-
+        If a victim is hit by both paws in the same round, the bear hugs for an
+        extra 2d8 automatic damage.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    _id: jyj4bbgo4ma199a7
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      createdTime: 1754273920801
+      modifiedTime: 1754273920801
+      lastModifiedBy: null
+      exportSource: null
+    folder: null
+    flags: {}
+    sort: 0
+    ownership:
+      default: 0
+    effects: []
+    _key: '!actors.items!4kr2bxg6ntk3uevv.jyj4bbgo4ma199a7'
+_key: '!actors!4kr2bxg6ntk3uevv'
+

@@ -1,0 +1,82 @@
+name: Rocket Launcher
+type: weapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+folder: G85uNfQpAMrPqGCy
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-weapons.Item.umf8yd3rs4sgd8k8
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266598689
+  modifiedTime: 1754266598689
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  ammo:
+    burst: false
+    max: 1
+    suppress: false
+    type: special
+    value: 1
+    longReload: false
+    current: null
+  cost: 5000
+  damage: 3d10
+  description: >-
+    Rocket launchers include a wide variety of single-shot disposable launchers.
+    Their general imprecision forces a -4 hit penalty against human-sized
+    targets, but they inflict frag grenade damage on any target within 5 meters
+    of the rocket's landing point. Specialized anti-armor warheads lose this
+    frag grenade bonus, but do double damage to vehicles or obstacles. Operators
+    who intend to take down enemy vehicles favor them for their effectiveness in
+    that role. This weapon's Trauma Die can inflict Traumatic Hits on drones,
+    vehicles, and other machines.
+  encumbrance: 2
+  isNonLethal: false
+  range:
+    max: 4000
+    normal: 2000
+  secondStat: none
+  shock:
+    ac: 0
+    dmg: 0
+  stat: dex
+  trauma:
+    die: 1d10
+    rating: 3
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  tl: null
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  skill: ask
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  ab: 0
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  isTwoHanded: false
+  isMelee: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: 3UG39ayKlPKX6PpC
+sort: 103125
+_key: '!items!3UG39ayKlPKX6PpC'
+

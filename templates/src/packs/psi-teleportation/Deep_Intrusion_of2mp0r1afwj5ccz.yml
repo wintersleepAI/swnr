@@ -1,0 +1,40 @@
+name: Deep Intrusion
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: of2mp0r1afwj5ccz
+system:
+  description: >-
+    <p>The adept can use <em>Personal Apportation</em> to blind-teleport into a
+    building, structure, vehicle, or spaceship visible to them, including
+    spaceships close enough to engage in conventional ship-to-ship combat. They
+    intuitively seek out a space large enough to hold them and without immediate
+    environmental hazards, but cannot control their precise destination. Using
+    this technique in conjunction with <em>Personal Apportation</em> is very
+    draining to the psychic, and requires that they Commit an additional Effort
+    point for the day.</p>
+  level: 4
+  source: teleportation
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
+effects: []
+ownership:
+  default: 0
+_key: '!items!of2mp0r1afwj5ccz'
+

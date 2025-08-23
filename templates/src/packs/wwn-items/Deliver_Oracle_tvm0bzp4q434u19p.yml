@@ -1,0 +1,53 @@
+name: Deliver Oracle
+type: power
+sort: 0
+system:
+  description: >-
+    A petitioner asks about the outcome of a particular course of action. The
+    diviner then spends a day in various rituals, seeking an oracular answer. At
+    the end, the GM makes a secret Wis/Magic skill check. If the skill check
+    beats difficulty 8, an oracular sentence with some truth in it is produced.
+    If the skill check beats difficulty 12, a direct and obvious oracle is
+    produced. If the skill check is 7 or less, a hopelessly ambiguous oracle is
+    produced, and if the dice roll a natural 2 an intentionally misleading
+    oracle is delivered. Oracles are usually delivered as metaphors, poetry, or
+    visions. The GM should ensure that some element of a true oracle actually
+    does come to pass.
+  favorite: false
+  subType: arcane
+  source: Wise
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Wise
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Self
+  skill: null
+_id: tvm0bzp4q434u19p
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456825
+  modifiedTime: 1754277456825
+  lastModifiedBy: null
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+img: systems/wwn/assets/default/wise_art.png
+ownership:
+  default: 0
+_key: '!items!tvm0bzp4q434u19p'
+

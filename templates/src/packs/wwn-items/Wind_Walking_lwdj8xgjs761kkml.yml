@@ -1,0 +1,56 @@
+name: Wind Walking
+type: power
+sort: 0
+system:
+  description: >-
+    A visible target creature and their possesions are briefly transformed into
+    a misty, insubstantial cloud. Only sources of harm that could conceivably
+    disrupt a cloud of mist can harm them, and until the spell's end they may
+    pass freely into any area that a vapor could reach. They may move freely in
+    all three dimensions at their normal movment rate, though they cannot
+    physically manipulate objects. The spell lasts until the end of the scene or
+    until the target or the caster choose to end it.
+  favorite: false
+  subType: arcane
+  source: Elementalist
+  level: 3
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: null
+  duration: Instant
+  save: None
+  range: Visible
+  skill: null
+_id: lwdj8xgjs761kkml
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456901
+  modifiedTime: 1754277456901
+  lastModifiedBy: null
+  exportSource: null
+folder: qxBl7uHLaKwQr1Ih
+flags: {}
+effects: []
+img: systems/wwn/assets/new/elementalist_spell.png
+ownership:
+  default: 0
+_key: '!items!lwdj8xgjs761kkml'
+

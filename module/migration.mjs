@@ -249,7 +249,7 @@ const migrations = {
                 usesCost: strainCost,
                 cadence: "day",
                 itemId: "",
-                uses: { value: 0, max: 1 }
+                uses: { value: 1, max: 1 }
               });
               needsUpdate = true;
             }
@@ -264,7 +264,7 @@ const migrations = {
                 cadence: "day",
                 itemId: "",
                 uses: {
-                  value: internalResource.value || 0,
+                  value: internalResource.value || internalResource.max,
                   max: internalResource.max
                 }
               });

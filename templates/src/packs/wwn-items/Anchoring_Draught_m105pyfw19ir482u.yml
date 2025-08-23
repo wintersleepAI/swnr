@@ -1,0 +1,44 @@
+name: Anchoring Draught
+type: item
+sort: 0
+system:
+  description: >-
+    When a subject drinks this elixir, they become spatially anchored to the
+    place at which they drank it. At any time within the following twenty-four
+    hours, they may teleport back to this point as a Main Action, along with any
+    objects, willing subjects, or incapacitated creatures they are carrying,
+    provided it's within ten miles. This teleportation can be done only once,
+    and if the target point is blocked by a solid object the shift fails.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 0
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
+_id: m105pyfw19ir482u
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457001
+  modifiedTime: 1754277457001
+  lastModifiedBy: null
+  exportSource: null
+folder: jXrFh0x6b5Auj9IZ
+flags: {}
+effects: []
+img: icons/tools/laboratory/vial-orange.webp
+ownership:
+  default: 0
+_key: '!items!m105pyfw19ir482u'
+

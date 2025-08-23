@@ -1,0 +1,37 @@
+name: Biopsionics
+type: item
+sort: 0
+system:
+  description: Master powers of physical repair, body augmentation, and shapeshifting.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  encumbrance: 1
+  cost: 0
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+_id: g7cxkibgjeltt5io
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457119
+  modifiedTime: 1754277457119
+  lastModifiedBy: null
+  exportSource: null
+folder: 9gsuaJcejB0mhHRg
+flags: {}
+effects: []
+img: /systems/wwn/assets/skills/biopsionics.png
+ownership:
+  default: 0
+_key: '!items!g7cxkibgjeltt5io'
+

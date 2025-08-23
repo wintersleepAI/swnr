@@ -1,0 +1,147 @@
+folder: 4F3lvzYtRAUIuKhW
+name: 'Smuggling: Why Must It Be Smuggled?'
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: ismiX5SkOYG607BB
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: It’s some form of illegal contraband
+    name: ''
+    _key: '!tables.results!RG1jZixjtqk5i6TG.ismiX5SkOYG607BB'
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: aa4YlM0hSG8BxmfZ
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: A local monopoly keeps out competition
+    name: ''
+    _key: '!tables.results!RG1jZixjtqk5i6TG.aa4YlM0hSG8BxmfZ'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: edLBvg8xOHSSRr4d
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Somebody dangerous is looking for it
+    name: ''
+    _key: '!tables.results!RG1jZixjtqk5i6TG.edLBvg8xOHSSRr4d'
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: SHReMrrVhG4TZlFt
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: The recipient can’t be known to have it
+    name: ''
+    _key: '!tables.results!RG1jZixjtqk5i6TG.SHReMrrVhG4TZlFt'
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: H6vtG6vdDKS1FJT6
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: High tariffs make smuggling profitable
+    name: ''
+    _key: '!tables.results!RG1jZixjtqk5i6TG.H6vtG6vdDKS1FJT6'
+  - type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: anvdwmF5RaKvM3OV
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: They’re stolen goods for transport
+    name: ''
+    _key: '!tables.results!RG1jZixjtqk5i6TG.anvdwmF5RaKvM3OV'
+replacement: true
+displayRoll: true
+flags:
+  core: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-tables.RollTable.RG1jZixjtqk5i6TG
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754272613626
+  modifiedTime: 1754272613626
+  lastModifiedBy: lKC5x4Yf023Bizof
+formula: 1d6
+_id: RG1jZixjtqk5i6TG
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!tables!RG1jZixjtqk5i6TG'
+

@@ -5,19 +5,21 @@
 
 /**
  * Refresh pools based on cadence level
- * @param {string} cadenceLevel - "scene", "rest", or "day"
+ * @param {string} cadenceLevel - "scene" or "day"
  * @param {Actor[]} actors - Optional array of specific actors to refresh
  * @returns {Promise<Object>} Refresh results
  */
 async function refreshPools(cadenceLevel, actors = null) {
-  const cadenceHierarchy = {
-    "scene": 1,
-    "rest": 2,
-    "day": 3
-  };
+  // Build cadence hierarchy from CONFIG - higher index = higher level
+  const cadenceHierarchy = {};
+  CONFIG.SWN.poolCadences.forEach((cadence, index) => {
+    if (cadence !== "commit") { // commit cadence doesn't auto-refresh
+      cadenceHierarchy[cadence] = index;
+    }
+  });
 
   const currentLevel = cadenceHierarchy[cadenceLevel];
-  if (!currentLevel) {
+  if (currentLevel === undefined) {
     console.error(`[SWN Refresh] Invalid cadence level: ${cadenceLevel}`);
     return { success: false, reason: "invalid-cadence" };
   }
@@ -68,18 +70,20 @@ async function refreshPools(cadenceLevel, actors = null) {
 /**
  * Refresh pools for a single actor
  * @param {Actor} actor - The actor to refresh
- * @param {number} cadenceLevel - Numeric cadence level (1=scene, 2=rest, 3=day)
+ * @param {number} cadenceLevel - Numeric cadence level (from CONFIG.SWN.poolCadences array index)
  * @returns {Promise<Object>} Refresh result for this actor
  */
 async function refreshActorPools(actor, cadenceLevel) {
   const pools = foundry.utils.deepClone(actor.system.pools || {});
   const refreshedPools = [];
 
-  const cadenceMap = {
-    1: "scene",
-    2: "rest", 
-    3: "day"
-  };
+  // Build reverse cadence map from CONFIG (numeric level -> cadence name)
+  const cadenceMap = {};
+  CONFIG.SWN.poolCadences.forEach((cadence, index) => {
+    if (cadence !== "commit") {
+      cadenceMap[index] = cadence;
+    }
+  });
 
   for (const [poolKey, poolData] of Object.entries(pools)) {
     const poolCadenceLevel = getCadenceLevel(poolData.cadence);
@@ -129,12 +133,15 @@ async function refreshActorPools(actor, cadenceLevel) {
  * @returns {number} Numeric level
  */
 function getCadenceLevel(cadence) {
-  const cadenceMap = {
-    "commit": 0,  // Never auto-refresh
-    "scene": 1,
-    "rest": 2,
-    "day": 3
-  };
+  // Build cadence level map from CONFIG
+  const cadenceMap = {};
+  CONFIG.SWN.poolCadences.forEach((configCadence, index) => {
+    if (configCadence === "commit") {
+      cadenceMap[configCadence] = 0;  // Never auto-refresh
+    } else {
+      cadenceMap[configCadence] = index;
+    }
+  });
   return cadenceMap[cadence] || 0;
 }
 
@@ -231,11 +238,13 @@ async function refreshSpecificPools(actor, poolKeys) {
  */
 function getRefreshStatus() {
   const actors = game.actors.filter(a => a.type !== "faction");
-  const status = {
-    scene: [],
-    rest: [],
-    day: []
-  };
+  // Build status object from CONFIG cadences (excluding commit)
+  const status = {};
+  CONFIG.SWN.poolCadences.forEach(cadence => {
+    if (cadence !== "commit") {
+      status[cadence] = [];
+    }
+  });
 
   for (const actor of actors) {
     const pools = actor.system.pools || {};
@@ -261,15 +270,17 @@ function getRefreshStatus() {
 /**
  * Refresh consumption uses for powers based on cadence
  * @param {Actor} actor - Actor to refresh consumption uses for
- * @param {number} cadenceLevel - Numeric cadence level (1=scene, 2=rest, 3=day)
+ * @param {number} cadenceLevel - Numeric cadence level (from CONFIG.SWN.poolCadences array index)
  * @returns {Promise<Object>} Refresh results
  */
 async function refreshConsumptionUses(actor, cadenceLevel) {
-  const cadenceMap = {
-    1: "scene",
-    2: "rest", 
-    3: "day"
-  };
+  // Build reverse cadence map from CONFIG (numeric level -> cadence name)
+  const cadenceMap = {};
+  CONFIG.SWN.poolCadences.forEach((cadence, index) => {
+    if (cadence !== "commit") {
+      cadenceMap[index] = cadence;
+    }
+  });
   
   const currentCadence = cadenceMap[cadenceLevel];
   const updates = {};
@@ -323,12 +334,14 @@ async function refreshConsumptionUses(actor, cadenceLevel) {
  * Unprepare all prepared powers on day rest (rest for the day)
  * Also restore preparation costs but NOT casting costs
  * @param {Actor} actor - Actor to unprepare powers for
- * @param {number} cadenceLevel - Numeric cadence level (only works on day/3)
+ * @param {number} cadenceLevel - Numeric cadence level (only works on day cadence)
  * @returns {Promise<Object>} Unprepare results
  */
 async function unprepareAllPowers(actor, cadenceLevel) {
   // Only unprepare powers on day rest (full rest)
-  if (cadenceLevel !== 3) {
+  // Find the index of "day" in CONFIG.SWN.poolCadences
+  const dayLevel = CONFIG.SWN.poolCadences.indexOf("day");
+  if (cadenceLevel !== dayLevel) {
     return {
       unpreparedCount: 0,
       unpreparedPowers: []
@@ -394,6 +407,5 @@ export {
 // Add to global swnr object
 globalThis.swnr = globalThis.swnr || {};
 globalThis.swnr.refreshScene = () => refreshPools("scene");
-globalThis.swnr.refreshRest = () => refreshPools("rest");
 globalThis.swnr.refreshDay = () => refreshPools("day");
 globalThis.swnr.getRefreshStatus = getRefreshStatus;

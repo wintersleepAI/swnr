@@ -1,0 +1,39 @@
+name: Paralyze
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: YSjeg2WqEsCIXk0y
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-program.Item.4m96x4njjepvf0cx
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267253955
+  modifiedTime: 1754267253955
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  accessCost: 1
+  cost: 2000
+  description: >-
+    On a successful opposed Int/Program skill check against the target, render a
+    Demon or avatar incapable of moving out of a node or using the Alert the
+    Network or Send Message actions while the program is running. Other
+    cyberspace actions can be taken normally. Human hackers are also physically
+    paralyzed while the program runs, incapable of moving in meatspace until the
+    connection is cut or the program ends.
+  selfTerminating: false
+  skillCheckMod: -1
+  target: Avatar
+  type: verb
+  useAffects: Paralyze an avatar's owner via network
+  favorite: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: pPwvb4gJZhMnXCfD
+sort: 600000
+_key: '!items!pPwvb4gJZhMnXCfD'
+

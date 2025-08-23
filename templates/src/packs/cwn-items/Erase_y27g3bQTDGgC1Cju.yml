@@ -1,0 +1,36 @@
+name: Erase
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: YSjeg2WqEsCIXk0y
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-program.Item.x1hem6w3sfdd4kj7
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267253955
+  modifiedTime: 1754267253955
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  accessCost: 1
+  cost: 500
+  description: >-
+    Erase a data file. This Verb is extremely thorough, and any on-site backups
+    can be expected to be nuked as well, either immediately or as soon as the
+    automatic backup protocols expose them.
+  selfTerminating: true
+  skillCheckMod: 1
+  target: Data
+  type: verb
+  useAffects: Erase a data file and corrupt backups
+  favorite: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: y27g3bQTDGgC1Cju
+sort: 1300000
+_key: '!items!y27g3bQTDGgC1Cju'
+
