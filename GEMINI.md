@@ -1,6 +1,6 @@
 # GEMINI.md
 
-This file provides focused guidance for me, Gemini, when working with this **Foundry VTT V13** Stars Without Number Redux (SWNR) system. The system supports most features of the Kevin Crawford suite of compatable games including WWN, CWN, and AWN.
+This file provides focused guidance for me, Gemini, when working with this **Foundry VTT V13** Stars Without Number Redux (SWNR) system. The system supports most features of the Kevin Crawford suite of compatible games including Worlds Without Number (WWN), Cities Without Number (CWN), and Ashes Without Number (AWN).
 
 ## 🚨 CRITICAL: Foundry V13 Context
 
@@ -74,6 +74,31 @@ const sourceValue = this.parent._source.system.pools?.[poolKey]?.value;
 const currentValue = sourceValue !== undefined ? 
   Math.min(sourceValue, maxValue) : calculatedValue;
 ```
+
+### Embedded Item Updates (CRITICAL in V13)
+In Foundry V13, flattened `items.{id}.system...` paths in `actor.update()` do not modify embedded Items. I will always use embedded-document updates for items.
+
+```javascript
+// ❌ I will NOT do this in V13 (no effect on items):
+await actor.update({ [`items.${item.id}.system.consumptions.0.uses.value`]: 0 });
+
+// ✅ I will update items via embedded documents:
+const updates = [
+  { _id: item.id, "system.consumptions": updatedConsumptions }
+];
+await actor.updateEmbeddedDocuments("Item", updates);
+
+// ✅ I will batch multiple item updates when possible:
+const payload = itemsToReset.map((it) => ({
+  _id: it.id,
+  "system.consumptions": resetConsumptionsFor(it)
+}));
+await actor.updateEmbeddedDocuments("Item", payload);
+```
+
+### Internal Power Uses Refresh (v2.1.0)
+- When resting or ending a scene, I will reset power-item internal uses by updating the power Items themselves via `updateEmbeddedDocuments('Item', ...)`.
+- I will ensure chat summaries reflect real, persisted changes and avoid flattened `items.{id}` paths.
 
 ## Common Commands
 

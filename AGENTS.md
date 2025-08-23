@@ -28,6 +28,21 @@
 - Templates must have a single root element.
 - Use `foundry.applications.api.DialogV2` (not legacy `Dialog`).
 
+### Embedded Documents (Items) Updates
+- Do not use flattened `items.{id}.system...` paths in `actor.update()`; in V13 these do not modify embedded Items.
+- Use `actor.updateEmbeddedDocuments('Item', payload)` where `payload` is an array of `{ _id, system: { ... } }` changes.
+- Batch multiple item changes in one call for performance and consistency.
+
+Example:
+```js
+// Reset internal uses for multiple power items
+const payload = powerItems.map(p => ({
+  _id: p.id,
+  "system.consumptions": resetConsumptionsFor(p)
+}));
+await actor.updateEmbeddedDocuments('Item', payload);
+```
+
 ## Pools & Powers
 - Pools are computed vs stored: use `actor.system.pools`; preserve manual overrides from `actor._source.system.pools` when recalculating.
 - Use `power.system.resourceKey()` to locate the correct pool (e.g., `Effort:Psychic`).
@@ -44,3 +59,9 @@
 
 ## Docs & Planning
 - Development notes live in `docs/dev/` (see `knownIssues.md` and `README.md`). Keep known issues updated as you work.
+
+## Acronyms
+- SWN: Stars Without Number
+- CWN: Cities Without Number
+- WWN: Worlds Without Number
+- AWN: Ashes Without Number

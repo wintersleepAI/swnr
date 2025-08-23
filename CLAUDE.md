@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-This file provides focused guidance for Claude Code when working with this **Foundry VTT V13** Stars Without Number Redux (SWNR) system. The system supports most features of the Kevin Crawford suite of compatable games including WWN, CWN, and AWN.
+This file provides focused guidance for Claude Code when working with this **Foundry VTT V13** Stars Without Number Redux (SWNR) system. The system supports most features of the Kevin Crawford suite of compatible games including Worlds Without Number (WWN), Cities Without Number (CWN), and Ashes Without Number (AWN).
 
 ## 🚨 CRITICAL: Foundry V13 Context
 
@@ -87,6 +87,31 @@ const sourceValue = this.parent._source.system.pools?.[poolKey]?.value;
 const currentValue = sourceValue !== undefined ? 
   Math.min(sourceValue, maxValue) : calculatedValue;
 ```
+
+### Embedded Item Updates (CRITICAL in V13)
+Foundry V13 does not apply flattened `items.{id}.system...` paths via `actor.update()` to embedded Items. You must update items using embedded-document APIs.
+
+```javascript
+// ❌ Do NOT do this in V13 (no effect on items):
+await actor.update({ [`items.${item.id}.system.consumptions.0.uses.value`]: 0 });
+
+// ✅ Use embedded-document updates instead:
+const itemUpdates = [
+  { _id: item.id, "system.consumptions": updatedConsumptions }
+];
+await actor.updateEmbeddedDocuments("Item", itemUpdates);
+
+// ✅ Batch multiple item updates:
+const payload = itemsToReset.map((it) => ({
+  _id: it.id,
+  "system.consumptions": resetConsumptionsFor(it)
+}));
+await actor.updateEmbeddedDocuments("Item", payload);
+```
+
+### Internal Power Uses Refresh (v2.1.0)
+- Rest/scene refresh now resets power-item internal uses by updating the power Items themselves via `updateEmbeddedDocuments('Item', ...)`.
+- Chat messages reflect actual persisted changes; ensure helper utilities batch item updates rather than using flattened paths.
 
 ## Common Commands
 

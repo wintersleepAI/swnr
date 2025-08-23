@@ -1,17 +1,17 @@
-# Systems Without Number Redux (SWN, CWN, AWN) for Foundry VTT
+# Systems Without Number Redux for Foundry VTT
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Foundry v12](https://img.shields.io/badge/foundry-v12-green)
 
-This is a system re-rewrite of the Stars Without Number Revised system for Foundry VTT.  The system was originally written by SpiceKing and taken over wintersleepAI. The prior system was written in TypeScript and was not compatible with the latest version of Foundry VTT and I had fallen far behind on maintaining the definitions. This system is a complete re-write in JavaScript (using the boilerplate foundry system) and is compatible with the latest version of Foundry VTT.  A hope of the rewrite is to open the system to more contributors and to make it easier to maintain. This system will also add more support for AWN and WWN this year. Several folks helped with the rewrite and I am grateful for their help. See the list of contributors below, along with Stas, Sobran, and the all-stars on the Foundry VTT Discord server have been a great help in getting this system to where it is today.
+This is a system re-rewrite of the Stars Without Number Revised system for Foundry VTT. The system was originally written by SpiceKing and taken over wintersleepAI. The prior system was written in TypeScript and was not compatible with the latest version of Foundry VTT and I had fallen far behind on maintaining the definitions. This system is a complete re-write in JavaScript (using the boilerplate foundry system) and is compatible with the latest version of Foundry VTT. A hope of the rewrite is to open the system to more contributors and to make it easier to maintain. This system will also add more support for Ashes Without Number (AWN) and Worlds Without Number (WWN) this year. Several folks helped with the rewrite and I am grateful for their help. See the list of contributors below, along with Stas, Sobran, and the all-stars on the Foundry VTT Discord server have been a great help in getting this system to where it is today.
 
 ## Notes 
 
  - Some of the data organization is changed, but most of it follows the same structure as the original system.
- - The UI needs a clean up. A goal is to make the colors and fonts a bit more modular to allow for customization and settings for SWN, CWN, and AWN.
-  - CWN and SWN are both implemented. Much of CWN is enabled through system settings. AWN support is just started. We plan to add WWN support soon.
+ - The UI needs a clean up. A goal is to make the colors and fonts a bit more modular to allow for customization and settings for Stars/Cities/Ashes Without Number (SWN, CWN, AWN).
+  - Cities Without Number (CWN) and Stars Without Number (SWN) are both implemented. Much of CWN is enabled through system settings. Ashes Without Number (AWN) support is just started. We plan to add Worlds Without Number (WWN) support soon.
   - Characters have a lock button/toggle that is needed to edit skills. Other attributes will go under the locks soon. 
   - Old game worlds should not be migrated ONLY after back up is made.
 

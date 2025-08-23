@@ -37,7 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Passive Power Support** - Better handling of powers without casting costs
 
 #### Compendium & Content
-- **AWN Content Integration** - Extensive After the War Never additions including:
+- **AWN Content Integration** - Extensive AWN additions including:
   - AWN-specific armor, weapons, and equipment
   - Mutation system support with roll tables
   - AWN edges and features
@@ -61,7 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Creates pool-granting features for existing characters
   - Preserves existing resource values and committed effort
   - Handles strain costs, internal resources, and legacy configurations
-- **Safe Migration Process** - Robust error handling and rollback support
+- **Safe Migration Process** - Robust error handling and reporting; migration version is only updated on success
 - **Migration Reporting** - Detailed logging and user notifications of migration results
 
 #### Data Model Updates
