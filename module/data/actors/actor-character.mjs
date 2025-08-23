@@ -916,37 +916,6 @@ export default class SWNCharacter extends SWNActorBase {
     return { updates, powersUnprepared };
   }
   
-
-  /**
-   * Create chat message for refresh results
-   * @param {string} cadence - The refresh cadence
-   * @param {Array} effortReleased - List of effort released
-   * @private
-   */
-  async _createRefreshChatMessage(cadence, effortReleased) {
-    const chatMessage = getDocumentClass("ChatMessage");
-    const refreshTitle = cadence === "scene" 
-      ? game.i18n.localize("swnr.pools.refreshSummary.scene")
-      : game.i18n.localize("swnr.pools.refreshSummary.day");
-    let content = `<div class="refresh-summary">
-      <h3><i class="fas fa-sync"></i> ${refreshTitle}</h3>`;
-    
-    if (effortReleased.length > 0) {
-      content += `<p><strong>${game.i18n.localize("swnr.pools.effortReleased")}:</strong></p><ul>`;
-      effortReleased.forEach(release => {
-        content += `<li>${release}</li>`;
-      });
-      content += `</ul>`;
-    }
-    
-    content += `</div>`;
-    
-    await chatMessage.create({
-      speaker: chatMessage.getSpeaker({ actor: this.parent }),
-      content: content
-    });
-  }
-
   /**
    * Create a standardized RefreshResult object
    * @param {'rest'|'scene'} type - The type of refresh operation
