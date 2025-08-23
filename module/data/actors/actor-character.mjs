@@ -638,7 +638,7 @@ export default class SWNCharacter extends SWNActorBase {
       : Math.min(oldHP + systemData.level.value, systemData.health.max);
     
     // Collect all updates in single object
-    const allUpdates = {
+    let allUpdates = {
       system: {
         systemStrain: { value: newStrain },
         health: { value: newHP },
@@ -650,12 +650,14 @@ export default class SWNCharacter extends SWNActorBase {
     
     // Merge pool updates
     if (refreshResults.poolUpdates && Object.keys(refreshResults.poolUpdates).length > 0) {
-      Object.assign(allUpdates, refreshResults.poolUpdates);
+      const poolUpdates = foundry.utils.expandObject(refreshResults.poolUpdates);
+      allUpdates = foundry.utils.mergeObject(allUpdates, poolUpdates);
     }
     
     // Merge item updates (consumptions and prepared powers)
     if (refreshResults.itemUpdates && Object.keys(refreshResults.itemUpdates).length > 0) {
-      Object.assign(allUpdates, refreshResults.itemUpdates);
+      const itemUpdates = foundry.utils.expandObject(refreshResults.itemUpdates);
+      allUpdates = foundry.utils.mergeObject(allUpdates, itemUpdates);
     }
     
     // Single database write for everything
@@ -686,19 +688,21 @@ export default class SWNCharacter extends SWNActorBase {
    */
   async endScene() {
     // Collect all updates in single object
-    const allUpdates = {};
+    let allUpdates = {};
     
     // Collect pool updates and item updates from refresh logic
     const refreshResults = await this._collectRefreshUpdates('scene');
     
     // Merge pool updates
     if (refreshResults.poolUpdates && Object.keys(refreshResults.poolUpdates).length > 0) {
-      Object.assign(allUpdates, refreshResults.poolUpdates);
+      const poolUpdates = foundry.utils.expandObject(refreshResults.poolUpdates);
+      allUpdates = foundry.utils.mergeObject(allUpdates, poolUpdates);
     }
     
     // Merge item updates (consumptions)
     if (refreshResults.itemUpdates && Object.keys(refreshResults.itemUpdates).length > 0) {
-      Object.assign(allUpdates, refreshResults.itemUpdates);
+      const itemUpdates = foundry.utils.expandObject(refreshResults.itemUpdates);
+      allUpdates = foundry.utils.mergeObject(allUpdates, itemUpdates);
     }
     
     // Single database write for everything
@@ -730,33 +734,32 @@ export default class SWNCharacter extends SWNActorBase {
     const commitments = this.parent.system.effortCommitments || {};
     const poolUpdates = {};
     const itemUpdates = {};
-    const newCommitments = {};
+    const newCommitments = foundry.utils.deepClone(commitments);
     let effortReleased = [];
     
     // Process each pool
     for (const [poolKey, poolData] of Object.entries(pools)) {
       // Handle effort commitments for effort pools
-      if (poolKey.startsWith("Effort:") && commitments[poolKey]) {
+      if (newCommitments[poolKey]) {
         const remainingCommitments = [];
         const releasedCommitments = [];
         
-        // Filter commitments based on duration and cadence
-        for (const commitment of commitments[poolKey]) {
+        for (const commitment of newCommitments[poolKey]) {
           let shouldRelease = false;
           
           // Never auto-release "commit" duration - those are manual only
           if (commitment.duration === "commit") {
             shouldRelease = false;
-          } else if (cadence === "scene" && (commitment.duration === "scene")) {
+          } else if (cadence === "scene" && commitment.duration === "scene") {
             shouldRelease = true;
           } else if (cadence === "day" && (commitment.duration === "day" || commitment.duration === "scene")) {
             shouldRelease = true;
           }
-          if (shouldRelease) {
-            releasedCommitments.push(commitment);
-            effortReleased.push(`${commitment.powerName} (${commitment.amount} ${poolKey})`);
-          } else {
+
+          if (!shouldRelease) {
             remainingCommitments.push(commitment);
+          } else {
+            effortReleased.push(`${commitment.powerName} (${commitment.amount} ${poolKey})`);
           }
         }
         
@@ -776,10 +779,7 @@ export default class SWNCharacter extends SWNActorBase {
       }
     }
     
-    // Update effort commitments
-    if (Object.keys(newCommitments).length > 0) {
-      poolUpdates["system.effortCommitments"] = newCommitments;
-    }
+    poolUpdates["system.effortCommitments"] = newCommitments;
     
     // Collect item updates (consumption uses and prepared powers)
     let consumptionRefreshed = [];
@@ -855,6 +855,8 @@ export default class SWNCharacter extends SWNActorBase {
           if (consumption.type === "uses" && consumption.cadence) {
             const consumptionCadenceLevel = globalThis.swnr.utils.getCadenceLevel(consumption.cadence);
             if (consumptionCadenceLevel <= cadenceLevel && consumption.uses.value < consumption.uses.max) {
+              // Add both type and value to the update payload to prevent the type from being reset to default
+              updates[`items.${item.id}.system.consumptions.${i}.type`] = "uses";
               updates[`items.${item.id}.system.consumptions.${i}.uses.value`] = consumption.uses.max;
               
               // Track for structured result

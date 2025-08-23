@@ -44,6 +44,7 @@ Pools are computed dynamically. I must distinguish between stored and computed d
 - **Computed Data**: `actor.system.pools` (these are the calculated values, derived after data preparation).
 - **Pool Keys**: Keys are strings in the format `"ResourceName:SubResource"` (e.g., `"Effort:Psychic"`, `"Slots:Lv3"`).
 - **Pool Structure**: `{ value, max, cadence, committed?, commitments? }`.
+- **Commitment Flexibility**: The central commitment list is `actor.system.effortCommitments`. Despite its name, it can track commitments for *any* pool (e.g., "Slots", "HP"), not just pools named "Effort". The refresh logic must handle all keys in this object, not just those prefixed with "Effort:".
 
 ### Power Resource Integration (v2.1.0)
 Powers have specific fields for resource management:
