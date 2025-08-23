@@ -53,5 +53,11 @@
         "systems/swnr/templates/actor/fragments/vehicle-defense-table.hbs" 
           type=actor.type actor=actor
       }}
+
+      {{#if (eq actor.type 'vehicle')}}
+       <div>
+        {{> "systems/swnr/templates/actor/fragments/compact-carried-list.hbs" itemList=actor.system.carriedGear actorType=actor.type }}
+      </div>
+      {{/if}}
     </div>
 </section>
