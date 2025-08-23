@@ -1,0 +1,43 @@
+name: Mass Cannon
+type: shipWeapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: jfk0i3ujybsy3w08
+system:
+  broken: false
+  cost: 5000000
+  costMultiplier: false
+  damage: 2d20
+  description: >-
+    By firing projectiles almost as large as fighter-scale craft, the mass
+    cannon inflicts tremendous damage on a target. Serious ammunition
+    limitations hamper its wider-scale use.
+  hardpoint: 4
+  mass: 5
+  massMultiplier: false
+  minClass: capital
+  power: 10
+  powerMultiplier: false
+  qualities: AP 20
+  tl: 4
+  ammo:
+    max: 4
+    type: special
+    value: 4
+effects: []
+ownership:
+  default: 0
+_key: '!items!jfk0i3ujybsy3w08'
+

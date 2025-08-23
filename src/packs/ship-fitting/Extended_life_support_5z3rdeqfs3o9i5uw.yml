@@ -1,0 +1,38 @@
+name: Extended life support
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/fuel-tank.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 5z3rdeqfs3o9i5uw
+system:
+  broken: false
+  cost: 5000
+  costMultiplier: true
+  description: >-
+    The ship can be designed to accommodate a larger number of crew or
+    passengers. Extended life support can be fitted multiple times; each time,
+    the maximum crew rating of the ship increases by 100% of its normal maximum.
+    Thus, a free merchant who installs this twice can have a maximum complement
+    of 18 people.
+  effect: Doubles maximum crew size
+  mass: 1
+  massMultiplier: true
+  minClass: fighter
+  power: 1
+  powerMultiplier: true
+effects: []
+ownership:
+  default: 0
+_key: '!items!5z3rdeqfs3o9i5uw'
+

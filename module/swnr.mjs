@@ -42,6 +42,10 @@ globalThis.swnr = {
     rollItemMacro,
     ...refreshHelpers,
   },
+  // Global refresh functions
+  refreshScene: () => refreshHelpers.refreshPools("scene"),
+  refreshDay: () => refreshHelpers.refreshPools("day"),
+  getRefreshStatus: refreshHelpers.getRefreshStatus,
   models,
 };
 

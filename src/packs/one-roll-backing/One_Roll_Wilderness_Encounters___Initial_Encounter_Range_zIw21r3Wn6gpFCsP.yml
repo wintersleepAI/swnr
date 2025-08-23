@@ -1,0 +1,115 @@
+_id: zIw21r3Wn6gpFCsP
+description: ''
+displayRoll: true
+flags:
+  core: {}
+folder: null
+formula: 1d4
+img: icons/svg/d20-grey.svg
+name: One Roll Wilderness Encounters - Initial Encounter Range
+replacement: true
+results:
+  - _id: IOO173IoVne3m8Hj
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 1
+    type: text
+    weight: 1
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Initial Encounter Range: Visible from a long distance away'
+    name: ''
+    _key: '!tables.results!zIw21r3Wn6gpFCsP.IOO173IoVne3m8Hj'
+  - _id: 6h4HwsiUUxDX4Rjt
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 2
+      - 2
+    type: text
+    weight: 1
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Initial Encounter Range: Noticed [[1d4 * 100]] meters away'
+    name: ''
+    _key: '!tables.results!zIw21r3Wn6gpFCsP.6h4HwsiUUxDX4Rjt'
+  - _id: wrq6OGU7uLwxrBCs
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 3
+      - 3
+    type: text
+    weight: 1
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Initial Encounter Range: Noticed only within [[1d6 * 10]] meters'
+    name: ''
+    _key: '!tables.results!zIw21r3Wn6gpFCsP.wrq6OGU7uLwxrBCs'
+  - _id: kR9LFxBTuifyWCAU
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 4
+      - 4
+    type: text
+    weight: 1
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: 'Initial Encounter Range: Noticed only when adjacent to the event'
+    name: ''
+    _key: '!tables.results!zIw21r3Wn6gpFCsP.kR9LFxBTuifyWCAU'
+sort: 0
+_stats:
+  coreVersion: '13.346'
+  systemId: null
+  systemVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+  compendiumSource: RollTable.S7QgE7MObAgn7CX1
+  duplicateSource: null
+  exportSource: null
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+_key: '!tables!zIw21r3Wn6gpFCsP'
+

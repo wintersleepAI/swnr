@@ -1,0 +1,46 @@
+name: Harvesters
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: thjemm1noi4wecb9
+system:
+  assetType: wealth
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 2
+  counter: 1d4
+  description: >-
+    These gather the natural resources of a world, whether ore, biologicals, or
+    other unprocessed goods. As an action, the Harvesters' owning faction may
+    roll 1d6. On 3+, gain one FacCred. Roll: [[1d6]]
+  health:
+    max: 4
+    value: 4
+  income: 0
+  maintenance: 0
+  note: A
+  rating: 1
+  tl: 0
+  turnRoll: ''
+  type: Facility
+  unusable: false
+effects: []
+ownership:
+  default: 0
+_key: '!items!thjemm1noi4wecb9'
+

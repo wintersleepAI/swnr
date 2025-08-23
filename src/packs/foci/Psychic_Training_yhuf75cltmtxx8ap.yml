@@ -1,0 +1,40 @@
+name: Psychic Training
+type: feature
+img: icons/svg/mystery-man.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988826
+  modifiedTime: 1739238988826
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: yhuf75cltmtxx8ap
+system:
+  description: >-
+    You’ve had special training in a particular psychic discipline. You must be
+    a Psychic or have taken the Partial Psychic class option as an Adventurer to
+    pick this focus. In the latter case, you can only take training in the
+    discipline you initially chose as a Partial Psychic. As with most foci, this
+    focus can be taken only once.<br><br>Level 1: Gain any psychic skill as a
+    bonus. If this improves it to level-1 proficiency, choose a free level-1
+    technique from that discipline. Your maximum Effort increases by
+    one.<br>Level 2: When you advance a level, the bonus psychic skill you chose
+    for the first level of the focus automatically gets one skill point put
+    toward increasing it or purchasing a technique from it. You may save these
+    points for later, if more are required to raise the skill or buy a
+    particular technique. These points are awarded retroactively if you take
+    this focus level later in the game.
+  favorite: false
+  level: 0
+  type: focus
+effects: []
+ownership:
+  default: 0
+_key: '!items!yhuf75cltmtxx8ap'
+

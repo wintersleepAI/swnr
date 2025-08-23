@@ -274,15 +274,6 @@ function getRefreshStatus() {
  * @returns {Promise<Object>} Refresh results
  */
 async function refreshConsumptionUses(actor, cadenceLevel) {
-  // Build reverse cadence map from CONFIG (numeric level -> cadence name)
-  const cadenceMap = {};
-  CONFIG.SWN.poolCadences.forEach((cadence, index) => {
-    if (cadence !== "commit") {
-      cadenceMap[index] = cadence;
-    }
-  });
-  
-  const currentCadence = cadenceMap[cadenceLevel];
   const updates = {};
   const refreshedItems = [];
 
@@ -300,6 +291,7 @@ async function refreshConsumptionUses(actor, cadenceLevel) {
         if (consumption.type === "uses" && consumption.cadence) {
           const consumptionCadenceLevel = getCadenceLevel(consumption.cadence);
           if (consumptionCadenceLevel <= cadenceLevel && consumption.uses.value < consumption.uses.max) {
+            console.log(`[SWN Refresh] Updating ${item.name}: ${consumption.uses.value} -> ${consumption.uses.max}`);
             updates[`items.${item.id}.system.consumptions.${i}.uses.value`] = consumption.uses.max;
             refreshedItems.push({
               itemName: item.name,
@@ -321,7 +313,21 @@ async function refreshConsumptionUses(actor, cadenceLevel) {
   
   // Apply all updates at once
   if (Object.keys(updates).length > 0) {
+    console.log(`[SWN Refresh] Applying consumption updates:`, updates);
     await actor.update(updates);
+    console.log(`[SWN Refresh] Consumption updates applied successfully`);
+    
+    // Verify the update was applied by checking the first updated item
+    if (refreshedItems.length > 0) {
+      const firstUpdate = Object.keys(updates)[0];
+      const itemId = firstUpdate.split('.')[1]; // Extract ID from "items.{id}.system..."
+      const item = actor.items.get(itemId);
+      if (item) {
+        console.log(`[SWN Refresh] Verified item ${item.name} after update:`, item.system.consumptions[0].uses);
+      }
+    }
+  } else {
+    console.log(`[SWN Refresh] No consumption updates needed`);
   }
   
   return {
@@ -404,8 +410,5 @@ export {
   unprepareAllPowers
 };
 
-// Add to global swnr object
-globalThis.swnr = globalThis.swnr || {};
-globalThis.swnr.refreshScene = () => refreshPools("scene");
-globalThis.swnr.refreshDay = () => refreshPools("day");
-globalThis.swnr.getRefreshStatus = getRefreshStatus;
+// Export functions that will be added to global swnr object by swnr.mjs
+// Global functions will be accessible as globalThis.swnr.refreshScene(), etc.

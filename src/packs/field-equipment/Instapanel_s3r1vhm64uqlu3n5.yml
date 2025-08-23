@@ -1,0 +1,40 @@
+name: Instapanel
+type: item
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: s3r1vhm64uqlu3n5
+system:
+  bundle:
+    amount: 3
+    bundled: false
+  cost: 50
+  description: >-
+    Instapanel: In its compressed form, an instapanel is a two-kilo cube of
+    ceraplast five centimeters on a side. When a type A power cell is inserted
+    in the cube’s side, it immediately expands to an opaque, waterproof
+    ceraplast sheet 2 meters on each side and a centimeter thick. Five minutes
+    later the ceraplast hardens into a tough, rigid shape, but until then it can
+    be folded or bent by hand. Instapanels can be bonded to one another with a
+    metatool or a toolkit. Breaking an instapanel requires inflicting at least
+    twelve points of damage on it.
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 4
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+_key: '!items!s3r1vhm64uqlu3n5'
+

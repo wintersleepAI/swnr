@@ -422,7 +422,7 @@ export class SWNActorSheet extends SWNBaseSheet {
   }
 
   /**
-   * Refresh pools by cadence type, releasing effort commitments
+   * Refresh pools by cadence type, releasing effort commitments and refreshing consumption uses
    * @param {string} cadence - The cadence type to refresh ('scene', 'day')
    */
   async _refreshPoolsByCadence(cadence) {
@@ -480,10 +480,23 @@ export class SWNActorSheet extends SWNBaseSheet {
       poolUpdates["system.effortCommitments"] = newCommitments;
     }
     
+    // Apply pool updates
     if (Object.keys(poolUpdates).length > 0) {
       await this.actor.update(poolUpdates);
+    }
+    
+    // Also refresh consumption uses for powers using centralized helper
+    const cadenceLevel = CONFIG.SWN.poolCadences.indexOf(cadence);
+    if (cadenceLevel >= 0) {
+      const { refreshConsumptionUses } = globalThis.swnr.utils;
+      await refreshConsumptionUses(this.actor, cadenceLevel);
       
-      // Create chat message for refresh
+      // Force sheet re-render to show updated consumption uses
+      this.render(false);
+    }
+    
+    // Create chat message for refresh
+    if (Object.keys(poolUpdates).length > 0) {
       const chatMessage = getDocumentClass("ChatMessage");
       const refreshTitle = cadence === "scene" 
         ? game.i18n.localize("swnr.pools.refreshSummary.scene")

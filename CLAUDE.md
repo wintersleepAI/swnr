@@ -69,7 +69,15 @@ await actor.update({ [`system.pools.${poolKey}.value`]: newValue });
 // WORKING: Targeted updates (preferred for single changes)
 await actor.update({ [`system.pools.${poolKey}.value`]: newValue });
 
-// WORKING: Full replacement (like refresh-helpers)
+// WORKING: Batch updates (preferred for multiple changes)
+const updates = {
+  [`system.pools.${poolKey1}.value`]: value1,
+  [`system.pools.${poolKey2}.value`]: value2,
+  "system.effortCommitments": newCommitments
+};
+await actor.update(updates);
+
+// WORKING: Full replacement (like refresh-helpers) - use sparingly
 const pools = foundry.utils.deepClone(actor.system.pools);
 pools[poolKey].value = newValue;
 await actor.update({ "system.pools": pools });
@@ -134,6 +142,42 @@ new Dialog({ ... })              // ❌
 - **Powers consume pools** via `consumptions` array  
 - **Character model** recalculates pools during `prepareData()`
 - **Manual changes preserved** by reading from `_source` data
+
+## Rest & Refresh Architecture (Current State)
+**IMPORTANT**: The rest/refresh system has architectural issues being addressed in `docs/dev/rest-refresh-refactor-plan.md`
+
+### Current Button Flow
+- **Rest buttons** in `templates/actor/header.hbs` (lines 11-24) 
+- **Sheet actions** in `module/sheets/actor-sheet.mjs`:
+  - `_onRest()` - Shows dialog, updates HP/strain, calls `_refreshPoolsByCadence('day')`
+  - `_onScene()` - Calls `_refreshPoolsByCadence('scene')` + `_resetSoak()`
+- **Business logic** split between sheet and `module/helpers/refresh-helpers.mjs`
+
+### Known Issues
+- Multiple database updates per rest operation (performance)
+- Business logic in sheet class instead of data model
+- Code duplication between sheet and helpers
+- Complex state synchronization across files
+
+**For new work**: Consider the refactor plan before making significant changes to rest/refresh functionality.
+
+### Key Implementation Files for Rest/Refresh Work
+- `module/sheets/actor-sheet.mjs:632-691` - Current `_onRest()` and `_onScene()` methods
+- `module/sheets/actor-sheet.mjs:693-783` - Current `_refreshPoolsByCadence()` method  
+- `module/helpers/refresh-helpers.mjs:248-295` - `unprepareAllPowers()` function
+- `module/helpers/refresh-helpers.mjs:148-200` - `refreshConsumptionUses()` function
+- `module/data/actors/actor-character.mjs` - Target location for refactored business logic
+- `templates/actor/header.hbs:11-24` - Rest button definitions (`data-action='rest'` and `data-action='scene'`)
+
+### Current Execution Flow (for reference)
+1. **User clicks rest button** → `data-action='rest'` triggers `_onRest()`
+2. **Dialog shown** → User selects rest type (normal/frail/cancel)
+3. **Direct updates** → HP/strain updated via `actor.update()`
+4. **Pool refresh** → `_refreshPoolsByCadence('day')` called
+5. **Consumption refresh** → `refreshConsumptionUses()` called from helpers
+6. **Power unprepare** → `unprepareAllPowers()` called (day rest only)  
+7. **Chat message** → Created in sheet method
+8. **UI refresh** → `this.render(false)` forced
 
 ---
 
