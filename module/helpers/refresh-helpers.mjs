@@ -405,6 +405,7 @@ export {
   refreshActorPools,
   refreshSpecificPools,
   getRefreshStatus,
+  getCadenceLevel,
   createRefreshChatMessage,
   refreshConsumptionUses,
   unprepareAllPowers

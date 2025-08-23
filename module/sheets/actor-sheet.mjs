@@ -422,102 +422,46 @@ export class SWNActorSheet extends SWNBaseSheet {
   }
 
   /**
-   * Refresh pools by cadence type, releasing effort commitments and refreshing consumption uses
+   * Refresh pools by cadence type - delegates to helper for consistency
+   * Used only for non-character actors (NPCs, etc.)
    * @param {string} cadence - The cadence type to refresh ('scene', 'day')
    */
   async _refreshPoolsByCadence(cadence) {
-    const pools = this.actor.system.pools || {};
-    const commitments = this.actor.system.effortCommitments || {};
-    const poolUpdates = {};
-    const newCommitments = {};
-    let effortReleased = [];
-    
-    // Process each pool
-    for (const [poolKey, poolData] of Object.entries(pools)) {
-      // Handle effort commitments for effort pools
-      if (poolKey.startsWith("Effort:") && commitments[poolKey]) {
-        const remainingCommitments = [];
-        const releasedCommitments = [];
-        
-        // Filter commitments based on duration and cadence
-        for (const commitment of commitments[poolKey]) {
-          let shouldRelease = false;
-          
-          // Never auto-release "commit" duration - those are manual only
-          if (commitment.duration === "commit") {
-            shouldRelease = false;
-          } else if (cadence === "scene" && (commitment.duration === "scene")) {
-            shouldRelease = true;
-          } else if (cadence === "day" && (commitment.duration === "day" || commitment.duration === "scene")) {
-            shouldRelease = true;
-          }
-          if (shouldRelease) {
-            releasedCommitments.push(commitment);
-            effortReleased.push(`${commitment.powerName} (${commitment.amount} ${poolKey})`);
-          } else {
-            remainingCommitments.push(commitment);
-          }
-        }
-        
-        newCommitments[poolKey] = remainingCommitments;
-        
-        // Recalculate available effort
-        const totalCommitted = remainingCommitments.reduce((sum, c) => sum + c.amount, 0);
-        const availableEffort = Math.max(0, poolData.max - totalCommitted);
-        
-        poolUpdates[`system.pools.${poolKey}.value`] = availableEffort;
-        poolUpdates[`system.pools.${poolKey}.committed`] = totalCommitted;
-        poolUpdates[`system.pools.${poolKey}.commitments`] = remainingCommitments;
-      } 
-      // Handle regular pool refresh
-      else if (poolData.cadence === cadence) {
-        poolUpdates[`system.pools.${poolKey}.value`] = poolData.max;
-      }
-    }
-    
-    // Update effort commitments
-    if (Object.keys(newCommitments).length > 0) {
-      poolUpdates["system.effortCommitments"] = newCommitments;
-    }
-    
-    // Apply pool updates
-    if (Object.keys(poolUpdates).length > 0) {
-      await this.actor.update(poolUpdates);
-    }
-    
-    // Also refresh consumption uses for powers using centralized helper
     const cadenceLevel = CONFIG.SWN.poolCadences.indexOf(cadence);
-    if (cadenceLevel >= 0) {
-      const { refreshConsumptionUses } = globalThis.swnr.utils;
-      await refreshConsumptionUses(this.actor, cadenceLevel);
-      
-      // Force sheet re-render to show updated consumption uses
-      this.render(false);
+    if (cadenceLevel < 0) {
+      console.error(`[SWN Refresh] Invalid cadence: ${cadence}`);
+      return;
     }
+
+    // Delegate to helper function for consistent logic
+    const { refreshActorPools } = globalThis.swnr.utils;
+    const result = await refreshActorPools(this.actor, cadenceLevel);
     
-    // Create chat message for refresh
-    if (Object.keys(poolUpdates).length > 0) {
+    // Force sheet re-render to show updates
+    this.render(false);
+    
+    // Create simple chat message if anything was refreshed
+    if (result.success && (result.poolsRefreshed > 0 || result.preparedPowersUnprepared > 0)) {
       const chatMessage = getDocumentClass("ChatMessage");
       const refreshTitle = cadence === "scene" 
-        ? game.i18n.localize("swnr.pools.refreshSummary.scene")
-        : game.i18n.localize("swnr.pools.refreshSummary.day");
+        ? (game.i18n.localize("swnr.pools.refreshSummary.scene") || "End of Scene")
+        : (game.i18n.localize("swnr.pools.refreshSummary.day") || "Rest for the Night");
+      
       let content = `<div class="refresh-summary">
-        <h3><i class="fas fa-sync"></i> ${refreshTitle}</h3>`;
+        <h3><i class="fas fa-sync"></i> ${refreshTitle}</h3>
+        <p><strong>${this.actor.name}</strong>: `;
       
-      if (effortReleased.length > 0) {
-        content += `<p><strong>${game.i18n.localize("swnr.pools.effortReleased")}:</strong></p><ul>`;
-        effortReleased.forEach(effort => content += `<li>${effort}</li>`);
-        content += `</ul>`;
+      const details = [];
+      if (result.poolsRefreshed > 0) {
+        details.push(`${result.poolsRefreshed} pools refreshed`);
+      }
+      if (result.preparedPowersUnprepared > 0) {
+        details.push(`${result.preparedPowersUnprepared} powers unprepared`);
       }
       
-      const regularRefreshes = Object.keys(poolUpdates).filter(key => !key.includes("Effort:") && !key.includes("effortCommitments"));
-      if (regularRefreshes.length > 0) {
-        content += `<p>${regularRefreshes.length} pools restored to maximum.</p>`;
-      }
+      content += details.join(', ') + '</p></div>';
       
-      content += `</div>`;
-      
-      chatMessage.create({
+      await chatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         content
       });

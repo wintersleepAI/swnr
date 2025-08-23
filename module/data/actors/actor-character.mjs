@@ -409,7 +409,7 @@ export default class SWNCharacter extends SWNActorBase {
           }
         });
         getDocumentClass("ChatMessage").create({
-          speaker: ChatMessage.getSpeaker({ actor: this.parent }),
+          speaker: chatMessage.getSpeaker({ actor: this.parent }),
           flavor: msg,
           roll: JSON.stringify(roll),
           rolls: [roll],
@@ -623,63 +623,113 @@ export default class SWNCharacter extends SWNActorBase {
    * Handle a full rest for the night (day cadence refresh)
    * @param {Object} options - Rest options
    * @param {boolean} options.isFrail - Whether this is a frail rest (no HP recovery)
-   * @returns {Promise<Object>} Rest results
+   * @returns {Promise<RefreshResult>} Rest results in standardized format
    */
   async restForNight(options = {}) {
     const { isFrail = false } = options;
     const systemData = this.parent.system;
     
-    // Calculate new values
-    const newStrain = Math.max(systemData.systemStrain.value - 1, 0);
+    // Calculate new HP and strain values
+    const oldHP = systemData.health.value;
+    const oldStrain = systemData.systemStrain.value;
+    const newStrain = Math.max(oldStrain - 1, 0);
     const newHP = isFrail
-      ? systemData.health.value
-      : Math.min(systemData.health.value + systemData.level.value, systemData.health.max);
+      ? oldHP
+      : Math.min(oldHP + systemData.level.value, systemData.health.max);
     
-    // Update HP and strain
-    await this.parent.update({
+    // Collect all updates in single object
+    const allUpdates = {
       system: {
         systemStrain: { value: newStrain },
         health: { value: newHP },
-      },
+      }
+    };
+    
+    // Collect pool updates and item updates from refresh logic
+    const refreshResults = await this._collectRefreshUpdates('day');
+    
+    // Merge pool updates
+    if (refreshResults.poolUpdates && Object.keys(refreshResults.poolUpdates).length > 0) {
+      Object.assign(allUpdates, refreshResults.poolUpdates);
+    }
+    
+    // Merge item updates (consumptions and prepared powers)
+    if (refreshResults.itemUpdates && Object.keys(refreshResults.itemUpdates).length > 0) {
+      Object.assign(allUpdates, refreshResults.itemUpdates);
+    }
+    
+    // Single database write for everything
+    if (Object.keys(allUpdates).length > 0) {
+      await this.parent.update(allUpdates);
+    }
+    
+    // Create standardized result
+    const result = this._createRefreshResult('rest', {
+      health: { old: oldHP, new: newHP },
+      strain: { old: oldStrain, new: newStrain },
+      isFrail,
+      pools: refreshResults.poolsRefreshed,
+      effortReleased: refreshResults.effortReleased,
+      powersUnprepared: refreshResults.powersUnprepared,
+      consumptionRefreshed: refreshResults.consumptionRefreshed
     });
     
-    // Refresh pools with 'day' cadence (full rest)
-    await this._refreshPools('day');
+    // Create chat message using standardized formatter
+    await this._createStandardizedChatMessage(result);
     
-    // Create and return result object for chat message
-    return {
-      type: 'rest',
-      isFrail,
-      oldHP: systemData.health.value,
-      newHP,
-      oldStrain: systemData.systemStrain.value,
-      newStrain
-    };
+    return result;
   }
 
   /**
    * Handle end of scene refresh (scene cadence refresh)
-   * @returns {Promise<Object>} Scene refresh results
+   * @returns {Promise<RefreshResult>} Scene refresh results in standardized format
    */
   async endScene() {
-    // Refresh pools with 'scene' cadence
-    await this._refreshPools('scene');
+    // Collect all updates in single object
+    const allUpdates = {};
     
-    // Return result object for chat message
-    return {
-      type: 'scene'
-    };
+    // Collect pool updates and item updates from refresh logic
+    const refreshResults = await this._collectRefreshUpdates('scene');
+    
+    // Merge pool updates
+    if (refreshResults.poolUpdates && Object.keys(refreshResults.poolUpdates).length > 0) {
+      Object.assign(allUpdates, refreshResults.poolUpdates);
+    }
+    
+    // Merge item updates (consumptions)
+    if (refreshResults.itemUpdates && Object.keys(refreshResults.itemUpdates).length > 0) {
+      Object.assign(allUpdates, refreshResults.itemUpdates);
+    }
+    
+    // Single database write for everything
+    if (Object.keys(allUpdates).length > 0) {
+      await this.parent.update(allUpdates);
+    }
+    
+    // Create standardized result
+    const result = this._createRefreshResult('scene', {
+      pools: refreshResults.poolsRefreshed,
+      effortReleased: refreshResults.effortReleased,
+      consumptionRefreshed: refreshResults.consumptionRefreshed
+    });
+    
+    // Create chat message using standardized formatter
+    await this._createStandardizedChatMessage(result);
+    
+    return result;
   }
 
   /**
-   * Internal helper to refresh pools by cadence
+   * Collect all refresh updates without applying them
    * @param {string} cadence - The cadence to refresh ('scene' or 'day')
+   * @returns {Promise<Object>} Object containing poolUpdates, itemUpdates, and effortReleased
    * @private
    */
-  async _refreshPools(cadence) {
+  async _collectRefreshUpdates(cadence) {
     const pools = this.parent.system.pools || {};
     const commitments = this.parent.system.effortCommitments || {};
     const poolUpdates = {};
+    const itemUpdates = {};
     const newCommitments = {};
     let effortReleased = [];
     
@@ -731,42 +781,319 @@ export default class SWNCharacter extends SWNActorBase {
       poolUpdates["system.effortCommitments"] = newCommitments;
     }
     
-    // Apply pool updates
-    if (Object.keys(poolUpdates).length > 0) {
-      await this.parent.update(poolUpdates);
-    }
+    // Collect item updates (consumption uses and prepared powers)
+    let consumptionRefreshed = [];
+    let powersUnprepared = [];
     
-    // Also refresh consumption uses for powers using centralized helper
     const cadenceLevel = CONFIG.SWN.poolCadences.indexOf(cadence);
     if (cadenceLevel >= 0) {
-      const { refreshConsumptionUses } = globalThis.swnr.utils;
-      await refreshConsumptionUses(this.parent, cadenceLevel);
+      // Collect consumption use updates
+      const consumptionResult = await this._collectConsumptionUseUpdates(cadenceLevel);
+      Object.assign(itemUpdates, consumptionResult.updates);
+      consumptionRefreshed = consumptionResult.consumptionRefreshed;
+      
+      // Collect prepared power updates (only on day rest)
+      if (cadence === "day") {
+        const preparedResult = await this._collectPreparedPowerUpdates();
+        Object.assign(itemUpdates, preparedResult.updates);
+        powersUnprepared = preparedResult.powersUnprepared;
+      }
     }
     
-    // Create chat message for refresh
-    if (Object.keys(poolUpdates).length > 0) {
-      const chatMessage = getDocumentClass("ChatMessage");
-      const refreshTitle = cadence === "scene" 
-        ? game.i18n.localize("swnr.pools.refreshSummary.scene")
-        : game.i18n.localize("swnr.pools.refreshSummary.day");
-      let content = `<div class="refresh-summary">
-        <h3><i class="fas fa-sync"></i> ${refreshTitle}</h3>`;
+    // Collect structured refresh data for result formatting
+    const poolsRefreshed = [];
+    
+    // Extract pool refresh data from poolUpdates
+    for (const [updateKey, newValue] of Object.entries(poolUpdates)) {
+      if (updateKey.startsWith('system.pools.') && updateKey.endsWith('.value')) {
+        const poolKey = updateKey.replace('system.pools.', '').replace('.value', '');
+        const poolData = pools[poolKey];
+        if (poolData && poolData.value !== newValue) {
+          poolsRefreshed.push({
+            key: poolKey,
+            oldValue: poolData.value,
+            newValue: newValue,
+            max: poolData.max,
+            cadence: poolData.cadence
+          });
+        }
+      }
+    }
+    
+    // Structured data is now populated by the helper methods above
+    
+    return {
+      poolUpdates,
+      itemUpdates,
+      effortReleased,
+      poolsRefreshed,
+      consumptionRefreshed,
+      powersUnprepared
+    };
+  }
+  
+  /**
+   * Collect consumption use refresh updates without applying them
+   * @param {number} cadenceLevel - Numeric cadence level
+   * @returns {Promise<Object>} Object with updates and structured data
+   * @private
+   */
+  async _collectConsumptionUseUpdates(cadenceLevel) {
+    const updates = {};
+    const consumptionRefreshed = [];
+    
+    // Check all power items for consumption uses that need refreshing
+    for (const item of this.parent.items) {
+      if (item.type !== "power") continue;
       
-      if (effortReleased.length > 0) {
-        content += `<p><strong>${game.i18n.localize("swnr.pools.effortReleased")}:</strong></p><ul>`;
-        effortReleased.forEach(release => {
-          content += `<li>${release}</li>`;
+      const power = item.system;
+      
+      // Check consumption array for "uses" type consumptions
+      if (power.consumptions && Array.isArray(power.consumptions)) {
+        for (let i = 0; i < power.consumptions.length; i++) {
+          const consumption = power.consumptions[i];
+          if (consumption.type === "uses" && consumption.cadence) {
+            const consumptionCadenceLevel = globalThis.swnr.utils.getCadenceLevel(consumption.cadence);
+            if (consumptionCadenceLevel <= cadenceLevel && consumption.uses.value < consumption.uses.max) {
+              updates[`items.${item.id}.system.consumptions.${i}.uses.value`] = consumption.uses.max;
+              
+              // Track for structured result
+              consumptionRefreshed.push({
+                powerName: item.name,
+                consumptionIndex: i,
+                oldValue: consumption.uses.value,
+                newValue: consumption.uses.max,
+                cadence: consumption.cadence
+              });
+            }
+          }
+        }
+      }
+    }
+    
+    return { updates, consumptionRefreshed };
+  }
+  
+  /**
+   * Collect prepared power unprepare updates without applying them
+   * @returns {Promise<Object>} Object with updates and structured data
+   * @private
+   */
+  async _collectPreparedPowerUpdates() {
+    const updates = {};
+    const powersUnprepared = [];
+    
+    // Check all power items for prepared powers
+    for (const item of this.parent.items) {
+      if (item.type !== "power") continue;
+      
+      const power = item.system;
+      
+      // If power is prepared, unprepare it
+      if (power.prepared) {
+        updates[`items.${item.id}.system.prepared`] = false;
+        
+        // Track for structured result
+        powersUnprepared.push({
+          id: item.id,
+          name: item.name,
+          hadResourceCost: power.hasConsumption && power.hasConsumption()
         });
-        content += `</ul>`;
+        
+        // Also reset any preparation-based internal uses (spendOnPrep: true uses)
+        if (power.consumptions && Array.isArray(power.consumptions)) {
+          for (let i = 0; i < power.consumptions.length; i++) {
+            const consumption = power.consumptions[i];
+            if (consumption.type === "uses" && consumption.spendOnPrep && consumption.uses) {
+              // Reset prep-based uses to maximum
+              updates[`items.${item.id}.system.consumptions.${i}.uses.value`] = consumption.uses.max;
+            }
+          }
+        }
+      }
+    }
+    
+    return { updates, powersUnprepared };
+  }
+  
+
+  /**
+   * Create chat message for refresh results
+   * @param {string} cadence - The refresh cadence
+   * @param {Array} effortReleased - List of effort released
+   * @private
+   */
+  async _createRefreshChatMessage(cadence, effortReleased) {
+    const chatMessage = getDocumentClass("ChatMessage");
+    const refreshTitle = cadence === "scene" 
+      ? game.i18n.localize("swnr.pools.refreshSummary.scene")
+      : game.i18n.localize("swnr.pools.refreshSummary.day");
+    let content = `<div class="refresh-summary">
+      <h3><i class="fas fa-sync"></i> ${refreshTitle}</h3>`;
+    
+    if (effortReleased.length > 0) {
+      content += `<p><strong>${game.i18n.localize("swnr.pools.effortReleased")}:</strong></p><ul>`;
+      effortReleased.forEach(release => {
+        content += `<li>${release}</li>`;
+      });
+      content += `</ul>`;
+    }
+    
+    content += `</div>`;
+    
+    await chatMessage.create({
+      speaker: chatMessage.getSpeaker({ actor: this.parent }),
+      content: content
+    });
+  }
+
+  /**
+   * Create a standardized RefreshResult object
+   * @param {'rest'|'scene'} type - The type of refresh operation
+   * @param {Object} changes - The changes that occurred
+   * @returns {RefreshResult} Standardized result object
+   * @private
+   */
+  _createRefreshResult(type, changes = {}) {
+    return {
+      type,
+      actor: this.parent,
+      changes: {
+        health: changes.health || null,
+        strain: changes.strain || null,
+        pools: changes.pools || [],
+        effortReleased: changes.effortReleased || [],
+        powersUnprepared: changes.powersUnprepared || [],
+        consumptionRefreshed: changes.consumptionRefreshed || []
+      },
+      // Additional metadata
+      isFrail: changes.isFrail || false,
+      timestamp: new Date().toISOString()
+    };
+  }
+
+  /**
+   * Create a chat message from a standardized RefreshResult
+   * @param {RefreshResult} result - The refresh result object
+   * @private
+   */
+  async _createStandardizedChatMessage(result) {
+    // Skip if no meaningful changes occurred
+    if (!this._hasSignificantChanges(result)) {
+      return;
+    }
+
+    const chatMessage = getDocumentClass("ChatMessage");
+    const content = this._formatRefreshChatMessage(result);
+    
+    await chatMessage.create({
+      speaker: chatMessage.getSpeaker({ actor: this.parent }),
+      content: content
+    });
+  }
+
+  /**
+   * Check if a refresh result has significant changes worth reporting
+   * @param {RefreshResult} result - The refresh result to check
+   * @returns {boolean} True if there are significant changes
+   * @private
+   */
+  _hasSignificantChanges(result) {
+    const { changes } = result;
+    
+    // Health/strain changes are always significant
+    if (changes.health && changes.health.old !== changes.health.new) return true;
+    if (changes.strain && changes.strain.old !== changes.strain.new) return true;
+    
+    // Pool changes
+    if (changes.pools && changes.pools.length > 0) return true;
+    
+    // Effort releases
+    if (changes.effortReleased && changes.effortReleased.length > 0) return true;
+    
+    // Power changes
+    if (changes.powersUnprepared && changes.powersUnprepared.length > 0) return true;
+    if (changes.consumptionRefreshed && changes.consumptionRefreshed.length > 0) return true;
+    
+    return false;
+  }
+
+  /**
+   * Format a refresh result into HTML for chat messages
+   * @param {RefreshResult} result - The refresh result to format
+   * @returns {string} HTML content for the chat message
+   * @private
+   */
+  _formatRefreshChatMessage(result) {
+    const { type, changes } = result;
+    
+    // Title based on refresh type
+    const titleKey = type === 'rest' ? 
+      (result.isFrail ? 'swnr.pools.refreshSummary.frailRest' : 'swnr.pools.refreshSummary.rest') :
+      'swnr.pools.refreshSummary.scene';
+    const title = game.i18n.localize(titleKey) || 
+      (type === 'rest' ? 'Rest for the Night' : 'End of Scene');
+    
+    let content = `<div class="refresh-summary">
+      <h3><i class="fas fa-sync"></i> ${title}</h3>`;
+    
+    // Health and strain changes (rest only)
+    if (type === 'rest') {
+      if (changes.health) {
+        const hpChange = changes.health.new - changes.health.old;
+        if (hpChange > 0) {
+          content += `<p><strong>Health recovered:</strong> ${changes.health.old} → ${changes.health.new} (+${hpChange})</p>`;
+        } else if (result.isFrail) {
+          content += `<p><em>No health recovery (frail rest)</em></p>`;
+        }
       }
       
-      content += `</div>`;
-      
-      await chatMessage.create({
-        speaker: ChatMessage.getSpeaker({ actor: this.parent }),
-        content: content
-      });
+      if (changes.strain) {
+        const strainChange = changes.strain.old - changes.strain.new;
+        if (strainChange > 0) {
+          content += `<p><strong>System strain reduced:</strong> ${changes.strain.old} → ${changes.strain.new} (-${strainChange})</p>`;
+        }
+      }
     }
+    
+    // Pool refreshes
+    if (changes.pools && changes.pools.length > 0) {
+      content += `<p><strong>Pools refreshed:</strong></p><ul>`;
+      changes.pools.forEach(pool => {
+        content += `<li>${pool.key}: ${pool.oldValue} → ${pool.newValue}</li>`;
+      });
+      content += `</ul>`;
+    }
+    
+    // Effort releases
+    if (changes.effortReleased && changes.effortReleased.length > 0) {
+      content += `<p><strong>Effort released:</strong></p><ul>`;
+      changes.effortReleased.forEach(release => {
+        content += `<li>${release}</li>`;
+      });
+      content += `</ul>`;
+    }
+    
+    // Powers unprepared (day rest only)
+    if (changes.powersUnprepared && changes.powersUnprepared.length > 0 && type === 'rest') {
+      content += `<p><strong>Powers unprepared:</strong></p><ul>`;
+      changes.powersUnprepared.forEach(power => {
+        content += `<li>${power.name}</li>`;
+      });
+      content += `</ul>`;
+    }
+    
+    // Consumption refreshes
+    if (changes.consumptionRefreshed && changes.consumptionRefreshed.length > 0) {
+      content += `<p><strong>Power uses refreshed:</strong></p><ul>`;
+      changes.consumptionRefreshed.forEach(consumption => {
+        content += `<li>${consumption.powerName}: ${consumption.oldValue} → ${consumption.newValue}</li>`;
+      });
+      content += `</ul>`;
+    }
+    
+    content += `</div>`;
+    return content;
   }
 
 }
