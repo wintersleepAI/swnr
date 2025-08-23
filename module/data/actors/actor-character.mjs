@@ -648,21 +648,20 @@ export default class SWNCharacter extends SWNActorBase {
     // Collect pool updates and item updates from refresh logic
     const refreshResults = await this._collectRefreshUpdates('day');
     
-    // Merge pool updates
+    // Merge pool updates into actor-level update payload
     if (refreshResults.poolUpdates && Object.keys(refreshResults.poolUpdates).length > 0) {
       const poolUpdates = foundry.utils.expandObject(refreshResults.poolUpdates);
       allUpdates = foundry.utils.mergeObject(allUpdates, poolUpdates);
     }
-    
-    // Merge item updates (consumptions and prepared powers)
-    if (refreshResults.itemUpdates && Object.keys(refreshResults.itemUpdates).length > 0) {
-      const itemUpdates = foundry.utils.expandObject(refreshResults.itemUpdates);
-      allUpdates = foundry.utils.mergeObject(allUpdates, itemUpdates);
-    }
-    
-    // Single database write for everything
+
+    // Apply actor-level updates first (HP/strain + pools)
     if (Object.keys(allUpdates).length > 0) {
       await this.parent.update(allUpdates);
+    }
+
+    // Apply item-level updates (consumptions, prepared flags) via embedded document updates
+    if (refreshResults.itemUpdates && Object.keys(refreshResults.itemUpdates).length > 0) {
+      await this._updateEmbeddedItemsFromFlattened(refreshResults.itemUpdates);
     }
     
     // Create standardized result
@@ -693,21 +692,20 @@ export default class SWNCharacter extends SWNActorBase {
     // Collect pool updates and item updates from refresh logic
     const refreshResults = await this._collectRefreshUpdates('scene');
     
-    // Merge pool updates
+    // Merge pool updates into actor-level update payload
     if (refreshResults.poolUpdates && Object.keys(refreshResults.poolUpdates).length > 0) {
       const poolUpdates = foundry.utils.expandObject(refreshResults.poolUpdates);
       allUpdates = foundry.utils.mergeObject(allUpdates, poolUpdates);
     }
-    
-    // Merge item updates (consumptions)
-    if (refreshResults.itemUpdates && Object.keys(refreshResults.itemUpdates).length > 0) {
-      const itemUpdates = foundry.utils.expandObject(refreshResults.itemUpdates);
-      allUpdates = foundry.utils.mergeObject(allUpdates, itemUpdates);
-    }
-    
-    // Single database write for everything
+
+    // Apply actor-level updates first (pools)
     if (Object.keys(allUpdates).length > 0) {
       await this.parent.update(allUpdates);
+    }
+
+    // Apply item-level updates (consumptions) via embedded document updates
+    if (refreshResults.itemUpdates && Object.keys(refreshResults.itemUpdates).length > 0) {
+      await this._updateEmbeddedItemsFromFlattened(refreshResults.itemUpdates);
     }
     
     // Create standardized result
@@ -874,6 +872,32 @@ export default class SWNCharacter extends SWNActorBase {
     }
     
     return { updates, consumptionRefreshed };
+  }
+
+  /**
+   * Convert flattened `items.{id}.<path>` updates into updateEmbeddedDocuments payloads
+   * and apply them to the actor's embedded Items.
+   * @param {Object} flatItemUpdates - Object where keys start with `items.{id}.`
+   * @private
+   */
+  async _updateEmbeddedItemsFromFlattened(flatItemUpdates) {
+    if (!flatItemUpdates || Object.keys(flatItemUpdates).length === 0) return;
+
+    // Group updates by item id
+    const byItem = new Map();
+    for (const [key, value] of Object.entries(flatItemUpdates)) {
+      const parts = key.split(".");
+      if (parts.length < 3 || parts[0] !== "items") continue; // skip invalid keys
+      const itemId = parts[1];
+      const itemPath = parts.slice(2).join(".");
+      if (!byItem.has(itemId)) byItem.set(itemId, { _id: itemId });
+      byItem.get(itemId)[itemPath] = value;
+    }
+
+    const payload = Array.from(byItem.values());
+    if (payload.length > 0) {
+      await this.parent.updateEmbeddedDocuments('Item', payload);
+    }
   }
   
   /**

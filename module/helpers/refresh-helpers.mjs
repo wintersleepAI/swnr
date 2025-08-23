@@ -274,7 +274,7 @@ function getRefreshStatus() {
  * @returns {Promise<Object>} Refresh results
  */
 async function refreshConsumptionUses(actor, cadenceLevel) {
-  const updates = {};
+  const flatUpdates = {};
   const refreshedItems = [];
 
   // Check all power items for consumption uses that need refreshing
@@ -292,7 +292,9 @@ async function refreshConsumptionUses(actor, cadenceLevel) {
           const consumptionCadenceLevel = getCadenceLevel(consumption.cadence);
           if (consumptionCadenceLevel <= cadenceLevel && consumption.uses.value < consumption.uses.max) {
             console.log(`[SWN Refresh] Updating ${item.name}: ${consumption.uses.value} -> ${consumption.uses.max}`);
-            updates[`items.${item.id}.system.consumptions.${i}.uses.value`] = consumption.uses.max;
+            // Ensure the type remains 'uses' in the updated data
+            flatUpdates[`items.${item.id}.system.consumptions.${i}.type`] = 'uses';
+            flatUpdates[`items.${item.id}.system.consumptions.${i}.uses.value`] = consumption.uses.max;
             refreshedItems.push({
               itemName: item.name,
               consumptionSlot: `consumption[${i}]`,
@@ -312,20 +314,20 @@ async function refreshConsumptionUses(actor, cadenceLevel) {
   }
   
   // Apply all updates at once
-  if (Object.keys(updates).length > 0) {
-    console.log(`[SWN Refresh] Applying consumption updates:`, updates);
-    await actor.update(updates);
-    console.log(`[SWN Refresh] Consumption updates applied successfully`);
-    
-    // Verify the update was applied by checking the first updated item
-    if (refreshedItems.length > 0) {
-      const firstUpdate = Object.keys(updates)[0];
-      const itemId = firstUpdate.split('.')[1]; // Extract ID from "items.{id}.system..."
-      const item = actor.items.get(itemId);
-      if (item) {
-        console.log(`[SWN Refresh] Verified item ${item.name} after update:`, item.system.consumptions[0].uses);
-      }
+  if (Object.keys(flatUpdates).length > 0) {
+    console.log(`[SWN Refresh] Applying consumption updates:`, flatUpdates);
+    // Convert flattened updates into updateEmbeddedDocuments payloads
+    const byItem = new Map();
+    for (const [key, value] of Object.entries(flatUpdates)) {
+      const parts = key.split('.');
+      const itemId = parts[1];
+      const itemPath = parts.slice(2).join('.');
+      if (!byItem.has(itemId)) byItem.set(itemId, { _id: itemId });
+      byItem.get(itemId)[itemPath] = value;
     }
+    const payload = Array.from(byItem.values());
+    await actor.updateEmbeddedDocuments('Item', payload);
+    console.log(`[SWN Refresh] Consumption updates applied successfully`);
   } else {
     console.log(`[SWN Refresh] No consumption updates needed`);
   }
@@ -354,7 +356,7 @@ async function unprepareAllPowers(actor, cadenceLevel) {
     };
   }
 
-  const updates = {};
+  const flatUpdates = {};
   const unpreparedPowers = [];
 
   // Check all power items for prepared powers
@@ -365,7 +367,7 @@ async function unprepareAllPowers(actor, cadenceLevel) {
     
     // If power is prepared, unprepare it
     if (power.prepared) {
-      updates[`items.${item.id}.system.prepared`] = false;
+      flatUpdates[`items.${item.id}.system.prepared`] = false;
       
       // Also reset any preparation-based internal uses (spendOnPrep: true uses)
       if (power.consumptions && Array.isArray(power.consumptions)) {
@@ -373,7 +375,7 @@ async function unprepareAllPowers(actor, cadenceLevel) {
           const consumption = power.consumptions[i];
           if (consumption.type === "uses" && consumption.spendOnPrep && consumption.uses) {
             // Reset prep-based uses to maximum
-            updates[`items.${item.id}.system.consumptions.${i}.uses.value`] = consumption.uses.max;
+              flatUpdates[`items.${item.id}.system.consumptions.${i}.uses.value`] = consumption.uses.max;
           }
         }
       }
@@ -389,8 +391,17 @@ async function unprepareAllPowers(actor, cadenceLevel) {
   }
   
   // Apply all updates at once
-  if (Object.keys(updates).length > 0) {
-    await actor.update(updates);
+  if (Object.keys(flatUpdates).length > 0) {
+    const byItem = new Map();
+    for (const [key, value] of Object.entries(flatUpdates)) {
+      const parts = key.split('.');
+      const itemId = parts[1];
+      const itemPath = parts.slice(2).join('.');
+      if (!byItem.has(itemId)) byItem.set(itemId, { _id: itemId });
+      byItem.get(itemId)[itemPath] = value;
+    }
+    const payload = Array.from(byItem.values());
+    await actor.updateEmbeddedDocuments('Item', payload);
   }
   
   return {
