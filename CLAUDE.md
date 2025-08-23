@@ -143,41 +143,25 @@ new Dialog({ ... })              // ❌
 - **Character model** recalculates pools during `prepareData()`
 - **Manual changes preserved** by reading from `_source` data
 
-## Rest & Refresh Architecture (Current State)
-**IMPORTANT**: The rest/refresh system has architectural issues being addressed in `docs/dev/rest-refresh-refactor-plan.md`
+## Rest & Refresh Architecture
+**Clean, optimized architecture with single database writes and standardized results.**
 
-### Current Button Flow
-- **Rest buttons** in `templates/actor/header.hbs` (lines 11-24) 
-- **Sheet actions** in `module/sheets/actor-sheet.mjs`:
-  - `_onRest()` - Shows dialog, updates HP/strain, calls `_refreshPoolsByCadence('day')`
-  - `_onScene()` - Calls `_refreshPoolsByCadence('scene')` + `_resetSoak()`
-- **Business logic** split between sheet and `module/helpers/refresh-helpers.mjs`
+### Current Implementation
+- **Rest buttons** in `templates/actor/header.hbs` trigger sheet actions
+- **Sheet methods** delegate to actor business logic:
+  - `_onRest()` - Shows dialog, delegates to `actor.system.restForNight()`
+  - `_onScene()` - Delegates to `actor.system.endScene()`
+- **Actor methods** in `module/data/actors/actor-character.mjs`:
+  - `restForNight(options)` - Complete rest logic with batched updates
+  - `endScene()` - Scene refresh with batched updates
+- **Global utilities** in `module/helpers/refresh-helpers.mjs` for GM refresh and NPC support
 
-### Known Issues
-- Multiple database updates per rest operation (performance)
-- Business logic in sheet class instead of data model
-- Code duplication between sheet and helpers
-- Complex state synchronization across files
-
-**For new work**: Consider the refactor plan before making significant changes to rest/refresh functionality.
-
-### Key Implementation Files for Rest/Refresh Work
-- `module/sheets/actor-sheet.mjs:632-691` - Current `_onRest()` and `_onScene()` methods
-- `module/sheets/actor-sheet.mjs:693-783` - Current `_refreshPoolsByCadence()` method  
-- `module/helpers/refresh-helpers.mjs:248-295` - `unprepareAllPowers()` function
-- `module/helpers/refresh-helpers.mjs:148-200` - `refreshConsumptionUses()` function
-- `module/data/actors/actor-character.mjs` - Target location for refactored business logic
-- `templates/actor/header.hbs:11-24` - Rest button definitions (`data-action='rest'` and `data-action='scene'`)
-
-### Current Execution Flow (for reference)
-1. **User clicks rest button** → `data-action='rest'` triggers `_onRest()`
-2. **Dialog shown** → User selects rest type (normal/frail/cancel)
-3. **Direct updates** → HP/strain updated via `actor.update()`
-4. **Pool refresh** → `_refreshPoolsByCadence('day')` called
-5. **Consumption refresh** → `refreshConsumptionUses()` called from helpers
-6. **Power unprepare** → `unprepareAllPowers()` called (day rest only)  
-7. **Chat message** → Created in sheet method
-8. **UI refresh** → `this.render(false)` forced
+### Key Features
+- **Single database write** per operation (optimal performance)
+- **Standardized results** with comprehensive change tracking
+- **Enhanced chat messages** with detailed change breakdowns
+- **Clean separation** between UI (sheets) and business logic (actors)
+- **Centralized utilities** for consistent refresh behavior
 
 ---
 

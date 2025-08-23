@@ -126,6 +126,22 @@ new Dialog({ ... });              // ❌
 - The **Character model** recalculates pools during its `prepareData()` method.
 - **Manual changes are preserved** by reading from `_source` data before calculations.
 
+## Rest & Refresh Architecture
+The system uses an optimized architecture with clean separation of concerns:
+
+- **UI Layer**: Rest buttons in `templates/actor/header.hbs` trigger sheet actions.
+- **Delegation Pattern**: Sheet methods (`_onRest()`, `_onScene()`) delegate to actor business logic.
+- **Business Logic**: Actor methods in `module/data/actors/actor-character.mjs`:
+  - `restForNight(options)`: Complete rest with batched updates
+  - `endScene()`: Scene refresh with batched updates
+- **Global Utilities**: `module/helpers/refresh-helpers.mjs` provides GM refresh and NPC support.
+
+### Key Features I Must Follow:
+- **Single database write** per operation (optimal performance)
+- **Batched updates** collecting all changes before `actor.update()`
+- **Standardized results** with comprehensive change tracking
+- **Enhanced chat messages** with detailed change breakdowns
+
 ---
 
 **My primary directive is to adhere to the Foundry V13 ApplicationV2 framework. When in doubt, I will check existing, working patterns in the codebase.**
