@@ -11,6 +11,7 @@ export default class SWNVehicleBase extends foundry.abstract
     schema.health = SWNShared.resourceField(10, 10);
     schema.cost = SWNShared.requiredNumber(0);
     schema.ac = SWNShared.requiredNumber(10);
+    schema.fuel = SWNShared.resourceField(1,1);
     schema.traumaTarget = SWNShared.requiredNumber(6);
     schema.armor = SWNShared.resourceField(1,1);
     schema.speed = SWNShared.requiredNumber(1);

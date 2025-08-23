@@ -14,7 +14,6 @@ export default class SWNShip extends SWNVehicleBase {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
     schema.lifeSupportDays = SWNShared.resourceField(1,1);
-    schema.fuel = SWNShared.resourceField(1,1);
     schema.cargo = SWNShared.resourceField(1,1);
     schema.spikeDrive = SWNShared.resourceField(1,1);
     schema.shipClass= SWNShared.stringChoices("fighter", CONFIG.SWN.shipClasses, true);
