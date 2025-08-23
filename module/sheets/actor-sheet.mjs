@@ -672,20 +672,9 @@ export class SWNActorSheet extends SWNBaseSheet {
         return;
       }
       const isFrail = rest === "no_hp" ? true : false;
-      const systemData = this.actor.system
-      const newStrain = Math.max(systemData.systemStrain.value - 1, 0);
-      const newHP = isFrail
-        ? systemData.health.value
-        : Math.min(systemData.health.value + systemData.level.value, systemData.health.max);
-      await this.actor.update({
-        system: {
-          systemStrain: { value: newStrain },
-          health: { value: newHP },
-        },
-      });
       
-      // Refresh pools with 'day' cadence (full rest)
-      await this._refreshPoolsByCadence('day');
+      // Delegate to actor's rest method
+      await this.actor.system.restForNight({ isFrail });
     } else if (this.actor.type === "npc") {
       const newHP = this.actor.system.health.max;
       await this.actor.update({
@@ -704,8 +693,13 @@ export class SWNActorSheet extends SWNBaseSheet {
   static async _onScene(event, _target) {
     event.preventDefault();
     
-    // Refresh pools with 'scene' cadence
-    await this._refreshPoolsByCadence('scene');
+    if (this.actor.type === "character") {
+      // Delegate to actor's endScene method
+      await this.actor.system.endScene();
+    } else {
+      // For non-character actors, use the old method
+      await this._refreshPoolsByCadence('scene');
+    }
     this._resetSoak();
   }
 

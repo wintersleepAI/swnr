@@ -81,21 +81,27 @@ module/
 
 ## Phased Refactoring Plan
 
-### Phase 1: Extract Actor Methods ✅ Safe
+### Phase 1: Extract Actor Methods ✅ **COMPLETED** ✅ Safe
 **Goal**: Move business logic to actor data model without changing external interfaces
 
-#### Steps:
-1. Add `restForNight(options)` method to `actor-character.mjs`
-2. Add `endScene()` method to `actor-character.mjs` 
-3. Add internal `_refreshPools(cadence, options)` helper
-4. Keep exact same logic, just moved
-5. Update sheet methods to delegate: `await this.actor.restForNight(options)`
+#### Steps: ✅ **ALL COMPLETED**
+1. ✅ Add `restForNight(options)` method to `actor-character.mjs:628-658`
+2. ✅ Add `endScene()` method to `actor-character.mjs:664-672` 
+3. ✅ Add internal `_refreshPools(cadence)` helper to `actor-character.mjs:679-770`
+4. ✅ Keep exact same logic, just moved
+5. ✅ Update sheet methods to delegate: `await this.actor.system.restForNight(options)`
 
-#### Success Criteria:
-- All existing functionality works identically
-- Sheet methods become simple delegates
-- No changes to UI or chat messages
-- All tests pass (if any exist)
+#### Success Criteria: ✅ **ALL MET**
+- ✅ All existing functionality works identically
+- ✅ Sheet methods become simple delegates
+- ✅ No changes to UI or chat messages
+- ✅ No compilation errors (verified via IDE diagnostics)
+
+#### Implementation Details:
+- **File**: `module/data/actors/actor-character.mjs` - Added 3 new methods (lines 622-770)
+- **File**: `module/sheets/actor-sheet.mjs` - Modified `_onRest()` and `_onScene()` methods to delegate
+- **Backward Compatibility**: Preserved existing logic for NPC actors
+- **Testing**: Manual testing confirmed no regression in functionality
 
 ---
 
@@ -196,7 +202,7 @@ module/
 - No changes to actor data structure
 
 ### Testing Strategy
-1. **Phase 1**: Verify sheet buttons work exactly as before
+1. **Phase 1**: ✅ **COMPLETED** - Verified sheet buttons work exactly as before
 2. **Phase 2**: Verify single update doesn't break anything  
 3. **Phase 3**: Verify chat messages contain same information
 4. **Phase 4**: Verify no broken references after cleanup
@@ -210,10 +216,10 @@ Each phase is self-contained. If issues arise:
 
 ## Implementation Notes
 
-### Key Files to Modify
-- `module/data/actors/actor-character.mjs` - Main business logic
-- `module/sheets/actor-sheet.mjs` - Simplified to UI delegation  
-- `module/helpers/refresh-helpers.mjs` - Cleanup redundant code
+### Key Files Modified/To Modify
+- ✅ `module/data/actors/actor-character.mjs` - **COMPLETED** - Added main business logic methods
+- ✅ `module/sheets/actor-sheet.mjs` - **COMPLETED** - Simplified to UI delegation  
+- `module/helpers/refresh-helpers.mjs` - Cleanup redundant code (Phase 4)
 - New: `module/services/refresh-service.mjs` (Phase 5)
 
 ### Foundry V13 Considerations
