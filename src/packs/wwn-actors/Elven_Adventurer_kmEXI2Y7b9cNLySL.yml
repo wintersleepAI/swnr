@@ -60,7 +60,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/mystery-man.svg
+    src: systems/swnr/assets/icons/game-icons.net/humanoid-icons/elf-helmet.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -132,11 +132,11 @@ prototypeToken:
     src: null
     disposition: false
   movementAction: null
-img: icons/svg/mystery-man.svg
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/elf-helmet.svg
 items:
   - name: Mail Shirt
     type: armor
-    img: systems/wwn/assets/default/armor.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
     system:
       description: >-
         Mail shirts are usually of iron or steel wire, though bronze and other

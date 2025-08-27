@@ -66,7 +66,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/mystery-man.svg
+    src: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -138,11 +138,11 @@ prototypeToken:
     src: null
     disposition: false
   movementAction: null
-img: icons/svg/mystery-man.svg
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
 items:
   - name: Grand Plate
     type: armor
-    img: systems/wwn/assets/default/armor.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
     system:
       description: >-
         Grand plate is so finely-jointed that a weapon must either be very large
@@ -199,7 +199,7 @@ items:
     _key: '!actors.items!P8kuECWZNDyZlaQR.zv4cs2enzrlmb4dd'
   - name: Shield, Small
     type: armor
-    img: systems/wwn/assets/default/armor.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
     system:
       description: >-
         Shields come in two general varieties. Small ones, often made of

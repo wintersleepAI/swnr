@@ -72,7 +72,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/dragon-head.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -139,11 +139,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/dragon-head.svg
 items:
   - name: Claw
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -185,7 +185,7 @@ items:
     _key: '!actors.items!2ctytkhv7kw8f0a7.5ihq4unlvvmrwc9x'
   - name: Bite
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -227,7 +227,7 @@ items:
     _key: '!actors.items!2ctytkhv7kw8f0a7.7zyb5jbcyyu1n8mz'
   - name: Breath Weapon
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: 100' long line of lightning.
       cost: 0
@@ -256,7 +256,7 @@ items:
     _key: '!actors.items!2ctytkhv7kw8f0a7.q5k7zf7jigh8y63p'
   - name: Language and Spells
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: 40%; 4 x 1st level, 4 x 2nd level.
       cost: 0
@@ -285,7 +285,7 @@ items:
     _key: '!actors.items!2ctytkhv7kw8f0a7.b86qxakio35xwt8a'
   - name: Sleeping
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: 20%.
       cost: 0

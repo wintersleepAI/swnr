@@ -45,7 +45,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/deer-track.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -112,11 +112,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/deer-track.svg
 items:
   - name: Antlers or Hoofs
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -158,7 +158,7 @@ items:
     _key: '!actors.items!xewcv1ksm47q7lp9.harsso8vcni8k8yj'
   - name: Stampede
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Herds of 20 or more can trample those in their path. 3-in-4 chance each

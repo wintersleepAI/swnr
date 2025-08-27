@@ -46,7 +46,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/camel-head.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -113,11 +113,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/camel-head.svg
 items:
   - name: Bite
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -159,7 +159,7 @@ items:
     _key: '!actors.items!2dutmhzesidi7r2d.ijzu9ismlw1bk3cc'
   - name: Hoof
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0

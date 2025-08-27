@@ -68,7 +68,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/mystery-man.svg
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -140,11 +140,11 @@ prototypeToken:
     src: null
     disposition: false
   movementAction: null
-img: icons/svg/mystery-man.svg
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
 items:
   - name: Beak
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -213,7 +213,7 @@ items:
     _key: '!actors.items!jYT9K5MByERPk5BZ.9dtmhg3kobfmq50t'
   - name: Wail
     type: item
-    img: systems/wwn/assets/new/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: ''
       cost: 0

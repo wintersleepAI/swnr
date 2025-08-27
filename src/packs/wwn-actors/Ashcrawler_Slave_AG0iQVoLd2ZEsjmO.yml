@@ -72,7 +72,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/mystery-man.svg
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/floating-tentacles.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -144,11 +144,11 @@ prototypeToken:
     src: null
     disposition: false
   movementAction: null
-img: icons/svg/mystery-man.svg
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/floating-tentacles.svg
 items:
   - name: Linothorax
     type: armor
-    img: systems/wwn/assets/default/armor.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
     system:
       description: >-
         Linothorax armor is a stiffer armor of glued, layered cloth, often as
@@ -201,7 +201,7 @@ items:
     _key: '!actors.items!AG0iQVoLd2ZEsjmO.973f3okdo591bcuc'
   - name: Sword, Short
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of

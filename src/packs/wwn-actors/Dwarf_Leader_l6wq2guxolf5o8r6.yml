@@ -44,7 +44,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/mystery-man.svg
+    src: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -111,11 +111,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/mystery-man.svg
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
 items:
   - name: Punch/Headbutt
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -157,7 +157,7 @@ items:
     _key: '!actors.items!l6wq2guxolf5o8r6.x469h32oqlnufeg0'
   - name: Axe, War
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Axes given here are those fashioned for war; lighter and more agile than
@@ -203,7 +203,7 @@ items:
     _key: '!actors.items!l6wq2guxolf5o8r6.crbig1i090qxs6fa'
   - name: Hammer, War
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Hammers listed here are the fighting variety, narrow-headed and made for
@@ -247,7 +247,7 @@ items:
     _key: '!actors.items!l6wq2guxolf5o8r6.vdtyv8zzd32scsnq'
   - name: Morale
     type: item
-    img: systems/wwn/assets/new/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Morale is 10 if leader is present.
       cost: 0

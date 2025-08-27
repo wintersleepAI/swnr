@@ -39,7 +39,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/transparent-slime.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -106,11 +106,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/transparent-slime.svg
 items:
   - name: Touch
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Acid: After a successful attack, sticks to the victim and exudes acid.
@@ -155,7 +155,7 @@ items:
     _key: '!actors.items!ivpmq0mz8vttb5kc.yvpyh7wp59rlc0hu'
   - name: Acid
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Acid: After a successful attack, sticks to the victim and exudes acid.
@@ -187,7 +187,7 @@ items:
     _key: '!actors.items!ivpmq0mz8vttb5kc.pax47k8x4cv96ui7'
   - name: Immunity
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Unharmed by all attacks except cold or fire.
       cost: 0
@@ -216,7 +216,7 @@ items:
     _key: '!actors.items!ivpmq0mz8vttb5kc.qbi980io1pdk9gjq'
   - name: Division
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Lightning or attacks with weapons cause the jelly to divide into 1d4+1
@@ -247,7 +247,7 @@ items:
     _key: '!actors.items!ivpmq0mz8vttb5kc.osgxbhzmama83rg3'
   - name: Seep
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Can squeeze through small holes and cracks.
       cost: 0

@@ -41,7 +41,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/snake.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -108,11 +108,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/snake.svg
 items:
   - name: Bite
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: 'Poison: Causes death in 1d10 turns (Physical save).'
       cost: 0
@@ -154,7 +154,7 @@ items:
     _key: '!actors.items!op13rdjx3ttmxwsp.ovmrsgw16tynp7q9'
   - name: Blinding Spit
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: A hit causes permanent blindness (Physical save).
       cost: 0
