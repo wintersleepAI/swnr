@@ -24,7 +24,7 @@
           <div class="pools-list">
             {{#each pools}}
             <div class="pool-badge {{#if isEmpty}}empty{{else if isLow}}low{{else if isFull}}full{{/if}} {{#if hasCommitments}}has-commitments{{/if}}" 
-                 title="{{key}}: {{current}} available/{{max}} total{{#if committed}} ({{committed}} committed){{/if}} ({{cadence}})" 
+                 title="{{key}}: {{current}} available/{{max}} total{{#if committed}} ({{committed}} committed){{/if}}{{#if cadence}} ({{localize (concat 'swnr.effort.' cadence)}}){{/if}}" 
                  data-pool-key="{{key}}">
               <span class="pool-label">{{#if (eq subResource "Default")}}{{../resourceName}}{{else}}{{subResource}}{{/if}}</span>
               <span class="pool-values">{{current}}/{{max}}{{#if committed}}<small class="committed-indicator">-{{committed}}</small>{{/if}}</span>
@@ -34,8 +34,9 @@
               {{#if hasCommitments}}
               <div class="commitment-details">
                 {{#each commitments}}
-                <div class="commitment-item" title="{{powerName}}: {{amount}} effort ({{duration}})">
+                <div class="commitment-item" title="{{powerName}}: {{amount}} effort ({{localize (concat 'swnr.effort.' duration)}})">
                   <span class="power-name">{{powerName}}</span>
+                  <span class="duration">{{localize (concat 'swnr.effort.' duration 'Short') }}</span>
                   <span class="effort-amount">{{amount}}</span>
                   {{#if (eq duration "commit")}}
                   <button type="button" class="release-commitment" data-action="releaseCommitment" 
