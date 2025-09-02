@@ -1,6 +1,9 @@
 # Contributing Code 
 
 ## Contributing to the Codebase
+Please communicate with wintersleep directly before making any significant PR.
+
+We need to implement a check on our style guide, which has not been done in some time.
 
 ## Development
 
@@ -9,16 +12,17 @@ Using node 20.14 for development.
 Recommend using nvm (available on mac via brew or ubuntu) to manage node versions.
 `nvm use 20.14.0`
 
+### Install dependencies:
 `npm install`
 
-### SCSS
+## CSS / SCSS
+All changes to the CSS sheets must occur through scss
+To compile the CSS sheets locally (release build will automatically do this) you should run `npm run build` or `npm run watch`
 
 
-### Compendium Building
-(notes from PR)
-(TODO add notes on how this gets built)
+## Compendium Building
+The compendium items are stored as yaml files in src/packs with the compendium collections and folders defined in system.json
 
-(game world must be closed to build )
-I was able to convert most items to the new V12 format. Got rid of the roll tables as they caused an error and was better to get rid of them then to figure out how to fix it. Used convert-yaml.mjs to convert incompatible yml files from version 11 to version 12 format (requires /input and /output folder inside the /conversion folder where /input is where the old yaml files were and /output is where the output of the conversion script lands).
-
-The /src/packs has the corrected yaml files. You can technically delete convert-yaml.mjs and mapping.mjs now as they won't be useful since all the old yaml files have been converted but keeping it as a documentation.
+The build script for a release will handle this automatically, but to build locally you should:
+ - stop the foundry system
+ - `npm run pack-compendium`
