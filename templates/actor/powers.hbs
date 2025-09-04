@@ -38,13 +38,11 @@
                   <span class="power-name">{{powerName}}</span>
                   <span class="duration">{{localize (concat 'swnr.effort.' duration 'Short') }}</span>
                   <span class="effort-amount">{{amount}}</span>
-                  {{#if (eq duration "commit")}}
                   <button type="button" class="release-commitment" data-action="releaseCommitment" 
                           data-pool-key="{{../key}}" data-power-id="{{powerId}}" 
                           title="{{localize 'swnr.pools.commitment.release'}}">
                     <i class="fas fa-times"></i>
                   </button>
-                  {{/if}}
                 </div>
                 {{/each}}
               </div>
