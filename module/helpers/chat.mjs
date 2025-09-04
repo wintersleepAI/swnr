@@ -735,48 +735,6 @@ export async function _onChatCardAction(
       ui.notifications?.error(`Failed to use consumption: ${error.message}`);
       console.error("Consumption usage error:", error);
     }
-  } else if (action === "recover-resource") {
-    // Handle resource recovery
-    const poolKey = button.dataset.poolKey;
-    const amount = parseInt(button.dataset.amount);
-    const actorId = button.dataset.actorId;
-    
-    if (!poolKey || !amount || !actorId) {
-      ui.notifications?.error("Missing data for resource recovery");
-      return;
-    }
-    
-    const actor = game.actors?.get(actorId);
-    if (!actor) {
-      ui.notifications?.error("Could not find actor for resource recovery");
-      return;
-    }
-    
-    // Check if user can control this actor
-    if (!actor.isOwner && !game.user?.isGM) {
-      ui.notifications?.warn("You do not have permission to modify this actor's resources");
-      return;
-    }
-    
-    try {
-      const pools = foundry.utils.deepClone(actor.system.pools || {});
-      if (pools[poolKey]) {
-        const newValue = Math.min(pools[poolKey].value + amount, pools[poolKey].max);
-        await actor.update({ [`system.pools.${poolKey}.value`]: newValue });
-        
-        // Disable the button
-        button.disabled = true;
-        button.style.opacity = "0.5";
-        button.innerHTML = "<i class='fas fa-check'></i> Recovered";
-        
-        ui.notifications?.info(`Recovered ${amount} ${poolKey}`);
-      } else {
-        ui.notifications?.error(`Pool ${poolKey} not found on actor`);
-      }
-    } catch (error) {
-      ui.notifications?.error(`Failed to recover resource: ${error.message}`);
-      console.error("Resource recovery error:", error);
-    }
   } else if (action === "recover-strain") {
     // Handle system strain recovery
     const amount = parseInt(button.dataset.amount);

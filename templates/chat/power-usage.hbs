@@ -97,21 +97,6 @@
           {{localize "swnr.consumption.recoverStrain"}} {{strainCost}}
         </button>
       {{/if}}
-      {{#each consumptions}}
-        {{#unless (eq type "systemStrain")}}
-          {{#if (eq cadence "commit")}}
-            <button data-action="releaseCommitment" data-pool-key="{{poolKey}}" data-power-id="{{../power.id}}" data-actor-id="{{../actor.id}}">
-              <i class="fas fa-times"></i>
-              Release {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}}
-            </button>
-          {{else}}
-            <button data-action="recover-resource" data-pool-key="{{poolKey}}" data-amount="{{spent}}" data-actor-id="{{../actor.id}}">
-              <i class="fas fa-plus-circle"></i>
-              Recover {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}}
-            </button>
-          {{/if}}
-        {{/unless}}
-      {{/each}}
 
       {{! Show consumption buttons for unprocessed manual consumptions only (timing: "manual") }}
       {{#each power.system.consumptions}}
