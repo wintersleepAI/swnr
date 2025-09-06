@@ -886,7 +886,9 @@ export default class SWNCharacter extends SWNActorBase {
       if (item.type !== "power") continue;
       
       const power = item.system;
-      
+      let itemHadUpdates = false;
+      // Start from the existing array to avoid sparse/invalid updates in v13
+      const updatedConsumptions = foundry.utils.deepClone(power.consumptions || []);
       // Check consumption array for "uses" type consumptions
       if (power.consumptions && Array.isArray(power.consumptions)) {
         for (let i = 0; i < power.consumptions.length; i++) {
@@ -894,9 +896,14 @@ export default class SWNCharacter extends SWNActorBase {
           if (consumption.type === "uses" && consumption.cadence) {
             const consumptionCadenceLevel = globalThis.swnr.utils.getCadenceLevel(consumption.cadence);
             if (consumptionCadenceLevel <= cadenceLevel && consumption.uses.value < consumption.uses.max) {
-              // Add both type and value to the update payload to prevent the type from being reset to default
-              updates[`items.${item.id}.system.consumptions.${i}.type`] = "uses";
-              updates[`items.${item.id}.system.consumptions.${i}.uses.value`] = consumption.uses.max;
+              // Update the cloned array element safely
+              if (!updatedConsumptions[i]) updatedConsumptions[i] = { type: "uses", uses: { value: 0, max: 1 } };
+              updatedConsumptions[i].type = "uses";
+              updatedConsumptions[i].uses = {
+                ...(updatedConsumptions[i].uses || { value: 0, max: 1 }),
+                value: consumption.uses.max,
+                max: consumption.uses.max
+              };
               
               // Track for structured result
               consumptionRefreshed.push({
@@ -906,9 +913,15 @@ export default class SWNCharacter extends SWNActorBase {
                 newValue: consumption.uses.max,
                 cadence: consumption.cadence
               });
+              itemHadUpdates = true;
             }
           }
         }
+      }
+
+      // If any updates were made for this item, set the full array update
+      if (itemHadUpdates) {
+        updates[`items.${item.id}.system.consumptions`] = updatedConsumptions;
       }
     }
     

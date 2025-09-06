@@ -307,6 +307,7 @@ async function refreshConsumptionUses(actor, cadenceLevel) {
     
     const power = item.system;
     let itemUpdated = false;
+    const updatedConsumptions = foundry.utils.deepClone(power.consumptions || []);
     
     // Check consumption array for "uses" type consumptions
     if (power.consumptions && Array.isArray(power.consumptions)) {
@@ -316,9 +317,14 @@ async function refreshConsumptionUses(actor, cadenceLevel) {
           const consumptionCadenceLevel = getCadenceLevel(consumption.cadence);
           if (consumptionCadenceLevel <= cadenceLevel && consumption.uses.value < consumption.uses.max) {
             console.log(`[SWN Refresh] Updating ${item.name}: ${consumption.uses.value} -> ${consumption.uses.max}`);
-            // Ensure the type remains 'uses' in the updated data
-            flatUpdates[`items.${item.id}.system.consumptions.${i}.type`] = 'uses';
-            flatUpdates[`items.${item.id}.system.consumptions.${i}.uses.value`] = consumption.uses.max;
+            // Update the cloned array element safely
+            if (!updatedConsumptions[i]) updatedConsumptions[i] = { type: 'uses', uses: { value: 0, max: 1 } };
+            updatedConsumptions[i].type = 'uses';
+            updatedConsumptions[i].uses = {
+              ...(updatedConsumptions[i].uses || { value: 0, max: 1 }),
+              value: consumption.uses.max,
+              max: consumption.uses.max
+            };
             refreshedItems.push({
               itemName: item.name,
               consumptionSlot: `consumption[${i}]`,
@@ -334,6 +340,8 @@ async function refreshConsumptionUses(actor, cadenceLevel) {
     
     if (itemUpdated) {
       console.log(`[SWN Refresh] Refreshing consumption uses for power: ${item.name}`);
+      // Set full array update per item to avoid sparse array issues in v13
+      flatUpdates[`items.${item.id}.system.consumptions`] = updatedConsumptions;
     }
   }
   

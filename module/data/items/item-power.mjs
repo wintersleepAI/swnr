@@ -258,13 +258,12 @@ export default class SWNPower extends SWNItemBase {
 
     // Process only immediate consumption types (timing: "immediate")
     const consumptionResults = [];
-    const allConsumptions = this.getConsumptions();
-    const immediateConsumptions = allConsumptions.filter(c => c.timing === "immediate");
+    const all = this.consumptions || [];
     
     // First pass: validate all immediate consumption requirements
-    for (let i = 0; i < allConsumptions.length; i++) {
-      const consumes = allConsumptions[i];
-      if (consumes.timing !== "immediate") continue; // Skip preparation and manual costs during casting
+    for (let i = 0; i < all.length; i++) {
+      const consumes = all[i];
+      if (!consumes || consumes.type === "none" || consumes.timing !== "immediate") continue; // Skip non-runtime costs
       
       const validation = await this._validateConsumption(actor, consumes, i);
       if (!validation.valid) {
@@ -279,9 +278,9 @@ export default class SWNPower extends SWNItemBase {
     }
     
     // Second pass: apply all immediate consumption costs
-    for (let i = 0; i < allConsumptions.length; i++) {
-      const consumes = allConsumptions[i];
-      if (consumes.timing !== "immediate") continue; // Skip preparation and manual costs during casting
+    for (let i = 0; i < all.length; i++) {
+      const consumes = all[i];
+      if (!consumes || consumes.type === "none" || consumes.timing !== "immediate") continue; // Skip non-runtime costs
       
       const result = await this._processConsumption(actor, consumes, options, i);
       if (!result.success) {
@@ -341,12 +340,12 @@ export default class SWNPower extends SWNItemBase {
 
     // Process only manual consumption types (timing: "manual")
     const consumptionResults = [];
-    const allConsumptions = this.getConsumptions();
+    const allManual = this.consumptions || [];
     
-    // First pass: validate all manual consumption requirements
-    for (let i = 0; i < allConsumptions.length; i++) {
-      const consumes = allConsumptions[i];
-      if (consumes.timing !== "manual") continue; // Skip preparation and immediate costs during manual processing
+    // First pass: validate all manual consumption requirements on original indices
+    for (let i = 0; i < allManual.length; i++) {
+      const consumes = allManual[i];
+      if (!consumes || consumes.type === "none" || consumes.timing !== "manual") continue; // Skip non-manual costs
       
       const validation = await this._validateConsumption(actor, consumes, i);
       if (!validation.valid) {
@@ -360,9 +359,9 @@ export default class SWNPower extends SWNItemBase {
     }
 
     // Second pass: apply manual consumption
-    for (let i = 0; i < allConsumptions.length; i++) {
-      const consumes = allConsumptions[i];
-      if (consumes.timing !== "manual") continue; // Skip preparation and immediate costs during manual processing
+    for (let i = 0; i < allManual.length; i++) {
+      const consumes = allManual[i];
+      if (!consumes || consumes.type === "none" || consumes.timing !== "manual") continue; // Skip non-manual costs
       
       const result = await this._processConsumption(actor, consumes, options, i);
       if (!result.success) {
@@ -756,18 +755,24 @@ export default class SWNPower extends SWNItemBase {
     
     const newValue = consumes.uses.value - 1;
     
-    // Update the consumption entry in the array
-    await this.parent.update({
-      [`system.consumptions.${consumptionIndex}.uses.value`]: newValue,
-      [`system.consumptions.${consumptionIndex}.type`]: "uses"
-    });
+    // Update the consumption entry by replacing the whole array element to satisfy v13 array validation
+    const updated = foundry.utils.deepClone(this.consumptions || []);
+    if (!updated[consumptionIndex]) updated[consumptionIndex] = { type: "uses", uses: { value: 0, max: 1 } };
+    updated[consumptionIndex].type = "uses";
+    updated[consumptionIndex].uses = {
+      ...(updated[consumptionIndex].uses || { value: 0, max: 1 }),
+      value: newValue
+    };
+    await this.parent.update({ "system.consumptions": updated });
     
     return { 
       success: true, 
       type: "uses",
       spent: 1,
       remaining: newValue,
-      max: consumes.uses.max
+      max: consumes.uses.max,
+      cadence: consumes.cadence || null,
+      resourceName: "Uses"
     };
   }
 
@@ -803,13 +808,12 @@ export default class SWNPower extends SWNItemBase {
     }
 
     // Get only preparation consumptions (timing: "preparation")
-    const allConsumptions = this.getConsumptions();
-    const prepConsumptions = allConsumptions.filter(c => c.timing === "preparation");
+    const allForPrep = this.consumptions || [];
     
     // Validate all preparation consumption requirements
-    for (let i = 0; i < allConsumptions.length; i++) {
-      const consumes = allConsumptions[i];
-      if (consumes.timing !== "preparation") continue; // Skip manual and immediate costs during preparation
+    for (let i = 0; i < allForPrep.length; i++) {
+      const consumes = allForPrep[i];
+      if (!consumes || consumes.type === "none" || consumes.timing !== "preparation") continue; // Skip non-prep costs
       
       const validation = await this._validateConsumption(actor, consumes, i);
       if (!validation.valid) {
@@ -823,9 +827,9 @@ export default class SWNPower extends SWNItemBase {
 
     // Deduct resources for preparation (only timing: "preparation")
     const consumptionResults = [];
-    for (let i = 0; i < allConsumptions.length; i++) {
-      const consumes = allConsumptions[i];
-      if (consumes.timing !== "preparation") continue; // Skip manual and immediate costs during preparation
+    for (let i = 0; i < allForPrep.length; i++) {
+      const consumes = allForPrep[i];
+      if (!consumes || consumes.type === "none" || consumes.timing !== "preparation") continue; // Skip non-prep costs
       
       const result = await this._processConsumption(actor, consumes, {}, i);
       if (!result.success) {

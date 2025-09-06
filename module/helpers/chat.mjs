@@ -648,14 +648,18 @@ export async function _onChatCardAction(
         }
       }
       
-      // Get the specific consumption to process
-      const consumptions = power.system.getConsumptions();
-      if (consumptionIndex >= consumptions.length) {
+      // Get the specific consumption to process using the original array index
+      const consumptions = power.system.consumptions || [];
+      if (consumptionIndex >= consumptions.length || consumptionIndex < 0) {
         ui.notifications?.error("Invalid consumption index");
         return;
       }
       
       const consumption = consumptions[consumptionIndex];
+      if (!consumption || consumption.type === "none") {
+        ui.notifications?.error("Invalid consumption for this power");
+        return;
+      }
       
       // Process the single consumption
       const result = await power.system._processConsumption(targetActor, consumption, {}, consumptionIndex);
@@ -859,7 +863,16 @@ export async function _onChatCardAction(
       const maxUses = consumption.uses.max;
       const newUses = Math.min(currentUses + amount, maxUses);
       
-      await power.update({ [`system.consumptions.${consumptionIndex}.uses.value`]: newUses });
+      // v13-safe: update full array element to avoid sparse array validation
+      const updated = foundry.utils.deepClone(power.system.consumptions || []);
+      if (!updated[consumptionIndex]) updated[consumptionIndex] = { type: 'uses', uses: { value: 0, max: 1 } };
+      updated[consumptionIndex].type = 'uses';
+      updated[consumptionIndex].uses = {
+        ...(updated[consumptionIndex].uses || { value: 0, max: 1 }),
+        value: newUses,
+        max: maxUses
+      };
+      await power.update({ "system.consumptions": updated });
       
       // Disable the button
       button.disabled = true;

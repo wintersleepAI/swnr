@@ -14,7 +14,11 @@
         {{#unless (eq type "systemStrain")}}
           <span class="consumption-cost consumption-{{type}}">
             <i class="fas fa-circle-minus"></i>
-            {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}} ({{cadence}})
+            {{#if (eq type "uses")}}
+              {{spent}} {{localize "swnr.consumption.uses"}} {{#if cadence}}({{localize (concat 'swnr.effort.' cadence)}}){{/if}}
+            {{else}}
+              {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}} {{#if cadence}}({{localize (concat 'swnr.effort.' cadence)}}){{/if}}
+            {{/if}}
           </span>
         {{/unless}}
       {{/each}}
@@ -112,7 +116,7 @@
                 Take {{usesCost}} {{localize "swnr.consumption.systemStrain"}}
               {{else if (eq type "uses")}}
                 <i class="fas fa-minus-circle"></i>
-                Use {{usesCost}} {{localize "swnr.consumption.uses"}}
+                Use {{usesCost}} {{localize "swnr.consumption.uses"}} {{#if cadence}}({{localize (concat 'swnr.effort.' cadence)}}){{/if}}
               {{else if (eq type "consumableItem")}}
                 <i class="fas fa-cube"></i>
                 Consume {{usesCost}} {{localize "swnr.consumption.consumableItem"}}
