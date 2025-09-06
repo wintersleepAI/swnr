@@ -164,7 +164,7 @@ export class SWNActorSheet extends SWNBaseSheet {
         options.defaultTab = 'combat';
         break;
       case 'npc':
-        options.parts.push('npc', 'gear', 'effects');
+        options.parts.push('npc', 'features', 'powers', 'gear', 'effects');
         options.defaultTab = 'npc';
         break;
     }

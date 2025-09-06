@@ -293,7 +293,8 @@ export default class SWNCharacter extends SWNActorBase {
       }
     }
 
-    data["lvl"] =this.level.value;
+    data["lvl"] = this.level.value;
+    data["HD"] = this.hitDie?.value || 0;
     return data;
   }
 
@@ -1024,7 +1025,7 @@ export default class SWNCharacter extends SWNActorBase {
     
     // Title based on refresh type
     const titleKey = type === 'rest' ? 
-      (result.isFrail ? 'swnr.pools.refreshSummary.frailRest' : 'swnr.pools.refreshSummary.rest') :
+      (result.isFrail ? 'swnr.pools.refreshSummary.frailRest' : 'swnr.pools.refreshSummary.day') :
       'swnr.pools.refreshSummary.scene';
     const title = game.i18n.localize(titleKey) || 
       (type === 'rest' ? 'Rest for the Night' : 'End of Scene');

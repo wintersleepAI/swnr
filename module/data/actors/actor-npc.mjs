@@ -5,6 +5,7 @@ export default class SWNNPC extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
     ...super.LOCALIZATION_PREFIXES,
     'SWN.Actor.NPC',
+    'SWN.Actor.base', // Add base actor localization for tweak fields
   ];
   //Regexs for parsing hit dice
   static numberRegex = /^\d+$/;
@@ -46,6 +47,16 @@ export default class SWNNPC extends SWNActorBase {
     schema.baseSoakTotal = new fields.SchemaField({
       value: SWNShared.requiredNumber(0),
       max: SWNShared.requiredNumber(0),
+    });
+
+    // Add tweak schema for power toggles (subset of character tweaks)
+    schema.tweak = new fields.SchemaField({
+      showCyberware: new fields.BooleanField({initial: true}),
+      showPsychic: new fields.BooleanField({initial: true}),
+      showArts: new fields.BooleanField({initial: false}),
+      showSpells: new fields.BooleanField({initial: false}),
+      showAdept: new fields.BooleanField({initial: false}),
+      showMutation: new fields.BooleanField({initial: false}),
     });
 
     return schema;
@@ -252,6 +263,7 @@ export default class SWNNPC extends SWNActorBase {
     let expr = formula
       .replace(/@level/g, effectiveLevel)
       .replace(/@hitdice/g, effectiveLevel)
+      .replace(/@HD/g, effectiveLevel)
       .replace(/@skills\.psychic\.highest/g, highestPsychicSkill)
       .replace(/@skills\.([^.]+)\.rank/g, (match, skillName) => {
         // Replace underscores with spaces for skill names
@@ -270,6 +282,26 @@ export default class SWNNPC extends SWNActorBase {
     
     const result = new Function('return ' + expr)();
     return Math.max(0, Math.floor(result));
+  }
+
+  /**
+   * Provide roll data for NPCs to support standard Foundry formula evaluation
+   * @returns {Object} Roll data object
+   */
+  getRollData() {
+    const data = {};
+    
+    // Add level-equivalent from hit dice for formula compatibility
+    const effectiveLevel = this._extractHitDiceNumber();
+    data["lvl"] = effectiveLevel;
+    data["level"] = effectiveLevel;
+    data["HD"] = effectiveLevel;
+    data["hitdice"] = effectiveLevel;
+    
+    // Add saves
+    data["saves"] = this.saves;
+    
+    return data;
   }
 
   async rollSave(_saveType) {
