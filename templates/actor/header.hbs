@@ -246,26 +246,7 @@
       {{#if hasAnyPools}}
       <div class='resource-pools header-group flex-group-center grid-span-5'>
         <div class="pools-container">
-          <div class="pools-display">
-            {{#each poolGroups}}
-            <div class="pool-group">
-              <div class="pool-group-header">
-                <span class="resource-name">{{resourceName}}</span>
-              </div>
-              <div class="pools-list">
-                {{#each pools}}
-                <div class="pool-badge {{#if isEmpty}}empty{{else if isLow}}low{{else if isFull}}full{{/if}} {{#if hasCommitments}}has-commitments{{/if}}" 
-                     title="{{key}}: {{current}} available/{{max}} total{{#if committed}} ({{committed}} committed){{/if}} ({{cadence}})">
-                  <span class="pool-values">{{#if (eq subResource "Default")}}{{../resourceName}}{{else}}{{subResource}}{{/if}} {{current}}/{{max}}{{#if committed}}<small class="committed-indicator">-{{committed}}</small>{{/if}}</span>
-                  <div class="pool-bar">
-                    <div class="pool-fill" style="width: {{percentage}}%"></div>
-                  </div>
-                </div>
-                {{/each}}
-              </div>
-            </div>
-            {{/each}}
-          </div>
+          {{> "systems/swnr/templates/actor/fragments/pools-display.hbs"}}
         </div>
       </div>
       {{/if}}

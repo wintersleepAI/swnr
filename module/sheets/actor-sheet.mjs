@@ -113,6 +113,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     consumablesList: {
       template: 'systems/swnr/templates/actor/fragments/consumable-list.hbs',
     },
+    poolsDisplay: {
+      template: 'systems/swnr/templates/actor/fragments/pools-display.hbs',
+    },
     skillFrag: {
       template: 'systems/swnr/templates/actor/fragments/skill.hbs',
     },

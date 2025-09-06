@@ -1,0 +1,75 @@
+<div class="pools-display">
+  {{#each poolGroups}}
+  <div class="pool-group">
+    <div class="pool-group-header">
+      <span class="resource-name">{{resourceName}}</span>
+    </div>
+    <div class="pools-list">
+      {{#each pools}}
+      <div class="pool-badge {{#if isEmpty}}empty{{else if isLow}}low{{else if isFull}}full{{/if}} {{#if hasCommitments}}has-commitments{{/if}}" 
+           title="{{key}}: {{current}} available/{{max}} total{{#if committed}} ({{committed}} committed){{/if}}{{#if cadence}} ({{localize (concat 'swnr.effort.' cadence)}}){{/if}}" 
+           data-pool-key="{{key}}">
+        {{#if @root.gameSettings.showTempPoolModifiers}}
+        <div class="pool-toggle-button" data-action="togglePoolTempModifiers" title="Toggle temporary modifiers">
+          <i class="fas fa-chevron-{{#unless (lookup @root.expandedPoolTempModifiers key)}}down{{else}}right{{/unless}}"></i>
+        </div>
+        {{/if}}
+        <div class="pool-values-with-modifier">
+          <div class="pool-values-line">
+            <span class="pool-values">{{#if (eq subResource "Default")}}{{../resourceName}}{{else}}{{subResource}}{{/if}} {{current}}/{{max}}{{#if committed}}<small class="committed-indicator">-{{committed}}</small>{{/if}}</span>
+          </div>
+          {{#if @root.gameSettings.showTempPoolModifiers}}
+          <div class="pool-temp-modifiers" style="display: {{#unless (lookup @root.expandedPoolTempModifiers key)}}flex{{else}}none{{/unless}};">
+            <input type="number" 
+                   name="system.pools.{{key}}.tempCommit" 
+                   value="{{tempCommit}}" 
+                   class="pool-temp-modifier" 
+                   title="{{localize 'swnr.effort.commit'}} temporary modifier"
+                   placeholder="0"
+                   data-dtype="Number" />
+            <span class="temp-label">{{localize 'swnr.effort.commitShort'}}</span>
+            <input type="number" 
+                   name="system.pools.{{key}}.tempScene" 
+                   value="{{tempScene}}" 
+                   class="pool-temp-modifier" 
+                   title="{{localize 'swnr.effort.scene'}} temporary modifier"
+                   placeholder="0"
+                   data-dtype="Number" />
+            <span class="temp-label">{{localize 'swnr.effort.sceneShort'}}</span>
+            <input type="number" 
+                   name="system.pools.{{key}}.tempDay" 
+                   value="{{tempDay}}" 
+                   class="pool-temp-modifier" 
+                   title="{{localize 'swnr.effort.day'}} temporary modifier"
+                   placeholder="0"
+                   data-dtype="Number" />
+            <span class="temp-label">{{localize 'swnr.effort.dayShort'}}</span>
+          </div>
+          {{/if}}
+        </div>
+        <div class="pool-bar">
+          <div class="pool-fill" style="width: {{percentage}}%"></div>
+        </div>
+        {{#if hasCommitments}}
+        <div class="commitment-details">
+          {{#each commitments}}
+          <div class="commitment-item" title="{{powerName}}: {{amount}} effort ({{localize (concat 'swnr.effort.' duration)}})">
+            <span class="power-name">{{powerName}}</span>
+            <span class="duration">{{localize (concat 'swnr.effort.' duration 'Short') }}</span>
+            <span class="effort-amount">{{amount}}</span>
+            <button type="button" class="release-commitment" data-action="releaseCommitment" 
+                    data-pool-key="{{../key}}" data-power-id="{{powerId}}" 
+                    title="{{localize 'swnr.pools.commitment.release'}}">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          {{/each}}
+        </div>
+        {{/if}}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  {{/each}}
+</div>
+
