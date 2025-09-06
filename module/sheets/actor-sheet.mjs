@@ -56,6 +56,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       resourceCreate: this._onResourceCreate,
       resourceDelete: this._onResourceDelete,
       releaseCommitment: this._onReleaseCommitment,
+      resetPowerUses: this._onResetPowerUses,
       addLanguage: this._onAddLanguage,
       removeLanguage: this._onRemoveLanguage,
       toggleLanguageAdd: this._onToggleLanguageAdd,
@@ -1146,6 +1147,62 @@ export class SWNActorSheet extends SWNBaseSheet {
       
       ui.notifications?.info(`Released ${releasedCommitment.amount} effort from ${releasedCommitment.powerName}`);
     }
+  }
+
+  /**
+   * Reset power consumption uses to maximum
+   * @param {Event} event - The click event
+   * @param {HTMLElement} target - The clicked element
+   * @returns {Promise<void>}
+   * @static
+   */
+  static async _onResetPowerUses(event, target) {
+    event.preventDefault();
+    
+    // If target is the icon inside the button, get the button element
+    const button = target.closest('.reset-power-uses') || target;
+    const itemId = button.dataset.itemId;
+    const consumptionIndex = parseInt(button.dataset.consumptionIndex);
+    
+    if (!itemId || consumptionIndex === undefined || isNaN(consumptionIndex)) {
+      ui.notifications?.error("Missing item ID or consumption index for power uses reset");
+      return;
+    }
+    
+    const actor = this.actor;
+    const item = actor.items.get(itemId);
+    
+    if (!item || item.type !== 'power') {
+      ui.notifications?.error("Could not find power item for uses reset");
+      return;
+    }
+    
+    const consumptions = foundry.utils.deepClone(item.system.consumptions);
+    const consumption = consumptions[consumptionIndex];
+    
+    if (!consumption || consumption.type !== 'uses') {
+      ui.notifications?.error("Invalid consumption data for uses reset");
+      return;
+    }
+    
+    // Reset the uses to maximum
+    const oldValue = consumption.uses.value;
+    consumption.uses.value = consumption.uses.max;
+    
+    // Update the item
+    await item.update({ "system.consumptions": consumptions });
+    
+    // Create chat message for reset
+    const chatMessage = getDocumentClass("ChatMessage");
+    chatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: actor }),
+      content: `<div class="power-uses-reset">
+        <h3><i class="fas fa-undo"></i> Power Uses Reset</h3>
+        <p><strong>${item.name}:</strong> Uses reset from ${oldValue}/${consumption.uses.max} to ${consumption.uses.max}/${consumption.uses.max}</p>
+      </div>`
+    });
+    
+    ui.notifications?.info(`Reset ${item.name} uses to maximum`);
   }
 
   /**
