@@ -15,6 +15,7 @@ export class SWNActorSheet extends SWNBaseSheet {
   // Private properties
   #toggleLock = false;
   static #expandedDescriptions = {};
+  static #expandedPoolTempModifiers = {};
 
   constructor(options = {}) {
     super(options);
@@ -57,6 +58,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       resourceDelete: this._onResourceDelete,
       releaseCommitment: this._onReleaseCommitment,
       resetPowerUses: this._onResetPowerUses,
+      togglePoolTempModifiers: this._onTogglePoolTempModifiers,
       addLanguage: this._onAddLanguage,
       removeLanguage: this._onRemoveLanguage,
       toggleLanguageAdd: this._onToggleLanguageAdd,
@@ -197,6 +199,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       groupWidget: groupFieldWidget.bind(this),
       // Add expanded descriptions state for item description toggle functionality
       expandedDescriptions: SWNActorSheet.#expandedDescriptions,
+      expandedPoolTempModifiers: SWNActorSheet.#expandedPoolTempModifiers,
 
     };
 
@@ -1233,6 +1236,35 @@ export class SWNActorSheet extends SWNBaseSheet {
     if (descriptionRow && descriptionRow.classList.contains('item-description')) {
       const isExpanded = SWNActorSheet.#expandedDescriptions[itemId];
       descriptionRow.style.display = isExpanded ? 'block' : 'none';
+    }
+  }
+
+  /**
+   * Handle toggling pool temp modifiers visibility
+   * @param {Event} event - The originating click event
+   * @param {HTMLElement} target - The clicked element
+   */
+  static async _onTogglePoolTempModifiers(event, target) {
+    event.preventDefault();
+    
+    const poolKey = target.dataset.poolKey || target.closest('[data-pool-key]')?.dataset.poolKey;
+    if (!poolKey) return;
+
+    // Toggle the expanded state
+    if (SWNActorSheet.#expandedPoolTempModifiers[poolKey]) {
+      delete SWNActorSheet.#expandedPoolTempModifiers[poolKey];
+    } else {
+      SWNActorSheet.#expandedPoolTempModifiers[poolKey] = true;
+    }
+
+    // Find and toggle the temp modifiers
+    const poolBadge = target.closest('.pool-badge[data-pool-key]');
+    if (!poolBadge) return;
+
+    const tempModifiers = poolBadge.querySelector('.pool-temp-modifiers');
+    if (tempModifiers) {
+      const isCollapsed = SWNActorSheet.#expandedPoolTempModifiers[poolKey];
+      tempModifiers.style.display = isCollapsed ? 'none' : 'flex';
     }
   }
 

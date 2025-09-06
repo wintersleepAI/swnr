@@ -256,8 +256,7 @@
                 {{#each pools}}
                 <div class="pool-badge {{#if isEmpty}}empty{{else if isLow}}low{{else if isFull}}full{{/if}} {{#if hasCommitments}}has-commitments{{/if}}" 
                      title="{{key}}: {{current}} available/{{max}} total{{#if committed}} ({{committed}} committed){{/if}} ({{cadence}})">
-                  <span class="pool-label">{{#if (eq subResource "Default")}}{{../resourceName}}{{else}}{{subResource}}{{/if}}</span>
-                  <span class="pool-values">{{current}}/{{max}}{{#if committed}}<small class="committed-indicator">-{{committed}}</small>{{/if}}</span>
+                  <span class="pool-values">{{#if (eq subResource "Default")}}{{../resourceName}}{{else}}{{subResource}}{{/if}} {{current}}/{{max}}{{#if committed}}<small class="committed-indicator">-{{committed}}</small>{{/if}}</span>
                   <div class="pool-bar">
                     <div class="pool-fill" style="width: {{percentage}}%"></div>
                   </div>

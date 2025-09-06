@@ -26,11 +26,17 @@
             <div class="pool-badge {{#if isEmpty}}empty{{else if isLow}}low{{else if isFull}}full{{/if}} {{#if hasCommitments}}has-commitments{{/if}}" 
                  title="{{key}}: {{current}} available/{{max}} total{{#if committed}} ({{committed}} committed){{/if}}{{#if cadence}} ({{localize (concat 'swnr.effort.' cadence)}}){{/if}}" 
                  data-pool-key="{{key}}">
-              <span class="pool-label">{{#if (eq subResource "Default")}}{{../resourceName}}{{else}}{{subResource}}{{/if}}</span>
+              {{#if @root.gameSettings.showTempPoolModifiers}}
+              <div class="pool-toggle-button" data-action="togglePoolTempModifiers" title="Toggle temporary modifiers">
+                <i class="fas fa-chevron-{{#unless (lookup @root.expandedPoolTempModifiers key)}}down{{else}}right{{/unless}}"></i>
+              </div>
+              {{/if}}
               <div class="pool-values-with-modifier">
-                <span class="pool-values">{{current}}/{{max}}{{#if committed}}<small class="committed-indicator">-{{committed}}</small>{{/if}}</span>
+                <div class="pool-values-line">
+                  <span class="pool-values">{{#if (eq subResource "Default")}}{{../resourceName}}{{else}}{{subResource}}{{/if}} {{current}}/{{max}}{{#if committed}}<small class="committed-indicator">-{{committed}}</small>{{/if}}</span>
+                </div>
                 {{#if @root.gameSettings.showTempPoolModifiers}}
-                <div class="pool-temp-modifiers">
+                <div class="pool-temp-modifiers" style="display: {{#unless (lookup @root.expandedPoolTempModifiers key)}}flex{{else}}none{{/unless}};">
                   <input type="number" 
                          name="system.pools.{{key}}.tempCommit" 
                          value="{{tempCommit}}" 
