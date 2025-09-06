@@ -508,6 +508,13 @@ export default class SWNCharacter extends SWNActorBase {
           }
           
           pools[poolKey].max = newMax;
+
+          // Apply temporary modifier from source data
+          const tempModifier = sourcePoolData?.tempModifier || 0;
+          
+          pools[poolKey].tempModifier = tempModifier;
+          pools[poolKey].max += tempModifier;
+          pools[poolKey].value = Math.min(pools[poolKey].value + tempModifier, pools[poolKey].max);
         } else {
           // Calculate available effort (max - committed)
           const commitments = (this.parent.system.effortCommitments || {})[poolKey] || [];
@@ -521,13 +528,19 @@ export default class SWNCharacter extends SWNActorBase {
           const currentValue = existingCurrentValue !== undefined ? 
             Math.min(existingCurrentValue, maxValue) : availableEffort;
           
+          // Get temporary modifier from source data
+          const tempModifier = sourcePoolData?.tempModifier || 0;
+          
+          const finalMax = maxValue + tempModifier;
+          const finalValue = Math.min(currentValue + tempModifier, finalMax);
           
           pools[poolKey] = {
-            value: currentValue,
-            max: maxValue,
+            value: finalValue,
+            max: finalMax,
             cadence: poolConfig.cadence,
             committed: committedAmount,
-            commitments: commitments
+            commitments: commitments,
+            tempModifier: tempModifier
           };
         }
       }

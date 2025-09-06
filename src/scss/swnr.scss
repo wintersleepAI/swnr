@@ -110,4 +110,46 @@
       }
     }
   }
+
+  /* Pool values with inline modifier styling */
+  .pool-values-with-modifier {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    margin: 0.2em 0;
+    
+    .pool-values {
+      font-size: 0.9em;
+      color: var(--color-text-dark-secondary);
+    }
+    
+    .pool-temp-modifier {
+      width: 35px;
+      height: 18px;
+      padding: 1px 3px;
+      border: 1px solid rgba(var(--accent-color), 0.2);
+      border-radius: 2px;
+      background: rgba(var(--accent-color), 0.05);
+      color: var(--color-text-dark-primary);
+      font-size: 0.75em;
+      text-align: center;
+      
+      &:focus {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 2px rgba(var(--accent-color), 0.3);
+        outline: none;
+        background: var(--color-bg-input);
+      }
+      
+      &:hover {
+        border-color: rgba(var(--accent-color), 0.4);
+        background: rgba(var(--accent-color), 0.08);
+      }
+      
+      &::placeholder {
+        color: var(--color-text-dark-inactive);
+        opacity: 0.7;
+      }
+    }
+  }
 }

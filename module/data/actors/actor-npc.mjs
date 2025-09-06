@@ -170,17 +170,35 @@ export default class SWNNPC extends SWNActorBase {
           const oldMax = pools[poolKey].max;
           const newMax = oldMax + maxValue;
           
+          // Get temporary modifier from source data
+          const sourcePoolData = this.parent._source.system.pools?.[poolKey];
+          const tempModifier = sourcePoolData?.tempModifier || 0;
+          
           // Preserve user-set value if possible, but allow it to increase if max increased
           const wasAtMax = pools[poolKey].value >= pools[poolKey].max;
           pools[poolKey].value = wasAtMax ? newMax : Math.min(pools[poolKey].value + maxValue, newMax);
           pools[poolKey].max = newMax;
+          
+          // Apply temporary modifier
+          pools[poolKey].tempModifier = tempModifier;
+          pools[poolKey].max += tempModifier;
+          pools[poolKey].value = Math.min(pools[poolKey].value + tempModifier, pools[poolKey].max);
         } else {
           // Create new pool, preserving current value if it exists
-          const currentValue = this.pools[poolKey]?.value || 0;
+          const sourcePoolData = this.parent._source.system.pools?.[poolKey];
+          const currentValue = this.pools[poolKey]?.value || sourcePoolData?.value || 0;
+          
+          // Get temporary modifier from source data
+          const tempModifier = sourcePoolData?.tempModifier || 0;
+          
+          const finalMax = maxValue + tempModifier;
+          const finalValue = Math.min(currentValue + tempModifier, finalMax);
+          
           pools[poolKey] = {
-            value: Math.min(currentValue, maxValue), // Don't exceed new max
-            max: maxValue,
-            cadence: poolConfig.cadence
+            value: finalValue,
+            max: finalMax,
+            cadence: poolConfig.cadence,
+            tempModifier: tempModifier
           };
         }
       }

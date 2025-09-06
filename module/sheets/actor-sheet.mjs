@@ -495,6 +495,7 @@ export class SWNActorSheet extends SWNBaseSheet {
         cadence: poolData.cadence,
         committed: poolData.committed || 0,
         commitments: poolData.commitments || [],
+        tempModifier: poolData.tempModifier || 0,
         percentage: poolData.max > 0 ? Math.round((poolData.value / poolData.max) * 100) : 0,
         isEmpty: poolData.value === 0,
         isFull: poolData.value >= poolData.max,
@@ -1274,4 +1275,5 @@ export class SWNActorSheet extends SWNBaseSheet {
       }
     }
   }
+
 }
