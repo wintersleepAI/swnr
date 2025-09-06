@@ -1,6 +1,7 @@
 import SWNActorBase from './base-actor.mjs';
 import SWNShared from '../shared.mjs';
 import { calcMod } from '../../helpers/utils.mjs';
+import { calculatePoolsFromFeatures } from '../../helpers/pool-helpers.mjs';
 
 export default class SWNCharacter extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -451,113 +452,13 @@ export default class SWNCharacter extends SWNActorBase {
    * @private
    */
   _calculateResourcePools() {
-    const pools = {};
-    
-    // Get all features that might grant pools
-    const poolGrantingItems = this.parent.items.filter(item => 
-      item.type === "feature" && 
-      item.system.poolsGranted && 
-      item.system.poolsGranted.length > 0
-    );
-    
-
-    for (const feature of poolGrantingItems) {
-      for (const poolConfig of feature.system.poolsGranted) {
-        // Check condition if specified
-        if (poolConfig.condition && !this._evaluateCondition(poolConfig.condition)) {
-          continue;
-        }
-
-        // Build pool key
-        const poolKey = `${poolConfig.resourceName}:${poolConfig.subResource || ""}`;
-        
-        // Calculate pool maximum
-        let maxValue = 0;
-        
-        // Use formula if specified, otherwise fall back to legacy base + per-level
-        if (poolConfig.formula) {
-          try {
-            const formulaResult = this._evaluateFormula(poolConfig.formula);
-            maxValue = formulaResult;
-          } catch (error) {
-            console.warn(`[SWN Pool] Failed to evaluate formula "${poolConfig.formula}" for ${feature.name}:`, error);
-            maxValue = 0; // Default to 0 if formula fails
-          }
-        } else {
-          console.warn(`[SWN Pool] No formula provided for pool ${poolKey} in ${feature.name}`);
-          maxValue = 0;
-        }
-
-        // Initialize or update pool
-        if (pools[poolKey]) {
-          // Pool already exists from another feature, add to max and adjust value accordingly
-          const oldMax = pools[poolKey].max;
-          const newMax = oldMax + maxValue;
-          
-          // Preserve user-set value if possible, but allow it to increase if max increased
-          const sourcePoolData = this.parent._source.system.pools?.[poolKey];
-          const userSetValue = sourcePoolData?.value;
-          
-          if (userSetValue !== undefined) {
-            // User has manually set a value, respect it but cap at new max
-            pools[poolKey].value = Math.min(userSetValue, newMax);
-          } else {
-            // No user-set value, scale current value proportionally or set to new max if fully recovered
-            const wasAtMax = pools[poolKey].value >= pools[poolKey].max;
-            pools[poolKey].value = wasAtMax ? newMax : Math.min(pools[poolKey].value + maxValue, newMax);
-          }
-          
-          pools[poolKey].max = newMax;
-
-          // Apply temporary modifiers from source data
-          const tempCommit = sourcePoolData?.tempCommit || 0;
-          const tempScene = sourcePoolData?.tempScene || 0;
-          const tempDay = sourcePoolData?.tempDay || 0;
-          const totalTempModifier = tempCommit + tempScene + tempDay;
-          
-          pools[poolKey].tempCommit = tempCommit;
-          pools[poolKey].tempScene = tempScene;
-          pools[poolKey].tempDay = tempDay;
-          pools[poolKey].max += totalTempModifier;
-          pools[poolKey].value = Math.min(pools[poolKey].value + totalTempModifier, pools[poolKey].max);
-        } else {
-          // Calculate available effort (max - committed)
-          const commitments = (this.parent.system.effortCommitments || {})[poolKey] || [];
-          const committedAmount = commitments.reduce((sum, commitment) => sum + commitment.amount, 0);
-          
-          // Preserve existing current value from document source if it exists, otherwise calculate available effort
-          const sourcePoolData = this.parent._source.system.pools?.[poolKey];
-          const existingCurrentValue = sourcePoolData?.value;
-          const sourceMaxValue = sourcePoolData?.max;
-          const availableEffort = Math.max(0, maxValue - committedAmount);
-          const currentValue = existingCurrentValue !== undefined ? 
-            Math.min(existingCurrentValue, maxValue) : availableEffort;
-          
-          // Get temporary modifiers from source data
-          const tempCommit = sourcePoolData?.tempCommit || 0;
-          const tempScene = sourcePoolData?.tempScene || 0;
-          const tempDay = sourcePoolData?.tempDay || 0;
-          const totalTempModifier = tempCommit + tempScene + tempDay;
-          
-          const finalMax = maxValue + totalTempModifier;
-          const finalValue = Math.min(currentValue + totalTempModifier, finalMax);
-          
-          pools[poolKey] = {
-            value: finalValue,
-            max: finalMax,
-            cadence: poolConfig.cadence,
-            committed: committedAmount,
-            commitments: commitments,
-            tempCommit: tempCommit,
-            tempScene: tempScene,
-            tempDay: tempDay
-          };
-        }
-      }
-    }
-
-    // Update the pools object
-    this.pools = pools;
+    this.pools = calculatePoolsFromFeatures({
+      parent: this.parent,
+      dataModel: this,
+      evaluateCondition: (cond) => this._evaluateCondition(cond),
+      evaluateFormula: (formula) => this._evaluateFormula(formula),
+      includeCommitments: true,
+    });
   }
 
   /**

@@ -1,5 +1,6 @@
 import SWNActorBase from './base-actor.mjs';
 import SWNShared from '../shared.mjs';
+import { calculatePoolsFromFeatures } from '../../helpers/pool-helpers.mjs';
 
 export default class SWNNPC extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -125,98 +126,13 @@ export default class SWNNPC extends SWNActorBase {
    * @private
    */
   _calculateResourcePools() {
-    const pools = {};
-    
-    // Get all features that might grant pools
-    const poolGrantingItems = this.parent.items.filter(item => 
-      item.type === "feature" && 
-      item.system.poolsGranted && 
-      item.system.poolsGranted.length > 0
-    );
-
-    for (const feature of poolGrantingItems) {
-      for (const poolConfig of feature.system.poolsGranted) {
-        // Check condition if specified (NPCs use hit dice instead of level)
-        if (poolConfig.condition && !this._evaluateCondition(poolConfig.condition)) {
-          continue;
-        }
-
-        // Build pool key
-        const poolKey = `${poolConfig.resourceName}:${poolConfig.subResource || ""}`;
-        
-        // Calculate pool maximum
-        let maxValue = 0;
-        
-        // For NPCs, use hit dice number for level-based calculations
-        const effectiveLevel = this._extractHitDiceNumber();
-        
-        // Use formula if specified, otherwise fall back to legacy base + per-level
-        if (poolConfig.formula) {
-          try {
-            const formulaResult = this._evaluateFormula(poolConfig.formula, effectiveLevel);
-            maxValue = formulaResult;
-          } catch (error) {
-            console.warn(`[SWN Pool] Failed to evaluate formula "${poolConfig.formula}" for ${feature.name}:`, error);
-            maxValue = 0; // Default to 0 if formula fails
-          }
-        } else {
-          console.warn(`[SWN Pool] No formula provided for pool ${poolKey} in ${feature.name}`);
-          maxValue = 0;
-        }
-
-        // Initialize or update pool
-        if (pools[poolKey]) {
-          // Pool already exists from another feature, add to max and adjust value accordingly
-          const oldMax = pools[poolKey].max;
-          const newMax = oldMax + maxValue;
-          
-          // Get temporary modifier from source data
-          const sourcePoolData = this.parent._source.system.pools?.[poolKey];
-          
-          // Preserve user-set value if possible, but allow it to increase if max increased
-          const wasAtMax = pools[poolKey].value >= pools[poolKey].max;
-          pools[poolKey].value = wasAtMax ? newMax : Math.min(pools[poolKey].value + maxValue, newMax);
-          pools[poolKey].max = newMax;
-          
-          // Apply temporary modifiers from source data
-          const tempCommit = sourcePoolData?.tempCommit || 0;
-          const tempScene = sourcePoolData?.tempScene || 0;
-          const tempDay = sourcePoolData?.tempDay || 0;
-          const totalTempModifier = tempCommit + tempScene + tempDay;
-          
-          pools[poolKey].tempCommit = tempCommit;
-          pools[poolKey].tempScene = tempScene;
-          pools[poolKey].tempDay = tempDay;
-          pools[poolKey].max += totalTempModifier;
-          pools[poolKey].value = Math.min(pools[poolKey].value + totalTempModifier, pools[poolKey].max);
-        } else {
-          // Create new pool, preserving current value if it exists
-          const sourcePoolData = this.parent._source.system.pools?.[poolKey];
-          const currentValue = this.pools[poolKey]?.value || sourcePoolData?.value || 0;
-          
-          // Get temporary modifiers from source data
-          const tempCommit = sourcePoolData?.tempCommit || 0;
-          const tempScene = sourcePoolData?.tempScene || 0;
-          const tempDay = sourcePoolData?.tempDay || 0;
-          const totalTempModifier = tempCommit + tempScene + tempDay;
-          
-          const finalMax = maxValue + totalTempModifier;
-          const finalValue = Math.min(currentValue + totalTempModifier, finalMax);
-          
-          pools[poolKey] = {
-            value: finalValue,
-            max: finalMax,
-            cadence: poolConfig.cadence,
-            tempCommit: tempCommit,
-            tempScene: tempScene,
-            tempDay: tempDay
-          };
-        }
-      }
-    }
-
-    // Update the pools object
-    this.pools = pools;
+    this.pools = calculatePoolsFromFeatures({
+      parent: this.parent,
+      dataModel: this,
+      evaluateCondition: (cond) => this._evaluateCondition(cond),
+      evaluateFormula: (formula) => this._evaluateFormula(formula, this._extractHitDiceNumber()),
+      includeCommitments: false,
+    });
   }
 
   /**
