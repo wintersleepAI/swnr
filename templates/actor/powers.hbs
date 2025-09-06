@@ -29,13 +29,34 @@
               <span class="pool-label">{{#if (eq subResource "Default")}}{{../resourceName}}{{else}}{{subResource}}{{/if}}</span>
               <div class="pool-values-with-modifier">
                 <span class="pool-values">{{current}}/{{max}}{{#if committed}}<small class="committed-indicator">-{{committed}}</small>{{/if}}</span>
-                <input type="number" 
-                       name="system.pools.{{key}}.tempModifier" 
-                       value="{{tempModifier}}" 
-                       class="pool-temp-modifier" 
-                       title="Temporary modifier (+/-)"
-                       placeholder="±0"
-                       data-dtype="Number" />
+                {{#if @root.gameSettings.showTempPoolModifiers}}
+                <div class="pool-temp-modifiers">
+                  <input type="number" 
+                         name="system.pools.{{key}}.tempCommit" 
+                         value="{{tempCommit}}" 
+                         class="pool-temp-modifier" 
+                         title="{{localize 'swnr.effort.commit'}} temporary modifier"
+                         placeholder="0"
+                         data-dtype="Number" />
+                  <span class="temp-label">{{localize 'swnr.effort.commitShort'}}</span>
+                  <input type="number" 
+                         name="system.pools.{{key}}.tempScene" 
+                         value="{{tempScene}}" 
+                         class="pool-temp-modifier" 
+                         title="{{localize 'swnr.effort.scene'}} temporary modifier"
+                         placeholder="0"
+                         data-dtype="Number" />
+                  <span class="temp-label">{{localize 'swnr.effort.sceneShort'}}</span>
+                  <input type="number" 
+                         name="system.pools.{{key}}.tempDay" 
+                         value="{{tempDay}}" 
+                         class="pool-temp-modifier" 
+                         title="{{localize 'swnr.effort.day'}} temporary modifier"
+                         placeholder="0"
+                         data-dtype="Number" />
+                  <span class="temp-label">{{localize 'swnr.effort.dayShort'}}</span>
+                </div>
+                {{/if}}
               </div>
               <div class="pool-bar">
                 <div class="pool-fill" style="width: {{percentage}}%"></div>

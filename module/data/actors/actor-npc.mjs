@@ -172,33 +172,44 @@ export default class SWNNPC extends SWNActorBase {
           
           // Get temporary modifier from source data
           const sourcePoolData = this.parent._source.system.pools?.[poolKey];
-          const tempModifier = sourcePoolData?.tempModifier || 0;
           
           // Preserve user-set value if possible, but allow it to increase if max increased
           const wasAtMax = pools[poolKey].value >= pools[poolKey].max;
           pools[poolKey].value = wasAtMax ? newMax : Math.min(pools[poolKey].value + maxValue, newMax);
           pools[poolKey].max = newMax;
           
-          // Apply temporary modifier
-          pools[poolKey].tempModifier = tempModifier;
-          pools[poolKey].max += tempModifier;
-          pools[poolKey].value = Math.min(pools[poolKey].value + tempModifier, pools[poolKey].max);
+          // Apply temporary modifiers from source data
+          const tempCommit = sourcePoolData?.tempCommit || 0;
+          const tempScene = sourcePoolData?.tempScene || 0;
+          const tempDay = sourcePoolData?.tempDay || 0;
+          const totalTempModifier = tempCommit + tempScene + tempDay;
+          
+          pools[poolKey].tempCommit = tempCommit;
+          pools[poolKey].tempScene = tempScene;
+          pools[poolKey].tempDay = tempDay;
+          pools[poolKey].max += totalTempModifier;
+          pools[poolKey].value = Math.min(pools[poolKey].value + totalTempModifier, pools[poolKey].max);
         } else {
           // Create new pool, preserving current value if it exists
           const sourcePoolData = this.parent._source.system.pools?.[poolKey];
           const currentValue = this.pools[poolKey]?.value || sourcePoolData?.value || 0;
           
-          // Get temporary modifier from source data
-          const tempModifier = sourcePoolData?.tempModifier || 0;
+          // Get temporary modifiers from source data
+          const tempCommit = sourcePoolData?.tempCommit || 0;
+          const tempScene = sourcePoolData?.tempScene || 0;
+          const tempDay = sourcePoolData?.tempDay || 0;
+          const totalTempModifier = tempCommit + tempScene + tempDay;
           
-          const finalMax = maxValue + tempModifier;
-          const finalValue = Math.min(currentValue + tempModifier, finalMax);
+          const finalMax = maxValue + totalTempModifier;
+          const finalValue = Math.min(currentValue + totalTempModifier, finalMax);
           
           pools[poolKey] = {
             value: finalValue,
             max: finalMax,
             cadence: poolConfig.cadence,
-            tempModifier: tempModifier
+            tempCommit: tempCommit,
+            tempScene: tempScene,
+            tempDay: tempDay
           };
         }
       }

@@ -509,12 +509,17 @@ export default class SWNCharacter extends SWNActorBase {
           
           pools[poolKey].max = newMax;
 
-          // Apply temporary modifier from source data
-          const tempModifier = sourcePoolData?.tempModifier || 0;
+          // Apply temporary modifiers from source data
+          const tempCommit = sourcePoolData?.tempCommit || 0;
+          const tempScene = sourcePoolData?.tempScene || 0;
+          const tempDay = sourcePoolData?.tempDay || 0;
+          const totalTempModifier = tempCommit + tempScene + tempDay;
           
-          pools[poolKey].tempModifier = tempModifier;
-          pools[poolKey].max += tempModifier;
-          pools[poolKey].value = Math.min(pools[poolKey].value + tempModifier, pools[poolKey].max);
+          pools[poolKey].tempCommit = tempCommit;
+          pools[poolKey].tempScene = tempScene;
+          pools[poolKey].tempDay = tempDay;
+          pools[poolKey].max += totalTempModifier;
+          pools[poolKey].value = Math.min(pools[poolKey].value + totalTempModifier, pools[poolKey].max);
         } else {
           // Calculate available effort (max - committed)
           const commitments = (this.parent.system.effortCommitments || {})[poolKey] || [];
@@ -528,11 +533,14 @@ export default class SWNCharacter extends SWNActorBase {
           const currentValue = existingCurrentValue !== undefined ? 
             Math.min(existingCurrentValue, maxValue) : availableEffort;
           
-          // Get temporary modifier from source data
-          const tempModifier = sourcePoolData?.tempModifier || 0;
+          // Get temporary modifiers from source data
+          const tempCommit = sourcePoolData?.tempCommit || 0;
+          const tempScene = sourcePoolData?.tempScene || 0;
+          const tempDay = sourcePoolData?.tempDay || 0;
+          const totalTempModifier = tempCommit + tempScene + tempDay;
           
-          const finalMax = maxValue + tempModifier;
-          const finalValue = Math.min(currentValue + tempModifier, finalMax);
+          const finalMax = maxValue + totalTempModifier;
+          const finalValue = Math.min(currentValue + totalTempModifier, finalMax);
           
           pools[poolKey] = {
             value: finalValue,
@@ -540,7 +548,9 @@ export default class SWNCharacter extends SWNActorBase {
             cadence: poolConfig.cadence,
             committed: committedAmount,
             commitments: commitments,
-            tempModifier: tempModifier
+            tempCommit: tempCommit,
+            tempScene: tempScene,
+            tempDay: tempDay
           };
         }
       }
@@ -788,6 +798,23 @@ export default class SWNCharacter extends SWNActorBase {
       // Handle regular pool refresh
       else if (poolData.cadence === cadence) {
         poolUpdates[`system.pools.${poolKey}.value`] = poolData.max;
+      }
+      
+      // Reset temp modifiers based on cadence
+      const sourcePoolData = this.parent._source.system.pools?.[poolKey];
+      if (cadence === "scene") {
+        // Scene refresh: reset scene temp modifiers
+        if ((sourcePoolData?.tempScene || 0) !== 0) {
+          poolUpdates[`system.pools.${poolKey}.tempScene`] = 0;
+        }
+      } else if (cadence === "day") {
+        // Day refresh: reset both scene and day temp modifiers
+        if ((sourcePoolData?.tempScene || 0) !== 0) {
+          poolUpdates[`system.pools.${poolKey}.tempScene`] = 0;
+        }
+        if ((sourcePoolData?.tempDay || 0) !== 0) {
+          poolUpdates[`system.pools.${poolKey}.tempDay`] = 0;
+        }
       }
     }
     

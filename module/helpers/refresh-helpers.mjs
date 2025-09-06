@@ -87,21 +87,45 @@ async function refreshActorPools(actor, cadenceLevel) {
 
   for (const [poolKey, poolData] of Object.entries(pools)) {
     const poolCadenceLevel = getCadenceLevel(poolData.cadence);
+    const oldValue = poolData.value;
+    let poolChanged = false;
     
     // Refresh if pool cadence is at or below current refresh level
     if (poolCadenceLevel <= cadenceLevel) {
-      const oldValue = poolData.value;
       poolData.value = poolData.max;
-      
       if (oldValue !== poolData.value) {
-        refreshedPools.push({
-          key: poolKey,
-          oldValue,
-          newValue: poolData.value,
-          max: poolData.max,
-          cadence: poolData.cadence
-        });
+        poolChanged = true;
       }
+    }
+    
+    // Reset temp modifiers based on cadence level
+    let tempModifierReset = false;
+    const sourcePoolData = actor._source.system.pools?.[poolKey];
+    
+    if (cadenceLevel >= getCadenceLevel("scene")) {
+      // Scene or higher refresh: reset scene and day temp modifiers
+      if ((sourcePoolData?.tempScene || 0) !== 0) {
+        poolData.tempScene = 0;
+        tempModifierReset = true;
+      }
+      if (cadenceLevel >= getCadenceLevel("day")) {
+        // Day refresh: also reset day temp modifiers  
+        if ((sourcePoolData?.tempDay || 0) !== 0) {
+          poolData.tempDay = 0;
+          tempModifierReset = true;
+        }
+      }
+    }
+    
+    if (poolChanged || tempModifierReset) {
+      refreshedPools.push({
+        key: poolKey,
+        oldValue,
+        newValue: poolData.value,
+        max: poolData.max,
+        cadence: poolData.cadence,
+        tempModifierReset
+      });
     }
   }
 
