@@ -3,69 +3,7 @@
  * Handles automatic and manual refresh of actor resource pools
  */
 
-/**
- * Refresh pools based on cadence level
- * @param {string} cadenceLevel - "scene" or "day"
- * @param {Actor[]} actors - Optional array of specific actors to refresh
- * @returns {Promise<Object>} Refresh results
- */
-async function refreshPools(cadenceLevel, actors = null) {
-  // Build cadence hierarchy from CONFIG - higher index = higher level
-  const cadenceHierarchy = {};
-  CONFIG.SWN.poolCadences.forEach((cadence, index) => {
-    if (cadence !== "commit") { // commit cadence doesn't auto-refresh
-      cadenceHierarchy[cadence] = index;
-    }
-  });
-
-  const currentLevel = cadenceHierarchy[cadenceLevel];
-  if (currentLevel === undefined) {
-    console.error(`[SWN Refresh] Invalid cadence level: ${cadenceLevel}`);
-    return { success: false, reason: "invalid-cadence" };
-  }
-
-  // Get actors to refresh
-  const actorsToRefresh = actors || game.actors.filter(a => a.type !== "faction");
-  const refreshResults = [];
-
-  console.log(`[SWN Refresh] Starting ${cadenceLevel} refresh for ${actorsToRefresh.length} actors`);
-
-  for (const actor of actorsToRefresh) {
-    try {
-      const result = await refreshActorPools(actor, currentLevel);
-      refreshResults.push({
-        actorId: actor.id,
-        actorName: actor.name,
-        ...result
-      });
-    } catch (error) {
-      console.error(`[SWN Refresh] Error refreshing actor ${actor.name}:`, error);
-      refreshResults.push({
-        actorId: actor.id,
-        actorName: actor.name,
-        success: false,
-        error: error.message
-      });
-    }
-  }
-
-  // Emit hook for module compatibility
-  Hooks.call("swnrPoolsRefreshed", {
-    cadenceLevel,
-    actorsRefreshed: actorsToRefresh.length,
-    results: refreshResults
-  });
-
-  // Create chat message summary
-  await createRefreshChatMessage(cadenceLevel, refreshResults);
-
-  return {
-    success: true,
-    cadenceLevel,
-    actorsRefreshed: actorsToRefresh.length,
-    results: refreshResults
-  };
-}
+// Removed: refreshPools — use refresh-orchestrator.refreshMany instead
 
 /**
  * Refresh pools for a single actor
@@ -76,6 +14,10 @@ async function refreshPools(cadenceLevel, actors = null) {
 async function refreshActorPools(actor, cadenceLevel) {
   const pools = foundry.utils.deepClone(actor.system.pools || {});
   const refreshedPools = [];
+  // Track commitment changes and releases; clone to avoid mutating source directly
+  const sourceCommitments = foundry.utils.deepClone(actor.system.effortCommitments || {});
+  const newCommitments = foundry.utils.deepClone(sourceCommitments);
+  const effortReleased = [];
 
   // Build reverse cadence map from CONFIG (numeric level -> cadence name)
   const cadenceMap = {};
@@ -87,29 +29,50 @@ async function refreshActorPools(actor, cadenceLevel) {
 
   for (const [poolKey, poolData] of Object.entries(pools)) {
     const poolCadenceLevel = getCadenceLevel(poolData.cadence);
-    const oldValue = poolData.value;
+    const oldValue = Number(poolData.value) || 0;
     let poolChanged = false;
-    
-    // Refresh if pool cadence is at or below current refresh level
-    if (poolCadenceLevel <= cadenceLevel) {
-      poolData.value = poolData.max;
-      if (oldValue !== poolData.value) {
-        poolChanged = true;
+
+    // 1) Handle effort commitments for this pool: release by cadence and recompute totals
+    let totalCommittedLocal = null;
+    if (newCommitments[poolKey]) {
+      const remaining = [];
+      for (const commitment of newCommitments[poolKey]) {
+        let shouldRelease = false;
+        if (commitment.duration === "commit") {
+          shouldRelease = false; // never auto-release
+        } else if (cadenceLevel >= getCadenceLevel("day") && (commitment.duration === "day" || commitment.duration === "scene")) {
+          shouldRelease = true;
+        } else if (cadenceLevel >= getCadenceLevel("scene") && commitment.duration === "scene") {
+          shouldRelease = true;
+        }
+        if (!shouldRelease) {
+          remaining.push(commitment);
+        } else {
+          effortReleased.push(`${commitment.powerName} (${commitment.amount} ${poolKey})`);
+        }
       }
+      newCommitments[poolKey] = remaining;
+      totalCommittedLocal = remaining.reduce((sum, c) => sum + (Number(c.amount) || 0), 0);
+      // Reflect committed total on the pool
+      poolData.committed = totalCommittedLocal;
+      poolChanged = true;
     }
-    
-    // Reset temp modifiers based on cadence level
+
+    // 2) Refresh to full if this pool's cadence is within scope
+    if (poolCadenceLevel <= cadenceLevel) {
+      poolData.value = Number(poolData.max) || 0;
+      if (oldValue !== poolData.value) poolChanged = true;
+    }
+
+    // 3) Reset temp modifiers based on cadence level
     let tempModifierReset = false;
     const sourcePoolData = actor._source.system.pools?.[poolKey];
-    
     if (cadenceLevel >= getCadenceLevel("scene")) {
-      // Scene or higher refresh: reset scene and day temp modifiers
       if ((sourcePoolData?.tempScene || 0) !== 0) {
         poolData.tempScene = 0;
         tempModifierReset = true;
       }
       if (cadenceLevel >= getCadenceLevel("day")) {
-        // Day refresh: also reset day temp modifiers  
         if ((sourcePoolData?.tempDay || 0) !== 0) {
           poolData.tempDay = 0;
           tempModifierReset = true;
@@ -117,7 +80,7 @@ async function refreshActorPools(actor, cadenceLevel) {
       }
     }
 
-    // If any temp modifier was reset, recompute max and value to reflect new totals
+    // 4) If any temp modifier was reset, recompute max and value to reflect new totals
     if (tempModifierReset) {
       const oldCommit = Number(sourcePoolData?.tempCommit) || 0;
       const oldScene = Number(sourcePoolData?.tempScene) || 0;
@@ -133,19 +96,35 @@ async function refreshActorPools(actor, cadenceLevel) {
       const currentMax = Number(poolData.max) || 0;
       const baseMax = Math.max(0, currentMax - oldTempSum);
       const newMax = Math.max(0, baseMax + newTempSum);
-
-      // Adjust current value by the delta in temp; clamp to newMax
-      const delta = newTempSum - oldTempSum;
-      const currentVal = Number(poolData.value) || 0;
-      const newVal = Math.max(0, Math.min(currentVal + delta, newMax));
-
-      if (poolData.max !== newMax) poolChanged = true;
-      if (poolData.value !== newVal) poolChanged = true;
-
       poolData.max = newMax;
-      poolData.value = newVal;
+
+      // Determine new value honoring commitments and cadence
+      const valueBefore = Number(poolData.value) || 0;
+      let newValue;
+      if (totalCommittedLocal !== null) {
+        // Commitments reduce availability to max - committed
+        newValue = Math.max(0, newMax - totalCommittedLocal);
+      } else if (poolCadenceLevel <= cadenceLevel) {
+        // If pool refreshed this pass, set to newMax
+        newValue = newMax;
+      } else {
+        // Otherwise, adjust by delta temp
+        const delta = newTempSum - oldTempSum;
+        newValue = Math.max(0, Math.min(valueBefore + delta, newMax));
+      }
+      if (poolData.value !== newValue) poolChanged = true;
+      poolData.value = newValue;
     }
-    
+
+    // 5) If commitments exist but no temp reset occurred, still ensure value ≤ max - committed when applicable
+    if (!tempModifierReset && totalCommittedLocal !== null) {
+      const cap = Math.max(0, (Number(poolData.max) || 0) - totalCommittedLocal);
+      if (poolData.value > cap) {
+        poolData.value = cap;
+        poolChanged = true;
+      }
+    }
+
     if (poolChanged || tempModifierReset) {
       refreshedPools.push({
         key: poolKey,
@@ -158,9 +137,14 @@ async function refreshActorPools(actor, cadenceLevel) {
     }
   }
 
-  // Update actor if any pools changed
-  if (refreshedPools.length > 0) {
-    await actor.update({ "system.pools": pools });
+  // Build update payload. Always include commitments if they changed, otherwise only pools
+  const updates = { "system.pools": pools };
+  if (JSON.stringify(sourceCommitments) !== JSON.stringify(newCommitments)) {
+    updates["system.effortCommitments"] = newCommitments;
+  }
+  // Update actor if any relevant data changed
+  if (refreshedPools.length > 0 || updates["system.effortCommitments"]) {
+    await actor.update(updates);
   }
 
   // Refresh consumption uses for powers
@@ -173,6 +157,7 @@ async function refreshActorPools(actor, cadenceLevel) {
     success: true,
     poolsRefreshed: refreshedPools.length,
     pools: refreshedPools,
+    effortReleased,
     consumptionUsesRefreshed: consumptionRefreshResults.refreshedCount,
     consumptionRefreshDetails: consumptionRefreshResults.refreshedItems,
     preparedPowersUnprepared: preparedPowersResults.unpreparedCount,
@@ -203,52 +188,7 @@ function getCadenceLevel(cadence) {
  * @param {string} cadenceLevel - The refresh level
  * @param {Array} results - Refresh results per actor
  */
-async function createRefreshChatMessage(cadenceLevel, results) {
-  const successfulRefreshes = results.filter(r => r.success && (r.poolsRefreshed > 0 || r.preparedPowersUnprepared > 0));
-  
-  if (successfulRefreshes.length === 0) {
-    return; // No need to create a message if nothing was refreshed
-  }
-
-  const totalPoolsRefreshed = successfulRefreshes.reduce((sum, r) => sum + r.poolsRefreshed, 0);
-  const totalPowersUnprepared = successfulRefreshes.reduce((sum, r) => sum + (r.preparedPowersUnprepared || 0), 0);
-  
-  let content = `<div class="chat-card refresh-summary">`;
-  content += `<h3><i class="fas fa-sync-alt"></i> ${game.i18n.localize(`SWN.pools.refreshSummary.${cadenceLevel}`) || (cadenceLevel.charAt(0).toUpperCase() + cadenceLevel.slice(1) + " Refresh")}</h3>`;
-  
-  if (totalPoolsRefreshed > 0) {
-    content += `<p>Refreshed ${totalPoolsRefreshed} resource pools across ${successfulRefreshes.length} actors.</p>`;
-  }
-  
-  if (totalPowersUnprepared > 0 && cadenceLevel === "day") {
-    content += `<p>Unprepared ${totalPowersUnprepared} prepared powers (rest for the day).</p>`;
-  }
-  
-  if (successfulRefreshes.length <= 5) {
-    content += `<ul>`;
-    for (const result of successfulRefreshes) {
-      let details = [];
-      if (result.poolsRefreshed > 0) {
-        details.push(`${result.poolsRefreshed} pools refreshed`);
-      }
-      if (result.preparedPowersUnprepared > 0) {
-        details.push(`${result.preparedPowersUnprepared} powers unprepared`);
-      }
-      if (details.length > 0) {
-        content += `<li><strong>${result.actorName}</strong>: ${details.join(', ')}</li>`;
-      }
-    }
-    content += `</ul>`;
-  }
-  
-  content += `</div>`;
-
-  await getDocumentClass("ChatMessage").create({
-    speaker: { alias: "System" },
-    content: content,
-    whisper: game.users.filter(u => u.isGM).map(u => u.id)
-  });
-}
+// (Removed) createRefreshChatMessage — GM summary chat is handled by refresh-orchestrator
 
 /**
  * Manually refresh specific pools for an actor
@@ -473,12 +413,10 @@ async function unprepareAllPowers(actor, cadenceLevel) {
 
 // Export functions for global access
 export {
-  refreshPools,
   refreshActorPools,
   refreshSpecificPools,
   getRefreshStatus,
   getCadenceLevel,
-  createRefreshChatMessage,
   refreshConsumptionUses,
   unprepareAllPowers
 };

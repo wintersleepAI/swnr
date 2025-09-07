@@ -169,17 +169,17 @@ new Dialog({ ... })              // ❌
 - **Manual changes preserved** by reading from `_source` data
 
 ## Rest & Refresh Architecture
-**Clean, optimized architecture with single database writes and standardized results.**
+**Single orchestration path with clean separation of concerns.**
 
 ### Current Implementation
 - **Rest buttons** in `templates/actor/header.hbs` trigger sheet actions
-- **Sheet methods** delegate to actor business logic:
-  - `_onRest()` - Shows dialog, delegates to `actor.system.restForNight()`
-  - `_onScene()` - Delegates to `actor.system.endScene()`
-- **Actor methods** in `module/data/actors/actor-character.mjs`:
-  - `restForNight(options)` - Complete rest logic with batched updates
-  - `endScene()` - Scene refresh with batched updates
-- **Global utilities** in `module/helpers/refresh-helpers.mjs` for GM refresh and NPC support
+- **Sheet methods** delegate to the orchestrator helper:
+  - `_onRest()` → `refreshOrchestrator.refreshActor({ actor, cadence: 'day', frail? })`
+  - `_onScene()` → `refreshOrchestrator.refreshActor({ actor, cadence: 'scene' })`
+- **Engine vs Orchestrator**:
+  - Engine: `module/helpers/refresh-helpers.mjs` (data updates only — pools, temps, commitments, uses, day unprepare)
+  - Orchestrator: `module/helpers/refresh-orchestrator.mjs` (HP/strain for chars, NPC HP=max on day, calls engine, builds chats)
+- **Global refresh**: `globalThis.swnr.refreshScene/refreshDay` → `refreshOrchestrator.refreshMany({ cadence })`
 
 ### Key Features
 - **Single database write** per operation (optimal performance)

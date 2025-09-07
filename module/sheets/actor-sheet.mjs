@@ -439,45 +439,9 @@ export class SWNActorSheet extends SWNBaseSheet {
    * @param {string} cadence - The cadence type to refresh ('scene', 'day')
    */
   async _refreshPoolsByCadence(cadence) {
-    const cadenceLevel = CONFIG.SWN.poolCadences.indexOf(cadence);
-    if (cadenceLevel < 0) {
-      console.error(`[SWN Refresh] Invalid cadence: ${cadence}`);
-      return;
-    }
-
-    // Delegate to helper function for consistent logic
-    const { refreshActorPools } = globalThis.swnr.utils;
-    const result = await refreshActorPools(this.actor, cadenceLevel);
-    
-    // Force sheet re-render to show updates
+    // Delegate to orchestrator for NPCs and other non-character actors
+    await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence });
     this.render(false);
-    
-    // Create simple chat message if anything was refreshed
-    if (result.success && (result.poolsRefreshed > 0 || result.preparedPowersUnprepared > 0)) {
-      const chatMessage = getDocumentClass("ChatMessage");
-      const refreshTitle = cadence === "scene" 
-        ? (game.i18n.localize("swnr.pools.refreshSummary.scene") || "End of Scene")
-        : (game.i18n.localize("swnr.pools.refreshSummary.day") || "Rest for the Night");
-      
-      let content = `<div class="refresh-summary">
-        <h3><i class="fas fa-sync"></i> ${refreshTitle}</h3>
-        <p><strong>${this.actor.name}</strong>: `;
-      
-      const details = [];
-      if (result.poolsRefreshed > 0) {
-        details.push(`${result.poolsRefreshed} pools refreshed`);
-      }
-      if (result.preparedPowersUnprepared > 0) {
-        details.push(`${result.preparedPowersUnprepared} powers unprepared`);
-      }
-      
-      content += details.join(', ') + '</p></div>';
-      
-      await chatMessage.create({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        content
-      });
-    }
   }
 
   /**
@@ -650,18 +614,10 @@ export class SWNActorSheet extends SWNBaseSheet {
       }
       const isFrail = rest === "no_hp" ? true : false;
       
-      // Delegate to actor's rest method
-      await this.actor.system.restForNight({ isFrail });
+      // Delegate to refresh orchestrator (handles HP/strain + pools)
+      await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence: 'day', frail: isFrail });
     } else if (this.actor.type === "npc") {
-      const newHP = this.actor.system.health.max;
-      await this.actor.update({
-        system: {
-          health: { value: newHP },
-        },
-      });
-      
-      // Refresh pools with 'day' cadence (full rest)
-      await this._refreshPoolsByCadence('day');
+      await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence: 'day' });
     }
     await this._resetSoak();
   }
@@ -670,13 +626,7 @@ export class SWNActorSheet extends SWNBaseSheet {
   static async _onScene(event, _target) {
     event.preventDefault();
     
-    if (this.actor.type === "character") {
-      // Delegate to actor's endScene method
-      await this.actor.system.endScene();
-    } else {
-      // For non-character actors, use the old method
-      await this._refreshPoolsByCadence('scene');
-    }
+    await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence: 'scene' });
     this._resetSoak();
   }
 

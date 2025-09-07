@@ -48,6 +48,13 @@ await actor.updateEmbeddedDocuments('Item', payload);
 - Use `power.system.resourceKey()` to locate the correct pool (e.g., `Effort:Psychic`).
 - Update pattern: `await actor.update({ [\`system.pools.${key}.value\`]: newValue });` (batch multiple updates when possible).
 
+## Refresh Orchestration
+- Use the orchestrator helper for all refresh flows:
+  - Per-actor: `refreshOrchestrator.refreshActor({ actor, cadence: 'scene'|'day', frail? })`
+  - Global/GM: `refreshOrchestrator.refreshMany({ cadence: 'scene'|'day', actors? })`
+- Engine (`refresh-helpers.mjs`) exposes `refreshActorPools(actor, cadenceLevel)` for data updates only — do not create chat in the engine.
+- Removed: `refreshPools(cadence)` — call the orchestrator or the global API (`globalThis.swnr.refreshScene/refreshDay`).
+
 ## Testing Guidelines
 - No unit test suite yet. Validate changes by loading this system in Foundry, reloading the world, and exercising affected sheets, chat cards, and migrations.
 - Run ESLint clean before PRs; for compendium edits, prefer editing `src/packs/` and repack.

@@ -78,6 +78,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Build Tools** - Improved build process and development workflow
 - **Template System** - CSV templates for creating new compendium content
 
+#### Refresh Orchestration
+- Introduced a clean split between orchestration and engine:
+  - Orchestrator: `module/helpers/refresh-orchestrator.mjs` provides `refreshActor({ actor, cadence, frail? })` and `refreshMany({ cadence, actors? })`, owns HP/strain updates and chat creation.
+  - Engine: `module/helpers/refresh-helpers.mjs` provides `refreshActorPools(actor, cadenceLevel)`, item updates, and cadence utilities; now chat-free.
+- Global API updated: `globalThis.swnr.refreshScene()` and `globalThis.swnr.refreshDay()` now call the orchestrator (`refreshMany`).
+- NPC and Character sheet buttons now call the orchestrator (`refreshActor`) for a single, consistent path.
+
+#### Removed
+- Deprecated helper `refreshPools(cadence)` removed. Use `refreshMany({ cadence })` instead for global refresh and `refreshActor({ actor, cadence })` for a single actor.
+
 ### Bug Fixes
 
 - Fixed compendium tracking and git integration issues
@@ -88,6 +98,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking Changes**: This version includes significant data model changes. The migration system handles the transition automatically, but custom modules interfacing with the power system may need updates.
 - **Pool System**: Developers should use the new `resourceKey()` method and standardized pool update patterns when working with character resources.
 - **Backward Compatibility**: Legacy effort-based worlds will be automatically migrated to the new system on first load.
+ - **Refresh API Changes**: The old helper `refreshPools(cadence)` was removed. For global/GM flows call `globalThis.swnr.refreshScene()` / `globalThis.swnr.refreshDay()` (which delegate to the orchestrator’s `refreshMany`). For targeted flows, call `refreshOrchestrator.refreshActor({ actor, cadence })` directly.
 
 ---
 

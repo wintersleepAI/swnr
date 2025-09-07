@@ -153,14 +153,15 @@ new Dialog({ ... });              // ❌
 - **Manual changes are preserved** by reading from `_source` data before calculations.
 
 ## Rest & Refresh Architecture
-The system uses an optimized architecture with clean separation of concerns:
+Clean separation with a single orchestration path:
 
-- **UI Layer**: Rest buttons in `templates/actor/header.hbs` trigger sheet actions.
-- **Delegation Pattern**: Sheet methods (`_onRest()`, `_onScene()`) delegate to actor business logic.
-- **Business Logic**: Actor methods in `module/data/actors/actor-character.mjs`:
-  - `restForNight(options)`: Complete rest with batched updates
-  - `endScene()`: Scene refresh with batched updates
-- **Global Utilities**: `module/helpers/refresh-helpers.mjs` provides GM refresh and NPC support.
+- **UI Layer**: Rest/Scene buttons trigger sheet actions.
+- **Orchestrator**: Sheet actions delegate to `module/helpers/refresh-orchestrator.mjs`:
+  - `refreshActor({ actor, cadence, frail? })` for per-actor flows (characters and NPCs).
+  - `refreshMany({ cadence, actors? })` for GM/global flows.
+- **Engine**: `module/helpers/refresh-helpers.mjs` handles data updates only:
+  - `refreshActorPools(actor, cadenceLevel)` for pools, temps, commitments, uses, and day unprepare.
+- **Chat**: Orchestrator creates per-actor and GM summary chats; the engine is chat-free.
 
 ### Key Features I Must Follow:
 - **Single database write** per operation (optimal performance)

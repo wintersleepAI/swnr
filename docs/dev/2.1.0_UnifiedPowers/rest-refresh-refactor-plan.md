@@ -5,7 +5,7 @@
 ### Overview
 The current rest and refresh system is split across multiple files with overlapping responsibilities and inconsistent patterns. While functional, it has architectural issues that impact maintainability and performance.
 
-### Current File Structure
+### Current File Structure (original)
 
 ```
 module/
@@ -60,23 +60,22 @@ module/
 4. **Event-Driven**: Use Foundry hooks for cross-system communication
 5. **Testable**: Clear interfaces and dependency injection
 
-### Target Structure
+### Final Architecture (implemented)
 
 ```
 module/
 ├── sheets/actor-sheet.mjs
 │   ├── _onRest() - UI only, delegates to actor
 │   └── _onScene() - UI only, delegates to actor  
-├── data/actors/actor-character.mjs
-│   ├── restForNight() - Complete rest logic
-│   ├── endScene() - Complete scene refresh logic
-│   └── _refreshPools() - Internal pool refresh helper
-├── services/refresh-service.mjs (NEW)
-│   ├── RefreshService class
-│   ├── createRefreshResult() - Standardized results
-│   └── formatChatMessage() - Centralized messaging
-└── helpers/refresh-helpers.mjs
-    └── (Global utilities only, no actor-specific logic)
+├── helpers/refresh-orchestrator.mjs (NEW)
+│   ├── refreshActor({ actor, cadence, frail? }) - Orchestrates per-actor refresh
+│   └── refreshMany({ cadence, actors? }) - Orchestrates multi-actor refresh and GM summary chat
+├── helpers/refresh-helpers.mjs (ENGINE)
+│   ├── refreshActorPools(actor, cadenceLevel) - Data updates for pools/temps/commitments/uses
+│   └── getCadenceLevel(), refreshConsumptionUses(), unprepareAllPowers()
+└── data/actors/actor-character.mjs
+    ├── restForNight(options) - Delegates to orchestrator
+    └── endScene() - Delegates to orchestrator
 ```
 
 ## Phased Refactoring Plan
@@ -141,7 +140,7 @@ module/
 ---
 
 ### Phase 3: Standardize Result Handling ✅ **COMPLETED** ✅ Safe
-**Goal**: Create consistent result format and centralized chat messaging
+**Goal**: Centralize chat in orchestrator; engine stays chat-free
 
 #### Steps: ✅ **ALL COMPLETED**
 1. ✅ Create `RefreshResult` standardized structure with comprehensive change tracking
@@ -156,12 +155,8 @@ module/
 - ✅ Enhanced chat messages with detailed change tracking
 
 #### Implementation Details:
-- **File**: `module/data/actors/actor-character.mjs` - Added standardized result system (lines 926-1066)
-- **New Methods**: 
-  - `_createRefreshResult()` (lines 926-942) - Creates standardized RefreshResult objects
-  - `_createStandardizedChatMessage()` (lines 949-962) - Handles chat message creation from results
-  - `_hasSignificantChanges()` (lines 970-987) - Determines if changes warrant a chat message
-  - `_formatRefreshChatMessage()` (lines 996-1066) - Formats structured results into rich HTML
+- **File**: `module/helpers/refresh-orchestrator.mjs` - Owns per-actor and GM summary chat creation
+- **File**: `module/helpers/refresh-helpers.mjs` - No chat; pure data updates
 - **Enhanced Data Collection**: Updated helper methods to return structured data for result formatting
 - **Improved Chat Messages**: New format shows detailed breakdown of all changes (HP, strain, pools, effort, powers)
 - **Future-Proof**: Easy to extend with new change types and formatting options
@@ -187,16 +182,15 @@ module/
 ---
 
 ### Phase 4: Remove Redundant Code ✅ **COMPLETED** ✅ Safe
-**Goal**: Clean up old helper functions and consolidate refresh utilities
+**Goal**: Clean up old helper functions and consolidate into engine + orchestrator
 
 #### Steps: ✅ **ALL COMPLETED**
 1. ✅ Refactor `_refreshPoolsByCadence()` from actor-sheet to delegate to helpers (preserve NPC compatibility)
 2. ✅ Remove duplicate `_getCadenceLevel()` from actor-character.mjs 
-3. ✅ Keep all global utilities in refresh-helpers and ensure proper exports:
-   - `refreshPools(cadence)` - Global GM refresh entry point
-   - `refreshActorPools(actor, cadenceLevel)` - Individual actor refresh (used by NPCs and global refresh)
-   - `getCadenceLevel(cadence)` - Utility function (now exported and used consistently)
-   - `refreshConsumptionUses()`, `unprepareAllPowers()` - Power system utilities
+3. ✅ Move global flows to orchestrator helper:
+   - `refreshMany({ cadence })` - Global GM refresh entry point
+   - `refreshActor({ actor, cadence })` - Individual actor refresh used by sheets
+   - Engine keeps `refreshActorPools`, `getCadenceLevel`, `refreshConsumptionUses`, `unprepareAllPowers`
 4. ✅ Update all references to use centralized helper functions
 
 #### Success Criteria: ✅ **ALL MET**
@@ -205,9 +199,12 @@ module/
 - ✅ All functionality preserved (NPCs still work, global refresh intact)
 
 #### Implementation Details:
-- **File**: `module/sheets/actor-sheet.mjs` - Refactored `_refreshPoolsByCadence()` (lines 429-469) to delegate to `refreshActorPools()` helper
-- **File**: `module/data/actors/actor-character.mjs` - Removed duplicate `_getCadenceLevel()` method, updated consumption refresh to use `globalThis.swnr.utils.getCadenceLevel()`
-- **File**: `module/helpers/refresh-helpers.mjs` - Added `getCadenceLevel` to exports list for global access
+- **File**: `module/sheets/actor-sheet.mjs` - `_onRest/_onScene/_refreshPoolsByCadence()` now delegate to orchestrator `refreshActor`
+- **File**: `module/data/actors/actor-character.mjs` - `restForNight/endScene` delegate to orchestrator; removed standardized chat helpers
+- **File**: `module/helpers/refresh-helpers.mjs` - Removed deprecated `refreshPools` + helper-level GM chat; engine remains data-only
+
+### Note on Service Layer
+Earlier drafts referenced a `services/refresh-service.mjs`. We chose a helper-based orchestrator instead for consistency with the existing helpers folder and simpler dependency surface.
 - **Consistency**: All cadence level calculations now use single centralized function
 - **Compatibility**: Sheet refresh method still available for NPCs but uses consistent helper logic
 - **Testing**: ✅ **COMPLETED** - Syntax validation passed, no broken references detected
