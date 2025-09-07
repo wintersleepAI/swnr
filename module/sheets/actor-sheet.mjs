@@ -206,6 +206,11 @@ export class SWNActorSheet extends SWNBaseSheet {
 
     };
 
+    // Ensure shared fragments are preloaded regardless of which parts render
+    await loadTemplates([
+      'systems/swnr/templates/actor/fragments/pools-display.hbs'
+    ]);
+
     // Offloading context prep to a helper function
     this._prepareItems(context);
     
@@ -494,22 +499,34 @@ export class SWNActorSheet extends SWNBaseSheet {
         };
       }
       
+      // Coerce potentially malformed values to safe numbers
+      const toNum = (v) => {
+        const n = Number(v);
+        return Number.isFinite(n) ? n : 0;
+      };
+      const value = toNum(poolData.value);
+      const max = toNum(poolData.max);
+      const committed = toNum(poolData.committed);
+      const tempCommit = toNum(poolData.tempCommit);
+      const tempScene = toNum(poolData.tempScene);
+      const tempDay = toNum(poolData.tempDay);
+
       const poolInfo = {
         key: poolKey,
         subResource: subResource || "Default",
-        current: poolData.value,
-        max: poolData.max,
+        current: value,
+        max: max,
         cadence: poolData.cadence,
-        committed: poolData.committed || 0,
+        committed,
         commitments: poolData.commitments || [],
-        tempCommit: poolData.tempCommit || 0,
-        tempScene: poolData.tempScene || 0,
-        tempDay: poolData.tempDay || 0,
-        percentage: poolData.max > 0 ? Math.round((poolData.value / poolData.max) * 100) : 0,
-        isEmpty: poolData.value === 0,
-        isFull: poolData.value >= poolData.max,
-        isLow: poolData.max > 0 && (poolData.value / poolData.max) < 0.25,
-        hasCommitments: (poolData.committed || 0) > 0
+        tempCommit,
+        tempScene,
+        tempDay,
+        percentage: max > 0 ? Math.round((value / max) * 100) : 0,
+        isEmpty: value === 0,
+        isFull: value >= max,
+        isLow: max > 0 && (value / max) < 0.25,
+        hasCommitments: committed > 0
       };
       
       poolGroups[resourceName].pools.push(poolInfo);
@@ -558,6 +575,12 @@ export class SWNActorSheet extends SWNBaseSheet {
 
     this.element.querySelectorAll(".power-prepared-icon").forEach((d) =>
       d.addEventListener('click', this._onPowerPreparedToggle.bind(this)));
+
+    // Handle temp modifier inputs (header and powers)
+    this.element.querySelectorAll('.pool-temp-modifier[data-path]')
+      .forEach((el) => {
+        el.addEventListener('change', this._onPoolTempModifierChange.bind(this));
+      });
 
     // Toggle lock related elements after render depending on the lock state
     this.element?.querySelectorAll(".lock-icon").forEach((d) => {
@@ -669,6 +692,60 @@ export class SWNActorSheet extends SWNBaseSheet {
       console.log("Hit dice rolls are only for PCs/NPCs");
     }
 
+  }
+
+  /**
+   * Change handler for temp modifier inputs that don't participate in form submit
+   */
+  async _onPoolTempModifierChange(event) {
+    event.preventDefault();
+    const input = event.currentTarget;
+    const path = input.dataset.path; // e.g., system.pools.Effort:Default.tempScene
+    if (!path) return;
+
+    const poolBadge = input.closest('.pool-badge[data-pool-key]');
+    const poolKey = poolBadge?.dataset.poolKey || path.match(/system\.pools\.(.+?)\.(tempCommit|tempScene|tempDay)/)?.[1];
+    if (!poolKey) return;
+
+    const pools = this.actor.system.pools || {};
+    const pool = pools[poolKey];
+    if (!pool) {
+      await this.actor.update({ [path]: Number(input.value) || 0 });
+      return;
+    }
+
+    // Parse new and old values
+    const newFieldVal = Number(input.value);
+    const safeNewFieldVal = Number.isFinite(newFieldVal) ? newFieldVal : 0;
+
+    const oldCommit = Number(pool.tempCommit) || 0;
+    const oldScene = Number(pool.tempScene) || 0;
+    const oldDay = Number(pool.tempDay) || 0;
+    const oldTempSum = oldCommit + oldScene + oldDay;
+
+    const fieldMatch = path.match(/\.((tempCommit|tempScene|tempDay))$/);
+    const fieldKey = fieldMatch ? fieldMatch[1] : null;
+    const oldFieldVal = fieldKey ? (Number(pool[fieldKey]) || 0) : 0;
+
+    const newTempSum = oldTempSum - oldFieldVal + safeNewFieldVal;
+
+    // Derive baseMax from current max minus current temp sum
+    const currentMax = Number(pool.max) || 0;
+    const baseMax = Math.max(0, currentMax - oldTempSum);
+    const newMax = Math.max(0, baseMax + newTempSum);
+
+    // Adjust current value by delta temp; clamp to newMax
+    const delta = newTempSum - oldTempSum;
+    const currentVal = Number(pool.value) || 0;
+    const newVal = Math.max(0, Math.min(currentVal + delta, newMax));
+
+    const updates = {
+      [path]: safeNewFieldVal,
+      [`system.pools.${poolKey}.value`]: newVal,
+      [`system.pools.${poolKey}.max`]: newMax
+    };
+
+    await this.actor.update(updates);
   }
 
   async _resetSoak() {
@@ -1260,15 +1337,21 @@ export class SWNActorSheet extends SWNBaseSheet {
       SWNActorSheet.#expandedPoolTempModifiers[poolKey] = true;
     }
 
-    // Find and toggle the temp modifiers
-    const poolBadge = target.closest('.pool-badge[data-pool-key]');
-    if (!poolBadge) return;
+    // Update all matching badges (header and powers) to keep UI in sync
+    const isCollapsed = !!SWNActorSheet.#expandedPoolTempModifiers[poolKey];
+    const badges = this.element.querySelectorAll(`.pool-badge[data-pool-key="${CSS.escape(poolKey)}"]`);
+    badges.forEach((poolBadge) => {
+      poolBadge.classList.toggle('collapsed', isCollapsed);
+      poolBadge.classList.toggle('expanded', !isCollapsed);
 
-    const tempModifiers = poolBadge.querySelector('.pool-temp-modifiers');
-    if (tempModifiers) {
-      const isCollapsed = SWNActorSheet.#expandedPoolTempModifiers[poolKey];
-      tempModifiers.style.display = isCollapsed ? 'none' : 'flex';
-    }
+      // Update caret direction: down when collapsed, up when expanded
+      const chevron = poolBadge.querySelector('.pool-toggle-button i');
+      if (chevron) {
+        chevron.classList.toggle('fa-chevron-up', !isCollapsed);
+        chevron.classList.toggle('fa-chevron-down', isCollapsed);
+        chevron.classList.remove('fa-chevron-right', 'fa-chevron-left');
+      }
+    });
   }
 
   /**

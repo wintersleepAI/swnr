@@ -244,11 +244,16 @@
 
       {{! Resource Pools Display}}
       {{#if hasAnyPools}}
-      <div class='resource-pools header-group flex-group-center grid-span-5'>
-        <div class="pools-container">
-          {{> "systems/swnr/templates/actor/fragments/pools-display.hbs"}}
+        {{#if system.tweak.showPoolsInHeader}}
+        <div class='resource-pools'>
+          <div class="pools-container">
+            <div class="pools-header">
+              <h4><i class="fas fa-battery-three-quarters"></i> {{localize 'swnr.pools.title'}}</h4>
+            </div>
+          {{> "systems/swnr/templates/actor/fragments/pools-display.hbs" submitInputs=false}}
         </div>
       </div>
+      {{/if}}
       {{/if}}
 
       {{!-- AC shield --}}

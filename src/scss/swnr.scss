@@ -176,6 +176,11 @@
       gap: 0.2em;
     }
     
+    // Collapsed state hides temp modifiers
+    .resource-pools .pool-badge.collapsed & .pool-temp-modifiers {
+      display: none;
+    }
+    
     .pool-temp-modifier {
       width: 28px;
       height: 16px;
@@ -212,5 +217,10 @@
       margin-right: 0.1em;
       user-select: none;
     }
+  }
+
+  /* Reserve space for the caret when toggle is present */
+  .resource-pools .pool-badge.has-toggle {
+    padding-right: 1.25rem; // ~20px for 16px icon + spacing
   }
 }

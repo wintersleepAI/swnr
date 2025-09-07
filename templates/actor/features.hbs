@@ -204,6 +204,14 @@
                 <label>Show Mutation</label>
                 <input type="checkbox" name="system.tweak.showMutation" {{checked system.tweak.showMutation}} />
               </div>
+              <div class="form-group" style="grid-column: 1 / -1; margin-top: 0.5rem;">
+                <label>Show Pools in Header</label>
+                <input type="checkbox" name="system.tweak.showPoolsInHeader" {{checked system.tweak.showPoolsInHeader}} />
+              </div>
+              <div class="form-group" style="grid-column: 1 / -1;">
+                <label>Show Pools in Powers Tab</label>
+                <input type="checkbox" name="system.tweak.showPoolsInPowers" {{checked system.tweak.showPoolsInPowers}} />
+              </div>
             </div> <!-- End NPC Power toggles -->
             {{else}}
             {{! Character-specific configuration }}
@@ -235,6 +243,8 @@
               {{formGroup systemFields.tweak.fields.showSpells value=system.tweak.showSpells localize=true}}
               {{formGroup systemFields.tweak.fields.showAdept value=system.tweak.showAdept localize=true}}
               {{formGroup systemFields.tweak.fields.showMutation value=system.tweak.showMutation localize=true}}
+              {{formGroup systemFields.tweak.fields.showPoolsInHeader value=system.tweak.showPoolsInHeader localize=true}}
+              {{formGroup systemFields.tweak.fields.showPoolsInPowers value=system.tweak.showPoolsInPowers localize=true}}
               {{!-- {{formGroup systemFields.tweak.fields.extraHeader value=system.tweak.extraHeader localize=true}} --}}
             </div> <!-- End Character Tweak options -->
             {{/if}}

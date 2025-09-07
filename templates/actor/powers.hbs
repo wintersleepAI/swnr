@@ -10,14 +10,16 @@
 
   {{! Resource Pools Display }}
   {{#if hasAnyPools}}
-  <div class='resource-pools'>
-    <div class="pools-container">
-      <div class="pools-header">
-        <h4><i class="fas fa-battery-three-quarters"></i> {{localize 'swnr.pools.title'}}</h4>
+    {{#if system.tweak.showPoolsInPowers}}
+    <div class='resource-pools'>
+      <div class="pools-container">
+        <div class="pools-header">
+          <h4><i class="fas fa-battery-three-quarters"></i> {{localize 'swnr.pools.title'}}</h4>
+        </div>
+        {{> "systems/swnr/templates/actor/fragments/pools-display.hbs" submitInputs=true}}
       </div>
-      {{> "systems/swnr/templates/actor/fragments/pools-display.hbs"}}
     </div>
-  </div>
+    {{/if}}
   {{else}}
     <div class="no-pools-message">
       <p><i class="fas fa-info-circle"></i> {{localize 'swnr.pools.noPoolsMessage'}}</p>

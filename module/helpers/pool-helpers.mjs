@@ -93,21 +93,24 @@ export function calculatePoolsFromFeatures(options) {
 
         // Determine current value baseline
         const existingCurrentValue = sourcePoolData?.value;
-        let baseCurrent;
+        let finalValue;
         if (existingCurrentValue !== undefined) {
-          baseCurrent = Math.min(Number(existingCurrentValue), baseMax);
+          // Stored value represents current available including prior temp modifiers.
+          // Extract a base-current by removing current temp, then re-apply current temp.
+          const inferredBase = Math.max(0, Number(existingCurrentValue) - totalTemp);
+          const clampedBase = Math.min(inferredBase, baseMax);
+          finalValue = Math.min(clampedBase + totalTemp, finalMax);
         } else if (includeCommitments) {
           // For Characters, subtract current committed effort to compute available
           const actorCommitments = parent.system?.effortCommitments || {};
           const commitments = actorCommitments[poolKey] || [];
           const committedAmount = commitments.reduce((sum, c) => sum + (c.amount || 0), 0);
-          baseCurrent = Math.max(0, baseMax - committedAmount);
+          const baseCurrent = Math.max(0, baseMax - committedAmount);
+          finalValue = Math.min(baseCurrent + totalTemp, finalMax);
         } else {
           // For NPCs (no commitments tracked), default to full
-          baseCurrent = baseMax;
+          finalValue = finalMax; // equals baseMax + totalTemp
         }
-
-        const finalValue = Math.min(baseCurrent + totalTemp, finalMax);
 
         const poolRecord = {
           value: finalValue,
@@ -133,4 +136,3 @@ export function calculatePoolsFromFeatures(options) {
 
   return pools;
 }
-

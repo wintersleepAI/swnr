@@ -58,6 +58,8 @@ export default class SWNNPC extends SWNActorBase {
       showSpells: new fields.BooleanField({initial: false}),
       showAdept: new fields.BooleanField({initial: false}),
       showMutation: new fields.BooleanField({initial: false}),
+      showPoolsInHeader: new fields.BooleanField({ initial: true }),
+      showPoolsInPowers: new fields.BooleanField({ initial: false }),
     });
 
     return schema;

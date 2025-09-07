@@ -402,6 +402,11 @@
   transition: all 0.2s ease;
 }
 
+/* Reserve space for the caret when toggle is present */
+.swnr .resource-pools .pool-badge.has-toggle {
+  padding-right: 1.25rem; /* ~20px for 16px icon + spacing */
+}
+
 .swnr .resource-pools .pool-badge:hover {
   border-color: var(--color-border-light-primary);
   box-shadow: 0 0 0 1px var(--color-border-light-primary);
@@ -1846,6 +1851,9 @@
   display: flex;
   align-items: center;
   gap: 0.2em;
+}
+.swnr .resource-pools .pool-badge.collapsed .pool-values-with-modifier .pool-temp-modifiers {
+  display: none;
 }
 .swnr .pool-values-with-modifier .pool-temp-modifier {
   width: 28px;

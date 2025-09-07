@@ -64,6 +64,8 @@ export default class SWNCharacter extends SWNActorBase {
       showSpells: new fields.BooleanField({initial: false}),
       showAdept: new fields.BooleanField({initial: false}),
       showMutation: new fields.BooleanField({initial: false}),
+      showPoolsInHeader: new fields.BooleanField({ initial: true }),
+      showPoolsInPowers: new fields.BooleanField({ initial: false }),
       resourceList: new fields.ArrayField(new fields.SchemaField({
         name: SWNShared.emptyString(),
         value: SWNShared.requiredNumber(0),
@@ -662,6 +664,7 @@ export default class SWNCharacter extends SWNActorBase {
     
     // Process each pool
     for (const [poolKey, poolData] of Object.entries(pools)) {
+      let totalCommittedLocal = null; // track committed for this pool if computed
       // Handle effort commitments for effort pools
       if (newCommitments[poolKey]) {
         const remainingCommitments = [];
@@ -690,6 +693,7 @@ export default class SWNCharacter extends SWNActorBase {
         
         // Recalculate available effort
         const totalCommitted = remainingCommitments.reduce((sum, c) => sum + c.amount, 0);
+        totalCommittedLocal = totalCommitted;
         const availableEffort = Math.max(0, poolData.max - totalCommitted);
         
         poolUpdates[`system.pools.${poolKey}.value`] = availableEffort;
@@ -701,21 +705,56 @@ export default class SWNCharacter extends SWNActorBase {
         poolUpdates[`system.pools.${poolKey}.value`] = poolData.max;
       }
       
-      // Reset temp modifiers based on cadence
+      // Reset temp modifiers based on cadence and adjust value/max accordingly
       const sourcePoolData = this.parent._source.system.pools?.[poolKey];
+      let didResetTemp = false;
       if (cadence === "scene") {
         // Scene refresh: reset scene temp modifiers
         if ((sourcePoolData?.tempScene || 0) !== 0) {
           poolUpdates[`system.pools.${poolKey}.tempScene`] = 0;
+          didResetTemp = true;
         }
       } else if (cadence === "day") {
         // Day refresh: reset both scene and day temp modifiers
         if ((sourcePoolData?.tempScene || 0) !== 0) {
           poolUpdates[`system.pools.${poolKey}.tempScene`] = 0;
+          didResetTemp = true;
         }
         if ((sourcePoolData?.tempDay || 0) !== 0) {
           poolUpdates[`system.pools.${poolKey}.tempDay`] = 0;
+          didResetTemp = true;
         }
+      }
+
+      if (didResetTemp) {
+        const oldCommit = Number(sourcePoolData?.tempCommit) || 0;
+        const oldScene = Number(sourcePoolData?.tempScene) || 0;
+        const oldDay = Number(sourcePoolData?.tempDay) || 0;
+        const oldTempSum = oldCommit + oldScene + oldDay;
+
+        const newCommit = oldCommit; // commit temp persists across refreshes
+        const newScene = (cadence === "scene" || cadence === "day") ? 0 : oldScene;
+        const newDay = (cadence === "day") ? 0 : oldDay;
+        const newTempSum = newCommit + newScene + newDay;
+
+        const currentMax = Number(poolData.max) || 0;
+        const baseMax = Math.max(0, currentMax - oldTempSum);
+        const newMax = Math.max(0, baseMax + newTempSum);
+        poolUpdates[`system.pools.${poolKey}.max`] = newMax;
+
+        const valueKey = `system.pools.${poolKey}.value`;
+        const interimValue = (valueKey in poolUpdates) ? Number(poolUpdates[valueKey]) : (Number(poolData.value) || 0);
+
+        let newValue;
+        if (totalCommittedLocal !== null) {
+          newValue = Math.max(0, newMax - totalCommittedLocal);
+        } else if (poolData.cadence === cadence) {
+          newValue = newMax;
+        } else {
+          const delta = newTempSum - oldTempSum;
+          newValue = Math.max(0, Math.min(interimValue + delta, newMax));
+        }
+        poolUpdates[valueKey] = newValue;
       }
     }
     

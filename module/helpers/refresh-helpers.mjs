@@ -116,6 +116,35 @@ async function refreshActorPools(actor, cadenceLevel) {
         }
       }
     }
+
+    // If any temp modifier was reset, recompute max and value to reflect new totals
+    if (tempModifierReset) {
+      const oldCommit = Number(sourcePoolData?.tempCommit) || 0;
+      const oldScene = Number(sourcePoolData?.tempScene) || 0;
+      const oldDay = Number(sourcePoolData?.tempDay) || 0;
+      const oldTempSum = oldCommit + oldScene + oldDay;
+
+      const newCommit = Number(poolData.tempCommit) || 0;
+      const newScene = Number(poolData.tempScene) || 0;
+      const newDay = Number(poolData.tempDay) || 0;
+      const newTempSum = newCommit + newScene + newDay;
+
+      // Derive baseMax from current max minus old temp sum
+      const currentMax = Number(poolData.max) || 0;
+      const baseMax = Math.max(0, currentMax - oldTempSum);
+      const newMax = Math.max(0, baseMax + newTempSum);
+
+      // Adjust current value by the delta in temp; clamp to newMax
+      const delta = newTempSum - oldTempSum;
+      const currentVal = Number(poolData.value) || 0;
+      const newVal = Math.max(0, Math.min(currentVal + delta, newMax));
+
+      if (poolData.max !== newMax) poolChanged = true;
+      if (poolData.value !== newVal) poolChanged = true;
+
+      poolData.max = newMax;
+      poolData.value = newVal;
+    }
     
     if (poolChanged || tempModifierReset) {
       refreshedPools.push({
