@@ -177,6 +177,53 @@ Cost: 3
 Timing: immediate (consumed when sent to chat)
 ```
 
+#### Charging Items (Consumable Items)
+
+Powers can spend charges from items (ammo, batteries, potions) on use.
+
+- Configure in Power → Attributes → Resource Consumption:
+  - Type: Consumable Item
+  - Cost: Number of charges to spend
+  - Item: Pick an owned item that has `Uses` configured
+  - Timing: Preparation, Manual, or Immediate
+
+Behavior and tips:
+- If an Item is selected, that specific item is charged the specified amount.
+- If no Item is selected, a dialog appears at use-time listing all readied consumables. You can pick multiple items and exact amounts to spend; all selected items are deducted accordingly.
+- “Manual” timing shows a Spend Resources button on the chat card; “Immediate” spends on send; “Preparation” spends when preparing the power.
+- Item depletion respects the item’s Uses settings (max/value) and empty handling (`keepEmpty` and `emptyQuantity`).
+
+Example:
+```
+Type: Consumable Item
+Cost: 1
+Item: (leave blank to choose at runtime)
+Timing: manual
+```
+
+#### Internal Uses (Per‑Power Counters)
+
+Use this when a power has its own limited uses independent of pools.
+
+- Configure in Power → Attributes → Resource Consumption:
+  - Type: Uses
+  - Uses: Set current `value` and `max`
+  - Cadence: Optional auto-refresh on Scene or Day
+  - Timing: Preparation, Manual, or Immediate
+
+Behavior and tips:
+- Each activation consumes 1 internal use. The UI shows the current `value/max` beside the power.
+- If Cadence is set, internal uses refresh to max on rest/scene per cadence.
+- “Manual” timing shows a Spend Resources button; “Immediate” deducts on send; “Preparation” deducts on prepare.
+- You can reset a power’s uses to max from the powers list when below max.
+
+#### Consumption Types (Summary)
+
+- Pool Resource: Spend from any pool you grant (Effort, Slots, Points, etc.). Supports commit/scene/day cadences and commitments.
+- System Strain: Applies strain directly to the actor.
+- Consumable Item: Spends charges from items; supports multi-item selection if no item is preset.
+- Uses: Internal per-power counter that can auto-refresh by cadence.
+
 #### Consumption Timing Options
 
 - **"preparation"**: Resource consumed when power is prepared (no chat buttons shown)
@@ -210,9 +257,42 @@ The system efficiently batches all pool changes in single database operations fo
 #### Cross-Game Compatibility
 The pool system works identically across SWN, WWN, CWN, and AWN - just adjust the resource names and formulas for each game's needs.
 
+## Languages
+
+Languages are managed per-character with a world-defined list.
+
+- GM: System Settings → SWNR → Available Languages. Enter a comma-separated list (e.g., “Common, Elven, Dwarven”).
+- Player: Actor → Biography tab → Languages.
+  - Click the + button to open the add panel.
+  - Choose a language from the dropdown and click Add.
+  - Remove languages with the trash icon.
+- Presets: GMs can use the language preset selector in settings to quickly seed the available list, then edit freely.
+
+Notes:
+- The add panel only appears if the GM has configured at least one Available Language.
+- Languages are simple strings; no skill rolls or fluency levels are enforced by the system.
+
+## Containers
+
+You can mark items as containers and place other items inside them with capacity tracking.
+
+- Configure a container on an Item (gear) sheet → Attributes:
+  - Enable “Is Container”.
+  - Set Capacity Max and toggle Open/Closed.
+- On the character’s Items list:
+  - A Containers section lists all container items with current/maximum capacity.
+  - Click the box icon to open/close the container. Only open containers accept drops.
+  - Drag items onto a container row to place them inside if capacity allows. Drag out to remove.
+  - Container capacity is the sum of contained items’ encumbrance and updates automatically.
+  - Changing the container’s location propagates to contained items.
+
+Limitations:
+- Nesting containers is not supported.
+- Only physical items (gear, weapons, armor) can be contained.
+
 ## License and Attribution
 
-The background art for this system is taken from the SWN Revised book download and is used per the license file. The artwork is by Grzegorz Pedrycz. Asset tokens were provided by Hawkin.
+The background art for this system is taken from the SWN Revised book download and is used per the license file. The artwork is by Grzegorz Pedrycz. Asset tokens were provided by Hawkin. Additional icons provided by game-icons.net.
 
 ---
 
