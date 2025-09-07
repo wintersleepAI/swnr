@@ -240,15 +240,10 @@ input[type="checkbox"].small-checkbox {
   overflow-y: auto;
 }
 
+// (migrated to components/_chat.scss for global scope)
+
 // Language Management Styles
 .languages-section {
-  .items-list {
-    // Use existing items-list styling
-  }
-  
-  .language-toggle {
-    // Inherit from item-control styling
-  }
   
   .languages-list {
     display: flex;

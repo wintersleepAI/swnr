@@ -41,7 +41,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/bear-head.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -108,11 +108,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/bear-head.svg
 items:
   - name: Claw
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Bear hug: If a victim is hit by both paws in the same round, the bear
@@ -156,7 +156,7 @@ items:
     _key: '!actors.items!lusfrfzksdqlwyas.dibdl6z4qrpaiyib'
   - name: Bite
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -198,7 +198,7 @@ items:
     _key: '!actors.items!lusfrfzksdqlwyas.tmcecf3k88l11dmn'
   - name: Bear Hug
     type: item
-    img: /systems/wwn/assets/new/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         If a victim is hit by both paws in the same round, the bear hugs for an

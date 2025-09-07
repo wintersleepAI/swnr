@@ -42,7 +42,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/rhinoceros-horn.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -109,11 +109,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/rhinoceros-horn.svg
 items:
   - name: Horn
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -155,7 +155,7 @@ items:
     _key: '!actors.items!e0m6ah06926i9r92.5jld2emxadnejt6v'
   - name: Trample
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         3-in-4 chance of trampling each round. +4 to hit human-sized or smaller
@@ -199,7 +199,7 @@ items:
     _key: '!actors.items!e0m6ah06926i9r92.qojjbbt4kjc9krrl'
   - name: Charge
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         If disturbed or threatened, will charge in a random direction. Requires

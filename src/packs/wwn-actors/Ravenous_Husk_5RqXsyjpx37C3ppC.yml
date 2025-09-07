@@ -70,7 +70,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/mystery-man.svg
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/shambling-zombie.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -142,11 +142,11 @@ prototypeToken:
     src: null
     disposition: false
   movementAction: null
-img: icons/svg/mystery-man.svg
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/shambling-zombie.svg
 items:
   - name: Averse
     type: item
-    img: systems/wwn/assets/default/necromancer_art.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Certain religious symbols, lines of salt, emblems of natural law, or
@@ -198,7 +198,7 @@ items:
     _key: '!actors.items!5RqXsyjpx37C3ppC.a9p38rtj1tl7nsfl'
   - name: Beguiling
     type: item
-    img: systems/wwn/assets/default/necromancer_art.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Once per scene it can beguile a creature with its gaze on a failed
@@ -250,7 +250,7 @@ items:
     _key: '!actors.items!5RqXsyjpx37C3ppC.li0uvz9tdz7xuhzl'
   - name: Desynchrony
     type: item
-    img: systems/wwn/assets/default/necromancer_art.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Foes hit by it must make a Physical save or be paralyzed for 1d4+1
@@ -300,7 +300,7 @@ items:
     _key: '!actors.items!5RqXsyjpx37C3ppC.sdo51czdw3wbndbv'
   - name: Draining
     type: item
-    img: systems/wwn/assets/default/necromancer_art.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Foes hit by it are enfeebled, taking a cumulative -2 penalty to hit
@@ -351,7 +351,7 @@ items:
     _key: '!actors.items!5RqXsyjpx37C3ppC.qmbmmam5opl3azdf'
   - name: Intangible
     type: item
-    img: systems/wwn/assets/default/necromancer_art.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         It is a shade or specter, unable to be touched by non-magical objects or
@@ -402,7 +402,7 @@ items:
     _key: '!actors.items!5RqXsyjpx37C3ppC.0dkv383q2z8lrfzg'
   - name: Ravenous
     type: item
-    img: systems/wwn/assets/default/necromancer_art.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         If it hits with at least one of its attacks, it gets an immediate bonus
@@ -452,7 +452,7 @@ items:
     _key: '!actors.items!5RqXsyjpx37C3ppC.zgaof408j5fjm17o'
   - name: Red Hunger
     type: item
-    img: systems/wwn/assets/default/necromancer_art.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         It must eat a pound of human flesh or drink a pint of human blood every
@@ -503,7 +503,7 @@ items:
     _key: '!actors.items!5RqXsyjpx37C3ppC.aj9z6bsjv7a643yg'
   - name: Sunscorch
     type: item
-    img: systems/wwn/assets/default/necromancer_art.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Exposure to sunlight, running water, or some specific other emblem of
@@ -553,7 +553,7 @@ items:
     _key: '!actors.items!5RqXsyjpx37C3ppC.l1epz0dcenr7g1k2'
   - name: Terrifying
     type: item
-    img: systems/wwn/assets/default/necromancer_art.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Enemies must make a Mental save or lose their first turn's Main Action
@@ -603,7 +603,7 @@ items:
     _key: '!actors.items!5RqXsyjpx37C3ppC.r2h5cnh0r2f8u5am'
   - name: Impure
     type: item
-    img: systems/wwn/assets/default/necromancer_art.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Weapons of silver, green wood, or other specific apotropaic material
@@ -654,7 +654,7 @@ items:
     _key: '!actors.items!5RqXsyjpx37C3ppC.1kgyz95wskwtvx30'
   - name: Unending
     type: item
-    img: systems/wwn/assets/default/necromancer_art.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         It cannot die by violence. Only the right act, weapon, object
@@ -704,7 +704,7 @@ items:
     _key: '!actors.items!5RqXsyjpx37C3ppC.t1dg5iulhk3brg9s'
   - name: Punch/Claw
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0

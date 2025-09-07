@@ -1,10 +1,12 @@
 import SWNActorBase from './base-actor.mjs';
 import SWNShared from '../shared.mjs';
+import { calculatePoolsFromFeatures } from '../../helpers/pool-helpers.mjs';
 
 export default class SWNNPC extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
     ...super.LOCALIZATION_PREFIXES,
     'SWN.Actor.NPC',
+    'SWN.Actor.base', // Add base actor localization for tweak fields
   ];
   //Regexs for parsing hit dice
   static numberRegex = /^\d+$/;
@@ -46,6 +48,18 @@ export default class SWNNPC extends SWNActorBase {
     schema.baseSoakTotal = new fields.SchemaField({
       value: SWNShared.requiredNumber(0),
       max: SWNShared.requiredNumber(0),
+    });
+
+    // Add tweak schema for power toggles (subset of character tweaks)
+    schema.tweak = new fields.SchemaField({
+      showCyberware: new fields.BooleanField({initial: true}),
+      showPsychic: new fields.BooleanField({initial: true}),
+      showArts: new fields.BooleanField({initial: false}),
+      showSpells: new fields.BooleanField({initial: false}),
+      showAdept: new fields.BooleanField({initial: false}),
+      showMutation: new fields.BooleanField({initial: false}),
+      showPoolsInHeader: new fields.BooleanField({ initial: true }),
+      showPoolsInPowers: new fields.BooleanField({ initial: false }),
     });
 
     return schema;
@@ -114,69 +128,13 @@ export default class SWNNPC extends SWNActorBase {
    * @private
    */
   _calculateResourcePools() {
-    const pools = {};
-    
-    // Get all features that might grant pools
-    const poolGrantingItems = this.parent.items.filter(item => 
-      item.type === "feature" && 
-      item.system.poolsGranted && 
-      item.system.poolsGranted.length > 0
-    );
-
-    for (const feature of poolGrantingItems) {
-      for (const poolConfig of feature.system.poolsGranted) {
-        // Check condition if specified (NPCs use hit dice instead of level)
-        if (poolConfig.condition && !this._evaluateCondition(poolConfig.condition)) {
-          continue;
-        }
-
-        // Build pool key
-        const poolKey = `${poolConfig.resourceName}:${poolConfig.subResource || ""}`;
-        
-        // Calculate pool maximum
-        let maxValue = 0;
-        
-        // For NPCs, use hit dice number for level-based calculations
-        const effectiveLevel = this._extractHitDiceNumber();
-        
-        // Use formula if specified, otherwise fall back to legacy base + per-level
-        if (poolConfig.formula) {
-          try {
-            const formulaResult = this._evaluateFormula(poolConfig.formula, effectiveLevel);
-            maxValue = formulaResult;
-          } catch (error) {
-            console.warn(`[SWN Pool] Failed to evaluate formula "${poolConfig.formula}" for ${feature.name}:`, error);
-            maxValue = 0; // Default to 0 if formula fails
-          }
-        } else {
-          console.warn(`[SWN Pool] No formula provided for pool ${poolKey} in ${feature.name}`);
-          maxValue = 0;
-        }
-
-        // Initialize or update pool
-        if (pools[poolKey]) {
-          // Pool already exists from another feature, add to max and adjust value accordingly
-          const oldMax = pools[poolKey].max;
-          const newMax = oldMax + maxValue;
-          
-          // Preserve user-set value if possible, but allow it to increase if max increased
-          const wasAtMax = pools[poolKey].value >= pools[poolKey].max;
-          pools[poolKey].value = wasAtMax ? newMax : Math.min(pools[poolKey].value + maxValue, newMax);
-          pools[poolKey].max = newMax;
-        } else {
-          // Create new pool, preserving current value if it exists
-          const currentValue = this.pools[poolKey]?.value || 0;
-          pools[poolKey] = {
-            value: Math.min(currentValue, maxValue), // Don't exceed new max
-            max: maxValue,
-            cadence: poolConfig.cadence
-          };
-        }
-      }
-    }
-
-    // Update the pools object
-    this.pools = pools;
+    this.pools = calculatePoolsFromFeatures({
+      parent: this.parent,
+      dataModel: this,
+      evaluateCondition: (cond) => this._evaluateCondition(cond),
+      evaluateFormula: (formula) => this._evaluateFormula(formula, this._extractHitDiceNumber()),
+      includeCommitments: false,
+    });
   }
 
   /**
@@ -252,6 +210,7 @@ export default class SWNNPC extends SWNActorBase {
     let expr = formula
       .replace(/@level/g, effectiveLevel)
       .replace(/@hitdice/g, effectiveLevel)
+      .replace(/@HD/g, effectiveLevel)
       .replace(/@skills\.psychic\.highest/g, highestPsychicSkill)
       .replace(/@skills\.([^.]+)\.rank/g, (match, skillName) => {
         // Replace underscores with spaces for skill names
@@ -270,6 +229,26 @@ export default class SWNNPC extends SWNActorBase {
     
     const result = new Function('return ' + expr)();
     return Math.max(0, Math.floor(result));
+  }
+
+  /**
+   * Provide roll data for NPCs to support standard Foundry formula evaluation
+   * @returns {Object} Roll data object
+   */
+  getRollData() {
+    const data = {};
+    
+    // Add level-equivalent from hit dice for formula compatibility
+    const effectiveLevel = this._extractHitDiceNumber();
+    data["lvl"] = effectiveLevel;
+    data["level"] = effectiveLevel;
+    data["HD"] = effectiveLevel;
+    data["hitdice"] = effectiveLevel;
+    
+    // Add saves
+    data["saves"] = this.saves;
+    
+    return data;
   }
 
   async rollSave(_saveType) {

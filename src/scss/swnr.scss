@@ -89,6 +89,31 @@
       padding: 0.1em 0.3em;
       margin-right: 0.3em;
       font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.2em;
+      
+      .reset-power-uses {
+        background: transparent;
+        border: none;
+        color: var(--color-text-dark-secondary);
+        font-size: 0.8em;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: all 0.2s ease;
+        
+        &:hover {
+          color: var(--color-control-delete-hover);
+          opacity: 1;
+          transform: scale(1.1);
+        }
+        
+        i {
+          pointer-events: none;
+        }
+      }
     }
   }
 
@@ -109,5 +134,100 @@
         cursor: pointer;
       }
     }
+  }
+
+  /* Pool toggle button styling */
+  .pool-toggle-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-text-light-6);
+    font-size: 10px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--color-text-light-primary);
+    }
+  }
+
+  /* Pool values with inline modifier styling */
+  .pool-values-with-modifier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+    margin: 0.2em 0;
+    
+    .pool-values {
+      font-size: 0.9em;
+      color: var(--color-text-dark-secondary);
+      text-align: center;
+    }
+    
+    .pool-temp-modifiers {
+      display: flex;
+      align-items: center;
+      gap: 0.2em;
+    }
+    
+    // Collapsed state hides temp/manual fields
+    // Note: The previous selector incorrectly compiled to
+    // ".resource-pools .pool-badge.collapsed .swnr .pool-values-with-modifier .pool-temp-modifiers"
+    // due to nesting under the global .swnr wrapper. Target the DOM structure directly instead.
+    // This compiles to: ".swnr .resource-pools .pool-badge.collapsed .pool-temp-modifiers"
+    
+    
+    .pool-temp-modifier {
+      width: 28px;
+      height: 16px;
+      padding: 1px 2px;
+      border: 1px solid rgba(var(--accent-color), 0.2);
+      border-radius: 2px;
+      background: rgba(var(--accent-color), 0.05);
+      color: var(--color-text-dark-primary);
+      font-size: 0.7em;
+      text-align: center;
+      
+      &:focus {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 2px rgba(var(--accent-color), 0.3);
+        outline: none;
+        background: var(--color-bg-input);
+      }
+      
+      &:hover {
+        border-color: rgba(var(--accent-color), 0.4);
+        background: rgba(var(--accent-color), 0.08);
+      }
+      
+      &::placeholder {
+        color: var(--color-text-dark-inactive);
+        opacity: 0.7;
+      }
+    }
+    
+    .temp-label {
+      font-size: 0.65em;
+      color: var(--color-text-dark-secondary);
+      opacity: 0.8;
+      margin-right: 0.1em;
+      user-select: none;
+    }
+  }
+
+  // Place outside the .pool-values-with-modifier nest to avoid incorrect .swnr placement
+  .resource-pools .pool-badge.collapsed .pool-values-with-modifier .pool-temp-modifiers {
+    display: none;
+  }
+
+  /* Reserve space for the caret when toggle is present */
+  .resource-pools .pool-badge.has-toggle {
+    padding-right: 1.25rem; // ~20px for 16px icon + spacing
   }
 }

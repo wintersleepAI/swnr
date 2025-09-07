@@ -217,6 +217,15 @@ export const registerSettings = function () {
     default: []
   });
 
+  game.settings.register("swnr", "showTempPoolModifiers", {
+    name: "swnr.settings.showTempPoolModifiers",
+    hint: "swnr.settings.showTempPoolModifiersHint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: false,
+  });
+
 };
 
 export const getGameSettings = function () {
@@ -237,6 +246,7 @@ export const getGameSettings = function () {
     languagePresetSelector: game.settings.get("swnr", "languagePresetSelector"),
     availableLanguages: game.settings.get("swnr", "availableLanguages"),
     parsedLanguageList: game.settings.get("swnr", "parsedLanguageList"),
+    showTempPoolModifiers: game.settings.get("swnr", "showTempPoolModifiers"),
   };
   return settings;
 };

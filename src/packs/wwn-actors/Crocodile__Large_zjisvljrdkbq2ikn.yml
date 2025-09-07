@@ -43,7 +43,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/croc-jaws.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -110,11 +110,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/croc-jaws.svg
 items:
   - name: Bite
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -156,7 +156,7 @@ items:
     _key: '!actors.items!zjisvljrdkbq2ikn.1qrhhe8qzfdk1mr3'
   - name: Feeding Frenzy
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Attracted to the scent of blood or violent movement in the water.
       cost: 0

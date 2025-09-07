@@ -1,6 +1,7 @@
 import SWNActorBase from './base-actor.mjs';
 import SWNShared from '../shared.mjs';
 import { calcMod } from '../../helpers/utils.mjs';
+import { calculatePoolsFromFeatures } from '../../helpers/pool-helpers.mjs';
 
 export default class SWNCharacter extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -63,6 +64,8 @@ export default class SWNCharacter extends SWNActorBase {
       showSpells: new fields.BooleanField({initial: false}),
       showAdept: new fields.BooleanField({initial: false}),
       showMutation: new fields.BooleanField({initial: false}),
+      showPoolsInHeader: new fields.BooleanField({ initial: true }),
+      showPoolsInPowers: new fields.BooleanField({ initial: false }),
       resourceList: new fields.ArrayField(new fields.SchemaField({
         name: SWNShared.emptyString(),
         value: SWNShared.requiredNumber(0),
@@ -293,7 +296,8 @@ export default class SWNCharacter extends SWNActorBase {
       }
     }
 
-    data["lvl"] =this.level.value;
+    data["lvl"] = this.level.value;
+    data["HD"] = this.hitDie?.value || 0;
     return data;
   }
 
@@ -409,7 +413,7 @@ export default class SWNCharacter extends SWNActorBase {
           }
         });
         getDocumentClass("ChatMessage").create({
-          speaker: ChatMessage.getSpeaker({ actor: this.parent }),
+          speaker: chatMessage.getSpeaker({ actor: this.parent }),
           flavor: msg,
           roll: JSON.stringify(roll),
           rolls: [roll],
@@ -450,90 +454,13 @@ export default class SWNCharacter extends SWNActorBase {
    * @private
    */
   _calculateResourcePools() {
-    const pools = {};
-    
-    // Get all features that might grant pools
-    const poolGrantingItems = this.parent.items.filter(item => 
-      item.type === "feature" && 
-      item.system.poolsGranted && 
-      item.system.poolsGranted.length > 0
-    );
-    
-
-    for (const feature of poolGrantingItems) {
-      for (const poolConfig of feature.system.poolsGranted) {
-        // Check condition if specified
-        if (poolConfig.condition && !this._evaluateCondition(poolConfig.condition)) {
-          continue;
-        }
-
-        // Build pool key
-        const poolKey = `${poolConfig.resourceName}:${poolConfig.subResource || ""}`;
-        
-        // Calculate pool maximum
-        let maxValue = 0;
-        
-        // Use formula if specified, otherwise fall back to legacy base + per-level
-        if (poolConfig.formula) {
-          try {
-            const formulaResult = this._evaluateFormula(poolConfig.formula);
-            maxValue = formulaResult;
-          } catch (error) {
-            console.warn(`[SWN Pool] Failed to evaluate formula "${poolConfig.formula}" for ${feature.name}:`, error);
-            maxValue = 0; // Default to 0 if formula fails
-          }
-        } else {
-          console.warn(`[SWN Pool] No formula provided for pool ${poolKey} in ${feature.name}`);
-          maxValue = 0;
-        }
-
-        // Initialize or update pool
-        if (pools[poolKey]) {
-          // Pool already exists from another feature, add to max and adjust value accordingly
-          const oldMax = pools[poolKey].max;
-          const newMax = oldMax + maxValue;
-          
-          // Preserve user-set value if possible, but allow it to increase if max increased
-          const sourcePoolData = this.parent._source.system.pools?.[poolKey];
-          const userSetValue = sourcePoolData?.value;
-          
-          if (userSetValue !== undefined) {
-            // User has manually set a value, respect it but cap at new max
-            pools[poolKey].value = Math.min(userSetValue, newMax);
-          } else {
-            // No user-set value, scale current value proportionally or set to new max if fully recovered
-            const wasAtMax = pools[poolKey].value >= pools[poolKey].max;
-            pools[poolKey].value = wasAtMax ? newMax : Math.min(pools[poolKey].value + maxValue, newMax);
-          }
-          
-          pools[poolKey].max = newMax;
-        } else {
-          // Calculate available effort (max - committed)
-          const commitments = (this.parent.system.effortCommitments || {})[poolKey] || [];
-          const committedAmount = commitments.reduce((sum, commitment) => sum + commitment.amount, 0);
-          
-          // Preserve existing current value from document source if it exists, otherwise calculate available effort
-          const sourcePoolData = this.parent._source.system.pools?.[poolKey];
-          const existingCurrentValue = sourcePoolData?.value;
-          const sourceMaxValue = sourcePoolData?.max;
-          const availableEffort = Math.max(0, maxValue - committedAmount);
-          const currentValue = existingCurrentValue !== undefined ? 
-            Math.min(existingCurrentValue, maxValue) : availableEffort;
-          
-          
-          pools[poolKey] = {
-            value: currentValue,
-            max: maxValue,
-            cadence: poolConfig.cadence,
-            committed: committedAmount,
-            commitments: commitments
-          };
-        }
-      }
-    }
-
-    // Update the pools object
-    this.pools = pools;
+    this.pools = calculatePoolsFromFeatures({
+      parent: this.parent,
+      dataModel: this,
+      evaluateCondition: (cond) => this._evaluateCondition(cond),
+      evaluateFormula: (formula) => this._evaluateFormula(formula),
+      includeCommitments: true,
+    });
   }
 
   /**
@@ -618,5 +545,37 @@ export default class SWNCharacter extends SWNActorBase {
       return Math.max(0, Math.floor(result)); // Default behavior: round down
     }
   }
+
+  /**
+   * Handle a full rest for the night (day cadence refresh)
+   * @param {Object} options - Rest options
+   * @param {boolean} options.isFrail - Whether this is a frail rest (no HP recovery)
+   * @returns {Promise<RefreshResult>} Rest results in standardized format
+   */
+  async restForNight(options = {}) {
+    const { isFrail = false } = options;
+    // Delegate completely to orchestrator for consistency
+    return await globalThis.swnr.utils.refreshActor({ actor: this.parent, cadence: 'day', frail: isFrail });
+  }
+
+  /**
+   * Handle end of scene refresh (scene cadence refresh)
+   * @returns {Promise<RefreshResult>} Scene refresh results in standardized format
+   */
+  async endScene() {
+    return await globalThis.swnr.utils.refreshActor({ actor: this.parent, cadence: 'scene' });
+  }
+
+  /**
+   * Collect all refresh updates without applying them
+   * @param {string} cadence - The cadence to refresh ('scene' or 'day')
+   * @returns {Promise<Object>} Object containing poolUpdates, itemUpdates, and effortReleased
+   * @private
+   */
+  // Removed: _collectRefreshUpdates — logic consolidated into refresh-helpers.refreshActorPools
+  
+  // Removed: _collectConsumptionUseUpdates, _updateEmbeddedItemsFromFlattened, _collectPreparedPowerUpdates — consolidated in refresh-helpers
+  
+  // Removed: per-actor standardized chat utilities — handled by refresh-orchestrator
 
 }

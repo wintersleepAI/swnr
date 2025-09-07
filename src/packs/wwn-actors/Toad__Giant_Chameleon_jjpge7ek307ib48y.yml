@@ -41,7 +41,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/frog.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -108,11 +108,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/frog.svg
 items:
   - name: Bite
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -154,7 +154,7 @@ items:
     _key: '!actors.items!jjpge7ek307ib48y.ysde7ojoedzf0rz4'
   - name: Surprise
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Additional +2 to surprise checks, in forests or dark dungeons, due to
@@ -185,7 +185,7 @@ items:
     _key: '!actors.items!jjpge7ek307ib48y.ojdxu5wxjx7rt9cf'
   - name: Sticky Tongue
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Attack up to 15' away. On a hit, prey (up to dwarf size) is dragged to
@@ -216,7 +216,7 @@ items:
     _key: '!actors.items!jjpge7ek307ib48y.8dif7o328jr46vf5'
   - name: Swallow Whole
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         A natural 20 attack roll indicates a small victim is swallowed. Inside

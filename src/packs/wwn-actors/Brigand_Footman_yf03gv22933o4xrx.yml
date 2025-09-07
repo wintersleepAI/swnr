@@ -50,7 +50,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/humanoid-icons/bandit.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -117,11 +117,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/bandit.svg
 items:
   - name: Sword, Short
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -166,7 +166,7 @@ items:
     _key: '!actors.items!yf03gv22933o4xrx.ybkq5lv17v0z9wsu'
   - name: Throwing Blade
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Throwing blades are small leaves of steel that are not terribly useful
@@ -211,7 +211,7 @@ items:
     _key: '!actors.items!yf03gv22933o4xrx.7spuy0jl3ng1n8j9'
   - name: Bow, Small
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Bows cover everything from the small self bows of horse archers to the
@@ -259,7 +259,7 @@ items:
     _key: '!actors.items!yf03gv22933o4xrx.uxet938d4id7ccqk'
   - name: Buff Coat
     type: armor
-    img: systems/wwn/assets/default/armor.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
     system:
       description: >-
         Buff coats are long coats of thick, supple hide, sometimes worn to
@@ -300,7 +300,7 @@ items:
     _key: '!actors.items!yf03gv22933o4xrx.jvjnc9dtci5z6229'
   - name: Small Shield
     type: armor
-    img: systems/wwn/assets/default/armor.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
     system:
       description: >-
         Shields come in two general varieties. Small ones, often made of metal,

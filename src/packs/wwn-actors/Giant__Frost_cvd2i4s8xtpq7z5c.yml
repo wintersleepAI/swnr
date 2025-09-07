@@ -41,7 +41,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/giant.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -108,11 +108,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/giant.svg
 items:
   - name: Gigantic Weapon
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -154,7 +154,7 @@ items:
     _key: '!actors.items!cvd2i4s8xtpq7z5c.tgnobz0lnijlmkit'
   - name: Boulder
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -196,7 +196,7 @@ items:
     _key: '!actors.items!cvd2i4s8xtpq7z5c.jn05fxapj9rtnuv6'
   - name: Cold Immunity
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Unharmed by cold-based attacks.
       cost: 0
@@ -225,7 +225,7 @@ items:
     _key: '!actors.items!cvd2i4s8xtpq7z5c.xojegz5w01b7gl6w'
   - name: Castle
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: High upon snowy mountains.
       cost: 0
@@ -254,7 +254,7 @@ items:
     _key: '!actors.items!cvd2i4s8xtpq7z5c.6rhl127vhqovfwt3'
   - name: Guardians
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: 20% chance of [[/r 3d6]] polar bears, [[/r 6d6]] wolves otherwise.
       cost: 0

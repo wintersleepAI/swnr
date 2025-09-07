@@ -813,18 +813,8 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       return;
     }
 
-    const currentConsumptions = foundry.utils.deepClone(this.item.system.consumptions || []);
-    
-    // Add a new consumption configuration with defaults
-    currentConsumptions.push({
-      type: "none",
-      usesCost: 1,
-      cadence: "day",
-      itemId: "",
-      uses: { value: 0, max: 1 }
-    });
-
-    await this.item.update({ "system.consumptions": currentConsumptions });
+    // Use the data model method instead of duplicating logic
+    await this.item.system.addConsumption();
   }
 
   /**
@@ -846,12 +836,8 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       return;
     }
 
-    const currentConsumptions = foundry.utils.deepClone(this.item.system.consumptions || []);
-    
-    if (consumptionIndex >= 0 && consumptionIndex < currentConsumptions.length) {
-      currentConsumptions.splice(consumptionIndex, 1);
-      await this.item.update({ "system.consumptions": currentConsumptions });
-    }
+    // Use the data model method instead of duplicating logic
+    await this.item.system.removeConsumption(consumptionIndex);
   }
 
   /** Helper Functions */

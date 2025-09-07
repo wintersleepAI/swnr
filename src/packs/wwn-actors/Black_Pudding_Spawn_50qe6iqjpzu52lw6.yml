@@ -41,7 +41,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/vile-fluid.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -108,11 +108,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/vile-fluid.svg
 items:
   - name: Touch
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -154,7 +154,7 @@ items:
     _key: '!actors.items!50qe6iqjpzu52lw6.yfzwq44uq5nfxe15'
   - name: Immunity
     type: item
-    img: systems/wwn/assets/new/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Only harmed by fire-based attacks.
       cost: 0
@@ -183,7 +183,7 @@ items:
     _key: '!actors.items!50qe6iqjpzu52lw6.ly6by6q5vu0r39cn'
   - name: Division
     type: item
-    img: systems/wwn/assets/new/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Non-fire attacks (including spells) cause the pudding to divide. Each
@@ -215,7 +215,7 @@ items:
     _key: '!actors.items!50qe6iqjpzu52lw6.xd982xasp0jnxkg9'
   - name: Erode Wood/Metal
     type: item
-    img: systems/wwn/assets/new/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Can dissolve wood or metal in one turn.
       cost: 0
@@ -244,7 +244,7 @@ items:
     _key: '!actors.items!50qe6iqjpzu52lw6.0do3ubz8infh89ab'
   - name: Cling
     type: item
-    img: systems/wwn/assets/new/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Can move across walls and ceilings.
       cost: 0
@@ -273,7 +273,7 @@ items:
     _key: '!actors.items!50qe6iqjpzu52lw6.pooe8g5cucm1wkup'
   - name: Seep
     type: item
-    img: systems/wwn/assets/new/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Can squeeze through small holes and cracks.
       cost: 0

@@ -71,7 +71,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/mystery-man.svg
+    src: systems/swnr/assets/icons/game-icons.net/humanoid-icons/golem-head.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -143,7 +143,7 @@ prototypeToken:
     src: null
     disposition: false
   movementAction: null
-img: icons/svg/mystery-man.svg
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/golem-head.svg
 items: []
 ownership:
   default: 0

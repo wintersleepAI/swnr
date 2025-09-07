@@ -15,6 +15,7 @@ export class SWNActorSheet extends SWNBaseSheet {
   // Private properties
   #toggleLock = false;
   static #expandedDescriptions = {};
+  static #expandedPoolTempModifiers = {};
 
   constructor(options = {}) {
     super(options);
@@ -56,6 +57,8 @@ export class SWNActorSheet extends SWNBaseSheet {
       resourceCreate: this._onResourceCreate,
       resourceDelete: this._onResourceDelete,
       releaseCommitment: this._onReleaseCommitment,
+      resetPowerUses: this._onResetPowerUses,
+      togglePoolTempModifiers: this._onTogglePoolTempModifiers,
       addLanguage: this._onAddLanguage,
       removeLanguage: this._onRemoveLanguage,
       toggleLanguageAdd: this._onToggleLanguageAdd,
@@ -109,6 +112,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     },
     consumablesList: {
       template: 'systems/swnr/templates/actor/fragments/consumable-list.hbs',
+    },
+    poolsDisplay: {
+      template: 'systems/swnr/templates/actor/fragments/pools-display.hbs',
     },
     skillFrag: {
       template: 'systems/swnr/templates/actor/fragments/skill.hbs',
@@ -164,7 +170,7 @@ export class SWNActorSheet extends SWNBaseSheet {
         options.defaultTab = 'combat';
         break;
       case 'npc':
-        options.parts.push('npc', 'gear', 'effects');
+        options.parts.push('npc', 'features', 'powers', 'gear', 'effects');
         options.defaultTab = 'npc';
         break;
     }
@@ -196,8 +202,14 @@ export class SWNActorSheet extends SWNBaseSheet {
       groupWidget: groupFieldWidget.bind(this),
       // Add expanded descriptions state for item description toggle functionality
       expandedDescriptions: SWNActorSheet.#expandedDescriptions,
+      expandedPoolTempModifiers: SWNActorSheet.#expandedPoolTempModifiers,
 
     };
+
+    // Ensure shared fragments are preloaded regardless of which parts render
+    await loadTemplates([
+      'systems/swnr/templates/actor/fragments/pools-display.hbs'
+    ]);
 
     // Offloading context prep to a helper function
     this._prepareItems(context);
@@ -422,93 +434,14 @@ export class SWNActorSheet extends SWNBaseSheet {
   }
 
   /**
-   * Refresh pools by cadence type, releasing effort commitments
+   * Refresh pools by cadence type - delegates to helper for consistency
+   * Used only for non-character actors (NPCs, etc.)
    * @param {string} cadence - The cadence type to refresh ('scene', 'day')
    */
   async _refreshPoolsByCadence(cadence) {
-    const pools = this.actor.system.pools || {};
-    const commitments = this.actor.system.effortCommitments || {};
-    const poolUpdates = {};
-    const newCommitments = {};
-    let effortReleased = [];
-    
-    // Process each pool
-    for (const [poolKey, poolData] of Object.entries(pools)) {
-      // Handle effort commitments for effort pools
-      if (poolKey.startsWith("Effort:") && commitments[poolKey]) {
-        const remainingCommitments = [];
-        const releasedCommitments = [];
-        
-        // Filter commitments based on duration and cadence
-        for (const commitment of commitments[poolKey]) {
-          let shouldRelease = false;
-          
-          // Never auto-release "commit" duration - those are manual only
-          if (commitment.duration === "commit") {
-            shouldRelease = false;
-          } else if (cadence === "scene" && (commitment.duration === "scene")) {
-            shouldRelease = true;
-          } else if (cadence === "day" && (commitment.duration === "day" || commitment.duration === "scene")) {
-            shouldRelease = true;
-          }
-          if (shouldRelease) {
-            releasedCommitments.push(commitment);
-            effortReleased.push(`${commitment.powerName} (${commitment.amount} ${poolKey})`);
-          } else {
-            remainingCommitments.push(commitment);
-          }
-        }
-        
-        newCommitments[poolKey] = remainingCommitments;
-        
-        // Recalculate available effort
-        const totalCommitted = remainingCommitments.reduce((sum, c) => sum + c.amount, 0);
-        const availableEffort = Math.max(0, poolData.max - totalCommitted);
-        
-        poolUpdates[`system.pools.${poolKey}.value`] = availableEffort;
-        poolUpdates[`system.pools.${poolKey}.committed`] = totalCommitted;
-        poolUpdates[`system.pools.${poolKey}.commitments`] = remainingCommitments;
-      } 
-      // Handle regular pool refresh
-      else if (poolData.cadence === cadence) {
-        poolUpdates[`system.pools.${poolKey}.value`] = poolData.max;
-      }
-    }
-    
-    // Update effort commitments
-    if (Object.keys(newCommitments).length > 0) {
-      poolUpdates["system.effortCommitments"] = newCommitments;
-    }
-    
-    if (Object.keys(poolUpdates).length > 0) {
-      await this.actor.update(poolUpdates);
-      
-      // Create chat message for refresh
-      const chatMessage = getDocumentClass("ChatMessage");
-      const refreshTitle = cadence === "scene" 
-        ? game.i18n.localize("swnr.pools.refreshSummary.scene")
-        : game.i18n.localize("swnr.pools.refreshSummary.day");
-      let content = `<div class="refresh-summary">
-        <h3><i class="fas fa-sync"></i> ${refreshTitle}</h3>`;
-      
-      if (effortReleased.length > 0) {
-        content += `<p><strong>${game.i18n.localize("swnr.pools.effortReleased")}:</strong></p><ul>`;
-        effortReleased.forEach(effort => content += `<li>${effort}</li>`);
-        content += `</ul>`;
-      }
-      
-      const regularRefreshes = Object.keys(poolUpdates).filter(key => !key.includes("Effort:") && !key.includes("effortCommitments"));
-      if (regularRefreshes.length > 0) {
-        content += `<p>${regularRefreshes.length} pools restored to maximum.</p>`;
-      }
-      
-      content += `</div>`;
-      
-      chatMessage.create({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        content
-      });
-    }
+    // Delegate to orchestrator for NPCs and other non-character actors
+    await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence });
+    this.render(false);
   }
 
   /**
@@ -530,19 +463,34 @@ export class SWNActorSheet extends SWNBaseSheet {
         };
       }
       
+      // Coerce potentially malformed values to safe numbers
+      const toNum = (v) => {
+        const n = Number(v);
+        return Number.isFinite(n) ? n : 0;
+      };
+      const value = toNum(poolData.value);
+      const max = toNum(poolData.max);
+      const committed = toNum(poolData.committed);
+      const tempCommit = toNum(poolData.tempCommit);
+      const tempScene = toNum(poolData.tempScene);
+      const tempDay = toNum(poolData.tempDay);
+
       const poolInfo = {
         key: poolKey,
         subResource: subResource || "Default",
-        current: poolData.value,
-        max: poolData.max,
+        current: value,
+        max: max,
         cadence: poolData.cadence,
-        committed: poolData.committed || 0,
+        committed,
         commitments: poolData.commitments || [],
-        percentage: poolData.max > 0 ? Math.round((poolData.value / poolData.max) * 100) : 0,
-        isEmpty: poolData.value === 0,
-        isFull: poolData.value >= poolData.max,
-        isLow: poolData.max > 0 && (poolData.value / poolData.max) < 0.25,
-        hasCommitments: (poolData.committed || 0) > 0
+        tempCommit,
+        tempScene,
+        tempDay,
+        percentage: max > 0 ? Math.round((value / max) * 100) : 0,
+        isEmpty: value === 0,
+        isFull: value >= max,
+        isLow: max > 0 && (value / max) < 0.25,
+        hasCommitments: committed > 0
       };
       
       poolGroups[resourceName].pools.push(poolInfo);
@@ -591,6 +539,12 @@ export class SWNActorSheet extends SWNBaseSheet {
 
     this.element.querySelectorAll(".power-prepared-icon").forEach((d) =>
       d.addEventListener('click', this._onPowerPreparedToggle.bind(this)));
+
+    // Handle temp modifier inputs (header and powers)
+    this.element.querySelectorAll('.pool-temp-modifier[data-path]')
+      .forEach((el) => {
+        el.addEventListener('change', this._onPoolTempModifierChange.bind(this));
+      });
 
     // Toggle lock related elements after render depending on the lock state
     this.element?.querySelectorAll(".lock-icon").forEach((d) => {
@@ -659,30 +613,11 @@ export class SWNActorSheet extends SWNBaseSheet {
         return;
       }
       const isFrail = rest === "no_hp" ? true : false;
-      const systemData = this.actor.system
-      const newStrain = Math.max(systemData.systemStrain.value - 1, 0);
-      const newHP = isFrail
-        ? systemData.health.value
-        : Math.min(systemData.health.value + systemData.level.value, systemData.health.max);
-      await this.actor.update({
-        system: {
-          systemStrain: { value: newStrain },
-          health: { value: newHP },
-        },
-      });
       
-      // Refresh pools with 'day' cadence (full rest)
-      await this._refreshPoolsByCadence('day');
+      // Delegate to refresh orchestrator (handles HP/strain + pools)
+      await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence: 'day', frail: isFrail });
     } else if (this.actor.type === "npc") {
-      const newHP = this.actor.system.health.max;
-      await this.actor.update({
-        system: {
-          health: { value: newHP },
-        },
-      });
-      
-      // Refresh pools with 'day' cadence (full rest)
-      await this._refreshPoolsByCadence('day');
+      await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence: 'day' });
     }
     await this._resetSoak();
   }
@@ -691,8 +626,7 @@ export class SWNActorSheet extends SWNBaseSheet {
   static async _onScene(event, _target) {
     event.preventDefault();
     
-    // Refresh pools with 'scene' cadence
-    await this._refreshPoolsByCadence('scene');
+    await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence: 'scene' });
     this._resetSoak();
   }
 
@@ -708,6 +642,60 @@ export class SWNActorSheet extends SWNBaseSheet {
       console.log("Hit dice rolls are only for PCs/NPCs");
     }
 
+  }
+
+  /**
+   * Change handler for temp modifier inputs that don't participate in form submit
+   */
+  async _onPoolTempModifierChange(event) {
+    event.preventDefault();
+    const input = event.currentTarget;
+    const path = input.dataset.path; // e.g., system.pools.Effort:Default.tempScene
+    if (!path) return;
+
+    const poolBadge = input.closest('.pool-badge[data-pool-key]');
+    const poolKey = poolBadge?.dataset.poolKey || path.match(/system\.pools\.(.+?)\.(tempCommit|tempScene|tempDay)/)?.[1];
+    if (!poolKey) return;
+
+    const pools = this.actor.system.pools || {};
+    const pool = pools[poolKey];
+    if (!pool) {
+      await this.actor.update({ [path]: Number(input.value) || 0 });
+      return;
+    }
+
+    // Parse new and old values
+    const newFieldVal = Number(input.value);
+    const safeNewFieldVal = Number.isFinite(newFieldVal) ? newFieldVal : 0;
+
+    const oldCommit = Number(pool.tempCommit) || 0;
+    const oldScene = Number(pool.tempScene) || 0;
+    const oldDay = Number(pool.tempDay) || 0;
+    const oldTempSum = oldCommit + oldScene + oldDay;
+
+    const fieldMatch = path.match(/\.((tempCommit|tempScene|tempDay))$/);
+    const fieldKey = fieldMatch ? fieldMatch[1] : null;
+    const oldFieldVal = fieldKey ? (Number(pool[fieldKey]) || 0) : 0;
+
+    const newTempSum = oldTempSum - oldFieldVal + safeNewFieldVal;
+
+    // Derive baseMax from current max minus current temp sum
+    const currentMax = Number(pool.max) || 0;
+    const baseMax = Math.max(0, currentMax - oldTempSum);
+    const newMax = Math.max(0, baseMax + newTempSum);
+
+    // Adjust current value by delta temp; clamp to newMax
+    const delta = newTempSum - oldTempSum;
+    const currentVal = Number(pool.value) || 0;
+    const newVal = Math.max(0, Math.min(currentVal + delta, newMax));
+
+    const updates = {
+      [path]: safeNewFieldVal,
+      [`system.pools.${poolKey}.value`]: newVal,
+      [`system.pools.${poolKey}.max`]: newMax
+    };
+
+    await this.actor.update(updates);
   }
 
   async _resetSoak() {
@@ -1182,16 +1170,75 @@ export class SWNActorSheet extends SWNBaseSheet {
       
       // Create chat message for release
       const chatMessage = getDocumentClass("ChatMessage");
+      const cadenceShort = releasedCommitment.duration === 'day' ? game.i18n.localize('swnr.effort.dayShort')
+        : releasedCommitment.duration === 'scene' ? game.i18n.localize('swnr.effort.sceneShort')
+        : game.i18n.localize('swnr.effort.commitShort');
       chatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: actor }),
         content: `<div class="effort-release">
           <h3><i class="fas fa-unlock"></i> ${game.i18n.localize("swnr.pools.commitment.released")}</h3>
-          <p><strong>${releasedCommitment.powerName}:</strong> ${releasedCommitment.amount} ${poolKey} effort released</p>
+          <p><strong>${releasedCommitment.powerName}:</strong> ${releasedCommitment.amount} ${poolKey} ${cadenceShort} effort released</p>
         </div>`
       });
       
       ui.notifications?.info(`Released ${releasedCommitment.amount} effort from ${releasedCommitment.powerName}`);
     }
+  }
+
+  /**
+   * Reset power consumption uses to maximum
+   * @param {Event} event - The click event
+   * @param {HTMLElement} target - The clicked element
+   * @returns {Promise<void>}
+   * @static
+   */
+  static async _onResetPowerUses(event, target) {
+    event.preventDefault();
+    
+    // If target is the icon inside the button, get the button element
+    const button = target.closest('.reset-power-uses') || target;
+    const itemId = button.dataset.itemId;
+    const consumptionIndex = parseInt(button.dataset.consumptionIndex);
+    
+    if (!itemId || consumptionIndex === undefined || isNaN(consumptionIndex)) {
+      ui.notifications?.error("Missing item ID or consumption index for power uses reset");
+      return;
+    }
+    
+    const actor = this.actor;
+    const item = actor.items.get(itemId);
+    
+    if (!item || item.type !== 'power') {
+      ui.notifications?.error("Could not find power item for uses reset");
+      return;
+    }
+    
+    const consumptions = foundry.utils.deepClone(item.system.consumptions);
+    const consumption = consumptions[consumptionIndex];
+    
+    if (!consumption || consumption.type !== 'uses') {
+      ui.notifications?.error("Invalid consumption data for uses reset");
+      return;
+    }
+    
+    // Reset the uses to maximum
+    const oldValue = consumption.uses.value;
+    consumption.uses.value = consumption.uses.max;
+    
+    // Update the item
+    await item.update({ "system.consumptions": consumptions });
+    
+    // Create chat message for reset
+    const chatMessage = getDocumentClass("ChatMessage");
+    chatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: actor }),
+      content: `<div class="power-uses-reset">
+        <h3><i class="fas fa-undo"></i> Power Uses Reset</h3>
+        <p><strong>${item.name}:</strong> Uses reset from ${oldValue}/${consumption.uses.max} to ${consumption.uses.max}/${consumption.uses.max}</p>
+      </div>`
+    });
+    
+    ui.notifications?.info(`Reset ${item.name} uses to maximum`);
   }
 
   /**
@@ -1223,6 +1270,41 @@ export class SWNActorSheet extends SWNBaseSheet {
       const isExpanded = SWNActorSheet.#expandedDescriptions[itemId];
       descriptionRow.style.display = isExpanded ? 'block' : 'none';
     }
+  }
+
+  /**
+   * Handle toggling pool temp modifiers visibility
+   * @param {Event} event - The originating click event
+   * @param {HTMLElement} target - The clicked element
+   */
+  static async _onTogglePoolTempModifiers(event, target) {
+    event.preventDefault();
+    
+    const poolKey = target.dataset.poolKey || target.closest('[data-pool-key]')?.dataset.poolKey;
+    if (!poolKey) return;
+
+    // Toggle the expanded state
+    if (SWNActorSheet.#expandedPoolTempModifiers[poolKey]) {
+      delete SWNActorSheet.#expandedPoolTempModifiers[poolKey];
+    } else {
+      SWNActorSheet.#expandedPoolTempModifiers[poolKey] = true;
+    }
+
+    // Update all matching badges (header and powers) to keep UI in sync
+    const isCollapsed = !!SWNActorSheet.#expandedPoolTempModifiers[poolKey];
+    const badges = this.element.querySelectorAll(`.pool-badge[data-pool-key="${CSS.escape(poolKey)}"]`);
+    badges.forEach((poolBadge) => {
+      poolBadge.classList.toggle('collapsed', isCollapsed);
+      poolBadge.classList.toggle('expanded', !isCollapsed);
+
+      // Update caret direction: down when collapsed, up when expanded
+      const chevron = poolBadge.querySelector('.pool-toggle-button i');
+      if (chevron) {
+        chevron.classList.toggle('fa-chevron-up', !isCollapsed);
+        chevron.classList.toggle('fa-chevron-down', isCollapsed);
+        chevron.classList.remove('fa-chevron-right', 'fa-chevron-left');
+      }
+    });
   }
 
   /**
@@ -1323,4 +1405,5 @@ export class SWNActorSheet extends SWNBaseSheet {
       }
     }
   }
+
 }

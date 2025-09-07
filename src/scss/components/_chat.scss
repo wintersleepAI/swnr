@@ -143,6 +143,81 @@
   }
 }
 
+// Consumable selection dialog (power usage) – compact, themed controls
+.swnr {
+  .consume-select-container {
+    .consume-select-header {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--color-text-dark-primary);
+    }
+
+    .consume-select-table {
+      width: 100%;
+      border-collapse: collapse;
+      th, td {
+        border-bottom: 1px solid var(--color-border-dark-tertiary);
+        padding: 0.35rem 0.5rem;
+        vertical-align: middle;
+      }
+
+      // Column alignment and widths
+      thead th:nth-child(1),
+      tbody td:nth-child(1) { text-align: center; width: 28px; }
+      thead th:nth-child(2),
+      tbody td:nth-child(2) { text-align: left; }
+      thead th:nth-child(3),
+      tbody td:nth-child(3) { text-align: right; width: 80px; }
+      thead th:nth-child(4),
+      tbody td:nth-child(4) { text-align: center; width: 120px; }
+
+      // Item icon sizing
+      tbody td:nth-child(1) img { width: 24px; height: 24px; }
+
+      tbody tr:hover {
+        background: rgba(255, 255, 255, 0.02);
+      }
+    }
+
+    .swnr-inc, .swnr-dec {
+      width: 22px;
+      height: 22px;
+      line-height: 20px;
+      padding: 0;
+      margin: 0 6px;
+      border-radius: 4px;
+      background: transparent;
+      border: 1px solid var(--color-border-dark-tertiary);
+      color: var(--color-text-dark-primary);
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .swnr-inc:hover, .swnr-dec:hover {
+      background: var(--color-border-dark-tertiary);
+    }
+
+    .swnr-amt {
+      display: inline-block;
+      min-width: 20px;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+      margin: 0 2px;
+    }
+  }
+}
+
+// Dark theme variants (core selector only)
+.theme-dark .swnr .consume-select-container {
+  .consume-select-header { color: var(--color-text-light-primary); }
+  .consume-select-table { th, td { border-color: var(--color-border-dark); } }
+  .swnr-inc, .swnr-dec {
+    color: var(--color-text-light-primary);
+    border-color: var(--color-border-dark);
+  }
+  .swnr-inc:hover, .swnr-dec:hover { background: var(--color-border-dark); }
+}
+
 // Actor Sheet Pool Display
 .swnr {
   .resource-pools {
@@ -202,6 +277,7 @@
     }
     
     .pool-badge {
+      position: relative;
       background: var(--color-bg-option);
       border: 1px solid var(--color-border-dark-tertiary);
       border-radius: 4px;
@@ -209,7 +285,6 @@
       min-width: 4rem;
       text-align: center;
       font-size: 0.75em;
-      position: relative;
       overflow: hidden;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -245,6 +320,7 @@
         display: block;
         color: var(--color-text-light-6);
         font-size: 0.9em;
+        text-align: center;
       }
       
       .pool-bar {

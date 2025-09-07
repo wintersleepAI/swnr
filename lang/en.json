@@ -170,6 +170,12 @@
             "showMutation": {
               "label": "Show Mutation"
             },
+            "showPoolsInHeader": {
+              "label": "Show Pools in Header"
+            },
+            "showPoolsInPowers": {
+              "label": "Show Pools in Powers Tab"
+            },
             "debtDisplay": {
               "label": "Name of Currency 1"
             },
@@ -1480,7 +1486,8 @@
       "system-strain": "System Strain",
       "ss": "Strain",
       "ac": "AC",
-      "acCWN": "AC (Ranged/Melee)",
+      "acCWN": "AC (r/m)",
+      "acCWNLong": "AC (ranged/melee)",
       "ab": "AB",
       "credit-change": "Add/Remove",
       "tabs": {
@@ -1915,7 +1922,9 @@
         "earth": "Earth Languages (Top 10)",
         "wwn": "WWN Languages",
         "both": "Both Earth and WWN Languages"
-      }
+      },
+      "showTempPoolModifiers": "Show Temporary Pool Modifiers?",
+      "showTempPoolModifiersHint": "Show temporary modifier input boxes for resource pools in the Powers tab. Allows manual adjustment of pool values and maximums."
     },
     "chat": {
       "dicepool": "Dice Pool",
@@ -2038,7 +2047,11 @@
       "bonus": "Bonus",
       "current": "Current",
       "day": "Day",
+      "dayShort": "(D)",
+      "sceneShort": "(S)",
+      "commitShort": "(C)",
       "scene": "Scene",
+      "commit": "Commit",
       "title": "Effort",
       "max": "Max"
     },
@@ -2050,13 +2063,13 @@
       "effortReleased": "Effort Released",
       "refreshSummary": {
         "scene": "Scene Refresh",
-        "rest": "Rest Refresh",
         "day": "Day Refresh"
       },
       "commitment": {
         "release": "Release committed effort",
         "released": "Effort Released"
-      }
+      },
+      "resetUses": "Reset power uses to maximum"
     },
     "dialog": {
       "attackRoll": "{actorName} attacking with {weaponName}?",
@@ -2209,7 +2222,6 @@
       "uses": "Internal Uses",
       "remaining": "remaining",
       "scene": "Per Scene",
-      "rest": "Per Rest",
       "day": "Per Day", 
       "commit": "Committed",
       "recover": "Recover",
@@ -2217,6 +2229,18 @@
       "recoverStrain": "Recover System Strain",
       "recoverItem": "Recover Item",
       "recoverUses": "Recover Uses",
+      "selectDialog": {
+        "title": "Select Consumables",
+        "choose": "Choose items to consume",
+        "item": "Item",
+        "available": "Available",
+        "spend": "Spend",
+        "selected": "Selected",
+        "notEnough": "You must select the required amount",
+        "noneAvailable": "No readied consumables with sufficient uses available",
+        "cancelled": "Item selection cancelled",
+        "noneSelected": "No items selected to consume"
+      },
       "timing": {
         "preparation": "Pay on Prep",
         "manual": "Pay via Chat",

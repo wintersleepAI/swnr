@@ -334,6 +334,99 @@
   margin-bottom: 0.25rem;
 }
 
+.swnr .consume-select-container .consume-select-header {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-dark-primary);
+}
+
+.swnr .consume-select-container .consume-select-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.swnr .consume-select-container .consume-select-table th, .swnr .consume-select-container .consume-select-table td {
+  border-bottom: 1px solid var(--color-border-dark-tertiary);
+  padding: 0.35rem 0.5rem;
+  vertical-align: middle;
+}
+
+.swnr .consume-select-container .consume-select-table thead th:nth-child(1),
+.swnr .consume-select-container .consume-select-table tbody td:nth-child(1) {
+  text-align: center;
+  width: 28px;
+}
+
+.swnr .consume-select-container .consume-select-table thead th:nth-child(2),
+.swnr .consume-select-container .consume-select-table tbody td:nth-child(2) {
+  text-align: left;
+}
+
+.swnr .consume-select-container .consume-select-table thead th:nth-child(3),
+.swnr .consume-select-container .consume-select-table tbody td:nth-child(3) {
+  text-align: right;
+  width: 80px;
+}
+
+.swnr .consume-select-container .consume-select-table thead th:nth-child(4),
+.swnr .consume-select-container .consume-select-table tbody td:nth-child(4) {
+  text-align: center;
+  width: 120px;
+}
+
+.swnr .consume-select-container .consume-select-table tbody td:nth-child(1) img {
+  width: 24px;
+  height: 24px;
+}
+
+.swnr .consume-select-container .consume-select-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.swnr .consume-select-container .swnr-inc, .swnr .consume-select-container .swnr-dec {
+  width: 22px;
+  height: 22px;
+  line-height: 20px;
+  padding: 0;
+  margin: 0 6px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid var(--color-border-dark-tertiary);
+  color: var(--color-text-dark-primary);
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.swnr .consume-select-container .swnr-inc:hover, .swnr .consume-select-container .swnr-dec:hover {
+  background: var(--color-border-dark-tertiary);
+}
+
+.swnr .consume-select-container .swnr-amt {
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  margin: 0 2px;
+}
+
+.theme-dark .swnr .consume-select-container .consume-select-header {
+  color: var(--color-text-light-primary);
+}
+
+.theme-dark .swnr .consume-select-container .consume-select-table th, .theme-dark .swnr .consume-select-container .consume-select-table td {
+  border-color: var(--color-border-dark);
+}
+
+.theme-dark .swnr .consume-select-container .swnr-inc, .theme-dark .swnr .consume-select-container .swnr-dec {
+  color: var(--color-text-light-primary);
+  border-color: var(--color-border-dark);
+}
+
+.theme-dark .swnr .consume-select-container .swnr-inc:hover, .theme-dark .swnr .consume-select-container .swnr-dec:hover {
+  background: var(--color-border-dark);
+}
+
 .swnr .resource-pools .pools-container {
   width: 100%;
   padding: 0.5rem;
@@ -389,6 +482,7 @@
 }
 
 .swnr .resource-pools .pool-badge {
+  position: relative;
   background: var(--color-bg-option);
   border: 1px solid var(--color-border-dark-tertiary);
   border-radius: 4px;
@@ -396,7 +490,6 @@
   min-width: 4rem;
   text-align: center;
   font-size: 0.75em;
-  position: relative;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -433,6 +526,7 @@
   display: block;
   color: var(--color-text-light-6);
   font-size: 0.9em;
+  text-align: center;
 }
 
 .swnr .resource-pools .pool-badge .pool-bar {
@@ -636,11 +730,14 @@
   /* Fieldset styling for consumption section */
   /* Responsive adjustments */
   /* Integration with existing power sheet styles */
-  /* Dark mode support */
+  /* Dark mode support (core) */
   /* Container drag and drop styling */
   /* Power prepared icon styling */
   /* Power consumption display styling */
   /* Consumption timing styling */
+  /* Pool toggle button styling */
+  /* Pool values with inline modifier styling */
+  /* Reserve space for the caret when toggle is present */
 }
 .swnr .item-form {
   font-family: "Roboto", sans-serif;
@@ -1703,18 +1800,18 @@
 .swnr .item-sheet .consumption-table-container .consumption-table input:focus, .swnr .item-sheet .consumption-table-container .consumption-table select:focus {
   outline: none;
 }
-.swnr .dark-theme .consumption-table-container .consumption-table th {
+.swnr .theme-dark .swnr .consumption-table-container .consumption-table th {
   background: var(--color-bg-dark);
   color: var(--color-text-light-primary);
   border-color: var(--color-border-dark);
 }
-.swnr .dark-theme .consumption-table-container .consumption-table td {
+.swnr .theme-dark .swnr .consumption-table-container .consumption-table td {
   border-color: var(--color-border-dark);
 }
-.swnr .dark-theme .consumption-table-container .consumption-table .consumption-row:hover {
+.swnr .theme-dark .swnr .consumption-table-container .consumption-table .consumption-row:hover {
   background: var(--color-bg-dark);
 }
-.swnr .dark-theme .consumption-table-container .no-consumptions {
+.swnr .theme-dark .swnr .consumption-table-container .no-consumptions {
   background: var(--color-bg-dark);
   border-color: var(--color-border-dark);
   color: var(--color-text-light-secondary);
@@ -1772,6 +1869,28 @@
   padding: 0.1em 0.3em;
   margin-right: 0.3em;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+.swnr .power-consumption-display .consumption-uses .reset-power-uses {
+  background: transparent;
+  border: none;
+  color: var(--color-text-dark-secondary);
+  font-size: 0.8em;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+.swnr .power-consumption-display .consumption-uses .reset-power-uses:hover {
+  color: var(--color-control-delete-hover);
+  opacity: 1;
+  transform: scale(1.1);
+}
+.swnr .power-consumption-display .consumption-uses .reset-power-uses i {
+  pointer-events: none;
 }
 .swnr .consumption-timing {
   display: flex;
@@ -1787,4 +1906,76 @@
   gap: 0.3em;
   margin: 0;
   cursor: pointer;
+}
+.swnr .pool-toggle-button {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text-light-6);
+  font-size: 10px;
+  transition: color 0.2s ease;
+}
+.swnr .pool-toggle-button:hover {
+  color: var(--color-text-light-primary);
+}
+.swnr .pool-values-with-modifier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2em;
+  margin: 0.2em 0;
+}
+.swnr .pool-values-with-modifier .pool-values {
+  font-size: 0.9em;
+  color: var(--color-text-dark-secondary);
+  text-align: center;
+}
+.swnr .pool-values-with-modifier .pool-temp-modifiers {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+.swnr .pool-values-with-modifier .pool-temp-modifier {
+  width: 28px;
+  height: 16px;
+  padding: 1px 2px;
+  border: 1px solid rgba(var(--accent-color), 0.2);
+  border-radius: 2px;
+  background: rgba(var(--accent-color), 0.05);
+  color: var(--color-text-dark-primary);
+  font-size: 0.7em;
+  text-align: center;
+}
+.swnr .pool-values-with-modifier .pool-temp-modifier:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 2px rgba(var(--accent-color), 0.3);
+  outline: none;
+  background: var(--color-bg-input);
+}
+.swnr .pool-values-with-modifier .pool-temp-modifier:hover {
+  border-color: rgba(var(--accent-color), 0.4);
+  background: rgba(var(--accent-color), 0.08);
+}
+.swnr .pool-values-with-modifier .pool-temp-modifier::placeholder {
+  color: var(--color-text-dark-inactive);
+  opacity: 0.7;
+}
+.swnr .pool-values-with-modifier .temp-label {
+  font-size: 0.65em;
+  color: var(--color-text-dark-secondary);
+  opacity: 0.8;
+  margin-right: 0.1em;
+  user-select: none;
+}
+.swnr .resource-pools .pool-badge.collapsed .pool-values-with-modifier .pool-temp-modifiers {
+  display: none;
+}
+.swnr .resource-pools .pool-badge.has-toggle {
+  padding-right: 1.25rem;
 }

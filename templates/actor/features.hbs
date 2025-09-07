@@ -102,6 +102,7 @@
     <div id="tweaks">
       {{! Two-column layout for everything under tweaks }}
       <section class='sheet-cols'>
+        {{#unless (eq actor.type "npc")}}
         <aside class='sidebar' style="flex: 0 1 300px;margin-right:4px;">
           <ol class="items-list">
             <li class="flexrow items-header">
@@ -170,10 +171,50 @@
             {{/each}}
           </div>
         </aside>
+        {{/unless}}
 
         {{! Main section with stats modifiers and tweaks }}
         <section class='main' style="flex: 2 1;">
           <div class="flex flexcol" style="gap:12px;">
+            {{#if (eq actor.type "npc")}}
+            {{! NPC-specific configuration - focus on power toggles }}
+            <div class="grid grid-col3"> <!-- NPC Power toggles -->
+              <h4 style="grid-column: 1 / -1;">Power Type Toggles</h4>
+              <div class="form-group">
+                <label>Show Cyberware</label>
+                <input type="checkbox" name="system.tweak.showCyberware" {{checked system.tweak.showCyberware}} />
+              </div>
+              <div class="form-group">
+                <label>Show Psychic</label>
+                <input type="checkbox" name="system.tweak.showPsychic" {{checked system.tweak.showPsychic}} />
+              </div>
+              <div class="form-group">
+                <label>Show Arts</label>
+                <input type="checkbox" name="system.tweak.showArts" {{checked system.tweak.showArts}} />
+              </div>
+              <div class="form-group">
+                <label>Show Spells</label>
+                <input type="checkbox" name="system.tweak.showSpells" {{checked system.tweak.showSpells}} />
+              </div>
+              <div class="form-group">
+                <label>Show Adept</label>
+                <input type="checkbox" name="system.tweak.showAdept" {{checked system.tweak.showAdept}} />
+              </div>
+              <div class="form-group">
+                <label>Show Mutation</label>
+                <input type="checkbox" name="system.tweak.showMutation" {{checked system.tweak.showMutation}} />
+              </div>
+              <div class="form-group" style="grid-column: 1 / -1; margin-top: 0.5rem;">
+                <label>Show Pools in Header</label>
+                <input type="checkbox" name="system.tweak.showPoolsInHeader" {{checked system.tweak.showPoolsInHeader}} />
+              </div>
+              <div class="form-group" style="grid-column: 1 / -1;">
+                <label>Show Pools in Powers Tab</label>
+                <input type="checkbox" name="system.tweak.showPoolsInPowers" {{checked system.tweak.showPoolsInPowers}} />
+              </div>
+            </div> <!-- End NPC Power toggles -->
+            {{else}}
+            {{! Character-specific configuration }}
             <div class="grid grid-col3"> <!--Stats modifiers / features --> 
               {{formGroup systemFields.baseAc value=system.baseAc localize=true}}
               {{formGroup systemFields.hitDie value=system.hitDie localize=true}}
@@ -190,7 +231,7 @@
               </div>
             </div> <!-- End Stats modifiers / features -->
             
-            <div class="grid grid-col2"> <!-- Tweak options -->
+            <div class="grid grid-col2"> <!-- Character Tweak options -->
               {{formGroup systemFields.tweak.fields.advInit value=system.tweak.advInit localize=true}}
               {{formGroup systemFields.tweak.fields.initiative.fields.mod value=system.tweak.initiative.mod localize=true}}
               {{formGroup systemFields.tweak.fields.debtDisplay value=system.tweak.debtDisplay localize=true}}
@@ -202,8 +243,11 @@
               {{formGroup systemFields.tweak.fields.showSpells value=system.tweak.showSpells localize=true}}
               {{formGroup systemFields.tweak.fields.showAdept value=system.tweak.showAdept localize=true}}
               {{formGroup systemFields.tweak.fields.showMutation value=system.tweak.showMutation localize=true}}
+              {{formGroup systemFields.tweak.fields.showPoolsInHeader value=system.tweak.showPoolsInHeader localize=true}}
+              {{formGroup systemFields.tweak.fields.showPoolsInPowers value=system.tweak.showPoolsInPowers localize=true}}
               {{!-- {{formGroup systemFields.tweak.fields.extraHeader value=system.tweak.extraHeader localize=true}} --}}
-            </div> <!-- End Tweak options -->
+            </div> <!-- End Character Tweak options -->
+            {{/if}}
       </section>
     </div>
   </div> <!-- End Tweaks -->

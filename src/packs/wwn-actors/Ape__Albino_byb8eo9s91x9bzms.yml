@@ -42,7 +42,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/gorilla.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -109,11 +109,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/gorilla.svg
 items:
   - name: Claw
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -155,7 +155,7 @@ items:
     _key: '!actors.items!byb8eo9s91x9bzms.0eylana40k7z8idm'
   - name: Thrown Rock
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0

@@ -41,7 +41,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/unfriendly-fire.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -108,11 +108,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/unfriendly-fire.svg
 items:
   - name: Bite
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -154,7 +154,7 @@ items:
     _key: '!actors.items!7ct0t4tdull5tesl.nzjv249hmqr09rxt'
   - name: Fire Breath
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         [[/r 1d6]]: 2-in-6 chance per round of breathing fire. One target. Save
@@ -185,7 +185,7 @@ items:
     _key: '!actors.items!7ct0t4tdull5tesl.9c5p2vbodsyap3fi'
   - name: Fire Immunity
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Unharmed by non-magical fire.
       cost: 0
@@ -214,7 +214,7 @@ items:
     _key: '!actors.items!7ct0t4tdull5tesl.ta729kinp93irp81'
   - name: Detect Invisible
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Receives an opposed Dex/Sneak check with a +4 bonus to detect invisible
@@ -245,7 +245,7 @@ items:
     _key: '!actors.items!7ct0t4tdull5tesl.bkfinj56onbb554q'
   - name: Pets
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Sometimes found with other creatures with an affinity for fire.
       cost: 0

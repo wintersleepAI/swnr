@@ -44,7 +44,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/humanoid-icons/golem-head.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -111,11 +111,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/golem-head.svg
 items:
   - name: Fist (Blunt/Heat)
     type: weapon
-    img: /systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: 3d10 blunt damage + 1d10 heat damage.
       cost: 0
@@ -157,7 +157,7 @@ items:
     _key: '!actors.items!ewl2nz9idt7qxlhx.5v6ke4th44ahodyx'
   - name: Mundane Damage Immunity
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Can only be harmed by magical attacks.
       cost: 0
@@ -186,7 +186,7 @@ items:
     _key: '!actors.items!ewl2nz9idt7qxlhx.oc8wmseifshh27gq'
   - name: Immunity
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Unharmed by gas; unaffected by charm, hold, and sleep spells.
       cost: 0
@@ -215,7 +215,7 @@ items:
     _key: '!actors.items!ewl2nz9idt7qxlhx.ifhy0wphaq0q8cb3'
   - name: Fire Immunity
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Unharmed by fire.
       cost: 0
@@ -244,7 +244,7 @@ items:
     _key: '!actors.items!ewl2nz9idt7qxlhx.o8n2fmkd5j6xe5qm'
   - name: Flaming Blood
     type: item
-    img: /systems/wwn/assets/default/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         If damaged by an edged weapon, emits a spurt of liquid fire: attacker

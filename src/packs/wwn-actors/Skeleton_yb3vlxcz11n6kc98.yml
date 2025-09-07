@@ -42,7 +42,7 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: icons/svg/cowled.svg
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/grim-reaper.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -109,11 +109,11 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: icons/svg/cowled.svg
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/grim-reaper.svg
 items:
   - name: Punch/Claw
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -155,7 +155,7 @@ items:
     _key: '!actors.items!yb3vlxcz11n6kc98.7hn6suvi88s5qh5k'
   - name: Halberd
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Halberds and other polearms can be somewhat awkward in narrow spaces,
@@ -202,7 +202,7 @@ items:
     _key: '!actors.items!yb3vlxcz11n6kc98.ohqe74zqwzasyc1p'
   - name: Sword, Short
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -247,7 +247,7 @@ items:
     _key: '!actors.items!yb3vlxcz11n6kc98.1cxhmbvlfkhrzh82'
   - name: Spear, Light
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Spears, and their longer cousin the pike, are common military weapons
@@ -292,7 +292,7 @@ items:
     _key: '!actors.items!yb3vlxcz11n6kc98.cacbdt0nmj2vfs21'
   - name: Bow, Small
     type: weapon
-    img: systems/wwn/assets/default/weapon.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Bows cover everything from the small self bows of horse archers to the
@@ -340,7 +340,7 @@ items:
     _key: '!actors.items!yb3vlxcz11n6kc98.e2i8egpkichedpy5'
   - name: Undead
     type: item
-    img: systems/wwn/assets/new/ability.png
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Make no noise, until they attack. Immune to effects that affect living
