@@ -49,8 +49,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### User Interface
 - **Improved Resource Management** - Better pool manager interface with clearer status indicators
 - **Enhanced Chat Cards** - Power usage chat cards now show detailed consumption information
-- **Container System** - Functional container support for organizing gear and equipment
-- **Language Support** - Improved localization and language functionality
+- **Container System**
+  - Mark any gear item as a container with capacity max/value and open/closed state
+  - Drag-and-drop items into open containers; auto-updates capacity and highlights valid drops
+  - Drag items out to remove; contained item encumbrance recalculates capacity
+  - Container location propagates to contained items; prevents container-in-container nesting; only gear/weapon/armor allowed
+  - Dedicated Containers section in the items list with capacity display and toggle icon
+- **Languages Management**
+  - New world settings: Available Languages (comma-separated list) and Preset selector (Earth, WWN, Both)
+  - Biography tab languages UI: open add panel with +, pick from available (excluding known), add, and remove per-language
+  - Add panel only shown when at least one available language is configured; styles for a clean, concise flow
 
 ### Technical Changes
 
