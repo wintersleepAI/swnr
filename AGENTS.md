@@ -1,25 +1,4 @@
-# Repository Guidelines
-
-## Project Structure & Module Organization
-- `module/`: Foundry VTT system logic (`.mjs` ES modules: documents, sheets, helpers).
-- `templates/`: Handlebars HTML templates used by system sheets and UI.
-- `src/scss/` → `css/`: Author styles in SCSS; compiled CSS output is generated. Do not edit `css/` by hand.
-- `src/packs/` ↔ `packs/`: YAML sources for compendium content and compiled Foundry compendium folders.
-- `assets/`, `lang/`, `system.json`: Static assets, localization JSON, and system manifest.
-
-## Build, Test, and Development Commands
-- `npm run build`: Compile SCSS `src/scss/swnr.scss` to `css/swnr.css` (no source map).
-- `npm run watch`: Watch and recompile SCSS with source maps during development.
-- `npm run pack-compendium`: Build compendiums from `src/packs/*` YAML into `packs/*` using Foundry CLI.
-- `npm run unpack-compendium`: Extract `packs/*` into `src/packs/*` (useful before editing or reviewing changes).
-- `npm run convert-csv` / `npm run convert-yaml`: Import/export helpers under `scripts/` for content workflows.
-- Lint (local): `npx eslint module scripts --ext .mjs,.js`.
-
-## Coding Style & Naming Conventions
-- JavaScript: 2‑space indentation, semicolons required, braces enforced (`curly`). See `eslint.config.mjs`.
-- Modules: ES modules (`.mjs`), kebab‑case filenames; classes in PascalCase (e.g., `SWNActor`).
-- Localization: Add keys under `lang/en.json` with `SWN.*` namespacing; use `game.i18n.localize` in code.
-- Styles: Place new SCSS under `src/scss/{global,components,utils}`; run build/watch to generate CSS.
+# Repository Guidelines (Concise)
 
 ## Foundry V13 ApplicationV2
 - No jQuery: use native DOM (`querySelector`, `addEventListener`).
@@ -27,6 +6,7 @@
 - Static action handlers: `static async _onActionHandler(event, target)`.
 - Templates must have a single root element.
 - Use `foundry.applications.api.DialogV2` (not legacy `Dialog`).
+  - Note: One existing consumable selection dialog still uses legacy `Dialog`. Do not add new legacy dialogs; prefer DialogV2 for future work.
 
 ### Embedded Documents (Items) Updates
 - Do not use flattened `items.{id}.system...` paths in `actor.update()`; in V13 these do not modify embedded Items.
@@ -44,9 +24,12 @@ await actor.updateEmbeddedDocuments('Item', payload);
 ```
 
 ## Pools & Powers
-- Pools are computed vs stored: use `actor.system.pools`; preserve manual overrides from `actor._source.system.pools` when recalculating.
-- Use `power.system.resourceKey()` to locate the correct pool (e.g., `Effort:Psychic`).
-- Update pattern: `await actor.update({ [\`system.pools.${key}.value\`]: newValue });` (batch multiple updates when possible).
+- Use `actor.system.pools` (computed) and preserve `_source` manual overrides when recalculating.
+- `power.system.resourceKey()` returns the pool key (e.g., `Effort:Psychic`).
+- Update pattern: `await actor.update({ [\`system.pools.${key}.value\`]: newValue })` (batch when possible).
+- Consumption types: `poolResource`, `systemStrain`, `consumableItem`, `uses`.
+  - `consumableItem` without `itemId`: show selection dialog; spend exactly user‑chosen amounts across items.
+  - `uses`: subtract 1 per use; cadence refresh in helpers.
 
 ## Refresh Orchestration
 - Use the orchestrator helper for all refresh flows:
@@ -55,20 +38,13 @@ await actor.updateEmbeddedDocuments('Item', payload);
 - Engine (`refresh-helpers.mjs`) exposes `refreshActorPools(actor, cadenceLevel)` for data updates only — do not create chat in the engine.
 - Removed: `refreshPools(cadence)` — call the orchestrator or the global API (`globalThis.swnr.refreshScene/refreshDay`).
 
-## Testing Guidelines
-- No unit test suite yet. Validate changes by loading this system in Foundry, reloading the world, and exercising affected sheets, chat cards, and migrations.
-- Run ESLint clean before PRs; for compendium edits, prefer editing `src/packs/` and repack.
-
-## Commit & Pull Request Guidelines
-- Messages: Imperative, concise. Prefer Conventional Commits (`feat:`, `fix:`, `docs:`) and keep CHANGELOG style in mind.
-- PRs: Describe the change, link issues, include screenshots/GIFs for UI updates, list migration steps if data/schema changed.
-- Before opening: `npm run build`, lint clean, and if content changed, run `npm run pack-compendium`. Update `CHANGELOG.md` for user‑facing changes.
-
 ## Docs & Planning
 - Development notes live in `docs/dev/` (see `knownIssues.md` and `README.md`). Keep known issues updated as you work.
+ - Media capture guide in `docs/dev/media-shots.md` lists required screenshots/GIFs and naming.
 
-## Acronyms
-- SWN: Stars Without Number
-- CWN: Cities Without Number
-- WWN: Worlds Without Number
-- AWN: Ashes Without Number
+## Containers & Languages
+- Containers: Items can be marked as containers with `system.container.isContainer`, capacity, and `isOpen`. Use `ContainerHelper` for drag/drop; no nesting.
+- Languages: GM sets `availableLanguages` and optional preset; actors add/remove on the Biography tab. Only show the add panel if at least one language is configured.
+
+## Theming
+- Do not toggle dark classes in JS. Use `.swnr ...` and `.theme-dark .swnr ...` selectors.
