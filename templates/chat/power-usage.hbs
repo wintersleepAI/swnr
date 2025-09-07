@@ -21,6 +21,14 @@
                 {{else}}{{localize 'swnr.effort.commitShort'}}
                 {{/if}}
               {{/if}}
+            {{else if (eq type "consumableItem")}}
+              {{spent}} {{localize "swnr.consumption.consumableItem"}}
+              {{#if items}}
+                :
+                {{#each items}}
+                  {{itemName}} × {{amount}}{{#unless @last}}, {{/unless}}
+                {{/each}}
+              {{/if}}
             {{else}}
               {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}} {{#if cadence}}
                 {{#if (eq cadence "day")}}{{localize 'swnr.effort.dayShort'}}

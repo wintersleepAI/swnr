@@ -2228,6 +2228,17 @@
       "recoverStrain": "Recover System Strain",
       "recoverItem": "Recover Item",
       "recoverUses": "Recover Uses",
+      "selectDialog": {
+        "title": "Select Consumables",
+        "choose": "Choose items to consume (requires {required})",
+        "item": "Item",
+        "available": "Available",
+        "spend": "Spend",
+        "selected": "Selected",
+        "notEnough": "You must select at least {required} uses (selected {selected})",
+        "noneAvailable": "No readied consumables with sufficient uses available",
+        "cancelled": "Item selection cancelled"
+      },
       "timing": {
         "preparation": "Pay on Prep",
         "manual": "Pay via Chat",
