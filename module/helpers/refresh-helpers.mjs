@@ -52,9 +52,19 @@ async function refreshActorPools(actor, cadenceLevel) {
         }
       }
       newCommitments[poolKey] = remaining;
+      const oldCommittedTotal = (sourceCommitments[poolKey] || []).reduce((sum, c) => sum + (Number(c.amount) || 0), 0);
       totalCommittedLocal = remaining.reduce((sum, c) => sum + (Number(c.amount) || 0), 0);
+      const releasedAmount = Math.max(0, oldCommittedTotal - totalCommittedLocal);
       // Reflect committed total on the pool
       poolData.committed = totalCommittedLocal;
+      // If commitments were released (e.g., scene cadence), increase available value by the released amount,
+      // clamped to current max. Subsequent refresh/tempo blocks may overwrite this as appropriate.
+      if (releasedAmount > 0) {
+        const curVal = Number(poolData.value) || 0;
+        const curMax = Number(poolData.max) || 0;
+        const incVal = Math.min(curVal + releasedAmount, curMax);
+        if (incVal !== curVal) poolData.value = incVal, poolChanged = true;
+      }
       poolChanged = true;
     }
 

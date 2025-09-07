@@ -1170,11 +1170,14 @@ export class SWNActorSheet extends SWNBaseSheet {
       
       // Create chat message for release
       const chatMessage = getDocumentClass("ChatMessage");
+      const cadenceShort = releasedCommitment.duration === 'day' ? game.i18n.localize('swnr.effort.dayShort')
+        : releasedCommitment.duration === 'scene' ? game.i18n.localize('swnr.effort.sceneShort')
+        : game.i18n.localize('swnr.effort.commitShort');
       chatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: actor }),
         content: `<div class="effort-release">
           <h3><i class="fas fa-unlock"></i> ${game.i18n.localize("swnr.pools.commitment.released")}</h3>
-          <p><strong>${releasedCommitment.powerName}:</strong> ${releasedCommitment.amount} ${poolKey} effort released</p>
+          <p><strong>${releasedCommitment.powerName}:</strong> ${releasedCommitment.amount} ${poolKey} ${cadenceShort} effort released</p>
         </div>`
       });
       

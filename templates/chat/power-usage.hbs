@@ -15,9 +15,19 @@
           <span class="consumption-cost consumption-{{type}}">
             <i class="fas fa-circle-minus"></i>
             {{#if (eq type "uses")}}
-              {{spent}} {{localize "swnr.consumption.uses"}} {{#if cadence}}({{localize (concat 'swnr.effort.' cadence)}}){{/if}}
+              {{spent}} {{localize "swnr.consumption.uses"}} {{#if cadence}}
+                {{#if (eq cadence "day")}}{{localize 'swnr.effort.dayShort'}}
+                {{else if (eq cadence "scene")}}{{localize 'swnr.effort.sceneShort'}}
+                {{else}}{{localize 'swnr.effort.commitShort'}}
+                {{/if}}
+              {{/if}}
             {{else}}
-              {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}} {{#if cadence}}({{localize (concat 'swnr.effort.' cadence)}}){{/if}}
+              {{spent}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}} {{#if cadence}}
+                {{#if (eq cadence "day")}}{{localize 'swnr.effort.dayShort'}}
+                {{else if (eq cadence "scene")}}{{localize 'swnr.effort.sceneShort'}}
+                {{else}}{{localize 'swnr.effort.commitShort'}}
+                {{/if}}
+              {{/if}}
             {{/if}}
           </span>
         {{/unless}}
@@ -110,13 +120,23 @@
             <button data-action="use-consumption" data-power-id="{{../power.id}}" data-actor-id="{{../actor.id}}" data-consumption-index="{{@index}}">
               {{#if (eq type "poolResource")}}
                 <i class="fas fa-battery-half"></i>
-                Spend {{usesCost}} {{resourceName}}{{#if subResource}}:{{subResource}} ({{localize (concat 'swnr.effort.' cadence)}}){{/if}}
+                Spend {{usesCost}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}} {{#if cadence}}
+                  {{#if (eq cadence "day")}}{{localize 'swnr.effort.dayShort'}}
+                  {{else if (eq cadence "scene")}}{{localize 'swnr.effort.sceneShort'}}
+                  {{else}}{{localize 'swnr.effort.commitShort'}}
+                  {{/if}}
+                {{/if}}
               {{else if (eq type "systemStrain")}}
                 <i class="fas fa-heart-broken"></i>
                 Take {{usesCost}} {{localize "swnr.consumption.systemStrain"}}
               {{else if (eq type "uses")}}
                 <i class="fas fa-minus-circle"></i>
-                Use {{usesCost}} {{localize "swnr.consumption.uses"}} {{#if cadence}}({{localize (concat 'swnr.effort.' cadence)}}){{/if}}
+                Use {{usesCost}} {{localize "swnr.consumption.uses"}} {{#if cadence}}
+                  {{#if (eq cadence "day")}}{{localize 'swnr.effort.dayShort'}}
+                  {{else if (eq cadence "scene")}}{{localize 'swnr.effort.sceneShort'}}
+                  {{else}}{{localize 'swnr.effort.commitShort'}}
+                  {{/if}}
+                {{/if}}
               {{else if (eq type "consumableItem")}}
                 <i class="fas fa-cube"></i>
                 Consume {{usesCost}} {{localize "swnr.consumption.consumableItem"}}
