@@ -1,0 +1,159 @@
+folder: ch7TJNmZ3AmSj004
+name: 'Theft: Why Can’t They Get It Themselves?'
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: ismiX5SkOYG607BB
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They tried, failed, and are now watched
+    name: ''
+    _key: '!tables.results!xvG7oEYLdxtysh4w.ismiX5SkOYG607BB'
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: aa4YlM0hSG8BxmfZ
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Their usual spies are unavailable
+    name: ''
+    _key: '!tables.results!xvG7oEYLdxtysh4w.aa4YlM0hSG8BxmfZ'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: edLBvg8xOHSSRr4d
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Their superiors don’t want them to do it
+    name: ''
+    _key: '!tables.results!xvG7oEYLdxtysh4w.edLBvg8xOHSSRr4d'
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: SHReMrrVhG4TZlFt
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They’re under too much suspicion right now
+    name: ''
+    _key: '!tables.results!xvG7oEYLdxtysh4w.SHReMrrVhG4TZlFt'
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: H6vtG6vdDKS1FJT6
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They don’t have anyone up to the job
+    name: ''
+    _key: '!tables.results!xvG7oEYLdxtysh4w.H6vtG6vdDKS1FJT6'
+  - type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: anvdwmF5RaKvM3OV
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They will, but the PCs will be decoys
+    name: ''
+    _key: '!tables.results!xvG7oEYLdxtysh4w.anvdwmF5RaKvM3OV'
+replacement: true
+displayRoll: true
+flags:
+  core: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '13.346'
+  createdTime: 1703891799686
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+formula: 1d6
+_id: xvG7oEYLdxtysh4w
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!xvG7oEYLdxtysh4w'
+

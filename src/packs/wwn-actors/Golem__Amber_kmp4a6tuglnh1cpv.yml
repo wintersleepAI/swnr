@@ -111,11 +111,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/golem-head.svg
 items:
   - name: Claw
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -157,7 +155,6 @@ items:
     _key: '!actors.items!kmp4a6tuglnh1cpv.l5h93lo5mfcjg3zg'
   - name: Bite
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -199,7 +196,6 @@ items:
     _key: '!actors.items!kmp4a6tuglnh1cpv.5htyua37hu4zejee'
   - name: Mundane Damage Immunity
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Can only be harmed by magical attacks.
       cost: 0
@@ -228,7 +224,6 @@ items:
     _key: '!actors.items!kmp4a6tuglnh1cpv.sdu0hird876djbxj'
   - name: Tracking
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Without error.
       cost: 0
@@ -257,7 +252,6 @@ items:
     _key: '!actors.items!kmp4a6tuglnh1cpv.7pquv2ppphrv0ek3'
   - name: Detect Invisible Creatures
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Within 60'.
       cost: 0
@@ -286,7 +280,6 @@ items:
     _key: '!actors.items!kmp4a6tuglnh1cpv.eku80hf5n95ekqbm'
   - name: Immunity
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Unharmed by gas; unaffected by charm, hold, and sleep spells.
       cost: 0

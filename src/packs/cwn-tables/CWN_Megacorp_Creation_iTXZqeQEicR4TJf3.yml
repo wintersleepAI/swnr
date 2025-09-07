@@ -1,0 +1,195 @@
+name: CWN Megacorp Creation
+description: >-
+  <p>Megacorps are the universal patrons, targets, antagonists, and loot sources
+  of most cyberpunk games. Most have effectively unlimited money, unrestricted
+  power within their own domains, and a profound indifference toward anything
+  but their own advancement. It’s a given that your campaign is going to need a
+  decent selection of them to serve as mission targets, paymasters, and
+  background movers.</p><p>1). Focus</p><p>2). Style</p><p>3).
+  Strengths</p><p>4). Recent Events</p><p>5). Goals</p><p>6 &amp; 7). Name
+  Elements</p>
+results:
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: hibr6HVpEMoMDdkn
+    flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Megacorp Main Focus
+    documentUuid: RollTable.EoLXuivpmKvEIDUf
+    description: ''
+    _key: '!tables.results!iTXZqeQEicR4TJf3.hibr6HVpEMoMDdkn'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: fDcisyTZ7tQzrwVQ
+    flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Megacorp Style
+    documentUuid: RollTable.2fn90r0sfqGhQ4nv
+    description: ''
+    _key: '!tables.results!iTXZqeQEicR4TJf3.fDcisyTZ7tQzrwVQ'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: 0JkBBS9FadUiNjT2
+    flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Corp Strengths
+    documentUuid: RollTable.QnOoIH4TvRw3v6f3
+    description: ''
+    _key: '!tables.results!iTXZqeQEicR4TJf3.0JkBBS9FadUiNjT2'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: 9PgB4ITe31dWBc4U
+    flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Recent Corp Events
+    documentUuid: RollTable.SHdVcW7dkF5g3OVs
+    description: ''
+    _key: '!tables.results!iTXZqeQEicR4TJf3.9PgB4ITe31dWBc4U'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: GUzTrRoGQXed4dNz
+    flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Current Corp Goals
+    documentUuid: RollTable.o2yXZkQtygdwyDKa
+    description: ''
+    _key: '!tables.results!iTXZqeQEicR4TJf3.GUzTrRoGQXed4dNz'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: MwkP3dbNIyQSmNhH
+    flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Corp Name Element
+    documentUuid: RollTable.HZFRS6P1Q6gnnCsm
+    description: ''
+    _key: '!tables.results!iTXZqeQEicR4TJf3.MwkP3dbNIyQSmNhH'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: OxhJuaHpc0eowmpm
+    flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Corp Element
+    documentUuid: RollTable.qInEYhO5fU68lztI
+    description: ''
+    _key: '!tables.results!iTXZqeQEicR4TJf3.OxhJuaHpc0eowmpm'
+formula: 1d1
+_id: iTXZqeQEicR4TJf3
+img: icons/svg/d20-grey.svg
+replacement: true
+displayRoll: false
+folder: Kaj67bsHMHUR6kI2
+flags: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '13.346'
+  createdTime: 1703841309034
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!iTXZqeQEicR4TJf3'
+

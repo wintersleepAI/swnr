@@ -1,0 +1,158 @@
+folder: n3hCUWqsIch9pU7N
+name: Fixer Basic Background
+_id: jwZTMolLk5Kd5hUc
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: E7c468o5Rcid6tZ1
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A street dweller made good over time
+    name: ''
+    _key: '!tables.results!jwZTMolLk5Kd5hUc.E7c468o5Rcid6tZ1'
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: MDfN5awNoTA8hIR0
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A corporate Mr. Smith with outside ties
+    name: ''
+    _key: '!tables.results!jwZTMolLk5Kd5hUc.MDfN5awNoTA8hIR0'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: Gyb4NuadLpd774Cm
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Gang member of a middleman crew
+    name: ''
+    _key: '!tables.results!jwZTMolLk5Kd5hUc.Gyb4NuadLpd774Cm'
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: TxK5errWlT7ggZMp
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Neighborhood figure of importance
+    name: ''
+    _key: '!tables.results!jwZTMolLk5Kd5hUc.TxK5errWlT7ggZMp'
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: u6yhr2G9PfKamI9P
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Hacker-associated info broker
+    name: ''
+    _key: '!tables.results!jwZTMolLk5Kd5hUc.u6yhr2G9PfKamI9P'
+  - type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: f5mjLPmRpodkrCr1
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They had or have rebel or terrorist ties
+    name: ''
+    _key: '!tables.results!jwZTMolLk5Kd5hUc.f5mjLPmRpodkrCr1'
+replacement: true
+displayRoll: true
+flags: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '13.346'
+  createdTime: 1703900723186
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+formula: 1d6
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!jwZTMolLk5Kd5hUc'
+

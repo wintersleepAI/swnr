@@ -1,0 +1,141 @@
+folder: 9tYCoWoL6mMvmEMQ
+name: Extra Loot %
+_id: LcZ8SSM72sMGTE2l
+img: icons/svg/d20-grey.svg
+description: >-
+  <p>The PCs may or may not find this loot, and if they do find it they may need
+  to fence it to convert it into cash. Any competent operator can find a fence,
+  but these more accessible dealers will almost never give more than 10% of an
+  object’s value. Better rates require a Contact or other special efforts, in
+  which case up to 25% of the item’s worth can be obtained.</p>
+results:
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: guGk9SnuvMxI5VHx
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: None
+    name: ''
+    _key: '!tables.results!LcZ8SSM72sMGTE2l.guGk9SnuvMxI5VHx'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 4
+    drawn: false
+    _id: 2iWyChD4ECJ9rTXI
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: +50%
+    name: ''
+    _key: '!tables.results!LcZ8SSM72sMGTE2l.2iWyChD4ECJ9rTXI'
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 9
+    drawn: false
+    _id: iH3hLzmbVtknKynC
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: +100%
+    name: ''
+    _key: '!tables.results!LcZ8SSM72sMGTE2l.iH3hLzmbVtknKynC'
+  - type: text
+    weight: 1
+    range:
+      - 10
+      - 11
+    drawn: false
+    _id: lMNtxfM9oxuaIHKW
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: +150%
+    name: ''
+    _key: '!tables.results!LcZ8SSM72sMGTE2l.lMNtxfM9oxuaIHKW'
+  - type: text
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: false
+    _id: mfpx7DKrIe2p4zxT
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: +200%
+    name: ''
+    _key: '!tables.results!LcZ8SSM72sMGTE2l.mfpx7DKrIe2p4zxT'
+replacement: true
+displayRoll: true
+flags: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '13.346'
+  createdTime: 1703901313546
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+formula: 2d6
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!LcZ8SSM72sMGTE2l'
+

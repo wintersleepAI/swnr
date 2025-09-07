@@ -106,11 +106,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/bully-minion.svg
 items:
   - name: Punch/Claw
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -152,7 +150,6 @@ items:
     _key: '!actors.items!lqmvudzq6lbv5bvv.f4pats6gwr8htmvi'
   - name: Club
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Clubs, staves, and maces are of much the same genus, though the latter
@@ -197,7 +194,6 @@ items:
     _key: '!actors.items!lqmvudzq6lbv5bvv.l4t4xcqrh9e1zo6g'
   - name: Mace
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Clubs, staves, and maces are of much the same genus, though the latter
@@ -242,7 +238,6 @@ items:
     _key: '!actors.items!lqmvudzq6lbv5bvv.efjf5y8xve35qku2'
   - name: Sword, Short
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -287,7 +282,6 @@ items:
     _key: '!actors.items!lqmvudzq6lbv5bvv.ovyczxki6boe0s11'
   - name: Surprise
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Surprises on a 1-3 on 1d6 if using B/X rules. Otherwise, gains a +1 to

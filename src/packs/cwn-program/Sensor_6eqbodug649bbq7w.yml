@@ -1,0 +1,35 @@
+name: Sensor
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 6eqbodug649bbq7w
+system:
+  accessCost: 0
+  cost: 500
+  description: >-
+    Similar to the Camera element, this code block handles sensors of any kind,
+    regardless of what they are intended to detect. The generality of the
+    element decreases its efficiency, however, and it applies a +1 security
+    difficulty penalty.
+  selfTerminating: false
+  skillCheckMod: '-1'
+  target: Device
+  type: subject
+  useAffects: Any sensors at -1 penalty
+effects: []
+ownership:
+  default: 0
+_key: '!items!6eqbodug649bbq7w'
+

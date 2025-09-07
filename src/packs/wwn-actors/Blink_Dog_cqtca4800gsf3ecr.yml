@@ -108,11 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
 items:
   - name: Bite
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -154,7 +152,6 @@ items:
     _key: '!actors.items!cqtca4800gsf3ecr.w71yq2tz9av6pw0r'
   - name: Blink
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Blink: In combat, teleport close to an enemy, attack, then reappear 1d4
@@ -186,7 +183,6 @@ items:
     _key: '!actors.items!cqtca4800gsf3ecr.yfqyimkvh3ma914r'
   - name: Disappear
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: If in serious danger, the pack can flee by entirely disappearing.
       cost: 0

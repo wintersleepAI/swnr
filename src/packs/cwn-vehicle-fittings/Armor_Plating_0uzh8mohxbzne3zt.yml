@@ -1,0 +1,32 @@
+name: Armor Plating
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: 0uzh8mohxbzne3zt
+system:
+  cost: 5000
+  description: >-
+    Increase the vehicle's Armor rating by 3 points. Medium vehicles can apply
+    this fitting twice, and Large ones can apply it three times.
+  effect: Adds Armor to the vehicle
+  mass: 3
+  minClass: S
+  power: 0
+  type: vehicle
+effects: []
+ownership:
+  default: 0
+_key: '!items!0uzh8mohxbzne3zt'
+

@@ -53,7 +53,8 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: systems/swnr/assets/icons/game-icons.net/humanoid-icons/vampire-dracula.svg
+    src: >-
+      systems/swnr/assets/icons/game-icons.net/humanoid-icons/vampire-dracula.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -120,11 +121,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/vampire-dracula.svg
 items:
   - name: Touch
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Energy Drain: A successfully touched target gains 2d6 system strain. If
@@ -173,7 +172,6 @@ items:
     _key: '!actors.items!dfwd6hcdhw0f5fwy.5dm0ronldpcgvecq'
   - name: Undead
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Make no noise, until they attack. Immune to effects that affect living
@@ -205,7 +203,6 @@ items:
     _key: '!actors.items!dfwd6hcdhw0f5fwy.zwqrl7jb59vu85vt'
   - name: Mundane Damage Immunity
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Can only be harmed by magical attacks.
       cost: 0
@@ -234,7 +231,6 @@ items:
     _key: '!actors.items!dfwd6hcdhw0f5fwy.c7i220mnqmxcvd8f'
   - name: Charming Gaze
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Save at &ndash;2 or be charmed: move towards the vampire (resisting
@@ -267,7 +263,6 @@ items:
     _key: '!actors.items!dfwd6hcdhw0f5fwy.l8p35som25bfj8mp'
   - name: Regeneration
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         A damaged vampire gains 3hp at the start of each round, as long as it is
@@ -298,7 +293,6 @@ items:
     _key: '!actors.items!dfwd6hcdhw0f5fwy.nex2tkiu6b55nnrq'
   - name: Immortal
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: 'At 0hp: Change into gaseous form; flee to coffin.'
       cost: 0
@@ -327,7 +321,6 @@ items:
     _key: '!actors.items!dfwd6hcdhw0f5fwy.sn6v134vib8nvt81'
   - name: Change Form
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Change form: At will; takes 1 round: Humanoid: Standard form. Dire wolf:
@@ -361,7 +354,6 @@ items:
     _key: '!actors.items!dfwd6hcdhw0f5fwy.avepjlbdp3g2kcku'
   - name: Summon Beasts
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         In human form only. Choose one type of creature from the surrounding

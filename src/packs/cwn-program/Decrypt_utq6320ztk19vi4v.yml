@@ -1,0 +1,33 @@
+name: Decrypt
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: utq6320ztk19vi4v
+system:
+  accessCost: 1
+  cost: 1000
+  description: >-
+    Decrypt a data file or radio transmission. This is often automatic for
+    civilian encoding, though some files take Int/Program checks.
+  selfTerminating: true
+  skillCheckMod: 0
+  target: Data
+  type: verb
+  useAffects: Decrypt a file or radio transmission
+effects: []
+ownership:
+  default: 0
+_key: '!items!utq6320ztk19vi4v'
+

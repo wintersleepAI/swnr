@@ -1,0 +1,164 @@
+_id: 9qD60NfjUfz8tDgt
+name: Frame-Inhabitants
+img: icons/svg/d20-grey.svg
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: i5lt51ldnmt3ehq6
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      One major monstrous beast, with the other inhabitants avoiding it or
+      supplicating it
+    name: ''
+    _key: '!tables.results!9qD60NfjUfz8tDgt.i5lt51ldnmt3ehq6'
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: ci7kfpmmhm7dns82
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: One major intelligent leader with their followers, slaves, or associates
+    name: ''
+    _key: '!tables.results!9qD60NfjUfz8tDgt.ci7kfpmmhm7dns82'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: 6mdp2co8nvwyffgu
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      [[1d3+1]] major inhabitants, at least two of which are hostile to each
+      other
+    name: ''
+    _key: '!tables.results!9qD60NfjUfz8tDgt.6mdp2co8nvwyffgu'
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: 4pbsr9mqdcgtttnw
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A major inhabitant and the remnants of another group or pack they deposed
+    name: ''
+    _key: '!tables.results!9qD60NfjUfz8tDgt.4pbsr9mqdcgtttnw'
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: jp0uw82719dht1iu
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A relatively harmonious group of [[1d3+1]] significant figures
+    name: ''
+    _key: '!tables.results!9qD60NfjUfz8tDgt.jp0uw82719dht1iu'
+  - type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: goyndfhtojahedin
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      No discernible major figures, only a disorganized congery of beasts and
+      beings
+    name: ''
+    _key: '!tables.results!9qD60NfjUfz8tDgt.goyndfhtojahedin'
+formula: 1d6
+replacement: true
+displayRoll: true
+folder: null
+sort: 1500000
+flags: {}
+ownership:
+  default: 0
+  mgBwP0sTLP1VFg1m: 3
+description: ''
+_stats:
+  systemId: wwn
+  systemVersion: 1.1.4
+  coreVersion: '13.346'
+  createdTime: null
+  modifiedTime: 1690569840132
+  lastModifiedBy: VPYTJCONjTybUwoI
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!tables!9qD60NfjUfz8tDgt'
+

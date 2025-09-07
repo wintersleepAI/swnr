@@ -1,0 +1,114 @@
+folder: n3hCUWqsIch9pU7N
+name: Fixer How Established Are They?
+_id: AKYwQEZdZChAoEvM
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: 7fZwzk6o1RwbWvfn
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They’re a new face with little history.
+    name: ''
+    _key: '!tables.results!AKYwQEZdZChAoEvM.7fZwzk6o1RwbWvfn'
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: fGtXoLcYHK7TG1fV
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They’ve handled business for a year or two.
+    name: ''
+    _key: '!tables.results!AKYwQEZdZChAoEvM.fGtXoLcYHK7TG1fV'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: rSizu7bnG7bLgPT1
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They’ve been around for a long while.
+    name: ''
+    _key: '!tables.results!AKYwQEZdZChAoEvM.rSizu7bnG7bLgPT1'
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: nHKGgeQey4GBoKUU
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They’ve been a face here for ages.
+    name: ''
+    _key: '!tables.results!AKYwQEZdZChAoEvM.nHKGgeQey4GBoKUU'
+replacement: true
+displayRoll: true
+flags: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '13.346'
+  createdTime: 1703901024022
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+formula: 1d4
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!AKYwQEZdZChAoEvM'
+

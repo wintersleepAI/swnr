@@ -1,0 +1,159 @@
+folder: JCTtZt3gza36t9hX
+name: 'Scouting: Why Can’t They Just Go There?'
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: ismiX5SkOYG607BB
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: The surrounding area is too dangerous
+    name: ''
+    _key: '!tables.results!XeCK9RPARsdNAR4Y.ismiX5SkOYG607BB'
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: aa4YlM0hSG8BxmfZ
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: A hostile group there is keeping them out
+    name: ''
+    _key: '!tables.results!XeCK9RPARsdNAR4Y.aa4YlM0hSG8BxmfZ'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: edLBvg8xOHSSRr4d
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They don’t have anyone with apposite skill
+    name: ''
+    _key: '!tables.results!XeCK9RPARsdNAR4Y.edLBvg8xOHSSRr4d'
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: SHReMrrVhG4TZlFt
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: They’re spread too thin to take care of it
+    name: ''
+    _key: '!tables.results!XeCK9RPARsdNAR4Y.SHReMrrVhG4TZlFt'
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: H6vtG6vdDKS1FJT6
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Somebody’s watching them too closely
+    name: ''
+    _key: '!tables.results!XeCK9RPARsdNAR4Y.H6vtG6vdDKS1FJT6'
+  - type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: anvdwmF5RaKvM3OV
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: The PCs would blend better than them
+    name: ''
+    _key: '!tables.results!XeCK9RPARsdNAR4Y.anvdwmF5RaKvM3OV'
+replacement: true
+displayRoll: true
+flags:
+  core: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '13.346'
+  createdTime: 1703891799686
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+formula: 1d6
+_id: XeCK9RPARsdNAR4Y
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!XeCK9RPARsdNAR4Y'
+

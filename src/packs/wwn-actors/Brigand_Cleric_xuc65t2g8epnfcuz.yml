@@ -117,11 +117,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/monk-face.svg
 items:
   - name: Crossbow
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Crossbows come in heavier varieties than the one listed, but such slow,
@@ -168,7 +166,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.zopxfqgkd0qhnxg0'
   - name: Mail Shirt
     type: armor
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
     system:
       description: >-
         Mail shirts are usually of iron or steel wire, though bronze and other
@@ -209,7 +206,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.d65z2tvlq39cdghw'
   - name: Mace
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Clubs, staves, and maces are of much the same genus, though the latter
@@ -254,7 +250,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.e3cyui06tyhqlrsw'
   - name: Cure Light Wounds
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Instant Range: The caster or a creature touched This spell has
@@ -289,7 +284,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.21osrexafjy2d6qz'
   - name: Cure Serious Wounds
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Instant Range: The caster or a creature touched The caster's
@@ -323,7 +317,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.8lktkf6p8p2bryq7'
   - name: Purify Food and Water
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Permanent Range: 10' This spell makes spoiled, rotten,
@@ -357,7 +350,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.nlccvew6gj90cjme'
   - name: Remove Curse (Cleric)
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Instant / Permanent (curse) Range: The caster or a creature
@@ -396,7 +388,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.9t52vdk64k4e3p1c'
   - name: Remove Fear
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 2 turns Range: The caster or a creature touched The creature
@@ -431,7 +422,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.4xsvn1byruz370tl'
   - name: Resist Cold
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 6 turns Range: 30' All creatures within range are protected
@@ -466,7 +456,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.zrgysagbc6zigbow'
   - name: Bless
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 6 turns Range: 60' May be used in one of two situations:
@@ -503,7 +492,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.hqq1h39myndub89a'
   - name: Find Traps
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 2 turns Range: 30' Trapped objects or areas within range of
@@ -536,7 +524,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.yv649b7kuybo7n2g'
   - name: Hold Person (Cleric)
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 9 turns Range: 180' This spell causes one or more humans,
@@ -571,7 +558,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.wyijm7am17my2azg'
   - name: Cure Disease
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Instant Range: 30' This spell has two uses: 1. Cure a subject
@@ -608,7 +594,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.tl2mdwih0tzgw1rf'
   - name: Resist Fire
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 2 turns Range: 30' A single creature is bestowed with
@@ -643,7 +628,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.cmlbvfv82hmgtn7o'
   - name: Create Food
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Permanent Range: 30' Conjures food from thin air. ▶ Volume:
@@ -677,7 +661,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.301sxqpulfuwbrya'
   - name: Create Water
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Permanent Range: Touch This spell causes a magical fount to
@@ -712,7 +695,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.igu47ylwc0n7lzwo'
   - name: Neutralize Poison
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Instant Range: The caster or a creature or object touched This
@@ -746,7 +728,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.4rah3mbun0j07rps'
   - name: Insect Plague
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Concentration (up to 1 day) Range: 480' Cast above ground,
@@ -783,7 +764,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.t7hck0arluuk8h3f'
   - name: Quest
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Until quest is completed / Instant (remove quest) Range: 30'
@@ -827,7 +807,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.3tfc3nn6nqxsh8cy'
   - name: Sticks to Snakes
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 6 turns Range: 120' 2d8 normal sticks are miraculously
@@ -863,7 +842,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.bp1z25zkazlildwm'
   - name: Continual Light (Cleric)
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Permanent Range: 120' This spell has three usages: 1.
@@ -905,7 +883,6 @@ items:
     _key: '!actors.items!xuc65t2g8epnfcuz.1egp0ny1vend4whi'
   - name: Striking
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 1 turn Range: 30' A single weapon is enchanted: ▶ Damage: It

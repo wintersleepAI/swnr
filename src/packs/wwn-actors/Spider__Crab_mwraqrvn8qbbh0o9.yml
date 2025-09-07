@@ -108,11 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/animal-icons/spider-face.svg
 items:
   - name: Bite
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: 'Poison: Causes death in 1d4 turns (Physical save with a +2 bonus).'
       cost: 0
@@ -154,7 +152,6 @@ items:
     _key: '!actors.items!mwraqrvn8qbbh0o9.rd6jady67rndg6mj'
   - name: Ambush
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Attack by dropping on victims from above.
       cost: 0
@@ -183,7 +180,6 @@ items:
     _key: '!actors.items!mwraqrvn8qbbh0o9.jgahmn6lznfk1pwe'
   - name: Surprise
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Receives an additional +3 to checks to surprise opponents.
       cost: 0
@@ -212,7 +208,6 @@ items:
     _key: '!actors.items!mwraqrvn8qbbh0o9.9fh5p01vh7p67jwt'
   - name: Cling
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Can walk on walls and ceilings.
       cost: 0

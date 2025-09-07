@@ -1,0 +1,140 @@
+_id: 0aHNowVvpqcOitxG
+name: Room Layout
+img: icons/svg/d20-grey.svg
+results:
+  - _id: mrtX52amXSkDKW7v
+    type: text
+    weight: 1
+    range:
+      - 1
+      - 8
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: <b>Exits</b>
+    name: ''
+    _key: '!tables.results!0aHNowVvpqcOitxG.mrtX52amXSkDKW7v'
+  - _id: MqOaQRB228a3zjH3
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: false
+    flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Room-Egress
+    documentUuid: Compendium.wwn.gm-subtables.mCzku3NSmMSjisOy
+    description: ''
+    _key: '!tables.results!0aHNowVvpqcOitxG.MqOaQRB228a3zjH3'
+  - _id: Pr3jUTHb9fsUGT8g
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 4
+    drawn: false
+    flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Room-Egress
+    documentUuid: Compendium.wwn.gm-subtables.mCzku3NSmMSjisOy
+    description: ''
+    _key: '!tables.results!0aHNowVvpqcOitxG.Pr3jUTHb9fsUGT8g'
+  - _id: kqO4MOi4ACc4XX0W
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 7
+    drawn: false
+    flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Room-Egress
+    documentUuid: Compendium.wwn.gm-subtables.mCzku3NSmMSjisOy
+    description: ''
+    _key: '!tables.results!0aHNowVvpqcOitxG.kqO4MOi4ACc4XX0W'
+  - _id: bDrgarVcQcyXPZ8G
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 8
+    drawn: false
+    flags: {}
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Room-Egress
+    documentUuid: Compendium.wwn.gm-subtables.mCzku3NSmMSjisOy
+    description: ''
+    _key: '!tables.results!0aHNowVvpqcOitxG.bDrgarVcQcyXPZ8G'
+formula: 1d8
+replacement: true
+displayRoll: true
+folder: null
+sort: 100000
+flags: {}
+ownership:
+  default: 0
+  mgBwP0sTLP1VFg1m: 3
+description: ''
+_stats:
+  systemId: wwn
+  systemVersion: 1.1.4
+  coreVersion: '13.346'
+  createdTime: null
+  modifiedTime: 1690569812651
+  lastModifiedBy: VPYTJCONjTybUwoI
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!tables!0aHNowVvpqcOitxG'
+

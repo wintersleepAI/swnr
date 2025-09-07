@@ -1,0 +1,108 @@
+_id: rQZeiqnlbhXB9831
+name: Magical Armor SA, Great
+flags:
+  better-rolltables:
+    table-type: better
+    table-currency-string: ''
+    loot-actor-name: ''
+    loot-amount-key: ''
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - _id: u9lmxfYTcelSjQ6X
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 19
+    drawn: false
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Magical Armor and Shield Abilities
+    documentUuid: Compendium.wwn.magic-tables.pPZG8CuQQKPynEFb
+    description: ''
+    _key: '!tables.results!rQZeiqnlbhXB9831.u9lmxfYTcelSjQ6X'
+  - _id: YxeHWyrVQSpQcHQu
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 17
+      - 19
+    drawn: false
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    name: Magical Armor and Shield Abilities
+    documentUuid: Compendium.wwn.magic-tables.pPZG8CuQQKPynEFb
+    description: ''
+    _key: '!tables.results!rQZeiqnlbhXB9831.YxeHWyrVQSpQcHQu'
+  - _id: nSkPKXXe5poPY9pb
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 20
+      - 20
+    drawn: false
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: No special abilities.
+    name: ''
+    _key: '!tables.results!rQZeiqnlbhXB9831.nSkPKXXe5poPY9pb'
+formula: 1d20
+replacement: true
+displayRoll: true
+_stats:
+  coreVersion: '13.346'
+  systemId: null
+  systemVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+ownership:
+  default: 0
+  mgBwP0sTLP1VFg1m: 3
+folder: null
+sort: 0
+_key: '!tables!rQZeiqnlbhXB9831'
+

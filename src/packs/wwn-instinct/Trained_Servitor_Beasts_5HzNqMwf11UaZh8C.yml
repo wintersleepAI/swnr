@@ -1,0 +1,159 @@
+_id: 5HzNqMwf11UaZh8C
+name: Trained Servitor Beasts
+img: icons/svg/d20-grey.svg
+results:
+  - _id: Cq2uL8PaprvYxzpC
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Seek its trainer or handler on the field
+    name: ''
+    _key: '!tables.results!5HzNqMwf11UaZh8C.Cq2uL8PaprvYxzpC'
+  - _id: sA0lQ4Pfzi55wOdT
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Repeat the last action it took, sensible or not
+    name: ''
+    _key: '!tables.results!5HzNqMwf11UaZh8C.sA0lQ4Pfzi55wOdT'
+  - _id: DmTQbR6KJnBl0pPA
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Attack the enemy closest to its handler
+    name: ''
+    _key: '!tables.results!5HzNqMwf11UaZh8C.DmTQbR6KJnBl0pPA'
+  - _id: v1ipUXJ4ZZbWoLTH
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Whine in confusion and disorientation
+    name: ''
+    _key: '!tables.results!5HzNqMwf11UaZh8C.v1ipUXJ4ZZbWoLTH'
+  - _id: R64ieYsWpk5dkrP0
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Perform an inappropriate but trained action
+    name: ''
+    _key: '!tables.results!5HzNqMwf11UaZh8C.R64ieYsWpk5dkrP0'
+  - _id: JQP40zHl7lBbjkCf
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Panic, attacking the nearest friend or foe
+    name: ''
+    _key: '!tables.results!5HzNqMwf11UaZh8C.JQP40zHl7lBbjkCf'
+formula: 1d6
+replacement: true
+displayRoll: true
+folder: null
+sort: 0
+flags:
+  core: {}
+_stats:
+  coreVersion: '13.346'
+  systemId: null
+  systemVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+  compendiumSource: Compendium.wwn.instinct.5HzNqMwf11UaZh8C
+  duplicateSource: null
+  exportSource: null
+ownership:
+  default: 0
+  mgBwP0sTLP1VFg1m: 3
+description: ''
+_key: '!tables!5HzNqMwf11UaZh8C'
+

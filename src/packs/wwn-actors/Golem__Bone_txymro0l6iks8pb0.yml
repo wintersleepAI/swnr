@@ -111,11 +111,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/golem-head.svg
 items:
   - name: Axe, War
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Axes given here are those fashioned for war; lighter and more agile than
@@ -161,7 +159,6 @@ items:
     _key: '!actors.items!txymro0l6iks8pb0.3z96q67fcx1he4y6'
   - name: Sword, Long
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -206,7 +203,6 @@ items:
     _key: '!actors.items!txymro0l6iks8pb0.49e37kjl7e9dfgmj'
   - name: Mundane Damage Immunity
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Can only be harmed by magical attacks.
       cost: 0
@@ -235,7 +231,6 @@ items:
     _key: '!actors.items!txymro0l6iks8pb0.d531fsawktludual'
   - name: Immunity
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Unharmed by gas; unaffected by charm, hold, and sleep spells.
       cost: 0
@@ -264,7 +259,6 @@ items:
     _key: '!actors.items!txymro0l6iks8pb0.lq2xbw64yuomz059'
   - name: Weapons
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: 4&times;1-handed or 2&times;2-handed.
       cost: 0
@@ -293,7 +287,6 @@ items:
     _key: '!actors.items!txymro0l6iks8pb0.kqewwdjyq9v6y4g4'
   - name: Energy Immunity
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Unharmed by fire, cold, and electricity.
       cost: 0
@@ -322,7 +315,6 @@ items:
     _key: '!actors.items!txymro0l6iks8pb0.duvzdxdzwbp55i5l'
   - name: Attack Multiple Opponents
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Up to 2 per round.
       cost: 0
@@ -351,7 +343,6 @@ items:
     _key: '!actors.items!txymro0l6iks8pb0.8cel42bcs0pak5fw'
   - name: Fists
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: Any hands not occupied by weapons may make an unarmed attack.
       cost: 0

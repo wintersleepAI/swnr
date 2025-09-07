@@ -121,11 +121,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
 items:
   - name: Bow, Small
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Bows cover everything from the small self bows of horse archers to the
@@ -173,7 +171,6 @@ items:
     _key: '!actors.items!nya9jogmtfn5pq59.mdf7v4fjeawt2g7x'
   - name: Sword, Long
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -218,7 +215,6 @@ items:
     _key: '!actors.items!nya9jogmtfn5pq59.6cz98611z8ytp1t6'
   - name: Axe, War
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Axes given here are those fashioned for war; lighter and more agile than
@@ -264,7 +260,6 @@ items:
     _key: '!actors.items!nya9jogmtfn5pq59.ep0szq7m0y6her1i'
   - name: Spear, Heavy
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Spears, and their longer cousin the pike, are common military weapons
@@ -309,7 +304,6 @@ items:
     _key: '!actors.items!nya9jogmtfn5pq59.qc2dn5c620fopewp'
   - name: Club, Great
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Clubs, staffs, and maces are of much the same genus, though the latter
@@ -354,7 +348,6 @@ items:
     _key: '!actors.items!nya9jogmtfn5pq59.u94iwp53ldtkad67'
   - name: Hate the Sun
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: '-1 to hit in full daylight.'
       cost: 0
@@ -383,7 +376,6 @@ items:
     _key: '!actors.items!nya9jogmtfn5pq59.d1u61w35q41ujnf4'
   - name: Craven
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Afraid of larger or stronger-looking creatures, though leaders may force

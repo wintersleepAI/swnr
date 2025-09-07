@@ -1,0 +1,170 @@
+folder: MwGyL6iXOdzE7yA4
+name: 'Cyber Product Line: How Can You Get It?'
+_id: xC3QBuGVxWHUifGg
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: qvI9ll8Nf0QXKetl
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      It’s available in all the usual places at the usual prices for systems of
+      its kind.
+    name: ''
+    _key: '!tables.results!xC3QBuGVxWHUifGg.qvI9ll8Nf0QXKetl'
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: dTayhNcys9MHouxM
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      It’s exclusive to corp retail outlets and will cost 20% more to get a
+      usable system.
+    name: ''
+    _key: '!tables.results!xC3QBuGVxWHUifGg.dTayhNcys9MHouxM'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: v6EN0XSHGJ4Q4oag
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      It’s a sub-licensed line only available through a third party who usually
+      restricts it to their own clients and personnel.
+    name: ''
+    _key: '!tables.results!xC3QBuGVxWHUifGg.v6EN0XSHGJ4Q4oag'
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: 10XkVMkDXhdxYnNp
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      It’s strictly black market, having been pulled from public sale for some
+      reason, and might cost up to 50% more than usual.
+    name: ''
+    _key: '!tables.results!xC3QBuGVxWHUifGg.10XkVMkDXhdxYnNp'
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: FvgNiQe5reA4bUWY
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      It’s available only at a specific retail outlet that only sells to
+      verified clientele.
+    name: ''
+    _key: '!tables.results!xC3QBuGVxWHUifGg.FvgNiQe5reA4bUWY'
+  - type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: rtTynN9hdB6yemcl
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: >-
+      The entire production run was sold through some time ago, and getting it
+      now means finding someone willing to sell theirs.
+    name: ''
+    _key: '!tables.results!xC3QBuGVxWHUifGg.rtTynN9hdB6yemcl'
+replacement: true
+displayRoll: false
+flags: {}
+_stats:
+  systemId: swnr
+  systemVersion: 1.1.0
+  coreVersion: '13.346'
+  createdTime: 1703915135826
+  modifiedTime: 1703915663438
+  lastModifiedBy: IdcfL6SpjG7rJP4D
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+formula: 1d6
+sort: 0
+ownership:
+  default: 0
+  IdcfL6SpjG7rJP4D: 3
+_key: '!tables!xC3QBuGVxWHUifGg'
+

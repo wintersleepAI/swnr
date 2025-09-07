@@ -1,0 +1,203 @@
+_id: S5LfTFOCY9w6H9h1
+name: Government-SingleRuler
+img: icons/svg/d20-grey.svg
+description: Single Rulers
+results:
+  - _id: BZXXPetqhuhbzBhZ
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    img: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: King or queen over lesser lords
+    name: ''
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.BZXXPetqhuhbzBhZ'
+  - _id: Te9hABZ3H9VjNnpK
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    img: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Autocrat with non-noble officials
+    name: ''
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.Te9hABZ3H9VjNnpK'
+  - _id: AARVHIQFETaSTXup
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    img: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: President chosen by certain electors
+    name: ''
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.AARVHIQFETaSTXup'
+  - _id: i2OhJeaEvQMyNGLx
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    img: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Warlord recognized as the strongest
+    name: ''
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.i2OhJeaEvQMyNGLx'
+  - _id: MrsnW8DtSAM8rafc
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    img: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Seniormost representative of the ruling class
+    name: ''
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.MrsnW8DtSAM8rafc'
+  - _id: occFxOEd27N4CTLA
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    img: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Divinely-chosen leader of the land
+    name: ''
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.occFxOEd27N4CTLA'
+  - _id: cgojRaRZt5iiZEDK
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: false
+    img: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Monarch for a fixed term or situation
+    name: ''
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.cgojRaRZt5iiZEDK'
+  - _id: tSEHREpeB9MKXrOK
+    flags: {}
+    type: text
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: false
+    img: null
+    _stats:
+      coreVersion: '13.346'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    description: Wielder of some magical legitimacy
+    name: ''
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.tSEHREpeB9MKXrOK'
+formula: 1d8
+replacement: true
+displayRoll: true
+folder: null
+sort: 4900000
+flags:
+  better-rolltables: {}
+ownership:
+  default: 0
+  mgBwP0sTLP1VFg1m: 3
+_stats:
+  systemId: wwn
+  systemVersion: 1.1.4
+  coreVersion: '13.346'
+  createdTime: null
+  modifiedTime: 1690569840132
+  lastModifiedBy: VPYTJCONjTybUwoI
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+_key: '!tables!S5LfTFOCY9w6H9h1'
+

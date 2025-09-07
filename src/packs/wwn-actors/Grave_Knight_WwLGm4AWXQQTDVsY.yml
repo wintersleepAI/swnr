@@ -139,11 +139,9 @@ prototypeToken:
     src: null
     disposition: false
   movementAction: null
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/visored-helm.svg
 items:
   - name: Attack
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -212,7 +210,6 @@ items:
     _key: '!actors.items!WwLGm4AWXQQTDVsY.csmwg54wij9ubicq'
   - name: Regenerate
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Regains all lost hit points at dusk each day, assuming it's not

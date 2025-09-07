@@ -109,11 +109,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
 items:
   - name: Mace
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Clubs, staffs, and maces are of much the same genus, though the latter
@@ -158,7 +156,6 @@ items:
     _key: '!actors.items!lyd81z18ezbxkmoa.raolzchin9l1luh9'
   - name: Cure Light Wounds
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Instant Range: The caster or a creature touched This spell has
@@ -193,7 +190,6 @@ items:
     _key: '!actors.items!lyd81z18ezbxkmoa.nuaqzwoofbg1b6iy'
   - name: Detect Evil
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 6 turns Range: 120' Objects enchanted for evil purposes or
@@ -228,7 +224,6 @@ items:
     _key: '!actors.items!lyd81z18ezbxkmoa.i36zmlhlmupoq7st'
   - name: Detect Magic
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 2 turns Range: 60' Enchanted objects, areas, or creatures are
@@ -259,7 +254,6 @@ items:
     _key: '!actors.items!lyd81z18ezbxkmoa.zodrmfdb9j83tpss'
   - name: Light
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 12 turns Range: 120' This spell has three usages: Conjuring
@@ -298,7 +292,6 @@ items:
     _key: '!actors.items!lyd81z18ezbxkmoa.r9rwoy7yxmfcqtkf'
   - name: Protection from Evil
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 12 turns Range: The caster This spell wards the caster from
@@ -337,7 +330,6 @@ items:
     _key: '!actors.items!lyd81z18ezbxkmoa.f0nrx5za8k11jwbm'
   - name: Purify Food and Water
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Permanent Range: 10' This spell makes spoiled, rotten,
@@ -371,7 +363,6 @@ items:
     _key: '!actors.items!lyd81z18ezbxkmoa.3y5ridp4vj55tvh6'
   - name: Remove Fear
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 2 turns Range: The caster or a creature touched The creature
@@ -406,7 +397,6 @@ items:
     _key: '!actors.items!lyd81z18ezbxkmoa.r528ez0w7uk8csc6'
   - name: Resist Cold
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 6 turns Range: 30' All creatures within range are protected

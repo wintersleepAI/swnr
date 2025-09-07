@@ -1,0 +1,35 @@
+name: Drone
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: null
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+  lastModifiedBy: null
+  exportSource: null
+sort: 0
+_id: i07yb25e8rn6zbr9
+system:
+  accessCost: 0
+  cost: 1000
+  description: >-
+    A remote-controlled drone. The base difficulty is equal to 7 plus the
+    operator's level or HD/3, rounded up, or 8 if it's not actively controlled.
+    Like the Cyber Subject, it is not necessary to manifest in a drone's node to
+    hack it wirelessly.
+  selfTerminating: false
+  skillCheckMod: 0
+  target: Device
+  type: subject
+  useAffects: Drones of all kinds
+effects: []
+ownership:
+  default: 0
+_key: '!items!i07yb25e8rn6zbr9'
+

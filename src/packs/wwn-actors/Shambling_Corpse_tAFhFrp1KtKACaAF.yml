@@ -70,7 +70,8 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/shambling-zombie.svg
+    src: >-
+      systems/swnr/assets/icons/game-icons.net/creature-icons/shambling-zombie.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -142,11 +143,9 @@ prototypeToken:
     src: null
     disposition: false
   movementAction: null
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/shambling-zombie.svg
 items:
   - name: Averse
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Certain religious symbols, lines of salt, emblems of natural law, or
@@ -198,7 +197,6 @@ items:
     _key: '!actors.items!tAFhFrp1KtKACaAF.qnrlz70y4h2lmzlw'
   - name: Beguiling
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Once per scene it can beguile a creature with its gaze on a failed
@@ -250,7 +248,6 @@ items:
     _key: '!actors.items!tAFhFrp1KtKACaAF.n60lrl1khws0nlf8'
   - name: Desynchrony
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Foes hit by it must make a Physical save or be paralyzed for 1d4+1
@@ -300,7 +297,6 @@ items:
     _key: '!actors.items!tAFhFrp1KtKACaAF.d1sblo259kq2n0ve'
   - name: Draining
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Foes hit by it are enfeebled, taking a cumulative -2 penalty to hit
@@ -351,7 +347,6 @@ items:
     _key: '!actors.items!tAFhFrp1KtKACaAF.eciwzy9c7bvzrudu'
   - name: Intangible
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         It is a shade or specter, unable to be touched by non-magical objects or
@@ -402,7 +397,6 @@ items:
     _key: '!actors.items!tAFhFrp1KtKACaAF.31vbpi7aolbxbfqz'
   - name: Ravenous
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         If it hits with at least one of its attacks, it gets an immediate bonus
@@ -452,7 +446,6 @@ items:
     _key: '!actors.items!tAFhFrp1KtKACaAF.h8vg9k9cvexsj76w'
   - name: Red Hunger
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         It must eat a pound of human flesh or drink a pint of human blood every
@@ -503,7 +496,6 @@ items:
     _key: '!actors.items!tAFhFrp1KtKACaAF.wqpepk0v64yf1g07'
   - name: Sunscorch
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Exposure to sunlight, running water, or some specific other emblem of
@@ -553,7 +545,6 @@ items:
     _key: '!actors.items!tAFhFrp1KtKACaAF.x2rneg0qvca94igu'
   - name: Terrifying
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Enemies must make a Mental save or lose their first turn's Main Action
@@ -603,7 +594,6 @@ items:
     _key: '!actors.items!tAFhFrp1KtKACaAF.o23as7l47q6jzcym'
   - name: Impure
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Weapons of silver, green wood, or other specific apotropaic material
@@ -654,7 +644,6 @@ items:
     _key: '!actors.items!tAFhFrp1KtKACaAF.591k8xff9e93f71d'
   - name: Unending
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         It cannot die by violence. Only the right act, weapon, object
@@ -704,7 +693,6 @@ items:
     _key: '!actors.items!tAFhFrp1KtKACaAF.5mdl2qh9oqzb9mtu'
   - name: Punch
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0

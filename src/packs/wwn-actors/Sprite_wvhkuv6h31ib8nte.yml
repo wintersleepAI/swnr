@@ -112,11 +112,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
 items:
   - name: Curse
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Five sprites can collectively curse a target (no attack roll; Mental
