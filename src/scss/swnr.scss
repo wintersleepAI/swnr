@@ -176,10 +176,12 @@
       gap: 0.2em;
     }
     
-    // Collapsed state hides temp modifiers
-    .resource-pools .pool-badge.collapsed & .pool-temp-modifiers {
-      display: none;
-    }
+    // Collapsed state hides temp/manual fields
+    // Note: The previous selector incorrectly compiled to
+    // ".resource-pools .pool-badge.collapsed .swnr .pool-values-with-modifier .pool-temp-modifiers"
+    // due to nesting under the global .swnr wrapper. Target the DOM structure directly instead.
+    // This compiles to: ".swnr .resource-pools .pool-badge.collapsed .pool-temp-modifiers"
+    
     
     .pool-temp-modifier {
       width: 28px;
@@ -217,6 +219,11 @@
       margin-right: 0.1em;
       user-select: none;
     }
+  }
+
+  // Place outside the .pool-values-with-modifier nest to avoid incorrect .swnr placement
+  .resource-pools .pool-badge.collapsed .pool-values-with-modifier .pool-temp-modifiers {
+    display: none;
   }
 
   /* Reserve space for the caret when toggle is present */

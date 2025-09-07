@@ -1941,9 +1941,6 @@
   align-items: center;
   gap: 0.2em;
 }
-.resource-pools .pool-badge.collapsed .swnr .pool-values-with-modifier .pool-temp-modifiers {
-  display: none;
-}
 .swnr .pool-values-with-modifier .pool-temp-modifier {
   width: 28px;
   height: 16px;
@@ -1975,6 +1972,9 @@
   opacity: 0.8;
   margin-right: 0.1em;
   user-select: none;
+}
+.swnr .resource-pools .pool-badge.collapsed .pool-values-with-modifier .pool-temp-modifiers {
+  display: none;
 }
 .swnr .resource-pools .pool-badge.has-toggle {
   padding-right: 1.25rem;
