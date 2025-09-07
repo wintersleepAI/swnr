@@ -225,8 +225,8 @@ fieldset {
   }
 }
 
-/* Dark mode support */
-.dark-theme {
+/* Dark mode support (core) */
+@at-root .theme-dark .swnr {
   .consumption-table-container {
     .consumption-table {
       th {

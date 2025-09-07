@@ -340,10 +340,43 @@
   color: var(--color-text-dark-primary);
 }
 
+.swnr .consume-select-container .consume-select-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
 .swnr .consume-select-container .consume-select-table th, .swnr .consume-select-container .consume-select-table td {
   border-bottom: 1px solid var(--color-border-dark-tertiary);
   padding: 0.35rem 0.5rem;
   vertical-align: middle;
+}
+
+.swnr .consume-select-container .consume-select-table thead th:nth-child(1),
+.swnr .consume-select-container .consume-select-table tbody td:nth-child(1) {
+  text-align: center;
+  width: 28px;
+}
+
+.swnr .consume-select-container .consume-select-table thead th:nth-child(2),
+.swnr .consume-select-container .consume-select-table tbody td:nth-child(2) {
+  text-align: left;
+}
+
+.swnr .consume-select-container .consume-select-table thead th:nth-child(3),
+.swnr .consume-select-container .consume-select-table tbody td:nth-child(3) {
+  text-align: right;
+  width: 80px;
+}
+
+.swnr .consume-select-container .consume-select-table thead th:nth-child(4),
+.swnr .consume-select-container .consume-select-table tbody td:nth-child(4) {
+  text-align: center;
+  width: 120px;
+}
+
+.swnr .consume-select-container .consume-select-table tbody td:nth-child(1) img {
+  width: 24px;
+  height: 24px;
 }
 
 .swnr .consume-select-container .consume-select-table tbody tr:hover {
@@ -361,6 +394,8 @@
   border: 1px solid var(--color-border-dark-tertiary);
   color: var(--color-text-dark-primary);
   text-align: center;
+  cursor: pointer;
+  user-select: none;
 }
 
 .swnr .consume-select-container .swnr-inc:hover, .swnr .consume-select-container .swnr-dec:hover {
@@ -372,22 +407,23 @@
   min-width: 20px;
   text-align: center;
   font-variant-numeric: tabular-nums;
+  margin: 0 2px;
 }
 
-.swnr.dark-theme .consume-select-container .consume-select-header {
+.theme-dark .swnr .consume-select-container .consume-select-header {
   color: var(--color-text-light-primary);
 }
 
-.swnr.dark-theme .consume-select-container .consume-select-table th, .swnr.dark-theme .consume-select-container .consume-select-table td {
+.theme-dark .swnr .consume-select-container .consume-select-table th, .theme-dark .swnr .consume-select-container .consume-select-table td {
   border-color: var(--color-border-dark);
 }
 
-.swnr.dark-theme .consume-select-container .swnr-inc, .swnr.dark-theme .consume-select-container .swnr-dec {
+.theme-dark .swnr .consume-select-container .swnr-inc, .theme-dark .swnr .consume-select-container .swnr-dec {
   color: var(--color-text-light-primary);
   border-color: var(--color-border-dark);
 }
 
-.swnr.dark-theme .consume-select-container .swnr-inc:hover, .swnr.dark-theme .consume-select-container .swnr-dec:hover {
+.theme-dark .swnr .consume-select-container .swnr-inc:hover, .theme-dark .swnr .consume-select-container .swnr-dec:hover {
   background: var(--color-border-dark);
 }
 
@@ -694,7 +730,7 @@
   /* Fieldset styling for consumption section */
   /* Responsive adjustments */
   /* Integration with existing power sheet styles */
-  /* Dark mode support */
+  /* Dark mode support (core) */
   /* Container drag and drop styling */
   /* Power prepared icon styling */
   /* Power consumption display styling */
@@ -1764,18 +1800,18 @@
 .swnr .item-sheet .consumption-table-container .consumption-table input:focus, .swnr .item-sheet .consumption-table-container .consumption-table select:focus {
   outline: none;
 }
-.swnr .dark-theme .consumption-table-container .consumption-table th {
+.swnr .theme-dark .swnr .consumption-table-container .consumption-table th {
   background: var(--color-bg-dark);
   color: var(--color-text-light-primary);
   border-color: var(--color-border-dark);
 }
-.swnr .dark-theme .consumption-table-container .consumption-table td {
+.swnr .theme-dark .swnr .consumption-table-container .consumption-table td {
   border-color: var(--color-border-dark);
 }
-.swnr .dark-theme .consumption-table-container .consumption-table .consumption-row:hover {
+.swnr .theme-dark .swnr .consumption-table-container .consumption-table .consumption-row:hover {
   background: var(--color-bg-dark);
 }
-.swnr .dark-theme .consumption-table-container .no-consumptions {
+.swnr .theme-dark .swnr .consumption-table-container .no-consumptions {
   background: var(--color-bg-dark);
   border-color: var(--color-border-dark);
   color: var(--color-text-light-secondary);

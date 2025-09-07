@@ -564,19 +564,16 @@ export default class SWNPower extends SWNItemBase {
         return { valid: true };
         
       case "consumableItem":
-        // If no item is preset on the power, validate by checking if there exists
-        // at least one eligible readied consumable with enough uses. Selection
-        // will be prompted during processing time.
+        // If no item is preset on the power, defer to the selection dialog.
+        // Validation no longer enforces a required total; the dialog controls amounts.
         if (!consumes.itemId) {
-          const required = consumes.usesCost || 1;
           const eligible = (actor.items.contents || actor.items)
             .filter(i => i.type === "item"
               && i.system?.uses?.consumable !== "none"
               && i.system?.location === "readied"
               && (i.system?.uses?.value || 0) > 0);
-          const totalAvailable = eligible.reduce((s, i) => s + (i.system?.uses?.value || 0), 0);
-          if (totalAvailable < required) {
-            return { valid: false, reason: "no-eligible-readied-items", message: game.i18n?.format?.("swnr.consumption.selectDialog.notEnough", { required, selected: totalAvailable }) || "No readied consumables with sufficient uses" };
+          if (eligible.length === 0) {
+            return { valid: false, reason: "no-eligible-readied-items", message: game.i18n?.localize?.("swnr.consumption.selectDialog.noneAvailable") || "No readied consumables with sufficient uses available" };
           }
           return { valid: true };
         }
@@ -734,13 +731,22 @@ export default class SWNPower extends SWNItemBase {
       // Apply spends across selected items
       const itemsSpent = [];
       for (const { itemId, amount } of selection) {
-        const it = actor.items.get(itemId);
-        if (!it) continue;
-        const spend = Math.min(amount || 0, it.system?.uses?.value || 0);
-        for (let i = 0; i < spend; i++) {
-          await it.system.removeOneUse();
+        let remainingToSpend = Math.max(0, amount || 0);
+        let actualSpent = 0;
+        // Re-fetch the item each decrement to avoid stale system data
+        while (remainingToSpend > 0) {
+          const current = actor.items.get(itemId);
+          if (!current) break;
+          const available = current.system?.uses?.value || 0;
+          if (available <= 0) break;
+          await current.system.removeOneUse();
+          actualSpent += 1;
+          remainingToSpend -= 1;
         }
-        if (spend > 0) itemsSpent.push({ itemId, itemName: it.name, amount: spend });
+        if (actualSpent > 0) {
+          const name = actor.items.get(itemId)?.name || "Item";
+          itemsSpent.push({ itemId, itemName: name, amount: actualSpent });
+        }
       }
 
       const totalSpent = itemsSpent.reduce((s, r) => s + r.amount, 0);
@@ -782,7 +788,7 @@ export default class SWNPower extends SWNItemBase {
    * @returns {Promise<string|null>} selected itemId or null if cancelled
    */
   async _promptForConsumableItem(actor, consumes) {
-    const required = consumes.usesCost || 1;
+    const required = consumes.usesCost || 1; // informational only; selection controls final amounts
     // Gather eligible readied consumables with any uses
     const eligible = (actor.items.contents || actor.items)
       .filter(i => i.type === "item"
@@ -796,51 +802,16 @@ export default class SWNPower extends SWNItemBase {
       return null;
     }
 
-    // Build rows with +/- controls, starting at 0 for each
-    const rows = eligible.map(i => {
-      const maxVal = i.system?.uses?.value || 0;
-      const label = `${i.name} (${maxVal}/${i.system?.uses?.max || maxVal})`;
-      const img = i.img || "icons/svg/item-bag.svg";
-      return `
-        <tr data-item-id="${i.id}" data-available="${maxVal}">
-          <td style="text-align:center; width: 28px;"><img src="${img}" width="24" height="24"/></td>
-          <td>${label}</td>
-          <td style="text-align:right; width: 80px;">${maxVal}</td>
-          <td style="width: 120px; text-align:center;">
-            <button type="button" class="swnr-dec">-</button>
-            <span class="swnr-amt" data-item-id="${i.id}">0</span>
-            <button type="button" class="swnr-inc">+</button>
-          </td>
-        </tr>`;
-    }).join("");
-
-    const darkClass = (document?.body?.classList?.contains('theme-dark')) ? ' dark-theme' : '';
-    const content = `
-      <div class="swnr${darkClass}">
-      <div class="consume-select-container">
-        <form>
-        <p class="consume-select-header">
-          ${game.i18n?.format?.("swnr.consumption.selectDialog.choose", { required }) || `Choose items to consume (requires ${required})`}<br/>
-          <strong>${game.i18n?.localize?.("swnr.consumption.selectDialog.selected") || "Selected"}:</strong>
-          <span class="swnr-selected-count">0</span> / ${required}
-        </p>
-        <table class="swnr-consume-select consume-select-table" style="width:100%; border-collapse: collapse;">
-          <thead>
-            <tr>
-              <th></th>
-              <th style="text-align:left;">${game.i18n?.localize?.("swnr.consumption.selectDialog.item") || "Item"}</th>
-              <th style="text-align:right;">${game.i18n?.localize?.("swnr.consumption.selectDialog.available") || "Available"}</th>
-              <th style="text-align:center;">${game.i18n?.localize?.("swnr.consumption.selectDialog.spend") || "Spend"}</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${rows}
-          </tbody>
-        </table>
-        </form>
-      </div>
-      </div>
-    `;
+    // Render dialog content from template
+    const template = "systems/swnr/templates/dialogs/select-consumables.hbs";
+    const items = eligible.map(i => ({
+      id: i.id,
+      name: i.name,
+      img: i.img || "icons/svg/item-bag.svg",
+      value: i.system?.uses?.value || 0,
+      max: i.system?.uses?.max || (i.system?.uses?.value || 0)
+    }));
+    const content = await renderTemplate(template, { items });
 
     return new Promise((resolve) => {
       const dialogId = `swnr-consume-select-${actor.id}-${Date.now()}`;
@@ -851,23 +822,22 @@ export default class SWNPower extends SWNItemBase {
           ok: {
             label: game.i18n?.localize?.("OK") || "OK",
             callback: (html) => {
-              // Build clamped selection up to required
-              let remaining = required;
+              // Build selection exactly as chosen by the user
               const selections = [];
+              let total = 0;
               for (const i of eligible) {
                 const amtEl = html.find(`.swnr-amt[data-item-id="${i.id}"]`);
+                const rowEl = html.find(`tr[data-item-id="${i.id}"]`);
                 let amt = parseInt(amtEl.text()) || 0;
-                if (amt <= 0) continue;
-                const toSpend = Math.min(amt, remaining);
+                const available = parseInt(rowEl.data('available')) || 0;
+                const toSpend = Math.min(amt, available);
                 if (toSpend > 0) {
                   selections.push({ itemId: i.id, amount: toSpend });
-                  remaining -= toSpend;
+                  total += toSpend;
                 }
-                if (remaining <= 0) break;
               }
-              if (remaining > 0) {
-                const selected = (required - remaining);
-                ui.notifications?.warn(game.i18n?.format?.("swnr.consumption.selectDialog.notEnough", { required, selected }) || "Not enough selected");
+              if (total <= 0) {
+                ui.notifications?.warn(game.i18n?.localize?.("swnr.consumption.selectDialog.noneSelected") || "No items selected to consume");
                 resolve(null);
               } else {
                 resolve(selections);

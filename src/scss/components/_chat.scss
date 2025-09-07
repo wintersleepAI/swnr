@@ -153,11 +153,26 @@
     }
 
     .consume-select-table {
+      width: 100%;
+      border-collapse: collapse;
       th, td {
         border-bottom: 1px solid var(--color-border-dark-tertiary);
         padding: 0.35rem 0.5rem;
         vertical-align: middle;
       }
+
+      // Column alignment and widths
+      thead th:nth-child(1),
+      tbody td:nth-child(1) { text-align: center; width: 28px; }
+      thead th:nth-child(2),
+      tbody td:nth-child(2) { text-align: left; }
+      thead th:nth-child(3),
+      tbody td:nth-child(3) { text-align: right; width: 80px; }
+      thead th:nth-child(4),
+      tbody td:nth-child(4) { text-align: center; width: 120px; }
+
+      // Item icon sizing
+      tbody td:nth-child(1) img { width: 24px; height: 24px; }
 
       tbody tr:hover {
         background: rgba(255, 255, 255, 0.02);
@@ -175,6 +190,8 @@
       border: 1px solid var(--color-border-dark-tertiary);
       color: var(--color-text-dark-primary);
       text-align: center;
+      cursor: pointer;
+      user-select: none;
     }
     .swnr-inc:hover, .swnr-dec:hover {
       background: var(--color-border-dark-tertiary);
@@ -185,12 +202,12 @@
       min-width: 20px;
       text-align: center;
       font-variant-numeric: tabular-nums;
+      margin: 0 2px;
     }
   }
 }
 
-// Dark theme variants (system or core)
-.swnr.dark-theme .consume-select-container,
+// Dark theme variants (core selector only)
 .theme-dark .swnr .consume-select-container {
   .consume-select-header { color: var(--color-text-light-primary); }
   .consume-select-table { th, td { border-color: var(--color-border-dark); } }
