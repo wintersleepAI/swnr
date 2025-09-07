@@ -2218,6 +2218,7 @@
       "poolResource": "Pool Resource",
       "systemStrain": "System Strain",
       "consumableItem": "Consumable Item",
+      "consumed": "Consumed",
       "uses": "Internal Uses",
       "remaining": "remaining",
       "scene": "Per Scene",
@@ -2228,6 +2229,12 @@
       "recoverStrain": "Recover System Strain",
       "recoverItem": "Recover Item",
       "recoverUses": "Recover Uses",
+      "itemText": {
+        "placeholder": "Item description (optional)"
+      },
+      "action": {
+        "consume": "Consume"
+      },
       "selectDialog": {
         "title": "Select Consumables",
         "choose": "Choose items to consume",
@@ -2235,10 +2242,21 @@
         "available": "Available",
         "spend": "Spend",
         "selected": "Selected",
+        "requirements": {
+          "single": "Item required:",
+          "multiple": "Items required:"
+        },
         "notEnough": "You must select the required amount",
         "noneAvailable": "No readied consumables with sufficient uses available",
         "cancelled": "Item selection cancelled",
         "noneSelected": "No items selected to consume"
+      },
+      "errors": {
+        "missingPowerOrActor": "Missing power or actor ID",
+        "noChatMessage": "Could not find chat message",
+        "noActorForMessage": "Could not find the actor associated with the chat message.",
+        "noPower": "Could not find power",
+        "failedConsumeGeneric": "Failed to consume items"
       },
       "timing": {
         "preparation": "Pay on Prep",

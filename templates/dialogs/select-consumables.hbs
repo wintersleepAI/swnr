@@ -6,6 +6,14 @@
         <strong>{{localize "swnr.consumption.selectDialog.selected"}}</strong>:
         <span class="swnr-selected-count">0</span>
       </p>
+      {{#if requirements}}
+        <p class="consume-requirements">
+          {{#if (eq requirements.length 1)}}{{localize "swnr.consumption.selectDialog.requirements.single"}}{{else}}{{localize "swnr.consumption.selectDialog.requirements.multiple"}}{{/if}}
+          {{#each requirements}}
+            ({{amount}}) {{text}}{{#unless @last}}, {{/unless}}
+          {{/each}}
+        </p>
+      {{/if}}
       <table class="swnr-consume-select consume-select-table">
         <thead>
           <tr>

@@ -63,7 +63,8 @@ export default class SWNPower extends SWNItemBase {
         choices: Object.keys(CONFIG.SWN.consumptionCadences),
         initial: "day"
       }),
-      itemId: new fields.StringField({ initial: "" }),
+      // Free-text description for required item(s) for display in selection dialog
+      itemText: new fields.StringField({ initial: "" }),
       uses: new fields.SchemaField({
         value: new fields.NumberField({ initial: 1, min: 0 }),
         max: new fields.NumberField({ initial: 1, min: 0 })
@@ -114,8 +115,8 @@ export default class SWNPower extends SWNItemBase {
         }
         
         // Ensure other properties have defaults
-        if (!consumption.itemId) {
-          consumption.itemId = "";
+        if (!consumption.itemText && consumption.itemText !== "") {
+          consumption.itemText = "";
         }
         if (!consumption.usesCost || typeof consumption.usesCost !== 'number') {
           consumption.usesCost = 1;
@@ -177,7 +178,7 @@ export default class SWNPower extends SWNItemBase {
       type: consumption.type || "none",
       usesCost: consumption.usesCost || 1,
       cadence: consumption.cadence || "day",
-      itemId: consumption.itemId || "",
+      itemText: consumption.itemText || "",
       uses: consumption.uses || { value: 1, max: 1 }
     };
     
@@ -424,6 +425,14 @@ export default class SWNPower extends SWNItemBase {
     // Check if power has manual costs (timing: "manual")
     const manualConsumptions = this.getConsumptions().filter(c => c.timing === "manual");
     const hasManualCosts = manualConsumptions.length > 0;
+    const manualConsumableReqs = manualConsumptions
+      .map((c, idx) => ({ index: idx, ...c }))
+      .filter(c => c.type === "consumableItem" && (c.itemText || "").trim().length > 0);
+    const consumableRequirements = manualConsumableReqs.map(c => ({
+      index: c.index,
+      amount: c.usesCost || 0,
+      text: (c.itemText || "").trim()
+    }));
     
     // Check if power has any runtime costs (immediate or manual)
     const allConsumptions = this.getConsumptions();
@@ -436,7 +445,10 @@ export default class SWNPower extends SWNItemBase {
       powerRoll: powerRoll ? await powerRoll.render() : null,
       strainCost: totalStrainCost,
       isPassive: !hasRuntimeCosts, // Passive only if no immediate or manual costs
-      consumptions: consumptionResults // Contains immediate costs due to filtering in use()
+      consumptions: consumptionResults, // Contains immediate costs due to filtering in use()
+      hasManualConsumables: consumableRequirements.length > 0,
+      hasUnprocessedConsumableManual: consumableRequirements.length > 0,
+      consumableRequirements
     };
 
     const template = "systems/swnr/templates/chat/power-usage.hbs";
@@ -484,13 +496,23 @@ export default class SWNPower extends SWNItemBase {
     const runtimeConsumptions = allConsumptions.filter(c => c.timing === "immediate" || c.timing === "manual");
     const hasRuntimeCosts = runtimeConsumptions.length > 0;
     
+    // Determine if there are manual consumable costs to show combined button
+    const hasManualConsumables = allConsumptions.some(c => c.timing === "manual" && c.type === "consumableItem");
+    const consumableRequirements = allConsumptions
+      .map((c, idx) => ({ index: idx, ...c }))
+      .filter(c => c && c.timing === 'manual' && c.type === 'consumableItem' && (c.itemText || '').trim().length > 0)
+      .map(c => ({ index: c.index, amount: c.usesCost || 0, text: (c.itemText || '').trim() }));
+    
     const dialogData = {
       actor: actor,
       power: item,
       powerRoll: await powerRoll.render(),
       strainCost: 0,
       isPassive: !hasRuntimeCosts, // Passive only if no immediate or manual costs
-      consumptions: [] // Empty for initial state - shows "Spend Resources" button if has manual costs
+      consumptions: [], // Empty for initial state
+      hasManualConsumables,
+      hasUnprocessedConsumableManual: hasManualConsumables,
+      consumableRequirements
     };
     const rollMode = game.settings.get("core", "rollMode");
 
@@ -564,9 +586,8 @@ export default class SWNPower extends SWNItemBase {
         return { valid: true };
         
       case "consumableItem":
-        // If no item is preset on the power, defer to the selection dialog.
-        // Validation no longer enforces a required total; the dialog controls amounts.
-        if (!consumes.itemId) {
+        // Always defer to selection dialog; no fixed association with a specific item
+        {
           const eligible = (actor.items.contents || actor.items)
             .filter(i => i.type === "item"
               && i.system?.uses?.consumable !== "none"
@@ -577,22 +598,6 @@ export default class SWNPower extends SWNItemBase {
           }
           return { valid: true };
         }
-        
-        // Legacy behavior: an item was configured on the power
-        const consumableItem = actor.items.get(consumes.itemId);
-        if (!consumableItem) {
-          return { valid: false, reason: "item-not-found", message: "Consumable item not found in inventory" };
-        }
-        
-        const itemUses = consumableItem.system.uses;
-        if (!itemUses || itemUses.value < consumes.usesCost) {
-          return { 
-            valid: false, 
-            reason: "insufficient-item-uses",
-            message: `Insufficient ${consumableItem.name}: ${itemUses?.value || 0}/${itemUses?.max || 0} available, ${consumes.usesCost} required`
-          };
-        }
-        return { valid: true };
         
       case "uses":
         if (consumes.uses.value < consumes.usesCost) {
@@ -717,68 +722,14 @@ export default class SWNPower extends SWNItemBase {
    * Process consumable item consumption
    */
   async _processConsumableItem(actor, consumes, options = {}) {
-    // Allow passing a selected item via options (e.g., from chat button or future hooks)
-    let selectedItemId = options.selectedItemId || consumes.itemId || null;
+    // Always prompt; never bind to a specific item id
+    const requirements = [];
+    const cost = Math.max(0, consumes.usesCost || 0);
+    const text = (consumes.itemText || "").trim();
+    if (cost > 0 || text) requirements.push({ amount: cost, text });
 
-    // If no item selected in the power, prompt user to pick a readied consumable
-    // If no single item selected, prompt for multi-selection and amounts
-    if (!selectedItemId) {
-      const selection = await this._promptForConsumableItem(actor, consumes);
-      if (!selection || selection.length === 0) {
-        return { success: false, reason: "cancelled", message: game.i18n?.localize?.("swnr.consumption.selectDialog.cancelled") || "Item selection cancelled" };
-      }
-
-      // Apply spends across selected items
-      const itemsSpent = [];
-      for (const { itemId, amount } of selection) {
-        let remainingToSpend = Math.max(0, amount || 0);
-        let actualSpent = 0;
-        // Re-fetch the item each decrement to avoid stale system data
-        while (remainingToSpend > 0) {
-          const current = actor.items.get(itemId);
-          if (!current) break;
-          const available = current.system?.uses?.value || 0;
-          if (available <= 0) break;
-          await current.system.removeOneUse();
-          actualSpent += 1;
-          remainingToSpend -= 1;
-        }
-        if (actualSpent > 0) {
-          const name = actor.items.get(itemId)?.name || "Item";
-          itemsSpent.push({ itemId, itemName: name, amount: actualSpent });
-        }
-      }
-
-      const totalSpent = itemsSpent.reduce((s, r) => s + r.amount, 0);
-      return { success: true, type: "consumableItem", spent: totalSpent, items: itemsSpent };
-    }
-
-    // Legacy single-item flow
-    const item = actor.items.get(selectedItemId);
-    if (!item) {
-      return { 
-        success: false, 
-        reason: "item-not-found",
-        message: `Required item not found: ${selectedItemId}`,
-        itemId: selectedItemId
-      };
-    }
-
-    if (!item.system.uses || item.system.uses.value < consumes.usesCost) {
-      return {
-        success: false,
-        reason: "insufficient-item-uses",
-        message: `Insufficient ${item.name} uses: ${item.system.uses?.value || 0} available, ${consumes.usesCost} required`,
-        itemName: item.name,
-        required: consumes.usesCost,
-        available: item.system.uses?.value || 0
-      };
-    }
-
-    for (let i = 0; i < consumes.usesCost; i++) {
-      await item.system.removeOneUse();
-    }
-    return { success: true, type: "consumableItem", spent: consumes.usesCost, items: [{ itemId: item.id, itemName: item.name, amount: consumes.usesCost }] };
+    const result = await this._promptAndSpendConsumables(actor, requirements);
+    return result;
   }
 
   /**
@@ -788,7 +739,22 @@ export default class SWNPower extends SWNItemBase {
    * @returns {Promise<string|null>} selected itemId or null if cancelled
    */
   async _promptForConsumableItem(actor, consumes) {
-    const required = consumes.usesCost || 1; // informational only; selection controls final amounts
+    // Deprecated path retained to avoid breaking references; forward to new helper
+    const requirements = [];
+    const required = consumes.usesCost || 0;
+    const text = (consumes.itemText || "").trim();
+    if (required > 0 || text) requirements.push({ amount: required, text });
+    return await this._promptAndSpendConsumables(actor, requirements);
+  }
+
+  /**
+   * Combined prompt + spend flow for consumables with optional requirements text.
+   * @param {Actor} actor
+   * @param {Array<{amount:number, text:string}>} requirements
+   * @returns {Promise<{success:boolean,type:string,spent:number,items:Array}|{success:false,reason:string,message:string}>}
+   */
+  async _promptAndSpendConsumables(actor, requirements = []) {
+    const required = (requirements && requirements.length === 1) ? (requirements[0].amount || 0) : 0;
     // Gather eligible readied consumables with any uses
     const eligible = (actor.items.contents || actor.items)
       .filter(i => i.type === "item"
@@ -799,10 +765,10 @@ export default class SWNPower extends SWNItemBase {
 
     if (eligible.length === 0) {
       ui.notifications?.warn(game.i18n?.localize?.("swnr.consumption.selectDialog.noneAvailable") || "No readied consumables with sufficient uses available");
-      return null;
+      return { success: false, reason: "no-eligible-readied-items" };
     }
 
-    // Render dialog content from template
+    // Render dialog content from template (include optional requirements)
     const template = "systems/swnr/templates/dialogs/select-consumables.hbs";
     const items = eligible.map(i => ({
       id: i.id,
@@ -811,9 +777,9 @@ export default class SWNPower extends SWNItemBase {
       value: i.system?.uses?.value || 0,
       max: i.system?.uses?.max || (i.system?.uses?.value || 0)
     }));
-    const content = await renderTemplate(template, { items });
+    const content = await renderTemplate(template, { items, requirements });
 
-    return new Promise((resolve) => {
+    const contentPromise = new Promise((resolve) => {
       const dialogId = `swnr-consume-select-${actor.id}-${Date.now()}`;
       const dlg = new Dialog({
         title: game.i18n?.localize?.("swnr.consumption.selectDialog.title") || "Select Consumables",
@@ -837,16 +803,17 @@ export default class SWNPower extends SWNItemBase {
                 }
               }
               if (total <= 0) {
-                ui.notifications?.warn(game.i18n?.localize?.("swnr.consumption.selectDialog.noneSelected") || "No items selected to consume");
-                resolve(null);
+                const msg = game.i18n?.localize?.("swnr.consumption.selectDialog.noneSelected") || "No items selected to consume";
+                ui.notifications?.warn(msg);
+                resolve({ success: false, reason: "none-selected", message: msg });
               } else {
-                resolve(selections);
+                resolve({ success: true, selections });
               }
             }
           },
           cancel: {
             label: game.i18n?.localize?.("Cancel") || "Cancel",
-            callback: () => resolve(null)
+            callback: () => resolve({ success: false, reason: "cancelled" })
           }
         },
         default: "ok"
@@ -893,6 +860,35 @@ export default class SWNPower extends SWNItemBase {
 
       dlg.render(true);
     });
+    // Spend selection
+    if (!contentPromise || !contentPromise.then) return { success: false, reason: "dialog-error" };
+    const selectionResult = await contentPromise;
+    if (!selectionResult?.success) {
+      return { success: false, reason: selectionResult?.reason || "cancelled", message: selectionResult?.message };
+    }
+
+    // Apply spends across selected items
+    const itemsSpent = [];
+    for (const { itemId, amount } of selectionResult.selections) {
+      let remainingToSpend = Math.max(0, amount || 0);
+      let actualSpent = 0;
+      while (remainingToSpend > 0) {
+        const current = actor.items.get(itemId);
+        if (!current) break;
+        const available = current.system?.uses?.value || 0;
+        if (available <= 0) break;
+        await current.system.removeOneUse();
+        actualSpent += 1;
+        remainingToSpend -= 1;
+      }
+      if (actualSpent > 0) {
+        const name = actor.items.get(itemId)?.name || "Item";
+        itemsSpent.push({ itemId, itemName: name, amount: actualSpent });
+      }
+    }
+
+    const totalSpent = itemsSpent.reduce((s, r) => s + r.amount, 0);
+    return { success: true, type: "consumableItem", spent: totalSpent, items: itemsSpent };
   }
 
   /**
