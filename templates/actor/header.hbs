@@ -170,7 +170,7 @@
             / {{system.meleeAc}}
             {{/if}}
         </div>
-        <label class='resource-label'>
+        <label class='resource-label' data-tooltip="{{localize 'swnr.sheet.acCWNLong'}}">
           {{#if (eq gameSettings.useCWNArmor true)}}
             {{localize 'swnr.sheet.acCWN'}}
           {{else}}
@@ -181,9 +181,9 @@
 
       {{#if (eq actor.type 'character')}}
         {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget}}
-        {{#if (eq gameSettings.useCWNArmor true)}}
+        {{!-- {{#if (eq gameSettings.useCWNArmor true)}}
         {{formGroup systemFields.meleeAb value=system.meleeAb localize=true widget=headerWidget}}
-        {{/if}}
+        {{/if}} --}}
       {{else}}
         {{#if (eq gameSettings.useCWNArmor true)}}
         <div class="resource flex-group-center"><!-- AC -->
