@@ -1,0 +1,53 @@
+name: Rope, 20 meters (TL 0)
+type: item
+folder: H7LaO0abkbAji23w
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.field-equipment.Item.fk9b68ryv9dnfirf
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286673546
+  modifiedTime: 1757286673546
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: fk9b68ryv9dnfirf
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 4
+  description: 'Rope: Light and sturdy. 40 meters in a bundle.'
+  encumbrance: 2
+  location: other
+  quality: stock
+  tl: 0
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!fk9b68ryv9dnfirf'
+

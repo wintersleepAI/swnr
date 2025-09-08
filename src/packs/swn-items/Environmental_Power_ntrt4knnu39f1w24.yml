@@ -1,0 +1,42 @@
+name: Environmental Power
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/gps.svg
+folder: 6XDktrKETRNcBLu6
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.drone-fittings.Item.ntrt4knnu39f1w24
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286953010
+  modifiedTime: 1757286953010
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: ntrt4knnu39f1w24
+system:
+  broken: false
+  cost: 4000
+  costMultiplier: true
+  description: >-
+    Environmental Power: The drone draws operating power from sunlight or
+    thermal variances. It can operate indefinitely so long as it can draw power
+    from its environment.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  type: drone
+  favorite: false
+  tl: 4
+  minClass: fighter
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!ntrt4knnu39f1w24'
+

@@ -1,0 +1,53 @@
+name: Telepathic Assault
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: T7VK7FTps9Ubc5gw
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-telepathy.Item.u1riczeoku7erafl
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286864688
+  modifiedTime: 1757286864688
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: u1riczeoku7erafl
+system:
+  description: >-
+    <p>The telepath Commits Effort for the day as a Main Action to force a wave
+    of metadimensional energy through the brain of a <em>Telepathic Contact</em>
+    target. The assault does 6d6 damage, or 9d6 damage if the telepath has
+    Telepathy-4 skill. The target may make a Mental saving throw to halve the
+    damage. This assault cannot kill a target, but can knock them unconscious
+    for an hour if they’re reduced to zero hit points, after which they wake up
+    with one hit point. A victim cannot be targeted by an assault more than once
+    per scene.</p>
+  level: 3
+  source: telepathy
+  save: mental
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
+  roll: 6d6
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!u1riczeoku7erafl'
+

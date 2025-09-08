@@ -1,0 +1,79 @@
+name: Plasma Projector
+type: weapon
+folder: IuHCQEm5J46mKh45
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ranged.Item.aufm01sdhdpanc25
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286681607
+  modifiedTime: 1757286681607
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: aufm01sdhdpanc25
+system:
+  ab: 1
+  ammo:
+    burst: false
+    longReload: false
+    max: 6
+    suppress: false
+    type: typeAPower
+    value: 6
+    current: null
+  cost: 400
+  damage: 2d8
+  description: >-
+    Thermal pistols and their larger, two-handed plasma projector cousins
+    replace the beam of a laser with a small sphere of magnetically-shaped
+    plasma. The spheres tend to dissipate at much shorter ranges than a laser
+    beam, but do significantly more damage to targets within range and are not
+    affected by ambient particulates. They tend to be extremely loud in
+    operation.
+  encumbrance: 2
+  location: other
+  quality: stock
+  range:
+    max: 100
+    normal: 50
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 4
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  secondStat: null
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+  isTwoHanded: false
+  isNonLethal: false
+  isMelee: false
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!aufm01sdhdpanc25'
+

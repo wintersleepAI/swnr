@@ -1,0 +1,55 @@
+name: Deep Strike Landers
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.x9cfe76nsc8tgrkb
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: x9cfe76nsc8tgrkb
+system:
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 25
+  counter: ''
+  description: >-
+    These advanced transport ships are capable of moving an asset long
+    distances. As an action, any one non-Starship asset, including itself, can
+    be moved between any two worlds within three hexes of the deep strike
+    landers, at a cost of 2 FacCreds. This movement can be done even if the
+    local planetary government objects, albeit doing so is usually an act of
+    open war.
+  health:
+    max: 10
+    value: 10
+  income: 0
+  maintenance: 0
+  rating: 7
+  tl: 4
+  turnRoll: ''
+  type: Facility
+  unusable: false
+  qualities:
+    permission: false
+    action: true
+    special: false
+  category: force
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!x9cfe76nsc8tgrkb'
+

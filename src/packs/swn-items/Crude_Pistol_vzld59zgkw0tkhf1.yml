@@ -1,0 +1,77 @@
+name: Crude Pistol
+type: weapon
+folder: IuHCQEm5J46mKh45
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ranged.Item.vzld59zgkw0tkhf1
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286681607
+  modifiedTime: 1757286681607
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: vzld59zgkw0tkhf1
+system:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: true
+    max: 1
+    suppress: false
+    type: ammo
+    value: 1
+    current: null
+  cost: 20
+  damage: 1d6
+  description: >-
+    Crude pistols and muskets represent the rawest and most primitive forms of
+    gunpowder weaponry, usually makeshift weapons improvised by criminals or the
+    desperate. Reloading a crude pistol or a musket requires two rounds instead
+    of one.
+  encumbrance: 1
+  location: other
+  quality: stock
+  range:
+    max: 15
+    normal: 5
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 2
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  secondStat: null
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+  isTwoHanded: false
+  isNonLethal: false
+  isMelee: false
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!vzld59zgkw0tkhf1'
+

@@ -1,0 +1,59 @@
+name: Pressure tent
+type: item
+folder: H7LaO0abkbAji23w
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.field-equipment.Item.bazvxbt7bcamm5n2
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286673546
+  modifiedTime: 1757286673546
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: bazvxbt7bcamm5n2
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 100
+  description: >-
+    Pressure tent: This tent maintains a breathable atmosphere, tolerable
+    temperature and serviceable sleeping quarters for up to five very friendly
+    occupants. Advanced filtration and cracking tech allows a single standard
+    vacc suit oxygen tank to provide breathable air for the occupants for up to
+    24 hours. The tent requires a type A power cell for each day in which this
+    filter is employed.
+  encumbrance: 4
+  location: other
+  quality: stock
+  tl: 3
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!bazvxbt7bcamm5n2'
+

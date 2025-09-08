@@ -1,0 +1,44 @@
+name: Drive-3 upgrade
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/rocket-thruster.svg
+folder: FSb3IGBn6eTDHX2S
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-fitting.Item.ja9f1raaqrkc9vpj
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: ja9f1raaqrkc9vpj
+system:
+  broken: false
+  cost: 20000
+  costMultiplier: true
+  description: >-
+    A ship can improve its standard-issue drive-1 spike drive with additional
+    phase filters and power throughput refinements. A captain needs to buy only
+    the final grade of drive desired. He does not have to buy upgrades
+    sequentially. Drives of rating 4 and higher are generally TL5 artifacts that
+    cannot be built on most modern worlds.
+  effect: Upgrade a spike drive to drive-3 rating
+  mass: 2
+  massMultiplier: true
+  minClass: fighter
+  power: 2
+  powerMultiplier: true
+  favorite: false
+  tl: 4
+  destroyed: false
+  juryRigged: false
+  type: ship
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!ja9f1raaqrkc9vpj'
+

@@ -1,0 +1,57 @@
+name: Armored Undersuit
+type: armor
+folder: 3Dm85i0tKhFQJtw7
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.armor.Item.4db5hotc4rsfteh8
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286662362
+  modifiedTime: 1757286662362
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 4db5hotc4rsfteh8
+system:
+  ac: 13
+  meleeAc: 13
+  traumaDiePenalty: 1
+  isSubtle: true
+  soak:
+    value: 2
+    max: 2
+  cost: 600
+  description: >-
+    An armored undersuit is a skin-tight bodysuit woven of advanced TL4 fibers
+    with exceptional shock-activated rigidity and impact dispersion
+    capabilities. Transparent panels allow for it to be worn with almost any
+    outfit without drawing notice or being detected without a close tactile
+    examination.
+  encumbrance: 0
+  location: other
+  quality: stock
+  shield: false
+  tl: 4
+  use: false
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  dr: 0
+  isHeavy: false
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!4db5hotc4rsfteh8'
+

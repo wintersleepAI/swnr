@@ -1,0 +1,44 @@
+name: Quintessential Reconstruction
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: VXwfMckwPSKXC4gD
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-biopsionics.Item.ep3rtv72gj03to5u
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286851234
+  modifiedTime: 1757286851234
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: ep3rtv72gj03to5u
+system:
+  description: >-
+    <p>The biopsion becomes extremely difficult to kill, encoding their mind in
+    a coherent pattern of MES energy coterminous with their realspace
+    coordinates. If killed, the psychic will regenerate from the largest
+    remaining fragment of their body over 24 hours. This process maximizes their
+    System Strain for one week. If brought to zero hit points during this week,
+    they die instantly and permanently. The psychic retains a vague awareness of
+    their surroundings while “dead” and can postpone their regeneration for up
+    to a week in order to avoid notice, but burial or entombment may result in a
+    very short second life. Each use of this power inflicts one point of
+    permanent attribute loss in an attribute of the biopsion’s choice.</p>
+  level: 4
+  source: biopsionics
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions: []
+  save: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!ep3rtv72gj03to5u'
+

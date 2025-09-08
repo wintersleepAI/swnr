@@ -1,0 +1,52 @@
+name: Freighter Contract
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.lp4fg3yby6khem2g
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: lp4fg3yby6khem2g
+system:
+  attackDamage: 1d4
+  attackSource: wealth
+  attackSpecial: ''
+  attackTarget: wealth
+  baseOfInfluence: false
+  cost: 5
+  counter: ''
+  description: >-
+    A special link with heavy shipping spacers. As an action, the faction may
+    move any one non-Force asset, including this one, to any world within two
+    hexes at a cost of one FacCred.
+  health:
+    max: 4
+    value: 4
+  income: 0
+  maintenance: 0
+  rating: 2
+  tl: 4
+  turnRoll: ''
+  type: Starship
+  unusable: false
+  qualities:
+    permission: false
+    action: true
+    special: false
+  category: wealth
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!lp4fg3yby6khem2g'
+

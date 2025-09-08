@@ -1,0 +1,58 @@
+name: Survey scanner
+type: item
+folder: H7LaO0abkbAji23w
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.field-equipment.Item.a4fhdbkir3vf4huc
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286673546
+  modifiedTime: 1757286673546
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: a4fhdbkir3vf4huc
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 250
+  description: >-
+    Survey scanner: A multipurpose scanner that can take atmospheric and
+    gravitic readings, provide basic chemical analysis of samples of up to one
+    cubic centimeter in size, and record up to two hundred hours of video
+    information or ten times that amount of audio. Know skill checks are
+    necessary for any but the most basic analysis.
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 4
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!a4fhdbkir3vf4huc'
+

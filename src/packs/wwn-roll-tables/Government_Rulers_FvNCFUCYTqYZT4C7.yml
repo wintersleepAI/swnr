@@ -1,7 +1,7 @@
 _id: FvNCFUCYTqYZT4C7
 name: Government-Rulers
 img: icons/svg/d20-grey.svg
-description: Number of Rulers
+description: <p>Number of Rulers</p>
 results:
   - _id: Zv50LKpOplxVmrfh
     flags: {}
@@ -39,9 +39,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757292394110
     name: Government-SingleRuler
-    documentUuid: Compendium.wwn.gm-subtables.S5LfTFOCY9w6H9h1
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.S5LfTFOCY9w6H9h1
     description: ''
     _key: '!tables.results!FvNCFUCYTqYZT4C7.nnd5hcJ6DUC9NNRJ'
   - _id: uxrU5hzbMHYYnWUY
@@ -80,9 +81,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757292401821
     name: Government-MultipleRulers
-    documentUuid: Compendium.wwn.gm-subtables.b5m1mBU2Uq7TtRFc
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.b5m1mBU2Uq7TtRFc
     description: ''
     _key: '!tables.results!FvNCFUCYTqYZT4C7.f4Mvebabics7Lhld'
   - _id: zcaXvYcauYMrJOdc
@@ -139,8 +141,8 @@ _stats:
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
-  modifiedTime: 1754271915093
-  lastModifiedBy: lKC5x4Yf023Bizof
+  modifiedTime: 1757292388193
+  lastModifiedBy: iXDXVi7OlHcRwXw0
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3

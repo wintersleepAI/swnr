@@ -1,0 +1,43 @@
+name: Spatial Synchrony Mandala
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: B7XvnONYELdrJlLA
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-teleportation.Item.9ejthmu8e3ku5fwr
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286862454
+  modifiedTime: 1757286862454
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 9ejthmu8e3ku5fwr
+system:
+  description: >-
+    <p>The psychic imprints a particular object or person on their psionic
+    awareness. Provided the object is relatively intact and in range of their
+    <em>Personal Apportation</em>, the psychic always knows its exact location
+    and can teleport to within three meters of it with <em>Personal
+    Apportation</em> even if it has moved from its original location. Imprinting
+    an object requires an hour’s meditation with it, and only one object can be
+    imprinted at a time. If imprinting on a person, the target must be willing
+    and cooperative to make the imprint. Objects must be at least one kilogram
+    in mass to be effectively tracked.</p>
+  level: 2
+  source: teleportation
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions: []
+  save: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!9ejthmu8e3ku5fwr'
+

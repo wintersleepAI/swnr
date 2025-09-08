@@ -1,0 +1,54 @@
+name: Marketers
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.a5tu0hefph62vyl1
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: a5tu0hefph62vyl1
+system:
+  attackDamage: 1d6
+  attackSource: cunning
+  attackSpecial: ''
+  attackTarget: wealth
+  baseOfInfluence: false
+  cost: 10
+  counter: ''
+  description: >-
+    Deployed to confuse enemy factions into untimely investments. As an action,
+    the marketers may test Cunning vs. Wealth against a rival faction's asset.
+    If successful, the target faction must immediately pay half the asset's
+    purchase cost, rounded down, or have it become disabled and useless until
+    this price is paid.
+  health:
+    max: 8
+    value: 8
+  income: 0
+  maintenance: 0
+  rating: 5
+  tl: 0
+  turnRoll: ''
+  type: Tactic
+  unusable: false
+  qualities:
+    permission: false
+    action: true
+    special: false
+  category: wealth
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!a5tu0hefph62vyl1'
+

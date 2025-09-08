@@ -1,0 +1,52 @@
+name: Zealots
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.8x9wk6kuuutok2xw
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 8x9wk6kuuutok2xw
+system:
+  attackDamage: 2d6
+  attackSource: force
+  attackSpecial: Zealot takes [[1d4]] damage
+  attackTarget: force
+  baseOfInfluence: false
+  cost: 6
+  counter: 2d6
+  description: >-
+    Members of the faction so utterly dedicated that they are willing to launch
+    suicide attacks or hold positions to the death. Zealots take 1d4 damage
+    every time they launch a successful attack or perform a counterattack.
+  health:
+    max: 4
+    value: 4
+  income: 0
+  maintenance: 0
+  rating: 3
+  tl: 0
+  turnRoll: ''
+  type: Special Forces
+  unusable: false
+  qualities:
+    permission: false
+    action: false
+    special: true
+  category: force
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!8x9wk6kuuutok2xw'
+

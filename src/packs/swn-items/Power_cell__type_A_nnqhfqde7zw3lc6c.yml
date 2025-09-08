@@ -1,0 +1,60 @@
+name: Power cell, type A
+type: item
+folder: rvD6mRxUC48bljtg
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ammo-and-power.Item.nnqhfqde7zw3lc6c
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286652097
+  modifiedTime: 1757286652097
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: nnqhfqde7zw3lc6c
+system:
+  favorite: false
+  quantity: 1
+  uses:
+    max: 1
+    value: 1
+    ammo: typeAPower
+    consumable: bundle
+    keepEmpty: true
+    emptyQuantity: 0
+  bundle:
+    amount: 6
+    bundled: false
+  cost: 10
+  description: >-
+    Power cells: One of the few standardized artifacts inherited from before the
+    Silence, power cells are small cylindrical objects designed to take and hold
+    electrical charges. Type A cells are usually used for personal equipment.
+    The engineering for the cells is substantially different, and they cannot be
+    exchanged or recharge each other without a trained tech’s modifications or a
+    converter unit. Power cells can be recharged off a ship’s power plant or
+    other grid. Recharging requires 30 minutes for a type A cell
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 4
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!nnqhfqde7zw3lc6c'
+

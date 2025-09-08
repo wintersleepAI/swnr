@@ -1,0 +1,54 @@
+name: Blockade Runners
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.n5b1m9phjnmfz4f4
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: n5b1m9phjnmfz4f4
+system:
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 12
+  counter: 2d4
+  description: >-
+    These starship captains excel at transporting goods through unfriendly
+    lines. As an action, a blockade runner can transfer itself or any one
+    Military Unit or Special Forces to a world within three hexes for a cost of
+    two FacCreds. They can even move units that would otherwise require
+    planetary government permission to enter.
+  health:
+    max: 6
+    value: 6
+  income: 0
+  maintenance: 0
+  rating: 5
+  tl: 4
+  turnRoll: ''
+  type: Starship
+  unusable: false
+  qualities:
+    permission: false
+    action: true
+    special: false
+  category: wealth
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!n5b1m9phjnmfz4f4'
+

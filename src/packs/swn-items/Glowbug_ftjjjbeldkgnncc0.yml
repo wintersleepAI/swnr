@@ -1,0 +1,57 @@
+name: Glowbug
+type: item
+folder: H7LaO0abkbAji23w
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.field-equipment.Item.ftjjjbeldkgnncc0
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286673546
+  modifiedTime: 1757286673546
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: ftjjjbeldkgnncc0
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 5
+  description: >-
+    Glowbug: A palm-sized disc that can adhere to any non-porous surface. When
+    turned on, it emits a white light, illuminating everything within ten meters
+    for twenty-four hours. A hundred glowbugs can be recharged off a single type
+    A cell.
+  encumbrance: 0
+  location: other
+  quality: stock
+  tl: 3
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!ftjjjbeldkgnncc0'
+

@@ -1,0 +1,53 @@
+name: Pretech Manufactory
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.ot7l4dah33gvwxfu
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: ot7l4dah33gvwxfu
+system:
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 25
+  counter: ''
+  description: >-
+    Rare, precious examples of functioning pretech industrial facilities,
+    retrofitted to work without the benefit of specialized psychic disciplines.
+    As an action, the owning faction can roll 1d8 for a Pretech Manufactory, and
+    gain half that many FacCreds, rounded up. Roll: [[1d8]]
+  health:
+    max: 16
+    value: 16
+  income: 0
+  maintenance: 0
+  rating: 7
+  tl: 5
+  turnRoll: ''
+  type: Facility
+  unusable: false
+  qualities:
+    permission: false
+    action: false
+    special: true
+  category: wealth
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!ot7l4dah33gvwxfu'
+

@@ -1,0 +1,43 @@
+name: Suicide Charge
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/gps.svg
+folder: 6XDktrKETRNcBLu6
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.drone-fittings.Item.d04fgkc3hreug42w
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286953010
+  modifiedTime: 1757286953010
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: d04fgkc3hreug42w
+system:
+  broken: false
+  cost: 250
+  costMultiplier: true
+  description: >-
+    The drone is loaded with a demo charge as per page 69. The operator can
+    trigger it as an attack, but unless they can move the drone in by surprise,
+    the approach will always give onlookers a chance to spot it before it gets
+    within range.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  tl: 3
+  type: drone
+  favorite: false
+  minClass: fighter
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!d04fgkc3hreug42w'
+

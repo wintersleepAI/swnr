@@ -1,0 +1,59 @@
+name: Full plate, layered mail
+type: armor
+folder: 3Dm85i0tKhFQJtw7
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.armor.Item.0xm3a3pojfiw76p2
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286662362
+  modifiedTime: 1757286662362
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 0xm3a3pojfiw76p2
+system:
+  ac: 17
+  meleeAc: 17
+  traumaDiePenalty: 2
+  isSubtle: false
+  soak:
+    value: 10
+    max: 10
+  cost: 100
+  description: >-
+    Primitive armor is a catch-all covering all armor technology that lacks
+    access to advanced materials and processes. While such armor can be very
+    effective in protecting against primitive weaponry, it is useless against
+    advanced TL4 melee weapons and firearms of all kinds. Against these weapons,
+    it is treated as AC 10. Note that some planets have native flora or fauna
+    capable of naturally producing extremely effective armor materials, ones not
+    susceptible to this limitation
+  encumbrance: 2
+  location: other
+  quality: stock
+  shield: false
+  tl: 1
+  use: false
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  dr: 0
+  isHeavy: false
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!0xm3a3pojfiw76p2'
+

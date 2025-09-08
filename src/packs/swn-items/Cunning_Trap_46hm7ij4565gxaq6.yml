@@ -1,0 +1,51 @@
+name: Cunning Trap
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.46hm7ij4565gxaq6
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 46hm7ij4565gxaq6
+system:
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 5
+  counter: 1d6+3
+  description: >-
+    This asset covers all the myriad stratagems of war, from induced landslides
+    to spreading local diseases.<br /> Note:
+  health:
+    max: 2
+    value: 2
+  income: 0
+  maintenance: 0
+  rating: 3
+  tl: 0
+  turnRoll: ''
+  type: Tactic
+  unusable: false
+  qualities:
+    permission: false
+    action: false
+    special: false
+  category: force
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!46hm7ij4565gxaq6'
+

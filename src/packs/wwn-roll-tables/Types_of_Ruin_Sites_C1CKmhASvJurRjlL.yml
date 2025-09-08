@@ -2,11 +2,11 @@ _id: C1CKmhASvJurRjlL
 name: Types of Ruin Sites
 img: icons/svg/d20-grey.svg
 description: >-
-  The table below offers suggestions as to what kind of structure the
+  <p>The table below offers suggestions as to what kind of structure the
   exploration site might be. Some of the listed sites might not make sense in a
   particular context. While you can always just re-roll or pick something, it
   can sometimes be interesting to read the result metaphorically, and then put a
-  structure in that matches the essential significance of the rolled result.
+  structure in that matches the essential significance of the rolled result.</p>
 results:
   - _id: 7Ld9UI1z0dMyVXDb
     type: text
@@ -44,9 +44,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293781421
     name: Ruin-Residential
-    documentUuid: Compendium.wwn.gm-subtables.f9Ej9D62dBkn95id
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.f9Ej9D62dBkn95id
     description: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.U4W3kmi7bjcearWT'
   - _id: M7pXF3VG2uZbOLwF
@@ -85,9 +86,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293786483
     name: Ruin-Military
-    documentUuid: Compendium.wwn.gm-subtables.9F3PeDKeKv2aICLU
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.9F3PeDKeKv2aICLU
     description: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.9G5C8B8P7OtQKxXb'
   - _id: kANP9BCvFQ1Wr8gw
@@ -126,9 +128,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293792046
     name: Ruin-Production
-    documentUuid: Compendium.wwn.gm-subtables.d0JsJbQXJHLwrT6I
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.d0JsJbQXJHLwrT6I
     description: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.GEJXQ315tKDFoKfn'
   - _id: RSiQJym4LMmlKslj
@@ -167,9 +170,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293796712
     name: Ruin-Religious
-    documentUuid: Compendium.wwn.gm-subtables.VT5kUIdkZKXbmgm4
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.VT5kUIdkZKXbmgm4
     description: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.n1f6H2C4afstiLTR'
   - _id: Lg1z7ZXyFdscqnOZ
@@ -208,9 +212,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293801169
     name: Ruin-Cultural
-    documentUuid: Compendium.wwn.gm-subtables.2EgsngYETnfsMIXY
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.2EgsngYETnfsMIXY
     description: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.A99KUEGG9aVzkF42'
   - _id: 2Aq7Pt27EAUOIlCc
@@ -249,9 +254,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293807604
     name: Ruin-Infrastructure
-    documentUuid: Compendium.wwn.gm-subtables.D1d00cXACTQTvQhG
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.D1d00cXACTQTvQhG
     description: ''
     _key: '!tables.results!C1CKmhASvJurRjlL.tRBUpzLeDbsMaRtJ'
 formula: 1d6
@@ -267,8 +273,8 @@ _stats:
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271920613
-  modifiedTime: 1754271920613
-  lastModifiedBy: lKC5x4Yf023Bizof
+  modifiedTime: 1757293777475
+  lastModifiedBy: iXDXVi7OlHcRwXw0
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3
