@@ -169,7 +169,6 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     switch (this.document.type) {
       case 'feature':
         options.parts.push('attributesFeature');
-        options.parts.push('effects');
         options.defaultTab = 'attributes';
         break;
       case 'item':
@@ -216,6 +215,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'skill':
         break;
     }
+    options.parts.push('effects');
     options.parts.push('description');
   }
 
