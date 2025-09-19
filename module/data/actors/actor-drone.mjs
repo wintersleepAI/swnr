@@ -1,5 +1,6 @@
 import SWNVehicleBase from './base-vehicle.mjs';
 import SWNShared from '../shared.mjs';
+import { SWN } from '../../helpers/config.mjs';
 
 export default class SWNDrone extends SWNVehicleBase {
   static LOCALIZATION_PREFIXES = [
@@ -19,6 +20,7 @@ export default class SWNDrone extends SWNVehicleBase {
     schema.enc = SWNShared.requiredNumber(1);
     schema.range = SWNShared.requiredString("");
     schema.model = SWNShared.stringChoices('primitiveDrone', modelMap, false); //SWNShared.requiredString("");
+    schema.customModel = SWNShared.nullableString("");
     schema.moveType = SWNShared.requiredString("");
     return schema;
   }
@@ -80,5 +82,16 @@ export default class SWNDrone extends SWNVehicleBase {
     this.power.value = shipPower;
     this.fittings.value = fittingTotal;
     this.hardpoints.value = shipHardpoint;
+  }
+
+  static migrateData(data) {
+    if (data.model !== null && data.model !== 'custom') {
+      if (!(data.model in CONFIG.SWN.DroneModelsData)) {
+        let oldName = data.model;
+        data.model = 'custom';
+        data.customModel = oldName;
+      }
+    }
+    return data;
   }
 }
