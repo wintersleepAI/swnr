@@ -89,6 +89,10 @@ The system uses:
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
 
+### Art 
+The background art for the system is taken from the SWN Revised book download and is able to be used per the license file. 
+The artwork is by Grzegorz Pedrycz. The asset tokens were provided by Hawkin.
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
