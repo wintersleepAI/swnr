@@ -459,7 +459,8 @@ const migrations = {
         ui.notifications?.info(successMsg);
       }
       
-      versionNote("2.1.0", "Unified Power System migration completed. This comprehensive migration transforms the legacy effort system into the new resource pool system, populates power resource fields, converts legacy configurations to consumption arrays, and creates pool-granting features for characters. All worlds from 2.0.12 or earlier have been fully migrated to the new system.");
+      versionNote("2.1.0", "Unified Power System migration completed. This comprehensive migration transforms the legacy effort system into the new resource pool system, populates power resource fields, converts legacy configurations to consumption arrays, and creates pool-granting features for characters. All worlds from 2.0.12 or earlier have been fully migrated to the new system. See the notes at <a href='https://github.com/wintersleepAI/swnr/wiki/Powers---Resource-Pools' target='_blank'>this wiki page</a> for more information.");
+        
       
     } catch (err) {
       console.error("Critical migration error:", err);
