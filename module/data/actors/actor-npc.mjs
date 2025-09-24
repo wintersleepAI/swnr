@@ -1,6 +1,5 @@
 import SWNActorBase from './base-actor.mjs';
 import SWNShared from '../shared.mjs';
-import { calculatePoolsFromFeatures } from '../../helpers/pool-helpers.mjs';
 
 export default class SWNNPC extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -128,7 +127,7 @@ export default class SWNNPC extends SWNActorBase {
    * @private
    */
   _calculateResourcePools() {
-    this.pools = calculatePoolsFromFeatures({
+    this.pools = this.calculatePoolsFromFeatures({
       parent: this.parent,
       dataModel: this,
       evaluateCondition: (cond) => this._evaluateCondition(cond),
