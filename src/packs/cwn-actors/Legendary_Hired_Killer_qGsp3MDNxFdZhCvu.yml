@@ -1,0 +1,798 @@
+name: Legendary Hired Killer
+type: npc
+img: icons/svg/mystery-man.svg
+system:
+  health:
+    value: 80
+    max: 80
+  biography: ''
+  species: ''
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 8
+  baseAc: 21
+  meleeAc: 21
+  ab: 17
+  meleeAb: 15
+  systemStrain:
+    value: 0
+    permanent: 0
+  speed: 20
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: street
+  skillBonus: 4
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  hitDice: 10d8
+  saves: 10
+  moralScore: 12
+  reaction: unknown
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  homeworld: ''
+  faction: ''
+  pools: {}
+  tweak:
+    showCyberware: true
+    showPsychic: true
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: true
+    showPoolsInPowers: false
+prototypeToken:
+  name: Veteran Corp
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/mystery-man.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+items:
+  - name: Advanced Knife
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.hbnlvlb3zhkkf0a1
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: EYYNWBn8RrZBN7TY
+    system:
+      ammo:
+        burst: false
+        max: 0
+        suppress: false
+        type: none
+        value: 0
+        longReload: false
+        current: null
+      cost: 200
+      damage: 1d6+2
+      description: >-
+        Advanced weapons employ modern polymers, sophisticated metallurgy,
+        fractal edges, electro-stun tech, and a small legion of marketers to
+        sell products that are distinctly superior to the plain steel edges of a
+        prior age. An advanced micro-edged butcher knife can go through bone
+        like bamboo and keep an edge for weeks between sharpenings. The more
+        martial offerings go to even greater lengths in their marketing, with
+        some enterprising serial killers and gang enforcers inking exclusivity
+        deals with particular knife manufacturers.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 20
+        normal: 10
+      secondStat: dex
+      shock:
+        ac: 15
+        dmg: 9
+      stat: str
+      trauma:
+        die: 1d8
+        rating: 3
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.EYYNWBn8RrZBN7TY'
+  - name: Coordination Augment II
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.hamt7zrk26jrwy5r
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: xI0QtoAMLr5Mztea
+    system:
+      concealment: Touch
+      cost: 200000
+      description: >-
+        As Coordination Augment I, but the subject gains a Dexterity score of
+        18, and their base Move rate is increased by 10 meters.
+      effect: Dex 18 and +10m Move
+      strain: 3
+      type: Nerve
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.xI0QtoAMLr5Mztea'
+  - name: Armored Clothing
+    type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-armor.Item.rgosy2tui7x5kwp0
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: KBQMBpg6hDAjG3ow
+    system:
+      ac: 16
+      cost: 1000
+      description: >-
+        The bulky plates and heavy ballistic weaves of this outfit are disguised
+        as drapes and fashion elements.
+      encumbrance: 2
+      isHeavy: false
+      isSubtle: true
+      meleeAc: 14
+      shieldACBonus: 0
+      shieldMeleeACBonus: 0
+      soak:
+        max: 5
+        value: 5
+      traumaDiePenalty: 1
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      shield: false
+      use: true
+      dr: 0
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.KBQMBpg6hDAjG3ow'
+  - name: Modded Light Pistol
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.j3dkw1jpnfuob1ju
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: JNeww7ZXhyJ2NKR5
+    system:
+      ammo:
+        burst: false
+        max: 15
+        suppress: false
+        type: ammo
+        value: 15
+        longReload: false
+        current: null
+      cost: 200
+      damage: 1d6+14
+      description: >-
+        Light and heavy pistols are categorized by the caliber of the bullet
+        they fire. Some operators prefer the low recoil and high mag capacity
+        possible with a low-caliber round, while others like to have a little
+        more certainty in dropping the targets they hit.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 80
+        normal: 10
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      stat: dex
+      trauma:
+        die: 1d8+1
+        rating: 2
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.JNeww7ZXhyJ2NKR5'
+  - name: Cybereyes (pair)
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.84j3wyp3mp029n4z
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 0mIX6zxhYshZsTpj
+    system:
+      concealment: Sight
+      cost: 10000
+      description: >-
+        While a single cybernetic eye can be implanted, it is recommended that
+        both be replaced at the same time to improve neural adaptation. These
+        cybereyes are clearly artificial, though most are styled in attractive
+        or striking fashions. They all have perfect 20/20 vision and integral
+        flash protectors, but additional functionality must be implanted
+        separately. A user with a pair of cybereyes or syntheyes halves the
+        System Strain cost of cybernetic eye implants.
+      effect: Flash-protected synthetic eyes
+      strain: 0.25
+      type: Sensory
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.0mIX6zxhYshZsTpj'
+  - name: Enhanced Reflexes III
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.2xdi94obeezvc5hb
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: asBMyEPi1H78VpwG
+    system:
+      concealment: Touch
+      cost: 750000
+      description: >-
+        Twice per scene, as an On Turn action up to once per round, the user
+        gains a bonus non-cyberspace Main Action and bonus Move Action. By
+        accepting one System Strain, this ability can be used as an Instant
+        action.
+      effect: 2/scene, bonus Main and Move
+      strain: 4
+      type: Nerve
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.asBMyEPi1H78VpwG'
+  - name: Eye Mod/Flechette Launcher
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.dtz5ug5ad6cylxft
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: NduugZpX943TgUFW
+    system:
+      concealment: Medical
+      cost: 20000
+      description: >-
+        A holdout weapon designed for surprise short-ranged attacks, this eye
+        has been loaded with a small explosive flechette. It has the statistics
+        of a light pistol, has a range of 10 meters, and requires a Main Action
+        to reload its single-round magazine. If used against a target in melee
+        range who does not suspect its existence, a normal hit roll is made; on
+        a miss, it does full normal damage anyway, and on a hit, the damage is
+        doubled. It can be used for Execution Attacks.
+      effect: Surprise light pistol attack
+      strain: 0.5
+      type: Head
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.NduugZpX943TgUFW'
+  - name: Eye Mod/Impostor
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.p7t0nzc357rxvlj2
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: hBDfHI95ZYo4xaNk
+    system:
+      concealment: Medical
+      cost: 10000
+      description: >-
+        Aside from allowing free alteration of eye color, this mod allows the
+        user to copy another person's retinal patterns. Provided they are within
+        two meters, they need only meet the user's gaze for a few moments to get
+        a good imprint. The eye can store up to a dozen imprints, but it takes a
+        Main Action to shift from one to another. Note that it is a relatively
+        simple procedure to alter a person's retinal pattern, so an important
+        target alerted to the imposture may end up changing their imprint.
+      effect: Mimic retinal patterns
+      strain: 1
+      type: Sensory
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.hBDfHI95ZYo4xaNk'
+  - name: Eye Mod/Infrared Vision
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.3nxh3aam4rmf1don
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: x2XLNp24zBqeoJcz
+    system:
+      concealment: Medical
+      cost: 5000
+      description: >-
+        The infrared vision this mod allows permits basic navigation in dark
+        areas and makes the presence of heat sources such as humans, engines,
+        and infrared tripwires very obvious. The user gains a +1 bonus on any
+        Notice checks to detect the presence of thermally-unshielded living
+        creatures.
+      effect: See heat patterns in the area
+      strain: 0.5
+      type: Sensory
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.x2XLNp24zBqeoJcz'
+  - name: Eye Mod/Zoom
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.m7478sikz6r9jbpr
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: D3p9y3y0kkdLaG80
+    system:
+      concealment: Medical
+      cost: 10000
+      description: >-
+        The user's vision can zoom in on distant targets. The user can see
+        objects within 500 meters as if they were standing next to them. The hit
+        penalty for a ranged weapon's long range is eliminated.
+      effect: 500m telescopic vision
+      strain: 0.5
+      type: Sensory
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.D3p9y3y0kkdLaG80'
+  - name: Reaction Booster II
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.lg6b4ormag3e53x6
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: NqxryAQnq7OMOGMZ
+    system:
+      concealment: Medical
+      cost: 100000
+      description: >-
+        As level one, but the user automatically wins initiative against targets
+        that don't also automatically win initiative; if both have this ability,
+        initiative is rolled without modifications. The user can act normally
+        during surprise rounds.
+      effect: Automatically win initiative
+      strain: 2
+      type: Nerve
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.NqxryAQnq7OMOGMZ'
+  - name: Stick Pads
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.e1scp9y1h45wayvk
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 1Aa2VqAQvKJUECgv
+    system:
+      concealment: Touch
+      cost: 15000
+      description: >-
+        Macroscale van der Waals generators allow the user's hands and feet to
+        stick to vertical or overhanging surfaces, their full weight supported
+        by one arm. They can climb such surfaces at their full movement rate
+        with one free hand.
+      effect: Climb sheer or vertical surfaces
+      strain: 0.5
+      type: Limb
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.1Aa2VqAQvKJUECgv'
+  - name: Hard To Kill
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-edges.Item.7hvwwmidep4132l0
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: ExsnLJPZiDpGEVjd
+    system:
+      description: >-
+        Instead of rolling 1d6 per level for your hit points, you roll 1d6+2.
+        Your base Trauma Target increases by +1, turning the base 6 into 7.
+      favorite: false
+      level: 0
+      type: edge
+      poolsGranted: []
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.ExsnLJPZiDpGEVjd'
+  - name: Killing Blow
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-edges.Item.gcq6cz8et24c4tst
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: ntBKchaSBkWH6QXd
+    system:
+      description: >-
+        Gain a combat skill as a bonus skill. Whenever you inflict hit point
+        damage on something, whether by weapon, Shock, special ability, or any
+        other source, the damage is increased by 1 point per two character
+        levels, rounded up. Any Trauma Die you roll gains a +1 bonus.
+      favorite: false
+      level: 0
+      type: edge
+      poolsGranted: []
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.ntBKchaSBkWH6QXd'
+  - name: Veteran's Luck
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-edges.Item.94fgmfw56y7l780i
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: p8q6riQcFB0W3VvX
+    system:
+      description: >-
+        Once per scene, as an Instant action, trigger this ability to gain one
+        of two effects,an attack roll that just hit you is instead treated as a
+        miss
+      favorite: false
+      level: 0
+      type: edge
+      poolsGranted: []
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.p8q6riQcFB0W3VvX'
+  - name: Deadeye
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-foci.Item.572fu5suit6lkrzl
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 65NkVA7f65MbLt2N
+    system:
+      description: >-
+        You have a gift with ranged weapons. While this talent most commonly
+        applies to guns, it is also applicable to thrown weapons or other ranged
+        weapons that can be used with the Shoot skill. For thrown weapons, you
+        can't use the benefits of the Armsmaster Focus at the same time as
+        Deadeye.<br /><br />Level 1: Gain Shoot as a bonus skill. You can Ready
+        a Stowed ranged weapon as an Instant action. You may use a rifle or
+        two-handed ranged weapon even when an enemy is within melee range,
+        albeit at a -4 hit penalty. You may add your Shoot skill level to a
+        ranged weapon's damage roll.<br />Level 2: You can reload guns,
+        crossbows, or other slow-loading weapons as an On Turn action, provided
+        they don't take more than a round to reload. You can use ranged weapons
+        of any size in melee without penalty. Once per scene, as an On Turn
+        action when target shooting at an inanimate, non-creature target, you
+        automatically hit unless you roll a 2 on your Shoot skill check or the
+        shot is physically impossible.
+      favorite: false
+      level: 2
+      type: focus
+      poolsGranted: []
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!qGsp3MDNxFdZhCvu.65NkVA7f65MbLt2N'
+effects: []
+folder: 1MnMOlCpFjrZIhXu
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.qGsp3MDNxFdZhCvu
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
+_id: qGsp3MDNxFdZhCvu
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!actors!qGsp3MDNxFdZhCvu'
+

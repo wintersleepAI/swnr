@@ -1,6 +1,6 @@
 name: Pieced Armor
 type: armor
-sort: 0
+sort: 125000
 system:
   description: >-
     Pieced armor is assembled of a thicker or more durable chestpiece and
@@ -20,7 +20,7 @@ system:
   location: stowed
   quality: stock
   noEncReadied: false
-  ac: 10
+  ac: 14
   shield: false
   use: false
   meleeAc: 14
@@ -38,17 +38,18 @@ _id: rm4u8hg9xxtt9tjl
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.348'
   systemId: swnr
-  systemVersion: 2.1.0
+  systemVersion: 2.1.0-beta
   createdTime: 1754277456695
-  modifiedTime: 1754277456695
-  lastModifiedBy: null
+  modifiedTime: 1758741728066
+  lastModifiedBy: lKC5x4Yf023Bizof
   exportSource: null
-folder: MiJwkaqEfKd6620L
+folder: uwB7P89lzKd8aa90
 flags: {}
 effects: []
 ownership:
   default: 0
+img: icons/svg/item-bag.svg
 _key: '!items!rm4u8hg9xxtt9tjl'
 

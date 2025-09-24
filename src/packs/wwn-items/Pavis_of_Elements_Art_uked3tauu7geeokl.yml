@@ -1,6 +1,6 @@
-name: Pavis of Elements
+name: Pavis of Elements Art
 type: armor
-sort: 0
+sort: 100000
 system:
   description: >-
     Commit Effort as an On Turn action to conjure an elemental barrier around
@@ -12,16 +12,16 @@ system:
   bundle:
     bundled: false
     amount: null
-  encumbrance: 1
+  encumbrance: 0
   cost: 0
   tl: 3
   location: stowed
   quality: stock
   noEncReadied: false
   ac: 10
-  shield: false
+  shield: true
   use: false
-  meleeAc: 4
+  meleeAc: null
   soak:
     value: 0
     max: 0
@@ -29,24 +29,25 @@ system:
   traumaDiePenalty: 0
   isSubtle: false
   isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
+  shieldMeleeACBonus: 4
+  shieldACBonus: 4
   baseAc: 4
 _id: uked3tauu7geeokl
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.348'
   systemId: swnr
-  systemVersion: 2.1.0
+  systemVersion: 2.1.0-beta
   createdTime: 1754277456694
-  modifiedTime: 1754277456694
-  lastModifiedBy: null
+  modifiedTime: 1758741496961
+  lastModifiedBy: lKC5x4Yf023Bizof
   exportSource: null
-folder: MiJwkaqEfKd6620L
+folder: wWLLqniCuTTHdUfm
 flags: {}
 effects: []
 ownership:
   default: 0
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 _key: '!items!uked3tauu7geeokl'
 

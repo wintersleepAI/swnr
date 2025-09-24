@@ -1,6 +1,6 @@
 name: War Robe
 type: armor
-sort: 0
+sort: 150000
 system:
   description: >-
     A war robe is a catchall term for various outfits involving layers of
@@ -21,7 +21,7 @@ system:
   location: stowed
   quality: stock
   noEncReadied: false
-  ac: 10
+  ac: 14
   shield: false
   use: false
   meleeAc: 14
@@ -39,17 +39,18 @@ _id: 9po5iwrpwysng5k3
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.348'
   systemId: swnr
-  systemVersion: 2.1.0
+  systemVersion: 2.1.0-beta
   createdTime: 1754277456693
-  modifiedTime: 1754277456693
-  lastModifiedBy: null
+  modifiedTime: 1758741764353
+  lastModifiedBy: lKC5x4Yf023Bizof
   exportSource: null
-folder: MiJwkaqEfKd6620L
+folder: uwB7P89lzKd8aa90
 flags: {}
 effects: []
 ownership:
   default: 0
+img: icons/svg/item-bag.svg
 _key: '!items!9po5iwrpwysng5k3'
 

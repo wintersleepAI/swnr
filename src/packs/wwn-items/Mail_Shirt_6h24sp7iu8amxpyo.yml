@@ -1,6 +1,6 @@
 name: Mail Shirt
 type: armor
-sort: 0
+sort: 100000
 system:
   description: >-
     Mail shirts are usually of iron or steel wire, though bronze and other more
@@ -20,7 +20,7 @@ system:
   location: stowed
   quality: stock
   noEncReadied: false
-  ac: 10
+  ac: 14
   shield: false
   use: false
   meleeAc: 14
@@ -38,17 +38,18 @@ _id: 6h24sp7iu8amxpyo
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.348'
   systemId: swnr
-  systemVersion: 2.1.0
+  systemVersion: 2.1.0-beta
   createdTime: 1754277456698
-  modifiedTime: 1754277456698
-  lastModifiedBy: null
+  modifiedTime: 1758741789408
+  lastModifiedBy: lKC5x4Yf023Bizof
   exportSource: null
-folder: MiJwkaqEfKd6620L
+folder: FITv2SYJsQwWnL69
 flags: {}
 effects: []
 ownership:
   default: 0
+img: icons/svg/item-bag.svg
 _key: '!items!6h24sp7iu8amxpyo'
 

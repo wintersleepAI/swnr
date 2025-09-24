@@ -1,6 +1,6 @@
-name: Unarmored Defense
+name: Unarmored Defense Art
 type: armor
-sort: 0
+sort: 400000
 system:
   description: >-
     When not wearing armor or using a shield, your base Armor Class is equal to
@@ -10,13 +10,13 @@ system:
   bundle:
     bundled: false
     amount: null
-  encumbrance: 1
+  encumbrance: 0
   cost: 0
   tl: 3
   location: stowed
   quality: stock
   noEncReadied: false
-  ac: 10
+  ac: 13
   shield: false
   use: false
   meleeAc: 13
@@ -34,17 +34,18 @@ _id: 1epfl5xd0fkdxuyg
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.348'
   systemId: swnr
-  systemVersion: 2.1.0
+  systemVersion: 2.1.0-beta
   createdTime: 1754277456694
-  modifiedTime: 1754277456694
-  lastModifiedBy: null
+  modifiedTime: 1758741681079
+  lastModifiedBy: lKC5x4Yf023Bizof
   exportSource: null
-folder: MiJwkaqEfKd6620L
+folder: wWLLqniCuTTHdUfm
 flags: {}
 effects: []
 ownership:
   default: 0
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 _key: '!items!1epfl5xd0fkdxuyg'
 
