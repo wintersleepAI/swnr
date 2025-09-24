@@ -219,7 +219,7 @@ export default class SWNNPC extends SWNActorBase {
           i.type === "skill" && 
           i.name.toLocaleLowerCase() === decodedSkillName.toLocaleLowerCase()
         );
-        return skill?.system.rank || -1; // -1 for untrained
+        return skill?.system.rank ?? -1; // -1 for untrained
       });
     
     // Final safety check - after substitution should only contain numbers and math
