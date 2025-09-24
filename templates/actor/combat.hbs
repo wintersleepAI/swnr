@@ -178,7 +178,9 @@
       {{/if}}
       <div class="flex flexrow" style="align-items:flex-start;">
         <div class="resource-bar" style="margin-top:10px;"><!--  The readied bar -->
-          <div style="width:{{actor.system.encumbrance.ready.percentage}}%" class="ready-fill"></div>
+          <div style="width:{{actor.system.encumbrance.ready.percentage}}%" 
+            class="ready-fill {{#if (gt actor.system.encumbrance.ready.value actor.system.encumbrance.ready.max)}}full-fill{{/if}}">
+          </div>
             <div class="text">
               {{localize 'swnr.item.locationReadied'}} {{localize 'swnr.item.gear'}}:
               {{actor.system.encumbrance.ready.value}}/{{actor.system.encumbrance.ready.max}}
