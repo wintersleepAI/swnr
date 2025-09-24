@@ -285,6 +285,9 @@
       },
       "Ship": {
         "FIELDS": {
+          "speed": {
+            "label": "Speed"
+          },
           "lifeSupportDays": {
             "label": "Life Support Days"
           },
@@ -358,6 +361,9 @@
       },
       "Mech": {
         "FIELDS": {
+          "speed": {
+            "label": "Speed"
+          },
           "maintenanceCost": {
             "label": "Maintenance Cost"
           },
@@ -371,6 +377,9 @@
       },
       "Vehicle": {
         "FIELDS": {
+          "speed": {
+            "label": "Speed"
+          },
           "kmph": {
             "label": "kmph"
           },
