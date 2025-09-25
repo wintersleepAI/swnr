@@ -342,5 +342,36 @@ export default class SWNNPC extends SWNActorBase {
     }
   }
 
+  async findOrCreatePool(resourceName, subResource) {
+    // Ignore straing or uses
+    if (resourceName == "Strain" || resourceName == "Uses") {
+      return false;
+    }
+    for (const feature of this.parent.items.filter(i => i.type == "feature")) {
+      for (const pool of feature.system.poolsGranted) {
+        if (pool.resourceName == resourceName && pool.subResource == subResource) {
+          // Pool already exists
+          return false;
+        }
+      }
+    }
+    // Pool does not exist, create a feature with it
+    this.parent.createEmbeddedDocuments(
+      "Item",
+      [
+        {
+          name: `${resourceName} ${subResource}`,
+          type: "feature",
+          img: "systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg",
+          system: {
+            poolsGranted: [{ resourceName: resourceName, subResource: subResource, formula: 1, cadence: "day" }]
+          },
+        },
+      ],
+      {}
+    );
+    return true;
+  }
+
 
 }
