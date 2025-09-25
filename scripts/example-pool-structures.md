@@ -113,8 +113,10 @@ Both systems use a consistent pool key format: `"ResourceName:SubResource"`
 Examples:
 - `"Effort:Psychic"` - Psychic effort pool
 - `"Slots:SpellsCast"` - Spell casting slots
-- `"Effort:"` - Generic effort pool (empty sub-resource)
+- `"Effort:"` - Generic effort pool (empty sub-resource, serves as fallback for any Effort consumption)
 - `"Points:Gunnery"` - Gunnery points pool
+
+**Pool Fallback Behavior**: When a power needs a specific sub-resource (e.g., "Effort:Psychic") but that pool is unavailable or has insufficient resources, the system automatically falls back to the corresponding generic pool (e.g., "Effort:") if available.
 
 ## Configuration Options
 

@@ -15,7 +15,7 @@ Concise guidance for Claude Code on this Foundry VTT v13 system.
 - Update pattern: `await actor.update({ [\`system.pools.${key}.value\`]: newValue })` (batch when needed). Respect `_source` to preserve manual overrides when recalculating.
 
 ## Consumption Types & UX
-- `poolResource`: spends from pools; supports cadence and commitments.
+- `poolResource`: spends from pools; supports cadence and commitments. Falls back to generic pools (blank subtype) when specific subtypes unavailable.
 - `systemStrain`: adjusts `actor.system.systemStrain.value`.
 - `consumableItem`: spends item charges; if no `itemId`, show multi‑item selection dialog and spend exactly what the user chooses.
 - `uses`: internal per‑power counter; deduct 1 per use; optional cadence auto‑refresh.

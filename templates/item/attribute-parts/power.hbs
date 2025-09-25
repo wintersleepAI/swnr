@@ -58,7 +58,7 @@
   {{! Resource Consumption Section }}
   <fieldset>
     <legend>{{localize "swnr.consumption.resourceConsumption"}}</legend>
-    <p class="help-text">Configure all resource costs required to use this power. You can add multiple consumption types (effort, strain, spell points, consumable items, etc.)</p>
+    <p class="help-text">Configure all resource costs required to use this power. You can add multiple consumption types (effort, strain, spell points, consumable items, etc.). Pool resources will first try to use the specific sub-resource (e.g., "Effort:Psychic"), but will automatically fall back to generic pools (e.g., "Effort:") if the specific pool is unavailable or insufficient.</p>
     
     <div class="consumption-table-container">
       {{#if system.consumptions.length}}

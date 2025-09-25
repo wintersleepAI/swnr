@@ -138,9 +138,10 @@ Powers consume resources from pools when activated. The system supports flexible
    - **Source**: Discipline or school name
 3. **Configure Resource Consumption**:
    - **Resource Type**: Must match a pool's resource type exactly
-   - **Sub Resource**: Must match a pool's sub-resource exactly (or leave blank)
+   - **Sub Resource**: Must match a pool's sub-resource exactly (or leave blank for generic pools)
    - **Cost**: How much to consume
    - **Timing**: When to consume ("preparation", "manual", "immediate")
+   - **Pool Fallback**: If specific sub-resource is unavailable/insufficient, will automatically use generic pools (blank sub-resource)
 
 #### Power Consumption Examples
 
@@ -176,6 +177,20 @@ Sub Resource: (leave blank)
 Cost: 3
 Timing: immediate (consumed when sent to chat)
 ```
+
+#### Pool Resource Fallback Behavior
+
+When a power specifies both a resource type and sub-resource (e.g., "Effort:Psychic"), the system will:
+
+1. **First try** the specific pool: "Effort:Psychic"
+2. **If unavailable/insufficient**, fall back to generic pool: "Effort:" (blank sub-resource)
+
+**Example Fallback Scenarios:**
+- Power needs "Effort:Psychic" (1 point), character has "Effort:Psychic" (0) and "Effort:" (2) → Uses "Effort:"
+- Power needs "Slots:Lv3" (1 slot), character has "Slots:Lv3" (0) and "Slots:" (1) → Uses "Slots:"
+- Power needs "Points:Mana" (2 points), character has only "Points:" (3) → Uses "Points:"
+
+This allows characters to maintain both specialized pools and flexible generic pools that can cover multiple power types.
 
 #### Charging Items (Consumable Items)
 

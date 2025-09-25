@@ -572,11 +572,18 @@ export default class SWNPower extends SWNItemBase {
         const pools = actor.system.pools || {};
         const pool = pools[poolKey];
         
-        if (!pool || pool.value < consumes.usesCost) {
+        // Check if specific pool is available, otherwise try generic pool fallback
+        let validPool = pool;
+        if ((!pool || pool.value < consumes.usesCost) && consumes.subResource) {
+          const genericPoolKey = this._getPoolKey(consumes.resourceName, "");
+          validPool = pools[genericPoolKey];
+        }
+        
+        if (!validPool || validPool.value < consumes.usesCost) {
           return { 
             valid: false, 
             reason: "insufficient-source-effort",
-            message: `Insufficient source effort: ${pool?.value || 0}/${pool?.max || 0} available, ${consumes.usesCost} required`
+            message: `Insufficient source effort: ${validPool?.value || 0}/${validPool?.max || 0} available, ${consumes.usesCost} required`
           };
         }
         return { valid: true };
@@ -653,23 +660,38 @@ export default class SWNPower extends SWNItemBase {
     const pools = actor.system.pools || {};
     const pool = pools[poolKey];
     
-    if (!pool || pool.value < consumes.usesCost) {
+    // If specific pool not available/sufficient, try fallback to generic pool (blank subtype)
+    let actualPoolKey = poolKey;
+    let actualPool = pool;
+    
+    if ((!pool || pool.value < consumes.usesCost) && consumes.subResource) {
+      // Try generic pool with blank subtype as fallback
+      const genericPoolKey = this._getPoolKey(consumes.resourceName, "");
+      const genericPool = pools[genericPoolKey];
+      
+      if (genericPool && genericPool.value >= consumes.usesCost) {
+        actualPoolKey = genericPoolKey;
+        actualPool = genericPool;
+      }
+    }
+    
+    if (!actualPool || actualPool.value < consumes.usesCost) {
       return { 
         success: false, 
         reason: "insufficient-pool-resource",
-        message: `Insufficient ${consumes.resourceName}${consumes.subResource ? ':' + consumes.subResource : ''}: ${pool?.value || 0}/${pool?.max || 0} available, ${consumes.usesCost} required`,
-        poolKey,
+        message: `Insufficient ${consumes.resourceName}${consumes.subResource ? ':' + consumes.subResource : ''}: ${actualPool?.value || 0}/${actualPool?.max || 0} available, ${consumes.usesCost} required`,
+        poolKey: actualPoolKey,
         required: consumes.usesCost,
-        available: pool?.value || 0
+        available: actualPool?.value || 0
       };
     }
     
     // Create effort commitment if cadence is commit
     if (["commit", "scene", "day"].includes(consumes.cadence)) {
       const commitments = foundry.utils.deepClone(actor.system.effortCommitments || {});
-      if (!commitments[poolKey]) commitments[poolKey] = [];
+      if (!commitments[actualPoolKey]) commitments[actualPoolKey] = [];
       
-      commitments[poolKey].push({
+      commitments[actualPoolKey].push({
         powerId: this.parent.id,
         powerName: this.parent.name,
         amount: consumes.usesCost,
@@ -681,19 +703,19 @@ export default class SWNPower extends SWNItemBase {
       await actor.update({ "system.effortCommitments": commitments });
       
       // Update pool value
-      const newValue = Math.max(0, pool.max - commitments[poolKey].reduce((sum, c) => sum + c.amount, 0));
-      await actor.update({ [`system.pools.${poolKey}.value`]: newValue });
+      const newValue = Math.max(0, actualPool.max - commitments[actualPoolKey].reduce((sum, c) => sum + c.amount, 0));
+      await actor.update({ [`system.pools.${actualPoolKey}.value`]: newValue });
     } else {
       // Direct spending for other cadences
-      await actor.update({ [`system.pools.${poolKey}.value`]: pool.value - consumes.usesCost });
+      await actor.update({ [`system.pools.${actualPoolKey}.value`]: actualPool.value - consumes.usesCost });
     }
     
     return { 
       success: true, 
       type: "poolResource",
-      poolKey,
+      poolKey: actualPoolKey,
       resourceName: consumes.resourceName,
-      subResource: consumes.subResource,
+      subResource: actualPoolKey === poolKey ? consumes.subResource : "", // Show blank subtype if fallback used
       spent: consumes.usesCost,
       cadence: consumes.cadence
     };
