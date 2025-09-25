@@ -1,0 +1,36 @@
+folder: BslyO9GYhD75h2Kk
+name: Necromancer Effort
+type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+system:
+  description: ''
+  favorite: false
+  level: 0
+  type: focus
+  poolsGranted:
+    - resourceName: Effort
+      subResource: Necromancer
+      formula: >-
+        Math.max(1, @skills.Magic.rank + Math.max(@stats.int.mod,
+        @stats.cha.mod))
+      condition: ''
+      cadence: day
+effects: []
+sort: 1200000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Item.uyqXQb6BV8ADVCA4
+  duplicateSource: Item.YXQJ18dr4rXdnZCw
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758769340355
+  modifiedTime: 1758769340355
+  lastModifiedBy: lKC5x4Yf023Bizof
+_id: jkb4fH3oDdR6BCmE
+_key: '!items!jkb4fH3oDdR6BCmE'
+

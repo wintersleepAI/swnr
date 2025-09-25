@@ -1,0 +1,49 @@
+folder: BslyO9GYhD75h2Kk
+name: Partial Invoker Spells
+type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+system:
+  description: ''
+  favorite: false
+  level: 0
+  type: focus
+  poolsGranted:
+    - resourceName: Points
+      subResource: Spell
+      cadence: day
+      formula: Math.ceil(@level/2) + @stats.int.mod
+      condition: ''
+    - resourceName: Points
+      subResource: Spell
+      cadence: day
+      formula: '+1'
+      condition: '@level>=10'
+    - resourceName: Slots
+      subResource: Prepared
+      cadence: day
+      formula: 1 + @stats.int.mod
+      condition: ''
+    - resourceName: Slots
+      subResource: Prepared
+      cadence: day
+      formula: 1 + @level/2
+      condition: '@level>=2'
+effects: []
+sort: 950000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Item.Vu3mdRzn9Ypfij0N
+  duplicateSource: Item.YsLGtpBJuHyX6Xjs
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758769340355
+  modifiedTime: 1758769340355
+  lastModifiedBy: lKC5x4Yf023Bizof
+_id: jhQsSs1g1d2WrcEh
+_key: '!items!jhQsSs1g1d2WrcEh'
+
