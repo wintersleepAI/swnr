@@ -7,7 +7,7 @@ system:
     affected or impeded by an unwanted spell or a standing magical effect
     created by a spell. You may ignore the magic.
   favorite: false
-  subType: arcane
+  subType: art
   source: Mageslayer
   level: 1
   prepared: false
@@ -20,26 +20,27 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  roll: ''
   duration: Instant
   save: None
   range: Self
-  skill: null
+  skill: ''
 _id: 2iiovxi84u7bpibj
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.348'
   systemId: swnr
-  systemVersion: 2.1.0
+  systemVersion: 2.1.0-beta
   createdTime: 1754277456826
-  modifiedTime: 1754277456826
-  lastModifiedBy: null
+  modifiedTime: 1758770738516
+  lastModifiedBy: lKC5x4Yf023Bizof
   exportSource: null
 folder: 1QSf6od5nEmDkbXu
 flags: {}
 effects: []
 ownership:
   default: 0
+img: icons/svg/item-bag.svg
 _key: '!items!2iiovxi84u7bpibj'
 
