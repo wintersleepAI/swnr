@@ -110,9 +110,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Bow, Small
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/bandit.svg
+items:
+  - name: Bow, Small
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Bows cover everything from the small self bows of horse archers to the
@@ -160,6 +168,10 @@ items:
     _key: '!actors.items!bp7eraz5ohglsnwo.oukk6qijh2ncxscw'
   - name: Sword, Short
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of

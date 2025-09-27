@@ -113,9 +113,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Bite
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/tiger.svg
+items:
+  - name: Bite
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -157,6 +165,10 @@ items:
     _key: '!actors.items!x45pxpfl9t3gk2ru.bhp4ejfmlq2yix6o'
   - name: Claw
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0

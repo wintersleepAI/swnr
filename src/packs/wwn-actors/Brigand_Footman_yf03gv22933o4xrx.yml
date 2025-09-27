@@ -117,9 +117,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Sword, Short
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/bandit.svg
+items:
+  - name: Sword, Short
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -164,6 +172,10 @@ items:
     _key: '!actors.items!yf03gv22933o4xrx.ybkq5lv17v0z9wsu'
   - name: Throwing Blade
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Throwing blades are small leaves of steel that are not terribly useful
@@ -208,6 +220,10 @@ items:
     _key: '!actors.items!yf03gv22933o4xrx.7spuy0jl3ng1n8j9'
   - name: Bow, Small
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Bows cover everything from the small self bows of horse archers to the
@@ -255,6 +271,10 @@ items:
     _key: '!actors.items!yf03gv22933o4xrx.uxet938d4id7ccqk'
   - name: Buff Coat
     type: armor
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Buff coats are long coats of thick, supple hide, sometimes worn to
@@ -295,6 +315,10 @@ items:
     _key: '!actors.items!yf03gv22933o4xrx.jvjnc9dtci5z6229'
   - name: Small Shield
     type: armor
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Shields come in two general varieties. Small ones, often made of metal,

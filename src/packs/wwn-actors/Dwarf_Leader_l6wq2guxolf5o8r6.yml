@@ -111,9 +111,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Punch/Headbutt
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
+items:
+  - name: Punch/Headbutt
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -155,6 +163,10 @@ items:
     _key: '!actors.items!l6wq2guxolf5o8r6.x469h32oqlnufeg0'
   - name: Axe, War
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Axes given here are those fashioned for war; lighter and more agile than
@@ -200,6 +212,10 @@ items:
     _key: '!actors.items!l6wq2guxolf5o8r6.crbig1i090qxs6fa'
   - name: Hammer, War
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Hammers listed here are the fighting variety, narrow-headed and made for
@@ -243,6 +259,10 @@ items:
     _key: '!actors.items!l6wq2guxolf5o8r6.vdtyv8zzd32scsnq'
   - name: Morale
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: Morale is 10 if leader is present.
       cost: 0

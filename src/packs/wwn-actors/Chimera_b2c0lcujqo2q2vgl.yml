@@ -112,9 +112,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Claw
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
+items:
+  - name: Claw
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -156,6 +164,10 @@ items:
     _key: '!actors.items!b2c0lcujqo2q2vgl.bg3shrq2ube2lozz'
   - name: Goat Head - Gore
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -197,6 +209,10 @@ items:
     _key: '!actors.items!b2c0lcujqo2q2vgl.mafy98rzyxfj8rin'
   - name: Lion Head - Bite
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -238,6 +254,10 @@ items:
     _key: '!actors.items!b2c0lcujqo2q2vgl.2pmn4sto1vjn9hib'
   - name: Dragon Head - Bite
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -279,6 +299,10 @@ items:
     _key: '!actors.items!b2c0lcujqo2q2vgl.76a20ns4rovnx69g'
   - name: Breath Weapon
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Breath weapon: Cone of fire: end 10' wide, 50' long. Can be used up to

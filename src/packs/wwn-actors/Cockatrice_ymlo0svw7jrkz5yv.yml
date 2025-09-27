@@ -108,9 +108,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Beak
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/ice-golem.svg
+items:
+  - name: Beak
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: 'Petrification: Anyone touched is turned to stone (save to resist).'
       cost: 0
@@ -152,6 +160,10 @@ items:
     _key: '!actors.items!ymlo0svw7jrkz5yv.zaphmh3uyl16717x'
   - name: Petrification
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: Anyone touched is turned to stone (save to resist).
       cost: 0

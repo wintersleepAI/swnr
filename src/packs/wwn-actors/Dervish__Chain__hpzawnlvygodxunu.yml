@@ -118,9 +118,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Shield, Large
     type: armor
+=======
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
+items:
+  - name: Shield, Large
+    type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Shields come in two general varieties. Small ones, often made of
@@ -164,6 +172,10 @@ items:
     _key: '!actors.items!hpzawnlvygodxunu.6lgx8orxaikga0o8'
   - name: Spear, Light
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Spears, and their longer cousin the pike, are common military weapons
@@ -208,6 +220,10 @@ items:
     _key: '!actors.items!hpzawnlvygodxunu.a2giq1eirwlkpcfk'
   - name: Mail Shirt
     type: armor
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Mail shirts are usually of iron or steel wire, though bronze and other

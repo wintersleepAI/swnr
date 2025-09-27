@@ -106,9 +106,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Bite
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
+items:
+  - name: Bite
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Swallow whole: On an attack roll of 19 or more. Inside the monster's
@@ -154,6 +162,10 @@ items:
     _key: '!actors.items!gv0m8429qm7jvw50.cliellnjw9yjw0dt'
   - name: Swallow Whole
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         On an attack roll of 19 or more. Inside the monster's belly: suffer 1d8

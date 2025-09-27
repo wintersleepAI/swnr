@@ -117,9 +117,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Small Shield
     type: armor
+=======
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/bandit.svg
+items:
+  - name: Small Shield
+    type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Shields come in two general varieties. Small ones, often made of metal,
@@ -163,6 +171,10 @@ items:
     _key: '!actors.items!mrkslfbvn8y2og63.cibpf2dqr3j258f6'
   - name: Sword, Long
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -207,6 +219,10 @@ items:
     _key: '!actors.items!mrkslfbvn8y2og63.k5yt2flnvwublxp2'
   - name: Mail Shirt
     type: armor
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Mail shirts are usually of iron or steel wire, though bronze and other

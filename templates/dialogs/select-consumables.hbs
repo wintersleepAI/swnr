@@ -6,6 +6,43 @@
         <strong>{{localize "swnr.consumption.selectDialog.selected"}}</strong>:
         <span class="swnr-selected-count">0</span>
       </p>
+      <table class="swnr-consume-select consume-select-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>{{localize "swnr.consumption.selectDialog.item"}}</th>
+            <th>{{localize "swnr.consumption.selectDialog.available"}}</th>
+            <th>{{localize "swnr.consumption.selectDialog.spend"}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each items}}
+            <tr data-item-id="{{id}}" data-available="{{value}}">
+              <td>
+                <img src="{{img}}"/>
+              </td>
+              <td>{{name}} ({{value}}/{{max}})</td>
+              <td>{{value}}</td>
+              <td>
+                <button type="button" class="swnr-dec">-</button>
+                <span class="swnr-amt" data-item-id="{{id}}">0</span>
+                <button type="button" class="swnr-inc">+</button>
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </form>
+  </div>
+  </div>
+<div class="swnr">
+  <div class="consume-select-container">
+    <form>
+      <p class="consume-select-header">
+        {{localize "swnr.consumption.selectDialog.choose"}}<br/>
+        <strong>{{localize "swnr.consumption.selectDialog.selected"}}</strong>:
+        <span class="swnr-selected-count">0</span>
+      </p>
       {{#if requirements}}
         <p class="consume-requirements">
           {{#if (eq requirements.length 1)}}{{localize "swnr.consumption.selectDialog.requirements.single"}}{{else}}{{localize "swnr.consumption.selectDialog.requirements.multiple"}}{{/if}}

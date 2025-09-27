@@ -142,9 +142,17 @@ prototypeToken:
     src: null
     disposition: false
   movementAction: null
+<<<<<<< HEAD
 items:
   - name: Averse
     type: item
+=======
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
+items:
+  - name: Averse
+    type: item
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Certain religious symbols, lines of salt, emblems of natural law, or
@@ -196,6 +204,10 @@ items:
     _key: '!actors.items!Lx4ANXkk3S1Cvmmm.z4bfnskqd8wscvy7'
   - name: Beguiling
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Once per scene it can beguile a creature with its gaze on a failed
@@ -247,6 +259,10 @@ items:
     _key: '!actors.items!Lx4ANXkk3S1Cvmmm.8yn4y17ij0vbr4jv'
   - name: Desynchrony
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Foes hit by it must make a Physical save or be paralyzed for 1d4+1
@@ -296,6 +312,10 @@ items:
     _key: '!actors.items!Lx4ANXkk3S1Cvmmm.hiqueyyedli7rs9h'
   - name: Draining
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Foes hit by it are enfeebled, taking a cumulative -2 penalty to hit
@@ -346,6 +366,10 @@ items:
     _key: '!actors.items!Lx4ANXkk3S1Cvmmm.qihzzjll4rphndyh'
   - name: Intangible
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         It is a shade or specter, unable to be touched by non-magical objects or
@@ -396,6 +420,10 @@ items:
     _key: '!actors.items!Lx4ANXkk3S1Cvmmm.juion2lt8zfvm5d0'
   - name: Ravenous
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         If it hits with at least one of its attacks, it gets an immediate bonus
@@ -445,6 +473,10 @@ items:
     _key: '!actors.items!Lx4ANXkk3S1Cvmmm.3krlogkz1gwmk0m3'
   - name: Red Hunger
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         It must eat a pound of human flesh or drink a pint of human blood every
@@ -495,6 +527,10 @@ items:
     _key: '!actors.items!Lx4ANXkk3S1Cvmmm.v0sx99n3f3qm3kcq'
   - name: Sunscorch
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Exposure to sunlight, running water, or some specific other emblem of
@@ -544,6 +580,10 @@ items:
     _key: '!actors.items!Lx4ANXkk3S1Cvmmm.zq94srfzlqu7t3yb'
   - name: Terrifying
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Enemies must make a Mental save or lose their first turn's Main Action
@@ -593,6 +633,10 @@ items:
     _key: '!actors.items!Lx4ANXkk3S1Cvmmm.ok4pk0p0isf20526'
   - name: Impure
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Weapons of silver, green wood, or other specific apotropaic material
@@ -643,6 +687,10 @@ items:
     _key: '!actors.items!Lx4ANXkk3S1Cvmmm.2voyur29htk1u9mg'
   - name: Unending
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         It cannot die by violence. Only the right act, weapon, object
@@ -692,6 +740,10 @@ items:
     _key: '!actors.items!Lx4ANXkk3S1Cvmmm.gz75cx2sma145sue'
   - name: Punch/Claw
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -760,6 +812,10 @@ items:
     _key: '!actors.items!Lx4ANXkk3S1Cvmmm.2bsp871jba3f1fut'
   - name: Plate Armor
     type: armor
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Plate armor is an extremely expensive suit of tailored metal pieces that

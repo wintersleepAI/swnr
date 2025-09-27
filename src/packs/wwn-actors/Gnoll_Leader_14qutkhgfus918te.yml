@@ -109,9 +109,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Bite
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
+items:
+  - name: Bite
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -153,6 +161,10 @@ items:
     _key: '!actors.items!14qutkhgfus918te.pwkxhl6r427ypt8l'
   - name: Spear, Light
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Spears, and their longer cousin the pike, are common military weapons
@@ -197,6 +209,10 @@ items:
     _key: '!actors.items!14qutkhgfus918te.y6822dia4uv8exbx'
   - name: Sword, Short
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -241,6 +257,10 @@ items:
     _key: '!actors.items!14qutkhgfus918te.m0jretfmy88pfvja'
   - name: Bow, Large
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Bows cover everything from the small self bows of horse archers to the
@@ -288,6 +308,10 @@ items:
     _key: '!actors.items!14qutkhgfus918te.3qqx59hwjuz2jskt'
   - name: Leader
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: Groups of 20+ are led by a gnoll with 3HD.
       cost: 0

@@ -106,9 +106,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Touch
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/spectre.svg
+items:
+  - name: Touch
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Energy Drain: A successfully hit target gains 1d8 system strain. If this
@@ -157,6 +165,10 @@ items:
     _key: '!actors.items!3dgafpw1achwqo5t.nxsr1epgr5a6f1pr'
   - name: Energy Drain
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Energy Drain: A successfully hit target gains 1d8 system strain. If this
@@ -192,6 +204,10 @@ items:
     _key: '!actors.items!3dgafpw1achwqo5t.9yfex5rcwystion4'
   - name: Mundane Damage Immunity
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: Can only be harmed by magical attacks.
       cost: 0
@@ -220,6 +236,10 @@ items:
     _key: '!actors.items!3dgafpw1achwqo5t.4mhunb7oadkeyxns'
   - name: Undead
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Make no noise, until they attack. Immune to effects that affect living

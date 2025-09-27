@@ -1,6 +1,7 @@
 # CLAUDE.md
 
 Concise guidance for Claude Code on this Foundry VTT v13 system.
+Concise guidance for Claude Code on this Foundry VTT v13 system.
 
 ## V13 Essentials
 - No jQuery; use native DOM APIs.

@@ -120,9 +120,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Fists
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/djinn.svg
+items:
+  - name: Fists
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0

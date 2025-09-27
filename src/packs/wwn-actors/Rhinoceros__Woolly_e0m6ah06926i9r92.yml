@@ -109,9 +109,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Horn
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/rhinoceros-horn.svg
+items:
+  - name: Horn
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -153,6 +161,10 @@ items:
     _key: '!actors.items!e0m6ah06926i9r92.5jld2emxadnejt6v'
   - name: Trample
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         3-in-4 chance of trampling each round. +4 to hit human-sized or smaller
@@ -196,6 +208,10 @@ items:
     _key: '!actors.items!e0m6ah06926i9r92.qojjbbt4kjc9krrl'
   - name: Charge
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         If disturbed or threatened, will charge in a random direction. Requires

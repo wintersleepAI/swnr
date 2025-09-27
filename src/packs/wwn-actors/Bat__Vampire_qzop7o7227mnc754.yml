@@ -106,9 +106,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Bite + Unconsciousness
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/evil-bat.svg
+items:
+  - name: Bite + Unconsciousness
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: 'Unconsciousness: For 1d10 rounds (Physical save).'
       cost: 0
@@ -150,6 +158,10 @@ items:
     _key: '!actors.items!qzop7o7227mnc754.mpfspqomngr8j7ih'
   - name: Echolocation
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Unaffected by effects that impair, modify, or rely on sight. Blinded by
@@ -180,6 +192,10 @@ items:
     _key: '!actors.items!qzop7o7227mnc754.3sd0pc1pn0w5zny7'
   - name: Blood Drain
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         A vampire bat may drain blood from an unconscious victim: 1d4 hit points
@@ -211,6 +227,10 @@ items:
     _key: '!actors.items!qzop7o7227mnc754.xnuhpe0aqc3sjz9u'
   - name: Unconsciousness
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: For 1d10 rounds (Physical save).
       cost: 0

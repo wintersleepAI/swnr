@@ -41,8 +41,12 @@ prototypeToken:
   width: 1
   height: 1
   texture:
+<<<<<<< HEAD
     src: >-
       systems/swnr/assets/icons/game-icons.net/creature-icons/unfriendly-fire.svg
+=======
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/unfriendly-fire.svg
+>>>>>>> origin/main
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -109,9 +113,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Bite
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/unfriendly-fire.svg
+items:
+  - name: Bite
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -153,6 +165,10 @@ items:
     _key: '!actors.items!opy0bgh705thqlp3.u2n3r9e9xreuww2z'
   - name: Fire Breath
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         [[/r 1d6]]: 2-in-6 chance per round of breathing fire. One target. Save
@@ -183,6 +199,10 @@ items:
     _key: '!actors.items!opy0bgh705thqlp3.nl3eg5h77tjdjl1w'
   - name: Fire Immunity
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: Unharmed by non-magical fire.
       cost: 0
@@ -211,6 +231,10 @@ items:
     _key: '!actors.items!opy0bgh705thqlp3.kv3vvnyv84icx6rh'
   - name: Detect Invisible
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Receives an opposed Dex/Sneak check with a +4 bonus to detect invisible
@@ -241,6 +265,10 @@ items:
     _key: '!actors.items!opy0bgh705thqlp3.l131sx9gsr27z51b'
   - name: Pets
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: Sometimes found with other creatures with an affinity for fire.
       cost: 0

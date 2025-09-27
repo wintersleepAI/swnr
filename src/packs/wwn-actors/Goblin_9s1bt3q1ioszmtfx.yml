@@ -106,9 +106,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Sword, Short
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/goblin-head.svg
+items:
+  - name: Sword, Short
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -153,6 +161,10 @@ items:
     _key: '!actors.items!9s1bt3q1ioszmtfx.ecvumf30z1hfd660'
   - name: Bow, Small
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Bows cover everything from the small self bows of horse archers to the
@@ -200,6 +212,10 @@ items:
     _key: '!actors.items!9s1bt3q1ioszmtfx.aj7jb1khq70mkcrg'
   - name: Dagger
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Daggers come in ten thousand varieties, but the listed kind is a common
@@ -245,6 +261,10 @@ items:
     _key: '!actors.items!9s1bt3q1ioszmtfx.190wf83ylpzyvvsk'
   - name: Spear, Light
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Spears, and their longer cousin the pike, are common military weapons
@@ -289,6 +309,10 @@ items:
     _key: '!actors.items!9s1bt3q1ioszmtfx.gnl1lrp9w2gfbyo9'
   - name: Hate Dwarves
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: Attack on sight.
       cost: 0

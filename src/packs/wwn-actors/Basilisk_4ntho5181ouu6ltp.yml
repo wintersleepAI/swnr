@@ -116,9 +116,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Bite + Petrification
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
+items:
+  - name: Bite + Petrification
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Petrifying touch: Anyone touched by a basilisk is turned to stone
@@ -162,6 +170,10 @@ items:
     _key: '!actors.items!4ntho5181ouu6ltp.1c2g1bn1b26hwljv'
   - name: Petrifying Gaze
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Anyone meeting a basilisk's gaze is turned to stone (Evasion save).

@@ -178,7 +178,7 @@ export default class SWNPower extends SWNItemBase {
       type: consumption.type || "none",
       usesCost: consumption.usesCost || 1,
       cadence: consumption.cadence || "day",
-      itemText: consumption.itemText || "",
+      itemId: consumption.itemId || "",
       uses: consumption.uses || { value: 1, max: 1 }
     };
     
@@ -744,14 +744,68 @@ export default class SWNPower extends SWNItemBase {
    * Process consumable item consumption
    */
   async _processConsumableItem(actor, consumes, options = {}) {
-    // Always prompt; never bind to a specific item id
-    const requirements = [];
-    const cost = Math.max(0, consumes.usesCost || 0);
-    const text = (consumes.itemText || "").trim();
-    if (cost > 0 || text) requirements.push({ amount: cost, text });
+    // Allow passing a selected item via options (e.g., from chat button or future hooks)
+    let selectedItemId = options.selectedItemId || consumes.itemId || null;
 
-    const result = await this._promptAndSpendConsumables(actor, requirements);
-    return result;
+    // If no item selected in the power, prompt user to pick a readied consumable
+    // If no single item selected, prompt for multi-selection and amounts
+    if (!selectedItemId) {
+      const selection = await this._promptForConsumableItem(actor, consumes);
+      if (!selection || selection.length === 0) {
+        return { success: false, reason: "cancelled", message: game.i18n?.localize?.("swnr.consumption.selectDialog.cancelled") || "Item selection cancelled" };
+      }
+
+      // Apply spends across selected items
+      const itemsSpent = [];
+      for (const { itemId, amount } of selection) {
+        let remainingToSpend = Math.max(0, amount || 0);
+        let actualSpent = 0;
+        // Re-fetch the item each decrement to avoid stale system data
+        while (remainingToSpend > 0) {
+          const current = actor.items.get(itemId);
+          if (!current) break;
+          const available = current.system?.uses?.value || 0;
+          if (available <= 0) break;
+          await current.system.removeOneUse();
+          actualSpent += 1;
+          remainingToSpend -= 1;
+        }
+        if (actualSpent > 0) {
+          const name = actor.items.get(itemId)?.name || "Item";
+          itemsSpent.push({ itemId, itemName: name, amount: actualSpent });
+        }
+      }
+
+      const totalSpent = itemsSpent.reduce((s, r) => s + r.amount, 0);
+      return { success: true, type: "consumableItem", spent: totalSpent, items: itemsSpent };
+    }
+
+    // Legacy single-item flow
+    const item = actor.items.get(selectedItemId);
+    if (!item) {
+      return { 
+        success: false, 
+        reason: "item-not-found",
+        message: `Required item not found: ${selectedItemId}`,
+        itemId: selectedItemId
+      };
+    }
+
+    if (!item.system.uses || item.system.uses.value < consumes.usesCost) {
+      return {
+        success: false,
+        reason: "insufficient-item-uses",
+        message: `Insufficient ${item.name} uses: ${item.system.uses?.value || 0} available, ${consumes.usesCost} required`,
+        itemName: item.name,
+        required: consumes.usesCost,
+        available: item.system.uses?.value || 0
+      };
+    }
+
+    for (let i = 0; i < consumes.usesCost; i++) {
+      await item.system.removeOneUse();
+    }
+    return { success: true, type: "consumableItem", spent: consumes.usesCost, items: [{ itemId: item.id, itemName: item.name, amount: consumes.usesCost }] };
   }
 
   /**
@@ -761,22 +815,7 @@ export default class SWNPower extends SWNItemBase {
    * @returns {Promise<string|null>} selected itemId or null if cancelled
    */
   async _promptForConsumableItem(actor, consumes) {
-    // Deprecated path retained to avoid breaking references; forward to new helper
-    const requirements = [];
-    const required = consumes.usesCost || 0;
-    const text = (consumes.itemText || "").trim();
-    if (required > 0 || text) requirements.push({ amount: required, text });
-    return await this._promptAndSpendConsumables(actor, requirements);
-  }
-
-  /**
-   * Combined prompt + spend flow for consumables with optional requirements text.
-   * @param {Actor} actor
-   * @param {Array<{amount:number, text:string}>} requirements
-   * @returns {Promise<{success:boolean,type:string,spent:number,items:Array}|{success:false,reason:string,message:string}>}
-   */
-  async _promptAndSpendConsumables(actor, requirements = []) {
-    const required = (requirements && requirements.length === 1) ? (requirements[0].amount || 0) : 0;
+    const required = consumes.usesCost || 1; // informational only; selection controls final amounts
     // Gather eligible readied consumables with any uses
     const eligible = (actor.items.contents || actor.items)
       .filter(i => i.type === "item"
@@ -787,10 +826,10 @@ export default class SWNPower extends SWNItemBase {
 
     if (eligible.length === 0) {
       ui.notifications?.warn(game.i18n?.localize?.("swnr.consumption.selectDialog.noneAvailable") || "No readied consumables with sufficient uses available");
-      return { success: false, reason: "no-eligible-readied-items" };
+      return null;
     }
 
-    // Render dialog content from template (include optional requirements)
+    // Render dialog content from template
     const template = "systems/swnr/templates/dialogs/select-consumables.hbs";
     const items = eligible.map(i => ({
       id: i.id,
@@ -799,9 +838,9 @@ export default class SWNPower extends SWNItemBase {
       value: i.system?.uses?.value || 0,
       max: i.system?.uses?.max || (i.system?.uses?.value || 0)
     }));
-    const content = await renderTemplate(template, { items, requirements });
+    const content = await renderTemplate(template, { items });
 
-    const contentPromise = new Promise((resolve) => {
+    return new Promise((resolve) => {
       const dialogId = `swnr-consume-select-${actor.id}-${Date.now()}`;
       const dlg = new Dialog({
         title: game.i18n?.localize?.("swnr.consumption.selectDialog.title") || "Select Consumables",
@@ -825,17 +864,16 @@ export default class SWNPower extends SWNItemBase {
                 }
               }
               if (total <= 0) {
-                const msg = game.i18n?.localize?.("swnr.consumption.selectDialog.noneSelected") || "No items selected to consume";
-                ui.notifications?.warn(msg);
-                resolve({ success: false, reason: "none-selected", message: msg });
+                ui.notifications?.warn(game.i18n?.localize?.("swnr.consumption.selectDialog.noneSelected") || "No items selected to consume");
+                resolve(null);
               } else {
-                resolve({ success: true, selections });
+                resolve(selections);
               }
             }
           },
           cancel: {
             label: game.i18n?.localize?.("Cancel") || "Cancel",
-            callback: () => resolve({ success: false, reason: "cancelled" })
+            callback: () => resolve(null)
           }
         },
         default: "ok"
@@ -882,35 +920,6 @@ export default class SWNPower extends SWNItemBase {
 
       dlg.render(true);
     });
-    // Spend selection
-    if (!contentPromise || !contentPromise.then) return { success: false, reason: "dialog-error" };
-    const selectionResult = await contentPromise;
-    if (!selectionResult?.success) {
-      return { success: false, reason: selectionResult?.reason || "cancelled", message: selectionResult?.message };
-    }
-
-    // Apply spends across selected items
-    const itemsSpent = [];
-    for (const { itemId, amount } of selectionResult.selections) {
-      let remainingToSpend = Math.max(0, amount || 0);
-      let actualSpent = 0;
-      while (remainingToSpend > 0) {
-        const current = actor.items.get(itemId);
-        if (!current) break;
-        const available = current.system?.uses?.value || 0;
-        if (available <= 0) break;
-        await current.system.removeOneUse();
-        actualSpent += 1;
-        remainingToSpend -= 1;
-      }
-      if (actualSpent > 0) {
-        const name = actor.items.get(itemId)?.name || "Item";
-        itemsSpent.push({ itemId, itemName: name, amount: actualSpent });
-      }
-    }
-
-    const totalSpent = itemsSpent.reduce((s, r) => s + r.amount, 0);
-    return { success: true, type: "consumableItem", spent: totalSpent, items: itemsSpent };
   }
 
   /**

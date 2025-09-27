@@ -138,9 +138,17 @@ prototypeToken:
     src: null
     disposition: false
   movementAction: null
+<<<<<<< HEAD
 items:
   - name: Beak
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
+items:
+  - name: Beak
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0

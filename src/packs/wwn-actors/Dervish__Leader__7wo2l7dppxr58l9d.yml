@@ -118,9 +118,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Shield, Large
     type: armor
+=======
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
+items:
+  - name: Shield, Large
+    type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Shields come in two general varieties. Small ones, often made of
@@ -164,6 +172,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.u03b4y7pju6tx8ly'
   - name: Plate Armor
     type: armor
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Plate armor is an extremely expensive suit of tailored metal pieces that
@@ -203,6 +215,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.p0rra47z03s6mn6h'
   - name: Bless
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: 6 turns Range: 60' May be used in one of two situations:
@@ -239,6 +255,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.jaeqz5d9fo7lhrx7'
   - name: Cure Light Wounds
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: Instant Range: The caster or a creature touched This spell has
@@ -273,6 +293,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.4cpn92j0mypz8rzx'
   - name: Cure Serious Wounds
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: Instant Range: The caster or a creature touched The caster's
@@ -306,6 +330,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.1zu7l02nyfcchs3l'
   - name: Detect Evil (Cleric)
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: 6 turns Range: 120' Objects enchanted for evil purposes or
@@ -340,6 +368,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.pblysojm3gaquhyh'
   - name: Protection from Evil (Cleric)
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: 12 turns Range: The caster This spell wards the caster from
@@ -378,6 +410,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.69ydqr1y5proi2jm'
   - name: Protection from Evil 10' Radius (Cleric)
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: 12 turns Range: 10' around the caster This spell wards the
@@ -416,6 +452,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.rffm5jv76abzfoox'
   - name: Purify Food and Water
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: Permanent Range: 10' This spell makes spoiled, rotten,
@@ -449,6 +489,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.rzw94rr4c2dj178g'
   - name: Raise Dead
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: Instant Range: 120' This spell has two uses: 1. Restore life:
@@ -493,6 +537,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.5m48gtm2a0doup18'
   - name: Hold Person (Cleric)
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: 9 turns Range: 180' This spell causes one or more humans,
@@ -527,6 +575,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.0rc5a42b9k2lcpmw'
   - name: Cure Disease
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: Instant Range: 30' This spell has two uses: 1. Cure a subject
@@ -563,6 +615,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.7rwnpqbce7wd2mje'
   - name: Remove Curse (Cleric)
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: Instant / Permanent (curse) Range: The caster or a creature
@@ -601,6 +657,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.cdeu6enr7ixju7ob'
   - name: Continual Light (Cleric)
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: Permanent Range: 120' This spell has three usages: 1.
@@ -642,6 +702,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.drul4lchudswmp69'
   - name: Know Alignment
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: 1 round Range: 10' The caster gains immediate knowledge of the
@@ -674,6 +738,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.37fca1duleqjtm22'
   - name: Silence 15' Radius
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: 12 turns Range: 180' A 15' radius area is rendered utterly
@@ -710,6 +778,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.yiuykfyd9bt59r6f'
   - name: Dispel Evil
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: Concentration (up to 1 turn) or instant (see below) Range: 30'
@@ -749,6 +821,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.3bkvlqi6fdsit0xg'
   - name: Quest
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: Until quest is completed / Instant (remove quest) Range: 30'
@@ -792,6 +868,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.xz3j7zty0jjh9hnq'
   - name: Sticks to Snakes
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Duration: 6 turns Range: 120' 2d8 normal sticks are miraculously
@@ -827,6 +907,10 @@ items:
     _key: '!actors.items!7wo2l7dppxr58l9d.sz5j1ewjhgqy5hqa'
   - name: Mace
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Clubs, staves, and maces are of much the same genus, though the latter

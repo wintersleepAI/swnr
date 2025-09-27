@@ -108,9 +108,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Claw
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/bear-head.svg
+items:
+  - name: Claw
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Bear hug: If a victim is hit by both paws in the same round, the bear
@@ -154,6 +162,10 @@ items:
     _key: '!actors.items!lusfrfzksdqlwyas.dibdl6z4qrpaiyib'
   - name: Bite
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -195,6 +207,10 @@ items:
     _key: '!actors.items!lusfrfzksdqlwyas.tmcecf3k88l11dmn'
   - name: Bear Hug
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         If a victim is hit by both paws in the same round, the bear hugs for an

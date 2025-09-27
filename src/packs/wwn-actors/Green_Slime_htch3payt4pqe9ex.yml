@@ -39,8 +39,12 @@ prototypeToken:
   width: 1
   height: 1
   texture:
+<<<<<<< HEAD
     src: >-
       systems/swnr/assets/icons/game-icons.net/creature-icons/transparent-slime.svg
+=======
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/transparent-slime.svg
+>>>>>>> origin/main
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -107,9 +111,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Touch
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/transparent-slime.svg
+items:
+  - name: Touch
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: Deals no direct damage. See entries for Acid and Consume Flesh.
       cost: 0
@@ -151,6 +163,10 @@ items:
     _key: '!actors.items!htch3payt4pqe9ex.acgpoer1zfzcwnn3'
   - name: Surprise
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Drops down on surprised characters from above. The Green Slime gains a
@@ -181,6 +197,10 @@ items:
     _key: '!actors.items!htch3payt4pqe9ex.1lm8q76e7u0mc6ao'
   - name: Acid
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         When in contact with a victim, sticks on and exudes acid. The acid
@@ -212,6 +232,10 @@ items:
     _key: '!actors.items!htch3payt4pqe9ex.rdyb7xt69p6zj601'
   - name: Consume Flesh
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Once in contact with flesh for 6 rounds, the victim is turned into green
@@ -242,6 +266,10 @@ items:
     _key: '!actors.items!htch3payt4pqe9ex.9b2riro9l024ctyv'
   - name: Removing
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         Once stuck on a victim, can only be removed by fire. This inflicts half
@@ -272,6 +300,10 @@ items:
     _key: '!actors.items!htch3payt4pqe9ex.inph4xc187zse4jh'
   - name: Immunity
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: Unharmed by all attacks except cold or fire.
       cost: 0

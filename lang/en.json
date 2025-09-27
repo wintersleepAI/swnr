@@ -176,6 +176,12 @@
             "showPoolsInPowers": {
               "label": "Show Pools in Powers Tab"
             },
+            "showPoolsInHeader": {
+              "label": "Show Pools in Header"
+            },
+            "showPoolsInPowers": {
+              "label": "Show Pools in Powers Tab"
+            },
             "debtDisplay": {
               "label": "Name of Currency 1"
             },
@@ -407,6 +413,9 @@
           },
           "moveType": {
             "label": "Move Type"
+          },
+          "customModel": {
+            "label": "Custom Model"
           }
         }
       },

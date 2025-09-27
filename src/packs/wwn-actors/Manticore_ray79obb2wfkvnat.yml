@@ -42,8 +42,12 @@ prototypeToken:
   width: 1
   height: 1
   texture:
+<<<<<<< HEAD
     src: >-
       systems/swnr/assets/icons/game-icons.net/creature-icons/spiked-dragon-head.svg
+=======
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/spiked-dragon-head.svg
+>>>>>>> origin/main
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -110,9 +114,17 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
+<<<<<<< HEAD
 items:
   - name: Claw
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/spiked-dragon-head.svg
+items:
+  - name: Claw
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -154,6 +166,10 @@ items:
     _key: '!actors.items!ray79obb2wfkvnat.s3ie4bgf3qidqh5u'
   - name: Bite
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -195,6 +211,10 @@ items:
     _key: '!actors.items!ray79obb2wfkvnat.samp5r473g4sr1xo'
   - name: Tail Spike
     type: weapon
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: >-
         180' range. 24 in total; 2 regrow each day. Cannot fire spikes in the
@@ -238,6 +258,10 @@ items:
     _key: '!actors.items!ray79obb2wfkvnat.axarbawukty3ofk4'
   - name: Track and Ambush
     type: item
+<<<<<<< HEAD
+=======
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+>>>>>>> origin/main
     system:
       description: Follow humans and attack with tail spikes when they stop to rest.
       cost: 0

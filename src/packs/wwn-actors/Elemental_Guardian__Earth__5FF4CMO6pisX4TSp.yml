@@ -137,9 +137,17 @@ prototypeToken:
     src: null
     disposition: false
   movementAction: null
+<<<<<<< HEAD
 items:
   - name: Attack
     type: weapon
+=======
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/visored-helm.svg
+items:
+  - name: Attack
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+>>>>>>> origin/main
     system:
       description: ''
       cost: 0
