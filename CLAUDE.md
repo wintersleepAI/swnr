@@ -40,3 +40,12 @@ Consumable dialog
 
 ## Refresh
 - Internal `uses` may auto‑refresh by cadence (scene/day). Ensure chats reflect persisted changes.
+
+## CSS/SCSS Development
+- **NEVER edit `css/swnr.css` directly** - it's compiled from SCSS sources.
+- Make style changes in `src/scss/` files:
+  - Main file: `src/scss/swnr.scss`
+  - Components: `src/scss/components/*.scss`
+  - Utilities: `src/scss/utils/*.scss`
+- After SCSS changes, run `npm run build` to compile CSS.
+- For development, use `npm run watch` for auto-compilation.

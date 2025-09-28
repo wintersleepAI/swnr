@@ -244,13 +244,13 @@
 
       {{! Resource Pools Display}}
       {{#if hasAnyPools}}
-        {{#if system.tweak.showPoolsInHeader}}
+        {{#if system.tweak.showPoolsInPowers}}
         <div class='resource-pools'>
           <div class="pools-container">
-          {{> "systems/swnr/templates/actor/fragments/pools-display.hbs" submitInputs=false}}
+            {{> "systems/swnr/templates/actor/fragments/pools-display.hbs" submitInputs=true}}
+          </div>
         </div>
-      </div>
-      {{/if}}
+        {{/if}}
       {{/if}}
 
       {{!-- AC shield --}}
