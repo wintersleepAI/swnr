@@ -242,17 +242,6 @@
       </div><!-- end resource-group -->
       {{/if}}
 
-      {{! Resource Pools Display}}
-      {{#if hasAnyPools}}
-        {{#if system.tweak.showPoolsInHeader}}
-        <div class='resource-pools'>
-          <div class="pools-container">
-            {{> "systems/swnr/templates/actor/fragments/pools-display.hbs" submitInputs=true}}
-          </div>
-        </div>
-        {{/if}}
-      {{/if}}
-
       {{!-- AC shield --}}
         {{!-- <svg version="1.1" x="0px" y="0px" viewBox="0 0 90 100" xml:space="preserve">
           <path d="M45,100C-2.6,79.3,0,12.6,0,12.6c0-2.2,1.8-4,4.4-4.6l39.1-7.9C44,0,44.5,0,45,0c0.5,0,1,0,1.4,0.1L85.5,8
@@ -261,6 +250,18 @@
           {{!-- {{system.ac}} --}}
 
     </div>
+
+    {{! Resource Pools Display - New row within header fields}}
+    {{#if hasAnyPools}}
+      {{#if system.tweak.showPoolsInHeader}}
+      <div class='resource-pools'>
+        <div class="pools-container">
+          {{> "systems/swnr/templates/actor/fragments/pools-display.hbs" submitInputs=true}}
+        </div>
+      </div>
+      {{/if}}
+    {{/if}}
+
     </div>
   </div>
 </header>
