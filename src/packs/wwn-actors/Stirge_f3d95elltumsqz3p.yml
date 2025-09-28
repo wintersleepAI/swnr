@@ -106,17 +106,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Beak
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
-items:
-  - name: Beak
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Blood Sucking: Upon a successful attack, attaches and drains victim's

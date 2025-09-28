@@ -106,17 +106,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Bite
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/animal-icons/insect-jaws.svg
-items:
-  - name: Bite
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -158,10 +150,6 @@ items:
     _key: '!actors.items!01k8bdz1a4otgqu2.yqi2cycla91to968'
   - name: Rapacious
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Consume everything in their path, when hungry.
       cost: 0
@@ -190,10 +178,6 @@ items:
     _key: '!actors.items!01k8bdz1a4otgqu2.yos9563dimtsgif8'
   - name: Morale
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Attack relentlessly, once they are engaged in melee (morale 12). Will
@@ -224,10 +208,6 @@ items:
     _key: '!actors.items!01k8bdz1a4otgqu2.874b1zjr3cu5i7oj'
   - name: Lair Treasure
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: 30% chance of 1d10 * 1,000gp worth of gold nuggets, mined by the ants.
       cost: 0

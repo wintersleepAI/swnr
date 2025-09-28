@@ -108,17 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Claw
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/animal-icons/bear-head.svg
-items:
-  - name: Claw
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Bear hug: If a victim is hit by both paws in the same round, the bear
@@ -162,10 +154,6 @@ items:
     _key: '!actors.items!criaqkenmppgme6w.2xf1d2inefitb21p'
   - name: Bite
     type: weapon
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -207,10 +195,6 @@ items:
     _key: '!actors.items!criaqkenmppgme6w.6td9hdcdqo2r7pve'
   - name: Swimming
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Excellent swimmers.
       cost: 0
@@ -239,10 +223,6 @@ items:
     _key: '!actors.items!criaqkenmppgme6w.kjv3vawm0rdg1puh'
   - name: Snow Walk
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Wide paws allow running on the surface of snow without sinking.
       cost: 0
@@ -271,10 +251,6 @@ items:
     _key: '!actors.items!criaqkenmppgme6w.whi67owj4mbgvd73'
   - name: Bear Hug
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         If a victim is hit by both paws in the same round, the bear hugs for an

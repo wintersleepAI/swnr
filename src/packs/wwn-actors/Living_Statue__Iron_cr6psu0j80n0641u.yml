@@ -108,17 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Sturdy Blow
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/golem-head.svg
-items:
-  - name: Sturdy Blow
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -160,10 +152,6 @@ items:
     _key: '!actors.items!cr6psu0j80n0641u.21737mne4budhhcv'
   - name: Sleep Immunity
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Unaffected by sleep spells.
       cost: 0
@@ -192,10 +180,6 @@ items:
     _key: '!actors.items!cr6psu0j80n0641u.1l29fbux8ksly9j1'
   - name: Magical Origins
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Created by powerful wizards.
       cost: 0
@@ -224,10 +208,6 @@ items:
     _key: '!actors.items!cr6psu0j80n0641u.atmkwe5uteavvzuf'
   - name: Absorb Metals
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Hits with non-magical, metal weapons cause damage, but the weapon may
@@ -259,10 +239,6 @@ items:
     _key: '!actors.items!cr6psu0j80n0641u.duv122areidow8xy'
   - name: Attacks
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Depend on form of statue (humanoid statues may use weapons, animal

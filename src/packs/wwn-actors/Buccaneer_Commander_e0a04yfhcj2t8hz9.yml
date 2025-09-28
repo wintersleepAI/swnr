@@ -121,17 +121,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Mail Shirt
     type: armor
-=======
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/pirate-captain.svg
-items:
-  - name: Mail Shirt
-    type: armor
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Mail shirts are usually of iron or steel wire, though bronze and other
@@ -172,10 +164,6 @@ items:
     _key: '!actors.items!e0a04yfhcj2t8hz9.3b7uwegs4vur3f16'
   - name: Crossbow
     type: weapon
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Crossbows come in heavier varieties than the one listed, but such slow,
@@ -222,10 +210,6 @@ items:
     _key: '!actors.items!e0a04yfhcj2t8hz9.t4ezn6g6hwkk9we2'
   - name: Sword, Long
     type: weapon
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of

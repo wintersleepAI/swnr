@@ -106,17 +106,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Poison Bite
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/animal-icons/centipede.svg
-items:
-  - name: Poison Bite
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Poison: Causes victims to become horribly sick for ten days (Physical

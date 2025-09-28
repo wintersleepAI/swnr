@@ -110,17 +110,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Bite
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/animal-icons/rat.svg
-items:
-  - name: Bite
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Disease: Bite has a 1-in-20 chance of infecting the target (Physical

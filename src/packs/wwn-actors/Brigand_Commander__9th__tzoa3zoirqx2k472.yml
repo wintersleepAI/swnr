@@ -117,17 +117,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Sword, Long
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
-items:
-  - name: Sword, Long
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -172,10 +164,6 @@ items:
     _key: '!actors.items!tzoa3zoirqx2k472.2u7hcbfayux2lpm0'
   - name: Plate Armor
     type: armor
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Plate armor is an extremely expensive suit of tailored metal pieces that
@@ -215,10 +203,6 @@ items:
     _key: '!actors.items!tzoa3zoirqx2k472.165wt2gv9ej8ky75'
   - name: Spear, Heavy
     type: weapon
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Spears, and their longer cousin the pike, are common military weapons

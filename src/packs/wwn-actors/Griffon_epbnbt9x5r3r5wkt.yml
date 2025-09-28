@@ -108,17 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Claw
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/animal-icons/griffin-symbol.svg
-items:
-  - name: Claw
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -160,10 +152,6 @@ items:
     _key: '!actors.items!epbnbt9x5r3r5wkt.j5fkkzylpsrb75s4'
   - name: Bite
     type: weapon
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -205,10 +193,6 @@ items:
     _key: '!actors.items!epbnbt9x5r3r5wkt.gi963we2kuaovlk7'
   - name: Attack Horses
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Within 120', unless a morale check is passed.
       cost: 0
@@ -237,10 +221,6 @@ items:
     _key: '!actors.items!epbnbt9x5r3r5wkt.58bper1bg8beg9xe'
   - name: Defend Nest
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Attack if it is approached.
       cost: 0
@@ -269,10 +249,6 @@ items:
     _key: '!actors.items!epbnbt9x5r3r5wkt.j5iyor9zvydyp2oq'
   - name: Taming
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Captured young can be trained as loyal mounts. Their fierce nature

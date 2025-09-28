@@ -108,17 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Charm
     type: item
-=======
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
-items:
-  - name: Charm
-    type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Victim compelled to approach the tree, vanishes inside it (Mental save
@@ -150,10 +142,6 @@ items:
     _key: '!actors.items!iwkkemf7uycp4hfy.j4c4j57sbi0u39w2'
   - name: Bound With Tree
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Spiritually connected with a single tree. Dryad dies if the tree dies,
@@ -184,10 +172,6 @@ items:
     _key: '!actors.items!iwkkemf7uycp4hfy.1qzrdh3we35ociy3'
   - name: Meld With Tree
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Can disappear by joining with her tree.
       cost: 0
@@ -216,10 +200,6 @@ items:
     _key: '!actors.items!iwkkemf7uycp4hfy.9000rwyp7nv0affp'
   - name: Defensive
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Distrustful of strangers. Attempt to charm anyone who approaches or
@@ -250,10 +230,6 @@ items:
     _key: '!actors.items!iwkkemf7uycp4hfy.axjpe9hko3mbzw23'
   - name: Treasure
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Hidden in roots of the tree. Treasure Type D from OSE.
       cost: 0

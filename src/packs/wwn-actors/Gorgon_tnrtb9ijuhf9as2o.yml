@@ -108,17 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Gore
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/medusa-head.svg
-items:
-  - name: Gore
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -160,10 +152,6 @@ items:
     _key: '!actors.items!tnrtb9ijuhf9as2o.d29yto57rnycojst'
   - name: Charge
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         When not in melee. Requires a clear run of at least 20 yards. Gore
@@ -194,10 +182,6 @@ items:
     _key: '!actors.items!tnrtb9ijuhf9as2o.scoqyl4vsludkceu'
   - name: Petrifying Breath
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Cloud 60' long, 10' wide. All in the cloud are turned to stone (save to

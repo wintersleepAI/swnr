@@ -121,17 +121,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Bow, Small
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/orc-head.svg
-items:
-  - name: Bow, Small
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Bows cover everything from the small self bows of horse archers to the
@@ -179,10 +171,6 @@ items:
     _key: '!actors.items!20jt5ukwntkdeqhm.t97p6qt807pkwj8s'
   - name: Sword, Long
     type: weapon
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -227,10 +215,6 @@ items:
     _key: '!actors.items!20jt5ukwntkdeqhm.i2y5apya30kku3c3'
   - name: Axe, War
     type: weapon
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Axes given here are those fashioned for war; lighter and more agile than
@@ -276,10 +260,6 @@ items:
     _key: '!actors.items!20jt5ukwntkdeqhm.p3wt4tnfi7tdttae'
   - name: Spear, Heavy
     type: weapon
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Spears, and their longer cousin the pike, are common military weapons
@@ -324,10 +304,6 @@ items:
     _key: '!actors.items!20jt5ukwntkdeqhm.dgoibifphfy64eyk'
   - name: Club, Great
     type: weapon
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Clubs, staffs, and maces are of much the same genus, though the latter
@@ -372,10 +348,6 @@ items:
     _key: '!actors.items!20jt5ukwntkdeqhm.p4o9ju7rrr7k6cwf'
   - name: Hate the Sun
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: '-1 to hit in full daylight.'
       cost: 0
@@ -404,10 +376,6 @@ items:
     _key: '!actors.items!20jt5ukwntkdeqhm.sowy91x3136fxc4z'
   - name: Craven
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Afraid of larger or stronger-looking creatures, though leaders may force

@@ -108,17 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Bite
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/animal-icons/wolf-head.svg
-items:
-  - name: Bite
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -160,10 +152,6 @@ items:
     _key: '!actors.items!cof0w4cquo1143op.y84n8yh54ojwyqur'
   - name: Training
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         At the referee's discretion, captured cubs may be trained like dogs.
@@ -194,10 +182,6 @@ items:
     _key: '!actors.items!cof0w4cquo1143op.nu1qbc42n2a84gv1'
   - name: Mounts
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Sometimes trained as mounts by goblins.
       cost: 0

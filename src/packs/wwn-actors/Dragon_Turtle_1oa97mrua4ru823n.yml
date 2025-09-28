@@ -109,17 +109,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Bite
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/animal-icons/turtle.svg
-items:
-  - name: Bite
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -161,10 +153,6 @@ items:
     _key: '!actors.items!1oa97mrua4ru823n.mieg7rotx3szlys0'
   - name: Claw
     type: weapon
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -206,10 +194,6 @@ items:
     _key: '!actors.items!1oa97mrua4ru823n.vrdqzglfcin8oqs5'
   - name: Breath Weapon
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         90' long, 30' wide cloud of steam. Can be used up to three times per
@@ -241,10 +225,6 @@ items:
     _key: '!actors.items!1oa97mrua4ru823n.2v51a82b0v94rt64'
   - name: Mistaken For Island
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: When floating, can be mistaken for a small island.
       cost: 0
@@ -273,10 +253,6 @@ items:
     _key: '!actors.items!1oa97mrua4ru823n.w5i5p2m6mhfg7l4m'
   - name: Attack Ships
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Sometimes try to destroy ships and eat the crew by surfacing below.
       cost: 0
@@ -305,10 +281,6 @@ items:
     _key: '!actors.items!1oa97mrua4ru823n.35yhi8ckk7ekpeb1'
   - name: Treasure
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: From sunken ships. Treasure Type H from OSE.
       cost: 0

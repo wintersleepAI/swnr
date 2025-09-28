@@ -108,17 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Claw
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/gargoyle.svg
-items:
-  - name: Claw
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -160,10 +152,6 @@ items:
     _key: '!actors.items!9ut7ee78npp56qzk.lsccxngtmppl7hz5'
   - name: Bite
     type: weapon
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -205,10 +193,6 @@ items:
     _key: '!actors.items!9ut7ee78npp56qzk.8uzk071u7h50lhlt'
   - name: Horn
     type: weapon
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: ''
       cost: 0
@@ -250,10 +234,6 @@ items:
     _key: '!actors.items!9ut7ee78npp56qzk.8vgbt1ev7w9zfqg1'
   - name: Blend In With Stone
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: May be overlooked or mistaken for inanimate statues.
       cost: 0
@@ -282,10 +262,6 @@ items:
     _key: '!actors.items!9ut7ee78npp56qzk.ztkdiw46b7cen7f9'
   - name: Guardians
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Almost always attack when approached.
       cost: 0
@@ -314,10 +290,6 @@ items:
     _key: '!actors.items!9ut7ee78npp56qzk.morrxvw3y86u29m6'
   - name: Spell Immunity
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Unaffected by sleep or charm spells.
       cost: 0
@@ -346,10 +318,6 @@ items:
     _key: '!actors.items!9ut7ee78npp56qzk.gxdtju7hay8u9l1u'
   - name: Mundane Damage Immunity
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Can only be harmed by magical attacks.
       cost: 0

@@ -121,17 +121,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Sword, Long
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/man-bandana.svg
-items:
-  - name: Sword, Long
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -176,10 +168,6 @@ items:
     _key: '!actors.items!lkkysthitb1sg3rc.6x5era06rihp0kd8'
   - name: Crossbow
     type: weapon
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Crossbows come in heavier varieties than the one listed, but such slow,
@@ -226,10 +214,6 @@ items:
     _key: '!actors.items!lkkysthitb1sg3rc.ripwobu3ge3l75f6'
   - name: Buff Coat
     type: armor
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Buff coats are long coats of thick, supple hide, sometimes worn to

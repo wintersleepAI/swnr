@@ -39,12 +39,8 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-<<<<<<< HEAD
     src: >-
       systems/swnr/assets/icons/game-icons.net/creature-icons/transparent-slime.svg
-=======
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/transparent-slime.svg
->>>>>>> origin/main
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -111,17 +107,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-<<<<<<< HEAD
 items:
   - name: Touch
     type: weapon
-=======
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/transparent-slime.svg
-items:
-  - name: Touch
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Acid: After a successful attack, sticks to the victim and exudes acid.
@@ -166,10 +154,6 @@ items:
     _key: '!actors.items!smivpsid61ou2qwq.dmbqudgsrfgam2om'
   - name: Acid
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Acid: After a successful attack, sticks to the victim and exudes acid.
@@ -201,10 +185,6 @@ items:
     _key: '!actors.items!smivpsid61ou2qwq.ojnl19zyuoj72omq'
   - name: Immunity
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Unharmed by all attacks except cold or fire.
       cost: 0
@@ -233,10 +213,6 @@ items:
     _key: '!actors.items!smivpsid61ou2qwq.9l184n2xi6dgy73c'
   - name: Division
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: >-
         Lightning or attacks with weapons cause the jelly to divide into 1d4+1
@@ -267,10 +243,6 @@ items:
     _key: '!actors.items!smivpsid61ou2qwq.t4k7uivv5vdjfxew'
   - name: Seep
     type: item
-<<<<<<< HEAD
-=======
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
->>>>>>> origin/main
     system:
       description: Can squeeze through small holes and cracks.
       cost: 0
