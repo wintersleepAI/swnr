@@ -15,7 +15,7 @@ system:
     illuminate it. Like continual light, it may alternatively be used to blind
     creatures or to dispel a continual light spell.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Mage
   level: 2
   prepared: false
@@ -53,7 +53,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!4nhxamimr6ucarm5'

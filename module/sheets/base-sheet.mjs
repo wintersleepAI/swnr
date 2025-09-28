@@ -45,6 +45,15 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
     if (this.actor.uuid === item.parent?.uuid)
       return this._onSortItem(event, item);
 
+    // Handle powers added to NPC 
+    if (this.actor.type === "npc" && item.type === "power" && item.system.consumptions.length > 0) {
+      for (const consumption of item.system.consumptions) {
+        if (consumption.type == "poolResource") {
+          this.actor.system.findOrCreatePool(consumption.resourceName, consumption.subResource);
+        }
+      }
+    }
+
     // Create the owned item
     return this._onDropItemCreate(item, event);
   }

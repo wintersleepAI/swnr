@@ -112,11 +112,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/centaur.svg
 items:
   - name: Hoof
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -158,7 +156,6 @@ items:
     _key: '!actors.items!m27rhjva0d9qhcy6.bvwl88r5xwym8mpm'
   - name: Club
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Clubs, staves, and maces are of much the same genus, though the latter
@@ -203,7 +200,6 @@ items:
     _key: '!actors.items!m27rhjva0d9qhcy6.ld0knk0ttztetsrv'
   - name: Bow, Small
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Bows cover everything from the small self bows of horse archers to the
@@ -251,7 +247,6 @@ items:
     _key: '!actors.items!m27rhjva0d9qhcy6.41txmxp30femc3mb'
   - name: Spear, Heavy
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Spears, and their longer cousin the pike, are common military weapons

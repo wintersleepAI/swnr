@@ -108,11 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/vile-fluid.svg
 items:
   - name: Touch
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -154,7 +152,6 @@ items:
     _key: '!actors.items!e866usguxykxijpq.149dmhuwjy6jdrm6'
   - name: Immunity
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Only harmed by fire-based attacks.
       cost: 0
@@ -183,7 +180,6 @@ items:
     _key: '!actors.items!e866usguxykxijpq.cebf0rm7qn50s0sk'
   - name: Division
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Non-fire attacks (including spells) cause the pudding to divide. Each
@@ -215,7 +211,6 @@ items:
     _key: '!actors.items!e866usguxykxijpq.gy3988pn9kt1smew'
   - name: Erode Wood/Metal
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Can dissolve wood or metal in one turn.
       cost: 0
@@ -244,7 +239,6 @@ items:
     _key: '!actors.items!e866usguxykxijpq.va0d4fyxn22st7iv'
   - name: Cling
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Can move across walls and ceilings.
       cost: 0
@@ -273,7 +267,6 @@ items:
     _key: '!actors.items!e866usguxykxijpq.xkemccvvm8dzt4j7'
   - name: Seep
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Can squeeze through small holes and cracks.
       cost: 0

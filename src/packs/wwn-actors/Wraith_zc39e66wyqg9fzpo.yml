@@ -109,11 +109,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
 items:
   - name: Touch
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Energy Drain: A successfully hit target gains system strain equal to the
@@ -163,7 +161,6 @@ items:
     _key: '!actors.items!zc39e66wyqg9fzpo.xngomw8ign2du6wh'
   - name: Energy Drain
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         A successfully hit target gains system strain equal to the damage
@@ -200,7 +197,6 @@ items:
     _key: '!actors.items!zc39e66wyqg9fzpo.fxhp9m12qew08klz'
   - name: Undead
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Make no noise, until they attack. Immune to effects that affect living
@@ -232,7 +228,6 @@ items:
     _key: '!actors.items!zc39e66wyqg9fzpo.zynwfj7smx6xkun5'
   - name: Mundane Damage Immunity
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Only harmed by silver weapons or magic. Half damage from silver weapons.
       cost: 0

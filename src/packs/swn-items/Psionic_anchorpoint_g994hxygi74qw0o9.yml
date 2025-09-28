@@ -1,0 +1,50 @@
+name: Psionic anchorpoint
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: FSb3IGBn6eTDHX2S
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-fitting.Item.g994hxygi74qw0o9
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: g994hxygi74qw0o9
+system:
+  broken: false
+  cost: 0
+  costMultiplier: false
+  description: >-
+    This pretech relic is unavailable on the open market in most sectors. Once
+    installed in a ship, it can be "imprinted" by up to a dozen psychics. These
+    psychics can sense and affect any object or location within ten meters of
+    the relic after one minute of concentration, provided they are within the
+    same solar system. Thus, teleporters can always teleport next to the
+    anchorpoint, telepaths can always contact anyone within the affected zone,
+    telekinetics can manipulate objects near the relic, and so forth. The relic
+    can be re-coded to eliminate existing imprints, but any psychic wo gets
+    access to the relic for ten minutes of meditation and focus can imprint on
+    it afterwards. There is no obvious way to tell how many psychics have
+    imprinted to the anchorpoint.
+  effect: Focal point for allied psychics' powers
+  mass: 0
+  massMultiplier: false
+  minClass: frigate
+  power: 3
+  powerMultiplier: false
+  favorite: false
+  tl: 4
+  destroyed: false
+  juryRigged: false
+  type: ship
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!g994hxygi74qw0o9'
+

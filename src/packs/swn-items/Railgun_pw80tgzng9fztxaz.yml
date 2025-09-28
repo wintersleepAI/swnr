@@ -1,0 +1,77 @@
+name: Railgun
+type: weapon
+folder: wyMNmbl7yA6k0fK4
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.heavy.Item.pw80tgzng9fztxaz
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286675498
+  modifiedTime: 1757294646719
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: pw80tgzng9fztxaz
+system:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 20
+    suppress: true
+    type: special
+    value: 20
+    current: null
+  cost: 8000
+  damage: 3d8
+  description: >-
+    Railguns are simply scaled-up versions of personal mag rifles. They
+    accelerate large metallic slugs along the weapon’s barrel, creating a steady
+    spray of hypervelocity rounds. Ammunition sufficient for one round of firing
+    costs 50 credits.
+  encumbrance: 0
+  location: other
+  quality: stock
+  range:
+    max: 8000
+    normal: 4000
+  secondStat: none
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 4
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+  isTwoHanded: false
+  isNonLethal: false
+  isMelee: false
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!pw80tgzng9fztxaz'
+

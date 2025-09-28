@@ -111,11 +111,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
 items:
   - name: Touch
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Life Drain: Each hit inflicts 1 System Strain. If this would take a

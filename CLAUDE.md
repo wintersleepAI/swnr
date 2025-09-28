@@ -1,6 +1,7 @@
 # CLAUDE.md
 
 Concise guidance for Claude Code on this Foundry VTT v13 system.
+Concise guidance for Claude Code on this Foundry VTT v13 system.
 
 ## V13 Essentials
 - No jQuery; use native DOM APIs.
@@ -15,7 +16,7 @@ Concise guidance for Claude Code on this Foundry VTT v13 system.
 - Update pattern: `await actor.update({ [\`system.pools.${key}.value\`]: newValue })` (batch when needed). Respect `_source` to preserve manual overrides when recalculating.
 
 ## Consumption Types & UX
-- `poolResource`: spends from pools; supports cadence and commitments.
+- `poolResource`: spends from pools; supports cadence and commitments. Falls back to generic pools (blank subtype) when specific subtypes unavailable.
 - `systemStrain`: adjusts `actor.system.systemStrain.value`.
 - `consumableItem`: spends item charges; if no `itemId`, show multi‑item selection dialog and spend exactly what the user chooses.
 - `uses`: internal per‑power counter; deduct 1 per use; optional cadence auto‑refresh.
@@ -39,3 +40,12 @@ Consumable dialog
 
 ## Refresh
 - Internal `uses` may auto‑refresh by cadence (scene/day). Ensure chats reflect persisted changes.
+
+## CSS/SCSS Development
+- **NEVER edit `css/swnr.css` directly** - it's compiled from SCSS sources.
+- Make style changes in `src/scss/` files:
+  - Main file: `src/scss/swnr.scss`
+  - Components: `src/scss/components/*.scss`
+  - Utilities: `src/scss/utils/*.scss`
+- After SCSS changes, run `npm run build` to compile CSS.
+- For development, use `npm run watch` for auto-compilation.

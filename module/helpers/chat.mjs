@@ -573,13 +573,27 @@ export async function _onChatCardAction(
           .filter(r => r.type === "systemStrain")
           .reduce((sum, r) => sum + (r.spent || 0), 0);
 
+        // Compute manual consumable presence
+        let hasManualConsumables = false;
+        const allConsumptions = power.system.consumptions || [];
+        for (const c of allConsumptions) {
+          if (c && c.type === 'consumableItem' && c.timing === 'manual') { hasManualConsumables = true; break; }
+        }
+        const consumableRequirements = allConsumptions
+          .map((c, idx) => ({ index: idx, ...c }))
+          .filter(c => c && c.type === 'consumableItem' && c.timing === 'manual' && (c.itemText || '').trim().length > 0)
+          .map(c => ({ index: c.index, amount: c.usesCost || 0, text: (c.itemText || '').trim() }));
+
         const templateData = {
           actor: actor,
           power: power,
           powerRoll: existingPowerRoll, // Will be null if no roll exists
           strainCost: totalStrainCost,
           isPassive: !power.system.hasConsumption(),
-          consumptions: consumptionResults
+          consumptions: consumptionResults,
+          hasManualConsumables,
+          hasUnprocessedConsumableManual: hasManualConsumables,
+          consumableRequirements
         };
 
 
@@ -710,6 +724,21 @@ export async function _onChatCardAction(
         .filter(r => r.type === "systemStrain")
         .reduce((sum, r) => sum + (r.spent || 0), 0);
       
+      // Determine if any consumable manual costs remain unprocessed
+      let hasUnprocessedConsumableManual = false;
+      for (let i = 0; i < consumptions.length; i++) {
+        const c = consumptions[i];
+        if (!c || c.type === 'none') continue;
+        if (c.type === 'consumableItem' && c.timing === 'manual' && !processedConsumptions[i]) { hasUnprocessedConsumableManual = true; break; }
+      }
+
+      // Build consumable requirements for display
+      const allConsumptions2 = power.system.consumptions || [];
+      const consumableRequirements = allConsumptions2
+        .map((c, idx) => ({ index: idx, ...c }))
+        .filter(c => c && c.type === 'consumableItem' && c.timing === 'manual' && (c.itemText || '').trim().length > 0)
+        .map(c => ({ index: c.index, amount: c.usesCost || 0, text: (c.itemText || '').trim() }));
+
       const templateData = {
         actor: originalActor,
         power: power,
@@ -717,7 +746,9 @@ export async function _onChatCardAction(
         strainCost: totalStrainCost,
         isPassive: false,
         consumptions: existingConsumptions,
-        processedConsumptions: processedConsumptions
+        processedConsumptions: processedConsumptions,
+        hasUnprocessedConsumableManual,
+        consumableRequirements
       };
       
       const template = "systems/swnr/templates/chat/power-usage.hbs";
@@ -738,6 +769,137 @@ export async function _onChatCardAction(
     } catch (error) {
       ui.notifications?.error(`Failed to use consumption: ${error.message}`);
       console.error("Consumption usage error:", error);
+    }
+  } else if (action === "use-consumables") {
+    // Handle combined consumable item spending via a single button
+    const powerId = button.dataset.powerId;
+    const actorId = button.dataset.actorId;
+    if (!powerId || !actorId) {
+      ui.notifications?.error(game.i18n?.localize?.("swnr.consumption.errors.missingPowerOrActor") || "Missing power or actor ID");
+      return;
+    }
+    try {
+      const messageLi = button.closest(".message");
+      const chatMsgLocal = game.messages.get(messageLi.dataset.messageId);
+      if (!chatMsgLocal) {
+        ui.notifications?.error(game.i18n?.localize?.("swnr.consumption.errors.noChatMessage") || "Could not find chat message");
+        return;
+      }
+
+      const speaker = message.speaker;
+      let originalActor;
+      if (speaker.token) {
+        const token = game.scenes.get(speaker.scene)?.tokens.get(speaker.token);
+        originalActor = token?.actor;
+      } else {
+        originalActor = game.actors?.get(speaker.actor);
+      }
+      if (!originalActor) {
+        ui.notifications?.error(game.i18n?.localize?.("swnr.consumption.errors.noActorForMessage") || "Could not find the actor associated with the chat message.");
+        return;
+      }
+
+      const power = originalActor.items?.get(powerId);
+      if (!power) {
+        ui.notifications?.error(game.i18n?.localize?.("swnr.consumption.errors.noPower") || "Could not find power");
+        return;
+      }
+
+      // Determine target actor (selected token or original actor)
+      let targetActor = originalActor;
+      const controlled = canvas.tokens?.controlled;
+      if (controlled && controlled.length === 1) {
+        targetActor = controlled[0].actor;
+        if (targetActor !== originalActor) {
+          ui.notifications?.info(`Using selected token for cost: ${targetActor.name}`);
+        }
+      }
+
+      // Determine which consumable consumptions are unprocessed
+      const consumptions = power.system.consumptions || [];
+      const chatCard = $(button).closest('.chat-message');
+      const messageId = chatCard.data('message-id');
+      const chatMsg = game.messages?.get(messageId);
+      let processed = {};
+      if (chatMsg?.flags?.swnr?.processedConsumptions) processed = chatMsg.flags.swnr.processedConsumptions;
+
+      const unprocessedIndices = [];
+      const requirements = [];
+      for (let i = 0; i < consumptions.length; i++) {
+        const c = consumptions[i];
+        if (!c || c.type === 'none') continue;
+        if (c.type === 'consumableItem' && c.timing === 'manual' && !processed[i]) {
+          unprocessedIndices.push(i);
+          const amt = Math.max(0, c.usesCost || 0);
+          const text = (c.itemText || '').trim();
+          if (amt > 0 || text) requirements.push({ amount: amt, text });
+        }
+      }
+      if (unprocessedIndices.length === 0) return;
+
+      const result = await power.system._promptAndSpendConsumables(targetActor, requirements);
+      if (!result?.success) return;
+
+      // Get existing prior consumption results from message flags
+      let existingConsumptions = [];
+      if (chatMsg?.flags?.swnr?.consumptions) existingConsumptions = chatMsg.flags.swnr.consumptions;
+      existingConsumptions.push(result);
+
+      // Mark all relevant indices as processed
+      for (const idx of unprocessedIndices) processed[idx] = true;
+
+      // Preserve existing power roll
+      let existingPowerRoll = null;
+      if (chatMsg) {
+        const existingRollElement = $(chatMsg.content).find('.roll');
+        if (existingRollElement.length > 0) {
+          const cleanedRoll = existingRollElement.clone();
+          cleanedRoll.find('.dmgBtn-container').remove();
+          existingPowerRoll = cleanedRoll[0].outerHTML;
+        }
+      }
+
+      const totalStrainCost = existingConsumptions
+        .filter(r => r.type === "systemStrain")
+        .reduce((sum, r) => sum + (r.spent || 0), 0);
+
+      // Compute whether any consumable remains unprocessed
+      let hasUnprocessedConsumableManual = false;
+      for (let i = 0; i < consumptions.length; i++) {
+        const c = consumptions[i];
+        if (!c || c.type === 'none') continue;
+        if (c.type === 'consumableItem' && c.timing === 'manual' && !processed[i]) { hasUnprocessedConsumableManual = true; break; }
+      }
+
+      const templateData = {
+        actor: originalActor,
+        power: power,
+        powerRoll: existingPowerRoll,
+        strainCost: totalStrainCost,
+        isPassive: false,
+        consumptions: existingConsumptions,
+        processedConsumptions: processed,
+        hasUnprocessedConsumableManual,
+        consumableRequirements: requirements.filter(r => (r.text || '').trim().length > 0)
+      };
+
+      const template = "systems/swnr/templates/chat/power-usage.hbs";
+      const newContent = await foundry.applications.handlebars.renderTemplate(template, templateData);
+
+      if (chatMsg) {
+        await chatMsg.update({ 
+          content: newContent,
+          flags: { 
+            swnr: { 
+              consumptions: existingConsumptions,
+              processedConsumptions: processed
+            } 
+          }
+        });
+      }
+    } catch (error) {
+      ui.notifications?.error(`${game.i18n?.localize?.("swnr.consumption.errors.failedConsumeGeneric") || "Failed to consume items"}: ${error.message}`);
+      console.error("Consumables usage error:", error);
     }
   } else if (action === "recover-strain") {
     // Handle system strain recovery

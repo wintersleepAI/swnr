@@ -7,7 +7,7 @@ system:
     normal movement rate as an On Turn action. This art can be used only once
     per round.
   favorite: false
-  subType: arcane
+  subType: art
   source: Duelist
   level: 1
   prepared: false
@@ -39,7 +39,6 @@ _stats:
 folder: 1QSf6od5nEmDkbXu
 flags: {}
 effects: []
-img: systems/wwn/assets/default/duelistArt_art.png
 ownership:
   default: 0
 _key: '!items!zkcy5a31q4oi4g29'

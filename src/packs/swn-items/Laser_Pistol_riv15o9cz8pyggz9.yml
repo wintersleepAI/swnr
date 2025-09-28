@@ -1,0 +1,81 @@
+name: Laser Pistol
+type: weapon
+folder: IuHCQEm5J46mKh45
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ranged.Item.riv15o9cz8pyggz9
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286681607
+  modifiedTime: 1757286681607
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: riv15o9cz8pyggz9
+system:
+  ab: 1
+  ammo:
+    burst: false
+    longReload: false
+    max: 10
+    suppress: false
+    type: typeAPower
+    value: 10
+    current: null
+  cost: 200
+  damage: 1d6
+  description: >-
+    Laser pistols and laser rifles are the most common type of energy weapon,
+    though pistols are considerably less energy-efficient. Depending on the tech
+    used in the sector, they might produce silent, invisible beams of death or
+    noisy, brightly-colored streaks of lethal light. The phased multifrequency
+    beam is capable of penetrating any ordinary mist or haze, but a thick cloud
+    of thermally-resistant particulate matter such as ash or sand can seriously
+    degrade the beam, applying up to a -4 penalty to hit and cutting ranges in
+    half.
+  encumbrance: 1
+  location: other
+  quality: stock
+  range:
+    max: 300
+    normal: 100
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 4
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  secondStat: null
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+  isTwoHanded: false
+  isNonLethal: false
+  isMelee: false
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!riv15o9cz8pyggz9'
+

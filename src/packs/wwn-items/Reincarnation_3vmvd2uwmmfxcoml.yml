@@ -26,7 +26,7 @@ system:
     Reincarnation HD 1 Goblin 1 2 Hobgoblin 1 3 Kobold 1 4 Orc 1 5 Gnoll 2 6
     Bugbear 3 7 Wererat 3 8 Ogre 4 9 Werewolf 4 10 Minotaur 6
   favorite: false
-  subType: arcane
+  subType: spell
   source: Mage
   level: 6
   prepared: false
@@ -64,7 +64,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!3vmvd2uwmmfxcoml'

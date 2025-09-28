@@ -1,0 +1,57 @@
+name: Franchise
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.pd87hrmn2lxswt2o
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: pd87hrmn2lxswt2o
+system:
+  attackDamage: 1d4
+  attackSource: wealth
+  attackSpecial: >-
+    When a Franchise successfully attacks a enemy asset, the enemy faction loses
+    one FacCred (if available), which is gained by the Franchise's owner. This
+    loss can happen only once a turn, no matter how many Franchises attack.
+  attackTarget: wealth
+  baseOfInfluence: false
+  cost: 2
+  counter: 1d4-1
+  description: >-
+    This asset reflects a deniable connection with a local licensee for the
+    faction's goods and services. When a Franchise successfully attacks a enemy
+    asset, the enemy faction loses one FacCred (if available), which is gained
+    by the Franchise's owner. This loss can happen only once a turn, no matter
+    how many Franchises attack.
+  health:
+    max: 3
+    value: 3
+  income: 0
+  maintenance: 0
+  rating: 1
+  tl: 2
+  turnRoll: ''
+  type: Facility
+  unusable: false
+  qualities:
+    permission: false
+    action: false
+    special: true
+  category: wealth
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!pd87hrmn2lxswt2o'
+

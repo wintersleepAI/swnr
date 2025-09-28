@@ -105,6 +105,10 @@
   .stowed-fill {
     @include resource-bar-fill(var(--stowed-bar-color));
   }
+
+  .full-fill {
+    @include resource-bar-fill(var(--over-filled-bar-color));
+  }
   
   .text{
     /* Positions the HP text in the center of the resource-bar */

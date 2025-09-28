@@ -1,9 +1,21 @@
     <ol class='items-list'>
       <li class='flex flexrow items-header'>
-        <div class='item-name item-name-long'>{{ localize 'swnr.sheet.carriedGear'}}</div>
-        <div class="item-enc"> {{ localize 'swnr.item.enc' }} </div>
-        <div class="item-type"> {{ localize 'swnr.item.type' }} </div>
+        <div class='item-name item-name-long'>{{ localize 'swnr.item.gear'}} [{{ localize 'swnr.item.qty' }}]</div>
+        {{!-- <div class="item-enc"> {{ localize 'swnr.item.enc' }} </div> --}}
+        <div class="item-type"> {{ localize 'swnr.item.uses' }} </div>
         <div class='item-controls-small'>
+          {{#if @root.editable}}
+          <a
+            class='item-control item-create'
+            title='Create Item'
+            data-action='createDoc'
+            data-document-class='Item'
+            data-type='item'
+            data-system.location='readied'
+          >
+            <i class='fas fa-plus'></i>
+          </a>
+      {{/if}}
         </div>
       </li>
       {{#each itemList as |item id|}}
@@ -26,13 +38,17 @@
             </div>
             <div>{{item.name}} 
               {{#if (eq item.type "item")}}
-                ({{ item.system.quantity }})
+                {{#if (ne item.system.quantity 1)}}
+                  [{{ item.system.quantity }}]
+                {{/if}}
               {{/if}}
             </div>
           </div>
-          <div class="item-enc">{{ item.system.encumbrance }} </div>
+          {{!-- <div class="item-enc">{{ item.system.encumbrance }} </div> --}}
           <div class="item-type">
-            {{item.type}}
+            {{#if (ne item.system.uses.consumable "none")}}
+              {{item.system.uses.value}}/{{item.system.uses.max}}
+            {{/if}}
           </div>
           <div class='item-controls-small'>
             <a

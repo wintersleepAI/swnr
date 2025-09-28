@@ -1,0 +1,51 @@
+name: Vanguard Cadres
+type: asset
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.o44asvxcttlq4hab
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: o44asvxcttlq4hab
+system:
+  attackDamage: 1d6
+  attackSource: cunning
+  attackSpecial: ''
+  attackTarget: cunning
+  baseOfInfluence: false
+  cost: 8
+  counter: 1d6
+  description: >-
+    Followers of the movement are inspired sufficiently to take up arms and
+    fight on behalf of their leadership.<br /> Note:
+  health:
+    max: 12
+    value: 12
+  income: 0
+  maintenance: 0
+  rating: 4
+  tl: 3
+  turnRoll: ''
+  type: Military Unit
+  unusable: false
+  qualities:
+    permission: false
+    action: false
+    special: false
+  category: cunning
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!o44asvxcttlq4hab'
+

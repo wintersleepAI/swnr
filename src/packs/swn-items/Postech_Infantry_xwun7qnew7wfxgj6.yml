@@ -1,0 +1,52 @@
+name: Postech Infantry
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.xwun7qnew7wfxgj6
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: xwun7qnew7wfxgj6
+system:
+  attackDamage: 1d8
+  attackSource: force
+  attackSpecial: ''
+  attackTarget: force
+  baseOfInfluence: false
+  cost: 8
+  counter: 1d8
+  description: >-
+    The backbone of most planetary armies, these well-trained soldiers are
+    usually equipped with mag weaponry and combat field uniforms, and have heavy
+    support units attached.
+  health:
+    max: 12
+    value: 12
+  income: 0
+  maintenance: 0
+  rating: 4
+  tl: 4
+  turnRoll: ''
+  type: Military Unit
+  unusable: false
+  qualities:
+    permission: true
+    action: false
+    special: false
+  category: force
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!xwun7qnew7wfxgj6'
+

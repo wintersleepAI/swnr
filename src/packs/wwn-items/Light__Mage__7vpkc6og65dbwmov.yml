@@ -14,7 +14,7 @@ system:
     not infravision). Like light, it may alternatively be used to blind
     creatures or to dispel a light spell.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Mage
   level: 1
   prepared: false
@@ -52,7 +52,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!7vpkc6og65dbwmov'

@@ -1,0 +1,53 @@
+name: Pavis of Elements Art
+type: armor
+sort: 100000
+system:
+  description: >-
+    Commit Effort as an On Turn action to conjure an elemental barrier around
+    yourself. The barrier improves your Armor Class by +4 and remains as long as
+    the Effort remains Committed. This bonus stacks with other effects, but
+    cannot increase AC above 18, regardless of the combinations.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 0
+  cost: 0
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 10
+  shield: true
+  use: false
+  meleeAc: null
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: 4
+  shieldACBonus: 4
+  baseAc: 4
+_id: uked3tauu7geeokl
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1754277456694
+  modifiedTime: 1758741496961
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: wWLLqniCuTTHdUfm
+flags: {}
+effects: []
+ownership:
+  default: 0
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+_key: '!items!uked3tauu7geeokl'
+

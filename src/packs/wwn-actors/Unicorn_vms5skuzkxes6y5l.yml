@@ -108,11 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/unicorn.svg
 items:
   - name: Hoof
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -154,7 +152,6 @@ items:
     _key: '!actors.items!vms5skuzkxes6y5l.gnxijc6zhnlpfien'
   - name: Horn
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -196,7 +193,6 @@ items:
     _key: '!actors.items!vms5skuzkxes6y5l.w3tkonl586fz2l55'
   - name: Teleport
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Once per day, up to 360' (including rider).
       cost: 0
@@ -225,7 +221,6 @@ items:
     _key: '!actors.items!vms5skuzkxes6y5l.5vtnsfb0z33l2qbs'
   - name: Empathy With Maidens
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: A pure-hearted maiden can communicate with and ride a unicorn.
       cost: 0

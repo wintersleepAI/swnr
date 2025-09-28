@@ -1,0 +1,78 @@
+name: Combat Rifle
+type: weapon
+folder: IuHCQEm5J46mKh45
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ranged.Item.r6n59ruycwlic5qq
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286681607
+  modifiedTime: 1757286681607
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: r6n59ruycwlic5qq
+system:
+  ab: 0
+  ammo:
+    burst: true
+    longReload: false
+    max: 30
+    suppress: false
+    type: ammo
+    value: 30
+    current: null
+  cost: 300
+  damage: 1d12
+  description: >-
+    Combat rifles are favored by the militaries of tech level 3 worlds, trading
+    some of the often-unnecessary range and penetration of a conventional rifle
+    for a larger ammunition capacity and burst fire capabilities. On more
+    strait-laced worlds such military weaponry is often illegal for civilians to
+    possess.
+  encumbrance: 2
+  location: other
+  quality: stock
+  range:
+    max: 300
+    normal: 100
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 3
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  secondStat: null
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+  isTwoHanded: false
+  isNonLethal: false
+  isMelee: false
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!r6n59ruycwlic5qq'
+

@@ -1,0 +1,43 @@
+name: Holoskin
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/gps.svg
+folder: 6XDktrKETRNcBLu6
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.drone-fittings.Item.17oljks49cql1xw4
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286953010
+  modifiedTime: 1757286953010
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 17oljks49cql1xw4
+system:
+  broken: false
+  cost: 3000
+  costMultiplier: true
+  description: >-
+    The drone can drop a filmy hologram over itself, one convincing at a
+    distance. The difficulty of visually spotting the drone becomes 10 at
+    weapons range or 12 at observational range. Weapons fire always draws
+    attention.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  tl: 4
+  type: drone
+  favorite: false
+  minClass: fighter
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!17oljks49cql1xw4'
+

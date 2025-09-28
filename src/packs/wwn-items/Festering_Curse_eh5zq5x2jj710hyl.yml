@@ -13,7 +13,7 @@ system:
     Creatures with more hit dice than the necromancer has levels can make a
     Physical save to resist the curse.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Necromancer
   level: 3
   prepared: false
@@ -51,7 +51,6 @@ _stats:
 folder: qxBl7uHLaKwQr1Ih
 flags: {}
 effects: []
-img: systems/wwn/assets/new/necromancer_spell.png
 ownership:
   default: 0
 _key: '!items!eh5zq5x2jj710hyl'

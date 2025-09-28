@@ -1,0 +1,44 @@
+name: Burst ECM Generator
+type: shipDefense
+img: systems/swnr/assets/icons/game-icons.net/item-icons/spiky-field.svg
+folder: XJlAoDKKip1GmJb7
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-defense.Item.zxmjj1qcc8mk5xlm
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: zxmjj1qcc8mk5xlm
+system:
+  broken: false
+  cost: 25000
+  costMultiplier: true
+  description: >-
+    A high-powered secondary ECM generator can be activated to negate any one
+    otherwise-successful hit against the ship. This generator can be activated
+    after the damage has been rolled, but enemy ships rapidly compensate for the
+    new ECM source, and so the generator can only be used effectively once per
+    engagement.
+  effect: Negate one successful hit
+  mass: 1
+  massMultiplier: true
+  minClass: frigate
+  power: 2
+  powerMultiplier: false
+  favorite: false
+  tl: 4
+  destroyed: false
+  juryRigged: false
+  type: ship
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!zxmjj1qcc8mk5xlm'
+

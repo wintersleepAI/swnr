@@ -6,7 +6,7 @@ system:
     Duration: 6 turns Range: 10' per level Invisible creatures or items in range
     are revealed to the caster.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Mage
   level: 2
   prepared: false
@@ -44,7 +44,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!0mrgtpqrl67kjsxz'

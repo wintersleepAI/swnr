@@ -15,7 +15,7 @@ system:
     when the caster ceases to touch the barrier or immediately after it has been
     made insubstantial.
   favorite: false
-  subType: arcane
+  subType: spell
   source: High Mage
   level: 3
   prepared: false
@@ -53,7 +53,6 @@ _stats:
 folder: qxBl7uHLaKwQr1Ih
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!wttn0d1r1j4igotf'

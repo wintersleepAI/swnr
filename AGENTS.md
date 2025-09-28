@@ -48,3 +48,12 @@ await actor.updateEmbeddedDocuments('Item', payload);
 
 ## Theming
 - Do not toggle dark classes in JS. Use `.swnr ...` and `.theme-dark .swnr ...` selectors.
+
+## CSS/SCSS Development
+- **NEVER edit `css/swnr.css` directly** - it's compiled from SCSS sources.
+- Make style changes in `src/scss/` files:
+  - Main file: `src/scss/swnr.scss`
+  - Components: `src/scss/components/*.scss` (e.g., `_chat.scss` for pools styling)
+  - Utilities: `src/scss/utils/*.scss`
+- After SCSS changes, run `npm run build` to compile CSS.
+- For development, use `npm run watch` for auto-compilation.

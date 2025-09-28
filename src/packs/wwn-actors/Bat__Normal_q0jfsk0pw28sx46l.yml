@@ -110,11 +110,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/animal-icons/bat.svg
 items:
   - name: Swarm
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         ▶ Swarm: 10 bats can swarm around a target's head, causing confusion:

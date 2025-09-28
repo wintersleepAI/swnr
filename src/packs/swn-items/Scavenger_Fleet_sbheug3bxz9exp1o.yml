@@ -1,0 +1,53 @@
+name: Scavenger Fleet
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.sbheug3bxz9exp1o
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: sbheug3bxz9exp1o
+system:
+  attackDamage: 2d10+4
+  attackSource: wealth
+  attackSpecial: ''
+  attackTarget: wealth
+  baseOfInfluence: false
+  cost: 30
+  counter: 2d10
+  description: >-
+    These rag-tag armadas bring enormous technical and mercantile resources to
+    their patrons, along with a facility with heavy guns. As an action, a
+    Scavenger Fleet can be moved to any world within three hexes. Scavenger
+    Fleets cost 2 FacCreds a turn in maintenance.<br /> Note:
+  health:
+    max: 20
+    value: 20
+  income: 0
+  maintenance: 2
+  rating: 8
+  tl: 5
+  turnRoll: ''
+  type: Starship
+  unusable: false
+  qualities:
+    permission: false
+    action: false
+    special: false
+  category: wealth
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!sbheug3bxz9exp1o'
+

@@ -113,11 +113,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/animal-icons/lynx-head.svg
 items:
   - name: Bite
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -159,7 +157,6 @@ items:
     _key: '!actors.items!s3y2mffiqsncn5ox.47t6mli050h3vkxe'
   - name: Claw
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0

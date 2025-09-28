@@ -11,7 +11,7 @@ system:
     it may make a Physical save to resist the spell. ▶ Concentration: If the
     caster's concentration is broken, the target will fall.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Mage
   level: 5
   prepared: false
@@ -49,7 +49,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!o2atfqen2vyvsa6v'

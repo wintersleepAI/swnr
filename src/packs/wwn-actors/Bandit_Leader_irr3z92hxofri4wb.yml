@@ -110,11 +110,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
 items:
   - name: Bow, Small
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Bows cover everything from the small self bows of horse archers to the
@@ -162,7 +160,6 @@ items:
     _key: '!actors.items!irr3z92hxofri4wb.rrpmvei9kb0nklke'
   - name: Sword, Short
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of

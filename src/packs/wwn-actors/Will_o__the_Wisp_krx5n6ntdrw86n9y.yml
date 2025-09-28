@@ -108,11 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/spark-spirit.svg
 items:
   - name: Lightning
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -154,7 +152,6 @@ items:
     _key: '!actors.items!krx5n6ntdrw86n9y.o5f8bltssmwvtcfk'
   - name: Damage Immunity
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Only harmed by magical attacks. Immune to electricity. Minimum damage
@@ -185,7 +182,6 @@ items:
     _key: '!actors.items!krx5n6ntdrw86n9y.cgsd5wyfaw3gmry9'
   - name: Invisibility
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: At will. Cannot attack while invisible.
       cost: 0
@@ -214,7 +210,6 @@ items:
     _key: '!actors.items!krx5n6ntdrw86n9y.kbhqu4vjnjyhjss5'
   - name: Reveal Treasure Hoard
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Will reveal location of treasure hoard if reduced to 5 or fewer hp.

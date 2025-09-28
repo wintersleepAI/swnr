@@ -1,0 +1,57 @@
+name: Pretech Cosmetic
+type: item
+folder: 3qDhXaAAiQyoDWAW
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.pharmaceuticals.Item.99tajdsvpcpqmvi8
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286679493
+  modifiedTime: 1757286679493
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 99tajdsvpcpqmvi8
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 1000
+  description: >-
+    Pretech Cosmetic (None): Before the Silence stims existed for a host of
+    cosmetic, hygiene, and health purposes. While these effects are trivial, the
+    basic pretech stim substrate also works to heal 1d6 lost hit points in the
+    user at a cost of 1 System Strain.
+  encumbrance: 0
+  location: other
+  quality: stock
+  tl: 5
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!99tajdsvpcpqmvi8'
+

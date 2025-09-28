@@ -109,11 +109,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
 items:
   - name: Mace
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Clubs, staffs, and maces are of much the same genus, though the latter
@@ -158,7 +156,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.l74ffniu5lq76wer'
   - name: Cure Light Wounds
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Instant Range: The caster or a creature touched This spell has
@@ -193,7 +190,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.vojnhc3d3hyg4spd'
   - name: Detect Evil
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 6 turns Range: 120' Objects enchanted for evil purposes or
@@ -228,7 +224,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.el955puggnr8whah'
   - name: Detect Magic
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 2 turns Range: 60' Enchanted objects, areas, or creatures are
@@ -259,7 +254,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.mf5dfz31gtgnjch7'
   - name: Light
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 12 turns Range: 120' This spell has three usages: Conjuring
@@ -298,7 +292,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.dp1dc9iwagt53wby'
   - name: Protection from Evil
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 12 turns Range: The caster This spell wards the caster from
@@ -337,7 +330,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.gmz9iuoa6zbh2954'
   - name: Purify Food and Water
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Permanent Range: 10' This spell makes spoiled, rotten,
@@ -371,7 +363,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.iyzs40o6qo67njqb'
   - name: Remove Fear
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 2 turns Range: The caster or a creature touched The creature
@@ -406,7 +397,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.x3mlx38ex55rk12w'
   - name: Resist Cold
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 6 turns Range: 30' All creatures within range are protected
@@ -441,7 +431,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.qa9b06hwqa7qbeek'
   - name: Bless
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 6 turns Range: 60' May be used in one of two situations:
@@ -478,7 +467,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.03bdn1tdg4kuufh3'
   - name: Find Traps
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 2 turns Range: 30' Trapped objects or areas within range of
@@ -511,7 +499,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.4ho86jpa58jstzho'
   - name: Hold Person
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 9 turns Range: 180' This spell causes one or more humans,
@@ -546,7 +533,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.3qdmeeep7pofq33f'
   - name: Know Alignment
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 1 round Range: 10' The caster gains immediate knowledge of the
@@ -579,7 +565,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.fpnro9a58pdn7klr'
   - name: Resist Fire
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 2 turns Range: 30' A single creature is bestowed with
@@ -614,7 +599,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.e18yzcx5v0uysral'
   - name: Silence 15' Radius
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 12 turns Range: 180' A 15' radius area is rendered utterly
@@ -651,7 +635,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.bv6qvkkpv2xf7sqs'
   - name: Snake Charm
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 1d4+1 rounds or turns Range: 60' One or more snakes are
@@ -688,7 +671,6 @@ items:
     _key: '!actors.items!8s94pelugp2wr03j.fvmc95p73gu2qbi6'
   - name: Speak with Animals
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 6 turns Range: 30' The caster can communicate with one type of

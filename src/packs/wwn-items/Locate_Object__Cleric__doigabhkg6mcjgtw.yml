@@ -10,7 +10,7 @@ system:
     specific object which the caster can clearly visualise in all aspects.
     Restrictions: This spell cannot be used to locate creatures.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Cleric
   level: 3
   prepared: false
@@ -48,7 +48,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!doigabhkg6mcjgtw'

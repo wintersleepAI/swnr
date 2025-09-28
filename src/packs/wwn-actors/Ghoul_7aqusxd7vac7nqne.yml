@@ -39,7 +39,8 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/shambling-zombie.svg
+    src: >-
+      systems/swnr/assets/icons/game-icons.net/creature-icons/shambling-zombie.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -106,11 +107,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/shambling-zombie.svg
 items:
   - name: Claw
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Paralysis: For [[/r 2d4]] turns. Elves and creatures larger than ogres
@@ -154,7 +153,6 @@ items:
     _key: '!actors.items!7aqusxd7vac7nqne.6kt5mmoj4nvx75gj'
   - name: Undead
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Make no noise, until they attack. Immune to effects that affect living
@@ -186,7 +184,6 @@ items:
     _key: '!actors.items!7aqusxd7vac7nqne.emjsulgow6lh8ado'
   - name: Paralysis
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         For [[/r 2d4]] turns. Elves and creatures larger than ogres are

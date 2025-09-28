@@ -1,0 +1,50 @@
+name: Reactive Telekinesis
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: mOJTfIBCxT4AY88p
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-telekinesis.Item.t08akfbxz0yvxjyz
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286860108
+  modifiedTime: 1757286860108
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: t08akfbxz0yvxjyz
+system:
+  description: >-
+    <p>As an Instant action, the psychic can Commit Effort for the scene
+    whenever an assailant misses them with a physical attack. The attack is then
+    reflected back against the assailant, who must reroll the attack against
+    their own person twice. If either roll hits, the assailant suffers damage
+    from their own attack. If both rolls hit, the damage is the maximum
+    possible.</p>
+  level: 3
+  source: telekInesIs
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: scene
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+  save: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!t08akfbxz0yvxjyz'
+

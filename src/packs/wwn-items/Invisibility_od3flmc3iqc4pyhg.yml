@@ -13,7 +13,7 @@ system:
     invisible (either as part of a creature's gear or as an individual object),
     the light it casts is unaffected.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Mage
   level: 2
   prepared: false
@@ -51,7 +51,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!od3flmc3iqc4pyhg'

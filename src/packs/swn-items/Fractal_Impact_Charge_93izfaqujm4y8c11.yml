@@ -1,0 +1,55 @@
+name: Fractal Impact Charge
+type: shipWeapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+folder: 7HIRYMavpuUv01al
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-weapon.Item.93izfaqujm4y8c11
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 93izfaqujm4y8c11
+system:
+  broken: false
+  cost: 200000
+  costMultiplier: false
+  damage: 2d6
+  description: >-
+    A spray of penetrator sabots that use fractla surfacing to increase impact.
+    Favored for bomber-class fighter hulls.
+  hardpoint: 1
+  mass: 1
+  massMultiplier: false
+  minClass: fighter
+  power: 5
+  powerMultiplier: false
+  qualities: AP 15
+  tl: 4
+  ammo:
+    max: 4
+    type: special
+    value: 4
+  favorite: false
+  destroyed: false
+  juryRigged: false
+  type: ship
+  ab: 0
+  trauma:
+    die: 1d6
+    vehicle: false
+  range:
+    normal: 1
+    max: 2
+  stat: ask
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!93izfaqujm4y8c11'
+

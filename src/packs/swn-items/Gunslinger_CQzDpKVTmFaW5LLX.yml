@@ -1,0 +1,39 @@
+name: Gunslinger
+type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: sPYHUjJb2geTuLHp
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.foci.Item.z30yg689b9mxjz06
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287061953
+  modifiedTime: 1757294397738
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+system:
+  description: >-
+    You have a gift with a gun. While this talent most commonly applies to
+    slugthrowers or energy weapons, it is also applicable to thrown weapons,
+    bows, or other ranged weapons that can be used with the Shoot skill. For
+    thrown weapons, you can’t use the benefits of the Armsman focus at the same
+    time as Gunslinger.<br /><br />Level 1: Gain Shoot as a bonus skill. You can
+    draw or holster a Stowed ranged weapon as an On Turn action. You may add
+    your Shoot skill level to a ranged weapon’s damage roll.<br />Level 2: Once
+    per round you can reload a ranged weapon as an On Turn action if it takes no
+    more than one round to reload. Even on a miss with a Shoot attack, you do an
+    unmodified 1d4 damage.
+  favorite: false
+  level: 0
+  type: focus
+  poolsGranted: []
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+_id: CQzDpKVTmFaW5LLX
+sort: 0
+_key: '!items!CQzDpKVTmFaW5LLX'
+

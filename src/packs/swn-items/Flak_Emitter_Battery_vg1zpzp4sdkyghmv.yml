@@ -1,0 +1,55 @@
+name: Flak Emitter Battery
+type: shipWeapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+folder: 7HIRYMavpuUv01al
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-weapon.Item.vg1zpzp4sdkyghmv
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: vg1zpzp4sdkyghmv
+system:
+  broken: false
+  cost: 500000
+  costMultiplier: false
+  damage: 2d6
+  description: >-
+    A baseline frigate anti-fighter system, this battery fires waves of lasers
+    or charged particles to knock down small craft.
+  hardpoint: 1
+  mass: 3
+  massMultiplier: false
+  minClass: frigate
+  power: 5
+  powerMultiplier: false
+  qualities: AP 10, Flak
+  tl: 4
+  favorite: false
+  destroyed: false
+  juryRigged: false
+  type: ship
+  ab: 0
+  ammo:
+    type: none
+    max: 4
+    value: 4
+  trauma:
+    die: 1d6
+    vehicle: false
+  range:
+    normal: 1
+    max: 2
+  stat: ask
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!vg1zpzp4sdkyghmv'
+

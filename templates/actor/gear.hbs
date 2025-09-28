@@ -37,7 +37,7 @@
   <div class="flex flexrow gap" style="column-gap:10%;"><!-- Encum -->
 
     <div class="resource-bar"><!-- The readied bar -->
-      <div style="width:{{actor.system.encumbrance.ready.percentage}}%" class="ready-fill"></div>
+      <div style="width:{{actor.system.encumbrance.ready.percentage}}%" class="ready-fill {{#if (gt actor.system.encumbrance.ready.value actor.system.encumbrance.ready.max)}}full-fill{{/if}}"></div>
         <div class="text">
           {{localize 'swnr.item.locationReadied'}}:
           {{actor.system.encumbrance.ready.value}}/{{actor.system.encumbrance.ready.max}}
@@ -45,7 +45,7 @@
     </div>
 
     <div class="resource-bar"><!-- The stowed bar -->
-      <div style="width:{{actor.system.encumbrance.stowed.percentage}}%" class="stowed-fill"></div>
+      <div style="width:{{actor.system.encumbrance.stowed.percentage}}%" class="stowed-fill {{#if (gt actor.system.encumbrance.stowed.value actor.system.encumbrance.stowed.max)}}full-fill{{/if}}"></div>
         <div class="text">
            {{localize 'swnr.item.locationStowed'}}:
         {{actor.system.encumbrance.stowed.value}}/{{actor.system.encumbrance.stowed.max}}

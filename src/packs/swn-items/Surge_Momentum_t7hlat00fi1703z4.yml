@@ -1,0 +1,53 @@
+name: Surge Momentum
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: b1y9xejewpVMRdey
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-metapsionics.Item.t7hlat00fi1703z4
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286855552
+  modifiedTime: 1757286855552
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: t7hlat00fi1703z4
+system:
+  description: >-
+    <p>The metapsion’s abilities can be reinforced with a degree of
+    metadimensional energy that would cause substantial damage to a less adept
+    mind. Particularly weak or unprepared minds might be completely crushed by
+    the force of the adept’s augmented will.</p><p>The adept must Commit Effort
+    for the day when using a power that normally grants its target a saving
+    throw. The target then suffers a penalty equal to the adept’s Metapsionics
+    skill on any saving throw normally granted by the power. If the target’s hit
+    die total or character level is less than half the adept’s level, rounded
+    up, they automatically fail their saving throw.</p>
+  level: 3
+  source: metapsionics
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+  save: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!t7hlat00fi1703z4'
+

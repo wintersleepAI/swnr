@@ -275,7 +275,7 @@
       flex-wrap: wrap;
       gap: 0.25rem;
     }
-    
+
     .pool-badge {
       position: relative;
       background: var(--color-bg-option);
@@ -386,6 +386,18 @@
           }
         }
       }
+    }
+  }
+
+  // Force horizontal layout in header context
+  .sheet-header .resource-pools {
+    .pools-list {
+      flex-wrap: nowrap;
+    }
+
+    .pool-badge {
+      min-width: 3rem;
+      flex-shrink: 1;
     }
   }
 }

@@ -1,0 +1,53 @@
+name: Surveyors
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.labow4ef352m7qyh
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: labow4ef352m7qyh
+system:
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 4
+  counter: 1d4
+  description: >-
+    Explore potential resource and investment options on worlds. The presence of
+    a Surveyor crew allows one additional die to be rolled on Expand Influence
+    actions. As an action, a surveyor crew can be moved to any world within two
+    hexes.
+  health:
+    max: 4
+    value: 4
+  income: 0
+  maintenance: 0
+  rating: 2
+  tl: 4
+  turnRoll: ''
+  type: Special Forces
+  unusable: false
+  qualities:
+    permission: false
+    action: true
+    special: true
+  category: wealth
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!labow4ef352m7qyh'
+

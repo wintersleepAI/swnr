@@ -1,0 +1,59 @@
+name: Lobbyists
+type: asset
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.qiq1kefbvwon71ws
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: qiq1kefbvwon71ws
+system:
+  attackDamage: '0'
+  attackSource: cunning
+  attackSpecial: >-
+    Usable to block the governmental permission that is sometimes required to
+    buy an asset or transport it into a system. When a rival faction gains
+    permission to do so, the Lobbyists can make an immediate Cunning vs. Cunning
+    test against the faction; if successful, the permission is withdrawn and
+    cannot be re-attempted until next turn.
+  attackTarget: cunning
+  baseOfInfluence: false
+  cost: 4
+  counter: ''
+  description: >-
+    Usable to block the governmental permission that is sometimes required to
+    buy an asset or transport it into a system. When a rival faction gains
+    permission to do so, the Lobbyists can make an immediate Cunning vs. Cunning
+    test against the faction; if successful, the permission is withdrawn and
+    cannot be re-attempted until next turn.
+  health:
+    max: 4
+    value: 4
+  income: 0
+  maintenance: 0
+  rating: 2
+  tl: 0
+  turnRoll: ''
+  type: Special Forces
+  unusable: false
+  qualities:
+    permission: false
+    action: false
+    special: true
+  category: cunning
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!qiq1kefbvwon71ws'
+

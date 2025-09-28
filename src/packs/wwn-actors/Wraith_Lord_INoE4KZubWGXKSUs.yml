@@ -142,11 +142,9 @@ prototypeToken:
     src: null
     disposition: false
   movementAction: null
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
 items:
   - name: Averse
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Certain religious symbols, lines of salt, emblems of natural law, or
@@ -198,7 +196,6 @@ items:
     _key: '!actors.items!INoE4KZubWGXKSUs.nisdtak1a7vzm57a'
   - name: Beguiling
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Once per scene it can beguile a creature with its gaze on a failed
@@ -250,7 +247,6 @@ items:
     _key: '!actors.items!INoE4KZubWGXKSUs.c7ipc9368qog2g7t'
   - name: Desynchrony
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Foes hit by it must make a Physical save or be paralyzed for 1d4+1
@@ -300,7 +296,6 @@ items:
     _key: '!actors.items!INoE4KZubWGXKSUs.znv8txxr5nogvn36'
   - name: Draining
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Foes hit by it are enfeebled, taking a cumulative -2 penalty to hit
@@ -351,7 +346,6 @@ items:
     _key: '!actors.items!INoE4KZubWGXKSUs.n1etennbxswwbi4x'
   - name: Intangible
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         It is a shade or specter, unable to be touched by non-magical objects or
@@ -402,7 +396,6 @@ items:
     _key: '!actors.items!INoE4KZubWGXKSUs.mfxs8yaqbx058ncg'
   - name: Ravenous
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         If it hits with at least one of its attacks, it gets an immediate bonus
@@ -452,7 +445,6 @@ items:
     _key: '!actors.items!INoE4KZubWGXKSUs.vvd5juzwmapyh84m'
   - name: Red Hunger
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         It must eat a pound of human flesh or drink a pint of human blood every
@@ -503,7 +495,6 @@ items:
     _key: '!actors.items!INoE4KZubWGXKSUs.j6myqngo9a2xm3zl'
   - name: Sunscorch
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Exposure to sunlight, running water, or some specific other emblem of
@@ -553,7 +544,6 @@ items:
     _key: '!actors.items!INoE4KZubWGXKSUs.pavy13v7tfsw2s03'
   - name: Terrifying
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Enemies must make a Mental save or lose their first turn's Main Action
@@ -603,7 +593,6 @@ items:
     _key: '!actors.items!INoE4KZubWGXKSUs.tgahx2ztuq52689e'
   - name: Impure
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Weapons of silver, green wood, or other specific apotropaic material
@@ -654,7 +643,6 @@ items:
     _key: '!actors.items!INoE4KZubWGXKSUs.esotjzf771g1rc8o'
   - name: Unending
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         It cannot die by violence. Only the right act, weapon, object
@@ -704,7 +692,6 @@ items:
     _key: '!actors.items!INoE4KZubWGXKSUs.qmtbtkfxk25i2k0n'
   - name: Touch
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0

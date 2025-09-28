@@ -1,0 +1,53 @@
+name: Tripwire Cells
+type: asset
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.kxyp0zyr9i1nremz
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: kxyp0zyr9i1nremz
+system:
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 12
+  counter: 1d4
+  description: >-
+    These observers are alert to the arrival of stealthed units. Whenever a
+    stealthed asset lands or is purchased on a planet with tripwire cells, the
+    Cells make an immediate Cunning vs. Cunning attack against the owning
+    faction. If successful, the asset loses its stealth.
+  health:
+    max: 8
+    value: 8
+  income: 0
+  maintenance: 0
+  rating: 4
+  tl: 4
+  turnRoll: ''
+  type: Special Forces
+  unusable: false
+  qualities:
+    permission: false
+    action: true
+    special: true
+  category: cunning
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!kxyp0zyr9i1nremz'
+

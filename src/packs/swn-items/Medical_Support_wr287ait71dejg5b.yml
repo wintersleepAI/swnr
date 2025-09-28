@@ -1,0 +1,45 @@
+name: Medical Support
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/gps.svg
+folder: 6XDktrKETRNcBLu6
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.drone-fittings.Item.wr287ait71dejg5b
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286953010
+  modifiedTime: 1757286953010
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: wr287ait71dejg5b
+system:
+  broken: false
+  cost: 2000
+  costMultiplier: true
+  description: >-
+    The drone can be loaded with up to a dozen units of medication, whether stim
+    doses, lazarus patches, or less benevolent substances. It can launch a
+    medication through a remote injector at a target within ten meters in lieu
+    of a weapon attack. Immobile or willing targets are hit automatically, while
+    hostiles require a normal hit roll. The drone is treated as having Heal-0
+    skill or the active pilot’s Heal skill, whichever is higher.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  tl: 4
+  type: drone
+  favorite: false
+  minClass: fighter
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!wr287ait71dejg5b'
+

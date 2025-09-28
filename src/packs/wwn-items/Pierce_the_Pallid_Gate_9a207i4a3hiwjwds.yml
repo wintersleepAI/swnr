@@ -16,7 +16,7 @@ system:
     can be shut as an Instant action by the caster. Creatures partially in a
     rift when it closes are spat out on the far side.
   favorite: false
-  subType: arcane
+  subType: spell
   source: High Mage
   level: 4
   prepared: false
@@ -54,7 +54,6 @@ _stats:
 folder: qxBl7uHLaKwQr1Ih
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!9a207i4a3hiwjwds'

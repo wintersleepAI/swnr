@@ -1,0 +1,56 @@
+name: Telekinetic Ram
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: mOJTfIBCxT4AY88p
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-telekinesis.Item.08ooj1oj9sf8hc2y
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286860108
+  modifiedTime: 1757286860108
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 08ooj1oj9sf8hc2y
+system:
+  description: >-
+    <p>As a Main Action, the psychic can Commit Effort for the scene to target a
+    tremendous, uncontrolled burst of force at a single target within sight.
+    This burst requires some time to detonate, however, and will only go off at
+    the end of the next round. Targets of this technique are aware of an
+    oppressive, electrical tingling in the air and are apt to instinctively
+    move; this technique is thus generally useless against any target that is
+    not entirely immobile, as any movement of a chosen target disrupts the ram.
+    Once the ram detonates, however, it is sufficient to destroy any immobile
+    civilian vehicle, create a five-meter hole in anything short of hardened
+    military fortifications, or inflict 5d12 damage on anything else as if it
+    were struck by a Heavy weapon.</p>
+  level: 3
+  source: telekInesIs
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: scene
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
+  roll: 5d12
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+  save: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!08ooj1oj9sf8hc2y'
+

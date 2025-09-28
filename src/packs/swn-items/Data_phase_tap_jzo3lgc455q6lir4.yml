@@ -1,0 +1,58 @@
+name: Data phase tap
+type: item
+folder: A92luWXXOnWWWMUA
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.computing-gear.Item.jzo3lgc455q6lir4
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286668405
+  modifiedTime: 1757286668405
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: jzo3lgc455q6lir4
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 5000
+  description: >-
+    Data phase tap: This handheld device is normally illegal outside the
+    possession of licensed data line repair technicians. The tap can detect data
+    lines within five meters through up to ten centimeters of ordinary walls,
+    and can generate an energy manipulation field that allows tapping that data
+    line for hacking purposes without physically damaging the wall.
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 4
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!jzo3lgc455q6lir4'
+

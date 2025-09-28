@@ -1,0 +1,54 @@
+folder: BslyO9GYhD75h2Kk
+name: Full Invoker Spells
+type: feature
+_id: YsLGtpBJuHyX6Xjs
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+system:
+  description: ''
+  favorite: false
+  level: 0
+  type: focus
+  poolsGranted:
+    - resourceName: Points
+      subResource: Spell
+      cadence: day
+      formula: '@level + @stats.int.mod'
+      condition: ''
+    - resourceName: Points
+      subResource: Spell
+      cadence: day
+      formula: '+1'
+      condition: '@level>=2'
+    - resourceName: Slots
+      subResource: Prepared
+      cadence: day
+      formula: '@level - 1 + @stats.int.mod'
+      condition: ''
+    - resourceName: Slots
+      subResource: Prepared
+      cadence: day
+      formula: '+1'
+      condition: '@level<=7'
+    - resourceName: Slots
+      subResource: Prepared
+      cadence: day
+      formula: '+1'
+      condition: '@level<=3'
+effects: []
+sort: 650000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Item.Vu3mdRzn9Ypfij0N
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758769340355
+  modifiedTime: 1758769340355
+  lastModifiedBy: lKC5x4Yf023Bizof
+_key: '!items!YsLGtpBJuHyX6Xjs'
+

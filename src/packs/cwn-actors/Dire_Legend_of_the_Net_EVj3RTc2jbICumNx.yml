@@ -1,0 +1,727 @@
+folder: 1MnMOlCpFjrZIhXu
+name: Dire Legend of the Net
+type: npc
+img: icons/svg/mystery-man.svg
+system:
+  health:
+    value: 63
+    max: 63
+  biography: ''
+  species: ''
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 8
+  baseAc: 20
+  meleeAc: 20
+  ab: 12
+  meleeAb: 12
+  systemStrain:
+    value: 0
+    permanent: 0
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: street
+  skillBonus: 8
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  hitDice: 9d8
+  saves: 11
+  moralScore: 10
+  reaction: unknown
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  homeworld: ''
+  faction: ''
+  pools: {}
+  tweak:
+    showCyberware: true
+    showPsychic: true
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: true
+    showPoolsInPowers: false
+prototypeToken:
+  name: Small Time
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/mystery-man.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+items:
+  - name: Cranial Jack
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.0vi41za0bti143fz
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 92mxTHPanoQQoQas
+    system:
+      concealment: Touch
+      cost: 1000
+      description: >-
+        A discreetly-placed plug socket in the user's head or neck allows
+        interfacing with cyberdecks and gear equipped with a jack line.
+      effect: Link to jack-equipped gear
+      strain: 0.25
+      type: Head
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.92mxTHPanoQQoQas'
+  - name: Cyberdeck
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.1otao4zzgjtth9ny
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 1eTWYwmwzenwPEH3
+    system:
+      concealment: Sight
+      cost: 0
+      description: >-
+        <p>Memory 17, Shielding 20, CPU 7 with verbs Defend, Glitch, Kill,
+        Paralyze, Sense, Sabotage, Silence, Stun, Lock, Terminate and subjects
+        Avatar, Barrier, Cyber, Camera, Door, Nerve Cyber, Program</p>
+      effect: ''
+      strain: 0
+      type: Sensory
+      favorite: false
+      tl: 1
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.1eTWYwmwzenwPEH3'
+  - name: Defend
+    type: program
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-program.Item.jvws7zz5xhwk0mez
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 62JcOVskatSMeZi4
+    system:
+      accessCost: 0
+      cost: 1000
+      description: >-
+        A special Verb that can only be targeted at a friendly device or allied
+        cyberware user within range, and costs no Access to use. While the
+        program remains running, any hostile hacking attempts aimed at that
+        device or any of the target's cyber systems must first beat the user in
+        an opposed Int/Program skill check before they can attempt their hack.
+        This Verb cannot negate programs that are already running on the target.
+      selfTerminating: false
+      skillCheckMod: 0
+      target: Device/Cyber
+      type: verb
+      useAffects: Shield a friendly device or cyber system
+      favorite: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.62JcOVskatSMeZi4'
+  - name: Paralyze
+    type: program
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-program.Item.4m96x4njjepvf0cx
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: bmPh4lEvwOLxjcxH
+    system:
+      accessCost: 1
+      cost: 2000
+      description: >-
+        On a successful opposed Int/Program skill check against the target,
+        render a Demon or avatar incapable of moving out of a node or using the
+        Alert the Network or Send Message actions while the program is running.
+        Other cyberspace actions can be taken normally. Human hackers are also
+        physically paralyzed while the program runs, incapable of moving in
+        meatspace until the connection is cut or the program ends.
+      selfTerminating: false
+      skillCheckMod: -1
+      target: Avatar
+      type: verb
+      useAffects: Paralyze an avatar's owner via network
+      favorite: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.bmPh4lEvwOLxjcxH'
+  - name: Defend
+    type: program
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-program.Item.jvws7zz5xhwk0mez
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: LxeLna234wdMUfTq
+    system:
+      accessCost: 0
+      cost: 1000
+      description: >-
+        A special Verb that can only be targeted at a friendly device or allied
+        cyberware user within range, and costs no Access to use. While the
+        program remains running, any hostile hacking attempts aimed at that
+        device or any of the target's cyber systems must first beat the user in
+        an opposed Int/Program skill check before they can attempt their hack.
+        This Verb cannot negate programs that are already running on the target.
+      selfTerminating: false
+      skillCheckMod: 0
+      target: Device/Cyber
+      type: verb
+      useAffects: Shield a friendly device or cyber system
+      favorite: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.LxeLna234wdMUfTq'
+  - name: Defend
+    type: program
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-program.Item.jvws7zz5xhwk0mez
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: pB2Z0KI2OXYO2KGY
+    system:
+      accessCost: 0
+      cost: 1000
+      description: >-
+        A special Verb that can only be targeted at a friendly device or allied
+        cyberware user within range, and costs no Access to use. While the
+        program remains running, any hostile hacking attempts aimed at that
+        device or any of the target's cyber systems must first beat the user in
+        an opposed Int/Program skill check before they can attempt their hack.
+        This Verb cannot negate programs that are already running on the target.
+      selfTerminating: false
+      skillCheckMod: 0
+      target: Device/Cyber
+      type: verb
+      useAffects: Shield a friendly device or cyber system
+      favorite: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.pB2Z0KI2OXYO2KGY'
+  - name: Neural Buffer
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.kfpruvnr7jf9htw5
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: zix8FGjW33qkYop5
+    system:
+      concealment: Medical
+      cost: 40000
+      description: >-
+        A system favored by hackers, a Neural Buffer rearranges the user's brain
+        topography, making it more difficult to harm the user with neural
+        feedback. The user gains an additional 3 hit points per level that can
+        only absorb cyberspace damage from Stun or 000ill Verbs. These phantom
+        hit points refresh completely each hour.
+      effect: Adds +27 HP vs. cyberspace damage
+      strain: 1
+      type: Head
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.zix8FGjW33qkYop5'
+  - name: Reaction Booster II
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.lg6b4ormag3e53x6
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: Wo9z1X7SpifZFcwX
+    system:
+      concealment: Medical
+      cost: 100000
+      description: >-
+        As level one, but the user automatically wins initiative against targets
+        that don't also automatically win initiative; if both have this ability,
+        initiative is rolled without modifications. The user can act normally
+        during surprise rounds.
+      effect: Automatically win initiative
+      strain: 2
+      type: Nerve
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.Wo9z1X7SpifZFcwX'
+  - name: Hacker
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-edges.Item.c2brxxicu0k3bsna
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: PcKTALwMDc65696Y
+    system:
+      description: >-
+        Gain Program as a bonus skill. You may begin play with an installed
+        Cranial Jack cybersystem, a scrap deck from page 75, and eight program
+        elements of your choice among available Verbs and Subjects. Each round,
+        you gain a bonus Main Action that can only be used to perform hacking or
+        cyberspace-related mental actions. This does not include drone piloting
+        or vehicle driving.
+      favorite: false
+      level: 0
+      type: edge
+      poolsGranted: []
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.PcKTALwMDc65696Y'
+  - name: Enhanced Reflexes III
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.2xdi94obeezvc5hb
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: s7KkWY9gKCaerpEX
+    system:
+      concealment: Touch
+      cost: 750000
+      description: >-
+        Twice per scene, as an On Turn action up to once per round, the user
+        gains a bonus non-cyberspace Main Action and bonus Move Action. By
+        accepting one System Strain, this ability can be used as an Instant
+        action.
+      effect: 2/scene, bonus Main and Move
+      strain: 4
+      type: Nerve
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.s7KkWY9gKCaerpEX'
+  - name: Hard To Kill
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-edges.Item.7hvwwmidep4132l0
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: TikPFCZ2YLKrY6DY
+    system:
+      description: >-
+        Instead of rolling 1d6 per level for your hit points, you roll 1d6+2.
+        Your base Trauma Target increases by +1, turning the base 6 into 7.
+      favorite: false
+      level: 0
+      type: edge
+      poolsGranted: []
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.TikPFCZ2YLKrY6DY'
+  - name: Armored Clothing
+    type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-armor.Item.rgosy2tui7x5kwp0
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: lLu7t8X8OSYlBPhw
+    system:
+      ac: 16
+      cost: 1000
+      description: >-
+        The bulky plates and heavy ballistic weaves of this outfit are disguised
+        as drapes and fashion elements.
+      encumbrance: 2
+      isHeavy: false
+      isSubtle: true
+      meleeAc: 14
+      shieldACBonus: 0
+      shieldMeleeACBonus: 0
+      soak:
+        max: 5
+        value: 5
+      traumaDiePenalty: 1
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      shield: false
+      use: true
+      dr: 0
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.lLu7t8X8OSYlBPhw'
+  - name: Modded Light Pistol
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.j3dkw1jpnfuob1ju
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: ONBsxpQkqfEhvNI7
+    system:
+      ammo:
+        burst: false
+        max: 15
+        suppress: false
+        type: ammo
+        value: 15
+        longReload: false
+        current: null
+      cost: 200
+      damage: 1d6+4
+      description: >-
+        Light and heavy pistols are categorized by the caliber of the bullet
+        they fire. Some operators prefer the low recoil and high mag capacity
+        possible with a low-caliber round, while others like to have a little
+        more certainty in dropping the targets they hit.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 80
+        normal: 10
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      stat: dex
+      trauma:
+        die: 1d8
+        rating: 2
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.ONBsxpQkqfEhvNI7'
+  - name: Advanced Knife
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.hbnlvlb3zhkkf0a1
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 0hlTz1Dn8MTWjFDp
+    system:
+      ammo:
+        burst: false
+        max: 0
+        suppress: false
+        type: none
+        value: 0
+        longReload: false
+        current: null
+      cost: 200
+      damage: 1d6+4
+      description: >-
+        Advanced weapons employ modern polymers, sophisticated metallurgy,
+        fractal edges, electro-stun tech, and a small legion of marketers to
+        sell products that are distinctly superior to the plain steel edges of a
+        prior age. An advanced micro-edged butcher knife can go through bone
+        like bamboo and keep an edge for weeks between sharpenings. The more
+        martial offerings go to even greater lengths in their marketing, with
+        some enterprising serial killers and gang enforcers inking exclusivity
+        deals with particular knife manufacturers.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 20
+        normal: 10
+      secondStat: dex
+      shock:
+        ac: 15
+        dmg: 2
+      stat: str
+      trauma:
+        die: 1d8
+        rating: 3
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!EVj3RTc2jbICumNx.0hlTz1Dn8MTWjFDp'
+effects: []
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.EVj3RTc2jbICumNx
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
+_id: EVj3RTc2jbICumNx
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!actors!EVj3RTc2jbICumNx'
+

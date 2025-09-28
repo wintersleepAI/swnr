@@ -1,0 +1,54 @@
+name: Transit Web
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.10pq9sozrmdcbg2i
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 10pq9sozrmdcbg2i
+system:
+  attackDamage: 1d12
+  attackSource: cunning
+  attackSpecial: ''
+  attackTarget: cunning
+  baseOfInfluence: false
+  cost: 15
+  counter: ''
+  description: >-
+    These facilities allow almost effortless relocation of all assets. For one
+    FacCred, any number of non-starship Cunning or Wealth assets may be moved
+    between any two worlds within three hexes of the Transit Web. This may be
+    done freely on the owner's turn so long as the fee can be paid, and using
+    the ability doesn't require an action.
+  health:
+    max: 5
+    value: 5
+  income: 0
+  maintenance: 0
+  rating: 7
+  tl: 5
+  turnRoll: ''
+  type: Facility
+  unusable: false
+  qualities:
+    permission: false
+    action: false
+    special: true
+  category: wealth
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!10pq9sozrmdcbg2i'
+

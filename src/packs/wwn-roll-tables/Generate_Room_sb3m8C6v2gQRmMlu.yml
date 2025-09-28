@@ -1,7 +1,7 @@
 _id: sb3m8C6v2gQRmMlu
 name: Generate Room
 img: icons/svg/d20-grey.svg
-description: Generate both room contents and exits.
+description: <p>Generate both room contents and exits.</p>
 results:
   - _id: qmsjMKKTMZj1I3dw
     type: document
@@ -19,9 +19,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757292292010
     name: Stocking Rooms
-    documentUuid: Compendium.wwn.gm-master-tables.CGBVZvWlHBCJh7Oi
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.CGBVZvWlHBCJh7Oi
     description: ''
     _key: '!tables.results!sb3m8C6v2gQRmMlu.qmsjMKKTMZj1I3dw'
   - _id: GR7qvGDvBXI12Zs0
@@ -40,9 +41,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757292300911
     name: Room Layout
-    documentUuid: Compendium.wwn.gm-master-tables.0aHNowVvpqcOitxG
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.0aHNowVvpqcOitxG
     description: ''
     _key: '!tables.results!sb3m8C6v2gQRmMlu.GR7qvGDvBXI12Zs0'
 formula: 1d1
@@ -58,8 +60,8 @@ _stats:
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271920613
-  modifiedTime: 1754271920613
-  lastModifiedBy: lKC5x4Yf023Bizof
+  modifiedTime: 1757292287251
+  lastModifiedBy: iXDXVi7OlHcRwXw0
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3

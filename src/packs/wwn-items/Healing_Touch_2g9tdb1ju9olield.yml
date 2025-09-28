@@ -8,7 +8,7 @@ system:
     Action. This healing adds 1 System Strain to the target each time it is
     applied.
   favorite: false
-  subType: arcane
+  subType: art
   source: Healer
   level: 1
   prepared: false
@@ -40,7 +40,6 @@ _stats:
 folder: 1QSf6od5nEmDkbXu
 flags: {}
 effects: []
-img: systems/wwn/assets/new/healer_art.png
 ownership:
   default: 0
 _key: '!items!2g9tdb1ju9olield'

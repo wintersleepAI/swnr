@@ -176,6 +176,12 @@
             "showPoolsInPowers": {
               "label": "Show Pools in Powers Tab"
             },
+            "showPoolsInHeader": {
+              "label": "Show Pools in Header"
+            },
+            "showPoolsInPowers": {
+              "label": "Show Pools in Powers Tab"
+            },
             "debtDisplay": {
               "label": "Name of Currency 1"
             },
@@ -285,6 +291,9 @@
       },
       "Ship": {
         "FIELDS": {
+          "speed": {
+            "label": "Speed"
+          },
           "lifeSupportDays": {
             "label": "Life Support Days"
           },
@@ -358,6 +367,9 @@
       },
       "Mech": {
         "FIELDS": {
+          "speed": {
+            "label": "Speed"
+          },
           "maintenanceCost": {
             "label": "Maintenance Cost"
           },
@@ -371,6 +383,9 @@
       },
       "Vehicle": {
         "FIELDS": {
+          "speed": {
+            "label": "Speed"
+          },
           "kmph": {
             "label": "kmph"
           },
@@ -1015,6 +1030,7 @@
     "Effect": {
       "Source": "Source",
       "Toggle": "Toggle Effect",
+      "TabDuration": "Duration",
       "Temporary": "Temporary Effects",
       "Passive": "Passive Effects",
       "Inactive": "Inactive Effects"
@@ -1999,6 +2015,7 @@
       "locationOther": "Other",
       "locationStowed": "Stowed",
       "locationReadied": "Readied",
+      "gear": "Gear",
       "range": "Range",
       "favorite": "Favorite",
       "noEncReadied": "No Encumbrance Readied",
@@ -2032,6 +2049,7 @@
         "damage": "Trauma Damage"
       },
       "damage": "Damage",
+      "dmg": "Dmg",
       "damageFormula": "Damage Formula",
       "attackBonus": "Attack Bonus",
       "ammo": "Ammo",
@@ -2222,6 +2240,7 @@
       "poolResource": "Pool Resource",
       "systemStrain": "System Strain",
       "consumableItem": "Consumable Item",
+      "consumed": "Consumed",
       "uses": "Internal Uses",
       "remaining": "remaining",
       "scene": "Per Scene",
@@ -2232,6 +2251,12 @@
       "recoverStrain": "Recover System Strain",
       "recoverItem": "Recover Item",
       "recoverUses": "Recover Uses",
+      "itemText": {
+        "placeholder": "Item description (optional)"
+      },
+      "action": {
+        "consume": "Consume"
+      },
       "selectDialog": {
         "title": "Select Consumables",
         "choose": "Choose items to consume",
@@ -2239,10 +2264,21 @@
         "available": "Available",
         "spend": "Spend",
         "selected": "Selected",
+        "requirements": {
+          "single": "Item required:",
+          "multiple": "Items required:"
+        },
         "notEnough": "You must select the required amount",
         "noneAvailable": "No readied consumables with sufficient uses available",
         "cancelled": "Item selection cancelled",
         "noneSelected": "No items selected to consume"
+      },
+      "errors": {
+        "missingPowerOrActor": "Missing power or actor ID",
+        "noChatMessage": "Could not find chat message",
+        "noActorForMessage": "Could not find the actor associated with the chat message.",
+        "noPower": "Could not find power",
+        "failedConsumeGeneric": "Failed to consume items"
       },
       "timing": {
         "preparation": "Pay on Prep",

@@ -1,0 +1,49 @@
+name: Tissue Integrity Field
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: VXwfMckwPSKXC4gD
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-biopsionics.Item.pcfo2wbe5t5nyzxb
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286851234
+  modifiedTime: 1757286851234
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: pcfo2wbe5t5nyzxb
+system:
+  description: >-
+    <p>The biopsion’s <em>Psychic Succor</em> may now also affect all allies
+    within ten meters of the target. Allies can decline the healing if they
+    don’t require it or don’t want to take the additional System Strain. Each
+    use of this technique requires that the biopsion Commit Effort for the day
+    in addition to the cost of the <em>Psychic Succor</em>.</p>
+  level: 2
+  source: biopsionics
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+  save: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!pcfo2wbe5t5nyzxb'
+

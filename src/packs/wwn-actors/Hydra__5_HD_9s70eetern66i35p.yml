@@ -108,11 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/hydra.svg
 items:
   - name: Bite
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -154,7 +152,6 @@ items:
     _key: '!actors.items!9s70eetern66i35p.ogl1fakryi5r10xc'
   - name: Heads
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: '[[/r 1d8+4]] heads; 1 HD per head. Attack bonus equal to HD.'
       cost: 0
@@ -183,7 +180,6 @@ items:
     _key: '!actors.items!9s70eetern66i35p.jm93s7q2uwzbukat'
   - name: Disabling Heads
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: For every 8 hp damage taken, one head is disabled (cannot attack).
       cost: 0
@@ -212,7 +208,6 @@ items:
     _key: '!actors.items!9s70eetern66i35p.tpvg12quaym6etl1'
   - name: Variants
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Special hydras sometimes found with venom, fiery breath, etc. Add 125 XP

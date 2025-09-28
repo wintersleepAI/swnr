@@ -1,0 +1,79 @@
+name: Large primitive weapon
+type: weapon
+folder: OweUZxSfzsY4xsDh
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.melee.Item.28okhbnono0ovytw
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286677303
+  modifiedTime: 1757286677303
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 28okhbnono0ovytw
+system:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 0
+    suppress: false
+    type: none
+    value: 0
+    current: null
+  cost: 30
+  damage: 1d8+1
+  description: >-
+    Large weapons are two-handed implements of bodily ruin such as claymores,
+    halberds, tetsubos, or other such weapons. Unlike smaller weapons, they rely
+    largely on Strength for their employ, and can bash through lighter forms of
+    armor. Large weapons count as two encumbrance items. A primitive weapon is
+    simply one of ordinary metal or wood, with no high-tech augmentations.
+    Primitive weapons are often unable to harm targets in powered armor.
+  encumbrance: 2
+  location: other
+  isMelee: true
+  quality: stock
+  range:
+    max: 0
+    normal: 0
+  secondStat: none
+  shock:
+    ac: 15
+    dmg: 2
+  skill: ''
+  stat: str
+  tl: 0
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+  isTwoHanded: false
+  isNonLethal: false
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!28okhbnono0ovytw'
+

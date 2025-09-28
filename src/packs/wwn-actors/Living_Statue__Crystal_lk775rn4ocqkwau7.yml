@@ -108,11 +108,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/golem-head.svg
 items:
   - name: Sturdy Blow
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -154,7 +152,6 @@ items:
     _key: '!actors.items!lk775rn4ocqkwau7.pezocschfzy3mrma'
   - name: Sleep Immunity
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Unaffected by sleep spells.
       cost: 0
@@ -183,7 +180,6 @@ items:
     _key: '!actors.items!lk775rn4ocqkwau7.n7rn3vo1evihs69x'
   - name: Magical Origins
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Created by powerful wizards.
       cost: 0
@@ -212,7 +208,6 @@ items:
     _key: '!actors.items!lk775rn4ocqkwau7.qghfkshewfuy4jj4'
   - name: Attacks
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Depend on form of statue (humanoid statues may use weapons, animal

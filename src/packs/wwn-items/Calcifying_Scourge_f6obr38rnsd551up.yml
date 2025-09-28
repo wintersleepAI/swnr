@@ -13,7 +13,7 @@ system:
     successfully by a creature, the target is temporarily slowed, losing its
     Move action for the next 1d6 rounds.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Elementalist
   level: 4
   prepared: false
@@ -51,7 +51,6 @@ _stats:
 folder: qxBl7uHLaKwQr1Ih
 flags: {}
 effects: []
-img: systems/wwn/assets/new/elementalist_spell.png
 ownership:
   default: 0
 _key: '!items!f6obr38rnsd551up'

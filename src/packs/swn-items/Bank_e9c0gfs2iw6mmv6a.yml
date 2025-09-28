@@ -1,0 +1,55 @@
+name: Bank
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.e9c0gfs2iw6mmv6a
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: e9c0gfs2iw6mmv6a
+system:
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 12
+  counter: ''
+  description: >-
+    Once per turn, the faction can ignore one cost or FacCred loss imposed by
+    another faction. This does not require an action. Multiple bank assets allow
+    multiple losses to be ignored.
+  health:
+    max: 8
+    value: 8
+  income: 0
+  maintenance: 0
+  rating: 4
+  tl: 3
+  turnRoll: >-
+    Once per turn, the faction can ignore one cost or FacCred loss imposed by
+    another faction. This does not require an action. Multiple bank assets allow
+    multiple losses to be ignored.
+  type: Facility
+  unusable: false
+  qualities:
+    permission: false
+    action: false
+    special: true
+  category: wealth
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!e9c0gfs2iw6mmv6a'
+

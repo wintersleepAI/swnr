@@ -169,7 +169,6 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     switch (this.document.type) {
       case 'feature':
         options.parts.push('attributesFeature');
-        options.parts.push('effects');
         options.defaultTab = 'attributes';
         break;
       case 'item':
@@ -216,6 +215,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       case 'skill':
         break;
     }
+    options.parts.push('effects');
     options.parts.push('description');
   }
 
@@ -263,23 +263,6 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
           context.consumptionTypes = CONFIG.SWN.consumptionTypes;
           context.consumptionCadences = CONFIG.SWN.consumptionCadences;
           context.consumptionTiming = CONFIG.SWN.consumptionTiming;
-          // Get consumable items from actor if available
-          const actor = this.document.actor;
-          if (actor) {
-            // Filter for items that have uses and are consumable
-            const allItems = actor.items.filter(i => i.type === "item");
-            context.consumableItems = allItems.filter(i => {
-              const uses = i.system.uses;
-              // Include items that have uses configured OR are marked as consumable
-              return uses && (
-                (uses.consumable && uses.consumable !== "none") ||
-                (uses.max && uses.max > 0) ||
-                (uses.value !== undefined)
-              );
-            }).map(i => ({ id: i.id, name: i.name }));
-          } else {
-            context.consumableItems = [];
-          }
         }
         break;
       case 'attributesSpell':
@@ -529,10 +512,10 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
         cadenceField.value = consumption.cadence;
       }
       
-      // Update itemId field (for consumableItem type)
-      const itemIdField = this.element.querySelector(`[name="system.consumptions.${index}.itemId"]`);
-      if (itemIdField && itemIdField.value !== consumption.itemId) {
-        itemIdField.value = consumption.itemId;
+      // Update itemText field (for consumableItem type)
+      const itemTextField = this.element.querySelector(`[name="system.consumptions.${index}.itemText"]`);
+      if (itemTextField && itemTextField.value !== (consumption.itemText ?? "")) {
+        itemTextField.value = consumption.itemText ?? "";
       }
       
       // Update internal uses fields (for uses type)

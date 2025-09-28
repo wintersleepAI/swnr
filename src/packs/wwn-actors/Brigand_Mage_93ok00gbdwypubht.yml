@@ -117,11 +117,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/wizard-face.svg
 items:
   - name: Sword, Long
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -166,7 +164,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.0e804wi9oxlbe090'
   - name: Crossbow
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Crossbows come in heavier varieties than the one listed, but such slow,
@@ -213,7 +210,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.j3uf5267zn58g5dv'
   - name: Light (Mage)
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 6 turns + 1 per level Range: 120' This spell has three usages:
@@ -252,7 +248,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.186wkhjl3qr6ku6m'
   - name: Magic Missile
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 1 turn Range: 150' This spell conjures a glowing dart of
@@ -289,7 +284,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.gzzpq7j2vr9s9nwr'
   - name: Shield
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 2 turns Range: The caster Shield creates an invisible field of
@@ -321,7 +315,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.vbsjwoqee7m753si'
   - name: Invisibility
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Permanent (but may be broken, see below) Range: 240' The
@@ -359,7 +352,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.48pme9f97j16wmsu'
   - name: Web
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 48 turns Range: 10' Web conjures a many-layered mass of
@@ -399,7 +391,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.ovx8anpdno7p371r'
   - name: Knock
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 1 round Range: 60' The knock spell opens stuck, barred, or
@@ -432,7 +423,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.h3lvva3gg4cfu6yu'
   - name: Lightning Bolt
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Instant Range: 180' A powerful stroke of electrical energy,
@@ -468,7 +458,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.vqmejcv940awaia6'
   - name: Hallucinatory Terrain
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Until touched Range: 240' Hallucinatory terrain either
@@ -502,7 +491,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.zg5rkjmqkwbeis7y'
   - name: Polymorph Self
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 6 turns +1 per level Range: The caster The caster transforms
@@ -542,7 +530,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.327704y0xp0quova'
   - name: Polymorph Others
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Permanent Range: 60' A living subject is changed into another
@@ -581,7 +568,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.8n92c6h4b2u5sabx'
   - name: Wall of Ice
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 12 turns Range: 120' An immobile, translucent, wall of ice
@@ -620,7 +606,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.znik4sd8bjt8xj7c'
   - name: Teleport
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Instant Range: 10' The caster or a chosen creature vanishes
@@ -673,7 +658,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.vt2ipk4goqopo86s'
   - name: Conjure Elemental
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Permanent (until dismissed or slain) Range: 240' A 16 Hit Dice
@@ -737,7 +721,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.cne859n73tcmn55h'
   - name: Cloudkill
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 6 turns Range: 30' A poisonous fog streams from the caster's
@@ -775,7 +758,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.71f8za7nz2v42nvw'
   - name: Fire Ball
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: Instant Range: 240' Flame streaks towards a point within range
@@ -808,7 +790,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.9oxoe7k7sib67u47'
   - name: Fly
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: [[1d6 turns]] +1 per level Range: The caster or a creature
@@ -841,7 +822,6 @@ items:
     _key: '!actors.items!93ok00gbdwypubht.x8nh4z1vcfaxh825'
   - name: Protection from Evil (Mage)
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         Duration: 6 turns Range: The caster This spell wards the caster from

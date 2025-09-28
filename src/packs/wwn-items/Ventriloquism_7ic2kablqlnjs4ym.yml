@@ -6,7 +6,7 @@ system:
     Duration: 2 turns Range: 60' The caster may make their voice appear to come
     from any location or source (e.g. a statue or animal) within range.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Mage
   level: 1
   prepared: false
@@ -44,7 +44,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!7ic2kablqlnjs4ym'

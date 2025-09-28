@@ -10,7 +10,7 @@ system:
     target simply takes damage as normal. This art can be used only once per
     round on any given target, and the target must be no larger than an ox.
   favorite: false
-  subType: arcane
+  subType: art
   source: Vowed
   level: 1
   prepared: false
@@ -42,7 +42,6 @@ _stats:
 folder: 1QSf6od5nEmDkbXu
 flags: {}
 effects: []
-img: systems/wwn/assets/new/vowed_art.png
 ownership:
   default: 0
 _key: '!items!iypnny0d3z97u2wa'

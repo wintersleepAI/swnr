@@ -1,0 +1,56 @@
+name: Telescoping pole
+type: item
+folder: H7LaO0abkbAji23w
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.field-equipment.Item.a3kv148qcndtd3iw
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286673546
+  modifiedTime: 1757286673546
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: a3kv148qcndtd3iw
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 10
+  description: >-
+    Telescoping pole: Retracting to a 30-centimeter baton, this pole extends and
+    locks into a 3.048-meter extension that can bear as much as a thousand
+    kilograms of weight or serve as a makeshift club.
+  encumbrance: 0
+  location: other
+  quality: stock
+  tl: 4
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!a3kv148qcndtd3iw'
+

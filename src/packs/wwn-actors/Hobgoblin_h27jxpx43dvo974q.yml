@@ -111,11 +111,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/barbute.svg
 items:
   - name: Sword, Short
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -160,7 +158,6 @@ items:
     _key: '!actors.items!h27jxpx43dvo974q.zd0nv5bewd7o7eei'
   - name: Spear, Heavy
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Spears, and their longer cousin the pike, are common military weapons
@@ -205,7 +202,6 @@ items:
     _key: '!actors.items!h27jxpx43dvo974q.wagaznaj9wwueieo'
   - name: Bow, Large
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Bows cover everything from the small self bows of horse archers to the
@@ -253,7 +249,6 @@ items:
     _key: '!actors.items!h27jxpx43dvo974q.x499jyqbczc9xb45'
   - name: Shield, Small
     type: armor
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
     system:
       description: >-
         Shields come in two general varieties. Small ones, often made of

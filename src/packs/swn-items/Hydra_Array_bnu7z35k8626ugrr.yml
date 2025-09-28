@@ -1,0 +1,80 @@
+name: Hydra Array
+type: weapon
+folder: wyMNmbl7yA6k0fK4
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.heavy.Item.bnu7z35k8626ugrr
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286675498
+  modifiedTime: 1757294640846
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: bnu7z35k8626ugrr
+system:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 10
+    suppress: true
+    type: special
+    value: 10
+    current: null
+  cost: 20000
+  damage: 3d6
+  description: >-
+    Hydra arrays sequence a number of missile launchers to fire at once. The
+    gunner designates up to three targets and can then make three rolls to hit
+    divided among them. Each successful hit on a target allows the gunner to
+    roll damage once, but only the highest damage roll is applied to the target.
+    Thus, if all three volleys were aimed at a single target and two of them
+    hit, the gunner would roll damage twice and apply the best result. A volley
+    from the array costs 150 credits.
+  encumbrance: 0
+  location: other
+  quality: stock
+  range:
+    max: 8000
+    normal: 4000
+  secondStat: none
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 4
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+  isTwoHanded: false
+  isNonLethal: false
+  isMelee: false
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!bnu7z35k8626ugrr'
+

@@ -1,0 +1,355 @@
+name: Unaffiliated Street Thug
+type: npc
+img: icons/svg/mystery-man.svg
+system:
+  health:
+    value: 10
+    max: 10
+  biography: >-
+    <p>Lacking any gang support, these disposable thugs rarely have any
+    significant cyber.</p>
+  species: ''
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 10
+  meleeAc: 10
+  ab: 1
+  meleeAb: 1
+  systemStrain:
+    value: 0
+    permanent: 0
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: street
+  skillBonus: 1
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 1
+  hitDice: 1d6
+  saves: 15
+  moralScore: 7
+  reaction: unknown
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  faction: ''
+  homeworld: ''
+  pools: {}
+  tweak:
+    showCyberware: true
+    showPsychic: true
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: true
+    showPoolsInPowers: false
+prototypeToken:
+  name: Street Thug
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/mystery-man.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+items:
+  - name: Heavy Pistol
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.kgoo4k7gf2gvp0rx
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: PfgUVPQAMmpdwai6
+    system:
+      ammo:
+        burst: false
+        max: 8
+        suppress: false
+        type: ammo
+        value: 7
+        longReload: false
+        current: null
+      cost: 200
+      damage: 1d8
+      description: >-
+        Light and heavy pistols are categorized by the caliber of the bullet
+        they fire. Some operators prefer the low recoil and high mag capacity
+        possible with a low-caliber round, while others like to have a little
+        more certainty in dropping the targets they hit.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 100
+        normal: 10
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      stat: dex
+      trauma:
+        die: 1d6
+        rating: 3
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: readied
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!yIRsQPPWDTU0RkXV.PfgUVPQAMmpdwai6'
+  - name: Knife
+    type: weapon
+    _id: JX1Rfw3XHOHz15hC
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    system:
+      description: ''
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      encumbrance: 1
+      cost: 0
+      tl: null
+      location: readied
+      quality: stock
+      noEncReadied: false
+      stat: dex
+      secondStat: null
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      shock:
+        dmg: 1
+        ac: 15
+      ab: 0
+      ammo:
+        longReload: false
+        suppress: false
+        type: none
+        max: 10
+        value: 10
+        burst: false
+        current: null
+      range:
+        normal: 1
+        max: 2
+      damage: 1d4
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      trauma:
+        die: 1d6
+        rating: null
+      isTwoHanded: false
+      isNonLethal: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    ownership:
+      default: 0
+    _key: '!actors.items!yIRsQPPWDTU0RkXV.JX1Rfw3XHOHz15hC'
+  - name: Ordinary Clothing
+    type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-armor.Item.4wpvufw1wsejizlw
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 7e5BlhNVS1lPufTv
+    system:
+      ac: 10
+      cost: 25
+      description: >-
+        Some bold, impoverished, or highly fashionable people still insist on
+        wearing clothing that has no functional use as armor.
+      encumbrance: 0
+      isHeavy: false
+      isSubtle: true
+      meleeAc: 10
+      shieldACBonus: 0
+      shieldMeleeACBonus: 0
+      soak:
+        max: 0
+        value: 0
+      traumaDiePenalty: 0
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: readied
+      quality: stock
+      noEncReadied: false
+      shield: false
+      use: false
+      dr: 0
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!yIRsQPPWDTU0RkXV.7e5BlhNVS1lPufTv'
+effects: []
+folder: 1MnMOlCpFjrZIhXu
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.yIRsQPPWDTU0RkXV
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
+_id: yIRsQPPWDTU0RkXV
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!actors!yIRsQPPWDTU0RkXV'
+

@@ -8,7 +8,7 @@ system:
     barrier, whether from inside or outside. ▶ Dismissing: The caster may end
     this spell at any time before the duration has expired.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Mage
   level: 6
   prepared: false
@@ -46,7 +46,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!o55d2ckddbrw7t7e'

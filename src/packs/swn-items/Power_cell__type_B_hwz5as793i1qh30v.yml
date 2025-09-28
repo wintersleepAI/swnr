@@ -1,0 +1,60 @@
+name: Power cell, type B
+type: item
+folder: rvD6mRxUC48bljtg
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ammo-and-power.Item.hwz5as793i1qh30v
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286652097
+  modifiedTime: 1757286652097
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: hwz5as793i1qh30v
+system:
+  favorite: false
+  quantity: 1
+  uses:
+    max: 1
+    value: 1
+    ammo: typeBPower
+    consumable: bundle
+    keepEmpty: true
+    emptyQuantity: 0
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 100
+  description: >-
+    Power cells: One of the few standardized artifacts inherited from before the
+    Silence, power cells are small cylindrical objects designed to take and hold
+    electrical charges. These larger type B cells for vehicles and heavy gear.
+    The engineering for the cells is substantially different, and they cannot be
+    exchanged or recharge each other without a trained tech’s modifications or a
+    converter unit. Power cells can be recharged off a ship’s power plant or
+    other grid. Recharging requires 24 hours for a type B cell.
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 4
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!hwz5as793i1qh30v'
+

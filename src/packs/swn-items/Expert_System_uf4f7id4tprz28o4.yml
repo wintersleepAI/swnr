@@ -1,0 +1,46 @@
+name: Expert System
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/gps.svg
+folder: 6XDktrKETRNcBLu6
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.drone-fittings.Item.uf4f7id4tprz28o4
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286953010
+  modifiedTime: 1757286953010
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: uf4f7id4tprz28o4
+system:
+  broken: false
+  cost: 5000
+  costMultiplier: true
+  description: >-
+    The drone is loaded with sophisticated self-piloting software. It can be
+    given a flight plan by its operator, have targets designated for its weapon,
+    and respond to simple environmental cues. Each new command takes up a Main
+    Action and commands with any conditional states may require an Int/Program
+    skill check to get the drone to understand. The drone can fire only one
+    weapon per round and uses a total attack bonus of +2 if attacking
+    autonomously. Quantum ECM will scramble this lightweight system.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  type: drone
+  favorite: false
+  tl: 4
+  minClass: fighter
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!uf4f7id4tprz28o4'
+

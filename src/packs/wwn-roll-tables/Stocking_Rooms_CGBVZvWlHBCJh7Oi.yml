@@ -2,11 +2,11 @@ _id: CGBVZvWlHBCJh7Oi
 name: Stocking Rooms
 img: icons/svg/d20-grey.svg
 description: >-
-  Stocking an exploration site’s rooms is the most demanding part of site
+  <p>Stocking an exploration site’s rooms is the most demanding part of site
   preparation. A ruin map can be scrawled out in moments, and deciding or
   randomly generating a room’s purpose can take only a few minutes, but giving
   each such place a degree of flavor and interest is a much more challenging
-  prospect. Fortunately, a basic system can smooth this creative work.
+  prospect. Fortunately, a basic system can smooth this creative work.</p>
 results:
   - _id: Jilu1xbaIhr2oXEF
     type: text
@@ -69,9 +69,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293453302
     name: Room-Hazard
-    documentUuid: Compendium.wwn.gm-subtables.m0SIV8ejdxKnElhp
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.m0SIV8ejdxKnElhp
     description: ''
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.Y9TT9cr9yqviiULK'
   - _id: uBck6ZYdgi0yJvP1
@@ -112,9 +113,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293458296
     name: Room-Enigma
-    documentUuid: Compendium.wwn.gm-subtables.4uAIygVNERLjC7s1
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.4uAIygVNERLjC7s1
     description: ''
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.BzCM921IWxN1NRcw'
   - _id: PwTVK8tCB0K0TcIY
@@ -155,9 +157,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293463904
     name: Room-Distractor
-    documentUuid: Compendium.wwn.gm-subtables.0SVWjpyVal6Ji6Lz
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.0SVWjpyVal6Ji6Lz
     description: ''
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.zrRp1NpbC3x0loaH'
   - _id: QDlRT6Fy6LjhaOY0
@@ -218,9 +221,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293447513
     name: Room-Treasure
-    documentUuid: Compendium.wwn.gm-subtables.DM1jZFeude9HBs1i
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.DM1jZFeude9HBs1i
     description: ''
     _key: '!tables.results!CGBVZvWlHBCJh7Oi.24oIMHRhVkhz6xqL'
 formula: 1d8
@@ -236,8 +240,8 @@ _stats:
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271920613
-  modifiedTime: 1754271920613
-  lastModifiedBy: lKC5x4Yf023Bizof
+  modifiedTime: 1757293441558
+  lastModifiedBy: iXDXVi7OlHcRwXw0
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3

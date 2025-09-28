@@ -63,7 +63,8 @@ export default class SWNPower extends SWNItemBase {
         choices: Object.keys(CONFIG.SWN.consumptionCadences),
         initial: "day"
       }),
-      itemId: new fields.StringField({ initial: "" }),
+      // Free-text description for required item(s) for display in selection dialog
+      itemText: new fields.StringField({ initial: "" }),
       uses: new fields.SchemaField({
         value: new fields.NumberField({ initial: 1, min: 0 }),
         max: new fields.NumberField({ initial: 1, min: 0 })
@@ -114,8 +115,8 @@ export default class SWNPower extends SWNItemBase {
         }
         
         // Ensure other properties have defaults
-        if (!consumption.itemId) {
-          consumption.itemId = "";
+        if (!consumption.itemText && consumption.itemText !== "") {
+          consumption.itemText = "";
         }
         if (!consumption.usesCost || typeof consumption.usesCost !== 'number') {
           consumption.usesCost = 1;
@@ -424,6 +425,14 @@ export default class SWNPower extends SWNItemBase {
     // Check if power has manual costs (timing: "manual")
     const manualConsumptions = this.getConsumptions().filter(c => c.timing === "manual");
     const hasManualCosts = manualConsumptions.length > 0;
+    const manualConsumableReqs = manualConsumptions
+      .map((c, idx) => ({ index: idx, ...c }))
+      .filter(c => c.type === "consumableItem" && (c.itemText || "").trim().length > 0);
+    const consumableRequirements = manualConsumableReqs.map(c => ({
+      index: c.index,
+      amount: c.usesCost || 0,
+      text: (c.itemText || "").trim()
+    }));
     
     // Check if power has any runtime costs (immediate or manual)
     const allConsumptions = this.getConsumptions();
@@ -436,7 +445,10 @@ export default class SWNPower extends SWNItemBase {
       powerRoll: powerRoll ? await powerRoll.render() : null,
       strainCost: totalStrainCost,
       isPassive: !hasRuntimeCosts, // Passive only if no immediate or manual costs
-      consumptions: consumptionResults // Contains immediate costs due to filtering in use()
+      consumptions: consumptionResults, // Contains immediate costs due to filtering in use()
+      hasManualConsumables: consumableRequirements.length > 0,
+      hasUnprocessedConsumableManual: consumableRequirements.length > 0,
+      consumableRequirements
     };
 
     const template = "systems/swnr/templates/chat/power-usage.hbs";
@@ -484,13 +496,23 @@ export default class SWNPower extends SWNItemBase {
     const runtimeConsumptions = allConsumptions.filter(c => c.timing === "immediate" || c.timing === "manual");
     const hasRuntimeCosts = runtimeConsumptions.length > 0;
     
+    // Determine if there are manual consumable costs to show combined button
+    const hasManualConsumables = allConsumptions.some(c => c.timing === "manual" && c.type === "consumableItem");
+    const consumableRequirements = allConsumptions
+      .map((c, idx) => ({ index: idx, ...c }))
+      .filter(c => c && c.timing === 'manual' && c.type === 'consumableItem' && (c.itemText || '').trim().length > 0)
+      .map(c => ({ index: c.index, amount: c.usesCost || 0, text: (c.itemText || '').trim() }));
+    
     const dialogData = {
       actor: actor,
       power: item,
       powerRoll: await powerRoll.render(),
       strainCost: 0,
       isPassive: !hasRuntimeCosts, // Passive only if no immediate or manual costs
-      consumptions: [] // Empty for initial state - shows "Spend Resources" button if has manual costs
+      consumptions: [], // Empty for initial state
+      hasManualConsumables,
+      hasUnprocessedConsumableManual: hasManualConsumables,
+      consumableRequirements
     };
     const rollMode = game.settings.get("core", "rollMode");
 
@@ -550,11 +572,18 @@ export default class SWNPower extends SWNItemBase {
         const pools = actor.system.pools || {};
         const pool = pools[poolKey];
         
-        if (!pool || pool.value < consumes.usesCost) {
+        // Check if specific pool is available, otherwise try generic pool fallback
+        let validPool = pool;
+        if ((!pool || pool.value < consumes.usesCost) && consumes.subResource) {
+          const genericPoolKey = this._getPoolKey(consumes.resourceName, "");
+          validPool = pools[genericPoolKey];
+        }
+        
+        if (!validPool || validPool.value < consumes.usesCost) {
           return { 
             valid: false, 
             reason: "insufficient-source-effort",
-            message: `Insufficient source effort: ${pool?.value || 0}/${pool?.max || 0} available, ${consumes.usesCost} required`
+            message: `Insufficient source effort: ${validPool?.value || 0}/${validPool?.max || 0} available, ${consumes.usesCost} required`
           };
         }
         return { valid: true };
@@ -564,9 +593,8 @@ export default class SWNPower extends SWNItemBase {
         return { valid: true };
         
       case "consumableItem":
-        // If no item is preset on the power, defer to the selection dialog.
-        // Validation no longer enforces a required total; the dialog controls amounts.
-        if (!consumes.itemId) {
+        // Always defer to selection dialog; no fixed association with a specific item
+        {
           const eligible = (actor.items.contents || actor.items)
             .filter(i => i.type === "item"
               && i.system?.uses?.consumable !== "none"
@@ -577,22 +605,6 @@ export default class SWNPower extends SWNItemBase {
           }
           return { valid: true };
         }
-        
-        // Legacy behavior: an item was configured on the power
-        const consumableItem = actor.items.get(consumes.itemId);
-        if (!consumableItem) {
-          return { valid: false, reason: "item-not-found", message: "Consumable item not found in inventory" };
-        }
-        
-        const itemUses = consumableItem.system.uses;
-        if (!itemUses || itemUses.value < consumes.usesCost) {
-          return { 
-            valid: false, 
-            reason: "insufficient-item-uses",
-            message: `Insufficient ${consumableItem.name}: ${itemUses?.value || 0}/${itemUses?.max || 0} available, ${consumes.usesCost} required`
-          };
-        }
-        return { valid: true };
         
       case "uses":
         if (consumes.uses.value < consumes.usesCost) {
@@ -648,23 +660,38 @@ export default class SWNPower extends SWNItemBase {
     const pools = actor.system.pools || {};
     const pool = pools[poolKey];
     
-    if (!pool || pool.value < consumes.usesCost) {
+    // If specific pool not available/sufficient, try fallback to generic pool (blank subtype)
+    let actualPoolKey = poolKey;
+    let actualPool = pool;
+    
+    if ((!pool || pool.value < consumes.usesCost) && consumes.subResource) {
+      // Try generic pool with blank subtype as fallback
+      const genericPoolKey = this._getPoolKey(consumes.resourceName, "");
+      const genericPool = pools[genericPoolKey];
+      
+      if (genericPool && genericPool.value >= consumes.usesCost) {
+        actualPoolKey = genericPoolKey;
+        actualPool = genericPool;
+      }
+    }
+    
+    if (!actualPool || actualPool.value < consumes.usesCost) {
       return { 
         success: false, 
         reason: "insufficient-pool-resource",
-        message: `Insufficient ${consumes.resourceName}${consumes.subResource ? ':' + consumes.subResource : ''}: ${pool?.value || 0}/${pool?.max || 0} available, ${consumes.usesCost} required`,
-        poolKey,
+        message: `Insufficient ${consumes.resourceName}${consumes.subResource ? ':' + consumes.subResource : ''}: ${actualPool?.value || 0}/${actualPool?.max || 0} available, ${consumes.usesCost} required`,
+        poolKey: actualPoolKey,
         required: consumes.usesCost,
-        available: pool?.value || 0
+        available: actualPool?.value || 0
       };
     }
     
     // Create effort commitment if cadence is commit
     if (["commit", "scene", "day"].includes(consumes.cadence)) {
       const commitments = foundry.utils.deepClone(actor.system.effortCommitments || {});
-      if (!commitments[poolKey]) commitments[poolKey] = [];
+      if (!commitments[actualPoolKey]) commitments[actualPoolKey] = [];
       
-      commitments[poolKey].push({
+      commitments[actualPoolKey].push({
         powerId: this.parent.id,
         powerName: this.parent.name,
         amount: consumes.usesCost,
@@ -676,19 +703,19 @@ export default class SWNPower extends SWNItemBase {
       await actor.update({ "system.effortCommitments": commitments });
       
       // Update pool value
-      const newValue = Math.max(0, pool.max - commitments[poolKey].reduce((sum, c) => sum + c.amount, 0));
-      await actor.update({ [`system.pools.${poolKey}.value`]: newValue });
+      const newValue = Math.max(0, actualPool.max - commitments[actualPoolKey].reduce((sum, c) => sum + c.amount, 0));
+      await actor.update({ [`system.pools.${actualPoolKey}.value`]: newValue });
     } else {
       // Direct spending for other cadences
-      await actor.update({ [`system.pools.${poolKey}.value`]: pool.value - consumes.usesCost });
+      await actor.update({ [`system.pools.${actualPoolKey}.value`]: actualPool.value - consumes.usesCost });
     }
     
     return { 
       success: true, 
       type: "poolResource",
-      poolKey,
+      poolKey: actualPoolKey,
       resourceName: consumes.resourceName,
-      subResource: consumes.subResource,
+      subResource: actualPoolKey === poolKey ? consumes.subResource : "", // Show blank subtype if fallback used
       spent: consumes.usesCost,
       cadence: consumes.cadence
     };
@@ -779,6 +806,52 @@ export default class SWNPower extends SWNItemBase {
       await item.system.removeOneUse();
     }
     return { success: true, type: "consumableItem", spent: consumes.usesCost, items: [{ itemId: item.id, itemName: item.name, amount: consumes.usesCost }] };
+  }
+
+  /**
+   * Prompt and spend consumables for chat card consumption
+   * @param {Actor} actor - Target actor
+   * @param {Array} requirements - Array of {amount, text} requirements
+   * @returns {Promise<Object>} Result with success and consumption details
+   */
+  async _promptAndSpendConsumables(actor, requirements) {
+    // Create a dummy consumption object for the existing method
+    const dummyConsumes = { usesCost: 1 };
+
+    // Use existing method to get selections
+    const selections = await this._promptForConsumableItem(actor, dummyConsumes);
+    if (!selections || selections.length === 0) {
+      return { success: false, reason: "cancelled" };
+    }
+
+    // Apply spends across selected items
+    const itemsSpent = [];
+    for (const { itemId, amount } of selections) {
+      let remainingToSpend = Math.max(0, amount || 0);
+      let actualSpent = 0;
+      // Re-fetch the item each decrement to avoid stale system data
+      while (remainingToSpend > 0) {
+        const current = actor.items.get(itemId);
+        if (!current) break;
+        const available = current.system?.uses?.value || 0;
+        if (available <= 0) break;
+        await current.system.removeOneUse();
+        actualSpent += 1;
+        remainingToSpend -= 1;
+      }
+      if (actualSpent > 0) {
+        const name = actor.items.get(itemId)?.name || "Item";
+        itemsSpent.push({ itemId, itemName: name, amount: actualSpent });
+      }
+    }
+
+    const totalSpent = itemsSpent.reduce((s, r) => s + r.amount, 0);
+    return {
+      success: true,
+      type: "consumableItem",
+      spent: totalSpent,
+      items: itemsSpent
+    };
   }
 
   /**
