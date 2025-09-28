@@ -1,6 +1,5 @@
 import SWNActorBase from './base-actor.mjs';
 import SWNShared from '../shared.mjs';
-import { calculatePoolsFromFeatures } from '../../helpers/pool-helpers.mjs';
 
 export default class SWNNPC extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -128,7 +127,7 @@ export default class SWNNPC extends SWNActorBase {
    * @private
    */
   _calculateResourcePools() {
-    this.pools = calculatePoolsFromFeatures({
+    this.pools = this.calculatePoolsFromFeatures({
       parent: this.parent,
       dataModel: this,
       evaluateCondition: (cond) => this._evaluateCondition(cond),
@@ -341,6 +340,37 @@ export default class SWNNPC extends SWNActorBase {
         "system.health.value": newHealth,
       });
     }
+  }
+
+  async findOrCreatePool(resourceName, subResource) {
+    // Ignore straing or uses
+    if (resourceName == "Strain" || resourceName == "Uses") {
+      return false;
+    }
+    for (const feature of this.parent.items.filter(i => i.type == "feature")) {
+      for (const pool of feature.system.poolsGranted) {
+        if (pool.resourceName == resourceName && pool.subResource == subResource) {
+          // Pool already exists
+          return false;
+        }
+      }
+    }
+    // Pool does not exist, create a feature with it
+    this.parent.createEmbeddedDocuments(
+      "Item",
+      [
+        {
+          name: `${resourceName} ${subResource}`,
+          type: "feature",
+          img: "systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg",
+          system: {
+            poolsGranted: [{ resourceName: resourceName, subResource: subResource, formula: 1, cadence: "day" }]
+          },
+        },
+      ],
+      {}
+    );
+    return true;
   }
 
 

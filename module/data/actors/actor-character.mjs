@@ -1,7 +1,6 @@
 import SWNActorBase from './base-actor.mjs';
 import SWNShared from '../shared.mjs';
 import { calcMod } from '../../helpers/utils.mjs';
-import { calculatePoolsFromFeatures } from '../../helpers/pool-helpers.mjs';
 
 export default class SWNCharacter extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -64,8 +63,8 @@ export default class SWNCharacter extends SWNActorBase {
       showSpells: new fields.BooleanField({initial: false}),
       showAdept: new fields.BooleanField({initial: false}),
       showMutation: new fields.BooleanField({initial: false}),
-      showPoolsInHeader: new fields.BooleanField({ initial: true }),
-      showPoolsInPowers: new fields.BooleanField({ initial: false }),
+      showPoolsInHeader: new fields.BooleanField({ initial: false }),
+      showPoolsInPowers: new fields.BooleanField({ initial: true }),
       resourceList: new fields.ArrayField(new fields.SchemaField({
         name: SWNShared.emptyString(),
         value: SWNShared.requiredNumber(0),
@@ -278,6 +277,7 @@ export default class SWNCharacter extends SWNActorBase {
     this.favorites = this.parent.items.filter((i) => i.system["favorite"]);;
     this.readiedWeapons = readiedItems.filter((i) => i.type === "weapon");
     this.readiedArmor = readiedItems.filter((i) => i.type === "armor");
+    this.readiedGear = readiedItems.filter((i) => i.type === "item");
     this.gear = gear;
     this.consumables = consumables;
     
@@ -454,7 +454,7 @@ export default class SWNCharacter extends SWNActorBase {
    * @private
    */
   _calculateResourcePools() {
-    this.pools = calculatePoolsFromFeatures({
+    this.pools = this.calculatePoolsFromFeatures({
       parent: this.parent,
       dataModel: this,
       evaluateCondition: (cond) => this._evaluateCondition(cond),

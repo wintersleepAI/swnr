@@ -176,12 +176,25 @@
       {{/each}}
       </ol>
       {{/if}}
-
+      <div class="flex flexrow" style="align-items:flex-start;">
+        <div class="resource-bar" style="margin-top:10px;"><!--  The readied bar -->
+          <div style="width:{{actor.system.encumbrance.ready.percentage}}%" 
+            class="ready-fill {{#if (gt actor.system.encumbrance.ready.value actor.system.encumbrance.ready.max)}}full-fill{{/if}}">
+          </div>
+            <div class="text">
+              {{localize 'swnr.item.locationReadied'}} {{localize 'swnr.item.gear'}}:
+              {{actor.system.encumbrance.ready.value}}/{{actor.system.encumbrance.ready.max}}
+            </div>
+        </div>
+      </div>
       {{!-- Readied Weapons --}}
       {{> "systems/swnr/templates/actor/fragments/compact-weapon-list.hbs" itemList=actor.system.readiedWeapons actorType=actor.type }}
 
       {{!-- Readied Armor --}}
       {{> "systems/swnr/templates/actor/fragments/compact-armor-list.hbs" itemList=actor.system.readiedArmor actorType=actor.type }}
+
+      {{!-- Readied Items --}}
+      {{> "systems/swnr/templates/actor/fragments/compact-carried-list.hbs" itemList=actor.system.readiedGear actorType=actor.type }}
     </div>
   </div>
 </section>
