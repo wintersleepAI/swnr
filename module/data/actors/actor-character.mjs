@@ -78,11 +78,6 @@ export default class SWNCharacter extends SWNActorBase {
       })
     });
 
-    schema.effortCommitments = new fields.ObjectField({
-      /* Dynamic keys: "${resourceName}:${subResource}" */
-      /* Values: array of { powerId, powerName, amount } */
-    });
-
     return schema;
   }
 
@@ -459,7 +454,6 @@ export default class SWNCharacter extends SWNActorBase {
       dataModel: this,
       evaluateCondition: (cond) => this._evaluateCondition(cond),
       evaluateFormula: (formula) => this._evaluateFormula(formula),
-      includeCommitments: true,
     });
   }
 

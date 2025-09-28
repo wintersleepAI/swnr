@@ -28,6 +28,11 @@ export default class SWNActorBase extends foundry.abstract
       /* Values: { value, max, cadence } */
     });
 
+    schema.effortCommitments = new fields.ObjectField({
+      /* Dynamic keys: "${resourceName}:${subResource}" */
+      /* Values: array of { powerId, powerName, amount, duration } */
+    });
+
     schema.speed = SWNShared.requiredNumber(10);
     schema.cyberdecks = new fields.ArrayField(new fields.DocumentIdField()); 
     schema.health_max_modified = SWNShared.requiredNumber(0);
@@ -51,7 +56,7 @@ export default class SWNActorBase extends foundry.abstract
    * - dataModel: the actor data model (this) that holds `pools` (optional)
    * - evaluateCondition: function(string) => boolean
    * - evaluateFormula: function(string) => number
-   * - includeCommitments: boolean (characters true, NPC false)
+   * - includeCommitments: boolean (default true for all actors)
    *
    * Returns object keyed by poolKey with { value, max, cadence, committed?, commitments?, tempCommit, tempScene, tempDay }
    */
@@ -61,7 +66,7 @@ export default class SWNActorBase extends foundry.abstract
       dataModel = null,
       evaluateCondition = () => true,
       evaluateFormula = () => 0,
-      includeCommitments = false,
+      includeCommitments = true,
     } = options || {};
 
     const pools = {};

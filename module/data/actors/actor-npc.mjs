@@ -132,7 +132,6 @@ export default class SWNNPC extends SWNActorBase {
       dataModel: this,
       evaluateCondition: (cond) => this._evaluateCondition(cond),
       evaluateFormula: (formula) => this._evaluateFormula(formula, this._extractHitDiceNumber()),
-      includeCommitments: false,
     });
   }
 
