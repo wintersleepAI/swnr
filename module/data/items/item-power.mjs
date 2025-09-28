@@ -809,6 +809,52 @@ export default class SWNPower extends SWNItemBase {
   }
 
   /**
+   * Prompt and spend consumables for chat card consumption
+   * @param {Actor} actor - Target actor
+   * @param {Array} requirements - Array of {amount, text} requirements
+   * @returns {Promise<Object>} Result with success and consumption details
+   */
+  async _promptAndSpendConsumables(actor, requirements) {
+    // Create a dummy consumption object for the existing method
+    const dummyConsumes = { usesCost: 1 };
+
+    // Use existing method to get selections
+    const selections = await this._promptForConsumableItem(actor, dummyConsumes);
+    if (!selections || selections.length === 0) {
+      return { success: false, reason: "cancelled" };
+    }
+
+    // Apply spends across selected items
+    const itemsSpent = [];
+    for (const { itemId, amount } of selections) {
+      let remainingToSpend = Math.max(0, amount || 0);
+      let actualSpent = 0;
+      // Re-fetch the item each decrement to avoid stale system data
+      while (remainingToSpend > 0) {
+        const current = actor.items.get(itemId);
+        if (!current) break;
+        const available = current.system?.uses?.value || 0;
+        if (available <= 0) break;
+        await current.system.removeOneUse();
+        actualSpent += 1;
+        remainingToSpend -= 1;
+      }
+      if (actualSpent > 0) {
+        const name = actor.items.get(itemId)?.name || "Item";
+        itemsSpent.push({ itemId, itemName: name, amount: actualSpent });
+      }
+    }
+
+    const totalSpent = itemsSpent.reduce((s, r) => s + r.amount, 0);
+    return {
+      success: true,
+      type: "consumableItem",
+      spent: totalSpent,
+      items: itemsSpent
+    };
+  }
+
+  /**
    * Prompt the user to choose a readied consumable item to spend for this power
    * @param {Actor} actor
    * @param {Object} consumes
