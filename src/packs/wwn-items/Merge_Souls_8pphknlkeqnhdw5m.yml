@@ -12,7 +12,7 @@ system:
     will while the spell is in effect. The power ends at daybreak; if dispelled
     sooner, the remaining pool is split proportionately.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Necromancer
   level: 3
   prepared: false
@@ -50,7 +50,6 @@ _stats:
 folder: qxBl7uHLaKwQr1Ih
 flags: {}
 effects: []
-img: systems/wwn/assets/new/necromancer_spell.png
 ownership:
   default: 0
 _key: '!items!8pphknlkeqnhdw5m'

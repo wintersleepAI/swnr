@@ -1,0 +1,64 @@
+name: Stiletto charge
+type: item
+folder: A92luWXXOnWWWMUA
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.computing-gear.Item.fc1ixkf59deiitpz
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286668405
+  modifiedTime: 1757286668405
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: fc1ixkf59deiitpz
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 0
+  description: >-
+    Stiletto charge: These ancient Mandate-era polymorphic intrusion charges
+    were originally made to allow Mandate agents to easily overcome primitive
+    colonial data security measures. Each charge is a small interface plug the
+    size of a human thumb. When used as part of a hack against a TL4 system, it
+    causes the skill check to automatically succeed regardless of the
+    difficulty. Without line shunts, however, the duration of the hack is still
+    no more than the usual 1d4 rounds plus the hacker’s Program skill. These
+    devices are single-use, and are prized so highly that they are almost always
+    unavailable for conventional purchase. Favors to the right people and the
+    looting of Mandate remnants are the only normal ways to acquire these
+    devices.
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 5
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/laptop.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!fc1ixkf59deiitpz'
+

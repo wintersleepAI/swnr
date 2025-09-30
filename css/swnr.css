@@ -593,6 +593,15 @@
   margin-left: 0.25rem;
 }
 
+.swnr .sheet-header .resource-pools .pools-list {
+  flex-wrap: nowrap;
+}
+
+.swnr .sheet-header .resource-pools .pool-badge {
+  min-width: 3rem;
+  flex-shrink: 1;
+}
+
 .swnr.item .pools-granted-container {
   max-height: none;
   overflow: visible;
@@ -1113,6 +1122,10 @@
 }
 .swnr .resource-bar .stowed-fill {
   background: var(--stowed-bar-color);
+  height: 100%;
+}
+.swnr .resource-bar .full-fill {
+  background: var(--over-filled-bar-color);
   height: 100%;
 }
 .swnr .resource-bar .text {

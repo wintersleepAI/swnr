@@ -1,0 +1,59 @@
+name: Tailored antiallergens
+type: item
+folder: byrj73aeo8TgSYac
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.tools-and-medical.Item.6mgryird4xf16bsi
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286683353
+  modifiedTime: 1757286683353
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 6mgryird4xf16bsi
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 5
+  description: >-
+    Tailored Antiallergens: A dose of tailored antiallergens can be used to
+    render a local world’s organics largely edible by humans and its atmosphere
+    breathable without severe allergic reactions. While many worlds have been
+    seeded with Terran life forms or have produced organics that are edible by
+    humans, others are toxic without the appropriate chemical augmentation. A
+    dose of these antiallergens lasts for twenty-four hours.
+  encumbrance: 0
+  location: other
+  quality: stock
+  tl: 4
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/first-aid-kit.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!6mgryird4xf16bsi'
+

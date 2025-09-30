@@ -12,7 +12,7 @@ system:
     If used against rock-based monsters, the spell does 1d10 damage per caster
     level, with a Physical save for half.
   favorite: false
-  subType: arcane
+  subType: spell
   source: High Mage
   level: 2
   prepared: false
@@ -50,7 +50,6 @@ _stats:
 folder: qxBl7uHLaKwQr1Ih
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!k7k063e4aj3mfhqt'

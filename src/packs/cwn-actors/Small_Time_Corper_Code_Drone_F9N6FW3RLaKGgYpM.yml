@@ -1,0 +1,433 @@
+folder: 1MnMOlCpFjrZIhXu
+name: Small-Time Corper Code Drone
+type: npc
+_id: F9N6FW3RLaKGgYpM
+img: icons/svg/mystery-man.svg
+system:
+  health:
+    value: 5
+    max: 5
+  biography: ''
+  species: ''
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 10
+  meleeAc: 10
+  ab: 0
+  meleeAb: 0
+  systemStrain:
+    value: 0
+    permanent: 0
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: street
+  skillBonus: 1
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  hitDice: 1d8
+  saves: 15
+  moralScore: 7
+  reaction: unknown
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  faction: ''
+  homeworld: ''
+  pools: {}
+  tweak:
+    showCyberware: true
+    showPsychic: true
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: true
+    showPoolsInPowers: false
+prototypeToken:
+  name: Small Time
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/mystery-man.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+items:
+  - name: Heavy Pistol
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.kgoo4k7gf2gvp0rx
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: ISpnT9yRpGhO2PBx
+    system:
+      ammo:
+        burst: false
+        max: 8
+        suppress: false
+        type: ammo
+        value: 8
+        longReload: false
+        current: null
+      cost: 200
+      damage: 1d8
+      description: >-
+        Light and heavy pistols are categorized by the caliber of the bullet
+        they fire. Some operators prefer the low recoil and high mag capacity
+        possible with a low-caliber round, while others like to have a little
+        more certainty in dropping the targets they hit.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 100
+        normal: 10
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      stat: dex
+      trauma:
+        die: 1d6
+        rating: 3
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!F9N6FW3RLaKGgYpM.ISpnT9yRpGhO2PBx'
+  - name: Cranial Jack
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.0vi41za0bti143fz
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 92mxTHPanoQQoQas
+    system:
+      concealment: Touch
+      cost: 1000
+      description: >-
+        A discreetly-placed plug socket in the user's head or neck allows
+        interfacing with cyberdecks and gear equipped with a jack line.
+      effect: Link to jack-equipped gear
+      strain: 0.25
+      type: Head
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!F9N6FW3RLaKGgYpM.92mxTHPanoQQoQas'
+  - name: Cyberdeck
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.1otao4zzgjtth9ny
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 1eTWYwmwzenwPEH3
+    system:
+      concealment: Sight
+      cost: 0
+      description: >-
+        <p>Memory 10, Shielding 10, CPU 3 with verbs Defend, Paralyze, Stun,
+        Lock, Terminate and subjects Avatar, Barrier, Camera, Door, Program</p>
+      effect: ''
+      strain: 0
+      type: Sensory
+      favorite: false
+      tl: 1
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!F9N6FW3RLaKGgYpM.1eTWYwmwzenwPEH3'
+  - name: Defend
+    type: program
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-program.Item.jvws7zz5xhwk0mez
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 62JcOVskatSMeZi4
+    system:
+      accessCost: 0
+      cost: 1000
+      description: >-
+        A special Verb that can only be targeted at a friendly device or allied
+        cyberware user within range, and costs no Access to use. While the
+        program remains running, any hostile hacking attempts aimed at that
+        device or any of the target's cyber systems must first beat the user in
+        an opposed Int/Program skill check before they can attempt their hack.
+        This Verb cannot negate programs that are already running on the target.
+      selfTerminating: false
+      skillCheckMod: 0
+      target: Device/Cyber
+      type: verb
+      useAffects: Shield a friendly device or cyber system
+      favorite: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!F9N6FW3RLaKGgYpM.62JcOVskatSMeZi4'
+  - name: Paralyze
+    type: program
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-program.Item.4m96x4njjepvf0cx
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: bmPh4lEvwOLxjcxH
+    system:
+      accessCost: 1
+      cost: 2000
+      description: >-
+        On a successful opposed Int/Program skill check against the target,
+        render a Demon or avatar incapable of moving out of a node or using the
+        Alert the Network or Send Message actions while the program is running.
+        Other cyberspace actions can be taken normally. Human hackers are also
+        physically paralyzed while the program runs, incapable of moving in
+        meatspace until the connection is cut or the program ends.
+      selfTerminating: false
+      skillCheckMod: -1
+      target: Avatar
+      type: verb
+      useAffects: Paralyze an avatar's owner via network
+      favorite: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!F9N6FW3RLaKGgYpM.bmPh4lEvwOLxjcxH'
+  - name: Defend
+    type: program
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-program.Item.jvws7zz5xhwk0mez
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: LxeLna234wdMUfTq
+    system:
+      accessCost: 0
+      cost: 1000
+      description: >-
+        A special Verb that can only be targeted at a friendly device or allied
+        cyberware user within range, and costs no Access to use. While the
+        program remains running, any hostile hacking attempts aimed at that
+        device or any of the target's cyber systems must first beat the user in
+        an opposed Int/Program skill check before they can attempt their hack.
+        This Verb cannot negate programs that are already running on the target.
+      selfTerminating: false
+      skillCheckMod: 0
+      target: Device/Cyber
+      type: verb
+      useAffects: Shield a friendly device or cyber system
+      favorite: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!F9N6FW3RLaKGgYpM.LxeLna234wdMUfTq'
+  - name: Defend
+    type: program
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-program.Item.jvws7zz5xhwk0mez
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: pB2Z0KI2OXYO2KGY
+    system:
+      accessCost: 0
+      cost: 1000
+      description: >-
+        A special Verb that can only be targeted at a friendly device or allied
+        cyberware user within range, and costs no Access to use. While the
+        program remains running, any hostile hacking attempts aimed at that
+        device or any of the target's cyber systems must first beat the user in
+        an opposed Int/Program skill check before they can attempt their hack.
+        This Verb cannot negate programs that are already running on the target.
+      selfTerminating: false
+      skillCheckMod: 0
+      target: Device/Cyber
+      type: verb
+      useAffects: Shield a friendly device or cyber system
+      favorite: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!F9N6FW3RLaKGgYpM.pB2Z0KI2OXYO2KGY'
+effects: []
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.F9N6FW3RLaKGgYpM
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!actors!F9N6FW3RLaKGgYpM'
+

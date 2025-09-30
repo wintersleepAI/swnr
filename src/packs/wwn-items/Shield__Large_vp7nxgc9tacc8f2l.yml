@@ -1,6 +1,6 @@
 name: Shield, Large
 type: armor
-sort: 0
+sort: 200000
 system:
   description: >-
     Shields come in two general varieties. Small ones, often made of costlier
@@ -22,7 +22,7 @@ system:
   location: stowed
   quality: stock
   noEncReadied: false
-  ac: 10
+  ac: 14
   shield: true
   use: false
   meleeAc: 14
@@ -33,25 +33,25 @@ system:
   traumaDiePenalty: 0
   isSubtle: false
   isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
+  shieldMeleeACBonus: 1
+  shieldACBonus: 1
   baseAc: 14
 _id: vp7nxgc9tacc8f2l
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.348'
   systemId: swnr
-  systemVersion: 2.1.0
+  systemVersion: 2.1.0-beta
   createdTime: 1754277456696
-  modifiedTime: 1754277456696
-  lastModifiedBy: null
+  modifiedTime: 1758741974511
+  lastModifiedBy: lKC5x4Yf023Bizof
   exportSource: null
-folder: MiJwkaqEfKd6620L
+folder: uEIK9nTIi1UzMYvs
 flags: {}
 effects: []
-img: icons/equipment/shield/shield-round-boss-wood-brown.webp
 ownership:
   default: 0
+img: icons/svg/item-bag.svg
 _key: '!items!vp7nxgc9tacc8f2l'
 

@@ -11,7 +11,7 @@ system:
     any done by the blow, or simply touching an unwary target. Arts that modify
     your Healing Touch don't aid this power.
   favorite: false
-  subType: arcane
+  subType: art
   source: Healer
   level: 1
   prepared: false
@@ -43,7 +43,6 @@ _stats:
 folder: 1QSf6od5nEmDkbXu
 flags: {}
 effects: []
-img: systems/wwn/assets/new/healer_art.png
 ownership:
   default: 0
 _key: '!items!aosofnfdq2g8jii0'

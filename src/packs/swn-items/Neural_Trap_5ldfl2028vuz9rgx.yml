@@ -1,0 +1,42 @@
+name: Neural Trap
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: b1y9xejewpVMRdey
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-metapsionics.Item.5ldfl2028vuz9rgx
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286855552
+  modifiedTime: 1757286855552
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 5ldfl2028vuz9rgx
+system:
+  description: >-
+    <p>The metapsion allows a hostile psychic into their mental sanctum in order
+    to gain a later advantage. When targeted by a hostile psionic power that
+    allows a save, the metapsion may Commit Effort as an Instant action and
+    voluntarily fail the saving throw, accepting the effect. The next psychic
+    power the user targets at that assailant then allows the victim no saving
+    throw. This technique lasts until the metapsion makes their psychic attack
+    or reclaims their Committed Effort. A hostile psychic may be affected by
+    only one <em>Neural Trap</em> from a given psychic at a time</p>
+  level: 2
+  source: metapsionics
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions: []
+  save: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!5ldfl2028vuz9rgx'
+

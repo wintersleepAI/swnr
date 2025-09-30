@@ -39,7 +39,8 @@ prototypeToken:
   width: 1
   height: 1
   texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/transparent-slime.svg
+    src: >-
+      systems/swnr/assets/icons/game-icons.net/creature-icons/transparent-slime.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -106,11 +107,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/transparent-slime.svg
 items:
   - name: Touch
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -152,7 +151,6 @@ items:
     _key: '!actors.items!cn5rz0btafyji9wq.yz228jbanl3stnam'
   - name: Blend In With Stone
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Difficult to tell apart from wet stone.
       cost: 0
@@ -181,7 +179,6 @@ items:
     _key: '!actors.items!cn5rz0btafyji9wq.gi5nlx2e86zzw2yc'
   - name: Acid
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: >-
         After a successful attack, sticks to the victim and exudes acid. The
@@ -213,7 +210,6 @@ items:
     _key: '!actors.items!cn5rz0btafyji9wq.qojqdpfb4oui9tr0'
   - name: Energy Immunity
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Unharmed by cold or fire.
       cost: 0

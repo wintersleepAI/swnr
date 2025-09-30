@@ -22,7 +22,7 @@
                 {{/if}}
               {{/if}}
             {{else if (eq type "consumableItem")}}
-              {{spent}} {{localize "swnr.consumption.consumableItem"}}
+              {{spent}} {{localize "swnr.consumption.consumed"}}
               {{#if items}}
                 :
                 {{#each items}}
@@ -112,6 +112,19 @@
     </div>
   {{else}}
     <div class="card-buttons resource-management">
+      {{#if consumableRequirements.length}}
+        <div class="consume-requirements-line">
+          <i class="fas fa-cubes"></i>
+          {{#if (eq consumableRequirements.length 1)}}
+            {{localize "swnr.consumption.selectDialog.requirements.single"}}
+          {{else}}
+            {{localize "swnr.consumption.selectDialog.requirements.multiple"}}
+          {{/if}}
+          {{#each consumableRequirements}}
+            ({{amount}}) {{text}}{{#unless @last}}, {{/unless}}
+          {{/each}}
+        </div>
+      {{/if}}
       {{! Show recovery buttons for already processed consumptions }}
       {{#if strainCost}}
         <button data-action="recover-strain" data-amount="{{strainCost}}" data-actor-id="{{actor.id}}">
@@ -123,36 +136,43 @@
       {{! Show consumption buttons for unprocessed manual consumptions only (timing: "manual") }}
       {{#each power.system.consumptions}}
         {{#if (and (ne type "none") (eq timing "manual"))}}
-          {{! Check if this consumption has already been processed }}
-          {{#unless (lookup ../processedConsumptions @index)}}
-            <button data-action="use-consumption" data-power-id="{{../power.id}}" data-actor-id="{{../actor.id}}" data-consumption-index="{{@index}}">
-              {{#if (eq type "poolResource")}}
-                <i class="fas fa-battery-half"></i>
-                Spend {{usesCost}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}} {{#if cadence}}
-                  {{#if (eq cadence "day")}}{{localize 'swnr.effort.dayShort'}}
-                  {{else if (eq cadence "scene")}}{{localize 'swnr.effort.sceneShort'}}
-                  {{else}}{{localize 'swnr.effort.commitShort'}}
+          {{#unless (eq type "consumableItem")}}
+            {{! Check if this consumption has already been processed }}
+            {{#unless (lookup ../processedConsumptions @index)}}
+              <button data-action="use-consumption" data-power-id="{{../power.id}}" data-actor-id="{{../actor.id}}" data-consumption-index="{{@index}}">
+                {{#if (eq type "poolResource")}}
+                  <i class="fas fa-battery-half"></i>
+                  Spend {{usesCost}} {{resourceName}}{{#if subResource}}:{{subResource}}{{/if}} {{#if cadence}}
+                    {{#if (eq cadence "day")}}{{localize 'swnr.effort.dayShort'}}
+                    {{else if (eq cadence "scene")}}{{localize 'swnr.effort.sceneShort'}}
+                    {{else}}{{localize 'swnr.effort.commitShort'}}
+                    {{/if}}
+                  {{/if}}
+                {{else if (eq type "systemStrain")}}
+                  <i class="fas fa-heart-broken"></i>
+                  Take {{usesCost}} {{localize "swnr.consumption.systemStrain"}}
+                {{else if (eq type "uses")}}
+                  <i class="fas fa-minus-circle"></i>
+                  Use {{usesCost}} {{localize "swnr.consumption.uses"}} {{#if cadence}}
+                    {{#if (eq cadence "day")}}{{localize 'swnr.effort.dayShort'}}
+                    {{else if (eq cadence "scene")}}{{localize 'swnr.effort.sceneShort'}}
+                    {{else}}{{localize 'swnr.effort.commitShort'}}
+                    {{/if}}
                   {{/if}}
                 {{/if}}
-              {{else if (eq type "systemStrain")}}
-                <i class="fas fa-heart-broken"></i>
-                Take {{usesCost}} {{localize "swnr.consumption.systemStrain"}}
-              {{else if (eq type "uses")}}
-                <i class="fas fa-minus-circle"></i>
-                Use {{usesCost}} {{localize "swnr.consumption.uses"}} {{#if cadence}}
-                  {{#if (eq cadence "day")}}{{localize 'swnr.effort.dayShort'}}
-                  {{else if (eq cadence "scene")}}{{localize 'swnr.effort.sceneShort'}}
-                  {{else}}{{localize 'swnr.effort.commitShort'}}
-                  {{/if}}
-                {{/if}}
-              {{else if (eq type "consumableItem")}}
-                <i class="fas fa-cube"></i>
-                Consume {{usesCost}} {{localize "swnr.consumption.consumableItem"}}
-              {{/if}}
-            </button>
+              </button>
+            {{/unless}}
           {{/unless}}
         {{/if}}
       {{/each}}
+
+      {{! Single combined button for all manual consumable-item costs }}
+      {{#if hasUnprocessedConsumableManual}}
+        <button data-action="use-consumables" data-power-id="{{power.id}}" data-actor-id="{{actor.id}}">
+          <i class="fas fa-cubes"></i>
+          {{localize "swnr.consumption.action.consume"}} {{localize "swnr.consumption.consumableItem"}}
+        </button>
+      {{/if}}
     </div>
   {{/if}}
 </div>

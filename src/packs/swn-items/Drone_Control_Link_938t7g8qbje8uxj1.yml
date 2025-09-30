@@ -1,0 +1,43 @@
+name: Drone Control Link
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: 7ZDHgPOCyrCRwTEX
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cyberware.Item.938t7g8qbje8uxj1
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286670636
+  modifiedTime: 1757286670636
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 938t7g8qbje8uxj1
+system:
+  cost: 20000
+  description: >-
+    Most often found among military bot wranglers, civilians can also get a
+    drone control link implanted to simplify the remote piloting of drones and
+    other robotic units. Users of a link can issue commands to a drone as a Move
+    action instead of a Main Action. A single drone can only receive one command
+    per round, however. Aside from this ease of command, someone with an
+    implanted rig can "look" through a piloted drone's sensors as an Instant
+    action, and a drone is never considered to be out of control even if the
+    pilot doesn't spend an action controlling it. A link can maintain a
+    connection with one drone at a time, plus the user's Program skill.
+  disabled: false
+  effect: Allows easier remote control of drones
+  strain: 1
+  tl: 4
+  favorite: false
+  type: None
+  concealment: Sight
+  complication: ''
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!938t7g8qbje8uxj1'
+

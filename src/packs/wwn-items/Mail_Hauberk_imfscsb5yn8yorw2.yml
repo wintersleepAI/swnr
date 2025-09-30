@@ -1,6 +1,6 @@
 name: Mail Hauberk
 type: armor
-sort: 0
+sort: 100000
 system:
   description: >-
     A mail hauberk in the listed style covers not only the wearer's chest, but
@@ -20,7 +20,7 @@ system:
   location: stowed
   quality: stock
   noEncReadied: false
-  ac: 10
+  ac: 16
   shield: false
   use: false
   meleeAc: 16
@@ -38,18 +38,18 @@ _id: imfscsb5yn8yorw2
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.348'
   systemId: swnr
-  systemVersion: 2.1.0
+  systemVersion: 2.1.0-beta
   createdTime: 1754277456690
-  modifiedTime: 1754277456690
-  lastModifiedBy: null
+  modifiedTime: 1758741284139
+  lastModifiedBy: lKC5x4Yf023Bizof
   exportSource: null
-folder: MiJwkaqEfKd6620L
+folder: vL1j4TVwpVKfM6Ck
 flags: {}
 effects: []
-img: icons/equipment/head/hood-chain-worn.webp
 ownership:
   default: 0
+img: icons/svg/item-bag.svg
 _key: '!items!imfscsb5yn8yorw2'
 

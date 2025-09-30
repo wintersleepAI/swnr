@@ -1,0 +1,80 @@
+name: Thunder Gun
+type: weapon
+folder: IuHCQEm5J46mKh45
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ranged.Item.w1dz37xixv70mlpv
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286681607
+  modifiedTime: 1757286681607
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: w1dz37xixv70mlpv
+system:
+  ab: 1
+  ammo:
+    burst: false
+    longReload: false
+    max: 6
+    suppress: false
+    type: typeAPower
+    value: 6
+    current: null
+  cost: 1000
+  damage: (@hitRoll>15?3:2)d10
+  description: >-
+    Thunder guns are named for the basso vibrations caused by their operation, a
+    sound that can be felt as far as thirty meters away from an operator. This
+    two-handed weapon uses grav plates to create rapid, randomized disruptions
+    in a target that increase the chance of complete structural collapse. If a
+    thunder gun hits a target with an unmodified hit roll of 16 or higher an
+    extra 1d10 damage is rolled. This bonus damage always applies to inanimate
+    targets.
+  encumbrance: 2
+  location: other
+  quality: stock
+  range:
+    max: 300
+    normal: 100
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 5
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  secondStat: null
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+  isTwoHanded: false
+  isNonLethal: false
+  isMelee: false
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!w1dz37xixv70mlpv'
+

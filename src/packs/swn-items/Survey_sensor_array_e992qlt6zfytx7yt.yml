@@ -1,0 +1,46 @@
+name: Survey sensor array
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/sattelite.svg
+folder: FSb3IGBn6eTDHX2S
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-fitting.Item.e992qlt6zfytx7yt
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: e992qlt6zfytx7yt
+system:
+  broken: false
+  cost: 5000
+  costMultiplier: true
+  description: >-
+    Most ships require only basic analysis of a star system, sufficient to
+    identify population centers, do rough scanning of an object's composition,
+    and char major navigational hazards. Survey sensor arrays greatly enhance
+    the ship's sensor abilities, allowing for finely-detailed mapping of objects
+    and planets, along with broad spectrum communications analysis. They also
+    improve attempts to detect other craft when scanning a region for stealthy
+    vessels. Any rolls with survey sensor arrays add +2 to skill checks.
+  effect: Improved planetary sensory array
+  mass: 1
+  massMultiplier: false
+  minClass: frigate
+  power: 2
+  powerMultiplier: false
+  favorite: false
+  tl: 4
+  destroyed: false
+  juryRigged: false
+  type: ship
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!e992qlt6zfytx7yt'
+

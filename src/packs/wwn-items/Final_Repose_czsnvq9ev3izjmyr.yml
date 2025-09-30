@@ -8,7 +8,7 @@ system:
     equal to your Heal skill. If they are reduced to zero hit points before the
     end of the scene, they die with no chance for stabilization or revival.
   favorite: false
-  subType: arcane
+  subType: art
   source: Healer
   level: 1
   prepared: false
@@ -40,7 +40,6 @@ _stats:
 folder: 1QSf6od5nEmDkbXu
 flags: {}
 effects: []
-img: systems/wwn/assets/default/healer_art.png
 ownership:
   default: 0
 _key: '!items!czsnvq9ev3izjmyr'

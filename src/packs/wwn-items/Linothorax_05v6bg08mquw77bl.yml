@@ -1,6 +1,6 @@
 name: Linothorax
 type: armor
-sort: 0
+sort: 106250
 system:
   description: >-
     Linothorax armor is a stiffer armor of glued, layered cloth, often as
@@ -19,7 +19,7 @@ system:
   location: stowed
   quality: stock
   noEncReadied: false
-  ac: 10
+  ac: 13
   shield: false
   use: false
   meleeAc: 13
@@ -37,18 +37,18 @@ _id: 05v6bg08mquw77bl
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.348'
   systemId: swnr
-  systemVersion: 2.1.0
+  systemVersion: 2.1.0-beta
   createdTime: 1754277456692
-  modifiedTime: 1754277456692
-  lastModifiedBy: null
+  modifiedTime: 1758741722880
+  lastModifiedBy: lKC5x4Yf023Bizof
   exportSource: null
-folder: MiJwkaqEfKd6620L
+folder: uwB7P89lzKd8aa90
 flags: {}
 effects: []
-img: icons/equipment/chest/breastplate-layered-leather-stitched.webp
 ownership:
   default: 0
+img: icons/svg/item-bag.svg
 _key: '!items!05v6bg08mquw77bl'
 

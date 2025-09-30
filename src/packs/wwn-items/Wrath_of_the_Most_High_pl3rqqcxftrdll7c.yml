@@ -7,7 +7,7 @@ system:
     target. The first time the target takes damage before the end of the next
     round, it suffers automatic additional damage equal to 1d8 plus your level.
   favorite: false
-  subType: arcane
+  subType: art
   source: Blood Priest
   level: 1
   prepared: false
@@ -39,7 +39,6 @@ _stats:
 folder: 1QSf6od5nEmDkbXu
 flags: {}
 effects: []
-img: systems/wwn/assets/default/bloodPriest_art.png
 ownership:
   default: 0
 _key: '!items!pl3rqqcxftrdll7c'

@@ -20,7 +20,7 @@ system:
     probability of spell failure is 5% per level the caster is below the caster
     of geas.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Mage
   level: 6
   prepared: false
@@ -58,7 +58,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!ecpmw1wb26u1hjvz'

@@ -9,7 +9,7 @@ system:
     neutralize poison is cast within ten rounds. 2. Items: Remove poison from an
     item.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Cleric
   level: 4
   prepared: false
@@ -47,7 +47,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!9e05l48k0ie9644l'

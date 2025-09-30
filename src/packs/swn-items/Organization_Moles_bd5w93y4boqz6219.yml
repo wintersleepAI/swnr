@@ -1,0 +1,51 @@
+name: Organization Moles
+type: asset
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.bd5w93y4boqz6219
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: bd5w93y4boqz6219
+system:
+  attackDamage: 2d6
+  attackSource: cunning
+  attackSpecial: ''
+  attackTarget: cunning
+  baseOfInfluence: false
+  cost: 10
+  counter: ''
+  description: >-
+    These can subvert and confuse enemy assets, striking to damage their
+    cohesion.<br /> Note:
+  health:
+    max: 8
+    value: 8
+  income: 0
+  maintenance: 0
+  rating: 5
+  tl: 0
+  turnRoll: ''
+  type: Tactic
+  unusable: false
+  qualities:
+    permission: false
+    action: false
+    special: false
+  category: cunning
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!bd5w93y4boqz6219'
+

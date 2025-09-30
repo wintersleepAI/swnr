@@ -2,11 +2,11 @@ _id: B1NTlfFZ5Ikwe6KP
 name: Types of Inhabitants
 img: icons/svg/d20-grey.svg
 description: >-
-  The types of inhabitants rolled or chosen here reflect the major figures in a
-  site, but they shouldn’t be taken as the only creatures to inhabit the area.
+  <p>The types of inhabitants rolled or chosen here reflect the major figures in
+  a site, but they shouldn’t be taken as the only creatures to inhabit the area.
   Some portion of a ruin or wilderness site’s inhabitants should be taken from
   exotic beasts, unaffiliated sentients, or other figures of happenstance. Such
-  variety helps keep foes fresh.
+  variety helps keep foes fresh.</p>
 results:
   - _id: 5KqItv40A5p1tqlE
     type: text
@@ -44,9 +44,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293732684
     name: Inhab-Ancient
-    documentUuid: Compendium.wwn.gm-subtables.ypsDSboKIlu0mfxF
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.ypsDSboKIlu0mfxF
     description: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.bWkdjgfIjnjjyUvV'
   - _id: lLWUliWBisMgteSe
@@ -85,9 +86,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293737988
     name: Inhab-Arratu
-    documentUuid: Compendium.wwn.gm-subtables.H2ZU19ZHt0xV88kH
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.H2ZU19ZHt0xV88kH
     description: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.IoJUxIWWNkctrY58'
   - _id: hjdadjTxYjBEhaJM
@@ -126,9 +128,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293742493
     name: Inhab-Deep
-    documentUuid: Compendium.wwn.gm-subtables.fhbfYxLtgLoVlZp5
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.fhbfYxLtgLoVlZp5
     description: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.KJU8Oyznma20x8fZ'
   - _id: XmksRSmWb6vPtKhe
@@ -167,9 +170,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293747637
     name: Inhab-Modern
-    documentUuid: Compendium.wwn.gm-subtables.vRgM3LCZL4IBvlEx
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.vRgM3LCZL4IBvlEx
     description: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.ju6HfZFBgoocvPLm'
   - _id: C9w9LHbTRFPAmyv2
@@ -208,9 +212,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757293752738
     name: Inhab-Wilderness
-    documentUuid: Compendium.wwn.gm-subtables.AEt6C19UFsL8EnU1
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.AEt6C19UFsL8EnU1
     description: ''
     _key: '!tables.results!B1NTlfFZ5Ikwe6KP.9GBpCrYz5Xtr55wv'
 formula: 1d1
@@ -226,8 +231,8 @@ _stats:
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271920613
-  modifiedTime: 1754271920613
-  lastModifiedBy: lKC5x4Yf023Bizof
+  modifiedTime: 1757293727546
+  lastModifiedBy: iXDXVi7OlHcRwXw0
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3

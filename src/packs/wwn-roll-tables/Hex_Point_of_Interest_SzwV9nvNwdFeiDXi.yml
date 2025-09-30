@@ -2,13 +2,13 @@ _id: SzwV9nvNwdFeiDXi
 name: Hex Point of Interest
 img: icons/svg/d20-grey.svg
 description: >-
-  For a hexcrawl, where a “room” consists of an entire hex of terrain, a point
-  of interest is defined a little differently. First, decide how many hexes in
-  your map should have anything particularly interesting at all. One simple way
-  to do so is to roll one die for every hex in your map; on a roll of 1 or 2,
-  there’s something worth noticing there. Use 1d6 for the die if you want a
-  densely-populated hexcrawl, or 1d8, 1d10, or even 1d12 if you want sparser
-  results.
+  <p>For a hexcrawl, where a “room” consists of an entire hex of terrain, a
+  point of interest is defined a little differently. First, decide how many
+  hexes in your map should have anything particularly interesting at all. One
+  simple way to do so is to roll one die for every hex in your map; on a roll of
+  1 or 2, there’s something worth noticing there. Use 1d6 for the die if you
+  want a densely-populated hexcrawl, or 1d8, 1d10, or even 1d12 if you want
+  sparser results.</p>
 results:
   - _id: W3LaWc7OF75ltvl6
     type: text
@@ -46,9 +46,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757292484373
     name: Types of Ruin Sites
-    documentUuid: Compendium.wwn.gm-master-tables.C1CKmhASvJurRjlL
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.C1CKmhASvJurRjlL
     description: ''
     _key: '!tables.results!SzwV9nvNwdFeiDXi.PZbqupggNLMniDJ0'
   - _id: 3DR6DgjCpZcluxDI
@@ -87,9 +88,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757292529186
     name: Hex-Community
-    documentUuid: Compendium.wwn.gm-subtables.YXKLmjpxj6h8OMgK
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.YXKLmjpxj6h8OMgK
     description: ''
     _key: '!tables.results!SzwV9nvNwdFeiDXi.BbnKt87bALrwNwmr'
   - _id: c7KlC7XtIcElFpek
@@ -128,9 +130,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757292534902
     name: Hex-Court
-    documentUuid: Compendium.wwn.gm-subtables.mvOZ7B6mwmD3BFVi
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.mvOZ7B6mwmD3BFVi
     description: ''
     _key: '!tables.results!SzwV9nvNwdFeiDXi.mlisUSCyk37Z0TI2'
   - _id: 9SAh2q68YRgWUO7V
@@ -169,9 +172,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757292553468
     name: Hex-Wilderness
-    documentUuid: Compendium.wwn.gm-subtables.GxYubvGDpoVlbPy3
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.GxYubvGDpoVlbPy3
     description: ''
     _key: '!tables.results!SzwV9nvNwdFeiDXi.3BFxnRTiYEr1IDu4'
 formula: 1d10
@@ -187,8 +191,8 @@ _stats:
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271920613
-  modifiedTime: 1754271920613
-  lastModifiedBy: lKC5x4Yf023Bizof
+  modifiedTime: 1757292481435
+  lastModifiedBy: iXDXVi7OlHcRwXw0
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3

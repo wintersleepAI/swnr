@@ -15,7 +15,7 @@ system:
     the caster; they must make a Mental saving throw on casting it or suffer a
     quarter of the damage inflicted, rounded up.
   favorite: false
-  subType: arcane
+  subType: spell
   source: High Mage
   level: 5
   prepared: false
@@ -53,7 +53,6 @@ _stats:
 folder: qxBl7uHLaKwQr1Ih
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!ysp9igmjfwpr07y8'

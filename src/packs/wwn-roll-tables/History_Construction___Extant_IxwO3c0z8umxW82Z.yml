@@ -1,7 +1,9 @@
 _id: IxwO3c0z8umxW82Z
 name: History Construction - Extant
 img: icons/svg/d20-grey.svg
-description: This generates a history with a single Crisis that the populace overcame.
+description: >-
+  <p>This generates a history with a single Crisis that the populace
+  overcame.</p>
 results:
   - _id: eQUWJuAtzTjlPxgQ
     flags:
@@ -45,9 +47,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757292612915
     name: History-Originate
-    documentUuid: Compendium.wwn.gm-subtables.zvmgqmrMPn1uPn3s
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.zvmgqmrMPn1uPn3s
     description: ''
     _key: '!tables.results!IxwO3c0z8umxW82Z.Cs7yobzyCjJsfUUF'
   - _id: yKWMM6grji7lFdCT
@@ -92,9 +95,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757292617980
     name: History-Became
-    documentUuid: Compendium.wwn.gm-subtables.ezfbdMP34zjIv8SN
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.ezfbdMP34zjIv8SN
     description: ''
     _key: '!tables.results!IxwO3c0z8umxW82Z.s2KpZo3jhCk5M53j'
   - _id: yWkFTRGaILzBswYV
@@ -139,9 +143,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757292624170
     name: History-Crises
-    documentUuid: Compendium.wwn.gm-subtables.aWN0p6WmxZusXM12
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.aWN0p6WmxZusXM12
     description: ''
     _key: '!tables.results!IxwO3c0z8umxW82Z.DUZL2GbvjDaWvFzD'
   - _id: zIalJedYHs4RBOR6
@@ -186,9 +191,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757292632969
     name: History-Overcome-Crisis
-    documentUuid: Compendium.wwn.gm-subtables.H0VclxkStddyMzu2
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.H0VclxkStddyMzu2
     description: ''
     _key: '!tables.results!IxwO3c0z8umxW82Z.WOwLODRc5YWdKxe2'
   - _id: mI8XpPE1sNYl416M
@@ -233,9 +239,10 @@ results:
       coreVersion: '13.346'
       systemId: swnr
       systemVersion: 2.1.0
-      lastModifiedBy: null
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      modifiedTime: 1757292639285
     name: History-Peak
-    documentUuid: Compendium.wwn.gm-subtables.viCbnbWQusdkEbIM
+    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.viCbnbWQusdkEbIM
     description: ''
     _key: '!tables.results!IxwO3c0z8umxW82Z.Nj151Xx0ZrsnDMQY'
 formula: 1d1
@@ -254,8 +261,8 @@ _stats:
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271920613
-  modifiedTime: 1754271920613
-  lastModifiedBy: lKC5x4Yf023Bizof
+  modifiedTime: 1757292609360
+  lastModifiedBy: iXDXVi7OlHcRwXw0
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3

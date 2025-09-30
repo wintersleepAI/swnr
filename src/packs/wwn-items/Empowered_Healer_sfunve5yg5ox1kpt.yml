@@ -4,7 +4,7 @@ sort: 0
 system:
   description: Your Healing Touch becomes more powerful, adding your level to any healing.
   favorite: false
-  subType: arcane
+  subType: art
   source: Healer
   level: 1
   prepared: false
@@ -36,7 +36,6 @@ _stats:
 folder: 1QSf6od5nEmDkbXu
 flags: {}
 effects: []
-img: systems/wwn/assets/new/healer_art.png
 ownership:
   default: 0
 _key: '!items!sfunve5yg5ox1kpt'

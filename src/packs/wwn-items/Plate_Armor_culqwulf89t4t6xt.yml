@@ -1,6 +1,6 @@
 name: Plate Armor
 type: armor
-sort: 0
+sort: 125000
 system:
   description: >-
     Plate armor is an extremely expensive suit of tailored metal pieces that
@@ -19,7 +19,7 @@ system:
   location: stowed
   quality: stock
   noEncReadied: false
-  ac: 10
+  ac: 17
   shield: false
   use: false
   meleeAc: 17
@@ -37,18 +37,18 @@ _id: culqwulf89t4t6xt
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.348'
   systemId: swnr
-  systemVersion: 2.1.0
+  systemVersion: 2.1.0-beta
   createdTime: 1754277456691
-  modifiedTime: 1754277456691
-  lastModifiedBy: null
+  modifiedTime: 1758741175306
+  lastModifiedBy: lKC5x4Yf023Bizof
   exportSource: null
-folder: MiJwkaqEfKd6620L
+folder: vL1j4TVwpVKfM6Ck
 flags: {}
 effects: []
-img: icons/equipment/chest/breastplate-cuirass-steel-blue.webp
 ownership:
   default: 0
+img: icons/svg/item-bag.svg
 _key: '!items!culqwulf89t4t6xt'
 

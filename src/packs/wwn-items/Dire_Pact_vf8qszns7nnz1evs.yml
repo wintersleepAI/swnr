@@ -6,7 +6,7 @@ system:
     Foes suffer a penalty equal to your Magic skill on all saves versus your
     Accursed arts. If they succeed, however, you gain one System Strain.
   favorite: false
-  subType: arcane
+  subType: art
   source: Accursed
   level: 1
   prepared: false
@@ -38,7 +38,6 @@ _stats:
 folder: 1QSf6od5nEmDkbXu
 flags: {}
 effects: []
-img: systems/wwn/assets/default/accursed_art.png
 ownership:
   default: 0
 _key: '!items!vf8qszns7nnz1evs'

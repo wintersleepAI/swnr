@@ -12,6 +12,9 @@ export const migrateWorld = async function (storedVersion) {
     // Set the migration as complete only if all migrations succeeded
     await game.settings.set("swnr", "systemMigrationVersion", game.system.version);
     ui.notifications.info(`SWN System Migration to version ${game.system.version} completed!`, { permanent: true });
+
+    // Show release notes to GM after successful migration
+    await showReleaseNotesToGM();
   } catch (err) {
     console.error("Migration failed:", err);
     ui.notifications.error(`Migration failed: ${err.message}. System version not updated. Please check console for details.`, { permanent: true });
@@ -121,11 +124,11 @@ const migrations = {
   },
   "2.0.8": async () => {
     console.log('Running migration for 2.0.8');
-    versionNote("2.0.8", "This migration adds a 'melee' flag to weapons which is used for determining what attack bonus to use with CWN Armor setting enabled. <b>You will need to set this flag manually for existing items.</b>");
+    // versionNote("2.0.8", "This migration adds a 'melee' flag to weapons which is used for determining what attack bonus to use with CWN Armor setting enabled. <b>You will need to set this flag manually for existing items.</b>");
   },
   "2.0.11": async () => {
     console.log('Running migration for 2.0.11');
-    versionNote("2.0.11", "This version adds the ability for items to be marked as consumable (partially for AWN support) with the ability to track empty 'containers'. Ammo is treated as a consumable, which means a weapon should have the ammo source selected to reload. Shift+clicking reload will bypass this logic.");
+    // versionNote("2.0.11", "This version adds the ability for items to be marked as consumable (partially for AWN support) with the ability to track empty 'containers'. Ammo is treated as a consumable, which means a weapon should have the ammo source selected to reload. Shift+clicking reload will bypass this logic.");
     },
   "2.1.0": async () => {
     console.log('Running migration for 2.1.0 - Unified Power System');
@@ -459,7 +462,7 @@ const migrations = {
         ui.notifications?.info(successMsg);
       }
       
-      versionNote("2.1.0", "Unified Power System migration completed. This comprehensive migration transforms the legacy effort system into the new resource pool system, populates power resource fields, converts legacy configurations to consumption arrays, and creates pool-granting features for characters. All worlds from 2.0.12 or earlier have been fully migrated to the new system. See the notes at <a href='https://github.com/wintersleepAI/swnr/wiki/Powers---Resource-Pools' target='_blank'>this wiki page</a> for more information.");
+      // versionNote("2.1.0", "Unified Power System migration completed.");
         
       
     } catch (err) {
@@ -474,14 +477,53 @@ function compareVersions(v1, v2) {
   const parts1 = v1.split('.').map(Number);
   const parts2 = v2.split('.').map(Number);
   const len = Math.max(parts1.length, parts2.length);
-  
+
   for (let i = 0; i < len; i++) {
     const num1 = parts1[i] || 0;
     const num2 = parts2[i] || 0;
-    
+
     if (num1 > num2) return 1;
     if (num1 < num2) return -1;
   }
-  
+
   return 0; // They are equal
+}
+
+/**
+ * Shows the release notes journal to the GM after a successful migration
+ * @returns {Promise<void>}
+ */
+async function showReleaseNotesToGM() {
+  // Only show to GMs
+  if (!game.user.isGM) return;
+
+  try {
+    // Get the SWNR documentation pack
+    const pack = game.packs.get("swnr.swnr-documentation");
+    if (!pack) {
+      console.warn("SWNR documentation pack not found, cannot show release notes");
+      return;
+    }
+
+    // Get the release notes journal entry
+    const releaseNotesId = "Gq9tLm4ZRxv8pAy2";
+    const journal = await pack.getDocument(releaseNotesId);
+
+    if (journal) {
+      // Small delay to let migration notifications settle
+      setTimeout(() => {
+        journal.sheet.render(true, {
+          focus: true,
+          top: 100,
+          left: 100
+        });
+        console.log("Release notes displayed to GM after migration");
+      }, 2000);
+    } else {
+      console.warn("Release notes journal entry not found in pack");
+    }
+  } catch (err) {
+    console.error("Failed to show release notes after migration:", err);
+    // Don't throw - this shouldn't break migration if it fails
+  }
 }

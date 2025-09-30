@@ -111,11 +111,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/dwarf-face.svg
 items:
   - name: Punch/Headbutt
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -157,7 +155,6 @@ items:
     _key: '!actors.items!tgdgb56pkd7ma7hp.gbjl9yvui5x7ewjo'
   - name: Axe, War
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Axes given here are those fashioned for war; lighter and more agile than
@@ -203,7 +200,6 @@ items:
     _key: '!actors.items!tgdgb56pkd7ma7hp.4boru0bytzbljd8s'
   - name: Hammer, War
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: >-
         Hammers listed here are the fighting variety, narrow-headed and made for
@@ -247,7 +243,6 @@ items:
     _key: '!actors.items!tgdgb56pkd7ma7hp.chuz0rjqaqdbk63w'
   - name: Morale
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: Morale is 10 if leader is present.
       cost: 0

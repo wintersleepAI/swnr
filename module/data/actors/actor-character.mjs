@@ -1,7 +1,6 @@
 import SWNActorBase from './base-actor.mjs';
 import SWNShared from '../shared.mjs';
 import { calcMod } from '../../helpers/utils.mjs';
-import { calculatePoolsFromFeatures } from '../../helpers/pool-helpers.mjs';
 
 export default class SWNCharacter extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -64,8 +63,9 @@ export default class SWNCharacter extends SWNActorBase {
       showSpells: new fields.BooleanField({initial: false}),
       showAdept: new fields.BooleanField({initial: false}),
       showMutation: new fields.BooleanField({initial: false}),
-      showPoolsInHeader: new fields.BooleanField({ initial: true }),
-      showPoolsInPowers: new fields.BooleanField({ initial: false }),
+      showPoolsInHeader: new fields.BooleanField({ initial: false }),
+      showPoolsInPowers: new fields.BooleanField({ initial: true }),
+      showPoolsInCombat: new fields.BooleanField({ initial: true }),
       resourceList: new fields.ArrayField(new fields.SchemaField({
         name: SWNShared.emptyString(),
         value: SWNShared.requiredNumber(0),
@@ -77,11 +77,6 @@ export default class SWNCharacter extends SWNActorBase {
       initiative: new fields.SchemaField({
         mod: SWNShared.nullableNumber(),
       })
-    });
-
-    schema.effortCommitments = new fields.ObjectField({
-      /* Dynamic keys: "${resourceName}:${subResource}" */
-      /* Values: array of { powerId, powerName, amount } */
     });
 
     return schema;
@@ -278,6 +273,7 @@ export default class SWNCharacter extends SWNActorBase {
     this.favorites = this.parent.items.filter((i) => i.system["favorite"]);;
     this.readiedWeapons = readiedItems.filter((i) => i.type === "weapon");
     this.readiedArmor = readiedItems.filter((i) => i.type === "armor");
+    this.readiedGear = readiedItems.filter((i) => i.type === "item");
     this.gear = gear;
     this.consumables = consumables;
     
@@ -413,7 +409,7 @@ export default class SWNCharacter extends SWNActorBase {
           }
         });
         getDocumentClass("ChatMessage").create({
-          speaker: chatMessage.getSpeaker({ actor: this.parent }),
+          speaker: ChatMessage.getSpeaker({ actor: this.parent }),
           flavor: msg,
           roll: JSON.stringify(roll),
           rolls: [roll],
@@ -454,12 +450,11 @@ export default class SWNCharacter extends SWNActorBase {
    * @private
    */
   _calculateResourcePools() {
-    this.pools = calculatePoolsFromFeatures({
+    this.pools = this.calculatePoolsFromFeatures({
       parent: this.parent,
       dataModel: this,
       evaluateCondition: (cond) => this._evaluateCondition(cond),
       evaluateFormula: (formula) => this._evaluateFormula(formula),
-      includeCommitments: true,
     });
   }
 
@@ -526,7 +521,7 @@ export default class SWNCharacter extends SWNActorBase {
           i.type === "skill" && 
           i.name.toLocaleLowerCase() === decodedSkillName.toLocaleLowerCase()
         );
-        return skill?.system.rank || -1; // -1 for untrained
+        return skill?.system.rank ?? -1; // -1 for untrained
       });
     
     // Final safety check - after substitution should only contain numbers and math

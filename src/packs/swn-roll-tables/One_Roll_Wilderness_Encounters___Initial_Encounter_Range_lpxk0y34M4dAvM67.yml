@@ -1,0 +1,108 @@
+description: ''
+displayRoll: true
+flags:
+  core: {}
+folder: Td6GsHm0Ns7IXzwI
+formula: 1d4
+img: icons/svg/d20-grey.svg
+name: One Roll Wilderness Encounters - Initial Encounter Range
+replacement: true
+results:
+  - _id: IOO173IoVne3m8Hj
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 1
+    type: text
+    weight: 1
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    description: 'Initial Encounter Range: Visible from a long distance away'
+    name: ''
+    _key: '!tables.results!lpxk0y34M4dAvM67.IOO173IoVne3m8Hj'
+  - _id: 6h4HwsiUUxDX4Rjt
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 2
+      - 2
+    type: text
+    weight: 1
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    description: 'Initial Encounter Range: Noticed [[1d4 * 100]] meters away'
+    name: ''
+    _key: '!tables.results!lpxk0y34M4dAvM67.6h4HwsiUUxDX4Rjt'
+  - _id: wrq6OGU7uLwxrBCs
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 3
+      - 3
+    type: text
+    weight: 1
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    description: 'Initial Encounter Range: Noticed only within [[1d6 * 10]] meters'
+    name: ''
+    _key: '!tables.results!lpxk0y34M4dAvM67.wrq6OGU7uLwxrBCs'
+  - _id: kR9LFxBTuifyWCAU
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    range:
+      - 4
+      - 4
+    type: text
+    weight: 1
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    description: 'Initial Encounter Range: Noticed only when adjacent to the event'
+    name: ''
+    _key: '!tables.results!lpxk0y34M4dAvM67.kR9LFxBTuifyWCAU'
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287523875
+  modifiedTime: 1757287523875
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+_id: lpxk0y34M4dAvM67
+sort: 0
+_key: '!tables!lpxk0y34M4dAvM67'
+

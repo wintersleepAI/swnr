@@ -12,7 +12,7 @@ system:
     concentration, the swarm dissipates, ending the spell. Restrictions: The
     spell has no effect if cast underground.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Cleric
   level: 5
   prepared: false
@@ -50,7 +50,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!rd6v9olqhzz3okve'

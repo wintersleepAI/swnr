@@ -11,7 +11,7 @@ system:
     with the weapon is instead equal to your level. You cannot apply this or
     other Duelist arts to thrown weapons.
   favorite: false
-  subType: arcane
+  subType: art
   source: Duelist
   level: 1
   prepared: false
@@ -43,7 +43,6 @@ _stats:
 folder: 1QSf6od5nEmDkbXu
 flags: {}
 effects: []
-img: systems/wwn/assets/default/duelistArt_art.png
 ownership:
   default: 0
 _key: '!items!v27ngdiqp3d0orw9'

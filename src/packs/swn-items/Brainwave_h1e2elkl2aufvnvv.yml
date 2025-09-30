@@ -1,0 +1,59 @@
+name: Brainwave
+type: item
+folder: 3qDhXaAAiQyoDWAW
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.pharmaceuticals.Item.h1e2elkl2aufvnvv
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286679493
+  modifiedTime: 1757286679493
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: h1e2elkl2aufvnvv
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 1000
+  description: >-
+    Brainwave (Heal-2): This psitech drug requires advanced TL5 facilities to
+    compound, and the few remaining doses from pre-Silence periods are rarely
+    available on the open market. Application of Brainwave gives a psychic 2
+    extra maximum Effort for one hour. At the end of that hour, they suffer 4
+    points of System Strain. If their Strain is maximized by this, they go
+    unconscious for one hour. Only one dose can be active at a time.
+  encumbrance: 0
+  location: other
+  quality: stock
+  tl: 5
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/medicines.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!h1e2elkl2aufvnvv'
+

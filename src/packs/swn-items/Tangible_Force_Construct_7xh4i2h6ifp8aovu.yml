@@ -1,0 +1,52 @@
+name: Tangible Force Construct
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: mOJTfIBCxT4AY88p
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-telekinesis.Item.7xh4i2h6ifp8aovu
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286860108
+  modifiedTime: 1757286860108
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 7xh4i2h6ifp8aovu
+system:
+  description: >-
+    <p>Once per turn, as an On Turn action, the psychic can Commit Effort for
+    the scene to create a telekinetic force construct at a visible point,
+    provided it can fit within a three-meter cube. The force construct can be
+    shaped in any way the psychic wishes, and can remain fixed in its location
+    without external supports if desired. It is as sturdy as a TL4 construction
+    and may be visible or invisible at the adept’s choice. The construct lasts
+    until the end of the scene, until the psychic dispels it, or until it is
+    smashed with 20 points of damage against AC 15.</p>
+  level: 3
+  source: telekInesIs
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: scene
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+  save: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!7xh4i2h6ifp8aovu'
+

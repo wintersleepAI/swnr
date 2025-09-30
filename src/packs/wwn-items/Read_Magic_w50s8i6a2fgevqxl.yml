@@ -13,7 +13,7 @@ system:
     inscription using read magic, they are thereafter able to read that
     particular writing without recourse to the use of this spell.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Mage
   level: 1
   prepared: false
@@ -51,7 +51,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!w50s8i6a2fgevqxl'

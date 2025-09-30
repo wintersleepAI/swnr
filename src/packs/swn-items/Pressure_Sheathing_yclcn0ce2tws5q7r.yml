@@ -1,0 +1,42 @@
+name: Pressure Sheathing
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: 7ZDHgPOCyrCRwTEX
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cyberware.Item.yclcn0ce2tws5q7r
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286670636
+  modifiedTime: 1757286670636
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: yclcn0ce2tws5q7r
+system:
+  cost: 15000
+  description: >-
+    Occasionally purchased by workers in hard vacuum or other hostile
+    environments, pressure sheathing integrates an ultrathin pressure membrane
+    with the user’s dermis and emergency film sealants that trigger at the
+    user’s mental command. The pressure sheathing serves as an emergency vacc
+    suit with an integral oxygen supply and temperature regulators that can
+    sustain them for up to thirty minutes. A pressure sheath needs 48 hours to
+    regain structural integrity and power after triggering. A pressure sheath
+    can be detected only by a close medical examination.
+  disabled: false
+  effect: Integral emergency vacc suit
+  strain: 1
+  tl: 4
+  favorite: false
+  type: None
+  concealment: Sight
+  complication: ''
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!yclcn0ce2tws5q7r'
+

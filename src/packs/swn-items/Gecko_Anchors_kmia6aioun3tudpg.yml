@@ -1,0 +1,41 @@
+name: Gecko Anchors
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: 7ZDHgPOCyrCRwTEX
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cyberware.Item.kmia6aioun3tudpg
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286670636
+  modifiedTime: 1757286670636
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: kmia6aioun3tudpg
+system:
+  cost: 15000
+  description: >-
+    Miniaturized gravitic manipulators are embedded in the subject’s hands and
+    feet as part of this complex surgery. While they are too weak to allow
+    levitation or damping fall damage, they can twist localized gravity around
+    those limbs to anchor the subject to the nearest surface capable of bearing
+    their weight. As a result, the user can freely run or climb up or down sheer
+    surfaces at their normal movement rate, carrying no more than their normal
+    maximum encumbrance.
+  disabled: false
+  effect: Can climb sheer surfaces as if they were flat
+  strain: 1
+  tl: 4
+  favorite: false
+  type: None
+  concealment: Sight
+  complication: ''
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!kmia6aioun3tudpg'
+

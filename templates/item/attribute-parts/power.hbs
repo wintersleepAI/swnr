@@ -58,7 +58,7 @@
   {{! Resource Consumption Section }}
   <fieldset>
     <legend>{{localize "swnr.consumption.resourceConsumption"}}</legend>
-    <p class="help-text">Configure all resource costs required to use this power. You can add multiple consumption types (effort, strain, spell points, consumable items, etc.)</p>
+    <p class="help-text">Configure all resource costs required to use this power. You can add multiple consumption types (effort, strain, spell points, consumable items, etc.). Pool resources will first try to use the specific sub-resource (e.g., "Effort:Psychic"), but will automatically fall back to generic pools (e.g., "Effort:") if the specific pool is unavailable or insufficient.</p>
     
     <div class="consumption-table-container">
       {{#if system.consumptions.length}}
@@ -120,12 +120,9 @@
                       <input type="text" name="system.consumptions.{{index}}.subResource" value="{{#if consumption.subResource}}{{consumption.subResource}}{{/if}}" data-dtype="String" placeholder="Sub-resource" style="flex: 1; min-width: 80px;" />
                     </div>
                   {{else if (eq consumption.type "consumableItem")}}
-                    <select name="system.consumptions.{{index}}.itemId" data-dtype="String">
-                      <option value="">Select Item...</option>
-                      {{#each @root.consumableItems}}
-                        <option value="{{id}}" {{#eq consumption.itemId id}}selected{{/eq}}>{{name}}</option>
-                      {{/each}}
-                    </select>
+                    <div class="consumable-item-config" style="display: flex; gap: 5px; flex-wrap: wrap; width: 100%;">
+                      <input type="text" name="system.consumptions.{{index}}.itemText" value="{{#if consumption.itemText}}{{consumption.itemText}}{{/if}}" data-dtype="String" placeholder="{{localize 'swnr.consumption.itemText.placeholder'}}" style="flex: 1; min-width: 160px;" />
+                    </div>
                   {{else if (eq consumption.type "uses")}}
                     <div class="uses-counter">
                       <input type="number" name="system.consumptions.{{index}}.uses.value" value="{{consumption.uses.value}}" data-dtype="Number" min="0" max="{{consumption.uses.max}}" style="width: 50px;">

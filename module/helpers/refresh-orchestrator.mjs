@@ -77,7 +77,7 @@ export async function refreshActor({ actor, cadence, frail = false, createChat =
     </div>`;
 
     await chatMessage.create({
-      speaker: chatMessage.getSpeaker({ actor }),
+      speaker: ChatMessage.getSpeaker({ actor }),
       content
     });
   }

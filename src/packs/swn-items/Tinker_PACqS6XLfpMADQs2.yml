@@ -1,0 +1,37 @@
+name: Tinker
+type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: sPYHUjJb2geTuLHp
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.foci.Item.rmk672dbd8ywgpad
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287061953
+  modifiedTime: 1757294527315
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+system:
+  description: >-
+    You have a natural knack for modifying and improving equipment, as given in
+    the rules on page 90.<br /><br />Level 1: Gain Fix as a bonus skill. Your
+    Maintenance score is doubled, allowing you to maintain twice as many mods.
+    Both ship and gear mods cost only half their usual price in credits, though
+    pretech salvage requirements remain the same.<br />Level 2: Your Fix skill
+    is treated as one level higher for purposes of building and maintaining mods
+    and calculating your Maintenance score. Advanced mods require one fewer
+    pretech salvage part to make, down to a minimum of zero.
+  favorite: false
+  level: 0
+  type: focus
+  poolsGranted: []
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+_id: PACqS6XLfpMADQs2
+sort: 0
+_key: '!items!PACqS6XLfpMADQs2'
+

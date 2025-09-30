@@ -1,0 +1,62 @@
+name: Lift
+type: item
+folder: 3qDhXaAAiQyoDWAW
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.pharmaceuticals.Item.x2xv8ddxj8aj9gjo
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286679493
+  modifiedTime: 1757286679493
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: x2xv8ddxj8aj9gjo
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 50
+  description: >-
+    Lift (Heal-0): A Lift stim augments and amplifies the body’s natural
+    response to physical injury and exhaustion. This boost speeds natural
+    recovery drastically and heals 1d8 plus the user’s Heal skill in hit points
+    after five minutes of rest. Lift stims do not work on PCs who are mortally
+    wounded; they need to be stabilized before the Lift can help them, though
+    application to a stabilized target will get them back on their feet and
+    active again. Each application adds 1 System Strain to the target. Each
+    additional application of Lift to a target the same day increases the
+    minimum Heal skill needed by 1.
+  encumbrance: 0
+  location: other
+  quality: stock
+  tl: 4
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/medicines.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!x2xv8ddxj8aj9gjo'
+

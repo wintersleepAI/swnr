@@ -7,7 +7,7 @@ system:
     once per day, as an On Turn action, automatically succeed at a skill check
     to stabilize a Mortally Wounded subject.
   favorite: false
-  subType: arcane
+  subType: art
   source: Wise
   level: 1
   prepared: false
@@ -39,7 +39,6 @@ _stats:
 folder: 1QSf6od5nEmDkbXu
 flags: {}
 effects: []
-img: systems/wwn/assets/default/wise_art.png
 ownership:
   default: 0
 _key: '!items!yr1kejmc9mhqabhy'

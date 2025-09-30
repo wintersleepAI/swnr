@@ -16,6 +16,7 @@ export class SWNActorSheet extends SWNBaseSheet {
   #toggleLock = false;
   static #expandedDescriptions = {};
   static #expandedPoolTempModifiers = {};
+  static #collapsedSections = {};
 
   constructor(options = {}) {
     super(options);
@@ -203,6 +204,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       // Add expanded descriptions state for item description toggle functionality
       expandedDescriptions: SWNActorSheet.#expandedDescriptions,
       expandedPoolTempModifiers: SWNActorSheet.#expandedPoolTempModifiers,
+      collapsedSections: SWNActorSheet.#collapsedSections,
 
     };
 
@@ -553,6 +555,84 @@ export class SWNActorSheet extends SWNBaseSheet {
     this.element?.querySelectorAll(".lock-toggle").forEach((d) => {
       d.style.display = this.#toggleLock ? "inline" : "none";
     });
+
+    // Apply collapsed section states after render
+    this._applySectionStates();
+    this._applyPoolModifierStates();
+  }
+
+  /**
+   * Apply persistent section collapse states after render
+   * @private
+   */
+  _applySectionStates() {
+    // Load collapsed sections from localStorage
+    const storageKey = 'swnr-collapsed-sections';
+    let collapsedSections = {};
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        collapsedSections = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Failed to parse collapsed sections from localStorage:', e);
+    }
+
+    // Update static property and apply states
+    SWNActorSheet.#collapsedSections = collapsedSections;
+
+    for (const [sectionId, isCollapsed] of Object.entries(collapsedSections)) {
+      if (isCollapsed) {
+        const sectionElement = this.element.querySelector("#" + sectionId);
+        const toggleElement = this.element.querySelector("#" + sectionId + "-toggle");
+
+        if (sectionElement) {
+          sectionElement.style.display = "none";
+        }
+
+        if (toggleElement) {
+          toggleElement.innerHTML = "▲";
+        }
+      }
+    }
+  }
+
+  /**
+   * Apply persistent pool modifier states after render
+   * @private
+   */
+  _applyPoolModifierStates() {
+    // Load expanded pool modifiers from localStorage
+    const storageKey = 'swnr-expanded-pool-modifiers';
+    let expandedPoolModifiers = {};
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        expandedPoolModifiers = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Failed to parse expanded pool modifiers from localStorage:', e);
+    }
+
+    // Update static property and apply states
+    SWNActorSheet.#expandedPoolTempModifiers = expandedPoolModifiers;
+
+    for (const [poolKey, isExpanded] of Object.entries(expandedPoolModifiers)) {
+      if (isExpanded) {
+        const badges = this.element.querySelectorAll(`.pool-badge[data-pool-key="${CSS.escape(poolKey)}"]`);
+        badges.forEach((poolBadge) => {
+          poolBadge.classList.add('collapsed');
+          poolBadge.classList.remove('expanded');
+
+          // Update caret direction: down when collapsed, up when expanded
+          const chevron = poolBadge.querySelector('.pool-toggle-button i');
+          if (chevron) {
+            chevron.classList.add('fa-chevron-up');
+            chevron.classList.remove('fa-chevron-down', 'fa-chevron-right', 'fa-chevron-left');
+          }
+        });
+      }
+    }
   }
 
   /**************
@@ -843,9 +923,47 @@ export class SWNActorSheet extends SWNBaseSheet {
 
   static async _toggleSection(event, target) {
     event.preventDefault();
-    const elem = target.dataset.section; //= target.dataset.section === "open" ? "closed" : "open";
-    this.element.querySelector("#" + elem).style.display = this.element.querySelector("#" + elem).style.display === "none" ? "" : "none";
-    this.element.querySelector("#" + elem + "-toggle").innerHTML = this.element.querySelector("#" + elem + "-toggle").innerHTML === "▼" ? "▲" : "▼";
+    const sectionId = target.dataset.section;
+
+    // Get current collapsed sections from localStorage
+    const storageKey = 'swnr-collapsed-sections';
+    let collapsedSections = {};
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        collapsedSections = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Failed to parse collapsed sections from localStorage:', e);
+    }
+
+    // Toggle the collapsed state
+    if (collapsedSections[sectionId]) {
+      delete collapsedSections[sectionId];
+    } else {
+      collapsedSections[sectionId] = true;
+    }
+
+    // Save to localStorage and update static property
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(collapsedSections));
+    } catch (e) {
+      console.warn('Failed to save collapsed sections to localStorage:', e);
+    }
+    SWNActorSheet.#collapsedSections = collapsedSections;
+
+    // Apply the state to the DOM
+    const isCollapsed = !!collapsedSections[sectionId];
+    const sectionElement = this.element.querySelector("#" + sectionId);
+    const toggleElement = this.element.querySelector("#" + sectionId + "-toggle");
+
+    if (sectionElement) {
+      sectionElement.style.display = isCollapsed ? "none" : "";
+    }
+
+    if (toggleElement) {
+      toggleElement.innerHTML = isCollapsed ? "▲" : "▼";
+    }
   }
 
   /**
@@ -1279,19 +1397,39 @@ export class SWNActorSheet extends SWNBaseSheet {
    */
   static async _onTogglePoolTempModifiers(event, target) {
     event.preventDefault();
-    
+
     const poolKey = target.dataset.poolKey || target.closest('[data-pool-key]')?.dataset.poolKey;
     if (!poolKey) return;
 
-    // Toggle the expanded state
-    if (SWNActorSheet.#expandedPoolTempModifiers[poolKey]) {
-      delete SWNActorSheet.#expandedPoolTempModifiers[poolKey];
-    } else {
-      SWNActorSheet.#expandedPoolTempModifiers[poolKey] = true;
+    // Get current expanded pool modifiers from localStorage
+    const storageKey = 'swnr-expanded-pool-modifiers';
+    let expandedPoolModifiers = {};
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        expandedPoolModifiers = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Failed to parse expanded pool modifiers from localStorage:', e);
     }
 
+    // Toggle the expanded state
+    if (expandedPoolModifiers[poolKey]) {
+      delete expandedPoolModifiers[poolKey];
+    } else {
+      expandedPoolModifiers[poolKey] = true;
+    }
+
+    // Save to localStorage and update static property
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(expandedPoolModifiers));
+    } catch (e) {
+      console.warn('Failed to save expanded pool modifiers to localStorage:', e);
+    }
+    SWNActorSheet.#expandedPoolTempModifiers = expandedPoolModifiers;
+
     // Update all matching badges (header and powers) to keep UI in sync
-    const isCollapsed = !!SWNActorSheet.#expandedPoolTempModifiers[poolKey];
+    const isCollapsed = !!expandedPoolModifiers[poolKey];
     const badges = this.element.querySelectorAll(`.pool-badge[data-pool-key="${CSS.escape(poolKey)}"]`);
     badges.forEach((poolBadge) => {
       poolBadge.classList.toggle('collapsed', isCollapsed);

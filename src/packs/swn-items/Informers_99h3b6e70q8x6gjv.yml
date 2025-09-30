@@ -1,0 +1,60 @@
+name: Informers
+type: asset
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.99h3b6e70q8x6gjv
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 99h3b6e70q8x6gjv
+system:
+  attackDamage: '0'
+  attackSource: cunning
+  attackSpecial: >-
+    They can choose to Attack a faction without specifying a target asset. On a
+    successful Cunning vs. Cunning attack, all Stealthed assets on the planet
+    belonging to that faction are revealed. Informers can target a faction even
+    if none of their assets are visible on a world; at worst, they simply learn
+    that there are no stealthed assets.
+  attackTarget: cunning
+  baseOfInfluence: false
+  cost: 2
+  counter: ''
+  description: >-
+    Minions that lace a planet's underworld, watchful for intruders. They can
+    choose to Attack a faction without specifying a target asset. On a
+    successful Cunning vs. Cunning attack, all Stealthed assets on the planet
+    belonging to that faction are revealed. Informers can target a faction even
+    if none of their assets are visible on a world; at worst, they simply learn
+    that there are no stealthed assets.
+  health:
+    max: 3
+    value: 3
+  income: 0
+  maintenance: 0
+  rating: 1
+  tl: 0
+  turnRoll: ''
+  type: Special Forces
+  unusable: false
+  qualities:
+    permission: false
+    action: true
+    special: true
+  category: cunning
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!99h3b6e70q8x6gjv'
+

@@ -1,0 +1,43 @@
+name: Luxury cabins
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: FSb3IGBn6eTDHX2S
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-fitting.Item.2x11edyu47t30noe
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 2x11edyu47t30noe
+system:
+  broken: false
+  cost: 10000
+  costMultiplier: true
+  description: >-
+    Each time this fitting is selected, 10% of the ship's maximum crew gain
+    access to luxury cabins of spaciousness sufficient to please a wealthy
+    star-farer. This fitting comes with the usual zero-gee athletic courts,
+    decorative fountains, fine-dining, and artistic fittings.
+  effect: 10% of the max crew get luxurious quarters
+  mass: 1
+  massMultiplier: true
+  minClass: frigate
+  power: 1
+  powerMultiplier: false
+  favorite: false
+  tl: 4
+  destroyed: false
+  juryRigged: false
+  type: ship
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!2x11edyu47t30noe'
+

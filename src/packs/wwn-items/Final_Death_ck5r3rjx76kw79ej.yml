@@ -8,7 +8,7 @@ system:
     instantly if Mortally Wounded. After each failed instance of healing, a
     target can make a Physical save to throw off the spell.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Necromancer
   level: 2
   prepared: false
@@ -46,7 +46,6 @@ _stats:
 folder: qxBl7uHLaKwQr1Ih
 flags: {}
 effects: []
-img: systems/wwn/assets/new/necromancer_spell.png
 ownership:
   default: 0
 _key: '!items!ck5r3rjx76kw79ej'

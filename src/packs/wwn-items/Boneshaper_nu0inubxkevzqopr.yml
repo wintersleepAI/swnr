@@ -15,7 +15,7 @@ system:
     of +2 or -2. This spell lasts until the necromancer lifts it or it is
     dispelled.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Necromancer
   level: 4
   prepared: false
@@ -53,7 +53,6 @@ _stats:
 folder: qxBl7uHLaKwQr1Ih
 flags: {}
 effects: []
-img: systems/wwn/assets/new/necromancer_spell.png
 ownership:
   default: 0
 _key: '!items!nu0inubxkevzqopr'

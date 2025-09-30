@@ -14,7 +14,7 @@ system:
     succeeds, it flees the affected area. Dispel curse: Instantly dispel the
     hold that a cursed item has over a being within range.
   favorite: false
-  subType: arcane
+  subType: spell
   source: Cleric
   level: 5
   prepared: false
@@ -52,7 +52,6 @@ _stats:
 folder: Oa54k573WAw15y2A
 flags: {}
 effects: []
-img: systems/wwn/assets/default/spell.png
 ownership:
   default: 0
 _key: '!items!zjx63lqkzkqanyow'

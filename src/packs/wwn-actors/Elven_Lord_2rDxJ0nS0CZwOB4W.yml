@@ -132,11 +132,9 @@ prototypeToken:
     src: null
     disposition: false
   movementAction: null
-img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
 items:
   - name: Plate Armor
     type: armor
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
     system:
       description: >-
         Plate armor is an extremely expensive suit of tailored metal pieces that
@@ -189,7 +187,6 @@ items:
     _key: '!actors.items!2rDxJ0nS0CZwOB4W.8c5moofztenngo6f'
   - name: Shield, Small
     type: armor
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
     system:
       description: >-
         Shields come in two general varieties. Small ones, often made of

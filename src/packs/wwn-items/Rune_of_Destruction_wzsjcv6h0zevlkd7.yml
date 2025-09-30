@@ -12,7 +12,7 @@ system:
     laid will not trigger it until they re-enter the area, nor will the caster
     trigger their own runes. Runes cannot overlap their areas of effect.
   favorite: false
-  subType: arcane
+  subType: art
   source: Elementalist
   level: 1
   prepared: false
@@ -44,7 +44,6 @@ _stats:
 folder: 1QSf6od5nEmDkbXu
 flags: {}
 effects: []
-img: systems/wwn/assets/new/elementalist_art.png
 ownership:
   default: 0
 _key: '!items!wzsjcv6h0zevlkd7'

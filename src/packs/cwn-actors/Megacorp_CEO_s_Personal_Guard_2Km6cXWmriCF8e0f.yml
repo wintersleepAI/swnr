@@ -1,0 +1,1162 @@
+name: Megacorp CEO's Personal Guard
+type: npc
+img: icons/svg/mystery-man.svg
+system:
+  health:
+    value: 80
+    max: 80
+  biography: ''
+  species: ''
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 22
+  meleeAc: 22
+  ab: 17
+  meleeAb: 19
+  systemStrain:
+    value: 0
+    permanent: 0
+  speed: 20
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: street
+  skillBonus: 4
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  hitDice: 10d8
+  saves: 10
+  moralScore: 12
+  reaction: unknown
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  homeworld: ''
+  faction: ''
+  pools: {}
+  tweak:
+    showCyberware: true
+    showPsychic: true
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: true
+    showPoolsInPowers: false
+prototypeToken:
+  name: Mega
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/mystery-man.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+items:
+  - name: Grenade,Flash
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.85hhm4zx11ghbi9h
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: batbCaR7y1wPviNn
+    system:
+      ammo:
+        burst: false
+        max: 0
+        suppress: false
+        type: none
+        value: 0
+        longReload: false
+        current: null
+      cost: 50
+      damage: '0'
+      description: >-
+        Grenades may be thrown at a point within range and always target AC 10.
+        On a miss, the grenade bounces 1d10 meters in a random direction before
+        exploding. Grenades have a 5-meter radius of effect. Flash grenades
+        force victims without eye and ear protection to make a Physical save; on
+        a failure, the victim loses their next Main Action and takes a -2
+        penalty to hit rolls and AC for the next 1d6 rounds. Flashbang effects
+        don't stack, and a target who makes their save cannot be flashbanged
+        again that same round.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 30
+        normal: 10
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      stat: dex
+      trauma:
+        die: None
+        rating: null
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.batbCaR7y1wPviNn'
+  - name: Grenade,Flash
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.85hhm4zx11ghbi9h
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: rQUudpUCEwvskOFF
+    system:
+      ammo:
+        burst: false
+        max: 0
+        suppress: false
+        type: none
+        value: 0
+        longReload: false
+        current: null
+      cost: 50
+      damage: '0'
+      description: >-
+        Grenades may be thrown at a point within range and always target AC 10.
+        On a miss, the grenade bounces 1d10 meters in a random direction before
+        exploding. Grenades have a 5-meter radius of effect. Flash grenades
+        force victims without eye and ear protection to make a Physical save; on
+        a failure, the victim loses their next Main Action and takes a -2
+        penalty to hit rolls and AC for the next 1d6 rounds. Flashbang effects
+        don't stack, and a target who makes their save cannot be flashbanged
+        again that same round.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 30
+        normal: 10
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      stat: dex
+      trauma:
+        die: None
+        rating: null
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.rQUudpUCEwvskOFF'
+  - name: Grenade,Flash
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.85hhm4zx11ghbi9h
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: BudrLOSmOpvaQcXY
+    system:
+      ammo:
+        burst: false
+        max: 0
+        suppress: false
+        type: none
+        value: 0
+        longReload: false
+        current: null
+      cost: 50
+      damage: '0'
+      description: >-
+        Grenades may be thrown at a point within range and always target AC 10.
+        On a miss, the grenade bounces 1d10 meters in a random direction before
+        exploding. Grenades have a 5-meter radius of effect. Flash grenades
+        force victims without eye and ear protection to make a Physical save; on
+        a failure, the victim loses their next Main Action and takes a -2
+        penalty to hit rolls and AC for the next 1d6 rounds. Flashbang effects
+        don't stack, and a target who makes their save cannot be flashbanged
+        again that same round.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 30
+        normal: 10
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      stat: dex
+      trauma:
+        die: None
+        rating: null
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.BudrLOSmOpvaQcXY'
+  - name: Grenade,Frag
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.3zjb5tg3fploawnf
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: PGJtMxScHXNCRW8x
+    system:
+      ammo:
+        burst: false
+        max: 0
+        suppress: false
+        type: none
+        value: 0
+        longReload: false
+        current: null
+      cost: 100
+      damage: 2d6
+      description: >-
+        Grenades may be thrown at a point within range and always target AC 10.
+        On a miss, the grenade bounces 1d10 meters in a random direction before
+        exploding. Grenades have a 5-meter radius of effect. Frag grenades
+        inflict 2d6 damage on all victims in range, plus the chance for a
+        Traumatic Hit. An Evasion save can halve a frag grenade's damage, and
+        each point of melee AC the target has above 14 reduces the final damage
+        total by one point, possibly down to zero.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 30
+        normal: 10
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      stat: dex
+      trauma:
+        die: 1d8
+        rating: 2
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.PGJtMxScHXNCRW8x'
+  - name: Grenade,Frag
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.3zjb5tg3fploawnf
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 8itdvc4a162P8dum
+    system:
+      ammo:
+        burst: false
+        max: 0
+        suppress: false
+        type: none
+        value: 0
+        longReload: false
+        current: null
+      cost: 100
+      damage: 2d6
+      description: >-
+        Grenades may be thrown at a point within range and always target AC 10.
+        On a miss, the grenade bounces 1d10 meters in a random direction before
+        exploding. Grenades have a 5-meter radius of effect. Frag grenades
+        inflict 2d6 damage on all victims in range, plus the chance for a
+        Traumatic Hit. An Evasion save can halve a frag grenade's damage, and
+        each point of melee AC the target has above 14 reduces the final damage
+        total by one point, possibly down to zero.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 30
+        normal: 10
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      stat: dex
+      trauma:
+        die: 1d8
+        rating: 2
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.8itdvc4a162P8dum'
+  - name: Grenade,Frag
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.3zjb5tg3fploawnf
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: I92y0cYhQ85Jcz1U
+    system:
+      ammo:
+        burst: false
+        max: 0
+        suppress: false
+        type: none
+        value: 0
+        longReload: false
+        current: null
+      cost: 100
+      damage: 2d6
+      description: >-
+        Grenades may be thrown at a point within range and always target AC 10.
+        On a miss, the grenade bounces 1d10 meters in a random direction before
+        exploding. Grenades have a 5-meter radius of effect. Frag grenades
+        inflict 2d6 damage on all victims in range, plus the chance for a
+        Traumatic Hit. An Evasion save can halve a frag grenade's damage, and
+        each point of melee AC the target has above 14 reduces the final damage
+        total by one point, possibly down to zero.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 30
+        normal: 10
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      stat: dex
+      trauma:
+        die: 1d8
+        rating: 2
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.I92y0cYhQ85Jcz1U'
+  - name: Modded Light Pistol
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.j3dkw1jpnfuob1ju
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: X4MoFoBZqUpT8G9S
+    system:
+      ammo:
+        burst: false
+        max: 15
+        suppress: false
+        type: ammo
+        value: 15
+        longReload: false
+        current: null
+      cost: 200
+      damage: 1d6+10
+      description: >-
+        Light and heavy pistols are categorized by the caliber of the bullet
+        they fire. Some operators prefer the low recoil and high mag capacity
+        possible with a low-caliber round, while others like to have a little
+        more certainty in dropping the targets they hit.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 80
+        normal: 10
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      stat: dex
+      trauma:
+        die: 1d8
+        rating: 2
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.X4MoFoBZqUpT8G9S'
+  - name: Body Blades II
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.vc099h2u0tumbssa
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: BdMKvGv1soSkSmDa
+    system:
+      concealment: Sight
+      cost: 25000
+      description: >-
+        As level one, but the user's body armament includes not only
+        conventional blades, but assorted improvements such as monomolecular
+        edges, cutting vibrations, or thermal augmentation. Their unarmed
+        attacks do 2d6 damage with a Shock of 4/15, and a Trauma Die 1d10/x3.
+        Anyone who sees or touches their arms can detect signs of the cyber,
+        however.
+      effect: Larger body weaponry
+      strain: 2
+      type: Limb
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.BdMKvGv1soSkSmDa'
+  - name: Coordination Augment II
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.hamt7zrk26jrwy5r
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: vymgavFP00fN9KcJ
+    system:
+      concealment: Touch
+      cost: 200000
+      description: >-
+        As Coordination Augment I, but the subject gains a Dexterity score of
+        18, and their base Move rate is increased by 10 meters.
+      effect: Dex 18 and +10m Move
+      strain: 3
+      type: Nerve
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.vymgavFP00fN9KcJ'
+  - name: Cybereyes (pair)
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.84j3wyp3mp029n4z
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: dLHSAOYgk0beY644
+    system:
+      concealment: Sight
+      cost: 10000
+      description: >-
+        While a single cybernetic eye can be implanted, it is recommended that
+        both be replaced at the same time to improve neural adaptation. These
+        cybereyes are clearly artificial, though most are styled in attractive
+        or striking fashions. They all have perfect 20/20 vision and integral
+        flash protectors, but additional functionality must be implanted
+        separately. A user with a pair of cybereyes or syntheyes halves the
+        System Strain cost of cybernetic eye implants.
+      effect: Flash-protected synthetic eyes
+      strain: 0.25
+      type: Sensory
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.dLHSAOYgk0beY644'
+  - name: Dermal Armor III
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.639j14867ujc5wv5
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 5CO9S4KzD1pDtcNp
+    system:
+      concealment: Sight
+      cost: 200000
+      description: >-
+        Overt ceramic body plating and double-mesh joint reinforcement acts as
+        Dermal Armor II, but with a base ranged and melee AC of 20 and +2 to the
+        user's Trauma Target.
+      effect: As II, but AC 20 and +2 TT
+      strain: 3
+      type: Skin
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.5CO9S4KzD1pDtcNp'
+  - name: Ear Mod/Positional Detection
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.x118hmqqn5307vyl
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: NOOquU4dyt9I0Yfg
+    system:
+      concealment: Medical
+      cost: 15000
+      description: >-
+        This ear mod constructs a spatial map of significant surrounding sounds,
+        allowing the user to know the exact location of anything making audible
+        noise. The precise location of distant shooters, the location of targets
+        in visual concealment, and the positions of moving creatures in darkness
+        are all clear.
+      effect: Map all sound positions nearby
+      strain: 0.5
+      type: Sensory
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.NOOquU4dyt9I0Yfg'
+  - name: Eye Mod/Low Light Vision
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.uwghtxizr9z9415a
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: NndWC1iS2ljdaROs
+    system:
+      concealment: Medical
+      cost: 5000
+      description: >-
+        This mod grants low-light vision, allowing clear sight to normal
+        distances in any light condition better than pitch blackness.
+      effect: See in low-light conditions
+      strain: 0.5
+      type: Sensory
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.NndWC1iS2ljdaROs'
+  - name: Enhanced Reflexes III
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.2xdi94obeezvc5hb
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: sILh58R6gGhoovlt
+    system:
+      concealment: Touch
+      cost: 750000
+      description: >-
+        Twice per scene, as an On Turn action up to once per round, the user
+        gains a bonus non-cyberspace Main Action and bonus Move Action. By
+        accepting one System Strain, this ability can be used as an Instant
+        action.
+      effect: 2/scene, bonus Main and Move
+      strain: 4
+      type: Nerve
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.sILh58R6gGhoovlt'
+  - name: Iron Hand Aegis
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.9l9za4qr6u9ebmaj
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 2hPTNlUxC2yzZ6Kg
+    system:
+      concealment: Touch
+      cost: 40000
+      description: >-
+        Absorption plates and kinetic ablation units are implanted in the user's
+        arms and linked with a reactive ballistic calculator. Once per scene, as
+        an Instant action, the user can deflect a successful ranged bullet,
+        arrow, or thrown weapon attack, including burst or suppressive fire.
+        Surprise attacks cannot be deflected this way, nor can melee attacks or
+        explosives.
+      effect: Deflect one ranged hit per scene
+      strain: 1
+      type: Limb
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.2hPTNlUxC2yzZ6Kg'
+  - name: Muscle Fiber Replacement II
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.jl9w3g4n71x7ih4h
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: QhIuJTRDtP6QHoQB
+    system:
+      concealment: Sight
+      cost: 200000
+      description: >-
+        The subject gains a Strength score of 18, and can smash through standard
+        interior doors or equivalent barriers as a Move action.
+      effect: Str 18 and extreme feats
+      strain: 2
+      type: Limb
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.QhIuJTRDtP6QHoQB'
+  - name: Reaction Booster II
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.lg6b4ormag3e53x6
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: c3Z5tnIv6faJai9Q
+    system:
+      concealment: Medical
+      cost: 100000
+      description: >-
+        As level one, but the user automatically wins initiative against targets
+        that don't also automatically win initiative; if both have this ability,
+        initiative is rolled without modifications. The user can act normally
+        during surprise rounds.
+      effect: Automatically win initiative
+      strain: 2
+      type: Nerve
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.c3Z5tnIv6faJai9Q'
+  - name: Stick Pads
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.e1scp9y1h45wayvk
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: Uy6spYc0Ss6BmUie
+    system:
+      concealment: Touch
+      cost: 15000
+      description: >-
+        Macroscale van der Waals generators allow the user's hands and feet to
+        stick to vertical or overhanging surfaces, their full weight supported
+        by one arm. They can climb such surfaces at their full movement rate
+        with one free hand.
+      effect: Climb sheer or vertical surfaces
+      strain: 0.5
+      type: Limb
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.Uy6spYc0Ss6BmUie'
+  - name: Killing Blow
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-edges.Item.gcq6cz8et24c4tst
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: AqzNS3W1OeVxvpkT
+    system:
+      description: >-
+        Gain a combat skill as a bonus skill. Whenever you inflict hit point
+        damage on something, whether by weapon, Shock, special ability, or any
+        other source, the damage is increased by 1 point per two character
+        levels, rounded up. Any Trauma Die you roll gains a +1 bonus.
+      favorite: false
+      level: 0
+      type: edge
+      poolsGranted: []
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.AqzNS3W1OeVxvpkT'
+  - name: Veteran's Luck
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-edges.Item.94fgmfw56y7l780i
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: drSo2tM4sSHVPvIr
+    system:
+      description: >-
+        Once per scene, as an Instant action, trigger this ability to gain one
+        of two effects,an attack roll that just hit you is instead treated as a
+        miss
+      favorite: false
+      level: 0
+      type: edge
+      poolsGranted: []
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.drSo2tM4sSHVPvIr'
+  - name: Armsmaster
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-foci.Item.avyca4bixumyojdt
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: d89jhgAgBQrU7sQ2
+    system:
+      description: >-
+        "If it's got wheels or wings<br /><br />Level 1:  you can drive it. Your
+        background may lend itself to a particular type of transport<br />Level
+        2:  but your natural talent lets you operate any vehicle with an almost
+        instinctive aptitude. These Focus benefits do not apply to drone
+        piloting
+      favorite: false
+      level: 2
+      type: focus
+      poolsGranted: []
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!2Km6cXWmriCF8e0f.d89jhgAgBQrU7sQ2'
+effects: []
+folder: 1MnMOlCpFjrZIhXu
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.2Km6cXWmriCF8e0f
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
+_id: 2Km6cXWmriCF8e0f
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!actors!2Km6cXWmriCF8e0f'
+

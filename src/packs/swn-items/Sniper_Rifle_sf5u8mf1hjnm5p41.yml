@@ -1,0 +1,79 @@
+name: Sniper Rifle
+type: weapon
+folder: IuHCQEm5J46mKh45
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ranged.Item.sf5u8mf1hjnm5p41
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286681607
+  modifiedTime: 1757286681607
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: sf5u8mf1hjnm5p41
+system:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 1
+    suppress: false
+    type: ammo
+    value: 1
+    current: null
+  cost: 400
+  damage: 2d8
+  description: >-
+    Sniper rifles are designed to be exceptionally effective at dropping
+    unsuspecting targets at long range. Aside from the additional effective
+    range of a sniper rifle, any target it mortally wounds via an execution
+    attack will die instantly, with no chance for stabilization. The execution
+    attack must qualify according to the terms on page 52. If the rifle is used
+    outside of such conditions, it has no special qualities.
+  encumbrance: 2
+  location: other
+  quality: stock
+  range:
+    max: 2000
+    normal: 1000
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 3
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  secondStat: null
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+  isTwoHanded: false
+  isNonLethal: false
+  isMelee: false
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!sf5u8mf1hjnm5p41'
+

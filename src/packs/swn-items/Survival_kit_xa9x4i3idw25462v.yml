@@ -1,0 +1,62 @@
+name: Survival kit
+type: item
+folder: H7LaO0abkbAji23w
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.field-equipment.Item.xa9x4i3idw25462v
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286673546
+  modifiedTime: 1757286673546
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: xa9x4i3idw25462v
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 60
+  description: >-
+    Survival kit: A standard belt-worn kit with fire lighter, water filter,
+    three thermal flares, knife, thermal blanket, a brightly-colored 3 x 3 meter
+    waterproof tarp, a glowbug, and a radio beacon that can transmit a distress
+    signal up to fifty kilometers for one month on the included type A power
+    cell. Survival kits sold on a particular world will usually also include a
+    small booklet on specific dangers or edible organics. Possession of a
+    survival kit grants a +1 to all relevant Survive skill checks, assuming its
+    contents are helpful on a given planet. Survival kits are well-organized,
+    and count as only one item for encumbrance purposes.
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 4
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: icons/svg/item-bag.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!xa9x4i3idw25462v'
+

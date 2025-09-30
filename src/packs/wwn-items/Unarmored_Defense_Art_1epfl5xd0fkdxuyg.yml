@@ -1,0 +1,51 @@
+name: Unarmored Defense Art
+type: armor
+sort: 400000
+system:
+  description: >-
+    When not wearing armor or using a shield, your base Armor Class is equal to
+    13 plus half your character level, rounded down.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 0
+  cost: 0
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 13
+  shield: false
+  use: false
+  meleeAc: 13
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+  baseAc: 13
+_id: 1epfl5xd0fkdxuyg
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1754277456694
+  modifiedTime: 1758741681079
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: wWLLqniCuTTHdUfm
+flags: {}
+effects: []
+ownership:
+  default: 0
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+_key: '!items!1epfl5xd0fkdxuyg'
+

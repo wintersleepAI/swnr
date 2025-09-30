@@ -8,7 +8,7 @@ system:
     success, the spell's caster is treated as also having affected by the spell
     that just targeted you. This art can be used only once per round.
   favorite: false
-  subType: arcane
+  subType: art
   source: Mageslayer
   level: 1
   prepared: false
@@ -40,7 +40,6 @@ _stats:
 folder: 1QSf6od5nEmDkbXu
 flags: {}
 effects: []
-img: systems/wwn/assets/default/mageslayer_art.png
 ownership:
   default: 0
 _key: '!items!muxwgusfsxtaxbvx'

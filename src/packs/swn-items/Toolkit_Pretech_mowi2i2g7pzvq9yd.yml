@@ -1,0 +1,58 @@
+name: Toolkit/Pretech
+type: item
+folder: byrj73aeo8TgSYac
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.tools-and-medical.Item.mowi2i2g7pzvq9yd
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286683353
+  modifiedTime: 1757286683353
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: mowi2i2g7pzvq9yd
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 1000
+  description: >-
+    Toolkits/Pretech: Containing a wide range of necessary tools for a
+    particular skill set, toolkits can handle almost any job that doesn’t
+    require a full-scale shop or lab. These sophisticated pretech tools are
+    necessary for working on advanced TL5 artifacts, and the tools themselves
+    are very rare and difficult to obtain.
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 5
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/first-aid-kit.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!mowi2i2g7pzvq9yd'
+

@@ -139,11 +139,9 @@ prototypeToken:
       texture: null
   flags: {}
   randomImg: false
-img: systems/swnr/assets/icons/game-icons.net/creature-icons/dragon-head.svg
 items:
   - name: Claw
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -185,7 +183,6 @@ items:
     _key: '!actors.items!i0xb75jdbl4t5int.8l4rh927pstyhu05'
   - name: Bite
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     system:
       description: ''
       cost: 0
@@ -227,7 +224,6 @@ items:
     _key: '!actors.items!i0xb75jdbl4t5int.dmif5819s2sd6mdy'
   - name: Breath Weapon
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: 90' long cone of fire.
       cost: 0
@@ -256,7 +252,6 @@ items:
     _key: '!actors.items!i0xb75jdbl4t5int.vd7pu5r20mekuc75'
   - name: Language and Spells
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: 50%; 3 x 1st level, 3 x 2nd level, 3 x 3rd level.
       cost: 0
@@ -285,7 +280,6 @@ items:
     _key: '!actors.items!i0xb75jdbl4t5int.mhtgw901pzmwky62'
   - name: Sleeping
     type: item
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
     system:
       description: 10%.
       cost: 0
