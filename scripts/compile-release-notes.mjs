@@ -7,6 +7,7 @@ function markdownToHtml(markdown) {
     let html = markdown;
 
     // Headers
+    html = html.replace(/^#### (.*$)/gim, '<h4>$1</h4>');
     html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
     html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
     html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
@@ -67,12 +68,29 @@ function compileReleaseNotes(cb) {
         // Read the existing journal YAML as text
         const journalYaml = fs.readFileSync(JOURNAL_YAML_PATH, "utf8");
 
-        // Simple string replacement to update the content
-        // This replaces the content between the quotes after "content: "
-        const updatedYaml = journalYaml.replace(
-            /(content:\s*["'])[^"']*["']/,
-            `$1${html.replace(/"/g, '\\"')}"`
-        );
+        // Find the placeholder text and replace it with HTML content
+        // Preserve the indentation of the original line
+        const placeholderText = "This is a placeholder for the release note details. Do not manually edit this page.";
+        const lines = journalYaml.split('\n');
+        let updatedYaml = journalYaml;
+        
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            if (line.includes(placeholderText)) {
+                // Extract the indentation from the original line
+                const indentation = line.match(/^(\s*)/)[1];
+                
+                // Split HTML into lines and add the same indentation to each line
+                const htmlLines = html.split('\n');
+                const indentedHtml = htmlLines.map(htmlLine => 
+                    htmlLine.trim() === '' ? '' : indentation + htmlLine
+                ).join('\n');
+                
+                // Replace the placeholder line with the indented HTML
+                updatedYaml = journalYaml.replace(line, indentedHtml);
+                break;
+            }
+        }
 
         fs.writeFileSync(JOURNAL_YAML_PATH, updatedYaml);
 
