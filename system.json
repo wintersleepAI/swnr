@@ -205,6 +205,14 @@
       "label": "AWN Roll Tabels",
       "system": "swnr",
       "type": "RollTable"
+    },
+    {
+      "name": "swnr-documentation",
+      "label": "SWNR Documentation",
+      "system": "swnr",
+      "type": "JournalEntry",
+			"private": false,
+			"flags": {}
     }
   ],
   "packFolders": [
@@ -250,6 +258,14 @@
         "awn-roll-tables",
         "awn-actors",
         "awn-journals"
+      ]
+    },
+    {
+      "name": "SWNR System",
+      "sorting": "a",
+      "color": "#2E3B4E",
+      "packs": [
+        "swnr-documentation"
       ]
     }
   ],
