@@ -1,5 +1,4 @@
 name: "Release Notes"
-type: JournalEntry
 _id: Gq9tLm4ZRxv8pAy2
 _key: '!journal!Gq9tLm4ZRxv8pAy2'
 folder: null
@@ -7,26 +6,30 @@ flags: {}
 ownership:
   default: 0
 sort: 0
-system: {}
+categories: []
 pages:
-  - _id: XT7vLp3QMnbydEe9
-    _key: '!journal.pages!Gq9tLp3QMnbydEe9.XT7vLp3QMnbydEe9'
-    name: "Release Notes"
+  - sort: 100000
+    name: Release Note Details
     type: text
+    _id: npKF4D1snpeCxSu1
+    system: {}
     title:
+      show: true
       level: 1
-      show: false
-    text:
-      content: "Release notes will be automatically populated during the build process."
-      format: 1
     image: {}
+    text:
+      format: 1
+      content: >-
+        <h2>2.1.0</h2>
+        <ul><li><p>Unified Power System</p></li><li><p>Advanced Consumption System</p></li></ul>
     video:
       controls: true
       volume: 0.5
     src: null
-    system: {}
-    sort: 0
+    category: null
     ownership:
-      default: 0
+      default: -1
+      dlCmyPH1eqOStzVZ: 3
     flags: {}
+    _key: '!journal.pages!Gq9tLm4ZRxv8pAy2.npKF4D1snpeCxSu1'
 
