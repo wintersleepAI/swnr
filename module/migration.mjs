@@ -12,6 +12,9 @@ export const migrateWorld = async function (storedVersion) {
     // Set the migration as complete only if all migrations succeeded
     await game.settings.set("swnr", "systemMigrationVersion", game.system.version);
     ui.notifications.info(`SWN System Migration to version ${game.system.version} completed!`, { permanent: true });
+
+    // Show release notes to GM after successful migration
+    await showReleaseNotesToGM();
   } catch (err) {
     console.error("Migration failed:", err);
     ui.notifications.error(`Migration failed: ${err.message}. System version not updated. Please check console for details.`, { permanent: true });
@@ -474,14 +477,53 @@ function compareVersions(v1, v2) {
   const parts1 = v1.split('.').map(Number);
   const parts2 = v2.split('.').map(Number);
   const len = Math.max(parts1.length, parts2.length);
-  
+
   for (let i = 0; i < len; i++) {
     const num1 = parts1[i] || 0;
     const num2 = parts2[i] || 0;
-    
+
     if (num1 > num2) return 1;
     if (num1 < num2) return -1;
   }
-  
+
   return 0; // They are equal
+}
+
+/**
+ * Shows the release notes journal to the GM after a successful migration
+ * @returns {Promise<void>}
+ */
+async function showReleaseNotesToGM() {
+  // Only show to GMs
+  if (!game.user.isGM) return;
+
+  try {
+    // Get the SWNR documentation pack
+    const pack = game.packs.get("swnr.swnr-documentation");
+    if (!pack) {
+      console.warn("SWNR documentation pack not found, cannot show release notes");
+      return;
+    }
+
+    // Get the release notes journal entry
+    const releaseNotesId = "Gq9tLm4ZRxv8pAy2";
+    const journal = await pack.getDocument(releaseNotesId);
+
+    if (journal) {
+      // Small delay to let migration notifications settle
+      setTimeout(() => {
+        journal.sheet.render(true, {
+          focus: true,
+          top: 100,
+          left: 100
+        });
+        console.log("Release notes displayed to GM after migration");
+      }, 2000);
+    } else {
+      console.warn("Release notes journal entry not found in pack");
+    }
+  } catch (err) {
+    console.error("Failed to show release notes after migration:", err);
+    // Don't throw - this shouldn't break migration if it fails
+  }
 }

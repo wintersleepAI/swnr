@@ -1,8 +1,30 @@
+name: "Release Notes"
 type: JournalEntry
 _id: Gq9tLm4ZRxv8pAy2
-_key: '!journal!Gq9tLm4ZRxv8pAy2'
-categories: []
 folder: null
-name: "Release Notes"
-pages: ['XT7vLp3QMnbydEe9']
+flags: {}
+ownership:
+  default: 0
+sort: 0
+system: {}
+pages:
+  - _id: XT7vLp3QMnbydEe9
+    name: "Release Notes"
+    type: text
+    title:
+      level: 1
+      show: false
+    text:
+      content: "Release notes will be automatically populated during the build process."
+      format: 1
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: 0
+    flags: {}
 

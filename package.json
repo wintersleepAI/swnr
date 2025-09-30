@@ -5,6 +5,7 @@
   "scripts": {
     "build": "sass src/scss/swnr.scss css/swnr.css --style=expanded --no-source-map",
     "watch": "sass src/scss/swnr.scss css/swnr.css --style=expanded --source-map --watch",
+    "compile-release-notes": "node scripts/compile-release-notes.mjs",
     "pack-compendium": "node scripts/pack-compendium.mjs",
     "unpack-compendium": "node scripts/unpack-compendium.mjs",
     "convert-yaml": "node scripts/conversion/convert-yaml.mjs",

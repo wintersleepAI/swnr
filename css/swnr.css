@@ -1124,6 +1124,10 @@
   background: var(--stowed-bar-color);
   height: 100%;
 }
+.swnr .resource-bar .full-fill {
+  background: var(--over-filled-bar-color);
+  height: 100%;
+}
 .swnr .resource-bar .text {
   /* Positions the HP text in the center of the resource-bar */
   display: flex;
