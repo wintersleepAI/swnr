@@ -65,6 +65,7 @@ export default class SWNCharacter extends SWNActorBase {
       showMutation: new fields.BooleanField({initial: false}),
       showPoolsInHeader: new fields.BooleanField({ initial: false }),
       showPoolsInPowers: new fields.BooleanField({ initial: true }),
+      showPoolsInCombat: new fields.BooleanField({ initial: true }),
       resourceList: new fields.ArrayField(new fields.SchemaField({
         name: SWNShared.emptyString(),
         value: SWNShared.requiredNumber(0),

@@ -20,6 +20,14 @@
         </div>
         {{/each}}
       </div>
+      {{#if system.tweak.showPoolsInCombat}}
+      <div class="flex flex-col resource-pools" style="padding-top: 1.5em;">
+        <div class="pools-header">
+          <h4><i class="fas fa-battery-three-quarters"></i> {{localize 'swnr.pools.title'}}</h4>
+        </div>
+        {{> "systems/swnr/templates/actor/fragments/pools-display.hbs" submitInputs=true}}
+      </div>
+      {{/if}}
     </aside>
 
     {{! For the skills list, span the middle two columns }}
