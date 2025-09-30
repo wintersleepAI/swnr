@@ -409,7 +409,7 @@ export default class SWNCharacter extends SWNActorBase {
           }
         });
         getDocumentClass("ChatMessage").create({
-          speaker: chatMessage.getSpeaker({ actor: this.parent }),
+          speaker: ChatMessage.getSpeaker({ actor: this.parent }),
           flavor: msg,
           roll: JSON.stringify(roll),
           rolls: [roll],
