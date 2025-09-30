@@ -48,7 +48,7 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-img: icons/svg/item-bag.svg
+img: systems/swnr/assets/icons/game-icons.net/item-icons/ammo-box.svg
 ownership:
   default: 0
   iXDXVi7OlHcRwXw0: 3
