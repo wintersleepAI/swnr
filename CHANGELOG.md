@@ -5,7 +5,7 @@ All notable changes to the Stars Without Number Redux (SWNR) system for Foundry 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.0] Unified Power System and AWN 
+## [2.1.0] - 2025-09-30 Unified Power System and AWN 
 
 This comprehensive migration transforms the legacy effort system into the new resource pool system, 
 populates power resource fields, converts legacy configurations to consumption arrays, and creates pool-granting features 
@@ -122,18 +122,18 @@ at <a href='https://github.com/wintersleepAI/swnr/wiki/Powers---Resource-Pools' 
 *This version represents a major milestone in the SWNR system's evolution, providing a robust foundation for resource management across all Kevin Crawford game systems (SWN, WWN, CWN, AWN).*
 
 
-## [2.0.13] - 2024-07-30
+## [2.0.13] - 2025-07-30
 
 ### Fixed
 - Keep 0 qty consumables
 - Porting in NPC item bug
 
-## [2.0.12] - 2024-07-17
+## [2.0.12] - 2025-07-17
 
 ### Fixed
 - Fix for showing gear and consumables
 
-## [2.0.11] - 2024-07-16
+## [2.0.11] - 2025-07-16
 
 This version adds the ability for items to be marked as consumable (partially for AWN support) with the ability to track empty 'containers'. Ammo is treated as a consumable, which means a weapon should have the ammo source selected to reload. Shift+clicking reload will bypass this logic.
 
@@ -154,12 +154,12 @@ This version adds the ability for items to be marked as consumable (partially fo
 - Ammo is treated as a consumable - weapons need ammo source selected to reload
 - Item list formatting improvements
 
-## [2.0.10] - 2024-06-19
+## [2.0.10] - 2025-06-19
 
 ### Fixed
 - MacroBar bug fix - limited to intercept hook to cases that the system function handled
 
-## [2.0.9] - 2024-06-15
+## [2.0.9] - 2025-06-15
 
 ### Fixed
 - Chat card now properly displays damage buttons for v13
@@ -168,7 +168,7 @@ This version adds the ability for items to be marked as consumable (partially fo
 - Side bar context menu issue
 - Prose-mirror box fixes
 
-## [2.0.8] - 2024-05-30
+## [2.0.8] - 2025-05-30
 
 This migration adds a 'melee' flag to weapons which is used for determining what attack bonus to use with CWN Armor setting enabled. <b>You will need to set this flag manually for existing items.</b>
 
@@ -189,12 +189,12 @@ This migration adds a 'melee' flag to weapons which is used for determining what
 ### Changed
 - Adding melee tag to SWN weapons
 
-## [2.0.7] - 2024-05-13
+## [2.0.7] - 2025-05-13
 
 ### Changed
 - System bump
 
-## [2.0.6] - 2024-04-09
+## [2.0.6] - 2025-04-09
 
 ### Added
 - Reload on combat functionality
@@ -218,7 +218,7 @@ Remember and ask weapon fixes
 Adding the image for system
 
 ## [2.0.1]
-flag for access/stress. limit acces max to 0. small UI tweak
+flag for access/stress. limit access max to 0. small UI tweak
 
 ## [2.0.0]
 Initial release of the system rewrite. Original system can be found at 
