@@ -5,14 +5,16 @@ All notable changes to the Stars Without Number Redux (SWNR) system for Foundry 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.0] Unified Power System
+## [2.1.0] Unified Power System and AWN 
 
 This comprehensive migration transforms the legacy effort system into the new resource pool system, 
 populates power resource fields, converts legacy configurations to consumption arrays, and creates pool-granting features 
 for characters. All worlds from 2.0.12 or earlier have been fully migrated to the new system. See the notes 
 at <a href='https://github.com/wintersleepAI/swnr/wiki/Powers---Resource-Pools' target='_blank'>this wiki page</a> for more information.
 
-**NOTE v13 support only from this version onwards**
+**NOTE** v13 support only from this version onwards.
+
+**NOTE** you may have old compendiums from previous versions. You will need to manually delete empty compendium folders.
 
 ### Major Features
 
