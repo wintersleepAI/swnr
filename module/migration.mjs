@@ -124,11 +124,11 @@ const migrations = {
   },
   "2.0.8": async () => {
     console.log('Running migration for 2.0.8');
-    versionNote("2.0.8", "This migration adds a 'melee' flag to weapons which is used for determining what attack bonus to use with CWN Armor setting enabled. <b>You will need to set this flag manually for existing items.</b>");
+    // versionNote("2.0.8", "This migration adds a 'melee' flag to weapons which is used for determining what attack bonus to use with CWN Armor setting enabled. <b>You will need to set this flag manually for existing items.</b>");
   },
   "2.0.11": async () => {
     console.log('Running migration for 2.0.11');
-    versionNote("2.0.11", "This version adds the ability for items to be marked as consumable (partially for AWN support) with the ability to track empty 'containers'. Ammo is treated as a consumable, which means a weapon should have the ammo source selected to reload. Shift+clicking reload will bypass this logic.");
+    // versionNote("2.0.11", "This version adds the ability for items to be marked as consumable (partially for AWN support) with the ability to track empty 'containers'. Ammo is treated as a consumable, which means a weapon should have the ammo source selected to reload. Shift+clicking reload will bypass this logic.");
     },
   "2.1.0": async () => {
     console.log('Running migration for 2.1.0 - Unified Power System');
@@ -462,7 +462,7 @@ const migrations = {
         ui.notifications?.info(successMsg);
       }
       
-      versionNote("2.1.0", "Unified Power System migration completed. This comprehensive migration transforms the legacy effort system into the new resource pool system, populates power resource fields, converts legacy configurations to consumption arrays, and creates pool-granting features for characters. All worlds from 2.0.12 or earlier have been fully migrated to the new system. See the notes at <a href='https://github.com/wintersleepAI/swnr/wiki/Powers---Resource-Pools' target='_blank'>this wiki page</a> for more information.");
+      // versionNote("2.1.0", "Unified Power System migration completed.");
         
       
     } catch (err) {

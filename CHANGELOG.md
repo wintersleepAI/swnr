@@ -5,7 +5,13 @@ All notable changes to the Stars Without Number Redux (SWNR) system for Foundry 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.0] - 2025-08-XX
+## [2.1.0] 
+
+Unified Power System. This comprehensive migration transforms the legacy effort system into the new resource pool system, 
+populates power resource fields, converts legacy configurations to consumption arrays, and creates pool-granting features 
+for characters. All worlds from 2.0.12 or earlier have been fully migrated to the new system. See the notes 
+at <a href='https://github.com/wintersleepAI/swnr/wiki/Powers---Resource-Pools' target='_blank'>this wiki page</a> for more information.
+
 
 ### Major Features
 
@@ -111,3 +117,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 
 *This version represents a major milestone in the SWNR system's evolution, providing a robust foundation for resource management across all Kevin Crawford game systems (SWN, WWN, CWN, AWN).*
+
+
+## 2.0.11
+This version adds the ability for items to be marked as consumable (partially for AWN support) with the ability to track empty 'containers'. Ammo is treated as a consumable, which means a weapon should have the ammo source selected to reload. Shift+clicking reload will bypass this logic.
+
+## 2.0.8
+This migration adds a 'melee' flag to weapons which is used for determining what attack bonus to use with CWN Armor setting enabled. <b>You will need to set this flag manually for existing items.</b>
