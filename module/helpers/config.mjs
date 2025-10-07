@@ -357,6 +357,7 @@ SWN.defaultImg = {
   mech: "mech.png",
   cyberdeck: "cyberdeck.png",
   faction: "faction.png",
+  npc: "blankface.png",
 };
 
 SWN.shipActions = {
