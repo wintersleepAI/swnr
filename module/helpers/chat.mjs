@@ -106,6 +106,9 @@ function getRerollButton(
 
 export function _addRerollButton(html) {
   const totalDiv = html.find(".dice-total");
+  if (!totalDiv || totalDiv.length === 0) {
+    return;
+  }
   if (totalDiv.parent().parent().parent().hasClass("re-roll")) {
     // this is a re-roll do not add
     return;
