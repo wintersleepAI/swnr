@@ -77,48 +77,6 @@ export default class SWNNPC extends SWNActorBase {
     // Any derived data should be calculated here and added to "this."
     super.prepareDerivedData();
 
-    // migrate attacks to item. cannot be in migrateData because actor is not available
-    let attacks = this.attacks;
-    if (attacks) {
-      let attackName = attacks.name || "Attack";
-      let attackDamage = attacks.damage;
-
-      console.log("Migrating attacks for NPC", attackName, attackDamage);
-      // check if there is a weapon with the same name and damage
-      const weapon = this.parent.items.find(i => i.type === "weapon" && i.name === attackName && i.system.damage === attackDamage);
-      if (weapon) {
-        // Already has a weapon with the same name and damage so we can use it
-        console.log("Already has a weapon with the same name and damage so we can use it", weapon.name);
-      }
-      else {
-        console.log("No weapon with the same name and damage so we need to create one");
-        // Create a new weapon and add it to the NPC
-        let attackTraumaDie = attacks.trauma.die || "1d6";
-        let attackTraumaRating = attacks.trauma.rating || 2;
-        let attackShockDmg = attacks.shock.dmg || 0;
-        let attackShockAc = attacks.shock.ac || 10;
-        let system = {
-          damage: attackDamage,
-          trauma: {
-            die: attackTraumaDie,
-            rating: attackTraumaRating,
-          },
-          shock: {
-            dmg: attackShockDmg,
-            ac: attackShockAc,
-          },
-        };
-        this.parent.createEmbeddedDocuments("Item", [
-          {
-            name: attackName,
-            type: "weapon",
-            system: system,
-            img: "systems/swnr/assets/icons/game-icons.net/item-icons/fist.svg",
-          },
-        ]);
-      } // end else
-    } // end if attacks
-
     this.ac = this.baseAc;
     this.soakTotal = {
       value: 0,
