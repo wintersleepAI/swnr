@@ -23,7 +23,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
     schema.ammo = new fields.SchemaField({
       longReload: new fields.BooleanField({ initial: false }),
       suppress: new fields.BooleanField({ initial: false }),
-      type: SWNShared.stringChoices("ammo", CONFIG.SWN.ammoTypes),
+      type: SWNShared.stringChoices("none", CONFIG.SWN.ammoTypes),
       max: SWNShared.requiredNumber(10),
       value: SWNShared.requiredNumber(10),
       burst: new fields.BooleanField({ initial: false }),
