@@ -29,7 +29,7 @@ export default class SWNNPC extends SWNActorBase {
       }),
       shock: new fields.SchemaField({
         dmg: SWNShared.requiredNumber(0),
-        ac: SWNShared.requiredString("10"),
+        ac: SWNShared.requiredString(""),
       }),
     });
     schema.hitDice = SWNShared.requiredString("1d8");

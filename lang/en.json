@@ -261,6 +261,14 @@
             },
             "bonusDamage": {
               "label": "Damage Bonus"
+            },
+            "shock": {
+              "dmg": {
+                "label": "Shock Damage"
+              },
+              "ac": {
+                "label": "Shock AC Override"
+              }
             }
           },
           "ab": {

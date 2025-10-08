@@ -7,6 +7,14 @@
   font-family: typography.$font-primary;
 }
 
+.gap-2 {
+  gap: 2px;
+}
+
+.gap-4 {
+  gap: 4px;
+}
+
 .sheet-header {
   flex: 0 auto;
   /* overflow: hidden; TODO */
