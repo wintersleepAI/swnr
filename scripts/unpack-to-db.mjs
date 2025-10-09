@@ -22,6 +22,23 @@ async function initializeDatabase() {
         driver: sqlite3.Database
     });
 
+    // Check if we need to migrate embedded_items table
+    try {
+        const tableInfo = await db.all("PRAGMA table_info(embedded_items)");
+        const hasOwnershipColumn = tableInfo.some(col => col.name === 'ownership');
+        
+        if (!hasOwnershipColumn && tableInfo.length > 0) {
+            console.log("Migrating embedded_items table to new schema...");
+            
+            // Drop old embedded items tables and recreate with new schema
+            await db.exec(`DROP TABLE IF EXISTS embedded_items`);
+            await db.exec(`DROP TABLE IF EXISTS embedded_item_system_data`);
+            await db.exec(`DROP TABLE IF EXISTS embedded_item_effects`);
+        }
+    } catch (err) {
+        // Table doesn't exist yet, which is fine
+    }
+
     // Core documents table
     await db.exec(`
         CREATE TABLE IF NOT EXISTS documents (
@@ -64,7 +81,7 @@ async function initializeDatabase() {
         )
     `);
 
-    // Embedded items (for actors)
+    // Embedded items (for actors) - normalized approach
     await db.exec(`
         CREATE TABLE IF NOT EXISTS embedded_items (
             id TEXT PRIMARY KEY,
@@ -73,10 +90,31 @@ async function initializeDatabase() {
             type TEXT,
             img TEXT,
             sort INTEGER,
-            system_data TEXT, -- JSON
-            effects TEXT, -- JSON
+            ownership TEXT, -- JSON
             flags TEXT, -- JSON
             FOREIGN KEY (actor_id) REFERENCES documents(id)
+        )
+    `);
+
+    // Embedded item system data (normalized like main documents)
+    await db.exec(`
+        CREATE TABLE IF NOT EXISTS embedded_item_system_data (
+            item_id TEXT,
+            key TEXT,
+            value TEXT, -- JSON value
+            value_type TEXT, -- string, number, boolean, object, array
+            FOREIGN KEY (item_id) REFERENCES embedded_items(id)
+        )
+    `);
+
+    // Embedded item effects (normalized like main documents)
+    await db.exec(`
+        CREATE TABLE IF NOT EXISTS embedded_item_effects (
+            id TEXT PRIMARY KEY,
+            item_id TEXT,
+            name TEXT,
+            data TEXT, -- JSON
+            FOREIGN KEY (item_id) REFERENCES embedded_items(id)
         )
     `);
 
@@ -196,13 +234,14 @@ async function storeDocument(db, doc, compendium) {
         }
     }
 
-    // Store embedded items (for actors)
+    // Store embedded items (for actors) - normalized approach
     if (doc.items && Array.isArray(doc.items)) {
         for (const item of doc.items) {
+            // Insert the embedded item record
             await db.run(`
                 INSERT OR REPLACE INTO embedded_items (
-                    id, actor_id, name, type, img, sort, system_data, effects, flags
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    id, actor_id, name, type, img, sort, ownership, flags
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             `, [
                 item._id,
                 doc._id,
@@ -210,10 +249,30 @@ async function storeDocument(db, doc, compendium) {
                 item.type || null,
                 item.img || null,
                 item.sort || 0,
-                JSON.stringify(item.system || {}),
-                JSON.stringify(item.effects || []),
+                JSON.stringify(item.ownership || {}),
                 JSON.stringify(item.flags || {})
             ]);
+
+            // Store embedded item system data (flattened like main documents)
+            if (item.system) {
+                const systemEntries = flattenSystemData(item.system);
+                for (const entry of systemEntries) {
+                    await db.run(`
+                        INSERT OR REPLACE INTO embedded_item_system_data (item_id, key, value, value_type)
+                        VALUES (?, ?, ?, ?)
+                    `, [item._id, entry.key, entry.value, entry.value_type]);
+                }
+            }
+
+            // Store embedded item effects
+            if (item.effects && Array.isArray(item.effects)) {
+                for (const effect of item.effects) {
+                    await db.run(`
+                        INSERT OR REPLACE INTO embedded_item_effects (id, item_id, name, data)
+                        VALUES (?, ?, ?, ?)
+                    `, [effect._id || `${item._id}_effect_${Math.random()}`, item._id, effect.name || null, JSON.stringify(effect)]);
+                }
+            }
         }
     }
 
@@ -321,6 +380,10 @@ async function unpackToDatabase() {
             CREATE INDEX IF NOT EXISTS idx_system_data_document_id ON system_data(document_id);
             CREATE INDEX IF NOT EXISTS idx_system_data_key ON system_data(key);
             CREATE INDEX IF NOT EXISTS idx_embedded_items_actor_id ON embedded_items(actor_id);
+            CREATE INDEX IF NOT EXISTS idx_embedded_items_type ON embedded_items(type);
+            CREATE INDEX IF NOT EXISTS idx_embedded_item_system_data_item_id ON embedded_item_system_data(item_id);
+            CREATE INDEX IF NOT EXISTS idx_embedded_item_system_data_key ON embedded_item_system_data(key);
+            CREATE INDEX IF NOT EXISTS idx_embedded_item_effects_item_id ON embedded_item_effects(item_id);
         `);
         
         console.log("✓ Database unpacking complete!");

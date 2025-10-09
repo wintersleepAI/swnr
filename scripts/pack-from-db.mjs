@@ -126,29 +126,61 @@ async function getEffects(db, documentId) {
 }
 
 /**
- * Get embedded items for an actor
+ * Get system data for an embedded item and unflatten it
+ */
+async function getEmbeddedItemSystemData(db, itemId) {
+    const systemRows = await db.all(`
+        SELECT key, value, value_type 
+        FROM embedded_item_system_data 
+        WHERE item_id = ?
+        ORDER BY key
+    `, [itemId]);
+    
+    return unflattenSystemData(systemRows);
+}
+
+/**
+ * Get effects for an embedded item
+ */
+async function getEmbeddedItemEffects(db, itemId) {
+    const effects = await db.all(`
+        SELECT data FROM embedded_item_effects 
+        WHERE item_id = ?
+    `, [itemId]);
+    
+    return effects.map(row => JSON.parse(row.data));
+}
+
+/**
+ * Get embedded items for an actor (normalized approach)
  */
 async function getEmbeddedItems(db, actorId) {
     const items = await db.all(`
-        SELECT id, name, type, img, sort, system_data, effects, flags
+        SELECT id, name, type, img, sort, ownership, flags
         FROM embedded_items 
         WHERE actor_id = ?
         ORDER BY sort, name
     `, [actorId]);
     
-    return items.map(item => ({
-        _id: item.id,
-        name: item.name,
-        type: item.type,
-        img: item.img,
-        sort: item.sort,
-        system: JSON.parse(item.system_data || '{}'),
-        effects: JSON.parse(item.effects || '[]'),
-        flags: JSON.parse(item.flags || '{}'),
-        folder: null,
-        ownership: { default: 0 },
-        _key: `!actors.items!${actorId}.${item.id}`
-    }));
+    const result = [];
+    for (const item of items) {
+        const embeddedItem = {
+            _id: item.id,
+            name: item.name,
+            type: item.type,
+            img: item.img,
+            sort: item.sort,
+            system: await getEmbeddedItemSystemData(db, item.id),
+            effects: await getEmbeddedItemEffects(db, item.id),
+            flags: JSON.parse(item.flags || '{}'),
+            folder: null,
+            ownership: JSON.parse(item.ownership || '{"default": 0}'),
+            _key: `!actors.items!${actorId}.${item.id}`
+        };
+        result.push(embeddedItem);
+    }
+    
+    return result;
 }
 
 /**
