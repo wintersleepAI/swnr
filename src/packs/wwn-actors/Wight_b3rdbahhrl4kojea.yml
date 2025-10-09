@@ -36,7 +36,7 @@ items:
   - _id: o578wvhmqcj3ml52
     name: Energy Drain
     type: item
-    img: null
+    img: icons/svg/item-bag.svg
     sort: 0
     system:
       cost: 0
@@ -63,7 +63,7 @@ items:
   - _id: e1gshdvoijj6sc7k
     name: Mundane Damage Immunity
     type: item
-    img: null
+    img: icons/svg/item-bag.svg
     sort: 0
     system:
       cost: 0
@@ -82,7 +82,7 @@ items:
   - _id: 0vmjahbrd4skaf4o
     name: Touch
     type: weapon
-    img: null
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
       ab: 0
@@ -114,7 +114,7 @@ items:
   - _id: 1kfhhwxtv6seo5em
     name: Undead
     type: item
-    img: null
+    img: icons/svg/item-bag.svg
     sort: 0
     system:
       cost: 0

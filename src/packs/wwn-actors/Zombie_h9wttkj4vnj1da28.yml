@@ -38,7 +38,7 @@ items:
   - _id: 1y1rzw4npl4azafi
     name: Guardians
     type: item
-    img: null
+    img: icons/svg/item-bag.svg
     sort: 0
     system:
       cost: 0
@@ -57,7 +57,7 @@ items:
   - _id: yok6e7ujkgrzw3ny
     name: Initiative
     type: item
-    img: null
+    img: icons/svg/item-bag.svg
     sort: 0
     system:
       cost: 0
@@ -78,7 +78,7 @@ items:
   - _id: p2z9tzwvpmv87ckf
     name: Strike
     type: weapon
-    img: null
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
       ab: 0
@@ -110,7 +110,7 @@ items:
   - _id: u9v49kj6vn7vfx6h
     name: Undead
     type: item
-    img: null
+    img: icons/svg/item-bag.svg
     sort: 0
     system:
       cost: 0

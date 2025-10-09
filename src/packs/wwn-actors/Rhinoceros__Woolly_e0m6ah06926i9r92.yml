@@ -39,7 +39,7 @@ items:
   - _id: 0lecfli48e8taz4i
     name: Charge
     type: item
-    img: null
+    img: icons/svg/item-bag.svg
     sort: 0
     system:
       cost: 0
@@ -61,7 +61,7 @@ items:
   - _id: 5jld2emxadnejt6v
     name: Horn
     type: weapon
-    img: null
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
       ab: 0
@@ -93,7 +93,7 @@ items:
   - _id: qojjbbt4kjc9krrl
     name: Trample
     type: weapon
-    img: null
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
       ab: 4

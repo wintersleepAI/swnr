@@ -38,7 +38,7 @@ items:
   - _id: cgsd5wyfaw3gmry9
     name: Damage Immunity
     type: item
-    img: null
+    img: icons/svg/item-bag.svg
     sort: 0
     system:
       cost: 0
@@ -59,7 +59,7 @@ items:
   - _id: kbhqu4vjnjyhjss5
     name: Invisibility
     type: item
-    img: null
+    img: icons/svg/item-bag.svg
     sort: 0
     system:
       cost: 0
@@ -78,7 +78,7 @@ items:
   - _id: o5f8bltssmwvtcfk
     name: Lightning
     type: weapon
-    img: null
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
       ab: 0
@@ -110,7 +110,7 @@ items:
   - _id: lkobb49tvyfdhsdf
     name: Reveal Treasure Hoard
     type: item
-    img: null
+    img: icons/svg/item-bag.svg
     sort: 0
     system:
       cost: 0

@@ -36,7 +36,7 @@ items:
   - _id: hzl8iq3lju4t4wjj
     name: Charge
     type: item
-    img: null
+    img: icons/svg/item-bag.svg
     sort: 0
     system:
       cost: 0
@@ -57,7 +57,7 @@ items:
   - _id: fgstgdt52iib0dl5
     name: Ivory
     type: item
-    img: null
+    img: icons/svg/item-bag.svg
     sort: 0
     system:
       cost: 0
@@ -76,7 +76,7 @@ items:
   - _id: oc4ge7ix9cc51ok4
     name: Trample
     type: weapon
-    img: null
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
       ab: 4
@@ -110,7 +110,7 @@ items:
   - _id: t81eq8rw10uybeq9
     name: Tusk
     type: weapon
-    img: null
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
       ab: 0
