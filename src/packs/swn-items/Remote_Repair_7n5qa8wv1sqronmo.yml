@@ -1,7 +1,12 @@
+_id: 7n5qa8wv1sqronmo
 name: Remote Repair
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: VXwfMckwPSKXC4gD
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-biopsionics.Item.7n5qa8wv1sqronmo
@@ -13,17 +18,7 @@ _stats:
   createdTime: 1757286851234
   modifiedTime: 1757286851234
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 7n5qa8wv1sqronmo
 system:
-  description: >-
-    <p><em>Psychic Succor</em> and other biopsionic techniques that normally
-    require touch contact can now be applied at a distance up to 100 meters,
-    provided the biopsion can see the target with their unaided vision. Hostile
-    powers that normally require a hit roll will hit automatically. Each time
-    this technique is used, Effort must be Committed for the scene.</p>
-  level: 1
-  source: biopsionics
-  range: 100m
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -35,16 +30,18 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p><em>Psychic Succor</em> and other biopsionic techniques that normally
+    require touch contact can now be applied at a distance up to 100 meters,
+    provided the biopsion can see the target with their unaided vision. Hostile
+    powers that normally require a hit roll will hit automatically. Each time
+    this technique is used, Effort must be Committed for the scene.</p>
   favorite: false
-  subType: psychic
+  level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  range: 100m
+  source: biopsionics
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!7n5qa8wv1sqronmo'
 

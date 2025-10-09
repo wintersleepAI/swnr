@@ -1,119 +1,67 @@
+_id: txymro0l6iks8pb0
 name: Golem, Bone
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
-system:
-  ab: 8
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 18
-  hitDice: 8
-  moralScore: 12
-  saves: 11
-  skillBonus: 0
-  speed: 40
-  biography: >-
-    Artificial beings constructed from different materials by mighty clerics or
-    wizards. Bone golems are 6' tall constructs of human bone, crafted into a
-    humanoid shape. Have four arms, attached at different places on the torso.
-    Other materials: Golems formed of other materials are also possible.
-    Constructing: A very complex, expensive, and time-consuming process.
-  species: monster
-_id: txymro0l6iks8pb0
+ownership: {}
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456573
   modifiedTime: 1754277456573
   lastModifiedBy: null
   exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+system:
+  ab: 8
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 18
+  biography: >-
+    Artificial beings constructed from different materials by mighty clerics or
+    wizards. Bone golems are 6' tall constructs of human bone, crafted into a
+    humanoid shape. Have four arms, attached at different places on the torso.
+    Other materials: Golems formed of other materials are also possible.
+    Constructing: A very complex, expensive, and time-consuming process.
+  hitDice: 8
+  moralScore: 12
+  saves: 11
+  skillBonus: 0
+  species: monster
+  speed: 40
 effects: []
-prototypeToken:
-  name: Golem, Bone
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/humanoid-icons/golem-head.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Axe, War
+  - _id: 8cel42bcs0pak5fw
+    name: Attack Multiple Opponents
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: Up to 2 per round.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!txymro0l6iks8pb0.8cel42bcs0pak5fw'
+  - _id: 3z96q67fcx1he4y6
+    name: Axe, War
     type: weapon
+    img: null
+    sort: 0
     system:
       description: >-
         Axes given here are those fashioned for war; lighter and more agile than
@@ -139,26 +87,106 @@ items:
       encumbrance: 2
       quality: stock
       tl: 3
-    _id: 3z96q67fcx1he4y6
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!txymro0l6iks8pb0.3z96q67fcx1he4y6'
-  - name: Sword, Long
+  - _id: duvzdxdzwbp55i5l
+    name: Energy Immunity
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: Unharmed by fire, cold, and electricity.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!txymro0l6iks8pb0.duvzdxdzwbp55i5l'
+  - _id: n1sothk1aikmr8hw
+    name: Fists
     type: weapon
+    img: null
+    sort: 0
+    system:
+      description: Any hands not occupied by weapons may make an unarmed attack.
+      cost: 0
+      damage: 1d6
+      range:
+        normal: 0
+        max: 0
+      shock:
+        dmg: 1
+        ac: 15
+      ammo:
+        max: 0
+        type: ammo
+        burst: false
+      isTwoHanded: false
+      stat: str
+      skill: punch
+      ab: 0
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!txymro0l6iks8pb0.n1sothk1aikmr8hw'
+  - _id: lq2xbw64yuomz059
+    name: Immunity
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: Unharmed by gas; unaffected by charm, hold, and sleep spells.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!txymro0l6iks8pb0.lq2xbw64yuomz059'
+  - _id: d531fsawktludual
+    name: Mundane Damage Immunity
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: Can only be harmed by magical attacks.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!txymro0l6iks8pb0.d531fsawktludual'
+  - _id: 49e37kjl7e9dfgmj
+    name: Sword, Long
+    type: weapon
+    img: null
+    sort: 0
     system:
       description: >-
         Swords are common sidearms throughout the Latter Earth. The expense of
@@ -183,82 +211,17 @@ items:
       encumbrance: 1
       quality: stock
       tl: 3
-    _id: 49e37kjl7e9dfgmj
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!txymro0l6iks8pb0.49e37kjl7e9dfgmj'
-  - name: Mundane Damage Immunity
+  - _id: kqewwdjyq9v6y4g4
+    name: Weapons
     type: item
-    system:
-      description: Can only be harmed by magical attacks.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: d531fsawktludual
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
+    img: null
     sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!txymro0l6iks8pb0.d531fsawktludual'
-  - name: Immunity
-    type: item
-    system:
-      description: Unharmed by gas; unaffected by charm, hold, and sleep spells.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: lq2xbw64yuomz059
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!txymro0l6iks8pb0.lq2xbw64yuomz059'
-  - name: Weapons
-    type: item
     system:
       description: 4&times;1-handed or 2&times;2-handed.
       cost: 0
@@ -267,120 +230,11 @@ items:
       location: stowed
       quality: stock
       tl: 3
-    _id: kqewwdjyq9v6y4g4
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!txymro0l6iks8pb0.kqewwdjyq9v6y4g4'
-  - name: Energy Immunity
-    type: item
-    system:
-      description: Unharmed by fire, cold, and electricity.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: duvzdxdzwbp55i5l
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!txymro0l6iks8pb0.duvzdxdzwbp55i5l'
-  - name: Attack Multiple Opponents
-    type: item
-    system:
-      description: Up to 2 per round.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 8cel42bcs0pak5fw
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!txymro0l6iks8pb0.8cel42bcs0pak5fw'
-  - name: Fists
-    type: weapon
-    system:
-      description: Any hands not occupied by weapons may make an unarmed attack.
-      cost: 0
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 1
-        ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: n1sothk1aikmr8hw
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!txymro0l6iks8pb0.n1sothk1aikmr8hw'
 _key: '!actors!txymro0l6iks8pb0'
 

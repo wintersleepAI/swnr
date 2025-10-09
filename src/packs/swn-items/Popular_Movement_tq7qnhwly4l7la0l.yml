@@ -1,7 +1,12 @@
+_id: tq7qnhwly4l7la0l
 name: Popular Movement
 type: asset
 img: systems/swnr/assets/icons/hawkin/cunning.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.tq7qnhwly4l7la0l
@@ -13,40 +18,35 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: tq7qnhwly4l7la0l
 system:
   attackDamage: 2d6
   attackSource: cunning
   attackSpecial: ''
   attackTarget: cunning
   baseOfInfluence: false
+  category: cunning
   cost: 25
   counter: 1d6
   description: >-
     A planet-wide surge of enthusiasm for a cause controlled by the faction.
     This support pervades all levels of government, and the government always
     grants any asset purchase or movement requests made by the faction.
+  favorite: false
   health:
     max: 16
     value: 16
   income: 0
   maintenance: 0
+  qualities:
+    action: false
+    permission: false
+    special: true
   rating: 7
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Tactic
   unusable: false
-  qualities:
-    permission: false
-    action: false
-    special: true
-  category: cunning
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!tq7qnhwly4l7la0l'
 

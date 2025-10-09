@@ -1,13 +1,18 @@
+_id: AJtFG5MtTyECNLD3
 name: Companion Bot
 type: npc
 img: systems/swnr/assets/icons/android.png
 folder: wHL3xA3jmTpsQmyZ
+sort: 2700000
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757286426327
@@ -15,148 +20,53 @@ _stats:
   lastModifiedBy: iXDXVi7OlHcRwXw0
 system:
   ab: 0
+  access:
+    max: 1
+    value: 1
   armorType: street
   attacks:
     bonusDamage: 0
-    number: 1
     damage: d6
+    number: 1
   baseAc: 12
+  baseSoakTotal:
+    max: 0
+    value: 0
+  biography: ''
+  cyberdecks: []
+  health:
+    max: 10
+    value: 10
+  health_max_modified: 0
   hitDice: '1'
+  meleeAb: 1
+  meleeAc: 10
   moralScore: 6
+  reaction: unknown
   saves: 15
   skillBonus: 1
-  speed: 10
-  health:
-    value: 10
-    max: 10
-  biography: ''
   species: ''
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 6
-  meleeAc: 10
-  meleeAb: 1
+  speed: 10
   systemStrain:
-    value: 0
     permanent: 0
-  pools: {}
-  cyberdecks: []
-  health_max_modified: 0
-  reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
     value: 0
-    max: 0
+  traumaTarget: 6
   tweak:
-    showCyberware: true
-    showPsychic: true
-    showArts: false
-    showSpells: false
     showAdept: false
+    showArts: false
+    showCyberware: true
     showMutation: false
     showPoolsInHeader: true
     showPoolsInPowers: false
+    showPsychic: true
+    showSpells: false
 effects: []
-prototypeToken:
-  name: Companion Bot
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/android.png
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
 items:
-  - name: Unarmed Attack
+  - _id: kpjnxh1xci8na592
+    name: Unarmed Attack
     type: weapon
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
+    img: icons/svg/item-bag.svg
     sort: 0
-    _id: kpjnxh1xci8na592
     system:
       shock:
         dmg: 0
@@ -208,14 +118,10 @@ items:
       isNonLethal: false
       isMelee: false
     effects: []
-    img: icons/svg/item-bag.svg
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!AJtFG5MtTyECNLD3.kpjnxh1xci8na592'
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: AJtFG5MtTyECNLD3
-sort: 2700000
 _key: '!actors!AJtFG5MtTyECNLD3'
 

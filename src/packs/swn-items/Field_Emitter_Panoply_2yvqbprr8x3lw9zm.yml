@@ -1,6 +1,12 @@
+_id: 2yvqbprr8x3lw9zm
 name: Field Emitter Panoply
 type: armor
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
 folder: 3Dm85i0tKhFQJtw7
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.armor.Item.2yvqbprr8x3lw9zm
@@ -12,15 +18,16 @@ _stats:
   createdTime: 1757286662362
   modifiedTime: 1757286662362
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 2yvqbprr8x3lw9zm
 system:
   ac: 20
-  meleeAc: 20
-  traumaDiePenalty: 4
-  isSubtle: false
-  soak:
-    value: 15
-    max: 15
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 40000
   description: >-
     A field emitter panoply is a heavy-duty pretech defensive system composed of
@@ -30,30 +37,23 @@ system:
     particularly effective at filtering radiation, and renders the wearer immune
     to any dose that wouldn’t kill them in seconds. Many FEPs project
     intimidating holographic skins over the wearer when in operation.
-  encumbrance: 1
-  location: other
-  quality: stock
-  shield: false
-  tl: 5
-  use: false
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
   dr: 0
+  encumbrance: 1
+  favorite: false
   isHeavy: false
+  isSubtle: false
+  location: other
+  meleeAc: 20
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
+  soak:
+    max: 15
+    value: 15
+  tl: 5
+  traumaDiePenalty: 4
+  use: false
 effects: []
-img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!2yvqbprr8x3lw9zm'
 

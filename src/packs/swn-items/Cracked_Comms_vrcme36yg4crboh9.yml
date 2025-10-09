@@ -1,7 +1,12 @@
+_id: vrcme36yg4crboh9
 name: Cracked Comms
 type: asset
 img: systems/swnr/assets/icons/hawkin/cunning.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.vrcme36yg4crboh9
@@ -13,16 +18,14 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: vrcme36yg4crboh9
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: >-
     If the Cracked Comms succeeds in defending against an attack, it can
     immediately cause the attacking asset to make an attack against itself for
     normal damage or counterattack results.
-  attackTarget: null
   baseOfInfluence: false
+  category: cunning
   cost: 14
   counter: Special
   description: >-
@@ -31,27 +34,22 @@ system:
     the Cracked Comms succeeds in defending against an attack, it can
     immediately cause the attacking asset to make an attack against itself for
     normal damage or counterattack results.
+  favorite: false
   health:
     max: 6
     value: 6
   income: 0
   maintenance: 0
+  qualities:
+    action: false
+    permission: false
+    special: true
   rating: 5
+  stealthed: false
   tl: 0
   turnRoll: ''
   type: Tactic
   unusable: false
-  qualities:
-    permission: false
-    action: false
-    special: true
-  category: cunning
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!vrcme36yg4crboh9'
 

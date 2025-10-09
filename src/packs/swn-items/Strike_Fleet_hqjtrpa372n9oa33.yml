@@ -1,7 +1,12 @@
+_id: hqjtrpa372n9oa33
 name: Strike Fleet
 type: asset
 img: systems/swnr/assets/icons/hawkin/force.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.hqjtrpa372n9oa33
@@ -13,13 +18,13 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: hqjtrpa372n9oa33
 system:
   attackDamage: 2d6
   attackSource: force
   attackSpecial: ''
   attackTarget: force
   baseOfInfluence: false
+  category: force
   cost: 12
   counter: 1d8
   description: >-
@@ -27,27 +32,22 @@ system:
     space-to-ground weaponry and sophisticated defenses against light planetary
     weaponry. As an action, they can move to any world within one hex of their
     current location.
+  favorite: false
   health:
     max: 8
     value: 8
   income: 0
   maintenance: 0
+  qualities:
+    action: true
+    permission: false
+    special: false
   rating: 4
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Starship
   unusable: false
-  qualities:
-    permission: false
-    action: true
-    special: false
-  category: force
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!hqjtrpa372n9oa33'
 

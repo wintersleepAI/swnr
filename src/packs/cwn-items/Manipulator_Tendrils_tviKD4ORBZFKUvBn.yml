@@ -1,7 +1,12 @@
+_id: tviKD4ORBZFKUvBn
 name: Manipulator Tendrils
 type: shipFitting
 img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
 folder: 4ctWevVXyy54aHh0
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.xtw0kc791fxelxqo
@@ -14,7 +19,9 @@ _stats:
   modifiedTime: 1754266949107
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  broken: false
   cost: 0
+  costMultiplier: false
   description: >-
     One set of manipulators is added to the drone, whether a mechanical claw, an
     articulated metal tendril, or some other device. With a Main Action command
@@ -24,24 +31,17 @@ system:
     short distances, but to haul weight any real distance the Cargo Space
     fitting is required. This fitting can be added more than once if a pair of
     `hands` are needed.
-  mass: 1
-  type: drone
+  destroyed: false
+  effect: ''
   favorite: false
-  tl: 4
-  power: 1
-  costMultiplier: false
-  powerMultiplier: false
+  juryRigged: false
+  mass: 1
   massMultiplier: false
   minClass: fighter
-  broken: false
-  destroyed: false
-  juryRigged: false
-  effect: ''
+  power: 1
+  powerMultiplier: false
+  tl: 4
+  type: drone
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: tviKD4ORBZFKUvBn
-sort: 0
 _key: '!items!tviKD4ORBZFKUvBn'
 

@@ -1,7 +1,12 @@
+_id: xdmgj1uo468kw1jm
 name: Stealth
 type: asset
 img: systems/swnr/assets/icons/hawkin/cunning.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.xdmgj1uo468kw1jm
@@ -13,13 +18,11 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: xdmgj1uo468kw1jm
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: ''
-  attackTarget: null
   baseOfInfluence: false
+  category: cunning
   cost: 2
   counter: ''
   description: >-
@@ -29,27 +32,22 @@ system:
     requires the permission of a planetary government to be moved onto a planet,
     that permission may be foregone. An asset loses its Stealth if it is used to
     attack or defend.
+  favorite: false
   health:
     max: 0
     value: 0
   income: 0
   maintenance: 0
+  qualities:
+    action: false
+    permission: false
+    special: true
   rating: 3
+  stealthed: false
   tl: 0
   turnRoll: ''
   type: Tactic
   unusable: false
-  qualities:
-    permission: false
-    action: false
-    special: true
-  category: cunning
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!xdmgj1uo468kw1jm'
 

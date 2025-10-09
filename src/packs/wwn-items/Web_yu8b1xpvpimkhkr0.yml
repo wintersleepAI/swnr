@@ -1,25 +1,23 @@
+_id: yu8b1xpvpimkhkr0
 name: Web
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 100049
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457093
+  modifiedTime: 1754277919637
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 48 turns Range: 10' Web conjures a many-layered mass of strong,
-    sticky threads, blocking a 10' cube area. ▶ Entanglement: Creatures caught
-    within a web become entangled among the gluey fibres. Entangled creatures
-    can't move, but can break free depending on their strength (see below). ▶
-    Flammable: The strands of the web are flammable and can be destroyed by fire
-    in two rounds. All creatures caught within flaming webs suffer 1d6 points of
-    damage from the flames. Breaking free: Depends on STR: ▶ Normal human range:
-    The creature can break free in 2d4 turns. ▶ Magically augmented STR above
-    18: The creature can break free in 4 rounds. ▶ Giant strength: The creature
-    can break free in two rounds.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -33,26 +31,25 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 48 turns Range: 10' Web conjures a many-layered mass of strong,
+    sticky threads, blocking a 10' cube area. ▶ Entanglement: Creatures caught
+    within a web become entangled among the gluey fibres. Entangled creatures
+    can't move, but can break free depending on their strength (see below). ▶
+    Flammable: The strands of the web are flammable and can be destroyed by fire
+    in two rounds. All creatures caught within flaming webs suffer 1d6 points of
+    damage from the flames. Breaking free: Depends on STR: ▶ Normal human range:
+    The creature can break free in 2d4 turns. ▶ Magically augmented STR above
+    18: The creature can break free in 4 rounds. ▶ Giant strength: The creature
+    can break free in two rounds.
   duration: 48 turns (8 hours)
-  save: None
+  favorite: false
+  level: 2
+  prepared: false
   range: 10'
-  skill: null
-_id: yu8b1xpvpimkhkr0
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457093
-  modifiedTime: 1754277919637
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!yu8b1xpvpimkhkr0'
 

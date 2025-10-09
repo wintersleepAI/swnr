@@ -1,7 +1,12 @@
+_id: tubizuud0ptg4uaj
 name: Panopticon Matrix
 type: asset
 img: systems/swnr/assets/icons/hawkin/cunning.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.tubizuud0ptg4uaj
@@ -13,13 +18,11 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: tubizuud0ptg4uaj
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: ''
-  attackTarget: null
   baseOfInfluence: false
+  category: cunning
   cost: 30
   counter: 1d6
   description: >-
@@ -29,12 +32,18 @@ system:
     vs. Cunning test at the beginning of every turn or lose their Stealth. The
     owner also gains an additional die on all Cunning attacks and defenses on
     that planet.
+  favorite: false
   health:
     max: 20
     value: 20
   income: 0
   maintenance: 0
+  qualities:
+    action: false
+    permission: false
+    special: true
   rating: 8
+  stealthed: false
   tl: 5
   turnRoll: >-
     Every rival Stealthed asset on the planet must succeed in a Cunning vs.
@@ -43,17 +52,6 @@ system:
     planet.
   type: Logistics Facility
   unusable: false
-  qualities:
-    permission: false
-    action: false
-    special: true
-  category: cunning
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!tubizuud0ptg4uaj'
 

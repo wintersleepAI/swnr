@@ -1,19 +1,9 @@
+_id: jzWpelr4ZzIGp2D2
 name: Psychic Effort
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
-system:
-  description: ''
-  favorite: false
-  level: 0
-  type: focus
-  poolsGranted:
-    - resourceName: Effort
-      subResource: Psychic
-      formula: 1 + @skills.psychic.highest + Math.max(@stats.wis.mod, @stats.con.mod)
-      condition: ''
-      cadence: day
-effects: []
 folder: kSVqyjnjk070Af3I
+sort: 0
 ownership:
   default: 0
   iXDXVi7OlHcRwXw0: 3
@@ -28,7 +18,17 @@ _stats:
   createdTime: 1757287115809
   modifiedTime: 1757287115809
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: jzWpelr4ZzIGp2D2
-sort: 0
+system:
+  description: ''
+  favorite: false
+  level: 0
+  poolsGranted:
+    - resourceName: Effort
+      subResource: Psychic
+      formula: 1 + @skills.psychic.highest + Math.max(@stats.wis.mod, @stats.con.mod)
+      condition: ''
+      cadence: day
+  type: focus
+effects: []
 _key: '!items!jzWpelr4ZzIGp2D2'
 

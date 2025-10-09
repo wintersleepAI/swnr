@@ -1,7 +1,26 @@
+_id: nbfhibtgw6tvsnpo
 name: Vothite Icon
 type: item
+img: icons/svg/item-bag.svg
+folder: jXrFh0x6b5Auj9IZ
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456988
+  modifiedTime: 1754277456988
+  lastModifiedBy: null
+  exportSource: null
 system:
+  bundle:
+    bundled: false
+  cost: 0
   description: >-
     These small paintings, figurines, or symbolic statuettes were designed to
     influence the most primitive, basic levels of human cogitation in order to
@@ -15,35 +34,17 @@ system:
     it takes the full round to do so. The same icon can't affect the same
     creature twice. Lifting and presenting an icon requires one hand and a Main
     Action.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
   encumbrance: 1
-  cost: 0
+  favorite: false
   location: stowed
-  quality: stock
   noEncReadied: false
+  quality: stock
+  quantity: 1
   roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
     diceNum: 1
     diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
   tl: 3
-_id: nbfhibtgw6tvsnpo
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456988
-  modifiedTime: 1754277456988
-  lastModifiedBy: null
-  exportSource: null
-folder: jXrFh0x6b5Auj9IZ
-flags: {}
 effects: []
-ownership:
-  default: 0
 _key: '!items!nbfhibtgw6tvsnpo'
 

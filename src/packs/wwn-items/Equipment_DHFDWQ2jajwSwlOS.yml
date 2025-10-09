@@ -1,11 +1,10 @@
-type: Item
-folder: null
-name: Equipment
-color: null
-sorting: a
 _id: DHFDWQ2jajwSwlOS
-description: ''
+name: Equipment
+type: Item
+img: null
+folder: null
 sort: 500000
+ownership: {}
 flags: {}
 _stats:
   compendiumSource: null
@@ -17,5 +16,7 @@ _stats:
   createdTime: 1754272189786
   modifiedTime: 1754272218707
   lastModifiedBy: lKC5x4Yf023Bizof
+system: {}
+effects: []
 _key: '!folders!DHFDWQ2jajwSwlOS'
 

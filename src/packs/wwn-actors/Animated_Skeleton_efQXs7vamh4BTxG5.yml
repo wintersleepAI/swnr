@@ -1,18 +1,37 @@
+_id: efQXs7vamh4BTxG5
 name: Animated Skeleton
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: Orxb7xnxCDrQGVQO
+sort: 200000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.wwn-actors.Actor.fqxnicfx4t693wn3
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754271303973
+  modifiedTime: 1754271303973
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
   ab: 1
+  access:
+    max: 1
+    value: 1
   armorType: street
   attacks:
-    damage: d6
     bonusDamage: 0
+    damage: d6
     number: 0
   baseAc: 13
-  hitDice: '1'
-  moralScore: 12
-  saves: 15
-  skillBonus: 0
-  speed: 30
+  baseSoakTotal:
+    max: 0
+    value: 0
   biography: >-
     On the Spells tab (and duplicated on the Attributes tab) are certain special
     abilities or traits found in certain undead. Others surely exist. By
@@ -24,127 +43,31 @@ system:
     rates. Conventional healing spells or powers are useless on them unless used
     by themselves, a Necromancer, or by another person skilled in the
     maintenance of dead flesh. They accrue and lose System Strain as normal.
-  species: monster
-  health:
-    value: 10
-    max: 10
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 6
-  meleeAc: 10
-  meleeAb: 1
-  systemStrain:
-    value: 0
-    permanent: 0
-  pools: {}
   cyberdecks: []
+  health:
+    max: 10
+    value: 10
   health_max_modified: 0
+  hitDice: '1'
+  meleeAb: 1
+  meleeAc: 10
+  moralScore: 12
   reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
+  saves: 15
+  skillBonus: 0
+  species: monster
+  speed: 30
+  systemStrain:
+    permanent: 0
     value: 0
-    max: 0
-_stats:
-  compendiumSource: Compendium.swnr.wwn-actors.Actor.fqxnicfx4t693wn3
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754271303973
-  modifiedTime: 1754271303973
-  lastModifiedBy: lKC5x4Yf023Bizof
-folder: Orxb7xnxCDrQGVQO
-flags: {}
+  traumaTarget: 6
 effects: []
-prototypeToken:
-  name: Animated Skeleton
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/grim-reaper.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
 items:
-  - name: Averse
+  - _id: a3ahyrqii8pyy2d5
+    name: Averse
     type: item
+    img: null
+    sort: 0
     system:
       description: >-
         Certain religious symbols, lines of salt, emblems of natural law, or
@@ -178,24 +101,17 @@ items:
         consumable: none
         ammo: none
         keepEmpty: true
-    _id: a3ahyrqii8pyy2d5
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!efQXs7vamh4BTxG5.a3ahyrqii8pyy2d5'
-  - name: Beguiling
+  - _id: t172wui3szuklbr1
+    name: Beguiling
     type: item
+    img: null
+    sort: 0
     system:
       description: >-
         Once per scene it can beguile a creature with its gaze on a failed
@@ -229,24 +145,17 @@ items:
         consumable: none
         ammo: none
         keepEmpty: true
-    _id: t172wui3szuklbr1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!efQXs7vamh4BTxG5.t172wui3szuklbr1'
-  - name: Desynchrony
+  - _id: 4zx9uqf7xa6plqu2
+    name: Desynchrony
     type: item
+    img: null
+    sort: 0
     system:
       description: >-
         Foes hit by it must make a Physical save or be paralyzed for 1d4+1
@@ -278,24 +187,17 @@ items:
         consumable: none
         ammo: none
         keepEmpty: true
-    _id: 4zx9uqf7xa6plqu2
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!efQXs7vamh4BTxG5.4zx9uqf7xa6plqu2'
-  - name: Draining
+  - _id: nwofaduixzjautqj
+    name: Draining
     type: item
+    img: null
+    sort: 0
     system:
       description: >-
         Foes hit by it are enfeebled, taking a cumulative -2 penalty to hit
@@ -328,271 +230,17 @@ items:
         consumable: none
         ammo: none
         keepEmpty: true
-    _id: nwofaduixzjautqj
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!efQXs7vamh4BTxG5.nwofaduixzjautqj'
-  - name: Intangible
+  - _id: 8y0vs6107awytx54
+    name: Impure
     type: item
-    system:
-      description: >-
-        It is a shade or specter, unable to be touched by non-magical objects or
-        energies. It can manipulate objects important to it in life or kill with
-        its icy touch.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: dl8qzeguzj29jy5t
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
+    img: null
     sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!efQXs7vamh4BTxG5.dl8qzeguzj29jy5t'
-  - name: Ravenous
-    type: item
-    system:
-      description: >-
-        If it hits with at least one of its attacks, it gets an immediate bonus
-        attack against the target.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: gdfq2tb9s8qivoo1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!efQXs7vamh4BTxG5.gdfq2tb9s8qivoo1'
-  - name: Red Hunger
-    type: item
-    system:
-      description: >-
-        It must eat a pound of human flesh or drink a pint of human blood every
-        week or lose a quarter of its maximum hit points. At zero hit points it
-        dies or goes inert until fresh food comes near.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: amcwao1w0unhozkj
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!efQXs7vamh4BTxG5.amcwao1w0unhozkj'
-  - name: Sunscorch
-    type: item
-    system:
-      description: >-
-        Exposure to sunlight, running water, or some specific other emblem of
-        natural law inflicts 1d10 damage on it each round.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: rlrciw6424o9rnx1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!efQXs7vamh4BTxG5.rlrciw6424o9rnx1'
-  - name: Terrifying
-    type: item
-    system:
-      description: >-
-        Enemies must make a Mental save or lose their first turn's Main Action
-        as they summon their nerve. Morale checks it induces are made at -2.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: wlotl32uo73bg4kb
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!efQXs7vamh4BTxG5.wlotl32uo73bg4kb'
-  - name: Impure
-    type: item
     system:
       description: >-
         Weapons of silver, green wood, or other specific apotropaic material
@@ -625,28 +273,22 @@ items:
         consumable: none
         ammo: none
         keepEmpty: true
-    _id: 8y0vs6107awytx54
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!efQXs7vamh4BTxG5.8y0vs6107awytx54'
-  - name: Unending
+  - _id: dl8qzeguzj29jy5t
+    name: Intangible
     type: item
+    img: null
+    sort: 0
     system:
       description: >-
-        It cannot die by violence. Only the right act, weapon, object
-        destruction, or ritual can end it.
+        It is a shade or specter, unable to be touched by non-magical objects or
+        energies. It can manipulate objects important to it in life or kill with
+        its icy touch.
       cost: 0
       quantity: 1
       encumbrance: 1
@@ -674,24 +316,17 @@ items:
         consumable: none
         ammo: none
         keepEmpty: true
-    _id: 9hzm91n7jh8evw0e
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
-    _key: '!actors.items!efQXs7vamh4BTxG5.9hzm91n7jh8evw0e'
-  - name: Punch/Claw
+    _key: '!actors.items!efQXs7vamh4BTxG5.dl8qzeguzj29jy5t'
+  - _id: 2od7elzt97i1gg1r
+    name: Punch/Claw
     type: weapon
+    img: null
+    sort: 0
     system:
       description: ''
       cost: 0
@@ -742,26 +377,222 @@ items:
         die: 1d6
       isNonLethal: false
       isMelee: false
-    _id: 2od7elzt97i1gg1r
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!efQXs7vamh4BTxG5.2od7elzt97i1gg1r'
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: efQXs7vamh4BTxG5
-sort: 200000
+  - _id: gdfq2tb9s8qivoo1
+    name: Ravenous
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: >-
+        If it hits with at least one of its attacks, it gets an immediate bonus
+        attack against the target.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+      favorite: false
+      bundle:
+        bundled: false
+      noEncReadied: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      roll:
+        diceNum: 1
+        diceSize: d20
+        diceBonus: +@str.mod+ceil(@lvl / 2)
+      uses:
+        max: 1
+        value: 1
+        emptyQuantity: 0
+        consumable: none
+        ammo: none
+        keepEmpty: true
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!efQXs7vamh4BTxG5.gdfq2tb9s8qivoo1'
+  - _id: amcwao1w0unhozkj
+    name: Red Hunger
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: >-
+        It must eat a pound of human flesh or drink a pint of human blood every
+        week or lose a quarter of its maximum hit points. At zero hit points it
+        dies or goes inert until fresh food comes near.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+      favorite: false
+      bundle:
+        bundled: false
+      noEncReadied: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      roll:
+        diceNum: 1
+        diceSize: d20
+        diceBonus: +@str.mod+ceil(@lvl / 2)
+      uses:
+        max: 1
+        value: 1
+        emptyQuantity: 0
+        consumable: none
+        ammo: none
+        keepEmpty: true
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!efQXs7vamh4BTxG5.amcwao1w0unhozkj'
+  - _id: rlrciw6424o9rnx1
+    name: Sunscorch
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: >-
+        Exposure to sunlight, running water, or some specific other emblem of
+        natural law inflicts 1d10 damage on it each round.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+      favorite: false
+      bundle:
+        bundled: false
+      noEncReadied: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      roll:
+        diceNum: 1
+        diceSize: d20
+        diceBonus: +@str.mod+ceil(@lvl / 2)
+      uses:
+        max: 1
+        value: 1
+        emptyQuantity: 0
+        consumable: none
+        ammo: none
+        keepEmpty: true
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!efQXs7vamh4BTxG5.rlrciw6424o9rnx1'
+  - _id: wlotl32uo73bg4kb
+    name: Terrifying
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: >-
+        Enemies must make a Mental save or lose their first turn's Main Action
+        as they summon their nerve. Morale checks it induces are made at -2.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+      favorite: false
+      bundle:
+        bundled: false
+      noEncReadied: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      roll:
+        diceNum: 1
+        diceSize: d20
+        diceBonus: +@str.mod+ceil(@lvl / 2)
+      uses:
+        max: 1
+        value: 1
+        emptyQuantity: 0
+        consumable: none
+        ammo: none
+        keepEmpty: true
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!efQXs7vamh4BTxG5.wlotl32uo73bg4kb'
+  - _id: 9hzm91n7jh8evw0e
+    name: Unending
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: >-
+        It cannot die by violence. Only the right act, weapon, object
+        destruction, or ritual can end it.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+      favorite: false
+      bundle:
+        bundled: false
+      noEncReadied: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      roll:
+        diceNum: 1
+        diceSize: d20
+        diceBonus: +@str.mod+ceil(@lvl / 2)
+      uses:
+        max: 1
+        value: 1
+        emptyQuantity: 0
+        consumable: none
+        ammo: none
+        keepEmpty: true
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!efQXs7vamh4BTxG5.9hzm91n7jh8evw0e'
 _key: '!actors!efQXs7vamh4BTxG5'
 

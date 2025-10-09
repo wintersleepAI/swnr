@@ -1,7 +1,12 @@
+_id: ktm0o8q7wlr02icp
 name: Intuitive Response
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: J1fmkA6JJxYOdJVY
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-precognition.Item.ktm0o8q7wlr02icp
@@ -13,18 +18,7 @@ _stats:
   createdTime: 1757286857649
   modifiedTime: 1757286857649
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: ktm0o8q7wlr02icp
 system:
-  description: >-
-    <p>As an Instant action, the precog can Commit Effort for the scene just
-    before they roll initiative. Their initiative score is treated as one better
-    than anyone else’s involved in the scene. If another participant has this
-    power or some other ability that grants automatic initiative success, roll
-    initiative normally to determine which of them goes first, and then the rest
-    of the combatants act. This ability cannot be used if the precog has been
-    surprised.</p>
-  level: 1
-  source: precognition
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -36,16 +30,19 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p>As an Instant action, the precog can Commit Effort for the scene just
+    before they roll initiative. Their initiative score is treated as one better
+    than anyone else’s involved in the scene. If another participant has this
+    power or some other ability that grants automatic initiative success, roll
+    initiative normally to determine which of them goes first, and then the rest
+    of the combatants act. This ability cannot be used if the precog has been
+    surprised.</p>
   favorite: false
-  subType: psychic
+  level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: precognition
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!ktm0o8q7wlr02icp'
 

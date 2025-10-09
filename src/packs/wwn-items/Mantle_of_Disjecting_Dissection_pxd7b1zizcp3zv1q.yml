@@ -1,23 +1,23 @@
+_id: pxd7b1zizcp3zv1q
 name: Mantle of Disjecting Dissection
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456914
+  modifiedTime: 1754277456914
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    A visible willing creature within thirty feet is surrounded by a whirl of
-    razor-sharp energy shards. Anyone who attempt to touch the target or make a
-    melee attack against them must make an Evasion saving throw or suffer 1d6
-    damage plus the caster's level before resolving their attack. The field of
-    blades is indiscriminate and will affect even allies trying to touch the
-    target. The blades remain as long as the target gives up a Move Action each
-    round in order to avoid disrupting them from within, up to a maximum of one
-    scene.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -31,26 +31,23 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    A visible willing creature within thirty feet is surrounded by a whirl of
+    razor-sharp energy shards. Anyone who attempt to touch the target or make a
+    melee attack against them must make an Evasion saving throw or suffer 1d6
+    damage plus the caster's level before resolving their attack. The field of
+    blades is indiscriminate and will affect even allies trying to touch the
+    target. The blades remain as long as the target gives up a Move Action each
+    round in order to avoid disrupting them from within, up to a maximum of one
+    scene.
   duration: Up to 1 scene
-  save: evasion
+  favorite: false
+  level: 2
+  prepared: false
   range: 30 ft.
-  skill: null
-_id: pxd7b1zizcp3zv1q
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456914
-  modifiedTime: 1754277456914
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: evasion
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!pxd7b1zizcp3zv1q'
 

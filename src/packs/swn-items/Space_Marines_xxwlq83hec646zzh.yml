@@ -1,7 +1,12 @@
+_id: xxwlq83hec646zzh
 name: Space Marines
 type: asset
 img: systems/swnr/assets/icons/hawkin/force.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.xxwlq83hec646zzh
@@ -13,40 +18,35 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: xxwlq83hec646zzh
 system:
   attackDamage: 2d8+2
   attackSource: force
   attackSpecial: ''
   attackTarget: force
   baseOfInfluence: false
+  category: force
   cost: 30
   counter: 2d8
   description: >-
     Heavily-armored specialist troops trained for ship boarding actions and
     opposed landings. As an action, they can move to any world within one hex of
     their current location, whether or not the planetary government permits it.
+  favorite: false
   health:
     max: 16
     value: 16
   income: 0
   maintenance: 0
+  qualities:
+    action: true
+    permission: false
+    special: false
   rating: 7
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Military Unit
   unusable: false
-  qualities:
-    permission: false
-    action: true
-    special: false
-  category: force
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!xxwlq83hec646zzh'
 

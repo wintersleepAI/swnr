@@ -1,7 +1,12 @@
+_id: uneimvuxcftb8l6b
 name: Mercenaries
 type: asset
 img: systems/swnr/assets/icons/hawkin/wealth.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.uneimvuxcftb8l6b
@@ -13,13 +18,13 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: uneimvuxcftb8l6b
 system:
   attackDamage: 2d4+2
   attackSource: wealth
   attackSpecial: ''
   attackTarget: force
   baseOfInfluence: false
+  category: wealth
   cost: 8
   counter: 1d6
   description: >-
@@ -28,27 +33,22 @@ system:
     As an action, Mercenaries can move to any world within one hex of their
     current location. To purchase or move a Mercenary asset to a planet requires
     government permission.
+  favorite: false
   health:
     max: 6
     value: 6
   income: 0
   maintenance: 1
+  qualities:
+    action: true
+    permission: true
+    special: true
   rating: 3
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Military Unit
   unusable: false
-  qualities:
-    permission: true
-    action: true
-    special: true
-  category: wealth
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!uneimvuxcftb8l6b'
 

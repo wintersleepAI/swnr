@@ -1,119 +1,48 @@
+_id: 1wl2orxc5qqrptn5
 name: Golem, Wood
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
-system:
-  ab: 3
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 13
-  hitDice: 2
-  moralScore: 12
-  saves: 14
-  skillBonus: 0
-  speed: 40
-  biography: >-
-    Artificial beings constructed from different materials by mighty clerics or
-    wizards. Amber golems are constructed in the form of giant cats (e.g. lions
-    or tigers). Other materials: Golems formed of other materials are also
-    possible. Constructing: A very complex, expensive, and time-consuming
-    process.
-  species: monster
-_id: 1wl2orxc5qqrptn5
+ownership: {}
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456672
   modifiedTime: 1754277456672
   lastModifiedBy: null
   exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+system:
+  ab: 3
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 13
+  biography: >-
+    Artificial beings constructed from different materials by mighty clerics or
+    wizards. Amber golems are constructed in the form of giant cats (e.g. lions
+    or tigers). Other materials: Golems formed of other materials are also
+    possible. Constructing: A very complex, expensive, and time-consuming
+    process.
+  hitDice: 2
+  moralScore: 12
+  saves: 14
+  skillBonus: 0
+  species: monster
+  speed: 40
 effects: []
-prototypeToken:
-  name: Golem, Wood
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/tree-face.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Fist
+  - _id: dqwtdpo01bxk22ks
+    name: Fist
     type: weapon
+    img: null
+    sort: 0
     system:
       description: ''
       cost: 0
@@ -135,112 +64,17 @@ items:
       encumbrance: 1
       quality: stock
       tl: 3
-    _id: dqwtdpo01bxk22ks
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!1wl2orxc5qqrptn5.dqwtdpo01bxk22ks'
-  - name: Mundane Damage Immunity
+  - _id: 07p523hfjzh2h5h8
+    name: Flammable
     type: item
-    system:
-      description: Can only be harmed by magical attacks.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 67lufcuoxydib0p2
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
+    img: null
     sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!1wl2orxc5qqrptn5.67lufcuoxydib0p2'
-  - name: Immunity
-    type: item
-    system:
-      description: Unharmed by gas; unaffected by charm, hold, and sleep spells.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: y056zmx482jle9lw
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!1wl2orxc5qqrptn5.y056zmx482jle9lw'
-  - name: Initiative
-    type: item
-    system:
-      description: >-
-        -1 penalty due to stiff movement. Already reflected in monster
-        statistics.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: vj1pbjbkuultpmk2
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!1wl2orxc5qqrptn5.vj1pbjbkuultpmk2'
-  - name: Flammable
-    type: item
     system:
       description: >-
         -2 to saves against fire attacks; suffers one extra point of damage per
@@ -251,23 +85,70 @@ items:
       location: stowed
       quality: stock
       tl: 3
-    _id: 07p523hfjzh2h5h8
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!1wl2orxc5qqrptn5.07p523hfjzh2h5h8'
+  - _id: y056zmx482jle9lw
+    name: Immunity
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: Unharmed by gas; unaffected by charm, hold, and sleep spells.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!1wl2orxc5qqrptn5.y056zmx482jle9lw'
+  - _id: vj1pbjbkuultpmk2
+    name: Initiative
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: >-
+        -1 penalty due to stiff movement. Already reflected in monster
+        statistics.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!1wl2orxc5qqrptn5.vj1pbjbkuultpmk2'
+  - _id: 67lufcuoxydib0p2
+    name: Mundane Damage Immunity
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: Can only be harmed by magical attacks.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!1wl2orxc5qqrptn5.67lufcuoxydib0p2'
 _key: '!actors!1wl2orxc5qqrptn5'
 

@@ -1,168 +1,103 @@
-description: ''
-displayRoll: true
-flags: {}
-folder: Td6GsHm0Ns7IXzwI
-formula: 1d6
-img: icons/svg/d20-grey.svg
+_id: xV3MSrf1veA6rrUr
 name: One Roll NPCs - Background
-replacement: true
-results:
-  - _id: o7k1MlGQX9Qrn5JH
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 1
-      - 1
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Background: The local underclass or poorest natives'
-    name: ''
-    _key: '!tables.results!xV3MSrf1veA6rrUr.o7k1MlGQX9Qrn5JH'
-  - _id: CoaqpDTqLHENvWFn
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 2
-      - 2
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Background: Common laborers or cube workers'
-    name: ''
-    _key: '!tables.results!xV3MSrf1veA6rrUr.CoaqpDTqLHENvWFn'
-  - _id: I3Q2alrTTTkW9ltT
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 3
-      - 3
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Background: Aspiring bourgeoise or upper class'
-    name: ''
-    _key: '!tables.results!xV3MSrf1veA6rrUr.I3Q2alrTTTkW9ltT'
-  - _id: mAzFKzVS4WJIPbXv
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 4
-      - 4
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Background: The elite of this society'
-    name: ''
-    _key: '!tables.results!xV3MSrf1veA6rrUr.mAzFKzVS4WJIPbXv'
-  - _id: n434U2frKi7wLibx
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 5
-      - 5
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Background: Minority or foreigners; reroll on 1d4'
-    name: ''
-    _key: '!tables.results!xV3MSrf1veA6rrUr.n434U2frKi7wLibx'
-  - _id: t2VrwMA4fyHOMern
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 6
-      - 6
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Background: Offworlders or exotics; reroll on 1d4'
-    name: ''
-    _key: '!tables.results!xV3MSrf1veA6rrUr.t2VrwMA4fyHOMern'
-  - _id: VpJK52HvF9Fc5nVS
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-grey.svg
-    range:
-      - 5
-      - 6
-    type: document
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    name: One Roll NPCs - Background - 1d4
-    documentUuid: Compendium.swnr.one-roll-backing.RollTable.x6etGYYrrVZCt1hP
-    description: ''
-    _key: '!tables.results!xV3MSrf1veA6rrUr.VpJK52HvF9Fc5nVS'
+type: null
+img: icons/svg/d20-grey.svg
+folder: Td6GsHm0Ns7IXzwI
+sort: 1400000
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757287479164
   modifiedTime: 1757287502706
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: xV3MSrf1veA6rrUr
-sort: 1400000
+system: {}
+effects: []
+results:
+  - _id: o7k1MlGQX9Qrn5JH
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xV3MSrf1veA6rrUr.o7k1MlGQX9Qrn5JH'
+  - _id: CoaqpDTqLHENvWFn
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xV3MSrf1veA6rrUr.CoaqpDTqLHENvWFn'
+  - _id: I3Q2alrTTTkW9ltT
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xV3MSrf1veA6rrUr.I3Q2alrTTTkW9ltT'
+  - _id: mAzFKzVS4WJIPbXv
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xV3MSrf1veA6rrUr.mAzFKzVS4WJIPbXv'
+  - _id: VpJK52HvF9Fc5nVS
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 5
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xV3MSrf1veA6rrUr.VpJK52HvF9Fc5nVS'
+  - _id: n434U2frKi7wLibx
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xV3MSrf1veA6rrUr.n434U2frKi7wLibx'
+  - _id: t2VrwMA4fyHOMern
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xV3MSrf1veA6rrUr.t2VrwMA4fyHOMern'
 _key: '!tables!xV3MSrf1veA6rrUr'
 

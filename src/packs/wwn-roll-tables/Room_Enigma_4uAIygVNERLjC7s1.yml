@@ -1,426 +1,245 @@
 _id: 4uAIygVNERLjC7s1
 name: Room-Enigma
+type: null
 img: icons/svg/d20-grey.svg
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: 0pzx3mtmeyde24u0
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Magical fountain or pool
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.0pzx3mtmeyde24u0'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: tr64j2o83henoth9
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Control that opens paths elsewhere
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.tr64j2o83henoth9'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: pnenkx5g2chbh5vs
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Spatial warp between locations
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.pnenkx5g2chbh5vs'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: bxx0qq0l58i0x5av
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Enchanted statue or art object
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.bxx0qq0l58i0x5av'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: yaaoj6l9948huyhc
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Magically-animated room components
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.yaaoj6l9948huyhc'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: rmm1pk82g4816nt8
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Substance with physically impossible traits
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.rmm1pk82g4816nt8'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: ze11w1f67dnuu22e
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Altered or augmented gravity
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.ze11w1f67dnuu22e'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: 29b5j8k785qhnxby
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Zone that empowers foes or magic types
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.29b5j8k785qhnxby'
-  - type: text
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    _id: 1013cleqqbd1r8uq
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Magical ward or seal on a summoned thing
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.1013cleqqbd1r8uq'
-  - type: text
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    _id: 7pm0fv7r0fw4i6lw
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Oracular object or far-scrying device
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.7pm0fv7r0fw4i6lw'
-  - type: text
-    weight: 1
-    range:
-      - 11
-      - 11
-    drawn: false
-    _id: 7mmu9lmb0cjn5f4d
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Standing magical effect in the area
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.7mmu9lmb0cjn5f4d'
-  - type: text
-    weight: 1
-    range:
-      - 12
-      - 12
-    drawn: false
-    _id: kh75sbuu7ed3kzt2
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Temporal distortion or visions of other times
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.kh75sbuu7ed3kzt2'
-  - type: text
-    weight: 1
-    range:
-      - 13
-      - 13
-    drawn: false
-    _id: 0vlxd1af7lxcu0cb
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Sounds being shifted over long distances
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.0vlxd1af7lxcu0cb'
-  - type: text
-    weight: 1
-    range:
-      - 14
-      - 14
-    drawn: false
-    _id: 5lnlntdd6jfkdyy1
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Zones of darkness or blinding light
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.5lnlntdd6jfkdyy1'
-  - type: text
-    weight: 1
-    range:
-      - 15
-      - 15
-    drawn: false
-    _id: rkbz0dtq0utocv1q
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Enchanted seals visibly locking up loot
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.rkbz0dtq0utocv1q'
-  - type: text
-    weight: 1
-    range:
-      - 16
-      - 16
-    drawn: false
-    _id: h59a2r00qhwfmztw
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Magical or elemental force emitting unit
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.h59a2r00qhwfmztw'
-  - type: text
-    weight: 1
-    range:
-      - 17
-      - 17
-    drawn: false
-    _id: atwy0s953xt1yof5
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Enchantment tailored to the site’s original use
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.atwy0s953xt1yof5'
-  - type: text
-    weight: 1
-    range:
-      - 18
-      - 18
-    drawn: false
-    _id: pjjapbui5ztupwtz
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Unnatural heat or chill in an area
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.pjjapbui5ztupwtz'
-  - type: text
-    weight: 1
-    range:
-      - 19
-      - 19
-    drawn: false
-    _id: ussvihjpiasvlokf
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Magically-altered plant life here
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.ussvihjpiasvlokf'
-  - type: text
-    weight: 1
-    range:
-      - 20
-      - 20
-    drawn: false
-    _id: s0az8c70q1da83op
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Restorative magical device
-    name: ''
-    _key: '!tables.results!4uAIygVNERLjC7s1.s0az8c70q1da83op'
-formula: 1d20
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
-description: ''
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.4uAIygVNERLjC7s1
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: 0pzx3mtmeyde24u0
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.0pzx3mtmeyde24u0'
+  - _id: tr64j2o83henoth9
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.tr64j2o83henoth9'
+  - _id: pnenkx5g2chbh5vs
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.pnenkx5g2chbh5vs'
+  - _id: bxx0qq0l58i0x5av
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.bxx0qq0l58i0x5av'
+  - _id: yaaoj6l9948huyhc
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.yaaoj6l9948huyhc'
+  - _id: rmm1pk82g4816nt8
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.rmm1pk82g4816nt8'
+  - _id: ze11w1f67dnuu22e
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.ze11w1f67dnuu22e'
+  - _id: 29b5j8k785qhnxby
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.29b5j8k785qhnxby'
+  - _id: 1013cleqqbd1r8uq
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.1013cleqqbd1r8uq'
+  - _id: 7pm0fv7r0fw4i6lw
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.7pm0fv7r0fw4i6lw'
+  - _id: 7mmu9lmb0cjn5f4d
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.7mmu9lmb0cjn5f4d'
+  - _id: kh75sbuu7ed3kzt2
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.kh75sbuu7ed3kzt2'
+  - _id: 0vlxd1af7lxcu0cb
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 13
+      - 13
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.0vlxd1af7lxcu0cb'
+  - _id: 5lnlntdd6jfkdyy1
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 14
+      - 14
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.5lnlntdd6jfkdyy1'
+  - _id: rkbz0dtq0utocv1q
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 15
+      - 15
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.rkbz0dtq0utocv1q'
+  - _id: h59a2r00qhwfmztw
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 16
+      - 16
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.h59a2r00qhwfmztw'
+  - _id: atwy0s953xt1yof5
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 17
+      - 17
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.atwy0s953xt1yof5'
+  - _id: pjjapbui5ztupwtz
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 18
+      - 18
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.pjjapbui5ztupwtz'
+  - _id: ussvihjpiasvlokf
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 19
+      - 19
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.ussvihjpiasvlokf'
+  - _id: s0az8c70q1da83op
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 20
+      - 20
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!4uAIygVNERLjC7s1.s0az8c70q1da83op'
 _key: '!tables!4uAIygVNERLjC7s1'
 

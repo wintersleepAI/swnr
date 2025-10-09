@@ -1,7 +1,36 @@
+_id: qjshcf9u6md34j56
 name: Animate Dead
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 9300000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457077
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     Duration: Permanent Range: 60' This spell turns the bones or bodies of dead
     creatures into undead skeletons or zombies: ▶ Obedient: They obey the
@@ -16,46 +45,14 @@ system:
     counted as HD. For example, the reanimated corpse of a 5th level fighter
     would have 2 HD (1 HD as a normal human, +1 for being reanimated as a
     zombie).
+  duration: Permanent
   favorite: false
-  subType: spell
-  source: Mage
   level: 5
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Permanent
-  save: None
   range: 60'
-  skill: null
-_id: qjshcf9u6md34j56
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457077
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!qjshcf9u6md34j56'
 

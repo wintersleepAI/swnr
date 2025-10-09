@@ -1,186 +1,113 @@
 _id: K9PxMGuSFYjWLTqu
 name: MonContext-React
+type: null
 img: icons/svg/d20-grey.svg
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: wqknlugopriwt6bf
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They try to placate or appease its hungers
-    name: ''
-    _key: '!tables.results!K9PxMGuSFYjWLTqu.wqknlugopriwt6bf'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: m8nqvdpfi6q7jxb4
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They try to kill it, actively hunting it down
-    name: ''
-    _key: '!tables.results!K9PxMGuSFYjWLTqu.m8nqvdpfi6q7jxb4'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: t766elqwoqrhm94m
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They avoid its territory out of spiritual fear
-    name: ''
-    _key: '!tables.results!K9PxMGuSFYjWLTqu.t766elqwoqrhm94m'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: yb5wiwj5z19izoh5
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They accept a certain amount of loss from it
-    name: ''
-    _key: '!tables.results!K9PxMGuSFYjWLTqu.yb5wiwj5z19izoh5'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: 7cy0bsodb1u5a89k
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They build countermeasures against it
-    name: ''
-    _key: '!tables.results!K9PxMGuSFYjWLTqu.7cy0bsodb1u5a89k'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: hxfw5a10o3c1vzrg
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They try to contain it within a certain area
-    name: ''
-    _key: '!tables.results!K9PxMGuSFYjWLTqu.hxfw5a10o3c1vzrg'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: q34jwnas2e84ws3b
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They try to use it against their enemies
-    name: ''
-    _key: '!tables.results!K9PxMGuSFYjWLTqu.q34jwnas2e84ws3b'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: 068f16ee1wsob7iy
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They worship it or take it as a leader
-    name: ''
-    _key: '!tables.results!K9PxMGuSFYjWLTqu.068f16ee1wsob7iy'
-formula: 1d8
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
-description: ''
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.K9PxMGuSFYjWLTqu
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: wqknlugopriwt6bf
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!K9PxMGuSFYjWLTqu.wqknlugopriwt6bf'
+  - _id: m8nqvdpfi6q7jxb4
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!K9PxMGuSFYjWLTqu.m8nqvdpfi6q7jxb4'
+  - _id: t766elqwoqrhm94m
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!K9PxMGuSFYjWLTqu.t766elqwoqrhm94m'
+  - _id: yb5wiwj5z19izoh5
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!K9PxMGuSFYjWLTqu.yb5wiwj5z19izoh5'
+  - _id: 7cy0bsodb1u5a89k
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!K9PxMGuSFYjWLTqu.7cy0bsodb1u5a89k'
+  - _id: hxfw5a10o3c1vzrg
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!K9PxMGuSFYjWLTqu.hxfw5a10o3c1vzrg'
+  - _id: q34jwnas2e84ws3b
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!K9PxMGuSFYjWLTqu.q34jwnas2e84ws3b'
+  - _id: 068f16ee1wsob7iy
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!K9PxMGuSFYjWLTqu.068f16ee1wsob7iy'
 _key: '!tables!K9PxMGuSFYjWLTqu'
 

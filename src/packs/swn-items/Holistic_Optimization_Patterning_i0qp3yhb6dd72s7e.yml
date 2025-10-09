@@ -1,7 +1,12 @@
+_id: i0qp3yhb6dd72s7e
 name: Holistic Optimization Patterning
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: VXwfMckwPSKXC4gD
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-biopsionics.Item.i0qp3yhb6dd72s7e
@@ -13,21 +18,7 @@ _stats:
   createdTime: 1757286851234
   modifiedTime: 1757286851234
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: i0qp3yhb6dd72s7e
 system:
-  description: >-
-    <p>The biopsion gains the ability to drastically augment their own or a
-    touched ally’s physical abilities as an On Turn action. This boost lasts for
-    the rest of the scene, adds two points of System Strain to the target and
-    gives them a +2 bonus to all Strength or Dexterity skill checks, hit rolls,
-    and damage rolls along with 20 extra hit points. Any damage is taken off
-    these temporary hit points first, and both the bonuses and any hit points in
-    excess of the target’s maximum are lost at the end of the scene. Each
-    invocation of this technique requires the biopsion to Commit Effort for the
-    day, and this power cannot be used on a given target more than once per
-    scene.</p>
-  level: 4
-  source: biopsionics
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -39,16 +30,22 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p>The biopsion gains the ability to drastically augment their own or a
+    touched ally’s physical abilities as an On Turn action. This boost lasts for
+    the rest of the scene, adds two points of System Strain to the target and
+    gives them a +2 bonus to all Strength or Dexterity skill checks, hit rolls,
+    and damage rolls along with 20 extra hit points. Any damage is taken off
+    these temporary hit points first, and both the bonuses and any hit points in
+    excess of the target’s maximum are lost at the end of the scene. Each
+    invocation of this technique requires the biopsion to Commit Effort for the
+    day, and this power cannot be used on a given target more than once per
+    scene.</p>
   favorite: false
-  subType: psychic
+  level: 4
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: biopsionics
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!i0qp3yhb6dd72s7e'
 

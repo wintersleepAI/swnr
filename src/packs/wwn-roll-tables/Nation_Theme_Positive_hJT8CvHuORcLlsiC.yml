@@ -1,227 +1,136 @@
 _id: hJT8CvHuORcLlsiC
 name: Nation-Theme-Positive
+type: null
 img: icons/svg/d20-grey.svg
-description: Thematic Element - Positive Elements
-results:
-  - _id: WGTDiWZIT8Ls0F8h
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Enlightenment, where knowledge is loved
-    name: ''
-    _key: '!tables.results!hJT8CvHuORcLlsiC.WGTDiWZIT8Ls0F8h'
-  - _id: mJlsUz1hX5J2ROdd
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Expansion, where things swell greater
-    name: ''
-    _key: '!tables.results!hJT8CvHuORcLlsiC.mJlsUz1hX5J2ROdd'
-  - _id: 1do0HVO2Z1RMrF9O
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Hope, that the future should be better
-    name: ''
-    _key: '!tables.results!hJT8CvHuORcLlsiC.1do0HVO2Z1RMrF9O'
-  - _id: lQIjnt6UDyuMGOTQ
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Justice, where a reckoning is had
-    name: ''
-    _key: '!tables.results!hJT8CvHuORcLlsiC.lQIjnt6UDyuMGOTQ'
-  - _id: VeVHUTsvMEsWbD2y
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Legitimacy, where rulers are by right
-    name: ''
-    _key: '!tables.results!hJT8CvHuORcLlsiC.VeVHUTsvMEsWbD2y'
-  - _id: 6bsX9V7QXO2RaAIX
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Pageantry, of splendor and magnificence
-    name: ''
-    _key: '!tables.results!hJT8CvHuORcLlsiC.6bsX9V7QXO2RaAIX'
-  - _id: zgmkvrxGqTTwrZIo
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Prosperity, with wealth easily had
-    name: ''
-    _key: '!tables.results!hJT8CvHuORcLlsiC.zgmkvrxGqTTwrZIo'
-  - _id: fBo7xwFYjIArQ0I1
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Renewal, with things growing brighter
-    name: ''
-    _key: '!tables.results!hJT8CvHuORcLlsiC.fBo7xwFYjIArQ0I1'
-  - _id: p7hRgnW14uYnrC7u
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Triumph, with victory a fresh memory
-    name: ''
-    _key: '!tables.results!hJT8CvHuORcLlsiC.p7hRgnW14uYnrC7u'
-  - _id: 792xo2AUoWPuuWLP
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Unity, where purposes are shared
-    name: ''
-    _key: '!tables.results!hJT8CvHuORcLlsiC.792xo2AUoWPuuWLP'
-formula: 1d10
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   better-rolltables: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.hJT8CvHuORcLlsiC
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: WGTDiWZIT8Ls0F8h
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hJT8CvHuORcLlsiC.WGTDiWZIT8Ls0F8h'
+  - _id: mJlsUz1hX5J2ROdd
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hJT8CvHuORcLlsiC.mJlsUz1hX5J2ROdd'
+  - _id: 1do0HVO2Z1RMrF9O
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hJT8CvHuORcLlsiC.1do0HVO2Z1RMrF9O'
+  - _id: lQIjnt6UDyuMGOTQ
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hJT8CvHuORcLlsiC.lQIjnt6UDyuMGOTQ'
+  - _id: VeVHUTsvMEsWbD2y
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hJT8CvHuORcLlsiC.VeVHUTsvMEsWbD2y'
+  - _id: 6bsX9V7QXO2RaAIX
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hJT8CvHuORcLlsiC.6bsX9V7QXO2RaAIX'
+  - _id: zgmkvrxGqTTwrZIo
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hJT8CvHuORcLlsiC.zgmkvrxGqTTwrZIo'
+  - _id: fBo7xwFYjIArQ0I1
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hJT8CvHuORcLlsiC.fBo7xwFYjIArQ0I1'
+  - _id: p7hRgnW14uYnrC7u
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hJT8CvHuORcLlsiC.p7hRgnW14uYnrC7u'
+  - _id: 792xo2AUoWPuuWLP
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hJT8CvHuORcLlsiC.792xo2AUoWPuuWLP'
 _key: '!tables!hJT8CvHuORcLlsiC'
 

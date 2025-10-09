@@ -1,561 +1,336 @@
 _id: sz7YZ7j6O0eGuv1i
 name: Government Construction
+type: null
 img: icons/svg/d20-grey.svg
-results:
-  - _id: bTSYODAj58n47s99
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292325891
-    description: >-
-      <p><strong>The Ruling Authority </strong>- Number of Rulers and Forms of
-      Rulership</p>
-    name: ''
-    documentUuid: null
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.bTSYODAj58n47s99'
-  - _id: jYKSOH96iFvPlNbU
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292333095
-    name: Government-Rulers
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.FvNCFUCYTqYZT4C7
-    description: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.jYKSOH96iFvPlNbU'
-  - _id: uzADsPsB7ymZd78i
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>The Ruling Class</b>
-    name: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.uzADsPsB7ymZd78i'
-  - _id: k2JxgSW2Xn4mtRH1
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292341882
-    name: Government-RulingClass
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.KAn6F1047vfZhXGn
-    description: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.k2JxgSW2Xn4mtRH1'
-  - _id: LJKSVtzTUH4izBXi
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Source of Legitimacy</b>
-    name: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.LJKSVtzTUH4izBXi'
-  - _id: 13eNLiZJU4H2L2kW
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292347968
-    name: Government-Legitimacy
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.Zr5dQzVTtR2kLcTn
-    description: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.13eNLiZJU4H2L2kW'
-  - _id: NovbGvplnAKGiuGh
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Institutions and Agents of Control</b>
-    name: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.NovbGvplnAKGiuGh'
-  - _id: G6M0KKRTmxClMuOM
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292356071
-    name: Government-Servants
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.Xw4Q07VlUhuL40FJ
-    description: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.G6M0KKRTmxClMuOM'
-  - _id: TiirNgDkcH4On0wv
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Current Struggle Within the Government</b>
-    name: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.TiirNgDkcH4On0wv'
-  - _id: yeglgwHaI3qvQZnT
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292363597
-    name: Government-Struggle
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.cRQilgHbQ35bK5Ls
-    description: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.yeglgwHaI3qvQZnT'
-  - _id: onjtn0uK7TXXZofm
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>How Stable is the Government?</b>
-    name: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.onjtn0uK7TXXZofm'
-  - _id: MPMThPIy2RDFT7c0
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292371576
-    name: Government-Stability
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.s2gO9TMhKzWgDaFD
-    description: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.MPMThPIy2RDFT7c0'
-  - _id: rBgWHGb4AbhlYfhx
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>How Established is the Current Ruler?</b>
-    name: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.rBgWHGb4AbhlYfhx'
-  - _id: BGP9tAplo2k22Qo0
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292421946
-    name: Government-Established
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.EpnCeklE2U2Vwzfd
-    description: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.BGP9tAplo2k22Qo0'
-  - _id: OjdAuQxSHOqqa5Y6
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>What Problems do their Ministers Have?</b>
-    name: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.OjdAuQxSHOqqa5Y6'
-  - _id: jgmIIM2uctkS2LJ7
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292430576
-    name: Government-Problems
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.Mgb2XFoJPZgidaEE
-    description: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.jgmIIM2uctkS2LJ7'
-  - _id: oQy5DDtLOPudQqMC
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>A Strength of the Government</b>
-    name: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.oQy5DDtLOPudQqMC'
-  - _id: BuqfQShx0FMXLSOs
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292437404
-    name: Government-Strength
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.9QtA1c7kZCkt9sXH
-    description: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.BuqfQShx0FMXLSOs'
-  - _id: U3nxcNvlrcyLx73a
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Officials Recently Causing Problems</b>
-    name: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.U3nxcNvlrcyLx73a'
-  - _id: 8kpmGusqLdzfbD54
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292444632
-    name: Government-Officials
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.F3AuhGriYViXEJpu
-    description: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.8kpmGusqLdzfbD54'
-  - _id: NmyQuOT3vIhUuojU
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Recent Governmental Event</b>
-    name: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.NmyQuOT3vIhUuojU'
-  - _id: IRy7kX5KoNo8oPuD
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292450104
-    name: Government-Event
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.Mz4YZ0etfiqLAYTe
-    description: ''
-    _key: '!tables.results!sz7YZ7j6O0eGuv1i.IRy7kX5KoNo8oPuD'
-formula: 1d1
-replacement: true
-displayRoll: true
 folder: NcNmE2NSqwIFlKia
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   better-rolltables:
     table-type: better
     loot-amount-key: ''
-description: ''
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-tables.RollTable.sz7YZ7j6O0eGuv1i
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271920613
   modifiedTime: 1754271920613
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: 13eNLiZJU4H2L2kW
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.13eNLiZJU4H2L2kW'
+  - _id: 8kpmGusqLdzfbD54
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.8kpmGusqLdzfbD54'
+  - _id: BGP9tAplo2k22Qo0
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.BGP9tAplo2k22Qo0'
+  - _id: BuqfQShx0FMXLSOs
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.BuqfQShx0FMXLSOs'
+  - _id: G6M0KKRTmxClMuOM
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.G6M0KKRTmxClMuOM'
+  - _id: IRy7kX5KoNo8oPuD
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.IRy7kX5KoNo8oPuD'
+  - _id: LJKSVtzTUH4izBXi
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.LJKSVtzTUH4izBXi'
+  - _id: MPMThPIy2RDFT7c0
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.MPMThPIy2RDFT7c0'
+  - _id: NmyQuOT3vIhUuojU
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.NmyQuOT3vIhUuojU'
+  - _id: NovbGvplnAKGiuGh
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.NovbGvplnAKGiuGh'
+  - _id: OjdAuQxSHOqqa5Y6
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.OjdAuQxSHOqqa5Y6'
+  - _id: TiirNgDkcH4On0wv
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.TiirNgDkcH4On0wv'
+  - _id: U3nxcNvlrcyLx73a
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.U3nxcNvlrcyLx73a'
+  - _id: bTSYODAj58n47s99
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.bTSYODAj58n47s99'
+  - _id: jYKSOH96iFvPlNbU
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.jYKSOH96iFvPlNbU'
+  - _id: jgmIIM2uctkS2LJ7
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.jgmIIM2uctkS2LJ7'
+  - _id: k2JxgSW2Xn4mtRH1
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.k2JxgSW2Xn4mtRH1'
+  - _id: oQy5DDtLOPudQqMC
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.oQy5DDtLOPudQqMC'
+  - _id: onjtn0uK7TXXZofm
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.onjtn0uK7TXXZofm'
+  - _id: rBgWHGb4AbhlYfhx
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.rBgWHGb4AbhlYfhx'
+  - _id: uzADsPsB7ymZd78i
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.uzADsPsB7ymZd78i'
+  - _id: yeglgwHaI3qvQZnT
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!sz7YZ7j6O0eGuv1i.yeglgwHaI3qvQZnT'
 _key: '!tables!sz7YZ7j6O0eGuv1i'
 

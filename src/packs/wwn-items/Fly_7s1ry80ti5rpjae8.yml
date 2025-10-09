@@ -1,19 +1,23 @@
+_id: 7s1ry80ti5rpjae8
 name: Fly
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 5900000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457053
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: [[1d6 turns]] +1 per level Range: The caster or a creature touched
-    The subject gains the ability to fly through the air. ▶ Movement rate: Up to
-    360' (120'). ▶ Free movement: Is possible in any direction, including the
-    ability to levitate and to hover in mid-air.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -27,26 +31,19 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: [[1d6 turns]] +1 per level Range: The caster or a creature touched
+    The subject gains the ability to fly through the air. ▶ Movement rate: Up to
+    360' (120'). ▶ Free movement: Is possible in any direction, including the
+    ability to levitate and to hover in mid-air.
   duration: 1d6 turns + 1 / level
-  save: None
+  favorite: false
+  level: 3
+  prepared: false
   range: Touch
-  skill: null
-_id: 7s1ry80ti5rpjae8
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457053
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!7s1ry80ti5rpjae8'
 

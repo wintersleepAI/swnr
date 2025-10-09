@@ -1,26 +1,23 @@
+_id: i8k8a7kkwu1a6ste
 name: Sigil of Aeolian Auctoritas
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456900
+  modifiedTime: 1754277456900
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    A fierce gust of wind may be conjured in a line a hundred feet long and
-    thirty feet wide. All creatures of man-size or smaller must make Physical
-    saves or be bowled over and blown back thirty feet, losing their next
-    round's Main Action and suffering 1d6 damage. Light wooden constructions or
-    similar structures are flattened by the wind. If used outdoors, the spell
-    can instead control the local weather, transforming the quarter-mile around
-    the caster into any climate found normally at that location at any point
-    during the year. The spell cannot summon a tornado or other extreme weather,
-    but it can call rain and conventional storms sufficient to cause flooding in
-    areas prone to it. The gust of wind is instantaneous, but the weather change
-    lasts for one hour per caster level before reverting to its natural state.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -34,26 +31,26 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    A fierce gust of wind may be conjured in a line a hundred feet long and
+    thirty feet wide. All creatures of man-size or smaller must make Physical
+    saves or be bowled over and blown back thirty feet, losing their next
+    round's Main Action and suffering 1d6 damage. Light wooden constructions or
+    similar structures are flattened by the wind. If used outdoors, the spell
+    can instead control the local weather, transforming the quarter-mile around
+    the caster into any climate found normally at that location at any point
+    during the year. The spell cannot summon a tornado or other extreme weather,
+    but it can call rain and conventional storms sufficient to cause flooding in
+    areas prone to it. The gust of wind is instantaneous, but the weather change
+    lasts for one hour per caster level before reverting to its natural state.
   duration: 1 hour per caster level
-  save: physical
+  favorite: false
+  level: 4
+  prepared: false
   range: 100 ft. x 30 ft.
-  skill: null
-_id: i8k8a7kkwu1a6ste
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456900
-  modifiedTime: 1754277456900
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: physical
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!i8k8a7kkwu1a6ste'
 

@@ -1,427 +1,246 @@
 _id: xR9vJU4cLdDuKN1U
 name: Nation-Problems
+type: null
 img: icons/svg/d20-grey.svg
-description: Current National Problems
-results:
-  - _id: 9tfZf8wQfLqXhLd9
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Farmland is becoming worn-out and depleted
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.9tfZf8wQfLqXhLd9'
-  - _id: x5hHFQdSLi3pVvpH
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Verminous monsters are swarming
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.x5hHFQdSLi3pVvpH'
-  - _id: gOhgyzE28RCbYV2d
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A rebel front is stirring up trouble
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.gOhgyzE28RCbYV2d'
-  - _id: nrbLy2uyUYMMB7xw
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: An outside power is backing internal strife
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.nrbLy2uyUYMMB7xw'
-  - _id: wKoLv9F7hqBLutt7
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: The leadership is inept and distracted
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.wKoLv9F7hqBLutt7'
-  - _id: XMg9Ub9rgS9OLqa2
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A religious reformer is breaking old compacts
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.XMg9Ub9rgS9OLqa2'
-  - _id: BINEZHoKvjx5gpg3
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: An evil is provoking outraged rioting
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.BINEZHoKvjx5gpg3'
-  - _id: X2OBfv91yeYSS4AV
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Dark cults are attracting the ambitious
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.X2OBfv91yeYSS4AV'
-  - _id: upOPaGOzWJmjZVGA
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A Blighted horde is threatening the borders
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.upOPaGOzWJmjZVGA'
-  - _id: WvrfSkiLT8UMvRez
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: An ancient ruin has disgorged some peril
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.WvrfSkiLT8UMvRez'
-  - _id: p2hgwmK9zDyuX7rI
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 11
-      - 11
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Malcontents have obtained a potent artifact
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.p2hgwmK9zDyuX7rI'
-  - _id: 1E0vepoatNTEoirL
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 12
-      - 12
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Luxuriance has left the nation’s coffers bare
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.1E0vepoatNTEoirL'
-  - _id: xIVispSz0q7buZpB
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 13
-      - 13
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Local aristocrats are pushing for independence
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.xIVispSz0q7buZpB'
-  - _id: teiqfRGEBwE57FO8
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 14
-      - 14
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: An important mine has run out or been harmed
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.teiqfRGEBwE57FO8'
-  - _id: QKuem5Yqwjw3vJvn
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 15
-      - 15
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A sinister favorite has infatuated the leader
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.QKuem5Yqwjw3vJvn'
-  - _id: MXBGzrEIpxTuvFfa
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 16
-      - 16
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A recurring plant plague is causing hunger
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.MXBGzrEIpxTuvFfa'
-  - _id: Bqo8m25ngOedsjPP
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 17
-      - 17
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Fearsome monsters are migrating into the land
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.Bqo8m25ngOedsjPP'
-  - _id: nzDcyafBghYwcwXc
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 18
-      - 18
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A rival is preparing for war or raiding
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.nzDcyafBghYwcwXc'
-  - _id: 4TG8BoU2syq8F3Bi
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 19
-      - 19
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A grand national plan is exhausting the people
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.4TG8BoU2syq8F3Bi'
-  - _id: hNh55RkEOZkVtnnD
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 20
-      - 20
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A savage grudge has erupted between lords
-    name: ''
-    _key: '!tables.results!xR9vJU4cLdDuKN1U.hNh55RkEOZkVtnnD'
-formula: 1d20
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   better-rolltables: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.xR9vJU4cLdDuKN1U
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: 9tfZf8wQfLqXhLd9
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.9tfZf8wQfLqXhLd9'
+  - _id: x5hHFQdSLi3pVvpH
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.x5hHFQdSLi3pVvpH'
+  - _id: gOhgyzE28RCbYV2d
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.gOhgyzE28RCbYV2d'
+  - _id: nrbLy2uyUYMMB7xw
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.nrbLy2uyUYMMB7xw'
+  - _id: wKoLv9F7hqBLutt7
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.wKoLv9F7hqBLutt7'
+  - _id: XMg9Ub9rgS9OLqa2
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.XMg9Ub9rgS9OLqa2'
+  - _id: BINEZHoKvjx5gpg3
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.BINEZHoKvjx5gpg3'
+  - _id: X2OBfv91yeYSS4AV
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.X2OBfv91yeYSS4AV'
+  - _id: upOPaGOzWJmjZVGA
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.upOPaGOzWJmjZVGA'
+  - _id: WvrfSkiLT8UMvRez
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.WvrfSkiLT8UMvRez'
+  - _id: p2hgwmK9zDyuX7rI
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.p2hgwmK9zDyuX7rI'
+  - _id: 1E0vepoatNTEoirL
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.1E0vepoatNTEoirL'
+  - _id: xIVispSz0q7buZpB
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 13
+      - 13
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.xIVispSz0q7buZpB'
+  - _id: teiqfRGEBwE57FO8
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 14
+      - 14
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.teiqfRGEBwE57FO8'
+  - _id: QKuem5Yqwjw3vJvn
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 15
+      - 15
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.QKuem5Yqwjw3vJvn'
+  - _id: MXBGzrEIpxTuvFfa
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 16
+      - 16
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.MXBGzrEIpxTuvFfa'
+  - _id: Bqo8m25ngOedsjPP
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 17
+      - 17
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.Bqo8m25ngOedsjPP'
+  - _id: nzDcyafBghYwcwXc
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 18
+      - 18
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.nzDcyafBghYwcwXc'
+  - _id: 4TG8BoU2syq8F3Bi
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 19
+      - 19
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.4TG8BoU2syq8F3Bi'
+  - _id: hNh55RkEOZkVtnnD
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 20
+      - 20
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!xR9vJU4cLdDuKN1U.hNh55RkEOZkVtnnD'
 _key: '!tables!xR9vJU4cLdDuKN1U'
 

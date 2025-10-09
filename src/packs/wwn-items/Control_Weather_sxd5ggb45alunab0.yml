@@ -1,7 +1,36 @@
+_id: sxd5ggb45alunab0
 name: Control Weather
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 7900000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457055
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     Duration: Concentration Range: 240 yards around the caster By concentrating
     (no movement allowed), the caster causes one of the following conditions to
@@ -27,46 +56,14 @@ system:
     swept aside (Physical save to resist). ▶ Mundane damage immunity: Can only
     be harmed by magical attacks. ▶ Harm flying creatures: Inflict extra 1d8
     damage.
+  duration: Concentration
   favorite: false
-  subType: spell
-  source: Mage
   level: 6
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Concentration
-  save: physical
   range: 240 yard radius
-  skill: null
-_id: sxd5ggb45alunab0
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457055
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: physical
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!sxd5ggb45alunab0'
 

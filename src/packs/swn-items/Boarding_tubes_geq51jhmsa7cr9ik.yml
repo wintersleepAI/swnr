@@ -1,7 +1,12 @@
+_id: geq51jhmsa7cr9ik
 name: Boarding tubes
 type: shipFitting
 img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
 folder: FSb3IGBn6eTDHX2S
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.ship-fitting.Item.geq51jhmsa7cr9ik
@@ -13,7 +18,6 @@ _stats:
   createdTime: 1757286946146
   modifiedTime: 1757286946146
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: geq51jhmsa7cr9ik
 system:
   broken: false
   cost: 5000
@@ -24,21 +28,17 @@ system:
     Ships without boarding tubes have to send invaders across empty space to
     either make an assault on a doubtless heavily-guarded airlock or cut their
     way in through the hull with laser cutters and half an hour of work.
+  destroyed: false
   effect: Allows boarding of a hostile disabled ship
+  favorite: false
+  juryRigged: false
   mass: 1
   massMultiplier: false
   minClass: frigate
   power: 0
   powerMultiplier: false
-  favorite: false
   tl: 4
-  destroyed: false
-  juryRigged: false
   type: ship
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!geq51jhmsa7cr9ik'
 

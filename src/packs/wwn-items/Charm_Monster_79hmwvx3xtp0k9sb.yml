@@ -1,7 +1,36 @@
+_id: 79hmwvx3xtp0k9sb
 name: Charm Monster
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 8900000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457108
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     Duration: One or more days (see below) Range: 120' This spell places a charm
     upon either [[3d6]] creatures of 3 HD or less or a single creature of more
@@ -18,46 +47,14 @@ system:
     gains a new save once every month. ▶ INT 9&ndash;12: The creature gains a
     new save each week ▶ INT 13&ndash;18: The creature gains a new save once
     every day.
+  duration: one or more days
   favorite: false
-  subType: spell
-  source: Mage
   level: 4
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: one or more days
-  save: mental
   range: 120'
-  skill: null
-_id: 79hmwvx3xtp0k9sb
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457108
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: mental
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!79hmwvx3xtp0k9sb'
 

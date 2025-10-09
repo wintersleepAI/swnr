@@ -1,8 +1,24 @@
-folder: CgKRAtUIm5C6aa8D
+_id: SQUBmg7jYhUmzJcE
 name: Systemic Immunity
 type: feature
-_id: SQUBmg7jYhUmzJcE
 img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+folder: CgKRAtUIm5C6aa8D
+sort: 0
+ownership:
+  default: 0
+  AjdlQlPXkJlcOy63: 3
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1753923771336
+  modifiedTime: 1753923771336
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
   description: >-
     <h3
@@ -55,24 +71,8 @@ system:
     modifier increases by +1, to a maximum of +2.</p>
   favorite: false
   level: 0
-  type: edge
   poolsGranted: []
+  type: edge
 effects: []
-sort: 0
-ownership:
-  default: 0
-  AjdlQlPXkJlcOy63: 3
-  lKC5x4Yf023Bizof: 3
-flags: {}
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1753923771336
-  modifiedTime: 1753923771336
-  lastModifiedBy: lKC5x4Yf023Bizof
 _key: '!items!SQUBmg7jYhUmzJcE'
 

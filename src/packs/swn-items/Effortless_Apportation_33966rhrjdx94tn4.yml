@@ -1,7 +1,12 @@
+_id: 33966rhrjdx94tn4
 name: Effortless Apportation
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: B7XvnONYELdrJlLA
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-teleportation.Item.33966rhrjdx94tn4
@@ -13,26 +18,18 @@ _stats:
   createdTime: 1757286862454
   modifiedTime: 1757286862454
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 33966rhrjdx94tn4
 system:
+  consumptions: []
   description: >-
     <p>The psychic does not need to Commit Effort to use <em>Personal
     Apportation</em>. If the technique is augmented by other techniques that
     come with their own extra or increased cost, however, this extra cost must
     still be paid.</p>
-  level: 3
-  source: teleportation
   favorite: false
-  subType: psychic
+  level: 3
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions: []
-  save: null
+  source: teleportation
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!33966rhrjdx94tn4'
 

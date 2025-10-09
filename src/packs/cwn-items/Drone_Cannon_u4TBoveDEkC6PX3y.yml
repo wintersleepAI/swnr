@@ -1,7 +1,12 @@
+_id: u4TBoveDEkC6PX3y
 name: Drone Cannon
 type: shipWeapon
 img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
 folder: 8DIMaIn7MuHyezDm
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-vehicle-weapons.Item.ldx376zia7crola5
@@ -14,43 +19,38 @@ _stats:
   modifiedTime: 1754267303980
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  ab: 0
   ammo:
     max: 100
     type: ammo
     value: 10
+  broken: false
   cost: 5000
+  costMultiplier: false
   damage: 2d8
   description: >-
     Drone cannons are heavy semi-automatic weapons too bulky for human
     portability. A round of firing costs $100 worth of ammunition.
+  destroyed: false
+  favorite: false
+  hardpoint: 1
+  juryRigged: false
   mass: 1
+  massMultiplier: false
   minClass: m
   power: 1
+  powerMultiplier: false
+  qualities: ''
   range:
     max: 1000
     normal: 200
   stat: dex
+  tl: 4
   trauma:
     die: 1d10
     rating: 3
     vehicle: true
   type: vehicle
-  favorite: false
-  tl: 4
-  costMultiplier: false
-  powerMultiplier: false
-  massMultiplier: false
-  broken: false
-  destroyed: false
-  juryRigged: false
-  ab: 0
-  hardpoint: 1
-  qualities: ''
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: u4TBoveDEkC6PX3y
-sort: 0
 _key: '!items!u4TBoveDEkC6PX3y'
 

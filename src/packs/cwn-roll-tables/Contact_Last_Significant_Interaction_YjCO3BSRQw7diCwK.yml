@@ -1,186 +1,113 @@
-folder: LgTVzspCcdbYvn10
-name: Contact Last Significant Interaction
 _id: YjCO3BSRQw7diCwK
+name: Contact Last Significant Interaction
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: VmAdxoCEmiYzf8JB
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: You bailed them out of a bad situation
-    name: ''
-    _key: '!tables.results!YjCO3BSRQw7diCwK.VmAdxoCEmiYzf8JB'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: 3ipvWAayFnHZFEI0
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A wild carouse from a shared payday
-    name: ''
-    _key: '!tables.results!YjCO3BSRQw7diCwK.3ipvWAayFnHZFEI0'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: vTlKsCptkHToMMEn
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A minor job gone wrong for both of you
-    name: ''
-    _key: '!tables.results!YjCO3BSRQw7diCwK.vTlKsCptkHToMMEn'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: HsGZotmR94fPKF4G
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: You got a problem person off their back
-    name: ''
-    _key: '!tables.results!YjCO3BSRQw7diCwK.HsGZotmR94fPKF4G'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: T2PuJ0buHzeICHNT
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: You used your Edges to solve their problem
-    name: ''
-    _key: '!tables.results!YjCO3BSRQw7diCwK.T2PuJ0buHzeICHNT'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: Yf0WrH3ZwDVKd0sh
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A minor argument over different ideals
-    name: ''
-    _key: '!tables.results!YjCO3BSRQw7diCwK.Yf0WrH3ZwDVKd0sh'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: n11fFqHpa7MaCzvV
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Helped them with their day job a bit
-    name: ''
-    _key: '!tables.results!YjCO3BSRQw7diCwK.n11fFqHpa7MaCzvV'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: OGB1vzXcVuPuqaH0
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Did a favor for someone important to them
-    name: ''
-    _key: '!tables.results!YjCO3BSRQw7diCwK.OGB1vzXcVuPuqaH0'
-replacement: true
-displayRoll: true
+folder: LgTVzspCcdbYvn10
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-tables.RollTable.YjCO3BSRQw7diCwK
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d8
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: VmAdxoCEmiYzf8JB
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!YjCO3BSRQw7diCwK.VmAdxoCEmiYzf8JB'
+  - _id: 3ipvWAayFnHZFEI0
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!YjCO3BSRQw7diCwK.3ipvWAayFnHZFEI0'
+  - _id: vTlKsCptkHToMMEn
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!YjCO3BSRQw7diCwK.vTlKsCptkHToMMEn'
+  - _id: HsGZotmR94fPKF4G
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!YjCO3BSRQw7diCwK.HsGZotmR94fPKF4G'
+  - _id: T2PuJ0buHzeICHNT
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!YjCO3BSRQw7diCwK.T2PuJ0buHzeICHNT'
+  - _id: Yf0WrH3ZwDVKd0sh
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!YjCO3BSRQw7diCwK.Yf0WrH3ZwDVKd0sh'
+  - _id: n11fFqHpa7MaCzvV
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!YjCO3BSRQw7diCwK.n11fFqHpa7MaCzvV'
+  - _id: OGB1vzXcVuPuqaH0
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!YjCO3BSRQw7diCwK.OGB1vzXcVuPuqaH0'
 _key: '!tables!YjCO3BSRQw7diCwK'
 

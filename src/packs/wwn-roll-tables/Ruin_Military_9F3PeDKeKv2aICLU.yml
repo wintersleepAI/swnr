@@ -1,266 +1,157 @@
 _id: 9F3PeDKeKv2aICLU
 name: Ruin-Military
+type: null
 img: icons/svg/d20-grey.svg
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: i6jsspgf9r9tuug4
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Grand fortress of major significance
-    name: ''
-    _key: '!tables.results!9F3PeDKeKv2aICLU.i6jsspgf9r9tuug4'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: cxqnpkxzy0jai1wv
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Remote frontier keep
-    name: ''
-    _key: '!tables.results!9F3PeDKeKv2aICLU.cxqnpkxzy0jai1wv'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: amgebev7tnkw671y
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Isolated watchtower
-    name: ''
-    _key: '!tables.results!9F3PeDKeKv2aICLU.amgebev7tnkw671y'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: 21h8j62zziwsgp79
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Military training camp
-    name: ''
-    _key: '!tables.results!9F3PeDKeKv2aICLU.21h8j62zziwsgp79'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: 8u3xs9f273bt5wd4
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Half-subterranean entrenchments
-    name: ''
-    _key: '!tables.results!9F3PeDKeKv2aICLU.8u3xs9f273bt5wd4'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: ilc3a1n5qiokwgv5
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Battlefield littered with fortifications
-    name: ''
-    _key: '!tables.results!9F3PeDKeKv2aICLU.ilc3a1n5qiokwgv5'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: 0yqptg76fv1bm9jl
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Hidden bunker or strongpoint
-    name: ''
-    _key: '!tables.results!9F3PeDKeKv2aICLU.0yqptg76fv1bm9jl'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: 86zx3bycq7qqiw3k
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Secret operations base
-    name: ''
-    _key: '!tables.results!9F3PeDKeKv2aICLU.86zx3bycq7qqiw3k'
-  - type: text
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    _id: deoqbs1rr6k87qyo
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Battered front-line fortress
-    name: ''
-    _key: '!tables.results!9F3PeDKeKv2aICLU.deoqbs1rr6k87qyo'
-  - type: text
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    _id: bs5wge7svrsmado9
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Gatehouse controlling a
-    name: ''
-    _key: '!tables.results!9F3PeDKeKv2aICLU.bs5wge7svrsmado9'
-  - type: text
-    weight: 1
-    range:
-      - 11
-      - 11
-    drawn: false
-    _id: 69pa3a972ktriqvh
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Military cache or storehouse
-    name: ''
-    _key: '!tables.results!9F3PeDKeKv2aICLU.69pa3a972ktriqvh'
-  - type: text
-    weight: 1
-    range:
-      - 12
-      - 12
-    drawn: false
-    _id: s9yp0l743cg4hxoq
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Fortified waystation
-    name: ''
-    _key: '!tables.results!9F3PeDKeKv2aICLU.s9yp0l743cg4hxoq'
-formula: 1d12
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
-description: ''
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.9F3PeDKeKv2aICLU
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: i6jsspgf9r9tuug4
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!9F3PeDKeKv2aICLU.i6jsspgf9r9tuug4'
+  - _id: cxqnpkxzy0jai1wv
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!9F3PeDKeKv2aICLU.cxqnpkxzy0jai1wv'
+  - _id: amgebev7tnkw671y
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!9F3PeDKeKv2aICLU.amgebev7tnkw671y'
+  - _id: 21h8j62zziwsgp79
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!9F3PeDKeKv2aICLU.21h8j62zziwsgp79'
+  - _id: 8u3xs9f273bt5wd4
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!9F3PeDKeKv2aICLU.8u3xs9f273bt5wd4'
+  - _id: ilc3a1n5qiokwgv5
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!9F3PeDKeKv2aICLU.ilc3a1n5qiokwgv5'
+  - _id: 0yqptg76fv1bm9jl
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!9F3PeDKeKv2aICLU.0yqptg76fv1bm9jl'
+  - _id: 86zx3bycq7qqiw3k
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!9F3PeDKeKv2aICLU.86zx3bycq7qqiw3k'
+  - _id: deoqbs1rr6k87qyo
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!9F3PeDKeKv2aICLU.deoqbs1rr6k87qyo'
+  - _id: bs5wge7svrsmado9
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!9F3PeDKeKv2aICLU.bs5wge7svrsmado9'
+  - _id: 69pa3a972ktriqvh
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!9F3PeDKeKv2aICLU.69pa3a972ktriqvh'
+  - _id: s9yp0l743cg4hxoq
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!9F3PeDKeKv2aICLU.s9yp0l743cg4hxoq'
 _key: '!tables!9F3PeDKeKv2aICLU'
 

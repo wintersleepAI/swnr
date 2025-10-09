@@ -1,6 +1,12 @@
+_id: u5mj9ri03n0luw9m
 name: Combat Shotgun
 type: weapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
 folder: IuHCQEm5J46mKh45
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.ranged.Item.u5mj9ri03n0luw9m
@@ -12,7 +18,6 @@ _stats:
   createdTime: 1757286681607
   modifiedTime: 1757286681607
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: u5mj9ri03n0luw9m
 system:
   ab: 0
   ammo:
@@ -22,7 +27,14 @@ system:
     suppress: false
     type: ammo
     value: 12
-    current: null
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 300
   damage: 3d4
   description: >-
@@ -31,47 +43,32 @@ system:
     capacity and are capable of firing in burst mode. Combat shotguns can fire
     slug rounds just as normal shotguns.
   encumbrance: 2
+  favorite: false
+  isMelee: false
+  isNonLethal: false
+  isTwoHanded: false
   location: other
+  noEncReadied: false
   quality: stock
+  quantity: 1
   range:
     max: 30
     normal: 10
+  remember:
+    burst: false
+    isNonLethal: false
+    modifier: 0
+    use: false
   shock:
     ac: 15
     dmg: 0
   skill: ''
-  stat: dex
-  tl: 3
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
-  secondStat: null
   skillBoostsDamage: false
   skillBoostsShock: false
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
+  stat: dex
+  tl: 3
   trauma:
     die: 1d6
-  isTwoHanded: false
-  isNonLethal: false
-  isMelee: false
 effects: []
-img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!u5mj9ri03n0luw9m'
 

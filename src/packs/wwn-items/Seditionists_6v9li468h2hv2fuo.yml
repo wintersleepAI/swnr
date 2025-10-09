@@ -1,7 +1,26 @@
+_id: 6v9li468h2hv2fuo
 name: Seditionists
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: OawaGpAei0uKmXdc
+sort: 125000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456963
+  modifiedTime: 1759968695531
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     In place of an Attack action, the Seditionists' owners may spend 1d4
     Treasure and attach the Asset to a hostile Asset in the same location. Until
@@ -9,40 +28,20 @@ system:
     location, the rebelling Asset cannot be used for anything and grants no
     benefits.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 8
     max: 8
-  rating: 4
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 8
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: 6v9li468h2hv2fuo
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456963
-  modifiedTime: 1754277456963
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 4
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!6v9li468h2hv2fuo'
 

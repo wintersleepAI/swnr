@@ -1,7 +1,12 @@
+_id: h9fwe09l3z7jyqpc
 name: Security Personnel
 type: asset
 img: systems/swnr/assets/icons/hawkin/force.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.h9fwe09l3z7jyqpc
@@ -13,39 +18,34 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: h9fwe09l3z7jyqpc
 system:
   attackDamage: 1d3+1
   attackSource: force
   attackSpecial: ''
   attackTarget: force
   baseOfInfluence: false
+  category: force
   cost: 2
   counter: 1d4
   description: >-
     Standard civilian guards or policemen, usually equipped with nonlethal
     weaponry or personal sidearms.<br /> Note:
+  favorite: false
   health:
     max: 3
     value: 3
   income: 0
   maintenance: 0
+  qualities:
+    action: false
+    permission: false
+    special: false
   rating: 1
+  stealthed: false
   tl: 0
   turnRoll: ''
   type: Military Unit
   unusable: false
-  qualities:
-    permission: false
-    action: false
-    special: false
-  category: force
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!h9fwe09l3z7jyqpc'
 

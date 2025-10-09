@@ -1,26 +1,23 @@
+_id: 58dkc6omfs64io07
 name: Damnation of the Sense
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456888
+  modifiedTime: 1754277456888
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The caster targets a visible creature within two hundred feet. The target
-    gets a Mental saving throw to resist; on a failure, one sense of the
-    caster's choice is entirely under the caster's control for the rest of the
-    scene, while a success leaves them bound only for the next round. Any false
-    impression may be given, or any true one concealed, and a creature may be
-    left effectively blinded or deafened. Distracting tactile sensations can
-    force the victim to make a Physical saving throw in order to act each round.
-    Blinded creatures can't make ranged attacks and roll all melee hit rolls
-    twice, taking the worst result. If a creature thinks itself in mortal peril
-    its excitement allows it to make a Mental save to throw off the spell at the
-    end of each round.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -34,26 +31,26 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The caster targets a visible creature within two hundred feet. The target
+    gets a Mental saving throw to resist; on a failure, one sense of the
+    caster's choice is entirely under the caster's control for the rest of the
+    scene, while a success leaves them bound only for the next round. Any false
+    impression may be given, or any true one concealed, and a creature may be
+    left effectively blinded or deafened. Distracting tactile sensations can
+    force the victim to make a Physical saving throw in order to act each round.
+    Blinded creatures can't make ranged attacks and roll all melee hit rolls
+    twice, taking the worst result. If a creature thinks itself in mortal peril
+    its excitement allows it to make a Mental save to throw off the spell at the
+    end of each round.
   duration: Scene
-  save: mental
+  favorite: false
+  level: 1
+  prepared: false
   range: 200 ft.
-  skill: null
-_id: 58dkc6omfs64io07
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456888
-  modifiedTime: 1754277456888
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: mental
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!58dkc6omfs64io07'
 

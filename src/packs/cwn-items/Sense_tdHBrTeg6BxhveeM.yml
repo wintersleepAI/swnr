@@ -1,7 +1,12 @@
+_id: tdHBrTeg6BxhveeM
 name: Sense
 type: program
 img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
 folder: YSjeg2WqEsCIXk0y
+sort: 300000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-program.Item.gqdt5u0m1ztlbzkd
@@ -20,17 +25,12 @@ system:
     Piggyback on the sensory feed of a device or piece of cyber. Anything the
     device senses or records, the hacker can sense. Swapping focus from
     cyberspace to reality is an On Turn action.
+  favorite: false
   selfTerminating: false
   skillCheckMod: 0
   target: Device/Cyber
   type: verb
   useAffects: Piggyback on a sensor feed or cyber
-  favorite: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: tdHBrTeg6BxhveeM
-sort: 300000
 _key: '!items!tdHBrTeg6BxhveeM'
 

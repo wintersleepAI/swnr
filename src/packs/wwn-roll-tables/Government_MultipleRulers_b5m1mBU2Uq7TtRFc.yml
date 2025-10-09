@@ -1,187 +1,114 @@
 _id: b5m1mBU2Uq7TtRFc
 name: Government-MultipleRulers
+type: null
 img: icons/svg/d20-grey.svg
-description: Multiple Rulers
-results:
-  - _id: 765EPGlaQPIbMGhf
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Nobly-born peers of the realm
-    name: ''
-    _key: '!tables.results!b5m1mBU2Uq7TtRFc.765EPGlaQPIbMGhf'
-  - _id: vZji7jqvI5WEtMh2
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Seniormost figures in the ruling class
-    name: ''
-    _key: '!tables.results!b5m1mBU2Uq7TtRFc.vZji7jqvI5WEtMh2'
-  - _id: thsY3qsqaunEEvwd
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Elect chosen by ruling class electors
-    name: ''
-    _key: '!tables.results!b5m1mBU2Uq7TtRFc.thsY3qsqaunEEvwd'
-  - _id: 8cviNNMYeEeTBVSs
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Hereditary heirs to their positions
-    name: ''
-    _key: '!tables.results!b5m1mBU2Uq7TtRFc.8cviNNMYeEeTBVSs'
-  - _id: YDibW61bZlmsqVSq
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Warlords with the strongest backing
-    name: ''
-    _key: '!tables.results!b5m1mBU2Uq7TtRFc.YDibW61bZlmsqVSq'
-  - _id: 4X7z37sGKxEn0ano
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Oligarchs of greatest wealth or influence
-    name: ''
-    _key: '!tables.results!b5m1mBU2Uq7TtRFc.4X7z37sGKxEn0ano'
-  - _id: cYva2Z1PBD91t5dF
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Divinely-chosen representatives of their class
-    name: ''
-    _key: '!tables.results!b5m1mBU2Uq7TtRFc.cYva2Z1PBD91t5dF'
-  - _id: CaNPa5Cr2ZI6feuv
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Bureaucratically-chosen ministers
-    name: ''
-    _key: '!tables.results!b5m1mBU2Uq7TtRFc.CaNPa5Cr2ZI6feuv'
-formula: 1d8
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   better-rolltables: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.b5m1mBU2Uq7TtRFc
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: 765EPGlaQPIbMGhf
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!b5m1mBU2Uq7TtRFc.765EPGlaQPIbMGhf'
+  - _id: vZji7jqvI5WEtMh2
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!b5m1mBU2Uq7TtRFc.vZji7jqvI5WEtMh2'
+  - _id: thsY3qsqaunEEvwd
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!b5m1mBU2Uq7TtRFc.thsY3qsqaunEEvwd'
+  - _id: 8cviNNMYeEeTBVSs
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!b5m1mBU2Uq7TtRFc.8cviNNMYeEeTBVSs'
+  - _id: YDibW61bZlmsqVSq
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!b5m1mBU2Uq7TtRFc.YDibW61bZlmsqVSq'
+  - _id: 4X7z37sGKxEn0ano
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!b5m1mBU2Uq7TtRFc.4X7z37sGKxEn0ano'
+  - _id: cYva2Z1PBD91t5dF
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!b5m1mBU2Uq7TtRFc.cYva2Z1PBD91t5dF'
+  - _id: CaNPa5Cr2ZI6feuv
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!b5m1mBU2Uq7TtRFc.CaNPa5Cr2ZI6feuv'
 _key: '!tables!b5m1mBU2Uq7TtRFc'
 

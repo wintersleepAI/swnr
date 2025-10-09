@@ -1,7 +1,12 @@
+_id: jnd25yyu2zhy8413
 name: Stutterjump
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: B7XvnONYELdrJlLA
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-teleportation.Item.jnd25yyu2zhy8413
@@ -13,8 +18,8 @@ _stats:
   createdTime: 1757286862454
   modifiedTime: 1757286862454
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: jnd25yyu2zhy8413
 system:
+  consumptions: []
   description: >-
     <p>The psychic can instinctively micro-teleport away from incoming danger.
     As an On Turn action they may Commit Effort to begin shifting their spatial
@@ -27,19 +32,11 @@ system:
     rolled. This reflexive defensive jump may be used only once per day and
     leaves the psychic just outside the radius of explosions or other
     area-effect attacks.</p>
-  level: 3
-  source: teleportation
   favorite: false
-  subType: psychic
+  level: 3
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions: []
-  save: null
+  source: teleportation
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!jnd25yyu2zhy8413'
 

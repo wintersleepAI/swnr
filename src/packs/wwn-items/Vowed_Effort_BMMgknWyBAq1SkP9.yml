@@ -1,22 +1,8 @@
-folder: BslyO9GYhD75h2Kk
+_id: BMMgknWyBAq1SkP9
 name: Vowed Effort
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
-system:
-  description: ''
-  favorite: false
-  level: 0
-  type: focus
-  poolsGranted:
-    - resourceName: Effort
-      subResource: Vowed
-      formula: >-
-        Math.max(1, @skills.Magic.rank + Math.max(@stats.int.mod,
-        @stats.cha.mod, @stats.wis.mod, @stats.str.mod, @stats.dex.mod,
-        @stats.con.mod))
-      condition: ''
-      cadence: day
-effects: []
+folder: BslyO9GYhD75h2Kk
 sort: 1400000
 ownership:
   default: 0
@@ -32,6 +18,20 @@ _stats:
   createdTime: 1758769340355
   modifiedTime: 1758769340355
   lastModifiedBy: lKC5x4Yf023Bizof
-_id: BMMgknWyBAq1SkP9
+system:
+  description: ''
+  favorite: false
+  level: 0
+  poolsGranted:
+    - resourceName: Effort
+      subResource: Vowed
+      formula: >-
+        Math.max(1, @skills.Magic.rank + Math.max(@stats.int.mod,
+        @stats.cha.mod, @stats.wis.mod, @stats.str.mod, @stats.dex.mod,
+        @stats.con.mod))
+      condition: ''
+      cadence: day
+  type: focus
+effects: []
 _key: '!items!BMMgknWyBAq1SkP9'
 

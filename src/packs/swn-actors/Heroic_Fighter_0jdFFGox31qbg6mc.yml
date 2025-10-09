@@ -1,13 +1,18 @@
+_id: 0jdFFGox31qbg6mc
 name: Heroic Fighter
 type: npc
 img: systems/swnr/assets/icons/blankface.png
 folder: wHL3xA3jmTpsQmyZ
+sort: 1400000
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757286446581
@@ -15,355 +20,53 @@ _stats:
   lastModifiedBy: iXDXVi7OlHcRwXw0
 system:
   ab: 8
+  access:
+    max: 1
+    value: 1
   armorType: combat
   attacks:
     bonusDamage: 3
-    number: 1
     damage: d6
+    number: 1
   baseAc: 16
+  baseSoakTotal:
+    max: 0
+    value: 0
+  biography: ''
+  cyberdecks: []
+  health:
+    max: 10
+    value: 10
+  health_max_modified: 0
   hitDice: '6'
+  meleeAb: 1
+  meleeAc: 10
   moralScore: 11
+  reaction: unknown
   saves: 12
   skillBonus: 3
-  speed: 10
-  health:
-    value: 10
-    max: 10
-  biography: ''
   species: ''
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 6
-  meleeAc: 10
-  meleeAb: 1
+  speed: 10
   systemStrain:
-    value: 0
     permanent: 0
-  pools: {}
-  cyberdecks: []
-  health_max_modified: 0
-  reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
     value: 0
-    max: 0
+  traumaTarget: 6
   tweak:
-    showCyberware: true
-    showPsychic: true
-    showArts: false
-    showSpells: false
     showAdept: false
+    showArts: false
+    showCyberware: true
     showMutation: false
     showPoolsInHeader: true
     showPoolsInPowers: false
+    showPsychic: true
+    showSpells: false
 effects: []
-prototypeToken:
-  name: Heroic Fighter
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/blankface.png
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
 items:
-  - name: D4 Weapon
+  - _id: i47aid86khatlk19
+    name: D10 Weapon
     type: weapon
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: 61choc1yuf5ewze1
-    system:
-      shock:
-        dmg: 0
-        ac: 15
-      damage: d4
-      encumbrance: 0
-      cost: 0
-      tl: 4
-      skillBoostsDamage: false
-      description: ''
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsShock: false
-      ab: 0
-      ammo:
-        longReload: false
-        suppress: false
-        type: ammo
-        max: 10
-        value: 10
-        burst: false
-        current: null
-      range:
-        normal: 1
-        max: 2
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma:
-        die: 1d6
-      isTwoHanded: false
-      isNonLethal: false
-      isMelee: false
-    effects: []
     img: icons/svg/item-bag.svg
-    ownership:
-      default: 0
-    _key: '!actors.items!0jdFFGox31qbg6mc.61choc1yuf5ewze1'
-  - name: D6 Weapon
-    type: weapon
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: 2pqd5mt1prbzl2ac
-    system:
-      shock:
-        dmg: 0
-        ac: 15
-      damage: d6
-      encumbrance: 0
-      cost: 0
-      tl: 4
-      skillBoostsDamage: false
-      description: ''
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsShock: false
-      ab: 0
-      ammo:
-        longReload: false
-        suppress: false
-        type: ammo
-        max: 10
-        value: 10
-        burst: false
-        current: null
-      range:
-        normal: 1
-        max: 2
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma:
-        die: 1d6
-      isTwoHanded: false
-      isNonLethal: false
-      isMelee: false
-    effects: []
-    img: icons/svg/item-bag.svg
-    ownership:
-      default: 0
-    _key: '!actors.items!0jdFFGox31qbg6mc.2pqd5mt1prbzl2ac'
-  - name: D8 Weapon
-    type: weapon
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: x546na7dfsxsbzub
-    system:
-      shock:
-        dmg: 0
-        ac: 15
-      damage: d8
-      encumbrance: 0
-      cost: 0
-      tl: 4
-      skillBoostsDamage: false
-      description: ''
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsShock: false
-      ab: 0
-      ammo:
-        longReload: false
-        suppress: false
-        type: ammo
-        max: 10
-        value: 10
-        burst: false
-        current: null
-      range:
-        normal: 1
-        max: 2
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma:
-        die: 1d6
-      isTwoHanded: false
-      isNonLethal: false
-      isMelee: false
-    effects: []
-    img: icons/svg/item-bag.svg
-    ownership:
-      default: 0
-    _key: '!actors.items!0jdFFGox31qbg6mc.x546na7dfsxsbzub'
-  - name: D10 Weapon
-    type: weapon
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: i47aid86khatlk19
     system:
       shock:
         dmg: 0
@@ -415,24 +118,16 @@ items:
       isNonLethal: false
       isMelee: false
     effects: []
-    img: icons/svg/item-bag.svg
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!0jdFFGox31qbg6mc.i47aid86khatlk19'
-  - name: D12 Weapon
+  - _id: 5n0ffgur2x6ihzm5
+    name: D12 Weapon
     type: weapon
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
+    img: icons/svg/item-bag.svg
     sort: 0
-    _id: 5n0ffgur2x6ihzm5
     system:
       shock:
         dmg: 0
@@ -484,14 +179,193 @@ items:
       isNonLethal: false
       isMelee: false
     effects: []
-    img: icons/svg/item-bag.svg
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!0jdFFGox31qbg6mc.5n0ffgur2x6ihzm5'
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: 0jdFFGox31qbg6mc
-sort: 1400000
+  - _id: 61choc1yuf5ewze1
+    name: D4 Weapon
+    type: weapon
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      shock:
+        dmg: 0
+        ac: 15
+      damage: d4
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      description: ''
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      stat: dex
+      secondStat: null
+      skill: ask
+      skillBoostsShock: false
+      ab: 0
+      ammo:
+        longReload: false
+        suppress: false
+        type: ammo
+        max: 10
+        value: 10
+        burst: false
+        current: null
+      range:
+        normal: 1
+        max: 2
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      trauma:
+        die: 1d6
+      isTwoHanded: false
+      isNonLethal: false
+      isMelee: false
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!0jdFFGox31qbg6mc.61choc1yuf5ewze1'
+  - _id: 2pqd5mt1prbzl2ac
+    name: D6 Weapon
+    type: weapon
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      shock:
+        dmg: 0
+        ac: 15
+      damage: d6
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      description: ''
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      stat: dex
+      secondStat: null
+      skill: ask
+      skillBoostsShock: false
+      ab: 0
+      ammo:
+        longReload: false
+        suppress: false
+        type: ammo
+        max: 10
+        value: 10
+        burst: false
+        current: null
+      range:
+        normal: 1
+        max: 2
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      trauma:
+        die: 1d6
+      isTwoHanded: false
+      isNonLethal: false
+      isMelee: false
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!0jdFFGox31qbg6mc.2pqd5mt1prbzl2ac'
+  - _id: x546na7dfsxsbzub
+    name: D8 Weapon
+    type: weapon
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      shock:
+        dmg: 0
+        ac: 15
+      damage: d8
+      encumbrance: 0
+      cost: 0
+      tl: 4
+      skillBoostsDamage: false
+      description: ''
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      stat: dex
+      secondStat: null
+      skill: ask
+      skillBoostsShock: false
+      ab: 0
+      ammo:
+        longReload: false
+        suppress: false
+        type: ammo
+        max: 10
+        value: 10
+        burst: false
+        current: null
+      range:
+        normal: 1
+        max: 2
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      trauma:
+        die: 1d6
+      isTwoHanded: false
+      isNonLethal: false
+      isMelee: false
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!0jdFFGox31qbg6mc.x546na7dfsxsbzub'
 _key: '!actors!0jdFFGox31qbg6mc'
 

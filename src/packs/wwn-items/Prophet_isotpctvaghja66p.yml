@@ -1,45 +1,44 @@
+_id: isotpctvaghja66p
 name: Prophet
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: OawaGpAei0uKmXdc
+sort: 200000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456962
+  modifiedTime: 1759968688997
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     Whether a religious prophet, charismatic philosopher, rebel leader, or other
     figure of popular appeal, the Asset is firmly under the faction's control.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 10
     max: 10
-  rating: 6
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 10
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: isotpctvaghja66p
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456962
-  modifiedTime: 1754277456962
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 6
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!isotpctvaghja66p'
 

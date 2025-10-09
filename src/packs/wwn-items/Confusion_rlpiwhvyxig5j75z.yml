@@ -1,24 +1,23 @@
+_id: rlpiwhvyxig5j75z
 name: Confusion
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 8400000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457058
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 12 rounds Range: 120' This spell causes [[3d6]] subjects within
-    60' of one another to become confused, making them unable to independently
-    determine what they will do. ▶ Subjects of 2+1 HD or greater: May make a
-    Mental save each round to resist the spell's effect, acting with free will
-    that round if they make the save. ▶ Subjects of 2 HD or lower: May not make
-    a saving throw. ▶ Behaviour: Roll on the following table separately for each
-    affected subject each round to determine how that subject acts that round:
-    Confusion: Subject Behaviour 2d6 Behavior 2-5 Attack caster's group 6-8 No
-    action 9-12 Attack subject's group
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -32,26 +31,24 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 12 rounds Range: 120' This spell causes [[3d6]] subjects within
+    60' of one another to become confused, making them unable to independently
+    determine what they will do. ▶ Subjects of 2+1 HD or greater: May make a
+    Mental save each round to resist the spell's effect, acting with free will
+    that round if they make the save. ▶ Subjects of 2 HD or lower: May not make
+    a saving throw. ▶ Behaviour: Roll on the following table separately for each
+    affected subject each round to determine how that subject acts that round:
+    Confusion: Subject Behaviour 2d6 Behavior 2-5 Attack caster's group 6-8 No
+    action 9-12 Attack subject's group
   duration: 12 rounds
-  save: mental
+  favorite: false
+  level: 4
+  prepared: false
   range: 120'
-  skill: null
-_id: rlpiwhvyxig5j75z
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457058
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: mental
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!rlpiwhvyxig5j75z'
 

@@ -1,11 +1,10 @@
-type: Item
-folder: null
-name: Magic Items
-color: null
-sorting: a
 _id: U6Ba9ZBZzYyRWuru
-description: ''
+name: Magic Items
+type: Item
+img: null
+folder: null
 sort: 200000
+ownership: {}
 flags: {}
 _stats:
   compendiumSource: null
@@ -17,5 +16,7 @@ _stats:
   createdTime: 1754277040474
   modifiedTime: 1754277925274
   lastModifiedBy: lKC5x4Yf023Bizof
+system: {}
+effects: []
 _key: '!folders!U6Ba9ZBZzYyRWuru'
 

@@ -1,7 +1,12 @@
+_id: 3cwczn1cyaj08ndr
 name: Telekinetic Manipulation
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: mOJTfIBCxT4AY88p
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-telekinesis.Item.3cwczn1cyaj08ndr
@@ -13,8 +18,18 @@ _stats:
   createdTime: 1757286860108
   modifiedTime: 1757286860108
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 3cwczn1cyaj08ndr
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: scene
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
   description: >-
     <p>The adept may Commit Effort for the scene as a Main Action to direct
     telekinetic force toward an object or person within unaided visual range or
@@ -38,29 +53,11 @@ system:
     psychic can manipulate up to a metric ton and can smash human-sized holes in
     TL4-constructed exterior walls, light stone walls, or similar barriers as a
     Main Action.</p>
-  level: 0
-  source: telekInesIs
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Psychic
-      cadence: scene
-      usesCost: 1
-      itemText: ''
-      uses:
-        value: 1
-        max: 1
-      timing: manual
   favorite: false
-  subType: psychic
+  level: 0
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: telekInesIs
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!3cwczn1cyaj08ndr'
 

@@ -1,426 +1,245 @@
-folder: LgTVzspCcdbYvn10
-name: Contact What they can do for You
 _id: aEIsJCCT9ZZ2Wg8u
+name: Contact What they can do for You
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: vobchq8fjccmQTii
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Sell you not-too-very-illegal weaponry
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.vobchq8fjccmQTii'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: uOfz5XwqXCCHwf47
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Get you pharmaceutical and street drugs
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.uOfz5XwqXCCHwf47'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: yhSBsnpY1E8rXBgN
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Get you an inside line on a local corp
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.yhSBsnpY1E8rXBgN'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: 08nW2G5kEvLTpr9z
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Drive you around or loan you a vehicle
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.08nW2G5kEvLTpr9z'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: KGWJmC7BEY0A7QXs
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Stitch you up or do cyberdoc work
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.KGWJmC7BEY0A7QXs'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: JDuqmiMx1yWGXZ78
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Smuggle you or objects in and out
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.JDuqmiMx1yWGXZ78'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: p9Ow3uM1hHaFgvQu
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Help you find profitable operator jobs
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.p9Ow3uM1hHaFgvQu'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: pQhfW7TKVGmYb6Jr
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Get you some clemency from city police
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.pQhfW7TKVGmYb6Jr'
-  - type: text
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    _id: 7ID23fTQr9JROw3N
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Make a local gang play nice with you
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.7ID23fTQr9JROw3N'
-  - type: text
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    _id: 3y9DqPXZRoLKN7Le
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Find you nice used cyberware
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.3y9DqPXZRoLKN7Le'
-  - type: text
-    weight: 1
-    range:
-      - 11
-      - 11
-    drawn: false
-    _id: fAqnWkq3zwCebASi
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Acquire useful street information
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.fAqnWkq3zwCebASi'
-  - type: text
-    weight: 1
-    range:
-      - 12
-      - 12
-    drawn: false
-    _id: NxaaBM4kqunJDK6S
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Give you a safehouse for a while
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.NxaaBM4kqunJDK6S'
-  - type: text
-    weight: 1
-    range:
-      - 13
-      - 13
-    drawn: false
-    _id: 0cjsKIMHJQkHSqJl
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Broker contracts with a type of skilled pro
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.0cjsKIMHJQkHSqJl'
-  - type: text
-    weight: 1
-    range:
-      - 14
-      - 14
-    drawn: false
-    _id: U100qIJrgkPVVqfm
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Fence stolen goods without too big a cut
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.U100qIJrgkPVVqfm'
-  - type: text
-    weight: 1
-    range:
-      - 15
-      - 15
-    drawn: false
-    _id: YDE6hlhRLGdLPOKy
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Charm information out of a given target
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.YDE6hlhRLGdLPOKy'
-  - type: text
-    weight: 1
-    range:
-      - 16
-      - 16
-    drawn: false
-    _id: fUaWv9TsN99xAZpX
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Maintain or fix your gear for you
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.fUaWv9TsN99xAZpX'
-  - type: text
-    weight: 1
-    range:
-      - 17
-      - 17
-    drawn: false
-    _id: zFCix5g38NvOCpaV
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Get you in touch with a type of criminal
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.zFCix5g38NvOCpaV'
-  - type: text
-    weight: 1
-    range:
-      - 18
-      - 18
-    drawn: false
-    _id: dcrhKkAeQcE29CS9
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Sell you specialized or unique programs
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.dcrhKkAeQcE29CS9'
-  - type: text
-    weight: 1
-    range:
-      - 19
-      - 19
-    drawn: false
-    _id: xmvDYC6taBcmHHLa
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Get you permits or city gov information
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.xmvDYC6taBcmHHLa'
-  - type: text
-    weight: 1
-    range:
-      - 20
-      - 20
-    drawn: false
-    _id: CL1i4hJQADlmXSsp
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Find people who don’t want to be found
-    name: ''
-    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.CL1i4hJQADlmXSsp'
-replacement: true
-displayRoll: true
+folder: LgTVzspCcdbYvn10
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-tables.RollTable.aEIsJCCT9ZZ2Wg8u
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d20
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: vobchq8fjccmQTii
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.vobchq8fjccmQTii'
+  - _id: uOfz5XwqXCCHwf47
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.uOfz5XwqXCCHwf47'
+  - _id: yhSBsnpY1E8rXBgN
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.yhSBsnpY1E8rXBgN'
+  - _id: 08nW2G5kEvLTpr9z
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.08nW2G5kEvLTpr9z'
+  - _id: KGWJmC7BEY0A7QXs
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.KGWJmC7BEY0A7QXs'
+  - _id: JDuqmiMx1yWGXZ78
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.JDuqmiMx1yWGXZ78'
+  - _id: p9Ow3uM1hHaFgvQu
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.p9Ow3uM1hHaFgvQu'
+  - _id: pQhfW7TKVGmYb6Jr
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.pQhfW7TKVGmYb6Jr'
+  - _id: 7ID23fTQr9JROw3N
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.7ID23fTQr9JROw3N'
+  - _id: 3y9DqPXZRoLKN7Le
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.3y9DqPXZRoLKN7Le'
+  - _id: fAqnWkq3zwCebASi
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.fAqnWkq3zwCebASi'
+  - _id: NxaaBM4kqunJDK6S
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.NxaaBM4kqunJDK6S'
+  - _id: 0cjsKIMHJQkHSqJl
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 13
+      - 13
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.0cjsKIMHJQkHSqJl'
+  - _id: U100qIJrgkPVVqfm
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 14
+      - 14
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.U100qIJrgkPVVqfm'
+  - _id: YDE6hlhRLGdLPOKy
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 15
+      - 15
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.YDE6hlhRLGdLPOKy'
+  - _id: fUaWv9TsN99xAZpX
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 16
+      - 16
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.fUaWv9TsN99xAZpX'
+  - _id: zFCix5g38NvOCpaV
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 17
+      - 17
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.zFCix5g38NvOCpaV'
+  - _id: dcrhKkAeQcE29CS9
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 18
+      - 18
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.dcrhKkAeQcE29CS9'
+  - _id: xmvDYC6taBcmHHLa
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 19
+      - 19
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.xmvDYC6taBcmHHLa'
+  - _id: CL1i4hJQADlmXSsp
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 20
+      - 20
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!aEIsJCCT9ZZ2Wg8u.CL1i4hJQADlmXSsp'
 _key: '!tables!aEIsJCCT9ZZ2Wg8u'
 

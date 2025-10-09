@@ -1,22 +1,23 @@
+_id: o01fczldhkqeln4h
 name: Wizard Eye
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 100025
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457079
+  modifiedTime: 1754277920763
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 6 turns Range: 240' An invisible, magical eye is conjured that
-    allows the caster to see at a distance. ▶ Movement: The eye can be directed
-    to move within range at up to 120' per turn. ▶ Seeing through the eye: By
-    concentrating, the caster can see through the eye. ▶ Types of vision: The
-    magical eye grants both normal vision and infravision. ▶ Barriers: Solid
-    barriers block its passage, but it can pass through a hole or space as small
-    as 1 inch in diameter.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -30,26 +31,22 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 6 turns Range: 240' An invisible, magical eye is conjured that
+    allows the caster to see at a distance. ▶ Movement: The eye can be directed
+    to move within range at up to 120' per turn. ▶ Seeing through the eye: By
+    concentrating, the caster can see through the eye. ▶ Types of vision: The
+    magical eye grants both normal vision and infravision. ▶ Barriers: Solid
+    barriers block its passage, but it can pass through a hole or space as small
+    as 1 inch in diameter.
   duration: 6 turns
-  save: None
+  favorite: false
+  level: 4
+  prepared: false
   range: 240'
-  skill: null
-_id: o01fczldhkqeln4h
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457079
-  modifiedTime: 1754277920763
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!o01fczldhkqeln4h'
 

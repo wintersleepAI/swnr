@@ -1,47 +1,46 @@
+_id: 6joxgn2ph8nmnydj
 name: Underground Roads
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: OawaGpAei0uKmXdc
+sort: 101563
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456963
+  modifiedTime: 1759968859179
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     A well-established network of secret transit extends far around this Asset.
     As a free action, the faction may pay 1 Treasure and move any friendly Asset
     from a location within one round's move of the Underground Roads to a
     destination also within one round's move of the Roads.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 15
     max: 15
-  rating: 6
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 15
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: 6joxgn2ph8nmnydj
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456963
-  modifiedTime: 1754277456963
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 6
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!6joxgn2ph8nmnydj'
 

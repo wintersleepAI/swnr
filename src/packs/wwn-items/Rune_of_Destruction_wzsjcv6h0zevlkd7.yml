@@ -1,36 +1,12 @@
+_id: wzsjcv6h0zevlkd7
 name: Rune of Destruction
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Commit Effort for the day as a Main Action and target an adjacent solid
-    surface. A glowing rune the size of a handprint forms on the surface and
-    persists for one hour per caster level. Any creature who gets within two
-    feet of the rune will trigger it, causing it to explode in a five-foot
-    radius with an elemental force of your choice and suffering 2d6 damage plus
-    your caster level. Creatures already within five feet of the rune when it is
-    laid will not trigger it until they re-enter the area, nor will the caster
-    trigger their own runes. Runes cannot overlap their areas of effect.
-  favorite: false
-  subType: art
-  source: Elementalist
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Elementalist
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: wzsjcv6h0zevlkd7
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -41,10 +17,31 @@ _stats:
   modifiedTime: 1754277456772
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Elementalist
+      usesCost: 1
+      cadence: day
+      timing: manual
+  description: >-
+    Commit Effort for the day as a Main Action and target an adjacent solid
+    surface. A glowing rune the size of a handprint forms on the surface and
+    persists for one hour per caster level. Any creature who gets within two
+    feet of the rune will trigger it, causing it to explode in a five-foot
+    radius with an elemental force of your choice and suffering 2d6 damage plus
+    your caster level. Creatures already within five feet of the rune when it is
+    laid will not trigger it until they re-enter the area, nor will the caster
+    trigger their own runes. Runes cannot overlap their areas of effect.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Elementalist
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!wzsjcv6h0zevlkd7'
 

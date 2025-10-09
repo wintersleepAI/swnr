@@ -1,7 +1,12 @@
+_id: 2bagdjp4kz2p3e49
 name: Force Puppetry
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: mOJTfIBCxT4AY88p
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-telekinesis.Item.2bagdjp4kz2p3e49
@@ -13,8 +18,18 @@ _stats:
   createdTime: 1757286860108
   modifiedTime: 1757286860108
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 2bagdjp4kz2p3e49
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
   description: >-
     <p>As a Main Action, the telekinetic can Commit Effort for the day to suborn
     a visible target’s mobility, whether robotic, vehicular, or human, provided
@@ -31,29 +46,12 @@ system:
     fine enough to achieve even very delicate physical motions, but it is not
     good enough to control the target’s speech, though it can keep them
     silent.</p>
-  level: 4
-  source: telekInesIs
-  save: mental
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Psychic
-      cadence: day
-      usesCost: 1
-      itemText: ''
-      uses:
-        value: 1
-        max: 1
-      timing: manual
   favorite: false
-  subType: psychic
+  level: 4
   prepared: false
-  resourceName: null
-  subResource: null
+  save: mental
+  source: telekInesIs
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!2bagdjp4kz2p3e49'
 

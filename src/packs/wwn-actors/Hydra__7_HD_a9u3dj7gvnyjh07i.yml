@@ -1,116 +1,45 @@
+_id: a9u3dj7gvnyjh07i
 name: Hydra, 7 HD
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
-system:
-  ab: 7
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 15
-  hitDice: 7
-  moralScore: 9
-  saves: 12
-  skillBonus: 0
-  speed: 40
-  biography: >-
-    Large, dragon-like creatures with multiple, serpentine heads. Sea hydras
-    (adapted to water, with fins) also exist.
-  species: monster
-_id: a9u3dj7gvnyjh07i
+ownership: {}
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456542
   modifiedTime: 1754277456542
   lastModifiedBy: null
   exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+system:
+  ab: 7
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 15
+  biography: >-
+    Large, dragon-like creatures with multiple, serpentine heads. Sea hydras
+    (adapted to water, with fins) also exist.
+  hitDice: 7
+  moralScore: 9
+  saves: 12
+  skillBonus: 0
+  species: monster
+  speed: 40
 effects: []
-prototypeToken:
-  name: Hydra, 7 HD
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/hydra.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Bite
+  - _id: dv1axl0pa4wegir4
+    name: Bite
     type: weapon
+    img: null
+    sort: 0
     system:
       description: ''
       cost: 0
@@ -132,54 +61,17 @@ items:
       encumbrance: 1
       quality: stock
       tl: 3
-    _id: dv1axl0pa4wegir4
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920814
-      modifiedTime: 1754273920814
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!a9u3dj7gvnyjh07i.dv1axl0pa4wegir4'
-  - name: Heads
+  - _id: 1s8tcp94xqcxyymm
+    name: Disabling Heads
     type: item
-    system:
-      description: '[[/r 1d8+4]] heads; 1 HD per head. Attack bonus equal to HD.'
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: nbdd1upcdgtn2eno
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920814
-      modifiedTime: 1754273920814
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
+    img: null
     sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!a9u3dj7gvnyjh07i.nbdd1upcdgtn2eno'
-  - name: Disabling Heads
-    type: item
     system:
       description: For every 8 hp damage taken, one head is disabled (cannot attack).
       cost: 0
@@ -188,26 +80,36 @@ items:
       location: stowed
       quality: stock
       tl: 3
-    _id: 1s8tcp94xqcxyymm
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920814
-      modifiedTime: 1754273920814
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!a9u3dj7gvnyjh07i.1s8tcp94xqcxyymm'
-  - name: Variants
+  - _id: nbdd1upcdgtn2eno
+    name: Heads
     type: item
+    img: null
+    sort: 0
+    system:
+      description: '[[/r 1d8+4]] heads; 1 HD per head. Attack bonus equal to HD.'
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!a9u3dj7gvnyjh07i.nbdd1upcdgtn2eno'
+  - _id: 8r7dqkd0x6j8l2mo
+    name: Variants
+    type: item
+    img: null
+    sort: 0
     system:
       description: >-
         Special hydras sometimes found with venom, fiery breath, etc. Add 400 XP
@@ -218,23 +120,11 @@ items:
       location: stowed
       quality: stock
       tl: 3
-    _id: 8r7dqkd0x6j8l2mo
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920814
-      modifiedTime: 1754273920814
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!a9u3dj7gvnyjh07i.8r7dqkd0x6j8l2mo'
 _key: '!actors!a9u3dj7gvnyjh07i'
 

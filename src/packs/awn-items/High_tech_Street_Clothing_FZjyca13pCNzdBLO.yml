@@ -1,44 +1,7 @@
+_id: FZjyca13pCNzdBLO
 name: High-tech Street Clothing
 type: armor
-_id: FZjyca13pCNzdBLO
 img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
-system:
-  description: >-
-    <h3>Description</h3><p>High-tech street clothing represents those ancient
-    pre-collapse artifacts fabricated from exotic materials capable of resisting
-    blades and punctures. Their style may be highly outlandish, but their
-    durability makes them highly valuable to scavengers.</p><p></p>
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 0
-  cost: 200
-  tl: 4
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  ac: 13
-  shield: false
-  use: false
-  meleeAc: 13
-  soak:
-    value: 0
-    max: 0
-  dr: 0
-  traumaDiePenalty: 0
-  isSubtle: true
-  isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
-effects: []
 folder: 4i5hUE3dlwER4hcI
 sort: 100000
 ownership:
@@ -56,5 +19,39 @@ _stats:
   createdTime: 1753923591735
   modifiedTime: 1753923591735
   lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  ac: 13
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
+  cost: 200
+  description: >-
+    <h3>Description</h3><p>High-tech street clothing represents those ancient
+    pre-collapse artifacts fabricated from exotic materials capable of resisting
+    blades and punctures. Their style may be highly outlandish, but their
+    durability makes them highly valuable to scavengers.</p><p></p>
+  dr: 0
+  encumbrance: 0
+  favorite: false
+  isHeavy: false
+  isSubtle: true
+  location: stowed
+  meleeAc: 13
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
+  soak:
+    max: 0
+    value: 0
+  tl: 4
+  traumaDiePenalty: 0
+  use: false
+effects: []
 _key: '!items!FZjyca13pCNzdBLO'
 

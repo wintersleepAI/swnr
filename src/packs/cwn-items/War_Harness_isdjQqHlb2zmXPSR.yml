@@ -1,7 +1,12 @@
+_id: isdjQqHlb2zmXPSR
 name: War Harness
 type: armor
 img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
 folder: ne4H5P4Oc4gz4LcS
+sort: 800000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-armor.Item.sln95o9vdytly0s9
@@ -15,44 +20,38 @@ _stats:
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
   ac: 13
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 200
   description: >-
     An upgraded form of street leathers, these outfits have sacrificed all
     discretion for whatever spare ballistic plates and advanced polymer weaves
     its owner can sew or bolt on. It's usually the best armor that local gangs
     or common thugs can afford.
+  dr: 0
   encumbrance: 1
+  favorite: false
   isHeavy: false
   isSubtle: false
+  location: stowed
   meleeAc: 14
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
   shieldACBonus: 0
   shieldMeleeACBonus: 0
   soak:
     max: 5
     value: 5
   traumaDiePenalty: 0
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
-  shield: false
   use: false
-  dr: 0
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: isdjQqHlb2zmXPSR
-sort: 800000
 _key: '!items!isdjQqHlb2zmXPSR'
 

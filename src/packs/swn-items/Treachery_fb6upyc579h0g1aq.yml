@@ -1,7 +1,12 @@
+_id: fb6upyc579h0g1aq
 name: Treachery
 type: asset
 img: systems/swnr/assets/icons/hawkin/cunning.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.fb6upyc579h0g1aq
@@ -13,7 +18,6 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: fb6upyc579h0g1aq
 system:
   attackDamage: '0'
   attackSource: cunning
@@ -24,6 +28,7 @@ system:
     the attributes necessary.
   attackTarget: cunning
   baseOfInfluence: false
+  category: cunning
   cost: 10
   counter: ''
   description: >-
@@ -31,27 +36,22 @@ system:
     asset is lost, 5 FacCreds are gained, and the targeted asset switches sides
     to join the traitor's faction, even if the faction does not otherwise have
     the attributes necessary.
+  favorite: false
   health:
     max: 5
     value: 5
   income: 0
   maintenance: 0
+  qualities:
+    action: false
+    permission: false
+    special: true
   rating: 7
+  stealthed: false
   tl: 0
   turnRoll: ''
   type: Tactic
   unusable: false
-  qualities:
-    permission: false
-    action: false
-    special: true
-  category: cunning
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!fb6upyc579h0g1aq'
 

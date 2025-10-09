@@ -1,47 +1,46 @@
+_id: 815qgy5x7byaghbo
 name: Cryptomancers
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: OawaGpAei0uKmXdc
+sort: 1700000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456929
+  modifiedTime: 1759968688997
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     In place of an Attack action, they can make a Cunning vs. Cunning attack on
     a specific hostile Asset within one move. On a success, the targeted Asset
     is unable to do anything or be used for anything on its owner's next faction
     turn. On a failure, no Counterattack damage is taken.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 6
     max: 6
-  rating: 5
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 6
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: 815qgy5x7byaghbo
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456929
-  modifiedTime: 1754277456929
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 5
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!815qgy5x7byaghbo'
 

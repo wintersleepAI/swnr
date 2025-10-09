@@ -1,91 +1,12 @@
-folder: soZ5iBeerOWF2rfk
-name: 'Defense: How Afraid is the Target?'
 _id: p6BCzNJuZJhOyOl2
+name: 'Defense: How Afraid is the Target?'
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: x0dUijhHxmdrKZ64
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Excessively confident about the risks
-    name: ''
-    _key: '!tables.results!p6BCzNJuZJhOyOl2.x0dUijhHxmdrKZ64'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: nszjQJRmrnrlVlRB
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Concerned, but maybe wrong in its focus
-    name: ''
-    _key: '!tables.results!p6BCzNJuZJhOyOl2.nszjQJRmrnrlVlRB'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: nknRJ5bUejgTNbCB
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Expecting a very bad time ahead
-    name: ''
-    _key: '!tables.results!p6BCzNJuZJhOyOl2.nknRJ5bUejgTNbCB'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: cRoIjWvJXvGcEjx4
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Worried to the point of irrational behavior
-    name: ''
-    _key: '!tables.results!p6BCzNJuZJhOyOl2.cRoIjWvJXvGcEjx4'
-replacement: true
-displayRoll: true
+folder: soZ5iBeerOWF2rfk
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-tables.RollTable.p6BCzNJuZJhOyOl2
@@ -97,10 +18,8 @@ _stats:
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d4
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results: []
 _key: '!tables!p6BCzNJuZJhOyOl2'
 

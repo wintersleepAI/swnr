@@ -1,7 +1,12 @@
+_id: JmQ7PoKSv3y7xsIm
 name: Unlock
 type: program
 img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
 folder: YSjeg2WqEsCIXk0y
+sort: 112500
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-program.Item.8a5cfl92l9kl49iq
@@ -19,17 +24,12 @@ system:
   description: >-
     Unlock a physical device with an electronic lock or a network's cyberspace
     node barrier.
+  favorite: false
   selfTerminating: true
   skillCheckMod: 1
   target: Device/Data
   type: verb
   useAffects: Unlock an electric lock or node barrier
-  favorite: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: JmQ7PoKSv3y7xsIm
-sort: 112500
 _key: '!items!JmQ7PoKSv3y7xsIm'
 

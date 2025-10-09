@@ -1,7 +1,12 @@
+_id: Qnzg97C6IjxZKd4G
 name: Savage Fray
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: sPYHUjJb2geTuLHp
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.foci.Item.viov5ilju4h09j44
@@ -25,13 +30,8 @@ system:
     they may attempt all of them, but other foes around you simply miss.
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: Qnzg97C6IjxZKd4G
-sort: 0
 _key: '!items!Qnzg97C6IjxZKd4G'
 

@@ -1,6 +1,12 @@
+_id: 13k1tjpye9u4suj8
 name: Ammo, 20 rounds
 type: item
+img: icons/svg/item-bag.svg
 folder: rvD6mRxUC48bljtg
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.ammo-and-power.Item.13k1tjpye9u4suj8
@@ -12,20 +18,16 @@ _stats:
   createdTime: 1757286652097
   modifiedTime: 1757286652097
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 13k1tjpye9u4suj8
 system:
-  favorite: false
-  uses:
-    max: 20
-    value: 20
-    ammo: ammo
-    consumable: bundle
-    keepEmpty: false
-    emptyQuantity: 0
-  quantity: 1
   bundle:
     amount: 3
     bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 10
   description: >-
     Ammunition: A few worlds are too primitive or too resource-poor to
@@ -33,25 +35,23 @@ system:
     in almost every conceivable caliber and make. Most local gunsmiths can load
     ammunition to any specification required by a buyer.
   encumbrance: 1
+  favorite: false
   location: other
-  quality: stock
-  tl: 2
   noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
+  quality: stock
+  quantity: 1
   roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
     diceNum: 1
     diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 2
+  uses:
+    ammo: ammo
+    consumable: bundle
+    emptyQuantity: 0
+    keepEmpty: false
+    max: 20
+    value: 20
 effects: []
-img: systems/swnr/assets/icons/game-icons.net/item-icons/ammo-box.svg
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!13k1tjpye9u4suj8'
 

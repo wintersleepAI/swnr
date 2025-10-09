@@ -1,7 +1,12 @@
+_id: ybmoj7gw8lsvclf8
 name: Local Investments
 type: asset
 img: systems/swnr/assets/icons/hawkin/wealth.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.ybmoj7gw8lsvclf8
@@ -13,13 +18,13 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: ybmoj7gw8lsvclf8
 system:
   attackDamage: 1d4-1
   attackSource: wealth
   attackSpecial: ''
   attackTarget: wealth
   baseOfInfluence: false
+  category: wealth
   cost: 1
   counter: ''
   description: >-
@@ -27,12 +32,18 @@ system:
     Any other faction that tries to buy an asset on that planet must pay one
     extra FacCred. This money is not given to the investments' owner, but is
     lost. This penalty is only applied once.
+  favorite: false
   health:
     max: 2
     value: 2
   income: 0
   maintenance: 0
+  qualities:
+    action: false
+    permission: false
+    special: true
   rating: 1
+  stealthed: false
   tl: 2
   turnRoll: >-
     These give the faction substantial influence over the commerce on a world.
@@ -41,17 +52,6 @@ system:
     lost. This penalty is only applied once.
   type: Facility
   unusable: false
-  qualities:
-    permission: false
-    action: false
-    special: true
-  category: wealth
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!ybmoj7gw8lsvclf8'
 

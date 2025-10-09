@@ -1,34 +1,12 @@
+_id: eynek7f4o3123m2d
 name: Consume Life Energy
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    By making a Punch attack or using a melee weapon you have spent at least an
-    hour properly consecrating, you can absorb a portion of the damage you
-    inflict on others as healing to yourself. For each successful attack you
-    make with such implements, you heal 1d6 damage, up to a maximum of the
-    damage done by the attack You cannot drain more life than the target has
-    remaining hit points.
-  favorite: false
-  subType: art
-  source: Necromancer
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Necromancer
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: eynek7f4o3123m2d
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -39,10 +17,29 @@ _stats:
   modifiedTime: 1754277456763
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Necromancer
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    By making a Punch attack or using a melee weapon you have spent at least an
+    hour properly consecrating, you can absorb a portion of the damage you
+    inflict on others as healing to yourself. For each successful attack you
+    make with such implements, you heal 1d6 damage, up to a maximum of the
+    damage done by the attack You cannot drain more life than the target has
+    remaining hit points.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Necromancer
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!eynek7f4o3123m2d'
 

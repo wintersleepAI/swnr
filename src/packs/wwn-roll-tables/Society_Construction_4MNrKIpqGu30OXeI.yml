@@ -1,496 +1,12 @@
 _id: 4MNrKIpqGu30OXeI
 name: Society Construction
+type: null
 img: icons/svg/d20-grey.svg
-description: >-
-  <p>Society Construction random tables. There is a 50/50 chance of generating
-  two societal values or three.</p>
-results:
-  - _id: wjSO1Hm5KthQzfmz
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>What's the Typical Build of the People?</b>
-    name: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.wjSO1Hm5KthQzfmz'
-  - _id: UnOT5HACAF1nN7gM
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293337872
-    name: Society-Physical-Build
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.O68XOXXDKgxnLjUZ
-    description: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.UnOT5HACAF1nN7gM'
-  - _id: b4We254G6NChb0CD
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Typical Skin Colors in the Populace</b>
-    name: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.b4We254G6NChb0CD'
-  - _id: 8YxBLVZZACGo49O0
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293344925
-    name: Society-Physical-Skin
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.QuF42f2R0jP4IOxm
-    description: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.8YxBLVZZACGo49O0'
-  - _id: GQfXxpckSmOnmeC2
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Hair Color/Texture</b>
-    name: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.GQfXxpckSmOnmeC2'
-  - _id: 2lhUYUCilwuD6G5j
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293349936
-    name: Society-Physical-HairColor
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.LQx0CTzYWeFmRKPC
-    description: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.2lhUYUCilwuD6G5j'
-  - _id: wkbMIkex5ltIduki
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Eye Coloration</b>
-    name: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.wkbMIkex5ltIduki'
-  - _id: 0q8DdsT3c9720bxF
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293356141
-    name: Society-Physical-Eyes
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.izC3MiEmUZVetS4K
-    description: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.0q8DdsT3c9720bxF'
-  - _id: OhvJ8ODHhXfQv97p
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Optional Common Forms of Adornment</b>
-    name: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.OhvJ8ODHhXfQv97p'
-  - _id: rTTND87QzE176RNK
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293361814
-    name: Society-Physical-Adornment
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.GSjlxrEQJeqwTZ8x
-    description: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.rTTND87QzE176RNK'
-  - _id: vucklZjXFiDTmAmN
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Optional Physical Quirks or Traits</b>
-    name: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.vucklZjXFiDTmAmN'
-  - _id: 5pn8BFNlu0peNIbW
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293370985
-    name: Society-Physical-Quirk
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.FuyfiMka4zyytBE7
-    description: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.5pn8BFNlu0peNIbW'
-  - _id: qMHjvQjHB7mOKmx1
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Major Unit of Social Identity</b>
-    name: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.qMHjvQjHB7mOKmx1'
-  - _id: VWeUfiLqIYP56pUl
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293376834
-    name: Society-Organization
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.Egc5cbj4FZf6sRT0
-    description: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.VWeUfiLqIYP56pUl'
-  - _id: paC2E8MjLGJDVM1I
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Societal Aesthetics</b>
-    name: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.paC2E8MjLGJDVM1I'
-  - _id: MdscPJ3e0gJDhReR
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293383433
-    name: Society-Aesthetics
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.Ze38qkDvPSTzfJVd
-    description: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.MdscPJ3e0gJDhReR'
-  - _id: T63nucyip4V49j7I
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Values of the Society</b>
-    name: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.T63nucyip4V49j7I'
-  - _id: dTZKn8NninqQXKYz
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293390155
-    name: Society-Values
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.7nxDYi7V2mtlvqmV
-    description: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.dTZKn8NninqQXKYz'
-  - _id: TMjWKTFBBGb65wq7
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293396633
-    name: Society-Values
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.7nxDYi7V2mtlvqmV
-    description: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.TMjWKTFBBGb65wq7'
-  - _id: 3DSFgsvESC9yorA2
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293401256
-    name: Society-Values
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.7nxDYi7V2mtlvqmV
-    description: ''
-    _key: '!tables.results!4MNrKIpqGu30OXeI.3DSFgsvESC9yorA2'
-formula: 1d2
-replacement: true
-displayRoll: true
 folder: NcNmE2NSqwIFlKia
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   better-rolltables:
     table-type: better
@@ -499,15 +15,294 @@ _stats:
   compendiumSource: Compendium.swnr.wwn-gm-tables.RollTable.4MNrKIpqGu30OXeI
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271920613
   modifiedTime: 1757293331855
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: 0q8DdsT3c9720bxF
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.0q8DdsT3c9720bxF'
+  - _id: 2lhUYUCilwuD6G5j
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.2lhUYUCilwuD6G5j'
+  - _id: 5pn8BFNlu0peNIbW
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.5pn8BFNlu0peNIbW'
+  - _id: 8YxBLVZZACGo49O0
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.8YxBLVZZACGo49O0'
+  - _id: GQfXxpckSmOnmeC2
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.GQfXxpckSmOnmeC2'
+  - _id: MdscPJ3e0gJDhReR
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.MdscPJ3e0gJDhReR'
+  - _id: OhvJ8ODHhXfQv97p
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.OhvJ8ODHhXfQv97p'
+  - _id: T63nucyip4V49j7I
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.T63nucyip4V49j7I'
+  - _id: TMjWKTFBBGb65wq7
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.TMjWKTFBBGb65wq7'
+  - _id: UnOT5HACAF1nN7gM
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.UnOT5HACAF1nN7gM'
+  - _id: VWeUfiLqIYP56pUl
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.VWeUfiLqIYP56pUl'
+  - _id: b4We254G6NChb0CD
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.b4We254G6NChb0CD'
+  - _id: dTZKn8NninqQXKYz
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.dTZKn8NninqQXKYz'
+  - _id: paC2E8MjLGJDVM1I
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.paC2E8MjLGJDVM1I'
+  - _id: qMHjvQjHB7mOKmx1
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.qMHjvQjHB7mOKmx1'
+  - _id: rTTND87QzE176RNK
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.rTTND87QzE176RNK'
+  - _id: vucklZjXFiDTmAmN
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.vucklZjXFiDTmAmN'
+  - _id: wjSO1Hm5KthQzfmz
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.wjSO1Hm5KthQzfmz'
+  - _id: wkbMIkex5ltIduki
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.wkbMIkex5ltIduki'
+  - _id: 3DSFgsvESC9yorA2
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!4MNrKIpqGu30OXeI.3DSFgsvESC9yorA2'
 _key: '!tables!4MNrKIpqGu30OXeI'
 

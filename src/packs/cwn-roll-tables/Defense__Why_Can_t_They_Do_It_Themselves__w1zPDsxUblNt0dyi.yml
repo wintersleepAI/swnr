@@ -1,131 +1,12 @@
-folder: soZ5iBeerOWF2rfk
-name: 'Defense: Why Can’t They Do It Themselves?'
 _id: w1zPDsxUblNt0dyi
+name: 'Defense: Why Can’t They Do It Themselves?'
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: ismiX5SkOYG607BB
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They don’t have the raw muscle available
-    name: ''
-    _key: '!tables.results!w1zPDsxUblNt0dyi.ismiX5SkOYG607BB'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: aa4YlM0hSG8BxmfZ
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Their usual defenders are not available
-    name: ''
-    _key: '!tables.results!w1zPDsxUblNt0dyi.aa4YlM0hSG8BxmfZ'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: edLBvg8xOHSSRr4d
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They’ve quarreled with their usual cover
-    name: ''
-    _key: '!tables.results!w1zPDsxUblNt0dyi.edLBvg8xOHSSRr4d'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: SHReMrrVhG4TZlFt
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They think this time the hit will be too strong
-    name: ''
-    _key: '!tables.results!w1zPDsxUblNt0dyi.SHReMrrVhG4TZlFt'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: H6vtG6vdDKS1FJT6
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Their usual defenders are compromised
-    name: ''
-    _key: '!tables.results!w1zPDsxUblNt0dyi.H6vtG6vdDKS1FJT6'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: anvdwmF5RaKvM3OV
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They just don’t want to bother or risk it
-    name: ''
-    _key: '!tables.results!w1zPDsxUblNt0dyi.anvdwmF5RaKvM3OV'
-replacement: true
-displayRoll: true
+folder: soZ5iBeerOWF2rfk
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-tables.RollTable.w1zPDsxUblNt0dyi
@@ -137,10 +18,8 @@ _stats:
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d6
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results: []
 _key: '!tables!w1zPDsxUblNt0dyi'
 

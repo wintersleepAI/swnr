@@ -1,7 +1,12 @@
+_id: Jz4Ate6pBpfQtu3s
 name: Turret
 type: program
 img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
 folder: eBbZVBq3zmvZSDXd
+sort: 100098
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-program.Item.djs1iote98coq5zw
@@ -17,17 +22,12 @@ system:
   accessCost: 0
   cost: 1000
   description: A security turret, emplaced gun, or other fixed automated weapon.
+  favorite: false
   selfTerminating: false
   skillCheckMod: 0
   target: Device
   type: subject
   useAffects: Automated weaponry
-  favorite: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: Jz4Ate6pBpfQtu3s
-sort: 100098
 _key: '!items!Jz4Ate6pBpfQtu3s'
 

@@ -1,6 +1,22 @@
+_id: qpn9ousrfkdo0pcg
 name: Authority
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456875
+  modifiedTime: 1754277456875
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You have an uncanny kind of charisma about you, one that makes others
@@ -19,23 +35,8 @@ system:
     interests unless under extreme pressure.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: qpn9ousrfkdo0pcg
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456875
-  modifiedTime: 1754277456875
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!qpn9ousrfkdo0pcg'
 

@@ -1,7 +1,12 @@
+_id: m3puiauyq1x79v7n
 name: Cargo lighter
 type: shipFitting
 img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
 folder: FSb3IGBn6eTDHX2S
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.ship-fitting.Item.m3puiauyq1x79v7n
@@ -13,7 +18,6 @@ _stats:
   createdTime: 1757286946146
   modifiedTime: 1757286946146
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: m3puiauyq1x79v7n
 system:
   broken: false
   cost: 25000
@@ -27,21 +31,17 @@ system:
     take up no significant space when compressed for storage, assuming they're
     not simply disposable cargo shells. This fitting can be purchased multiple
     times.
+  destroyed: false
   effect: Orbit-to-surface cargo shuttle
+  favorite: false
+  juryRigged: false
   mass: 2
   massMultiplier: false
   minClass: frigate
   power: 0
   powerMultiplier: false
-  favorite: false
   tl: 4
-  destroyed: false
-  juryRigged: false
   type: ship
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!m3puiauyq1x79v7n'
 

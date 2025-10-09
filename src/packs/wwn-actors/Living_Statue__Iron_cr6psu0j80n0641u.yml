@@ -1,116 +1,126 @@
+_id: cr6psu0j80n0641u
 name: Living Statue, Iron
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
-system:
-  ab: 4
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 18
-  hitDice: 4
-  moralScore: 11
-  saves: 13
-  skillBonus: 0
-  speed: 10
-  biography: >-
-    Animated statues of any size and material (three types described below;
-    others may be invented by the referee).
-  species: monster
-_id: cr6psu0j80n0641u
+ownership: {}
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456657
   modifiedTime: 1754277456657
   lastModifiedBy: null
   exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+system:
+  ab: 4
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 18
+  biography: >-
+    Animated statues of any size and material (three types described below;
+    others may be invented by the referee).
+  hitDice: 4
+  moralScore: 11
+  saves: 13
+  skillBonus: 0
+  species: monster
+  speed: 10
 effects: []
-prototypeToken:
-  name: Living Statue, Iron
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/humanoid-icons/golem-head.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Sturdy Blow
+  - _id: duv122areidow8xy
+    name: Absorb Metals
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: >-
+        Hits with non-magical, metal weapons cause damage, but the weapon may
+        become stuck in the statue (Evasion save). Stuck weapons can be removed
+        if the statue is killed.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!cr6psu0j80n0641u.duv122areidow8xy'
+  - _id: htpfqgi52kz6vnc8
+    name: Attacks
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: >-
+        Depend on form of statue (humanoid statues may use weapons, animal
+        statues use claws, etc.).
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!cr6psu0j80n0641u.htpfqgi52kz6vnc8'
+  - _id: atmkwe5uteavvzuf
+    name: Magical Origins
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: Created by powerful wizards.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!cr6psu0j80n0641u.atmkwe5uteavvzuf'
+  - _id: 1l29fbux8ksly9j1
+    name: Sleep Immunity
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: Unaffected by sleep spells.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!cr6psu0j80n0641u.1l29fbux8ksly9j1'
+  - _id: 21737mne4budhhcv
+    name: Sturdy Blow
     type: weapon
+    img: null
+    sort: 0
     system:
       description: ''
       cost: 0
@@ -132,140 +142,11 @@ items:
       encumbrance: 1
       quality: stock
       tl: 3
-    _id: 21737mne4budhhcv
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920824
-      modifiedTime: 1754273920824
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!cr6psu0j80n0641u.21737mne4budhhcv'
-  - name: Sleep Immunity
-    type: item
-    system:
-      description: Unaffected by sleep spells.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 1l29fbux8ksly9j1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920824
-      modifiedTime: 1754273920824
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!cr6psu0j80n0641u.1l29fbux8ksly9j1'
-  - name: Magical Origins
-    type: item
-    system:
-      description: Created by powerful wizards.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: atmkwe5uteavvzuf
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920824
-      modifiedTime: 1754273920824
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!cr6psu0j80n0641u.atmkwe5uteavvzuf'
-  - name: Absorb Metals
-    type: item
-    system:
-      description: >-
-        Hits with non-magical, metal weapons cause damage, but the weapon may
-        become stuck in the statue (Evasion save). Stuck weapons can be removed
-        if the statue is killed.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: duv122areidow8xy
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920824
-      modifiedTime: 1754273920824
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!cr6psu0j80n0641u.duv122areidow8xy'
-  - name: Attacks
-    type: item
-    system:
-      description: >-
-        Depend on form of statue (humanoid statues may use weapons, animal
-        statues use claws, etc.).
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: htpfqgi52kz6vnc8
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920824
-      modifiedTime: 1754273920824
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!cr6psu0j80n0641u.htpfqgi52kz6vnc8'
 _key: '!actors!cr6psu0j80n0641u'
 

@@ -1,7 +1,12 @@
+_id: xUJZuo25qbsEQU3U
 name: Grenade,Smoke
 type: weapon
 img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
 folder: 2vEOSwQ7HuHk55y8
+sort: 100025
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-weapons.Item.6gk0m38rsn9x3z9u
@@ -14,14 +19,22 @@ _stats:
   modifiedTime: 1754266600754
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  ab: 0
   ammo:
     burst: false
+    longReload: false
     max: 0
     suppress: false
     type: none
     value: 0
-    longReload: false
-    current: null
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 25
   damage: '0'
   description: >-
@@ -35,48 +48,32 @@ system:
     harmless, but provide the same 10-meter dome of concealment where it's
     necessary. Gas and smoke aren't enough to defeat IR or augmented visuals.
   encumbrance: 1
+  favorite: false
+  isMelee: false
   isNonLethal: true
+  isTwoHanded: false
+  location: stowed
+  noEncReadied: false
+  quality: stock
+  quantity: 1
   range:
     max: 30
     normal: 10
+  remember:
+    burst: false
+    isNonLethal: false
+    modifier: 0
+    use: false
   secondStat: none
   shock:
     ac: 0
     dmg: 0
-  stat: dex
-  trauma:
-    die: None
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
   skill: ask
   skillBoostsDamage: false
   skillBoostsShock: false
-  ab: 0
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
-  isTwoHanded: false
-  isMelee: false
+  stat: dex
+  trauma:
+    die: None
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: xUJZuo25qbsEQU3U
-sort: 100025
 _key: '!items!xUJZuo25qbsEQU3U'
 

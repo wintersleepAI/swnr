@@ -1,6 +1,12 @@
+_id: aheecodicnbw7831
 name: Large advanced weapon
 type: weapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
 folder: OweUZxSfzsY4xsDh
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.melee.Item.aheecodicnbw7831
@@ -12,7 +18,6 @@ _stats:
   createdTime: 1757286677303
   modifiedTime: 1757286677303
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: aheecodicnbw7831
 system:
   ab: 0
   ammo:
@@ -22,7 +27,14 @@ system:
     suppress: false
     type: none
     value: 0
-    current: null
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 80
   damage: 1d10+1
   description: >-
@@ -34,47 +46,33 @@ system:
     blade, or some other TL4 touch. Advanced weapons can ignore primitive plate
     and hide protections.
   encumbrance: 2
-  location: other
+  favorite: false
   isMelee: true
+  isNonLethal: false
+  isTwoHanded: false
+  location: other
+  noEncReadied: false
   quality: stock
+  quantity: 1
   range:
     max: 0
     normal: 0
+  remember:
+    burst: false
+    isNonLethal: false
+    modifier: 0
+    use: false
   secondStat: none
   shock:
     ac: 15
     dmg: 2
   skill: ''
-  stat: str
-  tl: 4
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
   skillBoostsDamage: false
   skillBoostsShock: false
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
+  stat: str
+  tl: 4
   trauma:
     die: 1d6
-  isTwoHanded: false
-  isNonLethal: false
 effects: []
-img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!aheecodicnbw7831'
 

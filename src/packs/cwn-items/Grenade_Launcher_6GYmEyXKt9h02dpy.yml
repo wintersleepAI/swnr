@@ -1,7 +1,12 @@
+_id: 6GYmEyXKt9h02dpy
 name: Grenade Launcher
 type: weapon
 img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
 folder: G85uNfQpAMrPqGCy
+sort: 200000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-weapons.Item.hjwts7r2txuee2os
@@ -14,14 +19,22 @@ _stats:
   modifiedTime: 1754266598689
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  ab: 0
   ammo:
     burst: false
+    longReload: false
     max: 3
     suppress: false
     type: special
     value: 3
-    longReload: false
-    current: null
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 3000
   damage: '0'
   description: >-
@@ -37,48 +50,32 @@ system:
     mounting, counting as 2 Encumbrance but otherwise having the same cost and
     statistics.
   encumbrance: 1
+  favorite: false
+  isMelee: false
   isNonLethal: false
+  isTwoHanded: false
+  location: stowed
+  noEncReadied: false
+  quality: stock
+  quantity: 1
   range:
     max: 350
     normal: 150
+  remember:
+    burst: false
+    isNonLethal: false
+    modifier: 0
+    use: false
   secondStat: none
   shock:
     ac: 0
     dmg: 0
-  stat: ask
-  trauma:
-    die: None
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
   skill: ask
   skillBoostsDamage: false
   skillBoostsShock: false
-  ab: 0
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
-  isTwoHanded: false
-  isMelee: false
+  stat: ask
+  trauma:
+    die: None
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: 6GYmEyXKt9h02dpy
-sort: 200000
 _key: '!items!6GYmEyXKt9h02dpy'
 

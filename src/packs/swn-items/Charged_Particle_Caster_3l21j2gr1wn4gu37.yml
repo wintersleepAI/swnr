@@ -1,7 +1,12 @@
+_id: 3l21j2gr1wn4gu37
 name: Charged Particle Caster
 type: shipWeapon
 img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
 folder: 7HIRYMavpuUv01al
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.ship-weapon.Item.3l21j2gr1wn4gu37
@@ -13,8 +18,12 @@ _stats:
   createdTime: 1757286946146
   modifiedTime: 1757286946146
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 3l21j2gr1wn4gu37
 system:
+  ab: 0
+  ammo:
+    max: 4
+    type: none
+    value: 4
   broken: false
   cost: 800000
   costMultiplier: false
@@ -22,34 +31,25 @@ system:
   description: >-
     A focalized upgrade to the reaper battery, the CPC has a much better armor
     penetration profile.
+  destroyed: false
+  favorite: false
   hardpoint: 2
+  juryRigged: false
   mass: 1
   massMultiplier: false
   minClass: frigate
   power: 10
   powerMultiplier: false
   qualities: AP 15, Clumsy
+  range:
+    max: 2
+    normal: 1
+  stat: ask
   tl: 4
-  favorite: false
-  destroyed: false
-  juryRigged: false
-  type: ship
-  ab: 0
-  ammo:
-    type: none
-    max: 4
-    value: 4
   trauma:
     die: 1d6
     vehicle: false
-  range:
-    normal: 1
-    max: 2
-  stat: ask
+  type: ship
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!3l21j2gr1wn4gu37'
 

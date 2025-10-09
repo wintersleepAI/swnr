@@ -1,7 +1,12 @@
+_id: hckuubxtqsgmoyyz
 name: Stabilization Overrides
 type: cyberware
 img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
 folder: 7ZDHgPOCyrCRwTEX
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cyberware.Item.hckuubxtqsgmoyyz
@@ -13,8 +18,9 @@ _stats:
   createdTime: 1757286670636
   modifiedTime: 1757286670636
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: hckuubxtqsgmoyyz
 system:
+  complication: ''
+  concealment: Sight
   cost: 25000
   description: >-
     An intricate interweaving of microcapillaries and backup organs is implanted
@@ -27,16 +33,10 @@ system:
     1, with all the attendant consequences in loss of maximum hit points.
   disabled: false
   effect: Automatically stabilizes a mortally-wounded user
+  favorite: false
   strain: 2
   tl: 4
-  favorite: false
   type: None
-  concealment: Sight
-  complication: ''
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!hckuubxtqsgmoyyz'
 

@@ -1,7 +1,26 @@
+_id: de6m9lg97ziif2ux
 name: Useful Idiots
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: OawaGpAei0uKmXdc
+sort: 100782
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456945
+  modifiedTime: 1759968862797
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     Hirelings, catspaws, foolish idealists, and other disposable minions are
     gathered together in this Asset. If another Asset within one turn's move of
@@ -9,40 +28,20 @@ system:
     the Useful Idiots to negate the attack. Only one band of Useful Idiots can
     be sacrificed on any one turn.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 2
     max: 2
-  rating: 1
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 2
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: de6m9lg97ziif2ux
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456945
-  modifiedTime: 1754277456945
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 1
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!de6m9lg97ziif2ux'
 

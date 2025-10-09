@@ -1,7 +1,12 @@
+_id: J4SjWcZK5MtoDU37
 name: Henchkeeper
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: sPYHUjJb2geTuLHp
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.foci.Item.tbdevcd938xfi78r
@@ -41,13 +46,8 @@ system:
     earn such fierce loyalty.
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: J4SjWcZK5MtoDU37
-sort: 0
 _key: '!items!J4SjWcZK5MtoDU37'
 

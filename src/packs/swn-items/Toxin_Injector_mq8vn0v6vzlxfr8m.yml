@@ -1,7 +1,12 @@
+_id: mq8vn0v6vzlxfr8m
 name: Toxin Injector
 type: cyberware
 img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
 folder: 7ZDHgPOCyrCRwTEX
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cyberware.Item.mq8vn0v6vzlxfr8m
@@ -13,8 +18,9 @@ _stats:
   createdTime: 1757286670636
   modifiedTime: 1757286670636
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: mq8vn0v6vzlxfr8m
 system:
+  complication: ''
+  concealment: Sight
   cost: 20000
   description: >-
     The user’s canines or fingernails are altered to allow for the injection of
@@ -27,16 +33,10 @@ system:
     user’s discretion. Each poison attack adds 2 System Strain to the user.
   disabled: false
   effect: Allows surprise injection of lethal or dazing toxins
+  favorite: false
   strain: 2
   tl: 4
-  favorite: false
   type: None
-  concealment: Sight
-  complication: ''
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!mq8vn0v6vzlxfr8m'
 

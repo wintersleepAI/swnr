@@ -1,187 +1,114 @@
 _id: izC3MiEmUZVetS4K
 name: Society-Physical-Eyes
+type: null
 img: icons/svg/d20-grey.svg
-description: Eye Coloration
-results:
-  - _id: D0dpuyg6SQ1KZwIb
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Black or extremely dark brown
-    name: ''
-    _key: '!tables.results!izC3MiEmUZVetS4K.D0dpuyg6SQ1KZwIb'
-  - _id: 5Sc0mZb8s6hmA2vo
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Hazel or olive
-    name: ''
-    _key: '!tables.results!izC3MiEmUZVetS4K.5Sc0mZb8s6hmA2vo'
-  - _id: YZ8uVL8Q47sFKY4t
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Blues in varying shades
-    name: ''
-    _key: '!tables.results!izC3MiEmUZVetS4K.YZ8uVL8Q47sFKY4t'
-  - _id: Yn7qMiN20pS5WJEV
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Grays, whether flat or metallic
-    name: ''
-    _key: '!tables.results!izC3MiEmUZVetS4K.Yn7qMiN20pS5WJEV'
-  - _id: Y4W9f2C9uFoeWymv
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Ambers and yellows
-    name: ''
-    _key: '!tables.results!izC3MiEmUZVetS4K.Y4W9f2C9uFoeWymv'
-  - _id: TAV5XEwuMK6e0s7Y
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Greens in different shades
-    name: ''
-    _key: '!tables.results!izC3MiEmUZVetS4K.TAV5XEwuMK6e0s7Y'
-  - _id: O0Vtv2nzPwkRd39s
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: An unusual or luminous color
-    name: ''
-    _key: '!tables.results!izC3MiEmUZVetS4K.O0Vtv2nzPwkRd39s'
-  - _id: r6e1ggBOMYaFezWK
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Slit or unusual pupils; roll again for color
-    name: ''
-    _key: '!tables.results!izC3MiEmUZVetS4K.r6e1ggBOMYaFezWK'
-formula: 1d8
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   better-rolltables: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.izC3MiEmUZVetS4K
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: D0dpuyg6SQ1KZwIb
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!izC3MiEmUZVetS4K.D0dpuyg6SQ1KZwIb'
+  - _id: 5Sc0mZb8s6hmA2vo
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!izC3MiEmUZVetS4K.5Sc0mZb8s6hmA2vo'
+  - _id: YZ8uVL8Q47sFKY4t
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!izC3MiEmUZVetS4K.YZ8uVL8Q47sFKY4t'
+  - _id: Yn7qMiN20pS5WJEV
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!izC3MiEmUZVetS4K.Yn7qMiN20pS5WJEV'
+  - _id: Y4W9f2C9uFoeWymv
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!izC3MiEmUZVetS4K.Y4W9f2C9uFoeWymv'
+  - _id: TAV5XEwuMK6e0s7Y
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!izC3MiEmUZVetS4K.TAV5XEwuMK6e0s7Y'
+  - _id: O0Vtv2nzPwkRd39s
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!izC3MiEmUZVetS4K.O0Vtv2nzPwkRd39s'
+  - _id: r6e1ggBOMYaFezWK
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!izC3MiEmUZVetS4K.r6e1ggBOMYaFezWK'
 _key: '!tables!izC3MiEmUZVetS4K'
 

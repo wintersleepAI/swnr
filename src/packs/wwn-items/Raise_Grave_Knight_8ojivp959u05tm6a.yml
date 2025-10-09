@@ -1,26 +1,23 @@
+_id: 8ojivp959u05tm6a
 name: Raise Grave Knight
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456896
+  modifiedTime: 1754277456896
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The corpse used for this spell must be of a relatively powerful creature
-    with at least four hit dice or levels. The result is much like that of the
-    Raise Corpse spell, but this undead servitor is much stronger, with 4 HD, AC
-    15, a Move of 40'/action, a +1 skill bonus, saves of 13+, Instinct 0, Morale
-    of 12, and a melee attack of +6/1d10, assuming it doesn't use a normal
-    weapon. It is fully intelligent and self-willed, albeit utterly devoted to
-    its creator, and it remembers a significant amount about its prior life. A
-    grave knight regains all lost hit points at dusk each day, assuming it's not
-    destroyed. A caster may have only one grave knight active at a time, and one
-    that has been reduced to zero hit points is destroyed and cannot be revived.
-    @Compendium[wwn.creatures-of-a-far-age.QRQjKdy6RbgLcpeb]{Grave Knight}
-  favorite: false
-  subType: spell
-  source: Necromancer
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -34,26 +31,26 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The corpse used for this spell must be of a relatively powerful creature
+    with at least four hit dice or levels. The result is much like that of the
+    Raise Corpse spell, but this undead servitor is much stronger, with 4 HD, AC
+    15, a Move of 40'/action, a +1 skill bonus, saves of 13+, Instinct 0, Morale
+    of 12, and a melee attack of +6/1d10, assuming it doesn't use a normal
+    weapon. It is fully intelligent and self-willed, albeit utterly devoted to
+    its creator, and it remembers a significant amount about its prior life. A
+    grave knight regains all lost hit points at dusk each day, assuming it's not
+    destroyed. A caster may have only one grave knight active at a time, and one
+    that has been reduced to zero hit points is destroyed and cannot be revived.
+    @Compendium[wwn.creatures-of-a-far-age.QRQjKdy6RbgLcpeb]{Grave Knight}
   duration: Until destroyed
-  save: None
+  favorite: false
+  level: 4
+  prepared: false
   range: Self
-  skill: null
-_id: 8ojivp959u05tm6a
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456896
-  modifiedTime: 1754277456896
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: Necromancer
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!8ojivp959u05tm6a'
 

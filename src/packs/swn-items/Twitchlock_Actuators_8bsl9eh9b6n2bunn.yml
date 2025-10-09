@@ -1,7 +1,12 @@
+_id: 8bsl9eh9b6n2bunn
 name: Twitchlock Actuators
 type: cyberware
 img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
 folder: 7ZDHgPOCyrCRwTEX
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cyberware.Item.8bsl9eh9b6n2bunn
@@ -13,8 +18,9 @@ _stats:
   createdTime: 1757286670636
   modifiedTime: 1757286670636
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 8bsl9eh9b6n2bunn
 system:
+  complication: ''
+  concealment: Sight
   cost: 30000
   description: >-
     Neural override fibers are woven into the user’s hands and arms and linked
@@ -29,16 +35,10 @@ system:
     active. Activating or deactivating the cyberware requires a Main Action.
   disabled: false
   effect: Allows brief moments of hyper-precise accuracy
+  favorite: false
   strain: 2
   tl: 4
-  favorite: false
   type: None
-  concealment: Sight
-  complication: ''
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!8bsl9eh9b6n2bunn'
 

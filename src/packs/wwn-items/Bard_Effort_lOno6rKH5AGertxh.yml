@@ -1,19 +1,8 @@
-folder: BslyO9GYhD75h2Kk
+_id: lOno6rKH5AGertxh
 name: Bard Effort
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
-system:
-  description: ''
-  favorite: false
-  level: 0
-  type: focus
-  poolsGranted:
-    - resourceName: Effort
-      subResource: Bard
-      formula: Math.max(1, 1 + @skills.perform.rank + @stats.cha.mod)
-      condition: ''
-      cadence: day
-effects: []
+folder: BslyO9GYhD75h2Kk
 sort: 100000
 ownership:
   default: 0
@@ -29,6 +18,17 @@ _stats:
   createdTime: 1758769340355
   modifiedTime: 1758769340355
   lastModifiedBy: lKC5x4Yf023Bizof
-_id: lOno6rKH5AGertxh
+system:
+  description: ''
+  favorite: false
+  level: 0
+  poolsGranted:
+    - resourceName: Effort
+      subResource: Bard
+      formula: Math.max(1, 1 + @skills.perform.rank + @stats.cha.mod)
+      condition: ''
+      cadence: day
+  type: focus
+effects: []
 _key: '!items!lOno6rKH5AGertxh'
 

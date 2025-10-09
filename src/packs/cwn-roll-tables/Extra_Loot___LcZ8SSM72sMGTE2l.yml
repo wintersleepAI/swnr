@@ -1,131 +1,80 @@
-folder: 9tYCoWoL6mMvmEMQ
-name: Extra Loot %
 _id: LcZ8SSM72sMGTE2l
+name: Extra Loot %
+type: null
 img: icons/svg/d20-grey.svg
-description: >-
-  <p>The PCs may or may not find this loot, and if they do find it they may need
-  to fence it to convert it into cash. Any competent operator can find a fence,
-  but these more accessible dealers will almost never give more than 10% of an
-  object’s value. Better rates require a Contact or other special efforts, in
-  which case up to 25% of the item’s worth can be obtained.</p>
-results:
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: guGk9SnuvMxI5VHx
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: None
-    name: ''
-    _key: '!tables.results!LcZ8SSM72sMGTE2l.guGk9SnuvMxI5VHx'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 4
-    drawn: false
-    _id: 2iWyChD4ECJ9rTXI
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: +50%
-    name: ''
-    _key: '!tables.results!LcZ8SSM72sMGTE2l.2iWyChD4ECJ9rTXI'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 9
-    drawn: false
-    _id: iH3hLzmbVtknKynC
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: +100%
-    name: ''
-    _key: '!tables.results!LcZ8SSM72sMGTE2l.iH3hLzmbVtknKynC'
-  - type: text
-    weight: 1
-    range:
-      - 10
-      - 11
-    drawn: false
-    _id: lMNtxfM9oxuaIHKW
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: +150%
-    name: ''
-    _key: '!tables.results!LcZ8SSM72sMGTE2l.lMNtxfM9oxuaIHKW'
-  - type: text
-    weight: 1
-    range:
-      - 12
-      - 12
-    drawn: false
-    _id: mfpx7DKrIe2p4zxT
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: +200%
-    name: ''
-    _key: '!tables.results!LcZ8SSM72sMGTE2l.mfpx7DKrIe2p4zxT'
-replacement: true
-displayRoll: true
+folder: 9tYCoWoL6mMvmEMQ
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-tables.RollTable.LcZ8SSM72sMGTE2l
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 2d6
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: guGk9SnuvMxI5VHx
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LcZ8SSM72sMGTE2l.guGk9SnuvMxI5VHx'
+  - _id: 2iWyChD4ECJ9rTXI
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LcZ8SSM72sMGTE2l.2iWyChD4ECJ9rTXI'
+  - _id: iH3hLzmbVtknKynC
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LcZ8SSM72sMGTE2l.iH3hLzmbVtknKynC'
+  - _id: lMNtxfM9oxuaIHKW
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 10
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LcZ8SSM72sMGTE2l.lMNtxfM9oxuaIHKW'
+  - _id: mfpx7DKrIe2p4zxT
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LcZ8SSM72sMGTE2l.mfpx7DKrIe2p4zxT'
 _key: '!tables!LcZ8SSM72sMGTE2l'
 

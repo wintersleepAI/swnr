@@ -1,278 +1,157 @@
 _id: hZWVzCZ0nqQpySh6
 name: Monstrous Context
+type: null
 img: icons/svg/d20-grey.svg
-results:
-  - _id: fMzFfiNgmhoKq2C2
-    type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>How Did the Monster Arise?</b>
-    name: ''
-    _key: '!tables.results!hZWVzCZ0nqQpySh6.fMzFfiNgmhoKq2C2'
-  - _id: hGcdxwQhCg0E5orw
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757291219394
-    name: MonContext-Arise
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.auvkXvLBr7VUuASw
-    description: ''
-    _key: '!tables.results!hZWVzCZ0nqQpySh6.hGcdxwQhCg0E5orw'
-  - _id: lvi2WNhpDEiXKnhf
-    type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>How Much Local Contact Does It Have?</b>
-    name: ''
-    _key: '!tables.results!hZWVzCZ0nqQpySh6.lvi2WNhpDEiXKnhf'
-  - _id: tg5CU1BRtf9Hx3Io
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757291229145
-    name: MonContext-Contact
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.gZR5Svdf8ulbUuEI
-    description: ''
-    _key: '!tables.results!hZWVzCZ0nqQpySh6.tg5CU1BRtf9Hx3Io'
-  - _id: m9w2hAPBPdMlcNPF
-    type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>How Do the Locals React To Its Drive?</b>
-    name: ''
-    _key: '!tables.results!hZWVzCZ0nqQpySh6.m9w2hAPBPdMlcNPF'
-  - _id: PgWNHONyYnLSbAa5
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757291236859
-    name: MonContext-React
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.K9PxMGuSFYjWLTqu
-    description: ''
-    _key: '!tables.results!hZWVzCZ0nqQpySh6.PgWNHONyYnLSbAa5'
-  - _id: EZd3q6NlhXQJCbrM
-    type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>What Scars Has It Left Here?</b>
-    name: ''
-    _key: '!tables.results!hZWVzCZ0nqQpySh6.EZd3q6NlhXQJCbrM'
-  - _id: cqFkNWQQi5hwAYvM
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757291242003
-    name: MonContext-Scars
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.otkjQvQjnq7LbrRR
-    description: ''
-    _key: '!tables.results!hZWVzCZ0nqQpySh6.cqFkNWQQi5hwAYvM'
-  - _id: Gb2C7xT8HQEwuifh
-    type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>What Is Its Connection With the Past?</b>
-    name: ''
-    _key: '!tables.results!hZWVzCZ0nqQpySh6.Gb2C7xT8HQEwuifh'
-  - _id: SlqHmssJFhtT7Lm5
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757291247683
-    name: MonContext-Past
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.V6fG3Prqi8W7VZex
-    description: ''
-    _key: '!tables.results!hZWVzCZ0nqQpySh6.SlqHmssJFhtT7Lm5'
-  - _id: fuHOvdx9AqvAg5FV
-    type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>A Twist To Its Activities</b>
-    name: ''
-    _key: '!tables.results!hZWVzCZ0nqQpySh6.fuHOvdx9AqvAg5FV'
-  - _id: n5v3HXHQEWmRx79D
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757291253122
-    name: MonContext-Twist
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.pIksunKKG6P3RsF7
-    description: ''
-    _key: '!tables.results!hZWVzCZ0nqQpySh6.n5v3HXHQEWmRx79D'
-formula: 1d1
-replacement: true
-displayRoll: true
 folder: NcNmE2NSqwIFlKia
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
-description: ''
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-tables.RollTable.hZWVzCZ0nqQpySh6
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271920613
   modifiedTime: 1754271920613
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: EZd3q6NlhXQJCbrM
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hZWVzCZ0nqQpySh6.EZd3q6NlhXQJCbrM'
+  - _id: Gb2C7xT8HQEwuifh
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hZWVzCZ0nqQpySh6.Gb2C7xT8HQEwuifh'
+  - _id: PgWNHONyYnLSbAa5
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hZWVzCZ0nqQpySh6.PgWNHONyYnLSbAa5'
+  - _id: SlqHmssJFhtT7Lm5
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hZWVzCZ0nqQpySh6.SlqHmssJFhtT7Lm5'
+  - _id: cqFkNWQQi5hwAYvM
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hZWVzCZ0nqQpySh6.cqFkNWQQi5hwAYvM'
+  - _id: fMzFfiNgmhoKq2C2
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hZWVzCZ0nqQpySh6.fMzFfiNgmhoKq2C2'
+  - _id: fuHOvdx9AqvAg5FV
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hZWVzCZ0nqQpySh6.fuHOvdx9AqvAg5FV'
+  - _id: hGcdxwQhCg0E5orw
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hZWVzCZ0nqQpySh6.hGcdxwQhCg0E5orw'
+  - _id: lvi2WNhpDEiXKnhf
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hZWVzCZ0nqQpySh6.lvi2WNhpDEiXKnhf'
+  - _id: m9w2hAPBPdMlcNPF
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hZWVzCZ0nqQpySh6.m9w2hAPBPdMlcNPF'
+  - _id: n5v3HXHQEWmRx79D
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hZWVzCZ0nqQpySh6.n5v3HXHQEWmRx79D'
+  - _id: tg5CU1BRtf9Hx3Io
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hZWVzCZ0nqQpySh6.tg5CU1BRtf9Hx3Io'
 _key: '!tables!hZWVzCZ0nqQpySh6'
 

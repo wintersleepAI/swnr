@@ -1,26 +1,23 @@
+_id: 4nhxamimr6ucarm5
 name: Continual Light (Mage)
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 8000000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457077
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: Permanent Range: 120' This spell has three usages: Conjuring
-    light: In a 30' radius. The magical light is sufficient for reading, but is
-    not as bright as daylight. The spell may be cast upon an object, in which
-    case the light moves with the object. Blinding a creature: By casting the
-    spell upon its eyes. If the target fails an Evasion save, it is blinded. A
-    blind creature cannot attack. Cancelling darkness: Continual light may
-    cancel a continual darkness spell (see below). Reversed: Continual Darkness
-    Creates a 30' radius area of magical blackness, preventing both normal sight
-    and infravision. Light sources brought within the area of darkness do not
-    illuminate it. Like continual light, it may alternatively be used to blind
-    creatures or to dispel a continual light spell.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -34,26 +31,26 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: Permanent Range: 120' This spell has three usages: Conjuring
+    light: In a 30' radius. The magical light is sufficient for reading, but is
+    not as bright as daylight. The spell may be cast upon an object, in which
+    case the light moves with the object. Blinding a creature: By casting the
+    spell upon its eyes. If the target fails an Evasion save, it is blinded. A
+    blind creature cannot attack. Cancelling darkness: Continual light may
+    cancel a continual darkness spell (see below). Reversed: Continual Darkness
+    Creates a 30' radius area of magical blackness, preventing both normal sight
+    and infravision. Light sources brought within the area of darkness do not
+    illuminate it. Like continual light, it may alternatively be used to blind
+    creatures or to dispel a continual light spell.
   duration: Permanent
-  save: evasion
+  favorite: false
+  level: 2
+  prepared: false
   range: 120'
-  skill: null
-_id: 4nhxamimr6ucarm5
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457077
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: evasion
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!4nhxamimr6ucarm5'
 

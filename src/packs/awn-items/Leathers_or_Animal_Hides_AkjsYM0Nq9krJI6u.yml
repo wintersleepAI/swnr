@@ -1,45 +1,7 @@
+_id: AkjsYM0Nq9krJI6u
 name: Leathers or Animal Hides
 type: armor
-_id: AkjsYM0Nq9krJI6u
 img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
-system:
-  description: >-
-    <h3>Type: Primitive</h3><p>This armor is Primitive, and gives no benefits
-    against gunfire, explosives, or TL4+ melee
-    weaponry.</p><h3>Description</h3><p>Heavy leather jackets, boiled leather
-    plates, multi-layered cloth armor, dirt bike gear, athletic kit, and thick
-    furs can all serve as basic armor.</p>
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 25
-  tl: 0
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  ac: 13
-  shield: false
-  use: false
-  meleeAc: 13
-  soak:
-    value: 0
-    max: 0
-  dr: 0
-  traumaDiePenalty: 0
-  isSubtle: true
-  isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
-effects: []
 folder: aqEeYcgNBqyFHmfk
 sort: 200000
 ownership:
@@ -57,5 +19,40 @@ _stats:
   createdTime: 1753923584465
   modifiedTime: 1753923584465
   lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  ac: 13
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
+  cost: 25
+  description: >-
+    <h3>Type: Primitive</h3><p>This armor is Primitive, and gives no benefits
+    against gunfire, explosives, or TL4+ melee
+    weaponry.</p><h3>Description</h3><p>Heavy leather jackets, boiled leather
+    plates, multi-layered cloth armor, dirt bike gear, athletic kit, and thick
+    furs can all serve as basic armor.</p>
+  dr: 0
+  encumbrance: 1
+  favorite: false
+  isHeavy: false
+  isSubtle: true
+  location: stowed
+  meleeAc: 13
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
+  soak:
+    max: 0
+    value: 0
+  tl: 0
+  traumaDiePenalty: 0
+  use: false
+effects: []
 _key: '!items!AkjsYM0Nq9krJI6u'
 

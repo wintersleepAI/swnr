@@ -1,30 +1,12 @@
+_id: 1ifx65fwswxtutp1
 name: Lens of the Polychrome Lord
 type: item
+img: icons/svg/item-bag.svg
+folder: jXrFh0x6b5Auj9IZ
 sort: 0
-system:
-  description: >-
-    These palm-sized lenses collect and concentrate light into a beam of lethal
-    jewel-colored radiance. If used in direct sunlight, the beam so created does
-    5d6 damage to a single target within 300 feet, with an Evasion save to
-    negate the damage. If used indoors in ordinary lighting, the effect does
-    3d6, and if the chamber is dark save for torches or other portable light
-    sources the damage is a mere 1d6. If the lens is used more than once per
-    day, there is a 1 in 4 chance it shatters after each subsequent bolt.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
-  cost: 0
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
-  tl: 3
-_id: 1ifx65fwswxtutp1
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -35,10 +17,29 @@ _stats:
   modifiedTime: 1754277456993
   lastModifiedBy: null
   exportSource: null
-folder: jXrFh0x6b5Auj9IZ
-flags: {}
+system:
+  bundle:
+    bundled: false
+  cost: 0
+  description: >-
+    These palm-sized lenses collect and concentrate light into a beam of lethal
+    jewel-colored radiance. If used in direct sunlight, the beam so created does
+    5d6 damage to a single target within 300 feet, with an Evasion save to
+    negate the damage. If used indoors in ordinary lighting, the effect does
+    3d6, and if the chamber is dark save for torches or other portable light
+    sources the damage is a mere 1d6. If the lens is used more than once per
+    day, there is a 1 in 4 chance it shatters after each subsequent bolt.
+  encumbrance: 1
+  favorite: false
+  location: stowed
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+    diceNum: 1
+    diceSize: d20
+  tl: 3
 effects: []
-ownership:
-  default: 0
 _key: '!items!1ifx65fwswxtutp1'
 

@@ -1,7 +1,12 @@
+_id: jRFgEn0tQan4vhgu
 name: Alert
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: sPYHUjJb2geTuLHp
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.foci.Item.s3kmjjd31ljedwd4
@@ -24,13 +29,8 @@ system:
     else involved is also this Alert.
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: jRFgEn0tQan4vhgu
-sort: 0
 _key: '!items!jRFgEn0tQan4vhgu'
 

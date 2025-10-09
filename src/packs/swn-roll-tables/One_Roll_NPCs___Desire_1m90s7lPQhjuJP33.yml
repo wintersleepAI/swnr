@@ -1,267 +1,158 @@
-description: ''
-displayRoll: true
-flags: {}
-folder: Td6GsHm0Ns7IXzwI
-formula: 1d12
-img: icons/svg/d20-grey.svg
+_id: 1m90s7lPQhjuJP33
 name: One Roll NPCs - Desire
-replacement: true
-results:
-  - _id: Opl5LqFSXSI3194W
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 1
-      - 1
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Desire: They want a particular romantic partner'
-    name: ''
-    _key: '!tables.results!1m90s7lPQhjuJP33.Opl5LqFSXSI3194W'
-  - _id: WxpKNIBMJCLsWxP0
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 2
-      - 2
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Desire: They want money for them or a loved one'
-    name: ''
-    _key: '!tables.results!1m90s7lPQhjuJP33.WxpKNIBMJCLsWxP0'
-  - _id: soqI7gwHdANdxbtz
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 3
-      - 3
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Desire: They want a promotion in their job'
-    name: ''
-    _key: '!tables.results!1m90s7lPQhjuJP33.soqI7gwHdANdxbtz'
-  - _id: Qtoqsg2q5KBKF5sI
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 4
-      - 4
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Desire: They want answers about a past trauma'
-    name: ''
-    _key: '!tables.results!1m90s7lPQhjuJP33.Qtoqsg2q5KBKF5sI'
-  - _id: EntzDIZhYRl7uVYN
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 5
-      - 5
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Desire: They want revenge on an enemy'
-    name: ''
-    _key: '!tables.results!1m90s7lPQhjuJP33.EntzDIZhYRl7uVYN'
-  - _id: vlZvgva29Vp2GpuY
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 6
-      - 6
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Desire: They want to help a beleaguered friend'
-    name: ''
-    _key: '!tables.results!1m90s7lPQhjuJP33.vlZvgva29Vp2GpuY'
-  - _id: H8SOCY6pnvQkllJ4
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 7
-      - 7
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Desire: They want an entirely different job'
-    name: ''
-    _key: '!tables.results!1m90s7lPQhjuJP33.H8SOCY6pnvQkllJ4'
-  - _id: iN6qd3I56tNVVPBC
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 8
-      - 8
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Desire: They want protection from an enemy'
-    name: ''
-    _key: '!tables.results!1m90s7lPQhjuJP33.iN6qd3I56tNVVPBC'
-  - _id: WpsHJ7VAam52TqxI
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 9
-      - 9
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Desire: They want to leave their current life'
-    name: ''
-    _key: '!tables.results!1m90s7lPQhjuJP33.WpsHJ7VAam52TqxI'
-  - _id: mSQgV4vojm2iZo9x
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 10
-      - 10
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Desire: They want fame and glory'
-    name: ''
-    _key: '!tables.results!1m90s7lPQhjuJP33.mSQgV4vojm2iZo9x'
-  - _id: CNCYZ6zNWLPHKlem
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 11
-      - 11
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Desire: They want power over those around them'
-    name: ''
-    _key: '!tables.results!1m90s7lPQhjuJP33.CNCYZ6zNWLPHKlem'
-  - _id: 2ndqvqLe6FugkOnd
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 12
-      - 12
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Desire: They have everything they want from life'
-    name: ''
-    _key: '!tables.results!1m90s7lPQhjuJP33.2ndqvqLe6FugkOnd'
+type: null
+img: icons/svg/d20-grey.svg
+folder: Td6GsHm0Ns7IXzwI
+sort: 800000
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757287481996
   modifiedTime: 1757287502706
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: 1m90s7lPQhjuJP33
-sort: 800000
+system: {}
+effects: []
+results:
+  - _id: Opl5LqFSXSI3194W
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1m90s7lPQhjuJP33.Opl5LqFSXSI3194W'
+  - _id: WxpKNIBMJCLsWxP0
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1m90s7lPQhjuJP33.WxpKNIBMJCLsWxP0'
+  - _id: soqI7gwHdANdxbtz
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1m90s7lPQhjuJP33.soqI7gwHdANdxbtz'
+  - _id: Qtoqsg2q5KBKF5sI
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1m90s7lPQhjuJP33.Qtoqsg2q5KBKF5sI'
+  - _id: EntzDIZhYRl7uVYN
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1m90s7lPQhjuJP33.EntzDIZhYRl7uVYN'
+  - _id: vlZvgva29Vp2GpuY
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1m90s7lPQhjuJP33.vlZvgva29Vp2GpuY'
+  - _id: H8SOCY6pnvQkllJ4
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1m90s7lPQhjuJP33.H8SOCY6pnvQkllJ4'
+  - _id: iN6qd3I56tNVVPBC
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1m90s7lPQhjuJP33.iN6qd3I56tNVVPBC'
+  - _id: WpsHJ7VAam52TqxI
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1m90s7lPQhjuJP33.WpsHJ7VAam52TqxI'
+  - _id: mSQgV4vojm2iZo9x
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1m90s7lPQhjuJP33.mSQgV4vojm2iZo9x'
+  - _id: CNCYZ6zNWLPHKlem
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1m90s7lPQhjuJP33.CNCYZ6zNWLPHKlem'
+  - _id: 2ndqvqLe6FugkOnd
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1m90s7lPQhjuJP33.2ndqvqLe6FugkOnd'
 _key: '!tables!1m90s7lPQhjuJP33'
 

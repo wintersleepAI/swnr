@@ -1,116 +1,64 @@
+_id: mwraqrvn8qbbh0o9
 name: Spider, Crab
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
-system:
-  ab: 2
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 12
-  hitDice: 2
-  moralScore: 7
-  saves: 14
-  skillBonus: 0
-  speed: 40
-  biography: >-
-    5' long hunting spiders that can change their colour to match their
-    surroundings.
-  species: monster
-_id: mwraqrvn8qbbh0o9
+ownership: {}
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456481
   modifiedTime: 1754277456481
   lastModifiedBy: null
   exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+system:
+  ab: 2
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 12
+  biography: >-
+    5' long hunting spiders that can change their colour to match their
+    surroundings.
+  hitDice: 2
+  moralScore: 7
+  saves: 14
+  skillBonus: 0
+  species: monster
+  speed: 40
 effects: []
-prototypeToken:
-  name: Spider, Crab
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/animal-icons/spider-face.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Bite
+  - _id: jgahmn6lznfk1pwe
+    name: Ambush
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: Attack by dropping on victims from above.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!mwraqrvn8qbbh0o9.jgahmn6lznfk1pwe'
+  - _id: rd6jady67rndg6mj
+    name: Bite
     type: weapon
+    img: null
+    sort: 0
     system:
       description: 'Poison: Causes death in 1d4 turns (Physical save with a +2 bonus).'
       cost: 0
@@ -132,82 +80,17 @@ items:
       encumbrance: 1
       quality: stock
       tl: 3
-    _id: rd6jady67rndg6mj
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920805
-      modifiedTime: 1754273920805
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!mwraqrvn8qbbh0o9.rd6jady67rndg6mj'
-  - name: Ambush
+  - _id: 49z7af05jadjwfsg
+    name: Cling
     type: item
-    system:
-      description: Attack by dropping on victims from above.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: jgahmn6lznfk1pwe
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920805
-      modifiedTime: 1754273920805
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
+    img: null
     sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!mwraqrvn8qbbh0o9.jgahmn6lznfk1pwe'
-  - name: Surprise
-    type: item
-    system:
-      description: Receives an additional +3 to checks to surprise opponents.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 9fh5p01vh7p67jwt
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920805
-      modifiedTime: 1754273920805
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!mwraqrvn8qbbh0o9.9fh5p01vh7p67jwt'
-  - name: Cling
-    type: item
     system:
       description: Can walk on walls and ceilings.
       cost: 0
@@ -216,23 +99,30 @@ items:
       location: stowed
       quality: stock
       tl: 3
-    _id: 49z7af05jadjwfsg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920805
-      modifiedTime: 1754273920805
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!mwraqrvn8qbbh0o9.49z7af05jadjwfsg'
+  - _id: 9fh5p01vh7p67jwt
+    name: Surprise
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: Receives an additional +3 to checks to surprise opponents.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!mwraqrvn8qbbh0o9.9fh5p01vh7p67jwt'
 _key: '!actors!mwraqrvn8qbbh0o9'
 

@@ -1,7 +1,12 @@
+_id: vKbSJvi35QWLxMa8
 name: Hard To Kill
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
 folder: bmlxot0Gn0smSX1W
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-edges.Item.7hvwwmidep4132l0
@@ -19,13 +24,8 @@ system:
     base Trauma Target increases by +1, turning the base 6 into 7.
   favorite: false
   level: 0
-  type: edge
   poolsGranted: []
+  type: edge
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: vKbSJvi35QWLxMa8
-sort: 0
 _key: '!items!vKbSJvi35QWLxMa8'
 

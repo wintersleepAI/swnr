@@ -1,7 +1,12 @@
+_id: TCQqGJP3Y28Ap1La
 name: Veteran's Luck
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
 folder: bmlxot0Gn0smSX1W
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-edges.Item.94fgmfw56y7l780i
@@ -19,13 +24,8 @@ system:
     two effects,an attack roll that just hit you is instead treated as a miss
   favorite: false
   level: 0
-  type: edge
   poolsGranted: []
+  type: edge
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: TCQqGJP3Y28Ap1La
-sort: 0
 _key: '!items!TCQqGJP3Y28Ap1La'
 

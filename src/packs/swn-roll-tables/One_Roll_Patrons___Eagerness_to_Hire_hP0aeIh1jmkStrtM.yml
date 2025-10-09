@@ -1,107 +1,70 @@
-displayRoll: true
-flags: {}
-folder: Td6GsHm0Ns7IXzwI
-formula: 1d4
-img: icons/svg/d20-grey.svg
+_id: hP0aeIh1jmkStrtM
 name: One Roll Patrons - Eagerness to Hire
-replacement: true
-results:
-  - _id: ntGZpDvZBrnu1Uep
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 1
-      - 1
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Eagerness to Hire: Cautious, but can be convinced to hire'
-    name: ''
-    _key: '!tables.results!hP0aeIh1jmkStrtM.ntGZpDvZBrnu1Uep'
-  - _id: fUXMB2HeSuYuYCl9
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 2
-      - 2
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Eagerness to Hire: Willing to promise standard rates'
-    name: ''
-    _key: '!tables.results!hP0aeIh1jmkStrtM.fUXMB2HeSuYuYCl9'
-  - _id: VExWuJBtOL6EoCrL
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 3
-      - 3
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Eagerness to Hire: Eager, willing to offer a bonus'
-    name: ''
-    _key: '!tables.results!hP0aeIh1jmkStrtM.VExWuJBtOL6EoCrL'
-  - _id: MzNZ1NFIjgUlzINW
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 4
-      - 4
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Eagerness to Hire: Desperate, might offer what they can’t pay'
-    name: ''
-    _key: '!tables.results!hP0aeIh1jmkStrtM.MzNZ1NFIjgUlzINW'
+type: null
+img: icons/svg/d20-grey.svg
+folder: Td6GsHm0Ns7IXzwI
+sort: 500000
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757287492980
   modifiedTime: 1757287502706
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-description: ''
-_id: hP0aeIh1jmkStrtM
-sort: 500000
+system: {}
+effects: []
+results:
+  - _id: ntGZpDvZBrnu1Uep
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hP0aeIh1jmkStrtM.ntGZpDvZBrnu1Uep'
+  - _id: fUXMB2HeSuYuYCl9
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hP0aeIh1jmkStrtM.fUXMB2HeSuYuYCl9'
+  - _id: VExWuJBtOL6EoCrL
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hP0aeIh1jmkStrtM.VExWuJBtOL6EoCrL'
+  - _id: MzNZ1NFIjgUlzINW
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!hP0aeIh1jmkStrtM.MzNZ1NFIjgUlzINW'
 _key: '!tables!hP0aeIh1jmkStrtM'
 

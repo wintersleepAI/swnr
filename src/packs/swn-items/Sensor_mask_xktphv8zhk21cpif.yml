@@ -1,7 +1,12 @@
+_id: xktphv8zhk21cpif
 name: Sensor mask
 type: shipFitting
 img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
 folder: FSb3IGBn6eTDHX2S
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.ship-fitting.Item.xktphv8zhk21cpif
@@ -13,7 +18,6 @@ _stats:
   createdTime: 1757286946146
   modifiedTime: 1757286946146
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: xktphv8zhk21cpif
 system:
   broken: false
   cost: 10000
@@ -25,21 +29,17 @@ system:
     check against difficulty 10 plus the Program skill of the masking ship's
     comms officer. Once the ship is close enough to visually identify, the
     masking is useless.
+  destroyed: false
   effect: At long distances
+  favorite: false
+  juryRigged: false
   mass: 0
   massMultiplier: false
   minClass: frigate
   power: 1
   powerMultiplier: true
-  favorite: false
   tl: 4
-  destroyed: false
-  juryRigged: false
   type: ship
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!xktphv8zhk21cpif'
 

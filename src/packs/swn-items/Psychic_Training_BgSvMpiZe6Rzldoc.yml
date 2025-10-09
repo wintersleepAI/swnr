@@ -1,7 +1,12 @@
+_id: BgSvMpiZe6Rzldoc
 name: Psychic Training
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: sPYHUjJb2geTuLHp
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.foci.Item.yhuf75cltmtxx8ap
@@ -30,18 +35,13 @@ system:
     level later in the game.
   favorite: false
   level: 0
-  type: focus
   poolsGranted:
     - resourceName: Effort
       subResource: Psychic
       formula: '1'
       condition: ''
       cadence: day
+  type: focus
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: BgSvMpiZe6Rzldoc
-sort: 0
 _key: '!items!BgSvMpiZe6Rzldoc'
 

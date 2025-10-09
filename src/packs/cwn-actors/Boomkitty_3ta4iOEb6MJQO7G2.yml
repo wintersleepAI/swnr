@@ -1,10 +1,37 @@
+_id: 3ta4iOEb6MJQO7G2
 name: Boomkitty
 type: npc
 img: icons/svg/mystery-man.svg
+folder: 1MnMOlCpFjrZIhXu
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.3ta4iOEb6MJQO7G2
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
-  health:
-    value: 3
-    max: 3
+  ab: 1
+  access:
+    max: 1
+    value: 1
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 16
+  baseSoakTotal:
+    max: 0
+    value: 0
   biography: >-
     <p>Fabricated out of common street cats or small dogs, a “boomkitty” has a
     crude remote control harness spliced into their brain stem and a deposit of
@@ -12,147 +39,42 @@ system:
     inconspicuous spies and observers, a handler can detonate the animal as a
     Main action, inflicting damage as per a frag grenade on anything around
     it.</p>
-  species: ''
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 5
-  baseAc: 16
-  meleeAc: 16
-  ab: 1
-  meleeAb: 1
-  systemStrain:
-    value: 0
-    permanent: 0
-  speed: 20
   cyberdecks: []
+  faction: ''
+  health:
+    max: 3
+    value: 3
   health_max_modified: 0
-  armorType: street
-  skillBonus: 3
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
   hitDice: 1d8
-  saves: 0
+  homeworld: ''
+  meleeAb: 1
+  meleeAc: 16
   moralScore: 6
   reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
+  saves: 0
+  skillBonus: 3
+  species: ''
+  speed: 20
+  systemStrain:
+    permanent: 0
     value: 0
-    max: 0
-  faction: ''
-  homeworld: ''
-  pools: {}
+  traumaTarget: 5
   tweak:
-    showCyberware: true
-    showPsychic: true
-    showArts: false
-    showSpells: false
     showAdept: false
+    showArts: false
+    showCyberware: true
     showMutation: false
     showPoolsInHeader: true
     showPoolsInPowers: false
-prototypeToken:
-  name: Boomkitty
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: icons/svg/mystery-man.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
+    showPsychic: true
+    showSpells: false
+effects: []
 items:
-  - name: Grenade,Frag
+  - _id: v87VNlZyxOpekk0q
+    name: Grenade,Frag
     type: weapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-weapons.Item.3zjb5tg3fploawnf
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: v87VNlZyxOpekk0q
     system:
       ammo:
         burst: false
@@ -213,26 +135,10 @@ items:
           value: 0
       isMelee: false
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!3ta4iOEb6MJQO7G2.v87VNlZyxOpekk0q'
-effects: []
-folder: 1MnMOlCpFjrZIhXu
-flags: {}
-_stats:
-  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.3ta4iOEb6MJQO7G2
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.348'
-  systemId: swnr
-  systemVersion: 2.1.0-beta
-  createdTime: 1758737583614
-  modifiedTime: 1758737583614
-  lastModifiedBy: lKC5x4Yf023Bizof
-_id: 3ta4iOEb6MJQO7G2
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
 _key: '!actors!3ta4iOEb6MJQO7G2'
 

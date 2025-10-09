@@ -1,7 +1,26 @@
+_id: silpimyt8ia2rjq6
 name: Invincible Legion
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: zFqC1zP7Qyzj1jAK
+sort: 1200000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456955
+  modifiedTime: 1759968821235
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     The faction has developed a truly irresistible military organization that
     can smash its way through opposition without the aid of any support units.
@@ -10,40 +29,20 @@ system:
     relocate there, as if it had the Subtle quality. It is not, however, in any
     way subtle.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 30
     max: 30
-  rating: 8
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 30
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: silpimyt8ia2rjq6
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456955
-  modifiedTime: 1754277456955
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 8
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!silpimyt8ia2rjq6'
 

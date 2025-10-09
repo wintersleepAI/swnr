@@ -1,20 +1,8 @@
-folder: kSVqyjnjk070Af3I
+_id: DkA4qweVUTtXomIe
 name: NPC Effort
 type: feature
-_id: DkA4qweVUTtXomIe
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
-system:
-  description: ''
-  favorite: false
-  level: 0
-  type: focus
-  poolsGranted:
-    - resourceName: Effort
-      subResource: ''
-      formula: '@HD + 2'
-      condition: ''
-      cadence: day
-effects: []
+folder: kSVqyjnjk070Af3I
 sort: 0
 ownership:
   default: 0
@@ -30,5 +18,17 @@ _stats:
   createdTime: 1757294684131
   modifiedTime: 1757294698872
   lastModifiedBy: iXDXVi7OlHcRwXw0
+system:
+  description: ''
+  favorite: false
+  level: 0
+  poolsGranted:
+    - resourceName: Effort
+      subResource: ''
+      formula: '@HD + 2'
+      condition: ''
+      cadence: day
+  type: focus
+effects: []
 _key: '!items!DkA4qweVUTtXomIe'
 

@@ -1,46 +1,45 @@
+_id: 3nh6wzop9q8ujpy1
 name: Monopoly
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: vGBf0X640rXwS7Ze
+sort: 300000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456949
+  modifiedTime: 1759968730539
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     Once per turn, as a free action, the Monopoly Asset can target an Asset in
     the same location; that Asset's owning faction must either pay the
     Monopoly's owner 1 Treasure or lose the targeted Asset.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 12
     max: 12
-  rating: 4
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 12
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: 3nh6wzop9q8ujpy1
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456949
-  modifiedTime: 1754277456949
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 4
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!3nh6wzop9q8ujpy1'
 

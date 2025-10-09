@@ -1,19 +1,29 @@
+_id: qdg7cwic9z1bsi5w
 name: Dragon, Sea
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
+ownership: {}
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456643
+  modifiedTime: 1754277456643
+  lastModifiedBy: null
+  exportSource: null
 system:
   ab: 8
   armorType: street
   attacks:
-    damage: d6
     bonusDamage: 0
+    damage: d6
     number: 0
   baseAc: 19
-  hitDice: 8
-  moralScore: 9
-  saves: 11
-  skillBonus: 0
-  speed: 60
   biography: >-
     A proud, ancient race of gigantic, carnivorous, winged reptiles. There are
     many subspecies of dragon, many of which are distinguished by the colour of
@@ -50,100 +60,19 @@ system:
     treasure. Older dragons may have up to 3 HD more and twice as much treasure.
     Lairs: A dragon's treasure is always kept in its well-hidden lair and is
     seldom unguarded.
+  hitDice: 8
+  moralScore: 9
+  saves: 11
+  skillBonus: 0
   species: monster
-_id: qdg7cwic9z1bsi5w
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456643
-  modifiedTime: 1754277456643
-  lastModifiedBy: null
-  exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+  speed: 60
 effects: []
-prototypeToken:
-  name: Dragon, Sea
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/sea-dragon.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Bite
+  - _id: 42m923bt7pbgx2qi
+    name: Bite
     type: weapon
+    img: null
+    sort: 0
     system:
       description: ''
       cost: 0
@@ -165,26 +94,17 @@ items:
       encumbrance: 1
       quality: stock
       tl: 3
-    _id: 42m923bt7pbgx2qi
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!qdg7cwic9z1bsi5w.42m923bt7pbgx2qi'
-  - name: Breath Weapon
+  - _id: g6etinqhcpa6ygsx
+    name: Breath Weapon
     type: item
+    img: null
+    sort: 0
     system:
       description: >-
         Poison spittle, 100' range, 20' diameter. Save or die. Poison is
@@ -195,82 +115,17 @@ items:
       location: stowed
       quality: stock
       tl: 3
-    _id: g6etinqhcpa6ygsx
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!qdg7cwic9z1bsi5w.g6etinqhcpa6ygsx'
-  - name: Language and Spells
+  - _id: 6z7ulg1szxen5df4
+    name: Gliding
     type: item
-    system:
-      description: 20%; 3 x 1st level, 3 x 2nd level.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: a0rucjnihcon67mt
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
+    img: null
     sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!qdg7cwic9z1bsi5w.a0rucjnihcon67mt'
-  - name: Sleeping
-    type: item
-    system:
-      description: 30%.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 8p52ys6qezs3lvsb
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!qdg7cwic9z1bsi5w.8p52ys6qezs3lvsb'
-  - name: Gliding
-    type: item
     system:
       description: Leap out of the water and glide for up to 6 rounds at swim speed.
       cost: 0
@@ -279,23 +134,49 @@ items:
       location: stowed
       quality: stock
       tl: 3
-    _id: 6z7ulg1szxen5df4
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!qdg7cwic9z1bsi5w.6z7ulg1szxen5df4'
+  - _id: a0rucjnihcon67mt
+    name: Language and Spells
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: 20%; 3 x 1st level, 3 x 2nd level.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!qdg7cwic9z1bsi5w.a0rucjnihcon67mt'
+  - _id: 8p52ys6qezs3lvsb
+    name: Sleeping
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: 30%.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!qdg7cwic9z1bsi5w.8p52ys6qezs3lvsb'
 _key: '!actors!qdg7cwic9z1bsi5w'
 

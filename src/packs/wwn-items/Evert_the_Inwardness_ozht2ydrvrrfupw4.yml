@@ -1,25 +1,23 @@
+_id: ozht2ydrvrrfupw4
 name: Evert the Inwardness
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456923
+  modifiedTime: 1754277456923
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    A single visible target is selected, whereupon whatever contents that target
-    may possess are extracted and placed in the caster's hands. If used on a
-    cabinet, backpack, pocket, or other such container it can be no larger than
-    an armoire, and the caster can choose whether or not to receive any
-    particular object from inside it, being instantly appraised of its contents
-    when the spell is cast. If used on a creature, it attempts to tear out the
-    subject's innards; if the subject has equal or fewer hit dice than the
-    caster, it must make a Physical save or die instantly. Whether or not it
-    perishes, it suffers 1d10 damage per caster level, with a Physical save for
-    half.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -33,26 +31,25 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    A single visible target is selected, whereupon whatever contents that target
+    may possess are extracted and placed in the caster's hands. If used on a
+    cabinet, backpack, pocket, or other such container it can be no larger than
+    an armoire, and the caster can choose whether or not to receive any
+    particular object from inside it, being instantly appraised of its contents
+    when the spell is cast. If used on a creature, it attempts to tear out the
+    subject's innards; if the subject has equal or fewer hit dice than the
+    caster, it must make a Physical save or die instantly. Whether or not it
+    perishes, it suffers 1d10 damage per caster level, with a Physical save for
+    half.
   duration: Instant
-  save: physical
+  favorite: false
+  level: 4
+  prepared: false
   range: Visible
-  skill: null
-_id: ozht2ydrvrrfupw4
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456923
-  modifiedTime: 1754277456923
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: physical
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!ozht2ydrvrrfupw4'
 

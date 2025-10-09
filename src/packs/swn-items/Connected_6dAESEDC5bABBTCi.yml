@@ -1,7 +1,12 @@
+_id: 6dAESEDC5bABBTCi
 name: Connected
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: sPYHUjJb2geTuLHp
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.foci.Item.ye4ai24yg6wr265h
@@ -27,13 +32,8 @@ system:
     GM decides who they are and what they can do for you.
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: 6dAESEDC5bABBTCi
-sort: 0
 _key: '!items!6dAESEDC5bABBTCi'
 

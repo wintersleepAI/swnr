@@ -1,7 +1,12 @@
+_id: lAHFny9QEnIODuKH
 name: Ghost Driver
 type: shipFitting
 img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
 folder: aPPngDkp3e5tzGZ9
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-vehicle-fittings.Item.l41njuaeho2qe1yl
@@ -14,31 +19,26 @@ _stats:
   modifiedTime: 1754267290515
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  broken: false
   cost: 2500
+  costMultiplier: false
   description: >-
     The driver can order the vehicle directly or by radio or phone to go to
     particular places at particular times or perform other simple, direct
     actions on a given schedule. The onboard expert system can handle
     traffic-related challenges, but has no real intelligence to process more
     complicated problems.
+  destroyed: false
   effect: Limited AI driving capabilities
+  favorite: false
+  juryRigged: false
   mass: 1
+  massMultiplier: false
   minClass: fighter
   power: 1
-  type: vehicle
-  favorite: false
-  tl: 4
-  costMultiplier: false
   powerMultiplier: false
-  massMultiplier: false
-  broken: false
-  destroyed: false
-  juryRigged: false
+  tl: 4
+  type: vehicle
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: lAHFny9QEnIODuKH
-sort: 0
 _key: '!items!lAHFny9QEnIODuKH'
 

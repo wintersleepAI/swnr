@@ -1,7 +1,12 @@
+_id: bf5if7k6294lbjtf
 name: Far Thought
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: T7VK7FTps9Ubc5gw
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-telepathy.Item.bf5if7k6294lbjtf
@@ -13,8 +18,8 @@ _stats:
   createdTime: 1757286864688
   modifiedTime: 1757286864688
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: bf5if7k6294lbjtf
 system:
+  consumptions: []
   description: >-
     <p>Once a telepath has made a <em>Telepathic Contact</em> with a target,
     they can thereafter activate the technique whenever that target is within
@@ -23,19 +28,11 @@ system:
     extends over an entire planet and up to orbital distances. This distant
     connection is tenuous, however, and the psychic cannot use any technique
     through it that would allow the target a saving throw to resist.</p>
-  level: 2
-  source: telepathy
   favorite: false
-  subType: psychic
+  level: 2
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions: []
-  save: null
+  source: telepathy
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!bf5if7k6294lbjtf'
 

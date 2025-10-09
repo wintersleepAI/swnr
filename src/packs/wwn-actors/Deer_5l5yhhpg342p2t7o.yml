@@ -1,19 +1,29 @@
+_id: 5l5yhhpg342p2t7o
 name: Deer
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
+ownership: {}
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456652
+  modifiedTime: 1754277456652
+  lastModifiedBy: null
+  exportSource: null
 system:
   ab: 1
   armorType: street
   attacks:
-    damage: d6
     bonusDamage: 0
+    damage: d6
     number: 0
   baseAc: 12
-  hitDice: 2
-  moralScore: 5
-  saves: 14
-  skillBonus: 0
-  speed: 80
   biography: >-
     Wild animals that live in large, grazing herds. The exact type depends on
     the terrain. Stampede: Herds of 20 or more can trample those in their path.
@@ -21,100 +31,19 @@ system:
     damage. Males: In groups of 3 or more, only 1-in-4 are males. These have 1d4
     extra hit points and protect the herd. Females and young: Flee from danger.
     Females do not have a butt attack. Young have half normal hit points.
+  hitDice: 2
+  moralScore: 5
+  saves: 14
+  skillBonus: 0
   species: monster
-_id: 5l5yhhpg342p2t7o
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456652
-  modifiedTime: 1754277456652
-  lastModifiedBy: null
-  exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+  speed: 80
 effects: []
-prototypeToken:
-  name: Deer
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/animal-icons/deer-track.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Antlers or Hoofs
+  - _id: lio0c6h55nbhakrt
+    name: Antlers or Hoofs
     type: weapon
+    img: null
+    sort: 0
     system:
       description: ''
       cost: 0
@@ -136,26 +65,17 @@ items:
       encumbrance: 1
       quality: stock
       tl: 3
-    _id: lio0c6h55nbhakrt
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!5l5yhhpg342p2t7o.lio0c6h55nbhakrt'
-  - name: Stampede
+  - _id: dedniqesf5167n8a
+    name: Stampede
     type: weapon
+    img: null
+    sort: 0
     system:
       description: >-
         Herds of 20 or more can trample those in their path. 3-in-4 chance each
@@ -179,23 +99,11 @@ items:
       encumbrance: 1
       quality: stock
       tl: 3
-    _id: dedniqesf5167n8a
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!5l5yhhpg342p2t7o.dedniqesf5167n8a'
 _key: '!actors!5l5yhhpg342p2t7o'
 

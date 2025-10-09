@@ -1,24 +1,23 @@
+_id: g8nw7qkepicije4x
 name: Call of the Tomb
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456908
+  modifiedTime: 1754277456908
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The necromancer invokes the inescapable urge for self-dissolution within the
-    substance of all that exists, amplifying the weight of their own mortality.
-    All enemy creatures within forty feet are affected. Targets can make a
-    Mental saving throw to resist, in which case the effects last only one
-    round, otherwise lasting for one round per caster level. During this time
-    all attacks made against the victims automatically hit and all damage dice
-    they suffer are maximized. Any special defenses they may have against
-    mundane weapons or certain types of injury are negated while the spell is on
-    them.
-  favorite: false
-  subType: spell
-  source: Necromancer
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -32,26 +31,24 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The necromancer invokes the inescapable urge for self-dissolution within the
+    substance of all that exists, amplifying the weight of their own mortality.
+    All enemy creatures within forty feet are affected. Targets can make a
+    Mental saving throw to resist, in which case the effects last only one
+    round, otherwise lasting for one round per caster level. During this time
+    all attacks made against the victims automatically hit and all damage dice
+    they suffer are maximized. Any special defenses they may have against
+    mundane weapons or certain types of injury are negated while the spell is on
+    them.
   duration: 1 round per level
-  save: mental
+  favorite: false
+  level: 5
+  prepared: false
   range: 40 ft. radius
-  skill: null
-_id: g8nw7qkepicije4x
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456908
-  modifiedTime: 1754277456908
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: mental
+  source: Necromancer
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!g8nw7qkepicije4x'
 

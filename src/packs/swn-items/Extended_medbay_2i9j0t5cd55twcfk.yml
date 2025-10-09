@@ -1,7 +1,12 @@
+_id: 2i9j0t5cd55twcfk
 name: Extended medbay
 type: shipFitting
 img: systems/swnr/assets/icons/game-icons.net/item-icons/health-capsule.svg
 folder: FSb3IGBn6eTDHX2S
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.ship-fitting.Item.2i9j0t5cd55twcfk
@@ -13,7 +18,6 @@ _stats:
   createdTime: 1757286946146
   modifiedTime: 1757286946146
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 2i9j0t5cd55twcfk
 system:
   broken: false
   cost: 5000
@@ -24,21 +28,17 @@ system:
     reaching a planet. An extended medbay improves those facilities, allowing
     for the medical treatment of up to the ship's entire maximum crew at once,
     including the treatment of critically wounded passengers.
+  destroyed: false
   effect: Can provide medical care to more patients
+  favorite: false
+  juryRigged: false
   mass: 1
   massMultiplier: false
   minClass: frigate
   power: 1
   powerMultiplier: false
-  favorite: false
   tl: 4
-  destroyed: false
-  juryRigged: false
   type: ship
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!2i9j0t5cd55twcfk'
 

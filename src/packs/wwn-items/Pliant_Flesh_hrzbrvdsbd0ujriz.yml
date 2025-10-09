@@ -1,34 +1,12 @@
+_id: hrzbrvdsbd0ujriz
 name: Pliant Flesh
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    You've mastered your shapeshifting skills, and Change Form can be used as an
-    On Turn action, albeit only once per round. Alternately, it can take as long
-    as a minute but cost no Effort. Whenever you spend Effort to shift shape,
-    you heal lost hit points equal to 1d6 plus your level; this does not apply
-    when merely reverting a form's change. This art is intrinsic to you, and
-    doesn't count against the total number of arts allowed to apply to a form.
-  favorite: false
-  subType: art
-  source: Skinshifter
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Skinshifter
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: hrzbrvdsbd0ujriz
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -39,10 +17,29 @@ _stats:
   modifiedTime: 1754277456758
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Skinshifter
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    You've mastered your shapeshifting skills, and Change Form can be used as an
+    On Turn action, albeit only once per round. Alternately, it can take as long
+    as a minute but cost no Effort. Whenever you spend Effort to shift shape,
+    you heal lost hit points equal to 1d6 plus your level; this does not apply
+    when merely reverting a form's change. This art is intrinsic to you, and
+    doesn't count against the total number of arts allowed to apply to a form.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Skinshifter
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!hrzbrvdsbd0ujriz'
 

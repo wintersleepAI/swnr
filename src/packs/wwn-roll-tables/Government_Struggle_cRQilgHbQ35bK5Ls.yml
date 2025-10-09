@@ -1,267 +1,158 @@
 _id: cRQilgHbQ35bK5Ls
 name: Government-Struggle
+type: null
 img: icons/svg/d20-grey.svg
-description: Current Struggle Within the Government
-results:
-  - _id: WyJQz8C5ckrI2Cgw
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: The ruler’s trying to crush a too-powerful lord
-    name: ''
-    _key: '!tables.results!cRQilgHbQ35bK5Ls.WyJQz8C5ckrI2Cgw'
-  - _id: rXY6oK6uLHKk5xXF
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Ministers are trying to usurp power
-    name: ''
-    _key: '!tables.results!cRQilgHbQ35bK5Ls.rXY6oK6uLHKk5xXF'
-  - _id: 9AtuW4dylhsrLLFG
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A grand scheme has gone terribly wrong
-    name: ''
-    _key: '!tables.results!cRQilgHbQ35bK5Ls.9AtuW4dylhsrLLFG'
-  - _id: f95HViJqoE4TVioZ
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: External diplomacy has bungled something
-    name: ''
-    _key: '!tables.results!cRQilgHbQ35bK5Ls.f95HViJqoE4TVioZ'
-  - _id: zzWF5uFVxK0pohxL
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A usurper secretly controls a major power
-    name: ''
-    _key: '!tables.results!cRQilgHbQ35bK5Ls.zzWF5uFVxK0pohxL'
-  - _id: dGwobqZN2onCtDno
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Foreign rivals are backing malcontents
-    name: ''
-    _key: '!tables.results!cRQilgHbQ35bK5Ls.dGwobqZN2onCtDno'
-  - _id: 7seU0RyFw7ggDfjp
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A different class demands a share of rule
-    name: ''
-    _key: '!tables.results!cRQilgHbQ35bK5Ls.7seU0RyFw7ggDfjp'
-  - _id: 0iFNcAxFLu1ebur6
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: The existing ruling class wants more power
-    name: ''
-    _key: '!tables.results!cRQilgHbQ35bK5Ls.0iFNcAxFLu1ebur6'
-  - _id: tqGcDsBrCessGsk8
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A disfavored class is being oppressed
-    name: ''
-    _key: '!tables.results!cRQilgHbQ35bK5Ls.tqGcDsBrCessGsk8'
-  - _id: l8FeqLnUS7LQzVIE
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Popular discontent is destroying legitimacy
-    name: ''
-    _key: '!tables.results!cRQilgHbQ35bK5Ls.l8FeqLnUS7LQzVIE'
-  - _id: bZIT7EeNxaqAkxHP
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 11
-      - 11
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: The prior ruler’s incompetence still harms it
-    name: ''
-    _key: '!tables.results!cRQilgHbQ35bK5Ls.bZIT7EeNxaqAkxHP'
-  - _id: NSdUxZjqTS7TZZqX
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 12
-      - 12
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: The heir is unacceptable to many
-    name: ''
-    _key: '!tables.results!cRQilgHbQ35bK5Ls.NSdUxZjqTS7TZZqX'
-formula: 1d12
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   better-rolltables: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.cRQilgHbQ35bK5Ls
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: WyJQz8C5ckrI2Cgw
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cRQilgHbQ35bK5Ls.WyJQz8C5ckrI2Cgw'
+  - _id: rXY6oK6uLHKk5xXF
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cRQilgHbQ35bK5Ls.rXY6oK6uLHKk5xXF'
+  - _id: 9AtuW4dylhsrLLFG
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cRQilgHbQ35bK5Ls.9AtuW4dylhsrLLFG'
+  - _id: f95HViJqoE4TVioZ
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cRQilgHbQ35bK5Ls.f95HViJqoE4TVioZ'
+  - _id: zzWF5uFVxK0pohxL
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cRQilgHbQ35bK5Ls.zzWF5uFVxK0pohxL'
+  - _id: dGwobqZN2onCtDno
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cRQilgHbQ35bK5Ls.dGwobqZN2onCtDno'
+  - _id: 7seU0RyFw7ggDfjp
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cRQilgHbQ35bK5Ls.7seU0RyFw7ggDfjp'
+  - _id: 0iFNcAxFLu1ebur6
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cRQilgHbQ35bK5Ls.0iFNcAxFLu1ebur6'
+  - _id: tqGcDsBrCessGsk8
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cRQilgHbQ35bK5Ls.tqGcDsBrCessGsk8'
+  - _id: l8FeqLnUS7LQzVIE
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cRQilgHbQ35bK5Ls.l8FeqLnUS7LQzVIE'
+  - _id: bZIT7EeNxaqAkxHP
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cRQilgHbQ35bK5Ls.bZIT7EeNxaqAkxHP'
+  - _id: NSdUxZjqTS7TZZqX
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cRQilgHbQ35bK5Ls.NSdUxZjqTS7TZZqX'
 _key: '!tables!cRQilgHbQ35bK5Ls'
 

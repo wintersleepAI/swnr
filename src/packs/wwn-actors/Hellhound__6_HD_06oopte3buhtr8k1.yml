@@ -1,117 +1,45 @@
+_id: 06oopte3buhtr8k1
 name: Hellhound, 6 HD
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
-system:
-  ab: 6
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 16
-  hitDice: 6
-  moralScore: 9
-  saves: 12
-  skillBonus: 0
-  speed: 40
-  biography: >-
-    Monstrous, cunning, and very intelligent hounds, the size of a small pony.
-    Breathe fire and love heat. Dwell in dungeons or near volcanoes.
-  species: monster
-_id: 06oopte3buhtr8k1
+ownership: {}
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456491
   modifiedTime: 1754277456491
   lastModifiedBy: null
   exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+system:
+  ab: 6
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 16
+  biography: >-
+    Monstrous, cunning, and very intelligent hounds, the size of a small pony.
+    Breathe fire and love heat. Dwell in dungeons or near volcanoes.
+  hitDice: 6
+  moralScore: 9
+  saves: 12
+  skillBonus: 0
+  species: monster
+  speed: 40
 effects: []
-prototypeToken:
-  name: Hellhound, 6 HD
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: >-
-      systems/swnr/assets/icons/game-icons.net/creature-icons/unfriendly-fire.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Bite
+  - _id: 1p5hxqtbfeo74zil
+    name: Bite
     type: weapon
+    img: null
+    sort: 0
     system:
       description: ''
       cost: 0
@@ -133,84 +61,17 @@ items:
       encumbrance: 1
       quality: stock
       tl: 3
-    _id: 1p5hxqtbfeo74zil
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920806
-      modifiedTime: 1754273920806
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!06oopte3buhtr8k1.1p5hxqtbfeo74zil'
-  - name: Fire Breath
+  - _id: hgm4kmsurkn5jiv1
+    name: Detect Invisible
     type: item
-    system:
-      description: >-
-        [[/r 1d6]]: 2-in-6 chance per round of breathing fire. One target. Save
-        for half damage. 1d6 damage per HD.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: dny442gc1rid7ffg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920806
-      modifiedTime: 1754273920806
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
+    img: null
     sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!06oopte3buhtr8k1.dny442gc1rid7ffg'
-  - name: Fire Immunity
-    type: item
-    system:
-      description: Unharmed by non-magical fire.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 8yvnicq6a4zpic5c
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920806
-      modifiedTime: 1754273920806
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!06oopte3buhtr8k1.8yvnicq6a4zpic5c'
-  - name: Detect Invisible
-    type: item
     system:
       description: >-
         Receives an opposed Dex/Sneak check with a +4 bonus to detect invisible
@@ -221,26 +82,57 @@ items:
       location: stowed
       quality: stock
       tl: 3
-    _id: hgm4kmsurkn5jiv1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920806
-      modifiedTime: 1754273920806
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!06oopte3buhtr8k1.hgm4kmsurkn5jiv1'
-  - name: Pets
+  - _id: dny442gc1rid7ffg
+    name: Fire Breath
     type: item
+    img: null
+    sort: 0
+    system:
+      description: >-
+        [[/r 1d6]]: 2-in-6 chance per round of breathing fire. One target. Save
+        for half damage. 1d6 damage per HD.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!06oopte3buhtr8k1.dny442gc1rid7ffg'
+  - _id: 8yvnicq6a4zpic5c
+    name: Fire Immunity
+    type: item
+    img: null
+    sort: 0
+    system:
+      description: Unharmed by non-magical fire.
+      cost: 0
+      quantity: 1
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!06oopte3buhtr8k1.8yvnicq6a4zpic5c'
+  - _id: j1uqgxdpzgv3bpj8
+    name: Pets
+    type: item
+    img: null
+    sort: 0
     system:
       description: Sometimes found with other creatures with an affinity for fire.
       cost: 0
@@ -249,23 +141,11 @@ items:
       location: stowed
       quality: stock
       tl: 3
-    _id: j1uqgxdpzgv3bpj8
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920806
-      modifiedTime: 1754273920806
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!06oopte3buhtr8k1.j1uqgxdpzgv3bpj8'
 _key: '!actors!06oopte3buhtr8k1'
 

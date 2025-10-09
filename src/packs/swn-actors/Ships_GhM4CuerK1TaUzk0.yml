@@ -1,11 +1,10 @@
-type: Actor
-folder: null
-name: Ships
-color: null
-sorting: a
 _id: GhM4CuerK1TaUzk0
-description: ''
+name: Ships
+type: Actor
+img: null
+folder: null
 sort: 0
+ownership: {}
 flags: {}
 _stats:
   compendiumSource: null
@@ -17,5 +16,7 @@ _stats:
   createdTime: 1754269949747
   modifiedTime: 1754269949747
   lastModifiedBy: lKC5x4Yf023Bizof
+system: {}
+effects: []
 _key: '!folders!GhM4CuerK1TaUzk0'
 

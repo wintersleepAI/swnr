@@ -1,21 +1,23 @@
+_id: nom40aqdmpqv83sc
 name: Resist Cold
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 1000000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457096
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 6 turns Range: 30' All creatures within range are protected from
-    cold, as follows: ▶ Normal cold: Unharmed by non-magical freezing
-    temperatures. ▶ Save bonus: Gain a +2 bonus to all saving throws versus
-    cold-based magical or breath attacks. ▶ Cold-based damage: Is reduced by 1
-    point per damage die rolled. (Each die inflicts a minimum of 1 hit point
-    damage.)
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 6 turns Range: 30' All creatures within range are protected from
+    cold, as follows: ▶ Normal cold: Unharmed by non-magical freezing
+    temperatures. ▶ Save bonus: Gain a +2 bonus to all saving throws versus
+    cold-based magical or breath attacks. ▶ Cold-based damage: Is reduced by 1
+    point per damage die rolled. (Each die inflicts a minimum of 1 hit point
+    damage.)
   duration: 6 turns
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: 30'
-  skill: null
-_id: nom40aqdmpqv83sc
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457096
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!nom40aqdmpqv83sc'
 

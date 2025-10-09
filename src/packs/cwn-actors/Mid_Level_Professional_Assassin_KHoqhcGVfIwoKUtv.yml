@@ -1,187 +1,74 @@
+_id: KHoqhcGVfIwoKUtv
 name: Mid-Level Professional Assassin
 type: npc
 img: icons/svg/mystery-man.svg
+folder: 1MnMOlCpFjrZIhXu
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.KHoqhcGVfIwoKUtv
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
-  health:
-    value: 30
-    max: 30
-  biography: ''
-  species: ''
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 7
-  baseAc: 18
-  meleeAc: 18
   ab: 11
-  meleeAb: 9
-  systemStrain:
-    value: 0
-    permanent: 0
-  speed: 20
-  cyberdecks: []
-  health_max_modified: 0
+  access:
+    max: 1
+    value: 1
   armorType: street
-  skillBonus: 3
   attacks:
-    damage: d6
     bonusDamage: 0
+    damage: d6
     number: 0
+  baseAc: 18
+  baseSoakTotal:
+    max: 0
+    value: 0
+  biography: ''
+  cyberdecks: []
+  faction: ''
+  health:
+    max: 30
+    value: 30
+  health_max_modified: 0
   hitDice: 6d8
-  saves: 12
+  homeworld: ''
+  meleeAb: 9
+  meleeAc: 18
   moralScore: 11
   reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
+  saves: 12
+  skillBonus: 3
+  species: ''
+  speed: 20
+  systemStrain:
+    permanent: 0
     value: 0
-    max: 0
-  homeworld: ''
-  faction: ''
-  pools: {}
+  traumaTarget: 7
   tweak:
-    showCyberware: true
-    showPsychic: true
-    showArts: false
-    showSpells: false
     showAdept: false
+    showArts: false
+    showCyberware: true
     showMutation: false
     showPoolsInHeader: true
     showPoolsInPowers: false
-prototypeToken:
-  name: Veteran Corp
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: icons/svg/mystery-man.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
+    showPsychic: true
+    showSpells: false
+effects: []
 items:
-  - name: Gunlink
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.k78g89sqpqbprnnp
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: 6iRGL3UkDWV1Ny8R
-    system:
-      concealment: Touch
-      cost: 25000
-      description: >-
-        Hardwired control points interface with the onboard targeting systems of
-        most modern firearms. When using a modern firearm, the PC ignores range
-        penalties and negates up to 4 points of hit penalties for cover,
-        concealment, or prone targets. Once per scene, as an Instant action,
-        they can reroll a missed attack roll with a gun.
-      effect: Bonus when using firearms
-      strain: 1
-      type: Sensory
-      favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!KHoqhcGVfIwoKUtv.6iRGL3UkDWV1Ny8R'
-  - name: Advanced Knife
+  - _id: EYYNWBn8RrZBN7TY
+    name: Advanced Knife
     type: weapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-weapons.Item.hbnlvlb3zhkkf0a1
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: EYYNWBn8RrZBN7TY
     system:
       ammo:
         burst: false
@@ -243,192 +130,16 @@ items:
           value: 0
       isMelee: false
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!KHoqhcGVfIwoKUtv.EYYNWBn8RrZBN7TY'
-  - name: Coordination Augment II
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.hamt7zrk26jrwy5r
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: xI0QtoAMLr5Mztea
-    system:
-      concealment: Touch
-      cost: 200000
-      description: >-
-        As Coordination Augment I, but the subject gains a Dexterity score of
-        18, and their base Move rate is increased by 10 meters.
-      effect: Dex 18 and +10m Move
-      strain: 3
-      type: Nerve
-      favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!KHoqhcGVfIwoKUtv.xI0QtoAMLr5Mztea'
-  - name: Enhanced Reflexes II
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.bzw49sv03icvezza
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: C4Eh7dAmsfp1YQ6Y
-    system:
-      concealment: Medical
-      cost: 250000
-      description: >-
-        Once per scene, as an On Turn action, the user gains a bonus
-        non-cyberspace Main Action and Move action. By accepting one System
-        Strain, this ability can be used as an Instant action, potentially
-        interrupting incoming attacks if the user moves out of reach.
-      effect: 1/scene, bonus Main and Move
-      strain: 3
-      type: Nerve
-      favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!KHoqhcGVfIwoKUtv.C4Eh7dAmsfp1YQ6Y'
-  - name: Veteran's Luck
-    type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-edges.Item.94fgmfw56y7l780i
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: 4UHEjvUyfztES8sT
-    system:
-      description: >-
-        Once per scene, as an Instant action, trigger this ability to gain one
-        of two effects,an attack roll that just hit you is instead treated as a
-        miss
-      favorite: false
-      level: 0
-      type: edge
-      poolsGranted: []
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!KHoqhcGVfIwoKUtv.4UHEjvUyfztES8sT'
-  - name: Deadeye
-    type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-foci.Item.572fu5suit6lkrzl
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: AEZVUda7fOdWz56H
-    system:
-      description: >-
-        You have a gift with ranged weapons. While this talent most commonly
-        applies to guns, it is also applicable to thrown weapons or other ranged
-        weapons that can be used with the Shoot skill. For thrown weapons, you
-        can't use the benefits of the Armsmaster Focus at the same time as
-        Deadeye.<br /><br />Level 1: Gain Shoot as a bonus skill. You can Ready
-        a Stowed ranged weapon as an Instant action. You may use a rifle or
-        two-handed ranged weapon even when an enemy is within melee range,
-        albeit at a -4 hit penalty. You may add your Shoot skill level to a
-        ranged weapon's damage roll.<br />Level 2: You can reload guns,
-        crossbows, or other slow-loading weapons as an On Turn action, provided
-        they don't take more than a round to reload. You can use ranged weapons
-        of any size in melee without penalty. Once per scene, as an On Turn
-        action when target shooting at an inanimate, non-creature target, you
-        automatically hit unless you roll a 2 on your Shoot skill check or the
-        shot is physically impossible.
-      favorite: false
-      level: 0
-      type: focus
-      poolsGranted: []
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!KHoqhcGVfIwoKUtv.AEZVUda7fOdWz56H'
-  - name: Reaction Booster II
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.lg6b4ormag3e53x6
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: KqUveFxmqhTm3kf8
-    system:
-      concealment: Medical
-      cost: 100000
-      description: >-
-        As level one, but the user automatically wins initiative against targets
-        that don't also automatically win initiative; if both have this ability,
-        initiative is rolled without modifications. The user can act normally
-        during surprise rounds.
-      effect: Automatically win initiative
-      strain: 2
-      type: Nerve
-      favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!KHoqhcGVfIwoKUtv.KqUveFxmqhTm3kf8'
-  - name: Armored Clothing
+  - _id: KBQMBpg6hDAjG3ow
+    name: Armored Clothing
     type: armor
     img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-armor.Item.rgosy2tui7x5kwp0
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: KBQMBpg6hDAjG3ow
     system:
       ac: 16
       cost: 1000
@@ -464,24 +175,186 @@ items:
           max: 0
           value: 0
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!KHoqhcGVfIwoKUtv.KBQMBpg6hDAjG3ow'
-  - name: Modded Light Pistol
+  - _id: xI0QtoAMLr5Mztea
+    name: Coordination Augment II
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    sort: 0
+    system:
+      concealment: Touch
+      cost: 200000
+      description: >-
+        As Coordination Augment I, but the subject gains a Dexterity score of
+        18, and their base Move rate is increased by 10 meters.
+      effect: Dex 18 and +10m Move
+      strain: 3
+      type: Nerve
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!KHoqhcGVfIwoKUtv.xI0QtoAMLr5Mztea'
+  - _id: 0mIX6zxhYshZsTpj
+    name: Cybereyes (pair)
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    sort: 0
+    system:
+      concealment: Sight
+      cost: 10000
+      description: >-
+        While a single cybernetic eye can be implanted, it is recommended that
+        both be replaced at the same time to improve neural adaptation. These
+        cybereyes are clearly artificial, though most are styled in attractive
+        or striking fashions. They all have perfect 20/20 vision and integral
+        flash protectors, but additional functionality must be implanted
+        separately. A user with a pair of cybereyes or syntheyes halves the
+        System Strain cost of cybernetic eye implants.
+      effect: Flash-protected synthetic eyes
+      strain: 0.25
+      type: Sensory
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!KHoqhcGVfIwoKUtv.0mIX6zxhYshZsTpj'
+  - _id: AEZVUda7fOdWz56H
+    name: Deadeye
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    sort: 0
+    system:
+      description: >-
+        You have a gift with ranged weapons. While this talent most commonly
+        applies to guns, it is also applicable to thrown weapons or other ranged
+        weapons that can be used with the Shoot skill. For thrown weapons, you
+        can't use the benefits of the Armsmaster Focus at the same time as
+        Deadeye.<br /><br />Level 1: Gain Shoot as a bonus skill. You can Ready
+        a Stowed ranged weapon as an Instant action. You may use a rifle or
+        two-handed ranged weapon even when an enemy is within melee range,
+        albeit at a -4 hit penalty. You may add your Shoot skill level to a
+        ranged weapon's damage roll.<br />Level 2: You can reload guns,
+        crossbows, or other slow-loading weapons as an On Turn action, provided
+        they don't take more than a round to reload. You can use ranged weapons
+        of any size in melee without penalty. Once per scene, as an On Turn
+        action when target shooting at an inanimate, non-creature target, you
+        automatically hit unless you roll a 2 on your Shoot skill check or the
+        shot is physically impossible.
+      favorite: false
+      level: 0
+      type: focus
+      poolsGranted: []
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!KHoqhcGVfIwoKUtv.AEZVUda7fOdWz56H'
+  - _id: rZKlMRBJ4lzkNcxG
+    name: Deadeye
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    sort: 0
+    system:
+      description: >-
+        You have a gift with ranged weapons. While this talent most commonly
+        applies to guns, it is also applicable to thrown weapons or other ranged
+        weapons that can be used with the Shoot skill. For thrown weapons, you
+        can't use the benefits of the Armsmaster Focus at the same time as
+        Deadeye.<br /><br />Level 1: Gain Shoot as a bonus skill. You can Ready
+        a Stowed ranged weapon as an Instant action. You may use a rifle or
+        two-handed ranged weapon even when an enemy is within melee range,
+        albeit at a -4 hit penalty. You may add your Shoot skill level to a
+        ranged weapon's damage roll.<br />Level 2: You can reload guns,
+        crossbows, or other slow-loading weapons as an On Turn action, provided
+        they don't take more than a round to reload. You can use ranged weapons
+        of any size in melee without penalty. Once per scene, as an On Turn
+        action when target shooting at an inanimate, non-creature target, you
+        automatically hit unless you roll a 2 on your Shoot skill check or the
+        shot is physically impossible.
+      favorite: false
+      level: 2
+      type: focus
+      poolsGranted: []
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!KHoqhcGVfIwoKUtv.rZKlMRBJ4lzkNcxG'
+  - _id: C4Eh7dAmsfp1YQ6Y
+    name: Enhanced Reflexes II
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    sort: 0
+    system:
+      concealment: Medical
+      cost: 250000
+      description: >-
+        Once per scene, as an On Turn action, the user gains a bonus
+        non-cyberspace Main Action and Move action. By accepting one System
+        Strain, this ability can be used as an Instant action, potentially
+        interrupting incoming attacks if the user moves out of reach.
+      effect: 1/scene, bonus Main and Move
+      strain: 3
+      type: Nerve
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!KHoqhcGVfIwoKUtv.C4Eh7dAmsfp1YQ6Y'
+  - _id: rqac8PsMPMvY5Dm9
+    name: Eye Mod/Infrared Vision
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    sort: 0
+    system:
+      concealment: Medical
+      cost: 5000
+      description: >-
+        The infrared vision this mod allows permits basic navigation in dark
+        areas and makes the presence of heat sources such as humans, engines,
+        and infrared tripwires very obvious. The user gains a +1 bonus on any
+        Notice checks to detect the presence of thermally-unshielded living
+        creatures.
+      effect: See heat patterns in the area
+      strain: 0.5
+      type: Sensory
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!KHoqhcGVfIwoKUtv.rqac8PsMPMvY5Dm9'
+  - _id: JNeww7ZXhyJ2NKR5
+    name: Modded Light Pistol
     type: weapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-weapons.Item.j3dkw1jpnfuob1ju
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: JNeww7ZXhyJ2NKR5
     system:
       ammo:
         burst: false
@@ -539,96 +412,42 @@ items:
           value: 0
       isMelee: false
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!KHoqhcGVfIwoKUtv.JNeww7ZXhyJ2NKR5'
-  - name: Cybereyes (pair)
+  - _id: KqUveFxmqhTm3kf8
+    name: Reaction Booster II
     type: cyberware
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.84j3wyp3mp029n4z
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: 0mIX6zxhYshZsTpj
-    system:
-      concealment: Sight
-      cost: 10000
-      description: >-
-        While a single cybernetic eye can be implanted, it is recommended that
-        both be replaced at the same time to improve neural adaptation. These
-        cybereyes are clearly artificial, though most are styled in attractive
-        or striking fashions. They all have perfect 20/20 vision and integral
-        flash protectors, but additional functionality must be implanted
-        separately. A user with a pair of cybereyes or syntheyes halves the
-        System Strain cost of cybernetic eye implants.
-      effect: Flash-protected synthetic eyes
-      strain: 0.25
-      type: Sensory
-      favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!KHoqhcGVfIwoKUtv.0mIX6zxhYshZsTpj'
-  - name: Eye Mod/Infrared Vision
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.3nxh3aam4rmf1don
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: rqac8PsMPMvY5Dm9
     system:
       concealment: Medical
-      cost: 5000
+      cost: 100000
       description: >-
-        The infrared vision this mod allows permits basic navigation in dark
-        areas and makes the presence of heat sources such as humans, engines,
-        and infrared tripwires very obvious. The user gains a +1 bonus on any
-        Notice checks to detect the presence of thermally-unshielded living
-        creatures.
-      effect: See heat patterns in the area
-      strain: 0.5
-      type: Sensory
+        As level one, but the user automatically wins initiative against targets
+        that don't also automatically win initiative; if both have this ability,
+        initiative is rolled without modifications. The user can act normally
+        during surprise rounds.
+      effect: Automatically win initiative
+      strain: 2
+      type: Nerve
       favorite: false
       tl: 4
       disabled: false
       complication: ''
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
-    _key: '!actors.items!KHoqhcGVfIwoKUtv.rqac8PsMPMvY5Dm9'
-  - name: Stick Pads
+    _key: '!actors.items!KHoqhcGVfIwoKUtv.KqUveFxmqhTm3kf8'
+  - _id: bGeksQKHN4ZPSPoO
+    name: Stick Pads
     type: cyberware
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.e1scp9y1h45wayvk
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: bGeksQKHN4ZPSPoO
     system:
       concealment: Touch
       cost: 15000
@@ -645,66 +464,30 @@ items:
       disabled: false
       complication: ''
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!KHoqhcGVfIwoKUtv.bGeksQKHN4ZPSPoO'
-  - name: Deadeye
+  - _id: 4UHEjvUyfztES8sT
+    name: Veteran's Luck
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-foci.Item.572fu5suit6lkrzl
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
     sort: 0
-    _id: rZKlMRBJ4lzkNcxG
     system:
       description: >-
-        You have a gift with ranged weapons. While this talent most commonly
-        applies to guns, it is also applicable to thrown weapons or other ranged
-        weapons that can be used with the Shoot skill. For thrown weapons, you
-        can't use the benefits of the Armsmaster Focus at the same time as
-        Deadeye.<br /><br />Level 1: Gain Shoot as a bonus skill. You can Ready
-        a Stowed ranged weapon as an Instant action. You may use a rifle or
-        two-handed ranged weapon even when an enemy is within melee range,
-        albeit at a -4 hit penalty. You may add your Shoot skill level to a
-        ranged weapon's damage roll.<br />Level 2: You can reload guns,
-        crossbows, or other slow-loading weapons as an On Turn action, provided
-        they don't take more than a round to reload. You can use ranged weapons
-        of any size in melee without penalty. Once per scene, as an On Turn
-        action when target shooting at an inanimate, non-creature target, you
-        automatically hit unless you roll a 2 on your Shoot skill check or the
-        shot is physically impossible.
+        Once per scene, as an Instant action, trigger this ability to gain one
+        of two effects,an attack roll that just hit you is instead treated as a
+        miss
       favorite: false
-      level: 2
-      type: focus
+      level: 0
+      type: edge
       poolsGranted: []
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
-    _key: '!actors.items!KHoqhcGVfIwoKUtv.rZKlMRBJ4lzkNcxG'
-effects: []
-folder: 1MnMOlCpFjrZIhXu
-flags: {}
-_stats:
-  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.KHoqhcGVfIwoKUtv
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.348'
-  systemId: swnr
-  systemVersion: 2.1.0-beta
-  createdTime: 1758737583614
-  modifiedTime: 1758737583614
-  lastModifiedBy: lKC5x4Yf023Bizof
-_id: KHoqhcGVfIwoKUtv
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+    _key: '!actors.items!KHoqhcGVfIwoKUtv.4UHEjvUyfztES8sT'
 _key: '!actors!KHoqhcGVfIwoKUtv'
 

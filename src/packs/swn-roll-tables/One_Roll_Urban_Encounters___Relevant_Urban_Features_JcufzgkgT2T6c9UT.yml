@@ -1,428 +1,247 @@
-displayRoll: true
+_id: JcufzgkgT2T6c9UT
+name: One Roll Urban Encounters - Relevant Urban Features
+type: null
+img: icons/svg/d20-grey.svg
+folder: Td6GsHm0Ns7IXzwI
+sort: 0
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags:
   core: {}
-folder: Td6GsHm0Ns7IXzwI
-formula: 1d20
-img: icons/svg/d20-grey.svg
-name: One Roll Urban Encounters - Relevant Urban Features
-replacement: true
-results:
-  - _id: FLLY0yntMxAfoEp3
-    drawn: false
-    flags: {}
-    range:
-      - 1
-      - 1
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Heavy traffic running through the place'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.FLLY0yntMxAfoEp3'
-  - _id: 6fXcisHcooI7mBTc
-    drawn: false
-    flags: {}
-    range:
-      - 2
-      - 2
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Music blaring at deafening volumes'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.6fXcisHcooI7mBTc'
-  - _id: TXeuwR8eOUlxKDfe
-    drawn: false
-    flags: {}
-    range:
-      - 3
-      - 3
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Two groups present that detest each other'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.TXeuwR8eOUlxKDfe'
-  - _id: MrKvzSH9tkf03pdO
-    drawn: false
-    flags: {}
-    range:
-      - 4
-      - 4
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Large delivery taking place right there'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.MrKvzSH9tkf03pdO'
-  - _id: sonfvIVdM0JMUpjH
-    drawn: false
-    flags: {}
-    range:
-      - 5
-      - 5
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Swarm of schoolkids or feral youth'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.sonfvIVdM0JMUpjH'
-  - _id: dPW8bGk8lBtDqfdL
-    drawn: false
-    flags: {}
-    range:
-      - 6
-      - 6
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Insistent soapbox preacher here'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.dPW8bGk8lBtDqfdL'
-  - _id: PAWswVNfRPvucrJI
-    drawn: false
-    flags: {}
-    range:
-      - 7
-      - 7
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Several pickpockets working the crowd'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.PAWswVNfRPvucrJI'
-  - _id: SAxnskntKHrL3b4S
-    drawn: false
-    flags: {}
-    range:
-      - 8
-      - 8
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: A kiosk is tipping over and spilling things'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.SAxnskntKHrL3b4S'
-  - _id: TRVBePxU0TF48KcV
-    drawn: false
-    flags: {}
-    range:
-      - 9
-      - 9
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Streetlights are out or visibility is low'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.TRVBePxU0TF48KcV'
-  - _id: 51jejN4aaX5TDccu
-    drawn: false
-    flags: {}
-    range:
-      - 10
-      - 10
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: A cop patrol is here and reluctant to act'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.51jejN4aaX5TDccu'
-  - _id: HvMZUyYRQDncy6hV
-    drawn: false
-    flags: {}
-    range:
-      - 11
-      - 11
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: PC-hostile reporters are recording here'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.HvMZUyYRQDncy6hV'
-  - _id: XjYH2ZJijuJBonKy
-    drawn: false
-    flags: {}
-    range:
-      - 12
-      - 12
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Someone’s trying to sell something to PCs'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.XjYH2ZJijuJBonKy'
-  - _id: lkJSe2g0rfUpjwjF
-    drawn: false
-    flags: {}
-    range:
-      - 13
-      - 13
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Feral dogs or other animals crowd here'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.lkJSe2g0rfUpjwjF'
-  - _id: NOlpdBwNSv901D1J
-    drawn: false
-    flags: {}
-    range:
-      - 14
-      - 14
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Unrelated activists are protesting here'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.NOlpdBwNSv901D1J'
-  - _id: HAawGDvyL6Gq6WYW
-    drawn: false
-    flags: {}
-    range:
-      - 15
-      - 15
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Street kids are trying to steal from the PCs'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.HAawGDvyL6Gq6WYW'
-  - _id: 8DB8YUfQZrxY6gVU
-    drawn: false
-    flags: {}
-    range:
-      - 16
-      - 16
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: GPS maps are dangerously wrong here'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.8DB8YUfQZrxY6gVU'
-  - _id: jYRhIWlsq4rrVcmx
-    drawn: false
-    flags: {}
-    range:
-      - 17
-      - 17
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Downed power lines are a danger here'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.jYRhIWlsq4rrVcmx'
-  - _id: fCMd3ssKkgr8ISrr
-    drawn: false
-    flags: {}
-    range:
-      - 18
-      - 18
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Numerous open manholes and utility holes'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.fCMd3ssKkgr8ISrr'
-  - _id: brNpwnil2WljkaTm
-    drawn: false
-    flags: {}
-    range:
-      - 19
-      - 19
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: The street’s blockaded by something'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.brNpwnil2WljkaTm'
-  - _id: MXJwfIId4iPIvHp4
-    drawn: false
-    flags: {}
-    range:
-      - 20
-      - 20
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Relevant Urban Features: Crowds so thick one can barely move'
-    name: ''
-    _key: '!tables.results!JcufzgkgT2T6c9UT.MXJwfIId4iPIvHp4'
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757287512759
   modifiedTime: 1757287512759
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-description: ''
-_id: JcufzgkgT2T6c9UT
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: FLLY0yntMxAfoEp3
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.FLLY0yntMxAfoEp3'
+  - _id: 6fXcisHcooI7mBTc
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.6fXcisHcooI7mBTc'
+  - _id: TXeuwR8eOUlxKDfe
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.TXeuwR8eOUlxKDfe'
+  - _id: MrKvzSH9tkf03pdO
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.MrKvzSH9tkf03pdO'
+  - _id: sonfvIVdM0JMUpjH
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.sonfvIVdM0JMUpjH'
+  - _id: dPW8bGk8lBtDqfdL
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.dPW8bGk8lBtDqfdL'
+  - _id: PAWswVNfRPvucrJI
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.PAWswVNfRPvucrJI'
+  - _id: SAxnskntKHrL3b4S
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.SAxnskntKHrL3b4S'
+  - _id: TRVBePxU0TF48KcV
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.TRVBePxU0TF48KcV'
+  - _id: 51jejN4aaX5TDccu
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.51jejN4aaX5TDccu'
+  - _id: HvMZUyYRQDncy6hV
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.HvMZUyYRQDncy6hV'
+  - _id: XjYH2ZJijuJBonKy
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.XjYH2ZJijuJBonKy'
+  - _id: lkJSe2g0rfUpjwjF
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 13
+      - 13
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.lkJSe2g0rfUpjwjF'
+  - _id: NOlpdBwNSv901D1J
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 14
+      - 14
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.NOlpdBwNSv901D1J'
+  - _id: HAawGDvyL6Gq6WYW
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 15
+      - 15
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.HAawGDvyL6Gq6WYW'
+  - _id: 8DB8YUfQZrxY6gVU
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 16
+      - 16
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.8DB8YUfQZrxY6gVU'
+  - _id: jYRhIWlsq4rrVcmx
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 17
+      - 17
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.jYRhIWlsq4rrVcmx'
+  - _id: fCMd3ssKkgr8ISrr
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 18
+      - 18
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.fCMd3ssKkgr8ISrr'
+  - _id: brNpwnil2WljkaTm
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 19
+      - 19
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.brNpwnil2WljkaTm'
+  - _id: MXJwfIId4iPIvHp4
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 20
+      - 20
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!JcufzgkgT2T6c9UT.MXJwfIId4iPIvHp4'
 _key: '!tables!JcufzgkgT2T6c9UT'
 

@@ -1,427 +1,246 @@
-folder: ch7TJNmZ3AmSj004
+_id: 1ohQIAHSGCEDgDUf
 name: 'Theft: Twists to the Situation'
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: y1jMNAmQXJMikRFc
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: There’s a decoy target in place
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.y1jMNAmQXJMikRFc'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: uUltVOWS9gukKKhe
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Someone’s seeking to buy it openly
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.uUltVOWS9gukKKhe'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: OsehWtPkUk28bcnE
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Somebody’s inspecting it right now
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.OsehWtPkUk28bcnE'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: ls7xUBojp2DfUtWd
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It’s got a tracker on it that triggers if moved
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.ls7xUBojp2DfUtWd'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: zzq7rxM8m3ydLWUO
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Somebody dangerous carries it often
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.zzq7rxM8m3ydLWUO'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: Rz3MQKNY9TWCswLD
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Taking it would hurt a sympathetic group
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.Rz3MQKNY9TWCswLD'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: i9OZg8v8QBgC2hX1
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Another group of thieves are aiming at it
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.i9OZg8v8QBgC2hX1'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: EyznWh7PKyLkUXpM
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: The owner has been tipped to the threat
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.EyznWh7PKyLkUXpM'
-  - type: text
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    _id: 9ypll6IpMjNDtVcW
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A recent theft attempt failed badly
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.9ypll6IpMjNDtVcW'
-  - type: text
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    _id: SHyahYbjPXLamiAa
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They’ve recently changed up security
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.SHyahYbjPXLamiAa'
-  - type: text
-    weight: 1
-    range:
-      - 11
-      - 11
-    drawn: false
-    _id: K5A5fInSgQdb79R1
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Fighting near it is likely to damage it
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.K5A5fInSgQdb79R1'
-  - type: text
-    weight: 1
-    range:
-      - 12
-      - 12
-    drawn: false
-    _id: 1HPs019iDW9w89KS
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It’s physically attached to something
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.1HPs019iDW9w89KS'
-  - type: text
-    weight: 1
-    range:
-      - 13
-      - 13
-    drawn: false
-    _id: IiIf7HDqX8Vn6LCl
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Its owner would rather it wrecked than lost
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.IiIf7HDqX8Vn6LCl'
-  - type: text
-    weight: 1
-    range:
-      - 14
-      - 14
-    drawn: false
-    _id: zebkso86489JDQVI
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It takes a specific skill to extract it
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.zebkso86489JDQVI'
-  - type: text
-    weight: 1
-    range:
-      - 15
-      - 15
-    drawn: false
-    _id: Qpaa7mdkZYmZQbZg
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: There’s a recent security breach about it
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.Qpaa7mdkZYmZQbZg'
-  - type: text
-    weight: 1
-    range:
-      - 16
-      - 16
-    drawn: false
-    _id: zFDdSirfGPwxzNwK
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: One of its guardians is amenable to bribes
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.zFDdSirfGPwxzNwK'
-  - type: text
-    weight: 1
-    range:
-      - 17
-      - 17
-    drawn: false
-    _id: ZWfKgZXqtGHGJ9JW
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A third party wants to ensure its safety
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.ZWfKgZXqtGHGJ9JW'
-  - type: text
-    weight: 1
-    range:
-      - 18
-      - 18
-    drawn: false
-    _id: fgETgSg5w36BC1KZ
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It needs to be delivered to a specific site
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.fgETgSg5w36BC1KZ'
-  - type: text
-    weight: 1
-    range:
-      - 19
-      - 19
-    drawn: false
-    _id: YklNPsil5rDhoghZ
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It’s surrounded by valuable objects
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.YklNPsil5rDhoghZ'
-  - type: text
-    weight: 1
-    range:
-      - 20
-      - 20
-    drawn: false
-    _id: IzvOoXSqvAqovxi0
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It’s rather carelessly guarded
-    name: ''
-    _key: '!tables.results!1ohQIAHSGCEDgDUf.IzvOoXSqvAqovxi0'
-replacement: true
-displayRoll: true
+folder: ch7TJNmZ3AmSj004
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   core: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-tables.RollTable.1ohQIAHSGCEDgDUf
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d20
-_id: 1ohQIAHSGCEDgDUf
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: y1jMNAmQXJMikRFc
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.y1jMNAmQXJMikRFc'
+  - _id: uUltVOWS9gukKKhe
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.uUltVOWS9gukKKhe'
+  - _id: OsehWtPkUk28bcnE
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.OsehWtPkUk28bcnE'
+  - _id: ls7xUBojp2DfUtWd
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.ls7xUBojp2DfUtWd'
+  - _id: zzq7rxM8m3ydLWUO
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.zzq7rxM8m3ydLWUO'
+  - _id: Rz3MQKNY9TWCswLD
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.Rz3MQKNY9TWCswLD'
+  - _id: i9OZg8v8QBgC2hX1
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.i9OZg8v8QBgC2hX1'
+  - _id: EyznWh7PKyLkUXpM
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.EyznWh7PKyLkUXpM'
+  - _id: 9ypll6IpMjNDtVcW
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.9ypll6IpMjNDtVcW'
+  - _id: SHyahYbjPXLamiAa
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.SHyahYbjPXLamiAa'
+  - _id: K5A5fInSgQdb79R1
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.K5A5fInSgQdb79R1'
+  - _id: 1HPs019iDW9w89KS
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.1HPs019iDW9w89KS'
+  - _id: IiIf7HDqX8Vn6LCl
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 13
+      - 13
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.IiIf7HDqX8Vn6LCl'
+  - _id: zebkso86489JDQVI
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 14
+      - 14
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.zebkso86489JDQVI'
+  - _id: Qpaa7mdkZYmZQbZg
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 15
+      - 15
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.Qpaa7mdkZYmZQbZg'
+  - _id: zFDdSirfGPwxzNwK
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 16
+      - 16
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.zFDdSirfGPwxzNwK'
+  - _id: ZWfKgZXqtGHGJ9JW
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 17
+      - 17
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.ZWfKgZXqtGHGJ9JW'
+  - _id: fgETgSg5w36BC1KZ
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 18
+      - 18
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.fgETgSg5w36BC1KZ'
+  - _id: YklNPsil5rDhoghZ
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 19
+      - 19
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.YklNPsil5rDhoghZ'
+  - _id: IzvOoXSqvAqovxi0
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 20
+      - 20
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!1ohQIAHSGCEDgDUf.IzvOoXSqvAqovxi0'
 _key: '!tables!1ohQIAHSGCEDgDUf'
 

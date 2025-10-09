@@ -1,7 +1,12 @@
+_id: 0n66148a6u0iyequ
 name: Beachhead Landers
 type: asset
 img: systems/swnr/assets/icons/hawkin/force.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.0n66148a6u0iyequ
@@ -13,13 +18,11 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 0n66148a6u0iyequ
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: ''
-  attackTarget: null
   baseOfInfluence: false
+  category: force
   cost: 10
   counter: ''
   description: >-
@@ -27,27 +30,22 @@ system:
     moving large numbers of troops. As an action, the asset may move any number
     of assets on the planet, including itself, to any world within one hex at a
     cost of one FacCred per asset moved.
+  favorite: false
   health:
     max: 10
     value: 10
   income: 0
   maintenance: 0
+  qualities:
+    action: true
+    permission: false
+    special: false
   rating: 4
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Facility
   unusable: false
-  qualities:
-    permission: false
-    action: true
-    special: false
-  category: force
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!0n66148a6u0iyequ'
 

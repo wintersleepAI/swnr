@@ -1,7 +1,12 @@
+_id: a5tu0hefph62vyl1
 name: Marketers
 type: asset
 img: systems/swnr/assets/icons/hawkin/wealth.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.a5tu0hefph62vyl1
@@ -13,13 +18,13 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: a5tu0hefph62vyl1
 system:
   attackDamage: 1d6
   attackSource: cunning
   attackSpecial: ''
   attackTarget: wealth
   baseOfInfluence: false
+  category: wealth
   cost: 10
   counter: ''
   description: >-
@@ -28,27 +33,22 @@ system:
     If successful, the target faction must immediately pay half the asset's
     purchase cost, rounded down, or have it become disabled and useless until
     this price is paid.
+  favorite: false
   health:
     max: 8
     value: 8
   income: 0
   maintenance: 0
+  qualities:
+    action: true
+    permission: false
+    special: false
   rating: 5
+  stealthed: false
   tl: 0
   turnRoll: ''
   type: Tactic
   unusable: false
-  qualities:
-    permission: false
-    action: true
-    special: false
-  category: wealth
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!a5tu0hefph62vyl1'
 

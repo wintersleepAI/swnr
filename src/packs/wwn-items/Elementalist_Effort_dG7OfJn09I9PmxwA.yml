@@ -1,21 +1,8 @@
-folder: BslyO9GYhD75h2Kk
+_id: dG7OfJn09I9PmxwA
 name: Elementalist Effort
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
-system:
-  description: ''
-  favorite: false
-  level: 0
-  type: focus
-  poolsGranted:
-    - resourceName: Effort
-      subResource: Elementalist
-      cadence: day
-      formula: >-
-        Math.max(1, @skills.Magic.rank + Math.max(@stats.int.mod,
-        @stats.cha.mod))
-      condition: ''
-effects: []
+folder: BslyO9GYhD75h2Kk
 sort: 800000
 ownership:
   default: 0
@@ -31,6 +18,19 @@ _stats:
   createdTime: 1758769340355
   modifiedTime: 1758769340355
   lastModifiedBy: lKC5x4Yf023Bizof
-_id: dG7OfJn09I9PmxwA
+system:
+  description: ''
+  favorite: false
+  level: 0
+  poolsGranted:
+    - resourceName: Effort
+      subResource: Elementalist
+      cadence: day
+      formula: >-
+        Math.max(1, @skills.Magic.rank + Math.max(@stats.int.mod,
+        @stats.cha.mod))
+      condition: ''
+  type: focus
+effects: []
 _key: '!items!dG7OfJn09I9PmxwA'
 

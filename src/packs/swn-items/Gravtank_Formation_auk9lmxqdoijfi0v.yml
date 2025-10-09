@@ -1,7 +1,12 @@
+_id: auk9lmxqdoijfi0v
 name: Gravtank Formation
 type: asset
 img: systems/swnr/assets/icons/hawkin/force.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.auk9lmxqdoijfi0v
@@ -13,40 +18,35 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: auk9lmxqdoijfi0v
 system:
   attackDamage: 2d10+4
   attackSource: force
   attackSpecial: ''
   attackTarget: force
   baseOfInfluence: false
+  category: force
   cost: 25
   counter: 1d10
   description: >-
     These tank formations are composed of advanced postech gravtank units that
     are capable of covering almost any terrain and cracking even the toughest
     defensive positions.
+  favorite: false
   health:
     max: 14
     value: 14
   income: 0
   maintenance: 0
+  qualities:
+    action: false
+    permission: true
+    special: false
   rating: 6
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Military Unit
   unusable: false
-  qualities:
-    permission: true
-    action: false
-    special: false
-  category: force
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!auk9lmxqdoijfi0v'
 

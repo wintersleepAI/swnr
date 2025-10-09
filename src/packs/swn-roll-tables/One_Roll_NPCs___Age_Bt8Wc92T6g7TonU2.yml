@@ -1,107 +1,70 @@
-description: ''
-displayRoll: true
-flags: {}
-folder: Td6GsHm0Ns7IXzwI
-formula: 1d4
-img: icons/svg/d20-grey.svg
+_id: Bt8Wc92T6g7TonU2
 name: One Roll NPCs - Age
-replacement: true
-results:
-  - _id: PEf7mDWwmIbMMTED
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 1
-      - 1
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Age: Unusually young or old for their role'
-    name: ''
-    _key: '!tables.results!Bt8Wc92T6g7TonU2.PEf7mDWwmIbMMTED'
-  - _id: B1O5UhgDZFJa3vjp
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 2
-      - 2
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Age: Young adult'
-    name: ''
-    _key: '!tables.results!Bt8Wc92T6g7TonU2.B1O5UhgDZFJa3vjp'
-  - _id: XuUaN3b57uYdmO3c
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 3
-      - 3
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Age: Mature prime'
-    name: ''
-    _key: '!tables.results!Bt8Wc92T6g7TonU2.XuUaN3b57uYdmO3c'
-  - _id: jx1XhOfUaCIOgJJA
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 4
-      - 4
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Age: Middle-aged or elderly'
-    name: ''
-    _key: '!tables.results!Bt8Wc92T6g7TonU2.jx1XhOfUaCIOgJJA'
+type: null
+img: icons/svg/d20-grey.svg
+folder: Td6GsHm0Ns7IXzwI
+sort: 1200000
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757287477578
   modifiedTime: 1757287502706
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: Bt8Wc92T6g7TonU2
-sort: 1200000
+system: {}
+effects: []
+results:
+  - _id: PEf7mDWwmIbMMTED
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!Bt8Wc92T6g7TonU2.PEf7mDWwmIbMMTED'
+  - _id: B1O5UhgDZFJa3vjp
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!Bt8Wc92T6g7TonU2.B1O5UhgDZFJa3vjp'
+  - _id: XuUaN3b57uYdmO3c
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!Bt8Wc92T6g7TonU2.XuUaN3b57uYdmO3c'
+  - _id: jx1XhOfUaCIOgJJA
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!Bt8Wc92T6g7TonU2.jx1XhOfUaCIOgJJA'
 _key: '!tables!Bt8Wc92T6g7TonU2'
 

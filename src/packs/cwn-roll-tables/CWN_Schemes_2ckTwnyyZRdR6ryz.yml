@@ -1,112 +1,69 @@
-name: CWN Schemes
-description: >-
-  <p>1). Scheme Goal</p><p>2). NPC-Related Milestone</p><p>3). Resource-Related
-  Milestone</p><p>4). Business-Related Milestone</p>
-results:
-  - type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: Jde2MCbTPb59KzTL
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    name: Scheme Goal Examples
-    documentUuid: RollTable.ZBNI27KRoC8GsTiS
-    description: ''
-    _key: '!tables.results!2ckTwnyyZRdR6ryz.Jde2MCbTPb59KzTL'
-  - type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: 9ydqfDoJezT1lpNA
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    name: Scheme NPC-Related Milestones
-    documentUuid: RollTable.ys5IO6rDAMbkjawr
-    description: ''
-    _key: '!tables.results!2ckTwnyyZRdR6ryz.9ydqfDoJezT1lpNA'
-  - type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: Ddac1zfcdamyF7QB
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    name: Scheme Resource-Related Milestones
-    documentUuid: RollTable.1eIoVxubb6yE2LWv
-    description: ''
-    _key: '!tables.results!2ckTwnyyZRdR6ryz.Ddac1zfcdamyF7QB'
-  - type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: Squpbx85SMEZ8gQ6
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    name: Scheme Business-Related Milestones
-    documentUuid: RollTable.caCbrxSdImSbNcbW
-    description: ''
-    _key: '!tables.results!2ckTwnyyZRdR6ryz.Squpbx85SMEZ8gQ6'
-formula: 1d1
 _id: 2ckTwnyyZRdR6ryz
+name: CWN Schemes
+type: null
 img: icons/svg/d20-grey.svg
-replacement: true
-displayRoll: false
 folder: Kaj67bsHMHUR6kI2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-tables.RollTable.2ckTwnyyZRdR6ryz
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: 9ydqfDoJezT1lpNA
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!2ckTwnyyZRdR6ryz.9ydqfDoJezT1lpNA'
+  - _id: Ddac1zfcdamyF7QB
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!2ckTwnyyZRdR6ryz.Ddac1zfcdamyF7QB'
+  - _id: Jde2MCbTPb59KzTL
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!2ckTwnyyZRdR6ryz.Jde2MCbTPb59KzTL'
+  - _id: Squpbx85SMEZ8gQ6
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!2ckTwnyyZRdR6ryz.Squpbx85SMEZ8gQ6'
 _key: '!tables!2ckTwnyyZRdR6ryz'
 

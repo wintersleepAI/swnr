@@ -1,7 +1,12 @@
+_id: UGxgfhHVgWfdRS04
 name: Authority
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: sPYHUjJb2geTuLHp
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.foci.Item.kxtywdaaj9aw7tpy
@@ -31,13 +36,8 @@ system:
     against your interests unless under extreme pressure.
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: UGxgfhHVgWfdRS04
-sort: 0
 _key: '!items!UGxgfhHVgWfdRS04'
 

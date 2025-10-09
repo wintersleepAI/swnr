@@ -1,7 +1,12 @@
+_id: 11e3ii7ofvknb8e0
 name: Spatial Awareness
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: B7XvnONYELdrJlLA
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-teleportation.Item.11e3ii7ofvknb8e0
@@ -13,8 +18,8 @@ _stats:
   createdTime: 1757286862454
   modifiedTime: 1757286862454
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 11e3ii7ofvknb8e0
 system:
+  consumptions: []
   description: >-
     <p>The psychic may Commit Effort as an On Turn action to gain an intuitive
     360-degree awareness of their physical surroundings. The sense is roughly
@@ -22,19 +27,11 @@ system:
     distinguish colors. It is blocked by solid objects but is unimpeded by
     darkness, mist, blinding light, holograms, or optical illusions. The sense
     lasts as long as the Effort remains Committed to the technique.</p>
-  level: 1
-  source: teleportation
   favorite: false
-  subType: psychic
+  level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions: []
-  save: null
+  source: teleportation
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!11e3ii7ofvknb8e0'
 

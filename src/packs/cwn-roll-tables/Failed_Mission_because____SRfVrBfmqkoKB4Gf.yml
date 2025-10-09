@@ -1,280 +1,157 @@
-folder: CSCqqVbsxG36AwwF
-name: Failed Mission because...
 _id: SRfVrBfmqkoKB4Gf
+name: Failed Mission because...
+type: null
 img: icons/svg/d20-grey.svg
-description: <p>Failed mission because…</p>
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: 6rck84SeyZEHvlam
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: >-
-      There was a traitor within the team or someone they relied upon for the
-      mission
-    name: ''
-    _key: '!tables.results!SRfVrBfmqkoKB4Gf.6rck84SeyZEHvlam'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: K7RZHXphs62h1eBy
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A corp or gang had unsuspected involvement and rolled right over them
-    name: ''
-    _key: '!tables.results!SRfVrBfmqkoKB4Gf.K7RZHXphs62h1eBy'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: jCVJQGRHVeMIlFlQ
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: >-
-      They got cocky, and went into the situation with less force or care than
-      was wise
-    name: ''
-    _key: '!tables.results!SRfVrBfmqkoKB4Gf.jCVJQGRHVeMIlFlQ'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: HUprao5yhGdXaYhI
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: >-
-      They got stomped by another operator team that the target hired to deal
-      with them
-    name: ''
-    _key: '!tables.results!SRfVrBfmqkoKB4Gf.HUprao5yhGdXaYhI'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: T8fWRPEhMB5dirG4
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: >-
-      They fundamentally misunderstood the client’s wishes and did the wrong
-      thing
-    name: ''
-    _key: '!tables.results!SRfVrBfmqkoKB4Gf.T8fWRPEhMB5dirG4'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: ynopomuVlT9AJVtx
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They were woefully undersupported by their client or fed bad information
-    name: ''
-    _key: '!tables.results!SRfVrBfmqkoKB4Gf.ynopomuVlT9AJVtx'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: UK9mOkumSu2uhAxn
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They got intimidated or bribed into backing off by the target
-    name: ''
-    _key: '!tables.results!SRfVrBfmqkoKB4Gf.UK9mOkumSu2uhAxn'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: hcpVe0Vy8AQIHGar
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: >-
-      They made their play, but it just wasn’t good enough, and the target beat
-      them
-    name: ''
-    _key: '!tables.results!SRfVrBfmqkoKB4Gf.hcpVe0Vy8AQIHGar'
-  - type: text
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    _id: rq7zK4XSs89bhuQ6
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: >-
-      Somebody they relied on for the mission wasn’t as good as they should have
-      been
-    name: ''
-    _key: '!tables.results!SRfVrBfmqkoKB4Gf.rq7zK4XSs89bhuQ6'
-  - type: text
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    _id: KkTTBbsq4prqVH4s
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: >-
-      They “succeeded” at a cost or with consequences that are worse than
-      failure
-    name: ''
-    _key: '!tables.results!SRfVrBfmqkoKB4Gf.KkTTBbsq4prqVH4s'
-  - type: text
-    weight: 1
-    range:
-      - 11
-      - 11
-    drawn: false
-    _id: 4uIgGGDDyONSt4fo
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: The patron did not correctly understand the situation they sent them into
-    name: ''
-    _key: '!tables.results!SRfVrBfmqkoKB4Gf.4uIgGGDDyONSt4fo'
-  - type: text
-    weight: 1
-    range:
-      - 12
-      - 12
-    drawn: false
-    _id: TjKcjV6meDtxVswq
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Sheer bad luck made everything go wrong
-    name: ''
-    _key: '!tables.results!SRfVrBfmqkoKB4Gf.TjKcjV6meDtxVswq'
-replacement: true
-displayRoll: true
+folder: CSCqqVbsxG36AwwF
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-tables.RollTable.SRfVrBfmqkoKB4Gf
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d12
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: 6rck84SeyZEHvlam
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!SRfVrBfmqkoKB4Gf.6rck84SeyZEHvlam'
+  - _id: K7RZHXphs62h1eBy
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!SRfVrBfmqkoKB4Gf.K7RZHXphs62h1eBy'
+  - _id: jCVJQGRHVeMIlFlQ
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!SRfVrBfmqkoKB4Gf.jCVJQGRHVeMIlFlQ'
+  - _id: HUprao5yhGdXaYhI
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!SRfVrBfmqkoKB4Gf.HUprao5yhGdXaYhI'
+  - _id: T8fWRPEhMB5dirG4
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!SRfVrBfmqkoKB4Gf.T8fWRPEhMB5dirG4'
+  - _id: ynopomuVlT9AJVtx
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!SRfVrBfmqkoKB4Gf.ynopomuVlT9AJVtx'
+  - _id: UK9mOkumSu2uhAxn
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!SRfVrBfmqkoKB4Gf.UK9mOkumSu2uhAxn'
+  - _id: hcpVe0Vy8AQIHGar
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!SRfVrBfmqkoKB4Gf.hcpVe0Vy8AQIHGar'
+  - _id: rq7zK4XSs89bhuQ6
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!SRfVrBfmqkoKB4Gf.rq7zK4XSs89bhuQ6'
+  - _id: KkTTBbsq4prqVH4s
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!SRfVrBfmqkoKB4Gf.KkTTBbsq4prqVH4s'
+  - _id: 4uIgGGDDyONSt4fo
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!SRfVrBfmqkoKB4Gf.4uIgGGDDyONSt4fo'
+  - _id: TjKcjV6meDtxVswq
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!SRfVrBfmqkoKB4Gf.TjKcjV6meDtxVswq'
 _key: '!tables!SRfVrBfmqkoKB4Gf'
 

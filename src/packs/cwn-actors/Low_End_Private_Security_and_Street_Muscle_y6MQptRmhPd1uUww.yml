@@ -1,154 +1,76 @@
+_id: y6MQptRmhPd1uUww
 name: Low-End Private Security and Street Muscle
 type: npc
 img: icons/svg/mystery-man.svg
+folder: 1MnMOlCpFjrZIhXu
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.y6MQptRmhPd1uUww
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
-  health:
-    value: 5
-    max: 5
+  ab: 1
+  access:
+    max: 1
+    value: 1
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 13
+  baseSoakTotal:
+    max: 0
+    value: 0
   biography: >-
     <p>Guards of this quality usually have no useful combat cyber installed in
     them, as skinmod tattoos and gang-related dental implants don’t count.</p>
-  species: ''
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 6
-  baseAc: 13
-  meleeAc: 10
-  ab: 1
-  meleeAb: 1
-  systemStrain:
-    value: 0
-    permanent: 0
-  speed: 10
   cyberdecks: []
+  faction: ''
+  health:
+    max: 5
+    value: 5
   health_max_modified: 0
-  armorType: street
-  skillBonus: 1
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
   hitDice: 1d8
-  saves: 15
+  homeworld: ''
+  meleeAb: 1
+  meleeAc: 10
   moralScore: 7
   reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
+  saves: 15
+  skillBonus: 1
+  species: ''
+  speed: 10
+  systemStrain:
+    permanent: 0
     value: 0
-    max: 0
-  faction: ''
-  homeworld: ''
-  pools: {}
+  traumaTarget: 6
   tweak:
-    showCyberware: true
-    showPsychic: true
-    showArts: false
-    showSpells: false
     showAdept: false
+    showArts: false
+    showCyberware: true
     showMutation: false
     showPoolsInHeader: true
     showPoolsInPowers: false
-prototypeToken:
-  name: Low
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: icons/svg/mystery-man.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
+    showPsychic: true
+    showSpells: false
+effects: []
 items:
-  - name: Club
+  - _id: NN6zKutNSoht3rTw
+    name: Club
     type: weapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-weapons.Item.0b1lbtsa8tmh3k28
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: NN6zKutNSoht3rTw
     system:
       ammo:
         burst: false
@@ -207,24 +129,16 @@ items:
           value: 0
       isMelee: false
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!y6MQptRmhPd1uUww.NN6zKutNSoht3rTw'
-  - name: Heavy Pistol
+  - _id: FhKALJaIhZmxLjQ4
+    name: Heavy Pistol
     type: weapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-weapons.Item.kgoo4k7gf2gvp0rx
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: FhKALJaIhZmxLjQ4
     system:
       ammo:
         burst: false
@@ -282,24 +196,16 @@ items:
           value: 0
       isMelee: false
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!y6MQptRmhPd1uUww.FhKALJaIhZmxLjQ4'
-  - name: Reinforced Clothing
+  - _id: OdK3v46PIQUNoTrI
+    name: Reinforced Clothing
     type: armor
     img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-armor.Item.lpei0m3pukyke9e8
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: OdK3v46PIQUNoTrI
     system:
       ac: 13
       cost: 100
@@ -335,26 +241,10 @@ items:
           max: 0
           value: 0
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!y6MQptRmhPd1uUww.OdK3v46PIQUNoTrI'
-effects: []
-folder: 1MnMOlCpFjrZIhXu
-flags: {}
-_stats:
-  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.y6MQptRmhPd1uUww
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.348'
-  systemId: swnr
-  systemVersion: 2.1.0-beta
-  createdTime: 1758737583614
-  modifiedTime: 1758737583614
-  lastModifiedBy: lKC5x4Yf023Bizof
-_id: y6MQptRmhPd1uUww
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
 _key: '!actors!y6MQptRmhPd1uUww'
 

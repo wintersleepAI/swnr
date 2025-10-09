@@ -1,146 +1,91 @@
 _id: cnn1Q9SFILvhuLYV
 name: MonShape-Dead
+type: null
 img: icons/svg/d20-grey.svg
-description: Why Isn't It Dead Yet?
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: 9slr8628b9kptoae
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It requires very little food for survival
-    name: ''
-    _key: '!tables.results!cnn1Q9SFILvhuLYV.9slr8628b9kptoae'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: 9rane88cz790pg7k
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It’s poisonous and repels its predators
-    name: ''
-    _key: '!tables.results!cnn1Q9SFILvhuLYV.9rane88cz790pg7k'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: mnh5s4wr0mma2zac
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It eats something other creatures can’t
-    name: ''
-    _key: '!tables.results!cnn1Q9SFILvhuLYV.mnh5s4wr0mma2zac'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: hboqs8u5hps5955p
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It’s newly introduced in the area
-    name: ''
-    _key: '!tables.results!cnn1Q9SFILvhuLYV.hboqs8u5hps5955p'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: o2cir8uz1pu3uh5p
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It doesn’t need food in a normal sense
-    name: ''
-    _key: '!tables.results!cnn1Q9SFILvhuLYV.o2cir8uz1pu3uh5p'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: atvdiv2bzdv538qs
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It exists in symbiosis with something else
-    name: ''
-    _key: '!tables.results!cnn1Q9SFILvhuLYV.atvdiv2bzdv538qs'
-formula: 1d6
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.cnn1Q9SFILvhuLYV
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: 9slr8628b9kptoae
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cnn1Q9SFILvhuLYV.9slr8628b9kptoae'
+  - _id: 9rane88cz790pg7k
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cnn1Q9SFILvhuLYV.9rane88cz790pg7k'
+  - _id: mnh5s4wr0mma2zac
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cnn1Q9SFILvhuLYV.mnh5s4wr0mma2zac'
+  - _id: hboqs8u5hps5955p
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cnn1Q9SFILvhuLYV.hboqs8u5hps5955p'
+  - _id: o2cir8uz1pu3uh5p
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cnn1Q9SFILvhuLYV.o2cir8uz1pu3uh5p'
+  - _id: atvdiv2bzdv538qs
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!cnn1Q9SFILvhuLYV.atvdiv2bzdv538qs'
 _key: '!tables!cnn1Q9SFILvhuLYV'
 

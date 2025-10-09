@@ -1,7 +1,12 @@
+_id: sdgzm5fsfcgztii2
 name: Slip Field
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: mOJTfIBCxT4AY88p
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-telekinesis.Item.sdgzm5fsfcgztii2
@@ -13,22 +18,7 @@ _stats:
   createdTime: 1757286860108
   modifiedTime: 1757286860108
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: sdgzm5fsfcgztii2
 system:
-  description: >-
-    <p>As a Main Action, the psychic Commits Effort for the scene and decreases
-    the friction at a point in sight. Up to ten meters in diameter is affected,
-    making it difficult for enemies to move from their current position. All
-    chosen targets must make an Evasion saving throw or fall prone, becoming
-    unable to stand up or move more than a meter per Move action taken. If used
-    against a ground vehicle, the driver must make a Dex/Pilot skill check at a
-    difficulty of 8 plus the adept’s Telekinesis skill or go out of control,
-    driving directly forward for a round and crashing into any obstacles.
-    Targets who save are immune to this technique for the scene.</p>
-  level: 2
-  source: telekinesis
-  save: evasion
-  skill: dex/pilot
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -40,15 +30,23 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p>As a Main Action, the psychic Commits Effort for the scene and decreases
+    the friction at a point in sight. Up to ten meters in diameter is affected,
+    making it difficult for enemies to move from their current position. All
+    chosen targets must make an Evasion saving throw or fall prone, becoming
+    unable to stand up or move more than a meter per Move action taken. If used
+    against a ground vehicle, the driver must make a Dex/Pilot skill check at a
+    difficulty of 8 plus the adept’s Telekinesis skill or go out of control,
+    driving directly forward for a round and crashing into any obstacles.
+    Targets who save are immune to this technique for the scene.</p>
   favorite: false
-  subType: psychic
+  level: 2
   prepared: false
-  resourceName: null
-  subResource: null
+  save: evasion
+  skill: dex/pilot
+  source: telekinesis
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!sdgzm5fsfcgztii2'
 

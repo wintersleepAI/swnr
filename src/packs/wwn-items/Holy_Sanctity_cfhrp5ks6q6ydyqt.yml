@@ -1,31 +1,12 @@
+_id: cfhrp5ks6q6ydyqt
 name: Holy Sanctity
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    You are honored and respected by most in this region. Gain a +1 bonus on
-    social skill checks with locals who are not naturally opposed to your
-    religion or social institution.
-  favorite: false
-  subType: art
-  source: Wise
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Wise
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: cfhrp5ks6q6ydyqt
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -36,10 +17,26 @@ _stats:
   modifiedTime: 1754277456790
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Wise
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    You are honored and respected by most in this region. Gain a +1 bonus on
+    social skill checks with locals who are not naturally opposed to your
+    religion or social institution.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Wise
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!cfhrp5ks6q6ydyqt'
 

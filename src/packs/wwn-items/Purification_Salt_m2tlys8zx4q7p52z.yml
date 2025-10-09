@@ -1,32 +1,12 @@
+_id: m2tlys8zx4q7p52z
 name: Purification Salt
 type: item
+img: icons/svg/item-bag.svg
+folder: jXrFh0x6b5Auj9IZ
 sort: 0
-system:
-  description: >-
-    This small bag contains a never-ending supply of spiritually-purifying salt.
-    If the salt is used to dust an object or weapon as a Main Action, that
-    object can interact with incorporeal entities or spirits as if they were
-    solid for the rest of the scene. If hurled directly at a creature from melee
-    distance, it does 3d6 damage to incorporeal beings, mages, or unnatural
-    magical creatures. If actually consumed by a sentient creature, it fills the
-    imbiber with a sense of guilt and acute sorrow, inflicting 3d6 emotional
-    damage. Creatures reduced to zero hit points regain one point but will
-    attempt suicide. One pinch of salt can be taken from the bag each scene.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
-  cost: 0
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
-  tl: 3
-_id: m2tlys8zx4q7p52z
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -37,10 +17,31 @@ _stats:
   modifiedTime: 1754277456982
   lastModifiedBy: null
   exportSource: null
-folder: jXrFh0x6b5Auj9IZ
-flags: {}
+system:
+  bundle:
+    bundled: false
+  cost: 0
+  description: >-
+    This small bag contains a never-ending supply of spiritually-purifying salt.
+    If the salt is used to dust an object or weapon as a Main Action, that
+    object can interact with incorporeal entities or spirits as if they were
+    solid for the rest of the scene. If hurled directly at a creature from melee
+    distance, it does 3d6 damage to incorporeal beings, mages, or unnatural
+    magical creatures. If actually consumed by a sentient creature, it fills the
+    imbiber with a sense of guilt and acute sorrow, inflicting 3d6 emotional
+    damage. Creatures reduced to zero hit points regain one point but will
+    attempt suicide. One pinch of salt can be taken from the bag each scene.
+  encumbrance: 1
+  favorite: false
+  location: stowed
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+    diceNum: 1
+    diceSize: d20
+  tl: 3
 effects: []
-ownership:
-  default: 0
 _key: '!items!m2tlys8zx4q7p52z'
 

@@ -1,0 +1,225 @@
+_id: Gq9tLm4ZRxv8pAy2
+name: Release Notes
+type: null
+img: null
+folder: null
+sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  coreVersion: '13.350'
+  systemId: null
+  systemVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+system: {}
+effects: []
+pages:
+  - _id: npKF4D1snpeCxSu1
+    name: Release Note Details
+    type: text
+    title:
+      show: false
+      content: ''
+    text:
+      content: >-
+        <p></p><h1>CHANGELOG</h1><p></p><p>All notable changes to the Stars
+        Without Number Redux (SWNR) system for Foundry VTT will be documented in
+        this file.</p><p>The format is based on <a
+        href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>, and
+        this project adheres to <a
+        href="https://semver.org/spec/v2.0.0.html">Semantic
+        Versioning</a>.</p><p></p><h2>[2.1.0] - 2025-09-30 Unified Power System
+        and AWN </h2><p></p><p>This comprehensive migration transforms the
+        legacy effort system into the new resource pool system,  populates power
+        resource fields, converts legacy configurations to consumption arrays,
+        and creates pool-granting features  for characters. All worlds from
+        2.0.12 or earlier have been fully migrated to the new system. See the
+        notes  at <a
+        href="https://github.com/wintersleepAI/swnr/wiki/Powers---Resource-Pools"
+        target="_blank">this wiki page</a> for more
+        information.</p><p><strong>NOTE</strong> v13 support only from this
+        version onwards.</p><p><strong>NOTE</strong> you may have old
+        compendiums from previous versions. You will need to manually delete
+        empty compendium folders.</p><p></p><h3>Major
+        Features</h3><p></p><p></p><h4>Unified Power System</h4>
+        <ul><li><strong>Complete overhaul of the power/effort resource
+        system</strong> - Legacy effort system has been transformed into a
+        comprehensive resource pool system</li> <li><strong>Resource Field
+        Integration</strong> - Powers now include <code>resourceName</code> and
+        <code>subResource</code> fields for precise pool targeting</li>
+        <li><strong>Dynamic Pool System</strong> - Pools are computed
+        dynamically with support for manual overrides and committed
+        resources</li> <li><strong>Resource Key Method</strong> - New
+        <code>power.system.resourceKey()</code> method returns standardized
+        "ResourceName:SubResource" format</li> <li><strong>Pool Update
+        Patterns</strong> - Standardized patterns for updating pools while
+        preserving manual changes</li><p></p><p></p><h4>Advanced Consumption
+        System</h4> <li><strong>Multi-Cost Consumption Arrays</strong> - Powers
+        support multiple consumption types in expandable arrays</li>
+        <li><strong>Enhanced Resource Timing</strong> - New three-option timing
+        system replaces boolean <code>spendOnPrep</code>:</li>
+          - <strong>"Pay on Prep"</strong> - Resources consumed during power preparation (no chat buttons)
+          - <strong>"Pay via Chat"</strong> - Resources consumed via interactive chat card buttons (original behavior)
+          - <strong>"Pay Immediately"</strong> - Resources consumed immediately when sending power to chat (new option)
+        <li><strong>Flexible Resource Types</strong> - Support for pool
+        resources, system strain, internal uses, and item consumption</li>
+        <li><strong>Consumption Validation</strong> - Comprehensive validation
+        system ensures resources are available before consumption</li>
+        <li><strong>Restoration Support</strong> - Proper resource restoration
+        when unpreparing powers or effects
+        end</li><p></p><p></p><h3>Enhancements</h3><p></p><p></p><h4>Power
+        System Improvements</h4> <li><strong>Enhanced Power UI</strong> -
+        Improved power sheet interface with resource configuration section
+        including timing dropdown</li> <li><strong>Better Power Display</strong>
+        - Enhanced UI/UX for powers display with clearer resource
+        information</li> <li><strong>Improved Preparation Icons</strong> - Brain
+        icons now appear after power names for better alignment and visual
+        clarity</li> <li><strong>Prepared Spell Support</strong> - Full support
+        for spell preparation mechanics with new timing system</li>
+        <li><strong>Power Chat Cards</strong> - Improved chat integration
+        showing resource costs and consumption details</li> <li><strong>Passive
+        Power Support</strong> - Better handling of powers without casting
+        costs</li><p></p><p></p><h4>Compendium &amp; Content</h4>
+        <li><strong>AWN Content Integration</strong> - Extensive AWN additions
+        including:</li>
+          - AWN-specific armor, weapons, and equipment
+          - Mutation system support with roll tables
+          - AWN edges and features
+          - Wasteland-specific items and gear
+        <li><strong>CSV Import Tools</strong> - New utility scripts for
+        importing compendium content from CSV templates</li>
+        <li><strong>Enhanced Compendium Support</strong> - Improved tracking and
+        management of compendium YAML files</li> <li><strong>Content
+        Organization</strong> - Better organization of features tab and power
+        displays</li><p></p><p></p><h4>User Interface</h4> <li><strong>Improved
+        Resource Management</strong> - Better pool manager interface with
+        clearer status indicators</li> <li><strong>Enhanced Chat Cards</strong>
+        - Power usage chat cards now show detailed consumption information</li>
+        <li><strong>Container System</strong></li>
+          - Mark any gear item as a container with capacity max/value and open/closed state
+          - Drag-and-drop items into open containers; auto-updates capacity and highlights valid drops
+          - Drag items out to remove; contained item encumbrance recalculates capacity
+          - Container location propagates to contained items; prevents container-in-container nesting; only gear/weapon/armor allowed
+          - Dedicated Containers section in the items list with capacity display and toggle icon
+        <li><strong>Languages Management</strong></li>
+          - New world settings: Available Languages (comma-separated list) and Preset selector (Earth, WWN, Both)
+          - Biography tab languages UI: open add panel with +, pick from available (excluding known), add, and remove per-language
+          - Add panel only shown when at least one available language is configured; styles for a clean, concise flow<p></p><p></p><h3>Technical Changes</h3><p></p><p></p><h4>Migration System</h4>
+        <li><strong>Comprehensive v2.1.0 Migration</strong> - Automatic
+        migration transforms legacy data:</li>
+          - Populates <code>resourceName</code> and <code>subResource</code> fields based on power subtypes
+          - Converts legacy effort configurations to consumption arrays
+          - Creates pool-granting features for existing characters
+          - Preserves existing resource values and committed effort
+          - Handles strain costs, internal resources, and legacy configurations
+        <li><strong>Safe Migration Process</strong> - Robust error handling and
+        reporting; migration version is only updated on success</li>
+        <li><strong>Migration Reporting</strong> - Detailed logging and user
+        notifications of migration results</li><p></p><p></p><h4>Data Model
+        Updates</h4> <li><strong>Power Data Model</strong> - Extensive updates
+        to power schema:</li>
+          - New resource fields with proper validation
+          - Consumption array with complete configuration options
+          - Support for preparation mechanics
+          - Enhanced derived data preparation
+        <li><strong>Pool System Architecture</strong> - Clear separation between
+        stored (<code>_source</code>) and computed data</li>
+        <li><strong>Resource Pool Structure</strong> - Standardized pool format
+        with value, max, cadence, and commitment
+        tracking</li><p></p><p></p><h4>Developer Features</h4>
+        <li><strong>Development Documentation</strong> - Enhanced developer
+        documentation in <code>docs/dev/</code></li> <li><strong>Build
+        Tools</strong> - Improved build process and development workflow</li>
+        <li><strong>Template System</strong> - CSV templates for creating new
+        compendium content</li><p></p><p></p><h4>Refresh Orchestration</h4>
+        <li>Introduced a clean split between orchestration and engine:</li>
+          - Orchestrator: <code>module/helpers/refresh-orchestrator.mjs</code> provides <code>refreshActor({ actor, cadence, frail? })</code> and <code>refreshMany({ cadence, actors? })</code>, owns HP/strain updates and chat creation.
+          - Engine: <code>module/helpers/refresh-helpers.mjs</code> provides <code>refreshActorPools(actor, cadenceLevel)</code>, item updates, and cadence utilities; now chat-free.
+        <li>Global API updated: <code>globalThis.swnr.refreshScene()</code> and
+        <code>globalThis.swnr.refreshDay()</code> now call the orchestrator
+        (<code>refreshMany</code>).</li> <li>NPC and Character sheet buttons now
+        call the orchestrator (<code>refreshActor</code>) for a single,
+        consistent path.</li><p></p><p></p><h4>Removed</h4> <li>Deprecated
+        helper <code>refreshPools(cadence)</code> removed. Use
+        <code>refreshMany({ cadence })</code> instead for global refresh and
+        <code>refreshActor({ actor, cadence })</code> for a single
+        actor.</li><p></p><p></p><h3>Bug Fixes</h3><p></p><p></p><li>Fixed
+        compendium tracking and git integration issues</li> <li>Corrected
+        migration versioning and proper system
+        updates</li><p></p><p></p><h3>Developer
+        Notes</h3><p></p><p></p><li><strong>Breaking Changes</strong>: This
+        version includes significant data model changes. The migration system
+        handles the transition automatically, but custom modules interfacing
+        with the power system may need updates.</li> <li><strong>Pool
+        System</strong>: Developers should use the new
+        <code>resourceKey()</code> method and standardized pool update patterns
+        when working with character resources.</li> <li><strong>Backward
+        Compatibility</strong>: Legacy effort-based worlds will be automatically
+        migrated to the new system on first load.</li>
+         - <strong>Refresh API Changes</strong>: The old helper <code>refreshPools(cadence)</code> was removed. For global/GM flows call <code>globalThis.swnr.refreshScene()</code> / <code>globalThis.swnr.refreshDay()</code> (which delegate to the orchestrator’s <code>refreshMany</code>). For targeted flows, call <code>refreshOrchestrator.refreshActor({ actor, cadence })</code> directly.<p></p><p>---</p><p><em>This version represents a major milestone in the SWNR system's evolution, providing a robust foundation for resource management across all Kevin Crawford game systems (SWN, WWN, CWN, AWN).</em></p><p>
+        </p><h2>[2.0.13] - 2025-07-30</h2><p></p><p></p><h3>Fixed</h3> <li>Keep
+        0 qty consumables</li> <li>Porting in NPC item
+        bug</li><p></p><p></p><h2>[2.0.12] -
+        2025-07-17</h2><p></p><p></p><h3>Fixed</h3> <li>Fix for showing gear and
+        consumables</li><p></p><p></p><h2>[2.0.11] -
+        2025-07-16</h2><p></p><p>This version adds the ability for items to be
+        marked as consumable (partially for AWN support) with the ability to
+        track empty 'containers'. Ammo is treated as a consumable, which means a
+        weapon should have the ammo source selected to reload. Shift+clicking
+        reload will bypass this logic.</p><p> </p><h3>Added</h3> <li>Consumable
+        item system with ability to track empty 'containers'</li> <li>Ammo
+        specific reload functionality</li> <li>Ammo indicators on character
+        sheets</li> <li>Shift+click reload to bypass reload logic</li>
+        <li>Add/remove use buttons for consumables</li> <li>Ammo selector for
+        matching types</li><p></p><p></p><h3>Fixed</h3> <li>Secondary stat on
+        weapon breaking NPC rolls</li> <li>Right click on mech/ship/etc
+        functionality</li><p></p><p></p><h3>Changed</h3> <li>Ammo is treated as
+        a consumable - weapons need ammo source selected to reload</li> <li>Item
+        list formatting improvements</li><p></p><p></p><h2>[2.0.10] -
+        2025-06-19</h2><p></p><p></p><h3>Fixed</h3> <li>MacroBar bug fix -
+        limited to intercept hook to cases that the system function
+        handled</li><p></p><p></p><h2>[2.0.9] -
+        2025-06-15</h2><p></p><p></p><h3>Fixed</h3> <li>Chat card now properly
+        displays damage buttons for v13</li> <li>Character header issue</li>
+        <li>Description boxes and text alignment</li> <li>Side bar context menu
+        issue</li> <li>Prose-mirror box fixes</li><p></p><p></p><h2>[2.0.8] -
+        2025-05-30</h2><p></p><p>This migration adds a 'melee' flag to weapons
+        which is used for determining what attack bonus to use with CWN Armor
+        setting enabled. <b>You will need to set this flag manually for existing
+        items.</b></p><p> </p><h3>Added</h3> <li>Melee flag to weapons for
+        determining attack bonus with CWN Armor setting</li> <li>Ability to add
+        powers/weapons/armor from compact list</li> <li>Melee AB display on
+        character sheet</li> <li>Melee AC for NPCs</li> <li>Version migration
+        logging</li><p></p><p></p><h3>Fixed</h3> <li>Allow AB to be negative for
+        weapons</li> <li>Mech calculation of PMH</li> <li>Rolls data for HP for
+        dice so nice</li> <li>More accessible beige
+        color</li><p></p><p></p><h3>Changed</h3> <li>Adding melee tag to SWN
+        weapons</li><p></p><p></p><h2>[2.0.7] -
+        2025-05-13</h2><p></p><p></p><h3>Changed</h3> <li>System
+        bump</li><p></p><p></p><h2>[2.0.6] -
+        2025-04-09</h2><p></p><p></p><h3>Added</h3> <li>Reload on combat
+        functionality</li> <li>Rank as slider with max value</li> <li>Skill
+        select for weapons</li><p></p><p></p><h3>Fixed</h3> <li>Cargo fix</li>
+        <li>Skill remember setting</li> <li>Modifier modifier to break
+        limit</li> <li>Remember dice setting fix</li> <li>Migrate invalid
+        cyberware type and concealment</li></ul><p></p><p></p><h2>[2.0.5]</h2>
+         Cyber type and concealment <p></p><p></p><h2>[2.0.3]</h2>
+        Remember and ask weapon fixes <p></p><p></p><h2>[2.0.2]</h2> Adding the
+        image for system<p></p><p></p><h2>[2.0.1]</h2> flag for access/stress.
+        limit access max to 0. small UI tweak<p></p><p></p><h2>[2.0.0]</h2>
+        Initial release of the system rewrite. Original system can be found at 
+        https://github.com/wintersleepAI/foundry-swnr<p></p>
+      format: 1
+    sort: 100000
+    ownership:
+      default: 0
+    flags: {}
+    _key: '!journal.pages!Gq9tLm4ZRxv8pAy2.npKF4D1snpeCxSu1'
+_key: '!journal!Gq9tLm4ZRxv8pAy2'
+

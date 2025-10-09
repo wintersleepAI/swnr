@@ -1,188 +1,115 @@
-displayRoll: true
+_id: Bsbre0AYQLVVE82z
+name: One Roll Wilderness Encounters - Basic Nature of the Encounter
+type: null
+img: icons/svg/d20-grey.svg
+folder: Td6GsHm0Ns7IXzwI
+sort: 0
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags:
   core: {}
-folder: Td6GsHm0Ns7IXzwI
-formula: 1d8
-img: icons/svg/d20-grey.svg
-name: One Roll Wilderness Encounters - Basic Nature of the Encounter
-replacement: true
-results:
-  - _id: ETwUAbZvDtgMhyTG
-    drawn: false
-    flags: {}
-    range:
-      - 1
-      - 1
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Basic Nature of the Encounter: Attack by pack of hostiles'
-    name: ''
-    _key: '!tables.results!Bsbre0AYQLVVE82z.ETwUAbZvDtgMhyTG'
-  - _id: 4g8TGbVBMpkLF86F
-    drawn: false
-    flags: {}
-    range:
-      - 2
-      - 2
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Basic Nature of the Encounter: Ambush by single lone hostile'
-    name: ''
-    _key: '!tables.results!Bsbre0AYQLVVE82z.4g8TGbVBMpkLF86F'
-  - _id: R1vO7QvqHfu2uaoa
-    drawn: false
-    flags: {}
-    range:
-      - 3
-      - 3
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Basic Nature of the Encounter: Meet people who don’t want to be met'
-    name: ''
-    _key: '!tables.results!Bsbre0AYQLVVE82z.R1vO7QvqHfu2uaoa'
-  - _id: AvcRtoYSROeIMv4r
-    drawn: false
-    flags: {}
-    range:
-      - 4
-      - 4
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Basic Nature of the Encounter: Encounter people in need of aid'
-    name: ''
-    _key: '!tables.results!Bsbre0AYQLVVE82z.AvcRtoYSROeIMv4r'
-  - _id: b45oFghlHcmrvDzo
-    drawn: false
-    flags: {}
-    range:
-      - 5
-      - 5
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Basic Nature of the Encounter: Encounter hostile creatures'
-    name: ''
-    _key: '!tables.results!Bsbre0AYQLVVE82z.b45oFghlHcmrvDzo'
-  - _id: YBYIHAA3iyvM1TME
-    drawn: false
-    flags: {}
-    range:
-      - 6
-      - 6
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Basic Nature of the Encounter: Nearby feature is somehow dangerous'
-    name: ''
-    _key: '!tables.results!Bsbre0AYQLVVE82z.YBYIHAA3iyvM1TME'
-  - _id: tEZnxxSMLBR0cprC
-    drawn: false
-    flags: {}
-    range:
-      - 7
-      - 7
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Basic Nature of the Encounter: Nearby feature promises useful loot'
-    name: ''
-    _key: '!tables.results!Bsbre0AYQLVVE82z.tEZnxxSMLBR0cprC'
-  - _id: MVfPjY3WRfjkHDHU
-    drawn: false
-    flags: {}
-    range:
-      - 8
-      - 8
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Basic Nature of the Encounter: Meet hostiles that aren’t immediately so'
-    name: ''
-    _key: '!tables.results!Bsbre0AYQLVVE82z.MVfPjY3WRfjkHDHU'
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757287522774
   modifiedTime: 1757287522774
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-description: ''
-_id: Bsbre0AYQLVVE82z
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: ETwUAbZvDtgMhyTG
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!Bsbre0AYQLVVE82z.ETwUAbZvDtgMhyTG'
+  - _id: 4g8TGbVBMpkLF86F
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!Bsbre0AYQLVVE82z.4g8TGbVBMpkLF86F'
+  - _id: R1vO7QvqHfu2uaoa
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!Bsbre0AYQLVVE82z.R1vO7QvqHfu2uaoa'
+  - _id: AvcRtoYSROeIMv4r
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!Bsbre0AYQLVVE82z.AvcRtoYSROeIMv4r'
+  - _id: b45oFghlHcmrvDzo
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!Bsbre0AYQLVVE82z.b45oFghlHcmrvDzo'
+  - _id: YBYIHAA3iyvM1TME
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!Bsbre0AYQLVVE82z.YBYIHAA3iyvM1TME'
+  - _id: tEZnxxSMLBR0cprC
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!Bsbre0AYQLVVE82z.tEZnxxSMLBR0cprC'
+  - _id: MVfPjY3WRfjkHDHU
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!Bsbre0AYQLVVE82z.MVfPjY3WRfjkHDHU'
 _key: '!tables!Bsbre0AYQLVVE82z'
 

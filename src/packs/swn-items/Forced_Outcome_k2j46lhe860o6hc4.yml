@@ -1,7 +1,12 @@
+_id: k2j46lhe860o6hc4
 name: Forced Outcome
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: J1fmkA6JJxYOdJVY
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-precognition.Item.k2j46lhe860o6hc4
@@ -13,21 +18,7 @@ _stats:
   createdTime: 1757286857649
   modifiedTime: 1757286857649
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: k2j46lhe860o6hc4
 system:
-  description: >-
-    <p>Through careful manipulation of probability, the adept can influence
-    random physical events in their vicinity. Triggering this technique requires
-    a Main Action and Committing Effort for the scene. Any simple, random
-    mechanical outcome can be completely controlled for the scene, such as a
-    roulette wheel or the order of a deck of shuffled cards. Any other physical
-    event in the area that seems not-entirely-implausible may be made to occur
-    by this technique, provided it doesn’t involve more than a few objects and
-    doesn’t require human involvement. The GM decides what random events are and
-    are not adequately possible. Anything more than one unusual coincidence or
-    chance per scene is likely impossible to produce.</p>
-  level: 3
-  source: precognition
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -39,16 +30,22 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p>Through careful manipulation of probability, the adept can influence
+    random physical events in their vicinity. Triggering this technique requires
+    a Main Action and Committing Effort for the scene. Any simple, random
+    mechanical outcome can be completely controlled for the scene, such as a
+    roulette wheel or the order of a deck of shuffled cards. Any other physical
+    event in the area that seems not-entirely-implausible may be made to occur
+    by this technique, provided it doesn’t involve more than a few objects and
+    doesn’t require human involvement. The GM decides what random events are and
+    are not adequately possible. Anything more than one unusual coincidence or
+    chance per scene is likely impossible to produce.</p>
   favorite: false
-  subType: psychic
+  level: 3
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: precognition
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!k2j46lhe860o6hc4'
 

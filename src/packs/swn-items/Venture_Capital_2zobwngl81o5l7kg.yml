@@ -1,7 +1,12 @@
+_id: 2zobwngl81o5l7kg
 name: Venture Capital
 type: asset
 img: systems/swnr/assets/icons/hawkin/wealth.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.2zobwngl81o5l7kg
@@ -13,13 +18,13 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 2zobwngl81o5l7kg
 system:
   attackDamage: 2d6
   attackSource: wealth
   attackSpecial: ''
   attackTarget: wealth
   baseOfInfluence: false
+  category: wealth
   cost: 15
   counter: 1d6
   description: >-
@@ -28,27 +33,22 @@ system:
     can be tapped. 1d8 is rolled; on a 1, the asset is destroyed, while on a 2-3
     one FacCred is gained, 4-7 yields two FacCreds and 8 grants three FacCreds.
     Roll: [[1d8]]
+  favorite: false
   health:
     max: 10
     value: 10
   income: 0
   maintenance: 0
+  qualities:
+    action: true
+    permission: false
+    special: false
   rating: 6
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Facility
   unusable: false
-  qualities:
-    permission: false
-    action: true
-    special: false
-  category: wealth
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!2zobwngl81o5l7kg'
 

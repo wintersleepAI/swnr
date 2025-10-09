@@ -1,171 +1,93 @@
-description: >-
-  <p>PCs often need patrons to aim them at adventures or offer suitable
-  recompense for semi-legal favors. In conjunction with the adjacent one-roll
-  NPC tables, you can use the tools below to quickly generate a patron and what
-  it is they want from the party. One particularly convenient technique is to
-  have a few short filler adventures drawn up as described on page 177, and then
-  when the players suddenly need a job or need a favor that only a cooperative
-  patron could provide, use the patron to hook them up with the filler
-  adventure. If you lack a convenient premade adventure, it’s usually most
-  practical to have the patron request some simple, direct, one-scene job that
-  you feel comfortable in running on the fly. You can consult page 178 to find
-  appropriate pay rates for different patrons.</p>
-displayRoll: true
+_id: XqnL3Na6SmFvZjLe
+name: One Roll Patrons
+type: null
+img: icons/svg/d20-grey.svg
+folder: WW9xzm2TKZuzaii6
+sort: 200000
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags:
   core: {}
-folder: WW9xzm2TKZuzaii6
-formula: 1d1
-img: icons/svg/d20-grey.svg
-name: One Roll Patrons
-replacement: true
-results:
-  - _id: B4XjZiGvd5xtWamp
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-grey.svg
-    range:
-      - 1
-      - 1
-    type: document
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757290425550
-    name: One Roll Patrons - Trustworthiness
-    documentUuid: Compendium.swnr.swn-roll-tables.RollTable.8FDvqkProghl6iD0
-    description: ''
-    _key: '!tables.results!XqnL3Na6SmFvZjLe.B4XjZiGvd5xtWamp'
-  - _id: 6DEKfjXR136RKIVo
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-grey.svg
-    range:
-      - 1
-      - 1
-    type: document
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757290442998
-    name: One Roll Patrons - Basic Challenge of the Job
-    documentUuid: Compendium.swnr.swn-roll-tables.RollTable.UfH3991utx82oJpO
-    description: ''
-    _key: '!tables.results!XqnL3Na6SmFvZjLe.6DEKfjXR136RKIVo'
-  - _id: OTWzk1vTzPjCpszk
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-grey.svg
-    range:
-      - 1
-      - 1
-    type: document
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757290468379
-    name: One Roll Patrons - Main Countervailing Force
-    documentUuid: Compendium.swnr.swn-roll-tables.RollTable.LQKh23BeLXmY9eIj
-    description: ''
-    _key: '!tables.results!XqnL3Na6SmFvZjLe.OTWzk1vTzPjCpszk'
-  - _id: tC8JxaTChnysBIX8
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-grey.svg
-    range:
-      - 1
-      - 1
-    type: document
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757290458223
-    name: One Roll Patrons - Eagerness to Hire
-    documentUuid: Compendium.swnr.swn-roll-tables.RollTable.hP0aeIh1jmkStrtM
-    description: ''
-    _key: '!tables.results!XqnL3Na6SmFvZjLe.tC8JxaTChnysBIX8'
-  - _id: RNjRrV9KO2h6Zx4R
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-grey.svg
-    range:
-      - 1
-      - 1
-    type: document
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757290482091
-    name: One Roll Patrons - Potential Non-Cash Rewards
-    documentUuid: Compendium.swnr.swn-roll-tables.RollTable.oVNlzlPj0PbsVErZ
-    description: ''
-    _key: '!tables.results!XqnL3Na6SmFvZjLe.RNjRrV9KO2h6Zx4R'
-  - _id: vYR6s9wy4lBV9nBW
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-grey.svg
-    range:
-      - 1
-      - 1
-    type: document
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757290488475
-    name: One Roll Patrons - Complication to the Job
-    documentUuid: Compendium.swnr.swn-roll-tables.RollTable.JohTOZRX3B2XC1U8
-    description: ''
-    _key: '!tables.results!XqnL3Na6SmFvZjLe.vYR6s9wy4lBV9nBW'
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757287393567
   modifiedTime: 1757290414604
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: XqnL3Na6SmFvZjLe
-sort: 200000
+system: {}
+effects: []
+results:
+  - _id: 6DEKfjXR136RKIVo
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!XqnL3Na6SmFvZjLe.6DEKfjXR136RKIVo'
+  - _id: B4XjZiGvd5xtWamp
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!XqnL3Na6SmFvZjLe.B4XjZiGvd5xtWamp'
+  - _id: OTWzk1vTzPjCpszk
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!XqnL3Na6SmFvZjLe.OTWzk1vTzPjCpszk'
+  - _id: RNjRrV9KO2h6Zx4R
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!XqnL3Na6SmFvZjLe.RNjRrV9KO2h6Zx4R'
+  - _id: tC8JxaTChnysBIX8
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!XqnL3Na6SmFvZjLe.tC8JxaTChnysBIX8'
+  - _id: vYR6s9wy4lBV9nBW
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!XqnL3Na6SmFvZjLe.vYR6s9wy4lBV9nBW'
 _key: '!tables!XqnL3Na6SmFvZjLe'
 

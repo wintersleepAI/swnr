@@ -1,7 +1,12 @@
+_id: 2BmJc03t2dNtydv3
 name: Reinforced Longcoat
 type: armor
 img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
 folder: ne4H5P4Oc4gz4LcS
+sort: 600000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-armor.Item.yarpysoc8rc6hmct
@@ -15,42 +20,36 @@ _stats:
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
   ac: 15
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 500
   description: >-
     Long, draping clothing is bolstered with advanced fabrics and discreetly-
     placed absorption plates, the whole remaining deniable as armor.
+  dr: 0
   encumbrance: 1
+  favorite: false
   isHeavy: false
   isSubtle: true
+  location: stowed
   meleeAc: 13
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
   shieldACBonus: 0
   shieldMeleeACBonus: 0
   soak:
     max: 5
     value: 5
   traumaDiePenalty: 1
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
-  shield: false
   use: false
-  dr: 0
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: 2BmJc03t2dNtydv3
-sort: 600000
 _key: '!items!2BmJc03t2dNtydv3'
 

@@ -1,7 +1,12 @@
+_id: V2WDzksvx2hmzzZ9
 name: BanTech Sunfish
 type: drone
 img: systems/swnr/assets/icons/game-icons.net/item-icons/../../drone.png
 folder: xYnsd7k6HMrMYdEk
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-drones.Actor.4q9u5u5t5rop3ehe
@@ -15,7 +20,15 @@ _stats:
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
   ac: 15
+  armor:
+    max: 1
+    value: 1
   cost: 1000
+  crew:
+    current: 1
+    max: 1
+    min: 1
+  crewMembers: []
   description: >-
     BanTech has tried to make an opening in the aquatic drone market with the
     Sunfish,
@@ -26,120 +39,26 @@ system:
   fittings:
     max: 3
     value: 1
+  hardpoints:
+    max: 1
+    value: 1
   health:
     max: 8
     value: 8
-  moveType: swim
-  speed: 10
-  traumaTarget: 6
-  armor:
-    value: 1
-    max: 1
-  crew:
-    min: 1
-    current: 1
-    max: 1
-  crewMembers: []
-  tl: 5
-  mods: ''
-  power:
-    value: 1
-    max: 1
   mass:
-    value: 1
     max: 1
-  hardpoints:
     value: 1
-    max: 1
-  range: ''
   model: primitiveDrone
+  mods: ''
+  moveType: swim
+  power:
+    max: 1
+    value: 1
+  range: ''
+  speed: 10
+  tl: 5
+  traumaTarget: 6
 effects: []
-prototypeToken:
-  name: BanTech Sunfish
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/item-icons/../../drone.png
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
 items: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: V2WDzksvx2hmzzZ9
-sort: 0
 _key: '!actors!V2WDzksvx2hmzzZ9'
 

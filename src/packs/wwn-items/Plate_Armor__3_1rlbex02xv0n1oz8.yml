@@ -1,39 +1,12 @@
+_id: 1rlbex02xv0n1oz8
 name: Plate Armor +3
 type: armor
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+folder: CKqMh5qEXioiEqoU
 sort: 0
-system:
-  description: >-
-    Plate armor is an extremely expensive suit of tailored metal pieces that
-    cover both the vitals and the limbs of the wearer. Heavy armor is the
-    thickest, toughest panoply available on the market, and its bulk and noise
-    make its encumbrance apply as a penalty to Sneak or Exert checks made by the
-    wearer.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 1000
-  tl: 3
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  ac: 10
-  shield: false
-  use: false
-  meleeAc: 20
-  soak:
-    value: 0
-    max: 0
-  dr: 0
-  traumaDiePenalty: 0
-  isSubtle: false
-  isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
-  baseAc: 20
-_id: 1rlbex02xv0n1oz8
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -44,10 +17,35 @@ _stats:
   modifiedTime: 1754277456972
   lastModifiedBy: null
   exportSource: null
-folder: CKqMh5qEXioiEqoU
-flags: {}
+system:
+  ac: 10
+  baseAc: 20
+  bundle:
+    bundled: false
+  cost: 1000
+  description: >-
+    Plate armor is an extremely expensive suit of tailored metal pieces that
+    cover both the vitals and the limbs of the wearer. Heavy armor is the
+    thickest, toughest panoply available on the market, and its bulk and noise
+    make its encumbrance apply as a penalty to Sneak or Exert checks made by the
+    wearer.
+  dr: 0
+  encumbrance: 1
+  favorite: false
+  isHeavy: false
+  isSubtle: false
+  location: stowed
+  meleeAc: 20
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
+  soak:
+    max: 0
+    value: 0
+  tl: 3
+  traumaDiePenalty: 0
+  use: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!1rlbex02xv0n1oz8'
 

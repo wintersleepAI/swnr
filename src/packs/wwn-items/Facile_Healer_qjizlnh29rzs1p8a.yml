@@ -1,30 +1,12 @@
+_id: qjizlnh29rzs1p8a
 name: Facile Healer
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Your Healing Touch ability is improved;, and you no longer need to Commit
-    Effort to activate it.
-  favorite: false
-  subType: art
-  source: Healer
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Healer
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: qjizlnh29rzs1p8a
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -35,10 +17,25 @@ _stats:
   modifiedTime: 1754277456806
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Healer
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    Your Healing Touch ability is improved;, and you no longer need to Commit
+    Effort to activate it.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Healer
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!qjizlnh29rzs1p8a'
 

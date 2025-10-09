@@ -1,7 +1,12 @@
+_id: s0be2oiammr8itiy
 name: Point Defense Lasers
 type: shipDefense
 img: systems/swnr/assets/icons/game-icons.net/item-icons/strafe.svg
 folder: XJlAoDKKip1GmJb7
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.ship-defense.Item.s0be2oiammr8itiy
@@ -13,7 +18,6 @@ _stats:
   createdTime: 1757286946146
   modifiedTime: 1757286946146
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: s0be2oiammr8itiy
 system:
   broken: false
   cost: 10000
@@ -22,21 +26,17 @@ system:
     Too small to damage ships, these point defence lasers can detonate or melt
     incoming munitions, improving the ships defences against torpedoes, fractal
     impact charges, and other ammunition-based weapons.
+  destroyed: false
   effect: +2 AC versus weapons that use ammo
+  favorite: false
+  juryRigged: false
   mass: 2
   massMultiplier: true
   minClass: frigate
   power: 3
   powerMultiplier: false
-  favorite: false
   tl: 4
-  destroyed: false
-  juryRigged: false
   type: ship
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!s0be2oiammr8itiy'
 

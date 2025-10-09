@@ -1,7 +1,12 @@
+_id: UfGX6bC0WpAEZNfE
 name: Unarmed Combatant
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: rLKHK9Ka1PgqNDEq
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-foci.Item.ntgfov5a6mh7in1d
@@ -31,13 +36,8 @@ system:
     might inflict on the target. Your Trauma Die becomes 1d8 for lethal attacks.
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: UfGX6bC0WpAEZNfE
-sort: 0
 _key: '!items!UfGX6bC0WpAEZNfE'
 

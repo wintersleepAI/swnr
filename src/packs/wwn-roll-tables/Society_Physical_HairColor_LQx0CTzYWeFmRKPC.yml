@@ -1,208 +1,125 @@
 _id: LQx0CTzYWeFmRKPC
 name: Society-Physical-HairColor
+type: null
 img: icons/svg/d20-grey.svg
-description: Hair Color
-results:
-  - _id: iUbg8UWB36G3SlHb
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Night-black
-    name: ''
-    _key: '!tables.results!LQx0CTzYWeFmRKPC.iUbg8UWB36G3SlHb'
-  - _id: dONy0vhDLj3MLYEl
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Dark browns
-    name: ''
-    _key: '!tables.results!LQx0CTzYWeFmRKPC.dONy0vhDLj3MLYEl'
-  - _id: bY5Z3B0mSzafZVwt
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Lighter browns
-    name: ''
-    _key: '!tables.results!LQx0CTzYWeFmRKPC.bY5Z3B0mSzafZVwt'
-  - _id: 4rDGg92Jkpr36PJ2
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Red shades
-    name: ''
-    _key: '!tables.results!LQx0CTzYWeFmRKPC.4rDGg92Jkpr36PJ2'
-  - _id: 7pKtCVzN8uPz0b2Z
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Blonds
-    name: ''
-    _key: '!tables.results!LQx0CTzYWeFmRKPC.7pKtCVzN8uPz0b2Z'
-  - _id: tmzArAFsVQWeInoc
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: White or white-blond
-    name: ''
-    _key: '!tables.results!LQx0CTzYWeFmRKPC.tmzArAFsVQWeInoc'
-  - _id: JU1VpKc84bHozgsH
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: An unusual palette
-    name: ''
-    _key: '!tables.results!LQx0CTzYWeFmRKPC.JU1VpKc84bHozgsH'
-  - _id: iC4yDz550JZzPWBp
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They lack hair
-    name: ''
-    _key: '!tables.results!LQx0CTzYWeFmRKPC.iC4yDz550JZzPWBp'
-  - _id: Gsiib8fiHKWM3Os6
-    flags: {}
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 7
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    name: Society-Physical-HairTexture
-    documentUuid: Compendium.wwn.gm-subtables.rkP1UlBZwq4hPgzK
-    description: ''
-    _key: '!tables.results!LQx0CTzYWeFmRKPC.Gsiib8fiHKWM3Os6'
-formula: 1d8
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   better-rolltables: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.LQx0CTzYWeFmRKPC
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: Gsiib8fiHKWM3Os6
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQx0CTzYWeFmRKPC.Gsiib8fiHKWM3Os6'
+  - _id: iUbg8UWB36G3SlHb
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQx0CTzYWeFmRKPC.iUbg8UWB36G3SlHb'
+  - _id: dONy0vhDLj3MLYEl
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQx0CTzYWeFmRKPC.dONy0vhDLj3MLYEl'
+  - _id: bY5Z3B0mSzafZVwt
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQx0CTzYWeFmRKPC.bY5Z3B0mSzafZVwt'
+  - _id: 4rDGg92Jkpr36PJ2
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQx0CTzYWeFmRKPC.4rDGg92Jkpr36PJ2'
+  - _id: 7pKtCVzN8uPz0b2Z
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQx0CTzYWeFmRKPC.7pKtCVzN8uPz0b2Z'
+  - _id: tmzArAFsVQWeInoc
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQx0CTzYWeFmRKPC.tmzArAFsVQWeInoc'
+  - _id: JU1VpKc84bHozgsH
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQx0CTzYWeFmRKPC.JU1VpKc84bHozgsH'
+  - _id: iC4yDz550JZzPWBp
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQx0CTzYWeFmRKPC.iC4yDz550JZzPWBp'
 _key: '!tables!LQx0CTzYWeFmRKPC'
 

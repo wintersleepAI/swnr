@@ -1,31 +1,12 @@
+_id: sjdvxz5i9pk1gsyu
 name: Deep Sight
 type: item
+img: icons/svg/item-bag.svg
+folder: jXrFh0x6b5Auj9IZ
 sort: 0
-system:
-  description: >-
-    This substance allows an imbiber to briefly subconsciously integrate with a
-    Deep's basic structure, gaining an insight into the general layout of
-    proximate areas. The GM gives the PC a map of the four nearest rooms of
-    interest to the PC and instructions on how to get to them. For places with a
-    detailed map, a radius of 100' is discerned. Each room's original purpose is
-    revealed in a few words, though nothing can be discerned of its contents.
-    This elixir will work inside any structure that was intentionally
-    constructed by an intelligent being.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
-  cost: 0
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
-  tl: 3
-_id: sjdvxz5i9pk1gsyu
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -36,10 +17,30 @@ _stats:
   modifiedTime: 1754277456989
   lastModifiedBy: null
   exportSource: null
-folder: jXrFh0x6b5Auj9IZ
-flags: {}
+system:
+  bundle:
+    bundled: false
+  cost: 0
+  description: >-
+    This substance allows an imbiber to briefly subconsciously integrate with a
+    Deep's basic structure, gaining an insight into the general layout of
+    proximate areas. The GM gives the PC a map of the four nearest rooms of
+    interest to the PC and instructions on how to get to them. For places with a
+    detailed map, a radius of 100' is discerned. Each room's original purpose is
+    revealed in a few words, though nothing can be discerned of its contents.
+    This elixir will work inside any structure that was intentionally
+    constructed by an intelligent being.
+  encumbrance: 1
+  favorite: false
+  location: stowed
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+    diceNum: 1
+    diceSize: d20
+  tl: 3
 effects: []
-ownership:
-  default: 0
 _key: '!items!sjdvxz5i9pk1gsyu'
 

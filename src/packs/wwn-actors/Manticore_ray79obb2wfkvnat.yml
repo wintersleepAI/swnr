@@ -1,159 +1,46 @@
+_id: ray79obb2wfkvnat
 name: Manticore
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
-system:
-  ab: 7
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 16
-  hitDice: 6
-  moralScore: 9
-  saves: 12
-  skillBonus: 0
-  speed: 40
-  biography: >-
-    Monstrosities with the face of a man, the body of a lion, bat-like wings,
-    and a tail bristling with spikes. Love eating humans. Dwell in wild,
-    mountainous regions.
-  species: monster
-_id: ray79obb2wfkvnat
+ownership: {}
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456658
   modifiedTime: 1754277456658
   lastModifiedBy: null
   exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+system:
+  ab: 7
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 16
+  biography: >-
+    Monstrosities with the face of a man, the body of a lion, bat-like wings,
+    and a tail bristling with spikes. Love eating humans. Dwell in wild,
+    mountainous regions.
+  hitDice: 6
+  moralScore: 9
+  saves: 12
+  skillBonus: 0
+  species: monster
+  speed: 40
 effects: []
-prototypeToken:
-  name: Manticore
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: >-
-      systems/swnr/assets/icons/game-icons.net/creature-icons/spiked-dragon-head.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Claw
+  - _id: samp5r473g4sr1xo
+    name: Bite
     type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 1d4
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: s3ie4bgf3qidqh5u
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920824
-      modifiedTime: 1754273920824
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
+    img: null
     sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!ray79obb2wfkvnat.s3ie4bgf3qidqh5u'
-  - name: Bite
-    type: weapon
     system:
       description: ''
       cost: 0
@@ -175,26 +62,49 @@ items:
       encumbrance: 1
       quality: stock
       tl: 3
-    _id: samp5r473g4sr1xo
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920824
-      modifiedTime: 1754273920824
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!ray79obb2wfkvnat.samp5r473g4sr1xo'
-  - name: Tail Spike
+  - _id: s3ie4bgf3qidqh5u
+    name: Claw
     type: weapon
+    img: null
+    sort: 0
+    system:
+      description: ''
+      cost: 0
+      damage: 1d4
+      range:
+        normal: 0
+        max: 0
+      shock:
+        dmg: 2
+        ac: 15
+      ammo:
+        max: 0
+        type: ammo
+        burst: false
+      isTwoHanded: false
+      stat: str
+      skill: punch
+      ab: 0
+      encumbrance: 1
+      quality: stock
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!ray79obb2wfkvnat.s3ie4bgf3qidqh5u'
+  - _id: axarbawukty3ofk4
+    name: Tail Spike
+    type: weapon
+    img: null
+    sort: 0
     system:
       description: >-
         180' range. 24 in total; 2 regrow each day. Cannot fire spikes in the
@@ -218,26 +128,17 @@ items:
       encumbrance: 1
       quality: stock
       tl: 3
-    _id: axarbawukty3ofk4
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920824
-      modifiedTime: 1754273920824
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!ray79obb2wfkvnat.axarbawukty3ofk4'
-  - name: Track and Ambush
+  - _id: hsdd0swy45g8o8dn
+    name: Track and Ambush
     type: item
+    img: null
+    sort: 0
     system:
       description: Follow humans and attack with tail spikes when they stop to rest.
       cost: 0
@@ -246,23 +147,11 @@ items:
       location: stowed
       quality: stock
       tl: 3
-    _id: hsdd0swy45g8o8dn
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920824
-      modifiedTime: 1754273920824
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!ray79obb2wfkvnat.hsdd0swy45g8o8dn'
 _key: '!actors!ray79obb2wfkvnat'
 

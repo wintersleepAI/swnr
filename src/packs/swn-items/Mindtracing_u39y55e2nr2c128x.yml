@@ -1,7 +1,12 @@
+_id: u39y55e2nr2c128x
 name: Mindtracing
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: b1y9xejewpVMRdey
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-metapsionics.Item.u39y55e2nr2c128x
@@ -13,8 +18,18 @@ _stats:
   createdTime: 1757286855552
   modifiedTime: 1757286855552
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: u39y55e2nr2c128x
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: scene
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
   description: >-
     <p>The metapsion can trace back the use of psionic powers they’ve noticed in
     their presence. By Committing Effort for the scene as an Instant action,
@@ -27,29 +42,11 @@ system:
     destination. Use on a metamorphically-shaped impostor would reveal the
     biopsion responsible for the change, and so forth. These shared senses last
     for only one round and do not interfere with the adept’s other actions.</p>
-  level: 1
-  source: metapsionics
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Psychic
-      cadence: scene
-      usesCost: 1
-      itemText: ''
-      uses:
-        value: 1
-        max: 1
-      timing: manual
   favorite: false
-  subType: psychic
+  level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: metapsionics
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!u39y55e2nr2c128x'
 

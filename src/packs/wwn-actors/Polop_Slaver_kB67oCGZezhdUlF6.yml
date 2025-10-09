@@ -1,51 +1,13 @@
+_id: kB67oCGZezhdUlF6
 name: Polop Slaver
 type: npc
-system:
-  ab: 6
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 12
-  hitDice: '7'
-  moralScore: 9
-  saves: 12
-  skillBonus: 0
-  speed: 30
-  biography: >-
-    For their own equipment, Polop prefer to use living sea organisms sorceled
-    into suitable weapons and scaly armor. Their "spitters" cough bone darts
-    that function as thrown light spears, and the spears and slave-taking clubs
-    they use are of a living coral. The weapons of their leaders sweat a venom
-    that forces a victim that is struck to make a Physical save or lose their
-    next turn's Main Action. Two failed saving throws in the same scene means
-    the victim is paralyzed for the remainder of the scene. Two attacks per
-    round. Add 3 to weapon damage and shock values.
-  species: monster
-  health:
-    value: 10
-    max: 10
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 6
-  meleeAc: 10
-  meleeAb: 1
-  systemStrain:
-    value: 0
-    permanent: 0
-  pools: {}
-  cyberdecks: []
-  health_max_modified: 0
-  reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
-    value: 0
-    max: 0
+img: systems/swnr/assets/icons/blankface.png
+folder: 2TAFQtBi7ZxFWi6b
+sort: 900000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-actors.Actor.axw2fp1dnkts22qa
   duplicateSource: null
@@ -56,95 +18,48 @@ _stats:
   createdTime: 1754271303973
   modifiedTime: 1754271303973
   lastModifiedBy: lKC5x4Yf023Bizof
-folder: 2TAFQtBi7ZxFWi6b
-flags: {}
+system:
+  ab: 6
+  access:
+    max: 1
+    value: 1
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 12
+  baseSoakTotal:
+    max: 0
+    value: 0
+  biography: >-
+    For their own equipment, Polop prefer to use living sea organisms sorceled
+    into suitable weapons and scaly armor. Their "spitters" cough bone darts
+    that function as thrown light spears, and the spears and slave-taking clubs
+    they use are of a living coral. The weapons of their leaders sweat a venom
+    that forces a victim that is struck to make a Physical save or lose their
+    next turn's Main Action. Two failed saving throws in the same scene means
+    the victim is paralyzed for the remainder of the scene. Two attacks per
+    round. Add 3 to weapon damage and shock values.
+  cyberdecks: []
+  health:
+    max: 10
+    value: 10
+  health_max_modified: 0
+  hitDice: '7'
+  meleeAb: 1
+  meleeAc: 10
+  moralScore: 9
+  reaction: unknown
+  saves: 12
+  skillBonus: 0
+  species: monster
+  speed: 30
+  systemStrain:
+    permanent: 0
+    value: 0
+  traumaTarget: 6
 effects: []
-prototypeToken:
-  name: Polop Slaver
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
 items: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: kB67oCGZezhdUlF6
-sort: 900000
 _key: '!actors!kB67oCGZezhdUlF6'
 

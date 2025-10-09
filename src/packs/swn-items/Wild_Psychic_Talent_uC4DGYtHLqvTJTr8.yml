@@ -1,7 +1,12 @@
+_id: uC4DGYtHLqvTJTr8
 name: Wild Psychic Talent
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: sPYHUjJb2geTuLHp
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.foci.Item.xhk596a3mlrg9i80
@@ -41,13 +46,8 @@ system:
     you’re still restricted to level-0.
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: uC4DGYtHLqvTJTr8
-sort: 0
 _key: '!items!uC4DGYtHLqvTJTr8'
 

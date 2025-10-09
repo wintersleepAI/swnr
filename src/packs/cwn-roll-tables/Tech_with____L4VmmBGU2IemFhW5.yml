@@ -1,426 +1,245 @@
-folder: nYHvuvXEPoFPsjW4
-name: Tech with...
 _id: L4VmmBGU2IemFhW5
+name: Tech with...
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: 4DDUZWBZ642IJ3w1
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A private medical clinic
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.4DDUZWBZ642IJ3w1'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: 8YVbrjeOGzENRCrY
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Jury-rigged cyberware
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.8YVbrjeOGzENRCrY'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: YawaVmw3A7fPK9Pz
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A serious drug problem
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.YawaVmw3A7fPK9Pz'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: qarD2aAs1OsnxaKv
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A dearly-loved vehicle
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.qarD2aAs1OsnxaKv'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: KZPBXMYLJ1iQW2yo
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: An army of pet drones
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.KZPBXMYLJ1iQW2yo'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: 98CL6urYLmF8zV9P
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Tools-turned-weapons
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.98CL6urYLmF8zV9P'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: AT5r0EOsUsATlJ9m
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A love for explosives
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.AT5r0EOsUsATlJ9m'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: CQE1JhtlPVywHQ0E
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Amazing first aid skills
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.CQE1JhtlPVywHQ0E'
-  - type: text
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    _id: yboywy0Z55k0GRxh
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Incredibly illegal tech
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.yboywy0Z55k0GRxh'
-  - type: text
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    _id: MadZoFf5EILOk1W5
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Organlegger ties
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.MadZoFf5EILOk1W5'
-  - type: text
-    weight: 1
-    range:
-      - 11
-      - 11
-    drawn: false
-    _id: hO2JNiykfp03tLeD
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A secret workshop
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.hO2JNiykfp03tLeD'
-  - type: text
-    weight: 1
-    range:
-      - 12
-      - 12
-    drawn: false
-    _id: 5OFuE1jKjsEeTnXF
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A collection of vehicles
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.5OFuE1jKjsEeTnXF'
-  - type: text
-    weight: 1
-    range:
-      - 13
-      - 13
-    drawn: false
-    _id: nbSwl8GqVxRsKPa7
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A vehicle-mounted gun
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.nbSwl8GqVxRsKPa7'
-  - type: text
-    weight: 1
-    range:
-      - 14
-      - 14
-    drawn: false
-    _id: UtjaNDGOoFbCT5pN
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Heavily modded gear
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.UtjaNDGOoFbCT5pN'
-  - type: text
-    weight: 1
-    range:
-      - 15
-      - 15
-    drawn: false
-    _id: ZbIRLqtdeTRlPScH
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A stolen prototype
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.ZbIRLqtdeTRlPScH'
-  - type: text
-    weight: 1
-    range:
-      - 16
-      - 16
-    drawn: false
-    _id: b4ViogIYm5SPxGki
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A drug cooking lab
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.b4ViogIYm5SPxGki'
-  - type: text
-    weight: 1
-    range:
-      - 17
-      - 17
-    drawn: false
-    _id: PXpH6wLt0FIwYCk5
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Malfunctioning cyber
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.PXpH6wLt0FIwYCk5'
-  - type: text
-    weight: 1
-    range:
-      - 18
-      - 18
-    drawn: false
-    _id: Jc7yyfoIgznclBTL
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Black market ties
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.Jc7yyfoIgznclBTL'
-  - type: text
-    weight: 1
-    range:
-      - 19
-      - 19
-    drawn: false
-    _id: JCZV8eilyv5958IH
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Many grateful patients
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.JCZV8eilyv5958IH'
-  - type: text
-    weight: 1
-    range:
-      - 20
-      - 20
-    drawn: false
-    _id: mEoQidoMo4F0i7KC
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Several useful prentices
-    name: ''
-    _key: '!tables.results!L4VmmBGU2IemFhW5.mEoQidoMo4F0i7KC'
-replacement: true
-displayRoll: true
+folder: nYHvuvXEPoFPsjW4
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-tables.RollTable.L4VmmBGU2IemFhW5
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d20
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: 4DDUZWBZ642IJ3w1
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.4DDUZWBZ642IJ3w1'
+  - _id: 8YVbrjeOGzENRCrY
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.8YVbrjeOGzENRCrY'
+  - _id: YawaVmw3A7fPK9Pz
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.YawaVmw3A7fPK9Pz'
+  - _id: qarD2aAs1OsnxaKv
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.qarD2aAs1OsnxaKv'
+  - _id: KZPBXMYLJ1iQW2yo
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.KZPBXMYLJ1iQW2yo'
+  - _id: 98CL6urYLmF8zV9P
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.98CL6urYLmF8zV9P'
+  - _id: AT5r0EOsUsATlJ9m
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.AT5r0EOsUsATlJ9m'
+  - _id: CQE1JhtlPVywHQ0E
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.CQE1JhtlPVywHQ0E'
+  - _id: yboywy0Z55k0GRxh
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.yboywy0Z55k0GRxh'
+  - _id: MadZoFf5EILOk1W5
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.MadZoFf5EILOk1W5'
+  - _id: hO2JNiykfp03tLeD
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.hO2JNiykfp03tLeD'
+  - _id: 5OFuE1jKjsEeTnXF
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.5OFuE1jKjsEeTnXF'
+  - _id: nbSwl8GqVxRsKPa7
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 13
+      - 13
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.nbSwl8GqVxRsKPa7'
+  - _id: UtjaNDGOoFbCT5pN
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 14
+      - 14
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.UtjaNDGOoFbCT5pN'
+  - _id: ZbIRLqtdeTRlPScH
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 15
+      - 15
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.ZbIRLqtdeTRlPScH'
+  - _id: b4ViogIYm5SPxGki
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 16
+      - 16
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.b4ViogIYm5SPxGki'
+  - _id: PXpH6wLt0FIwYCk5
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 17
+      - 17
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.PXpH6wLt0FIwYCk5'
+  - _id: Jc7yyfoIgznclBTL
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 18
+      - 18
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.Jc7yyfoIgznclBTL'
+  - _id: JCZV8eilyv5958IH
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 19
+      - 19
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.JCZV8eilyv5958IH'
+  - _id: mEoQidoMo4F0i7KC
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 20
+      - 20
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!L4VmmBGU2IemFhW5.mEoQidoMo4F0i7KC'
 _key: '!tables!L4VmmBGU2IemFhW5'
 

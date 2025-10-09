@@ -1,186 +1,113 @@
-folder: n3hCUWqsIch9pU7N
-name: Fixer What Kind of Clients Do They Prefer?
 _id: 2W4uKN0RXfBTfm09
+name: Fixer What Kind of Clients Do They Prefer?
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: CxT8RlXxjusacyVL
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Corporate clients working against rivals
-    name: ''
-    _key: '!tables.results!2W4uKN0RXfBTfm09.CxT8RlXxjusacyVL'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: 0HIYTEkaTKkeEVet
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Gangs looking to get work done
-    name: ''
-    _key: '!tables.results!2W4uKN0RXfBTfm09.0HIYTEkaTKkeEVet'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: LZ8XgCJfDQBovQdH
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Locals with problems to solve
-    name: ''
-    _key: '!tables.results!2W4uKN0RXfBTfm09.LZ8XgCJfDQBovQdH'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: PIjrnk23SLdsuTkN
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Operators who need their own work done
-    name: ''
-    _key: '!tables.results!2W4uKN0RXfBTfm09.PIjrnk23SLdsuTkN'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: uhCbmZK1oOrN7JCM
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Co-ethnics or co-religionists with issues
-    name: ''
-    _key: '!tables.results!2W4uKN0RXfBTfm09.uhCbmZK1oOrN7JCM'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: D4HNegiqOphTkcBm
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Members of their associated organization
-    name: ''
-    _key: '!tables.results!2W4uKN0RXfBTfm09.D4HNegiqOphTkcBm'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: YlRJ8MpZY8jfkzZu
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Foreign agents of outside powers
-    name: ''
-    _key: '!tables.results!2W4uKN0RXfBTfm09.YlRJ8MpZY8jfkzZu'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: XyU1hK2ikb607qUO
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Local gov agencies needing deniables
-    name: ''
-    _key: '!tables.results!2W4uKN0RXfBTfm09.XyU1hK2ikb607qUO'
-replacement: true
-displayRoll: true
+folder: n3hCUWqsIch9pU7N
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-tables.RollTable.2W4uKN0RXfBTfm09
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d8
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: CxT8RlXxjusacyVL
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!2W4uKN0RXfBTfm09.CxT8RlXxjusacyVL'
+  - _id: 0HIYTEkaTKkeEVet
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!2W4uKN0RXfBTfm09.0HIYTEkaTKkeEVet'
+  - _id: LZ8XgCJfDQBovQdH
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!2W4uKN0RXfBTfm09.LZ8XgCJfDQBovQdH'
+  - _id: PIjrnk23SLdsuTkN
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!2W4uKN0RXfBTfm09.PIjrnk23SLdsuTkN'
+  - _id: uhCbmZK1oOrN7JCM
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!2W4uKN0RXfBTfm09.uhCbmZK1oOrN7JCM'
+  - _id: D4HNegiqOphTkcBm
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!2W4uKN0RXfBTfm09.D4HNegiqOphTkcBm'
+  - _id: YlRJ8MpZY8jfkzZu
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!2W4uKN0RXfBTfm09.YlRJ8MpZY8jfkzZu'
+  - _id: XyU1hK2ikb607qUO
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!2W4uKN0RXfBTfm09.XyU1hK2ikb607qUO'
 _key: '!tables!2W4uKN0RXfBTfm09'
 

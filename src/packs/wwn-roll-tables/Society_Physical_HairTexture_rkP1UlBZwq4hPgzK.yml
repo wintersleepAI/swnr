@@ -1,187 +1,114 @@
 _id: rkP1UlBZwq4hPgzK
 name: Society-Physical-HairTexture
+type: null
 img: icons/svg/d20-grey.svg
-description: Hair Texture
-results:
-  - _id: KxuEgRxVh11NtMl5
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Very tightly-curled
-    name: ''
-    _key: '!tables.results!rkP1UlBZwq4hPgzK.KxuEgRxVh11NtMl5'
-  - _id: obtKtWjMlTSEu2PZ
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Dense and curled
-    name: ''
-    _key: '!tables.results!rkP1UlBZwq4hPgzK.obtKtWjMlTSEu2PZ'
-  - _id: V7q5Kfr9QSFDM0bD
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Slightly wavy
-    name: ''
-    _key: '!tables.results!rkP1UlBZwq4hPgzK.V7q5Kfr9QSFDM0bD'
-  - _id: IUFBaAcIeFoolJy2
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Stiff and straight
-    name: ''
-    _key: '!tables.results!rkP1UlBZwq4hPgzK.IUFBaAcIeFoolJy2'
-  - _id: loN4hKRTxp6aTD0K
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Thick and wavy
-    name: ''
-    _key: '!tables.results!rkP1UlBZwq4hPgzK.loN4hKRTxp6aTD0K'
-  - _id: reqhZIXEr0A5Vada
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Thin and fine
-    name: ''
-    _key: '!tables.results!rkP1UlBZwq4hPgzK.reqhZIXEr0A5Vada'
-  - _id: qiUmbcVqw3bzleOG
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Thick and flowing
-    name: ''
-    _key: '!tables.results!rkP1UlBZwq4hPgzK.qiUmbcVqw3bzleOG'
-  - _id: H88feTE4clnoijN1
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Scant and delicate
-    name: ''
-    _key: '!tables.results!rkP1UlBZwq4hPgzK.H88feTE4clnoijN1'
-formula: 1d8
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   better-rolltables: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.rkP1UlBZwq4hPgzK
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: KxuEgRxVh11NtMl5
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!rkP1UlBZwq4hPgzK.KxuEgRxVh11NtMl5'
+  - _id: obtKtWjMlTSEu2PZ
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!rkP1UlBZwq4hPgzK.obtKtWjMlTSEu2PZ'
+  - _id: V7q5Kfr9QSFDM0bD
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!rkP1UlBZwq4hPgzK.V7q5Kfr9QSFDM0bD'
+  - _id: IUFBaAcIeFoolJy2
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!rkP1UlBZwq4hPgzK.IUFBaAcIeFoolJy2'
+  - _id: loN4hKRTxp6aTD0K
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!rkP1UlBZwq4hPgzK.loN4hKRTxp6aTD0K'
+  - _id: reqhZIXEr0A5Vada
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!rkP1UlBZwq4hPgzK.reqhZIXEr0A5Vada'
+  - _id: qiUmbcVqw3bzleOG
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!rkP1UlBZwq4hPgzK.qiUmbcVqw3bzleOG'
+  - _id: H88feTE4clnoijN1
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!rkP1UlBZwq4hPgzK.H88feTE4clnoijN1'
 _key: '!tables!rkP1UlBZwq4hPgzK'
 

@@ -1,7 +1,36 @@
+_id: jslkz77h6vnx76dk
 name: Teleport
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 106250
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457087
+  modifiedTime: 1754277913362
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     Duration: Instant Range: 10' The caster or a chosen creature vanishes and
     reappears at a location of the caster's choosing. ▶ Gear: The subject is
@@ -25,46 +54,14 @@ system:
     descriptions. ▶ Moderate: A location that the caster has visited often or
     has studied via scrying for several weeks. ▶ Exact: A location that the
     caster has made a detailed study of, in person.
+  duration: Instant
   favorite: false
-  subType: spell
-  source: Mage
   level: 5
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Instant
-  save: mental
   range: 10'
-  skill: null
-_id: jslkz77h6vnx76dk
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457087
-  modifiedTime: 1754277913362
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: mental
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!jslkz77h6vnx76dk'
 

@@ -1,7 +1,12 @@
+_id: kfsg37ug6v1plsve
 name: Precognitive nav chamber
 type: shipFitting
 img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
 folder: FSb3IGBn6eTDHX2S
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.ship-fitting.Item.kfsg37ug6v1plsve
@@ -13,7 +18,6 @@ _stats:
   createdTime: 1757286946146
   modifiedTime: 1757286946146
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: kfsg37ug6v1plsve
 system:
   broken: false
   cost: 100000
@@ -26,21 +30,17 @@ system:
     spike drill check of difficulty 9 or less. On a failed check, add 2 to the
     Spike Drive Mishap roll, limiting the potential damage. On drilling in to
     the destination system, the psychic has expended all Effort in the process.
+  destroyed: false
   effect: Allows a precog to assist in navigation
+  favorite: false
+  juryRigged: false
   mass: 0
   massMultiplier: false
   minClass: frigate
   power: 1
   powerMultiplier: false
-  favorite: false
   tl: 4
-  destroyed: false
-  juryRigged: false
   type: ship
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!kfsg37ug6v1plsve'
 
