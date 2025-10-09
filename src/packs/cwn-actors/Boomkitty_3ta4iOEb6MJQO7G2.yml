@@ -76,14 +76,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 0
         suppress: false
         type: none
         value: 0
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 100
       damage: 2d6
       description: >-
@@ -95,45 +103,33 @@ items:
         each point of melee AC the target has above 14 reduces the final damage
         total by one point, possibly down to zero.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 30
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: dex
       trauma:
         die: 1d8
         rating: 2
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
     flags: {}
     folder: null

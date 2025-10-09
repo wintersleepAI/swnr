@@ -65,6 +65,16 @@ items:
     img: null
     sort: 0
     system:
+      ac: 16
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 4000
       description: >-
         Grand plate is so finely-jointed that a weapon must either be very large
         or very armor-piercing to harm the wearer; they're immune to non-magical
@@ -75,33 +85,23 @@ items:
         armor is the thickest, toughest panoply available on the market, and its
         bulk and noise make its encumbrance apply as a penalty to Sneak or Exert
         checks made by the wearer.
-      cost: 4000
-      ac: 16
-      meleeAc: 16
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 3
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      use: false
       dr: 0
+      encumbrance: 3
+      favorite: false
       isHeavy: false
+      isSubtle: false
+      location: stowed
+      meleeAc: 16
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: false
+      soak:
+        max: 0
+        value: 0
+      tl: 3
+      traumaDiePenalty: 0
+      use: false
     effects: []
     flags: {}
     folder: null
@@ -114,6 +114,16 @@ items:
     img: null
     sort: 0
     system:
+      ac: 1
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 20
       description: >-
         Shields come in two general varieties. Small ones, often made of
         costlier metal, can be strapped to the wearer's arm and allow them to
@@ -124,33 +134,23 @@ items:
         wearing equal or better armor the shield grants a +1 bonus to their AC.
         Shields allow the bearer to ignore the first instance of Shock they
         might otherwise suffer in a round.
-      cost: 20
-      ac: 1
-      meleeAc: 1
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: true
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      use: false
       dr: 0
+      encumbrance: 1
+      favorite: false
       isHeavy: false
+      isSubtle: false
+      location: stowed
+      meleeAc: 1
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: true
+      soak:
+        max: 0
+        value: 0
+      tl: 3
+      traumaDiePenalty: 0
+      use: false
     effects: []
     flags: {}
     folder: null

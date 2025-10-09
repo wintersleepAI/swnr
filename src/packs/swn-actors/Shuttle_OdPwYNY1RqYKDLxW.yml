@@ -106,16 +106,16 @@ items:
         This fitting must be put in place when the ship is built, and cannot be
         installed on cruiser-class or larger ships. A ship designed for
         atmospheric flight can land on most solid or aqueous surfaces.
+      destroyed: false
       effect: 'Can land: frigates and fighters only.'
+      favorite: false
+      juryRigged: false
       mass: 1
       massMultiplier: true
       minClass: fighter
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
     flags: {}
@@ -138,16 +138,16 @@ items:
         time, the maximum crew rating of the ship increases by 100% of its
         normal maximum. Thus, a free merchant who installs this twice can have a
         maximum complement of 18 people.
+      destroyed: false
       effect: 'Can land: frigates and fighters only.'
+      favorite: false
+      juryRigged: false
       mass: 1
       massMultiplier: true
       minClass: fighter
       power: 1
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
     flags: {}

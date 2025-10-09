@@ -51,6 +51,8 @@ items:
     img: null
     sort: 0
     system:
+      ac: 14
+      cost: 250
       description: >-
         Mail shirts are usually of iron or steel wire, though bronze and other
         more exotic materials are not unknown. Such shirts cover only the vitals
@@ -58,18 +60,16 @@ items:
         armor is significantly noisier and more overt; it cannot be worn
         discreetly and applies its encumbrance as a penalty to any physical
         Sneak rolls made by the wearer.
-      cost: 250
-      ac: 14
-      meleeAc: 14
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: false
       encumbrance: 1
+      isSubtle: false
+      meleeAc: 14
       quality: stock
+      shield: false
+      soak:
+        max: 0
+        value: 0
       tl: 3
+      traumaDiePenalty: 0
     effects: []
     flags: {}
     folder: null
@@ -82,6 +82,8 @@ items:
     img: null
     sort: 0
     system:
+      ac: 1
+      cost: 10
       description: >-
         Shields come in two general varieties. Small ones, often made of
         costlier metal, can be strapped to the wearer's arm and allow them to
@@ -92,18 +94,16 @@ items:
         wearing equal or better armor the shield grants a +1 bonus to their AC.
         Shields allow the bearer to ignore the first instance of Shock they
         might otherwise suffer in a round.
-      cost: 10
-      ac: 1
-      meleeAc: 1
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: true
       encumbrance: 1
+      isSubtle: false
+      meleeAc: 1
       quality: stock
+      shield: true
+      soak:
+        max: 0
+        value: 0
       tl: 3
+      traumaDiePenalty: 0
     effects: []
     flags: {}
     folder: null
@@ -116,28 +116,28 @@ items:
     img: null
     sort: 0
     system:
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 5
+      damage: 1d6
       description: >-
         Spears, and their longer cousin the pike, are common military weapons
         throughout the Latter Earth. Lighter spears are effective thrown
         weapons, while heavier two-handed versions penetrate armor well.
-      cost: 5
-      damage: 1d6
-      range:
-        normal: 30
-        max: 60
-      shock:
-        dmg: 2
-        ac: 13
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: dex
-      skill: stab
-      ab: 0
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 60
+        normal: 30
+      shock:
+        ac: 13
+        dmg: 2
+      skill: stab
+      stat: dex
       tl: 3
     effects: []
     flags: {}

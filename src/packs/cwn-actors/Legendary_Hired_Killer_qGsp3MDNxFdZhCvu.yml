@@ -88,8 +88,8 @@ items:
         shot is physically impossible.
       favorite: false
       level: 2
-      type: focus
       poolsGranted: []
+      type: focus
     effects: []
     flags: {}
     folder: null
@@ -102,6 +102,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Touch
       cost: 750000
       description: >-
@@ -109,13 +110,12 @@ items:
         gains a bonus non-cyberspace Main Action and bonus Move Action. By
         accepting one System Strain, this ability can be used as an Instant
         action.
-      effect: 2/scene, bonus Main and Move
-      strain: 4
-      type: Nerve
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: 2/scene, bonus Main and Move
+      favorite: false
+      strain: 4
+      tl: 4
+      type: Nerve
     effects: []
     flags: {}
     folder: null
@@ -128,6 +128,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Medical
       cost: 20000
       description: >-
@@ -138,13 +139,12 @@ items:
         range who does not suspect its existence, a normal hit roll is made; on
         a miss, it does full normal damage anyway, and on a hit, the damage is
         doubled. It can be used for Execution Attacks.
-      effect: Surprise light pistol attack
-      strain: 0.5
-      type: Head
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Surprise light pistol attack
+      favorite: false
+      strain: 0.5
+      tl: 4
+      type: Head
     effects: []
     flags: {}
     folder: null
@@ -157,6 +157,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Medical
       cost: 10000
       description: >-
@@ -167,13 +168,12 @@ items:
         Main Action to shift from one to another. Note that it is a relatively
         simple procedure to alter a person's retinal pattern, so an important
         target alerted to the imposture may end up changing their imprint.
-      effect: Mimic retinal patterns
-      strain: 1
-      type: Sensory
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Mimic retinal patterns
+      favorite: false
+      strain: 1
+      tl: 4
+      type: Sensory
     effects: []
     flags: {}
     folder: null
@@ -186,6 +186,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Medical
       cost: 5000
       description: >-
@@ -194,13 +195,12 @@ items:
         and infrared tripwires very obvious. The user gains a +1 bonus on any
         Notice checks to detect the presence of thermally-unshielded living
         creatures.
-      effect: See heat patterns in the area
-      strain: 0.5
-      type: Sensory
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: See heat patterns in the area
+      favorite: false
+      strain: 0.5
+      tl: 4
+      type: Sensory
     effects: []
     flags: {}
     folder: null
@@ -213,19 +213,19 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Medical
       cost: 10000
       description: >-
         The user's vision can zoom in on distant targets. The user can see
         objects within 500 meters as if they were standing next to them. The hit
         penalty for a ranged weapon's long range is eliminated.
-      effect: 500m telescopic vision
-      strain: 0.5
-      type: Sensory
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: 500m telescopic vision
+      favorite: false
+      strain: 0.5
+      tl: 4
+      type: Sensory
     effects: []
     flags: {}
     folder: null
@@ -243,8 +243,8 @@ items:
         Your base Trauma Target increases by +1, turning the base 6 into 7.
       favorite: false
       level: 0
-      type: edge
       poolsGranted: []
+      type: edge
     effects: []
     flags: {}
     folder: null
@@ -264,8 +264,8 @@ items:
         levels, rounded up. Any Trauma Die you roll gains a +1 bonus.
       favorite: false
       level: 0
-      type: edge
       poolsGranted: []
+      type: edge
     effects: []
     flags: {}
     folder: null
@@ -278,6 +278,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Medical
       cost: 100000
       description: >-
@@ -285,13 +286,12 @@ items:
         that don't also automatically win initiative; if both have this ability,
         initiative is rolled without modifications. The user can act normally
         during surprise rounds.
-      effect: Automatically win initiative
-      strain: 2
-      type: Nerve
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Automatically win initiative
+      favorite: false
+      strain: 2
+      tl: 4
+      type: Nerve
     effects: []
     flags: {}
     folder: null
@@ -304,6 +304,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Touch
       cost: 15000
       description: >-
@@ -311,13 +312,12 @@ items:
         stick to vertical or overhanging surfaces, their full weight supported
         by one arm. They can climb such surfaces at their full movement rate
         with one free hand.
-      effect: Climb sheer or vertical surfaces
-      strain: 0.5
-      type: Limb
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Climb sheer or vertical surfaces
+      favorite: false
+      strain: 0.5
+      tl: 4
+      type: Limb
     effects: []
     flags: {}
     folder: null
@@ -336,8 +336,8 @@ items:
         miss
       favorite: false
       level: 0
-      type: edge
       poolsGranted: []
+      type: edge
     effects: []
     flags: {}
     folder: null

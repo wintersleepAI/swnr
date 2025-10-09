@@ -44,25 +44,25 @@ items:
     img: null
     sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 1
-        ac: 13
+      ab: 0
       ammo:
+        burst: false
         max: 0
         type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
+      cost: 0
+      damage: 1d6
+      description: ''
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 13
+        dmg: 1
+      skill: punch
+      stat: str
       tl: 3
     effects: []
     flags: {}

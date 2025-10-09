@@ -69,38 +69,38 @@ items:
     img: null
     sort: 0
     system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
       description: >-
         Certain religious symbols, lines of salt, emblems of natural law, or
         like icons repel it. When presented with the symbol it must make a
         Mental save to approach it. The aversion is broken if the icon's bearer
         or their allies attack it.
-      cost: 0
-      quantity: 1
       encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
       favorite: false
-      bundle:
-        bundled: false
+      location: stowed
       noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null
@@ -113,38 +113,38 @@ items:
     img: null
     sort: 0
     system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
       description: >-
         Once per scene it can beguile a creature with its gaze on a failed
         Mental save. The target becomes its helpless slave until separated from
         it for a full week. It cannot beguile creatures with more hit dice or
         levels than it has.
-      cost: 0
-      quantity: 1
       encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
       favorite: false
-      bundle:
-        bundled: false
+      location: stowed
       noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null
@@ -157,36 +157,36 @@ items:
     img: null
     sort: 0
     system:
-      description: >-
-        Foes hit by it must make a Physical save or be paralyzed for 1d4+1
-        rounds, stunned by its own dislocation from natural law.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
       bundle:
         bundled: false
-      noEncReadied: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      description: >-
+        Foes hit by it must make a Physical save or be paralyzed for 1d4+1
+        rounds, stunned by its own dislocation from natural law.
+      encumbrance: 1
+      favorite: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null
@@ -199,37 +199,37 @@ items:
     img: null
     sort: 0
     system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
       description: >-
         Foes hit by it are enfeebled, taking a cumulative -2 penalty to hit
         rolls and-1 to damage rolls, Shock, and skill checks for the rest of the
         scene.
-      cost: 0
-      quantity: 1
       encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
       favorite: false
-      bundle:
-        bundled: false
+      location: stowed
       noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null
@@ -242,37 +242,37 @@ items:
     img: null
     sort: 0
     system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
       description: >-
         Weapons of silver, green wood, or other specific apotropaic material
         inflict maximum damage to it on a hit and always inflict Shock
         regardless of AC.
-      cost: 0
-      quantity: 1
       encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
       favorite: false
-      bundle:
-        bundled: false
+      location: stowed
       noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null
@@ -285,37 +285,37 @@ items:
     img: null
     sort: 0
     system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
       description: >-
         It is a shade or specter, unable to be touched by non-magical objects or
         energies. It can manipulate objects important to it in life or kill with
         its icy touch.
-      cost: 0
-      quantity: 1
       encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
       favorite: false
-      bundle:
-        bundled: false
+      location: stowed
       noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null
@@ -328,55 +328,52 @@ items:
     img: null
     sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 1d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 0
-        ac: 15
+      ab: 0
       ammo:
-        max: 0
-        type: ammo
         burst: false
         longReload: false
+        max: 0
         suppress: false
+        type: ammo
         value: 10
-        current: null
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
       bundle:
         bundled: false
-      location: stowed
-      noEncReadied: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
-      secondStat: null
+        isContainer: false
+        isOpen: true
+      cost: 0
+      damage: 1d8
+      description: ''
+      encumbrance: 1
+      favorite: false
+      isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      range:
+        max: 0
+        normal: 0
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
+      shock:
+        ac: 15
+        dmg: 0
+      skill: punch
       skillBoostsDamage: false
       skillBoostsShock: false
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
+      stat: str
+      tl: 3
       trauma:
         die: 1d6
-      isNonLethal: false
-      isMelee: false
     effects: []
     flags: {}
     folder: null
@@ -389,36 +386,36 @@ items:
     img: null
     sort: 0
     system:
-      description: >-
-        If it hits with at least one of its attacks, it gets an immediate bonus
-        attack against the target.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
       bundle:
         bundled: false
-      noEncReadied: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      description: >-
+        If it hits with at least one of its attacks, it gets an immediate bonus
+        attack against the target.
+      encumbrance: 1
+      favorite: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null
@@ -431,37 +428,37 @@ items:
     img: null
     sort: 0
     system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
       description: >-
         It must eat a pound of human flesh or drink a pint of human blood every
         week or lose a quarter of its maximum hit points. At zero hit points it
         dies or goes inert until fresh food comes near.
-      cost: 0
-      quantity: 1
       encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
       favorite: false
-      bundle:
-        bundled: false
+      location: stowed
       noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null
@@ -474,36 +471,36 @@ items:
     img: null
     sort: 0
     system:
-      description: >-
-        Exposure to sunlight, running water, or some specific other emblem of
-        natural law inflicts 1d10 damage on it each round.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
       bundle:
         bundled: false
-      noEncReadied: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      description: >-
+        Exposure to sunlight, running water, or some specific other emblem of
+        natural law inflicts 1d10 damage on it each round.
+      encumbrance: 1
+      favorite: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null
@@ -516,36 +513,36 @@ items:
     img: null
     sort: 0
     system:
-      description: >-
-        Enemies must make a Mental save or lose their first turn's Main Action
-        as they summon their nerve. Morale checks it induces are made at -2.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
       bundle:
         bundled: false
-      noEncReadied: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      description: >-
+        Enemies must make a Mental save or lose their first turn's Main Action
+        as they summon their nerve. Morale checks it induces are made at -2.
+      encumbrance: 1
+      favorite: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null
@@ -558,36 +555,36 @@ items:
     img: null
     sort: 0
     system:
-      description: >-
-        It cannot die by violence. Only the right act, weapon, object
-        destruction, or ritual can end it.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
       bundle:
         bundled: false
-      noEncReadied: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      description: >-
+        It cannot die by violence. Only the right act, weapon, object
+        destruction, or ritual can end it.
+      encumbrance: 1
+      favorite: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null

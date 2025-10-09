@@ -72,14 +72,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 8
         suppress: false
         type: ammo
         value: 7
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 200
       damage: 1d8
       description: >-
@@ -88,45 +96,33 @@ items:
         possible with a low-caliber round, while others like to have a little
         more certainty in dropping the targets they hit.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: readied
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 100
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: dex
       trauma:
         die: 1d6
         rating: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: readied
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
     flags: {}
     folder: null
@@ -139,57 +135,51 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
-      description: ''
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      encumbrance: 1
-      cost: 0
-      tl: null
-      location: readied
-      quality: stock
-      noEncReadied: false
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      shock:
-        dmg: 1
-        ac: 15
       ab: 0
       ammo:
+        burst: false
         longReload: false
+        max: 10
         suppress: false
         type: none
-        max: 10
         value: 10
-        burst: false
-        current: null
-      range:
-        normal: 1
-        max: 2
-      damage: 1d4
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma:
-        die: 1d6
-        rating: null
-      isTwoHanded: false
-      isNonLethal: false
+      bundle:
+        bundled: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      damage: 1d4
+      description: ''
+      encumbrance: 1
+      favorite: false
       isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
+      location: readied
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      range:
+        max: 2
+        normal: 1
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
+      shock:
+        ac: 15
+        dmg: 1
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      stat: dex
+      trauma:
+        die: 1d6
     effects: []
     flags: {}
     folder: null
@@ -203,38 +193,36 @@ items:
     sort: 0
     system:
       ac: 10
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 25
       description: >-
         Some bold, impoverished, or highly fashionable people still insist on
         wearing clothing that has no functional use as armor.
+      dr: 0
       encumbrance: 0
+      favorite: false
       isHeavy: false
       isSubtle: true
+      location: readied
       meleeAc: 10
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: false
       shieldACBonus: 0
       shieldMeleeACBonus: 0
       soak:
         max: 0
         value: 0
       traumaDiePenalty: 0
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: readied
-      quality: stock
-      noEncReadied: false
-      shield: false
       use: false
-      dr: 0
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
     effects: []
     flags: {}
     folder: null

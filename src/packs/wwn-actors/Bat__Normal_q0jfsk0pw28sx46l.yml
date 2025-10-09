@@ -43,14 +43,14 @@ items:
     img: null
     sort: 0
     system:
+      cost: 0
       description: >-
         ▶ Swarm: 10 bats can swarm around a target's head, causing confusion:
         &ndash;2 to attack rolls and saves; unable to cast spells.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}

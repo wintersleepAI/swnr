@@ -70,14 +70,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 0
         suppress: false
         type: none
         value: 0
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 200
       damage: 1d6+4
       description: >-
@@ -90,45 +98,33 @@ items:
         some enterprising serial killers and gang enforcers inking exclusivity
         deals with particular knife manufacturers.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 20
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: dex
       shock:
         ac: 15
         dmg: 2
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: str
       trauma:
         die: 1d8
         rating: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
     flags: {}
     folder: null
@@ -142,38 +138,36 @@ items:
     sort: 0
     system:
       ac: 16
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 1000
       description: >-
         The bulky plates and heavy ballistic weaves of this outfit are disguised
         as drapes and fashion elements.
+      dr: 0
       encumbrance: 2
+      favorite: false
       isHeavy: false
       isSubtle: true
+      location: stowed
       meleeAc: 14
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: false
       shieldACBonus: 0
       shieldMeleeACBonus: 0
       soak:
         max: 5
         value: 5
       traumaDiePenalty: 1
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      shield: false
       use: true
-      dr: 0
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
     effects: []
     flags: {}
     folder: null
@@ -186,6 +180,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Touch
       cost: 750000
       description: >-
@@ -193,13 +188,12 @@ items:
         gains a bonus non-cyberspace Main Action and bonus Move Action. By
         accepting one System Strain, this ability can be used as an Instant
         action.
-      effect: 2/scene, bonus Main and Move
-      strain: 4
-      type: Nerve
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: 2/scene, bonus Main and Move
+      favorite: false
+      strain: 4
+      tl: 4
+      type: Nerve
     effects: []
     flags: {}
     folder: null
@@ -217,8 +211,8 @@ items:
         Your base Trauma Target increases by +1, turning the base 6 into 7.
       favorite: false
       level: 0
-      type: edge
       poolsGranted: []
+      type: edge
     effects: []
     flags: {}
     folder: null
@@ -231,14 +225,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 15
         suppress: false
         type: ammo
         value: 15
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 200
       damage: 1d6+4
       description: >-
@@ -247,45 +249,33 @@ items:
         possible with a low-caliber round, while others like to have a little
         more certainty in dropping the targets they hit.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 80
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: dex
       trauma:
         die: 1d8
         rating: 2
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
     flags: {}
     folder: null

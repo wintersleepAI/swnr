@@ -61,37 +61,37 @@ items:
     img: null
     sort: 0
     system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
       description: >-
         Blandishing voice bends the mind of a single target on a failed Mental
         save, making it friendly toward the Tuhulot until the creature does
         something obviously hostile.
-      cost: 0
-      quantity: 1
       encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
       favorite: false
-      bundle:
-        bundled: false
+      location: stowed
       noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null
@@ -104,55 +104,52 @@ items:
     img: null
     sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 2d8
-      range:
-        normal: 100
-        max: 100
-      shock:
-        dmg: 4
-        ac: 15
+      ab: 0
       ammo:
-        max: 0
-        type: ammo
         burst: false
         longReload: false
+        max: 0
         suppress: false
+        type: ammo
         value: 10
-        current: null
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
       bundle:
         bundled: false
-      location: stowed
-      noEncReadied: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
-      secondStat: null
+        isContainer: false
+        isOpen: true
+      cost: 0
+      damage: 2d8
+      description: ''
+      encumbrance: 1
+      favorite: false
+      isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      range:
+        max: 100
+        normal: 100
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
+      shock:
+        ac: 15
+        dmg: 4
+      skill: punch
       skillBoostsDamage: false
       skillBoostsShock: false
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
+      stat: str
+      tl: 3
       trauma:
         die: 1d6
-      isNonLethal: false
-      isMelee: false
     effects: []
     flags: {}
     folder: null
@@ -165,37 +162,37 @@ items:
     img: null
     sort: 0
     system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
       description: >-
         Scrying gaze allows them to observe a particular point within ten miles
         for up to a scene as if they were standing there, assuming magical wards
         don't forfend them.
-      cost: 0
-      quantity: 1
       encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
       favorite: false
-      bundle:
-        bundled: false
+      location: stowed
       noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null
@@ -208,37 +205,37 @@ items:
     img: null
     sort: 0
     system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
       description: >-
         Sidewards step lets them teleport to any location within a mile they've
         occupied before, provided neither their current location nor their
         destination is directly illuminated by sunlight.
-      cost: 0
-      quantity: 1
       encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
       favorite: false
-      bundle:
-        bundled: false
+      location: stowed
       noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null
@@ -251,6 +248,15 @@ items:
     img: null
     sort: 0
     system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
       description: >-
         Soul consumption power allows them to eat the memories and identity of a
         helpless sentient victim over the course of a torturous hour. The victim
@@ -259,33 +265,24 @@ items:
         of its former personality erased. The only way to cure the victim is for
         the Tuhulot to give back the soul, a thing which it will do only for a
         suitable price.
-      cost: 0
-      quantity: 1
       encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
       favorite: false
-      bundle:
-        bundled: false
+      location: stowed
       noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
+      quality: stock
+      quantity: 1
       roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
         diceNum: 1
         diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
+      tl: 3
       uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
         max: 1
         value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
     effects: []
     flags: {}
     folder: null

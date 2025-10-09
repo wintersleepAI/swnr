@@ -59,6 +59,16 @@ items:
     img: null
     sort: 0
     system:
+      ac: 16
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 500
       description: >-
         Scaled armor includes both armor of metal scales on a flexible backing,
         brigandine, jacks of plate, and other armor made up of small, connected
@@ -66,33 +76,23 @@ items:
         suits, albeit flexible ones. Medium armor is significantly noisier and
         more overt; it cannot be worn discreetly and applies its encumbrance as
         a penalty to any physical Sneak rolls made by the wearer.
-      cost: 500
-      ac: 16
-      meleeAc: 16
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 3
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      use: false
       dr: 0
+      encumbrance: 3
+      favorite: false
       isHeavy: false
+      isSubtle: false
+      location: stowed
+      meleeAc: 16
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: false
+      soak:
+        max: 0
+        value: 0
+      tl: 3
+      traumaDiePenalty: 0
+      use: false
     effects: []
     flags: {}
     folder: null

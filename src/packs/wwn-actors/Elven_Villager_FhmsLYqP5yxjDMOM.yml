@@ -59,6 +59,16 @@ items:
     img: null
     sort: 0
     system:
+      ac: 12
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 50
       description: >-
         Buff coats are long coats of thick, supple hide, sometimes worn to
         cushion the bite of heavier armor and sometimes sported as ornamented
@@ -66,33 +76,23 @@ items:
         may be decidedly heavy, but it is loose and flexible enough to offer
         minimal hindrance to the wearer's actions. Some varieties are also
         discreet enough to be worn politely in common society.
-      cost: 50
-      ac: 12
-      meleeAc: 12
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      use: false
       dr: 0
+      encumbrance: 1
+      favorite: false
       isHeavy: false
+      isSubtle: false
+      location: stowed
+      meleeAc: 12
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: false
+      soak:
+        max: 0
+        value: 0
+      tl: 3
+      traumaDiePenalty: 0
+      use: false
     effects: []
     flags: {}
     folder: null

@@ -59,6 +59,16 @@ items:
     img: null
     sort: 0
     system:
+      ac: 14
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 250
       description: >-
         Mail shirts are usually of iron or steel wire, though bronze and other
         more exotic materials are not unknown. Such shirts cover only the vitals
@@ -66,33 +76,23 @@ items:
         armor is significantly noisier and more overt; it cannot be worn
         discreetly and applies its encumbrance as a penalty to any physical
         Sneak rolls made by the wearer.
-      cost: 250
-      ac: 14
-      meleeAc: 14
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      use: false
       dr: 0
+      encumbrance: 1
+      favorite: false
       isHeavy: false
+      isSubtle: false
+      location: stowed
+      meleeAc: 14
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: false
+      soak:
+        max: 0
+        value: 0
+      tl: 3
+      traumaDiePenalty: 0
+      use: false
     effects: []
     flags: {}
     folder: null

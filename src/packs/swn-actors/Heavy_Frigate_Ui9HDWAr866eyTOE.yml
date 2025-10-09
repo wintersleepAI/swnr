@@ -112,16 +112,16 @@ items:
         integral maintenance facilities for its upkeep. There is enough gear
         available to outfit the entire crew for normal use, but giving it away
         or losing it in use may deplete it.
+      destroyed: false
       effect: Weapons and armor for the crew
+      favorite: false
+      juryRigged: false
       mass: 0
       massMultiplier: true
       minClass: fighter
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
     flags: {}
@@ -145,16 +145,16 @@ items:
         empty space to either make an assault on a doubtless heavily-guarded
         airlock or cut their way in through the hull with laser cutters and half
         an hour of work.
+      destroyed: false
       effect: Allows boarding of a hostile disabled ship
+      favorite: false
+      juryRigged: false
       mass: 1
       massMultiplier: true
       minClass: fighter
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
     flags: {}
@@ -178,16 +178,16 @@ items:
         assorted Heavy weapons to clear the landing zone, and can be treated as
         flight-capable gravtanks for purposes of combat. This fitting can be
         purchased multiple times.
+      destroyed: false
       effect: Upgrade a spike drive to drive-2 rating
+      favorite: false
+      juryRigged: false
       mass: 2
       massMultiplier: true
       minClass: frigate
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
     flags: {}
@@ -209,16 +209,16 @@ items:
         distance. Installing fuel bunkers allows the ship to carry one
         additional load of fuel. This fitting can be installed multiple times
         for ships that wish to minimize fueling.
+      destroyed: false
       effect: Adds fuel for one more drill between fuelings
+      favorite: false
+      juryRigged: false
       mass: 1
       massMultiplier: true
       minClass: fighter
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
     flags: {}
@@ -241,16 +241,16 @@ items:
         four days of processing and refinement, but completely refuels the ship.
         Such fittings are common on explorer craft that cannot expect to find
         refueling stations.
+      destroyed: false
       effect: Ship can scoop fuel from a gas giant or star
+      favorite: false
+      juryRigged: false
       mass: 2
       massMultiplier: true
       minClass: fighter
       power: 2
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
     flags: {}
@@ -271,17 +271,17 @@ items:
         A complex glazing process can harden the surface of a ship’s armor to
         more effectively shed incoming attacks, decreasing the armor-piercing
         quality of any hit by 5.
+      destroyed: false
+      effect: ''
+      favorite: false
+      juryRigged: false
       mass: 2
       massMultiplier: false
       minClass: fighter
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
-      effect: ''
     effects: []
     flags: {}
     folder: null
@@ -294,6 +294,11 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
     sort: 0
     system:
+      ab: 0
+      ammo:
+        max: 4
+        type: none
+        value: 4
       broken: false
       cost: 700000
       costMultiplier: false
@@ -301,30 +306,25 @@ items:
       description: >-
         With superior targeting and a smaller energy drain than a CPC, a plasma
         beam sacrifices some armor penetration.
+      destroyed: false
+      favorite: false
       hardpoint: 2
+      juryRigged: false
       mass: 2
       massMultiplier: false
       minClass: fighter
       power: 5
       powerMultiplier: false
       qualities: AP 10
+      range:
+        max: 2
+        normal: 1
+      stat: ask
       tl: 4
-      favorite: false
-      destroyed: false
-      juryRigged: false
-      type: ship
-      ab: 0
-      ammo:
-        type: none
-        max: 4
-        value: 4
       trauma:
         die: 1d6
         vehicle: false
-      range:
-        normal: 1
-        max: 2
-      stat: ask
+      type: ship
     effects: []
     flags: {}
     folder: null
@@ -337,6 +337,11 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
     sort: 0
     system:
+      ab: 0
+      ammo:
+        max: 4
+        type: none
+        value: 4
       broken: false
       cost: 700000
       costMultiplier: false
@@ -344,30 +349,25 @@ items:
       description: >-
         With superior targeting and a smaller energy drain than a CPC, a plasma
         beam sacrifices some armor penetration.
+      destroyed: false
+      favorite: false
       hardpoint: 2
+      juryRigged: false
       mass: 2
       massMultiplier: false
       minClass: fighter
       power: 5
       powerMultiplier: false
       qualities: AP 10
+      range:
+        max: 2
+        normal: 1
+      stat: ask
       tl: 4
-      favorite: false
-      destroyed: false
-      juryRigged: false
-      type: ship
-      ab: 0
-      ammo:
-        type: none
-        max: 4
-        value: 4
       trauma:
         die: 1d6
         vehicle: false
-      range:
-        normal: 1
-        max: 2
-      stat: ask
+      type: ship
     effects: []
     flags: {}
     folder: null
@@ -392,16 +392,16 @@ items:
         required. There is enough gear available to outfit the entire crew for
         normal use, but giving it away or losing it in use may deplete the
         locker until it is restocked.
+      destroyed: false
       effect: General equipment for the crew
+      favorite: false
+      juryRigged: false
       mass: 0
       massMultiplier: true
       minClass: fighter
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
     flags: {}
@@ -424,16 +424,16 @@ items:
         needs buy only the final grade of drive desired. He does not have to buy
         upgrades sequentially. Drives of rating 4 and higher are generally TL5
         artifacts that cannot be built most modern worlds.
+      destroyed: false
       effect: Upgrade a spike drive to drive-2 rating
+      favorite: false
+      juryRigged: false
       mass: 1
       massMultiplier: true
       minClass: fighter
       power: 1
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
     flags: {}

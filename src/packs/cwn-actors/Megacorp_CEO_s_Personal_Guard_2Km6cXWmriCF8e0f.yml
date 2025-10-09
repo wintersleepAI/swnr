@@ -78,8 +78,8 @@ items:
         piloting
       favorite: false
       level: 2
-      type: focus
       poolsGranted: []
+      type: focus
     effects: []
     flags: {}
     folder: null
@@ -92,6 +92,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Sight
       cost: 25000
       description: >-
@@ -101,13 +102,12 @@ items:
         attacks do 2d6 damage with a Shock of 4/15, and a Trauma Die 1d10/x3.
         Anyone who sees or touches their arms can detect signs of the cyber,
         however.
-      effect: Larger body weaponry
-      strain: 2
-      type: Limb
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Larger body weaponry
+      favorite: false
+      strain: 2
+      tl: 4
+      type: Limb
     effects: []
     flags: {}
     folder: null
@@ -120,18 +120,18 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Touch
       cost: 200000
       description: >-
         As Coordination Augment I, but the subject gains a Dexterity score of
         18, and their base Move rate is increased by 10 meters.
-      effect: Dex 18 and +10m Move
-      strain: 3
-      type: Nerve
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Dex 18 and +10m Move
+      favorite: false
+      strain: 3
+      tl: 4
+      type: Nerve
     effects: []
     flags: {}
     folder: null
@@ -144,6 +144,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Sight
       cost: 10000
       description: >-
@@ -154,13 +155,12 @@ items:
         flash protectors, but additional functionality must be implanted
         separately. A user with a pair of cybereyes or syntheyes halves the
         System Strain cost of cybernetic eye implants.
-      effect: Flash-protected synthetic eyes
-      strain: 0.25
-      type: Sensory
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Flash-protected synthetic eyes
+      favorite: false
+      strain: 0.25
+      tl: 4
+      type: Sensory
     effects: []
     flags: {}
     folder: null
@@ -173,19 +173,19 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Sight
       cost: 200000
       description: >-
         Overt ceramic body plating and double-mesh joint reinforcement acts as
         Dermal Armor II, but with a base ranged and melee AC of 20 and +2 to the
         user's Trauma Target.
-      effect: As II, but AC 20 and +2 TT
-      strain: 3
-      type: Skin
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: As II, but AC 20 and +2 TT
+      favorite: false
+      strain: 3
+      tl: 4
+      type: Skin
     effects: []
     flags: {}
     folder: null
@@ -198,6 +198,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Medical
       cost: 15000
       description: >-
@@ -206,13 +207,12 @@ items:
         noise. The precise location of distant shooters, the location of targets
         in visual concealment, and the positions of moving creatures in darkness
         are all clear.
-      effect: Map all sound positions nearby
-      strain: 0.5
-      type: Sensory
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Map all sound positions nearby
+      favorite: false
+      strain: 0.5
+      tl: 4
+      type: Sensory
     effects: []
     flags: {}
     folder: null
@@ -225,6 +225,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Touch
       cost: 750000
       description: >-
@@ -232,13 +233,12 @@ items:
         gains a bonus non-cyberspace Main Action and bonus Move Action. By
         accepting one System Strain, this ability can be used as an Instant
         action.
-      effect: 2/scene, bonus Main and Move
-      strain: 4
-      type: Nerve
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: 2/scene, bonus Main and Move
+      favorite: false
+      strain: 4
+      tl: 4
+      type: Nerve
     effects: []
     flags: {}
     folder: null
@@ -251,18 +251,18 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Medical
       cost: 5000
       description: >-
         This mod grants low-light vision, allowing clear sight to normal
         distances in any light condition better than pitch blackness.
-      effect: See in low-light conditions
-      strain: 0.5
-      type: Sensory
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: See in low-light conditions
+      favorite: false
+      strain: 0.5
+      tl: 4
+      type: Sensory
     effects: []
     flags: {}
     folder: null
@@ -275,14 +275,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 0
         suppress: false
         type: none
         value: 0
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 50
       damage: '0'
       description: >-
@@ -295,45 +303,32 @@ items:
         don't stack, and a target who makes their save cannot be flashbanged
         again that same round.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 30
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
-      stat: dex
-      trauma:
-        die: None
-        rating: null
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
       skill: ask
       skillBoostsDamage: false
       skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
+      stat: dex
+      trauma:
+        die: None
     effects: []
     flags: {}
     folder: null
@@ -346,14 +341,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 0
         suppress: false
         type: none
         value: 0
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 50
       damage: '0'
       description: >-
@@ -366,45 +369,32 @@ items:
         don't stack, and a target who makes their save cannot be flashbanged
         again that same round.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 30
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
-      stat: dex
-      trauma:
-        die: None
-        rating: null
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
       skill: ask
       skillBoostsDamage: false
       skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
+      stat: dex
+      trauma:
+        die: None
     effects: []
     flags: {}
     folder: null
@@ -417,14 +407,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 0
         suppress: false
         type: none
         value: 0
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 50
       damage: '0'
       description: >-
@@ -437,45 +435,32 @@ items:
         don't stack, and a target who makes their save cannot be flashbanged
         again that same round.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 30
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
-      stat: dex
-      trauma:
-        die: None
-        rating: null
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
       skill: ask
       skillBoostsDamage: false
       skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
+      stat: dex
+      trauma:
+        die: None
     effects: []
     flags: {}
     folder: null
@@ -488,14 +473,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 0
         suppress: false
         type: none
         value: 0
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 100
       damage: 2d6
       description: >-
@@ -507,45 +500,33 @@ items:
         each point of melee AC the target has above 14 reduces the final damage
         total by one point, possibly down to zero.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 30
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: dex
       trauma:
         die: 1d8
         rating: 2
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
     flags: {}
     folder: null
@@ -558,14 +539,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 0
         suppress: false
         type: none
         value: 0
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 100
       damage: 2d6
       description: >-
@@ -577,45 +566,33 @@ items:
         each point of melee AC the target has above 14 reduces the final damage
         total by one point, possibly down to zero.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 30
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: dex
       trauma:
         die: 1d8
         rating: 2
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
     flags: {}
     folder: null
@@ -628,14 +605,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 0
         suppress: false
         type: none
         value: 0
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 100
       damage: 2d6
       description: >-
@@ -647,45 +632,33 @@ items:
         each point of melee AC the target has above 14 reduces the final damage
         total by one point, possibly down to zero.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 30
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: dex
       trauma:
         die: 1d8
         rating: 2
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
     flags: {}
     folder: null
@@ -698,6 +671,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Touch
       cost: 40000
       description: >-
@@ -707,13 +681,12 @@ items:
         arrow, or thrown weapon attack, including burst or suppressive fire.
         Surprise attacks cannot be deflected this way, nor can melee attacks or
         explosives.
-      effect: Deflect one ranged hit per scene
-      strain: 1
-      type: Limb
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Deflect one ranged hit per scene
+      favorite: false
+      strain: 1
+      tl: 4
+      type: Limb
     effects: []
     flags: {}
     folder: null
@@ -733,8 +706,8 @@ items:
         levels, rounded up. Any Trauma Die you roll gains a +1 bonus.
       favorite: false
       level: 0
-      type: edge
       poolsGranted: []
+      type: edge
     effects: []
     flags: {}
     folder: null
@@ -747,14 +720,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 15
         suppress: false
         type: ammo
         value: 15
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 200
       damage: 1d6+10
       description: >-
@@ -763,45 +744,33 @@ items:
         possible with a low-caliber round, while others like to have a little
         more certainty in dropping the targets they hit.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 80
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: dex
       trauma:
         die: 1d8
         rating: 2
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
     flags: {}
     folder: null
@@ -814,18 +783,18 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Sight
       cost: 200000
       description: >-
         The subject gains a Strength score of 18, and can smash through standard
         interior doors or equivalent barriers as a Move action.
-      effect: Str 18 and extreme feats
-      strain: 2
-      type: Limb
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Str 18 and extreme feats
+      favorite: false
+      strain: 2
+      tl: 4
+      type: Limb
     effects: []
     flags: {}
     folder: null
@@ -838,6 +807,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Medical
       cost: 100000
       description: >-
@@ -845,13 +815,12 @@ items:
         that don't also automatically win initiative; if both have this ability,
         initiative is rolled without modifications. The user can act normally
         during surprise rounds.
-      effect: Automatically win initiative
-      strain: 2
-      type: Nerve
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Automatically win initiative
+      favorite: false
+      strain: 2
+      tl: 4
+      type: Nerve
     effects: []
     flags: {}
     folder: null
@@ -864,6 +833,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Touch
       cost: 15000
       description: >-
@@ -871,13 +841,12 @@ items:
         stick to vertical or overhanging surfaces, their full weight supported
         by one arm. They can climb such surfaces at their full movement rate
         with one free hand.
-      effect: Climb sheer or vertical surfaces
-      strain: 0.5
-      type: Limb
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Climb sheer or vertical surfaces
+      favorite: false
+      strain: 0.5
+      tl: 4
+      type: Limb
     effects: []
     flags: {}
     folder: null
@@ -896,8 +865,8 @@ items:
         miss
       favorite: false
       level: 0
-      type: edge
       poolsGranted: []
+      type: edge
     effects: []
     flags: {}
     folder: null

@@ -41,14 +41,14 @@ items:
     img: null
     sort: 0
     system:
+      cost: 0
       description: >-
         Spiritually connected with a single tree. Dryad dies if the tree dies,
         or if separated by more than 240'.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -62,15 +62,15 @@ items:
     img: null
     sort: 0
     system:
+      cost: 0
       description: >-
         Victim compelled to approach the tree, vanishes inside it (Mental save
         with a &ndash;2 penalty). If not immediately rescued, the victim is lost
         forever.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -84,14 +84,14 @@ items:
     img: null
     sort: 0
     system:
+      cost: 0
       description: >-
         Distrustful of strangers. Attempt to charm anyone who approaches or
         follows.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -105,12 +105,12 @@ items:
     img: null
     sort: 0
     system:
-      description: Can disappear by joining with her tree.
       cost: 0
-      quantity: 1
+      description: Can disappear by joining with her tree.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -124,12 +124,12 @@ items:
     img: null
     sort: 0
     system:
-      description: Hidden in roots of the tree. Treasure Type D from OSE.
       cost: 0
-      quantity: 1
+      description: Hidden in roots of the tree. Treasure Type D from OSE.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}

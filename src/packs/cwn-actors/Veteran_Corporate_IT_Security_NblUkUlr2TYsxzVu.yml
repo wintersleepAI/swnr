@@ -70,18 +70,18 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Touch
       cost: 1000
       description: >-
         A discreetly-placed plug socket in the user's head or neck allows
         interfacing with cyberdecks and gear equipped with a jack line.
-      effect: Link to jack-equipped gear
-      strain: 0.25
-      type: Head
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Link to jack-equipped gear
+      favorite: false
+      strain: 0.25
+      tl: 4
+      type: Head
     effects: []
     flags: {}
     folder: null
@@ -94,19 +94,19 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Sight
       cost: 0
       description: >-
         <p>Memory 14, Shielding 10, CPU 3 with verbs Defend, Paralyze, Sense,
         Silence, Stun, Lock, Terminate and subjects Avatar, Barrier, Camera,
         Door, Program</p>
-      effect: ''
-      strain: 0
-      type: Sensory
-      favorite: false
-      tl: 1
       disabled: false
-      complication: ''
+      effect: ''
+      favorite: false
+      strain: 0
+      tl: 1
+      type: Sensory
     effects: []
     flags: {}
     folder: null
@@ -128,12 +128,12 @@ items:
         device or any of the target's cyber systems must first beat the user in
         an opposed Int/Program skill check before they can attempt their hack.
         This Verb cannot negate programs that are already running on the target.
+      favorite: false
       selfTerminating: false
       skillCheckMod: 0
       target: Device/Cyber
       type: verb
       useAffects: Shield a friendly device or cyber system
-      favorite: false
     effects: []
     flags: {}
     folder: null
@@ -155,12 +155,12 @@ items:
         device or any of the target's cyber systems must first beat the user in
         an opposed Int/Program skill check before they can attempt their hack.
         This Verb cannot negate programs that are already running on the target.
+      favorite: false
       selfTerminating: false
       skillCheckMod: 0
       target: Device/Cyber
       type: verb
       useAffects: Shield a friendly device or cyber system
-      favorite: false
     effects: []
     flags: {}
     folder: null
@@ -182,12 +182,12 @@ items:
         device or any of the target's cyber systems must first beat the user in
         an opposed Int/Program skill check before they can attempt their hack.
         This Verb cannot negate programs that are already running on the target.
+      favorite: false
       selfTerminating: false
       skillCheckMod: 0
       target: Device/Cyber
       type: verb
       useAffects: Shield a friendly device or cyber system
-      favorite: false
     effects: []
     flags: {}
     folder: null
@@ -200,14 +200,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 8
         suppress: false
         type: ammo
         value: 8
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 200
       damage: 1d8
       description: >-
@@ -216,45 +224,33 @@ items:
         possible with a low-caliber round, while others like to have a little
         more certainty in dropping the targets they hit.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 100
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: dex
       trauma:
         die: 1d6
         rating: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
     flags: {}
     folder: null
@@ -267,6 +263,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Medical
       cost: 40000
       description: >-
@@ -275,13 +272,12 @@ items:
         feedback. The user gains an additional 3 hit points per level that can
         only absorb cyberspace damage from Stun or 000ill Verbs. These phantom
         hit points refresh completely each hour.
-      effect: Adds +12 HP vs. cyberspace damage
-      strain: 1
-      type: Head
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Adds +12 HP vs. cyberspace damage
+      favorite: false
+      strain: 1
+      tl: 4
+      type: Head
     effects: []
     flags: {}
     folder: null
@@ -303,12 +299,12 @@ items:
         Other cyberspace actions can be taken normally. Human hackers are also
         physically paralyzed while the program runs, incapable of moving in
         meatspace until the connection is cut or the program ends.
+      favorite: false
       selfTerminating: false
       skillCheckMod: -1
       target: Avatar
       type: verb
       useAffects: Paralyze an avatar's owner via network
-      favorite: false
     effects: []
     flags: {}
     folder: null

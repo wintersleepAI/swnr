@@ -111,16 +111,16 @@ items:
         This fitting must be put in place when the ship is built, and cannot be
         installed on cruiser-class or larger ships. A ship designed for
         atmospheric flight can land on most solid or aqueous surfaces.
+      destroyed: false
       effect: 'Can land: frigates and fighters only.'
+      favorite: false
+      juryRigged: false
       mass: 1
       massMultiplier: true
       minClass: fighter
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
     flags: {}
@@ -142,16 +142,16 @@ items:
         distance. Installing fuel bunkers allows the ship to carry one
         additional load of fuel. This fitting can be installed multiple times
         for ships that wish to minimize fueling.
+      destroyed: false
       effect: Adds fuel for one more drill between fuelings
+      favorite: false
+      juryRigged: false
       mass: 1
       massMultiplier: true
       minClass: fighter
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
     flags: {}
@@ -174,16 +174,16 @@ items:
         four days of processing and refinement, but completely refuels the ship.
         Such fittings are common on explorer craft that cannot expect to find
         refueling stations.
+      destroyed: false
       effect: Ship can scoop fuel from a gas giant or star
+      favorite: false
+      juryRigged: false
       mass: 2
       massMultiplier: true
       minClass: fighter
       power: 2
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
     flags: {}
@@ -197,6 +197,11 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
     sort: 0
     system:
+      ab: 0
+      ammo:
+        max: 4
+        type: none
+        value: 4
       broken: false
       cost: 100000
       costMultiplier: false
@@ -205,30 +210,25 @@ items:
         Twinned assay and penetration lasers modulate the frequency of this beam
         for remarkable armor penetration. These weapons are popular choices for
         fighters intended for frigate or cruiser engagement.
+      destroyed: false
+      favorite: false
       hardpoint: 1
+      juryRigged: false
       mass: 1
       massMultiplier: false
       minClass: fighter
       power: 4
       powerMultiplier: false
       qualities: AP 20
+      range:
+        max: 2
+        normal: 1
+      stat: ask
       tl: 4
-      favorite: false
-      destroyed: false
-      juryRigged: false
-      type: ship
-      ab: 0
-      ammo:
-        type: none
-        max: 4
-        value: 4
       trauma:
         die: 1d6
         vehicle: false
-      range:
-        normal: 1
-        max: 2
-      stat: ask
+      type: ship
     effects: []
     flags: {}
     folder: null
@@ -241,6 +241,11 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/fog.svg
     sort: 0
     system:
+      ab: 0
+      ammo:
+        max: 4
+        type: none
+        value: 4
       broken: false
       cost: 50000
       costMultiplier: false
@@ -248,30 +253,25 @@ items:
       description: >-
         Projecting a spray of tiny, dense particulate matter, sandthrowers are
         highly effective against lightly-armored fighters.
+      destroyed: false
+      favorite: false
       hardpoint: 1
+      juryRigged: false
       mass: 1
       massMultiplier: false
       minClass: fighter
       power: 3
       powerMultiplier: false
       qualities: Flak
+      range:
+        max: 2
+        normal: 1
+      stat: ask
       tl: 4
-      favorite: false
-      destroyed: false
-      juryRigged: false
-      type: ship
-      ab: 0
-      ammo:
-        type: none
-        max: 4
-        value: 4
       trauma:
         die: 1d6
         vehicle: false
-      range:
-        normal: 1
-        max: 2
-      stat: ask
+      type: ship
     effects: []
     flags: {}
     folder: null

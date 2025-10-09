@@ -74,57 +74,52 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
-      description: ''
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      encumbrance: 0
-      cost: 0
-      tl: null
-      location: readied
-      quality: stock
-      noEncReadied: false
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      shock:
-        dmg: 0
-        ac: 10
       ab: 0
       ammo:
+        burst: false
         longReload: false
+        max: 10
         suppress: false
         type: none
-        max: 10
         value: 10
-        burst: false
-        current: null
-      range:
-        normal: 1
-        max: 0
-      damage: 1d6+1
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma:
-        die: 1d6
-        rating: 2
-      isTwoHanded: false
-      isNonLethal: false
+      bundle:
+        bundled: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      damage: 1d6+1
+      description: ''
+      encumbrance: 0
+      favorite: false
       isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
+      location: readied
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      range:
+        max: 0
+        normal: 1
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
+      shock:
+        ac: 10
+        dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      stat: dex
+      trauma:
+        die: 1d6
+        rating: 2
     effects: []
     flags: {}
     folder: null

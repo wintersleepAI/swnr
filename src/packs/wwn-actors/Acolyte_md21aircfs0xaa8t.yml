@@ -42,28 +42,28 @@ items:
     img: null
     sort: 0
     system:
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 0
+      damage: 1d6
       description: >-
         Clubs, staffs, and maces are of much the same genus, though the latter
         is usually made of metal. While fully capable of killing a man, a
         careful user can usually avoid inflicting lethal injury.
-      cost: 0
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 1
-        ac: 18
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 18
+        dmg: 1
+      skill: punch
+      stat: str
       tl: 3
     effects: []
     flags: {}

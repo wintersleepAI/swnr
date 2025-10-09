@@ -39,25 +39,25 @@ items:
     img: null
     sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 1d2
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 0
-        ac: 15
+      ab: 0
       ammo:
+        burst: false
         max: 0
         type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
+      cost: 0
+      damage: 1d2
+      description: ''
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 15
+        dmg: 0
+      skill: punch
+      stat: str
       tl: 3
     effects: []
     flags: {}
@@ -71,14 +71,14 @@ items:
     img: null
     sort: 0
     system:
+      cost: 0
       description: >-
         May be overlooked or mistaken for statues, due to their stony
         colouration.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -92,28 +92,28 @@ items:
     img: null
     sort: 0
     system:
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 0
+      damage: 1d4
       description: >-
         Very skittish. If attacked, usually flee by jumping up to 60' then
         flying away. 50% chance of jumping at a random opponent, in which case
         treat the jump as an attack.
-      cost: 0
-      damage: 1d4
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 0
-        ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 15
+        dmg: 0
+      skill: punch
+      stat: str
       tl: 3
     effects: []
     flags: {}
@@ -127,14 +127,14 @@ items:
     img: null
     sort: 0
     system:
+      cost: 0
       description: >-
         Immune to yellow mould and most poisons, due to their habit of eating
         fungi.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -148,14 +148,14 @@ items:
     img: null
     sort: 0
     system:
+      cost: 0
       description: >-
         If attacked or frightened, shriek to warn others. This may attract
         wandering monsters (20% chance per round).
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -169,29 +169,29 @@ items:
     img: null
     sort: 0
     system:
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 0
+      damage: '0'
       description: >-
         Used defensively. 10' range. Target treated as AC 10. The affected
         character is covered in stinking spittle: unable to act for 1 turn
         (Physical save). Until the goo is washed off, others who come within 5'
         must also make a Physical save or be violently sick.
-      cost: 0
-      damage: '0'
-      range:
-        normal: 10
-        max: 10
-      shock:
-        dmg: 0
-        ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 10
+        normal: 10
+      shock:
+        ac: 15
+        dmg: 0
+      skill: punch
+      stat: str
       tl: 3
     effects: []
     flags: {}

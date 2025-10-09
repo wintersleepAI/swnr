@@ -70,6 +70,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Medical
       cost: 1000
       description: >-
@@ -77,13 +78,12 @@ items:
         within 100 meters or use the phone grid, if it's available. For cranial
         security reasons, only text and voice can be transmitted, but
         conversations can be held without audible vocalization.
-      effect: Silent radio or phone comms
-      strain: 0.25
-      type: Sensory
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Silent radio or phone comms
+      favorite: false
+      strain: 0.25
+      tl: 4
+      type: Sensory
     effects: []
     flags: {}
     folder: null
@@ -96,14 +96,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 0
         suppress: false
         type: none
         value: 0
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 20
       damage: 1d4+1
       description: >-
@@ -113,45 +121,33 @@ items:
         can’t be obtained. Such weapons are effectively free, but have a -1
         penalty to hit and damage rolls due to their ungainly make.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 20
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: dex
       shock:
         ac: 15
         dmg: 2
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: str
       trauma:
         die: 1d6
         rating: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
     flags: {}
     folder: null
@@ -165,39 +161,37 @@ items:
     sort: 0
     system:
       ac: 13
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 250
       description: >-
         Fashionable, aggressive, and often mismatched, 'street leathers' seldom
         have any non-synthetic leather in their makeup, but are light and
         comfortable enough to wear as a habit.
+      dr: 0
       encumbrance: 0
+      favorite: false
       isHeavy: false
       isSubtle: true
+      location: stowed
       meleeAc: 12
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: false
       shieldACBonus: 0
       shieldMeleeACBonus: 0
       soak:
         max: 3
         value: 3
       traumaDiePenalty: 0
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      shield: false
       use: true
-      dr: 0
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
     effects: []
     flags: {}
     folder: null

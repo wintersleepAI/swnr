@@ -70,14 +70,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 0
         suppress: false
         type: none
         value: 0
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 200
       damage: 1d6+1
       description: >-
@@ -90,45 +98,33 @@ items:
         some enterprising serial killers and gang enforcers inking exclusivity
         deals with particular knife manufacturers.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 20
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: dex
       shock:
         ac: 15
         dmg: 3
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: str
       trauma:
         die: 1d8
         rating: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
     flags: {}
     folder: null
@@ -141,14 +137,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: true
+        longReload: false
         max: 30
         suppress: false
         type: ammo
         value: 30
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 2500
       damage: 1d12+1
       description: >-
@@ -156,45 +160,33 @@ items:
         latter is equipped with a burst-fire selector and usually trades the
         range of a heavier caliber for the ability to carry more ammunition.
       encumbrance: 2
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 300
         normal: 100
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: dex
       trauma:
         die: 1d8
         rating: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
     flags: {}
     folder: null
@@ -207,19 +199,19 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Medical
       cost: 100000
       description: >-
         Neural acceleration matrices can be deployed to briefly boost the user's
         reaction speed. Once per scene, as an On Turn action, the user gets a
         bonus non-cyberspace Main Action.
-      effect: 1/scene, bonus Main Action
-      strain: 2
-      type: Nerve
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: 1/scene, bonus Main Action
+      favorite: false
+      strain: 2
+      tl: 4
+      type: Nerve
     effects: []
     flags: {}
     folder: null
@@ -233,38 +225,36 @@ items:
     sort: 0
     system:
       ac: 18
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 10000
       description: >-
         Heavy security usually sports armor on this level, including police
         rapid response teams.
+      dr: 0
       encumbrance: 3
+      favorite: false
       isHeavy: false
       isSubtle: false
+      location: stowed
       meleeAc: 14
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: false
       shieldACBonus: 0
       shieldMeleeACBonus: 0
       soak:
         max: 10
         value: 10
       traumaDiePenalty: 2
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      shield: false
       use: true
-      dr: 0
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
     effects: []
     flags: {}
     folder: null

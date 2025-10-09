@@ -71,25 +71,25 @@ items:
     img: null
     sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 2d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 3
-        ac: 18
+      ab: 0
       ammo:
+        burst: false
         max: 0
         type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
+      cost: 0
+      damage: 2d8
+      description: ''
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 18
+        dmg: 3
+      skill: punch
+      stat: str
       tl: 3
     effects: []
     flags: {}
@@ -103,12 +103,12 @@ items:
     img: null
     sort: 0
     system:
-      description: 80' long line of cold. Deals damage equal to current hp, save for half.
       cost: 0
-      quantity: 1
+      description: 80' long line of cold. Deals damage equal to current hp, save for half.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -122,25 +122,25 @@ items:
     img: null
     sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 1d4
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 1
-        ac: 15
+      ab: 0
       ammo:
+        burst: false
         max: 0
         type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
+      cost: 0
+      damage: 1d4
+      description: ''
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 15
+        dmg: 1
+      skill: punch
+      stat: str
       tl: 3
     effects: []
     flags: {}
@@ -154,12 +154,12 @@ items:
     img: null
     sort: 0
     system:
-      description: 10%; 3 &times; 1st level.
       cost: 0
-      quantity: 1
+      description: 10%; 3 &times; 1st level.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -173,12 +173,12 @@ items:
     img: null
     sort: 0
     system:
-      description: 50%.
       cost: 0
-      quantity: 1
+      description: 50%.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}

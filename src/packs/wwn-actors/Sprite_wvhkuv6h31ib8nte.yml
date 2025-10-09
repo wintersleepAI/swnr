@@ -45,15 +45,15 @@ items:
     img: null
     sort: 0
     system:
+      cost: 0
       description: >-
         Five sprites can collectively curse a target (no attack roll; Mental
         save). The effect is determined by the referee, but will always be used
         to comical effect (e.g. target trips, target's nose grows).
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}

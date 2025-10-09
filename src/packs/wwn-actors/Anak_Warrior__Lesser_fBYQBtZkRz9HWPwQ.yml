@@ -59,39 +59,39 @@ items:
     img: null
     sort: 0
     system:
+      ac: 13
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 20
       description: >-
         Linothorax armor is a stiffer armor of glued, layered cloth, often as
         elaborately decorated as the arts of its maker allow. Light armor may be
         decidedly heavy, but it is loose and flexible enough to offer minimal
         hindrance to the wearer's actions. Some varieties are also discreet
         enough to be worn politely in common society.
-      cost: 20
-      ac: 13
-      meleeAc: 13
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      use: false
       dr: 0
+      encumbrance: 1
+      favorite: false
       isHeavy: false
+      isSubtle: false
+      location: stowed
+      meleeAc: 13
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: false
+      soak:
+        max: 0
+        value: 0
+      tl: 3
+      traumaDiePenalty: 0
+      use: false
     effects: []
     flags: {}
     folder: null

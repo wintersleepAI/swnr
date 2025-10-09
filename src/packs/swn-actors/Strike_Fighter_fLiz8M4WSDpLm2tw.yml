@@ -107,16 +107,16 @@ items:
         This fitting must be put in place when the ship is built, and cannot be
         installed on cruiser-class or larger ships. A ship designed for
         atmospheric flight can land on most solid or aqueous surfaces.
+      destroyed: false
       effect: 'Can land: frigates and fighters only.'
+      favorite: false
+      juryRigged: false
       mass: 1
       massMultiplier: true
       minClass: fighter
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
     flags: {}
@@ -130,6 +130,11 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
     sort: 0
     system:
+      ab: 0
+      ammo:
+        max: 4
+        type: none
+        value: 4
       broken: false
       cost: 100000
       costMultiplier: false
@@ -138,30 +143,25 @@ items:
         Stepped tapping of the spike drive power plant allows for the emission
         of a torrent of charged particles. The particles have very little armor
         penetration, but can fry a small ship's power grid in a strike or two.
+      destroyed: false
+      favorite: false
       hardpoint: 1
+      juryRigged: false
       mass: 1
       massMultiplier: false
       minClass: fighter
       power: 4
       powerMultiplier: false
       qualities: Clumsy
+      range:
+        max: 2
+        normal: 1
+      stat: ask
       tl: 4
-      favorite: false
-      destroyed: false
-      juryRigged: false
-      type: ship
-      ab: 0
-      ammo:
-        type: none
-        max: 4
-        value: 4
       trauma:
         die: 1d6
         vehicle: false
-      range:
-        normal: 1
-        max: 2
-      stat: ask
+      type: ship
     effects: []
     flags: {}
     folder: null

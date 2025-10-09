@@ -41,25 +41,25 @@ items:
     img: null
     sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
+      ab: 0
       ammo:
+        burst: false
         max: 0
         type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
+      cost: 0
+      damage: 1d6
+      description: ''
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 15
+        dmg: 2
+      skill: punch
+      stat: str
       tl: 3
     effects: []
     flags: {}
@@ -73,12 +73,12 @@ items:
     img: null
     sort: 0
     system:
-      description: May be overlooked or mistaken for inanimate statues.
       cost: 0
-      quantity: 1
+      description: May be overlooked or mistaken for inanimate statues.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -92,25 +92,25 @@ items:
     img: null
     sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 1d3
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 0
-        ac: 15
+      ab: 0
       ammo:
+        burst: false
         max: 0
         type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
+      cost: 0
+      damage: 1d3
+      description: ''
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 15
+        dmg: 0
+      skill: punch
+      stat: str
       tl: 3
     effects: []
     flags: {}
@@ -124,12 +124,12 @@ items:
     img: null
     sort: 0
     system:
-      description: Almost always attack when approached.
       cost: 0
-      quantity: 1
+      description: Almost always attack when approached.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -143,25 +143,25 @@ items:
     img: null
     sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 1d4
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 1
-        ac: 18
+      ab: 0
       ammo:
+        burst: false
         max: 0
         type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
+      cost: 0
+      damage: 1d4
+      description: ''
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 18
+        dmg: 1
+      skill: punch
+      stat: str
       tl: 3
     effects: []
     flags: {}
@@ -175,12 +175,12 @@ items:
     img: null
     sort: 0
     system:
-      description: Can only be harmed by magical attacks.
       cost: 0
-      quantity: 1
+      description: Can only be harmed by magical attacks.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -194,12 +194,12 @@ items:
     img: null
     sort: 0
     system:
-      description: Unaffected by sleep or charm spells.
       cost: 0
-      quantity: 1
+      description: Unaffected by sleep or charm spells.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}

@@ -70,6 +70,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Medical
       cost: 5000
       description: >-
@@ -78,13 +79,12 @@ items:
         and infrared tripwires very obvious. The user gains a +1 bonus on any
         Notice checks to detect the presence of thermally-unshielded living
         creatures.
-      effect: See heat patterns in the area
-      strain: 0.5
-      type: Sensory
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: See heat patterns in the area
+      favorite: false
+      strain: 0.5
+      tl: 4
+      type: Sensory
     effects: []
     flags: {}
     folder: null
@@ -97,14 +97,22 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 1
         suppress: false
         type: ammo
         value: 1
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 3000
       damage: 2d8+7
       description: >-
@@ -114,45 +122,33 @@ items:
         This weapon can be reloaded with a Move action, or an On Turn if the
         user has at least Shoot-1 skill.
       encumbrance: 2
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 2000
         normal: 1000
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: dex
       trauma:
         die: 1d10
         rating: 4
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
     flags: {}
     folder: null
@@ -165,6 +161,7 @@ items:
     img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
     sort: 0
     system:
+      complication: ''
       concealment: Touch
       cost: 15000
       description: >-
@@ -172,13 +169,12 @@ items:
         stick to vertical or overhanging surfaces, their full weight supported
         by one arm. They can climb such surfaces at their full movement rate
         with one free hand.
-      effect: Climb sheer or vertical surfaces
-      strain: 0.5
-      type: Limb
-      favorite: false
-      tl: 4
       disabled: false
-      complication: ''
+      effect: Climb sheer or vertical surfaces
+      favorite: false
+      strain: 0.5
+      tl: 4
+      type: Limb
     effects: []
     flags: {}
     folder: null

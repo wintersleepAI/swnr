@@ -41,12 +41,12 @@ items:
     img: null
     sort: 0
     system:
-      description: Attack by dropping on victims from above.
       cost: 0
-      quantity: 1
+      description: Attack by dropping on victims from above.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -60,25 +60,25 @@ items:
     img: null
     sort: 0
     system:
-      description: 'Poison: Causes death in 1d4 turns (Physical save with a +2 bonus).'
-      cost: 0
-      damage: 1d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 0
-        ac: 15
+      ab: 0
       ammo:
+        burst: false
         max: 0
         type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
+      cost: 0
+      damage: 1d8
+      description: 'Poison: Causes death in 1d4 turns (Physical save with a +2 bonus).'
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 15
+        dmg: 0
+      skill: punch
+      stat: str
       tl: 3
     effects: []
     flags: {}
@@ -92,12 +92,12 @@ items:
     img: null
     sort: 0
     system:
-      description: Can walk on walls and ceilings.
       cost: 0
-      quantity: 1
+      description: Can walk on walls and ceilings.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
@@ -111,12 +111,12 @@ items:
     img: null
     sort: 0
     system:
-      description: Receives an additional +3 to checks to surprise opponents.
       cost: 0
-      quantity: 1
+      description: Receives an additional +3 to checks to surprise opponents.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
     effects: []
     flags: {}
