@@ -80,7 +80,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
       if (actor.system.crewMembers.length == 1) {
         defaultGunnerId = actor.system.crewMembers[0];
       } else if (actor.type == "ship") {
-        defaultGunnerId = actor.system.roles.gunnery;
+        defaultGunnerId = actor.system.roles.gunner;
       }
       //get the gunner if exists
       let defaultGunner = null;
