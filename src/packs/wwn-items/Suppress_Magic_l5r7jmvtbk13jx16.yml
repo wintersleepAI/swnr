@@ -1,34 +1,12 @@
+_id: l5r7jmvtbk13jx16
 name: Suppress Magic
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Commit Effort for the day as an On Turn action and target a visible or known
-    magical effect within one hundred feet. The effect is suppressed as if by
-    the @UUID[Compendium.wwn.arts.Item.zVoaLPVwZghGSACI]{Extirpate Arcana} spell
-    for 1d6 rounds plus the caster's character level. Spells cast by more
-    powerful casters may not be successfully suppressed, as noted in the spell
-    description. The caster can attempt to suppress an effect only once.
-  favorite: false
-  subType: art
-  source: High Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: High Mage
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: l5r7jmvtbk13jx16
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -39,10 +17,29 @@ _stats:
   modifiedTime: 1754277456781
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: High Mage
+      usesCost: 1
+      cadence: day
+      timing: manual
+  description: >-
+    Commit Effort for the day as an On Turn action and target a visible or known
+    magical effect within one hundred feet. The effect is suppressed as if by
+    the @UUID[Compendium.wwn.arts.Item.zVoaLPVwZghGSACI]{Extirpate Arcana} spell
+    for 1d6 rounds plus the caster's character level. Spells cast by more
+    powerful casters may not be successfully suppressed, as noted in the spell
+    description. The caster can attempt to suppress an effect only once.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: High Mage
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!l5r7jmvtbk13jx16'
 

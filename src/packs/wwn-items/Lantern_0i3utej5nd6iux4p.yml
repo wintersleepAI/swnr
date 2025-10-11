@@ -1,27 +1,12 @@
+_id: 0i3utej5nd6iux4p
 name: Lantern
 type: item
+img: icons/svg/item-bag.svg
+folder: OSCezLcl3H6szsim
 sort: 0
-system:
-  description: >-
-    A lantern or torch casts usable light in a thirty-foot radius. Objects
-    outside this range are too indistinct to be made out in the typical stygian
-    gloom of a Deep. A filled lantern lasts for 24 turns (4 hours) before
-    burning out.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
-  cost: 10
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
-  tl: 3
-_id: 0i3utej5nd6iux4p
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -32,10 +17,26 @@ _stats:
   modifiedTime: 1754277456706
   lastModifiedBy: null
   exportSource: null
-folder: OSCezLcl3H6szsim
-flags: {}
+system:
+  bundle:
+    bundled: false
+  cost: 10
+  description: >-
+    A lantern or torch casts usable light in a thirty-foot radius. Objects
+    outside this range are too indistinct to be made out in the typical stygian
+    gloom of a Deep. A filled lantern lasts for 24 turns (4 hours) before
+    burning out.
+  encumbrance: 1
+  favorite: false
+  location: stowed
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+    diceNum: 1
+    diceSize: d20
+  tl: 3
 effects: []
-ownership:
-  default: 0
 _key: '!items!0i3utej5nd6iux4p'
 

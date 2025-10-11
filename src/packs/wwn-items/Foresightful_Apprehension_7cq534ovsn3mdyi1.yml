@@ -1,21 +1,23 @@
+_id: 7cq534ovsn3mdyi1
 name: Foresightful Apprehension
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456923
+  modifiedTime: 1754277456923
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The caster probes the near currents of fate to discern the likely immediate
-    outcome of an action. The caster describes a particular action they or a
-    comrade intend to presently undertake, whereupon the GM tells them what is
-    most likely to happen in consequence within the first five minutes after the
-    action, as the GM thinks it most probable. This spell cannot be used more
-    than once a week on the same general topic.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The caster probes the near currents of fate to discern the likely immediate
+    outcome of an action. The caster describes a particular action they or a
+    comrade intend to presently undertake, whereupon the GM tells them what is
+    most likely to happen in consequence within the first five minutes after the
+    action, as the GM thinks it most probable. This spell cannot be used more
+    than once a week on the same general topic.
   duration: Instant
-  save: None
+  favorite: false
+  level: 3
+  prepared: false
   range: Self
-  skill: null
-_id: 7cq534ovsn3mdyi1
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456923
-  modifiedTime: 1754277456923
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!7cq534ovsn3mdyi1'
 

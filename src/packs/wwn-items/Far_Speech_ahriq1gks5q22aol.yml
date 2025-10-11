@@ -1,34 +1,12 @@
+_id: ahriq1gks5q22aol
 name: Far Speech
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Commit Effort for the scene as an On Turn action and target an intelligent
-    creature known to you that is within two hundred feet per level. If they
-    consent, you forge a telepathic link with them that can convey thoughts,
-    speech, and images even without a common language. The link lasts for the
-    rest of the scene. While linked with someone, both of you may reroll failed
-    Mental saving throws and neither of you can be surprised unless both are.
-  favorite: false
-  subType: art
-  source: Thought Noble
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Thought Noble
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: ahriq1gks5q22aol
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -39,10 +17,29 @@ _stats:
   modifiedTime: 1754277456763
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Thought Noble
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    Commit Effort for the scene as an On Turn action and target an intelligent
+    creature known to you that is within two hundred feet per level. If they
+    consent, you forge a telepathic link with them that can convey thoughts,
+    speech, and images even without a common language. The link lasts for the
+    rest of the scene. While linked with someone, both of you may reroll failed
+    Mental saving throws and neither of you can be surprised unless both are.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Thought Noble
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!ahriq1gks5q22aol'
 

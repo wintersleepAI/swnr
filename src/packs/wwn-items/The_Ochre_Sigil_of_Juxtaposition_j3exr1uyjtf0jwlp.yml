@@ -1,26 +1,23 @@
+_id: j3exr1uyjtf0jwlp
 name: The Ochre Sigil of Juxtaposition
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456894
+  modifiedTime: 1754277456894
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    This spell is cast in two parts, each of which must be cast separately
-    within a mile of each other, though such paired use counts as only a single
-    spell slot. The first casting inscribes a palm-sized seal of ruddy brown
-    radiance on the ground beneath the caster. The second casting will
-    immediately switch the caster and all creatures and objects within ten feet
-    with all creatures and objects within ten feet of the sigil. The caster may
-    refrain from swapping certain targets as they wish. Only portable objects
-    are swapped; any object too heavy for the caster to lift or secured in place
-    remains unmoved. Unwilling targets get no saving throw if they have four or
-    less hit dice; others can make a Mental save. Unused sigils dissipate in a
-    day.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -34,26 +31,26 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    This spell is cast in two parts, each of which must be cast separately
+    within a mile of each other, though such paired use counts as only a single
+    spell slot. The first casting inscribes a palm-sized seal of ruddy brown
+    radiance on the ground beneath the caster. The second casting will
+    immediately switch the caster and all creatures and objects within ten feet
+    with all creatures and objects within ten feet of the sigil. The caster may
+    refrain from swapping certain targets as they wish. Only portable objects
+    are swapped; any object too heavy for the caster to lift or secured in place
+    remains unmoved. Unwilling targets get no saving throw if they have four or
+    less hit dice; others can make a Mental save. Unused sigils dissipate in a
+    day.
   duration: 1 day
-  save: mental
+  favorite: false
+  level: 4
+  prepared: false
   range: 1 mile
-  skill: null
-_id: j3exr1uyjtf0jwlp
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456894
-  modifiedTime: 1754277456894
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: mental
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!j3exr1uyjtf0jwlp'
 

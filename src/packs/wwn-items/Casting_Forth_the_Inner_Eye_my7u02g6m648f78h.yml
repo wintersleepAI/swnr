@@ -1,7 +1,36 @@
+_id: my7u02g6m648f78h
 name: Casting Forth the Inner Eye
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456905
+  modifiedTime: 1754277456905
+  lastModifiedBy: null
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     A pool of water, mirror, open flame, polished crystal, or other luminous or
     reflective surface is used to peer at a distant location. The location must
@@ -17,46 +46,14 @@ system:
     Mental saving throw to get an uncanny sense of being watched, something that
     will alert those cognizant of this spell. This spell lasts until the caster
     performs some action other than focusing on the scrying.
+  duration: Until another action is performed
   favorite: false
-  subType: spell
-  source: High Mage
   level: 2
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Until another action is performed
-  save: mental
   range: 100 ft. per level
-  skill: null
-_id: my7u02g6m648f78h
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456905
-  modifiedTime: 1754277456905
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: mental
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!my7u02g6m648f78h'
 

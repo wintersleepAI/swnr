@@ -1,22 +1,23 @@
+_id: 3nykkvadjuwywvfm
 name: Abdictation of Temporal Presence
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456912
+  modifiedTime: 1754277456912
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The caster and up to one visible ally per caster level briefly step outside
-    of the conventional flow of time, the rest of the world freezing around
-    them. These subjects can take 1d4+1 free rounds of actions, but they cannot
-    physically affect the world or move any object they were not carrying at the
-    time they cast the spell. Any spells the caster or other allies cast can
-    affect only their own group, and not those entities still in the normal flow
-    of time.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -30,26 +31,22 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The caster and up to one visible ally per caster level briefly step outside
+    of the conventional flow of time, the rest of the world freezing around
+    them. These subjects can take 1d4+1 free rounds of actions, but they cannot
+    physically affect the world or move any object they were not carrying at the
+    time they cast the spell. Any spells the caster or other allies cast can
+    affect only their own group, and not those entities still in the normal flow
+    of time.
   duration: 1d4+1 rounds
-  save: None
+  favorite: false
+  level: 5
+  prepared: false
   range: Self
-  skill: null
-_id: 3nykkvadjuwywvfm
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456912
-  modifiedTime: 1754277456912
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!3nykkvadjuwywvfm'
 

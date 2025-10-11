@@ -1,20 +1,23 @@
+_id: 30u1idvcc0pi5eln
 name: Wall of Stone
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 100391
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457054
+  modifiedTime: 1754277916654
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: Permanent Range: 60' A wall of solid rock appears. ▶ Size: The
-    wall may be of whatever shape the caster desires and is of 1,000 cubic feet
-    in volume. (For example, a 2' thick wall, 50' long and 10' high.) ▶
-    Location: The wall must rest upon a solid surface and may not be evoked so
-    that it appears where objects are.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -28,26 +31,20 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: Permanent Range: 60' A wall of solid rock appears. ▶ Size: The
+    wall may be of whatever shape the caster desires and is of 1,000 cubic feet
+    in volume. (For example, a 2' thick wall, 50' long and 10' high.) ▶
+    Location: The wall must rest upon a solid surface and may not be evoked so
+    that it appears where objects are.
   duration: Permanent
-  save: None
+  favorite: false
+  level: 5
+  prepared: false
   range: 60'
-  skill: null
-_id: 30u1idvcc0pi5eln
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457054
-  modifiedTime: 1754277916654
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!30u1idvcc0pi5eln'
 

@@ -1,20 +1,23 @@
+_id: lvalrtbgwh62dq5u
 name: Cure Serious Wounds
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 7400000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457103
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: Instant Range: The caster or a creature touched The caster's touch
-    heals 2d6+2 hit points of damage in one living subject. This cannot grant
-    more hit points than the subject's normal maximum. Reversed: Cause Serious
-    Wounds Inflicts 2d6+2 hit points of damage to a touched creature. In combat,
-    a melee attack roll is required.
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -28,26 +31,20 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: Instant Range: The caster or a creature touched The caster's touch
+    heals 2d6+2 hit points of damage in one living subject. This cannot grant
+    more hit points than the subject's normal maximum. Reversed: Cause Serious
+    Wounds Inflicts 2d6+2 hit points of damage to a touched creature. In combat,
+    a melee attack roll is required.
   duration: Instant
-  save: None
+  favorite: false
+  level: 4
+  prepared: false
   range: Touch
-  skill: null
-_id: lvalrtbgwh62dq5u
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457103
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!lvalrtbgwh62dq5u'
 

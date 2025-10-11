@@ -1,18 +1,23 @@
+_id: c8em1k8byyogjkx8
 name: Striking
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 125000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457099
+  modifiedTime: 1754277910927
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 1 turn Range: 30' A single weapon is enchanted: ▶ Damage: It deals
-    an additional 1d6 damage. ▶ Treated as magical: It is able to harm monsters
-    which are normally only harmed by magical weapons.
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -26,26 +31,18 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 1 turn Range: 30' A single weapon is enchanted: ▶ Damage: It deals
+    an additional 1d6 damage. ▶ Treated as magical: It is able to harm monsters
+    which are normally only harmed by magical weapons.
   duration: 1 turn
-  save: None
+  favorite: false
+  level: 3
+  prepared: false
   range: 30'
-  skill: null
-_id: c8em1k8byyogjkx8
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457099
-  modifiedTime: 1754277910927
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!c8em1k8byyogjkx8'
 

@@ -1,26 +1,23 @@
+_id: 2l3ttf00o6za43ru
 name: Polymorph Self
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 2500000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457088
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 6 turns +1 per level Range: The caster The caster transforms
-    themselves into another being: ▶ HD: The new form may not have higher Hit
-    Dice than the caster's level. ▶ Stats: The caster retains their own
-    intelligence, hit points, saving throws, and attack probabilities. ▶
-    Physical capabilities: Of the new form (e.g. strength, physical attack
-    forms, modes of movement) are acquired. ▶ Non-physical special abilities:
-    (e.g. immunities, breath weapons, spell casting) are not acquired. ▶ Casting
-    spells: While polymorphed, the caster is unable to cast spells. ▶ Specific
-    individuals: The spell cannot be used to duplicate a specific individual. ▶
-    Reversion: If the caster dies while polymorphed, they return to their
-    original form.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -34,26 +31,26 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 6 turns +1 per level Range: The caster The caster transforms
+    themselves into another being: ▶ HD: The new form may not have higher Hit
+    Dice than the caster's level. ▶ Stats: The caster retains their own
+    intelligence, hit points, saving throws, and attack probabilities. ▶
+    Physical capabilities: Of the new form (e.g. strength, physical attack
+    forms, modes of movement) are acquired. ▶ Non-physical special abilities:
+    (e.g. immunities, breath weapons, spell casting) are not acquired. ▶ Casting
+    spells: While polymorphed, the caster is unable to cast spells. ▶ Specific
+    individuals: The spell cannot be used to duplicate a specific individual. ▶
+    Reversion: If the caster dies while polymorphed, they return to their
+    original form.
   duration: 6 turns + 1 / level
-  save: None
+  favorite: false
+  level: 4
+  prepared: false
   range: Caster
-  skill: null
-_id: 2l3ttf00o6za43ru
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457088
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!2l3ttf00o6za43ru'
 

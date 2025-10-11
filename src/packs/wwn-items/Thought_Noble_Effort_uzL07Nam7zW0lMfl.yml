@@ -1,21 +1,8 @@
-folder: BslyO9GYhD75h2Kk
+_id: uzL07Nam7zW0lMfl
 name: Thought Noble Effort
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
-system:
-  description: ''
-  favorite: false
-  level: 0
-  type: focus
-  poolsGranted:
-    - resourceName: Effort
-      subResource: Thought Noble
-      formula: >-
-        Math.max(1, @skills.notice.rank + Math.max(@stats.int.mod,
-        @stats.wis.mod))
-      condition: ''
-      cadence: day
-effects: []
+folder: BslyO9GYhD75h2Kk
 sort: 1300000
 ownership:
   default: 0
@@ -31,6 +18,19 @@ _stats:
   createdTime: 1758769340355
   modifiedTime: 1758769340355
   lastModifiedBy: lKC5x4Yf023Bizof
-_id: uzL07Nam7zW0lMfl
+system:
+  description: ''
+  favorite: false
+  level: 0
+  poolsGranted:
+    - resourceName: Effort
+      subResource: Thought Noble
+      formula: >-
+        Math.max(1, @skills.notice.rank + Math.max(@stats.int.mod,
+        @stats.wis.mod))
+      condition: ''
+      cadence: day
+  type: focus
+effects: []
 _key: '!items!uzL07Nam7zW0lMfl'
 

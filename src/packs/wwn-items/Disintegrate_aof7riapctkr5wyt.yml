@@ -1,20 +1,23 @@
+_id: aof7riapctkr5wyt
 name: Disintegrate
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 6600000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457092
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: Instant Range: 60' The material form of a single, non-magical
-    creature or object is instantly and permanently destroyed. ▶ If a creature
-    is targeted: It may make a Physical save to resist disintegration. ▶
-    Examples of objects: The following might be targeted: a tree, a ship, a 10'
-    section of wall.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 6
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -28,26 +31,20 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: Instant Range: 60' The material form of a single, non-magical
+    creature or object is instantly and permanently destroyed. ▶ If a creature
+    is targeted: It may make a Physical save to resist disintegration. ▶
+    Examples of objects: The following might be targeted: a tree, a ship, a 10'
+    section of wall.
   duration: Instant
-  save: physical
+  favorite: false
+  level: 6
+  prepared: false
   range: 60'
-  skill: null
-_id: aof7riapctkr5wyt
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457092
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: physical
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!aof7riapctkr5wyt'
 

@@ -1,27 +1,23 @@
+_id: 990111ohb3avpu0m
 name: ESP
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 6300000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457058
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 12 turns Range: 60' This spell grants the caster the ability to
-    perceive and understand the thoughts of other living creatures, provided
-    they fail a Mental save. ▶ Focus for 1 turn: To pick up thoughts, the caster
-    must focus their concentration in one direction for one turn. ▶ After this
-    turn: The thoughts of all creatures within range in that direction can be
-    perceived. ▶ Multiple creatures: If multiple creatures are within the range
-    in the direction being focused on, their thoughts mingle into a confusing
-    jumble. The caster must spend an additional turn to sort out one creature's
-    thoughts. ▶ Meaning: The caster understands the meaning of all thoughts even
-    if they do not share the creature's language. ▶ Obstructions: The ability to
-    perceive thoughts is obstructed by a thin layer of lead or by rock of 2'
-    thick or greater.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -35,26 +31,27 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 12 turns Range: 60' This spell grants the caster the ability to
+    perceive and understand the thoughts of other living creatures, provided
+    they fail a Mental save. ▶ Focus for 1 turn: To pick up thoughts, the caster
+    must focus their concentration in one direction for one turn. ▶ After this
+    turn: The thoughts of all creatures within range in that direction can be
+    perceived. ▶ Multiple creatures: If multiple creatures are within the range
+    in the direction being focused on, their thoughts mingle into a confusing
+    jumble. The caster must spend an additional turn to sort out one creature's
+    thoughts. ▶ Meaning: The caster understands the meaning of all thoughts even
+    if they do not share the creature's language. ▶ Obstructions: The ability to
+    perceive thoughts is obstructed by a thin layer of lead or by rock of 2'
+    thick or greater.
   duration: 12 turns
-  save: mental
+  favorite: false
+  level: 2
+  prepared: false
   range: 60'
-  skill: null
-_id: 990111ohb3avpu0m
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457058
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: mental
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!990111ohb3avpu0m'
 

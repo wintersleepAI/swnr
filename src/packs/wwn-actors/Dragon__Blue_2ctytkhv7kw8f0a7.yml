@@ -1,19 +1,29 @@
+_id: 2ctytkhv7kw8f0a7
 name: Dragon, Blue
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
+ownership: {}
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456517
+  modifiedTime: 1754277456517
+  lastModifiedBy: null
+  exportSource: null
 system:
   ab: 8
   armorType: street
   attacks:
-    damage: d6
     bonusDamage: 0
+    damage: d6
     number: 0
   baseAc: 20
-  hitDice: 9
-  moralScore: 9
-  saves: 11
-  skillBonus: 0
-  speed: 30
   biography: >-
     A proud, ancient race of gigantic, carnivorous, winged reptiles. There are
     many subspecies of dragon, many of which are distinguished by the colour of
@@ -48,263 +58,134 @@ system:
     dragons may have up to 3 HD more and twice as much treasure. Lairs: A
     dragon's treasure is always kept in its well-hidden lair and is seldom
     unguarded.
+  hitDice: 9
+  moralScore: 9
+  saves: 11
+  skillBonus: 0
   species: monster
-_id: 2ctytkhv7kw8f0a7
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456517
-  modifiedTime: 1754277456517
-  lastModifiedBy: null
-  exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+  speed: 30
 effects: []
-prototypeToken:
-  name: Dragon, Blue
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/dragon-head.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Claw
+  - _id: 7zyb5jbcyyu1n8mz
+    name: Bite
     type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 1d6+1
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
+      ab: 0
       ammo:
+        burst: false
         max: 0
         type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: 5ihq4unlvvmrwc9x
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920811
-      modifiedTime: 1754273920811
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!2ctytkhv7kw8f0a7.5ihq4unlvvmrwc9x'
-  - name: Bite
-    type: weapon
-    system:
-      description: ''
       cost: 0
       damage: 3d10
+      description: ''
+      encumbrance: 1
+      isTwoHanded: false
+      quality: stock
       range:
-        normal: 0
         max: 0
+        normal: 0
       shock:
-        dmg: 6
         ac: 18
+        dmg: 6
+      skill: punch
+      stat: str
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!2ctytkhv7kw8f0a7.7zyb5jbcyyu1n8mz'
+  - _id: q5k7zf7jigh8y63p
+    name: Breath Weapon
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      cost: 0
+      description: 100' long line of lightning.
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      quantity: 1
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!2ctytkhv7kw8f0a7.q5k7zf7jigh8y63p'
+  - _id: 5ihq4unlvvmrwc9x
+    name: Claw
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
+    system:
+      ab: 0
       ammo:
+        burst: false
         max: 0
         type: ammo
-        burst: false
+      cost: 0
+      damage: 1d6+1
+      description: ''
+      encumbrance: 1
       isTwoHanded: false
-      stat: str
+      quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 15
+        dmg: 2
       skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
+      stat: str
       tl: 3
-    _id: 7zyb5jbcyyu1n8mz
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920811
-      modifiedTime: 1754273920811
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
-    _key: '!actors.items!2ctytkhv7kw8f0a7.7zyb5jbcyyu1n8mz'
-  - name: Breath Weapon
+    _key: '!actors.items!2ctytkhv7kw8f0a7.5ihq4unlvvmrwc9x'
+  - _id: b86qxakio35xwt8a
+    name: Language and Spells
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
-      description: 100' long line of lightning.
       cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: q5k7zf7jigh8y63p
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920811
-      modifiedTime: 1754273920811
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!2ctytkhv7kw8f0a7.q5k7zf7jigh8y63p'
-  - name: Language and Spells
-    type: item
-    system:
       description: 40%; 4 x 1st level, 4 x 2nd level.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: b86qxakio35xwt8a
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920811
-      modifiedTime: 1754273920811
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!2ctytkhv7kw8f0a7.b86qxakio35xwt8a'
-  - name: Sleeping
+  - _id: dl35ac17h74hh486
+    name: Sleeping
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
-      description: 20%.
       cost: 0
-      quantity: 1
+      description: 20%.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: dl35ac17h74hh486
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920811
-      modifiedTime: 1754273920811
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!2ctytkhv7kw8f0a7.dl35ac17h74hh486'
 _key: '!actors!2ctytkhv7kw8f0a7'
 

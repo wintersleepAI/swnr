@@ -1,7 +1,30 @@
+_id: gnqsjc0ruzh9w1w7
 name: Natural Weaponry
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456798
+  modifiedTime: 1754277456798
+  lastModifiedBy: null
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Beastmaster
+      usesCost: 1
+      cadence: scene
+      timing: manual
   description: >-
     You may have physically grown fangs and claws, or it may be that you just
     intuitively absorbed effective unarmed fighting techniques from your animal
@@ -18,40 +41,14 @@ system:
     Weaponry (L6)} Level 9:
     @UUID[Compendium.wwn.adventuring-gear.Item.Un4Wi6C3dmuFhyLu]{Natural
     Weaponry (L9)}
+  duration: Instant
   favorite: false
-  subType: art
-  source: Beastmaster
   level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Beastmaster
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
   range: Self
-  skill: null
-_id: gnqsjc0ruzh9w1w7
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456798
-  modifiedTime: 1754277456798
-  lastModifiedBy: null
-  exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+  save: None
+  source: Beastmaster
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!gnqsjc0ruzh9w1w7'
 

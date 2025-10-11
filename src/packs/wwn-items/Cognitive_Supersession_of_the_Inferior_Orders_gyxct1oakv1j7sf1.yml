@@ -1,24 +1,23 @@
+_id: gyxct1oakv1j7sf1
 name: Cognitive Supersession of the Inferior Orders
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456902
+  modifiedTime: 1754277456902
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The mage targets a visible, normal, non-magical animal or insect, obtaining
-    temporary control of the beast and the ability to share its senses. The
-    animal gains a telepathic bond with the caster, obeying any non-suicidal
-    command and allowing the mage to perceive everything it perceives. The beast
-    will not fight for the caster, but can perform complex actions entirely out
-    of character for it while under the mage's control. The mage must focus to
-    share the beast's senses, requiring a Main Action and leaving the mage
-    unable to act physically while so focused. The spell lasts until the mage
-    releases the beast, it is dispelled, or it is cast again.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -32,26 +31,24 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The mage targets a visible, normal, non-magical animal or insect, obtaining
+    temporary control of the beast and the ability to share its senses. The
+    animal gains a telepathic bond with the caster, obeying any non-suicidal
+    command and allowing the mage to perceive everything it perceives. The beast
+    will not fight for the caster, but can perform complex actions entirely out
+    of character for it while under the mage's control. The mage must focus to
+    share the beast's senses, requiring a Main Action and leaving the mage
+    unable to act physically while so focused. The spell lasts until the mage
+    releases the beast, it is dispelled, or it is cast again.
   duration: Until dispelled, released, or cast again
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: Visible
-  skill: null
-_id: gyxct1oakv1j7sf1
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456902
-  modifiedTime: 1754277456902
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!gyxct1oakv1j7sf1'
 

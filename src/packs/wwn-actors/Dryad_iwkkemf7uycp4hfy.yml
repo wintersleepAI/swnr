@@ -1,260 +1,141 @@
+_id: iwkkemf7uycp4hfy
 name: Dryad
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
-system:
-  ab: 1
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 14
-  hitDice: 2
-  moralScore: 6
-  saves: 14
-  skillBonus: 0
-  speed: 40
-  biography: >-
-    Shy, peaceful, yet wary tree spirits that can manifest as beautiful female
-    humanoids. Live in deep forests.
-  species: monster
-_id: iwkkemf7uycp4hfy
+ownership: {}
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456562
   modifiedTime: 1754277456562
   lastModifiedBy: null
   exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+system:
+  ab: 1
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 14
+  biography: >-
+    Shy, peaceful, yet wary tree spirits that can manifest as beautiful female
+    humanoids. Live in deep forests.
+  hitDice: 2
+  moralScore: 6
+  saves: 14
+  skillBonus: 0
+  species: monster
+  speed: 40
 effects: []
-prototypeToken:
-  name: Dryad
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Charm
+  - _id: 1qzrdh3we35ociy3
+    name: Bound With Tree
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
+      description: >-
+        Spiritually connected with a single tree. Dryad dies if the tree dies,
+        or if separated by more than 240'.
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      quantity: 1
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!iwkkemf7uycp4hfy.1qzrdh3we35ociy3'
+  - _id: j4c4j57sbi0u39w2
+    name: Charm
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      cost: 0
       description: >-
         Victim compelled to approach the tree, vanishes inside it (Mental save
         with a &ndash;2 penalty). If not immediately rescued, the victim is lost
         forever.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: j4c4j57sbi0u39w2
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920816
-      modifiedTime: 1754273920816
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!iwkkemf7uycp4hfy.j4c4j57sbi0u39w2'
-  - name: Bound With Tree
+  - _id: axjpe9hko3mbzw23
+    name: Defensive
     type: item
-    system:
-      description: >-
-        Spiritually connected with a single tree. Dryad dies if the tree dies,
-        or if separated by more than 240'.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 1qzrdh3we35ociy3
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920816
-      modifiedTime: 1754273920816
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
+    img: icons/svg/item-bag.svg
     sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!iwkkemf7uycp4hfy.1qzrdh3we35ociy3'
-  - name: Meld With Tree
-    type: item
     system:
-      description: Can disappear by joining with her tree.
       cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 9000rwyp7nv0affp
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920816
-      modifiedTime: 1754273920816
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!iwkkemf7uycp4hfy.9000rwyp7nv0affp'
-  - name: Defensive
-    type: item
-    system:
       description: >-
         Distrustful of strangers. Attempt to charm anyone who approaches or
         follows.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: axjpe9hko3mbzw23
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920816
-      modifiedTime: 1754273920816
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!iwkkemf7uycp4hfy.axjpe9hko3mbzw23'
-  - name: Treasure
+  - _id: 9000rwyp7nv0affp
+    name: Meld With Tree
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
-      description: Hidden in roots of the tree. Treasure Type D from OSE.
       cost: 0
-      quantity: 1
+      description: Can disappear by joining with her tree.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: m6k9s1hqwv2vtzs9
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920816
-      modifiedTime: 1754273920816
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
+    _key: '!actors.items!iwkkemf7uycp4hfy.9000rwyp7nv0affp'
+  - _id: m6k9s1hqwv2vtzs9
+    name: Treasure
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      cost: 0
+      description: Hidden in roots of the tree. Treasure Type D from OSE.
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      quantity: 1
+      tl: 3
     effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
     _key: '!actors.items!iwkkemf7uycp4hfy.m6k9s1hqwv2vtzs9'
 _key: '!actors!iwkkemf7uycp4hfy'
 

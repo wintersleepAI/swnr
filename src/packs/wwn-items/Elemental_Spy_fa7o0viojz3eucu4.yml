@@ -1,20 +1,23 @@
+_id: fa7o0viojz3eucu4
 name: Elemental Spy
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456886
+  modifiedTime: 1754277456886
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The elementalist enchants a stone, ounce of liquid, flame no smaller than a
-    candleflame, or a particular plume of smoke or incense. For one day per
-    level, so long as the charmed object is not destroyed, dispersed, or
-    consumed, they can as a Main Action see and listen to anything around the
-    object as if they were standing there.
-  favorite: false
-  subType: spell
-  source: Elementalist
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -28,26 +31,20 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The elementalist enchants a stone, ounce of liquid, flame no smaller than a
+    candleflame, or a particular plume of smoke or incense. For one day per
+    level, so long as the charmed object is not destroyed, dispersed, or
+    consumed, they can as a Main Action see and listen to anything around the
+    object as if they were standing there.
   duration: Until dispelled, destroyed, or dismissed
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: Self
-  skill: null
-_id: fa7o0viojz3eucu4
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456886
-  modifiedTime: 1754277456886
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: Elementalist
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!fa7o0viojz3eucu4'
 

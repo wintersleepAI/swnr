@@ -1,6 +1,22 @@
+_id: ojt7l867k5d5ueqg
 name: Whirlwind Assault
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456863
+  modifiedTime: 1754277456863
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You are a frenzy of bloody havoc in melee combat, and can hack down numerous
@@ -13,23 +29,8 @@ system:
     within range using any Ready weapon you have.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: ojt7l867k5d5ueqg
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456863
-  modifiedTime: 1754277456863
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!ojt7l867k5d5ueqg'
 

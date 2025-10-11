@@ -1,26 +1,23 @@
+_id: 9uw38e3lqmhza2ny
 name: Scorn the Fetters of Earth
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456918
+  modifiedTime: 1754277456918
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The caster and up to one visible ally per caster level are briefly granted
-    the ability to move in three dimensions, being able to walk and run upward
-    into the air as easily as along flat ground. For the rest of the scene,
-    those affected can move in such a way, remaining suspended in the air after
-    their movement for the round. When the spell ends, either naturally or upon
-    being dispelled, all affected targets float gently to the ground.
-    Optionally, the caster can instead use this spell on one visible flying
-    creature per caster level, which must make a Physical save at a penalty
-    equal to the caster's Magic skill or be forced to land as they had fallen
-    half the distance they had descended. For the rest of the scene, such
-    creatures remain grounded and unable to fly.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -34,26 +31,26 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The caster and up to one visible ally per caster level are briefly granted
+    the ability to move in three dimensions, being able to walk and run upward
+    into the air as easily as along flat ground. For the rest of the scene,
+    those affected can move in such a way, remaining suspended in the air after
+    their movement for the round. When the spell ends, either naturally or upon
+    being dispelled, all affected targets float gently to the ground.
+    Optionally, the caster can instead use this spell on one visible flying
+    creature per caster level, which must make a Physical save at a penalty
+    equal to the caster's Magic skill or be forced to land as they had fallen
+    half the distance they had descended. For the rest of the scene, such
+    creatures remain grounded and unable to fly.
   duration: Scene
-  save: physical
+  favorite: false
+  level: 3
+  prepared: false
   range: Self
-  skill: null
-_id: 9uw38e3lqmhza2ny
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456918
-  modifiedTime: 1754277456918
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: physical
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!9uw38e3lqmhza2ny'
 

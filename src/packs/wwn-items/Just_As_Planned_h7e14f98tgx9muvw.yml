@@ -1,7 +1,26 @@
+_id: h7e14f98tgx9muvw
 name: Just As Planned
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: OawaGpAei0uKmXdc
+sort: 1000000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456930
+  modifiedTime: 1759968688997
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     Some sublimely cunning mastermind ensures that the schemes of this faction
     are unimaginably subtle and far-seeing. Whenever the faction's Assets make a
@@ -9,40 +28,20 @@ system:
     inflicting 1d6 damage on Just As Planned. This may be done repeatedly,
     though it may destroy the Asset. There is no range limit on this benefit.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 15
     max: 15
-  rating: 8
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 15
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: h7e14f98tgx9muvw
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456930
-  modifiedTime: 1754277456930
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 8
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!h7e14f98tgx9muvw'
 

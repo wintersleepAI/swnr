@@ -1,25 +1,23 @@
+_id: nbzzfalqjq2vllg9
 name: Invocation of the Invincible Citadel
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456887
+  modifiedTime: 1754277456887
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The caster hurls up a magical shield that is impervious to almost all
-    hostile powers. Unlike most sorceries, this spell can be cast as an Instant
-    action, and immediately creates a transparent bubble of force around the
-    caster with up to a twenty-foot radius. Entities and forces outside the
-    bubble cannot penetrate it, and the interior remains a warm, breathable,
-    safe environment regardless of the exterior. Those within the bubble can
-    pass out of it, but they cannot then return within. The bubble can be
-    dispelled by appropriate magics, but other enchantments and attacks cannot
-    harm it, nor can magical effects or material objects pass through it from
-    either direction. The spell lasts until the caster departs from the bubble.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -33,26 +31,25 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The caster hurls up a magical shield that is impervious to almost all
+    hostile powers. Unlike most sorceries, this spell can be cast as an Instant
+    action, and immediately creates a transparent bubble of force around the
+    caster with up to a twenty-foot radius. Entities and forces outside the
+    bubble cannot penetrate it, and the interior remains a warm, breathable,
+    safe environment regardless of the exterior. Those within the bubble can
+    pass out of it, but they cannot then return within. The bubble can be
+    dispelled by appropriate magics, but other enchantments and attacks cannot
+    harm it, nor can magical effects or material objects pass through it from
+    either direction. The spell lasts until the caster departs from the bubble.
   duration: Instant
-  save: None
+  favorite: false
+  level: 5
+  prepared: false
   range: Until the caster departs
-  skill: null
-_id: nbzzfalqjq2vllg9
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456887
-  modifiedTime: 1754277456887
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!nbzzfalqjq2vllg9'
 

@@ -1,42 +1,12 @@
+_id: 5trar78qv0ez4hrh
 name: Shield, Small
 type: armor
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+folder: uEIK9nTIi1UzMYvs
 sort: 100000
-system:
-  description: >-
-    Shields come in two general varieties. Small ones, often made of costlier
-    metal, can be strapped to the wearer's arm and allow them to hold and
-    manipulate objects with that hand, albeit not wield a weapon with it. Larger
-    shields are of cheaper wood and require a good grip. A small shield user has
-    a base AC of 13, while a large shield user has a base AC of 14. Unlike other
-    armor, however, if the user is already wearing equal or better armor the
-    shield grants a +1 bonus to their AC. Shields allow the bearer to ignore the
-    first instance of Shock they might otherwise suffer in a round.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 20
-  tl: 3
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  ac: 13
-  shield: true
-  use: false
-  meleeAc: 13
-  soak:
-    value: 0
-    max: 0
-  dr: 0
-  traumaDiePenalty: 0
-  isSubtle: false
-  isHeavy: false
-  shieldMeleeACBonus: 1
-  shieldACBonus: 1
-  baseAc: 13
-_id: 5trar78qv0ez4hrh
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -47,11 +17,40 @@ _stats:
   modifiedTime: 1758741966808
   lastModifiedBy: lKC5x4Yf023Bizof
   exportSource: null
-folder: uEIK9nTIi1UzMYvs
-flags: {}
+system:
+  ac: 13
+  baseAc: 13
+  bundle:
+    bundled: false
+  cost: 20
+  description: >-
+    Shields come in two general varieties. Small ones, often made of costlier
+    metal, can be strapped to the wearer's arm and allow them to hold and
+    manipulate objects with that hand, albeit not wield a weapon with it. Larger
+    shields are of cheaper wood and require a good grip. A small shield user has
+    a base AC of 13, while a large shield user has a base AC of 14. Unlike other
+    armor, however, if the user is already wearing equal or better armor the
+    shield grants a +1 bonus to their AC. Shields allow the bearer to ignore the
+    first instance of Shock they might otherwise suffer in a round.
+  dr: 0
+  encumbrance: 1
+  favorite: false
+  isHeavy: false
+  isSubtle: false
+  location: stowed
+  meleeAc: 13
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: true
+  shieldACBonus: 1
+  shieldMeleeACBonus: 1
+  soak:
+    max: 0
+    value: 0
+  tl: 3
+  traumaDiePenalty: 0
+  use: false
 effects: []
-ownership:
-  default: 0
-img: icons/svg/item-bag.svg
 _key: '!items!5trar78qv0ez4hrh'
 

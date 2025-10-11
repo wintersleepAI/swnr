@@ -1,6 +1,22 @@
+_id: c7491zsy3weqh8fk
 name: Spirit Familiar
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456854
+  modifiedTime: 1754277456854
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You have a minor spirit, devil, construct, magical beast, or other creature
@@ -25,23 +41,8 @@ system:
     @Compendium[wwn.creatures-of-a-far-age.utoptbq8DoUX3Xtf]{Evoked Servitor}
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: c7491zsy3weqh8fk
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456854
-  modifiedTime: 1754277456854
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!c7491zsy3weqh8fk'
 

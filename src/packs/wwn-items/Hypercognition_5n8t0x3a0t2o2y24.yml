@@ -1,33 +1,12 @@
+_id: 5n8t0x3a0t2o2y24
 name: Hypercognition
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    You can drive your mind to tremendous feats of calculation, estimation, and
-    recall. You have an eidetic memory and can perform extremely advanced
-    calculations in your head. As an Instant action, Commit Effort for the day
-    and reroll any failed Int-based skill check. This ability can be used only
-    once on any given check.
-  favorite: false
-  subType: art
-  source: Thought Noble
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Thought Noble
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: 5n8t0x3a0t2o2y24
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -38,10 +17,28 @@ _stats:
   modifiedTime: 1754277456830
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Thought Noble
+      usesCost: 1
+      cadence: day
+      timing: manual
+  description: >-
+    You can drive your mind to tremendous feats of calculation, estimation, and
+    recall. You have an eidetic memory and can perform extremely advanced
+    calculations in your head. As an Instant action, Commit Effort for the day
+    and reroll any failed Int-based skill check. This ability can be used only
+    once on any given check.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Thought Noble
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!5n8t0x3a0t2o2y24'
 

@@ -1,331 +1,203 @@
+_id: hfud06wd7z5jxsl7
 name: Cave Locust
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
-system:
-  ab: 1
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 15
-  hitDice: 2
-  moralScore: 5
-  saves: 14
-  skillBonus: 0
-  speed: 20
-  biography: 2&ndash;3' long, herbivorous, giant crickets that dwell in caverns.
-  species: monster
-_id: hfud06wd7z5jxsl7
+ownership: {}
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456523
   modifiedTime: 1754277456523
   lastModifiedBy: null
   exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+system:
+  ab: 1
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 15
+  biography: 2&ndash;3' long, herbivorous, giant crickets that dwell in caverns.
+  hitDice: 2
+  moralScore: 5
+  saves: 14
+  skillBonus: 0
+  species: monster
+  speed: 20
 effects: []
-prototypeToken:
-  name: Cave Locust
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Bite
+  - _id: wdatkf2kd8f7198q
+    name: Bite
     type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 1d2
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 0
-        ac: 15
+      ab: 0
       ammo:
+        burst: false
         max: 0
         type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
+      cost: 0
+      damage: 1d2
+      description: ''
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 15
+        dmg: 0
+      skill: punch
+      stat: str
       tl: 3
-    _id: wdatkf2kd8f7198q
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920811
-      modifiedTime: 1754273920811
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!hfud06wd7z5jxsl7.wdatkf2kd8f7198q'
-  - name: Jump
-    type: weapon
+  - _id: lelu69mmy30eiutn
+    name: Blend in with Stone
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
+      description: >-
+        May be overlooked or mistaken for statues, due to their stony
+        colouration.
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      quantity: 1
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!hfud06wd7z5jxsl7.lelu69mmy30eiutn'
+  - _id: hzc33tfihg59bzoo
+    name: Jump
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
+    system:
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 0
+      damage: 1d4
       description: >-
         Very skittish. If attacked, usually flee by jumping up to 60' then
         flying away. 50% chance of jumping at a random opponent, in which case
         treat the jump as an attack.
-      cost: 0
-      damage: 1d4
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 0
-        ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 15
+        dmg: 0
+      skill: punch
+      stat: str
       tl: 3
-    _id: hzc33tfihg59bzoo
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!hfud06wd7z5jxsl7.hzc33tfihg59bzoo'
-  - name: Spit
-    type: weapon
+  - _id: s4913ktq85mubqd3
+    name: Poison Immunity
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
+      description: >-
+        Immune to yellow mould and most poisons, due to their habit of eating
+        fungi.
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      quantity: 1
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!hfud06wd7z5jxsl7.s4913ktq85mubqd3'
+  - _id: wbcjhhojga8nf8wj
+    name: Shriek
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      cost: 0
+      description: >-
+        If attacked or frightened, shriek to warn others. This may attract
+        wandering monsters (20% chance per round).
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      quantity: 1
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!hfud06wd7z5jxsl7.wbcjhhojga8nf8wj'
+  - _id: t3vaomfod4t3jgdh
+    name: Spit
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
+    system:
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 0
+      damage: '0'
       description: >-
         Used defensively. 10' range. Target treated as AC 10. The affected
         character is covered in stinking spittle: unable to act for 1 turn
         (Physical save). Until the goo is washed off, others who come within 5'
         must also make a Physical save or be violently sick.
-      cost: 0
-      damage: '0'
-      range:
-        normal: 10
-        max: 10
-      shock:
-        dmg: 0
-        ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
+      encumbrance: 1
       isTwoHanded: false
-      stat: str
+      quality: stock
+      range:
+        max: 10
+        normal: 10
+      shock:
+        ac: 15
+        dmg: 0
       skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
+      stat: str
       tl: 3
-    _id: t3vaomfod4t3jgdh
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!hfud06wd7z5jxsl7.t3vaomfod4t3jgdh'
-  - name: Shriek
-    type: item
-    system:
-      description: >-
-        If attacked or frightened, shriek to warn others. This may attract
-        wandering monsters (20% chance per round).
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: wbcjhhojga8nf8wj
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!hfud06wd7z5jxsl7.wbcjhhojga8nf8wj'
-  - name: Poison Immunity
-    type: item
-    system:
-      description: >-
-        Immune to yellow mould and most poisons, due to their habit of eating
-        fungi.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: s4913ktq85mubqd3
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!hfud06wd7z5jxsl7.s4913ktq85mubqd3'
-  - name: Blend in with Stone
-    type: item
-    system:
-      description: >-
-        May be overlooked or mistaken for statues, due to their stony
-        colouration.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: lelu69mmy30eiutn
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!hfud06wd7z5jxsl7.lelu69mmy30eiutn'
 _key: '!actors!hfud06wd7z5jxsl7'
 

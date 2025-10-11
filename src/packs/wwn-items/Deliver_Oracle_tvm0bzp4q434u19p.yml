@@ -1,7 +1,30 @@
+_id: tvm0bzp4q434u19p
 name: Deliver Oracle
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456825
+  modifiedTime: 1754277456825
+  lastModifiedBy: null
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Wise
+      usesCost: 1
+      cadence: scene
+      timing: manual
   description: >-
     A petitioner asks about the outcome of a particular course of action. The
     diviner then spends a day in various rituals, seeking an oracular answer. At
@@ -13,40 +36,14 @@ system:
     oracle is delivered. Oracles are usually delivered as metaphors, poetry, or
     visions. The GM should ensure that some element of a true oracle actually
     does come to pass.
+  duration: Instant
   favorite: false
-  subType: art
-  source: Wise
   level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Wise
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
   range: Self
-  skill: null
-_id: tvm0bzp4q434u19p
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456825
-  modifiedTime: 1754277456825
-  lastModifiedBy: null
-  exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+  save: None
+  source: Wise
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!tvm0bzp4q434u19p'
 

@@ -1,32 +1,12 @@
+_id: bfzh61da2tokfyxp
 name: Evil Eye
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    This art improves your curse and blessing arts. You can now use these arts
-    as an Instant action, albeit still only one such art per round, and you need
-    do no more than look at the target rather than vocalizing any particular
-    curse or blessing.
-  favorite: false
-  subType: art
-  source: Wise
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Wise
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: bfzh61da2tokfyxp
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -37,10 +17,27 @@ _stats:
   modifiedTime: 1754277456792
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Wise
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    This art improves your curse and blessing arts. You can now use these arts
+    as an Instant action, albeit still only one such art per round, and you need
+    do no more than look at the target rather than vocalizing any particular
+    curse or blessing.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Wise
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!bfzh61da2tokfyxp'
 

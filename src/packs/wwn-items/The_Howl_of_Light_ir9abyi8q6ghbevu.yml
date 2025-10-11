@@ -1,22 +1,23 @@
+_id: ir9abyi8q6ghbevu
 name: The Howl of Light
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456922
+  modifiedTime: 1754277456922
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    A flattened disc of tremendous heat, sound, and shock is triggered at a
-    visible point within fifty feet per caster level, erupting in a twenty-foot
-    radius eight feet in height. Everything within the area suffers 1d8 damage
-    from flame, concussion, and sonic shock per caster level, with an Evasion
-    save for half. If used in a space less than 40 feet in width, the explosion
-    is channeled through adjacent spaces and passages for an additional [[/roll
-    1d6]] x 10 feet.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -30,26 +31,22 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    A flattened disc of tremendous heat, sound, and shock is triggered at a
+    visible point within fifty feet per caster level, erupting in a twenty-foot
+    radius eight feet in height. Everything within the area suffers 1d8 damage
+    from flame, concussion, and sonic shock per caster level, with an Evasion
+    save for half. If used in a space less than 40 feet in width, the explosion
+    is channeled through adjacent spaces and passages for an additional [[/roll
+    1d6]] x 10 feet.
   duration: Instant
-  save: evasion
+  favorite: false
+  level: 3
+  prepared: false
   range: 25-ft. radius
-  skill: null
-_id: ir9abyi8q6ghbevu
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456922
-  modifiedTime: 1754277456922
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: evasion
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!ir9abyi8q6ghbevu'
 

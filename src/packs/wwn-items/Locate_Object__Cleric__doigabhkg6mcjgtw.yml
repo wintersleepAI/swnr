@@ -1,21 +1,23 @@
+_id: doigabhkg6mcjgtw
 name: Locate Object (Cleric)
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 3900000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457078
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 6 turns Range: 120' The caster can sense the direction (but not
-    distance) of an object. One of two types of objects may be located: General
-    class: An object of a general class (e.g. a stairway, an altar, etc.). In
-    this case, the nearest object of that type is located. Specific object: A
-    specific object which the caster can clearly visualise in all aspects.
-    Restrictions: This spell cannot be used to locate creatures.
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 6 turns Range: 120' The caster can sense the direction (but not
+    distance) of an object. One of two types of objects may be located: General
+    class: An object of a general class (e.g. a stairway, an altar, etc.). In
+    this case, the nearest object of that type is located. Specific object: A
+    specific object which the caster can clearly visualise in all aspects.
+    Restrictions: This spell cannot be used to locate creatures.
   duration: 6 turns
-  save: None
+  favorite: false
+  level: 3
+  prepared: false
   range: 120'
-  skill: null
-_id: doigabhkg6mcjgtw
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457078
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!doigabhkg6mcjgtw'
 

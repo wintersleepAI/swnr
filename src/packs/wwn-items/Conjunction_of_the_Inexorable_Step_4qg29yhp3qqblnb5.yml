@@ -1,22 +1,23 @@
+_id: 4qg29yhp3qqblnb5
 name: Conjunction of the Inexorable Step
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456894
+  modifiedTime: 1754277456894
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    A visible target within a hundred feet is immediately teleported to any
-    visible, solid resting point within a half-mile, provided the target point
-    has enough room to accept them and it is not a position of imminent physical
-    peril. Unattended objects can be translocated by the spell, but they can be
-    no larger than a horse. Unwilling creatures targeted by this spell may make
-    a Mental saving throw to resist; on a success, it is the caster who is
-    transported to the intended destination instead.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -30,26 +31,22 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    A visible target within a hundred feet is immediately teleported to any
+    visible, solid resting point within a half-mile, provided the target point
+    has enough room to accept them and it is not a position of imminent physical
+    peril. Unattended objects can be translocated by the spell, but they can be
+    no larger than a horse. Unwilling creatures targeted by this spell may make
+    a Mental saving throw to resist; on a success, it is the caster who is
+    transported to the intended destination instead.
   duration: Instant
-  save: mental
+  favorite: false
+  level: 2
+  prepared: false
   range: 100 ft.
-  skill: null
-_id: 4qg29yhp3qqblnb5
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456894
-  modifiedTime: 1754277456894
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: mental
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!4qg29yhp3qqblnb5'
 

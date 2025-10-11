@@ -1,31 +1,12 @@
+_id: 9b4ao4cw7oqnycoe
 name: Battle Cry
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Commit Effort for the day as an On Turn action to bolster your allies. They
-    gain +1 to hit, saving throws, and damage, including Shock, for one round
-    per level. At 4th level this bonus increases to +2, and at 9th, to +3.
-  favorite: false
-  subType: art
-  source: Bard
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Bard
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: 9b4ao4cw7oqnycoe
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -36,10 +17,26 @@ _stats:
   modifiedTime: 1754277456813
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Bard
+      usesCost: 1
+      cadence: day
+      timing: manual
+  description: >-
+    Commit Effort for the day as an On Turn action to bolster your allies. They
+    gain +1 to hit, saving throws, and damage, including Shock, for one round
+    per level. At 4th level this bonus increases to +2, and at 9th, to +3.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Bard
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!9b4ao4cw7oqnycoe'
 

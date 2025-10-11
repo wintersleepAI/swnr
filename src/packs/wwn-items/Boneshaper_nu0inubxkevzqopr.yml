@@ -1,26 +1,23 @@
+_id: nu0inubxkevzqopr
 name: Boneshaper
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456922
+  modifiedTime: 1754277456922
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The clay of flesh and bone run obediently to the will of the necromancer.
-    Whether living or undead, a willing or helpless victim under the effects of
-    this spell can be reshaped into any roughly-equivalent form with an hour's
-    work. Limbs can be added or removed and existing tissue can be recolored,
-    re-textured, or rearranged to the necromancer's wishes. Perfect imitation of
-    a particular creature requires a Dex/Magic skill check against difficulty
-    10. This spell is limited in the physical changes it can effect; a bonus of
-    +1 can be added to modifier of Charisma or a physical attribute at the price
-    of a -1 penalty to the modifier of one of the same attributes, to a maximum
-    of +2 or -2. This spell lasts until the necromancer lifts it or it is
-    dispelled.
-  favorite: false
-  subType: spell
-  source: Necromancer
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -34,26 +31,26 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The clay of flesh and bone run obediently to the will of the necromancer.
+    Whether living or undead, a willing or helpless victim under the effects of
+    this spell can be reshaped into any roughly-equivalent form with an hour's
+    work. Limbs can be added or removed and existing tissue can be recolored,
+    re-textured, or rearranged to the necromancer's wishes. Perfect imitation of
+    a particular creature requires a Dex/Magic skill check against difficulty
+    10. This spell is limited in the physical changes it can effect; a bonus of
+    +1 can be added to modifier of Charisma or a physical attribute at the price
+    of a -1 penalty to the modifier of one of the same attributes, to a maximum
+    of +2 or -2. This spell lasts until the necromancer lifts it or it is
+    dispelled.
   duration: Until lifted or dispelled
-  save: None
+  favorite: false
+  level: 4
+  prepared: false
   range: Self
-  skill: null
-_id: nu0inubxkevzqopr
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456922
-  modifiedTime: 1754277456922
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: Necromancer
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!nu0inubxkevzqopr'
 

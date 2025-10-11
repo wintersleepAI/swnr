@@ -1,30 +1,12 @@
+_id: vf8qszns7nnz1evs
 name: Dire Pact
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Foes suffer a penalty equal to your Magic skill on all saves versus your
-    Accursed arts. If they succeed, however, you gain one System Strain.
-  favorite: false
-  subType: art
-  source: Accursed
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Accursed
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: vf8qszns7nnz1evs
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -35,10 +17,25 @@ _stats:
   modifiedTime: 1754277456809
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Accursed
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    Foes suffer a penalty equal to your Magic skill on all saves versus your
+    Accursed arts. If they succeed, however, you gain one System Strain.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Accursed
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!vf8qszns7nnz1evs'
 

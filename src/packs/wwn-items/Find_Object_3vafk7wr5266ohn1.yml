@@ -1,7 +1,30 @@
+_id: 3vafk7wr5266ohn1
 name: Find Object
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456793
+  modifiedTime: 1754277456793
+  lastModifiedBy: null
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Wise
+      usesCost: 1
+      cadence: scene
+      timing: manual
   description: >-
     The diviner spends a scene performing a ritual to locate a particular
     animal, object or type of substance known to them, be it gold, water, or a
@@ -13,40 +36,14 @@ system:
     impression of the direction the object is in. On a failure, roll 1d12 and
     use it as a clock face to give a random direction. This art can be used once
     per day.
+  duration: Instant
   favorite: false
-  subType: art
-  source: Wise
   level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Wise
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
   range: Self
-  skill: null
-_id: 3vafk7wr5266ohn1
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456793
-  modifiedTime: 1754277456793
-  lastModifiedBy: null
-  exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+  save: None
+  source: Wise
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!3vafk7wr5266ohn1'
 

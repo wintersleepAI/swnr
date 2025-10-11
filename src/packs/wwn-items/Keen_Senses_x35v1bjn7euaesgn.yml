@@ -1,33 +1,12 @@
+_id: x35v1bjn7euaesgn
 name: Keen Senses
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    First practiced by the blind music masters of the Second Dynasty, this art
-    gives you the equivalent of sight out to 60' even if blinded. You cannot
-    distinguish colors, but you can perceive physical details as readily as if
-    with your eyes. Physically-invisible creatures and objects are obvious to
-    you.
-  favorite: false
-  subType: art
-  source: Bard
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Bard
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: x35v1bjn7euaesgn
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -38,10 +17,28 @@ _stats:
   modifiedTime: 1754277456839
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Bard
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    First practiced by the blind music masters of the Second Dynasty, this art
+    gives you the equivalent of sight out to 60' even if blinded. You cannot
+    distinguish colors, but you can perceive physical details as readily as if
+    with your eyes. Physically-invisible creatures and objects are obvious to
+    you.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Bard
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!x35v1bjn7euaesgn'
 

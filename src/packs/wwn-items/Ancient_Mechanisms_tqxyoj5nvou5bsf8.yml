@@ -1,47 +1,46 @@
+_id: tqxyoj5nvou5bsf8
 name: Ancient Mechanisms
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: vGBf0X640rXwS7Ze
+sort: 100000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456963
+  modifiedTime: 1759968430177
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     Some useful magical mechanism from ages past has been refitted to be useful
     in local industry. Whenever an Asset in the same location must roll to make
     a profit, such as Farmers or Manufactory, the faction may roll the die twice
     and take the better result.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 4
     max: 4
-  rating: 3
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 4
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: tqxyoj5nvou5bsf8
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456963
-  modifiedTime: 1754277456963
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 3
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!tqxyoj5nvou5bsf8'
 

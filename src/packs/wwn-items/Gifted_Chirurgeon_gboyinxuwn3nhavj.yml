@@ -1,6 +1,22 @@
+_id: gboyinxuwn3nhavj
 name: Gifted Chirurgeon
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456873
+  modifiedTime: 1754277456873
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You have an unusual gift for saving mortally-wounded allies and quickening
@@ -15,23 +31,8 @@ system:
     on targets already at their maximum System Strain.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: gboyinxuwn3nhavj
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456873
-  modifiedTime: 1754277456873
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!gboyinxuwn3nhavj'
 

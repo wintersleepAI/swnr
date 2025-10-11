@@ -1,34 +1,12 @@
+_id: 2lats6h5firqlo39
 name: Wizard's Grandeur
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Commit Effort as an On Turn action. As long as it remains Committed, you
-    will not become dirty, sweaty, stained, or rumpled regardless of the
-    circumstances. Noxious substances will slide off you without staining and
-    you will remain comfortable regardless of your attire in any normal climate.
-    You may sleep comfortably without shelter or bedding as per the privation
-    rules on page 51.
-  favorite: false
-  subType: art
-  source: High Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: High Mage
-      usesCost: 1
-      cadence: active
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: 2lats6h5firqlo39
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -39,10 +17,29 @@ _stats:
   modifiedTime: 1754277456834
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: High Mage
+      usesCost: 1
+      cadence: active
+      timing: manual
+  description: >-
+    Commit Effort as an On Turn action. As long as it remains Committed, you
+    will not become dirty, sweaty, stained, or rumpled regardless of the
+    circumstances. Noxious substances will slide off you without staining and
+    you will remain comfortable regardless of your attire in any normal climate.
+    You may sleep comfortably without shelter or bedding as per the privation
+    rules on page 51.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: High Mage
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!2lats6h5firqlo39'
 

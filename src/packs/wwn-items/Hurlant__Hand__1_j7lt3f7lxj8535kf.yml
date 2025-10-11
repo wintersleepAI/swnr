@@ -1,7 +1,35 @@
+_id: j7lt3f7lxj8535kf
 name: Hurlant, Hand +1
 type: weapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+folder: jTUrnm2Z2KX0uU6Y
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457038
+  modifiedTime: 1754277457038
+  lastModifiedBy: null
+  exportSource: null
 system:
+  ab: 1
+  ammo:
+    burst: false
+    longReload: false
+    max: 10
+    suppress: false
+    type: ammo
+    value: 10
+  bundle:
+    bundled: false
+  cost: 1000
+  damage: 1d12+1
   description: >-
     Hurlants are a wide range of ancient and modern projectile weapons that
     launch specially-prepared charges through various means, both sorcerous and
@@ -20,63 +48,32 @@ system:
     military weapons in most regions. In some areas, even hurlants fail to
     function correctly; a GM who prefers not to include them can simply disallow
     them in their own campaign region.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
   encumbrance: 1
-  cost: 1000
-  tl: 3
+  favorite: false
+  isNonLethal: false
+  isTwoHanded: false
   location: stowed
-  quality: stock
   noEncReadied: false
-  stat: dex
-  secondStat: null
+  quality: stock
+  quantity: 1
+  range:
+    max: 60
+    normal: 30
+  remember:
+    burst: false
+    isNonLethal: false
+    modifier: 0
+    use: false
+  shock:
+    ac: 15
+    dmg: 0
   skill: shoot
   skillBoostsDamage: false
   skillBoostsShock: false
-  shock:
-    dmg: 0
-    ac: 15
-  ab: 1
-  ammo:
-    longReload: false
-    suppress: false
-    type: ammo
-    max: 10
-    value: 10
-    burst: false
-  range:
-    normal: 30
-    max: 60
-  damage: 1d12+1
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
+  stat: dex
+  tl: 3
   trauma:
     die: 1d6
-    rating: null
-  isTwoHanded: false
-  isNonLethal: false
-_id: j7lt3f7lxj8535kf
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457038
-  modifiedTime: 1754277457038
-  lastModifiedBy: null
-  exportSource: null
-folder: jTUrnm2Z2KX0uU6Y
-flags: {}
 effects: []
-ownership:
-  default: 0
 _key: '!items!j7lt3f7lxj8535kf'
 

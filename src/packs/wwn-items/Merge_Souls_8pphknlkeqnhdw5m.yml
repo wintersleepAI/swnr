@@ -1,23 +1,23 @@
+_id: 8pphknlkeqnhdw5m
 name: Merge Souls
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456920
+  modifiedTime: 1754277456920
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    By molding the plasmic stuff of life force, the necromancer can create a
-    bond between two willing or helpless targets. These subjects must be close
-    enough for the necromancer to touch; thereafter, for as long as the spell is
-    in effect, the two creatures pool their hit points. Injuries to either
-    subtract from this pool, and neither dies until it is reduced to zero,
-    whereupon both are Mortally Wounded. They can communicate telepathically at
-    will while the spell is in effect. The power ends at daybreak; if dispelled
-    sooner, the remaining pool is split proportionately.
-  favorite: false
-  subType: spell
-  source: Necromancer
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -31,26 +31,23 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    By molding the plasmic stuff of life force, the necromancer can create a
+    bond between two willing or helpless targets. These subjects must be close
+    enough for the necromancer to touch; thereafter, for as long as the spell is
+    in effect, the two creatures pool their hit points. Injuries to either
+    subtract from this pool, and neither dies until it is reduced to zero,
+    whereupon both are Mortally Wounded. They can communicate telepathically at
+    will while the spell is in effect. The power ends at daybreak; if dispelled
+    sooner, the remaining pool is split proportionately.
   duration: Until dawn
-  save: None
+  favorite: false
+  level: 3
+  prepared: false
   range: Touch
-  skill: null
-_id: 8pphknlkeqnhdw5m
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456920
-  modifiedTime: 1754277456920
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: Necromancer
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!8pphknlkeqnhdw5m'
 
