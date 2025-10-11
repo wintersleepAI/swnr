@@ -533,23 +533,23 @@ SWN.shipActions = {
     desc:
       "Gunners fire all weapons mounted on the ship, designating targets as they wish.",
     note: "Gunners fire all",
-    dept: "gunnery",
+    dept: "gunner",
   },
   fireOne: {
     title: "Fire One Weapon",
     cp: -2,
-    desc: "A gunner fires a single ship’s weapon of their choice.",
+    desc: "A gunner fires a single ship's weapon of their choice.",
     note: "A gunners fires one",
-    dept: "gunnery",
+    dept: "gunner",
   },
   targetSystem: {
     title: "Target Systems",
     cp: -1,
     desc:
-      "A Fire One Weapon action you  take this round may target a ship’s weapons, en- gine, or fittings the GM decides are vulnerable.  Such targeted attacks take -4 to hit. On a hit, do half damage before applying Armor. If damage  gets through the system is disabled or drive is  degraded by 1 level. Disabled systems hit again  are destroyed. You may take this action more than once to aim additional shots you may fire.",
+      "A Fire One Weapon action you  take this round may target a ship's weapons, en- gine, or fittings the GM decides are vulnerable.  Such targeted attacks take -4 to hit. On a hit, do half damage before applying Armor. If damage  gets through the system is disabled or drive is  degraded by 1 level. Disabled systems hit again  are destroyed. You may take this action more than once to aim additional shots you may fire.",
     note:
       "'Fire One Weapon' can target fitting, weapon, or engine with -4 hit. (Half damage - armor) > 0 to work.",
-    dept: "gunnery",
+    dept: "gunner",
   },
 };
 
