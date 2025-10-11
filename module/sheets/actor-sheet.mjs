@@ -229,9 +229,13 @@ export class SWNActorSheet extends SWNBaseSheet {
       case 'combat':
       case 'skills':
       case 'powers':
-      case 'npc':
       case 'gear':
         context.tab = context.tabs[partId];
+        break;
+      case 'npc':
+        context.tab = context.tabs[partId];
+        // Add available languages for NPC language selection
+        context.availableLanguages = game.settings.get("swnr", "parsedLanguageList") || [];
         break;
       case 'biography':
         context.tab = context.tabs[partId];

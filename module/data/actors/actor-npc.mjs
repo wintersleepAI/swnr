@@ -38,6 +38,7 @@ export default class SWNNPC extends SWNActorBase {
     schema.reaction = SWNShared.stringChoices("unknown", CONFIG.SWN.reactionTypes);
     schema.homeworld = SWNShared.emptyString();
     schema.faction = SWNShared.emptyString();
+    schema.languages = new fields.ArrayField(SWNShared.requiredString(""));
     //TODO contents to HTML?
     schema.notes = new fields.SchemaField({
       left: new fields.SchemaField({

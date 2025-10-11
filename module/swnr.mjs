@@ -15,6 +15,7 @@ import { registerHandlebarHelpers } from './helpers/handlebar.mjs';
 import { chatListeners, welcomeMessage } from './helpers/chat.mjs';
 import * as refreshHelpers from './helpers/refresh-helpers.mjs';
 import * as refreshOrchestrator from './helpers/refresh-orchestrator.mjs';
+import { SWNRLanguageProvider } from './polyglot/swnr-language-provider.mjs';
 
 // Import dialog classes
 
@@ -186,6 +187,8 @@ function initializeLanguageSettings() {
     const presetLanguages = getLanguagePresetList(presetValue);
     const languageString = presetLanguages.join(", ");
     game.settings.set("swnr", "availableLanguages", languageString);
+    // Also set the parsed list
+    game.settings.set("swnr", "parsedLanguageList", presetLanguages);
   } else {
     // Parse existing languages to ensure the parsed list is up to date
     const languageList = availableLanguages.split(",").map(lang => lang.trim()).filter(lang => lang);
@@ -239,6 +242,28 @@ Hooks.once('ready', function () {
     }
     return originalGetInitiativeRoll.call(this);
   };
+});
+
+/* -------------------------------------------- */
+/*  Polyglot Module Integration                 */
+/* -------------------------------------------- */
+
+/**
+ * Register SWNR language provider with Polyglot module
+ * This allows Polyglot to use SWNR's language system for chat encryption
+ */
+Hooks.once('polyglot.init', (LanguageProvider) => {
+  if (!game.modules.get('polyglot')?.active) {
+    return;
+  }
+
+  try {
+    // Pass the class, not an instance - Polyglot will instantiate it
+    game.polyglot.api.registerSystem(SWNRLanguageProvider);
+    console.log('SWNR | Successfully registered language provider with Polyglot');
+  } catch (error) {
+    console.error('SWNR | Error registering with Polyglot:', error);
+  }
 });
 
 /* -------------------------------------------- */

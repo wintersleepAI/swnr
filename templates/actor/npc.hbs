@@ -109,6 +109,64 @@
           <span style="flex: 4 0;">{{formGroup systemFields.saves value=system.saves localize=true}}</span>
         </div>
       </div>
+      <!-- Languages Section -->
+      <div class="languages-section" style="margin: 10px 0;">
+        <ol class="items-list">
+          <li class="items-header flexrow">
+            <div class="item-name">
+              {{localize 'swnr.sheet.languages'}}
+            </div>
+            <div class="item-controls">
+              {{#if @root.editable}}
+                {{#if availableLanguages.length}}
+                  <a class="item-control language-toggle" title="{{localize 'swnr.sheet.addLanguage'}}" data-action="toggleLanguageAdd">
+                    <i class="fas fa-plus"></i>
+                  </a>
+                {{/if}}
+              {{/if}}
+            </div>
+          </li>
+        </ol>
+
+        <!-- Language Add Container (hidden by default) -->
+        {{#if @root.editable}}
+          <div class="language-add-container" id="language-add-section" style="display: none; padding: 8px; background-color: var(--color-form-disabled); border-radius: 3px; margin-bottom: 8px;">
+            <select class="language-select" name="language-add-select">
+              <option value="">{{localize 'swnr.sheet.selectLanguage'}}</option>
+              {{#each availableLanguages as |language|}}
+                {{#unless (includes @root.system.languages language)}}
+                  <option value="{{language}}">{{language}}</option>
+                {{/unless}}
+              {{/each}}
+            </select>
+            <button type="button" class="language-add-btn" data-action="addLanguage" title="{{localize 'swnr.sheet.addLanguage'}}">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        {{/if}}
+
+        <!-- Languages List -->
+        <div class="languages-list">
+          {{#each system.languages as |language index|}}
+            <div class="language-item" data-lang-index="{{index}}">
+              <span class="language-name">{{language}}</span>
+              {{#if @root.editable}}
+                <button type="button" class="language-remove" data-action="removeLanguage" data-lang-index="{{index}}" title="{{localize 'swnr.sheet.removeLanguage'}}">
+                  <i class="fas fa-trash"></i>
+                </button>
+              {{/if}}
+            </div>
+          {{/each}}
+
+          {{#unless availableLanguages.length}}
+            {{#if @root.editable}}
+              <div class="no-languages-warning">
+                <em>{{localize 'swnr.sheet.noLanguagesConfigured'}}</em>
+              </div>
+            {{/if}}
+          {{/unless}}
+        </div>
+      </div>
     </div> <!-- End 2nd Column -->
     <div class="flex flex-col" style="flex: 1 0;"> <!-- 3rd Column -->
       {{> "systems/swnr/templates/actor/fragments/compact-weapon-list.hbs" itemList=actor.itemTypes.weapon actorType=actor.type }}
