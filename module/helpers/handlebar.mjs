@@ -301,10 +301,13 @@ export function registerHandlebarHelpers() {
 
   Handlebars.registerHelper('getStatChoices', function(stats) {
     const statChoices = {};
+    if (!stats) {
+      return statChoices;
+    }
     Object.keys(stats).forEach(key => {
       const stat = stats[key];
       const localizedLabel = game.i18n.localize("swnr.stat.long." + key );
-      statChoices[key] = `${localizedLabel} +${stat.mod}`; // Format the string 
+      statChoices[key] = `${localizedLabel} +${stat.mod}`; // Format the string
     });
     return statChoices;
   });
@@ -315,9 +318,12 @@ export function registerHandlebarHelpers() {
     {
       skillChoices[""] = game.i18n.localize("swnr.weapon.noSetSkill");
     }
+    if (!skills) {
+      return skillChoices;
+    }
     Object.keys(skills).forEach(key => {
       const skill = skills[key];
-      skillChoices[skill.id] = `${skill.name} ${skill.system.rank}`; 
+      skillChoices[skill.id] = `${skill.name} ${skill.system.rank}`;
     });
     return skillChoices;
   });
