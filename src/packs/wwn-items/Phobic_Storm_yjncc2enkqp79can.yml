@@ -1,21 +1,23 @@
+_id: yjncc2enkqp79can
 name: Phobic Storm
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456880
+  modifiedTime: 1754277456880
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    A wave of numbing terror sweeps over all enemies of the caster within forty
-    feet. They must immediately make a Morale check at a -1 penalty, with
-    failure causing flight. Those who succeed at the check suffer one point of
-    damage per caster level from demoralization and despair, with those brought
-    to zero hit points instead regaining one hit point and fleeing. This spell
-    has no effect on creatures that feel no fear or that have a Morale of 12.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    A wave of numbing terror sweeps over all enemies of the caster within forty
+    feet. They must immediately make a Morale check at a -1 penalty, with
+    failure causing flight. Those who succeed at the check suffer one point of
+    damage per caster level from demoralization and despair, with those brought
+    to zero hit points instead regaining one hit point and fleeing. This spell
+    has no effect on creatures that feel no fear or that have a Morale of 12.
   duration: Instant
-  save: None
+  favorite: false
+  level: 3
+  prepared: false
   range: 40 ft.
-  skill: null
-_id: yjncc2enkqp79can
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456880
-  modifiedTime: 1754277456880
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!yjncc2enkqp79can'
 

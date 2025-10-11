@@ -1,18 +1,12 @@
+_id: jn8ldoccllvtmejt
 name: 'Origin Focus: Anak, Lesser'
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
-system:
-  description: >-
-    As with the Great Anak origin, you are an exceptionally human or humane
-    example of your kind, and can function adequately in human society if your
-    nature is hidden. Level 1: Gain Stab and Sneak as bonus skills. Your
-    Dexterity modifier increases by +1, up to a maximum of +2, and your
-    Constitution modifier decreases by -1, to a minimum of -2.
-  favorite: false
-  level: 1
-  type: focus
-  poolsGranted: []
-_id: jn8ldoccllvtmejt
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -23,10 +17,17 @@ _stats:
   modifiedTime: 1754277456864
   lastModifiedBy: null
   exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+system:
+  description: >-
+    As with the Great Anak origin, you are an exceptionally human or humane
+    example of your kind, and can function adequately in human society if your
+    nature is hidden. Level 1: Gain Stab and Sneak as bonus skills. Your
+    Dexterity modifier increases by +1, up to a maximum of +2, and your
+    Constitution modifier decreases by -1, to a minimum of -2.
+  favorite: false
+  level: 1
+  poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!jn8ldoccllvtmejt'
 

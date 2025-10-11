@@ -1,32 +1,12 @@
+_id: czsnvq9ev3izjmyr
 name: Final Repose
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Target a visible living creature and Commit Effort for the day as an Instant
-    action. For the rest of the scene, they take a Physical saving throw penalty
-    equal to your Heal skill. If they are reduced to zero hit points before the
-    end of the scene, they die with no chance for stabilization or revival.
-  favorite: false
-  subType: art
-  source: Healer
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Healer
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: czsnvq9ev3izjmyr
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -37,10 +17,27 @@ _stats:
   modifiedTime: 1754277456839
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Healer
+      usesCost: 1
+      cadence: day
+      timing: manual
+  description: >-
+    Target a visible living creature and Commit Effort for the day as an Instant
+    action. For the rest of the scene, they take a Physical saving throw penalty
+    equal to your Heal skill. If they are reduced to zero hit points before the
+    end of the scene, they die with no chance for stabilization or revival.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Healer
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!czsnvq9ev3izjmyr'
 

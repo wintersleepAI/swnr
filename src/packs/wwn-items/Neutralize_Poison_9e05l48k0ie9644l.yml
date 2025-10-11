@@ -1,20 +1,23 @@
+_id: 9e05l48k0ie9644l
 name: Neutralize Poison
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 3000000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457072
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: Instant Range: The caster or a creature or object touched This
-    spell has two uses: 1. Characters: Neutralize the effects of poison on a
-    character. A character who has died from poisoning can be revived, if
-    neutralize poison is cast within ten rounds. 2. Items: Remove poison from an
-    item.
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -28,26 +31,20 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: Instant Range: The caster or a creature or object touched This
+    spell has two uses: 1. Characters: Neutralize the effects of poison on a
+    character. A character who has died from poisoning can be revived, if
+    neutralize poison is cast within ten rounds. 2. Items: Remove poison from an
+    item.
   duration: Instant
-  save: None
+  favorite: false
+  level: 4
+  prepared: false
   range: Touch
-  skill: null
-_id: 9e05l48k0ie9644l
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457072
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!9e05l48k0ie9644l'
 

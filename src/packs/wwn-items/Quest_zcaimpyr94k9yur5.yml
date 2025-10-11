@@ -1,7 +1,36 @@
+_id: zcaimpyr94k9yur5
 name: Quest
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 1700000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457099
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     Duration: Until quest is completed / Instant (remove quest) Range: 30' The
     caster commands a single subject to perform a specific quest or task. ▶
@@ -17,46 +46,14 @@ system:
     character casting remove quest, there is a chance of the spell having no
     effect. The probability of failure is 5% per level the caster is below the
     caster of quest.
+  duration: Indefinite
   favorite: false
-  subType: spell
-  source: Cleric
   level: 5
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Indefinite
-  save: mental
   range: 30'
-  skill: null
-_id: zcaimpyr94k9yur5
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457099
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: mental
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!zcaimpyr94k9yur5'
 

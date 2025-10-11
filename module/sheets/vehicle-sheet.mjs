@@ -500,8 +500,8 @@ export class SWNVehicleSheet extends SWNBaseSheet {
         if (roles.engineering == actorId) {
           roles.engineering = null;
         }
-        if (roles.gunnery == actorId) {
-          roles.gunnery = null;
+        if (roles.gunner == actorId) {
+          roles.gunner = null;
         }
         if (roles.bridge == actorId) {
           roles.bridge = null;
@@ -1612,10 +1612,10 @@ export class SWNVehicleSheet extends SWNBaseSheet {
               label: "Eng.",
               callback: () => this._setCaptSupport("engineering"),
             },
-            gunnery: {
+            gunner: {
               icon: '<i class="fas fa-check"></i>',
               label: "Gunnery",
-              callback: () => this._setCaptSupport("gunnery"),
+              callback: () => this._setCaptSupport("gunner"),
             },
           },
           default: "bridge",

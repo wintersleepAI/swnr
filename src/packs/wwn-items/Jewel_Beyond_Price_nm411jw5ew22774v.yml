@@ -1,7 +1,26 @@
+_id: nm411jw5ew22774v
 name: Jewel Beyond Price
 type: item
+img: icons/svg/item-bag.svg
+folder: jXrFh0x6b5Auj9IZ
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456993
+  modifiedTime: 1754277456993
+  lastModifiedBy: null
+  exportSource: null
 system:
+  bundle:
+    bundled: false
+  cost: 0
   description: >-
     This small gemstone is impossible to mistake for an ordinary jewel, for it
     fills all onlookers with an overwhelming desire to obtain it. If found as
@@ -14,35 +33,17 @@ system:
     bewitchment of them will last for at most a week, after which they will be
     able to think clearly about whether or not the trade was reasonable and
     worth it.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
   encumbrance: 1
-  cost: 0
+  favorite: false
   location: stowed
-  quality: stock
   noEncReadied: false
+  quality: stock
+  quantity: 1
   roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
     diceNum: 1
     diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
   tl: 3
-_id: nm411jw5ew22774v
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456993
-  modifiedTime: 1754277456993
-  lastModifiedBy: null
-  exportSource: null
-folder: jXrFh0x6b5Auj9IZ
-flags: {}
 effects: []
-ownership:
-  default: 0
 _key: '!items!nm411jw5ew22774v'
 

@@ -1,17 +1,23 @@
+_id: kbcaktfr85w8lpvr
 name: Infravision
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 4900000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457083
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 1 day Range: The caster or a creature touched The subject is able
-    to see 60' in the dark with infravision.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -25,26 +31,17 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 1 day Range: The caster or a creature touched The subject is able
+    to see 60' in the dark with infravision.
   duration: 1 day
-  save: None
+  favorite: false
+  level: 3
+  prepared: false
   range: Touch
-  skill: null
-_id: kbcaktfr85w8lpvr
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457083
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!kbcaktfr85w8lpvr'
 

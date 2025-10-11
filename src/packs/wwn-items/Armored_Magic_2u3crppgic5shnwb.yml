@@ -1,6 +1,22 @@
+_id: 2u3crppgic5shnwb
 name: Armored Magic
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456877
+  modifiedTime: 1754277456877
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     Usable only by Mage heroes who would otherwise be prevented from casting
@@ -13,23 +29,8 @@ system:
     learned to cast spells while both your hands are full, though not bound.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: 2u3crppgic5shnwb
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456877
-  modifiedTime: 1754277456877
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!2u3crppgic5shnwb'
 

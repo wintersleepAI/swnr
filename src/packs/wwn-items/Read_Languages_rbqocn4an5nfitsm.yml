@@ -1,19 +1,23 @@
+_id: rbqocn4an5nfitsm
 name: Read Languages
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 1500000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457064
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 2 turns Range: The caster For the duration of this spell, the
-    caster may read any language, coded message, map, or other set of written
-    instructions. This spell does not grant any ability to speak unknown
-    languages.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -27,26 +31,19 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 2 turns Range: The caster For the duration of this spell, the
+    caster may read any language, coded message, map, or other set of written
+    instructions. This spell does not grant any ability to speak unknown
+    languages.
   duration: 2 turns
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: Caster
-  skill: null
-_id: rbqocn4an5nfitsm
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457064
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!rbqocn4an5nfitsm'
 

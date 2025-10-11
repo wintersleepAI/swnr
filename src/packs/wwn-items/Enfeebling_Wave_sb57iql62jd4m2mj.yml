@@ -1,21 +1,23 @@
+_id: sb57iql62jd4m2mj
 name: Enfeebling Wave
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456911
+  modifiedTime: 1754277456911
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    A wash of debilitating force erupts in a 20-foot radius at a visible point
-    within one hundred feet. All living creatures within the area must make a
-    Physical saving throw or for the rest of the scene their movement rate is
-    halved and they must make all attack and damage rolls twice and take the
-    worse result. If the save is successful, these penalties apply only to their
-    next turn.
-  favorite: false
-  subType: spell
-  source: Necromancer
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    A wash of debilitating force erupts in a 20-foot radius at a visible point
+    within one hundred feet. All living creatures within the area must make a
+    Physical saving throw or for the rest of the scene their movement rate is
+    halved and they must make all attack and damage rolls twice and take the
+    worse result. If the save is successful, these penalties apply only to their
+    next turn.
   duration: Scene
-  save: physical
+  favorite: false
+  level: 2
+  prepared: false
   range: 20-ft. radius within 100 ft.
-  skill: null
-_id: sb57iql62jd4m2mj
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456911
-  modifiedTime: 1754277456911
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: physical
+  source: Necromancer
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!sb57iql62jd4m2mj'
 

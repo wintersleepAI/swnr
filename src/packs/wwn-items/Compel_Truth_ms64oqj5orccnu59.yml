@@ -1,35 +1,12 @@
+_id: ms64oqj5orccnu59
 name: Compel Truth
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    The diviner compels a person to drink a particular brew, participate in a
-    specific ritual, or otherwise undergo a scene-long ordeal. Afterwards, the
-    diviner may ask the target a single question and the GM secretly rolls a
-    Cha/Magic skill check against a difficulty of the target's Morale+1, or
-    level+6 for PCs. On a success, the subject must answer the question
-    truthfully and fully. On a failure, they may give any answer they wish. The
-    same or substantially same question may not be asked twice with this art.
-  favorite: false
-  subType: art
-  source: Wise
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Wise
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: ms64oqj5orccnu59
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -40,10 +17,30 @@ _stats:
   modifiedTime: 1754277456765
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Wise
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    The diviner compels a person to drink a particular brew, participate in a
+    specific ritual, or otherwise undergo a scene-long ordeal. Afterwards, the
+    diviner may ask the target a single question and the GM secretly rolls a
+    Cha/Magic skill check against a difficulty of the target's Morale+1, or
+    level+6 for PCs. On a success, the subject must answer the question
+    truthfully and fully. On a failure, they may give any answer they wish. The
+    same or substantially same question may not be asked twice with this art.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Wise
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!ms64oqj5orccnu59'
 

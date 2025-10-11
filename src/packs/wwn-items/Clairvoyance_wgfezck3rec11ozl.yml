@@ -1,23 +1,23 @@
+_id: wgfezck3rec11ozl
 name: Clairvoyance
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 8700000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457100
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 12 turns Range: 60' The caster gains the ability to see through
-    the eyes of other living creatures. ▶ Focus for 1 turn: To establish a
-    connection with a creature, the caster must focus their concentration in one
-    particular direction for one turn. ▶ After this turn: The visual perceptions
-    of one creature within range in that direction are relayed to the caster. ▶
-    Switching: Once a connection is established, the caster may choose to
-    maintain it or to change to another subject. ▶ Obstructions: The spell is
-    blocked by a thin layer of lead or by rock of 2' thick or greater.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -31,26 +31,23 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 12 turns Range: 60' The caster gains the ability to see through
+    the eyes of other living creatures. ▶ Focus for 1 turn: To establish a
+    connection with a creature, the caster must focus their concentration in one
+    particular direction for one turn. ▶ After this turn: The visual perceptions
+    of one creature within range in that direction are relayed to the caster. ▶
+    Switching: Once a connection is established, the caster may choose to
+    maintain it or to change to another subject. ▶ Obstructions: The spell is
+    blocked by a thin layer of lead or by rock of 2' thick or greater.
   duration: 12 turns
-  save: None
+  favorite: false
+  level: 3
+  prepared: false
   range: 60'
-  skill: null
-_id: wgfezck3rec11ozl
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457100
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!wgfezck3rec11ozl'
 

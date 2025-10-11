@@ -1,26 +1,23 @@
+_id: wttn0d1r1j4igotf
 name: Touch of Elucidating Intangibility
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456899
+  modifiedTime: 1754277456899
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The caster touches a solid non-magical barrier when casting this spell. A 10
-    foot cube of the barrier then becomes perfectly transparent to the caster,
-    allowing them to see and hear whatever lies on the other side as if it were
-    well-lit and visible. Optionally, the caster may make the barrier
-    insubstantial for one round per caster level, allowing anyone to pass or
-    shoot through it from either side. The barrier always appears solid and
-    opaque from the other side, even while the caster is peering through. If
-    someone is caught within the barrier when it becomes solid again, they're
-    spat out on the nearest clear side and suffer 2d10 damage. The spell ends
-    when the caster ceases to touch the barrier or immediately after it has been
-    made insubstantial.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -34,26 +31,26 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The caster touches a solid non-magical barrier when casting this spell. A 10
+    foot cube of the barrier then becomes perfectly transparent to the caster,
+    allowing them to see and hear whatever lies on the other side as if it were
+    well-lit and visible. Optionally, the caster may make the barrier
+    insubstantial for one round per caster level, allowing anyone to pass or
+    shoot through it from either side. The barrier always appears solid and
+    opaque from the other side, even while the caster is peering through. If
+    someone is caught within the barrier when it becomes solid again, they're
+    spat out on the nearest clear side and suffer 2d10 damage. The spell ends
+    when the caster ceases to touch the barrier or immediately after it has been
+    made insubstantial.
   duration: 1 round per level
-  save: None
+  favorite: false
+  level: 3
+  prepared: false
   range: Touch
-  skill: null
-_id: wttn0d1r1j4igotf
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456899
-  modifiedTime: 1754277456899
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!wttn0d1r1j4igotf'
 

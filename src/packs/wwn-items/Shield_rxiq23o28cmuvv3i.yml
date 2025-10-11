@@ -1,18 +1,23 @@
+_id: rxiq23o28cmuvv3i
 name: Shield
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 800000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457068
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 2 turns Range: The caster Shield creates an invisible field of
-    force that protects the caster: ▶ Against missile attacks: The caster's AC
-    is 17. ▶ Against other attacks: The caster's AC is 15.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -26,26 +31,18 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 2 turns Range: The caster Shield creates an invisible field of
+    force that protects the caster: ▶ Against missile attacks: The caster's AC
+    is 17. ▶ Against other attacks: The caster's AC is 15.
   duration: 2 turns
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: Caster
-  skill: null
-_id: rxiq23o28cmuvv3i
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457068
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!rxiq23o28cmuvv3i'
 

@@ -1,6 +1,22 @@
+_id: o1xz2qftwtotug67
 name: 'Origin Focus: Undead'
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456857
+  modifiedTime: 1754277456857
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You are a sentient undead creature that is capable of masquerading as a
@@ -19,23 +35,8 @@ system:
     than once.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: o1xz2qftwtotug67
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456857
-  modifiedTime: 1754277456857
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!o1xz2qftwtotug67'
 

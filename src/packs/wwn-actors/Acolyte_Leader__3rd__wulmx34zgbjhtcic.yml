@@ -1,162 +1,48 @@
+_id: wulmx34zgbjhtcic
 name: Acolyte Leader (3rd)
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
-system:
-  ab: 2
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 17
-  hitDice: 3
-  moralScore: 7
-  saves: 14
-  skillBonus: 0
-  speed: 20
-  biography: >-
-    Leader: Groups of 4+ are led by a higher level cleric (1d10: 1&ndash;4: 2nd
-    level, 5&ndash;7: 3rd level, 8&ndash;9: 4th level, 10: 5th level). Choose or
-    roll the leader's spells.
-  species: monster
-_id: wulmx34zgbjhtcic
+ownership: {}
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456681
   modifiedTime: 1754277456681
   lastModifiedBy: null
   exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+system:
+  ab: 2
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 17
+  biography: >-
+    Leader: Groups of 4+ are led by a higher level cleric (1d10: 1&ndash;4: 2nd
+    level, 5&ndash;7: 3rd level, 8&ndash;9: 4th level, 10: 5th level). Choose or
+    roll the leader's spells.
+  hitDice: 3
+  moralScore: 7
+  saves: 14
+  skillBonus: 0
+  species: monster
+  speed: 20
 effects: []
-prototypeToken:
-  name: Acolyte Leader (3rd)
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Mace
-    type: weapon
-    system:
-      description: >-
-        Clubs, staffs, and maces are of much the same genus, though the latter
-        is usually made of metal. While fully capable of killing a man, a
-        careful user can usually avoid inflicting lethal injury.
-      cost: 0
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 1
-        ac: 18
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: jns9g75m91z96thp
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!wulmx34zgbjhtcic.jns9g75m91z96thp'
-  - name: Cure Light Wounds
+  - _id: 9jd3gn6ogckaa87o
+    name: Cure Light Wounds
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
       description: >-
         Duration: Instant Range: The caster or a creature touched This spell has
         two uses: Healing a living subject: Restores 1d6+1 hit points of damage.
@@ -164,33 +50,24 @@ items:
         Curing paralysis: Paralysing effects are negated. Reversed: Cause Light
         Wounds Inflicts 1d6+1 hit points of damage to a touched creature. In
         combat, a melee attack roll is required.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: 9jd3gn6ogckaa87o
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!wulmx34zgbjhtcic.9jd3gn6ogckaa87o'
-  - name: Detect Evil
+  - _id: higjmhfqqx1irg91
+    name: Detect Evil
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
       description: >-
         Duration: 6 turns Range: 120' Objects enchanted for evil purposes or
         living beings with evil intentions are caused to magically glow. ▶
@@ -198,63 +75,45 @@ items:
         only grants a general sense of evil intent. ▶ Definition of evil: The
         referee must decide what is "evil". Some things that are potentially
         harmful, like traps, are not "evil."
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: higjmhfqqx1irg91
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!wulmx34zgbjhtcic.higjmhfqqx1irg91'
-  - name: Detect Magic
+  - _id: ug51heot6wgpaqpj
+    name: Detect Magic
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
       description: >-
         Duration: 2 turns Range: 60' Enchanted objects, areas, or creatures are
         caused to glow. Both permanent and temporary enchantments are revealed.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: ug51heot6wgpaqpj
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!wulmx34zgbjhtcic.ug51heot6wgpaqpj'
-  - name: Light
+  - _id: atagijov5yxlm1ft
+    name: Light
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
       description: >-
         Duration: 12 turns Range: 120' This spell has three usages: Conjuring
         light: In a 15' radius. The magical light is sufficient for reading, but
@@ -266,33 +125,59 @@ items:
         Darkness Creates a 15' radius area of magical blackness, preventing
         normal sight (but not infravision). Like light, it may alternatively be
         used to blind creatures or to dispel a light spell.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: atagijov5yxlm1ft
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!wulmx34zgbjhtcic.atagijov5yxlm1ft'
-  - name: Protection from Evil
-    type: item
+  - _id: jns9g75m91z96thp
+    name: Mace
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
     system:
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 0
+      damage: 1d6
+      description: >-
+        Clubs, staffs, and maces are of much the same genus, though the latter
+        is usually made of metal. While fully capable of killing a man, a
+        careful user can usually avoid inflicting lethal injury.
+      encumbrance: 1
+      isTwoHanded: false
+      quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 18
+        dmg: 1
+      skill: punch
+      stat: str
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!wulmx34zgbjhtcic.jns9g75m91z96thp'
+  - _id: 0s0hkb46c507nkbg
+    name: Protection from Evil
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      cost: 0
       description: >-
         Duration: 12 turns Range: The caster This spell wards the caster from
         attacks by creatures of another alignment, as follows: ▶ Bonuses: The
@@ -304,66 +189,48 @@ items:
         attacks. If the caster engages such a creature in melee, this protection
         is broken (the caster still gains the save and attack bonuses mentioned
         above).
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: 0s0hkb46c507nkbg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!wulmx34zgbjhtcic.0s0hkb46c507nkbg'
-  - name: Purify Food and Water
+  - _id: sl6akg4xrp6gv3ft
+    name: Purify Food and Water
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
       description: >-
         Duration: Permanent Range: 10' This spell makes spoiled, rotten,
         poisonous, or otherwise contaminated food and water pure and suitable
         for eating and drinking. One of the following may be affected: ▶ Drink:
         6 quarts. ▶ Rations: One trail ration (iron or standard). ▶ Unpreserved
         food: A quantity sufficient for 12 human-sized beings.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: sl6akg4xrp6gv3ft
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!wulmx34zgbjhtcic.sl6akg4xrp6gv3ft'
-  - name: Remove Fear
+  - _id: mb5pmzvsobe3tlaa
+    name: Remove Fear
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
       description: >-
         Duration: 2 turns Range: The caster or a creature touched The creature
         touched is calmed and purged of fear. Magically induced fear may be
@@ -371,33 +238,24 @@ items:
         is modified by -1 per level of the caster. Reversed: Cause Fear Will
         cause a target within 120' to flee for the duration unless it saves
         versus spells.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: mb5pmzvsobe3tlaa
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!wulmx34zgbjhtcic.mb5pmzvsobe3tlaa'
-  - name: Resist Cold
+  - _id: y3r5mhx8qi4bza6g
+    name: Resist Cold
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
       description: >-
         Duration: 6 turns Range: 30' All creatures within range are protected
         from cold, as follows: ▶ Normal cold: Unharmed by non-magical freezing
@@ -405,29 +263,16 @@ items:
         cold-based magical or breath attacks. ▶ Cold-based damage: Is reduced by
         1 point per damage die rolled. (Each die inflicts a minimum of 1 hit
         point damage.)
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: y3r5mhx8qi4bza6g
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!wulmx34zgbjhtcic.y3r5mhx8qi4bza6g'
 _key: '!actors!wulmx34zgbjhtcic'
 

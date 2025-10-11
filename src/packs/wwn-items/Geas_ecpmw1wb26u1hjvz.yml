@@ -1,7 +1,36 @@
+_id: ecpmw1wb26u1hjvz
 name: Geas
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 5800000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457087
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     Duration: Permanent / Instant (remove geas) Range: 30' The caster commands a
     subject to perform or avoid performing a specific action. ▶ Examples:
@@ -19,46 +48,14 @@ system:
     casting remove geas, there is a chance of the spell having no effect. The
     probability of spell failure is 5% per level the caster is below the caster
     of geas.
+  duration: Permanent
   favorite: false
-  subType: spell
-  source: Mage
   level: 6
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Permanent
-  save: mental
   range: 30'
-  skill: null
-_id: ecpmw1wb26u1hjvz
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457087
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: mental
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!ecpmw1wb26u1hjvz'
 

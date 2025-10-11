@@ -1,7 +1,26 @@
+_id: dla2ubrsi1kj7giy
 name: Vanguard Unit
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: zFqC1zP7Qyzj1jAK
+sort: 112500
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456948
+  modifiedTime: 1759968831656
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     This unit is specially trained to build bridges, reduce fortifications, and
     facilitate a lightning strike into enemy territory. When its faction takes a
@@ -12,40 +31,20 @@ system:
     unit may remain at that location afterwards even if the Vanguard Unit
     leaves.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 10
     max: 10
-  rating: 4
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 10
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: dla2ubrsi1kj7giy
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456948
-  modifiedTime: 1754277456948
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 4
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!dla2ubrsi1kj7giy'
 

@@ -1,35 +1,12 @@
+_id: 9gr3acibnzf821sx
 name: Elicitation of Truth
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    This art can only be taken by those who have mastered Surface Apprehension.
-    It can only be used on a helpless or cooperative target; the Thought Noble
-    may Commit Effort for the day and ask the target a question that takes no
-    more than two sentences to ask. If the target fails a Mental saving throw,
-    they must fully and completely answer the question. They need not exercise
-    any personal judgment or speculation, but they must answer directly and
-    without conscious deception.
-  favorite: false
-  subType: art
-  source: Thought Noble
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Thought Noble
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Instant
-  save: mental
-  range: Self
-  skill: null
-_id: 9gr3acibnzf821sx
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -40,10 +17,30 @@ _stats:
   modifiedTime: 1754277456770
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Thought Noble
+      usesCost: 1
+      cadence: day
+      timing: manual
+  description: >-
+    This art can only be taken by those who have mastered Surface Apprehension.
+    It can only be used on a helpless or cooperative target; the Thought Noble
+    may Commit Effort for the day and ask the target a question that takes no
+    more than two sentences to ask. If the target fails a Mental saving throw,
+    they must fully and completely answer the question. They need not exercise
+    any personal judgment or speculation, but they must answer directly and
+    without conscious deception.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: mental
+  source: Thought Noble
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!9gr3acibnzf821sx'
 

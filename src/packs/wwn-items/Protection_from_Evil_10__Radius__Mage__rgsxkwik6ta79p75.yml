@@ -1,25 +1,23 @@
+_id: rgsxkwik6ta79p75
 name: Protection from Evil 10' Radius (Mage)
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 2000000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457076
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 12 turns Range: 10' around the caster This spell wards the caster
-    and all allies within 10' from attacks by creatures of another alignment, as
-    follows: ▶ Bonuses: Those warded gain a +1 bonus to saving throws against
-    attacks or special abilities of affected creatures. ▶ Affected creatures'
-    attacks: Against those warded are penalised by &ndash;1. ▶ Enchanted,
-    constructed, or summoned creatures: The spell additionally prevents such
-    creatures from making melee attacks against those warded, though they may
-    still make ranged attacks. If any of the warded party engages such a
-    creature in melee, this protection is broken (those warded still gain the
-    save and attack bonuses mentioned above).
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -33,26 +31,25 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 12 turns Range: 10' around the caster This spell wards the caster
+    and all allies within 10' from attacks by creatures of another alignment, as
+    follows: ▶ Bonuses: Those warded gain a +1 bonus to saving throws against
+    attacks or special abilities of affected creatures. ▶ Affected creatures'
+    attacks: Against those warded are penalised by &ndash;1. ▶ Enchanted,
+    constructed, or summoned creatures: The spell additionally prevents such
+    creatures from making melee attacks against those warded, though they may
+    still make ranged attacks. If any of the warded party engages such a
+    creature in melee, this protection is broken (those warded still gain the
+    save and attack bonuses mentioned above).
   duration: 12 turns
-  save: None
+  favorite: false
+  level: 3
+  prepared: false
   range: 10' radius
-  skill: null
-_id: rgsxkwik6ta79p75
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457076
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!rgsxkwik6ta79p75'
 

@@ -1,6 +1,22 @@
+_id: x3oaxt3dp8b87djl
 name: Assassin
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456867
+  modifiedTime: 1754277456867
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You are practiced at sudden murder, and have certain advantages in carrying
@@ -16,23 +32,8 @@ system:
     quickly to alert a victim or to be hindered by bodyguards.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: x3oaxt3dp8b87djl
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456867
-  modifiedTime: 1754277456867
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!x3oaxt3dp8b87djl'
 

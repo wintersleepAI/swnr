@@ -1,21 +1,8 @@
-folder: BslyO9GYhD75h2Kk
+_id: n2gyFSbMR3Ensing
 name: Beastmaster Effort
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
-system:
-  description: ''
-  favorite: false
-  level: 0
-  type: focus
-  poolsGranted:
-    - resourceName: Effort
-      subResource: Beastmaster
-      formula: >-
-        Math.max(1, @skills.survive.rank + Math.max(@stats.wis.mod,
-        @stats.cha.mod))
-      condition: ''
-      cadence: day
-effects: []
+folder: BslyO9GYhD75h2Kk
 sort: 200000
 ownership:
   default: 0
@@ -31,6 +18,19 @@ _stats:
   createdTime: 1758769340355
   modifiedTime: 1758769340355
   lastModifiedBy: lKC5x4Yf023Bizof
-_id: n2gyFSbMR3Ensing
+system:
+  description: ''
+  favorite: false
+  level: 0
+  poolsGranted:
+    - resourceName: Effort
+      subResource: Beastmaster
+      formula: >-
+        Math.max(1, @skills.survive.rank + Math.max(@stats.wis.mod,
+        @stats.cha.mod))
+      condition: ''
+      cadence: day
+  type: focus
+effects: []
 _key: '!items!n2gyFSbMR3Ensing'
 

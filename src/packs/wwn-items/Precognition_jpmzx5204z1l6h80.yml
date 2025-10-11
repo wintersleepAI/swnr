@@ -1,22 +1,12 @@
+_id: jpmzx5204z1l6h80
 name: Precognition
 type: item
+img: icons/svg/item-bag.svg
+folder: 9gsuaJcejB0mhHRg
 sort: 0
-system:
-  description: Master the ability to sense future events and control probability.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
-  cost: 0
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
-_id: jpmzx5204z1l6h80
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -27,10 +17,21 @@ _stats:
   modifiedTime: 1754277457112
   lastModifiedBy: null
   exportSource: null
-folder: 9gsuaJcejB0mhHRg
-flags: {}
+system:
+  bundle:
+    bundled: false
+  cost: 0
+  description: Master the ability to sense future events and control probability.
+  encumbrance: 1
+  favorite: false
+  location: stowed
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+    diceNum: 1
+    diceSize: d20
 effects: []
-ownership:
-  default: 0
 _key: '!items!jpmzx5204z1l6h80'
 

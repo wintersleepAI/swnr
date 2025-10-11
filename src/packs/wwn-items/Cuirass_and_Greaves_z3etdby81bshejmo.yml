@@ -1,39 +1,12 @@
+_id: z3etdby81bshejmo
 name: Cuirass and Greaves
 type: armor
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+folder: FITv2SYJsQwWnL69
 sort: 200000
-system:
-  description: >-
-    Cuirass and greave armor reflects those different designs that rely on solid
-    metal plating over the wearer's vitals along with lighter limb armor. Medium
-    armor is significantly noisier and more overt; it cannot be worn discreetly
-    and applies its encumbrance as a penalty to any physical Sneak rolls made by
-    the wearer.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 2
-  cost: 250
-  tl: 3
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  ac: 15
-  shield: false
-  use: false
-  meleeAc: 15
-  soak:
-    value: 0
-    max: 0
-  dr: 0
-  traumaDiePenalty: 0
-  isSubtle: false
-  isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
-  baseAc: 15
-_id: z3etdby81bshejmo
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -44,11 +17,35 @@ _stats:
   modifiedTime: 1758741095261
   lastModifiedBy: lKC5x4Yf023Bizof
   exportSource: null
-folder: FITv2SYJsQwWnL69
-flags: {}
+system:
+  ac: 15
+  baseAc: 15
+  bundle:
+    bundled: false
+  cost: 250
+  description: >-
+    Cuirass and greave armor reflects those different designs that rely on solid
+    metal plating over the wearer's vitals along with lighter limb armor. Medium
+    armor is significantly noisier and more overt; it cannot be worn discreetly
+    and applies its encumbrance as a penalty to any physical Sneak rolls made by
+    the wearer.
+  dr: 0
+  encumbrance: 2
+  favorite: false
+  isHeavy: false
+  isSubtle: false
+  location: stowed
+  meleeAc: 15
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
+  soak:
+    max: 0
+    value: 0
+  tl: 3
+  traumaDiePenalty: 0
+  use: false
 effects: []
-ownership:
-  default: 0
-img: icons/svg/item-bag.svg
 _key: '!items!z3etdby81bshejmo'
 

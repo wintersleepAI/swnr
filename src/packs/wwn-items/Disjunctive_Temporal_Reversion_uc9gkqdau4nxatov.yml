@@ -1,23 +1,23 @@
+_id: uc9gkqdau4nxatov
 name: Disjunctive Temporal Reversion
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456892
+  modifiedTime: 1754277456892
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The caster may invoke this spell as an Instant action on any single creature
-    within one hundred feet. Time is rolled back slightly, allowing them to
-    replay their current round of action as if it never occurred, though all
-    involved retain a memory of what originally happened. This spell is only
-    useful on targets that are currently taking their round's actions; once
-    they've finished for the round and another creature has started acting, it
-    is too late to benefit from this spell. If the target is unwilling to roll
-    back their action, they may make a Mental saving throw to resist the spell.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -31,26 +31,23 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The caster may invoke this spell as an Instant action on any single creature
+    within one hundred feet. Time is rolled back slightly, allowing them to
+    replay their current round of action as if it never occurred, though all
+    involved retain a memory of what originally happened. This spell is only
+    useful on targets that are currently taking their round's actions; once
+    they've finished for the round and another creature has started acting, it
+    is too late to benefit from this spell. If the target is unwilling to roll
+    back their action, they may make a Mental saving throw to resist the spell.
   duration: Instant
-  save: mental
+  favorite: false
+  level: 4
+  prepared: false
   range: 100 ft.
-  skill: null
-_id: uc9gkqdau4nxatov
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456892
-  modifiedTime: 1754277456892
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: mental
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!uc9gkqdau4nxatov'
 

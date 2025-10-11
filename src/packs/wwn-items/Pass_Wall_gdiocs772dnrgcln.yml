@@ -1,17 +1,23 @@
+_id: gdiocs772dnrgcln
 name: Pass-Wall
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 2800000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457066
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 3 turns Range: 30' A 5' diameter hole is temporarily opened in
-    solid rock or stone, forming a passageway up to 10' deep.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -25,26 +31,17 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 3 turns Range: 30' A 5' diameter hole is temporarily opened in
+    solid rock or stone, forming a passageway up to 10' deep.
   duration: 3 turns
-  save: None
+  favorite: false
+  level: 5
+  prepared: false
   range: 30'
-  skill: null
-_id: gdiocs772dnrgcln
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457066
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!gdiocs772dnrgcln'
 

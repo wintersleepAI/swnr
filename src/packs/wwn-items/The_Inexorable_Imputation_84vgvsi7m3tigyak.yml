@@ -1,26 +1,23 @@
+_id: 84vgvsi7m3tigyak
 name: The Inexorable Imputation
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456921
+  modifiedTime: 1754277456921
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The caster makes a single one-sentence statement as part of casting this
-    spell, a process which is subtle enough to appear as no more than ordinary
-    conversation. All who hear the caster speak within a forty-foot radius must
-    make a Mental saving throw or come to immediately believe the statement is
-    true unless it seems physically impossible to them or it is emotionally
-    intolerable to believe. The listeners must be able to understand the
-    caster's language, and the caster may exempt up to two targets per caster
-    level from this delusion when casting the spell, so as to avoid beguiling
-    their companions. The spell's effects linger for one hour per caster level,
-    after which the believers will be no more persuaded of the fact than events
-    or their own common sense would allow
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -34,26 +31,26 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The caster makes a single one-sentence statement as part of casting this
+    spell, a process which is subtle enough to appear as no more than ordinary
+    conversation. All who hear the caster speak within a forty-foot radius must
+    make a Mental saving throw or come to immediately believe the statement is
+    true unless it seems physically impossible to them or it is emotionally
+    intolerable to believe. The listeners must be able to understand the
+    caster's language, and the caster may exempt up to two targets per caster
+    level from this delusion when casting the spell, so as to avoid beguiling
+    their companions. The spell's effects linger for one hour per caster level,
+    after which the believers will be no more persuaded of the fact than events
+    or their own common sense would allow
   duration: 1 hour per caster level
-  save: mental
+  favorite: false
+  level: 2
+  prepared: false
   range: 40-ft. radius
-  skill: null
-_id: 84vgvsi7m3tigyak
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456921
-  modifiedTime: 1754277456921
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: mental
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!84vgvsi7m3tigyak'
 

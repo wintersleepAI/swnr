@@ -1,22 +1,23 @@
+_id: f2efg0nizp2h7tmv
 name: Speak with Plants
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 300000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457102
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 3 turns Range: 30' This spell has two uses: Normal plants:
-    Communication with normal plants. The caster is able to ask questions and
-    receive answers and may ask for simple favours. Plants may comply, if the
-    request is within their ability to understand and perform. For example,
-    densely overgrown plants may clear a passageway through which the caster and
-    party may travel. Monstrous plants: Communication with plant-like or
-    plant-based monsters.
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -30,26 +31,22 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 3 turns Range: 30' This spell has two uses: Normal plants:
+    Communication with normal plants. The caster is able to ask questions and
+    receive answers and may ask for simple favours. Plants may comply, if the
+    request is within their ability to understand and perform. For example,
+    densely overgrown plants may clear a passageway through which the caster and
+    party may travel. Monstrous plants: Communication with plant-like or
+    plant-based monsters.
   duration: 3 turns
-  save: None
+  favorite: false
+  level: 4
+  prepared: false
   range: 30'
-  skill: null
-_id: f2efg0nizp2h7tmv
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457102
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!f2efg0nizp2h7tmv'
 

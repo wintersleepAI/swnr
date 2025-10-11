@@ -1,29 +1,12 @@
+_id: xw2xdnl7wtlqutyz
 name: Ring of Sea Princes
 type: item
+img: icons/svg/item-bag.svg
+folder: jXrFh0x6b5Auj9IZ
 sort: 0
-system:
-  description: >-
-    A lost empire of sea-going lords has left behind only these loops of
-    polished coral. Someone who wears one will be able to breathe underwater,
-    see clearly out to 120' when submerged regardless of the light level, and
-    they and their belongings are impervious to the chill and crushing pressure
-    of the depths, though not to other sources of cold damage. The wearer's
-    swimming speed is equal to twice their usual movement rate.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
-  cost: 0
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
-  tl: 3
-_id: xw2xdnl7wtlqutyz
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -34,10 +17,28 @@ _stats:
   modifiedTime: 1754277456982
   lastModifiedBy: null
   exportSource: null
-folder: jXrFh0x6b5Auj9IZ
-flags: {}
+system:
+  bundle:
+    bundled: false
+  cost: 0
+  description: >-
+    A lost empire of sea-going lords has left behind only these loops of
+    polished coral. Someone who wears one will be able to breathe underwater,
+    see clearly out to 120' when submerged regardless of the light level, and
+    they and their belongings are impervious to the chill and crushing pressure
+    of the depths, though not to other sources of cold damage. The wearer's
+    swimming speed is equal to twice their usual movement rate.
+  encumbrance: 1
+  favorite: false
+  location: stowed
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+    diceNum: 1
+    diceSize: d20
+  tl: 3
 effects: []
-ownership:
-  default: 0
 _key: '!items!xw2xdnl7wtlqutyz'
 

@@ -1,17 +1,23 @@
+_id: y2kdldhf7qc4jdmf
 name: Detect Magic (Mage)
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 6800000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457108
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 2 turns Range: 60' Enchanted objects, areas, or creatures are
-    caused to glow. Both permanent and temporary enchantments are revealed.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -25,26 +31,17 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 2 turns Range: 60' Enchanted objects, areas, or creatures are
+    caused to glow. Both permanent and temporary enchantments are revealed.
   duration: 2 turns
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: 60'
-  skill: null
-_id: y2kdldhf7qc4jdmf
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457108
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!y2kdldhf7qc4jdmf'
 

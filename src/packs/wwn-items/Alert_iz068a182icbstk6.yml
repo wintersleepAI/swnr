@@ -1,6 +1,22 @@
+_id: iz068a182icbstk6
 name: Alert
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456867
+  modifiedTime: 1754277456867
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You are keenly aware of your surroundings and virtually impossible to take
@@ -13,23 +29,8 @@ system:
     Alert.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: iz068a182icbstk6
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456867
-  modifiedTime: 1754277456867
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!iz068a182icbstk6'
 

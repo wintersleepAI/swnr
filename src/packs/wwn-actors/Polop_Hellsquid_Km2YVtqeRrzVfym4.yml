@@ -1,18 +1,37 @@
+_id: Km2YVtqeRrzVfym4
 name: Polop Hellsquid
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: 2TAFQtBi7ZxFWi6b
+sort: 700000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.wwn-actors.Actor.v5efgevgag6h6k6j
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754271303973
+  modifiedTime: 1754271303973
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
   ab: 5
+  access:
+    max: 1
+    value: 1
   armorType: street
   attacks:
-    damage: d6
     bonusDamage: 0
+    damage: d6
     number: 0
   baseAc: 13
-  hitDice: '5'
-  moralScore: 8
-  saves: 13
-  skillBonus: 0
-  speed: 40
+  baseSoakTotal:
+    max: 0
+    value: 0
   biography: >-
     Polop make extensive use of monstrous alien sea life as weapons, transport,
     and utility. Listed here is the "hellsquid", a claw-tentacled, octopodal
@@ -20,197 +39,83 @@ system:
     hunting parties. At sea, huge leviathans of hideous aspect are often
     employed to destroy troublesome human ships, though such vast creatures are
     reluctant to approach too closely to the shore.
-  species: monster
-  health:
-    value: 10
-    max: 10
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 6
-  meleeAc: 10
-  meleeAb: 1
-  systemStrain:
-    value: 0
-    permanent: 0
-  pools: {}
   cyberdecks: []
+  health:
+    max: 10
+    value: 10
   health_max_modified: 0
+  hitDice: '5'
+  meleeAb: 1
+  meleeAc: 10
+  moralScore: 8
   reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
+  saves: 13
+  skillBonus: 0
+  species: monster
+  speed: 40
+  systemStrain:
+    permanent: 0
     value: 0
-    max: 0
-_stats:
-  compendiumSource: Compendium.swnr.wwn-actors.Actor.v5efgevgag6h6k6j
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754271303973
-  modifiedTime: 1754271303973
-  lastModifiedBy: lKC5x4Yf023Bizof
-folder: 2TAFQtBi7ZxFWi6b
-flags: {}
+  traumaTarget: 6
 effects: []
-prototypeToken:
-  name: Polop Hellsquid
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/animal-icons/giant-squid.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
 items:
-  - name: Claw-Tentacle
+  - _id: mzqkwy69gwgdcv5a
+    name: Claw-Tentacle
     type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 1d8+2
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 0
-        ac: 15
+      ab: 0
       ammo:
-        max: 0
-        type: ammo
         burst: false
         longReload: false
+        max: 0
         suppress: false
+        type: ammo
         value: 10
-        current: null
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
       bundle:
         bundled: false
-      location: stowed
-      noEncReadied: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
-      secondStat: null
+        isContainer: false
+        isOpen: true
+      cost: 0
+      damage: 1d8+2
+      description: ''
+      encumbrance: 1
+      favorite: false
+      isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      range:
+        max: 0
+        normal: 0
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
+      shock:
+        ac: 15
+        dmg: 0
+      skill: punch
       skillBoostsDamage: false
       skillBoostsShock: false
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
+      stat: str
+      tl: 3
       trauma:
         die: 1d6
-      isNonLethal: false
-      isMelee: false
-    _id: mzqkwy69gwgdcv5a
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!Km2YVtqeRrzVfym4.mzqkwy69gwgdcv5a'
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: Km2YVtqeRrzVfym4
-sort: 700000
 _key: '!actors!Km2YVtqeRrzVfym4'
 

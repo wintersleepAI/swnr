@@ -1,23 +1,23 @@
+_id: i19ipwcpi5xjpzel
 name: Cloudkill
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 8600000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457050
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 6 turns Range: 30' A poisonous fog streams from the caster's
-    fingertips, filling a 30' diameter area. ▶ Movement: The fog moves at 60'
-    per turn (20' per round), driven by the wind (or away from the caster, in
-    still conditions). ▶ Sinking: Because the fog is heavier than air, it sinks
-    to the lowest level of the land, even pouring down den or sinkhole openings.
-    ▶ Damage: All creatures in contact with the vapours suffer 1 hit point of
-    damage per round of contact. ▶ Creatures with less than 5 Hit Dice: Must
-    also make a physical save (once per round of contact) or die.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -31,26 +31,23 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 6 turns Range: 30' A poisonous fog streams from the caster's
+    fingertips, filling a 30' diameter area. ▶ Movement: The fog moves at 60'
+    per turn (20' per round), driven by the wind (or away from the caster, in
+    still conditions). ▶ Sinking: Because the fog is heavier than air, it sinks
+    to the lowest level of the land, even pouring down den or sinkhole openings.
+    ▶ Damage: All creatures in contact with the vapours suffer 1 hit point of
+    damage per round of contact. ▶ Creatures with less than 5 Hit Dice: Must
+    also make a physical save (once per round of contact) or die.
   duration: 6 turns
-  save: physical
+  favorite: false
+  level: 5
+  prepared: false
   range: 30'
-  skill: null
-_id: i19ipwcpi5xjpzel
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457050
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: physical
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!i19ipwcpi5xjpzel'
 

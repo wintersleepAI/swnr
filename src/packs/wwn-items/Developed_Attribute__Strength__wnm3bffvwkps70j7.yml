@@ -1,6 +1,22 @@
+_id: wnm3bffvwkps70j7
 name: Developed Attribute (Strength)
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456876
+  modifiedTime: 1754277456876
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     Your hero has a remarkable degree of development to one or more of their
@@ -13,23 +29,8 @@ system:
     than once to improve different attributes.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: wnm3bffvwkps70j7
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456876
-  modifiedTime: 1754277456876
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!wnm3bffvwkps70j7'
 

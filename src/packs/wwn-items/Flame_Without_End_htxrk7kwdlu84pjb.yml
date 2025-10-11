@@ -1,24 +1,23 @@
+_id: htxrk7kwdlu84pjb
 name: Flame Without End
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456917
+  modifiedTime: 1754277456917
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    A sample of flame no larger than the caster is made effectively eternal. It
-    no longer consumes the object it burns, though it can still be used to burn
-    or heat other things, and it resists all extinguishing save being buried or
-    wholly immersed in water. The elementalist can temporarily extinguish it at
-    will. A number of such flames can be created equal to the elementalist's
-    level; beyond that, special ingredients and fuels are needed that price 500
-    silver pieces per flame. If used as a weapon, it adds +2 damage to a
-    successful hit, albeit nothing to Shock. The flame lasts until dispelled,
-    extinguished, or the elementalist releases it.
-  favorite: false
-  subType: spell
-  source: Elementalist
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -32,26 +31,24 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    A sample of flame no larger than the caster is made effectively eternal. It
+    no longer consumes the object it burns, though it can still be used to burn
+    or heat other things, and it resists all extinguishing save being buried or
+    wholly immersed in water. The elementalist can temporarily extinguish it at
+    will. A number of such flames can be created equal to the elementalist's
+    level; beyond that, special ingredients and fuels are needed that price 500
+    silver pieces per flame. If used as a weapon, it adds +2 damage to a
+    successful hit, albeit nothing to Shock. The flame lasts until dispelled,
+    extinguished, or the elementalist releases it.
   duration: Until dispelled or smothered
-  save: None
+  favorite: false
+  level: 2
+  prepared: false
   range: Self
-  skill: null
-_id: htxrk7kwdlu84pjb
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456917
-  modifiedTime: 1754277456917
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: Elementalist
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!htxrk7kwdlu84pjb'
 

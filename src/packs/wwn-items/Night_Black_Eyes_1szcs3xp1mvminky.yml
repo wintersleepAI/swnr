@@ -1,31 +1,12 @@
+_id: 1szcs3xp1mvminky
 name: Night-Black Eyes
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    ou can see clearly in perfect darkness. As a Main Action, focus on a
-    particular visible object, person, or location; you can tell if it is
-    enchanted, though no details about the magic are seen.
-  favorite: false
-  subType: art
-  source: Accursed
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Accursed
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: 1szcs3xp1mvminky
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -36,10 +17,26 @@ _stats:
   modifiedTime: 1754277456779
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Accursed
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    ou can see clearly in perfect darkness. As a Main Action, focus on a
+    particular visible object, person, or location; you can tell if it is
+    enchanted, though no details about the magic are seen.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Accursed
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!1szcs3xp1mvminky'
 

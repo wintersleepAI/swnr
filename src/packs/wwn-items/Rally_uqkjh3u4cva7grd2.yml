@@ -1,31 +1,12 @@
+_id: uqkjh3u4cva7grd2
 name: Rally
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Commit Effort for the day as a Main Action to exhort a wounded or fallen
-    ally, removing any Frailty. The target regains 2d6 plus your level in hit
-    points, but you incur one System Strain.
-  favorite: false
-  subType: art
-  source: Bard
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Bard
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: uqkjh3u4cva7grd2
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -36,10 +17,26 @@ _stats:
   modifiedTime: 1754277456778
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Bard
+      usesCost: 1
+      cadence: day
+      timing: manual
+  description: >-
+    Commit Effort for the day as a Main Action to exhort a wounded or fallen
+    ally, removing any Frailty. The target regains 2d6 plus your level in hit
+    points, but you incur one System Strain.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Bard
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!uqkjh3u4cva7grd2'
 

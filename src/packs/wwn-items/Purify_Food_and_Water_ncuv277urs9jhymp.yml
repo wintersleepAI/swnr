@@ -1,20 +1,23 @@
+_id: ncuv277urs9jhymp
 name: Purify Food and Water
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 1800000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457091
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: Permanent Range: 10' This spell makes spoiled, rotten, poisonous,
-    or otherwise contaminated food and water pure and suitable for eating and
-    drinking. One of the following may be affected: ▶ Drink: 6 quarts. ▶
-    Rations: One trail ration (iron or standard). ▶ Unpreserved food: A quantity
-    sufficient for 12 human-sized beings.
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -28,26 +31,20 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: Permanent Range: 10' This spell makes spoiled, rotten, poisonous,
+    or otherwise contaminated food and water pure and suitable for eating and
+    drinking. One of the following may be affected: ▶ Drink: 6 quarts. ▶
+    Rations: One trail ration (iron or standard). ▶ Unpreserved food: A quantity
+    sufficient for 12 human-sized beings.
   duration: Permanent
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: 10'
-  skill: null
-_id: ncuv277urs9jhymp
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457091
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!ncuv277urs9jhymp'
 

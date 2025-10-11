@@ -1,6 +1,22 @@
+_id: vgeif6gl9zn64et3
 name: 'Origin Focus: Drudge'
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456860
+  modifiedTime: 1754277456860
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You are remarkably intelligent for a Drudge, being able to understand
@@ -12,23 +28,8 @@ system:
     Mental saving throws.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: vgeif6gl9zn64et3
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456860
-  modifiedTime: 1754277456860
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!vgeif6gl9zn64et3'
 

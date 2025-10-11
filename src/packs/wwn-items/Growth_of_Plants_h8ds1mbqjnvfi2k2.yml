@@ -1,21 +1,23 @@
+_id: h8ds1mbqjnvfi2k2
 name: Growth of Plants
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 5600000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457100
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: Permanent Range: 120' This spell causes vigorous growth of normal
-    vegetation in an area within range. Plants in the affected area become thick
-    and overgrown, entwining to form a thorny jungle. ▶ Area: An area of up to
-    3,000 square feet&mdash;selected by the caster&mdash;is affected (e.g. 150'
-    &times; 20', 100' &times; 30', etc.). ▶ Passage: Only very large creatures
-    can force their way through.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: Permanent Range: 120' This spell causes vigorous growth of normal
+    vegetation in an area within range. Plants in the affected area become thick
+    and overgrown, entwining to form a thorny jungle. ▶ Area: An area of up to
+    3,000 square feet&mdash;selected by the caster&mdash;is affected (e.g. 150'
+    &times; 20', 100' &times; 30', etc.). ▶ Passage: Only very large creatures
+    can force their way through.
   duration: Permanent
-  save: None
+  favorite: false
+  level: 4
+  prepared: false
   range: 120'
-  skill: null
-_id: h8ds1mbqjnvfi2k2
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457100
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!h8ds1mbqjnvfi2k2'
 

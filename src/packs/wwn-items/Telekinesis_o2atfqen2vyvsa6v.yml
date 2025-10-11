@@ -1,22 +1,23 @@
+_id: o2atfqen2vyvsa6v
 name: Telekinesis
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 112500
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457080
+  modifiedTime: 1754277912607
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: Concentration (up to 6 rounds) Range: 120' By concentrating, the
-    caster is able to move objects or creatures by the power of thought. ▶
-    Weight: Up to 2 encumbrance per level of the caster may be targeted. ▶
-    Movement: The target may be moved up to 20' per round, in whatever direction
-    the caster wishes (including vertically). ▶ Save: If a creature is targeted,
-    it may make a Physical save to resist the spell. ▶ Concentration: If the
-    caster's concentration is broken, the target will fall.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -30,26 +31,22 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: Concentration (up to 6 rounds) Range: 120' By concentrating, the
+    caster is able to move objects or creatures by the power of thought. ▶
+    Weight: Up to 2 encumbrance per level of the caster may be targeted. ▶
+    Movement: The target may be moved up to 20' per round, in whatever direction
+    the caster wishes (including vertically). ▶ Save: If a creature is targeted,
+    it may make a Physical save to resist the spell. ▶ Concentration: If the
+    caster's concentration is broken, the target will fall.
   duration: Concentration (up to 6 rounds)
-  save: physical
+  favorite: false
+  level: 5
+  prepared: false
   range: 120'
-  skill: null
-_id: o2atfqen2vyvsa6v
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457080
-  modifiedTime: 1754277912607
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: physical
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!o2atfqen2vyvsa6v'
 

@@ -1,6 +1,22 @@
+_id: jl13h2ldq5ks8zme
 name: Specialist
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456857
+  modifiedTime: 1754277456857
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You are remarkably talented at a particular skill. Whether a marvelous cat
@@ -12,23 +28,8 @@ system:
     checks in this skill.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: jl13h2ldq5ks8zme
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456857
-  modifiedTime: 1754277456857
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!jl13h2ldq5ks8zme'
 

@@ -1,20 +1,23 @@
+_id: bp0651794n8ckn8a
 name: Levitate
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 4200000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457080
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 6 turns +1 per level Range: The caster This enchantment allows the
-    caster to move up and down through the air: ▶ Vertical: The caster mentally
-    directs vertical movement at up to 20' per round. ▶ Horizontal: The caster
-    can push against solid objects to move laterally. ▶ Weight: A normal amount
-    of weight can be carried while levitating.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -28,26 +31,20 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 6 turns +1 per level Range: The caster This enchantment allows the
+    caster to move up and down through the air: ▶ Vertical: The caster mentally
+    directs vertical movement at up to 20' per round. ▶ Horizontal: The caster
+    can push against solid objects to move laterally. ▶ Weight: A normal amount
+    of weight can be carried while levitating.
   duration: 6 turns + 1 / level
-  save: None
+  favorite: false
+  level: 2
+  prepared: false
   range: Self
-  skill: null
-_id: bp0651794n8ckn8a
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457080
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!bp0651794n8ckn8a'
 

@@ -1,6 +1,22 @@
+_id: 92et3x0sp8082blw
 name: Trapmaster
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456858
+  modifiedTime: 1754277456858
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You have uncommon expertise in handling traps and snares, both mundane ones
@@ -23,23 +39,8 @@ system:
     that's susceptible to being dispelled by Extirpate Arcana.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: 92et3x0sp8082blw
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456858
-  modifiedTime: 1754277456858
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!92et3x0sp8082blw'
 

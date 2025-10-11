@@ -1,23 +1,23 @@
+_id: rd6v9olqhzz3okve
 name: Insect Plague
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 4800000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457104
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: Concentration (up to 1 day) Range: 480' Cast above ground, this
-    spell conjures a 60' diameter swarm of flying insects with the following
-    properties: ▶ Movement: 20' per round. While the swarm is within range, the
-    caster is able to direct its movements. ▶ Vision: Within the area of the
-    swarm is obscured. ▶ Creatures of 2 HD or less: Are driven away, if caught
-    within the swarm. ▶ Concentration: If the caster moves or loses
-    concentration, the swarm dissipates, ending the spell. Restrictions: The
-    spell has no effect if cast underground.
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -31,26 +31,23 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: Concentration (up to 1 day) Range: 480' Cast above ground, this
+    spell conjures a 60' diameter swarm of flying insects with the following
+    properties: ▶ Movement: 20' per round. While the swarm is within range, the
+    caster is able to direct its movements. ▶ Vision: Within the area of the
+    swarm is obscured. ▶ Creatures of 2 HD or less: Are driven away, if caught
+    within the swarm. ▶ Concentration: If the caster moves or loses
+    concentration, the swarm dissipates, ending the spell. Restrictions: The
+    spell has no effect if cast underground.
   duration: up to 1 day
-  save: None
+  favorite: false
+  level: 5
+  prepared: false
   range: 480'
-  skill: null
-_id: rd6v9olqhzz3okve
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457104
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!rd6v9olqhzz3okve'
 

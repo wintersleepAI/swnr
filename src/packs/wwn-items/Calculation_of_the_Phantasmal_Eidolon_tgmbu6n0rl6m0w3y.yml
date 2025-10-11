@@ -1,7 +1,36 @@
+_id: tgmbu6n0rl6m0w3y
 name: Calculation of the Phantasmal Eidolon
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456919
+  modifiedTime: 1754277456919
+  lastModifiedBy: null
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     The caster conjures up a semi-real phantasmal creature in any shape or
     appearance they desire, provided it is no larger than an ox. The servitor is
@@ -19,46 +48,14 @@ system:
     spell is cast.
     @UUID[Compendium.wwn.creatures-of-a-far-age.MwoUjHFY21ZIZ3Lx]{Phantasmal
     Eidolon}
+  duration: Until destroyed or dawn
   favorite: false
-  subType: spell
-  source: High Mage
   level: 4
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Until destroyed or dawn
-  save: None
   range: Self
-  skill: null
-_id: tgmbu6n0rl6m0w3y
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456919
-  modifiedTime: 1754277456919
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!tgmbu6n0rl6m0w3y'
 

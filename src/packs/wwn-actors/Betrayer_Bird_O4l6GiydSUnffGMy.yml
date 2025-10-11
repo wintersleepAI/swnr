@@ -1,18 +1,37 @@
+_id: O4l6GiydSUnffGMy
 name: Betrayer Bird
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: 1lXACo4msOgJ1WVa
+sort: 300000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.wwn-actors.Actor.n0ah97n5bcds2ahx
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754271303973
+  modifiedTime: 1754271303973
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
   ab: 2
+  access:
+    max: 1
+    value: 1
   armorType: street
   attacks:
-    damage: d6
     bonusDamage: 0
+    damage: d6
     number: 0
   baseAc: 13
-  hitDice: '1'
-  moralScore: 8
-  saves: 15
-  skillBonus: 0
-  speed: 40
+  baseSoakTotal:
+    max: 0
+    value: 0
   biography: >-
     Resembling a vulture with a six-foot wingspan and razor-sharp claws,
     betrayer birds are encountered in small flocks of 1d6+1 birds. They seek out
@@ -20,197 +39,83 @@ system:
     and enemies to them in order to feast on the eventual leavings. They seem to
     have a positively human ability to identify suitable predators, though they
     fight with no more than bestial intelligence if directly attacked.
-  species: monster
-  health:
-    value: 10
-    max: 10
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 6
-  meleeAc: 10
-  meleeAb: 1
-  systemStrain:
-    value: 0
-    permanent: 0
-  pools: {}
   cyberdecks: []
+  health:
+    max: 10
+    value: 10
   health_max_modified: 0
+  hitDice: '1'
+  meleeAb: 1
+  meleeAc: 10
+  moralScore: 8
   reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
+  saves: 15
+  skillBonus: 0
+  species: monster
+  speed: 40
+  systemStrain:
+    permanent: 0
     value: 0
-    max: 0
-_stats:
-  compendiumSource: Compendium.swnr.wwn-actors.Actor.n0ah97n5bcds2ahx
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754271303973
-  modifiedTime: 1754271303973
-  lastModifiedBy: lKC5x4Yf023Bizof
-folder: 1lXACo4msOgJ1WVa
-flags: {}
+  traumaTarget: 6
 effects: []
-prototypeToken:
-  name: Betrayer Bird
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
 items:
-  - name: Beak
+  - _id: k2ul3hdntol0p7vk
+    name: Beak
     type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 0
-        ac: 15
+      ab: 0
       ammo:
-        max: 0
-        type: ammo
         burst: false
         longReload: false
+        max: 0
         suppress: false
+        type: ammo
         value: 10
-        current: null
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
       bundle:
         bundled: false
-      location: stowed
-      noEncReadied: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
-      secondStat: null
+        isContainer: false
+        isOpen: true
+      cost: 0
+      damage: 1d6
+      description: ''
+      encumbrance: 1
+      favorite: false
+      isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      range:
+        max: 0
+        normal: 0
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
+      shock:
+        ac: 15
+        dmg: 0
+      skill: punch
       skillBoostsDamage: false
       skillBoostsShock: false
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
+      stat: str
+      tl: 3
       trauma:
         die: 1d6
-      isNonLethal: false
-      isMelee: false
-    _id: k2ul3hdntol0p7vk
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!O4l6GiydSUnffGMy.k2ul3hdntol0p7vk'
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: O4l6GiydSUnffGMy
-sort: 300000
 _key: '!actors!O4l6GiydSUnffGMy'
 

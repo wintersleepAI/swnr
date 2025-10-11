@@ -1,25 +1,23 @@
+_id: 0qpuvqxmih3aul9g
 name: Imperceptible Cerebral Divulgence
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456910
+  modifiedTime: 1754277456910
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The mage focuses on a visible living creature within 100 feet per caster
-    level. For the rest of the scene, they immediately receive an impression of
-    the target's surface thoughts and interests, understanding them regardless
-    of any lack of a shared language. The caster may ask one question of the
-    target's memories per caster level, but doing so risks breaking the spell;
-    the target can make a Mental save before answering each question and the
-    spell ends if the save is successful. These questions can only query
-    memories, not compel any exercise of judgment or extrapolation. This spell
-    is very subtle in its casting, and can be invoked without any visible
-    gestures or audible incantations.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -33,26 +31,25 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The mage focuses on a visible living creature within 100 feet per caster
+    level. For the rest of the scene, they immediately receive an impression of
+    the target's surface thoughts and interests, understanding them regardless
+    of any lack of a shared language. The caster may ask one question of the
+    target's memories per caster level, but doing so risks breaking the spell;
+    the target can make a Mental save before answering each question and the
+    spell ends if the save is successful. These questions can only query
+    memories, not compel any exercise of judgment or extrapolation. This spell
+    is very subtle in its casting, and can be invoked without any visible
+    gestures or audible incantations.
   duration: Scene
-  save: mental
+  favorite: false
+  level: 1
+  prepared: false
   range: 100 ft. per caster level
-  skill: null
-_id: 0qpuvqxmih3aul9g
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456910
-  modifiedTime: 1754277456910
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: mental
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!0qpuvqxmih3aul9g'
 

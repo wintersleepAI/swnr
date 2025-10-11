@@ -1,31 +1,12 @@
+_id: urwo561y2i1zo0d6
 name: Skilled
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Gain three skill points to spend on any non-combat skills, up to the maximum
-    skill level allowed by your character level. This art may be taken more than
-    once.
-  favorite: false
-  subType: art
-  source: Wise
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Wise
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: urwo561y2i1zo0d6
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -36,10 +17,26 @@ _stats:
   modifiedTime: 1754277456786
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Wise
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    Gain three skill points to spend on any non-combat skills, up to the maximum
+    skill level allowed by your character level. This art may be taken more than
+    once.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Wise
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!urwo561y2i1zo0d6'
 

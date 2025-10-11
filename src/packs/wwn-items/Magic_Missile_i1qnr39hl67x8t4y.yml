@@ -1,23 +1,23 @@
+_id: i1qnr39hl67x8t4y
 name: Magic Missile
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 3400000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457089
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 1 turn Range: 150' This spell conjures a glowing dart of energy
-    that the caster may choose to shoot at a visible target within range. ▶ Hit:
-    The missile hits unerringly (no attack roll or saving throw is required). ▶
-    Damage: The missile inflicts 1d6+1 damage. ▶ Higher level casters: May
-    conjure more missiles: two additional missiles are conjured per five
-    experience levels the caster has gained (i.e. three missiles at
-    6th&ndash;10th level, five missiles at 11th&ndash;15th level, etc.).
-    Multiple missiles may be directed at a single target.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -31,26 +31,23 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 1 turn Range: 150' This spell conjures a glowing dart of energy
+    that the caster may choose to shoot at a visible target within range. ▶ Hit:
+    The missile hits unerringly (no attack roll or saving throw is required). ▶
+    Damage: The missile inflicts 1d6+1 damage. ▶ Higher level casters: May
+    conjure more missiles: two additional missiles are conjured per five
+    experience levels the caster has gained (i.e. three missiles at
+    6th&ndash;10th level, five missiles at 11th&ndash;15th level, etc.).
+    Multiple missiles may be directed at a single target.
   duration: 1 turn
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: 150'
-  skill: null
-_id: i1qnr39hl67x8t4y
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457089
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!i1qnr39hl67x8t4y'
 

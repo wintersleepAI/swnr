@@ -1,21 +1,23 @@
+_id: 14m9wiadktmxnagy
 name: Boreal Wings
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456904
+  modifiedTime: 1754277456904
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The elementalist chooses a visible ally within one hundred feet; the target
-    becomes capable of swift and easy aerial travel, flying at twice their usual
-    movement rate. If the spell ends or is dispelled while aloft, the target
-    descends gently to the earth. This spell lasts for one scene, though casters
-    of fifth level or more can make it last an hour, and those of eighth level
-    or more can make it last until dawn or dusk, whichever comes next.
-  favorite: false
-  subType: spell
-  source: Elementalist
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The elementalist chooses a visible ally within one hundred feet; the target
+    becomes capable of swift and easy aerial travel, flying at twice their usual
+    movement rate. If the spell ends or is dispelled while aloft, the target
+    descends gently to the earth. This spell lasts for one scene, though casters
+    of fifth level or more can make it last an hour, and those of eighth level
+    or more can make it last until dawn or dusk, whichever comes next.
   duration: Scene
-  save: None
+  favorite: false
+  level: 2
+  prepared: false
   range: 100 ft.
-  skill: null
-_id: 14m9wiadktmxnagy
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456904
-  modifiedTime: 1754277456904
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: Elementalist
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!14m9wiadktmxnagy'
 

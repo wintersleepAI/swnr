@@ -1,7 +1,36 @@
+_id: u5ailme457oksnm0
 name: Contact Higher Plane
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 8200000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457097
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     Duration: One conversation Range: The caster A channel of communication is
     opened to a higher plane of existence, allowing the caster to ask powerful,
@@ -26,46 +55,14 @@ system:
     55% 10% 5th 5 65% 60% 15% 6th 6 60% 65% 20% 7th 7 50% 70% 25% 8th 8 40% 75%
     30% 9th 9 30% 80% 35% 10th 10 20% 85% 40% 11th 11 10% 90% 45% 12th 12 5% 95%
     50%
+  duration: One conversation
   favorite: false
-  subType: spell
-  source: Mage
   level: 5
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: One conversation
-  save: None
   range: Caster
-  skill: null
-_id: u5ailme457oksnm0
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457097
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!u5ailme457oksnm0'
 

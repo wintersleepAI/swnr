@@ -1,21 +1,23 @@
+_id: hon4vcnt5wvf1v2g
 name: Visitation of the Clement Clime
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456912
+  modifiedTime: 1754277456912
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The caster and up to three visible allies per caster level are shielded from
-    the excesses of hostile elemental energies, becoming immune to mundane
-    extremes of heat and cold and natural acids or electrical discharges.
-    Against magical harm of this nature, they automatically take only half the
-    damage they normally would, or none if they make a successful Physical
-    saving throw. This spell lasts for one hour per caster level.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The caster and up to three visible allies per caster level are shielded from
+    the excesses of hostile elemental energies, becoming immune to mundane
+    extremes of heat and cold and natural acids or electrical discharges.
+    Against magical harm of this nature, they automatically take only half the
+    damage they normally would, or none if they make a successful Physical
+    saving throw. This spell lasts for one hour per caster level.
   duration: 1 hour per level
-  save: None
+  favorite: false
+  level: 2
+  prepared: false
   range: Visible
-  skill: null
-_id: hon4vcnt5wvf1v2g
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456912
-  modifiedTime: 1754277456912
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!hon4vcnt5wvf1v2g'
 

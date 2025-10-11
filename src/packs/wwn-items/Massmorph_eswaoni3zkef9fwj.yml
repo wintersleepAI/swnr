@@ -1,21 +1,23 @@
+_id: eswaoni3zkef9fwj
 name: Massmorph
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 3300000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457088
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: Permanent Range: 240' A force of human-sized creatures within a
-    240' diameter area is veiled by illusion to appear as a copse of trees or
-    orchard. ▶ Moving through: Once the illusion is in place, even creatures
-    moving among the veiled subjects are deceived. ▶ Subjects who leave the
-    affected area: Cease to be veiled. ▶ Dismissing: The caster may dismiss the
-    illusion in its entirety at any time.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: Permanent Range: 240' A force of human-sized creatures within a
+    240' diameter area is veiled by illusion to appear as a copse of trees or
+    orchard. ▶ Moving through: Once the illusion is in place, even creatures
+    moving among the veiled subjects are deceived. ▶ Subjects who leave the
+    affected area: Cease to be veiled. ▶ Dismissing: The caster may dismiss the
+    illusion in its entirety at any time.
   duration: Permanent
-  save: None
+  favorite: false
+  level: 4
+  prepared: false
   range: 240'
-  skill: null
-_id: eswaoni3zkef9fwj
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457088
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!eswaoni3zkef9fwj'
 

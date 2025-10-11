@@ -1,31 +1,12 @@
+_id: qjmki6bkwa3j0hs6
 name: Lex Talionis
 type: item
+img: icons/svg/item-bag.svg
+folder: jXrFh0x6b5Auj9IZ
 sort: 0
-system:
-  description: >-
-    These rare magical weapons come in various small, concealable forms, with
-    daggers predominating. They function as ordinary +1 magical weapons in the
-    main, but whenever they cause harm to a target, the victim must make a
-    Physical saving throw. On a failure, both the target and the wielder of the
-    Lex Talionis instantly die, with no chance to stabilize. If the weapon is
-    used as part of an Execution Attack, no saving throw is allowed. The weapon
-    then vanishes; some say that it is destroyed by the magical discharge, while
-    others postulate that it simply appears elsewhere to await a new avenger.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
-  cost: 0
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
-  tl: 3
-_id: qjmki6bkwa3j0hs6
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -36,10 +17,30 @@ _stats:
   modifiedTime: 1754277456981
   lastModifiedBy: null
   exportSource: null
-folder: jXrFh0x6b5Auj9IZ
-flags: {}
+system:
+  bundle:
+    bundled: false
+  cost: 0
+  description: >-
+    These rare magical weapons come in various small, concealable forms, with
+    daggers predominating. They function as ordinary +1 magical weapons in the
+    main, but whenever they cause harm to a target, the victim must make a
+    Physical saving throw. On a failure, both the target and the wielder of the
+    Lex Talionis instantly die, with no chance to stabilize. If the weapon is
+    used as part of an Execution Attack, no saving throw is allowed. The weapon
+    then vanishes; some say that it is destroyed by the magical discharge, while
+    others postulate that it simply appears elsewhere to await a new avenger.
+  encumbrance: 1
+  favorite: false
+  location: stowed
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+    diceNum: 1
+    diceSize: d20
+  tl: 3
 effects: []
-ownership:
-  default: 0
 _key: '!items!qjmki6bkwa3j0hs6'
 

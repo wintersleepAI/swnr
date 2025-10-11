@@ -1,25 +1,23 @@
+_id: xlhl7r0eze5s3z58
 name: The Jade Palanquin of the Faceless God
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456917
+  modifiedTime: 1754277456917
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    This spell calls forth a floating palanquin of ornately-carved green stone.
-    A slim three-foot-tall statue of a faceless entity stands at the center of
-    the platform, while four slender pillars rise at the corners, the roof and
-    sides being draped by metallic golden cloth. The palanquin itself is twelve
-    feet long and eight wide, with room enough for several people to sit on it.
-    It floats at shoulder-height above the ground or a liquid surface below. It
-    does not move of its own, but may be pulled along by even one human-sized
-    bearer. The total burden on the palanquin cannot exceed more than two
-    thousand pounds, or it sinks to the ground. It lasts until dusk, dawn, or
-    until the statue of the god is struck or insulted, whichever comes first.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -33,26 +31,25 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    This spell calls forth a floating palanquin of ornately-carved green stone.
+    A slim three-foot-tall statue of a faceless entity stands at the center of
+    the platform, while four slender pillars rise at the corners, the roof and
+    sides being draped by metallic golden cloth. The palanquin itself is twelve
+    feet long and eight wide, with room enough for several people to sit on it.
+    It floats at shoulder-height above the ground or a liquid surface below. It
+    does not move of its own, but may be pulled along by even one human-sized
+    bearer. The total burden on the palanquin cannot exceed more than two
+    thousand pounds, or it sinks to the ground. It lasts until dusk, dawn, or
+    until the statue of the god is struck or insulted, whichever comes first.
   duration: Until dusk, dawn, or the statue is insulted
-  save: None
+  favorite: false
+  level: 2
+  prepared: false
   range: Self
-  skill: null
-_id: xlhl7r0eze5s3z58
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456917
-  modifiedTime: 1754277456917
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!xlhl7r0eze5s3z58'
 

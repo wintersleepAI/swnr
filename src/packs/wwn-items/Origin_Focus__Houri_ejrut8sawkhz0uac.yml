@@ -1,6 +1,22 @@
+_id: ejrut8sawkhz0uac
 name: 'Origin Focus: Houri'
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456859
+  modifiedTime: 1754277456859
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You've taught yourself to resist the lure of enforced happiness and seek
@@ -12,23 +28,8 @@ system:
     Mental saving throws.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: ejrut8sawkhz0uac
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456859
-  modifiedTime: 1754277456859
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!ejrut8sawkhz0uac'
 

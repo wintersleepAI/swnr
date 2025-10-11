@@ -1,7 +1,36 @@
+_id: hraiit0cgeprm2uj
 name: Vallation of Specified Exclusion
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456882
+  modifiedTime: 1754277456882
+  lastModifiedBy: null
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     The caster must form some sort of line as part of this spell's invocation,
     either with dropped powders or a trace drawn in the dirt or a more permanent
@@ -20,46 +49,14 @@ system:
     the barrier, however, the entire field shatters. The barrier lasts until
     dispelled, the caster drops it, or until one hour has passed per caster
     level.
+  duration: 1 hour per level
   favorite: false
-  subType: spell
-  source: High Mage
   level: 3
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: 1 hour per level
-  save: None
   range: Self
-  skill: null
-_id: hraiit0cgeprm2uj
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456882
-  modifiedTime: 1754277456882
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!hraiit0cgeprm2uj'
 

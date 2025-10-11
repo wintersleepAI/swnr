@@ -1,22 +1,23 @@
+_id: rwvioowhmtehlrxo
 name: Tremors of the Depths
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456913
+  modifiedTime: 1754277456913
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The elementalist calls up a deep, rolling tremor from within the earth,
-    centering it on a visible point and affecting all structures in a radius of
-    up to five hundred feet. This spell's effects are slow, requiring five
-    minutes to fully manifest, but they can successfully topple or destroy any
-    structures, tunnels, or caves within the affected area unless such
-    structures are magically reinforced. The effects are negated if the spell is
-    dispelled before it fully manifests.
-  favorite: false
-  subType: spell
-  source: Elementalist
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -30,26 +31,22 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The elementalist calls up a deep, rolling tremor from within the earth,
+    centering it on a visible point and affecting all structures in a radius of
+    up to five hundred feet. This spell's effects are slow, requiring five
+    minutes to fully manifest, but they can successfully topple or destroy any
+    structures, tunnels, or caves within the affected area unless such
+    structures are magically reinforced. The effects are negated if the spell is
+    dispelled before it fully manifests.
   duration: 5 minutes
-  save: None
+  favorite: false
+  level: 5
+  prepared: false
   range: 500-ft. radius
-  skill: null
-_id: rwvioowhmtehlrxo
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456913
-  modifiedTime: 1754277456913
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: Elementalist
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!rwvioowhmtehlrxo'
 

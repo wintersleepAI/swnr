@@ -1,25 +1,23 @@
+_id: xz8i5acb3dw0b9fh
 name: Light (Cleric)
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 4100000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457059
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 12 turns Range: 120' This spell has three usages: Conjuring light:
-    In a 15' radius. The magical light is sufficient for reading, but is not as
-    bright as daylight. The spell may be cast upon an object, in which case the
-    light moves with the object. Blinding a creature: By casting the spell upon
-    its eyes. If the target fails an Evasion save, it is blinded for the
-    duration. A blind creature cannot attack. Cancelling darkness: Light may
-    cancel a darkness spell (see below). Reversed: Darkness Creates a 15' radius
-    area of magical blackness, preventing normal sight (but not infravision).
-    Like light, it may alternatively be used to blind creatures or to dispel a
-    light spell.
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -33,26 +31,25 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 12 turns Range: 120' This spell has three usages: Conjuring light:
+    In a 15' radius. The magical light is sufficient for reading, but is not as
+    bright as daylight. The spell may be cast upon an object, in which case the
+    light moves with the object. Blinding a creature: By casting the spell upon
+    its eyes. If the target fails an Evasion save, it is blinded for the
+    duration. A blind creature cannot attack. Cancelling darkness: Light may
+    cancel a darkness spell (see below). Reversed: Darkness Creates a 15' radius
+    area of magical blackness, preventing normal sight (but not infravision).
+    Like light, it may alternatively be used to blind creatures or to dispel a
+    light spell.
   duration: 12 turns
-  save: mental
+  favorite: false
+  level: 1
+  prepared: false
   range: 120'
-  skill: null
-_id: xz8i5acb3dw0b9fh
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457059
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: mental
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!xz8i5acb3dw0b9fh'
 

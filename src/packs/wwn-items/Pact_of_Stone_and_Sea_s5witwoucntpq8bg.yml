@@ -1,22 +1,23 @@
+_id: s5witwoucntpq8bg
 name: Pact of Stone and Sea
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456889
+  modifiedTime: 1754277456889
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The elementalist chooses earth, water, fire, or wind when casting this spell
-    and selects a visible target to be affected. For the rest of the scene, the
-    target is immune to injury caused by mundane manifestations of that
-    substance; stone weapons don't harm them, water doesn't drown them, fire
-    doesn't burn them, and wind doesn't topple them. This affects secondary
-    effects of the material as well; a fire-pacted mage couldn't be boiled in a
-    pot, and an earth-pacted one won't be suffocated if buried alive.
-  favorite: false
-  subType: spell
-  source: Elementalist
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -30,26 +31,22 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The elementalist chooses earth, water, fire, or wind when casting this spell
+    and selects a visible target to be affected. For the rest of the scene, the
+    target is immune to injury caused by mundane manifestations of that
+    substance; stone weapons don't harm them, water doesn't drown them, fire
+    doesn't burn them, and wind doesn't topple them. This affects secondary
+    effects of the material as well; a fire-pacted mage couldn't be boiled in a
+    pot, and an earth-pacted one won't be suffocated if buried alive.
   duration: Scene
-  save: None
+  favorite: false
+  level: 2
+  prepared: false
   range: Visible
-  skill: null
-_id: s5witwoucntpq8bg
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456889
-  modifiedTime: 1754277456889
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: Elementalist
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!s5witwoucntpq8bg'
 

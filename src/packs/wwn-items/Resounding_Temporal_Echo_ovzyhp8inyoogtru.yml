@@ -1,21 +1,23 @@
+_id: ovzyhp8inyoogtru
 name: Resounding Temporal Echo
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456893
+  modifiedTime: 1754277456893
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The caster imbues one visible ally per caster level with a burst of
-    tremendous speed as their localized time begins to flow more rapidly. For
-    1d4+1 rounds, all subjects get an extra Main Action during their turn. This
-    Main Action may not be used to cast spells or use Arts. This spell severely
-    taxes those who take advantage of it, adding 1 System Strain for each round
-    in which the recipient takes the bonus action.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The caster imbues one visible ally per caster level with a burst of
+    tremendous speed as their localized time begins to flow more rapidly. For
+    1d4+1 rounds, all subjects get an extra Main Action during their turn. This
+    Main Action may not be used to cast spells or use Arts. This spell severely
+    taxes those who take advantage of it, adding 1 System Strain for each round
+    in which the recipient takes the bonus action.
   duration: 1d4+1 rounds
-  save: None
+  favorite: false
+  level: 2
+  prepared: false
   range: Visible
-  skill: null
-_id: ovzyhp8inyoogtru
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456893
-  modifiedTime: 1754277456893
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!ovzyhp8inyoogtru'
 

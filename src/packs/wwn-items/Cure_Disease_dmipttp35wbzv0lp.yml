@@ -1,23 +1,23 @@
+_id: dmipttp35wbzv0lp
 name: Cure Disease
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 7600000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457068
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: Instant Range: 30' This spell has two uses: 1. Cure a subject of
-    any disease: Including those of magical origin. 2. Kill green slime: This
-    monster is killed instantly. Reversed: Cause Disease Inflicts a terrible,
-    withering disease on a victim, if a Physical save is failed. The disease has
-    the following effects: ▶ Death: Within [[2d12]] days. ▶ Attack penalty:
-    &ndash;2 to attack rolls. ▶ Natural healing: Takes twice the usual amount of
-    time. ▶ Magical healing: Is utterly ineffective. ▶ Curing: This disease can
-    be cured with a casting of cure disease.
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -31,26 +31,23 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: Instant Range: 30' This spell has two uses: 1. Cure a subject of
+    any disease: Including those of magical origin. 2. Kill green slime: This
+    monster is killed instantly. Reversed: Cause Disease Inflicts a terrible,
+    withering disease on a victim, if a Physical save is failed. The disease has
+    the following effects: ▶ Death: Within [[2d12]] days. ▶ Attack penalty:
+    &ndash;2 to attack rolls. ▶ Natural healing: Takes twice the usual amount of
+    time. ▶ Magical healing: Is utterly ineffective. ▶ Curing: This disease can
+    be cured with a casting of cure disease.
   duration: Instant
-  save: physical
+  favorite: false
+  level: 3
+  prepared: false
   range: 30'
-  skill: null
-_id: dmipttp35wbzv0lp
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457068
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: physical
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!dmipttp35wbzv0lp'
 

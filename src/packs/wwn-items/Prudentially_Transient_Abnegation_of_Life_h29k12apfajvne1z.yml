@@ -1,27 +1,23 @@
+_id: h29k12apfajvne1z
 name: Prudentially Transient Abnegation of Life
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456905
+  modifiedTime: 1754277456905
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    This spell may be cast as an Instant action, even if another spell has been
-    cast the same round, and targets either the caster or a willing visible
-    target. It can only be used in immediate response to an injury that reduces
-    the target to zero hit points. When it does, the target suffers dramatic and
-    ostentatiously obvious death, with mortal blows cleaving them asunder or
-    gorily butchering them. They are dead to all mundane or magical examination.
-    Up to two hours later however, at the target's discretion, the various
-    remains of the target flow back together and restore their body with two hit
-    points per caster level and two additional System Strain points gained. If
-    the target's remains are intentionally scattered widely, incinerated, or
-    entirely eaten, however, they cannot revive. The subject is aware of their
-    surroundings while "dead".
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -35,26 +31,27 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    This spell may be cast as an Instant action, even if another spell has been
+    cast the same round, and targets either the caster or a willing visible
+    target. It can only be used in immediate response to an injury that reduces
+    the target to zero hit points. When it does, the target suffers dramatic and
+    ostentatiously obvious death, with mortal blows cleaving them asunder or
+    gorily butchering them. They are dead to all mundane or magical examination.
+    Up to two hours later however, at the target's discretion, the various
+    remains of the target flow back together and restore their body with two hit
+    points per caster level and two additional System Strain points gained. If
+    the target's remains are intentionally scattered widely, incinerated, or
+    entirely eaten, however, they cannot revive. The subject is aware of their
+    surroundings while "dead".
   duration: Up to 2 hours
-  save: None
+  favorite: false
+  level: 2
+  prepared: false
   range: Visible
-  skill: null
-_id: h29k12apfajvne1z
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456905
-  modifiedTime: 1754277456905
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!h29k12apfajvne1z'
 

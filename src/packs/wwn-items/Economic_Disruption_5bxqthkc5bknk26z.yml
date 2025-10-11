@@ -1,43 +1,42 @@
+_id: 5bxqthkc5bknk26z
 name: Economic Disruption
 type: asset
-sort: 0
-system:
-  description: As a free action once per turn, this Asset can move itself without cost.
-  favorite: false
-  category: cunning
-  type: Facility
-  health:
-    value: 10
-    max: 10
-  rating: 6
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
-  income: 0
-  maintenance: 0
-  attackTarget: null
-  attackSource: null
-  qualities:
-    permission: false
-    action: false
-    special: false
-_id: 5bxqthkc5bknk26z
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: vGBf0X640rXwS7Ze
+sort: 1400000
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456940
-  modifiedTime: 1754277456940
-  lastModifiedBy: null
+  modifiedTime: 1759968730539
+  lastModifiedBy: lKC5x4Yf023Bizof
   exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
+  description: As a free action once per turn, this Asset can move itself without cost.
+  favorite: false
+  health:
+    max: 10
+    value: 10
+  income: 0
+  maintenance: 0
+  qualities:
+    action: false
+    permission: false
+    special: false
+  rating: 6
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!5bxqthkc5bknk26z'
 

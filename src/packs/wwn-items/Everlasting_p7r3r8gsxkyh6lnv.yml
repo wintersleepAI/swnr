@@ -1,21 +1,23 @@
+_id: p7r3r8gsxkyh6lnv
 name: Everlasting
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456899
+  modifiedTime: 1754277456899
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The spell may be triggered as an Instant action by the caster, imparting a
-    burst of unquenchable life force to all allied creatures within 50 feet. For
-    the next five rounds, no affected ally can be reduced below 1 hit point,
-    regardless of the damage inflicted upon them. At the end of the spell's
-    effect, the caster's own life energy is exhausted, leaving them with only 1
-    hit point. A creature can benefit from this spell no more than once per day.
-  favorite: false
-  subType: spell
-  source: Necromancer
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The spell may be triggered as an Instant action by the caster, imparting a
+    burst of unquenchable life force to all allied creatures within 50 feet. For
+    the next five rounds, no affected ally can be reduced below 1 hit point,
+    regardless of the damage inflicted upon them. At the end of the spell's
+    effect, the caster's own life energy is exhausted, leaving them with only 1
+    hit point. A creature can benefit from this spell no more than once per day.
   duration: 5 rounds
-  save: None
+  favorite: false
+  level: 5
+  prepared: false
   range: 50 ft. radius
-  skill: null
-_id: p7r3r8gsxkyh6lnv
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456899
-  modifiedTime: 1754277456899
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: Necromancer
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!p7r3r8gsxkyh6lnv'
 

@@ -1,7 +1,36 @@
+_id: dr7gpa2d19zp0qwm
 name: Elemental Vallation
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456909
+  modifiedTime: 1754277456909
+  lastModifiedBy: null
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     A wall of a chosen churning elemental force can be called up by the
     elementalist. The barrier is ten feet long per character level, with a
@@ -17,46 +46,14 @@ system:
     invisible, inaudible, and twenty feet in height; those who cross them suffer
     1d6 plus the elementalist's level in electrical damage. The walls vanish at
     the end of the scene.
+  duration: Scene
   favorite: false
-  subType: spell
-  source: Elementalist
   level: 3
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Scene
-  save: None
   range: 200 ft.
-  skill: null
-_id: dr7gpa2d19zp0qwm
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456909
-  modifiedTime: 1754277456909
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: Elementalist
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!dr7gpa2d19zp0qwm'
 

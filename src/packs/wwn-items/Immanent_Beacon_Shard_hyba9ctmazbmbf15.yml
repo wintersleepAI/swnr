@@ -1,7 +1,26 @@
+_id: hyba9ctmazbmbf15
 name: Immanent Beacon Shard
 type: item
+img: icons/svg/item-bag.svg
+folder: jXrFh0x6b5Auj9IZ
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456987
+  modifiedTime: 1754277456987
+  lastModifiedBy: null
+  exportSource: null
 system:
+  bundle:
+    bundled: false
+  cost: 0
   description: >-
     Fragments of some unfathomable monolith of congealed natural law, these
     shards of faceted crystal are usually the size of a short baton. When a user
@@ -14,35 +33,17 @@ system:
     around the beacon as if they were standing there. The user can reclaim the
     beacon at a cost of 1 System Strain, or wait for the effect to wear out and
     the shard to become movable again a day later.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
   encumbrance: 1
-  cost: 0
+  favorite: false
   location: stowed
-  quality: stock
   noEncReadied: false
+  quality: stock
+  quantity: 1
   roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
     diceNum: 1
     diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
   tl: 3
-_id: hyba9ctmazbmbf15
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456987
-  modifiedTime: 1754277456987
-  lastModifiedBy: null
-  exportSource: null
-folder: jXrFh0x6b5Auj9IZ
-flags: {}
 effects: []
-ownership:
-  default: 0
 _key: '!items!hyba9ctmazbmbf15'
 

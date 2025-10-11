@@ -1,23 +1,23 @@
+_id: yyovhid4umrr33sc
 name: Snake Charm
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 500000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457105
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: [[1d4+1]] rounds or turns Range: 60' One or more snakes are
-    rendered non-hostile, rearing up and swaying to and fro but not attacking. ▶
-    HD affected: The spell affects snakes whose total Hit Dice do not exceed the
-    caster's level. For example, a 7th level caster can affect 7 HD of snakes,
-    which can equal seven 1 HD snakes, or two 3 HD snakes and one 1 HD snake, or
-    any other combination. ▶ Duration: When cast on snakes that are already
-    attacking, the spell lasts for 1d4+1 rounds. Otherwise, it lasts for 1d4+1
-    turns.
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -31,26 +31,23 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: [[1d4+1]] rounds or turns Range: 60' One or more snakes are
+    rendered non-hostile, rearing up and swaying to and fro but not attacking. ▶
+    HD affected: The spell affects snakes whose total Hit Dice do not exceed the
+    caster's level. For example, a 7th level caster can affect 7 HD of snakes,
+    which can equal seven 1 HD snakes, or two 3 HD snakes and one 1 HD snake, or
+    any other combination. ▶ Duration: When cast on snakes that are already
+    attacking, the spell lasts for 1d4+1 rounds. Otherwise, it lasts for 1d4+1
+    turns.
   duration: 1d4+1 rounds/turns
-  save: None
+  favorite: false
+  level: 2
+  prepared: false
   range: 60'
-  skill: null
-_id: yyovhid4umrr33sc
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457105
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!yyovhid4umrr33sc'
 

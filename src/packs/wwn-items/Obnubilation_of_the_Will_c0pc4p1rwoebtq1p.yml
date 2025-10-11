@@ -1,25 +1,23 @@
+_id: c0pc4p1rwoebtq1p
 name: Obnubilation of the Will
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456884
+  modifiedTime: 1754277456884
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    This spell can only be applied to a helpless or restrained living victim,
-    who gets a Mental saving throw to resist it and be ever after immune to its
-    effects. On a failure, the target becomes hopelessly subject to the caster
-    via a series of psychic fetters, obediently carrying out their will. The
-    target must be able to understand the caster's wishes, but will obey them to
-    the best of its intelligence, capability, and initiative. They must make a
-    Mental saving throw to resist performing even suicidal acts. The spell lasts
-    until it is dispelled or the caster releases the target. A caster can have
-    no more creatures under this spell than twice their level or hit dice; if
-    this number is exceeded, the earliest thrall is freed first.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -33,26 +31,25 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    This spell can only be applied to a helpless or restrained living victim,
+    who gets a Mental saving throw to resist it and be ever after immune to its
+    effects. On a failure, the target becomes hopelessly subject to the caster
+    via a series of psychic fetters, obediently carrying out their will. The
+    target must be able to understand the caster's wishes, but will obey them to
+    the best of its intelligence, capability, and initiative. They must make a
+    Mental saving throw to resist performing even suicidal acts. The spell lasts
+    until it is dispelled or the caster releases the target. A caster can have
+    no more creatures under this spell than twice their level or hit dice; if
+    this number is exceeded, the earliest thrall is freed first.
   duration: Until dispelled or released
-  save: mental
+  favorite: false
+  level: 4
+  prepared: false
   range: Self
-  skill: null
-_id: c0pc4p1rwoebtq1p
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456884
-  modifiedTime: 1754277456884
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: mental
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!c0pc4p1rwoebtq1p'
 

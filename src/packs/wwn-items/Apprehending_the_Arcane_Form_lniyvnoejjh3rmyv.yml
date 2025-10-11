@@ -1,26 +1,23 @@
+_id: lniyvnoejjh3rmyv
 name: Apprehending the Arcane Form
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456888
+  modifiedTime: 1754277456888
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The mage opens up their mind to the presence of occult energies. For fifteen
-    minutes per character level, they are capable of seeing active magical
-    effects, curses, enchantments, or other dweomers as colored auras or
-    patterns of light. They may identify magical items and get a one-sentence
-    description of their purpose or most significant powers, and may get more
-    sophisticated answers with successful Wis/Magic skill checks at difficulties
-    of 8 or more depending on the subtlety of the enchantment. Mages with
-    prepared spells are visible to the caster, though which spells the subject
-    might have prepared is not knowable. As a side effect of this spell, the
-    ambient thaumic currents cast enough quasi-light to allow the caster to see
-    normally even in perfect darkness.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -34,26 +31,26 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The mage opens up their mind to the presence of occult energies. For fifteen
+    minutes per character level, they are capable of seeing active magical
+    effects, curses, enchantments, or other dweomers as colored auras or
+    patterns of light. They may identify magical items and get a one-sentence
+    description of their purpose or most significant powers, and may get more
+    sophisticated answers with successful Wis/Magic skill checks at difficulties
+    of 8 or more depending on the subtlety of the enchantment. Mages with
+    prepared spells are visible to the caster, though which spells the subject
+    might have prepared is not knowable. As a side effect of this spell, the
+    ambient thaumic currents cast enough quasi-light to allow the caster to see
+    normally even in perfect darkness.
   duration: (15*@level) minutes
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: Self
-  skill: null
-_id: lniyvnoejjh3rmyv
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456888
-  modifiedTime: 1754277456888
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!lniyvnoejjh3rmyv'
 

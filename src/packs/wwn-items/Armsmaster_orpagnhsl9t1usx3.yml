@@ -1,6 +1,22 @@
+_id: orpagnhsl9t1usx3
 name: Armsmaster
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456866
+  modifiedTime: 1754277456866
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You have an unusual competence with thrown weapons and melee attacks. This
@@ -14,23 +30,8 @@ system:
     10. Gain a +1 bonus to hit with all thrown or melee attacks.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: orpagnhsl9t1usx3
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456866
-  modifiedTime: 1754277456866
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!orpagnhsl9t1usx3'
 

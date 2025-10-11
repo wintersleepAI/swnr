@@ -1,19 +1,29 @@
+_id: yf03gv22933o4xrx
 name: Brigand Footman
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
+ownership: {}
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456528
+  modifiedTime: 1754277456528
+  lastModifiedBy: null
+  exportSource: null
 system:
   ab: 1
   armorType: street
   attacks:
-    damage: d6
     bonusDamage: 0
+    damage: d6
     number: 0
   baseAc: 13
-  hitDice: 1
-  moralScore: 8
-  saves: 15
-  skillBonus: 0
-  speed: 40
   biography: >-
     Outlaws and mercenaries who make a living by raiding settlements and
     attacking travellers. Footmen: Half the group has: leather armour, shield,
@@ -26,189 +36,27 @@ system:
     Combined camps are led by a 9th level fighter, plus a 5th level fighter for
     every 50 brigands. Also 50% chance of a magic-user (level 1d3 + 8); 30%
     chance of a cleric (8th level).
+  hitDice: 1
+  moralScore: 8
+  saves: 15
+  skillBonus: 0
   species: monster
-_id: yf03gv22933o4xrx
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456528
-  modifiedTime: 1754277456528
-  lastModifiedBy: null
-  exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+  speed: 40
 effects: []
-prototypeToken:
-  name: Brigand Footman
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/humanoid-icons/bandit.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Sword, Short
+  - _id: uxet938d4id7ccqk
+    name: Bow, Small
     type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
     system:
-      description: >-
-        Swords are common sidearms throughout the Latter Earth. The expense of
-        forging a large blade makes it a symbol of wealth and status in many
-        cultures, and its convenience makes it a favored arm for street wear.
-      cost: 10
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 20
       damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: '2'
-        ac: '15'
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: ybkq5lv17v0z9wsu
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!yf03gv22933o4xrx.ybkq5lv17v0z9wsu'
-  - name: Throwing Blade
-    type: weapon
-    system:
-      description: >-
-        Throwing blades are small leaves of steel that are not terribly useful
-        as melee weapons but are easy to carry discreetly in considerable
-        numbers.
-      cost: 3
-      damage: 1d4
-      range:
-        normal: 30
-        max: 60
-      shock:
-        dmg: '0'
-        ac: '-'
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: dex
-      skill: stab
-      ab: 0
-      encumbrance: 0.2
-      quality: stock
-      tl: 3
-    _id: 7spuy0jl3ng1n8j9
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!yf03gv22933o4xrx.7spuy0jl3ng1n8j9'
-  - name: Bow, Small
-    type: weapon
-    system:
       description: >-
         Bows cover everything from the small self bows of horse archers to the
         man-tall longbows wielded by foot archers. Larger bows are more
@@ -216,46 +64,32 @@ items:
         superior strength. An archer with a Readied quiver can load a fresh
         arrow as a Move action each turn, or as an On Turn action if they have
         at least Shoot-1 skill.
-      cost: 20
-      damage: 1d6
-      range:
-        normal: 50
-        max: 300
-      shock:
-        dmg: '0'
-        ac: '-'
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: true
-      stat: dex
-      skill: shoot
-      ab: 0
       encumbrance: 1
+      isTwoHanded: true
       quality: stock
+      range:
+        max: 300
+        normal: 50
+      shock:
+        ac: '-'
+        dmg: '0'
+      skill: shoot
+      stat: dex
       tl: 3
-    _id: uxet938d4id7ccqk
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!yf03gv22933o4xrx.uxet938d4id7ccqk'
-  - name: Buff Coat
+  - _id: jvjnc9dtci5z6229
+    name: Buff Coat
     type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+    sort: 0
     system:
+      ac: 12
+      cost: 50
       description: >-
         Buff coats are long coats of thick, supple hide, sometimes worn to
         cushion the bite of heavier armor and sometimes sported as ornamented
@@ -263,39 +97,30 @@ items:
         may be decidedly heavy, but it is loose and flexible enough to offer
         minimal hindrance to the wearer's actions. Some varieties are also
         discreet enough to be worn politely in common society.
-      cost: 50
-      ac: 12
-      meleeAc: 12
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: false
       encumbrance: 1
+      isSubtle: false
+      meleeAc: 12
       quality: stock
+      shield: false
+      soak:
+        max: 0
+        value: 0
       tl: 3
-    _id: jvjnc9dtci5z6229
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+      traumaDiePenalty: 0
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!yf03gv22933o4xrx.jvjnc9dtci5z6229'
-  - name: Small Shield
+  - _id: ihhwo23rke35lw4f
+    name: Small Shield
     type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+    sort: 0
     system:
+      ac: 1
+      cost: 20
       description: >-
         Shields come in two general varieties. Small ones, often made of metal,
         can be strapped to the wearer's arm and allow them to hold and
@@ -306,35 +131,91 @@ items:
         better armor the shield grants a +1 bonus to their AC. Shields allow the
         bearer to ignore the first instance of Shock they might otherwise suffer
         in a round.
-      cost: 20
-      ac: 1
-      meleeAc: 1
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: true
       encumbrance: 1
+      isSubtle: false
+      meleeAc: 1
       quality: stock
+      shield: true
+      soak:
+        max: 0
+        value: 0
       tl: 3
-    _id: ihhwo23rke35lw4f
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+      traumaDiePenalty: 0
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!yf03gv22933o4xrx.ihhwo23rke35lw4f'
+  - _id: ybkq5lv17v0z9wsu
+    name: Sword, Short
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
+    system:
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 10
+      damage: 1d6
+      description: >-
+        Swords are common sidearms throughout the Latter Earth. The expense of
+        forging a large blade makes it a symbol of wealth and status in many
+        cultures, and its convenience makes it a favored arm for street wear.
+      encumbrance: 1
+      isTwoHanded: false
+      quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: '15'
+        dmg: '2'
+      skill: stab
+      stat: str
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!yf03gv22933o4xrx.ybkq5lv17v0z9wsu'
+  - _id: 7spuy0jl3ng1n8j9
+    name: Throwing Blade
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
+    system:
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 3
+      damage: 1d4
+      description: >-
+        Throwing blades are small leaves of steel that are not terribly useful
+        as melee weapons but are easy to carry discreetly in considerable
+        numbers.
+      encumbrance: 0.2
+      isTwoHanded: false
+      quality: stock
+      range:
+        max: 60
+        normal: 30
+      shock:
+        ac: '-'
+        dmg: '0'
+      skill: stab
+      stat: dex
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!yf03gv22933o4xrx.7spuy0jl3ng1n8j9'
 _key: '!actors!yf03gv22933o4xrx'
 

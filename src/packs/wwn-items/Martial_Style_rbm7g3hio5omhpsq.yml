@@ -1,32 +1,12 @@
+_id: rbm7g3hio5omhpsq
 name: Martial Style
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Regardless of class, your hit die can't be worse than 1d6 per level. When
-    attacking with the Punch skill, your class hit bonus can be no worse than
-    that of an Expert of your same character level. At third level, any attack
-    using the Punch skill counts as a magic weapon.
-  favorite: false
-  subType: art
-  source: Vowed
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Vowed
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: rbm7g3hio5omhpsq
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -37,10 +17,27 @@ _stats:
   modifiedTime: 1754277456806
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Vowed
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    Regardless of class, your hit die can't be worse than 1d6 per level. When
+    attacking with the Punch skill, your class hit bonus can be no worse than
+    that of an Expert of your same character level. At third level, any attack
+    using the Punch skill counts as a magic weapon.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Vowed
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!rbm7g3hio5omhpsq'
 

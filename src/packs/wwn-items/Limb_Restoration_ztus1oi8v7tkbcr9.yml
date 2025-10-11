@@ -1,33 +1,12 @@
+_id: ztus1oi8v7tkbcr9
 name: Limb Restoration
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Only expert healers can master this art, which cannot be learned earlier
-    than 8th level. You must Commit all remaining Effort for the day, a minimum
-    of one point, to regenerate a missing limb or organ for a target you are
-    touching, or efface some dramatic scar or other physical debility. The
-    target's System Strain is automatically maximized.
-  favorite: false
-  subType: art
-  source: Healer
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Healer
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: ztus1oi8v7tkbcr9
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -38,10 +17,28 @@ _stats:
   modifiedTime: 1754277456787
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Healer
+      usesCost: 1
+      cadence: day
+      timing: manual
+  description: >-
+    Only expert healers can master this art, which cannot be learned earlier
+    than 8th level. You must Commit all remaining Effort for the day, a minimum
+    of one point, to regenerate a missing limb or organ for a target you are
+    touching, or efface some dramatic scar or other physical debility. The
+    target's System Strain is automatically maximized.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Healer
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!ztus1oi8v7tkbcr9'
 

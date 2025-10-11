@@ -1,45 +1,44 @@
+_id: pjip3gskafcmomwc
 name: Witch Hunters
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: zFqC1zP7Qyzj1jAK
+sort: 100782
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456960
+  modifiedTime: 1759968847402
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     Certain personnel are trained in sniffing out traitors and spies in the
     organization, along with the presence of hostile magic or hidden spellcraft.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 4
     max: 4
-  rating: 3
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 4
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: pjip3gskafcmomwc
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456960
-  modifiedTime: 1754277456960
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 3
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!pjip3gskafcmomwc'
 

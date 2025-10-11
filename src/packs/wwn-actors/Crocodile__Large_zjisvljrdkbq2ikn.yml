@@ -1,184 +1,92 @@
+_id: zjisvljrdkbq2ikn
 name: Crocodile, Large
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
-system:
-  ab: 5
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 16
-  hitDice: 6
-  moralScore: 7
-  saves: 12
-  skillBonus: 0
-  speed: 30
-  biography: >-
-    Large reptiles that are ungainly on land and live primarily in water,
-    lurking just beneath the surface of subtropical swamps and lazy rivers. If
-    hungry, attack any creatures that venture into the water. 20' or more long.
-    May attack small watercraft (canoes, rafts).
-  species: monster
-_id: zjisvljrdkbq2ikn
+ownership: {}
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456623
   modifiedTime: 1754277456623
   lastModifiedBy: null
   exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+system:
+  ab: 5
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 16
+  biography: >-
+    Large reptiles that are ungainly on land and live primarily in water,
+    lurking just beneath the surface of subtropical swamps and lazy rivers. If
+    hungry, attack any creatures that venture into the water. 20' or more long.
+    May attack small watercraft (canoes, rafts).
+  hitDice: 6
+  moralScore: 7
+  saves: 12
+  skillBonus: 0
+  species: monster
+  speed: 30
 effects: []
-prototypeToken:
-  name: Crocodile, Large
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/animal-icons/croc-jaws.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Bite
+  - _id: 1qrhhe8qzfdk1mr3
+    name: Bite
     type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
     system:
-      description: ''
-      cost: 0
-      damage: 2d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
+      ab: 0
       ammo:
+        burst: false
         max: 0
         type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
+      cost: 0
+      damage: 2d8
+      description: ''
       encumbrance: 1
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 15
+        dmg: 2
+      skill: punch
+      stat: str
       tl: 3
-    _id: 1qrhhe8qzfdk1mr3
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!zjisvljrdkbq2ikn.1qrhhe8qzfdk1mr3'
-  - name: Feeding Frenzy
+  - _id: es2vtmtopsc7qpff
+    name: Feeding Frenzy
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
-      description: Attracted to the scent of blood or violent movement in the water.
       cost: 0
-      quantity: 1
+      description: Attracted to the scent of blood or violent movement in the water.
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: es2vtmtopsc7qpff
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!zjisvljrdkbq2ikn.es2vtmtopsc7qpff'
 _key: '!actors!zjisvljrdkbq2ikn'
 

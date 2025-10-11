@@ -1,25 +1,23 @@
+_id: f4u8i9titcey2itw
 name: Adopt the Simulacular Visage
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456890
+  modifiedTime: 1754277456890
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    A brief incantation transforms one visible, willing target per caster level
-    into a perfect simulacrum of any humanoid creature the caster has seen
-    before, whether a specific individual or a general type. No special
-    abilities are granted by this transformation, but the target will perfectly
-    resemble a chosen individual, including in voice and scent. Their
-    non-magical clothing will transform to whatever clothing is appropriate to
-    the target, and they will gain an intuitive ability to speak and understand
-    the target's native tongue. The spell lasts until dawn of the day after
-    casting it, whereupon the targets and any transformed clothing revert back
-    to their original seeming
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -33,26 +31,25 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    A brief incantation transforms one visible, willing target per caster level
+    into a perfect simulacrum of any humanoid creature the caster has seen
+    before, whether a specific individual or a general type. No special
+    abilities are granted by this transformation, but the target will perfectly
+    resemble a chosen individual, including in voice and scent. Their
+    non-magical clothing will transform to whatever clothing is appropriate to
+    the target, and they will gain an intuitive ability to speak and understand
+    the target's native tongue. The spell lasts until dawn of the day after
+    casting it, whereupon the targets and any transformed clothing revert back
+    to their original seeming
   duration: Until dawn
-  save: None
+  favorite: false
+  level: 3
+  prepared: false
   range: Self
-  skill: null
-_id: f4u8i9titcey2itw
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456890
-  modifiedTime: 1754277456890
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!f4u8i9titcey2itw'
 

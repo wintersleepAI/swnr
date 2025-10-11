@@ -1,7 +1,36 @@
+_id: oaov14vmzp9tp748
 name: The Verdant Vallation
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456895
+  modifiedTime: 1754277456895
+  lastModifiedBy: null
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     A vast wall of thick, heavy vines and other plant life blooms from a visible
     point within one hundred feet per caster level. The wall is ten feet high
@@ -17,46 +46,14 @@ system:
     support plant life, it remains until dispelled or until it dies naturally.
     If called from bare stone or other infertile soils, it withers away to dust
     at the end of the scene
+  duration: Scene or longer
   favorite: false
-  subType: spell
-  source: High Mage
   level: 2
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Scene or longer
-  save: None
   range: 100 ft. per level
-  skill: null
-_id: oaov14vmzp9tp748
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456895
-  modifiedTime: 1754277456895
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!oaov14vmzp9tp748'
 

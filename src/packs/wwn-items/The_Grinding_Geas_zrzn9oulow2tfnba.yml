@@ -1,7 +1,36 @@
+_id: zrzn9oulow2tfnba
 name: The Grinding Geas
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456880
+  modifiedTime: 1754277456880
+  lastModifiedBy: null
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     A single visible living creature is struck with a grim geas, forcing it to
     comply with a particular command or else suffer a progressively-worse
@@ -19,46 +48,14 @@ system:
     at the same rate it progressed. An active target can make a Mental save to
     resist this spell, but they cannot if they are restrained, unconscious, or
     otherwise subdued. The curse lasts until dispelled or the caster lifts it.
+  duration: untill dispelled or lifted
   favorite: false
-  subType: spell
-  source: High Mage
   level: 4
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: untill dispelled or lifted
-  save: mental
   range: Visible
-  skill: null
-_id: zrzn9oulow2tfnba
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456880
-  modifiedTime: 1754277456880
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: mental
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!zrzn9oulow2tfnba'
 

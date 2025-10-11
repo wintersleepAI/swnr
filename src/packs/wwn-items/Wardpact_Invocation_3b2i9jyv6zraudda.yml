@@ -1,24 +1,23 @@
+_id: 3b2i9jyv6zraudda
 name: Wardpact Invocation
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456883
+  modifiedTime: 1754277456883
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    This spell may be cast in two different forms. If it targets a creature
-    within 200 feet, the target becomes partially immune to physical weapons;
-    any weapon hit on them requires the attacker make a successful Physical save
-    or the hit is negated. This effect lasts for one round per two caster
-    levels, rounded up, and can't target the caster. If it targets a visible
-    weapon within two hundred feet, that weapon is rendered entirely harmless
-    and unable to inflict damage for the rest of the scene, with no saving
-    throw. The spell may only affect a given target or weapon once per scene and
-    natural body weapons aren't affected.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -32,26 +31,24 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    This spell may be cast in two different forms. If it targets a creature
+    within 200 feet, the target becomes partially immune to physical weapons;
+    any weapon hit on them requires the attacker make a successful Physical save
+    or the hit is negated. This effect lasts for one round per two caster
+    levels, rounded up, and can't target the caster. If it targets a visible
+    weapon within two hundred feet, that weapon is rendered entirely harmless
+    and unable to inflict damage for the rest of the scene, with no saving
+    throw. The spell may only affect a given target or weapon once per scene and
+    natural body weapons aren't affected.
   duration: Depends
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: 200 ft.
-  skill: null
-_id: 3b2i9jyv6zraudda
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456883
-  modifiedTime: 1754277456883
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!3b2i9jyv6zraudda'
 

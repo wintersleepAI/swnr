@@ -1,35 +1,12 @@
+_id: aif87803w65j83aj
 name: Spiritual Weapon
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    You are able to translate examples of your favored weapon into a spiritual
-    template that you may manifest as you wish. Any favored weapon can be turned
-    into such a template, including a magical weapon, but the process destroys
-    the object's physical form. To manifest a template, Commit Effort as an
-    Instant action; a ghostly copy of the weapon appears Readied in hand for you
-    until you release the Effort or stop touching the weapon. Dual-wielders can
-    summon the same weapon into both hands with one use of this art.
-  favorite: false
-  subType: art
-  source: Duelist
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Duelist
-      usesCost: 1
-      cadence: active
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: aif87803w65j83aj
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -40,10 +17,30 @@ _stats:
   modifiedTime: 1754277456818
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Duelist
+      usesCost: 1
+      cadence: active
+      timing: manual
+  description: >-
+    You are able to translate examples of your favored weapon into a spiritual
+    template that you may manifest as you wish. Any favored weapon can be turned
+    into such a template, including a magical weapon, but the process destroys
+    the object's physical form. To manifest a template, Commit Effort as an
+    Instant action; a ghostly copy of the weapon appears Readied in hand for you
+    until you release the Effort or stop touching the weapon. Dual-wielders can
+    summon the same weapon into both hands with one use of this art.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Duelist
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!aif87803w65j83aj'
 

@@ -1,45 +1,44 @@
+_id: pvj99rahi8f2021p
 name: Thugs
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: zFqC1zP7Qyzj1jAK
+sort: 125000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456939
+  modifiedTime: 1759968826354
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     These gutter ruffians and common kneebreakers have been organized in service
     to the faction's causes.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 1
     max: 1
-  rating: 1
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 1
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: pvj99rahi8f2021p
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456939
-  modifiedTime: 1754277456939
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 1
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!pvj99rahi8f2021p'
 

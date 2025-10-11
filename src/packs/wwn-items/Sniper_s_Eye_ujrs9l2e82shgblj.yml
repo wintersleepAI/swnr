@@ -1,6 +1,22 @@
+_id: ujrs9l2e82shgblj
 name: Sniper's Eye
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456873
+  modifiedTime: 1754277456873
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You are an expert at placing a thrown knife or arrow on an unsuspecting
@@ -14,23 +30,8 @@ system:
     inflicted by the attack.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: ujrs9l2e82shgblj
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456873
-  modifiedTime: 1754277456873
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!ujrs9l2e82shgblj'
 

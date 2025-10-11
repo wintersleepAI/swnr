@@ -1,18 +1,23 @@
+_id: bznewcu0y13l820k
 name: Death Spell
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 7300000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457070
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: Instant Range: 240' Up to [[4d8]] Hit Dice of creatures within a
-    60' cube area must make a Physical save or die, instantly. Restrictions:
-    Undead and creatures with greater than 7 Hit Dice are unaffected.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 6
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -26,26 +31,18 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: Instant Range: 240' Up to [[4d8]] Hit Dice of creatures within a
+    60' cube area must make a Physical save or die, instantly. Restrictions:
+    Undead and creatures with greater than 7 Hit Dice are unaffected.
   duration: Instant
-  save: physical
+  favorite: false
+  level: 6
+  prepared: false
   range: 240'
-  skill: null
-_id: bznewcu0y13l820k
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457070
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: physical
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!bznewcu0y13l820k'
 

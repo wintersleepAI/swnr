@@ -1,34 +1,12 @@
+_id: do421vzxuz30pd01
 name: Surface Apprehension
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Commit Effort for the scene as a Main Action while targeting a visible
-    living creature. If it fails a Mental saving throw, you become aware of its
-    immediate surface thoughts for the rest of the round. If you ask specific
-    questions of the creature during this round it will instinctively think of
-    the answers, though the detail of these surface thoughts is generally
-    limited to one or two sentences of information.
-  favorite: false
-  subType: art
-  source: Thought Noble
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Thought Noble
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: mental
-  range: Self
-  skill: null
-_id: do421vzxuz30pd01
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -39,10 +17,29 @@ _stats:
   modifiedTime: 1754277456827
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Thought Noble
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    Commit Effort for the scene as a Main Action while targeting a visible
+    living creature. If it fails a Mental saving throw, you become aware of its
+    immediate surface thoughts for the rest of the round. If you ask specific
+    questions of the creature during this round it will instinctively think of
+    the answers, though the detail of these surface thoughts is generally
+    limited to one or two sentences of information.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: mental
+  source: Thought Noble
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!do421vzxuz30pd01'
 

@@ -1,7 +1,30 @@
+_id: gkf2tb9pllxgkg5f
 name: Savage Talons
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456776
+  modifiedTime: 1754277456776
+  lastModifiedBy: null
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Skinshifter
+      usesCost: 1
+      cadence: scene
+      timing: manual
   description: >-
     This shape has extremely dangerous claws, fangs, pincers, or other body
     weapons. At first level these weapons do 1d8 damage, use either Str or Dex
@@ -17,40 +40,14 @@ system:
     (L6)} Level 9:
     @UUID[Compendium.wwn.adventuring-gear.Item.qBrn4G9YB3xkWsJ2]{Savage Talons
     (L9)}
+  duration: Instant
   favorite: false
-  subType: art
-  source: Skinshifter
   level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Skinshifter
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
   range: Self
-  skill: null
-_id: gkf2tb9pllxgkg5f
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456776
-  modifiedTime: 1754277456776
-  lastModifiedBy: null
-  exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+  save: None
+  source: Skinshifter
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!gkf2tb9pllxgkg5f'
 

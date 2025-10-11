@@ -1,21 +1,23 @@
+_id: krz4hu70kq5mjwob
 name: Haste
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 5500000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457085
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 3 turns Range: 240' Up to 24 creatures in a 60' diameter area are
-    enchanted to be able to move and act twice as quickly as normal: ▶ Movement:
-    Subjects' maximum movement rates are doubled. ▶ Attacks: Subjects may make
-    double the normal number of attacks per round. ▶ Spells: The number of
-    spells a subject may cast per round is not doubled. ▶ Magical devices: The
-    use of devices such as wands is also not doubled.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 3 turns Range: 240' Up to 24 creatures in a 60' diameter area are
+    enchanted to be able to move and act twice as quickly as normal: ▶ Movement:
+    Subjects' maximum movement rates are doubled. ▶ Attacks: Subjects may make
+    double the normal number of attacks per round. ▶ Spells: The number of
+    spells a subject may cast per round is not doubled. ▶ Magical devices: The
+    use of devices such as wands is also not doubled.
   duration: 3 turns
-  save: None
+  favorite: false
+  level: 3
+  prepared: false
   range: 240'
-  skill: null
-_id: krz4hu70kq5mjwob
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457085
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!krz4hu70kq5mjwob'
 

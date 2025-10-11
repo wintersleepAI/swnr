@@ -1,21 +1,23 @@
+_id: 36fg09j2kxufcnph
 name: Transmute Rock to Mud
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 103125
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457093
+  modifiedTime: 1754277914141
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: [[3d6 days]] / Permanent (transmute mud to rock) Range: 120' This
-    spell turns up to 3,000 square feet of rock into 10' deep mud. ▶ Movement:
-    Any creatures passing through the mud have their movement rate reduced by
-    90%. Reversed: Transmute Mud to Rock Changes an area of mud&mdash;up to
-    3,000 square feet and up to 10' deep&mdash;into rock. This alteration is
-    permanent.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: [[3d6 days]] / Permanent (transmute mud to rock) Range: 120' This
+    spell turns up to 3,000 square feet of rock into 10' deep mud. ▶ Movement:
+    Any creatures passing through the mud have their movement rate reduced by
+    90%. Reversed: Transmute Mud to Rock Changes an area of mud&mdash;up to
+    3,000 square feet and up to 10' deep&mdash;into rock. This alteration is
+    permanent.
   duration: 3d6 days
-  save: None
+  favorite: false
+  level: 5
+  prepared: false
   range: 120'
-  skill: null
-_id: 36fg09j2kxufcnph
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457093
-  modifiedTime: 1754277914141
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!36fg09j2kxufcnph'
 

@@ -1,6 +1,22 @@
+_id: 5w9o4v9sr2fnrzao
 name: 'Origin Focus: Elf, Gyre'
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456865
+  modifiedTime: 1754277456865
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You are a reincarnated transhuman, shards of your former life still
@@ -23,23 +39,8 @@ system:
     bonus skill.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: 5w9o4v9sr2fnrzao
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456865
-  modifiedTime: 1754277456865
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!5w9o4v9sr2fnrzao'
 

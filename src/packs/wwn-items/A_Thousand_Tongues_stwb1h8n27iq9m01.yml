@@ -1,33 +1,12 @@
+_id: stwb1h8n27iq9m01
 name: A Thousand Tongues
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Commit Effort as an On Turn action; while it remains Committed, you can
-    speak with and understand any sentient creature with a language of their
-    own. To any listener, it will seem as if you are perfectly fluent in their
-    own language, even as you speak in your own native tongue. This ability does
-    not allow you to read or write unknown languages.
-  favorite: false
-  subType: art
-  source: Blood Priest
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Blood Priest
-      usesCost: 1
-      cadence: active
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: stwb1h8n27iq9m01
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -38,10 +17,28 @@ _stats:
   modifiedTime: 1754277456782
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Blood Priest
+      usesCost: 1
+      cadence: active
+      timing: manual
+  description: >-
+    Commit Effort as an On Turn action; while it remains Committed, you can
+    speak with and understand any sentient creature with a language of their
+    own. To any listener, it will seem as if you are perfectly fluent in their
+    own language, even as you speak in your own native tongue. This ability does
+    not allow you to read or write unknown languages.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Blood Priest
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!stwb1h8n27iq9m01'
 

@@ -1,21 +1,23 @@
+_id: 7jehhnrxs9i58inw
 name: Elemental Favor
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456907
+  modifiedTime: 1754277456907
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The elementalist makes a direct appeal to a non-magical mass of earth,
-    stone, water, flame, or air no larger than a ten-foot cube. At the end of
-    the round, the mass will move or reshape itself within that space as the
-    elementalist requests, maintaining its new form until the end of the scene.
-    If its new shape is one that is stable without magical help, it can be told
-    to remain in it after the spell is finished.
-  favorite: false
-  subType: spell
-  source: Elementalist
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The elementalist makes a direct appeal to a non-magical mass of earth,
+    stone, water, flame, or air no larger than a ten-foot cube. At the end of
+    the round, the mass will move or reshape itself within that space as the
+    elementalist requests, maintaining its new form until the end of the scene.
+    If its new shape is one that is stable without magical help, it can be told
+    to remain in it after the spell is finished.
   duration: Scene
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: Self
-  skill: null
-_id: 7jehhnrxs9i58inw
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456907
-  modifiedTime: 1754277456907
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: Elementalist
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!7jehhnrxs9i58inw'
 

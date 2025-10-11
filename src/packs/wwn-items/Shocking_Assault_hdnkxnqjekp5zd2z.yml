@@ -1,6 +1,22 @@
+_id: hdnkxnqjekp5zd2z
 name: Shocking Assault
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456856
+  modifiedTime: 1754277456856
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You're extremely dangerous to enemies around you. The ferocity of your melee
@@ -13,23 +29,8 @@ system:
     hits never do less damage than this Shock would do on a miss.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: hdnkxnqjekp5zd2z
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456856
-  modifiedTime: 1754277456856
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!hdnkxnqjekp5zd2z'
 

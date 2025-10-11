@@ -1,47 +1,46 @@
+_id: edcvp1maurkgaoir
 name: Supply Interruption
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: vGBf0X640rXwS7Ze
+sort: 125000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456951
+  modifiedTime: 1759968780420
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     As a free action, once per turn, the Asset can make a Cunning vs. Wealth
     check against an Asset in the same location. On a success, the owning
     faction must sacrifice Treasure equal to half the target Asset's purchase
     cost, or else it is disabled and useless until this price is paid.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 8
     max: 8
-  rating: 5
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 8
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: edcvp1maurkgaoir
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456951
-  modifiedTime: 1754277456951
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 5
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!edcvp1maurkgaoir'
 

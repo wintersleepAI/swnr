@@ -1,68 +1,311 @@
+_id: LQjZn5yRZuSYpXDp
 name: Tuhulot Manipulator
 type: npc
-system:
-  ab: 12
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 15
-  hitDice: '10'
-  moralScore: 7
-  saves: 10
-  skillBonus: 0
-  speed: 50
-  biography: >-
-    Tuhulot have several magical powers specific to their kind, most usable as a
-    Main Action three times per day.
-  species: monster
-  health:
-    value: 10
-    max: 10
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 6
-  meleeAc: 10
-  meleeAb: 1
-  systemStrain:
-    value: 0
-    permanent: 0
-  pools: {}
-  cyberdecks: []
-  health_max_modified: 0
-  reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
-    value: 0
-    max: 0
+img: systems/swnr/assets/icons/blankface.png
+folder: 2TAFQtBi7ZxFWi6b
+sort: 1000000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-actors.Actor.tin587s0abw4x0xz
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271303973
   modifiedTime: 1754271303973
   lastModifiedBy: lKC5x4Yf023Bizof
-folder: 2TAFQtBi7ZxFWi6b
-flags: {}
+system:
+  ab: 12
+  access:
+    max: 1
+    value: 1
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 15
+  baseSoakTotal:
+    max: 0
+    value: 0
+  biography: >-
+    Tuhulot have several magical powers specific to their kind, most usable as a
+    Main Action three times per day.
+  cyberdecks: []
+  health:
+    max: 10
+    value: 10
+  health_max_modified: 0
+  hitDice: '10'
+  meleeAb: 1
+  meleeAc: 10
+  moralScore: 7
+  reaction: unknown
+  saves: 10
+  skillBonus: 0
+  species: monster
+  speed: 50
+  systemStrain:
+    permanent: 0
+    value: 0
+  traumaTarget: 6
 effects: []
+items:
+  - _id: uuquavlym46xb3xa
+    name: Blandishing Voice
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      description: >-
+        Blandishing voice bends the mind of a single target on a failed Mental
+        save, making it friendly toward the Tuhulot until the creature does
+        something obviously hostile.
+      encumbrance: 1
+      favorite: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
+        diceNum: 1
+        diceSize: d20
+      tl: 3
+      uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
+        max: 1
+        value: 1
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!LQjZn5yRZuSYpXDp.uuquavlym46xb3xa'
+  - _id: jyhinqzzhxhdqx43
+    name: Distorted Space-Time
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
+    system:
+      ab: 0
+      ammo:
+        burst: false
+        longReload: false
+        max: 0
+        suppress: false
+        type: ammo
+        value: 9
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      damage: 2d8
+      description: ''
+      encumbrance: 1
+      favorite: false
+      isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      range:
+        max: 100
+        normal: 100
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
+      shock:
+        ac: 15
+        dmg: 4
+      skill: punch
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      stat: str
+      tl: 3
+      trauma:
+        die: 1d6
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _stats:
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.2.0
+      modifiedTime: 1760162081500
+      lastModifiedBy: iXDXVi7OlHcRwXw0
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+    _key: '!actors.items!LQjZn5yRZuSYpXDp.jyhinqzzhxhdqx43'
+  - _id: 2ymipzscjlwudyxs
+    name: Scrying Gaze
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      description: >-
+        Scrying gaze allows them to observe a particular point within ten miles
+        for up to a scene as if they were standing there, assuming magical wards
+        don't forfend them.
+      encumbrance: 1
+      favorite: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
+        diceNum: 1
+        diceSize: d20
+      tl: 3
+      uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
+        max: 1
+        value: 1
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!LQjZn5yRZuSYpXDp.2ymipzscjlwudyxs'
+  - _id: ggug1mnkgm1efpr2
+    name: Sidewards Step
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      description: >-
+        Sidewards step lets them teleport to any location within a mile they've
+        occupied before, provided neither their current location nor their
+        destination is directly illuminated by sunlight.
+      encumbrance: 1
+      favorite: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
+        diceNum: 1
+        diceSize: d20
+      tl: 3
+      uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
+        max: 1
+        value: 1
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!LQjZn5yRZuSYpXDp.ggug1mnkgm1efpr2'
+  - _id: 3e73lkd0j0gotal7
+    name: Soul Consumption
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      description: >-
+        Soul consumption power allows them to eat the memories and identity of a
+        helpless sentient victim over the course of a torturous hour. The victim
+        becomes a passive meat puppet for the Tuhulot, carrying out its orders
+        with total obedience and human levels of intellect, but with all trace
+        of its former personality erased. The only way to cure the victim is for
+        the Tuhulot to give back the soul, a thing which it will do only for a
+        suitable price.
+      encumbrance: 1
+      favorite: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      roll:
+        diceBonus: +@str.mod+ceil(@lvl / 2)
+        diceNum: 1
+        diceSize: d20
+      tl: 3
+      uses:
+        ammo: none
+        consumable: none
+        emptyQuantity: 0
+        keepEmpty: true
+        max: 1
+        value: 1
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!LQjZn5yRZuSYpXDp.3e73lkd0j0gotal7'
 prototypeToken:
   name: Tuhulot Manipulator
   displayName: 0
   actorLink: false
-  appendNumber: false
-  prependAdjective: false
   width: 1
   height: 1
   texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
+    src: icons/svg/mystery-man.svg
     anchorX: 0.5
     anchorY: 0.5
     offsetX: 0
@@ -126,291 +369,15 @@ prototypeToken:
     subject:
       scale: 1
       texture: null
-  flags: {}
-  randomImg: false
   turnMarker:
     mode: 1
     animation: null
     src: null
     disposition: false
   movementAction: null
-items:
-  - name: Distorted Space-Time
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 2d8
-      range:
-        normal: 100
-        max: 100
-      shock:
-        dmg: 4
-        ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-        longReload: false
-        suppress: false
-        value: 10
-        current: null
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      secondStat: null
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma:
-        die: 1d6
-      isNonLethal: false
-      isMelee: false
-    _id: jyhinqzzhxhdqx43
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!LQjZn5yRZuSYpXDp.jyhinqzzhxhdqx43'
-  - name: Scrying Gaze
-    type: item
-    system:
-      description: >-
-        Scrying gaze allows them to observe a particular point within ten miles
-        for up to a scene as if they were standing there, assuming magical wards
-        don't forfend them.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: 2ymipzscjlwudyxs
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!LQjZn5yRZuSYpXDp.2ymipzscjlwudyxs'
-  - name: Blandishing Voice
-    type: item
-    system:
-      description: >-
-        Blandishing voice bends the mind of a single target on a failed Mental
-        save, making it friendly toward the Tuhulot until the creature does
-        something obviously hostile.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: uuquavlym46xb3xa
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!LQjZn5yRZuSYpXDp.uuquavlym46xb3xa'
-  - name: Sidewards Step
-    type: item
-    system:
-      description: >-
-        Sidewards step lets them teleport to any location within a mile they've
-        occupied before, provided neither their current location nor their
-        destination is directly illuminated by sunlight.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: ggug1mnkgm1efpr2
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!LQjZn5yRZuSYpXDp.ggug1mnkgm1efpr2'
-  - name: Soul Consumption
-    type: item
-    system:
-      description: >-
-        Soul consumption power allows them to eat the memories and identity of a
-        helpless sentient victim over the course of a torturous hour. The victim
-        becomes a passive meat puppet for the Tuhulot, carrying out its orders
-        with total obedience and human levels of intellect, but with all trace
-        of its former personality erased. The only way to cure the victim is for
-        the Tuhulot to give back the soul, a thing which it will do only for a
-        suitable price.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: 3e73lkd0j0gotal7
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!LQjZn5yRZuSYpXDp.3e73lkd0j0gotal7'
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: LQjZn5yRZuSYpXDp
-sort: 1000000
+  flags: {}
+  randomImg: false
+  appendNumber: false
+  prependAdjective: false
 _key: '!actors!LQjZn5yRZuSYpXDp'
 

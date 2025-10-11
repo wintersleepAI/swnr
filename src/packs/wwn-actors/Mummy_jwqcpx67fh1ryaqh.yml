@@ -1,275 +1,156 @@
+_id: jwqcpx67fh1ryaqh
 name: Mummy
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
-system:
-  ab: 5
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 17
-  hitDice: 5
-  moralScore: 12
-  saves: 13
-  skillBonus: 0
-  speed: 20
-  biography: Undead humanoids wrapped in funerary bandages. Haunt ruins and tombs.
-  species: monster
-_id: jwqcpx67fh1ryaqh
+ownership: {}
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456636
   modifiedTime: 1754277456636
   lastModifiedBy: null
   exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+system:
+  ab: 5
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 17
+  biography: Undead humanoids wrapped in funerary bandages. Haunt ruins and tombs.
+  hitDice: 5
+  moralScore: 12
+  saves: 13
+  skillBonus: 0
+  species: monster
+  speed: 20
 effects: []
-prototypeToken:
-  name: Mummy
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/mummy-head.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Touch
-    type: weapon
+  - _id: 892csicy7a91zsq3
+    name: Damage Immunity
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
+      description: Only harmed by fire or magic. All damage reduced by half.
+      encumbrance: 1
+      location: stowed
+      quality: stock
+      quantity: 1
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!jwqcpx67fh1ryaqh.892csicy7a91zsq3'
+  - _id: xtrbcx2wlep4f9yb
+    name: Mummy Rot
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      cost: 0
       description: >-
         Disease: Anyone hit contracts a horrible rotting disease. Magical
         healing is ineffective; natural healing is ten times slower. The disease
         can only be removed by magic.
-      cost: 0
-      damage: 1d12
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 0
-        ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
       encumbrance: 1
+      location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: 6jq6adud8xzi79o0
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920822
-      modifiedTime: 1754273920822
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
-    _key: '!actors.items!jwqcpx67fh1ryaqh.6jq6adud8xzi79o0'
-  - name: Paralyze With Terror
+    _key: '!actors.items!jwqcpx67fh1ryaqh.xtrbcx2wlep4f9yb'
+  - _id: 6tq9w3y9qu6bqxnh
+    name: Paralyze With Terror
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
       description: >-
         Anyone seeing a mummy must save or be paralysed with terror. Paralysis
         is broken if the mummy attacks or goes out of sight.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: 6tq9w3y9qu6bqxnh
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920822
-      modifiedTime: 1754273920822
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!jwqcpx67fh1ryaqh.6tq9w3y9qu6bqxnh'
-  - name: Damage Immunity
-    type: item
-    system:
-      description: Only harmed by fire or magic. All damage reduced by half.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 892csicy7a91zsq3
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920822
-      modifiedTime: 1754273920822
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
+  - _id: 6jq6adud8xzi79o0
+    name: Touch
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!jwqcpx67fh1ryaqh.892csicy7a91zsq3'
-  - name: Mummy Rot
-    type: item
     system:
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 0
+      damage: 1d12
       description: >-
         Disease: Anyone hit contracts a horrible rotting disease. Magical
         healing is ineffective; natural healing is ten times slower. The disease
         can only be removed by magic.
-      cost: 0
-      quantity: 1
       encumbrance: 1
-      location: stowed
+      isTwoHanded: false
       quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 15
+        dmg: 0
+      skill: punch
+      stat: str
       tl: 3
-    _id: xtrbcx2wlep4f9yb
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920822
-      modifiedTime: 1754273920822
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
-    _key: '!actors.items!jwqcpx67fh1ryaqh.xtrbcx2wlep4f9yb'
-  - name: Undead
+    _key: '!actors.items!jwqcpx67fh1ryaqh.6jq6adud8xzi79o0'
+  - _id: ijjxrw9pqm2x27lu
+    name: Undead
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
       description: >-
         Make no noise, until they attack. Immune to effects that affect living
         creatures (e.g. poison). Immune to mind-affecting or mind-reading spells
         (e.g. charm, hold, sleep).
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: ijjxrw9pqm2x27lu
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920822
-      modifiedTime: 1754273920822
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!jwqcpx67fh1ryaqh.ijjxrw9pqm2x27lu'
 _key: '!actors!jwqcpx67fh1ryaqh'
 

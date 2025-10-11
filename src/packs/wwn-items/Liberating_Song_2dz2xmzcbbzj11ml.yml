@@ -1,32 +1,12 @@
+_id: 2dz2xmzcbbzj11ml
 name: Liberating Song
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    You are immune to mind- or emotion-controlling effects. You can Commit
-    Effort for the scene as an Instant action to grant any ally in range a
-    Mental saving throw to throw off such effects, assuming they allowed a save
-    to begin with. If the second save is failed, this art cannot help them.
-  favorite: false
-  subType: art
-  source: Bard
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Bard
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: 2dz2xmzcbbzj11ml
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -37,10 +17,27 @@ _stats:
   modifiedTime: 1754277456811
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Bard
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    You are immune to mind- or emotion-controlling effects. You can Commit
+    Effort for the scene as an Instant action to grant any ally in range a
+    Mental saving throw to throw off such effects, assuming they allowed a save
+    to begin with. If the second save is failed, this art cannot help them.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Bard
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!2dz2xmzcbbzj11ml'
 

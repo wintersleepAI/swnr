@@ -1,31 +1,12 @@
+_id: 4ttu8ziq9rki07b6
 name: Tireless Vigor
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Commit Effort; while it remains Committed your need to eat, drink, breathe,
-    or sleep does not grow further. You may exert yourself tirelessly and
-    regenerate 1 lost hit point per hour.
-  favorite: false
-  subType: art
-  source: Healer
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Healer
-      usesCost: 1
-      cadence: active
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: 4ttu8ziq9rki07b6
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -36,10 +17,26 @@ _stats:
   modifiedTime: 1754277456801
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Healer
+      usesCost: 1
+      cadence: active
+      timing: manual
+  description: >-
+    Commit Effort; while it remains Committed your need to eat, drink, breathe,
+    or sleep does not grow further. You may exert yourself tirelessly and
+    regenerate 1 lost hit point per hour.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Healer
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!4ttu8ziq9rki07b6'
 

@@ -1,23 +1,23 @@
+_id: sh4kyjqsycvcdx8y
 name: The Excellent Transpicuous Transformation
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456924
+  modifiedTime: 1754277456924
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The mage chooses up to one visible willing target per caster level provided
-    they are within 100 feet, though afterwards the targets can separate freely.
-    The targets and all they wear or carry become perfectly transparent. Missile
-    attacks against invisible foes are largely impossible, and melee attacks
-    against them usually suffer a -4 penalty to hit rolls. The spell lasts for
-    up to an hour per caster level, but it breaks if a subject performs some
-    violent motion, such as running, attacking, or casting a spell. Once broken
-    for one subject, it breaks for all.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -31,26 +31,23 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The mage chooses up to one visible willing target per caster level provided
+    they are within 100 feet, though afterwards the targets can separate freely.
+    The targets and all they wear or carry become perfectly transparent. Missile
+    attacks against invisible foes are largely impossible, and melee attacks
+    against them usually suffer a -4 penalty to hit rolls. The spell lasts for
+    up to an hour per caster level, but it breaks if a subject performs some
+    violent motion, such as running, attacking, or casting a spell. Once broken
+    for one subject, it breaks for all.
   duration: 1 hour per level
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: 100 ft.
-  skill: null
-_id: sh4kyjqsycvcdx8y
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456924
-  modifiedTime: 1754277456924
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!sh4kyjqsycvcdx8y'
 
