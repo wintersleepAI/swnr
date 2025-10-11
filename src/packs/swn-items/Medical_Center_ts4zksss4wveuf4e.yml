@@ -1,7 +1,12 @@
+_id: ts4zksss4wveuf4e
 name: Medical Center
 type: asset
 img: systems/swnr/assets/icons/hawkin/wealth.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.ts4zksss4wveuf4e
@@ -13,13 +18,11 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: ts4zksss4wveuf4e
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: ''
-  attackTarget: null
   baseOfInfluence: false
+  category: wealth
   cost: 12
   counter: ''
   description: >-
@@ -28,12 +31,18 @@ system:
     immediately pay half its purchase cost to restore it with one hit point. Any
     Repair Asset action taken on that world costs one less FacCred for Special
     Forces and Military Units.
+  favorite: false
   health:
     max: 8
     value: 8
   income: 0
   maintenance: 0
+  qualities:
+    action: false
+    permission: false
+    special: true
   rating: 4
+  stealthed: false
   tl: 4
   turnRoll: >-
     Salvage and repair damaged assets. Once between turns, if a Special Forces
@@ -43,17 +52,6 @@ system:
     Forces and Military Units.
   type: Facility
   unusable: false
-  qualities:
-    permission: false
-    action: false
-    special: true
-  category: wealth
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!ts4zksss4wveuf4e'
 

@@ -1,24 +1,23 @@
+_id: f6obr38rnsd551up
 name: Calcifying Scourge
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456921
+  modifiedTime: 1754277456921
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    A visible target within one hundred feet must make a Physical saving throw
-    or be turned to stone. Any size of living creature may be so transmuted,
-    though inanimate objects larger than a cart cannot. Objects being held or
-    worn by someone else get a Physical saving throw made by their user. The
-    calcification remains until dispelled or the caster undoes the magic, but if
-    the object or creature is damaged in the meanwhile, it may end up being
-    harmed or killed on its restoration. If the Physical saving throw is made
-    successfully by a creature, the target is temporarily slowed, losing its
-    Move action for the next 1d6 rounds.
-  favorite: false
-  subType: spell
-  source: Elementalist
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -32,26 +31,24 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    A visible target within one hundred feet must make a Physical saving throw
+    or be turned to stone. Any size of living creature may be so transmuted,
+    though inanimate objects larger than a cart cannot. Objects being held or
+    worn by someone else get a Physical saving throw made by their user. The
+    calcification remains until dispelled or the caster undoes the magic, but if
+    the object or creature is damaged in the meanwhile, it may end up being
+    harmed or killed on its restoration. If the Physical saving throw is made
+    successfully by a creature, the target is temporarily slowed, losing its
+    Move action for the next 1d6 rounds.
   duration: Until dispelled
-  save: physical
+  favorite: false
+  level: 4
+  prepared: false
   range: 100 ft.
-  skill: null
-_id: f6obr38rnsd551up
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456921
-  modifiedTime: 1754277456921
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: physical
+  source: Elementalist
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!f6obr38rnsd551up'
 

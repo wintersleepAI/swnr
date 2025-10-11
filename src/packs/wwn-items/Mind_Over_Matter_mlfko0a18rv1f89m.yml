@@ -1,34 +1,12 @@
+_id: mlfko0a18rv1f89m
 name: Mind Over Matter
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Your mental control over your physical processes is considerable. Commit
-    Effort for the day as an Instant action to gain one of the following
-    benefits: automatically stabilize if Mortally Wounded, go without sleep for
-    twenty-four hours, heal 1d6 hit points of damage you've suffered, or
-    completely ignore normal climatic extremes of heat or cold for one day.
-    Similar tricks of bodily control may be allowed at the GM's discretion.
-  favorite: false
-  subType: art
-  source: Thought Noble
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Thought Noble
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: mlfko0a18rv1f89m
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -39,10 +17,29 @@ _stats:
   modifiedTime: 1754277456755
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Thought Noble
+      usesCost: 1
+      cadence: day
+      timing: manual
+  description: >-
+    Your mental control over your physical processes is considerable. Commit
+    Effort for the day as an Instant action to gain one of the following
+    benefits: automatically stabilize if Mortally Wounded, go without sleep for
+    twenty-four hours, heal 1d6 hit points of damage you've suffered, or
+    completely ignore normal climatic extremes of heat or cold for one day.
+    Similar tricks of bodily control may be allowed at the GM's discretion.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Thought Noble
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!mlfko0a18rv1f89m'
 

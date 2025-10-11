@@ -1,7 +1,12 @@
+_id: vHIdKHH9VVEF2jz6
 name: Ironhide
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: sPYHUjJb2geTuLHp
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.foci.Item.t4u9za5tnnqyxigm
@@ -25,13 +30,8 @@ system:
     armor.
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: vHIdKHH9VVEF2jz6
-sort: 0
 _key: '!items!vHIdKHH9VVEF2jz6'
 

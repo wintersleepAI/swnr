@@ -1,22 +1,12 @@
+_id: lprdq670qp6vzeek
 name: Teleportation
 type: item
+img: icons/svg/item-bag.svg
+folder: 9gsuaJcejB0mhHRg
 sort: 0
-system:
-  description: Master the arts of physical translocation of yourself and allies.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
-  cost: 0
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
-_id: lprdq670qp6vzeek
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -27,10 +17,21 @@ _stats:
   modifiedTime: 1754277457120
   lastModifiedBy: null
   exportSource: null
-folder: 9gsuaJcejB0mhHRg
-flags: {}
+system:
+  bundle:
+    bundled: false
+  cost: 0
+  description: Master the arts of physical translocation of yourself and allies.
+  encumbrance: 1
+  favorite: false
+  location: stowed
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+    diceNum: 1
+    diceSize: d20
 effects: []
-ownership:
-  default: 0
 _key: '!items!lprdq670qp6vzeek'
 

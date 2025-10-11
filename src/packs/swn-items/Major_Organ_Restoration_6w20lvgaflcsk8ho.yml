@@ -1,7 +1,12 @@
+_id: 6w20lvgaflcsk8ho
 name: Major Organ Restoration
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: VXwfMckwPSKXC4gD
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-biopsionics.Item.6w20lvgaflcsk8ho
@@ -13,8 +18,8 @@ _stats:
   createdTime: 1757286851234
   modifiedTime: 1757286851234
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 6w20lvgaflcsk8ho
 system:
+  consumptions: []
   description: >-
     <p>The biopsion’s <em>Psychic Succor</em> can now cure congenital birth
     defects and regrow missing limbs and organs. It can even be used to
@@ -23,19 +28,11 @@ system:
     level of Biopsionic skill. The best that can be done for such badly-mangled
     targets is stabilization, after which they must rest for 24 hours before any
     further hit points can be healed by Biopsionics, stims, or natural rest.</p>
-  level: 2
-  source: biopsionics
   favorite: false
-  subType: psychic
+  level: 2
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions: []
-  save: null
+  source: biopsionics
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!6w20lvgaflcsk8ho'
 

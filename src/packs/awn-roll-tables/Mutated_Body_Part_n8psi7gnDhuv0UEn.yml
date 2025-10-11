@@ -1,130 +1,9 @@
+_id: n8psi7gnDhuv0UEn
 name: Mutated Body Part
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: 4dNx8ZQvpDGjWUGA
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Head
-    name: ''
-    _key: '!tables.results!n8psi7gnDhuv0UEn.4dNx8ZQvpDGjWUGA'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: ehzdkEbqtOhIjZm5
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Arm or Arms
-    name: ''
-    _key: '!tables.results!n8psi7gnDhuv0UEn.ehzdkEbqtOhIjZm5'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: COHVRBxUtmVWoQdE
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Leg or Legs
-    name: ''
-    _key: '!tables.results!n8psi7gnDhuv0UEn.COHVRBxUtmVWoQdE'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: EZIMNTY5GyUYXwN1
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Torso
-    name: ''
-    _key: '!tables.results!n8psi7gnDhuv0UEn.EZIMNTY5GyUYXwN1'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: tsXry7jWtfmWc43f
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Eyes, Ears, or Hands
-    name: ''
-    _key: '!tables.results!n8psi7gnDhuv0UEn.tsXry7jWtfmWc43f'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: jDtkONPyH12UdzUc
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Roll again and add that extra part
-    name: ''
-    _key: '!tables.results!n8psi7gnDhuv0UEn.jDtkONPyH12UdzUc'
-replacement: true
-displayRoll: true
 folder: ZsrKd0EZcB4THIIm
+sort: 200000
 ownership:
   default: 0
   AjdlQlPXkJlcOy63: 3
@@ -134,14 +13,80 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1753926183383
   modifiedTime: 1753926183405
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d6
-_id: n8psi7gnDhuv0UEn
-sort: 200000
+system: {}
+effects: []
+results:
+  - _id: 4dNx8ZQvpDGjWUGA
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!n8psi7gnDhuv0UEn.4dNx8ZQvpDGjWUGA'
+  - _id: ehzdkEbqtOhIjZm5
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!n8psi7gnDhuv0UEn.ehzdkEbqtOhIjZm5'
+  - _id: COHVRBxUtmVWoQdE
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!n8psi7gnDhuv0UEn.COHVRBxUtmVWoQdE'
+  - _id: EZIMNTY5GyUYXwN1
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!n8psi7gnDhuv0UEn.EZIMNTY5GyUYXwN1'
+  - _id: tsXry7jWtfmWc43f
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!n8psi7gnDhuv0UEn.tsXry7jWtfmWc43f'
+  - _id: jDtkONPyH12UdzUc
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!n8psi7gnDhuv0UEn.jDtkONPyH12UdzUc'
 _key: '!tables!n8psi7gnDhuv0UEn'
 

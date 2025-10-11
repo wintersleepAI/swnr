@@ -1,7 +1,12 @@
+_id: aoy68o1vrzvbgvgu
 name: Heavy Drop Assets
 type: asset
 img: systems/swnr/assets/icons/hawkin/force.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.aoy68o1vrzvbgvgu
@@ -13,40 +18,33 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: aoy68o1vrzvbgvgu
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: ''
-  attackTarget: null
   baseOfInfluence: false
+  category: force
   cost: 4
   counter: ''
   description: >-
     These craft allow for the transport of resources from one world to another.
     As an action, any one non-Starship asset, including this one, may be moved
     to any world within one hex for one FacCred.
+  favorite: false
   health:
     max: 6
     value: 6
   income: 0
   maintenance: 0
+  qualities:
+    action: true
+    permission: false
+    special: false
   rating: 2
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Facility
   unusable: false
-  qualities:
-    permission: false
-    action: true
-    special: false
-  category: force
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!aoy68o1vrzvbgvgu'
 

@@ -1,7 +1,12 @@
+_id: hmw17cn5xqgxmoim
 name: Eelskin Capacitor Mesh
 type: cyberware
 img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
 folder: 7ZDHgPOCyrCRwTEX
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cyberware.Item.hmw17cn5xqgxmoim
@@ -13,8 +18,9 @@ _stats:
   createdTime: 1757286670636
   modifiedTime: 1757286670636
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: hmw17cn5xqgxmoim
 system:
+  complication: ''
+  concealment: Sight
   cost: 25000
   description: >-
     A hair-fine mesh of almost imperceptible wiring along the user’s palms and
@@ -27,16 +33,10 @@ system:
     with each attack or skill check.
   disabled: false
   effect: Allows bare-handed hacking and electrical shocks
+  favorite: false
   strain: 1
   tl: 4
-  favorite: false
   type: None
-  concealment: Sight
-  complication: ''
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!hmw17cn5xqgxmoim'
 

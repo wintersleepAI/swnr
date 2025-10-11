@@ -1,21 +1,23 @@
+_id: cmfww3s9xebsc38y
 name: Commune
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 8500000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457094
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 3 turns Range: The caster The caster calls upon divine powers in
-    order to seek knowledge. ▶ Questions: The caster may ask three questions per
-    casting. Once per year, the caster may instead ask six questions. ▶ Answers:
-    Each question receives a simple "yes" or "no" answer. ▶ Usage limit: Commune
-    may only be cast once per week. If the referee feels this spell is being
-    overused, its usage may be limited to once per month.
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 3 turns Range: The caster The caster calls upon divine powers in
+    order to seek knowledge. ▶ Questions: The caster may ask three questions per
+    casting. Once per year, the caster may instead ask six questions. ▶ Answers:
+    Each question receives a simple "yes" or "no" answer. ▶ Usage limit: Commune
+    may only be cast once per week. If the referee feels this spell is being
+    overused, its usage may be limited to once per month.
   duration: 3 turns
-  save: None
+  favorite: false
+  level: 5
+  prepared: false
   range: Caster
-  skill: null
-_id: cmfww3s9xebsc38y
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457094
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!cmfww3s9xebsc38y'
 

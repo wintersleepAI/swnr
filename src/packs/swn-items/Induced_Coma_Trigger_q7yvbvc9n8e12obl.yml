@@ -1,7 +1,12 @@
+_id: q7yvbvc9n8e12obl
 name: Induced Coma Trigger
 type: cyberware
 img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
 folder: 7ZDHgPOCyrCRwTEX
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cyberware.Item.q7yvbvc9n8e12obl
@@ -13,8 +18,9 @@ _stats:
   createdTime: 1757286670636
   modifiedTime: 1757286670636
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: q7yvbvc9n8e12obl
 system:
+  complication: ''
+  concealment: Sight
   cost: 20000
   description: >-
     A series of implants are wired to the user’s brain stem, allowing them to
@@ -28,16 +34,10 @@ system:
     coma.
   disabled: false
   effect: Feigns death and halts bodily processes for up to two weeks
+  favorite: false
   strain: 1
   tl: 4
-  favorite: false
   type: None
-  concealment: Sight
-  complication: ''
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!q7yvbvc9n8e12obl'
 

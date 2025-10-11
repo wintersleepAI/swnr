@@ -1,26 +1,23 @@
+_id: ysp9igmjfwpr07y8
 name: Deluge of Hell
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456906
+  modifiedTime: 1754277456906
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The caster unleashes a consuming destruction on a visible point within three
-    thousand feet. A torrent of eldritch ruin rains down from the heavens on
-    everything within up to a two hundred foot radius per caster level,
-    inflicting 1d8 damage per caster level with a Physical save for half damage,
-    and automatically killing all targets with 4 or fewer hit dice. This damage
-    is sufficient to destroy any wooden or lightly-built stone structure and
-    will seriously damage even fortifications. The caster can tighten the radius
-    down to a minimum of 20 feet, but cannot be selective about targets within
-    that area, This spell cannot be cast indoors, and is extremely hazardous to
-    the caster; they must make a Mental saving throw on casting it or suffer a
-    quarter of the damage inflicted, rounded up.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -34,26 +31,26 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The caster unleashes a consuming destruction on a visible point within three
+    thousand feet. A torrent of eldritch ruin rains down from the heavens on
+    everything within up to a two hundred foot radius per caster level,
+    inflicting 1d8 damage per caster level with a Physical save for half damage,
+    and automatically killing all targets with 4 or fewer hit dice. This damage
+    is sufficient to destroy any wooden or lightly-built stone structure and
+    will seriously damage even fortifications. The caster can tighten the radius
+    down to a minimum of 20 feet, but cannot be selective about targets within
+    that area, This spell cannot be cast indoors, and is extremely hazardous to
+    the caster; they must make a Mental saving throw on casting it or suffer a
+    quarter of the damage inflicted, rounded up.
   duration: Instant
-  save: physical
+  favorite: false
+  level: 5
+  prepared: false
   range: 200' radius per level within 3000'
-  skill: null
-_id: ysp9igmjfwpr07y8
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456906
-  modifiedTime: 1754277456906
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: physical
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!ysp9igmjfwpr07y8'
 

@@ -1,7 +1,12 @@
+_id: YC2qLOBVg3ge58H9
 name: Frisk
 type: program
 img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
 folder: YSjeg2WqEsCIXk0y
+sort: 1200000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-program.Item.466c3m1i8jyx63et
@@ -20,17 +25,12 @@ system:
     A Frisk Cyber program can give a list of all the cyber implanted in a
     specific human target within 30 meters, assuming the hacker's skill check
     beats the cyber user's security difficulty.
+  favorite: false
   selfTerminating: true
   skillCheckMod: 1
   target: Cyber
   type: verb
   useAffects: Get a list of a target person's cyberware
-  favorite: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: YC2qLOBVg3ge58H9
-sort: 1200000
 _key: '!items!YC2qLOBVg3ge58H9'
 

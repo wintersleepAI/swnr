@@ -1,6 +1,12 @@
+_id: 301btxxgu6mih2fd
 name: Combat Field Uniform
 type: armor
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
 folder: 3Dm85i0tKhFQJtw7
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.armor.Item.301btxxgu6mih2fd
@@ -12,44 +18,38 @@ _stats:
   createdTime: 1757286662362
   modifiedTime: 1757286662362
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 301btxxgu6mih2fd
 system:
   ac: 16
-  meleeAc: 16
-  traumaDiePenalty: 2
-  isSubtle: false
-  soak:
-    value: 5
-    max: 5
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 1000
   description: >-
     A combat field uniform is sophisticated battle dress fabricated from TL4
     ablative coatings, rigid plates, and shock-activated soft components. The
     CFU is the standard uniform for well-equipped TL4 front-line soldiers.
-  encumbrance: 1
-  location: other
-  quality: stock
-  shield: false
-  tl: 4
-  use: false
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
   dr: 0
+  encumbrance: 1
+  favorite: false
   isHeavy: false
+  isSubtle: false
+  location: other
+  meleeAc: 16
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
+  soak:
+    max: 5
+    value: 5
+  tl: 4
+  traumaDiePenalty: 2
+  use: false
 effects: []
-img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!301btxxgu6mih2fd'
 

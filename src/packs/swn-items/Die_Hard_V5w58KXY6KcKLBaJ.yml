@@ -1,7 +1,12 @@
+_id: V5w58KXY6KcKLBaJ
 name: Die Hard
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: sPYHUjJb2geTuLHp
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.foci.Item.e4ttmhkf5u48mz6j
@@ -25,13 +30,8 @@ system:
     can’t save you from Heavy weapons or similar trauma.
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: V5w58KXY6KcKLBaJ
-sort: 0
 _key: '!items!V5w58KXY6KcKLBaJ'
 

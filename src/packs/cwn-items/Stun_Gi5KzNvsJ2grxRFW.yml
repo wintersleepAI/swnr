@@ -1,7 +1,12 @@
+_id: Gi5KzNvsJ2grxRFW
 name: Stun
 type: program
 img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
 folder: YSjeg2WqEsCIXk0y
+sort: 150000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-program.Item.8wc68z90eoprxgyn
@@ -22,17 +27,12 @@ system:
     opposed Int/Program check for a human target, or a static 8+skill bonus
     target for a Demon. The target takes 1d10 non-lethal damage per Program
     level, to a minimum of 1d10.
+  favorite: false
   selfTerminating: true
   skillCheckMod: 1
   target: Avatar
   type: verb
   useAffects: Inflict non-lethal damage on an avatar
-  favorite: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: Gi5KzNvsJ2grxRFW
-sort: 150000
 _key: '!items!Gi5KzNvsJ2grxRFW'
 

@@ -1,56 +1,8 @@
-folder: Kjm25SBafLshNPI2
+_id: 7nVyw4TcVNDnevvB
 name: Protection Field
 type: armor
-_id: 7nVyw4TcVNDnevvB
 img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
-system:
-  description: >-
-    <h3
-    style="box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar)
-    var(--color-scrollbar-track);margin:2rem 0px
-    1rem;padding:0px;font-weight:normal;font-size:var(--font-h3-size);border-bottom:1px
-    solid var(--color-underline-header);line-height:1;text-shadow:rgb(0, 0, 0)
-    1px 1px
-    4px;font-family:var(--font-h3);color:var(--color-light-1);font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial"><span
-    style="font-family:var(--font-h3)">Description</span></h3><p>Protection
-    fields are rare, exotic defensive screens once used by high-ranking Mandate
-    officials. Their physical component consists of nothing more than a ring,
-    bracelet, or other token. When worn, the field shields the wearer with an
-    invisible force field that has vacc suit functionality. The shield is
-    imperceptible under normal circumstances, only flashing briefly when struck
-    by blows. These devices operate indefinitely on their own internal power
-    sources.</p>
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 0
-  cost: 0
-  tl: 5
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  ac: 18
-  shield: false
-  use: false
-  meleeAc: 18
-  soak:
-    value: 0
-    max: 0
-  dr: 0
-  traumaDiePenalty: 0
-  isSubtle: true
-  isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
-effects: []
+folder: Kjm25SBafLshNPI2
 sort: 0
 ownership:
   default: 0
@@ -67,5 +19,50 @@ _stats:
   createdTime: 1753923607538
   modifiedTime: 1753923607538
   lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  ac: 18
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
+  cost: 0
+  description: >-
+    <h3
+    style="box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar)
+    var(--color-scrollbar-track);margin:2rem 0px
+    1rem;padding:0px;font-weight:normal;font-size:var(--font-h3-size);border-bottom:1px
+    solid var(--color-underline-header);line-height:1;text-shadow:rgb(0, 0, 0)
+    1px 1px
+    4px;font-family:var(--font-h3);color:var(--color-light-1);font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial"><span
+    style="font-family:var(--font-h3)">Description</span></h3><p>Protection
+    fields are rare, exotic defensive screens once used by high-ranking Mandate
+    officials. Their physical component consists of nothing more than a ring,
+    bracelet, or other token. When worn, the field shields the wearer with an
+    invisible force field that has vacc suit functionality. The shield is
+    imperceptible under normal circumstances, only flashing briefly when struck
+    by blows. These devices operate indefinitely on their own internal power
+    sources.</p>
+  dr: 0
+  encumbrance: 0
+  favorite: false
+  isHeavy: false
+  isSubtle: true
+  location: stowed
+  meleeAc: 18
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
+  soak:
+    max: 0
+    value: 0
+  tl: 5
+  traumaDiePenalty: 0
+  use: false
+effects: []
 _key: '!items!7nVyw4TcVNDnevvB'
 

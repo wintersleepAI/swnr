@@ -1,7 +1,12 @@
+_id: ssipurm4yjk54b5f
 name: Memory Editing
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: T7VK7FTps9Ubc5gw
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-telepathy.Item.ssipurm4yjk54b5f
@@ -13,8 +18,18 @@ _stats:
   createdTime: 1757286864688
   modifiedTime: 1757286864688
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: ssipurm4yjk54b5f
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
   description: >-
     <p>The telepath can make simple edits to the memory of a target currently
     linked by a <em>Telepathic Contact</em>. Events of no more than 24 hours in
@@ -27,29 +42,12 @@ system:
     target gets a Mental saving throw to resist editing for the rest of the
     scene, but on a failure, they will not notice the changed memories until
     given a reason to recollect them.</p>
-  level: 4
-  source: telepathy
-  save: mental
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Psychic
-      cadence: day
-      usesCost: 1
-      itemText: ''
-      uses:
-        value: 1
-        max: 1
-      timing: manual
   favorite: false
-  subType: psychic
+  level: 4
   prepared: false
-  resourceName: null
-  subResource: null
+  save: mental
+  source: telepathy
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!ssipurm4yjk54b5f'
 

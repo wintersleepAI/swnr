@@ -1,21 +1,23 @@
+_id: owlbvlm5bet11o4s
 name: Hold Person (Cleric)
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 5200000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457107
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 9 turns Range: 180' This spell causes one or more humans,
-    demihumans, or human-like monsters to be paralysed if they fail a Mental
-    save. It may be cast in two ways: Against an individual: The target's saving
-    throw is penalised by &ndash;2. Against a group: 1d4 individuals in the
-    group are targeted. Restrictions: Human-like monsters of greater than 4+1 HD
-    and undead are not affected.
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 9 turns Range: 180' This spell causes one or more humans,
+    demihumans, or human-like monsters to be paralysed if they fail a Mental
+    save. It may be cast in two ways: Against an individual: The target's saving
+    throw is penalised by &ndash;2. Against a group: 1d4 individuals in the
+    group are targeted. Restrictions: Human-like monsters of greater than 4+1 HD
+    and undead are not affected.
   duration: 9 turns
-  save: mental
+  favorite: false
+  level: 2
+  prepared: false
   range: 180'
-  skill: null
-_id: owlbvlm5bet11o4s
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457107
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: mental
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!owlbvlm5bet11o4s'
 

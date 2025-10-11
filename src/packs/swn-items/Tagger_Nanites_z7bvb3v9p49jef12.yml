@@ -1,7 +1,12 @@
+_id: z7bvb3v9p49jef12
 name: Tagger Nanites
 type: cyberware
 img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
 folder: 7ZDHgPOCyrCRwTEX
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cyberware.Item.z7bvb3v9p49jef12
@@ -13,8 +18,9 @@ _stats:
   createdTime: 1757286670636
   modifiedTime: 1757286670636
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: z7bvb3v9p49jef12
 system:
+  complication: ''
+  concealment: Sight
   cost: 15000
   description: >-
     While true nanotechnology is beyond the grasp of standard TL4 science, this
@@ -30,16 +36,10 @@ system:
     most TL4 sensors. Tagging an object adds one System Strain to the user.
   disabled: false
   effect: Lets the user tag others with tracking nanites
+  favorite: false
   strain: 1
   tl: 4
-  favorite: false
   type: None
-  concealment: Sight
-  complication: ''
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!z7bvb3v9p49jef12'
 

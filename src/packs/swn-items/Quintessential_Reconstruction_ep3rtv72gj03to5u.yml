@@ -1,7 +1,12 @@
+_id: ep3rtv72gj03to5u
 name: Quintessential Reconstruction
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: VXwfMckwPSKXC4gD
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-biopsionics.Item.ep3rtv72gj03to5u
@@ -13,8 +18,8 @@ _stats:
   createdTime: 1757286851234
   modifiedTime: 1757286851234
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: ep3rtv72gj03to5u
 system:
+  consumptions: []
   description: >-
     <p>The biopsion becomes extremely difficult to kill, encoding their mind in
     a coherent pattern of MES energy coterminous with their realspace
@@ -26,19 +31,11 @@ system:
     to a week in order to avoid notice, but burial or entombment may result in a
     very short second life. Each use of this power inflicts one point of
     permanent attribute loss in an attribute of the biopsion’s choice.</p>
-  level: 4
-  source: biopsionics
   favorite: false
-  subType: psychic
+  level: 4
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions: []
-  save: null
+  source: biopsionics
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!ep3rtv72gj03to5u'
 

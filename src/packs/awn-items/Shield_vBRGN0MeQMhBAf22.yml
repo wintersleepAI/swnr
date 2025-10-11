@@ -1,9 +1,35 @@
-folder: aqEeYcgNBqyFHmfk
+_id: vBRGN0MeQMhBAf22
 name: Shield
 type: armor
-_id: vBRGN0MeQMhBAf22
 img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+folder: aqEeYcgNBqyFHmfk
+sort: 300000
+ownership:
+  default: 0
+  AjdlQlPXkJlcOy63: 3
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1753923584465
+  modifiedTime: 1753923584465
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  ac: 14
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
+  cost: 0
   description: >-
     <h3
     style="box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar)
@@ -24,52 +50,24 @@ system:
     prevent the first instance of Shock a user suffers each round. Shields count
     as primitive armor, however, and grant no benefits against bullets or
     high-tech blades.</p>
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 0
-  tl: 0
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  ac: 14
-  shield: true
-  use: false
-  meleeAc: 14
-  soak:
-    value: 0
-    max: 0
   dr: 0
-  traumaDiePenalty: 0
-  isSubtle: false
+  encumbrance: 1
+  favorite: false
   isHeavy: false
-  shieldMeleeACBonus: null
+  isSubtle: false
+  location: stowed
+  meleeAc: 14
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: true
   shieldACBonus: 1
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
+  soak:
+    max: 0
+    value: 0
+  tl: 0
+  traumaDiePenalty: 0
+  use: false
 effects: []
-sort: 300000
-ownership:
-  default: 0
-  AjdlQlPXkJlcOy63: 3
-  lKC5x4Yf023Bizof: 3
-flags: {}
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1753923584465
-  modifiedTime: 1753923584465
-  lastModifiedBy: lKC5x4Yf023Bizof
 _key: '!items!vBRGN0MeQMhBAf22'
 

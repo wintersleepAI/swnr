@@ -1,130 +1,12 @@
-folder: JCTtZt3gza36t9hX
+_id: XeCK9RPARsdNAR4Y
 name: 'Scouting: Why Can’t They Just Go There?'
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: ismiX5SkOYG607BB
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: The surrounding area is too dangerous
-    name: ''
-    _key: '!tables.results!XeCK9RPARsdNAR4Y.ismiX5SkOYG607BB'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: aa4YlM0hSG8BxmfZ
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A hostile group there is keeping them out
-    name: ''
-    _key: '!tables.results!XeCK9RPARsdNAR4Y.aa4YlM0hSG8BxmfZ'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: edLBvg8xOHSSRr4d
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They don’t have anyone with apposite skill
-    name: ''
-    _key: '!tables.results!XeCK9RPARsdNAR4Y.edLBvg8xOHSSRr4d'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: SHReMrrVhG4TZlFt
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They’re spread too thin to take care of it
-    name: ''
-    _key: '!tables.results!XeCK9RPARsdNAR4Y.SHReMrrVhG4TZlFt'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: H6vtG6vdDKS1FJT6
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Somebody’s watching them too closely
-    name: ''
-    _key: '!tables.results!XeCK9RPARsdNAR4Y.H6vtG6vdDKS1FJT6'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: anvdwmF5RaKvM3OV
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: The PCs would blend better than them
-    name: ''
-    _key: '!tables.results!XeCK9RPARsdNAR4Y.anvdwmF5RaKvM3OV'
-replacement: true
-displayRoll: true
+folder: JCTtZt3gza36t9hX
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   core: {}
 _stats:
@@ -137,11 +19,8 @@ _stats:
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d6
-_id: XeCK9RPARsdNAR4Y
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results: []
 _key: '!tables!XeCK9RPARsdNAR4Y'
 

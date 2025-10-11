@@ -1,6 +1,12 @@
+_id: 9pen5f987zbletwj
 name: Cuirass, brigandine, linothorax, half-plate
 type: armor
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
 folder: 3Dm85i0tKhFQJtw7
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.armor.Item.9pen5f987zbletwj
@@ -12,15 +18,16 @@ _stats:
   createdTime: 1757286662362
   modifiedTime: 1757286662362
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 9pen5f987zbletwj
 system:
   ac: 15
-  meleeAc: 15
-  traumaDiePenalty: 2
-  isSubtle: false
-  soak:
-    value: 8
-    max: 8
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 50
   description: >-
     Primitive armor is a catch-all covering all armor technology that lacks
@@ -30,30 +37,23 @@ system:
     it is treated as AC 10. Note that some planets have native flora or fauna
     capable of naturally producing extremely effective armor materials, ones not
     susceptible to this limitation
-  encumbrance: 1
-  location: other
-  quality: stock
-  shield: false
-  tl: 1
-  use: false
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
   dr: 0
+  encumbrance: 1
+  favorite: false
   isHeavy: false
+  isSubtle: false
+  location: other
+  meleeAc: 15
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
+  soak:
+    max: 8
+    value: 8
+  tl: 1
+  traumaDiePenalty: 2
+  use: false
 effects: []
-img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!9pen5f987zbletwj'
 

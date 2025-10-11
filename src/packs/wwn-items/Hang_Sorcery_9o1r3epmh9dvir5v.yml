@@ -1,33 +1,12 @@
+_id: 9o1r3epmh9dvir5v
 name: Hang Sorcery
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Commit Effort for the scene as an Instant action when casting a spell. The
-    spell does not go off, but remains "hung" and waiting to be triggered as an
-    On Turn action, with details of targeting and effect determined at that
-    time. Damage does not disrupt a hung spell, but no additional spells can be
-    cast until the hung spell is released or allowed to dissipate.
-  favorite: false
-  subType: art
-  source: High Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: High Mage
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: 9o1r3epmh9dvir5v
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -38,10 +17,28 @@ _stats:
   modifiedTime: 1754277456835
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: High Mage
+      usesCost: 1
+      cadence: day
+      timing: manual
+  description: >-
+    Commit Effort for the scene as an Instant action when casting a spell. The
+    spell does not go off, but remains "hung" and waiting to be triggered as an
+    On Turn action, with details of targeting and effect determined at that
+    time. Damage does not disrupt a hung spell, but no additional spells can be
+    cast until the hung spell is released or allowed to dissipate.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: High Mage
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!9o1r3epmh9dvir5v'
 

@@ -1,7 +1,12 @@
+_id: ZEO4MTDe5cFJheCj
 name: Defend
 type: program
 img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
 folder: YSjeg2WqEsCIXk0y
+sort: 1500000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-program.Item.jvws7zz5xhwk0mez
@@ -23,17 +28,12 @@ system:
     the target's cyber systems must first beat the user in an opposed
     Int/Program skill check before they can attempt their hack. This Verb cannot
     negate programs that are already running on the target.
+  favorite: false
   selfTerminating: false
   skillCheckMod: 0
   target: Device/Cyber
   type: verb
   useAffects: Shield a friendly device or cyber system
-  favorite: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: ZEO4MTDe5cFJheCj
-sort: 1500000
 _key: '!items!ZEO4MTDe5cFJheCj'
 

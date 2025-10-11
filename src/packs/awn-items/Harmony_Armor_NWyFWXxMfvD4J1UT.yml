@@ -1,9 +1,35 @@
-folder: 4i5hUE3dlwER4hcI
+_id: NWyFWXxMfvD4J1UT
 name: Harmony Armor
 type: armor
-_id: NWyFWXxMfvD4J1UT
 img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+folder: 4i5hUE3dlwER4hcI
+sort: 0
+ownership:
+  default: 0
+  AjdlQlPXkJlcOy63: 3
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1753923591735
+  modifiedTime: 1753923591735
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  ac: 18
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
+  cost: 1500
   description: >-
     <h3
     style="box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar)
@@ -29,52 +55,23 @@ system:
     Bureau of Harmony. The ultra-light materials of the suit shift slightly to
     obscure the wearer’s body shape, and the blank faceplate and voice
     distortion module of the helmet conceal the wearer’s identity.</p>
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 0
-  cost: 1500
-  tl: 4
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  ac: 18
-  shield: false
-  use: false
-  meleeAc: 18
-  soak:
-    value: 0
-    max: 0
   dr: 0
-  traumaDiePenalty: 1
-  isSubtle: false
+  encumbrance: 0
+  favorite: false
   isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
+  isSubtle: false
+  location: stowed
+  meleeAc: 18
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
+  soak:
+    max: 0
+    value: 0
+  tl: 4
+  traumaDiePenalty: 1
+  use: false
 effects: []
-sort: 0
-ownership:
-  default: 0
-  AjdlQlPXkJlcOy63: 3
-  lKC5x4Yf023Bizof: 3
-flags: {}
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1753923591735
-  modifiedTime: 1753923591735
-  lastModifiedBy: lKC5x4Yf023Bizof
 _key: '!items!NWyFWXxMfvD4J1UT'
 

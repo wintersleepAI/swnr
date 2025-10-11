@@ -1,228 +1,137 @@
-displayRoll: true
+_id: FqVNtpn95VrKXFxv
+name: One Roll Wilderness Encounters - Types of Friendly Creatures
+type: null
+img: icons/svg/d20-grey.svg
+folder: Td6GsHm0Ns7IXzwI
+sort: 0
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags:
   core: {}
-folder: Td6GsHm0Ns7IXzwI
-formula: 1d10
-img: icons/svg/d20-grey.svg
-name: One Roll Wilderness Encounters - Types of Friendly Creatures
-replacement: true
-results:
-  - _id: Udt1O6FhO653SQUs
-    drawn: false
-    flags: {}
-    range:
-      - 1
-      - 1
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Types of Friendly Creatures: Affable but reclusive hermit'
-    name: ''
-    _key: '!tables.results!FqVNtpn95VrKXFxv.Udt1O6FhO653SQUs'
-  - _id: i6cLvLsZi5nKJeEZ
-    drawn: false
-    flags: {}
-    range:
-      - 2
-      - 2
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Types of Friendly Creatures: Local herd animal let loose to graze'
-    name: ''
-    _key: '!tables.results!FqVNtpn95VrKXFxv.i6cLvLsZi5nKJeEZ'
-  - _id: JyzeJl1XiRxOcfwD
-    drawn: false
-    flags: {}
-    range:
-      - 3
-      - 3
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Types of Friendly Creatures: Government ranger or circuit judge'
-    name: ''
-    _key: '!tables.results!FqVNtpn95VrKXFxv.JyzeJl1XiRxOcfwD'
-  - _id: NPv3IOcUfMLkrtXo
-    drawn: false
-    flags: {}
-    range:
-      - 4
-      - 4
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Types of Friendly Creatures: Curious local animal'
-    name: ''
-    _key: '!tables.results!FqVNtpn95VrKXFxv.NPv3IOcUfMLkrtXo'
-  - _id: U0FFJ6XjTmHKSjCD
-    drawn: false
-    flags: {}
-    range:
-      - 5
-      - 5
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Types of Friendly Creatures: Remote homesteader and family'
-    name: ''
-    _key: '!tables.results!FqVNtpn95VrKXFxv.U0FFJ6XjTmHKSjCD'
-  - _id: CjQ051hqx828s8MK
-    drawn: false
-    flags: {}
-    range:
-      - 6
-      - 6
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Types of Friendly Creatures: Working trapper or hunter'
-    name: ''
-    _key: '!tables.results!FqVNtpn95VrKXFxv.CjQ051hqx828s8MK'
-  - _id: iucMRvL0vLg4tj3v
-    drawn: false
-    flags: {}
-    range:
-      - 7
-      - 7
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Types of Friendly Creatures: Back-country villager or native'
-    name: ''
-    _key: '!tables.results!FqVNtpn95VrKXFxv.iucMRvL0vLg4tj3v'
-  - _id: nipR26KgpX5fXYzy
-    drawn: false
-    flags: {}
-    range:
-      - 8
-      - 8
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Types of Friendly Creatures: Hiker or wilderness tourist'
-    name: ''
-    _key: '!tables.results!FqVNtpn95VrKXFxv.nipR26KgpX5fXYzy'
-  - _id: oMVJ8UVMRCHjWwPT
-    drawn: false
-    flags: {}
-    range:
-      - 9
-      - 9
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Types of Friendly Creatures: Religious recluse or holy person'
-    name: ''
-    _key: '!tables.results!FqVNtpn95VrKXFxv.oMVJ8UVMRCHjWwPT'
-  - _id: RwkMRgywWGzBmHqH
-    drawn: false
-    flags: {}
-    range:
-      - 10
-      - 10
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Types of Friendly Creatures: Impoverished social exile'
-    name: ''
-    _key: '!tables.results!FqVNtpn95VrKXFxv.RwkMRgywWGzBmHqH'
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757287526982
   modifiedTime: 1757287526982
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-description: ''
-_id: FqVNtpn95VrKXFxv
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: Udt1O6FhO653SQUs
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!FqVNtpn95VrKXFxv.Udt1O6FhO653SQUs'
+  - _id: i6cLvLsZi5nKJeEZ
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!FqVNtpn95VrKXFxv.i6cLvLsZi5nKJeEZ'
+  - _id: JyzeJl1XiRxOcfwD
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!FqVNtpn95VrKXFxv.JyzeJl1XiRxOcfwD'
+  - _id: NPv3IOcUfMLkrtXo
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!FqVNtpn95VrKXFxv.NPv3IOcUfMLkrtXo'
+  - _id: U0FFJ6XjTmHKSjCD
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!FqVNtpn95VrKXFxv.U0FFJ6XjTmHKSjCD'
+  - _id: CjQ051hqx828s8MK
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!FqVNtpn95VrKXFxv.CjQ051hqx828s8MK'
+  - _id: iucMRvL0vLg4tj3v
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!FqVNtpn95VrKXFxv.iucMRvL0vLg4tj3v'
+  - _id: nipR26KgpX5fXYzy
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!FqVNtpn95VrKXFxv.nipR26KgpX5fXYzy'
+  - _id: oMVJ8UVMRCHjWwPT
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!FqVNtpn95VrKXFxv.oMVJ8UVMRCHjWwPT'
+  - _id: RwkMRgywWGzBmHqH
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!FqVNtpn95VrKXFxv.RwkMRgywWGzBmHqH'
 _key: '!tables!FqVNtpn95VrKXFxv'
 

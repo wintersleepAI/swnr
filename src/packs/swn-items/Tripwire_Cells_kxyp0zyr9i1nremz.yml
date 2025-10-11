@@ -1,7 +1,12 @@
+_id: kxyp0zyr9i1nremz
 name: Tripwire Cells
 type: asset
 img: systems/swnr/assets/icons/hawkin/cunning.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.kxyp0zyr9i1nremz
@@ -13,13 +18,11 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: kxyp0zyr9i1nremz
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: ''
-  attackTarget: null
   baseOfInfluence: false
+  category: cunning
   cost: 12
   counter: 1d4
   description: >-
@@ -27,27 +30,22 @@ system:
     stealthed asset lands or is purchased on a planet with tripwire cells, the
     Cells make an immediate Cunning vs. Cunning attack against the owning
     faction. If successful, the asset loses its stealth.
+  favorite: false
   health:
     max: 8
     value: 8
   income: 0
   maintenance: 0
+  qualities:
+    action: true
+    permission: false
+    special: true
   rating: 4
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Special Forces
   unusable: false
-  qualities:
-    permission: false
-    action: true
-    special: true
-  category: cunning
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!kxyp0zyr9i1nremz'
 

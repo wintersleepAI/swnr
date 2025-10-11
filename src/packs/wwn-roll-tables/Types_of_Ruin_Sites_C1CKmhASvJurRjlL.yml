@@ -1,283 +1,157 @@
 _id: C1CKmhASvJurRjlL
 name: Types of Ruin Sites
+type: null
 img: icons/svg/d20-grey.svg
-description: >-
-  <p>The table below offers suggestions as to what kind of structure the
-  exploration site might be. Some of the listed sites might not make sense in a
-  particular context. While you can always just re-roll or pick something, it
-  can sometimes be interesting to read the result metaphorically, and then put a
-  structure in that matches the essential significance of the rolled result.</p>
-results:
-  - _id: 7Ld9UI1z0dMyVXDb
-    type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Residential Site</b>
-    name: ''
-    _key: '!tables.results!C1CKmhASvJurRjlL.7Ld9UI1z0dMyVXDb'
-  - _id: U4W3kmi7bjcearWT
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293781421
-    name: Ruin-Residential
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.f9Ej9D62dBkn95id
-    description: ''
-    _key: '!tables.results!C1CKmhASvJurRjlL.U4W3kmi7bjcearWT'
-  - _id: M7pXF3VG2uZbOLwF
-    type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Military Site</b>
-    name: ''
-    _key: '!tables.results!C1CKmhASvJurRjlL.M7pXF3VG2uZbOLwF'
-  - _id: 9G5C8B8P7OtQKxXb
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293786483
-    name: Ruin-Military
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.9F3PeDKeKv2aICLU
-    description: ''
-    _key: '!tables.results!C1CKmhASvJurRjlL.9G5C8B8P7OtQKxXb'
-  - _id: kANP9BCvFQ1Wr8gw
-    type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Production Site</b>
-    name: ''
-    _key: '!tables.results!C1CKmhASvJurRjlL.kANP9BCvFQ1Wr8gw'
-  - _id: GEJXQ315tKDFoKfn
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293792046
-    name: Ruin-Production
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.d0JsJbQXJHLwrT6I
-    description: ''
-    _key: '!tables.results!C1CKmhASvJurRjlL.GEJXQ315tKDFoKfn'
-  - _id: RSiQJym4LMmlKslj
-    type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Religious Site</b>
-    name: ''
-    _key: '!tables.results!C1CKmhASvJurRjlL.RSiQJym4LMmlKslj'
-  - _id: n1f6H2C4afstiLTR
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293796712
-    name: Ruin-Religious
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.VT5kUIdkZKXbmgm4
-    description: ''
-    _key: '!tables.results!C1CKmhASvJurRjlL.n1f6H2C4afstiLTR'
-  - _id: Lg1z7ZXyFdscqnOZ
-    type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Cultural Site</b>
-    name: ''
-    _key: '!tables.results!C1CKmhASvJurRjlL.Lg1z7ZXyFdscqnOZ'
-  - _id: A99KUEGG9aVzkF42
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293801169
-    name: Ruin-Cultural
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.2EgsngYETnfsMIXY
-    description: ''
-    _key: '!tables.results!C1CKmhASvJurRjlL.A99KUEGG9aVzkF42'
-  - _id: 2Aq7Pt27EAUOIlCc
-    type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Infrastructure Site</b>
-    name: ''
-    _key: '!tables.results!C1CKmhASvJurRjlL.2Aq7Pt27EAUOIlCc'
-  - _id: tRBUpzLeDbsMaRtJ
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757293807604
-    name: Ruin-Infrastructure
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.D1d00cXACTQTvQhG
-    description: ''
-    _key: '!tables.results!C1CKmhASvJurRjlL.tRBUpzLeDbsMaRtJ'
-formula: 1d6
-replacement: true
-displayRoll: true
 folder: NcNmE2NSqwIFlKia
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-tables.RollTable.C1CKmhASvJurRjlL
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271920613
   modifiedTime: 1757293777475
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: 7Ld9UI1z0dMyVXDb
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!C1CKmhASvJurRjlL.7Ld9UI1z0dMyVXDb'
+  - _id: U4W3kmi7bjcearWT
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!C1CKmhASvJurRjlL.U4W3kmi7bjcearWT'
+  - _id: 9G5C8B8P7OtQKxXb
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!C1CKmhASvJurRjlL.9G5C8B8P7OtQKxXb'
+  - _id: M7pXF3VG2uZbOLwF
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!C1CKmhASvJurRjlL.M7pXF3VG2uZbOLwF'
+  - _id: GEJXQ315tKDFoKfn
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!C1CKmhASvJurRjlL.GEJXQ315tKDFoKfn'
+  - _id: kANP9BCvFQ1Wr8gw
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!C1CKmhASvJurRjlL.kANP9BCvFQ1Wr8gw'
+  - _id: RSiQJym4LMmlKslj
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!C1CKmhASvJurRjlL.RSiQJym4LMmlKslj'
+  - _id: n1f6H2C4afstiLTR
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!C1CKmhASvJurRjlL.n1f6H2C4afstiLTR'
+  - _id: A99KUEGG9aVzkF42
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!C1CKmhASvJurRjlL.A99KUEGG9aVzkF42'
+  - _id: Lg1z7ZXyFdscqnOZ
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!C1CKmhASvJurRjlL.Lg1z7ZXyFdscqnOZ'
+  - _id: 2Aq7Pt27EAUOIlCc
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!C1CKmhASvJurRjlL.2Aq7Pt27EAUOIlCc'
+  - _id: tRBUpzLeDbsMaRtJ
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!C1CKmhASvJurRjlL.tRBUpzLeDbsMaRtJ'
 _key: '!tables!C1CKmhASvJurRjlL'
 

@@ -1,250 +1,9 @@
+_id: ieQdNuKO6DL7lQBs
 name: Plant Influence
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: ULIaD2SBtj86Iblo
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Bark
-    name: ''
-    _key: '!tables.results!ieQdNuKO6DL7lQBs.ULIaD2SBtj86Iblo'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: TlZLQzJiEcyFFOrF
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Flowers
-    name: ''
-    _key: '!tables.results!ieQdNuKO6DL7lQBs.TlZLQzJiEcyFFOrF'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: Nu3NohGR2L0kgxcF
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Fragrance
-    name: ''
-    _key: '!tables.results!ieQdNuKO6DL7lQBs.Nu3NohGR2L0kgxcF'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: 4qyBZXNWRO4wm5BE
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Fronds and tendrils
-    name: ''
-    _key: '!tables.results!ieQdNuKO6DL7lQBs.4qyBZXNWRO4wm5BE'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: wfbXYDGi18YRozuQ
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Fungal masses
-    name: ''
-    _key: '!tables.results!ieQdNuKO6DL7lQBs.wfbXYDGi18YRozuQ'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: 99HdGjV8oLBGxmdd
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Gnarled tissues
-    name: ''
-    _key: '!tables.results!ieQdNuKO6DL7lQBs.99HdGjV8oLBGxmdd'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: Ef36Z98rNX3OJhm2
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Insect infestation
-    name: ''
-    _key: '!tables.results!ieQdNuKO6DL7lQBs.Ef36Z98rNX3OJhm2'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: uSuLcgthBuFbn9Kg
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Leaf growth
-    name: ''
-    _key: '!tables.results!ieQdNuKO6DL7lQBs.uSuLcgthBuFbn9Kg'
-  - type: text
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    _id: MqRPeBOPV0YuSNPF
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Mosses or lichens
-    name: ''
-    _key: '!tables.results!ieQdNuKO6DL7lQBs.MqRPeBOPV0YuSNPF'
-  - type: text
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    _id: cN6ICQJkFT7aS6Lg
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Pollen growth
-    name: ''
-    _key: '!tables.results!ieQdNuKO6DL7lQBs.cN6ICQJkFT7aS6Lg'
-  - type: text
-    weight: 1
-    range:
-      - 11
-      - 11
-    drawn: false
-    _id: vlzmIMJvRD0RC9kg
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Sap exudation
-    name: ''
-    _key: '!tables.results!ieQdNuKO6DL7lQBs.vlzmIMJvRD0RC9kg'
-  - type: text
-    weight: 1
-    range:
-      - 12
-      - 12
-    drawn: false
-    _id: rRK9jD54b7JT60hd
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Vegetative texture
-    name: ''
-    _key: '!tables.results!ieQdNuKO6DL7lQBs.rRK9jD54b7JT60hd'
-replacement: true
-displayRoll: true
 folder: ZsrKd0EZcB4THIIm
+sort: 0
 ownership:
   default: 0
   AjdlQlPXkJlcOy63: 3
@@ -254,14 +13,146 @@ _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1753926186317
   modifiedTime: 1753926186317
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d12
-_id: ieQdNuKO6DL7lQBs
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: ULIaD2SBtj86Iblo
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ieQdNuKO6DL7lQBs.ULIaD2SBtj86Iblo'
+  - _id: TlZLQzJiEcyFFOrF
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ieQdNuKO6DL7lQBs.TlZLQzJiEcyFFOrF'
+  - _id: Nu3NohGR2L0kgxcF
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ieQdNuKO6DL7lQBs.Nu3NohGR2L0kgxcF'
+  - _id: 4qyBZXNWRO4wm5BE
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ieQdNuKO6DL7lQBs.4qyBZXNWRO4wm5BE'
+  - _id: wfbXYDGi18YRozuQ
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ieQdNuKO6DL7lQBs.wfbXYDGi18YRozuQ'
+  - _id: 99HdGjV8oLBGxmdd
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ieQdNuKO6DL7lQBs.99HdGjV8oLBGxmdd'
+  - _id: Ef36Z98rNX3OJhm2
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ieQdNuKO6DL7lQBs.Ef36Z98rNX3OJhm2'
+  - _id: uSuLcgthBuFbn9Kg
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ieQdNuKO6DL7lQBs.uSuLcgthBuFbn9Kg'
+  - _id: MqRPeBOPV0YuSNPF
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ieQdNuKO6DL7lQBs.MqRPeBOPV0YuSNPF'
+  - _id: cN6ICQJkFT7aS6Lg
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ieQdNuKO6DL7lQBs.cN6ICQJkFT7aS6Lg'
+  - _id: vlzmIMJvRD0RC9kg
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ieQdNuKO6DL7lQBs.vlzmIMJvRD0RC9kg'
+  - _id: rRK9jD54b7JT60hd
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ieQdNuKO6DL7lQBs.rRK9jD54b7JT60hd'
 _key: '!tables!ieQdNuKO6DL7lQBs'
 

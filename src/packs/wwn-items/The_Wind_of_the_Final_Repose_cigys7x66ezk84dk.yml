@@ -1,22 +1,23 @@
+_id: cigys7x66ezk84dk
 name: The Wind of the Final Repose
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456915
+  modifiedTime: 1754277456915
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The mage designates a visible point within two hundred feet. A silent,
-    invisible burst of soporific influence erupts from that point, targeting all
-    living creatures within a twenty-foot radius. All such targets with 4 or
-    fewer hit dice within that area fall unconscious instantly, and can be
-    roused only by damage or by a Main Action used to kick them awake. If not
-    roused, they revive at the end of the scene. Entities that do not sleep are
-    immune to this spell.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -30,26 +31,22 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The mage designates a visible point within two hundred feet. A silent,
+    invisible burst of soporific influence erupts from that point, targeting all
+    living creatures within a twenty-foot radius. All such targets with 4 or
+    fewer hit dice within that area fall unconscious instantly, and can be
+    roused only by damage or by a Main Action used to kick them awake. If not
+    roused, they revive at the end of the scene. Entities that do not sleep are
+    immune to this spell.
   duration: Scene
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: 20-ft. radius within 200 ft.
-  skill: null
-_id: cigys7x66ezk84dk
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456915
-  modifiedTime: 1754277456915
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!cigys7x66ezk84dk'
 

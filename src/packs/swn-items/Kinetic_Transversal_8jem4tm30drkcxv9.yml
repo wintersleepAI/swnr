@@ -1,7 +1,12 @@
+_id: 8jem4tm30drkcxv9
 name: Kinetic Transversal
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: mOJTfIBCxT4AY88p
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-telekinesis.Item.8jem4tm30drkcxv9
@@ -13,27 +18,19 @@ _stats:
   createdTime: 1757286860108
   modifiedTime: 1757286860108
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 8jem4tm30drkcxv9
 system:
+  consumptions: []
   description: >-
     <p>The adept may Commit Effort as an On Turn action to move freely over
     vertical or overhanging surfaces as if they were flat ground, crossing any
     solid surface strong enough to bear five kilos of weight. They can also move
     over liquids at their full movement rate. This movement ability lasts as
     long as the Effort is committed.</p>
-  level: 1
-  source: telekInesIs
   favorite: false
-  subType: psychic
+  level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions: []
-  save: null
+  source: telekInesIs
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!8jem4tm30drkcxv9'
 

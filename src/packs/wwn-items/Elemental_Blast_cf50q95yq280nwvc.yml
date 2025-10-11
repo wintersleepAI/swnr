@@ -1,7 +1,30 @@
+_id: cf50q95yq280nwvc
 name: Elemental Blast
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456769
+  modifiedTime: 1754277456769
+  lastModifiedBy: null
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Elementalist
+      usesCost: 1
+      cadence: scene
+      timing: manual
   description: >-
     Commit Effort for the scene as a Main Action to hurl a blast of some
     elemental force at a visible target within fifty feet per character level.
@@ -13,40 +36,14 @@ system:
     any conjured matter vanishes at the end of the round. Drag and Drop Weapon:
     @UUID[Compendium.wwn.adventuring-gear.Item.7FNXYuNaOngyDVxF]{Elemental
     Blast}
+  duration: Instant
   favorite: false
-  subType: art
-  source: Elementalist
   level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Elementalist
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
   range: Self
-  skill: null
-_id: cf50q95yq280nwvc
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456769
-  modifiedTime: 1754277456769
-  lastModifiedBy: null
-  exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+  save: None
+  source: Elementalist
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!cf50q95yq280nwvc'
 

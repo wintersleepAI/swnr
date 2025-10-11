@@ -1,7 +1,12 @@
+_id: ndqucehea642d4ky
 name: Plasma Beam
 type: shipWeapon
 img: systems/swnr/assets/icons/game-icons.net/item-icons/plasma-bolt.svg
 folder: 7HIRYMavpuUv01al
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.ship-weapon.Item.ndqucehea642d4ky
@@ -13,8 +18,12 @@ _stats:
   createdTime: 1757286946146
   modifiedTime: 1757286946146
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: ndqucehea642d4ky
 system:
+  ab: 0
+  ammo:
+    max: 4
+    type: none
+    value: 4
   broken: false
   cost: 700000
   costMultiplier: false
@@ -22,34 +31,25 @@ system:
   description: >-
     With superior targeting and a smaller energy drain than a CPC, a plasma beam
     sacrifices some armor penetration.
+  destroyed: false
+  favorite: false
   hardpoint: 2
+  juryRigged: false
   mass: 2
   massMultiplier: false
   minClass: frigate
   power: 5
   powerMultiplier: false
   qualities: AP 10
+  range:
+    max: 2
+    normal: 1
+  stat: ask
   tl: 4
-  favorite: false
-  destroyed: false
-  juryRigged: false
-  type: ship
-  ab: 0
-  ammo:
-    type: none
-    max: 4
-    value: 4
   trauma:
     die: 1d6
     vehicle: false
-  range:
-    normal: 1
-    max: 2
-  stat: ask
+  type: ship
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!ndqucehea642d4ky'
 

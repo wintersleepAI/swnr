@@ -1,7 +1,12 @@
+_id: xuhb2u0j2iwb8eov
 name: Covert Transit Net
 type: asset
 img: systems/swnr/assets/icons/hawkin/cunning.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.xuhb2u0j2iwb8eov
@@ -13,40 +18,33 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: xuhb2u0j2iwb8eov
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: ''
-  attackTarget: null
   baseOfInfluence: false
+  category: cunning
   cost: 18
   counter: ''
   description: >-
     Facilities web an area of space with a network of smugglers and gray-market
     freighter captains. As an action, any Special Forces assets can be moved
     between any worlds within three hexes of the Covert Transit Net.
+  favorite: false
   health:
     max: 15
     value: 15
   income: 0
   maintenance: 0
+  qualities:
+    action: true
+    permission: false
+    special: false
   rating: 6
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Logistics Facility
   unusable: false
-  qualities:
-    permission: false
-    action: true
-    special: false
-  category: cunning
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!xuhb2u0j2iwb8eov'
 

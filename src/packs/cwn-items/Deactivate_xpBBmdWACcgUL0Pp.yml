@@ -1,7 +1,12 @@
+_id: xpBBmdWACcgUL0Pp
 name: Deactivate
 type: program
 img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
 folder: YSjeg2WqEsCIXk0y
+sort: 1700000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-program.Item.crc1x6zimeu3jayf
@@ -21,17 +26,12 @@ system:
     rebooted by the network or the user, but it'll take a Main Action and a
     round to do so. If a network alert hasn't been issued, the network may not
     notice a deactivated device until someone spots the problem.
+  favorite: false
   selfTerminating: true
   skillCheckMod: 1
   target: Device/Cyber
   type: verb
   useAffects: Turn off the target for at least a round
-  favorite: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: xpBBmdWACcgUL0Pp
-sort: 1700000
 _key: '!items!xpBBmdWACcgUL0Pp'
 

@@ -1,23 +1,23 @@
+_id: tu2z9ab49zsrkys8
 name: Dimension Door
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 6700000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457079
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 1 round Range: 10' The caster or a single creature is instantly
-    transferred to another location up to 360' distant. The destination may be
-    selected in two ways: 1. Known location: A location, within 360', known to
-    the caster. 2. An unknown location: Specified by a series of offsets (e.g.
-    120' north, 160' east, 80' up) totalling not more than 360'. Stipulations:
-    The following apply: ▶ If the destination is occupied: By a solid body, the
-    spell fails. ▶ If the target is unwilling: It may make a Mental save to
-    resist the teleportation.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 4
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -31,26 +31,23 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 1 round Range: 10' The caster or a single creature is instantly
+    transferred to another location up to 360' distant. The destination may be
+    selected in two ways: 1. Known location: A location, within 360', known to
+    the caster. 2. An unknown location: Specified by a series of offsets (e.g.
+    120' north, 160' east, 80' up) totalling not more than 360'. Stipulations:
+    The following apply: ▶ If the destination is occupied: By a solid body, the
+    spell fails. ▶ If the target is unwilling: It may make a Mental save to
+    resist the teleportation.
   duration: 1 round
-  save: mental
+  favorite: false
+  level: 4
+  prepared: false
   range: 10'
-  skill: null
-_id: tu2z9ab49zsrkys8
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457079
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: mental
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!tu2z9ab49zsrkys8'
 

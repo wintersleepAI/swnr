@@ -1,24 +1,23 @@
+_id: 7ck7f1vlua5az3dh
 name: Forgetting the Grave
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456886
+  modifiedTime: 1754277456886
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    A necromancer can temporarily suspend the mortality of a willing target
-    within sight. For one round per Necromancer level, the creature simply
-    cannot die, no matter how drastic their injuries. Those reduced to zero hit
-    points lose their Move action each turn but can continue to act otherwise;
-    if such a target is damaged yet again, they must make a Physical saving
-    throw each time or become incapable of movement until healed. At the spell's
-    end targets reduced to zero hit points are Mortally Wounded; those that have
-    been dismembered or otherwise slaughtered beyond the hope of survival die
-    instantly
-  favorite: false
-  subType: spell
-  source: Necromancer
-  level: 3
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -32,26 +31,24 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    A necromancer can temporarily suspend the mortality of a willing target
+    within sight. For one round per Necromancer level, the creature simply
+    cannot die, no matter how drastic their injuries. Those reduced to zero hit
+    points lose their Move action each turn but can continue to act otherwise;
+    if such a target is damaged yet again, they must make a Physical saving
+    throw each time or become incapable of movement until healed. At the spell's
+    end targets reduced to zero hit points are Mortally Wounded; those that have
+    been dismembered or otherwise slaughtered beyond the hope of survival die
+    instantly
   duration: 1 rounde per level
-  save: physical
+  favorite: false
+  level: 3
+  prepared: false
   range: Visible
-  skill: null
-_id: 7ck7f1vlua5az3dh
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456886
-  modifiedTime: 1754277456886
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: physical
+  source: Necromancer
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!7ck7f1vlua5az3dh'
 

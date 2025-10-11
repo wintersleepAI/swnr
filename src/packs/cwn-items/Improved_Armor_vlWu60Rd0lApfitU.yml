@@ -1,7 +1,12 @@
+_id: vlWu60Rd0lApfitU
 name: Improved Armor
 type: shipFitting
 img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
 folder: 4ctWevVXyy54aHh0
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.2uh2k8bd9zf43781
@@ -14,29 +19,24 @@ _stats:
   modifiedTime: 1754266949107
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  broken: false
   cost: 0
+  costMultiplier: false
   description: >-
     The drone`s AC improves by 2, to a maximum of 18, but its Encumbrance rating
     increases by one. This fitting is ineffective on drones too big to have an
     Encumbrance rating; they need vehicle-grade armor upgrades.
-  mass: 1
-  type: drone
+  destroyed: false
+  effect: ''
   favorite: false
-  tl: 4
-  power: 1
-  costMultiplier: false
-  powerMultiplier: false
+  juryRigged: false
+  mass: 1
   massMultiplier: false
   minClass: fighter
-  broken: false
-  destroyed: false
-  juryRigged: false
-  effect: ''
+  power: 1
+  powerMultiplier: false
+  tl: 4
+  type: drone
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: vlWu60Rd0lApfitU
-sort: 0
 _key: '!items!vlWu60Rd0lApfitU'
 

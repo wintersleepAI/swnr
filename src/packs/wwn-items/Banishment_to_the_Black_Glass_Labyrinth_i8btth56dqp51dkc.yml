@@ -1,27 +1,23 @@
+_id: i8btth56dqp51dkc
 name: Banishment to the Black Glass Labyrinth
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456925
+  modifiedTime: 1754277456925
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    Aimed at a visible point within three hundred feet, the spell affects all
-    creatures except the caster within a tenfoot radius of the target,
-    translating them into a lightless extradimensional maze of endlessly tall
-    obsidian walls. The maze is infinite, featureless, and empty. Transported
-    creatures get a Mental saving throw to end the spell, re-appearing one round
-    after it was cast. Those who fail their save get to make an additional
-    attempt once an hour afterwards. Creatures with five or fewer hit dice
-    cannot attempt these saving throws and are trapped forever unless the mage
-    is killed or ends the spell. Time passes normally while trapped, and
-    creatures snared within may rest, fight, or starve as their situation and
-    wills so recommends. Dead or escaped creatures appear in the nearest clear
-    space to their original departure.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -35,26 +31,27 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Aimed at a visible point within three hundred feet, the spell affects all
+    creatures except the caster within a tenfoot radius of the target,
+    translating them into a lightless extradimensional maze of endlessly tall
+    obsidian walls. The maze is infinite, featureless, and empty. Transported
+    creatures get a Mental saving throw to end the spell, re-appearing one round
+    after it was cast. Those who fail their save get to make an additional
+    attempt once an hour afterwards. Creatures with five or fewer hit dice
+    cannot attempt these saving throws and are trapped forever unless the mage
+    is killed or ends the spell. Time passes normally while trapped, and
+    creatures snared within may rest, fight, or starve as their situation and
+    wills so recommends. Dead or escaped creatures appear in the nearest clear
+    space to their original departure.
   duration: untill ended or the mage is killed
-  save: mental
+  favorite: false
+  level: 5
+  prepared: false
   range: 10-ft. radius within 300 ft.
-  skill: null
-_id: i8btth56dqp51dkc
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456925
-  modifiedTime: 1754277456925
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: mental
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!i8btth56dqp51dkc'
 

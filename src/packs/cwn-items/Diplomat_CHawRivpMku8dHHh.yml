@@ -1,7 +1,12 @@
+_id: CHawRivpMku8dHHh
 name: Diplomat
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: rLKHK9Ka1PgqNDEq
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-foci.Item.c0qnp3f0ion5nv3q
@@ -26,13 +31,8 @@ system:
     can talk to them for at least thirty seconds.
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: CHawRivpMku8dHHh
-sort: 0
 _key: '!items!CHawRivpMku8dHHh'
 

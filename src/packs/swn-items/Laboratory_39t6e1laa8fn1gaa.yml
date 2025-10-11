@@ -1,7 +1,12 @@
+_id: 39t6e1laa8fn1gaa
 name: Laboratory
 type: asset
 img: systems/swnr/assets/icons/hawkin/wealth.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.39t6e1laa8fn1gaa
@@ -13,40 +18,33 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 39t6e1laa8fn1gaa
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: ''
-  attackTarget: null
   baseOfInfluence: false
+  category: wealth
   cost: 6
   counter: ''
   description: >-
     The lab allows a world to make hesitant progress in tech. The presence of a
     Laboratory allows assets to be purchased on that world as if it had Tech
     Level 4.
+  favorite: false
   health:
     max: 4
     value: 4
   income: 0
   maintenance: 0
+  qualities:
+    action: false
+    permission: false
+    special: true
   rating: 3
+  stealthed: false
   tl: 0
   turnRoll: ''
   type: Facility
   unusable: false
-  qualities:
-    permission: false
-    action: false
-    special: true
-  category: wealth
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!39t6e1laa8fn1gaa'
 

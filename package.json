@@ -8,6 +8,9 @@
     "compile-release-notes": "node scripts/compile-release-notes.mjs",
     "pack-compendium": "node scripts/pack-compendium.mjs",
     "unpack-compendium": "node scripts/unpack-compendium.mjs",
+    "unpack-to-db": "node scripts/unpack-to-db.mjs",
+    "pack-from-db": "node scripts/pack-from-db.mjs",
+    "query-db": "node scripts/query-db.mjs",
     "convert-yaml": "node scripts/conversion/convert-yaml.mjs",
     "convert-csv": "node scripts/csv-import/csv-to-yaml.mjs",
     "local-release": "npm run build && npm run compile-release-notes && npm run pack-compendium"
@@ -28,6 +31,8 @@
     "csv-parse": "^6.1.0",
     "eslint": "^9.15.0",
     "js-yaml": "^4.1.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
     "yaml": "^2.8.0"
   }
 }

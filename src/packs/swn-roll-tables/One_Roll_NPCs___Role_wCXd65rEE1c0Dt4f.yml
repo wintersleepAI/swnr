@@ -1,187 +1,114 @@
-description: ''
-displayRoll: true
-flags: {}
-folder: Td6GsHm0Ns7IXzwI
-formula: 1d8
-img: icons/svg/d20-grey.svg
+_id: wCXd65rEE1c0Dt4f
 name: One Roll NPCs - Role
-replacement: true
-results:
-  - _id: H44ppOUStcgFYbOI
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 1
-      - 1
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Role: Criminal, thug, thief, swindler'
-    name: ''
-    _key: '!tables.results!wCXd65rEE1c0Dt4f.H44ppOUStcgFYbOI'
-  - _id: 2bgwVio9pPSfpsrf
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 2
-      - 2
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Role: Menial, cleaner, retail worker, servant'
-    name: ''
-    _key: '!tables.results!wCXd65rEE1c0Dt4f.2bgwVio9pPSfpsrf'
-  - _id: jrrW0t9u4yMiQvHX
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 3
-      - 3
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Role: Unskilled heavy labor, porter, construction'
-    name: ''
-    _key: '!tables.results!wCXd65rEE1c0Dt4f.jrrW0t9u4yMiQvHX'
-  - _id: RJUaBX8iBzrayE5e
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 4
-      - 4
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Role: Skilled trade, electrician, mechanic, pilot'
-    name: ''
-    _key: '!tables.results!wCXd65rEE1c0Dt4f.RJUaBX8iBzrayE5e'
-  - _id: qq6fbXaRgfw8fQiu
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 5
-      - 5
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Role: Idea worker, programmer, writer'
-    name: ''
-    _key: '!tables.results!wCXd65rEE1c0Dt4f.qq6fbXaRgfw8fQiu'
-  - _id: 13McgyJO1KO2JJBN
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 6
-      - 6
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Role: Merchant, business owner, trader, banker'
-    name: ''
-    _key: '!tables.results!wCXd65rEE1c0Dt4f.13McgyJO1KO2JJBN'
-  - _id: 6XyT1XSvSdkD7GBt
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 7
-      - 7
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Role: Official, bureaucrat, courtier, clerk'
-    name: ''
-    _key: '!tables.results!wCXd65rEE1c0Dt4f.6XyT1XSvSdkD7GBt'
-  - _id: kaJuME5XLgLwNoa2
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 8
-      - 8
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Role: Military, soldier, enforcer, law officer'
-    name: ''
-    _key: '!tables.results!wCXd65rEE1c0Dt4f.kaJuME5XLgLwNoa2'
+type: null
+img: icons/svg/d20-grey.svg
+folder: Td6GsHm0Ns7IXzwI
+sort: 1100000
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757287485058
   modifiedTime: 1757287502706
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: wCXd65rEE1c0Dt4f
-sort: 1100000
+system: {}
+effects: []
+results:
+  - _id: H44ppOUStcgFYbOI
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!wCXd65rEE1c0Dt4f.H44ppOUStcgFYbOI'
+  - _id: 2bgwVio9pPSfpsrf
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!wCXd65rEE1c0Dt4f.2bgwVio9pPSfpsrf'
+  - _id: jrrW0t9u4yMiQvHX
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!wCXd65rEE1c0Dt4f.jrrW0t9u4yMiQvHX'
+  - _id: RJUaBX8iBzrayE5e
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!wCXd65rEE1c0Dt4f.RJUaBX8iBzrayE5e'
+  - _id: qq6fbXaRgfw8fQiu
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!wCXd65rEE1c0Dt4f.qq6fbXaRgfw8fQiu'
+  - _id: 13McgyJO1KO2JJBN
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!wCXd65rEE1c0Dt4f.13McgyJO1KO2JJBN'
+  - _id: 6XyT1XSvSdkD7GBt
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!wCXd65rEE1c0Dt4f.6XyT1XSvSdkD7GBt'
+  - _id: kaJuME5XLgLwNoa2
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!wCXd65rEE1c0Dt4f.kaJuME5XLgLwNoa2'
 _key: '!tables!wCXd65rEE1c0Dt4f'
 

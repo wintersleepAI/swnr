@@ -1,7 +1,12 @@
+_id: tmcimva8by4z5hpl
 name: Impact Sump
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: mOJTfIBCxT4AY88p
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-telekinesis.Item.tmcimva8by4z5hpl
@@ -13,15 +18,7 @@ _stats:
   createdTime: 1757286860108
   modifiedTime: 1757286860108
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: tmcimva8by4z5hpl
 system:
-  description: >-
-    <p>The adept may Commit Effort for the day as an Instant action to negate a
-    single instance of physical damage. This ability is too taxing to be used
-    more than once per day, but as an Instant action, it can be triggered even
-    after damage is rolled.</p>
-  level: 2
-  source: telekInesIs
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -33,16 +30,16 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p>The adept may Commit Effort for the day as an Instant action to negate a
+    single instance of physical damage. This ability is too taxing to be used
+    more than once per day, but as an Instant action, it can be triggered even
+    after damage is rolled.</p>
   favorite: false
-  subType: psychic
+  level: 2
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: telekInesIs
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!tmcimva8by4z5hpl'
 

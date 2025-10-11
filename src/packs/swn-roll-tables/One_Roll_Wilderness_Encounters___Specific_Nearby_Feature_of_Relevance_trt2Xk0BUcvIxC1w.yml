@@ -1,438 +1,247 @@
-displayRoll: true
+_id: trt2Xk0BUcvIxC1w
+name: One Roll Wilderness Encounters - Specific Nearby Feature of Relevance
+type: null
+img: icons/svg/d20-grey.svg
+folder: Td6GsHm0Ns7IXzwI
+sort: 0
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags:
   core: {}
-folder: Td6GsHm0Ns7IXzwI
-formula: 1d20
-img: icons/svg/d20-grey.svg
-name: One Roll Wilderness Encounters - Specific Nearby Feature of Relevance
-replacement: true
-results:
-  - _id: BIjfbOZo0VlxPaGL
-    drawn: false
-    flags: {}
-    range:
-      - 1
-      - 1
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Overgrown homestead'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.BIjfbOZo0VlxPaGL'
-  - _id: MvOqv3g7UIl4RBfd
-    drawn: false
-    flags: {}
-    range:
-      - 2
-      - 2
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Stream prone to flash-flooding'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.MvOqv3g7UIl4RBfd'
-  - _id: E7NxSMbL1nv6Cvv8
-    drawn: false
-    flags: {}
-    range:
-      - 3
-      - 3
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: >-
-      Specific Nearby Feature of Relevance: Narrow bridge or beam over deep
-      cleft
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.E7NxSMbL1nv6Cvv8'
-  - _id: xZvZ8pDCxIxcpn5U
-    drawn: false
-    flags: {}
-    range:
-      - 4
-      - 4
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Box canyon with steep sides'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.xZvZ8pDCxIxcpn5U'
-  - _id: SBctmcdD1JInBKts
-    drawn: false
-    flags: {}
-    range:
-      - 5
-      - 5
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: >-
-      Specific Nearby Feature of Relevance: Unstable hillside that slides if
-      disturbed
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.SBctmcdD1JInBKts'
-  - _id: azmnf0Qo910uLNY5
-    drawn: false
-    flags: {}
-    range:
-      - 6
-      - 6
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Long-lost crash site of a gravflyer'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.azmnf0Qo910uLNY5'
-  - _id: 2Oy9Epm9kC634AEZ
-    drawn: false
-    flags: {}
-    range:
-      - 7
-      - 7
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Once-inhabited cave or tunnel'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.2Oy9Epm9kC634AEZ'
-  - _id: asiWIRnujpFmANqL
-    drawn: false
-    flags: {}
-    range:
-      - 8
-      - 8
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Steep and dangerous cliff'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.asiWIRnujpFmANqL'
-  - _id: z0VbQ9D62dph4iLR
-    drawn: false
-    flags: {}
-    range:
-      - 9
-      - 9
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Quicksand-laden swamp or dust pit'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.z0VbQ9D62dph4iLR'
-  - _id: ZGSpFZ1iFKCgkeuZ
-    drawn: false
-    flags: {}
-    range:
-      - 10
-      - 10
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Ruins of a ghost town or lost hamlet'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.ZGSpFZ1iFKCgkeuZ'
-  - _id: NiXc7cy4bPPLTURr
-    drawn: false
-    flags: {}
-    range:
-      - 11
-      - 11
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Hunting cabin with necessities'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.NiXc7cy4bPPLTURr'
-  - _id: sQbwXOhgTTazuQpm
-    drawn: false
-    flags: {}
-    range:
-      - 12
-      - 12
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: >-
-      Specific Nearby Feature of Relevance: Ill-tended graveyard of a lost
-      family stead
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.sQbwXOhgTTazuQpm'
-  - _id: GCbcekBVuHthwwca
-    drawn: false
-    flags: {}
-    range:
-      - 13
-      - 13
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Narrow pass that’s easily blocked'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.GCbcekBVuHthwwca'
-  - _id: ZDcTEnT5qXCoXEjL
-    drawn: false
-    flags: {}
-    range:
-      - 14
-      - 14
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Dilapidated resort building'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.ZDcTEnT5qXCoXEjL'
-  - _id: 91xuEY0LzxzjUSwO
-    drawn: false
-    flags: {}
-    range:
-      - 15
-      - 15
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Remote government monitoring outpost'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.91xuEY0LzxzjUSwO'
-  - _id: SzpQMlncyILEnkjz
-    drawn: false
-    flags: {}
-    range:
-      - 16
-      - 16
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: >-
-      Specific Nearby Feature of Relevance: Illicit substance farm or processing
-      center
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.SzpQMlncyILEnkjz'
-  - _id: 3WHxUxVIvqtOWPO4
-    drawn: false
-    flags: {}
-    range:
-      - 17
-      - 17
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Old and forgotten battleground'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.3WHxUxVIvqtOWPO4'
-  - _id: yuFWgg0LZo7KTwa5
-    drawn: false
-    flags: {}
-    range:
-      - 18
-      - 18
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Zone overrun by dangerous plants'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.yuFWgg0LZo7KTwa5'
-  - _id: RVlamk53Uz9frlFl
-    drawn: false
-    flags: {}
-    range:
-      - 19
-      - 19
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: >-
-      Specific Nearby Feature of Relevance: Thick growth that lights up at a
-      spark
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.RVlamk53Uz9frlFl'
-  - _id: owE2S0RlEdB3S9m8
-    drawn: false
-    flags: {}
-    range:
-      - 20
-      - 20
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Specific Nearby Feature of Relevance: Abandoned vehicle'
-    name: ''
-    _key: '!tables.results!trt2Xk0BUcvIxC1w.owE2S0RlEdB3S9m8'
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757287525448
   modifiedTime: 1757287525448
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-description: ''
-_id: trt2Xk0BUcvIxC1w
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: BIjfbOZo0VlxPaGL
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.BIjfbOZo0VlxPaGL'
+  - _id: MvOqv3g7UIl4RBfd
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.MvOqv3g7UIl4RBfd'
+  - _id: E7NxSMbL1nv6Cvv8
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.E7NxSMbL1nv6Cvv8'
+  - _id: xZvZ8pDCxIxcpn5U
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.xZvZ8pDCxIxcpn5U'
+  - _id: SBctmcdD1JInBKts
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.SBctmcdD1JInBKts'
+  - _id: azmnf0Qo910uLNY5
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.azmnf0Qo910uLNY5'
+  - _id: 2Oy9Epm9kC634AEZ
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.2Oy9Epm9kC634AEZ'
+  - _id: asiWIRnujpFmANqL
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.asiWIRnujpFmANqL'
+  - _id: z0VbQ9D62dph4iLR
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.z0VbQ9D62dph4iLR'
+  - _id: ZGSpFZ1iFKCgkeuZ
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.ZGSpFZ1iFKCgkeuZ'
+  - _id: NiXc7cy4bPPLTURr
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.NiXc7cy4bPPLTURr'
+  - _id: sQbwXOhgTTazuQpm
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.sQbwXOhgTTazuQpm'
+  - _id: GCbcekBVuHthwwca
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 13
+      - 13
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.GCbcekBVuHthwwca'
+  - _id: ZDcTEnT5qXCoXEjL
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 14
+      - 14
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.ZDcTEnT5qXCoXEjL'
+  - _id: 91xuEY0LzxzjUSwO
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 15
+      - 15
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.91xuEY0LzxzjUSwO'
+  - _id: SzpQMlncyILEnkjz
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 16
+      - 16
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.SzpQMlncyILEnkjz'
+  - _id: 3WHxUxVIvqtOWPO4
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 17
+      - 17
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.3WHxUxVIvqtOWPO4'
+  - _id: yuFWgg0LZo7KTwa5
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 18
+      - 18
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.yuFWgg0LZo7KTwa5'
+  - _id: RVlamk53Uz9frlFl
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 19
+      - 19
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.RVlamk53Uz9frlFl'
+  - _id: owE2S0RlEdB3S9m8
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 20
+      - 20
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!trt2Xk0BUcvIxC1w.owE2S0RlEdB3S9m8'
 _key: '!tables!trt2Xk0BUcvIxC1w'
 

@@ -1,7 +1,12 @@
+_id: KjYYGhUuklxJdcXB
 name: Telescopic Optics
 type: shipFitting
 img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
 folder: 4ctWevVXyy54aHh0
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.647zk2t2cxm70i51
@@ -14,29 +19,24 @@ _stats:
   modifiedTime: 1754266949107
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  broken: false
   cost: 0
+  costMultiplier: false
   description: >-
     The drone can focus on objects up to one kilometer away with a visual acuity
     sufficient to read a newspaper. Integral low-light sensors allow it to see
     in all but total darkness.
-  mass: 1
-  type: drone
+  destroyed: false
+  effect: ''
   favorite: false
-  tl: 4
-  power: 1
-  costMultiplier: false
-  powerMultiplier: false
+  juryRigged: false
+  mass: 1
   massMultiplier: false
   minClass: fighter
-  broken: false
-  destroyed: false
-  juryRigged: false
-  effect: ''
+  power: 1
+  powerMultiplier: false
+  tl: 4
+  type: drone
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: KjYYGhUuklxJdcXB
-sort: 0
 _key: '!items!KjYYGhUuklxJdcXB'
 

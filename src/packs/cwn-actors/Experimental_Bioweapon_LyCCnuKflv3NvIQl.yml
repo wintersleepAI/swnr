@@ -1,166 +1,96 @@
+_id: LyCCnuKflv3NvIQl
 name: Experimental Bioweapon
 type: npc
 img: icons/svg/mystery-man.svg
+folder: 1MnMOlCpFjrZIhXu
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.LyCCnuKflv3NvIQl
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
-  health:
-    value: 50
-    max: 50
+  ab: 1
+  access:
+    max: 1
+    value: 1
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 3
+  baseAc: 13
+  baseSoakTotal:
+    max: 0
+    value: 0
   biography: >-
     <p>A bleeding-edge example of cybernetic overreach, attack animals of this
     grade are found only in corporate black sites or experimental zones. Most
     are insanely aggressive and all are studded with cybernetic fangs,
     monomolecular claws, bladed tentacles, and countless other implements of
     bodily ruin. They attack three times with each Main action.</p>
-  species: ''
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 9
-  baseAc: 13
-  meleeAc: 13
-  ab: 1
-  meleeAb: 12
-  systemStrain:
-    value: 0
-    permanent: 0
-  speed: 20
   cyberdecks: []
+  faction: ''
+  health:
+    max: 50
+    value: 50
   health_max_modified: 0
-  armorType: street
-  skillBonus: 4
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 3
   hitDice: 8d8
-  saves: 11
+  homeworld: ''
+  meleeAb: 12
+  meleeAc: 13
   moralScore: 12
   reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
+  saves: 11
+  skillBonus: 4
+  species: ''
+  speed: 20
+  systemStrain:
+    permanent: 0
     value: 0
-    max: 0
-  faction: ''
-  homeworld: ''
-  pools: {}
+  traumaTarget: 9
   tweak:
-    showCyberware: true
-    showPsychic: true
-    showArts: false
-    showSpells: false
     showAdept: false
+    showArts: false
+    showCyberware: true
     showMutation: false
     showPoolsInHeader: true
     showPoolsInPowers: false
-prototypeToken:
-  name: Experimental Bioweapon
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: icons/svg/mystery-man.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
+    showPsychic: true
+    showSpells: false
+effects: []
 items:
-  - name: Body Weaponry
+  - _id: IDxvsHhARzj9JiQO
+    name: Body Weaponry
     type: weapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-weapons.Item.5sqaxpm7qmvhbbke
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: IDxvsHhARzj9JiQO
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 10
         suppress: false
         type: none
         value: 10
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 25000
       damage: 2d6+8
       description: >-
@@ -171,91 +101,63 @@ items:
         Anyone who sees or touches their arms can detect signs of the cyber,
         however.
       encumbrance: 0
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 0
         normal: 0
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 8
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: dex
       trauma:
         die: 1d10
         rating: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!LyCCnuKflv3NvIQl.IDxvsHhARzj9JiQO'
-  - name: Hard To Kill
+  - _id: KU8kBi9DfwqcYcI1
+    name: Hard To Kill
     type: feature
     img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-edges.Item.7hvwwmidep4132l0
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: KU8kBi9DfwqcYcI1
     system:
       description: >-
         Instead of rolling 1d6 per level for your hit points, you roll 1d6+2.
         Your base Trauma Target increases by +1, turning the base 6 into 7.
       favorite: false
       level: 0
-      type: edge
       poolsGranted: []
+      type: edge
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!LyCCnuKflv3NvIQl.KU8kBi9DfwqcYcI1'
-  - name: Veteran's Luck
+  - _id: Bb1GODPxyIhWM41p
+    name: Veteran's Luck
     type: feature
     img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-edges.Item.94fgmfw56y7l780i
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: Bb1GODPxyIhWM41p
     system:
       description: >-
         Once per scene, as an Instant action, trigger this ability to gain one
@@ -263,29 +165,13 @@ items:
         miss
       favorite: false
       level: 0
-      type: edge
       poolsGranted: []
+      type: edge
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!LyCCnuKflv3NvIQl.Bb1GODPxyIhWM41p'
-effects: []
-folder: 1MnMOlCpFjrZIhXu
-flags: {}
-_stats:
-  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.LyCCnuKflv3NvIQl
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.348'
-  systemId: swnr
-  systemVersion: 2.1.0-beta
-  createdTime: 1758737583614
-  modifiedTime: 1758737583614
-  lastModifiedBy: lKC5x4Yf023Bizof
-_id: LyCCnuKflv3NvIQl
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
 _key: '!actors!LyCCnuKflv3NvIQl'
 

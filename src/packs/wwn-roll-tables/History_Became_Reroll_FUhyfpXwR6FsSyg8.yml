@@ -1,196 +1,12 @@
 _id: FUhyfpXwR6FsSyg8
 name: History-Became-Reroll
+type: null
 img: icons/svg/d20-grey.svg
-description: What Became of the Original Inhabitants?
-results:
-  - _id: jOF5zB6Y8jrQAkhu
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: There were no other humans living here
-    name: ''
-    _key: '!tables.results!FUhyfpXwR6FsSyg8.jOF5zB6Y8jrQAkhu'
-  - _id: 9Dd2dLzuX83HRYIK
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They were wiped out in warfare
-    name: ''
-    _key: '!tables.results!FUhyfpXwR6FsSyg8.9Dd2dLzuX83HRYIK'
-  - _id: gqfsdQFYs7EJ0J9u
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They were utterly assimilated
-    name: ''
-    _key: '!tables.results!FUhyfpXwR6FsSyg8.gqfsdQFYs7EJ0J9u'
-  - _id: oiwEm2tws0qisyus
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They were driven into exile
-    name: ''
-    _key: '!tables.results!FUhyfpXwR6FsSyg8.oiwEm2tws0qisyus'
-  - _id: NuLciHQaw6JdNM1T
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They became the ruling class
-    name: ''
-    _key: '!tables.results!FUhyfpXwR6FsSyg8.NuLciHQaw6JdNM1T'
-  - _id: 74Qr3P6EcPC4GSyh
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They became an oppressed underclass
-    name: ''
-    _key: '!tables.results!FUhyfpXwR6FsSyg8.74Qr3P6EcPC4GSyh'
-  - _id: TLxkhYSYKfqjIknA
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They were partially assimilated
-    name: ''
-    _key: '!tables.results!FUhyfpXwR6FsSyg8.TLxkhYSYKfqjIknA'
-  - _id: BmIR5mkC2W1xlZqB
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They retained small areas of self-rule
-    name: ''
-    _key: '!tables.results!FUhyfpXwR6FsSyg8.BmIR5mkC2W1xlZqB'
-formula: 1d8
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   better-rolltables:
     table-type: better
@@ -205,9 +21,8 @@ _stats:
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results: []
 _key: '!tables!FUhyfpXwR6FsSyg8'
 

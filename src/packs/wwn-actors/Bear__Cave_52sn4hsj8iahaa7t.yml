@@ -1,257 +1,147 @@
+_id: 52sn4hsj8iahaa7t
 name: Bear, Cave
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
-system:
-  ab: 6
-  armorType: street
-  attacks:
-    damage: d6
-    bonusDamage: 0
-    number: 0
-  baseAc: 14
-  hitDice: 7
-  moralScore: 9
-  saves: 12
-  skillBonus: 0
-  speed: 40
-  biography: >-
-    Ferocious, 15' tall grizzly bears found in caves and Lost World settings.
-    Omnivorous, but prefer meat, including humans.
-  species: monster
-_id: 52sn4hsj8iahaa7t
+ownership: {}
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754277456531
   modifiedTime: 1754277456531
   lastModifiedBy: null
   exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+system:
+  ab: 6
+  armorType: street
+  attacks:
+    bonusDamage: 0
+    damage: d6
+    number: 0
+  baseAc: 14
+  biography: >-
+    Ferocious, 15' tall grizzly bears found in caves and Lost World settings.
+    Omnivorous, but prefer meat, including humans.
+  hitDice: 7
+  moralScore: 9
+  saves: 12
+  skillBonus: 0
+  species: monster
+  speed: 40
 effects: []
-prototypeToken:
-  name: Bear, Cave
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/animal-icons/bear-head.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Claw
-    type: weapon
-    system:
-      description: >-
-        Bear hug: If a victim is hit by both paws in the same round, the bear
-        hugs for an extra 2d8 automatic damage.
-      cost: 0
-      damage: 1d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: zxpojuvv6ha2mvol
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!52sn4hsj8iahaa7t.zxpojuvv6ha2mvol'
-  - name: Bite
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 2d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 3
-        ac: 18
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: 67275226i2wnwgr2
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!52sn4hsj8iahaa7t.67275226i2wnwgr2'
-  - name: Bear Hug
+  - _id: kae2lvxwaxnb4zww
+    name: Bear Hug
     type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
     system:
+      cost: 0
       description: >-
         If a victim is hit by both paws in the same round, the bear hugs for an
         extra 2d8 automatic damage.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: kae2lvxwaxnb4zww
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!52sn4hsj8iahaa7t.kae2lvxwaxnb4zww'
-  - name: Sense of Smell
-    type: item
+  - _id: 67275226i2wnwgr2
+    name: Bite
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
     system:
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 0
+      damage: 2d6
+      description: ''
+      encumbrance: 1
+      isTwoHanded: false
+      quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 18
+        dmg: 3
+      skill: punch
+      stat: str
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!52sn4hsj8iahaa7t.67275226i2wnwgr2'
+  - _id: zxpojuvv6ha2mvol
+    name: Claw
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
+    system:
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 0
+      damage: 1d8
+      description: >-
+        Bear hug: If a victim is hit by both paws in the same round, the bear
+        hugs for an extra 2d8 automatic damage.
+      encumbrance: 1
+      isTwoHanded: false
+      quality: stock
+      range:
+        max: 0
+        normal: 0
+      shock:
+        ac: 15
+        dmg: 2
+      skill: punch
+      stat: str
+      tl: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!52sn4hsj8iahaa7t.zxpojuvv6ha2mvol'
+  - _id: 844yfnjuwiqm5n2f
+    name: Sense of Smell
+    type: item
+    img: icons/svg/item-bag.svg
+    sort: 0
+    system:
+      cost: 0
       description: >-
         Poor eyesight, but keen sense of smell. When hungry, will follow a track
         of blood by scent.
-      cost: 0
-      quantity: 1
       encumbrance: 1
       location: stowed
       quality: stock
+      quantity: 1
       tl: 3
-    _id: 844yfnjuwiqm5n2f
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!52sn4hsj8iahaa7t.844yfnjuwiqm5n2f'
 _key: '!actors!52sn4hsj8iahaa7t'
 

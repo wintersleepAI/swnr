@@ -1,226 +1,135 @@
 _id: ZCHmVjjO4Qi2Rf1h
 name: Elixir Form
-flags: {}
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - _id: GZ3xdA1DONQGlXBT
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Bottled vapor
-    name: ''
-    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.GZ3xdA1DONQGlXBT'
-  - _id: 61UtD1gXa05gsqyG
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Breakable token
-    name: ''
-    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.61UtD1gXa05gsqyG'
-  - _id: yJQFxzLHj4JPoPCv
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Incense stick
-    name: ''
-    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.yJQFxzLHj4JPoPCv'
-  - _id: 13GaFHvk825ggPs0
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Inhaler
-    name: ''
-    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.13GaFHvk825ggPs0'
-  - _id: vEApwd4K7sZFy0YF
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Injector
-    name: ''
-    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.vEApwd4K7sZFy0YF'
-  - _id: zvYOIwrta8cLehka
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Inked charm
-    name: ''
-    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.zvYOIwrta8cLehka'
-  - _id: HqnuX6CKZDg2z8D0
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Jarred salve
-    name: ''
-    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.HqnuX6CKZDg2z8D0'
-  - _id: ZETDkft6YAcE3w7V
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Liquid potion
-    name: ''
-    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.ZETDkft6YAcE3w7V'
-  - _id: G1zrTA3gSoWMR7yu
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Pill
-    name: ''
-    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.G1zrTA3gSoWMR7yu'
-  - _id: GKq99mOoxpmBF24L
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Preserved edible
-    name: ''
-    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.GKq99mOoxpmBF24L'
-formula: 1d10
-replacement: true
-displayRoll: true
+folder: CIqAOfFTmfBqu0S8
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-magic-tables.RollTable.ZCHmVjjO4Qi2Rf1h
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271918725
   modifiedTime: 1754271918725
   lastModifiedBy: lKC5x4Yf023Bizof
-folder: CIqAOfFTmfBqu0S8
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: GZ3xdA1DONQGlXBT
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.GZ3xdA1DONQGlXBT'
+  - _id: 61UtD1gXa05gsqyG
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.61UtD1gXa05gsqyG'
+  - _id: yJQFxzLHj4JPoPCv
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.yJQFxzLHj4JPoPCv'
+  - _id: 13GaFHvk825ggPs0
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.13GaFHvk825ggPs0'
+  - _id: vEApwd4K7sZFy0YF
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.vEApwd4K7sZFy0YF'
+  - _id: zvYOIwrta8cLehka
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.zvYOIwrta8cLehka'
+  - _id: HqnuX6CKZDg2z8D0
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.HqnuX6CKZDg2z8D0'
+  - _id: ZETDkft6YAcE3w7V
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.ZETDkft6YAcE3w7V'
+  - _id: G1zrTA3gSoWMR7yu
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.G1zrTA3gSoWMR7yu'
+  - _id: GKq99mOoxpmBF24L
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZCHmVjjO4Qi2Rf1h.GKq99mOoxpmBF24L'
 _key: '!tables!ZCHmVjjO4Qi2Rf1h'
 

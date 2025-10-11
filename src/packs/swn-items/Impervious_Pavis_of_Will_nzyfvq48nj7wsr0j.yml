@@ -1,7 +1,12 @@
+_id: nzyfvq48nj7wsr0j
 name: Impervious Pavis of Will
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: b1y9xejewpVMRdey
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-metapsionics.Item.nzyfvq48nj7wsr0j
@@ -13,19 +18,7 @@ _stats:
   createdTime: 1757286855552
   modifiedTime: 1757286855552
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: nzyfvq48nj7wsr0j
 system:
-  description: >-
-    <p>When this technique is learned, the metapsion must choose a discipline.
-    They then become entirely immune to unwanted powers from that discipline;
-    they and their abilities are simply not valid targets for purposes of that
-    discipline’s powers unless the adept chooses to be affected. By Committing
-    Effort for the day as an Instant action, they can extend this immunity for a
-    scene to all allies within 50 meters. This technique may be learned more
-    than once, and any shared protection applies to all disciplines negated by
-    the adept.</p>
-  level: 4
-  source: metapsionics
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -37,16 +30,20 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p>When this technique is learned, the metapsion must choose a discipline.
+    They then become entirely immune to unwanted powers from that discipline;
+    they and their abilities are simply not valid targets for purposes of that
+    discipline’s powers unless the adept chooses to be affected. By Committing
+    Effort for the day as an Instant action, they can extend this immunity for a
+    scene to all allies within 50 meters. This technique may be learned more
+    than once, and any shared protection applies to all disciplines negated by
+    the adept.</p>
   favorite: false
-  subType: psychic
+  level: 4
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: metapsionics
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!nzyfvq48nj7wsr0j'
 

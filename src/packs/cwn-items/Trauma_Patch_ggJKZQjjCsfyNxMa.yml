@@ -1,7 +1,12 @@
+_id: ggJKZQjjCsfyNxMa
 name: Trauma Patch
 type: item
-img: systems/swnr/assets/icons/game-icons.net/item-icons/medicines.svg
+img: icons/svg/item-bag.svg
 folder: hr4MNY8tsuBKFcr9
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-pharmaceuticals.Item.smw17tetxsxszr7a
@@ -14,10 +19,16 @@ _stats:
   modifiedTime: 1754266729997
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
-  cost: 50
   bundle:
     amount: 3
     bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
+  cost: 50
   description: >-
     A theoretically foolproof cocktail of coagulants, stimulants, and
     painkillers, a trauma patch can be applied to a Mortally Wounded ally to
@@ -27,34 +38,22 @@ system:
     cannot revive victims downed by poisons or diseases, or those dismembered by
     explosives or heavy weapons.
   encumbrance: 1
-  noEncReadied: false
   favorite: false
-  quantity: 1
-  tl: null
   location: stowed
+  noEncReadied: false
   quality: stock
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
+  quantity: 1
   roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
     diceNum: 1
     diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
   uses:
+    ammo: none
+    consumable: none
+    emptyQuantity: 0
+    keepEmpty: true
     max: 1
     value: 1
-    emptyQuantity: 0
-    consumable: none
-    ammo: none
-    keepEmpty: true
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: ggJKZQjjCsfyNxMa
-sort: 0
 _key: '!items!ggJKZQjjCsfyNxMa'
 

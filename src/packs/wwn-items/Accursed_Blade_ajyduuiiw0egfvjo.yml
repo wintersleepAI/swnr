@@ -1,35 +1,12 @@
+_id: ajyduuiiw0egfvjo
 name: Accursed Blade
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    As an On Turn action, manifest an occult melee weapon as a one-handed 1d8
-    weapon or a two-handed 2d6 weapon. Both add your Magic skill to the damage
-    roll, have a Shock rating of 2/15, and use Magic as the attack skill and the
-    best of Str, Dex, Int, or Cha as its modifying attribute.
-    @UUID[Compendium.wwn.adventuring-gear.Item.7f0P2HCxZ89Bwovv]{Accursed Blade
-    (1H)} @UUID[Compendium.wwn.adventuring-gear.Item.Cgf0J8XDila3E2l6]{Accursed
-    Blade (2H)}
-  favorite: false
-  subType: art
-  source: Accursed
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Accursed
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: ajyduuiiw0egfvjo
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -40,10 +17,30 @@ _stats:
   modifiedTime: 1754277456822
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Accursed
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    As an On Turn action, manifest an occult melee weapon as a one-handed 1d8
+    weapon or a two-handed 2d6 weapon. Both add your Magic skill to the damage
+    roll, have a Shock rating of 2/15, and use Magic as the attack skill and the
+    best of Str, Dex, Int, or Cha as its modifying attribute.
+    @UUID[Compendium.wwn.adventuring-gear.Item.7f0P2HCxZ89Bwovv]{Accursed Blade
+    (1H)} @UUID[Compendium.wwn.adventuring-gear.Item.Cgf0J8XDila3E2l6]{Accursed
+    Blade (2H)}
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Accursed
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!ajyduuiiw0egfvjo'
 

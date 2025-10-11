@@ -1,171 +1,93 @@
-description: >-
-  <p>Building appropriate wilderness encounters will vary greatly with the
-  planet in question, but the tables below assume that the wilderness is on an
-  inhabited world with some vague analogs to Terran terrain and vegetation. If
-  the world is devoid of human inhabitants, replace the features with alien
-  relics or the remnants of scouts or lost colonies. The tables below provide a
-  suggested time of day and initial distance for the encounter, but these
-  baselines will vary depending on the choices and capabilities of the PCs. Some
-  encounters are unlikely to occur at night, unless the parties involved are
-  traveling or otherwise active despite the dark. Suggestions are given for
-  likely-hostile and likely-friendly creatures, but a reaction roll will
-  influence attitudes greatly.</p>
-displayRoll: true
+_id: 7lWu90rXvRpLfiiv
+name: One Roll Wilderness Encounters
+type: null
+img: icons/svg/d20-grey.svg
+folder: WW9xzm2TKZuzaii6
+sort: 0
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags:
   core: {}
-folder: WW9xzm2TKZuzaii6
-formula: 1d1
-img: icons/svg/d20-grey.svg
-name: One Roll Wilderness Encounters
-replacement: true
-results:
-  - _id: HKHQFNWLC2EG3eRf
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-grey.svg
-    range:
-      - 1
-      - 1
-    type: document
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757290606140
-    name: One Roll Wilderness Encounters - Weather and Lighting
-    documentUuid: Compendium.swnr.swn-roll-tables.RollTable.skSuKUYZq8ybmAkR
-    description: ''
-    _key: '!tables.results!7lWu90rXvRpLfiiv.HKHQFNWLC2EG3eRf'
-  - _id: RopoQoPZjEMVCeZN
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-grey.svg
-    range:
-      - 1
-      - 1
-    type: document
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757290619665
-    name: One Roll Wilderness Encounters - Basic Nature of the Encounter
-    documentUuid: Compendium.swnr.swn-roll-tables.RollTable.Bsbre0AYQLVVE82z
-    description: ''
-    _key: '!tables.results!7lWu90rXvRpLfiiv.RopoQoPZjEMVCeZN'
-  - _id: uJvll9c0EuT6liV9
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-grey.svg
-    range:
-      - 1
-      - 1
-    type: document
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757290626484
-    name: One Roll Wilderness Encounters - Types of Friendly Creatures
-    documentUuid: Compendium.swnr.swn-roll-tables.RollTable.FqVNtpn95VrKXFxv
-    description: ''
-    _key: '!tables.results!7lWu90rXvRpLfiiv.uJvll9c0EuT6liV9'
-  - _id: SjK7oDdnAhFT8D09
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-grey.svg
-    range:
-      - 1
-      - 1
-    type: document
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757290632503
-    name: One Roll Wilderness Encounters - Initial Encounter Range
-    documentUuid: Compendium.swnr.swn-roll-tables.RollTable.lpxk0y34M4dAvM67
-    description: ''
-    _key: '!tables.results!7lWu90rXvRpLfiiv.SjK7oDdnAhFT8D09'
-  - _id: lNkwHciKCDIzCOXu
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-grey.svg
-    range:
-      - 1
-      - 1
-    type: document
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757290638552
-    name: One Roll Wilderness Encounters - Types of Hostile Creatures
-    documentUuid: Compendium.swnr.swn-roll-tables.RollTable.CAa2iJBLa9wAXglP
-    description: ''
-    _key: '!tables.results!7lWu90rXvRpLfiiv.lNkwHciKCDIzCOXu'
-  - _id: eAdknTQhi0wd2wXm
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-grey.svg
-    range:
-      - 1
-      - 1
-    type: document
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757290666912
-    name: One Roll Wilderness Encounters - Specific Nearby Feature of Relevance
-    documentUuid: Compendium.swnr.swn-roll-tables.RollTable.trt2Xk0BUcvIxC1w
-    description: ''
-    _key: '!tables.results!7lWu90rXvRpLfiiv.eAdknTQhi0wd2wXm'
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757287397572
   modifiedTime: 1757290603221
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: 7lWu90rXvRpLfiiv
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: HKHQFNWLC2EG3eRf
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!7lWu90rXvRpLfiiv.HKHQFNWLC2EG3eRf'
+  - _id: RopoQoPZjEMVCeZN
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!7lWu90rXvRpLfiiv.RopoQoPZjEMVCeZN'
+  - _id: SjK7oDdnAhFT8D09
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!7lWu90rXvRpLfiiv.SjK7oDdnAhFT8D09'
+  - _id: eAdknTQhi0wd2wXm
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!7lWu90rXvRpLfiiv.eAdknTQhi0wd2wXm'
+  - _id: lNkwHciKCDIzCOXu
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!7lWu90rXvRpLfiiv.lNkwHciKCDIzCOXu'
+  - _id: uJvll9c0EuT6liV9
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!7lWu90rXvRpLfiiv.uJvll9c0EuT6liV9'
 _key: '!tables!7lWu90rXvRpLfiiv'
 

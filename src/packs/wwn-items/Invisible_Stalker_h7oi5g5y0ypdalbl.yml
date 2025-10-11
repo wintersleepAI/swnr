@@ -1,7 +1,36 @@
+_id: h7oi5g5y0ypdalbl
 name: Invisible Stalker
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 4500000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457057
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     Duration: One mission Range: Summoned to caster's presence An invisible
     stalker (see below) is summoned to the caster's presence and magically bound
@@ -17,46 +46,14 @@ system:
     +7, MV 120' (40'), SV 11, ML 12, AL Neutral, XP 1,200 ▶ Tracking: Without
     fault. ▶ Surprise: On a 1&ndash;5, unless target can detect invisibility. ▶
     If killed: Returns to plane of origin.
+  duration: One mission
   favorite: false
-  subType: spell
-  source: Mage
   level: 6
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: One mission
-  save: None
   range: Caster's presence
-  skill: null
-_id: h7oi5g5y0ypdalbl
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457057
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!h7oi5g5y0ypdalbl'
 

@@ -1,6 +1,12 @@
+_id: 9mxvw4cu1unqmzj9
 name: Demo Charge
 type: weapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
 folder: wyMNmbl7yA6k0fK4
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.heavy.Item.9mxvw4cu1unqmzj9
@@ -12,7 +18,6 @@ _stats:
   createdTime: 1757286675498
   modifiedTime: 1757294630450
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 9mxvw4cu1unqmzj9
 system:
   ab: 0
   ammo:
@@ -22,7 +27,14 @@ system:
     suppress: false
     type: special
     value: 0
-    current: null
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 250
   damage: 3d10
   description: >-
@@ -36,47 +48,33 @@ system:
     shape the charge so it directs the blast in only one direction, sparing all
     but two meters of the rest.
   encumbrance: 1
+  favorite: false
+  isMelee: false
+  isNonLethal: false
+  isTwoHanded: false
   location: other
+  noEncReadied: false
   quality: stock
+  quantity: 1
   range:
     max: 40
     normal: 20
+  remember:
+    burst: false
+    isNonLethal: false
+    modifier: 0
+    use: false
   secondStat: none
   shock:
     ac: 15
     dmg: 0
   skill: ''
-  stat: str
-  tl: 3
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
   skillBoostsDamage: false
   skillBoostsShock: false
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
+  stat: str
+  tl: 3
   trauma:
     die: 1d6
-  isTwoHanded: false
-  isNonLethal: false
-  isMelee: false
 effects: []
-img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!9mxvw4cu1unqmzj9'
 

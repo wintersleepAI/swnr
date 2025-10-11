@@ -1,7 +1,12 @@
+_id: msmf469y0qcli24d
 name: Burdened Apportation
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: B7XvnONYELdrJlLA
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-teleportation.Item.msmf469y0qcli24d
@@ -13,21 +18,7 @@ _stats:
   createdTime: 1757286862454
   modifiedTime: 1757286862454
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: msmf469y0qcli24d
 system:
-  description: >-
-    <p>The psychic can carry willing companions with them when using
-    <em>Personal Apportation</em>. Up to three human-sized companions and their
-    man-portable gear may be carried per skill level in Teleportation. Allies
-    must be within 3 meters of the teleporter to be carried along. Ordinary
-    inert matter cannot be carried along unless the psychic is touching it or
-    it’s being carried by an ally affected by this power. If carrying inert
-    mass, up to two hundred kilos of objects can be carried per
-    skill</p><p>Level. Using this technique increases the Effort cost of
-    <em>Personal Apportation</em>, requiring that an extra point of Effort be
-    Committed for the day.</p>
-  level: 2
-  source: teleportation
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -39,16 +30,22 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p>The psychic can carry willing companions with them when using
+    <em>Personal Apportation</em>. Up to three human-sized companions and their
+    man-portable gear may be carried per skill level in Teleportation. Allies
+    must be within 3 meters of the teleporter to be carried along. Ordinary
+    inert matter cannot be carried along unless the psychic is touching it or
+    it’s being carried by an ally affected by this power. If carrying inert
+    mass, up to two hundred kilos of objects can be carried per
+    skill</p><p>Level. Using this technique increases the Effort cost of
+    <em>Personal Apportation</em>, requiring that an extra point of Effort be
+    Committed for the day.</p>
   favorite: false
-  subType: psychic
+  level: 2
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: teleportation
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!msmf469y0qcli24d'
 

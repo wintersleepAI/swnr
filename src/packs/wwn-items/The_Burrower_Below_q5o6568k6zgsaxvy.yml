@@ -1,25 +1,23 @@
+_id: q5o6568k6zgsaxvy
 name: The Burrower Below
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456907
+  modifiedTime: 1754277456907
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    A passage is carved through natural stone or earth, forming a tunnel up to
-    twenty feet long per caster level and up to ten feet wide and tall. The
-    caster can cause the earth to compress and pack itself so as to stabilize
-    the tunnel even in very sandy or burdened soil, or they can allow it to
-    collapse naturally if burdened by some large structure or unstable
-    surroundings. This spell can function against worked stone, but the length
-    of the tunnel is much shorter, being only two feet per level. Magical stone
-    or earth cannot be altered by this spell. The caster has basic control over
-    the direction and interior features of the tunnel, and can form stairs or
-    other simple structures within it.
-  favorite: false
-  subType: spell
-  source: Elementalist
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -33,26 +31,25 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    A passage is carved through natural stone or earth, forming a tunnel up to
+    twenty feet long per caster level and up to ten feet wide and tall. The
+    caster can cause the earth to compress and pack itself so as to stabilize
+    the tunnel even in very sandy or burdened soil, or they can allow it to
+    collapse naturally if burdened by some large structure or unstable
+    surroundings. This spell can function against worked stone, but the length
+    of the tunnel is much shorter, being only two feet per level. Magical stone
+    or earth cannot be altered by this spell. The caster has basic control over
+    the direction and interior features of the tunnel, and can form stairs or
+    other simple structures within it.
   duration: 20 ft. per level
-  save: None
+  favorite: false
+  level: 2
+  prepared: false
   range: Self
-  skill: null
-_id: q5o6568k6zgsaxvy
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456907
-  modifiedTime: 1754277456907
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: Elementalist
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!q5o6568k6zgsaxvy'
 

@@ -1,7 +1,12 @@
+_id: 3fisy4qqukvmjfbu
 name: Metamorph
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: VXwfMckwPSKXC4gD
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-biopsionics.Item.3fisy4qqukvmjfbu
@@ -13,8 +18,8 @@ _stats:
   createdTime: 1757286851234
   modifiedTime: 1757286851234
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 3fisy4qqukvmjfbu
 system:
+  consumptions: []
   description: >-
     <p>The biopsion can now shape their own or another willing target’s physical
     form as a Main Action, transforming a touched target into any humanoid form
@@ -29,19 +34,11 @@ system:
     for as long as the change is to be maintained. If applied to a target other
     than the psychic, the power automatically ends if the psychic gets more than
     one hundred kilometers away.</p>
-  level: 3
-  source: biopsionics
   favorite: false
-  subType: psychic
+  level: 3
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions: []
-  save: null
+  source: biopsionics
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!3fisy4qqukvmjfbu'
 

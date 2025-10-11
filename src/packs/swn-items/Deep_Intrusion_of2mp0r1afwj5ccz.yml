@@ -1,7 +1,12 @@
+_id: of2mp0r1afwj5ccz
 name: Deep Intrusion
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: B7XvnONYELdrJlLA
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-teleportation.Item.of2mp0r1afwj5ccz
@@ -13,19 +18,7 @@ _stats:
   createdTime: 1757286862454
   modifiedTime: 1757286862454
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: of2mp0r1afwj5ccz
 system:
-  description: >-
-    <p>The adept can use <em>Personal Apportation</em> to blind-teleport into a
-    building, structure, vehicle, or spaceship visible to them, including
-    spaceships close enough to engage in conventional ship-to-ship combat. They
-    intuitively seek out a space large enough to hold them and without immediate
-    environmental hazards, but cannot control their precise destination. Using
-    this technique in conjunction with <em>Personal Apportation</em> is very
-    draining to the psychic, and requires that they Commit an additional Effort
-    point for the day.</p>
-  level: 4
-  source: teleportation
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -37,16 +30,20 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p>The adept can use <em>Personal Apportation</em> to blind-teleport into a
+    building, structure, vehicle, or spaceship visible to them, including
+    spaceships close enough to engage in conventional ship-to-ship combat. They
+    intuitively seek out a space large enough to hold them and without immediate
+    environmental hazards, but cannot control their precise destination. Using
+    this technique in conjunction with <em>Personal Apportation</em> is very
+    draining to the psychic, and requires that they Commit an additional Effort
+    point for the day.</p>
   favorite: false
-  subType: psychic
+  level: 4
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: teleportation
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!of2mp0r1afwj5ccz'
 

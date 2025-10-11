@@ -1,9 +1,35 @@
-folder: Kjm25SBafLshNPI2
+_id: wrFlzDGOnsU8YVDO
 name: Vanguard Plate
 type: armor
-_id: wrFlzDGOnsU8YVDO
 img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+folder: Kjm25SBafLshNPI2
+sort: 0
+ownership:
+  default: 0
+  AjdlQlPXkJlcOy63: 3
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1753923607538
+  modifiedTime: 1753923607538
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  ac: 20
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
+  cost: 0
   description: >-
     <h3
     style="box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar)
@@ -46,52 +72,23 @@ system:
     emergency response accelerators cut in. Unfortunately, Vanguard plate has
     the same Type B energy cell requirement as an assault suit, presumably to
     ensure that stolen suits could not be easily fueled by rebels.</p>
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 2
-  cost: 0
-  tl: 5
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  ac: 20
-  shield: false
-  use: false
-  meleeAc: 20
-  soak:
-    value: 0
-    max: 0
   dr: 0
-  traumaDiePenalty: 3
-  isSubtle: false
+  encumbrance: 2
+  favorite: false
   isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
+  isSubtle: false
+  location: stowed
+  meleeAc: 20
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
+  soak:
+    max: 0
+    value: 0
+  tl: 5
+  traumaDiePenalty: 3
+  use: false
 effects: []
-sort: 0
-ownership:
-  default: 0
-  AjdlQlPXkJlcOy63: 3
-  lKC5x4Yf023Bizof: 3
-flags: {}
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1753923607538
-  modifiedTime: 1753923607538
-  lastModifiedBy: lKC5x4Yf023Bizof
 _key: '!items!wrFlzDGOnsU8YVDO'
 

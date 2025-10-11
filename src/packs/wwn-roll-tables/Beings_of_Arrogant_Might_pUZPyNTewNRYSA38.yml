@@ -1,147 +1,92 @@
+_id: pUZPyNTewNRYSA38
 name: Beings of Arrogant Might
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - _id: 5GjDZt9xMMURAIZI
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Sneer at the pitiful weaklings that oppose it
-    name: ''
-    _key: '!tables.results!pUZPyNTewNRYSA38.5GjDZt9xMMURAIZI'
-  - _id: CyPW3gXcImttlwaM
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Boast of its inevitable victory
-    name: ''
-    _key: '!tables.results!pUZPyNTewNRYSA38.CyPW3gXcImttlwaM'
-  - _id: sAR46NO32LY8qqfR
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Gratuitous use of a power in an unhelpful way
-    name: ''
-    _key: '!tables.results!pUZPyNTewNRYSA38.sAR46NO32LY8qqfR'
-  - _id: L0KnX26s339N3nKO
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Attack the last enemy to offend it somehow
-    name: ''
-    _key: '!tables.results!pUZPyNTewNRYSA38.L0KnX26s339N3nKO'
-  - _id: LKiKbw96tJqG67PB
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Urge on servitors, or demand surrender
-    name: ''
-    _key: '!tables.results!pUZPyNTewNRYSA38.LKiKbw96tJqG67PB'
-  - _id: QKIN8XED1mlXAKB3
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Taunt the foe as it takes a <b>Total Defense</b>
-    name: ''
-    _key: '!tables.results!pUZPyNTewNRYSA38.QKIN8XED1mlXAKB3'
-formula: 1d6
-replacement: true
-displayRoll: true
 folder: tCjobZPuAK5KxMZQ
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   core: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-instinct.RollTable.MLYsyBmxy0cDjUst
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272494042
   modifiedTime: 1754272494042
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: pUZPyNTewNRYSA38
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: 5GjDZt9xMMURAIZI
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!pUZPyNTewNRYSA38.5GjDZt9xMMURAIZI'
+  - _id: CyPW3gXcImttlwaM
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!pUZPyNTewNRYSA38.CyPW3gXcImttlwaM'
+  - _id: sAR46NO32LY8qqfR
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!pUZPyNTewNRYSA38.sAR46NO32LY8qqfR'
+  - _id: L0KnX26s339N3nKO
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!pUZPyNTewNRYSA38.L0KnX26s339N3nKO'
+  - _id: LKiKbw96tJqG67PB
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!pUZPyNTewNRYSA38.LKiKbw96tJqG67PB'
+  - _id: QKIN8XED1mlXAKB3
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!pUZPyNTewNRYSA38.QKIN8XED1mlXAKB3'
 _key: '!tables!pUZPyNTewNRYSA38'
 

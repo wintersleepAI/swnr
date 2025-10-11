@@ -1,58 +1,43 @@
+_id: HLpQ8HW9tKTV7kKO
 name: Corvette
 type: ship
 img: systems/swnr/assets/icons/spaceship.png
 folder: GhM4CuerK1TaUzk0
+sort: 150000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754269956877
   modifiedTime: 1754269958982
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
-  health:
-    max: 40
-    value: 40
   ac: 13
+  actionsTaken: []
+  amountOwed: 0
   armor:
     max: 10
     value: 10
-  speed: 2
-  power:
-    max: 15
-    value: 1
-  mass:
-    max: 15
-    value: 1
-  crew:
-    min: 10
-    max: 40
-    current: 10
-  lifeSupportDays:
-    value: 1
-    max: 1
   cargo:
-    value: 0
     max: 0
-  spikeDrive:
-    value: 2
-    max: 2
-  hardpoints:
-    value: 6
-    max: 6
+    value: 0
+  cargoCarried: []
   commandPoints: 5
-  npcCommandPoints: 5
-  crewSkillBonus: 2
-  shipClass: frigate
-  shipHullType: corvette
   cost: 5973000
-  maintenanceCost: 298000
-  operatingCost: 1314000
-  maintenanceMonths: 6
+  creditPool: 0
+  crew:
+    current: 10
+    max: 40
+    min: 10
+  crewMembers: []
+  crewSkillBonus: 2
   description: >-
     The usual ship of the line of most modestly-funded frontier navies, a
     corvette is a true warship, albeit of a minimal size. While it is unable to
@@ -68,313 +53,122 @@ system:
     missions. Against cruis- er-class warships, however, this corvette’s weapons
     have insufficient armor penetration to seriously threat- en such a major
     warship.
-  traumaTarget: 6
-  crewMembers: []
-  tl: 5
-  mods: ''
   fuel:
-    value: 1
     max: 1
-  amountOwed: 0
+    value: 1
+  hardpoints:
+    max: 6
+    value: 6
+  health:
+    max: 40
+    value: 40
+  lastMaintenance:
+    day: 0
+    month: 0
+    year: 0
+  lastPayment:
+    day: 0
+    month: 0
+    year: 0
+  lifeSupportDays:
+    max: 1
+    value: 1
+  maintenanceCost: 298000
+  maintenanceMonths: 6
+  mass:
+    max: 15
+    value: 1
+  mods: ''
+  npcCommandPoints: 5
+  operatingCost: 1314000
   paymentAmount: 0
   paymentMonths: 0
-  creditPool: 0
-  lastMaintenance:
-    year: 0
-    month: 0
-    day: 0
-  lastPayment:
-    year: 0
-    month: 0
-    day: 0
-  roles:
-    captain: null
-    bridge: null
-    engineering: null
-    gunner: null
-    comms: null
-  cargoCarried: []
-  actionsTaken: []
-  supportingDept: ''
+  power:
+    max: 15
+    value: 1
   roleOrder: []
+  shipClass: frigate
+  shipHullType: corvette
+  speed: 2
+  spikeDrive:
+    max: 2
+    value: 2
+  supportingDept: ''
+  tl: 5
+  traumaTarget: 6
 effects: []
-prototypeToken:
-  name: Corvette
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/spaceship.png
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
 items:
-  - name: Plasma Beam
-    type: shipWeapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/plasma-bolt.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    sort: 0
-    _id: 59vfzisiyj0bpivr
-    system:
-      broken: false
-      cost: 700000
-      costMultiplier: false
-      ab: 4
-      damage: 3d6
-      description: >-
-        With superior targeting and a smaller energy drain than a CPC, a plasma
-        beam sacrifices some armor penetration.
-      hardpoint: 2
-      mass: 2
-      massMultiplier: false
-      minClass: fighter
-      power: 5
-      powerMultiplier: false
-      qualities: AP 10
-      tl: 4
-      favorite: false
-      destroyed: false
-      juryRigged: false
-      type: ship
-      ammo:
-        type: none
-        max: 4
-        value: 4
-      trauma:
-        die: 1d6
-        vehicle: false
-      range:
-        normal: 1
-        max: 2
-      stat: ask
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!HLpQ8HW9tKTV7kKO.59vfzisiyj0bpivr'
-  - name: Plasma Beam
-    type: shipWeapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/plasma-bolt.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    sort: 0
-    _id: hcfus8w3n1pmu3t3
-    system:
-      broken: false
-      cost: 700000
-      costMultiplier: false
-      ab: 4
-      damage: 3d6
-      description: >-
-        With superior targeting and a smaller energy drain than a CPC, a plasma
-        beam sacrifices some armor penetration.
-      hardpoint: 2
-      mass: 2
-      massMultiplier: false
-      minClass: fighter
-      power: 5
-      powerMultiplier: false
-      qualities: AP 10
-      tl: 4
-      favorite: false
-      destroyed: false
-      juryRigged: false
-      type: ship
-      ammo:
-        type: none
-        max: 4
-        value: 4
-      trauma:
-        die: 1d6
-        vehicle: false
-      range:
-        normal: 1
-        max: 2
-      stat: ask
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!HLpQ8HW9tKTV7kKO.hcfus8w3n1pmu3t3'
-  - name: Hardened Polyceramic Overlay
-    type: shipDefense
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/bubble-field.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    sort: 0
-    _id: 7n9xr896u8t6u6sd
-    system:
-      broken: false
-      cost: 25000
-      costMultiplier: false
-      description: >-
-        A complex glazing process can harden the surface of a ship’s armor to
-        more effectively shed incoming attacks, decreasing the armor-piercing
-        quality of any hit by 5.
-      mass: 2
-      massMultiplier: false
-      minClass: fighter
-      power: 0
-      powerMultiplier: false
-      favorite: false
-      tl: 4
-      destroyed: false
-      juryRigged: false
-      type: ship
-      effect: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!HLpQ8HW9tKTV7kKO.7n9xr896u8t6u6sd'
-  - name: Spike Drive-2 upgrade
+  - _id: pz5u6vui4xc1t895
+    name: Armory
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/rocket-thruster.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
     sort: 0
-    _id: 73gvjp8lxauxin48
     system:
       broken: false
       cost: 10000
       costMultiplier: true
       description: >-
-        A ship can improve its standard-issue drive-1 spike drive with
-        additional phase filters and power throughput refinements. A captain
-        needs buy only the final grade of drive desired. He does not have to buy
-        upgrades sequentially. Drives of rating 4 and higher are generally TL5
-        artifacts that cannot be built most modern worlds.
-      effect: Upgrade a spike drive to drive-2 rating
+        Rather than maintaining lengthy lists of ship equipment, a captain can
+        simply buy an armory. Ships so equipped have whatever amounts of TL4
+        military-grade weaponry and armor that a crew might require, and
+        integral maintenance facilities for its upkeep. There is enough gear
+        available to outfit the entire crew for normal use, but giving it away
+        or losing it in use may deplete it.
+      destroyed: false
+      effect: Weapons and armor for the crew
+      favorite: false
+      juryRigged: false
+      mass: 0
+      massMultiplier: true
+      minClass: fighter
+      power: 0
+      powerMultiplier: false
+      tl: 4
+      type: ship
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!HLpQ8HW9tKTV7kKO.pz5u6vui4xc1t895'
+  - _id: 8ka0kk4hcxvw9ekb
+    name: Boarding Tubes
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    sort: 0
+    system:
+      broken: false
+      cost: 5000
+      costMultiplier: true
+      description: >-
+        Armored tubes equipped with laser cutter apertures can be used to
+        forcibly invade a hostile ship, provided the target’s engines have been
+        disabled. Ships without boarding tubes have to send invaders across
+        empty space to either make an assault on a doubtless heavily-guarded
+        airlock or cut their way in through the hull with laser cutters and half
+        an hour of work.
+      destroyed: false
+      effect: Allows boarding of a hostile disabled ship
+      favorite: false
+      juryRigged: false
       mass: 1
       massMultiplier: true
       minClass: fighter
-      power: 1
+      power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
-    _key: '!actors.items!HLpQ8HW9tKTV7kKO.73gvjp8lxauxin48'
-  - name: Cargo Lighter
+    _key: '!actors.items!HLpQ8HW9tKTV7kKO.8ka0kk4hcxvw9ekb'
+  - _id: khaumum1idlx4ifm
+    name: Cargo Lighter
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
     sort: 0
-    _id: khaumum1idlx4ifm
     system:
       broken: false
       cost: 25000
@@ -388,36 +182,28 @@ items:
         usually collapsible and take up no significant space when compressed for
         storage, assuming they’re not simply disposable cargo shells. This
         fitting can be purchased multiple times.
+      destroyed: false
       effect: Orbit-to-surface cargo shuttle
+      favorite: false
+      juryRigged: false
       mass: 2
       massMultiplier: true
       minClass: frigate
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!HLpQ8HW9tKTV7kKO.khaumum1idlx4ifm'
-  - name: Extended Stores
+  - _id: yg9pf5q15ueaqhg9
+    name: Extended Stores
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
     sort: 0
-    _id: yg9pf5q15ueaqhg9
     system:
       broken: false
       cost: 2500
@@ -426,118 +212,175 @@ items:
         A normal complement of ship’s stores can keep the maximum crew size
         supplied for two months. Each selection of Extended Stores doubles that
         time, and can be fitted multiple times.
+      destroyed: false
       effect: Maximum life support duration is doubled
+      favorite: false
+      juryRigged: false
       mass: 1
       massMultiplier: true
       minClass: fighter
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!HLpQ8HW9tKTV7kKO.yg9pf5q15ueaqhg9'
-  - name: Boarding Tubes
+  - _id: 4ttxqct6bj8an1vp
+    name: Fuel Bunker
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/fuel-tank.svg
     sort: 0
-    _id: 8ka0kk4hcxvw9ekb
     system:
       broken: false
-      cost: 5000
+      cost: 2500
       costMultiplier: true
       description: >-
-        Armored tubes equipped with laser cutter apertures can be used to
-        forcibly invade a hostile ship, provided the target’s engines have been
-        disabled. Ships without boarding tubes have to send invaders across
-        empty space to either make an assault on a doubtless heavily-guarded
-        airlock or cut their way in through the hull with laser cutters and half
-        an hour of work.
-      effect: Allows boarding of a hostile disabled ship
+        Most ships require refueling after each drill jump, no matter the
+        distance. Installing fuel bunkers allows the ship to carry one
+        additional load of fuel. This fitting can be installed multiple times
+        for ships that wish to minimize fueling.
+      destroyed: false
+      effect: Adds fuel for one more drill between fuelings
+      favorite: false
+      juryRigged: false
       mass: 1
       massMultiplier: true
       minClass: fighter
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
-    _key: '!actors.items!HLpQ8HW9tKTV7kKO.8ka0kk4hcxvw9ekb'
-  - name: Armory
-    type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
+    _key: '!actors.items!HLpQ8HW9tKTV7kKO.4ttxqct6bj8an1vp'
+  - _id: 7n9xr896u8t6u6sd
+    name: Hardened Polyceramic Overlay
+    type: shipDefense
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/bubble-field.svg
     sort: 0
-    _id: pz5u6vui4xc1t895
     system:
       broken: false
-      cost: 10000
-      costMultiplier: true
+      cost: 25000
+      costMultiplier: false
       description: >-
-        Rather than maintaining lengthy lists of ship equipment, a captain can
-        simply buy an armory. Ships so equipped have whatever amounts of TL4
-        military-grade weaponry and armor that a crew might require, and
-        integral maintenance facilities for its upkeep. There is enough gear
-        available to outfit the entire crew for normal use, but giving it away
-        or losing it in use may deplete it.
-      effect: Weapons and armor for the crew
-      mass: 0
-      massMultiplier: true
+        A complex glazing process can harden the surface of a ship’s armor to
+        more effectively shed incoming attacks, decreasing the armor-piercing
+        quality of any hit by 5.
+      destroyed: false
+      effect: ''
+      favorite: false
+      juryRigged: false
+      mass: 2
+      massMultiplier: false
       minClass: fighter
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
-    _key: '!actors.items!HLpQ8HW9tKTV7kKO.pz5u6vui4xc1t895'
-  - name: Ship's Locker
+    _key: '!actors.items!HLpQ8HW9tKTV7kKO.7n9xr896u8t6u6sd'
+  - _id: 59vfzisiyj0bpivr
+    name: Plasma Beam
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/plasma-bolt.svg
+    sort: 0
+    system:
+      ab: 4
+      ammo:
+        max: 4
+        type: none
+        value: 4
+      broken: false
+      cost: 700000
+      costMultiplier: false
+      damage: 3d6
+      description: >-
+        With superior targeting and a smaller energy drain than a CPC, a plasma
+        beam sacrifices some armor penetration.
+      destroyed: false
+      favorite: false
+      hardpoint: 2
+      juryRigged: false
+      mass: 2
+      massMultiplier: false
+      minClass: fighter
+      power: 5
+      powerMultiplier: false
+      qualities: AP 10
+      range:
+        max: 2
+        normal: 1
+      stat: ask
+      tl: 4
+      trauma:
+        die: 1d6
+        vehicle: false
+      type: ship
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!HLpQ8HW9tKTV7kKO.59vfzisiyj0bpivr'
+  - _id: hcfus8w3n1pmu3t3
+    name: Plasma Beam
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/plasma-bolt.svg
+    sort: 0
+    system:
+      ab: 4
+      ammo:
+        max: 4
+        type: none
+        value: 4
+      broken: false
+      cost: 700000
+      costMultiplier: false
+      damage: 3d6
+      description: >-
+        With superior targeting and a smaller energy drain than a CPC, a plasma
+        beam sacrifices some armor penetration.
+      destroyed: false
+      favorite: false
+      hardpoint: 2
+      juryRigged: false
+      mass: 2
+      massMultiplier: false
+      minClass: fighter
+      power: 5
+      powerMultiplier: false
+      qualities: AP 10
+      range:
+        max: 2
+        normal: 1
+      stat: ask
+      tl: 4
+      trauma:
+        die: 1d6
+        vehicle: false
+      type: ship
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!HLpQ8HW9tKTV7kKO.hcfus8w3n1pmu3t3'
+  - _id: ldus5bpvtmrwsaf0
+    name: Ship's Locker
     type: shipFitting
     img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
     sort: 0
-    _id: ldus5bpvtmrwsaf0
     system:
       broken: false
       cost: 2000
@@ -551,64 +394,54 @@ items:
         required. There is enough gear available to outfit the entire crew for
         normal use, but giving it away or losing it in use may deplete the
         locker until it is restocked.
+      destroyed: false
       effect: General equipment for the crew
+      favorite: false
+      juryRigged: false
       mass: 0
       massMultiplier: true
       minClass: fighter
       power: 0
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!HLpQ8HW9tKTV7kKO.ldus5bpvtmrwsaf0'
-  - name: Fuel Bunker
+  - _id: 73gvjp8lxauxin48
+    name: Spike Drive-2 upgrade
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/fuel-tank.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/rocket-thruster.svg
     sort: 0
-    _id: 4ttxqct6bj8an1vp
     system:
       broken: false
-      cost: 2500
+      cost: 10000
       costMultiplier: true
       description: >-
-        Most ships require refueling after each drill jump, no matter the
-        distance. Installing fuel bunkers allows the ship to carry one
-        additional load of fuel. This fitting can be installed multiple times
-        for ships that wish to minimize fueling.
-      effect: Adds fuel for one more drill between fuelings
+        A ship can improve its standard-issue drive-1 spike drive with
+        additional phase filters and power throughput refinements. A captain
+        needs buy only the final grade of drive desired. He does not have to buy
+        upgrades sequentially. Drives of rating 4 and higher are generally TL5
+        artifacts that cannot be built most modern worlds.
+      destroyed: false
+      effect: Upgrade a spike drive to drive-2 rating
+      favorite: false
+      juryRigged: false
       mass: 1
       massMultiplier: true
       minClass: fighter
-      power: 0
+      power: 1
       powerMultiplier: false
-      favorite: false
       tl: 4
-      destroyed: false
-      juryRigged: false
       type: ship
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
-    _key: '!actors.items!HLpQ8HW9tKTV7kKO.4ttxqct6bj8an1vp'
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: HLpQ8HW9tKTV7kKO
-sort: 150000
+    _key: '!actors.items!HLpQ8HW9tKTV7kKO.73gvjp8lxauxin48'
 _key: '!actors!HLpQ8HW9tKTV7kKO'
 

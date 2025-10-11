@@ -1,7 +1,12 @@
+_id: p60akz0mt4sbs54w
 name: Boltholes
 type: asset
 img: systems/swnr/assets/icons/hawkin/cunning.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.p60akz0mt4sbs54w
@@ -13,13 +18,11 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: p60akz0mt4sbs54w
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: ''
-  attackTarget: null
   baseOfInfluence: false
+  category: cunning
   cost: 12
   counter: 2d6
   description: >-
@@ -29,27 +32,22 @@ system:
     destroy it, it is instead set at 0 HP and rendered untouchable and unusable
     until it is repaired to full strength. If the Boltholes are destroyed before
     this happens, the asset is destroyed with them.
+  favorite: false
   health:
     max: 6
     value: 6
   income: 0
   maintenance: 0
+  qualities:
+    action: false
+    permission: false
+    special: true
   rating: 5
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Logistics Facility
   unusable: false
-  qualities:
-    permission: false
-    action: false
-    special: true
-  category: cunning
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!p60akz0mt4sbs54w'
 

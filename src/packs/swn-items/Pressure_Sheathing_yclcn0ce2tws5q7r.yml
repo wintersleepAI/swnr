@@ -1,7 +1,12 @@
+_id: yclcn0ce2tws5q7r
 name: Pressure Sheathing
 type: cyberware
 img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
 folder: 7ZDHgPOCyrCRwTEX
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cyberware.Item.yclcn0ce2tws5q7r
@@ -13,8 +18,9 @@ _stats:
   createdTime: 1757286670636
   modifiedTime: 1757286670636
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: yclcn0ce2tws5q7r
 system:
+  complication: ''
+  concealment: Sight
   cost: 15000
   description: >-
     Occasionally purchased by workers in hard vacuum or other hostile
@@ -27,16 +33,10 @@ system:
     can be detected only by a close medical examination.
   disabled: false
   effect: Integral emergency vacc suit
+  favorite: false
   strain: 1
   tl: 4
-  favorite: false
   type: None
-  concealment: Sight
-  complication: ''
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!yclcn0ce2tws5q7r'
 

@@ -1,18 +1,37 @@
+_id: P8kuECWZNDyZlaQR
 name: Jikegida City Lord
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: 2TAFQtBi7ZxFWi6b
+sort: 200000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.wwn-actors.Actor.y4r9rxur7dieq3wo
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754271303973
+  modifiedTime: 1754271303973
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
   ab: 14
+  access:
+    max: 1
+    value: 1
   armorType: street
   attacks:
-    damage: d6
     bonusDamage: 0
+    damage: d6
     number: 0
   baseAc: 20
-  hitDice: '14'
-  moralScore: 10
-  saves: 8
-  skillBonus: 0
-  speed: 30
+  baseSoakTotal:
+    max: 0
+    value: 0
   biography: >-
     A Jikegida wearing a construction exoskeleton gains 20 hit points, a +2
     bonus to hit, and a +2 bonus on all damage rolls or Shock. Many exoskeletons
@@ -20,128 +39,42 @@ system:
     construction, with poison sprays, tremendous mobility, sonic shrieks, or
     other offensive or defensive abilities. Two attacks per round. Shock ignores
     AC value.
-  species: monster
-  health:
-    value: 10
-    max: 10
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 6
-  meleeAc: 10
-  meleeAb: 1
-  systemStrain:
-    value: 0
-    permanent: 0
-  pools: {}
   cyberdecks: []
+  health:
+    max: 10
+    value: 10
   health_max_modified: 0
+  hitDice: '14'
+  meleeAb: 1
+  meleeAc: 10
+  moralScore: 10
   reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
+  saves: 8
+  skillBonus: 0
+  species: monster
+  speed: 30
+  systemStrain:
+    permanent: 0
     value: 0
-    max: 0
-_stats:
-  compendiumSource: Compendium.swnr.wwn-actors.Actor.y4r9rxur7dieq3wo
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754271303973
-  modifiedTime: 1754271303973
-  lastModifiedBy: lKC5x4Yf023Bizof
-folder: 2TAFQtBi7ZxFWi6b
-flags: {}
+  traumaTarget: 6
 effects: []
-prototypeToken:
-  name: Jikegida City Lord
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
 items:
-  - name: Grand Plate
+  - _id: zv4cs2enzrlmb4dd
+    name: Grand Plate
     type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+    sort: 0
     system:
+      ac: 16
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 4000
       description: >-
         Grand plate is so finely-jointed that a weapon must either be very large
         or very armor-piercing to harm the wearer; they're immune to non-magical
@@ -152,52 +85,45 @@ items:
         armor is the thickest, toughest panoply available on the market, and its
         bulk and noise make its encumbrance apply as a penalty to Sneak or Exert
         checks made by the wearer.
-      cost: 4000
-      ac: 16
-      meleeAc: 16
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 3
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      use: false
       dr: 0
+      encumbrance: 3
+      favorite: false
       isHeavy: false
-    _id: zv4cs2enzrlmb4dd
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
+      isSubtle: false
+      location: stowed
+      meleeAc: 16
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: false
+      soak:
+        max: 0
+        value: 0
+      tl: 3
+      traumaDiePenalty: 0
+      use: false
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!P8kuECWZNDyZlaQR.zv4cs2enzrlmb4dd'
-  - name: Shield, Small
+  - _id: squqionnh21gm94a
+    name: Shield, Small
     type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+    sort: 0
     system:
+      ac: 1
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 20
       description: >-
         Shields come in two general varieties. Small ones, often made of
         costlier metal, can be strapped to the wearer's arm and allow them to
@@ -208,53 +134,28 @@ items:
         wearing equal or better armor the shield grants a +1 bonus to their AC.
         Shields allow the bearer to ignore the first instance of Shock they
         might otherwise suffer in a round.
-      cost: 20
-      ac: 1
-      meleeAc: 1
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: true
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      use: false
       dr: 0
+      encumbrance: 1
+      favorite: false
       isHeavy: false
-    _id: squqionnh21gm94a
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
+      isSubtle: false
+      location: stowed
+      meleeAc: 1
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: true
+      soak:
+        max: 0
+        value: 0
+      tl: 3
+      traumaDiePenalty: 0
+      use: false
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!P8kuECWZNDyZlaQR.squqionnh21gm94a'
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: P8kuECWZNDyZlaQR
-sort: 200000
 _key: '!actors!P8kuECWZNDyZlaQR'
 

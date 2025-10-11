@@ -1,90 +1,12 @@
-folder: dzFtbtvBCSnFS2K1
+_id: mDWoY0IVNopVqPTU
 name: 'Rescue: How Long Ago Were They Taken?'
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: x0dUijhHxmdrKZ64
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They were snatched just briefly before
-    name: ''
-    _key: '!tables.results!mDWoY0IVNopVqPTU.x0dUijhHxmdrKZ64'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: nszjQJRmrnrlVlRB
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They’ve been taken for a week or two
-    name: ''
-    _key: '!tables.results!mDWoY0IVNopVqPTU.nszjQJRmrnrlVlRB'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: nknRJ5bUejgTNbCB
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They’ve been gone for months
-    name: ''
-    _key: '!tables.results!mDWoY0IVNopVqPTU.nknRJ5bUejgTNbCB'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: cRoIjWvJXvGcEjx4
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: They’ve been captive for years now
-    name: ''
-    _key: '!tables.results!mDWoY0IVNopVqPTU.cRoIjWvJXvGcEjx4'
-replacement: true
-displayRoll: true
+folder: dzFtbtvBCSnFS2K1
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   core: {}
 _stats:
@@ -97,11 +19,8 @@ _stats:
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d4
-_id: mDWoY0IVNopVqPTU
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results: []
 _key: '!tables!mDWoY0IVNopVqPTU'
 

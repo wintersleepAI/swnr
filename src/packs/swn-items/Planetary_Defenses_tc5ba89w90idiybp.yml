@@ -1,7 +1,12 @@
+_id: tc5ba89w90idiybp
 name: Planetary Defenses
 type: asset
 img: systems/swnr/assets/icons/hawkin/force.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.tc5ba89w90idiybp
@@ -13,40 +18,33 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: tc5ba89w90idiybp
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: Planetary defenses can only defend against attacks by Starship-type assets.
-  attackTarget: null
   baseOfInfluence: false
+  category: force
   cost: 18
   counter: 2d6+6
   description: >-
     Massive mag cannons and gravitic braker gun arrays designed to defend
     against starship bombardments and repel unauthorized landing. Planetary
     defenses can only defend against attacks by Starship-type assets.
+  favorite: false
   health:
     max: 20
     value: 20
   income: 0
   maintenance: 0
+  qualities:
+    action: false
+    permission: false
+    special: true
   rating: 6
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Facility
   unusable: false
-  qualities:
-    permission: false
-    action: false
-    special: true
-  category: force
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!tc5ba89w90idiybp'
 

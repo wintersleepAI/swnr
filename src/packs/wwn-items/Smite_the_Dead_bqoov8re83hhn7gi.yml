@@ -1,22 +1,23 @@
+_id: bqoov8re83hhn7gi
 name: Smite the Dead
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456888
+  modifiedTime: 1754277456888
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The necromancer conjures a blast of dispelling force at a point within one
-    hundred feet per caster level, affecting an area up to 20 feet in radius.
-    All hostile undead within that area immediately suffer 1d10 damage per
-    caster level. Undead with hit dice equal or less than the caster's level
-    must make a Physical save or be destroyed outright. The necromancer may
-    Commit Effort for the day immediately after casting this spell to restore it
-    to their mind for use again.
-  favorite: false
-  subType: spell
-  source: Necromancer
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -30,26 +31,22 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The necromancer conjures a blast of dispelling force at a point within one
+    hundred feet per caster level, affecting an area up to 20 feet in radius.
+    All hostile undead within that area immediately suffer 1d10 damage per
+    caster level. Undead with hit dice equal or less than the caster's level
+    must make a Physical save or be destroyed outright. The necromancer may
+    Commit Effort for the day immediately after casting this spell to restore it
+    to their mind for use again.
   duration: Instant
-  save: physical
+  favorite: false
+  level: 1
+  prepared: false
   range: 20-ft. radius within 100 ft. per level
-  skill: null
-_id: bqoov8re83hhn7gi
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456888
-  modifiedTime: 1754277456888
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: physical
+  source: Necromancer
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!bqoov8re83hhn7gi'
 

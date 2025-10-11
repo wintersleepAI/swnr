@@ -1,426 +1,245 @@
-folder: n3hCUWqsIch9pU7N
-name: Fixer Style and/or Manner of Presentation
 _id: nfauTC9MMUp70I8y
+name: Fixer Style and/or Manner of Presentation
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: NQk00oQsG7MlhJoZ
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Sleek fashion, polished, and urbane
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.NQk00oQsG7MlhJoZ'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: KqlfAE3KoxrTPFLB
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Vice den chic, debased and vulgar
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.KqlfAE3KoxrTPFLB'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: iWwfIYzawShVuD8q
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Shabby clothes, wheedling manner
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.iWwfIYzawShVuD8q'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: KTnD12onDsMuoLF6
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Dresses like the locals, affable and friendly
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.KTnD12onDsMuoLF6'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: pPXNIIfpC7MzgNU3
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Favors armor, paranoid and suspicious
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.pPXNIIfpC7MzgNU3'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: rhzwczT8IQjk1Tem
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Gaudy chic, expansive and confident
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.rhzwczT8IQjk1Tem'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: NsmKzN87BMANX9PF
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Academic tweeds, avuncular and benign
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.NsmKzN87BMANX9PF'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: sICHHKm5u1oKiyWO
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Stale fashion, insinuating and implicative
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.sICHHKm5u1oKiyWO'
-  - type: text
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    _id: Q4OYjH2ATLS5dhBK
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Corper chic, reluctant to even be here
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.Q4OYjH2ATLS5dhBK'
-  - type: text
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    _id: 0l9J8jcHQygaR58Z
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Camo and mil-style, take-it-or-leave-it
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.0l9J8jcHQygaR58Z'
-  - type: text
-    weight: 1
-    range:
-      - 11
-      - 11
-    drawn: false
-    _id: 2YACz2cQ4gCew5O0
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Junkie shabbiness, deceptively sharp
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.2YACz2cQ4gCew5O0'
-  - type: text
-    weight: 1
-    range:
-      - 12
-      - 12
-    drawn: false
-    _id: Htg1gNxDg2681DeP
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Avant-garde style, benignly superior
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.Htg1gNxDg2681DeP'
-  - type: text
-    weight: 1
-    range:
-      - 13
-      - 13
-    drawn: false
-    _id: 4FpQqzR4GZe8Ec3d
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Threadbare fashion, earnest pleading
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.4FpQqzR4GZe8Ec3d'
-  - type: text
-    weight: 1
-    range:
-      - 14
-      - 14
-    drawn: false
-    _id: D6xkybvH8XBbewAV
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Defunct gang colors, casual and desultory
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.D6xkybvH8XBbewAV'
-  - type: text
-    weight: 1
-    range:
-      - 15
-      - 15
-    drawn: false
-    _id: 4ugf3WfvBG2TcS7o
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Last year’s style, grasping and chiseling
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.4ugf3WfvBG2TcS7o'
-  - type: text
-    weight: 1
-    range:
-      - 16
-      - 16
-    drawn: false
-    _id: 33WG5SFCqoIn8eer
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Visible religious tokens, calm and mild
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.33WG5SFCqoIn8eer'
-  - type: text
-    weight: 1
-    range:
-      - 17
-      - 17
-    drawn: false
-    _id: qWy8Ja5trHHTk3fu
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Clothes cut to suit scars, slow and labored
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.qWy8Ja5trHHTk3fu'
-  - type: text
-    weight: 1
-    range:
-      - 18
-      - 18
-    drawn: false
-    _id: CjdKWUrng8hx99KL
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Dresses too young, forcedly enthusiastic
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.CjdKWUrng8hx99KL'
-  - type: text
-    weight: 1
-    range:
-      - 19
-      - 19
-    drawn: false
-    _id: nix1mZyCSUelXUmd
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Bureaucrat gray, fussy and particular
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.nix1mZyCSUelXUmd'
-  - type: text
-    weight: 1
-    range:
-      - 20
-      - 20
-    drawn: false
-    _id: HiAZLcXUbFRdtgM9
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Roll again; the style or manner is inverted
-    name: ''
-    _key: '!tables.results!nfauTC9MMUp70I8y.HiAZLcXUbFRdtgM9'
-replacement: true
-displayRoll: true
+folder: n3hCUWqsIch9pU7N
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-tables.RollTable.nfauTC9MMUp70I8y
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d20
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: NQk00oQsG7MlhJoZ
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.NQk00oQsG7MlhJoZ'
+  - _id: KqlfAE3KoxrTPFLB
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.KqlfAE3KoxrTPFLB'
+  - _id: iWwfIYzawShVuD8q
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.iWwfIYzawShVuD8q'
+  - _id: KTnD12onDsMuoLF6
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.KTnD12onDsMuoLF6'
+  - _id: pPXNIIfpC7MzgNU3
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.pPXNIIfpC7MzgNU3'
+  - _id: rhzwczT8IQjk1Tem
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.rhzwczT8IQjk1Tem'
+  - _id: NsmKzN87BMANX9PF
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.NsmKzN87BMANX9PF'
+  - _id: sICHHKm5u1oKiyWO
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.sICHHKm5u1oKiyWO'
+  - _id: Q4OYjH2ATLS5dhBK
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.Q4OYjH2ATLS5dhBK'
+  - _id: 0l9J8jcHQygaR58Z
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.0l9J8jcHQygaR58Z'
+  - _id: 2YACz2cQ4gCew5O0
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.2YACz2cQ4gCew5O0'
+  - _id: Htg1gNxDg2681DeP
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.Htg1gNxDg2681DeP'
+  - _id: 4FpQqzR4GZe8Ec3d
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 13
+      - 13
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.4FpQqzR4GZe8Ec3d'
+  - _id: D6xkybvH8XBbewAV
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 14
+      - 14
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.D6xkybvH8XBbewAV'
+  - _id: 4ugf3WfvBG2TcS7o
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 15
+      - 15
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.4ugf3WfvBG2TcS7o'
+  - _id: 33WG5SFCqoIn8eer
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 16
+      - 16
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.33WG5SFCqoIn8eer'
+  - _id: qWy8Ja5trHHTk3fu
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 17
+      - 17
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.qWy8Ja5trHHTk3fu'
+  - _id: CjdKWUrng8hx99KL
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 18
+      - 18
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.CjdKWUrng8hx99KL'
+  - _id: nix1mZyCSUelXUmd
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 19
+      - 19
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.nix1mZyCSUelXUmd'
+  - _id: HiAZLcXUbFRdtgM9
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 20
+      - 20
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nfauTC9MMUp70I8y.HiAZLcXUbFRdtgM9'
 _key: '!tables!nfauTC9MMUp70I8y'
 

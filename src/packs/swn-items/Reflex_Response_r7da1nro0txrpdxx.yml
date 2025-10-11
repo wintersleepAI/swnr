@@ -1,7 +1,12 @@
+_id: r7da1nro0txrpdxx
 name: Reflex Response
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: T7VK7FTps9Ubc5gw
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-telepathy.Item.r7da1nro0txrpdxx
@@ -13,20 +18,7 @@ _stats:
   createdTime: 1757286864688
   modifiedTime: 1757286864688
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: r7da1nro0txrpdxx
 system:
-  description: >-
-    <p>As a Main Action, the telepath can Commit Effort for the day to force a
-    sudden, irrational impulse into the target of a <em>Telepathic Contact</em>.
-    The target may make a Mental saving throw to resist; on a failure, they will
-    use their next available action to carry out the impulse to the best of
-    their ability. This impulse cannot be self-injurious or harmful to a loved
-    one, but it can be foolish, reckless, or harmful to others. The target may
-    not understand why they have done the action, but will usually attempt to
-    rationalize it as their choice.</p>
-  level: 3
-  source: telepathy
-  save: mental
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -38,15 +30,21 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p>As a Main Action, the telepath can Commit Effort for the day to force a
+    sudden, irrational impulse into the target of a <em>Telepathic Contact</em>.
+    The target may make a Mental saving throw to resist; on a failure, they will
+    use their next available action to carry out the impulse to the best of
+    their ability. This impulse cannot be self-injurious or harmful to a loved
+    one, but it can be foolish, reckless, or harmful to others. The target may
+    not understand why they have done the action, but will usually attempt to
+    rationalize it as their choice.</p>
   favorite: false
-  subType: psychic
+  level: 3
   prepared: false
-  resourceName: null
-  subResource: null
+  save: mental
+  source: telepathy
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!r7da1nro0txrpdxx'
 

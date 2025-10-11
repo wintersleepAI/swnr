@@ -1,6 +1,22 @@
+_id: r7irvpgerywrosqg
 name: Impervious Defense
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456870
+  modifiedTime: 1754277456870
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     Whether through uncanny reflexes, remarkable luck, supernatural heritage, or
@@ -13,23 +29,8 @@ system:
     couldn't be forfended by strong armor cannot be resisted this way.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: r7irvpgerywrosqg
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456870
-  modifiedTime: 1754277456870
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!r7irvpgerywrosqg'
 

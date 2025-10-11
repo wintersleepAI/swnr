@@ -1,147 +1,92 @@
+_id: pRslDx4cy1bHQx7y
 name: Trained Servitor Beasts
+type: null
 img: icons/svg/d20-grey.svg
-results:
-  - _id: Cq2uL8PaprvYxzpC
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Seek its trainer or handler on the field
-    name: ''
-    _key: '!tables.results!pRslDx4cy1bHQx7y.Cq2uL8PaprvYxzpC'
-  - _id: sA0lQ4Pfzi55wOdT
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Repeat the last action it took, sensible or not
-    name: ''
-    _key: '!tables.results!pRslDx4cy1bHQx7y.sA0lQ4Pfzi55wOdT'
-  - _id: DmTQbR6KJnBl0pPA
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Attack the enemy closest to its handler
-    name: ''
-    _key: '!tables.results!pRslDx4cy1bHQx7y.DmTQbR6KJnBl0pPA'
-  - _id: v1ipUXJ4ZZbWoLTH
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Whine in confusion and disorientation
-    name: ''
-    _key: '!tables.results!pRslDx4cy1bHQx7y.v1ipUXJ4ZZbWoLTH'
-  - _id: R64ieYsWpk5dkrP0
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Perform an inappropriate but trained action
-    name: ''
-    _key: '!tables.results!pRslDx4cy1bHQx7y.R64ieYsWpk5dkrP0'
-  - _id: JQP40zHl7lBbjkCf
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Panic, attacking the nearest friend or foe
-    name: ''
-    _key: '!tables.results!pRslDx4cy1bHQx7y.JQP40zHl7lBbjkCf'
-formula: 1d6
-replacement: true
-displayRoll: true
 folder: tCjobZPuAK5KxMZQ
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   core: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-instinct.RollTable.5HzNqMwf11UaZh8C
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272494042
   modifiedTime: 1754272494042
   lastModifiedBy: lKC5x4Yf023Bizof
-description: ''
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: pRslDx4cy1bHQx7y
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: Cq2uL8PaprvYxzpC
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!pRslDx4cy1bHQx7y.Cq2uL8PaprvYxzpC'
+  - _id: sA0lQ4Pfzi55wOdT
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!pRslDx4cy1bHQx7y.sA0lQ4Pfzi55wOdT'
+  - _id: DmTQbR6KJnBl0pPA
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!pRslDx4cy1bHQx7y.DmTQbR6KJnBl0pPA'
+  - _id: v1ipUXJ4ZZbWoLTH
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!pRslDx4cy1bHQx7y.v1ipUXJ4ZZbWoLTH'
+  - _id: R64ieYsWpk5dkrP0
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!pRslDx4cy1bHQx7y.R64ieYsWpk5dkrP0'
+  - _id: JQP40zHl7lBbjkCf
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!pRslDx4cy1bHQx7y.JQP40zHl7lBbjkCf'
 _key: '!tables!pRslDx4cy1bHQx7y'
 

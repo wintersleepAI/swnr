@@ -1,7 +1,12 @@
+_id: pd87hrmn2lxswt2o
 name: Franchise
 type: asset
 img: systems/swnr/assets/icons/hawkin/wealth.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.pd87hrmn2lxswt2o
@@ -13,7 +18,6 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: pd87hrmn2lxswt2o
 system:
   attackDamage: 1d4
   attackSource: wealth
@@ -23,6 +27,7 @@ system:
     loss can happen only once a turn, no matter how many Franchises attack.
   attackTarget: wealth
   baseOfInfluence: false
+  category: wealth
   cost: 2
   counter: 1d4-1
   description: >-
@@ -31,27 +36,22 @@ system:
     asset, the enemy faction loses one FacCred (if available), which is gained
     by the Franchise's owner. This loss can happen only once a turn, no matter
     how many Franchises attack.
+  favorite: false
   health:
     max: 3
     value: 3
   income: 0
   maintenance: 0
+  qualities:
+    action: false
+    permission: false
+    special: true
   rating: 1
+  stealthed: false
   tl: 2
   turnRoll: ''
   type: Facility
   unusable: false
-  qualities:
-    permission: false
-    action: false
-    special: true
-  category: wealth
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!pd87hrmn2lxswt2o'
 

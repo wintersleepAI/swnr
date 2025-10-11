@@ -1,7 +1,12 @@
+_id: 77MmNRT19loIoP3q
 name: Many Faces
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: rLKHK9Ka1PgqNDEq
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-foci.Item.c6vzub46daj0u78h
@@ -28,13 +33,8 @@ system:
     you don't have a Contact in already.<br />Level 2:
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: 77MmNRT19loIoP3q
-sort: 0
 _key: '!items!77MmNRT19loIoP3q'
 

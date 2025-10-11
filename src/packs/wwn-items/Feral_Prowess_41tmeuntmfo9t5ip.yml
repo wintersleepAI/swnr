@@ -1,34 +1,12 @@
+_id: 41tmeuntmfo9t5ip
 name: Feral Prowess
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    This form has an augmented degree of speed, strength, or hardiness. For this
-    form, pick either Strength, Dexterity, or Constitution; that attribute
-    modifier is improved by +1 in this form, to a maximum of +2. These
-    alterations are obvious and extreme; it is impossible to masquerade as a
-    normal baseline human if using this art. Hit points gained from Con
-    improvements are lost when shifting back.
-  favorite: false
-  subType: art
-  source: Skinshifter
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Skinshifter
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: 41tmeuntmfo9t5ip
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -39,10 +17,29 @@ _stats:
   modifiedTime: 1754277456776
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Skinshifter
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    This form has an augmented degree of speed, strength, or hardiness. For this
+    form, pick either Strength, Dexterity, or Constitution; that attribute
+    modifier is improved by +1 in this form, to a maximum of +2. These
+    alterations are obvious and extreme; it is impossible to masquerade as a
+    normal baseline human if using this art. Hit points gained from Con
+    improvements are lost when shifting back.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Skinshifter
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!41tmeuntmfo9t5ip'
 

@@ -1,93 +1,15 @@
-description: ''
-displayRoll: true
+_id: EOkHaqCLyHG5GT6k
+name: One Roll NPCs - Background - 1d4
+type: null
+img: icons/svg/d20-grey.svg
+folder: Td6GsHm0Ns7IXzwI
+sort: 1300000
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags:
   core: {}
-folder: Td6GsHm0Ns7IXzwI
-formula: 1d4
-img: icons/svg/d20-grey.svg
-name: One Roll NPCs - Background - 1d4
-replacement: true
-results:
-  - _id: o7k1MlGQX9Qrn5JH
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 1
-      - 1
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Background: The local underclass or poorest natives'
-    name: ''
-    _key: '!tables.results!EOkHaqCLyHG5GT6k.o7k1MlGQX9Qrn5JH'
-  - _id: CoaqpDTqLHENvWFn
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 2
-      - 2
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Background: Common laborers or cube workers'
-    name: ''
-    _key: '!tables.results!EOkHaqCLyHG5GT6k.CoaqpDTqLHENvWFn'
-  - _id: I3Q2alrTTTkW9ltT
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 3
-      - 3
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Background: Aspiring bourgeoise or upper class'
-    name: ''
-    _key: '!tables.results!EOkHaqCLyHG5GT6k.I3Q2alrTTTkW9ltT'
-  - _id: mAzFKzVS4WJIPbXv
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 4
-      - 4
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Background: The elite of this society'
-    name: ''
-    _key: '!tables.results!EOkHaqCLyHG5GT6k.mAzFKzVS4WJIPbXv'
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -98,11 +20,8 @@ _stats:
   createdTime: 1757287480644
   modifiedTime: 1757287502706
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: EOkHaqCLyHG5GT6k
-sort: 1300000
+system: {}
+effects: []
+results: []
 _key: '!tables!EOkHaqCLyHG5GT6k'
 

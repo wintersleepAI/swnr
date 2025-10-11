@@ -1,7 +1,12 @@
+_id: 4fxalws0rgxiw45w
 name: Teratic Overload
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: VXwfMckwPSKXC4gD
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-biopsionics.Item.4fxalws0rgxiw45w
@@ -13,8 +18,18 @@ _stats:
   createdTime: 1757286851234
   modifiedTime: 1757286851234
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 4fxalws0rgxiw45w
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: scene
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
   description: >-
     <p>This use of biopsionics inflicts potentially-lethal damage on a touched
     target as a Main Action, and requires that the biopsion Commit Effort for
@@ -29,30 +44,13 @@ system:
     Such victims probably won’t even know they’ve been attacked by this power.
     Whether a success or failure, this power cannot be used on the same target
     more than once per scene.</p>
+  favorite: false
   level: 3
+  prepared: false
   roll: 3d6
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Psychic
-      cadence: scene
-      usesCost: 1
-      itemText: ''
-      uses:
-        value: 1
-        max: 1
-      timing: manual
   save: physical
   source: biopsionics
-  favorite: false
   subType: psychic
-  prepared: false
-  resourceName: null
-  subResource: null
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!4fxalws0rgxiw45w'
 

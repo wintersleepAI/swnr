@@ -1,196 +1,134 @@
+_id: NPhxjVxsZ4GBIiki
 name: Major Gang Boss
 type: npc
 img: icons/svg/mystery-man.svg
+folder: 1MnMOlCpFjrZIhXu
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.NPhxjVxsZ4GBIiki
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
-  health:
-    value: 40
-    max: 40
-  biography: ''
-  species: ''
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 7
-  baseAc: 21
-  meleeAc: 19
   ab: 13
-  meleeAb: 11
-  systemStrain:
-    value: 0
-    permanent: 0
-  speed: 20
-  cyberdecks: []
-  health_max_modified: 0
+  access:
+    max: 1
+    value: 1
   armorType: street
-  skillBonus: 3
   attacks:
-    damage: d6
     bonusDamage: 0
+    damage: d6
     number: 0
+  baseAc: 21
+  baseSoakTotal:
+    max: 0
+    value: 0
+  biography: ''
+  cyberdecks: []
+  faction: ''
+  health:
+    max: 40
+    value: 40
+  health_max_modified: 0
   hitDice: 8d8
-  saves: 11
+  homeworld: ''
+  meleeAb: 11
+  meleeAc: 19
   moralScore: 11
   reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
+  saves: 11
+  skillBonus: 3
+  species: ''
+  speed: 20
+  systemStrain:
+    permanent: 0
     value: 0
-    max: 0
-  homeworld: ''
-  faction: ''
-  pools: {}
+  traumaTarget: 7
   tweak:
-    showCyberware: true
-    showPsychic: true
-    showArts: false
-    showSpells: false
     showAdept: false
+    showArts: false
+    showCyberware: true
     showMutation: false
     showPoolsInHeader: true
     showPoolsInPowers: false
-prototypeToken:
-  name: Veteran Corp
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: icons/svg/mystery-man.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
+    showPsychic: true
+    showSpells: false
+effects: []
 items:
-  - name: Gunlink
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.k78g89sqpqbprnnp
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
+  - _id: 3yjAX7OSGEnI8II9
+    name: Modded Armored Clothing
+    type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
     sort: 0
-    _id: 6iRGL3UkDWV1Ny8R
     system:
-      concealment: Touch
-      cost: 25000
+      ac: 16
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 1000
       description: >-
-        Hardwired control points interface with the onboard targeting systems of
-        most modern firearms. When using a modern firearm, the PC ignores range
-        penalties and negates up to 4 points of hit penalties for cover,
-        concealment, or prone targets. Once per scene, as an Instant action,
-        they can reroll a missed attack roll with a gun.
-      effect: Bonus when using firearms
-      strain: 1
-      type: Sensory
+        The bulky plates and heavy ballistic weaves of this outfit are disguised
+        as drapes and fashion elements.
+      dr: 0
+      encumbrance: 2
       favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
+      isHeavy: false
+      isSubtle: true
+      location: stowed
+      meleeAc: 14
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: false
+      shieldACBonus: 0
+      shieldMeleeACBonus: 0
+      soak:
+        max: 10
+        value: 10
+      traumaDiePenalty: 1
+      use: false
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
-    _key: '!actors.items!NPhxjVxsZ4GBIiki.6iRGL3UkDWV1Ny8R'
-  - name: Modded Heavy Pistol
+    _key: '!actors.items!NPhxjVxsZ4GBIiki.3yjAX7OSGEnI8II9'
+  - _id: NEO1pcdi1YO3fhzL
+    name: Modded Heavy Pistol
     type: weapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-weapons.Item.kgoo4k7gf2gvp0rx
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: NEO1pcdi1YO3fhzL
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 8
         suppress: false
         type: ammo
         value: 8
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 200
       damage: 1d8+8
       description: >-
@@ -199,366 +137,38 @@ items:
         possible with a low-caliber round, while others like to have a little
         more certainty in dropping the targets they hit.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 100
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: none
       shock:
         ac: 0
         dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: dex
       trauma:
         die: 1d6
         rating: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!NPhxjVxsZ4GBIiki.NEO1pcdi1YO3fhzL'
-  - name: Advanced Knife
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-weapons.Item.hbnlvlb3zhkkf0a1
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: EYYNWBn8RrZBN7TY
-    system:
-      ammo:
-        burst: false
-        max: 0
-        suppress: false
-        type: none
-        value: 0
-        longReload: false
-        current: null
-      cost: 200
-      damage: 1d6+3
-      description: >-
-        Advanced weapons employ modern polymers, sophisticated metallurgy,
-        fractal edges, electro-stun tech, and a small legion of marketers to
-        sell products that are distinctly superior to the plain steel edges of a
-        prior age. An advanced micro-edged butcher knife can go through bone
-        like bamboo and keep an edge for weeks between sharpenings. The more
-        martial offerings go to even greater lengths in their marketing, with
-        some enterprising serial killers and gang enforcers inking exclusivity
-        deals with particular knife manufacturers.
-      encumbrance: 1
-      isNonLethal: false
-      range:
-        max: 20
-        normal: 10
-      secondStat: dex
-      shock:
-        ac: 15
-        dmg: 7
-      stat: str
-      trauma:
-        die: 1d8+1
-        rating: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!NPhxjVxsZ4GBIiki.EYYNWBn8RrZBN7TY'
-  - name: Coordination Augment II
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.hamt7zrk26jrwy5r
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: xI0QtoAMLr5Mztea
-    system:
-      concealment: Touch
-      cost: 200000
-      description: >-
-        As Coordination Augment I, but the subject gains a Dexterity score of
-        18, and their base Move rate is increased by 10 meters.
-      effect: Dex 18 and +10m Move
-      strain: 3
-      type: Nerve
-      favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!NPhxjVxsZ4GBIiki.xI0QtoAMLr5Mztea'
-  - name: Enhanced Reflexes II
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.bzw49sv03icvezza
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: C4Eh7dAmsfp1YQ6Y
-    system:
-      concealment: Medical
-      cost: 250000
-      description: >-
-        Once per scene, as an On Turn action, the user gains a bonus
-        non-cyberspace Main Action and Move action. By accepting one System
-        Strain, this ability can be used as an Instant action, potentially
-        interrupting incoming attacks if the user moves out of reach.
-      effect: 1/scene, bonus Main and Move
-      strain: 3
-      type: Nerve
-      favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!NPhxjVxsZ4GBIiki.C4Eh7dAmsfp1YQ6Y'
-  - name: Veteran's Luck
-    type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-edges.Item.94fgmfw56y7l780i
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: 4UHEjvUyfztES8sT
-    system:
-      description: >-
-        Once per scene, as an Instant action, trigger this ability to gain one
-        of two effects,an attack roll that just hit you is instead treated as a
-        miss
-      favorite: false
-      level: 0
-      type: edge
-      poolsGranted: []
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!NPhxjVxsZ4GBIiki.4UHEjvUyfztES8sT'
-  - name: Deadeye
-    type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-foci.Item.572fu5suit6lkrzl
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: AEZVUda7fOdWz56H
-    system:
-      description: >-
-        You have a gift with ranged weapons. While this talent most commonly
-        applies to guns, it is also applicable to thrown weapons or other ranged
-        weapons that can be used with the Shoot skill. For thrown weapons, you
-        can't use the benefits of the Armsmaster Focus at the same time as
-        Deadeye.<br /><br />Level 1: Gain Shoot as a bonus skill. You can Ready
-        a Stowed ranged weapon as an Instant action. You may use a rifle or
-        two-handed ranged weapon even when an enemy is within melee range,
-        albeit at a -4 hit penalty. You may add your Shoot skill level to a
-        ranged weapon's damage roll.<br />Level 2: You can reload guns,
-        crossbows, or other slow-loading weapons as an On Turn action, provided
-        they don't take more than a round to reload. You can use ranged weapons
-        of any size in melee without penalty. Once per scene, as an On Turn
-        action when target shooting at an inanimate, non-creature target, you
-        automatically hit unless you roll a 2 on your Shoot skill check or the
-        shot is physically impossible.
-      favorite: false
-      level: 0
-      type: focus
-      poolsGranted: []
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!NPhxjVxsZ4GBIiki.AEZVUda7fOdWz56H'
-  - name: Modded Armored Clothing
-    type: armor
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-armor.Item.rgosy2tui7x5kwp0
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: 3yjAX7OSGEnI8II9
-    system:
-      ac: 16
-      cost: 1000
-      description: >-
-        The bulky plates and heavy ballistic weaves of this outfit are disguised
-        as drapes and fashion elements.
-      encumbrance: 2
-      isHeavy: false
-      isSubtle: true
-      meleeAc: 14
-      shieldACBonus: 0
-      shieldMeleeACBonus: 0
-      soak:
-        max: 10
-        value: 10
-      traumaDiePenalty: 1
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      shield: false
-      use: false
-      dr: 0
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!NPhxjVxsZ4GBIiki.3yjAX7OSGEnI8II9'
-  - name: Reaction Booster II
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.lg6b4ormag3e53x6
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: KqUveFxmqhTm3kf8
-    system:
-      concealment: Medical
-      cost: 100000
-      description: >-
-        As level one, but the user automatically wins initiative against targets
-        that don't also automatically win initiative; if both have this ability,
-        initiative is rolled without modifications. The user can act normally
-        during surprise rounds.
-      effect: Automatically win initiative
-      strain: 2
-      type: Nerve
-      favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!NPhxjVxsZ4GBIiki.KqUveFxmqhTm3kf8'
-effects: []
-folder: 1MnMOlCpFjrZIhXu
-flags: {}
-_stats:
-  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.NPhxjVxsZ4GBIiki
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.348'
-  systemId: swnr
-  systemVersion: 2.1.0-beta
-  createdTime: 1758737583614
-  modifiedTime: 1758737583614
-  lastModifiedBy: lKC5x4Yf023Bizof
-_id: NPhxjVxsZ4GBIiki
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
 _key: '!actors!NPhxjVxsZ4GBIiki'
 

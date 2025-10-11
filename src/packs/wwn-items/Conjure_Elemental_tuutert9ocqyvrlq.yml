@@ -1,7 +1,36 @@
+_id: tuutert9ocqyvrlq
 name: Conjure Elemental
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 8300000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457073
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     Duration: Permanent (until dismissed or slain) Range: 240' A 16 Hit Dice
     elemental&mdash;a being formed of pure elemental matter&mdash;is summoned
@@ -36,46 +65,14 @@ system:
     10, AL Neutral, XP 2,300 ▶ Size: 8' tall, 32' across. ▶ Water-bound: Must
     remain within 60' of water. ▶ Mundane damage immunity: Can only be harmed by
     magical attacks. ▶ Harm creatures in water: Inflict extra 1d8 damage.
+  duration: Permanent
   favorite: false
-  subType: spell
-  source: Mage
   level: 5
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Permanent
-  save: None
   range: 240'
-  skill: null
-_id: tuutert9ocqyvrlq
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457073
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!tuutert9ocqyvrlq'
 

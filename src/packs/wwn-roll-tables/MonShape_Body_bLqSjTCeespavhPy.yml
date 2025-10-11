@@ -1,106 +1,69 @@
 _id: bLqSjTCeespavhPy
 name: MonShape-Body
+type: null
 img: icons/svg/d20-grey.svg
-description: What Is Its Basic Body Plan?
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: phas6uyt8f6pn1mu
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Limbless, amorphous, or a tentacular mass
-    name: ''
-    _key: '!tables.results!bLqSjTCeespavhPy.phas6uyt8f6pn1mu'
-  - type: text
-    weight: 2
-    range:
-      - 2
-      - 3
-    drawn: false
-    _id: uisoe7tvjyjfvs8h
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Bipedal, generally upright
-    name: ''
-    _key: '!tables.results!bLqSjTCeespavhPy.uisoe7tvjyjfvs8h'
-  - type: text
-    weight: 4
-    range:
-      - 4
-      - 7
-    drawn: false
-    _id: l3x8ng9d33t3d26v
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Quadrupedal, perhaps able to rear up
-    name: ''
-    _key: '!tables.results!bLqSjTCeespavhPy.l3x8ng9d33t3d26v'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: rtt4hu2wyr8kotfu
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Sexapedal, perhaps with wings and legs
-    name: ''
-    _key: '!tables.results!bLqSjTCeespavhPy.rtt4hu2wyr8kotfu'
-formula: 1d8
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.bLqSjTCeespavhPy
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: phas6uyt8f6pn1mu
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!bLqSjTCeespavhPy.phas6uyt8f6pn1mu'
+  - _id: uisoe7tvjyjfvs8h
+    type: text
+    text: null
+    img: null
+    weight: 2
+    range:
+      - 2
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!bLqSjTCeespavhPy.uisoe7tvjyjfvs8h'
+  - _id: l3x8ng9d33t3d26v
+    type: text
+    text: null
+    img: null
+    weight: 4
+    range:
+      - 4
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!bLqSjTCeespavhPy.l3x8ng9d33t3d26v'
+  - _id: rtt4hu2wyr8kotfu
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!bLqSjTCeespavhPy.rtt4hu2wyr8kotfu'
 _key: '!tables!bLqSjTCeespavhPy'
 

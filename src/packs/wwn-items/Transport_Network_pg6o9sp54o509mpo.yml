@@ -1,47 +1,46 @@
+_id: pg6o9sp54o509mpo
 name: Transport Network
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: vGBf0X640rXwS7Ze
+sort: 106250
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456931
+  modifiedTime: 1759968793988
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     A vast array of carters, ships, smugglers, and official caravans are under
     the faction's control. As a free action the Transport Network can spend 1
     Treasure to move any friendly Asset within two moves to any location within
     one move of either the target or the Transport Network.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 5
     max: 5
-  rating: 7
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 5
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: pg6o9sp54o509mpo
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456931
-  modifiedTime: 1754277456931
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 7
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!pg6o9sp54o509mpo'
 

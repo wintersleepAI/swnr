@@ -1,26 +1,12 @@
+_id: byd25x59zae5z9pq
 name: Exert
 type: item
+img: icons/svg/item-bag.svg
+folder: 9gsuaJcejB0mhHRg
 sort: 0
-system:
-  description: >-
-    Run, swim, climb, jump, labor for long periods, throw things, or otherwise
-    exert your physical strength, stamina, and coordination. Even a PC with poor
-    physical attributes might have a good Exert skill reflecting athletic
-    training and expertise in making the most of their available talents.
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  encumbrance: 1
-  cost: 0
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  roll:
-    diceNum: 1
-    diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
-_id: byd25x59zae5z9pq
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -31,10 +17,25 @@ _stats:
   modifiedTime: 1754277457119
   lastModifiedBy: null
   exportSource: null
-folder: 9gsuaJcejB0mhHRg
-flags: {}
+system:
+  bundle:
+    bundled: false
+  cost: 0
+  description: >-
+    Run, swim, climb, jump, labor for long periods, throw things, or otherwise
+    exert your physical strength, stamina, and coordination. Even a PC with poor
+    physical attributes might have a good Exert skill reflecting athletic
+    training and expertise in making the most of their available talents.
+  encumbrance: 1
+  favorite: false
+  location: stowed
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+    diceNum: 1
+    diceSize: d20
 effects: []
-ownership:
-  default: 0
 _key: '!items!byd25x59zae5z9pq'
 

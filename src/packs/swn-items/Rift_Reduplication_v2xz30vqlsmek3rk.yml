@@ -1,7 +1,12 @@
+_id: v2xz30vqlsmek3rk
 name: Rift Reduplication
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: B7XvnONYELdrJlLA
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-teleportation.Item.v2xz30vqlsmek3rk
@@ -13,8 +18,18 @@ _stats:
   createdTime: 1757286862454
   modifiedTime: 1757286862454
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: v2xz30vqlsmek3rk
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
   description: >-
     <p>Expert teleporters can be infuriatingly difficult to pin down. By
     Committing an additional Effort for the day as an Instant action, the adept
@@ -30,29 +45,11 @@ system:
     give them a chance to attack or otherwise interfere. Such a lightning strike
     may be surprising to onlookers, but it doesn’t allow enough preparation time
     to count as an Execution Attack as described on page 52.</p>
-  level: 3
-  source: teleportation
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Psychic
-      cadence: day
-      usesCost: 1
-      itemText: ''
-      uses:
-        value: 1
-        max: 1
-      timing: manual
   favorite: false
-  subType: psychic
+  level: 3
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: teleportation
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!v2xz30vqlsmek3rk'
 

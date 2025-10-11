@@ -1,7 +1,12 @@
+_id: 5MY4boLrC7UFCSCm
 name: Jack Control Port
 type: shipFitting
 img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
 folder: aPPngDkp3e5tzGZ9
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-vehicle-fittings.Item.r60k7h1dj2mwmy2f
@@ -14,29 +19,24 @@ _stats:
   modifiedTime: 1754267290515
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  broken: false
   cost: 5000
+  costMultiplier: false
   description: >-
     The vehicle is wired to be controlled through a plugged-in cranial jack as
     well as a conventional wheel. While jacked in, the driver need only use a
     Move Action to control the vehicle rather than a Main Action.
+  destroyed: false
   effect: Can drive the vehicle via cranial jack
+  favorite: false
+  juryRigged: false
   mass: 0
+  massMultiplier: false
   minClass: fighter
   power: 2
-  type: vehicle
-  favorite: false
-  tl: 4
-  costMultiplier: false
   powerMultiplier: false
-  massMultiplier: false
-  broken: false
-  destroyed: false
-  juryRigged: false
+  tl: 4
+  type: vehicle
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: 5MY4boLrC7UFCSCm
-sort: 0
 _key: '!items!5MY4boLrC7UFCSCm'
 

@@ -1,40 +1,7 @@
+_id: kVEqcFZVWbbKaROT
 name: Scrap Mail
 type: armor
-_id: kVEqcFZVWbbKaROT
 img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
-system:
-  description: "<h3 style=\"box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar) var(--color-scrollbar-track);margin:0px 0px 1rem;padding:0px;font-weight:normal;font-size:var(--font-h3-size);border-bottom:1px solid var(--color-underline-header);line-height:1;text-shadow:rgb(0, 0, 0) 1px 1px 4px;font-family:var(--font-h3);color:var(--color-light-1);font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial\"><span style=\"font-family:var(--font-h3)\">Type: Primitive -\_Heavy</span></h3><p style=\"box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar) var(--color-scrollbar-track);margin:0.5rem 0px;color:rgb(17, 17, 17);font-family:Signika, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;text-align:start\"><span style=\"font-family:Signika, sans-serif\">This armor is Primitive, and gives no benefits against gunfire, explosives, or TL4+ melee weaponry.</span></p><p>This armor is Heavy, and applies a -1 penalty to all Sneak or Exert skill checks.</p><h3 style=\"box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar) var(--color-scrollbar-track);margin:2rem 0px 1rem;padding:0px;font-weight:normal;font-size:var(--font-h3-size);border-bottom:1px solid var(--color-underline-header);line-height:1;text-shadow:rgb(0, 0, 0) 1px 1px 4px;font-family:var(--font-h3);color:var(--color-light-1);font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial\"><span style=\"font-family:var(--font-h3)\">Trauma Target Mod</span></h3><p style=\"box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar) var(--color-scrollbar-track);margin:0.5rem 0px;color:rgb(17, 17, 17);font-family:Signika, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;text-align:start\"><span style=\"font-family:Signika, sans-serif\">+1</span></p><h3>Description</h3><p>Scrap mail and scrap plate cover the various forms of jury-rigged armor fashioned from small pieces of metal. While still ineffective against bullets, enough battered plating can make a wearer very difficult to harm with less sophisticated tools.</p>"
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 2
-  cost: 100
-  tl: 2
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  ac: 15
-  shield: false
-  use: false
-  meleeAc: 15
-  soak:
-    value: 0
-    max: 0
-  dr: 0
-  traumaDiePenalty: 1
-  isSubtle: false
-  isHeavy: true
-  shieldMeleeACBonus: null
-  shieldACBonus: null
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
-effects: []
 folder: EEl9Shzp7zC548q2
 sort: 100000
 ownership:
@@ -52,5 +19,35 @@ _stats:
   createdTime: 1753923587785
   modifiedTime: 1753923587785
   lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  ac: 15
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
+  cost: 100
+  description: "<h3 style=\"box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar) var(--color-scrollbar-track);margin:0px 0px 1rem;padding:0px;font-weight:normal;font-size:var(--font-h3-size);border-bottom:1px solid var(--color-underline-header);line-height:1;text-shadow:rgb(0, 0, 0) 1px 1px 4px;font-family:var(--font-h3);color:var(--color-light-1);font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial\"><span style=\"font-family:var(--font-h3)\">Type: Primitive -\_Heavy</span></h3><p style=\"box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar) var(--color-scrollbar-track);margin:0.5rem 0px;color:rgb(17, 17, 17);font-family:Signika, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;text-align:start\"><span style=\"font-family:Signika, sans-serif\">This armor is Primitive, and gives no benefits against gunfire, explosives, or TL4+ melee weaponry.</span></p><p>This armor is Heavy, and applies a -1 penalty to all Sneak or Exert skill checks.</p><h3 style=\"box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar) var(--color-scrollbar-track);margin:2rem 0px 1rem;padding:0px;font-weight:normal;font-size:var(--font-h3-size);border-bottom:1px solid var(--color-underline-header);line-height:1;text-shadow:rgb(0, 0, 0) 1px 1px 4px;font-family:var(--font-h3);color:var(--color-light-1);font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial\"><span style=\"font-family:var(--font-h3)\">Trauma Target Mod</span></h3><p style=\"box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar) var(--color-scrollbar-track);margin:0.5rem 0px;color:rgb(17, 17, 17);font-family:Signika, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;text-align:start\"><span style=\"font-family:Signika, sans-serif\">+1</span></p><h3>Description</h3><p>Scrap mail and scrap plate cover the various forms of jury-rigged armor fashioned from small pieces of metal. While still ineffective against bullets, enough battered plating can make a wearer very difficult to harm with less sophisticated tools.</p>"
+  dr: 0
+  encumbrance: 2
+  favorite: false
+  isHeavy: true
+  isSubtle: false
+  location: stowed
+  meleeAc: 15
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
+  soak:
+    max: 0
+    value: 0
+  tl: 2
+  traumaDiePenalty: 1
+  use: false
+effects: []
 _key: '!items!kVEqcFZVWbbKaROT'
 

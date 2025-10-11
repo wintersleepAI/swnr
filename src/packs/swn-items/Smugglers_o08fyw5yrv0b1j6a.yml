@@ -1,7 +1,12 @@
+_id: o08fyw5yrv0b1j6a
 name: Smugglers
 type: asset
 img: systems/swnr/assets/icons/hawkin/cunning.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.o08fyw5yrv0b1j6a
@@ -13,40 +18,35 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: o08fyw5yrv0b1j6a
 system:
   attackDamage: 1d4
   attackSource: cunning
   attackSpecial: ''
   attackTarget: wealth
   baseOfInfluence: false
+  category: cunning
   cost: 2
   counter: ''
   description: >-
     Men and women skilled in extracting personnel. For one FacCred, the
     smugglers asset can transport itself and/or any one Special Forces unit to a
     planet up to two hexes away.
+  favorite: false
   health:
     max: 4
     value: 4
   income: 0
   maintenance: 0
+  qualities:
+    action: true
+    permission: false
+    special: false
   rating: 1
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Starship
   unusable: false
-  qualities:
-    permission: false
-    action: true
-    special: false
-  category: cunning
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!o08fyw5yrv0b1j6a'
 

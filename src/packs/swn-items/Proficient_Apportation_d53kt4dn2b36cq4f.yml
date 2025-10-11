@@ -1,7 +1,12 @@
+_id: d53kt4dn2b36cq4f
 name: Proficient Apportation
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: B7XvnONYELdrJlLA
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-teleportation.Item.d53kt4dn2b36cq4f
@@ -13,26 +18,18 @@ _stats:
   createdTime: 1757286862454
   modifiedTime: 1757286862454
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: d53kt4dn2b36cq4f
 system:
+  consumptions: []
   description: >-
     <p><em>Personal Apportation</em> now counts as a Move action, though it
     still can be performed only once per round. Apportations of 10 meters or
     less no longer require Effort to be Committed, though any augments to the
     technique must still be paid for normally.</p>
-  level: 1
-  source: teleportation
   favorite: false
-  subType: psychic
+  level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions: []
-  save: null
+  source: teleportation
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!d53kt4dn2b36cq4f'
 

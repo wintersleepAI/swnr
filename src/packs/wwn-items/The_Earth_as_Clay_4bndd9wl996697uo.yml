@@ -1,27 +1,23 @@
+_id: 4bndd9wl996697uo
 name: The Earth as Clay
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456883
+  modifiedTime: 1754277456883
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The caster molds the soil and stone of the land around them, raising hills,
-    digging trenches, or forming simple structures out of extruded bedrock. Once
-    cast, the mage may psychically mold the terrain within three hundred feet
-    per caster level, shifting it slowly over the course of an hour to form
-    whatever shape they desire out of it, provided the material used can
-    actually maintain such a shape. Simple buildings and walls may be created
-    out of bedrock or available stone, and tunnels and caves may be shaped up to
-    50 feet down from the caster, while hills may be raised up to 200 feet above
-    the prevailing grade. This spell cannot work within a thousand feet of stone
-    or earth that has been significantly worked by intelligent creatures, though
-    the use of this spell by the same caster doesn't count as working the earth
-    on further castings.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 5
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -35,26 +31,27 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The caster molds the soil and stone of the land around them, raising hills,
+    digging trenches, or forming simple structures out of extruded bedrock. Once
+    cast, the mage may psychically mold the terrain within three hundred feet
+    per caster level, shifting it slowly over the course of an hour to form
+    whatever shape they desire out of it, provided the material used can
+    actually maintain such a shape. Simple buildings and walls may be created
+    out of bedrock or available stone, and tunnels and caves may be shaped up to
+    50 feet down from the caster, while hills may be raised up to 200 feet above
+    the prevailing grade. This spell cannot work within a thousand feet of stone
+    or earth that has been significantly worked by intelligent creatures, though
+    the use of this spell by the same caster doesn't count as working the earth
+    on further castings.
   duration: 300 ft. per level
-  save: None
+  favorite: false
+  level: 5
+  prepared: false
   range: Self
-  skill: null
-_id: 4bndd9wl996697uo
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456883
-  modifiedTime: 1754277456883
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!4bndd9wl996697uo'
 

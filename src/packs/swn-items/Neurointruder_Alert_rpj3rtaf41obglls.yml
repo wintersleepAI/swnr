@@ -1,7 +1,12 @@
+_id: rpj3rtaf41obglls
 name: Neurointruder Alert
 type: cyberware
 img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
 folder: 7ZDHgPOCyrCRwTEX
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cyberware.Item.rpj3rtaf41obglls
@@ -13,8 +18,9 @@ _stats:
   createdTime: 1757286670636
   modifiedTime: 1757286670636
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: rpj3rtaf41obglls
 system:
+  complication: ''
+  concealment: Sight
   cost: 50000
   description: >-
     While somewhat primitive by pretech standards, this TL5 cybernetic implant
@@ -25,16 +31,10 @@ system:
     warning does not indicate the source of the influence.
   disabled: false
   effect: Grants +3 to save vs. telepathy alerts of intrusion
+  favorite: false
   strain: 1
   tl: 5
-  favorite: false
   type: None
-  concealment: Sight
-  complication: ''
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!rpj3rtaf41obglls'
 

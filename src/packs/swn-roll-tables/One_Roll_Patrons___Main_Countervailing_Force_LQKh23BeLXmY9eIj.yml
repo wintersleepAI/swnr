@@ -1,227 +1,136 @@
-displayRoll: true
-flags: {}
-folder: Td6GsHm0Ns7IXzwI
-formula: 1d10
-img: icons/svg/d20-grey.svg
+_id: LQKh23BeLXmY9eIj
 name: One Roll Patrons - Main Countervailing Force
-replacement: true
-results:
-  - _id: 1SBbyRAAWo1l44Sf
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 1
-      - 1
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Main Countervailing Force: A treacherous employer or subordinate'
-    name: ''
-    _key: '!tables.results!LQKh23BeLXmY9eIj.1SBbyRAAWo1l44Sf'
-  - _id: ZzPI4f1MGISyuFsx
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 2
-      - 2
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Main Countervailing Force: An open and known enemy of the patron'
-    name: ''
-    _key: '!tables.results!LQKh23BeLXmY9eIj.ZzPI4f1MGISyuFsx'
-  - _id: Qm1FO6BjjVGa7xIG
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 3
-      - 3
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Main Countervailing Force: Official governmental meddling'
-    name: ''
-    _key: '!tables.results!LQKh23BeLXmY9eIj.Qm1FO6BjjVGa7xIG'
-  - _id: dE8nXy2UMyKJYmZq
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 4
-      - 4
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Main Countervailing Force: An unknown rival of the patron'
-    name: ''
-    _key: '!tables.results!LQKh23BeLXmY9eIj.dE8nXy2UMyKJYmZq'
-  - _id: VVcNhNNkVb7T1Um4
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 5
-      - 5
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Main Countervailing Force: The macguffin itself opposes them'
-    name: ''
-    _key: '!tables.results!LQKh23BeLXmY9eIj.VVcNhNNkVb7T1Um4'
-  - _id: vyl6IbbutGDutgbO
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 6
-      - 6
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Main Countervailing Force: Very short time frame allowed'
-    name: ''
-    _key: '!tables.results!LQKh23BeLXmY9eIj.vyl6IbbutGDutgbO'
-  - _id: rp2azWfkcCBlOPcw
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 7
-      - 7
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Main Countervailing Force: The job is spectacularly illegal'
-    name: ''
-    _key: '!tables.results!LQKh23BeLXmY9eIj.rp2azWfkcCBlOPcw'
-  - _id: X6UeMwpHAhiB8SQi
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 8
-      - 8
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Main Countervailing Force: A participant would profit by their failure'
-    name: ''
-    _key: '!tables.results!LQKh23BeLXmY9eIj.X6UeMwpHAhiB8SQi'
-  - _id: Fq43uIcJ22y61GVa
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 9
-      - 9
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Main Countervailing Force: The patron is badly wrong about a thing'
-    name: ''
-    _key: '!tables.results!LQKh23BeLXmY9eIj.Fq43uIcJ22y61GVa'
-  - _id: nLqUes1eEvkct0lN
-    drawn: false
-    flags: {}
-    img: icons/svg/d20-black.svg
-    range:
-      - 10
-      - 10
-    type: text
-    weight: 1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Main Countervailing Force: The locals are against the patron'
-    name: ''
-    _key: '!tables.results!LQKh23BeLXmY9eIj.nLqUes1eEvkct0lN'
+type: null
+img: icons/svg/d20-grey.svg
+folder: Td6GsHm0Ns7IXzwI
+sort: 600000
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757287494556
   modifiedTime: 1757287502706
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-description: ''
-_id: LQKh23BeLXmY9eIj
-sort: 600000
+system: {}
+effects: []
+results:
+  - _id: 1SBbyRAAWo1l44Sf
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQKh23BeLXmY9eIj.1SBbyRAAWo1l44Sf'
+  - _id: ZzPI4f1MGISyuFsx
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQKh23BeLXmY9eIj.ZzPI4f1MGISyuFsx'
+  - _id: Qm1FO6BjjVGa7xIG
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQKh23BeLXmY9eIj.Qm1FO6BjjVGa7xIG'
+  - _id: dE8nXy2UMyKJYmZq
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQKh23BeLXmY9eIj.dE8nXy2UMyKJYmZq'
+  - _id: VVcNhNNkVb7T1Um4
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQKh23BeLXmY9eIj.VVcNhNNkVb7T1Um4'
+  - _id: vyl6IbbutGDutgbO
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQKh23BeLXmY9eIj.vyl6IbbutGDutgbO'
+  - _id: rp2azWfkcCBlOPcw
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQKh23BeLXmY9eIj.rp2azWfkcCBlOPcw'
+  - _id: X6UeMwpHAhiB8SQi
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQKh23BeLXmY9eIj.X6UeMwpHAhiB8SQi'
+  - _id: Fq43uIcJ22y61GVa
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQKh23BeLXmY9eIj.Fq43uIcJ22y61GVa'
+  - _id: nLqUes1eEvkct0lN
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!LQKh23BeLXmY9eIj.nLqUes1eEvkct0lN'
 _key: '!tables!LQKh23BeLXmY9eIj'
 

@@ -1,7 +1,12 @@
+_id: PACqS6XLfpMADQs2
 name: Tinker
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: sPYHUjJb2geTuLHp
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.foci.Item.rmk672dbd8ywgpad
@@ -25,13 +30,8 @@ system:
     pretech salvage part to make, down to a minimum of zero.
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: PACqS6XLfpMADQs2
-sort: 0
 _key: '!items!PACqS6XLfpMADQs2'
 

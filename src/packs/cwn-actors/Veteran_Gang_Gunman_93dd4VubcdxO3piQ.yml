@@ -1,215 +1,204 @@
+_id: 93dd4VubcdxO3piQ
 name: Veteran Gang Gunman
 type: npc
 img: icons/svg/mystery-man.svg
+folder: 1MnMOlCpFjrZIhXu
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.93dd4VubcdxO3piQ
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
-  health:
-    value: 15
-    max: 15
-  biography: ''
-  species: ''
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 6
-  baseAc: 10
-  meleeAc: 10
   ab: 6
-  meleeAb: 6
-  systemStrain:
-    value: 0
-    permanent: 0
-  speed: 10
-  cyberdecks: []
-  health_max_modified: 0
+  access:
+    max: 1
+    value: 1
   armorType: street
-  skillBonus: 2
   attacks:
-    damage: d6
     bonusDamage: 0
+    damage: d6
     number: 0
+  baseAc: 10
+  baseSoakTotal:
+    max: 0
+    value: 0
+  biography: ''
+  cyberdecks: []
+  faction: ''
+  health:
+    max: 15
+    value: 15
+  health_max_modified: 0
   hitDice: 3d8
-  saves: 14
+  homeworld: ''
+  meleeAb: 6
+  meleeAc: 10
   moralScore: 8
   reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
+  saves: 14
+  skillBonus: 2
+  species: ''
+  speed: 10
+  systemStrain:
+    permanent: 0
     value: 0
-    max: 0
-  faction: ''
-  homeworld: ''
-  pools: {}
+  traumaTarget: 6
   tweak:
-    showCyberware: true
-    showPsychic: true
-    showArts: false
-    showSpells: false
     showAdept: false
+    showArts: false
+    showCyberware: true
     showMutation: false
     showPoolsInHeader: true
     showPoolsInPowers: false
-prototypeToken:
-  name: Gang Member
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: icons/svg/mystery-man.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
+    showPsychic: true
+    showSpells: false
+effects: []
 items:
-  - name: Street Leathers
-    type: armor
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-armor.Item.u9lx97jitoy3y13i
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
+  - _id: VLD5MWp7vo5pC9FD
+    name: Combat Rifle
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
-    _id: 9CtvkX9XfMINAEyh
     system:
-      ac: 13
-      cost: 250
-      description: >-
-        Fashionable, aggressive, and often mismatched, 'street leathers' seldom
-        have any non-synthetic leather in their makeup, but are light and
-        comfortable enough to wear as a habit.
-      encumbrance: 0
-      isHeavy: false
-      isSubtle: true
-      meleeAc: 12
-      shieldACBonus: 0
-      shieldMeleeACBonus: 0
-      soak:
-        max: 3
-        value: 3
-      traumaDiePenalty: 0
-      favorite: false
-      quantity: 1
+      ab: 0
+      ammo:
+        burst: true
+        longReload: false
+        max: 30
+        suppress: false
+        type: ammo
+        value: 30
       bundle:
         bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      shield: false
-      use: true
-      dr: 0
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
+        isContainer: false
+        isOpen: true
+      cost: 2500
+      damage: 1d12
+      description: >-
+        Rifles and combat rifles are similar semi-automatic tech, though the
+        latter is equipped with a burst-fire selector and usually trades the
+        range of a heavier caliber for the ability to carry more ammunition.
+      encumbrance: 2
+      favorite: false
+      isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      range:
+        max: 300
+        normal: 100
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      stat: dex
+      trauma:
+        die: 1d8
+        rating: 3
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
-    _key: '!actors.items!93dd4VubcdxO3piQ.9CtvkX9XfMINAEyh'
-  - name: Knife
+    _key: '!actors.items!93dd4VubcdxO3piQ.VLD5MWp7vo5pC9FD'
+  - _id: hfQIaRFpsR74fP6K
+    name: Coordination Augment I
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    sort: 0
+    system:
+      complication: ''
+      concealment: Medical
+      cost: 50000
+      description: >-
+        The user's natural mindbody interface is tightened. The subject gains a
+        Dexterity score of 14, or +2 if already 14 or higher.
+      disabled: false
+      effect: Dex 14, or +2 if higher
+      favorite: false
+      strain: 2
+      tl: 4
+      type: Nerve
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!93dd4VubcdxO3piQ.hfQIaRFpsR74fP6K'
+  - _id: NYewjuby14fXr5qR
+    name: Gunlink
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    sort: 0
+    system:
+      complication: ''
+      concealment: Touch
+      cost: 25000
+      description: >-
+        Hardwired control points interface with the onboard targeting systems of
+        most modern firearms. When using a modern firearm, the PC ignores range
+        penalties and negates up to 4 points of hit penalties for cover,
+        concealment, or prone targets. Once per scene, as an Instant action,
+        they can reroll a missed attack roll with a gun.
+      disabled: false
+      effect: Bonus when using firearms
+      favorite: false
+      strain: 1
+      tl: 4
+      type: Sensory
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!93dd4VubcdxO3piQ.NYewjuby14fXr5qR'
+  - _id: HDxrc2OratYocbN5
+    name: Knife
     type: weapon
     img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-weapons.Item.n551gn0kcu2e0iku
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: HDxrc2OratYocbN5
     system:
+      ab: 0
       ammo:
         burst: false
+        longReload: false
         max: 0
         suppress: false
         type: none
         value: 0
-        longReload: false
-        current: null
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 20
       damage: 1d4+1
       description: >-
@@ -219,207 +208,82 @@ items:
         can’t be obtained. Such weapons are effectively free, but have a -1
         penalty to hit and damage rolls due to their ungainly make.
       encumbrance: 1
+      favorite: false
+      isMelee: false
       isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
         max: 20
         normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
       secondStat: dex
       shock:
         ac: 15
         dmg: 2
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
       stat: str
       trauma:
         die: 1d6
         rating: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!93dd4VubcdxO3piQ.HDxrc2OratYocbN5'
-  - name: Gunlink
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.k78g89sqpqbprnnp
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
+  - _id: 9CtvkX9XfMINAEyh
+    name: Street Leathers
+    type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
     sort: 0
-    _id: NYewjuby14fXr5qR
     system:
-      concealment: Touch
-      cost: 25000
-      description: >-
-        Hardwired control points interface with the onboard targeting systems of
-        most modern firearms. When using a modern firearm, the PC ignores range
-        penalties and negates up to 4 points of hit penalties for cover,
-        concealment, or prone targets. Once per scene, as an Instant action,
-        they can reroll a missed attack roll with a gun.
-      effect: Bonus when using firearms
-      strain: 1
-      type: Sensory
-      favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!93dd4VubcdxO3piQ.NYewjuby14fXr5qR'
-  - name: Coordination Augment I
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.9j6itsgkrljcwytm
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: hfQIaRFpsR74fP6K
-    system:
-      concealment: Medical
-      cost: 50000
-      description: >-
-        The user's natural mindbody interface is tightened. The subject gains a
-        Dexterity score of 14, or +2 if already 14 or higher.
-      effect: Dex 14, or +2 if higher
-      strain: 2
-      type: Nerve
-      favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!93dd4VubcdxO3piQ.hfQIaRFpsR74fP6K'
-  - name: Combat Rifle
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-weapons.Item.eamiki2rkf0rtwu9
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: VLD5MWp7vo5pC9FD
-    system:
-      ammo:
-        burst: true
-        max: 30
-        suppress: false
-        type: ammo
-        value: 30
-        longReload: false
-        current: null
-      cost: 2500
-      damage: 1d12
-      description: >-
-        Rifles and combat rifles are similar semi-automatic tech, though the
-        latter is equipped with a burst-fire selector and usually trades the
-        range of a heavier caliber for the ability to carry more ammunition.
-      encumbrance: 2
-      isNonLethal: false
-      range:
-        max: 300
-        normal: 100
-      secondStat: none
-      shock:
-        ac: 0
-        dmg: 0
-      stat: dex
-      trauma:
-        die: 1d8
-        rating: 3
-      favorite: false
-      quantity: 1
+      ac: 13
       bundle:
         bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
-      isMelee: false
+        isContainer: false
+        isOpen: true
+      cost: 250
+      description: >-
+        Fashionable, aggressive, and often mismatched, 'street leathers' seldom
+        have any non-synthetic leather in their makeup, but are light and
+        comfortable enough to wear as a habit.
+      dr: 0
+      encumbrance: 0
+      favorite: false
+      isHeavy: false
+      isSubtle: true
+      location: stowed
+      meleeAc: 12
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: false
+      shieldACBonus: 0
+      shieldMeleeACBonus: 0
+      soak:
+        max: 3
+        value: 3
+      traumaDiePenalty: 0
+      use: true
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
-    _key: '!actors.items!93dd4VubcdxO3piQ.VLD5MWp7vo5pC9FD'
-effects: []
-folder: 1MnMOlCpFjrZIhXu
-flags: {}
-_stats:
-  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.93dd4VubcdxO3piQ
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.348'
-  systemId: swnr
-  systemVersion: 2.1.0-beta
-  createdTime: 1758737583614
-  modifiedTime: 1758737583614
-  lastModifiedBy: lKC5x4Yf023Bizof
-_id: 93dd4VubcdxO3piQ
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+    _key: '!actors.items!93dd4VubcdxO3piQ.9CtvkX9XfMINAEyh'
 _key: '!actors!93dd4VubcdxO3piQ'
 

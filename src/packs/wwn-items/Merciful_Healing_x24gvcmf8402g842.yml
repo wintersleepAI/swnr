@@ -1,34 +1,12 @@
+_id: x24gvcmf8402g842
 name: Merciful Healing
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Commit Effort for the day as a Main Action and touch a target within melee
-    range. The target receives 1d6+2 points of magical healing. If done in
-    combat or used to revive a Mortally Wounded subject, the rushed haste of the
-    healing adds 1 System Strain to the target, but no System Strain is added if
-    it is applied outside of combat. At fourth level the healing done increases
-    to 2d6+4 and at eighth level it becomes 4d6+8.
-  favorite: false
-  subType: art
-  source: Blood Priest
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: Blood Priest
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: x24gvcmf8402g842
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -39,10 +17,29 @@ _stats:
   modifiedTime: 1754277456779
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Blood Priest
+      usesCost: 1
+      cadence: day
+      timing: manual
+  description: >-
+    Commit Effort for the day as a Main Action and touch a target within melee
+    range. The target receives 1d6+2 points of magical healing. If done in
+    combat or used to revive a Mortally Wounded subject, the rushed haste of the
+    healing adds 1 System Strain to the target, but no System Strain is added if
+    it is applied outside of combat. At fourth level the healing done increases
+    to 2d6+4 and at eighth level it becomes 4d6+8.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: Blood Priest
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!x24gvcmf8402g842'
 

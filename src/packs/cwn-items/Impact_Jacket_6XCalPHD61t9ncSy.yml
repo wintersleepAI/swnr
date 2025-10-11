@@ -1,7 +1,12 @@
+_id: 6XCalPHD61t9ncSy
 name: Impact Jacket
 type: armor
 img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
 folder: ne4H5P4Oc4gz4LcS
+sort: 200000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-armor.Item.o9d3jkluza11ur3d
@@ -15,43 +20,37 @@ _stats:
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
   ac: 12
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 1000
   description: >-
     Built to absorb the impact of various contact sports, extreme athletic
     pursuits, and unguided vehicle races, these jackets usually come as part of
     a full-body protective outfit.
+  dr: 0
   encumbrance: 1
+  favorite: false
   isHeavy: false
   isSubtle: false
+  location: stowed
   meleeAc: 14
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
   shieldACBonus: 0
   shieldMeleeACBonus: 0
   soak:
     max: 8
     value: 8
   traumaDiePenalty: 1
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
-  shield: false
   use: false
-  dr: 0
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: 6XCalPHD61t9ncSy
-sort: 200000
 _key: '!items!6XCalPHD61t9ncSy'
 

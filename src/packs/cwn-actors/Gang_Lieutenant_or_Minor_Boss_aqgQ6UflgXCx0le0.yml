@@ -1,410 +1,117 @@
+_id: aqgQ6UflgXCx0le0
 name: Gang Lieutenant or Minor Boss
 type: npc
 img: icons/svg/mystery-man.svg
+folder: 1MnMOlCpFjrZIhXu
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.aqgQ6UflgXCx0le0
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
-  health:
-    value: 30
-    max: 30
-  biography: ''
-  species: ''
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 7
-  baseAc: 16
-  meleeAc: 16
   ab: 9
-  meleeAb: 10
-  systemStrain:
-    value: 0
-    permanent: 0
-  speed: 10
-  cyberdecks: []
-  health_max_modified: 0
+  access:
+    max: 1
+    value: 1
   armorType: street
-  skillBonus: 2
   attacks:
-    damage: d6
     bonusDamage: 0
+    damage: d6
     number: 0
+  baseAc: 16
+  baseSoakTotal:
+    max: 0
+    value: 0
+  biography: ''
+  cyberdecks: []
+  faction: ''
+  health:
+    max: 30
+    value: 30
+  health_max_modified: 0
   hitDice: 6d8
-  saves: 12
+  homeworld: ''
+  meleeAb: 10
+  meleeAc: 16
   moralScore: 10
   reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
+  saves: 12
+  skillBonus: 2
+  species: ''
+  speed: 10
+  systemStrain:
+    permanent: 0
     value: 0
-    max: 0
-  homeworld: ''
-  faction: ''
-  pools: {}
+  traumaTarget: 7
   tweak:
-    showCyberware: true
-    showPsychic: true
-    showArts: false
-    showSpells: false
     showAdept: false
+    showArts: false
+    showCyberware: true
     showMutation: false
     showPoolsInHeader: true
     showPoolsInPowers: false
-prototypeToken:
-  name: Breaching Team Member
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: icons/svg/mystery-man.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
+    showPsychic: true
+    showSpells: false
+effects: []
 items:
-  - name: Body Blades II
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.vc099h2u0tumbssa
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: 0cgpPshfI6iD3UFT
-    system:
-      concealment: Sight
-      cost: 25000
-      description: >-
-        As level one, but the user's body armament includes not only
-        conventional blades, but assorted improvements such as monomolecular
-        edges, cutting vibrations, or thermal augmentation. Their unarmed
-        attacks do 2d6 damage with a Shock of 4/15, and a Trauma Die 1d10/x3.
-        Anyone who sees or touches their arms can detect signs of the cyber,
-        however.
-      effect: Larger body weaponry
-      strain: 2
-      type: Limb
-      favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!aqgQ6UflgXCx0le0.0cgpPshfI6iD3UFT'
-  - name: Enhanced Reflexes I
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.j5b8ar9wd7fk1m2z
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: Hg3TUpENsHC9yqE4
-    system:
-      concealment: Medical
-      cost: 100000
-      description: >-
-        Neural acceleration matrices can be deployed to briefly boost the user's
-        reaction speed. Once per scene, as an On Turn action, the user gets a
-        bonus non-cyberspace Main Action.
-      effect: 1/scene, bonus Main Action
-      strain: 2
-      type: Nerve
-      favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!aqgQ6UflgXCx0le0.Hg3TUpENsHC9yqE4'
-  - name: Muscle Fiber Replacement I
-    type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-cyberware.Item.trwrxzt4yhkbbnlh
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: NtbbEtMfZbpVL0UR
-    system:
-      concealment: Touch
-      cost: 50000
-      description: >-
-        Artificial muscle fibers are implanted as replacements for the user's
-        own flesh. The subject gains a Strength score of 14, or +2 if already 14
-        or higher.
-      effect: Str 14, or +2 if higher
-      strain: 1
-      type: Limb
-      favorite: false
-      tl: 4
-      disabled: false
-      complication: ''
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!aqgQ6UflgXCx0le0.NtbbEtMfZbpVL0UR'
-  - name: Armored Clothing
+  - _id: NbYbIMFWAVrvoNjJ
+    name: Armored Clothing
     type: armor
     img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-armor.Item.rgosy2tui7x5kwp0
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: NbYbIMFWAVrvoNjJ
     system:
       ac: 16
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
       cost: 1000
       description: >-
         The bulky plates and heavy ballistic weaves of this outfit are disguised
         as drapes and fashion elements.
+      dr: 0
       encumbrance: 2
+      favorite: false
       isHeavy: false
       isSubtle: true
+      location: stowed
       meleeAc: 14
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      shield: false
       shieldACBonus: 0
       shieldMeleeACBonus: 0
       soak:
         max: 5
         value: 5
       traumaDiePenalty: 1
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      shield: false
       use: true
-      dr: 0
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!aqgQ6UflgXCx0le0.NbYbIMFWAVrvoNjJ'
-  - name: Heavy Pistol
-    type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-weapons.Item.kgoo4k7gf2gvp0rx
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: 3qle9QsxNHOPRH5P
-    system:
-      ammo:
-        burst: false
-        max: 8
-        suppress: false
-        type: ammo
-        value: 8
-        longReload: false
-        current: null
-      cost: 200
-      damage: 1d8
-      description: >-
-        Light and heavy pistols are categorized by the caliber of the bullet
-        they fire. Some operators prefer the low recoil and high mag capacity
-        possible with a low-caliber round, while others like to have a little
-        more certainty in dropping the targets they hit.
-      encumbrance: 1
-      isNonLethal: false
-      range:
-        max: 100
-        normal: 10
-      secondStat: none
-      shock:
-        ac: 0
-        dmg: 0
-      stat: dex
-      trauma:
-        die: 1d6
-        rating: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-        amount: null
-      tl: null
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      skill: ask
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      ab: 0
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      isTwoHanded: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      isMelee: false
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!aqgQ6UflgXCx0le0.3qle9QsxNHOPRH5P'
-  - name: Veteran's Luck
-    type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-edges.Item.94fgmfw56y7l780i
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: Pip72wl26kAu9ewL
-    system:
-      description: >-
-        Once per scene, as an Instant action, trigger this ability to gain one
-        of two effects,an attack roll that just hit you is instead treated as a
-        miss
-      favorite: false
-      level: 0
-      type: edge
-      poolsGranted: []
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!aqgQ6UflgXCx0le0.Pip72wl26kAu9ewL'
-  - name: Armsmaster
+  - _id: VzmGL9oledmAk8hG
+    name: Armsmaster
     type: feature
     img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: Compendium.swnr.cwn-foci.Item.avyca4bixumyojdt
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.348'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
     sort: 0
-    _id: VzmGL9oledmAk8hG
     system:
       description: >-
         <p>You have an unusual competence with thrown weapons and melee attacks.
@@ -419,29 +126,174 @@ items:
         AC 10. Gain a +1 bonus to hit with all thrown or melee attacks.</p>
       favorite: false
       level: 2
-      type: focus
       poolsGranted: []
+      type: focus
     effects: []
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!aqgQ6UflgXCx0le0.VzmGL9oledmAk8hG'
-effects: []
-folder: 1MnMOlCpFjrZIhXu
-flags: {}
-_stats:
-  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.aqgQ6UflgXCx0le0
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.348'
-  systemId: swnr
-  systemVersion: 2.1.0-beta
-  createdTime: 1758737583614
-  modifiedTime: 1758737583614
-  lastModifiedBy: lKC5x4Yf023Bizof
-_id: aqgQ6UflgXCx0le0
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+  - _id: 0cgpPshfI6iD3UFT
+    name: Body Blades II
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    sort: 0
+    system:
+      complication: ''
+      concealment: Sight
+      cost: 25000
+      description: >-
+        As level one, but the user's body armament includes not only
+        conventional blades, but assorted improvements such as monomolecular
+        edges, cutting vibrations, or thermal augmentation. Their unarmed
+        attacks do 2d6 damage with a Shock of 4/15, and a Trauma Die 1d10/x3.
+        Anyone who sees or touches their arms can detect signs of the cyber,
+        however.
+      disabled: false
+      effect: Larger body weaponry
+      favorite: false
+      strain: 2
+      tl: 4
+      type: Limb
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!aqgQ6UflgXCx0le0.0cgpPshfI6iD3UFT'
+  - _id: Hg3TUpENsHC9yqE4
+    name: Enhanced Reflexes I
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    sort: 0
+    system:
+      complication: ''
+      concealment: Medical
+      cost: 100000
+      description: >-
+        Neural acceleration matrices can be deployed to briefly boost the user's
+        reaction speed. Once per scene, as an On Turn action, the user gets a
+        bonus non-cyberspace Main Action.
+      disabled: false
+      effect: 1/scene, bonus Main Action
+      favorite: false
+      strain: 2
+      tl: 4
+      type: Nerve
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!aqgQ6UflgXCx0le0.Hg3TUpENsHC9yqE4'
+  - _id: 3qle9QsxNHOPRH5P
+    name: Heavy Pistol
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
+    system:
+      ab: 0
+      ammo:
+        burst: false
+        longReload: false
+        max: 8
+        suppress: false
+        type: ammo
+        value: 8
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 200
+      damage: 1d8
+      description: >-
+        Light and heavy pistols are categorized by the caliber of the bullet
+        they fire. Some operators prefer the low recoil and high mag capacity
+        possible with a low-caliber round, while others like to have a little
+        more certainty in dropping the targets they hit.
+      encumbrance: 1
+      favorite: false
+      isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      range:
+        max: 100
+        normal: 10
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      stat: dex
+      trauma:
+        die: 1d6
+        rating: 3
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!aqgQ6UflgXCx0le0.3qle9QsxNHOPRH5P'
+  - _id: NtbbEtMfZbpVL0UR
+    name: Muscle Fiber Replacement I
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    sort: 0
+    system:
+      complication: ''
+      concealment: Touch
+      cost: 50000
+      description: >-
+        Artificial muscle fibers are implanted as replacements for the user's
+        own flesh. The subject gains a Strength score of 14, or +2 if already 14
+        or higher.
+      disabled: false
+      effect: Str 14, or +2 if higher
+      favorite: false
+      strain: 1
+      tl: 4
+      type: Limb
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!aqgQ6UflgXCx0le0.NtbbEtMfZbpVL0UR'
+  - _id: Pip72wl26kAu9ewL
+    name: Veteran's Luck
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+    sort: 0
+    system:
+      description: >-
+        Once per scene, as an Instant action, trigger this ability to gain one
+        of two effects,an attack roll that just hit you is instead treated as a
+        miss
+      favorite: false
+      level: 0
+      poolsGranted: []
+      type: edge
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!aqgQ6UflgXCx0le0.Pip72wl26kAu9ewL'
 _key: '!actors!aqgQ6UflgXCx0le0'
 

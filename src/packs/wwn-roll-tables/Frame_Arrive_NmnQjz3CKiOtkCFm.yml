@@ -1,266 +1,157 @@
 _id: NmnQjz3CKiOtkCFm
 name: Frame-Arrive
+type: null
 img: icons/svg/d20-grey.svg
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: 1nmvp6p6w5h883j3
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Driven here by a terrible monster
-    name: ''
-    _key: '!tables.results!NmnQjz3CKiOtkCFm.1nmvp6p6w5h883j3'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: 2aak47mwovau51sg
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: No one remembers when they first came
-    name: ''
-    _key: '!tables.results!NmnQjz3CKiOtkCFm.2aak47mwovau51sg'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: alpm2hfoh0qw9670
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Forced out of their old home by enemies
-    name: ''
-    _key: '!tables.results!NmnQjz3CKiOtkCFm.alpm2hfoh0qw9670'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: 5nmwrkgppsp3jap8
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Sent out as a colony from their parent group
-    name: ''
-    _key: '!tables.results!NmnQjz3CKiOtkCFm.5nmwrkgppsp3jap8'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: ccaopzbeyv5qrm7c
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Gathered from scattered exiles and outcasts
-    name: ''
-    _key: '!tables.results!NmnQjz3CKiOtkCFm.ccaopzbeyv5qrm7c'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: s01mmg0utzu3q3ia
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Enlisted to come by a powerful leader
-    name: ''
-    _key: '!tables.results!NmnQjz3CKiOtkCFm.s01mmg0utzu3q3ia'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: ou4x402rmol1h74n
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Drawn by the prospect of resources or loot
-    name: ''
-    _key: '!tables.results!NmnQjz3CKiOtkCFm.ou4x402rmol1h74n'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: xkl9p45isqzrocnj
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Making a cultural or religious pilgrimage
-    name: ''
-    _key: '!tables.results!NmnQjz3CKiOtkCFm.xkl9p45isqzrocnj'
-  - type: text
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    _id: lfffxcfb8mbuk8e6
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Came to fight an enemy that lairs here
-    name: ''
-    _key: '!tables.results!NmnQjz3CKiOtkCFm.lfffxcfb8mbuk8e6'
-  - type: text
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    _id: o06ulfpeiio0k2um
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Sent by visions, prophecy, or oracles
-    name: ''
-    _key: '!tables.results!NmnQjz3CKiOtkCFm.o06ulfpeiio0k2um'
-  - type: text
-    weight: 1
-    range:
-      - 11
-      - 11
-    drawn: false
-    _id: 4rwo6sw0y1pruulo
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It’s a refuge from some pursuing foe
-    name: ''
-    _key: '!tables.results!NmnQjz3CKiOtkCFm.4rwo6sw0y1pruulo'
-  - type: text
-    weight: 1
-    range:
-      - 12
-      - 12
-    drawn: false
-    _id: 4zjzex1tq8534909
-    flags: {}
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: To guard something precious here
-    name: ''
-    _key: '!tables.results!NmnQjz3CKiOtkCFm.4zjzex1tq8534909'
-formula: 1d12
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
-description: ''
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.NmnQjz3CKiOtkCFm
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: 1nmvp6p6w5h883j3
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!NmnQjz3CKiOtkCFm.1nmvp6p6w5h883j3'
+  - _id: 2aak47mwovau51sg
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!NmnQjz3CKiOtkCFm.2aak47mwovau51sg'
+  - _id: alpm2hfoh0qw9670
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!NmnQjz3CKiOtkCFm.alpm2hfoh0qw9670'
+  - _id: 5nmwrkgppsp3jap8
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!NmnQjz3CKiOtkCFm.5nmwrkgppsp3jap8'
+  - _id: ccaopzbeyv5qrm7c
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!NmnQjz3CKiOtkCFm.ccaopzbeyv5qrm7c'
+  - _id: s01mmg0utzu3q3ia
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!NmnQjz3CKiOtkCFm.s01mmg0utzu3q3ia'
+  - _id: ou4x402rmol1h74n
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!NmnQjz3CKiOtkCFm.ou4x402rmol1h74n'
+  - _id: xkl9p45isqzrocnj
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!NmnQjz3CKiOtkCFm.xkl9p45isqzrocnj'
+  - _id: lfffxcfb8mbuk8e6
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!NmnQjz3CKiOtkCFm.lfffxcfb8mbuk8e6'
+  - _id: o06ulfpeiio0k2um
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!NmnQjz3CKiOtkCFm.o06ulfpeiio0k2um'
+  - _id: 4rwo6sw0y1pruulo
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!NmnQjz3CKiOtkCFm.4rwo6sw0y1pruulo'
+  - _id: 4zjzex1tq8534909
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!NmnQjz3CKiOtkCFm.4zjzex1tq8534909'
 _key: '!tables!NmnQjz3CKiOtkCFm'
 

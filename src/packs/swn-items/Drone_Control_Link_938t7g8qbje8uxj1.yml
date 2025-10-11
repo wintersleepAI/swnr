@@ -1,7 +1,12 @@
+_id: 938t7g8qbje8uxj1
 name: Drone Control Link
 type: cyberware
 img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
 folder: 7ZDHgPOCyrCRwTEX
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cyberware.Item.938t7g8qbje8uxj1
@@ -13,8 +18,9 @@ _stats:
   createdTime: 1757286670636
   modifiedTime: 1757286670636
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 938t7g8qbje8uxj1
 system:
+  complication: ''
+  concealment: Sight
   cost: 20000
   description: >-
     Most often found among military bot wranglers, civilians can also get a
@@ -28,16 +34,10 @@ system:
     connection with one drone at a time, plus the user's Program skill.
   disabled: false
   effect: Allows easier remote control of drones
+  favorite: false
   strain: 1
   tl: 4
-  favorite: false
   type: None
-  concealment: Sight
-  complication: ''
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!938t7g8qbje8uxj1'
 

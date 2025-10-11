@@ -1,148 +1,93 @@
-displayRoll: true
+_id: skSuKUYZq8ybmAkR
+name: One Roll Wilderness Encounters - Weather and Lighting
+type: null
+img: icons/svg/d20-grey.svg
+folder: Td6GsHm0Ns7IXzwI
+sort: 0
+ownership:
+  P3lRTKxUBvk8Gei6: 3
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags:
   core: {}
-folder: Td6GsHm0Ns7IXzwI
-formula: 1d6
-img: icons/svg/d20-grey.svg
-name: One Roll Wilderness Encounters - Weather and Lighting
-replacement: true
-results:
-  - _id: vCockL5UjkDbhmHw
-    drawn: false
-    flags: {}
-    range:
-      - 1
-      - 1
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Weather and Lighting: Takes place in daylight and clear weather'
-    name: ''
-    _key: '!tables.results!skSuKUYZq8ybmAkR.vCockL5UjkDbhmHw'
-  - _id: vL54ovfB1lV0DHMH
-    drawn: false
-    flags: {}
-    range:
-      - 2
-      - 2
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Weather and Lighting: Daylight, but fog, mist, rain or the like'
-    name: ''
-    _key: '!tables.results!skSuKUYZq8ybmAkR.vL54ovfB1lV0DHMH'
-  - _id: 3QKa1WhyMTFumriQ
-    drawn: false
-    flags: {}
-    range:
-      - 3
-      - 3
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Weather and Lighting: Daylight, but harsh seasonal weather'
-    name: ''
-    _key: '!tables.results!skSuKUYZq8ybmAkR.3QKa1WhyMTFumriQ'
-  - _id: rfAEKWy5s2EwzA4P
-    drawn: false
-    flags: {}
-    range:
-      - 4
-      - 4
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Weather and Lighting: Night encounter, but clear weather'
-    name: ''
-    _key: '!tables.results!skSuKUYZq8ybmAkR.rfAEKWy5s2EwzA4P'
-  - _id: bsC77fZA44k27iEl
-    drawn: false
-    flags: {}
-    range:
-      - 5
-      - 5
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Weather and Lighting: Night, with rain or other obscuring effects'
-    name: ''
-    _key: '!tables.results!skSuKUYZq8ybmAkR.bsC77fZA44k27iEl'
-  - _id: 0G5gARtw7knGd09G
-    drawn: false
-    flags: {}
-    range:
-      - 6
-      - 6
-    type: text
-    weight: 1
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    description: 'Weather and Lighting: Night, with terrible weather and wind'
-    name: ''
-    _key: '!tables.results!skSuKUYZq8ybmAkR.0G5gARtw7knGd09G'
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757287529810
   modifiedTime: 1757287529810
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  P3lRTKxUBvk8Gei6: 3
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-description: ''
-_id: skSuKUYZq8ybmAkR
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: vCockL5UjkDbhmHw
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!skSuKUYZq8ybmAkR.vCockL5UjkDbhmHw'
+  - _id: vL54ovfB1lV0DHMH
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!skSuKUYZq8ybmAkR.vL54ovfB1lV0DHMH'
+  - _id: 3QKa1WhyMTFumriQ
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!skSuKUYZq8ybmAkR.3QKa1WhyMTFumriQ'
+  - _id: rfAEKWy5s2EwzA4P
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!skSuKUYZq8ybmAkR.rfAEKWy5s2EwzA4P'
+  - _id: bsC77fZA44k27iEl
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!skSuKUYZq8ybmAkR.bsC77fZA44k27iEl'
+  - _id: 0G5gARtw7knGd09G
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!skSuKUYZq8ybmAkR.0G5gARtw7knGd09G'
 _key: '!tables!skSuKUYZq8ybmAkR'
 

@@ -1,8 +1,24 @@
-folder: yQ4g9zWJVM3P9bRD
+_id: 65xUZpGkkgoEmimZ
 name: Veteran’s Luck
 type: feature
-_id: 65xUZpGkkgoEmimZ
 img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+folder: yQ4g9zWJVM3P9bRD
+sort: 0
+ownership:
+  default: 0
+  AjdlQlPXkJlcOy63: 3
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1753923778235
+  modifiedTime: 1753923778235
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
   description: >-
     <h3
@@ -61,24 +77,8 @@ system:
     other harm that doesn’t involve an attack roll.</p>
   favorite: false
   level: 0
-  type: edge
   poolsGranted: []
+  type: edge
 effects: []
-sort: 0
-ownership:
-  default: 0
-  AjdlQlPXkJlcOy63: 3
-  lKC5x4Yf023Bizof: 3
-flags: {}
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1753923778235
-  modifiedTime: 1753923778235
-  lastModifiedBy: lKC5x4Yf023Bizof
 _key: '!items!65xUZpGkkgoEmimZ'
 

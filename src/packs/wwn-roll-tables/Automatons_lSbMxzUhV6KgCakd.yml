@@ -1,147 +1,92 @@
+_id: lSbMxzUhV6KgCakd
 name: Automatons
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - _id: uN7qSO7hWEkqalwP
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Do its intended purpose, even if inappropriate
-    name: ''
-    _key: '!tables.results!lSbMxzUhV6KgCakd.uN7qSO7hWEkqalwP'
-  - _id: FXCY2hzg9sNiVG2p
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Spend the round analyzing the situation
-    name: ''
-    _key: '!tables.results!lSbMxzUhV6KgCakd.FXCY2hzg9sNiVG2p'
-  - _id: CFYmxpvdFvFMLC5S
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Repeat the last thing it did with blind intent
-    name: ''
-    _key: '!tables.results!lSbMxzUhV6KgCakd.CFYmxpvdFvFMLC5S'
-  - _id: 9Yl67Y0JJulRka5r
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Attack the last target, even if it's now downed
-    name: ''
-    _key: '!tables.results!lSbMxzUhV6KgCakd.9Yl67Y0JJulRka5r'
-  - _id: rvf0XfwxtGRiGZp1
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Utter a warning or imperative to the foes
-    name: ''
-    _key: '!tables.results!lSbMxzUhV6KgCakd.rvf0XfwxtGRiGZp1'
-  - _id: gg4RrBExRKCYmU42
-    flags: {}
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Select a new target for some reason
-    name: ''
-    _key: '!tables.results!lSbMxzUhV6KgCakd.gg4RrBExRKCYmU42'
-formula: 1d6
-replacement: true
-displayRoll: true
 folder: tCjobZPuAK5KxMZQ
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   core: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-instinct.RollTable.eriltzOM4smkhj0R
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272494042
   modifiedTime: 1754272494042
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: lSbMxzUhV6KgCakd
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: uN7qSO7hWEkqalwP
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!lSbMxzUhV6KgCakd.uN7qSO7hWEkqalwP'
+  - _id: FXCY2hzg9sNiVG2p
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!lSbMxzUhV6KgCakd.FXCY2hzg9sNiVG2p'
+  - _id: CFYmxpvdFvFMLC5S
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!lSbMxzUhV6KgCakd.CFYmxpvdFvFMLC5S'
+  - _id: 9Yl67Y0JJulRka5r
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!lSbMxzUhV6KgCakd.9Yl67Y0JJulRka5r'
+  - _id: rvf0XfwxtGRiGZp1
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!lSbMxzUhV6KgCakd.rvf0XfwxtGRiGZp1'
+  - _id: gg4RrBExRKCYmU42
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!lSbMxzUhV6KgCakd.gg4RrBExRKCYmU42'
 _key: '!tables!lSbMxzUhV6KgCakd'
 

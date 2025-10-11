@@ -1,187 +1,114 @@
 _id: S5LfTFOCY9w6H9h1
 name: Government-SingleRuler
+type: null
 img: icons/svg/d20-grey.svg
-description: Single Rulers
-results:
-  - _id: BZXXPetqhuhbzBhZ
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: King or queen over lesser lords
-    name: ''
-    _key: '!tables.results!S5LfTFOCY9w6H9h1.BZXXPetqhuhbzBhZ'
-  - _id: Te9hABZ3H9VjNnpK
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Autocrat with non-noble officials
-    name: ''
-    _key: '!tables.results!S5LfTFOCY9w6H9h1.Te9hABZ3H9VjNnpK'
-  - _id: AARVHIQFETaSTXup
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: President chosen by certain electors
-    name: ''
-    _key: '!tables.results!S5LfTFOCY9w6H9h1.AARVHIQFETaSTXup'
-  - _id: i2OhJeaEvQMyNGLx
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Warlord recognized as the strongest
-    name: ''
-    _key: '!tables.results!S5LfTFOCY9w6H9h1.i2OhJeaEvQMyNGLx'
-  - _id: MrsnW8DtSAM8rafc
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Seniormost representative of the ruling class
-    name: ''
-    _key: '!tables.results!S5LfTFOCY9w6H9h1.MrsnW8DtSAM8rafc'
-  - _id: occFxOEd27N4CTLA
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Divinely-chosen leader of the land
-    name: ''
-    _key: '!tables.results!S5LfTFOCY9w6H9h1.occFxOEd27N4CTLA'
-  - _id: cgojRaRZt5iiZEDK
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Monarch for a fixed term or situation
-    name: ''
-    _key: '!tables.results!S5LfTFOCY9w6H9h1.cgojRaRZt5iiZEDK'
-  - _id: tSEHREpeB9MKXrOK
-    flags: {}
-    type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    img: null
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Wielder of some magical legitimacy
-    name: ''
-    _key: '!tables.results!S5LfTFOCY9w6H9h1.tSEHREpeB9MKXrOK'
-formula: 1d8
-replacement: true
-displayRoll: true
 folder: fhkT8z8QarD3U3n2
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   better-rolltables: {}
 _stats:
   compendiumSource: Compendium.swnr.wwn-gm-sub-tables.RollTable.S5LfTFOCY9w6H9h1
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271915093
   modifiedTime: 1754271915093
   lastModifiedBy: lKC5x4Yf023Bizof
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: BZXXPetqhuhbzBhZ
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.BZXXPetqhuhbzBhZ'
+  - _id: Te9hABZ3H9VjNnpK
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.Te9hABZ3H9VjNnpK'
+  - _id: AARVHIQFETaSTXup
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.AARVHIQFETaSTXup'
+  - _id: i2OhJeaEvQMyNGLx
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.i2OhJeaEvQMyNGLx'
+  - _id: MrsnW8DtSAM8rafc
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.MrsnW8DtSAM8rafc'
+  - _id: occFxOEd27N4CTLA
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.occFxOEd27N4CTLA'
+  - _id: cgojRaRZt5iiZEDK
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.cgojRaRZt5iiZEDK'
+  - _id: tSEHREpeB9MKXrOK
+    type: text
+    text: null
+    img: null
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!S5LfTFOCY9w6H9h1.tSEHREpeB9MKXrOK'
 _key: '!tables!S5LfTFOCY9w6H9h1'
 

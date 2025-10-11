@@ -1,136 +1,80 @@
-folder: CSCqqVbsxG36AwwF
-name: Scheme Result
 _id: nvbGGKV7TUq15Shi
+name: Scheme Result
+type: null
 img: icons/svg/d20-grey.svg
-description: >-
-  <img
-  src="worlds/cyberpunk-lone-star-extraction/assets/tables/image-rRuaynFm9P7MpvZa.png"
-  />
-results:
-  - type: text
-    weight: 1
-    range:
-      - -10
-      - 2
-    drawn: false
-    _id: Ofqbi4t3zw9mrWdW
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: >-
-      Not only did they fail, but they somehow managed to make the situation
-      much worse for their patron with two unfortunate consequences for the team
-      and one for the actual patron
-    name: ''
-    _key: '!tables.results!nvbGGKV7TUq15Shi.Ofqbi4t3zw9mrWdW'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 5
-    drawn: false
-    _id: bxtUD0it0g1ALPW0
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: >-
-      The mission was a failure, and two unfortunate consequences were suffered
-      as collateral damage
-    name: ''
-    _key: '!tables.results!nvbGGKV7TUq15Shi.bxtUD0it0g1ALPW0'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 8
-    drawn: false
-    _id: LeQt5brwI3wzUgjt
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: The mission was a success, but one unfortunate consequence resulted
-    name: ''
-    _key: '!tables.results!nvbGGKV7TUq15Shi.LeQt5brwI3wzUgjt'
-  - type: text
-    weight: 1
-    range:
-      - 9
-      - 11
-    drawn: false
-    _id: m5U9BRqiLvPZ1WM2
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A solid success with no real missteps
-    name: ''
-    _key: '!tables.results!nvbGGKV7TUq15Shi.m5U9BRqiLvPZ1WM2'
-  - type: text
-    weight: 1
-    range:
-      - 12
-      - 30
-    drawn: false
-    _id: ReNpq63vD2v0dSEa
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: >-
-      Perfectly smooth job that accomplished everything desired without the
-      slightest collateral damage
-    name: ''
-    _key: '!tables.results!nvbGGKV7TUq15Shi.ReNpq63vD2v0dSEa'
-replacement: true
-displayRoll: true
+folder: CSCqqVbsxG36AwwF
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-tables.RollTable.nvbGGKV7TUq15Shi
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 2d6
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: Ofqbi4t3zw9mrWdW
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - -10
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nvbGGKV7TUq15Shi.Ofqbi4t3zw9mrWdW'
+  - _id: bxtUD0it0g1ALPW0
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nvbGGKV7TUq15Shi.bxtUD0it0g1ALPW0'
+  - _id: LeQt5brwI3wzUgjt
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nvbGGKV7TUq15Shi.LeQt5brwI3wzUgjt'
+  - _id: m5U9BRqiLvPZ1WM2
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 9
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nvbGGKV7TUq15Shi.m5U9BRqiLvPZ1WM2'
+  - _id: ReNpq63vD2v0dSEa
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 12
+      - 30
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!nvbGGKV7TUq15Shi.ReNpq63vD2v0dSEa'
 _key: '!tables!nvbGGKV7TUq15Shi'
 

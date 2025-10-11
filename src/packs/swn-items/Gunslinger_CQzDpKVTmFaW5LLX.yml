@@ -1,7 +1,12 @@
+_id: CQzDpKVTmFaW5LLX
 name: Gunslinger
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: sPYHUjJb2geTuLHp
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.foci.Item.z30yg689b9mxjz06
@@ -27,13 +32,8 @@ system:
     unmodified 1d4 damage.
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: CQzDpKVTmFaW5LLX
-sort: 0
 _key: '!items!CQzDpKVTmFaW5LLX'
 

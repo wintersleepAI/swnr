@@ -1,444 +1,12 @@
 _id: UjNCu5tmLWpZs6pP
 name: History Construction - Extant - Multiple Crises
+type: null
 img: icons/svg/d20-grey.svg
-description: <p>This generates a history with a 1-3 Crises that the populace overcame.</p>
-results:
-  - _id: eQUWJuAtzTjlPxgQ
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>How Did They Originate?</b>
-    name: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.eQUWJuAtzTjlPxgQ'
-  - _id: Cs7yobzyCjJsfUUF
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292816362
-    name: History-Originate
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.zvmgqmrMPn1uPn3s
-    description: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.Cs7yobzyCjJsfUUF'
-  - _id: yKWMM6grji7lFdCT
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>What Became of the Original Inhabitants?</b>
-    name: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.yKWMM6grji7lFdCT'
-  - _id: s2KpZo3jhCk5M53j
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292821320
-    name: History-Became
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.ezfbdMP34zjIv8SN
-    description: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.s2KpZo3jhCk5M53j'
-  - _id: yWkFTRGaILzBswYV
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>First Historical Crisis</b>
-    name: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.yWkFTRGaILzBswYV'
-  - _id: DUZL2GbvjDaWvFzD
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292826976
-    name: History-Crises
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.aWN0p6WmxZusXM12
-    description: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.DUZL2GbvjDaWvFzD'
-  - _id: zIalJedYHs4RBOR6
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>How Did They Overcome the First Crisis?</b>
-    name: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.zIalJedYHs4RBOR6'
-  - _id: WOwLODRc5YWdKxe2
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292832118
-    name: History-Overcome-Crisis
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.H0VclxkStddyMzu2
-    description: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.WOwLODRc5YWdKxe2'
-  - _id: mI8XpPE1sNYl416M
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 1
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>What Was Great About Its Peak?</b>
-    name: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.mI8XpPE1sNYl416M'
-  - _id: Nj151Xx0ZrsnDMQY
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292837826
-    name: History-Peak
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.viCbnbWQusdkEbIM
-    description: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.Nj151Xx0ZrsnDMQY'
-  - _id: sHh6xsOyWJ2maeQF
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 2
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Second Historical Crisis</b>
-    name: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.sHh6xsOyWJ2maeQF'
-  - _id: NQzBNX75KsKq28vA
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 2
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292846372
-    name: History-Crises
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.aWN0p6WmxZusXM12
-    description: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.NQzBNX75KsKq28vA'
-  - _id: d1TDzLhP0jBhhZEn
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 2
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>How Did They Overcome the Second Crisis?</b>
-    name: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.d1TDzLhP0jBhhZEn'
-  - _id: OFMlH1tK4AT0dfX6
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 2
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292851801
-    name: History-Overcome-Crisis
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.H0VclxkStddyMzu2
-    description: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.OFMlH1tK4AT0dfX6'
-  - _id: 6mdSz0tYRQrvrt1R
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>Third Historical Crisis</b>
-    name: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.6mdSz0tYRQrvrt1R'
-  - _id: n3tspF0ERUE7hp2l
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292858029
-    name: History-Crises
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.aWN0p6WmxZusXM12
-    description: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.n3tspF0ERUE7hp2l'
-  - _id: Fw0rAAXvt6F40kOG
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: <b>How Did They Overcome the Third Crisis?</b>
-    name: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.Fw0rAAXvt6F40kOG'
-  - _id: 6TbCeSlkGgVOE2GF
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757292870266
-    name: History-Overcome-Crisis
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.H0VclxkStddyMzu2
-    description: ''
-    _key: '!tables.results!UjNCu5tmLWpZs6pP.6TbCeSlkGgVOE2GF'
-formula: 1d3
-replacement: true
-displayRoll: true
 folder: NcNmE2NSqwIFlKia
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   better-rolltables:
     table-type: better
@@ -447,15 +15,266 @@ _stats:
   compendiumSource: Compendium.swnr.wwn-gm-tables.RollTable.UjNCu5tmLWpZs6pP
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271920613
   modifiedTime: 1757292812476
   lastModifiedBy: iXDXVi7OlHcRwXw0
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: Cs7yobzyCjJsfUUF
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.Cs7yobzyCjJsfUUF'
+  - _id: DUZL2GbvjDaWvFzD
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.DUZL2GbvjDaWvFzD'
+  - _id: Nj151Xx0ZrsnDMQY
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.Nj151Xx0ZrsnDMQY'
+  - _id: WOwLODRc5YWdKxe2
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.WOwLODRc5YWdKxe2'
+  - _id: eQUWJuAtzTjlPxgQ
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.eQUWJuAtzTjlPxgQ'
+  - _id: mI8XpPE1sNYl416M
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.mI8XpPE1sNYl416M'
+  - _id: s2KpZo3jhCk5M53j
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.s2KpZo3jhCk5M53j'
+  - _id: yKWMM6grji7lFdCT
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.yKWMM6grji7lFdCT'
+  - _id: yWkFTRGaILzBswYV
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.yWkFTRGaILzBswYV'
+  - _id: zIalJedYHs4RBOR6
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.zIalJedYHs4RBOR6'
+  - _id: NQzBNX75KsKq28vA
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 2
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.NQzBNX75KsKq28vA'
+  - _id: OFMlH1tK4AT0dfX6
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 2
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.OFMlH1tK4AT0dfX6'
+  - _id: d1TDzLhP0jBhhZEn
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.d1TDzLhP0jBhhZEn'
+  - _id: sHh6xsOyWJ2maeQF
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.sHh6xsOyWJ2maeQF'
+  - _id: 6TbCeSlkGgVOE2GF
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.6TbCeSlkGgVOE2GF'
+  - _id: 6mdSz0tYRQrvrt1R
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.6mdSz0tYRQrvrt1R'
+  - _id: Fw0rAAXvt6F40kOG
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.Fw0rAAXvt6F40kOG'
+  - _id: n3tspF0ERUE7hp2l
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    _key: '!tables.results!UjNCu5tmLWpZs6pP.n3tspF0ERUE7hp2l'
 _key: '!tables!UjNCu5tmLWpZs6pP'
 

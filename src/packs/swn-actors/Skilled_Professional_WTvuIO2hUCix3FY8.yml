@@ -1,13 +1,18 @@
+_id: WTvuIO2hUCix3FY8
 name: Skilled Professional
 type: npc
 img: systems/swnr/assets/icons/blankface.png
 folder: wHL3xA3jmTpsQmyZ
+sort: 1100000
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0-beta
   createdTime: 1757286510864
@@ -15,483 +20,337 @@ _stats:
   lastModifiedBy: iXDXVi7OlHcRwXw0
 system:
   ab: 0
+  access:
+    max: 1
+    value: 1
   armorType: street
   attacks:
     bonusDamage: 0
-    number: 1
     damage: d6
+    number: 1
   baseAc: 10
+  baseSoakTotal:
+    max: 0
+    value: 0
+  biography: ''
+  cyberdecks: []
+  health:
+    max: 10
+    value: 10
+  health_max_modified: 0
   hitDice: '1'
+  meleeAb: 1
+  meleeAc: 10
   moralScore: 6
+  reaction: unknown
   saves: 15
   skillBonus: 2
-  speed: 10
-  health:
-    value: 10
-    max: 10
-  biography: ''
   species: ''
-  access:
-    value: 1
-    max: 1
-  traumaTarget: 6
-  meleeAc: 10
-  meleeAb: 1
+  speed: 10
   systemStrain:
-    value: 0
     permanent: 0
-  pools: {}
-  cyberdecks: []
-  health_max_modified: 0
-  reaction: unknown
-  notes:
-    left: {}
-    right: {}
-    public: {}
-  baseSoakTotal:
     value: 0
-    max: 0
+  traumaTarget: 6
   tweak:
-    showCyberware: true
-    showPsychic: true
-    showArts: false
-    showSpells: false
     showAdept: false
+    showArts: false
+    showCyberware: true
     showMutation: false
     showPoolsInHeader: true
     showPoolsInPowers: false
+    showPsychic: true
+    showSpells: false
 effects: []
-prototypeToken:
-  name: Skilled Professional
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/blankface.png
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
-  turnMarker:
-    mode: 1
-    animation: null
-    src: null
-    disposition: false
-  movementAction: null
 items:
-  - name: D4 Weapon
+  - _id: cmxdzopbmq1dtjki
+    name: D10 Weapon
     type: weapon
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
-    _id: vby8lvxdjo2fx3wt
     system:
-      shock:
-        dmg: 0
-        ac: 15
-      damage: d4
-      encumbrance: 0
-      cost: 0
-      tl: 4
-      skillBoostsDamage: false
-      description: ''
-      favorite: false
-      quantity: 1
+      ab: 0
+      ammo:
+        burst: false
+        longReload: false
+        max: 10
+        suppress: false
+        type: ammo
+        value: 10
       bundle:
         bundled: false
-      location: stowed
-      quality: stock
-      noEncReadied: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsShock: false
-      ab: 0
-      ammo:
-        longReload: false
-        suppress: false
-        type: ammo
-        max: 10
-        value: 10
-        burst: false
-        current: null
-      range:
-        normal: 1
-        max: 2
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma:
-        die: 1d6
-      isTwoHanded: false
-      isNonLethal: false
-      isMelee: false
-    effects: []
-    img: icons/svg/item-bag.svg
-    ownership:
-      default: 0
-    _key: '!actors.items!WTvuIO2hUCix3FY8.vby8lvxdjo2fx3wt'
-  - name: D6 Weapon
-    type: weapon
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: qzkrlzjzuxd7qd4z
-    system:
-      shock:
-        dmg: 0
-        ac: 15
-      damage: d6
-      encumbrance: 0
-      cost: 0
-      tl: 4
-      skillBoostsDamage: false
-      description: ''
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      container:
         isContainer: false
         isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsShock: false
-      ab: 0
-      ammo:
-        longReload: false
-        suppress: false
-        type: ammo
-        max: 10
-        value: 10
-        burst: false
-        current: null
-      range:
-        normal: 1
-        max: 2
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma:
-        die: 1d6
-      isTwoHanded: false
-      isNonLethal: false
-      isMelee: false
-    effects: []
-    img: icons/svg/item-bag.svg
-    ownership:
-      default: 0
-    _key: '!actors.items!WTvuIO2hUCix3FY8.qzkrlzjzuxd7qd4z'
-  - name: D8 Weapon
-    type: weapon
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: k52zf2aa6ctltyje
-    system:
-      shock:
-        dmg: 0
-        ac: 15
-      damage: d8
-      encumbrance: 0
       cost: 0
-      tl: 4
-      skillBoostsDamage: false
-      description: ''
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      quality: stock
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsShock: false
-      ab: 0
-      ammo:
-        longReload: false
-        suppress: false
-        type: ammo
-        max: 10
-        value: 10
-        burst: false
-        current: null
-      range:
-        normal: 1
-        max: 2
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma:
-        die: 1d6
-      isTwoHanded: false
-      isNonLethal: false
-      isMelee: false
-    effects: []
-    img: icons/svg/item-bag.svg
-    ownership:
-      default: 0
-    _key: '!actors.items!WTvuIO2hUCix3FY8.k52zf2aa6ctltyje'
-  - name: D10 Weapon
-    type: weapon
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
-    sort: 0
-    _id: cmxdzopbmq1dtjki
-    system:
-      shock:
-        dmg: 0
-        ac: 15
       damage: d10
-      encumbrance: 0
-      cost: 0
-      tl: 4
-      skillBoostsDamage: false
       description: ''
+      encumbrance: 0
       favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
+      isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
       location: stowed
-      quality: stock
       noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsShock: false
-      ab: 0
-      ammo:
-        longReload: false
-        suppress: false
-        type: ammo
-        max: 10
-        value: 10
-        burst: false
-        current: null
+      quality: stock
+      quantity: 1
       range:
-        normal: 1
         max: 2
+        normal: 1
       remember:
-        use: false
         burst: false
-        modifier: 0
         isNonLethal: false
-      save: null
+        modifier: 0
+        use: false
+      shock:
+        ac: 15
+        dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      stat: dex
+      tl: 4
       trauma:
         die: 1d6
-      isTwoHanded: false
-      isNonLethal: false
-      isMelee: false
     effects: []
-    img: icons/svg/item-bag.svg
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!WTvuIO2hUCix3FY8.cmxdzopbmq1dtjki'
-  - name: D12 Weapon
+  - _id: ocn0w1b2eiu2q7az
+    name: D12 Weapon
     type: weapon
-    folder: null
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0-beta
-      lastModifiedBy: null
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
     sort: 0
-    _id: ocn0w1b2eiu2q7az
     system:
-      shock:
-        dmg: 0
-        ac: 15
-      damage: d12
-      encumbrance: 0
-      cost: 0
-      tl: 4
-      skillBoostsDamage: false
-      description: ''
-      favorite: false
-      quantity: 1
+      ab: 0
+      ammo:
+        burst: false
+        longReload: false
+        max: 10
+        suppress: false
+        type: ammo
+        value: 10
       bundle:
         bundled: false
-      location: stowed
-      quality: stock
-      noEncReadied: false
       container:
-        isContainer: false
-        isOpen: true
         capacity:
           max: 0
           value: 0
-      stat: dex
-      secondStat: null
-      skill: ask
-      skillBoostsShock: false
-      ab: 0
-      ammo:
-        longReload: false
-        suppress: false
-        type: ammo
-        max: 10
-        value: 10
-        burst: false
-        current: null
+        isContainer: false
+        isOpen: true
+      cost: 0
+      damage: d12
+      description: ''
+      encumbrance: 0
+      favorite: false
+      isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
       range:
-        normal: 1
         max: 2
+        normal: 1
       remember:
-        use: false
         burst: false
-        modifier: 0
         isNonLethal: false
-      save: null
+        modifier: 0
+        use: false
+      shock:
+        ac: 15
+        dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      stat: dex
+      tl: 4
       trauma:
         die: 1d6
-      isTwoHanded: false
-      isNonLethal: false
-      isMelee: false
     effects: []
-    img: icons/svg/item-bag.svg
+    flags: {}
+    folder: null
     ownership:
       default: 0
     _key: '!actors.items!WTvuIO2hUCix3FY8.ocn0w1b2eiu2q7az'
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: WTvuIO2hUCix3FY8
-sort: 1100000
+  - _id: vby8lvxdjo2fx3wt
+    name: D4 Weapon
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
+    system:
+      ab: 0
+      ammo:
+        burst: false
+        longReload: false
+        max: 10
+        suppress: false
+        type: ammo
+        value: 10
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      damage: d4
+      description: ''
+      encumbrance: 0
+      favorite: false
+      isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      range:
+        max: 2
+        normal: 1
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
+      shock:
+        ac: 15
+        dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      stat: dex
+      tl: 4
+      trauma:
+        die: 1d6
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!WTvuIO2hUCix3FY8.vby8lvxdjo2fx3wt'
+  - _id: qzkrlzjzuxd7qd4z
+    name: D6 Weapon
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
+    system:
+      ab: 0
+      ammo:
+        burst: false
+        longReload: false
+        max: 10
+        suppress: false
+        type: ammo
+        value: 10
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      damage: d6
+      description: ''
+      encumbrance: 0
+      favorite: false
+      isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      range:
+        max: 2
+        normal: 1
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
+      shock:
+        ac: 15
+        dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      stat: dex
+      tl: 4
+      trauma:
+        die: 1d6
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!WTvuIO2hUCix3FY8.qzkrlzjzuxd7qd4z'
+  - _id: k52zf2aa6ctltyje
+    name: D8 Weapon
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
+    system:
+      ab: 0
+      ammo:
+        burst: false
+        longReload: false
+        max: 10
+        suppress: false
+        type: ammo
+        value: 10
+      bundle:
+        bundled: false
+      container:
+        capacity:
+          max: 0
+          value: 0
+        isContainer: false
+        isOpen: true
+      cost: 0
+      damage: d8
+      description: ''
+      encumbrance: 0
+      favorite: false
+      isMelee: false
+      isNonLethal: false
+      isTwoHanded: false
+      location: stowed
+      noEncReadied: false
+      quality: stock
+      quantity: 1
+      range:
+        max: 2
+        normal: 1
+      remember:
+        burst: false
+        isNonLethal: false
+        modifier: 0
+        use: false
+      shock:
+        ac: 15
+        dmg: 0
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      stat: dex
+      tl: 4
+      trauma:
+        die: 1d6
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!WTvuIO2hUCix3FY8.k52zf2aa6ctltyje'
 _key: '!actors!WTvuIO2hUCix3FY8'
 

@@ -1,7 +1,12 @@
+_id: lgHTJUVAjuBgYx7m
 name: Killing Blow
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
 folder: bmlxot0Gn0smSX1W
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-edges.Item.gcq6cz8et24c4tst
@@ -21,13 +26,8 @@ system:
     up. Any Trauma Die you roll gains a +1 bonus.
   favorite: false
   level: 0
-  type: edge
   poolsGranted: []
+  type: edge
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: lgHTJUVAjuBgYx7m
-sort: 0
 _key: '!items!lgHTJUVAjuBgYx7m'
 

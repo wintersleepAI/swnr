@@ -1,6 +1,22 @@
+_id: y9zplpuzqj670g7s
 name: 'Origin Focus: Chattel Blighted'
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456862
+  modifiedTime: 1754277456862
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     Some cruel power has made your lineage one of human cattle to serve their
@@ -18,23 +34,8 @@ system:
     -2 hit penalty on all attack rolls.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: y9zplpuzqj670g7s
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456862
-  modifiedTime: 1754277456862
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!y9zplpuzqj670g7s'
 

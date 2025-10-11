@@ -1,7 +1,12 @@
+_id: t2bhnn2auybt16iy
 name: Covert Shipping
 type: asset
 img: systems/swnr/assets/icons/hawkin/cunning.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.t2bhnn2auybt16iy
@@ -13,40 +18,33 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: t2bhnn2auybt16iy
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: ''
-  attackTarget: null
   baseOfInfluence: false
+  category: cunning
   cost: 8
   counter: ''
   description: >-
     Quiet interstellar asset transport. Any one Special Forces unit can be moved
     between any worlds within three hexes of the Covert Shipping at the cost of
     one FacCred.
+  favorite: false
   health:
     max: 4
     value: 4
   income: 0
   maintenance: 0
+  qualities:
+    action: true
+    permission: false
+    special: true
   rating: 3
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Logistics Facility
   unusable: false
-  qualities:
-    permission: false
-    action: true
-    special: true
-  category: cunning
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!t2bhnn2auybt16iy'
 

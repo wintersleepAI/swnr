@@ -1,12 +1,27 @@
-folder: BslyO9GYhD75h2Kk
+_id: jhQsSs1g1d2WrcEh
 name: Partial Invoker Spells
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: BslyO9GYhD75h2Kk
+sort: 950000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Item.Vu3mdRzn9Ypfij0N
+  duplicateSource: Item.YsLGtpBJuHyX6Xjs
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758769340355
+  modifiedTime: 1758769340355
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
   description: ''
   favorite: false
   level: 0
-  type: focus
   poolsGranted:
     - resourceName: Points
       subResource: Spell
@@ -28,22 +43,7 @@ system:
       cadence: day
       formula: 1 + @level/2
       condition: '@level>=2'
+  type: focus
 effects: []
-sort: 950000
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-flags: {}
-_stats:
-  compendiumSource: Item.Vu3mdRzn9Ypfij0N
-  duplicateSource: Item.YsLGtpBJuHyX6Xjs
-  exportSource: null
-  coreVersion: '13.348'
-  systemId: swnr
-  systemVersion: 2.1.0-beta
-  createdTime: 1758769340355
-  modifiedTime: 1758769340355
-  lastModifiedBy: lKC5x4Yf023Bizof
-_id: jhQsSs1g1d2WrcEh
 _key: '!items!jhQsSs1g1d2WrcEh'
 

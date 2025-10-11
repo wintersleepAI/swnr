@@ -1,7 +1,12 @@
+_id: 8gt8jlm8fyd0hd2e
 name: Terminal Reflection
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: J1fmkA6JJxYOdJVY
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-precognition.Item.8gt8jlm8fyd0hd2e
@@ -13,18 +18,7 @@ _stats:
   createdTime: 1757286857649
   modifiedTime: 1757286857649
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 8gt8jlm8fyd0hd2e
 system:
-  description: >-
-    <p>The psychic’s <em>Oracle</em> power automatically triggers as an Instant
-    action moments before some unexpected danger or ambush, giving the precog a
-    brief vision of the impending hazard. This warning comes just in time to
-    avoid springing a trap or to negate combat surprise for the precog and their
-    companions. If the psychic does not immediately Commit Effort for the day,
-    this sense goes numb and this technique cannot be used for the rest of the
-    day.</p>
-  level: 1
-  source: precognition
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -36,16 +30,19 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p>The psychic’s <em>Oracle</em> power automatically triggers as an Instant
+    action moments before some unexpected danger or ambush, giving the precog a
+    brief vision of the impending hazard. This warning comes just in time to
+    avoid springing a trap or to negate combat surprise for the precog and their
+    companions. If the psychic does not immediately Commit Effort for the day,
+    this sense goes numb and this technique cannot be used for the rest of the
+    day.</p>
   favorite: false
-  subType: psychic
+  level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: precognition
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!8gt8jlm8fyd0hd2e'
 

@@ -1,43 +1,7 @@
+_id: cY1iN2jg5ivyBkS6
 name: Plate Carrier
 type: armor
-_id: cY1iN2jg5ivyBkS6
 img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
-system:
-  description: >-
-    <h3>Trauma Target Mod</h3><p>+1</p><h3>Description</h3><p>Plate carriers and
-    full military body armor are the best gear a modern-day scavenger can
-    generally hope to get.</p>
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
-  encumbrance: 1
-  cost: 200
-  tl: 3
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  ac: 14
-  shield: false
-  use: false
-  meleeAc: 14
-  soak:
-    value: 0
-    max: 0
-  dr: 0
-  traumaDiePenalty: 1
-  isSubtle: false
-  isHeavy: false
-  shieldMeleeACBonus: null
-  shieldACBonus: null
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
-effects: []
 folder: CPiDNbmltic5XA36
 sort: 200000
 ownership:
@@ -55,5 +19,38 @@ _stats:
   createdTime: 1753923589871
   modifiedTime: 1753923589871
   lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  ac: 14
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
+  cost: 200
+  description: >-
+    <h3>Trauma Target Mod</h3><p>+1</p><h3>Description</h3><p>Plate carriers and
+    full military body armor are the best gear a modern-day scavenger can
+    generally hope to get.</p>
+  dr: 0
+  encumbrance: 1
+  favorite: false
+  isHeavy: false
+  isSubtle: false
+  location: stowed
+  meleeAc: 14
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
+  soak:
+    max: 0
+    value: 0
+  tl: 3
+  traumaDiePenalty: 1
+  use: false
+effects: []
 _key: '!items!cY1iN2jg5ivyBkS6'
 

@@ -1,7 +1,12 @@
+_id: xni5mv2aqjf9tiqw
 name: Pressure Field
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: mOJTfIBCxT4AY88p
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-telekinesis.Item.xni5mv2aqjf9tiqw
@@ -13,8 +18,8 @@ _stats:
   createdTime: 1757286860108
   modifiedTime: 1757286860108
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: xni5mv2aqjf9tiqw
 system:
+  consumptions: []
   description: >-
     <p>As an Instant action, the adept can manifest a protective force skin
     around their person equivalent to a vacc suit, maintaining pressure and
@@ -23,19 +28,11 @@ system:
     thin atmospheres for breathability, or filter particulates or airborne
     toxins. By Committing Effort for the scene, they can shield up to six
     comrades. This lasts until the user reclaims the Effort.</p>
-  level: 1
-  source: telekInesIs
   favorite: false
-  subType: psychic
+  level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions: []
-  save: null
+  source: telekInesIs
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!xni5mv2aqjf9tiqw'
 

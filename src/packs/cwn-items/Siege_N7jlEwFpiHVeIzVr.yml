@@ -1,7 +1,12 @@
+_id: N7jlEwFpiHVeIzVr
 name: Siege
 type: program
 img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
 folder: YSjeg2WqEsCIXk0y
+sort: 106250
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-program.Item.4p7a9z059mbabe7z
@@ -20,17 +25,12 @@ system:
     If a Device is successfully Sieged, its network connections are severed for
     everyone but the hacker, blocking transit, data, or drone control. Defenders
     can run Terminate Program against it from any adjacent node.
+  favorite: false
   selfTerminating: false
   skillCheckMod: -2
   target: Device
   type: verb
   useAffects: Cut off a device's node from the network
-  favorite: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: N7jlEwFpiHVeIzVr
-sort: 106250
 _key: '!items!N7jlEwFpiHVeIzVr'
 

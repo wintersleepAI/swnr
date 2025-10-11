@@ -1,6 +1,12 @@
+_id: l6vmgz9xbxf91ly6
 name: Toolkit/Postech
 type: item
+img: icons/svg/item-bag.svg
 folder: byrj73aeo8TgSYac
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.tools-and-medical.Item.l6vmgz9xbxf91ly6
@@ -12,11 +18,16 @@ _stats:
   createdTime: 1757286683353
   modifiedTime: 1757286683353
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: l6vmgz9xbxf91ly6
 system:
   bundle:
     amount: 1
     bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 300
   description: >-
     Toolkits/Postech: Containing a wide range of necessary tools for a
@@ -24,34 +35,23 @@ system:
     require a full-scale shop or lab. A standard postech toolkit can handle
     electronics, small welding jobs, and basic repair on ordinary TL4 goods.
   encumbrance: 3
-  location: other
-  quality: stock
-  tl: 4
   favorite: false
-  quantity: 1
+  location: other
   noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
+  quality: stock
+  quantity: 1
   roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
     diceNum: 1
     diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 4
   uses:
+    ammo: none
+    consumable: none
+    emptyQuantity: 0
+    keepEmpty: true
     max: 1
     value: 1
-    emptyQuantity: 0
-    consumable: none
-    ammo: none
-    keepEmpty: true
 effects: []
-img: systems/swnr/assets/icons/game-icons.net/item-icons/first-aid-kit.svg
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!l6vmgz9xbxf91ly6'
 

@@ -1,7 +1,12 @@
+_id: kd0qknnqtr9hugcl
 name: Revenant Wiring
 type: cyberware
 img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
 folder: 7ZDHgPOCyrCRwTEX
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cyberware.Item.kd0qknnqtr9hugcl
@@ -13,8 +18,9 @@ _stats:
   createdTime: 1757286670636
   modifiedTime: 1757286670636
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: kd0qknnqtr9hugcl
 system:
+  complication: ''
+  concealment: Sight
   cost: 50000
   description: >-
     One of the more grotesque results of late pretech augmentation research,
@@ -32,16 +38,10 @@ system:
     revivification chances are half normal.
   disabled: false
   effect: Keeps the user fighting even after they're dead
+  favorite: false
   strain: 3
   tl: 5
-  favorite: false
   type: None
-  concealment: Sight
-  complication: ''
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!kd0qknnqtr9hugcl'
 

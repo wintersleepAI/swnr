@@ -1,88 +1,18 @@
 _id: rQZeiqnlbhXB9831
 name: Magical Armor SA, Great
+type: null
+img: icons/svg/d20-grey.svg
+folder: CIqAOfFTmfBqu0S8
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   better-rolltables:
     table-type: better
     table-currency-string: ''
     loot-actor-name: ''
     loot-amount-key: ''
-img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - _id: u9lmxfYTcelSjQ6X
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 1
-      - 19
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    name: Magical Armor and Shield Abilities
-    documentUuid: Compendium.wwn.magic-tables.pPZG8CuQQKPynEFb
-    description: ''
-    _key: '!tables.results!rQZeiqnlbhXB9831.u9lmxfYTcelSjQ6X'
-  - _id: YxeHWyrVQSpQcHQu
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: document
-    img: icons/svg/d20-grey.svg
-    weight: 1
-    range:
-      - 17
-      - 19
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    name: Magical Armor and Shield Abilities
-    documentUuid: Compendium.wwn.magic-tables.pPZG8CuQQKPynEFb
-    description: ''
-    _key: '!tables.results!rQZeiqnlbhXB9831.YxeHWyrVQSpQcHQu'
-  - _id: nSkPKXXe5poPY9pb
-    flags:
-      better-rolltables:
-        brt-result-formula:
-          formula: ''
-    type: text
-    img: icons/svg/d20-black.svg
-    weight: 1
-    range:
-      - 20
-      - 20
-    drawn: false
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: No special abilities.
-    name: ''
-    _key: '!tables.results!rQZeiqnlbhXB9831.nSkPKXXe5poPY9pb'
-formula: 1d20
-replacement: true
-displayRoll: true
 _stats:
   compendiumSource: Compendium.swnr.wwn-magic-tables.RollTable.rQZeiqnlbhXB9831
   duplicateSource: null
@@ -93,10 +23,8 @@ _stats:
   createdTime: 1754271918725
   modifiedTime: 1754271918725
   lastModifiedBy: lKC5x4Yf023Bizof
-folder: CIqAOfFTmfBqu0S8
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results: []
 _key: '!tables!rQZeiqnlbhXB9831'
 

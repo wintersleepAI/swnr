@@ -1,7 +1,12 @@
+_id: 3thxwey0ofuevita
 name: Not My Time
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: J1fmkA6JJxYOdJVY
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-precognition.Item.3thxwey0ofuevita
@@ -13,20 +18,7 @@ _stats:
   createdTime: 1757286857649
   modifiedTime: 1757286857649
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 3thxwey0ofuevita
 system:
-  description: >-
-    <p>The precog instinctively wrenches the lines of probability away from
-    futures in which they are about to die. This technique triggers
-    automatically when the precog is about to die, provided they can Commit
-    Effort for the day. On triggering, random events somehow conspire to leave
-    the precog alive, even if outrageous coincidences and ridiculous luck are
-    required. Provided the precog doesn’t intentionally thrust herself back into
-    danger, their life is secured for the next few minutes at least, though
-    there’s no guarantee the psychic will survive intact in mind or body. This
-    technique can trigger no more often than once per week.</p>
-  level: 4
-  source: precognition
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -38,16 +30,21 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p>The precog instinctively wrenches the lines of probability away from
+    futures in which they are about to die. This technique triggers
+    automatically when the precog is about to die, provided they can Commit
+    Effort for the day. On triggering, random events somehow conspire to leave
+    the precog alive, even if outrageous coincidences and ridiculous luck are
+    required. Provided the precog doesn’t intentionally thrust herself back into
+    danger, their life is secured for the next few minutes at least, though
+    there’s no guarantee the psychic will survive intact in mind or body. This
+    technique can trigger no more often than once per week.</p>
   favorite: false
-  subType: psychic
+  level: 4
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: precognition
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!3thxwey0ofuevita'
 

@@ -1,7 +1,12 @@
+_id: mdrvwcdp6xiexwug
 name: Sense the Need
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: J1fmkA6JJxYOdJVY
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-precognition.Item.mdrvwcdp6xiexwug
@@ -13,20 +18,7 @@ _stats:
   createdTime: 1757286857649
   modifiedTime: 1757286857649
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: mdrvwcdp6xiexwug
 system:
-  description: >-
-    <p>At some point in the recent past, the psychic had a vague but intense
-    premonition that a particular object would be needed. By triggering this
-    power as an Instant action and Committing Effort for the day, the psychic
-    can retroactively declare that they brought along any one object that they
-    could have reasonably acquired and carried to this point. This object must
-    be plausible given recent events; if the psychic has just been
-    stripsearched, very few objects could reasonably have been kept, while a
-    psychic who’s just passed through a weapons check couldn’t still have a
-    loaded laser pistol.</p>
-  level: 1
-  source: precognition
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -38,16 +30,21 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p>At some point in the recent past, the psychic had a vague but intense
+    premonition that a particular object would be needed. By triggering this
+    power as an Instant action and Committing Effort for the day, the psychic
+    can retroactively declare that they brought along any one object that they
+    could have reasonably acquired and carried to this point. This object must
+    be plausible given recent events; if the psychic has just been
+    stripsearched, very few objects could reasonably have been kept, while a
+    psychic who’s just passed through a weapons check couldn’t still have a
+    loaded laser pistol.</p>
   favorite: false
-  subType: psychic
+  level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: precognition
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!mdrvwcdp6xiexwug'
 

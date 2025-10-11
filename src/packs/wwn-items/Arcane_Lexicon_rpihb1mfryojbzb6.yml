@@ -1,32 +1,12 @@
+_id: rpihb1mfryojbzb6
 name: Arcane Lexicon
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: 1QSf6od5nEmDkbXu
 sort: 0
-system:
-  description: >-
-    Commit Effort for the scene. For the rest of the scene, you can read any
-    script that was not intentionally obfuscated or encoded by its writer.
-    Extremely esoteric or nonhuman scripts may not be comprehensible this way;
-    the "plain meaning" of the text might be utterly foreign to human logic.
-  favorite: false
-  subType: art
-  source: High Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Effort
-      subResource: High Mage
-      usesCost: 1
-      cadence: scene
-      timing: manual
-  roll: null
-  duration: Instant
-  save: None
-  range: Self
-  skill: null
-_id: rpihb1mfryojbzb6
+ownership:
+  default: 0
+flags: {}
 _stats:
   compendiumSource: null
   duplicateSource: null
@@ -37,10 +17,27 @@ _stats:
   modifiedTime: 1754277456769
   lastModifiedBy: null
   exportSource: null
-folder: 1QSf6od5nEmDkbXu
-flags: {}
+system:
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: High Mage
+      usesCost: 1
+      cadence: scene
+      timing: manual
+  description: >-
+    Commit Effort for the scene. For the rest of the scene, you can read any
+    script that was not intentionally obfuscated or encoded by its writer.
+    Extremely esoteric or nonhuman scripts may not be comprehensible this way;
+    the "plain meaning" of the text might be utterly foreign to human logic.
+  duration: Instant
+  favorite: false
+  level: 1
+  prepared: false
+  range: Self
+  save: None
+  source: High Mage
+  subType: art
 effects: []
-ownership:
-  default: 0
 _key: '!items!rpihb1mfryojbzb6'
 

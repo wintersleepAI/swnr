@@ -1,26 +1,23 @@
+_id: s6ne0esr05m47vgf
 name: Extirpate Arcana
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456926
+  modifiedTime: 1754277456926
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The caster sweeps away all unwanted magical effects and enchantments within
-    a twenty-foot radius, centered on any visible point within one hundred feet
-    per level. If the magical effect was cast by a creature with equal or fewer
-    hit dice or levels, the effect is negated automatically. Otherwise, a
-    contested Int/Magic or Cha/Magic skill roll must be made, with
-    higher-leveled caster gaining a +2 bonus on their roll and the dispeller
-    winning any ties. This spell is not strong enough to permanently suppress
-    standing magical effects, and requires the aforementioned contested roll to
-    have any chance to even temporarily suppressing them. If successful, the
-    effect is negated for 1d6 rounds. If cast on a very large enchantment, only
-    the portion within the spell's zone of effect is suppressed.
-  favorite: false
-  subType: spell
-  source: High Mage
-  level: 2
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -34,26 +31,26 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The caster sweeps away all unwanted magical effects and enchantments within
+    a twenty-foot radius, centered on any visible point within one hundred feet
+    per level. If the magical effect was cast by a creature with equal or fewer
+    hit dice or levels, the effect is negated automatically. Otherwise, a
+    contested Int/Magic or Cha/Magic skill roll must be made, with
+    higher-leveled caster gaining a +2 bonus on their roll and the dispeller
+    winning any ties. This spell is not strong enough to permanently suppress
+    standing magical effects, and requires the aforementioned contested roll to
+    have any chance to even temporarily suppressing them. If successful, the
+    effect is negated for 1d6 rounds. If cast on a very large enchantment, only
+    the portion within the spell's zone of effect is suppressed.
   duration: 1d6 rounds
-  save: None
+  favorite: false
+  level: 2
+  prepared: false
   range: 20-ft. radius
-  skill: null
-_id: s6ne0esr05m47vgf
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456926
-  modifiedTime: 1754277456926
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: None
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!s6ne0esr05m47vgf'
 

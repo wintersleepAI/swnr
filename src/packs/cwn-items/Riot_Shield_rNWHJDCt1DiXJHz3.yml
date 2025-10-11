@@ -1,7 +1,12 @@
+_id: rNWHJDCt1DiXJHz3
 name: Riot Shield
 type: armor
 img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
 folder: zslKZokGE1LBgiC9
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: null
@@ -15,16 +20,30 @@ _stats:
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
   ac: 0
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 1000
   description: >-
     These bulky, transparent shields are most effective in fending off melee
     attackers. They must be Readied in one hand; users with multiple cyberarms
     can benefit from only one shield at a time. A shield negates the first melee
     Shock damage a bearer takes in a round.
+  dr: 0
   encumbrance: 2
+  favorite: false
   isHeavy: false
   isSubtle: false
+  location: stowed
   meleeAc: 0
+  noEncReadied: false
+  quality: stock
+  quantity: 1
   shield: true
   shieldACBonus: 4
   shieldMeleeACBonus: 2
@@ -32,27 +51,7 @@ system:
     max: 0
     value: 0
   traumaDiePenalty: 0
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
   use: false
-  dr: 0
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: rNWHJDCt1DiXJHz3
-sort: 0
 _key: '!items!rNWHJDCt1DiXJHz3'
 

@@ -1,7 +1,12 @@
+_id: y0m5khgozdiepnp3
 name: Synthetic Adaptation
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: b1y9xejewpVMRdey
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-metapsionics.Item.y0m5khgozdiepnp3
@@ -13,8 +18,8 @@ _stats:
   createdTime: 1757286855552
   modifiedTime: 1757286855552
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: y0m5khgozdiepnp3
 system:
+  consumptions: []
   description: >-
     <p>This is a particularly esoteric technique, one that requires the adept to
     have at least Program-0 or Fix-0 skill in order to master. With it, however,
@@ -24,19 +29,11 @@ system:
     technique requires a sentient mind to catalyze the effect.</p><p>This
     synergy takes much of its force from the adept. Any System Strain the powers
     might inflict must be paid by the adept rather than the target.</p>
-  level: 1
-  source: metapsionics
   favorite: false
-  subType: psychic
+  level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions: []
-  save: null
+  source: metapsionics
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!y0m5khgozdiepnp3'
 

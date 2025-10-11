@@ -1,7 +1,12 @@
+_id: 9ejthmu8e3ku5fwr
 name: Spatial Synchrony Mandala
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: B7XvnONYELdrJlLA
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-teleportation.Item.9ejthmu8e3ku5fwr
@@ -13,8 +18,8 @@ _stats:
   createdTime: 1757286862454
   modifiedTime: 1757286862454
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 9ejthmu8e3ku5fwr
 system:
+  consumptions: []
   description: >-
     <p>The psychic imprints a particular object or person on their psionic
     awareness. Provided the object is relatively intact and in range of their
@@ -25,19 +30,11 @@ system:
     imprinted at a time. If imprinting on a person, the target must be willing
     and cooperative to make the imprint. Objects must be at least one kilogram
     in mass to be effectively tracked.</p>
-  level: 2
-  source: teleportation
   favorite: false
-  subType: psychic
+  level: 2
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions: []
-  save: null
+  source: teleportation
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!9ejthmu8e3ku5fwr'
 

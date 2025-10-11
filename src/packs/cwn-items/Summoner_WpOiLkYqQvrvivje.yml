@@ -1,7 +1,12 @@
+_id: WpOiLkYqQvrvivje
 name: Summoner
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
 folder: bmlxot0Gn0smSX1W
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-edges.Item.0dw4erd69v5tu3lf
@@ -19,13 +24,8 @@ system:
     page 6.2.0, though you also have limits in using cyberware.
   favorite: false
   level: 0
-  type: edge
   poolsGranted: []
+  type: edge
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: WpOiLkYqQvrvivje
-sort: 0
 _key: '!items!WpOiLkYqQvrvivje'
 

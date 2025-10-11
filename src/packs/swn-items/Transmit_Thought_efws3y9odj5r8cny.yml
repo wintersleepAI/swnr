@@ -1,7 +1,12 @@
+_id: efws3y9odj5r8cny
 name: Transmit Thought
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: T7VK7FTps9Ubc5gw
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-telepathy.Item.efws3y9odj5r8cny
@@ -13,25 +18,17 @@ _stats:
   createdTime: 1757286864688
   modifiedTime: 1757286864688
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: efws3y9odj5r8cny
 system:
+  consumptions: []
   description: >-
     <p>The telepath can send thoughts and images over a <em>Telepathic
     Contact</em>, allowing two-way communication with a willing target as an
     Instant action when desired.</p>
-  level: 1
-  source: telepathy
   favorite: false
-  subType: psychic
+  level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions: []
-  save: null
+  source: telepathy
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!efws3y9odj5r8cny'
 

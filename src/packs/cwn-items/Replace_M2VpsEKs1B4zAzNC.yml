@@ -1,7 +1,12 @@
+_id: M2VpsEKs1B4zAzNC
 name: Replace
 type: program
 img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
 folder: YSjeg2WqEsCIXk0y
+sort: 500000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-program.Item.7ng1wq8dzw4lkruq
@@ -19,17 +24,12 @@ system:
   description: >-
     Edit a data file, changing one piece of data in it into another of the
     hacker's choice. It cannot erase or add data outright, only alter it.
+  favorite: false
   selfTerminating: true
   skillCheckMod: 0
   target: Data
   type: verb
   useAffects: Change file data to something else
-  favorite: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: M2VpsEKs1B4zAzNC
-sort: 500000
 _key: '!items!M2VpsEKs1B4zAzNC'
 

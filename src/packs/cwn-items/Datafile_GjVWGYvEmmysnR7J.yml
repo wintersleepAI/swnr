@@ -1,7 +1,12 @@
+_id: GjVWGYvEmmysnR7J
 name: Datafile
 type: program
 img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
 folder: eBbZVBq3zmvZSDXd
+sort: 112500
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-program.Item.dhbiopddxyp3vfwn
@@ -21,17 +26,12 @@ system:
     have very little actual data in them, the autoencryption functions and
     anti-tamper code they're wrapped in almost always take up a full unit of
     Memory per file .
+  favorite: false
   selfTerminating: false
   skillCheckMod: 0
   target: Data
   type: subject
   useAffects: Files on servers
-  favorite: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: GjVWGYvEmmysnR7J
-sort: 112500
 _key: '!items!GjVWGYvEmmysnR7J'
 

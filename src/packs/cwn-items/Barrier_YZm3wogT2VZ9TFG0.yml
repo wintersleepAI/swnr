@@ -1,7 +1,12 @@
+_id: YZm3wogT2VZ9TFG0
 name: Barrier
 type: program
 img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
 folder: eBbZVBq3zmvZSDXd
+sort: 200000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-program.Item.e2m6tdli3ffnca9k
@@ -19,17 +24,12 @@ system:
   description: >-
     A network node barrier that blocks avatars from passing through a network
     connection.
+  favorite: false
   selfTerminating: false
   skillCheckMod: 0
   target: Data
   type: subject
   useAffects: Inter Node Barriers
-  favorite: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: YZm3wogT2VZ9TFG0
-sort: 200000
 _key: '!items!YZm3wogT2VZ9TFG0'
 

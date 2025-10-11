@@ -1,9 +1,43 @@
-folder: zGs17akTvZE1izrv
+_id: wPL9ph273yv1qnKh
 name: Mag Rifle
 type: weapon
-_id: wPL9ph273yv1qnKh
 img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+folder: zGs17akTvZE1izrv
+sort: 0
+ownership:
+  default: 0
+  AjdlQlPXkJlcOy63: 3
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1753925267676
+  modifiedTime: 1753925267676
+  lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 10
+    suppress: false
+    type: typeAPower
+    value: 10
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
+  cost: 0
+  damage: 2d8+2
   description: >-
     <h3
     style="box-sizing:border-box;user-select:text;scrollbar-width:thin;scrollbar-color:var(--color-scrollbar)
@@ -21,72 +55,34 @@ system:
     through a pulse of staged magnetics. The need for physical ammunition
     discouraged its military use, but such weapons were still popular among
     big-game hunters.</span></p>
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-    amount: null
   encumbrance: 2
-  cost: 0
-  tl: 4
+  favorite: false
+  isMelee: false
+  isNonLethal: false
+  isTwoHanded: false
   location: stowed
-  quality: stock
   noEncReadied: false
-  stat: dex
-  secondStat: null
+  quality: stock
+  quantity: 1
+  range:
+    max: 600
+    normal: 300
+  remember:
+    burst: false
+    isNonLethal: false
+    modifier: 0
+    use: false
+  shock:
+    ac: 10
+    dmg: 0
   skill: ask
   skillBoostsDamage: false
   skillBoostsShock: false
-  shock:
-    dmg: 0
-    ac: 10
-  ab: 0
-  ammo:
-    longReload: false
-    suppress: false
-    type: typeAPower
-    max: 10
-    value: 10
-    burst: false
-    current: null
-  range:
-    normal: 300
-    max: 600
-  damage: 2d8+2
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
+  stat: dex
+  tl: 4
   trauma:
     die: 1d8
     rating: 3
-  isTwoHanded: false
-  isNonLethal: false
-  isMelee: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
 effects: []
-sort: 0
-ownership:
-  default: 0
-  AjdlQlPXkJlcOy63: 3
-  lKC5x4Yf023Bizof: 3
-flags: {}
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  exportSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1753925267676
-  modifiedTime: 1753925267676
-  lastModifiedBy: lKC5x4Yf023Bizof
 _key: '!items!wPL9ph273yv1qnKh'
 

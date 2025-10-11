@@ -1,6 +1,12 @@
+_id: amyxdsh4tka6rdeo
 name: Ammo, missile
 type: item
+img: icons/svg/item-bag.svg
 folder: rvD6mRxUC48bljtg
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.ammo-and-power.Item.amyxdsh4tka6rdeo
@@ -12,20 +18,16 @@ _stats:
   createdTime: 1757286652097
   modifiedTime: 1757286652097
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: amyxdsh4tka6rdeo
 system:
-  favorite: false
-  quantity: 1
-  uses:
-    max: 1
-    value: 1
-    ammo: missile
-    consumable: count
-    keepEmpty: false
-    emptyQuantity: 0
   bundle:
     amount: 1
     bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 50
   description: >-
     Ammunition, missile: Some characters might have reason to pack along a
@@ -33,25 +35,23 @@ system:
     Heavy weapons and their ammunition are usually outlawed for civilians on
     most worlds, but this price is for locales where missiles can be bought.
   encumbrance: 1
+  favorite: false
   location: other
-  quality: stock
-  tl: 3
   noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
+  quality: stock
+  quantity: 1
   roll:
+    diceBonus: +@str.mod+ceil(@lvl / 2)
     diceNum: 1
     diceSize: d20
-    diceBonus: +@str.mod+ceil(@lvl / 2)
+  tl: 3
+  uses:
+    ammo: missile
+    consumable: count
+    emptyQuantity: 0
+    keepEmpty: false
+    max: 1
+    value: 1
 effects: []
-img: systems/swnr/assets/icons/game-icons.net/item-icons/ammo-box.svg
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!amyxdsh4tka6rdeo'
 

@@ -1,7 +1,12 @@
+_id: 1b6ci8psqwdo0gbp
 name: Capital Fleet
 type: asset
 img: systems/swnr/assets/icons/hawkin/force.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.1b6ci8psqwdo0gbp
@@ -13,13 +18,13 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 1b6ci8psqwdo0gbp
 system:
   attackDamage: 3d10+4
   attackSource: force
   attackSpecial: ''
   attackTarget: force
   baseOfInfluence: false
+  category: force
   cost: 40
   counter: 3d8
   description: >-
@@ -29,27 +34,22 @@ system:
     they may move to any world within three hexes of their current location.
     Planetary government permission is required to raise a capital fleet, but
     not to move one into a system.
+  favorite: false
   health:
     max: 30
     value: 30
   income: 0
   maintenance: 2
+  qualities:
+    action: true
+    permission: false
+    special: true
   rating: 8
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Spaceship
   unusable: false
-  qualities:
-    permission: false
-    action: true
-    special: true
-  category: force
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!1b6ci8psqwdo0gbp'
 

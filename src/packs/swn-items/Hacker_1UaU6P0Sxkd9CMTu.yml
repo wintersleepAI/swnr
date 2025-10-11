@@ -1,7 +1,12 @@
+_id: 1UaU6P0Sxkd9CMTu
 name: Hacker
 type: feature
 img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
 folder: sPYHUjJb2geTuLHp
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.foci.Item.caykps0wniwii7mp
@@ -26,13 +31,8 @@ system:
     with it.
   favorite: false
   level: 0
-  type: focus
   poolsGranted: []
+  type: focus
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-_id: 1UaU6P0Sxkd9CMTu
-sort: 0
 _key: '!items!1UaU6P0Sxkd9CMTu'
 

@@ -1,7 +1,12 @@
+_id: x9cfe76nsc8tgrkb
 name: Deep Strike Landers
 type: asset
 img: systems/swnr/assets/icons/hawkin/force.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.x9cfe76nsc8tgrkb
@@ -13,13 +18,11 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: x9cfe76nsc8tgrkb
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: ''
-  attackTarget: null
   baseOfInfluence: false
+  category: force
   cost: 25
   counter: ''
   description: >-
@@ -29,27 +32,22 @@ system:
     landers, at a cost of 2 FacCreds. This movement can be done even if the
     local planetary government objects, albeit doing so is usually an act of
     open war.
+  favorite: false
   health:
     max: 10
     value: 10
   income: 0
   maintenance: 0
+  qualities:
+    action: true
+    permission: false
+    special: false
   rating: 7
+  stealthed: false
   tl: 4
   turnRoll: ''
   type: Facility
   unusable: false
-  qualities:
-    permission: false
-    action: true
-    special: false
-  category: force
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!x9cfe76nsc8tgrkb'
 

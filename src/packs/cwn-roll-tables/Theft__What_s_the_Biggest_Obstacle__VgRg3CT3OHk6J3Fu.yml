@@ -1,227 +1,136 @@
-folder: ch7TJNmZ3AmSj004
+_id: VgRg3CT3OHk6J3Fu
 name: 'Theft: What’s the Biggest Obstacle?'
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: Aum056dZ1iedMcVh
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It’s physically hard to move around
-    name: ''
-    _key: '!tables.results!VgRg3CT3OHk6J3Fu.Aum056dZ1iedMcVh'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: XMfxRDjwSclj34zc
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It’s in a fortified and well-guarded locale
-    name: ''
-    _key: '!tables.results!VgRg3CT3OHk6J3Fu.XMfxRDjwSclj34zc'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: Nh8kPSTuWnLkNxPN
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It’s far away and hard to get to
-    name: ''
-    _key: '!tables.results!VgRg3CT3OHk6J3Fu.Nh8kPSTuWnLkNxPN'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: 6KwbbEtWlsEA3NQ3
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It has numerous well-armed guards
-    name: ''
-    _key: '!tables.results!VgRg3CT3OHk6J3Fu.6KwbbEtWlsEA3NQ3'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: MolZp8Ky0sayD8I2
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Their usual defender is dead or out of it
-    name: ''
-    _key: '!tables.results!VgRg3CT3OHk6J3Fu.MolZp8Ky0sayD8I2'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: Y3O3XZ9bM0ROxKLn
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It’s extremely easy to track
-    name: ''
-    _key: '!tables.results!VgRg3CT3OHk6J3Fu.Y3O3XZ9bM0ROxKLn'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: EDflthnR5kMYIDJB
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: The theft’s consequences would be dire
-    name: ''
-    _key: '!tables.results!VgRg3CT3OHk6J3Fu.EDflthnR5kMYIDJB'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: wkBIXy08i7EbShJG
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It exists in several separate components
-    name: ''
-    _key: '!tables.results!VgRg3CT3OHk6J3Fu.wkBIXy08i7EbShJG'
-  - type: text
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    _id: ptVM6aVGtakn2uUl
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: It’d be stolen from the thieves very quickly
-    name: ''
-    _key: '!tables.results!VgRg3CT3OHk6J3Fu.ptVM6aVGtakn2uUl'
-  - type: text
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    _id: d61thBFxzU9FNWcd
-    flags: {}
-    img: icons/svg/d20-black.svg
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: The genuine item is mixed with fakes
-    name: ''
-    _key: '!tables.results!VgRg3CT3OHk6J3Fu.d61thBFxzU9FNWcd'
-replacement: true
-displayRoll: true
+folder: ch7TJNmZ3AmSj004
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   core: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-tables.RollTable.VgRg3CT3OHk6J3Fu
   duplicateSource: null
   exportSource: null
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754272613626
   modifiedTime: 1754272613626
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d10
-_id: VgRg3CT3OHk6J3Fu
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: Aum056dZ1iedMcVh
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.Aum056dZ1iedMcVh'
+  - _id: XMfxRDjwSclj34zc
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.XMfxRDjwSclj34zc'
+  - _id: Nh8kPSTuWnLkNxPN
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.Nh8kPSTuWnLkNxPN'
+  - _id: 6KwbbEtWlsEA3NQ3
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.6KwbbEtWlsEA3NQ3'
+  - _id: MolZp8Ky0sayD8I2
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.MolZp8Ky0sayD8I2'
+  - _id: Y3O3XZ9bM0ROxKLn
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.Y3O3XZ9bM0ROxKLn'
+  - _id: EDflthnR5kMYIDJB
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.EDflthnR5kMYIDJB'
+  - _id: wkBIXy08i7EbShJG
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.wkBIXy08i7EbShJG'
+  - _id: ptVM6aVGtakn2uUl
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.ptVM6aVGtakn2uUl'
+  - _id: d61thBFxzU9FNWcd
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!VgRg3CT3OHk6J3Fu.d61thBFxzU9FNWcd'
 _key: '!tables!VgRg3CT3OHk6J3Fu'
 

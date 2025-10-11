@@ -1,7 +1,12 @@
+_id: OL0GZgR7Al8HYlKr
 name: Mounted Autogun
 type: shipWeapon
 img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
 folder: 8DIMaIn7MuHyezDm
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-vehicle-weapons.Item.9oquj3mimjghwu5s
@@ -14,43 +19,38 @@ _stats:
   modifiedTime: 1754267303980
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  ab: 0
   ammo:
     max: 10
     type: ammo
     value: 100
+  broken: false
   cost: 15000
+  costMultiplier: false
   damage: 3d8
   description: >-
     Mounted autoguns are a drone cannon `s big brother, for larger platforms.
     Each round of firing costs $100.
+  destroyed: false
+  favorite: false
+  hardpoint: 1
+  juryRigged: false
   mass: 2
+  massMultiplier: false
   minClass: l
   power: 1
+  powerMultiplier: false
+  qualities: ''
   range:
     max: 2000
     normal: 500
   stat: dex
+  tl: 4
   trauma:
     die: 1d12
     rating: 2
     vehicle: true
   type: vehicle
-  favorite: false
-  tl: 4
-  costMultiplier: false
-  powerMultiplier: false
-  massMultiplier: false
-  broken: false
-  destroyed: false
-  juryRigged: false
-  ab: 0
-  hardpoint: 1
-  qualities: ''
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: OL0GZgR7Al8HYlKr
-sort: 0
 _key: '!items!OL0GZgR7Al8HYlKr'
 

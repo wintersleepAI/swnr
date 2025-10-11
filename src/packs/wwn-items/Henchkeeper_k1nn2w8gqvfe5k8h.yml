@@ -1,6 +1,22 @@
+_id: k1nn2w8gqvfe5k8h
 name: Henchkeeper
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456871
+  modifiedTime: 1754277456871
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     You have a distinct knack for picking up lost souls who willingly do your
@@ -29,23 +45,8 @@ system:
     that would reasonably earn such fierce loyalty.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: k1nn2w8gqvfe5k8h
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456871
-  modifiedTime: 1754277456871
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!k1nn2w8gqvfe5k8h'
 

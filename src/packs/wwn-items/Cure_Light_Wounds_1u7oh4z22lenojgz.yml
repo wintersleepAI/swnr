@@ -1,21 +1,23 @@
+_id: 1u7oh4z22lenojgz
 name: Cure Light Wounds
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 7500000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457063
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: Instant Range: The caster or a creature touched This spell has two
-    uses: Healing a living subject: Restores 1d6+1 hit points of damage. This
-    cannot grant more hit points than the subject's normal maximum. Curing
-    paralysis: Paralysing effects are negated. Reversed: Cause Light Wounds
-    Inflicts 1d6+1 hit points of damage to a touched creature. In combat, a
-    melee attack roll is required.
-  favorite: false
-  subType: spell
-  source: Cleric
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -29,26 +31,21 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: Instant Range: The caster or a creature touched This spell has two
+    uses: Healing a living subject: Restores 1d6+1 hit points of damage. This
+    cannot grant more hit points than the subject's normal maximum. Curing
+    paralysis: Paralysing effects are negated. Reversed: Cause Light Wounds
+    Inflicts 1d6+1 hit points of damage to a touched creature. In combat, a
+    melee attack roll is required.
   duration: Instant
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: Touch
-  skill: null
-_id: 1u7oh4z22lenojgz
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457063
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Cleric
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!1u7oh4z22lenojgz'
 

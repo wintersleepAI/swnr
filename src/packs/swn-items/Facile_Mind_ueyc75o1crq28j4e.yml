@@ -1,7 +1,12 @@
+_id: ueyc75o1crq28j4e
 name: Facile Mind
 type: power
 img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
 folder: T7VK7FTps9Ubc5gw
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.psi-telepathy.Item.ueyc75o1crq28j4e
@@ -13,18 +18,7 @@ _stats:
   createdTime: 1757286864688
   modifiedTime: 1757286864688
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: ueyc75o1crq28j4e
 system:
-  description: >-
-    <p>The telepath is practiced at opening a <em>Telepathic Contact</em>, and
-    need only Commit Effort for the scene to do so, instead of Committing Effort
-    for the day. If contacting an ally who has practiced the process with the
-    psychic for at least a week, opening the contact normally requires no Effort
-    at all. In both cases, if the telepath chooses to Commit Effort for the day,
-    they can open a <em>Telepathic Contact</em> as an Instant action rather than
-    a Main Action.</p>
-  level: 1
-  source: telepathy
   consumptions:
     - type: poolResource
       resourceName: Effort
@@ -36,16 +30,19 @@ system:
         value: 1
         max: 1
       timing: manual
+  description: >-
+    <p>The telepath is practiced at opening a <em>Telepathic Contact</em>, and
+    need only Commit Effort for the scene to do so, instead of Committing Effort
+    for the day. If contacting an ally who has practiced the process with the
+    psychic for at least a week, opening the contact normally requires no Effort
+    at all. In both cases, if the telepath chooses to Commit Effort for the day,
+    they can open a <em>Telepathic Contact</em> as an Instant action rather than
+    a Main Action.</p>
   favorite: false
-  subType: psychic
+  level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  save: null
+  source: telepathy
+  subType: psychic
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!ueyc75o1crq28j4e'
 

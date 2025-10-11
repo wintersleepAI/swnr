@@ -1,7 +1,12 @@
+_id: rdvETYVmByDXsWNR
 name: Eye Mod/Flechette Launcher
 type: weapon
 img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
 folder: VQkpTds1s3XCREfM
+sort: 100098
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-weapons.Item.e7lf77m07v8wb5yo
@@ -14,14 +19,22 @@ _stats:
   modifiedTime: 1754266588343
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  ab: 0
   ammo:
     burst: false
+    longReload: false
     max: 1
     suppress: false
     type: ammo
     value: 1
-    longReload: false
-    current: null
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 20000
   damage: 1d6
   description: >-
@@ -33,49 +46,33 @@ system:
     full normal damage anyway, and on a hit, the damage is doubled. It can be
     used for Execution Attacks.
   encumbrance: 0
+  favorite: false
+  isMelee: false
   isNonLethal: false
+  isTwoHanded: false
+  location: stowed
+  noEncReadied: false
+  quality: stock
+  quantity: 1
   range:
     max: 10
     normal: 10
+  remember:
+    burst: false
+    isNonLethal: false
+    modifier: 0
+    use: false
   secondStat: none
   shock:
     ac: 0
     dmg: 0
+  skill: ask
+  skillBoostsDamage: false
+  skillBoostsShock: false
   stat: dex
   trauma:
     die: 1d8
     rating: 2
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
-  skill: ask
-  skillBoostsDamage: false
-  skillBoostsShock: false
-  ab: 0
-  remember:
-    use: false
-    burst: false
-    modifier: 0
-    isNonLethal: false
-  save: null
-  isTwoHanded: false
-  isMelee: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: rdvETYVmByDXsWNR
-sort: 100098
 _key: '!items!rdvETYVmByDXsWNR'
 

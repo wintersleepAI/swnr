@@ -1,19 +1,29 @@
+_id: hpzawnlvygodxunu
 name: Dervish (Chain)
 type: npc
+img: systems/swnr/assets/icons/blankface.png
+folder: EvdqxETxotoAuVI8
 sort: 0
+ownership: {}
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456624
+  modifiedTime: 1754277456624
+  lastModifiedBy: null
+  exportSource: null
 system:
   ab: 1
   armorType: street
   attacks:
-    damage: d6
     bonusDamage: 0
+    damage: d6
     number: 0
   baseAc: 15
-  hitDice: 1
-  moralScore: 10
-  saves: 15
-  skillBonus: 0
-  speed: 40
   biography: >-
     Fanatically religious, nomadic people who wander steppes and desert regions,
     living in tents. Mounted: On warhorses. Arms: 50% of group have: leather
@@ -27,101 +37,53 @@ system:
     used as slaves. Characters of Lawful alignment may be asked to join the holy
     war. Dervishes are highly suspicious of those who refuse (without good
     reason).
+  hitDice: 1
+  moralScore: 10
+  saves: 15
+  skillBonus: 0
   species: monster
-_id: hpzawnlvygodxunu
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456624
-  modifiedTime: 1754277456624
-  lastModifiedBy: null
-  exportSource: null
-folder: EvdqxETxotoAuVI8
-flags: {}
+  speed: 40
 effects: []
-prototypeToken:
-  name: Dervish (Chain)
-  displayName: 0
-  actorLink: false
-  appendNumber: false
-  prependAdjective: false
-  width: 1
-  height: 1
-  texture:
-    src: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg
-    anchorX: 0.5
-    anchorY: 0.5
-    offsetX: 0
-    offsetY: 0
-    fit: contain
-    scaleX: 1
-    scaleY: 1
-    rotation: 0
-    tint: '#ffffff'
-    alphaThreshold: 0.75
-  hexagonalShape: 0
-  lockRotation: false
-  rotation: 0
-  alpha: 1
-  disposition: -1
-  displayBars: 0
-  bar1:
-    attribute: health
-  bar2:
-    attribute: power
-  light:
-    negative: false
-    priority: 0
-    alpha: 0.5
-    angle: 360
-    bright: 0
-    color: null
-    coloration: 1
-    dim: 0
-    attenuation: 0.5
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      type: null
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-  sight:
-    enabled: false
-    range: 0
-    angle: 360
-    visionMode: basic
-    color: null
-    attenuation: 0.1
-    brightness: 0
-    saturation: 0
-    contrast: 0
-  detectionModes: []
-  occludable:
-    radius: 0
-  ring:
-    enabled: false
-    colors:
-      ring: null
-      background: null
-    effects: 1
-    subject:
-      scale: 1
-      texture: null
-  flags: {}
-  randomImg: false
 items:
-  - name: Shield, Large
+  - _id: jk987too00ckwkb1
+    name: Mail Shirt
     type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+    sort: 0
     system:
+      ac: 14
+      cost: 250
+      description: >-
+        Mail shirts are usually of iron or steel wire, though bronze and other
+        more exotic materials are not unknown. Such shirts cover only the vitals
+        of the wearer, but are much less burdensome than a full hauberk. Medium
+        armor is significantly noisier and more overt; it cannot be worn
+        discreetly and applies its encumbrance as a penalty to any physical
+        Sneak rolls made by the wearer.
+      encumbrance: 1
+      isSubtle: false
+      meleeAc: 14
+      quality: stock
+      shield: false
+      soak:
+        max: 0
+        value: 0
+      tl: 3
+      traumaDiePenalty: 0
+    effects: []
+    flags: {}
+    folder: null
+    ownership:
+      default: 0
+    _key: '!actors.items!hpzawnlvygodxunu.jk987too00ckwkb1'
+  - _id: 6lgx8orxaikga0o8
+    name: Shield, Large
+    type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+    sort: 0
+    system:
+      ac: 1
+      cost: 10
       description: >-
         Shields come in two general varieties. Small ones, often made of
         costlier metal, can be strapped to the wearer's arm and allow them to
@@ -132,119 +94,56 @@ items:
         wearing equal or better armor the shield grants a +1 bonus to their AC.
         Shields allow the bearer to ignore the first instance of Shock they
         might otherwise suffer in a round.
-      cost: 10
-      ac: 1
-      meleeAc: 1
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: true
       encumbrance: 1
+      isSubtle: false
+      meleeAc: 1
       quality: stock
+      shield: true
+      soak:
+        max: 0
+        value: 0
       tl: 3
-    _id: 6lgx8orxaikga0o8
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+      traumaDiePenalty: 0
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!hpzawnlvygodxunu.6lgx8orxaikga0o8'
-  - name: Spear, Light
+  - _id: a2giq1eirwlkpcfk
+    name: Spear, Light
     type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    sort: 0
     system:
+      ab: 0
+      ammo:
+        burst: false
+        max: 0
+        type: ammo
+      cost: 5
+      damage: 1d6
       description: >-
         Spears, and their longer cousin the pike, are common military weapons
         throughout the Latter Earth. Lighter spears are effective thrown
         weapons, while heavier two-handed versions penetrate armor well.
-      cost: 5
-      damage: 1d6
-      range:
-        normal: 30
-        max: 60
-      shock:
-        dmg: 2
-        ac: 13
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
+      encumbrance: 1
       isTwoHanded: false
-      stat: dex
+      quality: stock
+      range:
+        max: 60
+        normal: 30
+      shock:
+        ac: 13
+        dmg: 2
       skill: stab
-      ab: 0
-      encumbrance: 1
-      quality: stock
+      stat: dex
       tl: 3
-    _id: a2giq1eirwlkpcfk
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
+    effects: []
     flags: {}
-    sort: 0
+    folder: null
     ownership:
       default: 0
-    effects: []
     _key: '!actors.items!hpzawnlvygodxunu.a2giq1eirwlkpcfk'
-  - name: Mail Shirt
-    type: armor
-    system:
-      description: >-
-        Mail shirts are usually of iron or steel wire, though bronze and other
-        more exotic materials are not unknown. Such shirts cover only the vitals
-        of the wearer, but are much less burdensome than a full hauberk. Medium
-        armor is significantly noisier and more overt; it cannot be worn
-        discreetly and applies its encumbrance as a penalty to any physical
-        Sneak rolls made by the wearer.
-      cost: 250
-      ac: 14
-      meleeAc: 14
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: jk987too00ckwkb1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!hpzawnlvygodxunu.jk987too00ckwkb1'
 _key: '!actors!hpzawnlvygodxunu'
 

@@ -1,7 +1,26 @@
+_id: 5u2aah1xs6yn0u0d
 name: Popular Movement
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/cunning.png
+folder: OawaGpAei0uKmXdc
+sort: 300000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456961
+  modifiedTime: 1759968688997
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     Any friendly Asset is allowed movement into the same location as the Popular
     Movement, even if it would normally be forbidden by its owners and lacks the
@@ -9,40 +28,20 @@ system:
     Assets must also leave or suffer the usual consequences of a non-Subtle
     Asset in a hostile area.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 16
     max: 16
-  rating: 7
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 16
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: 5u2aah1xs6yn0u0d
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456961
-  modifiedTime: 1754277456961
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 7
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!5u2aah1xs6yn0u0d'
 

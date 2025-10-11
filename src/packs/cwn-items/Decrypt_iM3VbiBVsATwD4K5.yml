@@ -1,7 +1,12 @@
+_id: iM3VbiBVsATwD4K5
 name: Decrypt
 type: program
 img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
 folder: YSjeg2WqEsCIXk0y
+sort: 1600000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-program.Item.utq6320ztk19vi4v
@@ -19,17 +24,12 @@ system:
   description: >-
     Decrypt a data file or radio transmission. This is often automatic for
     civilian encoding, though some files take Int/Program checks.
+  favorite: false
   selfTerminating: true
   skillCheckMod: 0
   target: Data
   type: verb
   useAffects: Decrypt a file or radio transmission
-  favorite: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: iM3VbiBVsATwD4K5
-sort: 1600000
 _key: '!items!iM3VbiBVsATwD4K5'
 

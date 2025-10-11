@@ -1,7 +1,12 @@
+_id: CXrpvcOrXqAQ2oJl
 name: Limpet Mount,Medium
 type: shipFitting
 img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
 folder: aPPngDkp3e5tzGZ9
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-vehicle-fittings.Item.i06zli148jp4sod0
@@ -14,7 +19,9 @@ _stats:
   modifiedTime: 1754267290515
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
+  broken: false
   cost: 10000
+  costMultiplier: false
   description: >-
     An entire second vehicle can be mounted with this fitting, Medium vehicles
     taking Small parasites and Large ones taking Small or Medium. Adding a mount
@@ -23,24 +30,17 @@ system:
     while the parent vehicle is underway. These parasite vehicles are destroyed
     if the parent is; otherwise, they take only half the damage the parent
     takes.
+  destroyed: false
   effect: Mount a smaller vehicle on it
+  favorite: false
+  juryRigged: false
   mass: 6
+  massMultiplier: false
   minClass: fighter
   power: 0
-  type: vehicle
-  favorite: false
-  tl: 4
-  costMultiplier: false
   powerMultiplier: false
-  massMultiplier: false
-  broken: false
-  destroyed: false
-  juryRigged: false
+  tl: 4
+  type: vehicle
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: CXrpvcOrXqAQ2oJl
-sort: 0
 _key: '!items!CXrpvcOrXqAQ2oJl'
 

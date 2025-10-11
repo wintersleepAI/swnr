@@ -1,24 +1,23 @@
+_id: w50s8i6a2fgevqxl
 name: Read Magic
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: Oa54k573WAw15y2A
 sort: 1400000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277457061
+  modifiedTime: 1754277909115
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
-  description: >-
-    Duration: 1 turn Range: The caster By means of read magic, the caster can
-    decipher magical inscriptions or runes, as follows: ▶ Scrolls: The magical
-    script of a scroll of arcane spells can be understood. The caster is then
-    able to activate the scroll at any time in the future. ▶ Spell books: A
-    spell book written by another arcane spell caster can be deciphered. ▶
-    Inscriptions: Runes or magical words inscribed on an object or surface can
-    be understood. ▶ Reading again: Once the caster has read a magical
-    inscription using read magic, they are thereafter able to read that
-    particular writing without recourse to the use of this spell.
-  favorite: false
-  subType: spell
-  source: Mage
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -32,26 +31,24 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    Duration: 1 turn Range: The caster By means of read magic, the caster can
+    decipher magical inscriptions or runes, as follows: ▶ Scrolls: The magical
+    script of a scroll of arcane spells can be understood. The caster is then
+    able to activate the scroll at any time in the future. ▶ Spell books: A
+    spell book written by another arcane spell caster can be deciphered. ▶
+    Inscriptions: Runes or magical words inscribed on an object or surface can
+    be understood. ▶ Reading again: Once the caster has read a magical
+    inscription using read magic, they are thereafter able to read that
+    particular writing without recourse to the use of this spell.
   duration: 1 turn
-  save: None
+  favorite: false
+  level: 1
+  prepared: false
   range: Caster
-  skill: null
-_id: w50s8i6a2fgevqxl
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277457061
-  modifiedTime: 1754277909115
-  lastModifiedBy: lKC5x4Yf023Bizof
-  exportSource: null
-folder: Oa54k573WAw15y2A
-flags: {}
+  save: None
+  source: Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!w50s8i6a2fgevqxl'
 

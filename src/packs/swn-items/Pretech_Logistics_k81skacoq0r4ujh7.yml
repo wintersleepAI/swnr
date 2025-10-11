@@ -1,7 +1,12 @@
+_id: k81skacoq0r4ujh7
 name: Pretech Logistics
 type: asset
 img: systems/swnr/assets/icons/hawkin/force.png
 folder: b3Lxgyjj3TLLY04C
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.assets.Item.k81skacoq0r4ujh7
@@ -13,13 +18,11 @@ _stats:
   createdTime: 1757287716906
   modifiedTime: 1757287716906
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: k81skacoq0r4ujh7
 system:
   attackDamage: ''
-  attackSource: null
   attackSpecial: ''
-  attackTarget: null
   baseOfInfluence: false
+  category: force
   cost: 14
   counter: ''
   description: >-
@@ -28,27 +31,22 @@ system:
     one Force asset on that world that requires up to tech level 5 to purchase.
     This asset costs half again as many FacCreds as usual, rounded up. Only one
     asset can be purchased per turn.
+  favorite: false
   health:
     max: 6
     value: 6
   income: 0
   maintenance: 0
+  qualities:
+    action: true
+    permission: false
+    special: false
   rating: 5
+  stealthed: false
   tl: 0
   turnRoll: ''
   type: Facility
   unusable: false
-  qualities:
-    permission: false
-    action: true
-    special: false
-  category: force
-  favorite: false
-  stealthed: false
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!k81skacoq0r4ujh7'
 

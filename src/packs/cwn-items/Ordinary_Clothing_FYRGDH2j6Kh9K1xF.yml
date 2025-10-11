@@ -1,7 +1,12 @@
+_id: FYRGDH2j6Kh9K1xF
 name: Ordinary Clothing
 type: armor
 img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
 folder: ne4H5P4Oc4gz4LcS
+sort: 300000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-armor.Item.4wpvufw1wsejizlw
@@ -15,42 +20,36 @@ _stats:
   lastModifiedBy: lKC5x4Yf023Bizof
 system:
   ac: 10
+  bundle:
+    bundled: false
+  container:
+    capacity:
+      max: 0
+      value: 0
+    isContainer: false
+    isOpen: true
   cost: 25
   description: >-
     Some bold, impoverished, or highly fashionable people still insist on
     wearing clothing that has no functional use as armor.
+  dr: 0
   encumbrance: 0
+  favorite: false
   isHeavy: false
   isSubtle: true
+  location: stowed
   meleeAc: 10
+  noEncReadied: false
+  quality: stock
+  quantity: 1
+  shield: false
   shieldACBonus: 0
   shieldMeleeACBonus: 0
   soak:
     max: 0
     value: 0
   traumaDiePenalty: 0
-  favorite: false
-  quantity: 1
-  bundle:
-    bundled: false
-  tl: null
-  location: stowed
-  quality: stock
-  noEncReadied: false
-  container:
-    isContainer: false
-    isOpen: true
-    capacity:
-      max: 0
-      value: 0
-  shield: false
   use: false
-  dr: 0
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: FYRGDH2j6Kh9K1xF
-sort: 300000
 _key: '!items!FYRGDH2j6Kh9K1xF'
 

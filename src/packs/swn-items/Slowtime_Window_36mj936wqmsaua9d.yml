@@ -1,7 +1,12 @@
+_id: 36mj936wqmsaua9d
 name: Slowtime Window
 type: cyberware
 img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
 folder: 7ZDHgPOCyrCRwTEX
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cyberware.Item.36mj936wqmsaua9d
@@ -13,8 +18,9 @@ _stats:
   createdTime: 1757286670636
   modifiedTime: 1757286670636
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: 36mj936wqmsaua9d
 system:
+  complication: ''
+  concealment: Sight
   cost: 30000
   description: >-
     A piece of cutting-edge pretech cyberware, the slowtime window was installed
@@ -28,16 +34,10 @@ system:
     however, and one point of System Strain is gained each time it is engaged.
   disabled: false
   effect: Prevents surprise and speeds up the user's cogitation
+  favorite: false
   strain: 2
   tl: 5
-  favorite: false
   type: None
-  concealment: Sight
-  complication: ''
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!36mj936wqmsaua9d'
 

@@ -1,7 +1,36 @@
+_id: u38hfo8o5qxwqeb7
 name: Phantasmal Mimesis
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456913
+  modifiedTime: 1754277456913
+  lastModifiedBy: null
+  exportSource: null
 system:
+  consumptions:
+    - type: poolResource
+      resourceName: Slots
+      subResource: Prepared
+      usesCost: 1
+      cadence: day
+      timing: preparation
+    - type: poolResource
+      resourceName: Slots
+      subResource: Cast
+      usesCost: 1
+      cadence: day
+      timing: manual
   description: >-
     The mage creates a phantasmal seeming at a visible location within 100 feet
     per caster level. The illusion can occupy a number of 10-foot cubes equal to
@@ -20,46 +49,14 @@ system:
     each round to reject its psychic influences, becoming immune to its effects.
     The illusion lasts until dispelled, the caster drops it, or this spell is
     cast again.
+  duration: Until dispelled
   favorite: false
-  subType: spell
-  source: High Mage
   level: 1
   prepared: false
-  resourceName: null
-  subResource: null
-  consumptions:
-    - type: poolResource
-      resourceName: Slots
-      subResource: Prepared
-      usesCost: 1
-      cadence: day
-      timing: preparation
-    - type: poolResource
-      resourceName: Slots
-      subResource: Cast
-      usesCost: 1
-      cadence: day
-      timing: manual
-  roll: null
-  duration: Until dispelled
-  save: mental
   range: 100'/level
-  skill: null
-_id: u38hfo8o5qxwqeb7
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456913
-  modifiedTime: 1754277456913
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: mental
+  source: High Mage
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!u38hfo8o5qxwqeb7'
 

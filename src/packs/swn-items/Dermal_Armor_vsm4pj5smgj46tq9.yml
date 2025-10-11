@@ -1,7 +1,12 @@
+_id: vsm4pj5smgj46tq9
 name: Dermal Armor
 type: cyberware
 img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
 folder: 7ZDHgPOCyrCRwTEX
+sort: 0
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cyberware.Item.vsm4pj5smgj46tq9
@@ -13,8 +18,9 @@ _stats:
   createdTime: 1757286670636
   modifiedTime: 1757286670636
   lastModifiedBy: iXDXVi7OlHcRwXw0
-_id: vsm4pj5smgj46tq9
 system:
+  complication: ''
+  concealment: Sight
   cost: 20000
   description: >-
     A fine subcutaneous reinforcement mesh provides significant protection
@@ -26,16 +32,10 @@ system:
     powered armor.
   disabled: false
   effect: AC 16 immune to primitive weapon Shock
+  favorite: false
   strain: 2
   tl: 4
-  favorite: false
   type: None
-  concealment: Sight
-  complication: ''
 effects: []
-ownership:
-  default: 0
-  iXDXVi7OlHcRwXw0: 3
-sort: 0
 _key: '!items!vsm4pj5smgj46tq9'
 

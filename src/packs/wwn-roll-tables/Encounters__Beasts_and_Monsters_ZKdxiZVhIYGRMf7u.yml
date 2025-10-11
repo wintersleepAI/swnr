@@ -1,272 +1,12 @@
+_id: ZKdxiZVhIYGRMf7u
 name: Encounters, Beasts and Monsters
+type: null
 img: icons/svg/d20-grey.svg
-description: ''
-results:
-  - type: text
-    weight: 1
-    range:
-      - 1
-      - 1
-    drawn: false
-    _id: IeApchJIBMXYtnn7
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Harmless but annoying local creature
-    name: ''
-    _key: '!tables.results!ZKdxiZVhIYGRMf7u.IeApchJIBMXYtnn7'
-  - type: text
-    weight: 1
-    range:
-      - 2
-      - 2
-    drawn: false
-    _id: LmYxy8iB7uH4fHyV
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Hungry pack hunters
-    name: ''
-    _key: '!tables.results!ZKdxiZVhIYGRMf7u.LmYxy8iB7uH4fHyV'
-  - type: text
-    weight: 1
-    range:
-      - 3
-      - 3
-    drawn: false
-    _id: NHhRrrj7OOmiO6FC
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Stalking predator looking for an opening
-    name: ''
-    _key: '!tables.results!ZKdxiZVhIYGRMf7u.NHhRrrj7OOmiO6FC'
-  - type: text
-    weight: 1
-    range:
-      - 4
-      - 4
-    drawn: false
-    _id: kb17YhjAB1UtFJyG
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Sick or somehow enraged predator
-    name: ''
-    _key: '!tables.results!ZKdxiZVhIYGRMf7u.kb17YhjAB1UtFJyG'
-  - type: text
-    weight: 1
-    range:
-      - 5
-      - 5
-    drawn: false
-    _id: mdEej9b0ds4EyKRL
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: An ambush predator lying in wait
-    name: ''
-    _key: '!tables.results!ZKdxiZVhIYGRMf7u.mdEej9b0ds4EyKRL'
-  - type: text
-    weight: 1
-    range:
-      - 6
-      - 6
-    drawn: false
-    _id: Un7SFbqxYSDPa24K
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Large, dangerously aggressive herbivore
-    name: ''
-    _key: '!tables.results!ZKdxiZVhIYGRMf7u.Un7SFbqxYSDPa24K'
-  - type: text
-    weight: 1
-    range:
-      - 7
-      - 7
-    drawn: false
-    _id: 7oEfGwMdZnIuRDFW
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Uncanny or eldritch monster
-    name: ''
-    _key: '!tables.results!ZKdxiZVhIYGRMf7u.7oEfGwMdZnIuRDFW'
-  - type: text
-    weight: 1
-    range:
-      - 8
-      - 8
-    drawn: false
-    _id: YqkuGBkVkSSw12R4
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A swarm of dangerous vermin
-    name: ''
-    _key: '!tables.results!ZKdxiZVhIYGRMf7u.YqkuGBkVkSSw12R4'
-  - type: text
-    weight: 1
-    range:
-      - 9
-      - 9
-    drawn: false
-    _id: rnaDIi78eYIelgfB
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: A flying monster or beast
-    name: ''
-    _key: '!tables.results!ZKdxiZVhIYGRMf7u.rnaDIi78eYIelgfB'
-  - type: text
-    weight: 1
-    range:
-      - 10
-      - 10
-    drawn: false
-    _id: HwSyRTGeU4jpm71Y
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Mated pair of team hunters
-    name: ''
-    _key: '!tables.results!ZKdxiZVhIYGRMf7u.HwSyRTGeU4jpm71Y'
-  - type: text
-    weight: 1
-    range:
-      - 11
-      - 11
-    drawn: false
-    _id: qDB3K2wxVho2VYvw
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Ghost, animate corpse, or other undead
-    name: ''
-    _key: '!tables.results!ZKdxiZVhIYGRMf7u.qDB3K2wxVho2VYvw'
-  - type: text
-    weight: 1
-    range:
-      - 12
-      - 12
-    drawn: false
-    _id: aQexs9JlvePpi4Nb
-    img: icons/svg/d20-black.svg
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    description: Something far too dangerous to confront
-    name: ''
-    _key: '!tables.results!ZKdxiZVhIYGRMf7u.aQexs9JlvePpi4Nb'
-  - type: document
-    weight: 1
-    range:
-      - 1
-      - 12
-    drawn: false
-    img: icons/svg/d20-grey.svg
-    _id: Uju4FffEL1OoSwpr
-    flags: {}
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: iXDXVi7OlHcRwXw0
-      modifiedTime: 1757290976340
-    name: Encounters-Beast Activity
-    documentUuid: Compendium.swnr.wwn-roll-tables.RollTable.2vTVk5qsyC9ksVL5
-    description: ''
-    _key: '!tables.results!ZKdxiZVhIYGRMf7u.Uju4FffEL1OoSwpr'
-replacement: true
-displayRoll: true
 folder: NcNmE2NSqwIFlKia
+sort: 0
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags:
   core: {}
 _stats:
@@ -278,17 +18,157 @@ _stats:
     coreVersion: '10.291'
     systemId: wwn
     systemVersion: 1.1.4
-  coreVersion: '13.346'
+  coreVersion: '13.350'
   systemId: swnr
   systemVersion: 2.1.0
   createdTime: 1754271920613
   modifiedTime: 1754271920613
   lastModifiedBy: lKC5x4Yf023Bizof
-formula: 1d12
-_id: ZKdxiZVhIYGRMf7u
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-sort: 0
+system: {}
+effects: []
+results:
+  - _id: IeApchJIBMXYtnn7
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.IeApchJIBMXYtnn7'
+  - _id: Uju4FffEL1OoSwpr
+    type: document
+    text: null
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.Uju4FffEL1OoSwpr'
+  - _id: LmYxy8iB7uH4fHyV
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.LmYxy8iB7uH4fHyV'
+  - _id: NHhRrrj7OOmiO6FC
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.NHhRrrj7OOmiO6FC'
+  - _id: kb17YhjAB1UtFJyG
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.kb17YhjAB1UtFJyG'
+  - _id: mdEej9b0ds4EyKRL
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.mdEej9b0ds4EyKRL'
+  - _id: Un7SFbqxYSDPa24K
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.Un7SFbqxYSDPa24K'
+  - _id: 7oEfGwMdZnIuRDFW
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.7oEfGwMdZnIuRDFW'
+  - _id: YqkuGBkVkSSw12R4
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.YqkuGBkVkSSw12R4'
+  - _id: rnaDIi78eYIelgfB
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.rnaDIi78eYIelgfB'
+  - _id: HwSyRTGeU4jpm71Y
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.HwSyRTGeU4jpm71Y'
+  - _id: qDB3K2wxVho2VYvw
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 11
+      - 11
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.qDB3K2wxVho2VYvw'
+  - _id: aQexs9JlvePpi4Nb
+    type: text
+    text: null
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: 0
+    flags: {}
+    _key: '!tables.results!ZKdxiZVhIYGRMf7u.aQexs9JlvePpi4Nb'
 _key: '!tables!ZKdxiZVhIYGRMf7u'
 

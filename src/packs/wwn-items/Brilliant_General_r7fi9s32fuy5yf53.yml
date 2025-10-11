@@ -1,46 +1,45 @@
+_id: r7fi9s32fuy5yf53
 name: Brilliant General
 type: asset
-sort: 0
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: zFqC1zP7Qyzj1jAK
+sort: 2000000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456932
+  modifiedTime: 1759968821235
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
 system:
+  baseOfInfluence: false
+  category: cunning
+  cost: 1
   description: >-
     A leader for the ages is in service with the faction. Whenever the Brilliant
     General or any allied Force Asset in the same location Attacks or is made to
     defend, it can roll an extra die to do so.
   favorite: false
-  category: cunning
-  type: Facility
   health:
-    value: 8
     max: 8
-  rating: 7
-  tl: 0
-  baseOfInfluence: false
-  unusable: false
-  stealthed: false
-  cost: 1
+    value: 8
   income: 0
   maintenance: 0
-  attackTarget: null
-  attackSource: null
   qualities:
-    permission: false
     action: false
+    permission: false
     special: false
-_id: r7fi9s32fuy5yf53
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456932
-  modifiedTime: 1754277456932
-  lastModifiedBy: null
-  exportSource: null
-folder: S49e8FcOEsIjDzK3
-flags: {}
+  rating: 7
+  stealthed: false
+  tl: 0
+  type: Facility
+  unusable: false
 effects: []
-ownership:
-  default: 0
 _key: '!items!r7fi9s32fuy5yf53'
 

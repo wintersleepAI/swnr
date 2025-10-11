@@ -1,7 +1,12 @@
+_id: zlnYXJZ9E9HejklR
 name: Lock
 type: program
 img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
 folder: YSjeg2WqEsCIXk0y
+sort: 700000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
 flags: {}
 _stats:
   compendiumSource: Compendium.swnr.cwn-program.Item.v8wx9dskc0mfw1r1
@@ -19,17 +24,12 @@ system:
   description: >-
     Lock a physical device that has some sort of electronic locking mechanism or
     a currently-unlocked cyberspace node barrier.
+  favorite: false
   selfTerminating: false
   skillCheckMod: 1
   target: Device/Data
   type: verb
   useAffects: Lock an electronic lock or node barrier
-  favorite: false
 effects: []
-ownership:
-  default: 0
-  lKC5x4Yf023Bizof: 3
-_id: zlnYXJZ9E9HejklR
-sort: 700000
 _key: '!items!zlnYXJZ9E9HejklR'
 

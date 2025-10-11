@@ -1,25 +1,23 @@
+_id: 4rskmv4j5t1fwljz
 name: Command the Dead
 type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: qxBl7uHLaKwQr1Ih
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456897
+  modifiedTime: 1754277456897
+  lastModifiedBy: null
+  exportSource: null
 system:
-  description: >-
-    The necromancer exerts their will over a number of hit dice worth of undead
-    equal to twice their character level. These undead must be visible and
-    within one hundred feet of the caster. Undead get a Mental saving throw to
-    resist this binding, at a penalty equal to the caster's Magic skill.
-    Creatures only partially-bewitched by the spell due to their excess hit dice
-    merely stand dazed for a round. Those fully within the hit die cap who are
-    affected become suicidally loyal to the necromancer until they are released
-    by the caster. Regardless of how often the caster uses this spell, they may
-    have no more than twice their level worth of hit dice bound at any one time,
-    with the oldest-enchanted being first released.
-  favorite: false
-  subType: spell
-  source: Necromancer
-  level: 1
-  prepared: false
-  resourceName: null
-  subResource: null
   consumptions:
     - type: poolResource
       resourceName: Slots
@@ -33,26 +31,25 @@ system:
       usesCost: 1
       cadence: day
       timing: manual
-  roll: null
+  description: >-
+    The necromancer exerts their will over a number of hit dice worth of undead
+    equal to twice their character level. These undead must be visible and
+    within one hundred feet of the caster. Undead get a Mental saving throw to
+    resist this binding, at a penalty equal to the caster's Magic skill.
+    Creatures only partially-bewitched by the spell due to their excess hit dice
+    merely stand dazed for a round. Those fully within the hit die cap who are
+    affected become suicidally loyal to the necromancer until they are released
+    by the caster. Regardless of how often the caster uses this spell, they may
+    have no more than twice their level worth of hit dice bound at any one time,
+    with the oldest-enchanted being first released.
   duration: Until released
-  save: mental
+  favorite: false
+  level: 1
+  prepared: false
   range: 100 ft.
-  skill: null
-_id: 4rskmv4j5t1fwljz
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456897
-  modifiedTime: 1754277456897
-  lastModifiedBy: null
-  exportSource: null
-folder: qxBl7uHLaKwQr1Ih
-flags: {}
+  save: mental
+  source: Necromancer
+  subType: spell
 effects: []
-ownership:
-  default: 0
 _key: '!items!4rskmv4j5t1fwljz'
 

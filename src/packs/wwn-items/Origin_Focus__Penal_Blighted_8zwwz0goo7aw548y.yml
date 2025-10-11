@@ -1,6 +1,22 @@
+_id: 8zwwz0goo7aw548y
 name: 'Origin Focus: Penal Blighted'
 type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: XpfSdfJBDfjFSauP
 sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754277456875
+  modifiedTime: 1754277456875
+  lastModifiedBy: null
+  exportSource: null
 system:
   description: >-
     Your lineage was cursed by some sadistic sorcerer-king or merciless alien
@@ -18,23 +34,8 @@ system:
     cannot pick the Developed Attribute Focus.
   favorite: false
   level: 1
-  type: focus
   poolsGranted: []
-_id: 8zwwz0goo7aw548y
-_stats:
-  compendiumSource: null
-  duplicateSource: null
-  coreVersion: '13.346'
-  systemId: swnr
-  systemVersion: 2.1.0
-  createdTime: 1754277456875
-  modifiedTime: 1754277456875
-  lastModifiedBy: null
-  exportSource: null
-folder: XpfSdfJBDfjFSauP
-flags: {}
+  type: focus
 effects: []
-ownership:
-  default: 0
 _key: '!items!8zwwz0goo7aw548y'
 
