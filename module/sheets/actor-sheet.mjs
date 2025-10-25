@@ -1079,42 +1079,56 @@ export class SWNActorSheet extends SWNBaseSheet {
     if (this.actor.type !== "npc") {
       return;
     }
-    function defineResult(
-      text,
-      range
-    ) {
-      return {
-        text: game.i18n.localize("swnr.npc.reaction." + text),
-        type: 0,
-        range,
-        flags: { swnr: { type: text.toLocaleLowerCase() } },
-        weight: 1 + range[1] - range[0],
-        _id: text.toLocaleLowerCase().padEnd(16, "0"),
-      };
+    try {
+      const modifier = await foundry.applications.api.DialogV2.prompt({
+        window: { title: "NPC Reaction Roll (Private)" },
+        content: "Modifier: <input name='modifier' type='number' value='0' step='1' />",
+        ok: { 
+          label: "Roll",
+          callback: (event, button, dialog) => button.form.elements.modifier.value
+        },
+        reject: true
+      });
+      function defineResult(
+        text,
+        range
+      ) {
+        return {
+          text: game.i18n.localize("swnr.npc.reaction." + text),
+          type: 0,
+          range,
+          flags: { swnr: { type: text.toLocaleLowerCase() } },
+          weight: 1 + range[1] - range[0],
+          _id: text.toLocaleLowerCase().padEnd(16, "0"),
+        };
+      }
+      const tableResults = [
+        defineResult("hostile", [-99, 2]),
+        defineResult("negative", [3, 5]),
+        defineResult("neutral", [6, 8]),
+        defineResult("positive", [9, 11]),
+        defineResult("friendly", [12, 99]),
+      ];
+  
+      const rollTable = (await RollTable.create(
+        {
+          name: "NPC Reaction",
+          description: " ", //todo: spice this up
+          formula: `2d6 + ${modifier}`,
+          results: tableResults,
+        },
+        { temporary: true }
+      ));
+  
+      const { results } = await rollTable.draw({ rollMode: CONST.DICE_ROLL_MODES.PRIVATE });
+  
+      await this.actor.update({
+        "system.reaction": results[0].id?.split("0")[0],
+      });
+    } catch {
+      // User cancelled
+      return;
     }
-    const tableResults = [
-      defineResult("hostile", [2, 2]),
-      defineResult("negative", [3, 5]),
-      defineResult("neutral", [6, 8]),
-      defineResult("positive", [9, 11]),
-      defineResult("friendly", [12, 12]),
-    ];
-
-    const rollTable = (await RollTable.create(
-      {
-        name: "NPC Reaction",
-        description: " ", //todo: spice this up
-        formula: "2d6",
-        results: tableResults,
-      },
-      { temporary: true }
-    ));
-
-    const { results } = await rollTable.draw();
-
-    await this.actor.update({
-      "system.reaction": results[0].id?.split("0")[0],
-    });
   }
 
   static async _onMoraleRoll(event, _target) {

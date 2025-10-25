@@ -5,6 +5,16 @@ All notable changes to the Stars Without Number Redux (SWNR) system for Foundry 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0]
+
+### Fixes:
+ - Bulk add skills dialog now has a dropdown for skill lists
+ - Moved movement attribute to Features tab.
+ - Changed header layout
+ - NPC reaction roll now uses a private roll and takes a modifier
+ - Updated NPC import from CSV
+ - Misc fixes and more AWN support
+
 ## [2.1.0] - 2025-09-30 Unified Power System and AWN 
 
 This comprehensive migration transforms the legacy effort system into the new resource pool system, 
