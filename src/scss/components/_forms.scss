@@ -34,7 +34,6 @@
 
    input[type="text"],
    input[type="number"], 
-   select,
    div.field {
     font-size: 14px;
     /* padding: 2px; */
@@ -52,6 +51,25 @@
     transition: outline-color 0.5s;
     min-width: 20px;
   }
+
+  select {
+   font-size: 14px;
+   /* padding: 2px; */
+   margin: 2px;
+   border: none;
+   border-radius: 0;
+   /* background: var(--swnr-c-white); */
+   background: none;
+   color: var(--swnr-c-dark);
+   outline: 1px solid transparent;
+   height: var(--input-height);
+   line-height: var(--input-height);
+   user-select: text;
+   transition: outline-color 0.5s;
+   min-width: 20px;
+ }
+
+
   
   .profile-img,
   .item-img {
