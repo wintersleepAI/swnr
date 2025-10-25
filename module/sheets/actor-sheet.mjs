@@ -15,7 +15,6 @@ export class SWNActorSheet extends SWNBaseSheet {
   // Private properties
   #toggleLock = false;
   static #expandedDescriptions = {};
-  static #expandedPoolTempModifiers = {};
   static #collapsedSections = {};
 
   constructor(options = {}) {
@@ -203,7 +202,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       groupWidget: groupFieldWidget.bind(this),
       // Add expanded descriptions state for item description toggle functionality
       expandedDescriptions: SWNActorSheet.#expandedDescriptions,
-      expandedPoolTempModifiers: SWNActorSheet.#expandedPoolTempModifiers,
+      expandedPoolTempModifiers: SWNBaseSheet.expandedPoolTempModifiers,
       collapsedSections: SWNActorSheet.#collapsedSections,
 
     };
@@ -436,88 +435,6 @@ export class SWNActorSheet extends SWNBaseSheet {
   }
 
   /**
-   * Refresh pools by cadence type - delegates to helper for consistency
-   * Used only for non-character actors (NPCs, etc.)
-   * @param {string} cadence - The cadence type to refresh ('scene', 'day')
-   */
-  async _refreshPoolsByCadence(cadence) {
-    // Delegate to orchestrator for NPCs and other non-character actors
-    await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence });
-    this.render(false);
-  }
-
-  /**
-   * Prepare pool data for display in the sheet
-   * @param {Object} context - The context object being prepared
-   */
-  _preparePools(context) {
-    const pools = this.actor.system.pools || {};
-    const poolGroups = {};
-    
-    // Group pools by resource name
-    for (const [poolKey, poolData] of Object.entries(pools)) {
-      const [resourceName, subResource] = poolKey.split(':');
-      
-      if (!poolGroups[resourceName]) {
-        poolGroups[resourceName] = {
-          resourceName,
-          pools: []
-        };
-      }
-      
-      // Coerce potentially malformed values to safe numbers
-      const toNum = (v) => {
-        const n = Number(v);
-        return Number.isFinite(n) ? n : 0;
-      };
-      const value = toNum(poolData.value);
-      const max = toNum(poolData.max);
-      const committed = toNum(poolData.committed);
-      const tempCommit = toNum(poolData.tempCommit);
-      const tempScene = toNum(poolData.tempScene);
-      const tempDay = toNum(poolData.tempDay);
-
-      const poolInfo = {
-        key: poolKey,
-        subResource: subResource || "Default",
-        current: value,
-        max: max,
-        cadence: poolData.cadence,
-        committed,
-        commitments: poolData.commitments || [],
-        tempCommit,
-        tempScene,
-        tempDay,
-        percentage: max > 0 ? Math.round((value / max) * 100) : 0,
-        isEmpty: value === 0,
-        isFull: value >= max,
-        isLow: max > 0 && (value / max) < 0.25,
-        hasCommitments: committed > 0
-      };
-      
-      poolGroups[resourceName].pools.push(poolInfo);
-    }
-    
-    // Sort pools within each group by subResource
-    for (const group of Object.values(poolGroups)) {
-      group.pools.sort((a, b) => {
-        // Put "Default" first, then sort alphabetically
-        if (a.subResource === "Default" && b.subResource !== "Default") return -1;
-        if (b.subResource === "Default" && a.subResource !== "Default") return 1;
-        return a.subResource.localeCompare(b.subResource);
-      });
-    }
-    
-    // Convert to array and sort by resource name
-    const poolGroupsArray = Object.values(poolGroups).sort((a, b) => 
-      a.resourceName.localeCompare(b.resourceName)
-    );
-    
-    context.poolGroups = poolGroupsArray;
-    context.hasAnyPools = poolGroupsArray.length > 0;
-  }
-
-  /**
    * Actions performed after any render of the Application.
    * Post-render steps are not awaited by the render process.
    * @param {ApplicationRenderContext} context      Prepared context data
@@ -593,44 +510,6 @@ export class SWNActorSheet extends SWNBaseSheet {
         if (toggleElement) {
           toggleElement.innerHTML = "▲";
         }
-      }
-    }
-  }
-
-  /**
-   * Apply persistent pool modifier states after render
-   * @private
-   */
-  _applyPoolModifierStates() {
-    // Load expanded pool modifiers from localStorage
-    const storageKey = 'swnr-expanded-pool-modifiers';
-    let expandedPoolModifiers = {};
-    try {
-      const stored = localStorage.getItem(storageKey);
-      if (stored) {
-        expandedPoolModifiers = JSON.parse(stored);
-      }
-    } catch (e) {
-      console.warn('Failed to parse expanded pool modifiers from localStorage:', e);
-    }
-
-    // Update static property and apply states
-    SWNActorSheet.#expandedPoolTempModifiers = expandedPoolModifiers;
-
-    for (const [poolKey, isExpanded] of Object.entries(expandedPoolModifiers)) {
-      if (isExpanded) {
-        const badges = this.element.querySelectorAll(`.pool-badge[data-pool-key="${CSS.escape(poolKey)}"]`);
-        badges.forEach((poolBadge) => {
-          poolBadge.classList.add('collapsed');
-          poolBadge.classList.remove('expanded');
-
-          // Update caret direction: down when collapsed, up when expanded
-          const chevron = poolBadge.querySelector('.pool-toggle-button i');
-          if (chevron) {
-            chevron.classList.add('fa-chevron-up');
-            chevron.classList.remove('fa-chevron-down', 'fa-chevron-right', 'fa-chevron-left');
-          }
-        });
       }
     }
   }
@@ -1390,60 +1269,6 @@ export class SWNActorSheet extends SWNBaseSheet {
     }
   }
 
-  /**
-   * Handle toggling pool temp modifiers visibility
-   * @param {Event} event - The originating click event
-   * @param {HTMLElement} target - The clicked element
-   */
-  static async _onTogglePoolTempModifiers(event, target) {
-    event.preventDefault();
-
-    const poolKey = target.dataset.poolKey || target.closest('[data-pool-key]')?.dataset.poolKey;
-    if (!poolKey) return;
-
-    // Get current expanded pool modifiers from localStorage
-    const storageKey = 'swnr-expanded-pool-modifiers';
-    let expandedPoolModifiers = {};
-    try {
-      const stored = localStorage.getItem(storageKey);
-      if (stored) {
-        expandedPoolModifiers = JSON.parse(stored);
-      }
-    } catch (e) {
-      console.warn('Failed to parse expanded pool modifiers from localStorage:', e);
-    }
-
-    // Toggle the expanded state
-    if (expandedPoolModifiers[poolKey]) {
-      delete expandedPoolModifiers[poolKey];
-    } else {
-      expandedPoolModifiers[poolKey] = true;
-    }
-
-    // Save to localStorage and update static property
-    try {
-      localStorage.setItem(storageKey, JSON.stringify(expandedPoolModifiers));
-    } catch (e) {
-      console.warn('Failed to save expanded pool modifiers to localStorage:', e);
-    }
-    SWNActorSheet.#expandedPoolTempModifiers = expandedPoolModifiers;
-
-    // Update all matching badges (header and powers) to keep UI in sync
-    const isCollapsed = !!expandedPoolModifiers[poolKey];
-    const badges = this.element.querySelectorAll(`.pool-badge[data-pool-key="${CSS.escape(poolKey)}"]`);
-    badges.forEach((poolBadge) => {
-      poolBadge.classList.toggle('collapsed', isCollapsed);
-      poolBadge.classList.toggle('expanded', !isCollapsed);
-
-      // Update caret direction: down when collapsed, up when expanded
-      const chevron = poolBadge.querySelector('.pool-toggle-button i');
-      if (chevron) {
-        chevron.classList.toggle('fa-chevron-up', !isCollapsed);
-        chevron.classList.toggle('fa-chevron-down', isCollapsed);
-        chevron.classList.remove('fa-chevron-right', 'fa-chevron-left');
-      }
-    });
-  }
 
   /**
    * Handle adding a language to the character

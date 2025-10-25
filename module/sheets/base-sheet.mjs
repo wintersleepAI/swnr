@@ -9,6 +9,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
   sheets.ActorSheetV2
 ) {
   #dragDrop;
+  static expandedPoolTempModifiers = {};
 
   constructor(options = {}) {
     super(options);
@@ -262,7 +263,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
   static async _deleteDoc(event, target) {
     const doc = this._getEmbeddedDocument(target);
     const skipConfirmation = target.dataset?.skipconfirmation?.toLowerCase() === "true";
-    
+
     const executeDelete = async () => {
       // Clean up any consumed resources before deletion
       if (doc.type === "power") {
@@ -275,7 +276,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       await executeDelete();
       return;
     }
-    
+
     await this._promptDelete(event, doc.name, doc.parent.name, executeDelete);
   }
 
@@ -289,19 +290,112 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   async _promptDelete(event, name, parentName, callback) {
-    
-    if (event.shiftKey){
+
+    if (event.shiftKey) {
       await callback();
       return;
     }
-    
+
     await foundry.applications.api.DialogV2.confirm({
-      window: { title: game.i18n.format("swnr.deleteTitle", { name: name}) },
-      content: game.i18n.format("swnr.deleteContent", { name: name, actor: parentName}),
+      window: { title: game.i18n.format("swnr.deleteTitle", { name: name }) },
+      content: game.i18n.format("swnr.deleteContent", { name: name, actor: parentName }),
       yes: {
         callback: callback,
       }
     })
+  }
+
+  /**
+   * Handle toggling pool temp modifiers visibility
+   * @param {Event} event - The originating click event
+   * @param {HTMLElement} target - The clicked element
+   */
+  static async _onTogglePoolTempModifiers(event, target) {
+    event.preventDefault();
+
+    const poolKey = target.dataset.poolKey || target.closest('[data-pool-key]')?.dataset.poolKey;
+    if (!poolKey) return;
+
+    // Get current expanded pool modifiers from localStorage
+    const storageKey = 'swnr-expanded-pool-modifiers';
+    let expandedPoolModifiers = {};
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        expandedPoolModifiers = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Failed to parse expanded pool modifiers from localStorage:', e);
+    }
+
+    // Toggle the expanded state
+    if (expandedPoolModifiers[poolKey]) {
+      delete expandedPoolModifiers[poolKey];
+    } else {
+      expandedPoolModifiers[poolKey] = true;
+    }
+
+    // Save to localStorage and update static property
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(expandedPoolModifiers));
+    } catch (e) {
+      console.warn('Failed to save expanded pool modifiers to localStorage:', e);
+    }
+    SWNBaseSheet.expandedPoolTempModifiers = expandedPoolModifiers;
+
+    // Update all matching badges (header and powers) to keep UI in sync
+    const isCollapsed = !!expandedPoolModifiers[poolKey];
+    const badges = this.element.querySelectorAll(`.pool-badge[data-pool-key="${CSS.escape(poolKey)}"]`);
+    badges.forEach((poolBadge) => {
+      poolBadge.classList.toggle('collapsed', isCollapsed);
+      poolBadge.classList.toggle('expanded', !isCollapsed);
+
+      // Update caret direction: down when collapsed, up when expanded
+      const chevron = poolBadge.querySelector('.pool-toggle-button i');
+      if (chevron) {
+        chevron.classList.toggle('fa-chevron-up', !isCollapsed);
+        chevron.classList.toggle('fa-chevron-down', isCollapsed);
+        chevron.classList.remove('fa-chevron-right', 'fa-chevron-left');
+      }
+    });
+  }
+
+  /**
+ * Apply persistent pool modifier states after render
+ * @private
+ */
+  _applyPoolModifierStates() {
+    // Load expanded pool modifiers from localStorage
+    const storageKey = 'swnr-expanded-pool-modifiers';
+    let expandedPoolModifiers = {};
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        expandedPoolModifiers = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Failed to parse expanded pool modifiers from localStorage:', e);
+    }
+
+    // Update static property and apply states
+    SWNBaseSheet.expandedPoolTempModifiers = expandedPoolModifiers;
+
+    for (const [poolKey, isExpanded] of Object.entries(expandedPoolModifiers)) {
+      if (isExpanded) {
+        const badges = this.element.querySelectorAll(`.pool-badge[data-pool-key="${CSS.escape(poolKey)}"]`);
+        badges.forEach((poolBadge) => {
+          poolBadge.classList.add('collapsed');
+          poolBadge.classList.remove('expanded');
+
+          // Update caret direction: down when collapsed, up when expanded
+          const chevron = poolBadge.querySelector('.pool-toggle-button i');
+          if (chevron) {
+            chevron.classList.add('fa-chevron-up');
+            chevron.classList.remove('fa-chevron-down', 'fa-chevron-right', 'fa-chevron-left');
+          }
+        });
+      }
+    }
   }
 
   /**
@@ -321,12 +415,12 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       // Check if power is prepared - restore preparation costs
       if (power.system.prepared) {
         const prepConsumptions = power.system.consumptions?.filter(c => c.spendOnPrep) || [];
-        
+
         for (const consumption of prepConsumptions) {
           if (consumption.type === "poolResource" && consumption.resourceName) {
             const poolKey = `${consumption.resourceName}:${consumption.subResource || "Default"}`;
             const pool = pools[poolKey];
-            
+
             if (pool && consumption.usesCost > 0) {
               const newValue = Math.min(pool.max, pool.value + consumption.usesCost);
               poolUpdates[`system.pools.${poolKey}.value`] = newValue;
@@ -343,24 +437,24 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
 
       for (const [poolKey, poolCommitments] of Object.entries(commitments)) {
         const remainingCommitments = poolCommitments.filter(c => c.powerId !== power.id);
-        
+
         if (remainingCommitments.length !== poolCommitments.length) {
           // Some commitments were removed
           hasCommitmentChanges = true;
           newCommitments[poolKey] = remainingCommitments;
-          
+
           // Calculate restored effort
           const releasedCommitments = poolCommitments.filter(c => c.powerId === power.id);
           const releasedAmount = releasedCommitments.reduce((sum, c) => sum + c.amount, 0);
-          
+
           if (releasedAmount > 0 && pools[poolKey]) {
             const totalCommitted = remainingCommitments.reduce((sum, c) => sum + c.amount, 0);
             const newValue = Math.min(pools[poolKey].max, pools[poolKey].value + releasedAmount);
-            
+
             poolUpdates[`system.pools.${poolKey}.value`] = newValue;
             poolUpdates[`system.pools.${poolKey}.committed`] = totalCommitted;
             poolUpdates[`system.pools.${poolKey}.commitments`] = remainingCommitments;
-            
+
             restoredResources.push(`${releasedAmount} ${poolKey} (committed effort)`);
           }
         } else {
@@ -376,20 +470,20 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       // Apply updates if any resources need to be restored
       if (Object.keys(poolUpdates).length > 0) {
         await actor.update(poolUpdates);
-        
+
         // Create chat message about resource restoration
         if (restoredResources.length > 0) {
           let content = `<div class="power-deletion-cleanup">
             <h3><i class="fas fa-recycle"></i> Resources Restored</h3>
             <p><strong>${power.name}</strong> was deleted and the following resources were restored:</p>
             <ul>`;
-          
+
           restoredResources.forEach(resource => {
             content += `<li>${resource}</li>`;
           });
-          
+
           content += `</ul></div>`;
-          
+
           ChatMessage.create({
             speaker: ChatMessage.getSpeaker({ actor: actor }),
             content
@@ -400,6 +494,88 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       console.error("Error cleaning up power resources before deletion:", error);
       // Don't prevent deletion even if cleanup fails
     }
+  }
+
+  /**
+ * Refresh pools by cadence type - delegates to helper for consistency
+ * Used only for non-character actors (NPCs, etc.)
+ * @param {string} cadence - The cadence type to refresh ('scene', 'day')
+ */
+  async _refreshPoolsByCadence(cadence) {
+    // Delegate to orchestrator for NPCs and other non-character actors
+    await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence });
+    this.render(false);
+  }
+
+  /**
+   * Prepare pool data for display in the sheet
+   * @param {Object} context - The context object being prepared
+   */
+  _preparePools(context) {
+    const pools = this.actor.system.pools || {};
+    const poolGroups = {};
+
+    // Group pools by resource name
+    for (const [poolKey, poolData] of Object.entries(pools)) {
+      const [resourceName, subResource] = poolKey.split(':');
+
+      if (!poolGroups[resourceName]) {
+        poolGroups[resourceName] = {
+          resourceName,
+          pools: []
+        };
+      }
+
+      // Coerce potentially malformed values to safe numbers
+      const toNum = (v) => {
+        const n = Number(v);
+        return Number.isFinite(n) ? n : 0;
+      };
+      const value = toNum(poolData.value);
+      const max = toNum(poolData.max);
+      const committed = toNum(poolData.committed);
+      const tempCommit = toNum(poolData.tempCommit);
+      const tempScene = toNum(poolData.tempScene);
+      const tempDay = toNum(poolData.tempDay);
+
+      const poolInfo = {
+        key: poolKey,
+        subResource: subResource || "Default",
+        current: value,
+        max: max,
+        cadence: poolData.cadence,
+        committed,
+        commitments: poolData.commitments || [],
+        tempCommit,
+        tempScene,
+        tempDay,
+        percentage: max > 0 ? Math.round((value / max) * 100) : 0,
+        isEmpty: value === 0,
+        isFull: value >= max,
+        isLow: max > 0 && (value / max) < 0.25,
+        hasCommitments: committed > 0
+      };
+
+      poolGroups[resourceName].pools.push(poolInfo);
+    }
+
+    // Sort pools within each group by subResource
+    for (const group of Object.values(poolGroups)) {
+      group.pools.sort((a, b) => {
+        // Put "Default" first, then sort alphabetically
+        if (a.subResource === "Default" && b.subResource !== "Default") return -1;
+        if (b.subResource === "Default" && a.subResource !== "Default") return 1;
+        return a.subResource.localeCompare(b.subResource);
+      });
+    }
+
+    // Convert to array and sort by resource name
+    const poolGroupsArray = Object.values(poolGroups).sort((a, b) =>
+      a.resourceName.localeCompare(b.resourceName)
+    );
+
+    context.poolGroups = poolGroupsArray;
+    context.hasAnyPools = poolGroupsArray.length > 0;
   }
 
   /**
@@ -460,12 +636,12 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
     const item = this._getEmbeddedDocument(target);
     const property = target.dataset.property;
     const value = item.system[property];
-    
+
     if (value === undefined) {
       console.log(`Unable to find ${property} property on item `, item.system);
     }
-    
-    if (typeof  value != "boolean"){
+
+    if (typeof value != "boolean") {
       console.log(`Property ${property} on item is not a boolean`);
     }
 
@@ -512,134 +688,134 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @protected
    */
-    static async _onReload(event, target) {
-      const item = this._getEmbeddedDocument(target);
-      if (!item || (item.type !== 'weapon' && item.type !== 'shipWeapon')) {
-        ui.notifications.error("Only weapons can be reloaded.");
-        return;
-      }
-      if (!item.system.ammo) {
-        ui.notifications.error("This weapon does not use ammo.");
-        return;
-      }
-      
-      const ammoMax = item.system.ammo?.max;
-      if (ammoMax == null) {
-        console.log("Unable to find ammo max value in item", item.system);
-        return;
-      }
-      
-      let currentAmmo = item.system.ammo.value;
-      let ammoNeeded = ammoMax - currentAmmo;
-      if (ammoNeeded <= 0) {
-        ui.notifications.info("Weapon already full.");
+  static async _onReload(event, target) {
+    const item = this._getEmbeddedDocument(target);
+    if (!item || (item.type !== 'weapon' && item.type !== 'shipWeapon')) {
+      ui.notifications.error("Only weapons can be reloaded.");
+      return;
+    }
+    if (!item.system.ammo) {
+      ui.notifications.error("This weapon does not use ammo.");
+      return;
+    }
+
+    const ammoMax = item.system.ammo?.max;
+    if (ammoMax == null) {
+      console.log("Unable to find ammo max value in item", item.system);
+      return;
+    }
+
+    let currentAmmo = item.system.ammo.value;
+    let ammoNeeded = ammoMax - currentAmmo;
+    if (ammoNeeded <= 0) {
+      ui.notifications.info("Weapon already full.");
+      return;
+    }
+
+    let shift = event?.shiftKey || false;
+
+    // For specifying in chat msg where ammo comes from.
+    let ammoReloadDesc = '';
+    let extraMessage = "";
+    if (item.system.ammo.longReload) {
+      extraMessage = " This weapon takes extra time to reload.<br>";
+    }
+    let ammoToAdd = 0;
+    if (item.type == 'shipWeapon' || shift) {
+      ammoToAdd = ammoMax;
+    } else {
+      if (item.system.ammo.current == null || item.system.ammo.current == "") {
+        ui.notifications?.error("No ammo source currently set. Not reloading. Hold shift+click to bypass and reload.");
         return;
       }
 
-      let shift = event?.shiftKey || false;
-
-      // For specifying in chat msg where ammo comes from.
-      let ammoReloadDesc = '';
-      let extraMessage = "";
-      if (item.system.ammo.longReload) {
-        extraMessage = " This weapon takes extra time to reload.<br>";
+      let ammoItem = this.actor.items.get(item.system.ammo.current);
+      if (ammoItem == null) {
+        ui.notifications?.error("Selected ammo not found. Unsetting & select new ammo source. Not reloading. Hold shift+click to bypass and reload.");
+        await item.update({ "system.ammo.current": "" });
+        return;
       }
-      let ammoToAdd = 0;
-      if (item.type == 'shipWeapon' || shift) {
+      if (ammoItem.system.uses.consumable == 'bundle') {
+        if (ammoItem.system.quantity == 0 || ammoItem.system.uses.emptyQuantity == ammoItem.system.quantity) {
+          ui.notifications?.error(`All ${ammoItem.name} are empty. Hold shift+click to bypass and reload.`);
+          return;
+        }
+        //uses the whole clip with capacity set by the weapon
         ammoToAdd = ammoMax;
-      } else {
-        if (item.system.ammo.current == null || item.system.ammo.current == "") {
-          ui.notifications?.error("No ammo source currently set. Not reloading. Hold shift+click to bypass and reload.");
-          return;
-        }
-
-        let ammoItem = this.actor.items.get(item.system.ammo.current);
-        if (ammoItem == null) {
-          ui.notifications?.error("Selected ammo not found. Unsetting & select new ammo source. Not reloading. Hold shift+click to bypass and reload.");
-          await item.update({ "system.ammo.current" : "" });
-          return;
-        }
-        if (ammoItem.system.uses.consumable == 'bundle') {
-          if (ammoItem.system.quantity == 0 || ammoItem.system.uses.emptyQuantity == ammoItem.system.quantity) {
-            ui.notifications?.error(`All ${ammoItem.name} are empty. Hold shift+click to bypass and reload.`);
-            return;
-          }
-          //uses the whole clip with capacity set by the weapon
-          ammoToAdd = ammoMax;
-          ammoItem.system.removeOneUse();
-        }  else if (ammoItem.system.uses.consumable == "count") {
-          // take the value from the clip
-          if (ammoNeeded < ammoItem.system.uses.value) {
-            // Can partially reload
-            ammoToAdd = ammoNeeded;
-            await ammoItem.update({ "system.uses.value": ammoItem.system.uses.value - ammoToAdd});
-          } else {
-            // Uses up clip
-            ammoToAdd = ammoItem.system.uses.value;
-            ammoItem.system.removeOneUse();
-          }
+        ammoItem.system.removeOneUse();
+      } else if (ammoItem.system.uses.consumable == "count") {
+        // take the value from the clip
+        if (ammoNeeded < ammoItem.system.uses.value) {
+          // Can partially reload
+          ammoToAdd = ammoNeeded;
+          await ammoItem.update({ "system.uses.value": ammoItem.system.uses.value - ammoToAdd });
         } else {
-          ui.notifications.error("Item/Ammo consumable is not set to bundle or count");
-          return;
+          // Uses up clip
+          ammoToAdd = ammoItem.system.uses.value;
+          ammoItem.system.removeOneUse();
         }
-        ammoReloadDesc = ` using ${ammoItem.name} from your inventory`;
-        if (ammoItem.system.location != "readied") {
-          extraMessage+=" Ammo source was not readied.";
-        }
+      } else {
+        ui.notifications.error("Item/Ammo consumable is not set to bundle or count");
+        return;
       }
-      // Update the weapon with the ammo that was consumed.
-      let newAmmoValue = currentAmmo + ammoToAdd;
-      if (newAmmoValue > ammoMax) newAmmoValue = ammoMax;
-      
-      await item.update({ "system.ammo.value": newAmmoValue });
-    
-      if (shift) {
-        // If shift is held, just reload the weapon without any checks.
-        extraMessage = " (Shift-clicked to bypass checks)";
+      ammoReloadDesc = ` using ${ammoItem.name} from your inventory`;
+      if (ammoItem.system.location != "readied") {
+        extraMessage += " Ammo source was not readied.";
       }
+    }
+    // Update the weapon with the ammo that was consumed.
+    let newAmmoValue = currentAmmo + ammoToAdd;
+    if (newAmmoValue > ammoMax) newAmmoValue = ammoMax;
 
-      const content = `<p>Reloaded ${item.name}${ammoReloadDesc}.${extraMessage}</p>`;
-      ChatMessage.create({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        content: content,
-      });
+    await item.update({ "system.ammo.value": newAmmoValue });
+
+    if (shift) {
+      // If shift is held, just reload the weapon without any checks.
+      extraMessage = " (Shift-clicked to bypass checks)";
     }
 
-    static async _onCreditChange(event, target) {
-      event.preventDefault();
-      const currencyType = target.dataset.creditType;
-      const _doAdd = async (_event, button, _html) => {
-        const amount = button.form.elements.amount.value;
-        if (isNaN(parseInt(amount))) {
-          ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
-          return;
-        }
-        const oldAmount = this.actor.system.credits[currencyType];
-        if (oldAmount == undefined || oldAmount == null) {
-          ui.notifications?.error("Invalid currency type");
-          return;
-        }
-        const newAmount = this.actor.system.credits[currencyType] + parseInt(amount);
-        await this.actor.update({
-          system: {
-            credits: {
-              [currencyType]: newAmount,
-            },
+    const content = `<p>Reloaded ${item.name}${ammoReloadDesc}.${extraMessage}</p>`;
+    ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: content,
+    });
+  }
+
+  static async _onCreditChange(event, target) {
+    event.preventDefault();
+    const currencyType = target.dataset.creditType;
+    const _doAdd = async (_event, button, _html) => {
+      const amount = button.form.elements.amount.value;
+      if (isNaN(parseInt(amount))) {
+        ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
+        return;
+      }
+      const oldAmount = this.actor.system.credits[currencyType];
+      if (oldAmount == undefined || oldAmount == null) {
+        ui.notifications?.error("Invalid currency type");
+        return;
+      }
+      const newAmount = this.actor.system.credits[currencyType] + parseInt(amount);
+      await this.actor.update({
+        system: {
+          credits: {
+            [currencyType]: newAmount,
           },
-        });
-      };
-  
-      const description = game.i18n.format("swnr.dialog.addCurrency", { type: currencyType });
-      const proceed = await foundry.applications.api.DialogV2.prompt({
-        window: { title: "Proceed" },
-        content: `<p>${description}</p> <input type="number" name="amount">`,
-        modal: false,
-        rejectClose: false,
-        ok: {
-          callback: _doAdd,
-        }
+        },
       });
-    }
+    };
+
+    const description = game.i18n.format("swnr.dialog.addCurrency", { type: currencyType });
+    const proceed = await foundry.applications.api.DialogV2.prompt({
+      window: { title: "Proceed" },
+      content: `<p>${description}</p> <input type="number" name="amount">`,
+      modal: false,
+      rejectClose: false,
+      ok: {
+        callback: _doAdd,
+      }
+    });
+  }
 
   /***************
    *
