@@ -1,0 +1,81 @@
+name: Medium primitive weapon
+type: weapon
+folder: OweUZxSfzsY4xsDh
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.melee.Item.48tgvx98wpth74e5
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286677303
+  modifiedTime: 1757286677303
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 48tgvx98wpth74e5
+system:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 0
+    suppress: false
+    type: none
+    value: 0
+    current: null
+  cost: 20
+  damage: 1d6+1
+  description: >-
+    Medium weapons are one-handed swords, axes, spears, or other obvious
+    implements of war. While they can’t be effectively concealed in anything
+    smaller than an enveloping cloak or coat, they’re also more damaging to an
+    unfortunate victim struck by them, albeit they’re somewhat less nimble when
+    the wielder needs to strike at unprotected flesh. Spears and similar
+    aerodynamic weapons can be thrown up to 30 meters. A primitive weapon is
+    simply one of ordinary metal or wood, with no high-tech augmentations.
+    Primitive weapons are often unable to harm targets in powered armor.
+  encumbrance: 1
+  location: other
+  isMelee: true
+  quality: stock
+  range:
+    max: 0
+    normal: 0
+  secondStat: dex
+  shock:
+    ac: 13
+    dmg: 2
+  skill: ''
+  stat: str
+  tl: 0
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+  isTwoHanded: false
+  isNonLethal: false
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!48tgvx98wpth74e5'
+

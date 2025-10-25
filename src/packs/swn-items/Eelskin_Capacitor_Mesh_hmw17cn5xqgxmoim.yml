@@ -1,0 +1,42 @@
+name: Eelskin Capacitor Mesh
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: 7ZDHgPOCyrCRwTEX
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cyberware.Item.hmw17cn5xqgxmoim
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286670636
+  modifiedTime: 1757286670636
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: hmw17cn5xqgxmoim
+system:
+  cost: 25000
+  description: >-
+    A hair-fine mesh of almost imperceptible wiring along the user’s palms and
+    fingers allow them to trigger brief, controlled bursts of electrical energy
+    at targets within five meters. As an Instant action it adds 2d4 non-lethal
+    damage to a successful Punch attack. In its intended use, it also allows the
+    user to override and disable most electronic locks and security systems with
+    a successful Sneak or Fix skill check. Both triggering a burst and hacking a
+    security system tax the user’s biology; one System Strain point is gained
+    with each attack or skill check.
+  disabled: false
+  effect: Allows bare-handed hacking and electrical shocks
+  strain: 1
+  tl: 4
+  favorite: false
+  type: None
+  concealment: Sight
+  complication: ''
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!hmw17cn5xqgxmoim'
+

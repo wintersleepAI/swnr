@@ -1,0 +1,42 @@
+name: Atmospheric configuration
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: FSb3IGBn6eTDHX2S
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-fitting.Item.h655f580m3jdw3sx
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: h655f580m3jdw3sx
+system:
+  broken: false
+  cost: 5000
+  costMultiplier: true
+  description: >-
+    This fitting must be put in place when the ship is built, and cannot be
+    installed on cruiser-class or larger ships. A ship designed for atmospheric
+    flight can land on most solid or aqueous surfaces.
+  effect: 'Can land: frigates and fighters only.'
+  mass: 1
+  massMultiplier: true
+  minClass: fighter
+  power: 0
+  powerMultiplier: false
+  favorite: false
+  tl: 4
+  destroyed: false
+  juryRigged: false
+  type: ship
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!h655f580m3jdw3sx'
+

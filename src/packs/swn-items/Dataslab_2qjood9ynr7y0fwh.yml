@@ -1,0 +1,57 @@
+name: Dataslab
+type: item
+folder: A92luWXXOnWWWMUA
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.computing-gear.Item.2qjood9ynr7y0fwh
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286668405
+  modifiedTime: 1757286668405
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 2qjood9ynr7y0fwh
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 300
+  description: >-
+    Dataslab: A palm-sized computing device that can unfold into a thin slab
+    roughly one-third of a meter on a side. It can perform all the functions of
+    a compad or handheld computer and can communicate wirelessly with nearby
+    devices.
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 4
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/laptop.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!2qjood9ynr7y0fwh'
+

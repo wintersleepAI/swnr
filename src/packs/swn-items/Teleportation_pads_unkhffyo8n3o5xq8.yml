@@ -1,0 +1,50 @@
+name: Teleportation pads
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: FSb3IGBn6eTDHX2S
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-fitting.Item.unkhffyo8n3o5xq8
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: unkhffyo8n3o5xq8
+system:
+  broken: false
+  cost: 200000
+  costMultiplier: false
+  description: >-
+    This TL5 tech is completely unavailable in most sectors and was uncommon
+    even on Mandate-era ships. The pads allow up to a dozen people or 1200
+    kilograms of matter to be teleported to and from the surface of a planet or
+    the interior of another ship, provided it is no more than a few tens of
+    thousands of kilometers distant. Ship-to-ship teleportation is possible only
+    when the receiving ship is cooperating by transmitting accurate coordinate
+    details; otherwise, a friendly unjammed signal from inside is necessary to
+    lock onto the target point. Planetary teleportations are possible only in
+    the absence of physical barriers between the ship and the target point
+    below. The teleporters may be used once every five minutes. In those rare
+    sectors where this tech is widely available, it costs 200k.
+  effect: Pretech teleportation to and from ship
+  mass: 1
+  massMultiplier: false
+  minClass: frigate
+  power: 1
+  powerMultiplier: false
+  favorite: false
+  tl: 4
+  destroyed: false
+  juryRigged: false
+  type: ship
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!unkhffyo8n3o5xq8'
+

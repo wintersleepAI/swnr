@@ -1,0 +1,52 @@
+name: Destiny’s Shield
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: J1fmkA6JJxYOdJVY
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-precognition.Item.obbz1ztgwsmdj234
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286857649
+  modifiedTime: 1757286857649
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: obbz1ztgwsmdj234
+system:
+  description: >-
+    <p>The precog observes an incoming injury and tries to find an alternate
+    future in which the attack misses. As an Instant action, the precog can
+    Commit Effort for the day to force an attacker to reroll a successful hit
+    roll. This technique only works on attacks against the psychic’s person, not
+    against attacks aimed at a vehicle they’re occupying or harm that doesn’t
+    involve an attack roll. If the rerolled attack still hits, however, the
+    damage done is maximized. This technique can be used only once per incoming
+    attack.</p>
+  level: 2
+  source: precognition
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+  save: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!obbz1ztgwsmdj234'
+

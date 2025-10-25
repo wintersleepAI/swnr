@@ -1,0 +1,147 @@
+name: Undead Creatures
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - _id: rw1nFSl60aGyXzls
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Moan at the torment of their condition
+    name: ''
+    _key: '!tables.results!24ILjMlu1TdPJ6li.rw1nFSl60aGyXzls'
+  - _id: dVlhozgZRtg4fSWj
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Savagely attack the most vital, lively enemy
+    name: ''
+    _key: '!tables.results!24ILjMlu1TdPJ6li.dVlhozgZRtg4fSWj'
+  - _id: JfSWu4a3jzZTh0IB
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Blindly assault a downed foe or corpse
+    name: ''
+    _key: '!tables.results!24ILjMlu1TdPJ6li.JfSWu4a3jzZTh0IB'
+  - _id: 5AElUM9vLxo9lc0s
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Seek to terrify a foe rather than directly attack
+    name: ''
+    _key: '!tables.results!24ILjMlu1TdPJ6li.5AElUM9vLxo9lc0s'
+  - _id: d2w0aEAQND2vD4tm
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Target the foe with the weakest life force
+    name: ''
+    _key: '!tables.results!24ILjMlu1TdPJ6li.d2w0aEAQND2vD4tm'
+  - _id: sE4mXb8Mp8ab0FxJ
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Do nothing, instinctively craving an end
+    name: ''
+    _key: '!tables.results!24ILjMlu1TdPJ6li.sE4mXb8Mp8ab0FxJ'
+formula: 1d6
+replacement: true
+displayRoll: true
+folder: tCjobZPuAK5KxMZQ
+flags:
+  core: {}
+_stats:
+  compendiumSource: Compendium.swnr.wwn-instinct.RollTable.ODWKbUBbnFxGLvgg
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754272494042
+  modifiedTime: 1754272494042
+  lastModifiedBy: lKC5x4Yf023Bizof
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: 24ILjMlu1TdPJ6li
+sort: 0
+_key: '!tables!24ILjMlu1TdPJ6li'
+

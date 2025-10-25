@@ -170,7 +170,7 @@
             / {{system.meleeAc}}
             {{/if}}
         </div>
-        <label class='resource-label'>
+        <label class='resource-label' data-tooltip="{{localize 'swnr.sheet.acCWNLong'}}">
           {{#if (eq gameSettings.useCWNArmor true)}}
             {{localize 'swnr.sheet.acCWN'}}
           {{else}}
@@ -181,7 +181,7 @@
 
       {{#if (eq actor.type 'character')}}
         {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget}}
-        {{#if (eq gameSettings.useCWNArmor true)}}
+        {{!-- {{#if (eq gameSettings.useCWNArmor true)}}
         {{formGroup systemFields.meleeAb value=system.meleeAb localize=true widget=headerWidget}}
         {{/if}}
         
@@ -222,6 +222,7 @@
           <label class='resource-label'>Inj/Wnd</label>
         </div>
         {{/if}}
+        {{/if}} --}}
       {{else}}
         {{#if (eq gameSettings.useCWNArmor true)}}
         <div class="resource flex-group-center"><!-- AC -->
@@ -357,6 +358,18 @@
           {{!-- {{system.ac}} --}}
 
     </div>
+
+    {{! Resource Pools Display - New row within header fields}}
+    {{#if hasAnyPools}}
+      {{#if system.tweak.showPoolsInHeader}}
+      <div class='resource-pools'>
+        <div class="pools-container">
+          {{> "systems/swnr/templates/actor/fragments/pools-display.hbs" submitInputs=true}}
+        </div>
+      </div>
+      {{/if}}
+    {{/if}}
+
     </div>
   </div>
 </header>

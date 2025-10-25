@@ -1,0 +1,37 @@
+name: Glitch
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: YSjeg2WqEsCIXk0y
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-program.Item.4w1e697nmjmnbyno
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267253955
+  modifiedTime: 1754267253955
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  accessCost: 0
+  cost: 1000
+  description: >-
+    Temporarily deactivate a device or cyberware system while the program
+    remains running, for no more than one round per Program skill level plus
+    two. A device can be targeted by a particular hacker's Glitch only once a
+    day, successful or not.
+  selfTerminating: false
+  skillCheckMod: 2
+  target: Device/Cyber
+  type: verb
+  useAffects: Briefly deactivate a device or cyber
+  favorite: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: JmCMRwkDaEpiwdXm
+sort: 1000000
+_key: '!items!JmCMRwkDaEpiwdXm'
+

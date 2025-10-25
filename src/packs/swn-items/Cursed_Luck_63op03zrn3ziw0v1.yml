@@ -1,0 +1,53 @@
+name: Cursed Luck
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: J1fmkA6JJxYOdJVY
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-precognition.Item.63op03zrn3ziw0v1
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286857649
+  modifiedTime: 1757286857649
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 63op03zrn3ziw0v1
+system:
+  description: >-
+    <p>Negative probabilities are woven tightly around a visible animate target,
+    including robots and animals but not including vehicles. Triggering this
+    technique requires a Main Action and Committing Effort for the scene. The
+    target must roll any attack rolls, damage rolls, skill checks, and saving
+    throws twice and take the worst result each time. Any attempts to hit the
+    target or damage dice rolled against it may be rolled twice and the better
+    result taken. Intelligent targets can make a Mental saving throw at the end
+    of each round to throw off the effect; this save is not penalized by the
+    power.</p>
+  level: 3
+  source: precognition
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
+  save: mental
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!63op03zrn3ziw0v1'
+

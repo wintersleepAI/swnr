@@ -1,0 +1,43 @@
+name: Advanced nav computer
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/gps.svg
+folder: FSb3IGBn6eTDHX2S
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-fitting.Item.ib5k4xp66w97kjx0
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: ib5k4xp66w97kjx0
+system:
+  broken: false
+  cost: 10000
+  costMultiplier: true
+  description: >-
+    Forging new spike courses is too much an art to rely on computerized
+    assistance, but an advanced nav computer can help on well-mapped routes.
+    When navigating an interstellar drill course with charts less than a year
+    old, the navigator decreases drill difficulty by 2.
+  effect: Adds +2 for traveling familiar spike courses
+  mass: 0
+  massMultiplier: false
+  minClass: frigate
+  power: 1
+  powerMultiplier: true
+  favorite: false
+  tl: 4
+  destroyed: false
+  juryRigged: false
+  type: ship
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!ib5k4xp66w97kjx0'
+

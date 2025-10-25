@@ -1,0 +1,60 @@
+name: Headshot Pod
+type: shipWeapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+folder: 8DIMaIn7MuHyezDm
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-vehicle-weapons.Item.ceuc115jxukz9g0i
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267303980
+  modifiedTime: 1754267303980
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  ammo:
+    max: 1
+    type: ammo
+    value: 2000
+  cost: 20000
+  damage: 4d6
+  description: >-
+    Headshot pods are a family of guided missiles meant for mounted deployment
+    on vehicles or large drones. They always target AC 10 to hit, but require
+    two full consecutive rounds of aiming at a visible target to get a target
+    lock on them and prime for firing on the third round. Any bystanders within
+    5 meters of the impact take damage as if from a frag grenade. A headshot pod
+    missile costs $2,000.
+  mass: 2
+  minClass: l
+  power: 3
+  range:
+    max: 2000
+    normal: 1000
+  stat: dex
+  trauma:
+    die: 1d20
+    rating: 4
+    vehicle: true
+  type: vehicle
+  favorite: false
+  tl: 4
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  broken: false
+  destroyed: false
+  juryRigged: false
+  ab: 0
+  hardpoint: 1
+  qualities: ''
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: ZQwAvnQQ7WjSoI6W
+sort: 0
+_key: '!items!ZQwAvnQQ7WjSoI6W'
+

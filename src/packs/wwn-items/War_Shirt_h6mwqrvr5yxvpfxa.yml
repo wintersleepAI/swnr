@@ -1,0 +1,57 @@
+name: War Shirt
+type: armor
+sort: 100000
+system:
+  description: >-
+    War shirts are nothing more than blessed shirts, lucky cloaks, auspicious
+    warpaint, or whatever tokens of martial victory are favored by the poor and
+    humble of a given culture. While they may look like nothing but normal
+    clothing, their war-luck is still sufficient to interfere with a
+    spellcaster's abilities should they try to wear one. Light armor may be
+    decidedly heavy, but it is loose and flexible enough to offer minimal
+    hindrance to the wearer's actions. Some varieties are also discreet enough
+    to be worn politely in common society.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 1
+  cost: 5
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 11
+  shield: false
+  use: false
+  meleeAc: 11
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+  baseAc: 11
+_id: h6mwqrvr5yxvpfxa
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1754277456692
+  modifiedTime: 1758741767601
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: uwB7P89lzKd8aa90
+flags: {}
+effects: []
+ownership:
+  default: 0
+img: icons/svg/item-bag.svg
+_key: '!items!h6mwqrvr5yxvpfxa'
+

@@ -10,6 +10,8 @@ const { api, sheets } = foundry.applications;
  * @extends {ActorSheetV2}
  */
 export class SWNCyberdeckSheet extends SWNBaseSheet {
+  #expandedDescriptions = {};
+
   constructor(options = {}) {
     super(options);
   }
@@ -32,7 +34,8 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       hackerRoll: this._onHackerRoll,
       runProgram: this._onActivateProgram,
       refreshAccess: this._onRefreshAccess,
-      refreshShielding: this._onRefreshShielding
+      refreshShielding: this._onRefreshShielding,
+      toggleItemDescription: this._onToggleItemDescription
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -108,6 +111,8 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       gameSettings: getGameSettings(),
       headerWidget: headerFieldWidget.bind(this),
       groupWidget: groupFieldWidget.bind(this),
+      // Add expanded descriptions state for item description toggle functionality
+      expandedDescriptions: this.#expandedDescriptions,
     };
 
     // Offloading context prep to a helper function
@@ -616,5 +621,39 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
 
 
   // All in base
+
+  /**
+   * Toggle the display of an item's description
+   * @param {Event} event - The click event
+   * @param {HTMLElement} target - The clicked element
+   * @returns {Promise<void>}
+   * @static
+   */
+  static async _onToggleItemDescription(event, target) {
+    event.preventDefault();
+    const itemId = target.dataset.itemId || target.closest('[data-item-id]')?.dataset.itemId;
+    if (!itemId) return;
+
+    // Find the sheet instance from the event or target
+    const sheet = this instanceof SWNCyberdeckSheet ? this : (ui?.windows?.[target?.closest('.app')?.dataset?.appid] || null);
+    if (!sheet) return;
+
+    // Toggle the expanded state
+    if (sheet.#expandedDescriptions[itemId]) {
+      delete sheet.#expandedDescriptions[itemId];
+    } else {
+      sheet.#expandedDescriptions[itemId] = true;
+    }
+
+    // Find and toggle the description row
+    const itemRow = target.closest('.item[data-item-id]');
+    if (!itemRow) return;
+
+    const descriptionRow = itemRow.nextElementSibling;
+    if (descriptionRow && descriptionRow.classList.contains('item-description')) {
+      const isExpanded = sheet.#expandedDescriptions[itemId];
+      descriptionRow.style.display = isExpanded ? 'block' : 'none';
+    }
+  }
 
 }

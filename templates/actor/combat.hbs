@@ -20,75 +20,12 @@
         </div>
         {{/each}}
       </div>
-      {{!-- Effort --}}
-      <div style="margin-right:8px;">
-        {{!-- <ol class='items-list'>
-          <li class='flex flexrow items-header'>
-            <div class='item-name'>{{localize 'swnr.effort.title'}}</div>
-          </li>
-        </ol> --}}
-        <div class="resource-bar"><!-- The character effort bar -->
-          <div style="width:{{system.effort.percentage}}%" class="effort-fill"></div>
-            <div class="text">
-              {{localize 'swnr.effort.title'}}
-                <input
-                  type='text'
-                  value='{{system.effort.value}}'
-                  readonly
-                  data-dtype='Number'
-                  class='nested-field short-field align-right current-value'
-                />
-              <p>/</p>
-                <input
-                  type='text'
-                  value='{{system.effort.max}}'
-                  readonly
-                  data-dtype='Number'
-                  class='nested-field short-field'
-                />
-            </div>
-        </div><!-- End of the character effort bar -->
-        <div class="grid grid-2col">
-          {{ formGroup systemFields.effort.fields.bonus value=system.effort.bonus localize=true }}
-          {{ formGroup systemFields.effort.fields.current value=system.effort.current localize=true }}
-          {{ formGroup systemFields.effort.fields.scene value=system.effort.scene localize=true }}
-          {{ formGroup systemFields.effort.fields.day value=system.effort.day localize=true }}
+      {{#if system.tweak.showPoolsInCombat}}
+      <div class="flex flex-col resource-pools" style="padding-top: 1.5em;">
+        <div class="pools-header">
+          <h4><i class="fas fa-battery-three-quarters"></i> {{localize 'swnr.pools.title'}}</h4>
         </div>
-      </div>
-      {{#if actor.system.tweak.extraEffortName}}
-      <div style="margin-right:8px;">
-        {{!-- <ol class='items-list'>
-          <li class='flex flexrow items-header'>
-            <div class='item-name'>{{localize 'swnr.effort.title'}}</div>
-          </li>
-        </ol> --}}
-        <div class="resource-bar"><!-- The character extra effort bar -->
-          <div style="width:{{system.extraEffort.percentage}}%" class="effort-fill"></div>
-            <div class="text">
-              {{ actor.system.tweak.extraEffortName }} {{localize 'swnr.effort.title'}}
-                <input
-                  type='text'
-                  value='{{system.extraEffort.value}}'
-                  readonly
-                  data-dtype='Number'
-                  class='nested-field short-field align-right current-value'
-                />
-              <p>/</p>
-                <input
-                  type='text'
-                  value='{{system.extraEffort.max}}'
-                  readonly
-                  data-dtype='Number'
-                  class='nested-field short-field'
-                />
-            </div>
-        </div><!-- End of the character effort bar -->
-        <div class="grid grid-2col">
-          {{!-- {{ formGroup systemFields.tweak.fields.effort.fields.max value=system.tweak.extraEffort.bonus localize=true }}
-          {{ formGroup systemFields.tweak.fields.effort.fields.current value=system.tweak.extraEffort.current localize=true }}
-          {{ formGroup systemFields.tweak.fields.effort.fields.scene value=system.tweak.extraEffort.scene localize=true }}
-          {{ formGroup systemFields.tweak.fields.effort.fields.day value=system.tweak.extraEffort.day localize=true }} --}}
-        </div>
+        {{> "systems/swnr/templates/actor/fragments/pools-display.hbs" submitInputs=true}}
       </div>
       {{/if}}
     </aside>
@@ -247,12 +184,25 @@
       {{/each}}
       </ol>
       {{/if}}
-
+      <div class="flex flexrow" style="align-items:flex-start;">
+        <div class="resource-bar" style="margin-top:10px;"><!--  The readied bar -->
+          <div style="width:{{actor.system.encumbrance.ready.percentage}}%" 
+            class="ready-fill {{#if (gt actor.system.encumbrance.ready.value actor.system.encumbrance.ready.max)}}full-fill{{/if}}">
+          </div>
+            <div class="text">
+              {{localize 'swnr.item.locationReadied'}} {{localize 'swnr.item.gear'}}:
+              {{actor.system.encumbrance.ready.value}}/{{actor.system.encumbrance.ready.max}}
+            </div>
+        </div>
+      </div>
       {{!-- Readied Weapons --}}
       {{> "systems/swnr/templates/actor/fragments/compact-weapon-list.hbs" itemList=actor.system.readiedWeapons actorType=actor.type }}
 
       {{!-- Readied Armor --}}
       {{> "systems/swnr/templates/actor/fragments/compact-armor-list.hbs" itemList=actor.system.readiedArmor actorType=actor.type }}
+
+      {{!-- Readied Items --}}
+      {{> "systems/swnr/templates/actor/fragments/compact-carried-list.hbs" itemList=actor.system.readiedGear actorType=actor.type }}
     </div>
   </div>
 </section>

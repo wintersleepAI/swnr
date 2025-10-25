@@ -1,0 +1,1738 @@
+{
+  "package": "wwn.instinct",
+  "metadata": {
+    "name": "instinct",
+    "label": "Instinct",
+    "path": "systems/wwn/packs/instinct",
+    "type": "RollTable",
+    "system": "wwn",
+    "ownership": {
+      "PLAYER": "OBSERVER",
+      "ASSISTANT": "OWNER"
+    },
+    "flags": {},
+    "packageType": "system",
+    "packageName": "wwn",
+    "id": "wwn.instinct"
+  },
+  "type": "RollTable",
+  "items": [
+    {
+      "name": "Hateful and Sadistic Sentients",
+      "img": "icons/svg/d20-grey.svg",
+      "results": [
+        {
+          "_id": "aXsOtZg5elX41k0c",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            1,
+            1
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Spend a round looking for a good victim",
+          "name": ""
+        },
+        {
+          "_id": "PeALsD2ilGtL3FV6",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            2,
+            2
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Attack to hurt or humiliate, doing half damage",
+          "name": ""
+        },
+        {
+          "_id": "u6fFc8uxZBWc2o1T",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            3,
+            3
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Attack the weakest-looking foe present",
+          "name": ""
+        },
+        {
+          "_id": "UltvTRWVYBfI5tje",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            4,
+            4
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Assault the enemy that most offends it",
+          "name": ""
+        },
+        {
+          "_id": "y02zzXZLBXk4v8Sc",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            5,
+            5
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Slaughter a downed foe or tear a corpse",
+          "name": ""
+        },
+        {
+          "_id": "nyz3a6nSr2fNezHl",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            6,
+            6
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Spend a round making threats and vows",
+          "name": ""
+        }
+      ],
+      "formula": "1d6",
+      "replacement": true,
+      "displayRoll": true,
+      "folder": null,
+      "flags": {
+        "core": {}
+      },
+      "_stats": {
+        "coreVersion": "13.342",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "description": "",
+      "_id": "328FVFOWsYIHOzMr"
+    },
+    {
+      "name": "Trained Servitor Beasts",
+      "img": "icons/svg/d20-grey.svg",
+      "results": [
+        {
+          "_id": "Cq2uL8PaprvYxzpC",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            1,
+            1
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Seek its trainer or handler on the field",
+          "name": ""
+        },
+        {
+          "_id": "sA0lQ4Pfzi55wOdT",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            2,
+            2
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Repeat the last action it took, sensible or not",
+          "name": ""
+        },
+        {
+          "_id": "DmTQbR6KJnBl0pPA",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            3,
+            3
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Attack the enemy closest to its handler",
+          "name": ""
+        },
+        {
+          "_id": "v1ipUXJ4ZZbWoLTH",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            4,
+            4
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Whine in confusion and disorientation",
+          "name": ""
+        },
+        {
+          "_id": "R64ieYsWpk5dkrP0",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            5,
+            5
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Perform an inappropriate but trained action",
+          "name": ""
+        },
+        {
+          "_id": "JQP40zHl7lBbjkCf",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            6,
+            6
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Panic, attacking the nearest friend or foe",
+          "name": ""
+        }
+      ],
+      "formula": "1d6",
+      "replacement": true,
+      "displayRoll": true,
+      "folder": null,
+      "flags": {
+        "core": {}
+      },
+      "_stats": {
+        "coreVersion": "13.342",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "description": "",
+      "_id": "5HzNqMwf11UaZh8C"
+    },
+    {
+      "name": "Ordinary Predatory Beasts",
+      "img": "icons/svg/d20-grey.svg",
+      "results": [
+        {
+          "_id": "j9oRCKuLjlMnfEQG",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            1,
+            1
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Snarl and growl, but don't attack anyone",
+          "name": ""
+        },
+        {
+          "_id": "16V4vkxCIUbh6LGZ",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            2,
+            2
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Pull back and get away from nearby threats",
+          "name": ""
+        },
+        {
+          "_id": "KeUdtaKYI0JinrE7",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            3,
+            3
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Attack the last enemy to have hurt it",
+          "name": ""
+        },
+        {
+          "_id": "wk0Qg3xzj7ov0csg",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            4,
+            4
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Attack the last enemy it managed to hurt",
+          "name": ""
+        },
+        {
+          "_id": "bBLIdrWvilsYHNz7",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            5,
+            5
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Take a bite out of a downed enemy",
+          "name": ""
+        },
+        {
+          "_id": "TbbpnHCUU1rh4Z8R",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            6,
+            6
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Panic and make a Morale check",
+          "name": ""
+        }
+      ],
+      "formula": "1d6",
+      "replacement": true,
+      "displayRoll": true,
+      "folder": null,
+      "flags": {
+        "core": {}
+      },
+      "_stats": {
+        "coreVersion": "13.342",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "description": "",
+      "_id": "AdhcClvUZ5b3p3vH"
+    },
+    {
+      "name": "Beings of Arrogant Might",
+      "img": "icons/svg/d20-grey.svg",
+      "description": "",
+      "results": [
+        {
+          "_id": "5GjDZt9xMMURAIZI",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            1,
+            1
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Sneer at the pitiful weaklings that oppose it",
+          "name": ""
+        },
+        {
+          "_id": "CyPW3gXcImttlwaM",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            2,
+            2
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Boast of its inevitable victory",
+          "name": ""
+        },
+        {
+          "_id": "sAR46NO32LY8qqfR",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            3,
+            3
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Gratuitous use of a power in an unhelpful way",
+          "name": ""
+        },
+        {
+          "_id": "L0KnX26s339N3nKO",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            4,
+            4
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Attack the last enemy to offend it somehow",
+          "name": ""
+        },
+        {
+          "_id": "LKiKbw96tJqG67PB",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            5,
+            5
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Urge on servitors, or demand surrender",
+          "name": ""
+        },
+        {
+          "_id": "QKIN8XED1mlXAKB3",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            6,
+            6
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Taunt the foe as it takes a <b>Total Defense</b>",
+          "name": ""
+        }
+      ],
+      "formula": "1d6",
+      "replacement": true,
+      "displayRoll": true,
+      "folder": null,
+      "flags": {
+        "core": {}
+      },
+      "_stats": {
+        "coreVersion": "13.342",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_id": "MLYsyBmxy0cDjUst"
+    },
+    {
+      "name": "Undead Creatures",
+      "img": "icons/svg/d20-grey.svg",
+      "description": "",
+      "results": [
+        {
+          "_id": "rw1nFSl60aGyXzls",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            1,
+            1
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Moan at the torment of their condition",
+          "name": ""
+        },
+        {
+          "_id": "dVlhozgZRtg4fSWj",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            2,
+            2
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Savagely attack the most vital, lively enemy",
+          "name": ""
+        },
+        {
+          "_id": "JfSWu4a3jzZTh0IB",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            3,
+            3
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Blindly assault a downed foe or corpse",
+          "name": ""
+        },
+        {
+          "_id": "5AElUM9vLxo9lc0s",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            4,
+            4
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Seek to terrify a foe rather than directly attack",
+          "name": ""
+        },
+        {
+          "_id": "d2w0aEAQND2vD4tm",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            5,
+            5
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Target the foe with the weakest life force",
+          "name": ""
+        },
+        {
+          "_id": "sE4mXb8Mp8ab0FxJ",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            6,
+            6
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Do nothing, instinctively craving an end",
+          "name": ""
+        }
+      ],
+      "formula": "1d6",
+      "replacement": true,
+      "displayRoll": true,
+      "folder": null,
+      "flags": {
+        "core": {}
+      },
+      "_stats": {
+        "coreVersion": "13.342",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_id": "ODWKbUBbnFxGLvgg"
+    },
+    {
+      "name": "Insects and Semi-Mindless Beasts",
+      "img": "icons/svg/d20-grey.svg",
+      "results": [
+        {
+          "_id": "uW6tLJYQRE0ChDV1",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            1,
+            1
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Move to help an ally encircle a target",
+          "name": ""
+        },
+        {
+          "_id": "ekSgJSCymTDzCTfR",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            2,
+            2
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Retreat from a foe for a round",
+          "name": ""
+        },
+        {
+          "_id": "TjRJc1Lq1rf2rqI9",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            3,
+            3
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Skitter and crawl randomly",
+          "name": ""
+        },
+        {
+          "_id": "D0qeyY2q29Cai8le",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            4,
+            4
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Chew on the nearest organic substance",
+          "name": ""
+        },
+        {
+          "_id": "isuCazf3n1P1S8sB",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            5,
+            5
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Charge the nearest prey creature",
+          "name": ""
+        },
+        {
+          "_id": "t74E4KuofGyb3xFZ",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            6,
+            6
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Attack the smallest prey there",
+          "name": ""
+        }
+      ],
+      "formula": "1d6",
+      "replacement": true,
+      "displayRoll": true,
+      "folder": null,
+      "flags": {
+        "core": {}
+      },
+      "_stats": {
+        "coreVersion": "13.342",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "description": "",
+      "_id": "TE8v9dEbY95Qe2Hq"
+    },
+    {
+      "name": "Viciously Violent Beasts",
+      "img": "icons/svg/d20-grey.svg",
+      "description": "",
+      "results": [
+        {
+          "_id": "GN95RleZS05dVLww",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            1,
+            1
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Roar savagely at the foe, but don't attack",
+          "name": ""
+        },
+        {
+          "_id": "VTSgQM9O4q24PviN",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            2,
+            2
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Attack the last foe it hit in blind fury",
+          "name": ""
+        },
+        {
+          "_id": "oXbc7ZANl6iGFpVr",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            3,
+            3
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Charge the last enemy to get its attention",
+          "name": ""
+        },
+        {
+          "_id": "WXeLZKn9BVgOkxRv",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            4,
+            4
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Gnaw on a downed enemy",
+          "name": ""
+        },
+        {
+          "_id": "lKO1wyjBNsqfWR1l",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            5,
+            5
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Charge the biggest cluster of targets",
+          "name": ""
+        },
+        {
+          "_id": "FoOUVUZZ6RK90NNk",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            6,
+            6
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Attack the largest enemy on the field",
+          "name": ""
+        }
+      ],
+      "formula": "1d6",
+      "replacement": true,
+      "displayRoll": true,
+      "folder": null,
+      "flags": {
+        "core": {}
+      },
+      "_stats": {
+        "coreVersion": "13.342",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_id": "e97Psa2HYkSfcSIi"
+    },
+    {
+      "name": "Automatons",
+      "img": "icons/svg/d20-grey.svg",
+      "description": "",
+      "results": [
+        {
+          "_id": "uN7qSO7hWEkqalwP",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            1,
+            1
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Do its intended purpose, even if inappropriate",
+          "name": ""
+        },
+        {
+          "_id": "FXCY2hzg9sNiVG2p",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            2,
+            2
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Spend the round analyzing the situation",
+          "name": ""
+        },
+        {
+          "_id": "CFYmxpvdFvFMLC5S",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            3,
+            3
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Repeat the last thing it did with blind intent",
+          "name": ""
+        },
+        {
+          "_id": "9Yl67Y0JJulRka5r",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            4,
+            4
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Attack the last target, even if it's now downed",
+          "name": ""
+        },
+        {
+          "_id": "rvf0XfwxtGRiGZp1",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            5,
+            5
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Utter a warning or imperative to the foes",
+          "name": ""
+        },
+        {
+          "_id": "gg4RrBExRKCYmU42",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            6,
+            6
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Select a new target for some reason",
+          "name": ""
+        }
+      ],
+      "formula": "1d6",
+      "replacement": true,
+      "displayRoll": true,
+      "folder": null,
+      "flags": {
+        "core": {}
+      },
+      "_stats": {
+        "coreVersion": "13.342",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_id": "eriltzOM4smkhj0R"
+    },
+    {
+      "name": "Sorcerers or Other Spellcasters",
+      "img": "icons/svg/d20-grey.svg",
+      "results": [
+        {
+          "_id": "Yx7nHncfSWkaHJZ9",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            1,
+            1
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Freeze a round trying to pick which spell to use",
+          "name": ""
+        },
+        {
+          "_id": "m2gCNvPwQ6XsW98p",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            2,
+            2
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Get further away from the nearest enemy",
+          "name": ""
+        },
+        {
+          "_id": "N0E7mrRMexF34pgn",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            3,
+            3
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Use magic, but misjudge the aiming somehow",
+          "name": ""
+        },
+        {
+          "_id": "6dmbuHY3EnahUwwI",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            4,
+            4
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Try to hide behind something or get cover",
+          "name": ""
+        },
+        {
+          "_id": "Gw42WCvc1Djca4hJ",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            5,
+            5
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Attack with punches or physical weapons",
+          "name": ""
+        },
+        {
+          "_id": "5lBLWa8loyllwlEq",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            6,
+            6
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Ignore everyone but the nearest threat to them",
+          "name": ""
+        }
+      ],
+      "formula": "1d6",
+      "replacement": true,
+      "displayRoll": true,
+      "folder": null,
+      "flags": {
+        "core": {}
+      },
+      "_stats": {
+        "coreVersion": "13.342",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "description": "",
+      "_id": "kRkyVb4oBeJNH4xk"
+    },
+    {
+      "name": "Combat-Trained Humanoids",
+      "img": "icons/svg/d20-grey.svg",
+      "results": [
+        {
+          "_id": "fSPfHm5xsiUviFVz",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            1,
+            1
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Freeze in confusion, doing nothing this round",
+          "name": ""
+        },
+        {
+          "_id": "hHysPrMWnwfzqzVO",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            2,
+            2
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Reposition to get a better place to fight from",
+          "name": ""
+        },
+        {
+          "_id": "fPp1lYY4egmk28rr",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            3,
+            3
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Duck, taking the <b>Total Defense</b> action",
+          "name": ""
+        },
+        {
+          "_id": "68Q2iFiR0cFlYzxH",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            4,
+            4
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Spend a round looking around the battlefield",
+          "name": ""
+        },
+        {
+          "_id": "xvufoZTnVAFDwTI0",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            5,
+            5
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Blindly attack the nearest enemy",
+          "name": ""
+        },
+        {
+          "_id": "EuZ4iBI67uFC2TMk",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            6,
+            6
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Attack an object, barrier, or downed foe",
+          "name": ""
+        }
+      ],
+      "formula": "1d6",
+      "replacement": true,
+      "displayRoll": true,
+      "folder": null,
+      "flags": {
+        "core": {}
+      },
+      "_stats": {
+        "coreVersion": "13.342",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "description": "",
+      "_id": "pCayfwBEwsfFc4Hn"
+    },
+    {
+      "name": "Non-Combatant Humanoids",
+      "img": "icons/svg/d20-grey.svg",
+      "results": [
+        {
+          "_id": "TQ54AJwqEo1NnN3b",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            1,
+            1
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Stand immobile in confusion and fear",
+          "name": ""
+        },
+        {
+          "_id": "fBDTZaGoXsBZdrsx",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            2,
+            2
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Punch or kick a foe instead of using a weapon",
+          "name": ""
+        },
+        {
+          "_id": "0wKHjg8RN6cL6sAX",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            3,
+            3
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Cringe, taking the <b>Total Defense</b> action",
+          "name": ""
+        },
+        {
+          "_id": "L9on0iSAcFBwINRD",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            4,
+            4
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Panic and make a Morale check",
+          "name": ""
+        },
+        {
+          "_id": "Rc5tRDJdXDAL8sKw",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            5,
+            5
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Shout threats or pleas, but don't attack",
+          "name": ""
+        },
+        {
+          "_id": "ZHqJzXtZhmkUP95V",
+          "flags": {},
+          "type": "text",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            6,
+            6
+          ],
+          "drawn": false,
+          "_stats": {
+            "coreVersion": "13.342",
+            "systemId": null,
+            "systemVersion": null,
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null
+          },
+          "description": "Reposition to get close to the nearest ally",
+          "name": ""
+        }
+      ],
+      "formula": "1d6",
+      "replacement": true,
+      "displayRoll": true,
+      "folder": null,
+      "flags": {
+        "wwn": {
+          "treasure": false
+        },
+        "core": {}
+      },
+      "_stats": {
+        "coreVersion": "13.342",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "description": "",
+      "_id": "xq6rwhNERi8vSReO"
+    }
+  ],
+  "source": {
+    "world": "wwn",
+    "system": "wwn",
+    "version": {
+      "core": "13.346",
+      "system": "1.5.1"
+    }
+  },
+  "folders": []
+}

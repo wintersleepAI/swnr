@@ -1,3 +1,5 @@
+import { ContainerHelper } from '../helpers/container-helper.mjs';
+
 /**
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
@@ -91,6 +93,27 @@ export class SWNItem extends Item {
         flavor: label,
       });
       return roll;
+    }
+  }
+
+  /**
+   * Handle item updates, particularly for container location changes
+   * @param {object} changed - The change data
+   * @param {object} options - Update options
+   * @param {string} userId - The user performing the update
+   * @override
+   */
+  async _preUpdate(changed, options, user) {
+    await super._preUpdate(changed, options, user);
+
+    // If this is a container and its location is changing, update contained items
+    if (this.system.container?.isContainer && changed.system?.location) {
+      const newLocation = changed.system.location;
+      const currentLocation = this.system.location;
+      
+      if (newLocation !== currentLocation) {
+        await ContainerHelper.updateContainedItemsLocation(this, newLocation);
+      }
     }
   }
 }

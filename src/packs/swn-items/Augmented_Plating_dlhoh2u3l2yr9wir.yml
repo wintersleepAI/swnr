@@ -1,0 +1,43 @@
+name: Augmented Plating
+type: shipDefense
+img: systems/swnr/assets/icons/game-icons.net/item-icons/metal-scales.svg
+folder: XJlAoDKKip1GmJb7
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-defense.Item.dlhoh2u3l2yr9wir
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: dlhoh2u3l2yr9wir
+system:
+  broken: false
+  cost: 25000
+  costMultiplier: true
+  description: >-
+    At the cost of a certain amount of speed and maneuverability, a ship can
+    have its armor plating reinforced against glacing hits, gaining a +2 bonus
+    to its AC. This augmentation can decrease a ship's speed below 0, meaning it
+    will be applied as a penalty on all Pilot tests.
+  effect: +2 AC
+  mass: 1
+  massMultiplier: true
+  minClass: fighter
+  power: 0
+  powerMultiplier: false
+  favorite: false
+  tl: 4
+  destroyed: false
+  juryRigged: false
+  type: ship
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!dlhoh2u3l2yr9wir'
+

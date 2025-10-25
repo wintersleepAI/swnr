@@ -1,0 +1,147 @@
+name: Sorcerers or Other Spellcasters
+img: icons/svg/d20-grey.svg
+results:
+  - _id: Yx7nHncfSWkaHJZ9
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Freeze a round trying to pick which spell to use
+    name: ''
+    _key: '!tables.results!LCXd0Kf3km18H7ok.Yx7nHncfSWkaHJZ9'
+  - _id: m2gCNvPwQ6XsW98p
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Get further away from the nearest enemy
+    name: ''
+    _key: '!tables.results!LCXd0Kf3km18H7ok.m2gCNvPwQ6XsW98p'
+  - _id: N0E7mrRMexF34pgn
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Use magic, but misjudge the aiming somehow
+    name: ''
+    _key: '!tables.results!LCXd0Kf3km18H7ok.N0E7mrRMexF34pgn'
+  - _id: 6dmbuHY3EnahUwwI
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Try to hide behind something or get cover
+    name: ''
+    _key: '!tables.results!LCXd0Kf3km18H7ok.6dmbuHY3EnahUwwI'
+  - _id: Gw42WCvc1Djca4hJ
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Attack with punches or physical weapons
+    name: ''
+    _key: '!tables.results!LCXd0Kf3km18H7ok.Gw42WCvc1Djca4hJ'
+  - _id: 5lBLWa8loyllwlEq
+    flags: {}
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Ignore everyone but the nearest threat to them
+    name: ''
+    _key: '!tables.results!LCXd0Kf3km18H7ok.5lBLWa8loyllwlEq'
+formula: 1d6
+replacement: true
+displayRoll: true
+folder: tCjobZPuAK5KxMZQ
+flags:
+  core: {}
+_stats:
+  compendiumSource: Compendium.swnr.wwn-instinct.RollTable.kRkyVb4oBeJNH4xk
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754272494042
+  modifiedTime: 1754272494042
+  lastModifiedBy: lKC5x4Yf023Bizof
+description: ''
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: LCXd0Kf3km18H7ok
+sort: 0
+_key: '!tables!LCXd0Kf3km18H7ok'
+

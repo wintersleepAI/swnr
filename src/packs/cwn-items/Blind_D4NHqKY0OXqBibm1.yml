@@ -1,0 +1,38 @@
+name: Blind
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: YSjeg2WqEsCIXk0y
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-program.Item.2e03i24xvt9flb9x
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267253955
+  modifiedTime: 1754267253955
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  accessCost: 1
+  cost: 2000
+  description: >-
+    Deactivate a device's sensory input or make cyberware temporarily unable to
+    get any input from anything but the wearer's nervous system. Cybereyes are
+    blind, cameras sense nothing, and laser tripwires don't register the beam.
+    Blind characters can't effectively attack at range, their movement rate is
+    halved, and they suffer a -4 penalty to both AC and melee hit rolls.
+  selfTerminating: false
+  skillCheckMod: 0
+  target: Device/Cyber
+  type: verb
+  useAffects: Turn off sensory input to a device or cyber
+  favorite: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: D4NHqKY0OXqBibm1
+sort: 1800000
+_key: '!items!D4NHqKY0OXqBibm1'
+

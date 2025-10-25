@@ -1,0 +1,42 @@
+name: Hardened Polyceramic Overlay
+type: shipDefense
+img: systems/swnr/assets/icons/game-icons.net/item-icons/bubble-field.svg
+folder: XJlAoDKKip1GmJb7
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-defense.Item.0a1jp8tcc6iaj8r8
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 0a1jp8tcc6iaj8r8
+system:
+  broken: false
+  cost: 25000
+  costMultiplier: true
+  description: >-
+    A complex glazing process can harden the surface of a ship's armor to more
+    effectively shed incoming attacks, decreasing armor-piercing quality of any
+    hit by 5.
+  effect: AP quality of attacking weapons reduced by 5
+  mass: 1
+  massMultiplier: true
+  minClass: fighter
+  power: 0
+  powerMultiplier: false
+  favorite: false
+  tl: 4
+  destroyed: false
+  juryRigged: false
+  type: ship
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!0a1jp8tcc6iaj8r8'
+

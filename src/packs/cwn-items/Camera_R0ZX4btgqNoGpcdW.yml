@@ -1,0 +1,36 @@
+name: Camera
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: eBbZVBq3zmvZSDXd
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-program.Item.otv7q88ik1rdiuw8
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267253955
+  modifiedTime: 1754267253955
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  accessCost: 0
+  cost: 500
+  description: >-
+    Any device that transmits audiovisual information. Some defensive hardware
+    has its own onboard camera, which is susceptible to this target, while the
+    others rely on a separate device's input.
+  selfTerminating: false
+  skillCheckMod: 0
+  target: Device
+  type: subject
+  useAffects: Audiovisual sensors
+  favorite: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: R0ZX4btgqNoGpcdW
+sort: 150000
+_key: '!items!R0ZX4btgqNoGpcdW'
+

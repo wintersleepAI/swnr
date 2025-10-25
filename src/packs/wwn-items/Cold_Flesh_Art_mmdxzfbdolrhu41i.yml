@@ -1,0 +1,53 @@
+name: Cold Flesh Art
+type: armor
+sort: 300000
+system:
+  description: >-
+    You no longer require sleep and feel pain only in an abstract sense. You can
+    suffer no more than 2 points of damage from any given instance of Shock and
+    you have a natural Armor Class equal to 12 plus half your level, rounded
+    down.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 0
+  cost: 0
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 12
+  shield: false
+  use: false
+  meleeAc: 12
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+  baseAc: 12
+_id: mmdxzfbdolrhu41i
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1754277456691
+  modifiedTime: 1758741508193
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: wWLLqniCuTTHdUfm
+flags: {}
+effects: []
+ownership:
+  default: 0
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+_key: '!items!mmdxzfbdolrhu41i'
+

@@ -1,0 +1,54 @@
+name: Cuirass and Greaves
+type: armor
+sort: 200000
+system:
+  description: >-
+    Cuirass and greave armor reflects those different designs that rely on solid
+    metal plating over the wearer's vitals along with lighter limb armor. Medium
+    armor is significantly noisier and more overt; it cannot be worn discreetly
+    and applies its encumbrance as a penalty to any physical Sneak rolls made by
+    the wearer.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 2
+  cost: 250
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 15
+  shield: false
+  use: false
+  meleeAc: 15
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+  baseAc: 15
+_id: z3etdby81bshejmo
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1754277456692
+  modifiedTime: 1758741095261
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: FITv2SYJsQwWnL69
+flags: {}
+effects: []
+ownership:
+  default: 0
+img: icons/svg/item-bag.svg
+_key: '!items!z3etdby81bshejmo'
+

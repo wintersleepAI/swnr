@@ -1,0 +1,43 @@
+name: Unarmed Combatant
+type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: rLKHK9Ka1PgqNDEq
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-foci.Item.ntgfov5a6mh7in1d
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266764920
+  modifiedTime: 1754266764920
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  description: >-
+    Your empty hands are more dangerous than knives in the grip of the less
+    gifted. Your unarmed attacks are counted as melee weapons when it comes to
+    binding up opponents wielding pistols, rifles and similar ranged arms,
+    though you need at least one hand free to do so.<br /><br />Level 1: Gain
+    Punch as a bonus skill. Your unarmed attacks become more dangerous as your
+    Punch skill increases. At level-0, they do 1d6 damage. At level-1, they do
+    1d8 damage. At level-2 they do 1d10, level-3 does 1d12, and level-4 does
+    1d12+1. At Punch-1 or better, they have the Shock quality equal to your
+    Punch skill against AC 15 or less. While you normally add your Punch skill
+    level to any unarmed damage you inflict, don't add it twice to Shock damage.
+    If you choose to strike lethally with unarmed attacks, they have a Trauma
+    Die of 1d6 and a Trauma Rating of x2.<br />Level 2: Even on a miss with a
+    Punch attack, you do an unmodified 1d6 damage, plus any Shock that the blow
+    might inflict on the target. Your Trauma Die becomes 1d8 for lethal attacks.
+  favorite: false
+  level: 0
+  type: focus
+  poolsGranted: []
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: UfGX6bC0WpAEZNfE
+sort: 0
+_key: '!items!UfGX6bC0WpAEZNfE'
+

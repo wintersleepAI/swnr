@@ -1,0 +1,52 @@
+name: Reflex Response
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: T7VK7FTps9Ubc5gw
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-telepathy.Item.r7da1nro0txrpdxx
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286864688
+  modifiedTime: 1757286864688
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: r7da1nro0txrpdxx
+system:
+  description: >-
+    <p>As a Main Action, the telepath can Commit Effort for the day to force a
+    sudden, irrational impulse into the target of a <em>Telepathic Contact</em>.
+    The target may make a Mental saving throw to resist; on a failure, they will
+    use their next available action to carry out the impulse to the best of
+    their ability. This impulse cannot be self-injurious or harmful to a loved
+    one, but it can be foolish, reckless, or harmful to others. The target may
+    not understand why they have done the action, but will usually attempt to
+    rationalize it as their choice.</p>
+  level: 3
+  source: telepathy
+  save: mental
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: day
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!r7da1nro0txrpdxx'
+

@@ -1,0 +1,64 @@
+name: Storm Armor
+type: armor
+folder: 3Dm85i0tKhFQJtw7
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.armor.Item.nlis9pdjqyq2ond2
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286662362
+  modifiedTime: 1757286662362
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: nlis9pdjqyq2ond2
+system:
+  ac: 19
+  meleeAc: 19
+  traumaDiePenalty: 4
+  isSubtle: false
+  soak:
+    value: 20
+    max: 20
+  cost: 20000
+  description: >-
+    Storm armor is a more advanced form of assault suit, one that can be
+    fabricated only by those worlds that have retained some degree of
+    Mandate-grade technical infrastructure. Aside from functioning as an assault
+    suit, the storm armor’s exo-augments allow the wearer to treat their
+    Strength as 4 points higher for encumbrance purposes. Integral gravitic
+    boosters allow the wearer to leap up to 20 meters as a Move action, either
+    horizontally or vertically, and allow the wearer to fall up to 40 meters
+    without suffering harm. An onboard medical computer can attempt last-ditch
+    stabilization of the wearer if all other efforts fail; when the wearer would
+    normally die from an untreated mortal wound, they can make a Physical save
+    to self-stabilize. Storm armor requires the same type B power cell as an
+    assault suit, and each cell powers it for 24 hours.
+  encumbrance: 2
+  location: other
+  quality: stock
+  shield: false
+  tl: 5
+  use: false
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  dr: 0
+  isHeavy: false
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!nlis9pdjqyq2ond2'
+

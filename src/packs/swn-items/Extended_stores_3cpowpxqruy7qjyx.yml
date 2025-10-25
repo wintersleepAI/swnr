@@ -1,0 +1,42 @@
+name: Extended stores
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: FSb3IGBn6eTDHX2S
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-fitting.Item.3cpowpxqruy7qjyx
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 3cpowpxqruy7qjyx
+system:
+  broken: false
+  cost: 2500
+  costMultiplier: true
+  description: >-
+    A normal complement of ship's stores can keep the maximum crew size supplied
+    for two months. Each selection of Extended Stores doubles that time, and can
+    be fitted multiple times.
+  effect: Maximum life support duration is doubled
+  mass: 1
+  massMultiplier: true
+  minClass: fighter
+  power: 0
+  powerMultiplier: false
+  favorite: false
+  tl: 4
+  destroyed: false
+  juryRigged: false
+  type: ship
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!3cpowpxqruy7qjyx'
+

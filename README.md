@@ -1,34 +1,93 @@
-# Systems Without Number Redux (SWN, CWN, AWN) for Foundry VTT
+# Systems Without Number Redux for Foundry VTT
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-![Foundry v12](https://img.shields.io/badge/foundry-v12-green)
+![Foundry v13](https://img.shields.io/badge/foundry-v13-green)
 
-This is a system re-rewrite of the Stars Without Number Revised system for Foundry VTT.  The system was originally written by SpiceKing and taken over wintersleepAI. The prior system was written in TypeScript and was not compatible with the latest version of Foundry VTT and I had fallen far behind on maintaining the definitions. This system is a complete re-write in JavaScript (using the boilerplate foundry system) and is compatible with the latest version of Foundry VTT.  A hope of the rewrite is to open the system to more contributors and to make it easier to maintain. This system will also add more support for AWN and WWN this year. Several folks helped with the rewrite and I am grateful for their help. See the list of contributors below, along with Stas, Sobran, and the all-stars on the Foundry VTT Discord server have been a great help in getting this system to where it is today.
+A comprehensive Foundry VTT system for Stars Without Number Revised and the Kevin Crawford suite of games including Worlds Without Number (WWN), Cities Without Number (CWN), and Ashes Without Number (AWN).
 
-## Notes 
+## Game Support
 
- - Some of the data organization is changed, but most of it follows the same structure as the original system.
- - The UI needs a clean up. A goal is to make the colors and fonts a bit more modular to allow for customization and settings for SWN, CWN, and AWN.
-  - CWN and SWN are both implemented. Much of CWN is enabled through system settings. AWN support is just started. We plan to add WWN support soon.
-  - Characters have a lock button/toggle that is needed to edit skills. Other attributes will go under the locks soon. 
-  - Old game worlds should not be migrated ONLY after back up is made.
+- **Stars Without Number (SWN)** - Full support for space opera adventures
+- **Worlds Without Number (WWN)** - Fantasy campaigns with spells and arts
+- **Cities Without Number (CWN)** - Cyberpunk settings with hacking and cybernetics
+- **Ashes Without Number (AWN)** - Post-apocalyptic survival gameplay
 
-### Use 
-The background art for the system is taken from the SWN Revised book download and is able to be used per the license file. 
-The artwork is by Grzegorz Pedrycz. The asset tokens were provided by Hawkin.
+Game-specific features are enabled through system settings, allowing you to customize the interface and mechanics for your preferred game type.
 
-### Development 
+See the [SWNR game wiki for instructions](https://github.com/wintersleepAI/swnr/wiki)
 
-Contributing guide TBA. Msg me on Discord if you want to help out before making any significant PR (eg something that changes the data model or core functionality). 
+## Key Features
 
-[Seee tutorial on the Foundry Wiki for the new data model and appv2](https://foundryvtt.wiki/en/development/guides/SD-tutorial)!
+- **Unified Resource Pool System** - Flexible effort, spell slots, and custom resource management
+- **Character Sheets** - Complete character management with skills, equipment, and powers
+- **NPC Support** - Quick NPC creation and management tools  
+- **Vehicle Systems** - Ships, mechs, drones, and ground vehicles
+- **Faction Management** - Track faction assets and conflicts
+- **Automated Calculations** - AC, saves, skill checks, and combat rolls
+- **Compendium Content** - Extensive pre-loaded equipment, powers, and creatures
+
+## Installation
+
+1. In Foundry VTT, go to the **Game Systems** tab
+2. Click **Install System** 
+3. Search for "Stars Without Number Redux" or use this manifest URL:
+   ```
+   https://github.com/wintersleepAI/swnr/releases/latest/download/system.json
+   ```
+4. Click **Install** and create a new world using the SWNR system
 
 
-### Compiling the CSS
-Run `npm run build` to compile the SCSS to CSS 
+## License and Attribution
 
+The background art for this system is taken from the SWN Revised book download and is used per the license file. The artwork is by Grzegorz Pedrycz. Asset tokens were provided by Hawkin. Additional icons provided by game-icons.net.
+
+---
+
+## Development
+
+This section is for developers who want to contribute to the SWNR system.
+
+### Project Overview
+
+This is a complete re-write of the Stars Without Number Revised system for Foundry VTT. The system was originally written by SpiceKing and taken over by wintersleepAI. The prior system was written in TypeScript and was not compatible with the latest version of Foundry VTT. This system is a complete re-write in JavaScript using the modern Foundry system architecture and is compatible with Foundry v13+.
+
+### Development Notes
+
+- Some of the data organization is changed, but most of it follows the same structure as the original system
+- The UI is designed to be modular to allow for customization across different game types (SWN, CWN, AWN, WWN)
+- Characters have a lock button/toggle that is needed to edit skills. Other attributes may go under locks in the future
+- **Important**: Old game worlds should NOT be migrated unless a backup is made first
+
+### Getting Started with Development
+
+Contributing guide is in development. Please message wintersleepAI on Discord if you want to help out before making any significant PR (especially anything that changes the data model or core functionality).
+
+For learning about the new Foundry data model and ApplicationV2 architecture, see the [tutorial on the Foundry Wiki](https://foundryvtt.wiki/en/development/guides/SD-tutorial).
+
+### Building the System
+
+#### Compiling CSS
+Run `npm run build` to compile the SCSS to CSS
+
+#### Other Build Commands
+- `npm run build` - Compile SCSS and build system
+- `npm run watch` - Auto-compile SCSS during development
+- `npm run pack-compendium` - Rebuild compendium packs from source YAML files
+
+### Architecture Notes
+
+The system uses:
+- **Modern Foundry ApplicationV2** framework (V13 compatible)
+- **JavaScript** (no TypeScript compilation needed)
+- **Handlebars** templates with single root elements
+- **DataModel** classes for structured data
+- **Native DOM APIs** (no jQuery dependencies)
+
+### Contributing
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
 
 ## Contributors ✨
 
@@ -60,5 +119,3 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

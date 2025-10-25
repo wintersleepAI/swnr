@@ -1,0 +1,38 @@
+name: Sniper's Eye
+type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: rLKHK9Ka1PgqNDEq
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-foci.Item.r1w6eovohk3a0dk8
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266764920
+  modifiedTime: 1754266764920
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  description: >-
+    You are an expert at placing a bullet or arrow on an unsuspecting target.
+    These special benefits only apply when making an Execution Attack with a
+    gun, bow, or thrown weapon, as described in section 2.4.7.3.<br /><br
+    />Level 1: Gain Shoot as a bonus skill. When making a skill check for a
+    ranged Execution Attack or target shooting, roll 3d6 and drop the lowest
+    die.<br />Level 2: You don't miss ranged Execution Attacks. A target hit by
+    one takes a -4 penalty on the Physical saving throw to avoid immediate
+    mortal injury. Even if the save is successful, the target takes double the
+    normal damage inflicted by the attack.
+  favorite: false
+  level: 0
+  type: focus
+  poolsGranted: []
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: pjOLBDb7JDHCOdHW
+sort: 0
+_key: '!items!pjOLBDb7JDHCOdHW'
+

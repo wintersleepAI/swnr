@@ -1,0 +1,77 @@
+name: Mag Rifle
+type: weapon
+folder: IuHCQEm5J46mKh45
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ranged.Item.monym0btgpr72vl5
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286681607
+  modifiedTime: 1757286681607
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: monym0btgpr72vl5
+system:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 10
+    suppress: false
+    type: ammo
+    value: 10
+    current: null
+  cost: 500
+  damage: 2d8+2
+  description: >-
+    Mag weaponry involves the magnetic acceleration of metal flechettes, while
+    spike throwers are the shotgun equivalents of these weapons. Mag ammunition
+    is packaged with integral power supplies, so no additional power cells are
+    necessary to fire these weapons.
+  encumbrance: 2
+  location: other
+  quality: stock
+  range:
+    max: 600
+    normal: 300
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 4
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  secondStat: null
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+  isTwoHanded: false
+  isNonLethal: false
+  isMelee: false
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!monym0btgpr72vl5'
+

@@ -1,0 +1,52 @@
+name: Metadimensional Friction
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: b1y9xejewpVMRdey
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-metapsionics.Item.4unpeoff9uc75e3a
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286855552
+  modifiedTime: 1757286855552
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 4unpeoff9uc75e3a
+system:
+  description: >-
+    <p>As a Main Action, the metapsion Commits Effort for the scene to create
+    localized MES turbulence around a visible target psychic within 200 meters.
+    Each time the target Commits Effort or an NPC initiates a psychic power,
+    they suffer 1d8 damage per Metapsionics skill level of the adept. Each time
+    the target suffers the damage they can attempt a Mental saving throw to
+    throw off the effect. It lasts no longer than the rest of the scene at most.
+    Only one application of this friction can affect a target at once.</p>
+  level: 3
+  source: metapsionics
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Psychic
+      cadence: scene
+      usesCost: 1
+      itemText: ''
+      uses:
+        value: 1
+        max: 1
+      timing: manual
+  roll: 3d8
+  save: mental
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!4unpeoff9uc75e3a'
+

@@ -1,8 +1,8 @@
 {
   "id": "swnr",
-  "title": "Systems Without Number (Stars, Cities, and Ashes)",
-  "description": "The Stars and Cities and Ashes Without Number System for FoundryVTT!",
-  "version": "2.0.12",
+  "title": "Systems Without Number (Stars, Cities, Worlds, and Ashes)",
+  "description": "The Stars, Cities, Worlds, and Ashes Without Number System for FoundryVTT!",
+  "version": "2.1.0",
   "authors": [
     {
       "name": "wintersleepAI",
@@ -10,6 +10,10 @@
     },
     {
       "name": "SpiceKing"
+    },
+    {
+      "name": "Badgkat",
+      "discord": "badgkat"
     }
   ],
   "documentTypes": {
@@ -97,8 +101,8 @@
     }
   ],
   "compatibility": {
-    "minimum": "12.328",
-    "verified": "13.345"
+    "minimum": "13.345",
+    "verified": "13.348"
   },
   "esmodules": ["module/swnr.mjs"],
   "styles": ["css/swnr.css"],
@@ -110,83 +114,23 @@
     }
   ],
   "packs": [
+
     {
-      "name": "all-items",
-      "label": "All Items",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "ammo-and-power",
-      "label": "Ammo And Power",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "armor",
-      "label": "Armor",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "assets",
-      "label": "Assets",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "bestiary",
-      "label": "Bestiary",
+      "name": "cwn-actors",
+      "label": "Cwn actors",
       "system": "swnr",
       "type": "Actor"
     },
     {
-      "name": "communications",
-      "label": "Communications",
+      "name": "cwn-roll-tables",
+      "label": "Cwn Roll Tables",
       "system": "swnr",
-      "type": "Item"
-    },
+      "type": "RollTable"},
     {
-      "name": "computing-gear",
-      "label": "Computing Gear",
+      "name": "cwn-journals",
+      "label": "Cwn Journals",
       "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-armor",
-      "label": "Cwn Armor",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-cyberware",
-      "label": "Cwn Cyberware",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-drone-fittings",
-      "label": "Cwn Drone Fittings",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-drones",
-      "label": "Cwn Drones",
-      "system": "swnr",
-      "type": "Actor"
-    },
-    {
-      "name": "cwn-edges",
-      "label": "Cwn Edges",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-foci",
-      "label": "Cwn Foci",
-      "system": "swnr",
-      "type": "Item"
+      "type": "JournalEntry"
     },
     {
       "name": "cwn-items",
@@ -195,299 +139,137 @@
       "type": "Item"
     },
     {
-      "name": "cwn-pharmaceuticals",
-      "label": "Cwn Pharmaceuticals",
+      "name": "swn-items",
+      "label": "SWN Items",
       "system": "swnr",
       "type": "Item"
     },
     {
-      "name": "cwn-program",
-      "label": "Cwn Program",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-vehicle-fittings",
-      "label": "Cwn Vehicle Fittings",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-vehicle-weapons",
-      "label": "Cwn Vehicle Weapons",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-weapons",
-      "label": "Cwn Weapons",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cyberware",
-      "label": "Cyberware",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "drone-fittings",
-      "label": "Drone Fittings",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "field-equipment",
-      "label": "Field Equipment",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "foci",
-      "label": "Foci",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "heavy",
-      "label": "Heavy",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "melee",
-      "label": "Melee",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "pharmaceuticals",
-      "label": "Pharmaceuticals",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "psi-biopsionics",
-      "label": "Psi Biopsionics",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "psi-metapsionics",
-      "label": "Psi Metapsionics",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "psi-precognition",
-      "label": "Psi Precognition",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "psi-telekinesis",
-      "label": "Psi Telekinesis",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "psi-telepathy",
-      "label": "Psi Telepathy",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "psi-teleportation",
-      "label": "Psi Teleportation",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "ranged",
-      "label": "Ranged",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "sample-ships",
-      "label": "Sample Ships",
+      "name": "swn-actors",
+      "label": "SWN Actors",
       "system": "swnr",
       "type": "Actor"
     },
     {
-      "name": "ship-defense",
-      "label": "Ship Defense",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "ship-fitting",
-      "label": "Ship Fitting",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "ship-weapon",
-      "label": "Ship Weapon",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "tools-and-medical",
-      "label": "Tools And Medical",
-      "system": "swnr",
-      "type": "Item"
-    },
-    {
-      "name": "cwn-tables",
-      "label": "CWN Roll Tables",
-      "system": "swnr",
-      "type": "RollTable"
-    },
-    {
-      "name": "one-roll-tables",
+      "name": "swn-roll-tables",
       "label": "SWN Roll Tables",
       "system": "swnr",
       "type": "RollTable"
     },
     {
-      "name": "one-roll-backing",
-      "label": "SWN Backing Roll Tables",
+      "name": "swn-journals",
+      "label": "SWN Journals",
       "system": "swnr",
-      "type": "RollTable"
+      "type": "JournalEntry"
     },
     {
-      "name": "wwn-gm-sub-tables",
-      "label": "WWN Backing Roll Tables",
-      "system": "swnr",
-      "type": "RollTable"
-    },
-    {
-      "name": "wwn-gm-tables",
+      "name": "wwn-roll-tables",
       "label": "WWN Roll Tables",
+      "type": "RollTable",
+      "system": "swnr"
+    },
+    {
+      "name": "wwn-journals",
+      "label": "WWN Journals",
+      "type": "JournalEntry",
+      "system": "swnr"
+    },        
+    {
+      "name": "wwn-items",
+      "label": "WWN Items",
+      "type": "Item",
+      "system": "swnr"
+    },
+    {
+      "name": "wwn-actors",
+      "label": "WWN Actors",
+      "type": "Actor",
+      "system": "swnr"
+    },
+    {
+      "name": "awn-actors",
+      "label": "AWN Actors",
+      "type": "Actor",
+      "system": "swnr"
+    },
+    {
+      "name": "awn-journals",
+      "label": "AWN Journals",
+      "type": "JournalEntry",
+      "system": "swnr"
+    },
+    {
+      "name": "awn-items",
+      "label": "AWN Items",
+      "type": "Item",
+      "system": "swnr"
+    },
+    {
+      "name": "awn-roll-tables",
+      "label": "AWN Roll Tabels",
       "system": "swnr",
       "type": "RollTable"
     },
     {
-      "name": "wwn-instinct",
-      "label": "WWN Instinct Tables",
+      "name": "swnr-documentation",
+      "label": "SWNR Documentation",
       "system": "swnr",
-      "type": "RollTable"
-    },
-    {
-      "name": "wwn-magic-items",
-      "label": "WWN Magic Items Tables",
-      "system": "swnr",
-      "type": "RollTable"
-    },
-    {
-      "name": "wwn-magic-tables",
-      "label": "WWN Magic Tables",
-      "system": "swnr",
-      "type": "RollTable"
+      "type": "JournalEntry",
+			"private": false,
+			"flags": {}
     }
   ],
   "packFolders": [
     {
-      "name": "Gear",
+      "name": "WWN",
       "sorting": "a",
-      "color": "#333333",
+      "color": "#FF9900",
       "packs": [
-        "all-items",
-        "ammo-and-power",
-        "armor",
-        "communications",
-        "computing-gear",
-        "cyberware",
-        "field-equipment",
-        "heavy",
-        "melee",
-        "pharmaceuticals",
-        "ranged",
-        "tools-and-medical"
+        "wwn-actors",
+        "wwn-items",
+        "wwn-roll-tables",
+        "wwn-journals"
       ]
     },
     {
-      "name": "Factions",
+      "name": "SWN",
       "sorting": "a",
-      "color": "#555555",
+      "color": "#FF6600",
       "packs": [
-        "assets"
-      ]
-    },
-    {
-      "name": "Ship/Drone/Mech/Vehicle",
-      "sorting": "a",
-      "color": "#666666",
-      "packs": [
-        "drone-fittings",
-        "ship-defense",
-        "ship-fitting",
-        "ship-weapon"
-      ]
-    },
-    {
-      "name": "Psionics",
-      "sorting": "a",
-      "color": "#602a64",
-      "packs": [
-        "psi-biopsionics",
-        "psi-metapsionics",
-        "psi-precognition",
-        "psi-telekinesis",
-        "psi-telepathy",
-        "psi-teleportation"
+        "swn-actors",
+        "swn-items",
+        "swn-roll-tables",
+        "swn-journals"
       ]
     },
     {
       "name": "CWN",
       "sorting": "a",
-      "color": "#cccccc",
+      "color": "#00FF00",
       "packs": [
-        "cwn-armor",
-        "cwn-cyberware",
-        "cwn-drone-fittings",
-        "cwn-drones",
-        "cwn-edges",
-        "cwn-foci",
+        "cwn-actors",
         "cwn-items",
-        "cwn-pharmaceuticals",
-        "cwn-program",
-        "cwn-vehicle-fittings",
-        "cwn-vehicle-weapons",
-        "cwn-weapons"
-      ]
-    }, 
+        "cwn-roll-tables",
+        "cwn-journals"
+      ] 
+    },
     {
-      "name": "Bestiary",
+      "name": "AWN",
       "sorting": "a",
-      "color": "#999999",
+      "color": "#FFCC00",
       "packs": [
-        "bestiary",
-        "sample-ships"
+        "awn-items",
+        "awn-roll-tables",
+        "awn-actors",
+        "awn-journals"
       ]
-    }, 
+    },
     {
-      "name": "Character Options",
+      "name": "SWNR System",
       "sorting": "a",
-      "color": "#AAAAAA",
+      "color": "#2E3B4E",
       "packs": [
-        "foci"
-      ]
-    }, 
-    {
-      "name": "Tables",
-      "sorting": "a",
-      "color": "#CCCCCC",
-      "packs": [
-        "cwn-tables",
-        "one-roll-tables",
-        "one-roll-backing",
-        "wwn-gm-sub-tables",
-        "wwn-gm-tables",
-        "wwn-instinct",
-        "wwn-magic-items",
-        "wwn-magic-tables"
+        "swnr-documentation"
       ]
     }
   ],

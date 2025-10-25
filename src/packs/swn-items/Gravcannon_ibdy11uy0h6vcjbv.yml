@@ -1,0 +1,56 @@
+name: Gravcannon
+type: shipWeapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+folder: 7HIRYMavpuUv01al
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-weapon.Item.ibdy11uy0h6vcjbv
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: ibdy11uy0h6vcjbv
+system:
+  broken: false
+  cost: 2000000
+  costMultiplier: false
+  damage: 4d6
+  description: >-
+    Using much the same principles as man-portable grav weaponry, the gravcannon
+    causes targets to fall apart in a welter of mutually-antagonistic gravitic
+    fields.
+  hardpoint: 3
+  mass: 4
+  massMultiplier: false
+  minClass: cruiser
+  power: 15
+  powerMultiplier: false
+  qualities: AP 20
+  tl: 4
+  favorite: false
+  destroyed: false
+  juryRigged: false
+  type: ship
+  ab: 0
+  ammo:
+    type: none
+    max: 4
+    value: 4
+  trauma:
+    die: 1d6
+    vehicle: false
+  range:
+    normal: 1
+    max: 2
+  stat: ask
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!ibdy11uy0h6vcjbv'
+

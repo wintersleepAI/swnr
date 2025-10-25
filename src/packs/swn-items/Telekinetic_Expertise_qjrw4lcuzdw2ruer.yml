@@ -1,0 +1,37 @@
+name: Telekinetic Expertise
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: mOJTfIBCxT4AY88p
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-telekinesis.Item.qjrw4lcuzdw2ruer
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286860108
+  modifiedTime: 1757286860108
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: qjrw4lcuzdw2ruer
+system:
+  description: >-
+    <p>The adept has become familiar enough with the manipulation of telekinetic
+    force that they may now use <em>Telekinetic Manipulation</em> without
+    Committing Effort.</p>
+  level: 2
+  source: telekInesIs
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions: []
+  save: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!qjrw4lcuzdw2ruer'
+

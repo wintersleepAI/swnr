@@ -1,0 +1,57 @@
+name: Street Leathers
+type: armor
+img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+folder: ne4H5P4Oc4gz4LcS
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-armor.Item.u9lx97jitoy3y13i
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266100099
+  modifiedTime: 1754266100099
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  ac: 13
+  cost: 250
+  description: >-
+    Fashionable, aggressive, and often mismatched, 'street leathers' seldom have
+    any non-synthetic leather in their makeup, but are light and comfortable
+    enough to wear as a habit.
+  encumbrance: 0
+  isHeavy: false
+  isSubtle: true
+  meleeAc: 12
+  shieldACBonus: 0
+  shieldMeleeACBonus: 0
+  soak:
+    max: 3
+    value: 3
+  traumaDiePenalty: 0
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  tl: null
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  shield: false
+  use: false
+  dr: 0
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: D1VtLIt0CLB4h8Al
+sort: 700000
+_key: '!items!D1VtLIt0CLB4h8Al'
+

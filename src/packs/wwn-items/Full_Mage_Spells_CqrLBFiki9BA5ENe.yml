@@ -1,0 +1,49 @@
+folder: BslyO9GYhD75h2Kk
+name: Full Mage Spells
+type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+system:
+  description: ''
+  favorite: false
+  level: 0
+  type: focus
+  poolsGranted:
+    - resourceName: Slots
+      subResource: Cast
+      cadence: day
+      formula: Math.ceil(@level/2)
+      condition: ''
+    - resourceName: Slots
+      subResource: Cast
+      cadence: day
+      formula: '1'
+      condition: '@level>=10'
+    - resourceName: Slots
+      subResource: Prepared
+      cadence: day
+      formula: Math.max(3, @level + 1)
+      condition: ''
+    - resourceName: Slots
+      subResource: Prepared
+      cadence: day
+      formula: '+1'
+      condition: '@level>=10'
+effects: []
+sort: 600000
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+flags: {}
+_stats:
+  compendiumSource: Item.uyqXQb6BV8ADVCA4
+  duplicateSource: Item.YXQJ18dr4rXdnZCw
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758769340355
+  modifiedTime: 1758769340355
+  lastModifiedBy: lKC5x4Yf023Bizof
+_id: CqrLBFiki9BA5ENe
+_key: '!items!CqrLBFiki9BA5ENe'
+

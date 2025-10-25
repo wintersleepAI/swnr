@@ -1,0 +1,43 @@
+name: Cloak Powers
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: b1y9xejewpVMRdey
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-metapsionics.Item.wnmi2shduthmev2p
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286855552
+  modifiedTime: 1757286855552
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: wnmi2shduthmev2p
+system:
+  description: >-
+    <p>The metapsion can conceal their own psychic abilities from metapsionic
+    senses. They must Commit Effort for as long as they wish to cloak their
+    powers. While hidden, only a metapsion with equal or higher skill in
+    Metapsionics can detect their abilities with their level-0 or level-2
+    <em>Psychic Refinement</em> abilities. In such cases, an opposed
+    Wis/Metapsionics roll is made between the metapsion and the investigator. If
+    the investigator wins, the cloak is pierced, while if the metapsion wins,
+    the investigator’s <em>Psychic Refinement</em> remains oblivious.</p>
+  level: 1
+  source: metapsionics
+  skill: wis/metapsionics
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions: []
+  save: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!wnmi2shduthmev2p'
+

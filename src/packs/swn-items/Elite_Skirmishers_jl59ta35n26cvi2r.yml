@@ -1,0 +1,51 @@
+name: Elite Skirmishers
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.jl59ta35n26cvi2r
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: jl59ta35n26cvi2r
+system:
+  attackDamage: 2d4
+  attackSource: force
+  attackSpecial: ''
+  attackTarget: force
+  baseOfInfluence: false
+  cost: 5
+  counter: 1d4+1
+  description: >-
+    These lightly-equipped troops are trained for guerrilla warfare and quick
+    raids.
+  health:
+    max: 5
+    value: 5
+  income: 0
+  maintenance: 0
+  rating: 2
+  tl: 4
+  turnRoll: ''
+  type: Military Unit
+  unusable: false
+  qualities:
+    permission: true
+    action: false
+    special: false
+  category: force
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!jl59ta35n26cvi2r'
+

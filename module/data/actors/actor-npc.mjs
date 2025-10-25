@@ -5,6 +5,7 @@ export default class SWNNPC extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
     ...super.LOCALIZATION_PREFIXES,
     'SWN.Actor.NPC',
+    'SWN.Actor.base', // Add base actor localization for tweak fields
   ];
   //Regexs for parsing hit dice
   static numberRegex = /^\d+$/;
@@ -48,6 +49,18 @@ export default class SWNNPC extends SWNActorBase {
       max: SWNShared.requiredNumber(0),
     });
 
+    // Add tweak schema for power toggles (subset of character tweaks)
+    schema.tweak = new fields.SchemaField({
+      showCyberware: new fields.BooleanField({initial: true}),
+      showPsychic: new fields.BooleanField({initial: true}),
+      showArts: new fields.BooleanField({initial: false}),
+      showSpells: new fields.BooleanField({initial: false}),
+      showAdept: new fields.BooleanField({initial: false}),
+      showMutation: new fields.BooleanField({initial: false}),
+      showPoolsInHeader: new fields.BooleanField({ initial: true }),
+      showPoolsInPowers: new fields.BooleanField({ initial: false }),
+    });
+
     return schema;
   }
 
@@ -55,10 +68,6 @@ export default class SWNNPC extends SWNActorBase {
     // Any derived data should be calculated here and added to "this."
     super.prepareDerivedData();
 
-    const effort = this.effort;
-    effort.max = effort.bonus;
-    effort.value = effort.bonus - effort.current - effort.scene - effort.day;
-    effort.percentage = Math.clamp((effort.value * 100) / effort.max, 0, 100);
 
     this.ac = this.baseAc;
     this.soakTotal = {
@@ -88,6 +97,156 @@ export default class SWNNPC extends SWNActorBase {
         }
       }
     }
+
+    // Process inventory into gear and consumables (same as Character)
+    const inventory = this.parent.items.filter(
+      (i) => i.type === "item" || i.type === "weapon" || i.type === "armor"
+    );
+    let gear = [];
+    let consumables = [];
+
+    // Partition the item inventory into gear and consumables
+    inventory.filter((i) => i.type === "item").map((i) => {
+      const itemData = i.system;
+      if (itemData.uses.consumable === "none") {
+        gear.push(i);
+      } else {
+        consumables.push(i);
+      }
+    });
+
+    this.gear = gear;
+    this.consumables = consumables;
+
+    // Calculate resource pools from Features/Foci/Edges
+    this._calculateResourcePools();
+  }
+
+  /**
+   * Calculate resource pools based on Features, Foci, and Edges (same as Character)
+   * @private
+   */
+  _calculateResourcePools() {
+    this.pools = this.calculatePoolsFromFeatures({
+      parent: this.parent,
+      dataModel: this,
+      evaluateCondition: (cond) => this._evaluateCondition(cond),
+      evaluateFormula: (formula) => this._evaluateFormula(formula, this._extractHitDiceNumber()),
+    });
+  }
+
+  /**
+   * Extract hit dice number for level-based calculations
+   * @returns {number} The number of hit dice as effective level
+   * @private
+   */
+  _extractHitDiceNumber() {
+    const hitDice = this.hitDice;
+    if (SWNNPC.numberRegex.test(hitDice)) {
+      return parseInt(hitDice);
+    } else if (SWNNPC.hitDiceD8Regex.test(hitDice)) {
+      return parseInt(hitDice.replace('d', ''));
+    } else if (SWNNPC.hitDiceRegex.test(hitDice)) {
+      return parseInt(hitDice.split('d')[0]);
+    } else if (SWNNPC.hpRegex.test(hitDice)) {
+      return Math.floor(parseInt(hitDice.toLowerCase().replace(/hp/g, '').trim()) / 4); // Rough HP to level conversion
+    }
+    return 1; // Default to 1 if can't parse
+  }
+
+  /**
+   * Evaluate a condition string for NPCs (simplified, no stats)
+   * @param {string} condition - The condition to evaluate
+   * @returns {boolean} - Whether the condition is met
+   * @private
+   */
+  _evaluateCondition(condition) {
+    try {
+      const effectiveLevel = this._extractHitDiceNumber();
+      // Simple variable substitution for NPCs
+      let expr = condition
+        .replace(/@level/g, effectiveLevel)
+        .replace(/@hitdice/g, effectiveLevel);
+      
+      // Basic safety check
+      if (!/^[\d\s+\-*/()>=<!&|.]+$/.test(expr)) {
+        console.warn(`[SWN Pool] Unsafe condition: ${condition}`);
+        return false;
+      }
+      
+      return new Function('return ' + expr)();
+    } catch (error) {
+      console.warn(`[SWN Pool] Failed to evaluate condition "${condition}":`, error);
+      return false;
+    }
+  }
+
+  /**
+   * Evaluate a formula string for NPCs (simplified, no stats)
+   * @param {string} formula - The formula to evaluate
+   * @param {number} effectiveLevel - The NPC's effective level
+   * @returns {number} - The calculated value
+   * @private
+   */
+  _evaluateFormula(formula, effectiveLevel) {
+    // Validate formula contains only allowed patterns before substitution
+    const allowedPattern = /^[@\w\s+\-*/().MathMaxinflorceliwStrgmn,._]+$/;
+    if (!allowedPattern.test(formula)) {
+      throw new Error(`Unsafe formula: ${formula}`);
+    }
+    
+    // Get psychic skills for NPCs (if they have any)
+    const psychicSkills = this.parent.items.filter(
+      (i) =>
+        i.type === "skill" &&
+        i.system.source.toLocaleLowerCase() ===
+          game.i18n.localize("swnr.skills.labels.psionic").toLocaleLowerCase()
+    );
+    const highestPsychicSkill = Math.max(0, ...psychicSkills.map((i) => i.system.rank));
+    
+    // Simple variable substitution for NPCs
+    let expr = formula
+      .replace(/@level/g, effectiveLevel)
+      .replace(/@hitdice/g, effectiveLevel)
+      .replace(/@HD/g, effectiveLevel)
+      .replace(/@skills\.psychic\.highest/g, highestPsychicSkill)
+      .replace(/@skills\.([^.]+)\.rank/g, (match, skillName) => {
+        // Replace underscores with spaces for skill names
+        const decodedSkillName = skillName.replace(/_/g, ' ');
+        const skill = this.parent.items.find(i => 
+          i.type === "skill" && 
+          i.name.toLocaleLowerCase() === decodedSkillName.toLocaleLowerCase()
+        );
+        return skill?.system.rank ?? -1; // -1 for untrained
+      });
+    
+    // Final safety check - after substitution should only contain numbers and math
+    if (!/^[\d\s+\-*/().MathMaxinflorceliwStrgmn,]+$/.test(expr)) {
+      throw new Error(`Unsafe expression after substitution: ${expr}`);
+    }
+    
+    const result = new Function('return ' + expr)();
+    return Math.max(0, Math.floor(result));
+  }
+
+  /**
+   * Provide roll data for NPCs to support standard Foundry formula evaluation
+   * @returns {Object} Roll data object
+   */
+  getRollData() {
+    const data = {};
+    
+    // Add level-equivalent from hit dice for formula compatibility
+    const effectiveLevel = this._extractHitDiceNumber();
+    data["lvl"] = effectiveLevel;
+    data["level"] = effectiveLevel;
+    data["HD"] = effectiveLevel;
+    data["hitdice"] = effectiveLevel;
+    
+    // Add saves
+    data["saves"] = this.saves;
+    
+    return data;
   }
 
   async rollSave(_saveType) {
@@ -180,6 +339,37 @@ export default class SWNNPC extends SWNActorBase {
         "system.health.value": newHealth,
       });
     }
+  }
+
+  async findOrCreatePool(resourceName, subResource) {
+    // Ignore straing or uses
+    if (resourceName == "Strain" || resourceName == "Uses") {
+      return false;
+    }
+    for (const feature of this.parent.items.filter(i => i.type == "feature")) {
+      for (const pool of feature.system.poolsGranted) {
+        if (pool.resourceName == resourceName && pool.subResource == subResource) {
+          // Pool already exists
+          return false;
+        }
+      }
+    }
+    // Pool does not exist, create a feature with it
+    this.parent.createEmbeddedDocuments(
+      "Item",
+      [
+        {
+          name: `${resourceName} ${subResource}`,
+          type: "feature",
+          img: "systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg",
+          system: {
+            poolsGranted: [{ resourceName: resourceName, subResource: subResource, formula: 1, cadence: "day" }]
+          },
+        },
+      ],
+      {}
+    );
+    return true;
   }
 
 

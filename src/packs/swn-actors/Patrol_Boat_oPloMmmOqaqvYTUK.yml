@@ -1,0 +1,526 @@
+name: Patrol Boat
+type: ship
+img: systems/swnr/assets/icons/spaceship.png
+folder: GhM4CuerK1TaUzk0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754269968768
+  modifiedTime: 1754269968768
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  health:
+    max: 25
+    value: 25
+  ac: 14
+  armor:
+    max: 5
+    value: 5
+  speed: 4
+  power:
+    max: 115
+    value: 1
+  mass:
+    max: 10
+    value: 1
+  hardpoints:
+    max: 4
+    value: 1
+  crew:
+    min: 15
+    max: 20
+    current: 5
+  cargo:
+    value: 0
+    max: 0
+  spikeDrive:
+    value: 2
+    max: 2
+  commandPoints: 5
+  npcCommandPoints: 5
+  crewSkillBonus: 2
+  shipClass: frigate
+  shipHullType: patrolBoat
+  cost: 3523000
+  maintenanceCost: 176000
+  operatingCost: 657000
+  maintenanceMonths: 6
+  description: >-
+    Patrol boats are often the largest ships fielded by poor or backward
+    frontier worlds that lack the shipyard fa- cilities or available resources
+    to build bigger military craft. Even so, the ability to field two patrol
+    boats for the yearly maintenance cost of one corvette often ap- peals even
+    to richer worlds that need more coverage than their available craft can
+    provide. 
+
+    Patrol boats are the smallest independent warships fielded by most navies,
+    as fighters are not normally considered capable of extended independent
+    opera- tion. They have considerable spike drive reach and are faster
+    in-system than most of their potential targets. While their single mounted
+    gun is vulnerable to being disabled by expert enemy gunners, the relatively
+    thick armor of the ship and skilled damage control crew can mitigate that
+    danger. A few patrol boats replace their survey sensor array with a
+    sandthrower to up-gun the ship, but most prefer the additional edge in
+    scanning potential smugglers.
+  traumaTarget: 6
+  crewMembers: []
+  tl: 5
+  mods: ''
+  lifeSupportDays:
+    value: 1
+    max: 1
+  fuel:
+    value: 1
+    max: 1
+  amountOwed: 0
+  paymentAmount: 0
+  paymentMonths: 0
+  creditPool: 0
+  lastMaintenance:
+    year: 0
+    month: 0
+    day: 0
+  lastPayment:
+    year: 0
+    month: 0
+    day: 0
+  roles:
+    captain: null
+    bridge: null
+    engineering: null
+    gunner: null
+    comms: null
+  cargoCarried: []
+  actionsTaken: []
+  supportingDept: ''
+  roleOrder: []
+effects: []
+prototypeToken:
+  name: Patrol Boat
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/spaceship.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+items:
+  - name: Plasma Beam
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/plasma-bolt.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: uwa7g9xw6lur2w85
+    system:
+      broken: false
+      cost: 700000
+      costMultiplier: false
+      damage: 3d6
+      description: >-
+        With superior targeting and a smaller energy drain than a CPC, a plasma
+        beam sacrifices some armor penetration.
+      hardpoint: 2
+      mass: 2
+      massMultiplier: false
+      minClass: fighter
+      power: 5
+      powerMultiplier: false
+      qualities: AP 10
+      tl: 4
+      favorite: false
+      destroyed: false
+      juryRigged: false
+      type: ship
+      ab: 0
+      ammo:
+        type: none
+        max: 4
+        value: 4
+      trauma:
+        die: 1d6
+        vehicle: false
+      range:
+        normal: 1
+        max: 2
+      stat: ask
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!oPloMmmOqaqvYTUK.uwa7g9xw6lur2w85'
+  - name: Spike Drive-2 upgrade
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/rocket-thruster.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: t7hq653q6q0is2s3
+    system:
+      broken: false
+      cost: 10000
+      costMultiplier: true
+      description: >-
+        A ship can improve its standard-issue drive-1 spike drive with
+        additional phase filters and power throughput refinements. A captain
+        needs buy only the final grade of drive desired. He does not have to buy
+        upgrades sequentially. Drives of rating 4 and higher are generally TL5
+        artifacts that cannot be built most modern worlds.
+      effect: Upgrade a spike drive to drive-2 rating
+      mass: 1
+      massMultiplier: true
+      minClass: fighter
+      power: 1
+      powerMultiplier: false
+      favorite: false
+      tl: 4
+      destroyed: false
+      juryRigged: false
+      type: ship
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!oPloMmmOqaqvYTUK.t7hq653q6q0is2s3'
+  - name: Atmospheric Configuration
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: hc5k0uobw455s5bq
+    system:
+      broken: false
+      cost: 5000
+      costMultiplier: true
+      description: >-
+        This fitting must be put in place when the ship is built, and cannot be
+        installed on cruiser-class or larger ships. A ship designed for
+        atmospheric flight can land on most solid or aqueous surfaces.
+      effect: 'Can land: frigates and fighters only.'
+      mass: 1
+      massMultiplier: true
+      minClass: fighter
+      power: 0
+      powerMultiplier: false
+      favorite: false
+      tl: 4
+      destroyed: false
+      juryRigged: false
+      type: ship
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!oPloMmmOqaqvYTUK.hc5k0uobw455s5bq'
+  - name: Extended Stores
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: zaup553yjzwym0b2
+    system:
+      broken: false
+      cost: 2500
+      costMultiplier: true
+      description: >-
+        A normal complement of ship’s stores can keep the maximum crew size
+        supplied for two months. Each selection of Extended Stores doubles that
+        time, and can be fitted multiple times.
+      effect: Maximum life support duration is doubled
+      mass: 1
+      massMultiplier: true
+      minClass: fighter
+      power: 0
+      powerMultiplier: false
+      favorite: false
+      tl: 4
+      destroyed: false
+      juryRigged: false
+      type: ship
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!oPloMmmOqaqvYTUK.zaup553yjzwym0b2'
+  - name: Boarding Tubes
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: 69lenaqh8szpkj5q
+    system:
+      broken: false
+      cost: 5000
+      costMultiplier: true
+      description: >-
+        Armored tubes equipped with laser cutter apertures can be used to
+        forcibly invade a hostile ship, provided the target’s engines have been
+        disabled. Ships without boarding tubes have to send invaders across
+        empty space to either make an assault on a doubtless heavily-guarded
+        airlock or cut their way in through the hull with laser cutters and half
+        an hour of work.
+      effect: Allows boarding of a hostile disabled ship
+      mass: 1
+      massMultiplier: true
+      minClass: fighter
+      power: 0
+      powerMultiplier: false
+      favorite: false
+      tl: 4
+      destroyed: false
+      juryRigged: false
+      type: ship
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!oPloMmmOqaqvYTUK.69lenaqh8szpkj5q'
+  - name: Armory
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: ljmbbisqvxbl3h3h
+    system:
+      broken: false
+      cost: 10000
+      costMultiplier: true
+      description: >-
+        Rather than maintaining lengthy lists of ship equipment, a captain can
+        simply buy an armory. Ships so equipped have whatever amounts of TL4
+        military-grade weaponry and armor that a crew might require, and
+        integral maintenance facilities for its upkeep. There is enough gear
+        available to outfit the entire crew for normal use, but giving it away
+        or losing it in use may deplete it.
+      effect: Weapons and armor for the crew
+      mass: 0
+      massMultiplier: true
+      minClass: fighter
+      power: 0
+      powerMultiplier: false
+      favorite: false
+      tl: 4
+      destroyed: false
+      juryRigged: false
+      type: ship
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!oPloMmmOqaqvYTUK.ljmbbisqvxbl3h3h'
+  - name: Ship's Locker
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: amin4xm3b3khxhql
+    system:
+      broken: false
+      cost: 2000
+      costMultiplier: true
+      description: >-
+        Much like an armory, this option allows a captain to lay in a general
+        supply of equipment likely to be useful to explorers and spacemen. Any
+        TL4 equipment on the gear list can be found in the ship’s locker in
+        amounts commensurate with the ship’s size. A few guns and some basic
+        armor might be included as well, but for serious armament an armory is
+        required. There is enough gear available to outfit the entire crew for
+        normal use, but giving it away or losing it in use may deplete the
+        locker until it is restocked.
+      effect: General equipment for the crew
+      mass: 0
+      massMultiplier: true
+      minClass: fighter
+      power: 0
+      powerMultiplier: false
+      favorite: false
+      tl: 4
+      destroyed: false
+      juryRigged: false
+      type: ship
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!oPloMmmOqaqvYTUK.amin4xm3b3khxhql'
+  - name: Survey Sensors
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sattelite.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: urtd4pv7vjw9fk4y
+    system:
+      broken: false
+      cost: 5000
+      costMultiplier: true
+      description: >-
+        Most ships require only basic analysis of a star system, sufficient to
+        identify population centers, do rough scanning of an object’s
+        composition, and chart major navigational hazards. Survey sensor arrays
+        greatly enhance the ship’s sensor abilities, allowing for
+        finely-detailed mapping of objects and planets, along with
+        broad-spectrum communications analysis. They also improve attempts to
+        detect other craft when scanning a region for stealthy vessels. Any
+        rolls with survey sensor arrays add +2 to skill checks.
+      effect: Improved planetary sensory array
+      mass: 1
+      massMultiplier: true
+      minClass: fighter
+      power: 2
+      powerMultiplier: false
+      favorite: false
+      tl: 4
+      destroyed: false
+      juryRigged: false
+      type: ship
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!oPloMmmOqaqvYTUK.urtd4pv7vjw9fk4y'
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: oPloMmmOqaqvYTUK
+sort: 0
+_key: '!actors!oPloMmmOqaqvYTUK'
+

@@ -1,0 +1,353 @@
+name: Veteran Gang Bruiser
+type: npc
+img: icons/svg/mystery-man.svg
+system:
+  health:
+    value: 15
+    max: 15
+  biography: ''
+  species: ''
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 13
+  meleeAc: 14
+  ab: 6
+  meleeAb: 6
+  systemStrain:
+    value: 0
+    permanent: 0
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: street
+  skillBonus: 2
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  hitDice: 3d8
+  saves: 14
+  moralScore: 8
+  reaction: unknown
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  faction: ''
+  homeworld: ''
+  pools: {}
+  tweak:
+    showCyberware: true
+    showPsychic: true
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: true
+    showPoolsInPowers: false
+prototypeToken:
+  name: Gang Member
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/mystery-man.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+items:
+  - name: War Harness
+    type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-armor.Item.sln95o9vdytly0s9
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: WBNyAeaMPs1kgnM2
+    system:
+      ac: 13
+      cost: 200
+      description: >-
+        An upgraded form of street leathers, these outfits have sacrificed all
+        discretion for whatever spare ballistic plates and advanced polymer
+        weaves its owner can sew or bolt on. It's usually the best armor that
+        local gangs or common thugs can afford.
+      encumbrance: 1
+      isHeavy: false
+      isSubtle: false
+      meleeAc: 14
+      shieldACBonus: 0
+      shieldMeleeACBonus: 0
+      soak:
+        max: 5
+        value: 5
+      traumaDiePenalty: 0
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      shield: false
+      use: true
+      dr: 0
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!t0MCYL4wo8fkgKad.WBNyAeaMPs1kgnM2'
+  - name: Heavy Pistol
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.kgoo4k7gf2gvp0rx
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: j1CPkZ7GqOYfUTVo
+    system:
+      ammo:
+        burst: false
+        max: 8
+        suppress: false
+        type: ammo
+        value: 8
+        longReload: false
+        current: null
+      cost: 200
+      damage: 1d8
+      description: >-
+        Light and heavy pistols are categorized by the caliber of the bullet
+        they fire. Some operators prefer the low recoil and high mag capacity
+        possible with a low-caliber round, while others like to have a little
+        more certainty in dropping the targets they hit.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 100
+        normal: 10
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      stat: dex
+      trauma:
+        die: 1d6
+        rating: 3
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!t0MCYL4wo8fkgKad.j1CPkZ7GqOYfUTVo'
+  - name: Body Blades I
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.9ba5v7izv7hqa6xv
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 9MtMFyWz2qo5L59s
+    system:
+      concealment: Medical
+      cost: 10000
+      description: >-
+        Assorted retractable blades and spikes are implanted in the user's
+        limbs. Their unarmed attacks do 1d8 damage, Shock of 2/15, Trauma Die
+        1d8/x3 and can be rolled with either Stab or Punch as the relevant
+        combat skill. The Punch skill does not add damage to Body Blades
+        attacks. When not in use, the blades are perceptible only to a medical
+        scan.
+      effect: Integral body weaponry
+      strain: 1
+      type: Limb
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!t0MCYL4wo8fkgKad.9MtMFyWz2qo5L59s'
+  - name: Muscle Fiber Replacement I
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.trwrxzt4yhkbbnlh
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 00xjI9De0pEzfp6O
+    system:
+      concealment: Touch
+      cost: 50000
+      description: >-
+        Artificial muscle fibers are implanted as replacements for the user's
+        own flesh. The subject gains a Strength score of 14, or +2 if already 14
+        or higher.
+      effect: Str 14, or +2 if higher
+      strain: 1
+      type: Limb
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!t0MCYL4wo8fkgKad.00xjI9De0pEzfp6O'
+effects: []
+folder: 1MnMOlCpFjrZIhXu
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.t0MCYL4wo8fkgKad
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
+_id: t0MCYL4wo8fkgKad
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!actors!t0MCYL4wo8fkgKad'
+

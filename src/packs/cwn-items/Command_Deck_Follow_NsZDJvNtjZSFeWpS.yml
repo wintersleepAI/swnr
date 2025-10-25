@@ -1,0 +1,44 @@
+name: Command Deck/Follow
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: 4ctWevVXyy54aHh0
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.uaq7t8a4gb48g7eo
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266949107
+  modifiedTime: 1754266949107
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 0
+  description: >-
+    The drone is equipped with minimal autonomous pursuit capabilities. As a
+    Main Action, the drone can be ordered to follow a particular visible target
+    at a given distance at either half or full speed. If half speed, it will use
+    its Move action to follow, and full speed will use both Move and Main
+    Actions. Following can be ended as an On Turn command.
+  mass: 1
+  type: drone
+  favorite: false
+  tl: 4
+  power: 1
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: fighter
+  broken: false
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: NsZDJvNtjZSFeWpS
+sort: 0
+_key: '!items!NsZDJvNtjZSFeWpS'
+

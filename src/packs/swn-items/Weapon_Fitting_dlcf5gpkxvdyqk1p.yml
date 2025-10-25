@@ -1,0 +1,43 @@
+name: Weapon Fitting
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/gps.svg
+folder: 6XDktrKETRNcBLu6
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.drone-fittings.Item.dlcf5gpkxvdyqk1p
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286953010
+  modifiedTime: 1757286953010
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: dlcf5gpkxvdyqk1p
+system:
+  broken: false
+  cost: 250
+  costMultiplier: true
+  description: >-
+    The drone can be mounted with 1 encumbrance worth of ranged weaponry, which
+    must be purchased separately. This fitting may be taken more than once to
+    mount more weapons or heavier weapons. The weapon requires one or more ammo
+    units to feed it.
+  mass: 0
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  tl: 3
+  type: drone
+  favorite: false
+  minClass: fighter
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!dlcf5gpkxvdyqk1p'
+

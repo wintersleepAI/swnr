@@ -1,0 +1,409 @@
+name: Free Merchant
+type: ship
+img: systems/swnr/assets/icons/spaceship.png
+folder: GhM4CuerK1TaUzk0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754269963297
+  modifiedTime: 1754269963297
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  health:
+    max: 20
+    value: 20
+  ac: 14
+  armor:
+    max: 2
+    value: 2
+  speed: 3
+  power:
+    max: 10
+    value: 1
+  mass:
+    max: 15
+    value: 1
+  hardpoints:
+    max: 2
+    value: 1
+  crew:
+    min: 1
+    max: 6
+    current: 0
+  cargo:
+    value: 160
+    max: 160
+  spikeDrive:
+    value: 1
+    max: 1
+  commandPoints: 4
+  npcCommandPoints: 4
+  crewSkillBonus: 1
+  shipClass: frigate
+  shipHullType: freeMerchant
+  cost: 775000
+  maintenanceCost: 38750
+  operatingCost: 131400
+  maintenanceMonths: 6
+  description: >-
+    A mainstay of freebooting merchant-adventurers throughout human space, the
+    standard free merchant is an extremely versatile craft, capable of hauling
+    sig- nificant amounts of cargo to neighboring systems while requiring very
+    few hands to operate it. Only one crew member is needed for in-system
+    flight, though spike drills require three for normal margins of safety.
+
+    The standard free merchant is not a warship, but its sandthrower is enough
+    to discourage pirate shuttles and the other small or fragile craft that
+    wreckers or primitive worlds tend to favor. The multifocal laser is ideal
+    for a highly-skilled gunner who can snipe out important systems on an
+    attacking vessel, but the ship lacks the armor and durability to stand up to
+    a true war- ship. Of course, with a sufficiently expert crew, even a
+    corvette might be threatened by the well-aimed guns of a small craft like
+    this.
+  traumaTarget: 6
+  crewMembers: []
+  tl: 5
+  mods: ''
+  lifeSupportDays:
+    value: 1
+    max: 1
+  fuel:
+    value: 1
+    max: 1
+  amountOwed: 0
+  paymentAmount: 0
+  paymentMonths: 0
+  creditPool: 0
+  lastMaintenance:
+    year: 0
+    month: 0
+    day: 0
+  lastPayment:
+    year: 0
+    month: 0
+    day: 0
+  roles:
+    captain: null
+    bridge: null
+    engineering: null
+    gunner: null
+    comms: null
+  cargoCarried: []
+  actionsTaken: []
+  supportingDept: ''
+  roleOrder: []
+effects: []
+prototypeToken:
+  name: Free Merchant
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/spaceship.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+items:
+  - name: Multifocal Laser
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: ph4bt7ltzwv1wd0e
+    system:
+      broken: false
+      cost: 100000
+      costMultiplier: false
+      damage: 1d4
+      description: >-
+        Twinned assay and penetration lasers modulate the frequency of this beam
+        for remarkable armor penetration. These weapons are popular choices for
+        fighters intended for frigate or cruiser engagement.
+      hardpoint: 1
+      mass: 1
+      massMultiplier: false
+      minClass: fighter
+      power: 4
+      powerMultiplier: false
+      qualities: AP 20
+      tl: 4
+      favorite: false
+      destroyed: false
+      juryRigged: false
+      type: ship
+      ab: 0
+      ammo:
+        type: none
+        max: 4
+        value: 4
+      trauma:
+        die: 1d6
+        vehicle: false
+      range:
+        normal: 1
+        max: 2
+      stat: ask
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!BR1Kn7FIm33iM3qo.ph4bt7ltzwv1wd0e'
+  - name: Sandthrower
+    type: shipWeapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/fog.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: mh1ooh3tkqc96xo6
+    system:
+      broken: false
+      cost: 50000
+      costMultiplier: false
+      damage: 2d4
+      description: >-
+        Projecting a spray of tiny, dense particulate matter, sandthrowers are
+        highly effective against lightly-armored fighters.
+      hardpoint: 1
+      mass: 1
+      massMultiplier: false
+      minClass: fighter
+      power: 3
+      powerMultiplier: false
+      qualities: Flak
+      tl: 4
+      favorite: false
+      destroyed: false
+      juryRigged: false
+      type: ship
+      ab: 0
+      ammo:
+        type: none
+        max: 4
+        value: 4
+      trauma:
+        die: 1d6
+        vehicle: false
+      range:
+        normal: 1
+        max: 2
+      stat: ask
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!BR1Kn7FIm33iM3qo.mh1ooh3tkqc96xo6'
+  - name: Atmospheric Configuration
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: v9b29vd1xh6olbfw
+    system:
+      broken: false
+      cost: 5000
+      costMultiplier: true
+      description: >-
+        This fitting must be put in place when the ship is built, and cannot be
+        installed on cruiser-class or larger ships. A ship designed for
+        atmospheric flight can land on most solid or aqueous surfaces.
+      effect: 'Can land: frigates and fighters only.'
+      mass: 1
+      massMultiplier: true
+      minClass: fighter
+      power: 0
+      powerMultiplier: false
+      favorite: false
+      tl: 4
+      destroyed: false
+      juryRigged: false
+      type: ship
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!BR1Kn7FIm33iM3qo.v9b29vd1xh6olbfw'
+  - name: Fuel Scoops
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/energise.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: 77jvpagetbu1jgpq
+    system:
+      broken: false
+      cost: 5000
+      costMultiplier: true
+      description: >-
+        Fuel scoops allow for the harvesting and extraction of hydrogen from gas
+        giants or the penumbra of solar bodies. The extraction process requires
+        four days of processing and refinement, but completely refuels the ship.
+        Such fittings are common on explorer craft that cannot expect to find
+        refueling stations.
+      effect: Ship can scoop fuel from a gas giant or star
+      mass: 2
+      massMultiplier: true
+      minClass: fighter
+      power: 2
+      powerMultiplier: false
+      favorite: false
+      tl: 4
+      destroyed: false
+      juryRigged: false
+      type: ship
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!BR1Kn7FIm33iM3qo.77jvpagetbu1jgpq'
+  - name: Fuel Bunker
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/fuel-tank.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: b88a9fgthigh437t
+    system:
+      broken: false
+      cost: 2500
+      costMultiplier: true
+      description: >-
+        Most ships require refueling after each drill jump, no matter the
+        distance. Installing fuel bunkers allows the ship to carry one
+        additional load of fuel. This fitting can be installed multiple times
+        for ships that wish to minimize fueling.
+      effect: Adds fuel for one more drill between fuelings
+      mass: 1
+      massMultiplier: true
+      minClass: fighter
+      power: 0
+      powerMultiplier: false
+      favorite: false
+      tl: 4
+      destroyed: false
+      juryRigged: false
+      type: ship
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!BR1Kn7FIm33iM3qo.b88a9fgthigh437t'
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: BR1Kn7FIm33iM3qo
+sort: 0
+_key: '!actors!BR1Kn7FIm33iM3qo'
+

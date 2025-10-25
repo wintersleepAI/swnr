@@ -1,0 +1,51 @@
+name: Impervious Defense Foci
+type: armor
+sort: 200000
+system:
+  description: >-
+    You have an innate Armor Class of 15 plus half your character level, rounded
+    up.
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 0
+  cost: 0
+  tl: 3
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  ac: 16
+  shield: false
+  use: false
+  meleeAc: 16
+  soak:
+    value: 0
+    max: 0
+  dr: 0
+  traumaDiePenalty: 0
+  isSubtle: false
+  isHeavy: false
+  shieldMeleeACBonus: null
+  shieldACBonus: null
+  baseAc: 16
+_id: nrbydhlprm9rc7j5
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1754277456699
+  modifiedTime: 1758741513263
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: wWLLqniCuTTHdUfm
+flags: {}
+effects: []
+ownership:
+  default: 0
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+_key: '!items!nrbydhlprm9rc7j5'
+

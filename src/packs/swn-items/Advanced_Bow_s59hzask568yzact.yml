@@ -1,0 +1,78 @@
+name: Advanced Bow
+type: weapon
+folder: IuHCQEm5J46mKh45
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ranged.Item.s59hzask568yzact
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286681607
+  modifiedTime: 1757286681607
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: s59hzask568yzact
+system:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 1
+    suppress: false
+    type: ammo
+    value: 1
+    current: null
+  cost: 50
+  damage: 1d6
+  description: >-
+    Bows are uncommon weapons in the far future, though some lostworlder
+    barbarians have nothing better. Some sophisticated “conversion bows” use
+    special materials to convert the kinetic energy of the draw into a force
+    field “glazing” around the arrow, improving penetration. Bows can be
+    reloaded with a Move action, or faster if the Gunslinger focus is applied.
+  encumbrance: 2
+  location: other
+  quality: stock
+  range:
+    max: 150
+    normal: 100
+  shock:
+    ac: 15
+    dmg: 0
+  skill: ''
+  stat: dex
+  tl: 3
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  secondStat: null
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+  isTwoHanded: false
+  isNonLethal: false
+  isMelee: false
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!s59hzask568yzact'
+

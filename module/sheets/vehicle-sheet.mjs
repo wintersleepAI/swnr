@@ -10,6 +10,8 @@ const { api, sheets } = foundry.applications;
  * @extends {ActorSheetV2}
  */
 export class SWNVehicleSheet extends SWNBaseSheet {
+  #expandedDescriptions = {};
+
   constructor(options = {}) {
     super(options);
   }
@@ -50,6 +52,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       pilotDelete: this._onPilotDelete,
       pilotShow: this._onPilotShow,
       toggle: this._onToggleVehicleStatus,
+      toggleItemDescription: this._onToggleItemDescription,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -170,7 +173,9 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       groupWidget: groupFieldWidget.bind(this),
       groupWidgetDupe: groupFieldWidgetDupe.bind(this),
       crewArray: crewArray,
-      actions: CONFIG.SWN.shipActions
+      actions: CONFIG.SWN.shipActions,
+      // Add expanded descriptions state for item description toggle functionality
+      expandedDescriptions: this.#expandedDescriptions
     };
 
     // Offloading context prep to a helper function
@@ -1637,6 +1642,38 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     });
     event.target.value = "";
     return;
+  }
+
+  /**
+   * Toggle the display of an item's description
+   * @param {Event} event - The click event
+   * @param {HTMLElement} target - The clicked element
+   * @returns {Promise<void>}
+   * @static
+   */
+  static _expandedDescriptions = {};
+
+  static async _onToggleItemDescription(event, target) {
+    event.preventDefault();
+    const itemId = target.dataset.itemId || target.closest('[data-item-id]')?.dataset.itemId;
+    if (!itemId) return;
+
+    // Toggle the expanded state
+    if (this._expandedDescriptions[itemId]) {
+      delete this._expandedDescriptions[itemId];
+    } else {
+      this._expandedDescriptions[itemId] = true;
+    }
+
+    // Find and toggle the description row
+    const itemRow = target.closest('.item[data-item-id]');
+    if (!itemRow) return;
+
+    const descriptionRow = itemRow.nextElementSibling;
+    if (descriptionRow && descriptionRow.classList.contains('item-description')) {
+      const isExpanded = this._expandedDescriptions[itemId];
+      descriptionRow.style.display = isExpanded ? 'block' : 'none';
+    }
   }
 
 }

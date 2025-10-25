@@ -1,0 +1,53 @@
+name: Postech Industry
+type: asset
+img: systems/swnr/assets/icons/hawkin/wealth.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.tbyqmu62jxg5456p
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: tbyqmu62jxg5456p
+system:
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 8
+  counter: 1d4
+  description: >-
+    As an action, the owning faction can roll 1d6 for a Postech Industry asset.
+    On a 1, one FacCred is lost, on a 2-4 one FacCred is earned, and a 5-6
+    returns two FacCreds. If money is lost and no resources are available to pay
+    it, the Postech Industry is destroyed. Roll: [[1d6]]
+  health:
+    max: 4
+    value: 4
+  income: 0
+  maintenance: 0
+  rating: 3
+  tl: 4
+  turnRoll: ''
+  type: Facility
+  unusable: false
+  qualities:
+    permission: false
+    action: true
+    special: false
+  category: wealth
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!tbyqmu62jxg5456p'
+

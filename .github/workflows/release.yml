@@ -29,6 +29,10 @@ jobs:
         run: |
           npm run build
 
+      - name: Compile release notes
+        run: |
+          npm run compile-release-notes
+
       - name: Run pack-compendium
         run: |
           npm run pack-compendium

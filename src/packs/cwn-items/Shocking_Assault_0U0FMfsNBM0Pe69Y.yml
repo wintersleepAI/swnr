@@ -1,0 +1,38 @@
+name: Shocking Assault
+type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+folder: rLKHK9Ka1PgqNDEq
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-foci.Item.6ua3egaxdctxwv2g
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266764920
+  modifiedTime: 1754266764920
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  description: >-
+    You're extremely dangerous to enemies around you. The ferocity of your melee
+    attacks stresses and distracts enemies even when your blows don't draw
+    blood.<br /><br />Level 1: Gain Punch or Stab as a bonus skill. The Shock
+    damage of your weapon treats all targets as if they were AC 10, assuming
+    your weapon is capable of harming the target in the first place and the
+    target is not immune to Shock.<br />Level 2: In addition, you gain a +2
+    bonus to the Shock damage rating of all melee weapons and unarmed attacks
+    that do Shock. As usual, regular hits never do less damage than this Shock
+    would do.
+  favorite: false
+  level: 0
+  type: focus
+  poolsGranted: []
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: 0U0FMfsNBM0Pe69Y
+sort: 0
+_key: '!items!0U0FMfsNBM0Pe69Y'
+

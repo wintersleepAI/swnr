@@ -1,0 +1,38 @@
+name: Mastered Succor
+type: power
+img: systems/swnr/assets/icons/game-icons.net/item-icons/psychic-waves-white.svg
+folder: VXwfMckwPSKXC4gD
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.psi-biopsionics.Item.vnjiamkib1veepgl
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286851234
+  modifiedTime: 1757286851234
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: vnjiamkib1veepgl
+system:
+  description: >-
+    <p>The biopsion has developed a sophisticated mastery of their core ability,
+    and they no longer need to Commit Effort to activate it, and may use it
+    whenever they wish. The use of additional techniques that augment
+    <em>Psychic Succor</em> might still require Effort to be Committed.</p>
+  level: 1
+  source: biopsionics
+  favorite: false
+  subType: psychic
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions: []
+  save: null
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!vnjiamkib1veepgl'
+

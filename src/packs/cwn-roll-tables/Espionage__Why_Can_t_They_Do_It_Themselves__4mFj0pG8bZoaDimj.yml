@@ -1,0 +1,147 @@
+folder: eSWlOCBg6zE6bV6x
+name: 'Espionage: Why Can’t They Do It Themselves?'
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: ismiX5SkOYG607BB
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: They have no agents in place to do so
+    name: ''
+    _key: '!tables.results!4mFj0pG8bZoaDimj.ismiX5SkOYG607BB'
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: aa4YlM0hSG8BxmfZ
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: They tried and failed, bringing heat down
+    name: ''
+    _key: '!tables.results!4mFj0pG8bZoaDimj.aa4YlM0hSG8BxmfZ'
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: edLBvg8xOHSSRr4d
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: They’re being watched too closely to act
+    name: ''
+    _key: '!tables.results!4mFj0pG8bZoaDimj.edLBvg8xOHSSRr4d'
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: SHReMrrVhG4TZlFt
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: Their best spy is currently not available
+    name: ''
+    _key: '!tables.results!4mFj0pG8bZoaDimj.SHReMrrVhG4TZlFt'
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: H6vtG6vdDKS1FJT6
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: They plan to use the PCs as decoys
+    name: ''
+    _key: '!tables.results!4mFj0pG8bZoaDimj.H6vtG6vdDKS1FJT6'
+  - type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: anvdwmF5RaKvM3OV
+    flags: {}
+    img: icons/svg/d20-black.svg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: They’re afraid of alerting internal moles
+    name: ''
+    _key: '!tables.results!4mFj0pG8bZoaDimj.anvdwmF5RaKvM3OV'
+replacement: true
+displayRoll: true
+flags:
+  core: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-tables.RollTable.4mFj0pG8bZoaDimj
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754272613626
+  modifiedTime: 1754272613626
+  lastModifiedBy: lKC5x4Yf023Bizof
+formula: 1d6
+_id: 4mFj0pG8bZoaDimj
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!tables!4mFj0pG8bZoaDimj'
+

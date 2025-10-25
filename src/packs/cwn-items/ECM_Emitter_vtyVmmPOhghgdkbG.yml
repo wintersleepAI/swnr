@@ -1,0 +1,43 @@
+name: ECM Emitter
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: aPPngDkp3e5tzGZ9
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-vehicle-fittings.Item.nnf6smnsa6q2k67m
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267290515
+  modifiedTime: 1754267290515
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 10000
+  description: >-
+    On a successful hit roll by a headshot pod, rocket launcher, or other
+    long-range guided projectile, the driver can make an opposed Int or
+    Dex/Drive skill check against the attacker's combat skill. On a success, the
+    attacker must reroll their hit roll and take the worst result.
+  effect: Jams incoming missiles
+  mass: 0
+  minClass: fighter
+  power: 2
+  type: vehicle
+  favorite: false
+  tl: 4
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  broken: false
+  destroyed: false
+  juryRigged: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: vtyVmmPOhghgdkbG
+sort: 0
+_key: '!items!vtyVmmPOhghgdkbG'
+

@@ -1,0 +1,157 @@
+name: CWN Contact Creation
+description: >-
+  <p>Contacts come in two degrees: Acquaintances, who know you and will work
+  with you reliably, and Friends, who can be expected to go the extra mile for
+  you.</p><p>1). General Social Circles</p><p>2). Last Significant
+  Interaction</p><p>3). What they get out of acquantince</p><p>4). How well know
+  each other</p><p>5). How first met</p><p>6). What they can do for you</p>
+results:
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: dZ0EW2zBt4tkxwHh
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Contact General Social Circles
+    documentUuid: RollTable.n3FBAJnYisUKYzVe
+    description: ''
+    _key: '!tables.results!YjApHmDxCsdOTSjo.dZ0EW2zBt4tkxwHh'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: wT5m9n7UKnuwMrcW
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Contact Last Significant Interaction
+    documentUuid: RollTable.YjCO3BSRQw7diCwK
+    description: ''
+    _key: '!tables.results!YjApHmDxCsdOTSjo.wT5m9n7UKnuwMrcW'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: 74tEsvVAyZZIPqGO
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Contact What They get out of this?
+    documentUuid: RollTable.3o5qeLAcbfMRtatW
+    description: ''
+    _key: '!tables.results!YjApHmDxCsdOTSjo.74tEsvVAyZZIPqGO'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: 5yOfcqKxRHLcfzll
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Contact How Well do you Know Them?
+    documentUuid: RollTable.BnImIQqyydlPnQoZ
+    description: ''
+    _key: '!tables.results!YjApHmDxCsdOTSjo.5yOfcqKxRHLcfzll'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: X6tSB9Q7rWs84whF
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Contact How First Met
+    documentUuid: RollTable.13czr5kIgbUfLqeV
+    description: ''
+    _key: '!tables.results!YjApHmDxCsdOTSjo.X6tSB9Q7rWs84whF'
+  - type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: M7KHJnKdoEOHsL5v
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Contact What they can do for You
+    documentUuid: RollTable.aEIsJCCT9ZZ2Wg8u
+    description: ''
+    _key: '!tables.results!YjApHmDxCsdOTSjo.M7KHJnKdoEOHsL5v'
+formula: 1d1
+_id: YjApHmDxCsdOTSjo
+img: icons/svg/d20-grey.svg
+replacement: true
+displayRoll: false
+folder: Kaj67bsHMHUR6kI2
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-tables.RollTable.YjApHmDxCsdOTSjo
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754272613626
+  modifiedTime: 1754272613626
+  lastModifiedBy: lKC5x4Yf023Bizof
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!tables!YjApHmDxCsdOTSjo'
+

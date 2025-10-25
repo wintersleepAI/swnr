@@ -1,0 +1,52 @@
+name: Extended Theater
+type: asset
+img: systems/swnr/assets/icons/hawkin/force.png
+folder: b3Lxgyjj3TLLY04C
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.assets.Item.x0e6u3p08uaue6zr
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757287716906
+  modifiedTime: 1757287716906
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: x0e6u3p08uaue6zr
+system:
+  attackDamage: ''
+  attackSource: null
+  attackSpecial: ''
+  attackTarget: null
+  baseOfInfluence: false
+  cost: 10
+  counter: ''
+  description: >-
+    These facilities allow for transporting assets long distances. As an action,
+    any one non-Starship asset, including itself, can be moved between any two
+    worlds within two hexes of the extended theater, at a cost of 1 FacCred.
+  health:
+    max: 10
+    value: 10
+  income: 0
+  maintenance: 0
+  rating: 4
+  tl: 4
+  turnRoll: ''
+  type: Facility
+  unusable: false
+  qualities:
+    permission: false
+    action: true
+    special: false
+  category: force
+  favorite: false
+  stealthed: false
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!x0e6u3p08uaue6zr'
+

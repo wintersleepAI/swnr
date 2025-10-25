@@ -24,7 +24,7 @@ SWN.statAbbreviations = {
 
 SWN.maxTL = 6;
 
-SWN.maxPowerLevel = 5;
+SWN.maxPowerLevel = 10;
 
 SWN.maxSkillRank = 4;
 
@@ -70,11 +70,70 @@ SWN.saveTypes = {
   luck: 'swnr.sheet.saves.luck',
 };
 
-SWN.effortDurationTypes = {
-  scene: 'swnr.effort.scene',
-  day: 'swnr.effort.day',
-  current: 'swnr.effort.current',
-}
+
+SWN.poolResourceNames = ["Effort", "Slots", "Points", "Strain", "Uses"];
+
+SWN.poolCadences = ["commit", "scene", "day"];
+
+SWN.powerSubTypes = ["psychic", "art", "adept", "spell", "mutation"];
+
+SWN.consumptionTypes = {
+  none: 'swnr.consumption.none',
+  poolResource: 'swnr.consumption.poolResource',
+  systemStrain: 'swnr.consumption.systemStrain',
+  consumableItem: 'swnr.consumption.consumableItem',
+  uses: 'swnr.consumption.uses'
+};
+
+SWN.consumptionCadences = {
+  scene: 'swnr.consumption.scene',
+  day: 'swnr.consumption.day',
+  commit: 'swnr.consumption.commit'
+};
+
+SWN.consumptionTiming = {
+  preparation: 'swnr.consumption.timing.preparation',
+  manual: 'swnr.consumption.timing.manual',
+  immediate: 'swnr.consumption.timing.immediate'
+};
+
+SWN.powerPresets = {
+  psychic: { 
+    resourceName: "Effort", 
+    resourceCost: 1, 
+    subResource: "Psychic", 
+    sharedResource: true, 
+    resourceLength: "scene" 
+  },
+  art: { 
+    resourceName: "Effort", 
+    resourceCost: 1, 
+    subResource: "", 
+    sharedResource: true, 
+    resourceLength: "day" 
+  },
+  adept: { 
+    resourceName: "Effort", 
+    resourceCost: 1, 
+    subResource: "Adept", 
+    sharedResource: true, 
+    resourceLength: "day" 
+  },
+  spell: { 
+    resourceName: "Slots", 
+    resourceCost: 1, 
+    leveledResource: true, 
+    sharedResource: true, 
+    resourceLength: "day" 
+  },
+  mutation: { 
+    resourceName: "Uses", 
+    resourceCost: 0, 
+    subResource: "", 
+    sharedResource: false, 
+    resourceLength: "day" 
+  }
+};
 
 SWN.cyberTypes = {
   Head: 'swnr.sheet.cyberware.types.head',

@@ -5,9 +5,12 @@
   "scripts": {
     "build": "sass src/scss/swnr.scss css/swnr.css --style=expanded --no-source-map",
     "watch": "sass src/scss/swnr.scss css/swnr.css --style=expanded --source-map --watch",
+    "compile-release-notes": "node scripts/compile-release-notes.mjs",
     "pack-compendium": "node scripts/pack-compendium.mjs",
     "unpack-compendium": "node scripts/unpack-compendium.mjs",
-    "convert-yaml": "node scripts/conversion/convert-yaml.mjs"
+    "convert-yaml": "node scripts/conversion/convert-yaml.mjs",
+    "convert-csv": "node scripts/csv-import/csv-to-yaml.mjs",
+    "local-release": "npm run build && npm run compile-release-notes && npm run pack-compendium"
   },
   "browserslist": [
     "last 3 versions"
@@ -22,7 +25,9 @@
     "@eslint/js": "^9.15.0",
     "@foundryvtt/foundryvtt-cli": "^1.0.3",
     "@stylistic/eslint-plugin-js": "^2.11.0",
+    "csv-parse": "^6.1.0",
     "eslint": "^9.15.0",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "yaml": "^2.8.0"
   }
 }

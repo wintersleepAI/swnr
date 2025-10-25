@@ -1,0 +1,63 @@
+name: Spare parts
+type: item
+folder: byrj73aeo8TgSYac
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.tools-and-medical.Item.6fezly9tde35gkb2
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286683353
+  modifiedTime: 1757286683353
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 6fezly9tde35gkb2
+system:
+  bundle:
+    amount: 3
+    bundled: false
+  cost: 50
+  description: >-
+    Spare parts: This is a general category for a number of small TL4 components
+    and repair materials. While a simple toolkit or metatool is often enough to
+    fix a damaged object, severely broken devices may need replacement parts.
+    Rather than keep a catalog of bits and pieces, a technician can simply bring
+    along one or more units of spare parts, subtracting one whenever the GM
+    decides that a repair effort requires more than existing salvage can
+    support. A unit of spare parts can also be used to jury-rig some basic,
+    uncomplicated tool or weapon from the equipment list with ten or fifteen
+    minutes of assembly and at least Fix-0 skill. Such bodged devices rarely
+    last longer than one scene.
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 4
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/first-aid-kit.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!6fezly9tde35gkb2'
+

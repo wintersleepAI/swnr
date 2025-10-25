@@ -1,0 +1,56 @@
+name: Spike Inversion Projector
+type: shipWeapon
+img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+folder: 7HIRYMavpuUv01al
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-weapon.Item.3y40achtl06du9h7
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 3y40achtl06du9h7
+system:
+  broken: false
+  cost: 2500000
+  costMultiplier: false
+  damage: 3d8
+  description: >-
+    The SIP uses the ship's spike phasing as an offensive weapon, penetrating
+    the target with a brief incursions of MES energies that largely ignore
+    attempts to evade.
+  hardpoint: 3
+  mass: 3
+  massMultiplier: false
+  minClass: cruiser
+  power: 10
+  powerMultiplier: false
+  qualities: AP 15
+  tl: 4
+  favorite: false
+  destroyed: false
+  juryRigged: false
+  type: ship
+  ab: 0
+  ammo:
+    type: none
+    max: 4
+    value: 4
+  trauma:
+    die: 1d6
+    vehicle: false
+  range:
+    normal: 1
+    max: 2
+  stat: ask
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!3y40achtl06du9h7'
+

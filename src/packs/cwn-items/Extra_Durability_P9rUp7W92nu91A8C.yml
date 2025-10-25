@@ -1,0 +1,39 @@
+name: Extra Durability
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: aPPngDkp3e5tzGZ9
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-vehicle-fittings.Item.iqsrv4xpm8hv6kqs
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267290515
+  modifiedTime: 1754267290515
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 5000
+  description: The vehicle's maximum hit points increase by 25%, rounded up.
+  effect: Increases maximum HP by 25%
+  mass: 4
+  minClass: fighter
+  power: 0
+  type: vehicle
+  favorite: false
+  tl: 4
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  broken: false
+  destroyed: false
+  juryRigged: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: P9rUp7W92nu91A8C
+sort: 0
+_key: '!items!P9rUp7W92nu91A8C'
+

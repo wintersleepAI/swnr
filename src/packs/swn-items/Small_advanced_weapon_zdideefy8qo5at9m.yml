@@ -1,0 +1,79 @@
+name: Small advanced weapon
+type: weapon
+folder: OweUZxSfzsY4xsDh
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.melee.Item.zdideefy8qo5at9m
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286677303
+  modifiedTime: 1757286677303
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: zdideefy8qo5at9m
+system:
+  ab: 0
+  ammo:
+    burst: false
+    longReload: false
+    max: 0
+    suppress: false
+    type: none
+    value: 0
+    current: null
+  cost: 40
+  damage: 1d6
+  description: >-
+    Small weapons are small one-handed implements no larger than a baton or
+    knife. These weapons are easily concealed in normal clothing, and can even
+    be kept Readied up sleeves or in tailored pockets. Many can be thrown at a
+    range up to 10 meters. An advanced one has been given a monoblade edge,
+    kinetic sheathing, thermal wires, a chainsaw blade, or some other TL4 touch.
+    Advanced weapons can ignore primitive plate and hide protections.
+  encumbrance: 1
+  location: other
+  isMelee: true
+  quality: stock
+  range:
+    max: 0
+    normal: 0
+  secondStat: dex
+  shock:
+    ac: 15
+    dmg: 1
+  skill: ''
+  stat: str
+  tl: 4
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  skillBoostsDamage: false
+  skillBoostsShock: false
+  remember:
+    use: false
+    burst: false
+    modifier: 0
+    isNonLethal: false
+  save: null
+  trauma:
+    die: 1d6
+  isTwoHanded: false
+  isNonLethal: false
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!zdideefy8qo5at9m'
+

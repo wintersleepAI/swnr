@@ -1,0 +1,58 @@
+name: Data protocol
+type: item
+folder: A92luWXXOnWWWMUA
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.computing-gear.Item.zpvj2epemd9z81r2
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286668405
+  modifiedTime: 1757286668405
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: zpvj2epemd9z81r2
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 1000
+  description: >-
+    Data protocol: Not so much a device as a collection of standard manuals on a
+    world’s particular data formats and security methodologies. The price listed
+    here are for black-market manuals on worlds where this information is
+    rigidly restricted. On less paranoid planets, the equivalent information can
+    be acquired for free.
+  encumbrance: 0
+  location: other
+  quality: stock
+  tl: 4
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/laptop.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!zpvj2epemd9z81r2'
+

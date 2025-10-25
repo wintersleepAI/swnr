@@ -12,12 +12,15 @@ const { api, sheets } = foundry.applications;
  * @extends {ActorSheetV2}
  */
 export class SWNActorSheet extends SWNBaseSheet {
+  // Private properties
+  #toggleLock = false;
+  static #expandedDescriptions = {};
+  static #expandedPoolTempModifiers = {};
+  static #collapsedSections = {};
+
   constructor(options = {}) {
     super(options);
   }
-
-  // Private properties
-  #toggleLock = false;
 
   /** @override */
   static DEFAULT_OPTIONS = {
@@ -45,13 +48,21 @@ export class SWNActorSheet extends SWNBaseSheet {
       skillUp: this._onSkillUp,
       hitDice: this._onHitDice,
       toggleArmor: this._toggleArmor,
+      toggleContainer: this._toggleContainer,
       toggleLock: this._toggleLock,
+      toggleItemDescription: this._onToggleItemDescription,
       rollStats: this._onRollStats,
       toggleSection: this._toggleSection,
       reactionRoll: this._onReactionRoll,
       moraleRoll: this._onMoraleRoll,
       resourceCreate: this._onResourceCreate,
       resourceDelete: this._onResourceDelete,
+      releaseCommitment: this._onReleaseCommitment,
+      resetPowerUses: this._onResetPowerUses,
+      togglePoolTempModifiers: this._onTogglePoolTempModifiers,
+      addLanguage: this._onAddLanguage,
+      removeLanguage: this._onRemoveLanguage,
+      toggleLanguageAdd: this._onToggleLanguageAdd,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -103,6 +114,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     consumablesList: {
       template: 'systems/swnr/templates/actor/fragments/consumable-list.hbs',
     },
+    poolsDisplay: {
+      template: 'systems/swnr/templates/actor/fragments/pools-display.hbs',
+    },
     skillFrag: {
       template: 'systems/swnr/templates/actor/fragments/skill.hbs',
     },
@@ -117,6 +131,9 @@ export class SWNActorSheet extends SWNBaseSheet {
     },
     compactAbilitiesList: {
       template: 'systems/swnr/templates/actor/fragments/compact-abilities-list.hbs',
+    },
+    compactCarriedList: {
+      template: 'systems/swnr/templates/actor/fragments/compact-carried-list.hbs',
     }
   };
 
@@ -134,12 +151,27 @@ export class SWNActorSheet extends SWNBaseSheet {
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        // ws AI removing skills for now: ,'skills'
-        options.parts.push('combat', 'features', 'gear', 'powers', 'effects');
+        // Check if any power toggles are enabled to show powers tab
+        const showAnyPowerType = this.document.system.tweak.showPsychic || 
+                                this.document.system.tweak.showArts || 
+                                this.document.system.tweak.showSpells || 
+                                this.document.system.tweak.showAdept || 
+                                this.document.system.tweak.showMutation ||
+                                this.document.system.tweak.showCyberware;
+        
+        // Base tabs for characters
+        options.parts.push('combat', 'features', 'gear');
+        
+        // Only add powers tab if any power type toggles are enabled
+        if (showAnyPowerType) {
+          options.parts.push('powers');
+        }
+        
+        options.parts.push('effects');
         options.defaultTab = 'combat';
         break;
       case 'npc':
-        options.parts.push('npc', 'gear', 'effects');
+        options.parts.push('npc', 'features', 'powers', 'gear', 'effects');
         options.defaultTab = 'npc';
         break;
     }
@@ -169,11 +201,23 @@ export class SWNActorSheet extends SWNBaseSheet {
       gameSettings: getGameSettings(),
       headerWidget: headerFieldWidget.bind(this),
       groupWidget: groupFieldWidget.bind(this),
+      // Add expanded descriptions state for item description toggle functionality
+      expandedDescriptions: SWNActorSheet.#expandedDescriptions,
+      expandedPoolTempModifiers: SWNActorSheet.#expandedPoolTempModifiers,
+      collapsedSections: SWNActorSheet.#collapsedSections,
 
     };
 
+    // Ensure shared fragments are preloaded regardless of which parts render
+    await loadTemplates([
+      'systems/swnr/templates/actor/fragments/pools-display.hbs'
+    ]);
+
     // Offloading context prep to a helper function
     this._prepareItems(context);
+    
+    // Prepare pool data for display
+    this._preparePools(context);
 
     return context;
   }
@@ -204,6 +248,10 @@ export class SWNActorSheet extends SWNBaseSheet {
             relativeTo: this.actor,
           }
         );
+        // Add available languages for character language selection
+        if (this.actor.type === 'character') {
+          context.availableLanguages = game.settings.get("swnr", "parsedLanguageList") || [];
+        }
         break;
       case 'effects':
         context.tab = context.tabs[partId];
@@ -296,12 +344,12 @@ export class SWNActorSheet extends SWNBaseSheet {
     const items = [];
     const features = [];
     const cyberware = [];
-    const powers = {
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
+    const powersByType = {
+      psychic: {},
+      art: {},
+      adept: {},
+      spell: {},
+      mutation: {}
     };
 
     // Iterate through items, allocating to containers
@@ -323,17 +371,44 @@ export class SWNActorSheet extends SWNBaseSheet {
       else if (i.type === 'cyberware') {
         cyberware.push(i);
       }
-      // Append to powers.
+      // Append to powers by type and level.
       else if (i.type === 'power') {
-        if (i.system.level != undefined) {
-          powers[i.system.level].push(i);
+        const powerType = i.system.subType || 'psychic';
+        const powerLevel = i.system.level || 0;
+        
+        // Add hasPrepCosts property to the power item
+        i.hasPrepCosts = i.system.consumptions?.some(c => c.timing === "preparation") || false;
+        
+        // Initialize type structure if needed
+        if (!powersByType[powerType]) {
+          powersByType[powerType] = {};
+        }
+        
+        // For arts and mutations, create a flat list (no level grouping)
+        if (powerType === 'art' || powerType === 'mutation') {
+          if (!powersByType[powerType]['flat']) {
+            powersByType[powerType]['flat'] = [];
+          }
+          powersByType[powerType]['flat'].push(i);
+        } else {
+          // For other power types, group by level
+          if (!powersByType[powerType][powerLevel]) {
+            powersByType[powerType][powerLevel] = [];
+          }
+          powersByType[powerType][powerLevel].push(i);
         }
       }
     }
 
-    for (const s of Object.values(powers)) {
-      s.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    // Sort powers within each level
+    for (const powerType of Object.values(powersByType)) {
+      for (const levelArray of Object.values(powerType)) {
+        levelArray.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+      }
     }
+
+    // Prepare powers for template - include all power types regardless of whether they have powers
+    const powers = powersByType;
 
     // Sort then assign
     context.items = items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
@@ -361,6 +436,88 @@ export class SWNActorSheet extends SWNBaseSheet {
   }
 
   /**
+   * Refresh pools by cadence type - delegates to helper for consistency
+   * Used only for non-character actors (NPCs, etc.)
+   * @param {string} cadence - The cadence type to refresh ('scene', 'day')
+   */
+  async _refreshPoolsByCadence(cadence) {
+    // Delegate to orchestrator for NPCs and other non-character actors
+    await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence });
+    this.render(false);
+  }
+
+  /**
+   * Prepare pool data for display in the sheet
+   * @param {Object} context - The context object being prepared
+   */
+  _preparePools(context) {
+    const pools = this.actor.system.pools || {};
+    const poolGroups = {};
+    
+    // Group pools by resource name
+    for (const [poolKey, poolData] of Object.entries(pools)) {
+      const [resourceName, subResource] = poolKey.split(':');
+      
+      if (!poolGroups[resourceName]) {
+        poolGroups[resourceName] = {
+          resourceName,
+          pools: []
+        };
+      }
+      
+      // Coerce potentially malformed values to safe numbers
+      const toNum = (v) => {
+        const n = Number(v);
+        return Number.isFinite(n) ? n : 0;
+      };
+      const value = toNum(poolData.value);
+      const max = toNum(poolData.max);
+      const committed = toNum(poolData.committed);
+      const tempCommit = toNum(poolData.tempCommit);
+      const tempScene = toNum(poolData.tempScene);
+      const tempDay = toNum(poolData.tempDay);
+
+      const poolInfo = {
+        key: poolKey,
+        subResource: subResource || "Default",
+        current: value,
+        max: max,
+        cadence: poolData.cadence,
+        committed,
+        commitments: poolData.commitments || [],
+        tempCommit,
+        tempScene,
+        tempDay,
+        percentage: max > 0 ? Math.round((value / max) * 100) : 0,
+        isEmpty: value === 0,
+        isFull: value >= max,
+        isLow: max > 0 && (value / max) < 0.25,
+        hasCommitments: committed > 0
+      };
+      
+      poolGroups[resourceName].pools.push(poolInfo);
+    }
+    
+    // Sort pools within each group by subResource
+    for (const group of Object.values(poolGroups)) {
+      group.pools.sort((a, b) => {
+        // Put "Default" first, then sort alphabetically
+        if (a.subResource === "Default" && b.subResource !== "Default") return -1;
+        if (b.subResource === "Default" && a.subResource !== "Default") return 1;
+        return a.subResource.localeCompare(b.subResource);
+      });
+    }
+    
+    // Convert to array and sort by resource name
+    const poolGroupsArray = Object.values(poolGroups).sort((a, b) => 
+      a.resourceName.localeCompare(b.resourceName)
+    );
+    
+    context.poolGroups = poolGroupsArray;
+    context.hasAnyPools = poolGroupsArray.length > 0;
+  }
+
+  /**
    * Actions performed after any render of the Application.
    * Post-render steps are not awaited by the render process.
    * @param {ApplicationRenderContext} context      Prepared context data
@@ -382,6 +539,15 @@ export class SWNActorSheet extends SWNBaseSheet {
     this.element.querySelectorAll(".resource-list-val").forEach((d) =>
       d.addEventListener('change', this._onResourceChange.bind(this)));
 
+    this.element.querySelectorAll(".power-prepared-icon").forEach((d) =>
+      d.addEventListener('click', this._onPowerPreparedToggle.bind(this)));
+
+    // Handle temp modifier inputs (header and powers)
+    this.element.querySelectorAll('.pool-temp-modifier[data-path]')
+      .forEach((el) => {
+        el.addEventListener('change', this._onPoolTempModifierChange.bind(this));
+      });
+
     // Toggle lock related elements after render depending on the lock state
     this.element?.querySelectorAll(".lock-icon").forEach((d) => {
       d.style.display = this.#toggleLock ? "none" : "inline";
@@ -389,6 +555,84 @@ export class SWNActorSheet extends SWNBaseSheet {
     this.element?.querySelectorAll(".lock-toggle").forEach((d) => {
       d.style.display = this.#toggleLock ? "inline" : "none";
     });
+
+    // Apply collapsed section states after render
+    this._applySectionStates();
+    this._applyPoolModifierStates();
+  }
+
+  /**
+   * Apply persistent section collapse states after render
+   * @private
+   */
+  _applySectionStates() {
+    // Load collapsed sections from localStorage
+    const storageKey = 'swnr-collapsed-sections';
+    let collapsedSections = {};
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        collapsedSections = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Failed to parse collapsed sections from localStorage:', e);
+    }
+
+    // Update static property and apply states
+    SWNActorSheet.#collapsedSections = collapsedSections;
+
+    for (const [sectionId, isCollapsed] of Object.entries(collapsedSections)) {
+      if (isCollapsed) {
+        const sectionElement = this.element.querySelector("#" + sectionId);
+        const toggleElement = this.element.querySelector("#" + sectionId + "-toggle");
+
+        if (sectionElement) {
+          sectionElement.style.display = "none";
+        }
+
+        if (toggleElement) {
+          toggleElement.innerHTML = "▲";
+        }
+      }
+    }
+  }
+
+  /**
+   * Apply persistent pool modifier states after render
+   * @private
+   */
+  _applyPoolModifierStates() {
+    // Load expanded pool modifiers from localStorage
+    const storageKey = 'swnr-expanded-pool-modifiers';
+    let expandedPoolModifiers = {};
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        expandedPoolModifiers = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Failed to parse expanded pool modifiers from localStorage:', e);
+    }
+
+    // Update static property and apply states
+    SWNActorSheet.#expandedPoolTempModifiers = expandedPoolModifiers;
+
+    for (const [poolKey, isExpanded] of Object.entries(expandedPoolModifiers)) {
+      if (isExpanded) {
+        const badges = this.element.querySelectorAll(`.pool-badge[data-pool-key="${CSS.escape(poolKey)}"]`);
+        badges.forEach((poolBadge) => {
+          poolBadge.classList.add('collapsed');
+          poolBadge.classList.remove('expanded');
+
+          // Update caret direction: down when collapsed, up when expanded
+          const chevron = poolBadge.querySelector('.pool-toggle-button i');
+          if (chevron) {
+            chevron.classList.add('fa-chevron-up');
+            chevron.classList.remove('fa-chevron-down', 'fa-chevron-right', 'fa-chevron-left');
+          }
+        });
+      }
+    }
   }
 
   /**************
@@ -449,32 +693,11 @@ export class SWNActorSheet extends SWNBaseSheet {
         return;
       }
       const isFrail = rest === "no_hp" ? true : false;
-      const systemData = this.actor.system
-      const newStrain = Math.max(systemData.systemStrain.value - 1, 0);
-      const newHP = isFrail
-        ? systemData.health.value
-        : Math.min(systemData.health.value + systemData.level.value, systemData.health.max);
-      await this.actor.update({
-        system: {
-          systemStrain: { value: newStrain },
-          health: { value: newHP },
-          effort: { scene: 0, day: 0 },
-          tweak: {
-            extraEffort: {
-              scene: 0,
-              day: 0,
-            },
-          },
-        },
-      });
+      
+      // Delegate to refresh orchestrator (handles HP/strain + pools)
+      await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence: 'day', frail: isFrail });
     } else if (this.actor.type === "npc") {
-      const newHP = this.actor.system.health.max;
-      await this.actor.update({
-        system: {
-          health: { value: newHP },
-          effort: { scene: 0, day: 0 }
-        },
-      });
+      await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence: 'day' });
     }
     await this._resetSoak();
   }
@@ -482,11 +705,8 @@ export class SWNActorSheet extends SWNBaseSheet {
 
   static async _onScene(event, _target) {
     event.preventDefault();
-    let update = { system: { effort: { scene: 0 } } };
-    if (this.actor.type === "character") {
-      update["tweak.extraEffort.scene"] = 0;
-    }
-    await this.actor.update(update);
+    
+    await globalThis.swnr.utils.refreshActor({ actor: this.actor, cadence: 'scene' });
     this._resetSoak();
   }
 
@@ -502,6 +722,60 @@ export class SWNActorSheet extends SWNBaseSheet {
       console.log("Hit dice rolls are only for PCs/NPCs");
     }
 
+  }
+
+  /**
+   * Change handler for temp modifier inputs that don't participate in form submit
+   */
+  async _onPoolTempModifierChange(event) {
+    event.preventDefault();
+    const input = event.currentTarget;
+    const path = input.dataset.path; // e.g., system.pools.Effort:Default.tempScene
+    if (!path) return;
+
+    const poolBadge = input.closest('.pool-badge[data-pool-key]');
+    const poolKey = poolBadge?.dataset.poolKey || path.match(/system\.pools\.(.+?)\.(tempCommit|tempScene|tempDay)/)?.[1];
+    if (!poolKey) return;
+
+    const pools = this.actor.system.pools || {};
+    const pool = pools[poolKey];
+    if (!pool) {
+      await this.actor.update({ [path]: Number(input.value) || 0 });
+      return;
+    }
+
+    // Parse new and old values
+    const newFieldVal = Number(input.value);
+    const safeNewFieldVal = Number.isFinite(newFieldVal) ? newFieldVal : 0;
+
+    const oldCommit = Number(pool.tempCommit) || 0;
+    const oldScene = Number(pool.tempScene) || 0;
+    const oldDay = Number(pool.tempDay) || 0;
+    const oldTempSum = oldCommit + oldScene + oldDay;
+
+    const fieldMatch = path.match(/\.((tempCommit|tempScene|tempDay))$/);
+    const fieldKey = fieldMatch ? fieldMatch[1] : null;
+    const oldFieldVal = fieldKey ? (Number(pool[fieldKey]) || 0) : 0;
+
+    const newTempSum = oldTempSum - oldFieldVal + safeNewFieldVal;
+
+    // Derive baseMax from current max minus current temp sum
+    const currentMax = Number(pool.max) || 0;
+    const baseMax = Math.max(0, currentMax - oldTempSum);
+    const newMax = Math.max(0, baseMax + newTempSum);
+
+    // Adjust current value by delta temp; clamp to newMax
+    const delta = newTempSum - oldTempSum;
+    const currentVal = Number(pool.value) || 0;
+    const newVal = Math.max(0, Math.min(currentVal + delta, newMax));
+
+    const updates = {
+      [path]: safeNewFieldVal,
+      [`system.pools.${poolKey}.value`]: newVal,
+      [`system.pools.${poolKey}.max`]: newMax
+    };
+
+    await this.actor.update(updates);
   }
 
   async _resetSoak() {
@@ -622,6 +896,18 @@ export class SWNActorSheet extends SWNBaseSheet {
   }
 
   /**
+   * Toggle container open/closed state
+   * @this SWNActorSheet
+   */
+  static async _toggleContainer(event, target) {
+    event.preventDefault();
+    const itemId = target.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    const isOpen = item.system.container.isOpen;
+    await item.update({ "system.container.isOpen": !isOpen });
+  }
+
+  /**
   * @this SWNActorSheet
   */
   static async _toggleLock(event, _target) {
@@ -637,9 +923,47 @@ export class SWNActorSheet extends SWNBaseSheet {
 
   static async _toggleSection(event, target) {
     event.preventDefault();
-    const elem = target.dataset.section; //= target.dataset.section === "open" ? "closed" : "open";
-    this.element.querySelector("#" + elem).style.display = this.element.querySelector("#" + elem).style.display === "none" ? "" : "none";
-    this.element.querySelector("#" + elem + "-toggle").innerHTML = this.element.querySelector("#" + elem + "-toggle").innerHTML === "▼" ? "▲" : "▼";
+    const sectionId = target.dataset.section;
+
+    // Get current collapsed sections from localStorage
+    const storageKey = 'swnr-collapsed-sections';
+    let collapsedSections = {};
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        collapsedSections = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Failed to parse collapsed sections from localStorage:', e);
+    }
+
+    // Toggle the collapsed state
+    if (collapsedSections[sectionId]) {
+      delete collapsedSections[sectionId];
+    } else {
+      collapsedSections[sectionId] = true;
+    }
+
+    // Save to localStorage and update static property
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(collapsedSections));
+    } catch (e) {
+      console.warn('Failed to save collapsed sections to localStorage:', e);
+    }
+    SWNActorSheet.#collapsedSections = collapsedSections;
+
+    // Apply the state to the DOM
+    const isCollapsed = !!collapsedSections[sectionId];
+    const sectionElement = this.element.querySelector("#" + sectionId);
+    const toggleElement = this.element.querySelector("#" + sectionId + "-toggle");
+
+    if (sectionElement) {
+      sectionElement.style.display = isCollapsed ? "none" : "";
+    }
+
+    if (toggleElement) {
+      toggleElement.innerHTML = isCollapsed ? "▲" : "▼";
+    }
   }
 
   /**
@@ -814,6 +1138,12 @@ export class SWNActorSheet extends SWNBaseSheet {
     });
   }
 
+  /**
+   * Handle pool management button clicks
+   * @param {Event} event   The originating click event
+   * @param {HTMLElement} target - The capturing HTML element which defined a [data-action]
+   */
+
   static async _onResourceDelete(event, target) {
     event.preventDefault();
     const dataset = target.dataset;
@@ -833,6 +1163,64 @@ export class SWNActorSheet extends SWNBaseSheet {
     await this.actor.update({ "system.tweak.resourceList": resourceList });
   }
 
+  /**
+   * Handle power prepared icon clicks
+   * @param {Event} event The click event
+   */
+  async _onPowerPreparedToggle(event) {
+    event.preventDefault();
+    
+    // Only handle if editable
+    if (!this.isEditable) return;
+    
+    const icon = event.target;
+    const itemId = icon.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    
+    if (!item || item.type !== "power") {
+      ui.notifications?.error("Power not found");
+      return;
+    }
+
+    const power = item.system;
+    const currentlyPrepared = power.prepared;
+    
+    try {
+      if (!currentlyPrepared) {
+        // Prepare the power
+        const result = await power.prepare();
+        if (!result.success) {
+          ui.notifications?.warn(result.message || "Failed to prepare power");
+          return;
+        }
+        ui.notifications?.info(`${item.name} prepared successfully`);
+      } else {
+        // Unprepare the power
+        const result = await power.unprepare();
+        if (!result.success) {
+          ui.notifications?.warn(result.message || "Failed to unprepare power");
+          return;
+        }
+        ui.notifications?.info(`${item.name} unprepared successfully`);
+      }
+      
+      // Update icon classes immediately for visual feedback
+      if (!currentlyPrepared) {
+        icon.classList.remove('far');
+        icon.classList.add('fas');
+        icon.title = "Prepared";
+      } else {
+        icon.classList.remove('fas');
+        icon.classList.add('far');
+        icon.title = "Not Prepared";
+      }
+      
+    } catch (error) {
+      console.error("Error handling power preparation:", error);
+      ui.notifications?.error("An error occurred while changing power preparation");
+    }
+  }
+
   static async _onAddUse(event, target) {
     event.preventDefault();
     const itemId = target.dataset.itemId;
@@ -850,4 +1238,310 @@ export class SWNActorSheet extends SWNBaseSheet {
       item.system.removeOneUse();
     }
   }
+
+  /**
+   * Handle manual release of committed effort
+   * @param {Event} event   The originating click event
+   * @param {HTMLElement} target - The capturing HTML element which defined a [data-action]
+   */
+  static async _onReleaseCommitment(event, target) {
+    event.preventDefault();
+    const poolKey = target.dataset.poolKey;
+    const powerId = target.dataset.powerId;
+    
+    if (!poolKey || !powerId) {
+      ui.notifications?.error("Missing pool or power ID for commitment release");
+      return;
+    }
+    
+    const actor = this.actor;
+    const commitments = actor.system.effortCommitments || {};
+    const poolCommitments = commitments[poolKey] || [];
+    
+    // Find and remove the specific commitment
+    const commitmentIndex = poolCommitments.findIndex(c => c.powerId === powerId);
+    if (commitmentIndex === -1) {
+      ui.notifications?.warn("Could not find commitment to release");
+      return;
+    }
+    
+    const releasedCommitment = poolCommitments[commitmentIndex];
+    poolCommitments.splice(commitmentIndex, 1);
+    
+    // Update actor with released commitment
+    const newCommitments = { ...commitments };
+    newCommitments[poolKey] = poolCommitments;
+    
+    // Recalculate pool availability
+    const pools = actor.system.pools || {};
+    const pool = pools[poolKey];
+    if (pool) {
+      const totalCommitted = poolCommitments.reduce((sum, c) => sum + c.amount, 0);
+      const newValue = Math.min(pool.max, pool.value + releasedCommitment.amount);
+      
+      await actor.update({
+        "system.effortCommitments": newCommitments,
+        [`system.pools.${poolKey}.value`]: newValue,
+        [`system.pools.${poolKey}.committed`]: totalCommitted,
+        [`system.pools.${poolKey}.commitments`]: poolCommitments
+      });
+      
+      // Create chat message for release
+      const chatMessage = getDocumentClass("ChatMessage");
+      const cadenceShort = releasedCommitment.duration === 'day' ? game.i18n.localize('swnr.effort.dayShort')
+        : releasedCommitment.duration === 'scene' ? game.i18n.localize('swnr.effort.sceneShort')
+        : game.i18n.localize('swnr.effort.commitShort');
+      chatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: actor }),
+        content: `<div class="effort-release">
+          <h3><i class="fas fa-unlock"></i> ${game.i18n.localize("swnr.pools.commitment.released")}</h3>
+          <p><strong>${releasedCommitment.powerName}:</strong> ${releasedCommitment.amount} ${poolKey} ${cadenceShort} effort released</p>
+        </div>`
+      });
+      
+      ui.notifications?.info(`Released ${releasedCommitment.amount} effort from ${releasedCommitment.powerName}`);
+    }
+  }
+
+  /**
+   * Reset power consumption uses to maximum
+   * @param {Event} event - The click event
+   * @param {HTMLElement} target - The clicked element
+   * @returns {Promise<void>}
+   * @static
+   */
+  static async _onResetPowerUses(event, target) {
+    event.preventDefault();
+    
+    // If target is the icon inside the button, get the button element
+    const button = target.closest('.reset-power-uses') || target;
+    const itemId = button.dataset.itemId;
+    const consumptionIndex = parseInt(button.dataset.consumptionIndex);
+    
+    if (!itemId || consumptionIndex === undefined || isNaN(consumptionIndex)) {
+      ui.notifications?.error("Missing item ID or consumption index for power uses reset");
+      return;
+    }
+    
+    const actor = this.actor;
+    const item = actor.items.get(itemId);
+    
+    if (!item || item.type !== 'power') {
+      ui.notifications?.error("Could not find power item for uses reset");
+      return;
+    }
+    
+    const consumptions = foundry.utils.deepClone(item.system.consumptions);
+    const consumption = consumptions[consumptionIndex];
+    
+    if (!consumption || consumption.type !== 'uses') {
+      ui.notifications?.error("Invalid consumption data for uses reset");
+      return;
+    }
+    
+    // Reset the uses to maximum
+    const oldValue = consumption.uses.value;
+    consumption.uses.value = consumption.uses.max;
+    
+    // Update the item
+    await item.update({ "system.consumptions": consumptions });
+    
+    // Create chat message for reset
+    const chatMessage = getDocumentClass("ChatMessage");
+    chatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: actor }),
+      content: `<div class="power-uses-reset">
+        <h3><i class="fas fa-undo"></i> Power Uses Reset</h3>
+        <p><strong>${item.name}:</strong> Uses reset from ${oldValue}/${consumption.uses.max} to ${consumption.uses.max}/${consumption.uses.max}</p>
+      </div>`
+    });
+    
+    ui.notifications?.info(`Reset ${item.name} uses to maximum`);
+  }
+
+  /**
+   * Toggle the display of an item's description
+   * @param {Event} event - The click event
+   * @param {HTMLElement} target - The clicked element
+   * @returns {Promise<void>}
+   * @static
+   */
+  static async _onToggleItemDescription(event, target) {
+    event.preventDefault();
+    
+    const itemId = target.dataset.itemId || target.closest('[data-item-id]')?.dataset.itemId;
+    if (!itemId) return;
+
+    // Toggle the expanded state (using object instead of Set)
+    if (SWNActorSheet.#expandedDescriptions[itemId]) {
+      delete SWNActorSheet.#expandedDescriptions[itemId];
+    } else {
+      SWNActorSheet.#expandedDescriptions[itemId] = true;
+    }
+
+    // Find and toggle the description row
+    const itemRow = target.closest('.item[data-item-id]');
+    if (!itemRow) return;
+
+    const descriptionRow = itemRow.nextElementSibling;
+    if (descriptionRow && descriptionRow.classList.contains('item-description')) {
+      const isExpanded = SWNActorSheet.#expandedDescriptions[itemId];
+      descriptionRow.style.display = isExpanded ? 'block' : 'none';
+    }
+  }
+
+  /**
+   * Handle toggling pool temp modifiers visibility
+   * @param {Event} event - The originating click event
+   * @param {HTMLElement} target - The clicked element
+   */
+  static async _onTogglePoolTempModifiers(event, target) {
+    event.preventDefault();
+
+    const poolKey = target.dataset.poolKey || target.closest('[data-pool-key]')?.dataset.poolKey;
+    if (!poolKey) return;
+
+    // Get current expanded pool modifiers from localStorage
+    const storageKey = 'swnr-expanded-pool-modifiers';
+    let expandedPoolModifiers = {};
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        expandedPoolModifiers = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Failed to parse expanded pool modifiers from localStorage:', e);
+    }
+
+    // Toggle the expanded state
+    if (expandedPoolModifiers[poolKey]) {
+      delete expandedPoolModifiers[poolKey];
+    } else {
+      expandedPoolModifiers[poolKey] = true;
+    }
+
+    // Save to localStorage and update static property
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(expandedPoolModifiers));
+    } catch (e) {
+      console.warn('Failed to save expanded pool modifiers to localStorage:', e);
+    }
+    SWNActorSheet.#expandedPoolTempModifiers = expandedPoolModifiers;
+
+    // Update all matching badges (header and powers) to keep UI in sync
+    const isCollapsed = !!expandedPoolModifiers[poolKey];
+    const badges = this.element.querySelectorAll(`.pool-badge[data-pool-key="${CSS.escape(poolKey)}"]`);
+    badges.forEach((poolBadge) => {
+      poolBadge.classList.toggle('collapsed', isCollapsed);
+      poolBadge.classList.toggle('expanded', !isCollapsed);
+
+      // Update caret direction: down when collapsed, up when expanded
+      const chevron = poolBadge.querySelector('.pool-toggle-button i');
+      if (chevron) {
+        chevron.classList.toggle('fa-chevron-up', !isCollapsed);
+        chevron.classList.toggle('fa-chevron-down', isCollapsed);
+        chevron.classList.remove('fa-chevron-right', 'fa-chevron-left');
+      }
+    });
+  }
+
+  /**
+   * Handle adding a language to the character
+   * @param {Event} event - The originating click event
+   * @param {HTMLElement} target - The clicked element
+   * @private
+   */
+  static async _onAddLanguage(event, target) {
+    event.preventDefault();
+    
+    try {
+      const container = target.closest('.language-add-container');
+      if (!container) {
+        console.error("Language add container not found");
+        return;
+      }
+      
+      const languageSelect = container.querySelector('.language-select');
+      if (!languageSelect) {
+        console.error("Language select not found");
+        return;
+      }
+      
+      const selectedLanguage = languageSelect.value;
+      
+      if (!selectedLanguage || selectedLanguage === "") {
+        ui.notifications.warn("Please select a language to add.");
+        return;
+      }
+      
+      const currentLanguages = [...(this.actor.system.languages || [])];
+      
+      if (!currentLanguages.includes(selectedLanguage)) {
+        currentLanguages.push(selectedLanguage);
+        await this.actor.update({ "system.languages": currentLanguages });
+        
+        // Reset the select and hide the add section
+        languageSelect.value = "";
+        const addSection = container.closest('#language-add-section');
+        if (addSection) {
+          addSection.style.display = 'none';
+        }
+        
+        ui.notifications.info(`Added language: ${selectedLanguage}`);
+      } else {
+        ui.notifications.warn(`${selectedLanguage} is already known by this character.`);
+      }
+    } catch (error) {
+      console.error("Error adding language:", error);
+      ui.notifications.error("Error adding language. Check console for details.");
+    }
+  }
+
+  /**
+   * Handle removing a language from the character
+   * @param {Event} event - The originating click event  
+   * @param {HTMLElement} target - The clicked element
+   * @private
+   */
+  static async _onRemoveLanguage(event, target) {
+    event.preventDefault();
+    
+    const languageIndex = parseInt(target.dataset.langIndex);
+    
+    if (isNaN(languageIndex)) return;
+    
+    const currentLanguages = [...(this.actor.system.languages || [])];
+    if (languageIndex >= 0 && languageIndex < currentLanguages.length) {
+      const removedLanguage = currentLanguages[languageIndex];
+      currentLanguages.splice(languageIndex, 1);
+      await this.actor.update({ "system.languages": currentLanguages });
+      
+      ui.notifications.info(`Removed language: ${removedLanguage}`);
+    }
+  }
+
+  /**
+   * Handle toggling the language add section
+   * @param {Event} event - The originating click event
+   * @param {HTMLElement} target - The clicked element
+   * @private
+   */
+  static async _onToggleLanguageAdd(event, target) {
+    event.preventDefault();
+    
+    const addSection = target.closest('.languages-section').querySelector('#language-add-section');
+    if (addSection) {
+      const isVisible = addSection.style.display !== 'none';
+      addSection.style.display = isVisible ? 'none' : 'block';
+      
+      // Reset the select when showing
+      if (!isVisible) {
+        const select = addSection.querySelector('.language-select');
+        if (select) {
+          select.value = "";
+        }
+      }
+    }
+  }
+
 }

@@ -1,0 +1,61 @@
+name: Tsunami
+type: item
+folder: 3qDhXaAAiQyoDWAW
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.pharmaceuticals.Item.ir610kqmhexyizd0
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286679493
+  modifiedTime: 1757286679493
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: ir610kqmhexyizd0
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 50
+  description: >-
+    Tsunami (Heal-1): An emergency combat stim used to juice certain expendable
+    soldiers before an assault, Tsunami fills them with a reckless disregard for
+    pain and an intense aggressiveness. The short effect duration and difficult
+    application limits its wider use, however. Subjects gain a Morale score of
+    12, 10 extra hit points for ten minutes and a +2 bonus on all hit rolls. At
+    the end of the duration, they immediately lose those 10 hit points, which
+    may leave them mortally wounded. Each application adds 2 System Strain to
+    the target.
+  encumbrance: 0
+  location: other
+  quality: stock
+  tl: 4
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/medicines.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!ir610kqmhexyizd0'
+

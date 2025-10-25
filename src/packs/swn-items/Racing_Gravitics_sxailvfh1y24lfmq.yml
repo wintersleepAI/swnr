@@ -1,0 +1,42 @@
+name: Racing Gravitics
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/gps.svg
+folder: 6XDktrKETRNcBLu6
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.drone-fittings.Item.sxailvfh1y24lfmq
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286953010
+  modifiedTime: 1757286953010
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: sxailvfh1y24lfmq
+system:
+  broken: false
+  cost: 1000
+  costMultiplier: true
+  description: >-
+    The drone is tuned for extra speed. Its flight endurance is halved, but it
+    can now move up to 60 meters per combat round and fly at up to 200 kph out
+    of combat.
+  mass: 1
+  massMultiplier: false
+  power: 0
+  powerMultiplier: false
+  tl: 4
+  type: drone
+  favorite: false
+  minClass: fighter
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!sxailvfh1y24lfmq'
+

@@ -4,7 +4,7 @@
       "target": "ES6"
     },
     "exclude": ["node_modules", "**/node_modules/*"],
-    "include": ["module/swnr.mjs", "foundry/client/**/*.js", "foundry/**/*.mjs"],
+    "include": ["module/swnr.mjs", "module/helpers/config.mjs", "foundry/client/**/*.js", "foundry/**/*.mjs"],
     //"include": ["a5e.mjs", "dnd5e/**/*.mjs", "foundry/**/*.js"],
     "typeAcquisition": {
       "include": ["jquery"]

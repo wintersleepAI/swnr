@@ -1,0 +1,60 @@
+name: Remote link unit
+type: item
+folder: A92luWXXOnWWWMUA
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.computing-gear.Item.2mwevt30q55fwmfi
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286668405
+  modifiedTime: 1757286668405
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: 2mwevt30q55fwmfi
+system:
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 250
+  description: >-
+    Remote link unit: These data broadcast link units have been preloaded with
+    one-time pad security measures, advanced stealth circuitry, and
+    sophisticated data progression algorithms. Two of these links can allow a
+    user to maintain contact with a remote data storage unit. The connection is
+    too “stiff” to allow for easy hacking, however, and it applies a -2 penalty
+    to any attempts to hack through it. Professional-grade security systems
+    often have means to detect the broadcast of a remote link unit.
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 4
+  favorite: false
+  quantity: 1
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/laptop.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!2mwevt30q55fwmfi'
+

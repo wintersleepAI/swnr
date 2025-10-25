@@ -1,0 +1,124 @@
+_id: oi3tnNUSxsklwpDC
+name: Magical Weapon SA, Major
+flags:
+  better-rolltables:
+    table-type: better
+    loot-amount-key: ''
+img: icons/svg/d20-grey.svg
+description: ''
+results:
+  - _id: XEpAZIf6LdeH6lGs
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: text
+    img: icons/svg/d20-black.svg
+    weight: 1
+    range:
+      - 1
+      - 4
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    description: No special abilities.
+    name: ''
+    _key: '!tables.results!oi3tnNUSxsklwpDC.XEpAZIf6LdeH6lGs'
+  - _id: T4TjoYKqPGapJrRV
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 5
+      - 12
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Magical Weapon Abilities
+    documentUuid: Compendium.wwn.magic-tables.sEzwkDybTVwodMFV
+    description: ''
+    _key: '!tables.results!oi3tnNUSxsklwpDC.T4TjoYKqPGapJrRV'
+  - _id: Hiw3WJ5KGexr0iUw
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 9
+      - 12
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Magical Weapon Abilities
+    documentUuid: Compendium.wwn.magic-tables.sEzwkDybTVwodMFV
+    description: ''
+    _key: '!tables.results!oi3tnNUSxsklwpDC.Hiw3WJ5KGexr0iUw'
+  - _id: 89KMv01zqUwfeRie
+    flags:
+      better-rolltables:
+        brt-result-formula:
+          formula: ''
+    type: document
+    img: icons/svg/d20-grey.svg
+    weight: 1
+    range:
+      - 12
+      - 12
+    drawn: false
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    name: Magical Weapon Abilities
+    documentUuid: Compendium.wwn.magic-tables.sEzwkDybTVwodMFV
+    description: ''
+    _key: '!tables.results!oi3tnNUSxsklwpDC.89KMv01zqUwfeRie'
+formula: 1d12
+replacement: true
+displayRoll: true
+_stats:
+  compendiumSource: Compendium.swnr.wwn-magic-tables.RollTable.oi3tnNUSxsklwpDC
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754271918725
+  modifiedTime: 1754271918725
+  lastModifiedBy: lKC5x4Yf023Bizof
+folder: CIqAOfFTmfBqu0S8
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!tables!oi3tnNUSxsklwpDC'
+

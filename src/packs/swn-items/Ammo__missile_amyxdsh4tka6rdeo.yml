@@ -1,0 +1,57 @@
+name: Ammo, missile
+type: item
+folder: rvD6mRxUC48bljtg
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ammo-and-power.Item.amyxdsh4tka6rdeo
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286652097
+  modifiedTime: 1757286652097
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: amyxdsh4tka6rdeo
+system:
+  favorite: false
+  quantity: 1
+  uses:
+    max: 1
+    value: 1
+    ammo: missile
+    consumable: count
+    keepEmpty: false
+    emptyQuantity: 0
+  bundle:
+    amount: 1
+    bundled: false
+  cost: 50
+  description: >-
+    Ammunition, missile: Some characters might have reason to pack along a
+    man-portable rocket launcher, or have one mounted on their favorite gravcar.
+    Heavy weapons and their ammunition are usually outlawed for civilians on
+    most worlds, but this price is for locales where missiles can be bought.
+  encumbrance: 1
+  location: other
+  quality: stock
+  tl: 3
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: 1
+    diceSize: d20
+    diceBonus: +@str.mod+ceil(@lvl / 2)
+effects: []
+img: systems/swnr/assets/icons/game-icons.net/item-icons/ammo-box.svg
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!amyxdsh4tka6rdeo'
+

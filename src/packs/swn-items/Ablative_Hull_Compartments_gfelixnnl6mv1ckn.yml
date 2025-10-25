@@ -1,0 +1,43 @@
+name: Ablative Hull Compartments
+type: shipDefense
+img: systems/swnr/assets/icons/game-icons.net/item-icons/metal-scales.svg
+folder: XJlAoDKKip1GmJb7
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.ship-defense.Item.gfelixnnl6mv1ckn
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1757286946146
+  modifiedTime: 1757286946146
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+_id: gfelixnnl6mv1ckn
+system:
+  broken: false
+  cost: 100000
+  costMultiplier: true
+  description: >-
+    By sacrificing empty hull space in a complex system of ablative blast
+    baffles, a capital-class ship can have a large amount of its mass shot away
+    without actually impinging on its normal function. This grants it a +1 AC
+    bonus and 20 extra maximum hit points.
+  effect: +1 AC and +20 maximum hit points
+  mass: 2
+  massMultiplier: true
+  minClass: capital
+  power: 5
+  powerMultiplier: false
+  favorite: false
+  tl: 4
+  destroyed: false
+  juryRigged: false
+  type: ship
+effects: []
+ownership:
+  default: 0
+  iXDXVi7OlHcRwXw0: 3
+sort: 0
+_key: '!items!gfelixnnl6mv1ckn'
+

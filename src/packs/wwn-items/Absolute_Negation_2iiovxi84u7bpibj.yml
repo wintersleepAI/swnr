@@ -1,0 +1,46 @@
+name: Absolute Negation
+type: power
+sort: 0
+system:
+  description: >-
+    As an Instant action, Commit Effort for the day when you are about to be
+    affected or impeded by an unwanted spell or a standing magical effect
+    created by a spell. You may ignore the magic.
+  favorite: false
+  subType: art
+  source: Mageslayer
+  level: 1
+  prepared: false
+  resourceName: null
+  subResource: null
+  consumptions:
+    - type: poolResource
+      resourceName: Effort
+      subResource: Mageslayer
+      usesCost: 1
+      cadence: day
+      timing: manual
+  roll: ''
+  duration: Instant
+  save: None
+  range: Self
+  skill: ''
+_id: 2iiovxi84u7bpibj
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1754277456826
+  modifiedTime: 1758770738516
+  lastModifiedBy: lKC5x4Yf023Bizof
+  exportSource: null
+folder: 1QSf6od5nEmDkbXu
+flags: {}
+effects: []
+ownership:
+  default: 0
+img: icons/svg/item-bag.svg
+_key: '!items!2iiovxi84u7bpibj'
+

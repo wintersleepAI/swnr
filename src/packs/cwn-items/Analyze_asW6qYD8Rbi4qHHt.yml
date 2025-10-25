@@ -1,0 +1,37 @@
+name: Analyze
+type: program
+img: systems/swnr/assets/icons/game-icons.net/item-icons/program.svg
+folder: YSjeg2WqEsCIXk0y
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-program.Item.ejd1z88vd2m99d7g
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754267253955
+  modifiedTime: 1754267253955
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  accessCost: 0
+  cost: 500
+  description: >-
+    Identify the specific functionality of a device or the general topics of
+    local datafiles. Hackers get a general idea of what kind of device a
+    cyberspace node represents, but Analyze is needed to give specific details
+    of where a device is in reality.
+  selfTerminating: true
+  skillCheckMod: 1
+  target: Device/Data
+  type: verb
+  useAffects: Identify a target device or a file's topic
+  favorite: false
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: asW6qYD8Rbi4qHHt
+sort: 2000000
+_key: '!items!asW6qYD8Rbi4qHHt'
+

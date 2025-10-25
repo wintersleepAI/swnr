@@ -95,6 +95,9 @@
           {{localize 'SWN.Actor.Drone.FIELDS.model.label'}}
         </label>
       </div>
+      {{#if (eq system.model 'custom')}}
+      {{formGroup systemFields.customModel value=system.customModel localize=true widget=headerWidget}}
+      {{/if}}
       {{formGroup systemFields.tl value=system.tl localize=true widget=headerWidget}}
       {{formGroup systemFields.cost value=system.cost localize=true widget=headerWidget}}
 

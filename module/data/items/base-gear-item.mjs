@@ -17,6 +17,15 @@ export default class SWNBaseGearItem extends SWNItemBase {
     schema.location = SWNShared.stringChoices("stowed", CONFIG.SWN.itemLocations);
     schema.quality = SWNShared.stringChoices("stock", CONFIG.SWN.itemQualities);
     schema.noEncReadied = new fields.BooleanField({initial: false});
+    schema.container = new fields.SchemaField({
+      isContainer: new fields.BooleanField({initial: false}),
+      isOpen: new fields.BooleanField({initial: true}),
+      capacity: new fields.SchemaField({
+        max: SWNShared.requiredNumber(0),
+        value: SWNShared.requiredNumber(0)
+      })
+    });
+    schema.containerId = new fields.StringField({blank: true});
     return schema;
   }
 }

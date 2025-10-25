@@ -1,0 +1,46 @@
+name: Trauma Response Suite
+type: shipFitting
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: 4ctWevVXyy54aHh0
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-drone-fittings.Item.quc79akibgh719bf
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266949107
+  modifiedTime: 1754266949107
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  cost: 0
+  description: >-
+    An array of injectors, scalpels, sutures, and trauma chems are built into
+    the drone, allowing it to function as a medkit and make Heal skill checks
+    for a medically-competent pilot or an on-site doc in need of a kit. Such
+    medical efforts require a Main Action from the pilot as usual, and flying
+    drones apply a -2 penalty to the skill check due to their innate
+    instability. Up to six pharmaceutical doses of the pilot`s choice can be
+    loaded into the drone.
+  mass: 1
+  type: drone
+  favorite: false
+  tl: 4
+  power: 1
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: fighter
+  broken: false
+  destroyed: false
+  juryRigged: false
+  effect: ''
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: Dpfe6ULLkIZUYjD3
+sort: 0
+_key: '!items!Dpfe6ULLkIZUYjD3'
+

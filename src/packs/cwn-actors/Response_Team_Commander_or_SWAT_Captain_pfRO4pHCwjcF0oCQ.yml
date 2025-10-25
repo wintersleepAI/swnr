@@ -1,0 +1,497 @@
+name: Response Team Commander or SWAT Captain
+type: npc
+img: icons/svg/mystery-man.svg
+system:
+  health:
+    value: 20
+    max: 20
+  biography: ''
+  species: ''
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 8
+  baseAc: 19
+  meleeAc: 15
+  ab: 7
+  meleeAb: 6
+  systemStrain:
+    value: 0
+    permanent: 0
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: street
+  skillBonus: 2
+  attacks:
+    damage: d6
+    bonusDamage: 0
+    number: 0
+  hitDice: 4d8
+  saves: 13
+  moralScore: 10
+  reaction: unknown
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  homeworld: ''
+  faction: ''
+  pools: {}
+  tweak:
+    showCyberware: true
+    showPsychic: true
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: true
+    showPoolsInPowers: false
+prototypeToken:
+  name: Veteran Corp
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: icons/svg/mystery-man.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+items:
+  - name: Coordination Augment I
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.9j6itsgkrljcwytm
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: mPScKn9rLyQCYti6
+    system:
+      concealment: Medical
+      cost: 50000
+      description: >-
+        The user's natural mindbody interface is tightened. The subject gains a
+        Dexterity score of 14, or +2 if already 14 or higher.
+      effect: Dex 14, or +2 if higher
+      strain: 2
+      type: Nerve
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!pfRO4pHCwjcF0oCQ.mPScKn9rLyQCYti6'
+  - name: Cybereyes (pair)
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.84j3wyp3mp029n4z
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: H0anujxuJcP9QDux
+    system:
+      concealment: Sight
+      cost: 10000
+      description: >-
+        While a single cybernetic eye can be implanted, it is recommended that
+        both be replaced at the same time to improve neural adaptation. These
+        cybereyes are clearly artificial, though most are styled in attractive
+        or striking fashions. They all have perfect 20/20 vision and integral
+        flash protectors, but additional functionality must be implanted
+        separately. A user with a pair of cybereyes or syntheyes halves the
+        System Strain cost of cybernetic eye implants.
+      effect: Flash-protected synthetic eyes
+      strain: 0.25
+      type: Sensory
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!pfRO4pHCwjcF0oCQ.H0anujxuJcP9QDux'
+  - name: Gunlink
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.k78g89sqpqbprnnp
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 6iRGL3UkDWV1Ny8R
+    system:
+      concealment: Touch
+      cost: 25000
+      description: >-
+        Hardwired control points interface with the onboard targeting systems of
+        most modern firearms. When using a modern firearm, the PC ignores range
+        penalties and negates up to 4 points of hit penalties for cover,
+        concealment, or prone targets. Once per scene, as an Instant action,
+        they can reroll a missed attack roll with a gun.
+      effect: Bonus when using firearms
+      strain: 1
+      type: Sensory
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!pfRO4pHCwjcF0oCQ.6iRGL3UkDWV1Ny8R'
+  - name: Medium Armored Suit
+    type: armor
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-armor.Item.4cbgqkw9tknop7oj
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: j3rrbfLXfxMHONej
+    system:
+      ac: 18
+      cost: 10000
+      description: >-
+        Heavy security usually sports armor on this level, including police
+        rapid response teams.
+      encumbrance: 3
+      isHeavy: false
+      isSubtle: false
+      meleeAc: 14
+      shieldACBonus: 0
+      shieldMeleeACBonus: 0
+      soak:
+        max: 10
+        value: 10
+      traumaDiePenalty: 2
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      shield: false
+      use: true
+      dr: 0
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!pfRO4pHCwjcF0oCQ.j3rrbfLXfxMHONej'
+  - name: Advanced Knife
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.hbnlvlb3zhkkf0a1
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: YDq0KPZhJ0sc49HJ
+    system:
+      ammo:
+        burst: false
+        max: 0
+        suppress: false
+        type: none
+        value: 0
+        longReload: false
+        current: null
+      cost: 200
+      damage: 1d6+1
+      description: >-
+        Advanced weapons employ modern polymers, sophisticated metallurgy,
+        fractal edges, electro-stun tech, and a small legion of marketers to
+        sell products that are distinctly superior to the plain steel edges of a
+        prior age. An advanced micro-edged butcher knife can go through bone
+        like bamboo and keep an edge for weeks between sharpenings. The more
+        martial offerings go to even greater lengths in their marketing, with
+        some enterprising serial killers and gang enforcers inking exclusivity
+        deals with particular knife manufacturers.
+      encumbrance: 1
+      isNonLethal: false
+      range:
+        max: 20
+        normal: 10
+      secondStat: dex
+      shock:
+        ac: 15
+        dmg: 3
+      stat: str
+      trauma:
+        die: 1d8
+        rating: 3
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!pfRO4pHCwjcF0oCQ.YDq0KPZhJ0sc49HJ'
+  - name: Combat Rifle
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-weapons.Item.eamiki2rkf0rtwu9
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: zysFXYj8Rk5MYUMD
+    system:
+      ammo:
+        burst: true
+        max: 30
+        suppress: false
+        type: ammo
+        value: 30
+        longReload: false
+        current: null
+      cost: 2500
+      damage: 1d12+1
+      description: >-
+        Rifles and combat rifles are similar semi-automatic tech, though the
+        latter is equipped with a burst-fire selector and usually trades the
+        range of a heavier caliber for the ability to carry more ammunition.
+      encumbrance: 2
+      isNonLethal: false
+      range:
+        max: 300
+        normal: 100
+      secondStat: none
+      shock:
+        ac: 0
+        dmg: 0
+      stat: dex
+      trauma:
+        die: 1d8
+        rating: 3
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      tl: null
+      location: stowed
+      quality: stock
+      noEncReadied: false
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      ab: 0
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      isTwoHanded: false
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      isMelee: false
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!pfRO4pHCwjcF0oCQ.zysFXYj8Rk5MYUMD'
+  - name: Enhanced Reflexes I
+    type: cyberware
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.swnr.cwn-cyberware.Item.j5b8ar9wd7fk1m2z
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.348'
+      systemId: swnr
+      systemVersion: 2.1.0-beta
+      lastModifiedBy: null
+    sort: 0
+    _id: 3NopdHfCq8xsmyG0
+    system:
+      concealment: Medical
+      cost: 100000
+      description: >-
+        Neural acceleration matrices can be deployed to briefly boost the user's
+        reaction speed. Once per scene, as an On Turn action, the user gets a
+        bonus non-cyberspace Main Action.
+      effect: 1/scene, bonus Main Action
+      strain: 2
+      type: Nerve
+      favorite: false
+      tl: 4
+      disabled: false
+      complication: ''
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!pfRO4pHCwjcF0oCQ.3NopdHfCq8xsmyG0'
+effects: []
+folder: 1MnMOlCpFjrZIhXu
+flags: {}
+_stats:
+  compendiumSource: Compendium.cwn-npc.cwn-npc.Actor.pfRO4pHCwjcF0oCQ
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.348'
+  systemId: swnr
+  systemVersion: 2.1.0-beta
+  createdTime: 1758737583614
+  modifiedTime: 1758737583614
+  lastModifiedBy: lKC5x4Yf023Bizof
+_id: pfRO4pHCwjcF0oCQ
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+sort: 0
+_key: '!actors!pfRO4pHCwjcF0oCQ'
+

@@ -1,0 +1,262 @@
+name: Shuttle
+type: ship
+img: systems/swnr/assets/icons/spaceship.png
+folder: GhM4CuerK1TaUzk0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754269970356
+  modifiedTime: 1754269970356
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  health:
+    max: 15
+    value: 15
+  ac: 11
+  armor:
+    max: 0
+    value: 0
+  speed: 3
+  power:
+    max: 3
+    value: 1
+  mass:
+    max: 5
+    value: 1
+  crew:
+    min: 1
+    max: 20
+    current: 0
+  cargo:
+    value: 6
+    max: 6
+  spikeDrive:
+    value: 1
+    max: 1
+  commandPoints: 4
+  npcCommandPoints: 4
+  crewSkillBonus: 1
+  shipClass: fighter
+  shipHullType: shuttle
+  cost: 210000
+  maintenanceCost: 10500
+  operatingCost: 43800
+  maintenanceMonths: 6
+  description: >-
+    This craft is a conventional civilian shuttle, albeit one with a spike drive
+    sufficient to get it to a neighboring system and enough passenger space to
+    make it a minimally- acceptable transport for brave VIPs and light cargo. If
+    used as an inter-system transport, however, at least three crew will be
+    needed to safely navigate a drill. While cheap and flexible, the shuttle is
+    entirely unarmed and acutely vulnerable to piracy or hostile warships. In
+    such cases the pilot’s only recourse is to surrender or hope the small
+    craft’s nimble maneuver drives can keep it away from the attacker long
+    enough to get to safety.
+  traumaTarget: 6
+  crewMembers: []
+  tl: 5
+  mods: ''
+  hardpoints:
+    value: 1
+    max: 1
+  lifeSupportDays:
+    value: 1
+    max: 1
+  fuel:
+    value: 1
+    max: 1
+  amountOwed: 0
+  paymentAmount: 0
+  paymentMonths: 0
+  creditPool: 0
+  lastMaintenance:
+    year: 0
+    month: 0
+    day: 0
+  lastPayment:
+    year: 0
+    month: 0
+    day: 0
+  roles:
+    captain: null
+    bridge: null
+    engineering: null
+    gunner: null
+    comms: null
+  cargoCarried: []
+  actionsTaken: []
+  supportingDept: ''
+  roleOrder: []
+effects: []
+prototypeToken:
+  name: Shuttle
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/spaceship.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: '#ffffff'
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: power
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+items:
+  - name: Atmospheric Configuration
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: 5d1wyymgdlfwvi5o
+    system:
+      broken: false
+      cost: 5000
+      costMultiplier: true
+      description: >-
+        This fitting must be put in place when the ship is built, and cannot be
+        installed on cruiser-class or larger ships. A ship designed for
+        atmospheric flight can land on most solid or aqueous surfaces.
+      effect: 'Can land: frigates and fighters only.'
+      mass: 1
+      massMultiplier: true
+      minClass: fighter
+      power: 0
+      powerMultiplier: false
+      favorite: false
+      tl: 4
+      destroyed: false
+      juryRigged: false
+      type: ship
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!OdPwYNY1RqYKDLxW.5d1wyymgdlfwvi5o'
+  - name: Extended life support
+    type: shipFitting
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/fuel-tank.svg
+    folder: null
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '13.346'
+      systemId: swnr
+      systemVersion: 2.1.0
+      lastModifiedBy: null
+    sort: 0
+    _id: firocsaw8ybmvmns
+    system:
+      broken: false
+      cost: 5000
+      costMultiplier: true
+      description: >-
+        The ship can be designed to accommodate a larger number of crew or
+        passengers. Extended life support can be fitted multiple times; each
+        time, the maximum crew rating of the ship increases by 100% of its
+        normal maximum. Thus, a free merchant who installs this twice can have a
+        maximum complement of 18 people.
+      effect: 'Can land: frigates and fighters only.'
+      mass: 1
+      massMultiplier: true
+      minClass: fighter
+      power: 1
+      powerMultiplier: false
+      favorite: false
+      tl: 4
+      destroyed: false
+      juryRigged: false
+      type: ship
+    effects: []
+    ownership:
+      default: 0
+    _key: '!actors.items!OdPwYNY1RqYKDLxW.firocsaw8ybmvmns'
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: OdPwYNY1RqYKDLxW
+sort: 0
+_key: '!actors!OdPwYNY1RqYKDLxW'
+

@@ -39,6 +39,7 @@ export default class SWNCharacter extends SWNActorBase {
     schema.background = SWNShared.requiredString("");
     schema.employer = SWNShared.requiredString("");
     schema.biography = SWNShared.requiredString("");
+    schema.languages = new fields.ArrayField(SWNShared.requiredString(""));
     schema.credits = new fields.SchemaField({
       debt: SWNShared.requiredNumber(0),
       balance: SWNShared.requiredNumber(0),
@@ -54,18 +55,17 @@ export default class SWNCharacter extends SWNActorBase {
       quickSkill1: SWNShared.emptyString(), //deprecated
       quickSkill2: SWNShared.emptyString(), //deprecated
       quickSkill3: SWNShared.emptyString(), //deprecated
-      extraEffortName: SWNShared.emptyString(),
-      extraEffort: new fields.SchemaField({
-        bonus: SWNShared.requiredNumber(0),
-        current: SWNShared.requiredNumber(0),
-        scene: SWNShared.requiredNumber(0),
-        day: SWNShared.requiredNumber(0),
-        max: SWNShared.requiredNumber(0)
-      }),
       extraHeader: SWNShared.emptyString(),
       showResourceList: new fields.BooleanField({initial: false}),
       showCyberware: new fields.BooleanField({initial: true}),
-      showPowers: new fields.BooleanField({initial: true}),
+      showPsychic: new fields.BooleanField({initial: true}),
+      showArts: new fields.BooleanField({initial: false}),
+      showSpells: new fields.BooleanField({initial: false}),
+      showAdept: new fields.BooleanField({initial: false}),
+      showMutation: new fields.BooleanField({initial: false}),
+      showPoolsInHeader: new fields.BooleanField({ initial: false }),
+      showPoolsInPowers: new fields.BooleanField({ initial: true }),
+      showPoolsInCombat: new fields.BooleanField({ initial: true }),
       resourceList: new fields.ArrayField(new fields.SchemaField({
         name: SWNShared.emptyString(),
         value: SWNShared.requiredNumber(0),
@@ -201,34 +201,8 @@ export default class SWNCharacter extends SWNActorBase {
           i.system.source.toLocaleLowerCase() ===
             game.i18n.localize("swnr.skills.labels.psionic").toLocaleLowerCase()
       );
-    const effort = this.effort;
     const useCyber = game.settings.get("swnr", "useCWNCyber");
     const cyberStrain = useCyber ? this.systemStrain.cyberware : 0;
-    
-    effort.max =
-      Math.max(
-        1,
-        1 +
-          Math.max(this.stats.con.mod, this.stats.wis.mod) +
-          Math.max(0, ...psychicSkills.map((i) => i.system.rank))
-      ) +
-      effort.bonus -
-      cyberStrain;
-    
-    // Floor at 0.
-    effort.max = Math.max(0, effort.max);
-    
-    effort.value = effort.max - effort.current - effort.scene - effort.day;      
-    // extra effort
-    const extraEffort = this.tweak.extraEffort;
-    extraEffort.value =
-      extraEffort.max -
-      extraEffort.current -
-      extraEffort.scene -
-      extraEffort.day -
-      cyberStrain;
-
-    effort.percentage = Math.clamp((effort.value * 100) / effort.max, 0, 100);
 
     //encumbrance
     if (!this.encumbrance)
@@ -299,8 +273,12 @@ export default class SWNCharacter extends SWNActorBase {
     this.favorites = this.parent.items.filter((i) => i.system["favorite"]);;
     this.readiedWeapons = readiedItems.filter((i) => i.type === "weapon");
     this.readiedArmor = readiedItems.filter((i) => i.type === "armor");
+    this.readiedGear = readiedItems.filter((i) => i.type === "item");
     this.gear = gear;
     this.consumables = consumables;
+    
+    // Calculate resource pools from Features/Foci/Edges
+    this._calculateResourcePools();
   }
 
   getRollData() {
@@ -314,7 +292,8 @@ export default class SWNCharacter extends SWNActorBase {
       }
     }
 
-    data["lvl"] =this.level.value;
+    data["lvl"] = this.level.value;
+    data["HD"] = this.hitDie?.value || 0;
     return data;
   }
 
@@ -460,7 +439,138 @@ export default class SWNCharacter extends SWNActorBase {
       ui.notifications?.info("Set the character's HitDie");
     }
 
+    // Calculate resource pools from Features/Foci/Edges
+    this._calculateResourcePools();
+
     return;
   }
+
+  /**
+   * Calculate resource pools based on Features, Foci, and Edges
+   * @private
+   */
+  _calculateResourcePools() {
+    this.pools = this.calculatePoolsFromFeatures({
+      parent: this.parent,
+      dataModel: this,
+      evaluateCondition: (cond) => this._evaluateCondition(cond),
+      evaluateFormula: (formula) => this._evaluateFormula(formula),
+    });
+  }
+
+  /**
+   * Evaluate a condition string (e.g., "@level >= 3")
+   * @param {string} condition - The condition to evaluate
+   * @returns {boolean} - Whether the condition is met
+   * @private
+   */
+  _evaluateCondition(condition) {
+    try {
+      // Simple variable substitution
+      let expr = condition
+        .replace(/@level/g, this.level.value)
+        .replace(/@stats\.(\w+)\.mod/g, (match, stat) => this.stats[stat]?.mod || 0)
+        .replace(/@stats\.(\w+)\.total/g, (match, stat) => this.stats[stat]?.total || 0);
+      
+      // Basic safety check - only allow numbers, operators, and parentheses
+      if (!/^[\d\s+\-*/()>=<!&|.]+$/.test(expr)) {
+        console.warn(`[SWN Pool] Unsafe condition: ${condition}`);
+        return false;
+      }
+      
+      // Use Function constructor for evaluation (safer than eval)
+      return new Function('return ' + expr)();
+    } catch (error) {
+      console.warn(`[SWN Pool] Failed to evaluate condition "${condition}":`, error);
+      return false;
+    }
+  }
+
+  /**
+   * Evaluate a formula string (e.g., "@level + @stats.cha.mod")
+   * @param {string} formula - The formula to evaluate
+   * @returns {number} - The calculated value
+   * @private
+   */
+  _evaluateFormula(formula) {
+    // Validate formula contains only allowed patterns before substitution
+    const allowedPattern = /^[@\w\s+\-*/().MathMaxinflorceliwStrgmn,._]+$/;
+    if (!allowedPattern.test(formula)) {
+      throw new Error(`Unsafe formula: ${formula}`);
+    }
+    
+    // Get psychic skills for special psychic calculations
+    const psychicSkills = this.parent.items.filter(
+      (i) =>
+        i.type === "skill" &&
+        i.system.source.toLocaleLowerCase() ===
+          game.i18n.localize("swnr.skills.labels.psionic").toLocaleLowerCase()
+    );
+    const highestPsychicSkill = Math.max(0, ...psychicSkills.map((i) => i.system.rank));
+    
+    // Simple variable substitution
+    let expr = formula
+      .replace(/@level/g, this.level.value)
+      .replace(/@stats\.(\w+)\.mod/g, (match, stat) => this.stats[stat]?.mod || 0)
+      .replace(/@stats\.(\w+)\.total/g, (match, stat) => this.stats[stat]?.total || 0)
+      .replace(/@skills\.psychic\.highest/g, highestPsychicSkill)
+      .replace(/@skills\.([^.]+)\.rank/g, (match, skillName) => {
+        // Replace underscores with spaces for skill names
+        const decodedSkillName = skillName.replace(/_/g, ' ');
+        const skill = this.parent.items.find(i => 
+          i.type === "skill" && 
+          i.name.toLocaleLowerCase() === decodedSkillName.toLocaleLowerCase()
+        );
+        return skill?.system.rank ?? -1; // -1 for untrained
+      });
+    
+    // Final safety check - after substitution should only contain numbers and math
+    if (!/^[\d\s+\-*/().MathMaxinflorceliwStrgmn,]+$/.test(expr)) {
+      throw new Error(`Unsafe expression after substitution: ${expr}`);
+    }
+    
+    // Use Function constructor for evaluation with Math object available
+    const result = new Function('Math', 'return ' + expr)(Math);
+    
+    // If the formula already used Math.ceil or Math.floor, don't apply additional rounding
+    // Otherwise, default to Math.floor (current behavior)
+    if (formula.includes('Math.ceil') || formula.includes('Math.floor')) {
+      return Math.max(0, Math.round(result)); // Use round to preserve existing rounding
+    } else {
+      return Math.max(0, Math.floor(result)); // Default behavior: round down
+    }
+  }
+
+  /**
+   * Handle a full rest for the night (day cadence refresh)
+   * @param {Object} options - Rest options
+   * @param {boolean} options.isFrail - Whether this is a frail rest (no HP recovery)
+   * @returns {Promise<RefreshResult>} Rest results in standardized format
+   */
+  async restForNight(options = {}) {
+    const { isFrail = false } = options;
+    // Delegate completely to orchestrator for consistency
+    return await globalThis.swnr.utils.refreshActor({ actor: this.parent, cadence: 'day', frail: isFrail });
+  }
+
+  /**
+   * Handle end of scene refresh (scene cadence refresh)
+   * @returns {Promise<RefreshResult>} Scene refresh results in standardized format
+   */
+  async endScene() {
+    return await globalThis.swnr.utils.refreshActor({ actor: this.parent, cadence: 'scene' });
+  }
+
+  /**
+   * Collect all refresh updates without applying them
+   * @param {string} cadence - The cadence to refresh ('scene' or 'day')
+   * @returns {Promise<Object>} Object containing poolUpdates, itemUpdates, and effortReleased
+   * @private
+   */
+  // Removed: _collectRefreshUpdates — logic consolidated into refresh-helpers.refreshActorPools
+  
+  // Removed: _collectConsumptionUseUpdates, _updateEmbeddedItemsFromFlattened, _collectPreparedPowerUpdates — consolidated in refresh-helpers
+  
+  // Removed: per-actor standardized chat utilities — handled by refresh-orchestrator
 
 }

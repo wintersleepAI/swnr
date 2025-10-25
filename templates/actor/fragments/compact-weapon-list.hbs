@@ -1,13 +1,10 @@
 <ol class='items-list'>
   <li class='flex flexrow items-header'>
-    <div class='item-name'>
-      {{#if (eq actorType 'character')}}
-      {{localize 'swnr.item.locationReadied'}}
-      {{/if}}
+    <div class='item-name item-name-long'>
       {{localize 'swnr.sheet.tabs.weapons-short'}}
     </div>
     <div class="flex-group-center item-prop">
-      {{localize "swnr.weapon.damage"}}
+      {{localize "swnr.weapon.dmg"}}/{{localize "swnr.item.ammo.ammo"}}
     </div>
     <div class='item-controls-small'>
       {{#if @root.editable}}
@@ -41,14 +38,10 @@
 
       <!-- Damage Column -->
       <div class="flex-group-center item-prop">
-        {{item.system.damage}}
-      </div>
-
-      <!-- Ammo Column -->
-      <div class="flex-group-center item-prop">
-        {{#if (and item.system.ammo (ne item.system.ammo.type "none"))}}
-          <span>{{item.system.ammo.value}} / {{item.system.ammo.max}}</span>
-        {{/if}}
+        {{item.system.damage}} 
+         {{#if (and item.system.ammo (ne item.system.ammo.type "none"))}}
+           / {{item.system.ammo.value}}
+         {{/if}}
       </div>
 
       <!-- Controls -->

@@ -1,0 +1,36 @@
+name: Operator's Fortune
+type: feature
+img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+folder: bmlxot0Gn0smSX1W
+flags: {}
+_stats:
+  compendiumSource: Compendium.swnr.cwn-edges.Item.ttyjnz8vdqjg2qgm
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.346'
+  systemId: swnr
+  systemVersion: 2.1.0
+  createdTime: 1754266777803
+  modifiedTime: 1754266777803
+  lastModifiedBy: lKC5x4Yf023Bizof
+system:
+  description: >-
+    You may or may not be good, but you are undeniably lucky. Once per game
+    session as an Instant action, when something bad happens to you such as an
+    injury, a failed save, or a botched skill check, test your luck and roll
+    1d6. On a 1, the bad event is unaffected. On a 2-5, you somehow avert the
+    consequences by blind chance. On a 6, it actually lands on an enemy or rival
+    of the GM's choice, if that's possible. Only events that happened in this
+    same round can be averted.
+  favorite: false
+  level: 0
+  type: edge
+  poolsGranted: []
+effects: []
+ownership:
+  default: 0
+  lKC5x4Yf023Bizof: 3
+_id: AUZ4quqQC26vEomH
+sort: 0
+_key: '!items!AUZ4quqQC26vEomH'
+
