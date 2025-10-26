@@ -408,6 +408,9 @@
           },
           "fuelType": {
             "label": "Fuel Type"
+          },
+          "cargo": {
+            "label": "Cargo"
           }
         }
       },
@@ -1693,7 +1696,8 @@
           "s": "S",
           "m": "M",
           "l": "L"
-        }
+        },
+        "cargo": "Carried Cargo & Gear"
       },
       "faction": {
         "tags": "Tags",

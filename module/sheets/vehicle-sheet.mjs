@@ -132,7 +132,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
         break;
       case 'drone':
       case 'vehicle':
-        options.parts.push('shipCombat', 'effects');
+        options.parts.push('shipCombat', 'shipCargo', 'effects');
         options.defaultTab = 'shipCombat';
         break;
     }

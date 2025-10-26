@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
  - Bulk add skills dialog now has a dropdown for skill lists
  - Moved movement attribute to Features tab.
  - Changed header layout
+ - Added fuel to vehicle sheet (behind AWN setting)
+ - Added run time to vehicle sheet (behind AWN setting)
+ - Added cargo to vehicle sheet (tracks cargo and gear carried)
  - NPC reaction roll now uses a private roll and takes a modifier
  - Updated NPC import from CSV
  - Misc fixes and more AWN support

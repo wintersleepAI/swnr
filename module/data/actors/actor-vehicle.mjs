@@ -16,6 +16,14 @@ export default class SWNVehicle extends SWNVehicleBase {
     schema.runHours = SWNShared.resourceField(1,1);
     schema.fuelNeeded = SWNShared.requiredNumber(0);
     schema.fuelType = SWNShared.stringChoices("typeBPower", CONFIG.SWN.fuelTypes);
+    schema.cargo = SWNShared.resourceField(5,5);
+    schema.cargoCarried = new fields.ArrayField(
+      new fields.SchemaField({
+        name: SWNShared.requiredString("CargoX"),
+        value: new fields.NumberField({initial: 0, integer: true}),
+        max: new fields.NumberField({initial: 0, integer: true}),
+      })
+    );
     return schema;
   }
 
@@ -62,5 +70,10 @@ export default class SWNVehicle extends SWNVehicleBase {
     this.power.value = shipPower;
     this.mass.value = shipMass;
     this.hardpoints.value = shipHardpoint;
+
+    let cargoUsed = this.cargoCarried.reduce((acc, curr) => acc + curr.value, 0);
+    let gearUsed =  this.carriedGear.reduce((acc, curr) => acc + curr.system.encumbrance, 0);
+    this.cargo.value = (cargoUsed + gearUsed);
+    this.cargo.percentage = Math.clamp((this.cargo.value * 100) / this.cargo.max, 0, 100);
   }
 }

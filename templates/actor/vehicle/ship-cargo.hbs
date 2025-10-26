@@ -1,9 +1,22 @@
 <section class='tab ship shipCargo sheet-body {{tab.cssClass}}' data-group='primary' data-tab='shipCargo'>
   <div class="grid grid-cols-2">
-    <div>
-      {{formGroup systemFields.cargo value=system.cargo localize=true widget=groupWidget}}
-    </div>
-    <div> <!--empty--> </div>
+    {{#if (eq actor.type 'ship')}}
+      <div>
+        {{formGroup systemFields.cargo value=system.cargo localize=true widget=groupWidget}}
+      </div>
+      <div> <!--empty--> </div>
+    {{/if}}
+    {{#if (eq actor.type 'vehicle')}}
+      <div class="grid-span-2" style="display: flex; justify-content: center; align-items: center;">
+        <div class="resource-bar"><!-- The readied bar -->
+          <div style="width:{{actor.system.cargo.percentage}}%" class="ready-fill {{#if (gt actor.system.cargo.value actor.system.cargo.max)}}full-fill{{/if}}"></div>
+            <div class="text">
+              {{localize 'swnr.sheet.vehicle.cargo'}}:
+              {{actor.system.cargo.value}}/{{actor.system.cargo.max}}
+            </div>
+        </div>
+      </div>
+    {{/if}}
     <!-- ship cargo -->
     <div>
       <ol class='items-list'>

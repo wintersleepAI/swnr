@@ -121,6 +121,7 @@
       {{formGroup systemFields.tonnage value=system.tonnage localize=true widget=headerWidget}}
       {{formGroup systemFields.tl value=system.tl localize=true widget=headerWidget}}
       {{formGroup systemFields.crew value=system.crew localize=true widget=headerWidget}}
+      {{formGroup systemFields.cargo value=system.cargo localize=true widget=headerWidget readonly=0}}
         {{#if (eq gameSettings.useAWNVehicle true)}}
           {{formGroup systemFields.runHours value=system.runHours localize=true widget=headerWidget}}
           {{formGroup systemFields.fuelNeeded value=system.fuelNeeded localize=true widget=headerWidget}}
