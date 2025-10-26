@@ -399,6 +399,15 @@
           },
           "size": {
             "label": "Size"
+          },
+          "runHours": {
+            "label": "Run Hours"
+          },
+          "fuelNeeded": {
+            "label": "Fuel Needed"
+          },
+          "fuelType": {
+            "label": "Fuel Type"
           }
         }
       },
@@ -1925,15 +1934,19 @@
       "attrRollUnderEqual": "Roll d20 under or equal",
       "attackRoll": "Attack Roll?",
       "attackRollHint": "What to roll for attacks?",
-      "useTrauma": "Use Trauma?",
+      "useTrauma": "Use CWN Trauma?",
       "useTraumaHint": "Use CWN trauma dice for rolling attacks?",
-      "useStress": "Use Stress?",
+      "useStress": "Use AWN Stress?",
       "useStressHint": "Use AWN stress attribute for characters?",
+      "useAWNVehicle": "Use AWN Vehicle Options?",
+      "useAWNVehicleHint": "Use AWN vehicle options (Run Hours, Fuel, etc)?",
+      "useAWNGear": "Use AWN Gear Condition?",
+      "useAWNGearHint": "Use AWN gear condition options (broken, destroyed, worn, etc)?",
       "useCWNArmor": "Use CWN Armor?",
       "useCWNArmorHint": "Use CWN armor options (soak, melee and ranged AC)?",
       "useCWNCyber": "Use CWN Cyber Options?",
       "useCWNCyberHint": "Use CWN cyber options (concealment, type, complications, etc)?",
-      "showAccess" : "Show Access?",
+      "showAccess" : "Show CWN Access?",
       "showAccessHint" : "Show Access on the character sheet?",
       "search": "Compendium item search?",
       "searchHint": "What compendiums to search for items for in-sheet item adds?",
@@ -2028,7 +2041,8 @@
       "consumable": {
         "none": "None",
         "count": "Individual",
-        "bundle": "Bundle/Clip"
+        "bundle": "Bundle/Clip",
+        "fuel": "Fuel"
       },
       "container": {
         "settings": "Container Settings",

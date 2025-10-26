@@ -13,6 +13,9 @@ export default class SWNVehicle extends SWNVehicleBase {
     schema.kmph = SWNShared.requiredNumber(0);
     schema.tonnage = SWNShared.requiredNumber(0);
     schema.size = SWNShared.stringChoices('s', CONFIG.SWN.vehicleClasses);
+    schema.runHours = SWNShared.resourceField(1,1);
+    schema.fuelNeeded = SWNShared.requiredNumber(0);
+    schema.fuelType = SWNShared.stringChoices("typeBPower", CONFIG.SWN.fuelTypes);
     return schema;
   }
 

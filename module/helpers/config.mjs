@@ -46,6 +46,11 @@ SWN.itemConsumableTypes = {
   bundle: 'swnr.item.consumable.bundle',
 }
 
+SWN.fuelTypes = {
+  fuel: 'swnr.item.consumable.fuel',
+  typeBPower: 'swnr.ammo.typeBPower',
+};
+
 SWN.ammoTypes = {
   none: 'swnr.ammo.none',
   typeAPower: 'swnr.ammo.typeAPower',
