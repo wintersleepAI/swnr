@@ -187,9 +187,9 @@ export const registerSettings = function () {
     default: false,
   });
 
-  game.settings.register("swnr", "useAWNGear", {
-    name: "swnr.settings.useAWNGear",
-    hint: "swnr.settings.useAWNGearHint",
+  game.settings.register("swnr", "useAWNGearCondition", {
+    name: "swnr.settings.useAWNGearCondition",
+    hint: "swnr.settings.useAWNGearConditionHint",
     scope: "world",
     config: true,
     type: Boolean,
@@ -260,7 +260,7 @@ export const getGameSettings = function () {
     useCWNCyber: game.settings.get("swnr", "useCWNCyber"),
     useStress: game.settings.get("swnr", "useStress"),
     useAWNVehicle: game.settings.get("swnr", "useAWNVehicle"),
-    useAWNGear: game.settings.get("swnr", "useAWNGear"),
+    useAWNGearCondition: game.settings.get("swnr", "useAWNGearCondition"),
     showAccess: game.settings.get("swnr", "showAccess"),
     // search: game.settings.get("swnr", "search"),
     languagePresetSelector: game.settings.get("swnr", "languagePresetSelector"),

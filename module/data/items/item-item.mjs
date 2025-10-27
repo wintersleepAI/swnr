@@ -39,6 +39,7 @@ export default class SWNItemItem extends SWNBaseGearItem {
         nullable: false,
       }),
     });
+    schema.condition = SWNShared.stringChoices("perfect", CONFIG.SWN.gearCondition);
     return schema;
   }
 

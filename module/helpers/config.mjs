@@ -75,6 +75,26 @@ SWN.saveTypes = {
   luck: 'swnr.sheet.saves.luck',
 };
 
+/*
+Perfect No penalty to use.
+Worn No penalty to use.
+Light Damage -1 to hit or damage for weapons, -1to skill checks using the item
+Moderate Damage -2 to hit or damage, -1 to skill checks using the item, 20% chance to fail
+Heavy Damage -3 to hit or damage, -2 to skill checks using the item, 50% chance to fail
+Broken The object is inoperable/unusable.
+Ruined It’s broken beyond any repair.
+*/
+
+SWN.gearCondition = {
+  perfect: 'swnr.sheet.gear.condition.perfect',
+  worn: 'swnr.sheet.gear.condition.worn',
+  light: 'swnr.sheet.gear.condition.light',
+  moderate: 'swnr.sheet.gear.condition.moderate',
+  heavy: 'swnr.sheet.gear.condition.heavy',
+  broken: 'swnr.sheet.gear.condition.broken',
+  ruined: 'swnr.sheet.gear.condition.ruined'
+};
+  
 
 SWN.poolResourceNames = ["Effort", "Slots", "Points", "Strain", "Uses"];
 
