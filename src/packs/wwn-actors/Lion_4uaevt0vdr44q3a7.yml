@@ -126,10 +126,6 @@ items:
       shock:
         dmg: 2
         ac: 13
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
       isTwoHanded: false
       stat: str
       skill: punch
@@ -167,10 +163,6 @@ items:
       shock:
         dmg: 1
         ac: 13
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
       isTwoHanded: false
       stat: str
       skill: punch

@@ -140,10 +140,6 @@ items:
       shock:
         dmg: 0
         ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
       isTwoHanded: true
       stat: dex
       skill: shoot
@@ -184,10 +180,6 @@ items:
       shock:
         dmg: 2
         ac: 13
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
       isTwoHanded: false
       stat: str
       skill: stab
@@ -229,10 +221,6 @@ items:
       shock:
         dmg: 3
         ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
       isTwoHanded: true
       stat: str
       skill: stab
@@ -273,10 +261,6 @@ items:
       shock:
         dmg: 2
         ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
       isTwoHanded: true
       stat: str
       skill: stab
@@ -317,10 +301,6 @@ items:
       shock:
         dmg: 2
         ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
       isTwoHanded: true
       stat: str
       skill: stab
