@@ -133,58 +133,58 @@ prototypeToken:
     disposition: false
   movementAction: null
 items:
-  - name: Plate Armor
-    type: armor
-    system:
-      description: >-
-        Plate armor is an extremely expensive suit of tailored metal pieces that
-        cover both the vitals and the limbs of the wearer. Heavy armor is the
-        thickest, toughest panoply available on the market, and its bulk and
-        noise make its encumbrance apply as a penalty to Sneak or Exert checks
-        made by the wearer.
-      cost: 2000
-      ac: 17
-      meleeAc: 17
-      traumaDiePenalty: 0
-      soak:
-        value: 0
+- name: Plate Armor
+  type: armor
+  system:
+    description: >-
+      Plate armor is an extremely expensive suit of tailored metal pieces that
+      cover both the vitals and the limbs of the wearer. Heavy armor is the
+      thickest, toughest panoply available on the market, and its bulk and
+      noise make its encumbrance apply as a penalty to Sneak or Exert checks
+      made by the wearer.
+    cost: 2000
+    ac: 17
+    meleeAc: 17
+    traumaDiePenalty: 0
+    soak:
+      value: 0
+      max: 0
+    isSubtle: false
+    shield: false
+    encumbrance: 2
+    quality: stock
+    tl: 3
+    favorite: false
+    quantity: 1
+    bundle:
+      bundled: false
+    location: stowed
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
         max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 2
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      use: false
-      dr: 0
-      isHeavy: false
-    _id: s23pc1m9gwvixtqc
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!KkW8U3fn1Euiun08.s23pc1m9gwvixtqc'
+        value: 0
+    use: false
+    dr: 0
+    isHeavy: false
+  _id: s23pc1m9gwvixtqc
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!KkW8U3fn1Euiun08.s23pc1m9gwvixtqc'
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3
@@ -192,3 +192,4 @@ _id: KkW8U3fn1Euiun08
 sort: 0
 _key: '!actors!KkW8U3fn1Euiun08'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg

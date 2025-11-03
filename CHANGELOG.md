@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
  - Added run time to vehicle sheet (behind AWN setting)
  - Added cargo to vehicle sheet (tracks cargo and gear carried)
  - NPC reaction roll now uses a private roll and takes a modifier
+ - Fixed issues for ship / mech attack
+ - Removed roll formula from item description by default
+ - Updated WWN / OSE compendium content
  - Updated NPC import from CSV
  - Misc fixes and more AWN support
 

@@ -133,59 +133,59 @@ prototypeToken:
     disposition: false
   movementAction: null
 items:
-  - name: Great Armor
-    type: armor
-    system:
-      description: >-
-        Great armor is less finely tailored, relying instead on stacking layer
-        upon layer of mail, plates, hide, cloth, and other protective materials
-        until a suit almost too heavy for movement is finally assembled. Heavy
-        armor is the thickest, toughest panoply available on the market, and its
-        bulk and noise make its encumbrance apply as a penalty to Sneak or Exert
-        checks made by the wearer.
-      cost: 4000
-      ac: 18
-      meleeAc: 18
-      traumaDiePenalty: 0
-      soak:
-        value: 0
+- name: Great Armor
+  type: armor
+  system:
+    description: >-
+      Great armor is less finely tailored, relying instead on stacking layer
+      upon layer of mail, plates, hide, cloth, and other protective materials
+      until a suit almost too heavy for movement is finally assembled. Heavy
+      armor is the thickest, toughest panoply available on the market, and its
+      bulk and noise make its encumbrance apply as a penalty to Sneak or Exert
+      checks made by the wearer.
+    cost: 4000
+    ac: 18
+    meleeAc: 18
+    traumaDiePenalty: 0
+    soak:
+      value: 0
+      max: 0
+    isSubtle: false
+    shield: false
+    encumbrance: 3
+    quality: stock
+    tl: 3
+    favorite: false
+    quantity: 1
+    bundle:
+      bundled: false
+    location: stowed
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
         max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 3
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      use: false
-      dr: 0
-      isHeavy: false
-    _id: mnpmlgemn6dhxdem
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!x4QKp7U6B9nRNzhw.mnpmlgemn6dhxdem'
+        value: 0
+    use: false
+    dr: 0
+    isHeavy: false
+  _id: mnpmlgemn6dhxdem
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!x4QKp7U6B9nRNzhw.mnpmlgemn6dhxdem'
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3
@@ -193,3 +193,4 @@ _id: x4QKp7U6B9nRNzhw
 sort: 100000
 _key: '!actors!x4QKp7U6B9nRNzhw'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg

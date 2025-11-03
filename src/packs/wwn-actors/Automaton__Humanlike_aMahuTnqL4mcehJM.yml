@@ -133,77 +133,69 @@ prototypeToken:
     disposition: false
   movementAction: null
 items:
-  - name: Sword, Long
-    type: weapon
-    system:
-      description: >-
-        Swords are common sidearms throughout the Latter Earth. The expense of
-        forging a large blade makes it a symbol of wealth and status in many
-        cultures, and its convenience makes it a favored arm for street wear.
-      cost: 100
-      damage: 1d8
-      range:
-        normal: 0
+- name: Sword, Long
+  type: weapon
+  system:
+    description: >-
+      Swords are common sidearms throughout the Latter Earth. The expense of
+      forging a large blade makes it a symbol of wealth and status in many
+      cultures, and its convenience makes it a favored arm for street wear.
+    cost: 100
+    damage: 1d8
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 13
+    isTwoHanded: false
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+    favorite: false
+    quantity: 1
+    bundle:
+      bundled: false
+    location: stowed
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
         max: 0
-      shock:
-        dmg: 2
-        ac: 13
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-        longReload: false
-        suppress: false
-        value: 10
-        current: null
-      isTwoHanded: false
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      secondStat: null
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma:
-        die: 1d6
+        value: 0
+    secondStat: null
+    skillBoostsDamage: false
+    skillBoostsShock: false
+    remember:
+      use: false
+      burst: false
+      modifier: 0
       isNonLethal: false
-      isMelee: false
-    _id: 3v08yldscxs4k9tn
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!aMahuTnqL4mcehJM.3v08yldscxs4k9tn'
+    save: null
+    trauma:
+      die: 1d6
+    isNonLethal: false
+    isMelee: false
+  _id: 3v08yldscxs4k9tn
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!aMahuTnqL4mcehJM.3v08yldscxs4k9tn'
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3
@@ -211,3 +203,4 @@ _id: aMahuTnqL4mcehJM
 sort: 200000
 _key: '!actors!aMahuTnqL4mcehJM'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/golem-head.svg
