@@ -109,100 +109,101 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Bite
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 2d4
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 3
-        ac: 15
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: y84n8yh54ojwyqur
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920802
-      modifiedTime: 1754273920802
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!cof0w4cquo1143op.y84n8yh54ojwyqur'
-  - name: Training
-    type: item
-    system:
-      description: >-
-        At the referee's discretion, captured cubs may be trained like dogs.
-        Dire wolves are ferocious and extremely difficult to train.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: nu1qbc42n2a84gv1
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920802
-      modifiedTime: 1754273920802
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!cof0w4cquo1143op.nu1qbc42n2a84gv1'
-  - name: Mounts
-    type: item
-    system:
-      description: Sometimes trained as mounts by goblins.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: nz9n821eavqchq24
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920802
-      modifiedTime: 1754273920802
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!cof0w4cquo1143op.nz9n821eavqchq24'
+- name: Bite
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 2d4
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 3
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: y84n8yh54ojwyqur
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920802
+    modifiedTime: 1754273920802
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!cof0w4cquo1143op.y84n8yh54ojwyqur'
+- name: Training
+  type: item
+  system:
+    description: >-
+      At the referee's discretion, captured cubs may be trained like dogs.
+      Dire wolves are ferocious and extremely difficult to train.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: nu1qbc42n2a84gv1
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920802
+    modifiedTime: 1754273920802
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!cof0w4cquo1143op.nu1qbc42n2a84gv1'
+- name: Mounts
+  type: item
+  system:
+    description: Sometimes trained as mounts by goblins.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: nz9n821eavqchq24
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920802
+    modifiedTime: 1754273920802
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!cof0w4cquo1143op.nz9n821eavqchq24'
 _key: '!actors!cof0w4cquo1143op'
 
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/wolf-head.svg

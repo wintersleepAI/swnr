@@ -109,128 +109,129 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Bite
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: '1'
-        ac: '15'
-      isTwoHanded: false
-      stat: dex
-      skill: shoot
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: nqpydo95dwsn5sev
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!xlx1123g8673pfco.nqpydo95dwsn5sev'
-  - name: Heads
-    type: item
-    system:
-      description: '[[/r 1d8+4]] heads; 1 HD per head. Attack bonus equal to HD.'
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: lpb8u2llrfbpvw9i
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!xlx1123g8673pfco.lpb8u2llrfbpvw9i'
-  - name: Disabling Heads
-    type: item
-    system:
-      description: For every 8 hp damage taken, one head is disabled (cannot attack).
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 3ja7qh0es8maphg6
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!xlx1123g8673pfco.3ja7qh0es8maphg6'
-  - name: Variants
-    type: item
-    system:
-      description: >-
-        Special hydras sometimes found with venom, fiery breath, etc. Add 700 XP
-        per special ability.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 809j19vyjjx9238g
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!xlx1123g8673pfco.809j19vyjjx9238g'
+- name: Bite
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 1d6
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: '1'
+      ac: '15'
+    isTwoHanded: false
+    stat: dex
+    skill: shoot
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: nqpydo95dwsn5sev
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!xlx1123g8673pfco.nqpydo95dwsn5sev'
+- name: Heads
+  type: item
+  system:
+    description: '[[/r 1d8+4]] heads; 1 HD per head. Attack bonus equal to HD.'
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: lpb8u2llrfbpvw9i
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!xlx1123g8673pfco.lpb8u2llrfbpvw9i'
+- name: Disabling Heads
+  type: item
+  system:
+    description: For every 8 hp damage taken, one head is disabled (cannot attack).
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 3ja7qh0es8maphg6
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!xlx1123g8673pfco.3ja7qh0es8maphg6'
+- name: Variants
+  type: item
+  system:
+    description: >-
+      Special hydras sometimes found with venom, fiery breath, etc. Add 700 XP
+      per special ability.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 809j19vyjjx9238g
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!xlx1123g8673pfco.809j19vyjjx9238g'
 _key: '!actors!xlx1123g8673pfco'
 
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/hydra.svg

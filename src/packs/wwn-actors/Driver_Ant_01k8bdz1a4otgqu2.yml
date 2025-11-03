@@ -107,128 +107,129 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Bite
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 2d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: yqi2cycla91to968
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!01k8bdz1a4otgqu2.yqi2cycla91to968'
-  - name: Rapacious
-    type: item
-    system:
-      description: Consume everything in their path, when hungry.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: yos9563dimtsgif8
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!01k8bdz1a4otgqu2.yos9563dimtsgif8'
-  - name: Morale
-    type: item
-    system:
-      description: >-
-        Attack relentlessly, once they are engaged in melee (morale 12). Will
-        even pursue through flames.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 874b1zjr3cu5i7oj
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!01k8bdz1a4otgqu2.874b1zjr3cu5i7oj'
-  - name: Lair Treasure
-    type: item
-    system:
-      description: 30% chance of 1d10 * 1,000gp worth of gold nuggets, mined by the ants.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: nbcoy2n1o92qiib8
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!01k8bdz1a4otgqu2.nbcoy2n1o92qiib8'
+- name: Bite
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 2d6
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: yqi2cycla91to968
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920817
+    modifiedTime: 1754273920817
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!01k8bdz1a4otgqu2.yqi2cycla91to968'
+- name: Rapacious
+  type: item
+  system:
+    description: Consume everything in their path, when hungry.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: yos9563dimtsgif8
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920817
+    modifiedTime: 1754273920817
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!01k8bdz1a4otgqu2.yos9563dimtsgif8'
+- name: Morale
+  type: item
+  system:
+    description: >-
+      Attack relentlessly, once they are engaged in melee (morale 12). Will
+      even pursue through flames.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 874b1zjr3cu5i7oj
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920817
+    modifiedTime: 1754273920817
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!01k8bdz1a4otgqu2.874b1zjr3cu5i7oj'
+- name: Lair Treasure
+  type: item
+  system:
+    description: 30% chance of 1d10 * 1,000gp worth of gold nuggets, mined by the ants.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: nbcoy2n1o92qiib8
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920817
+    modifiedTime: 1754273920817
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!01k8bdz1a4otgqu2.nbcoy2n1o92qiib8'
 _key: '!actors!01k8bdz1a4otgqu2'
 
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/insect-jaws.svg

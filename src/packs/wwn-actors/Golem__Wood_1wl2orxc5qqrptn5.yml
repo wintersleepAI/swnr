@@ -112,158 +112,159 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Fist
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 1d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 1
-        ac: 13
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: dqwtdpo01bxk22ks
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!1wl2orxc5qqrptn5.dqwtdpo01bxk22ks'
-  - name: Mundane Damage Immunity
-    type: item
-    system:
-      description: Can only be harmed by magical attacks.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 67lufcuoxydib0p2
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!1wl2orxc5qqrptn5.67lufcuoxydib0p2'
-  - name: Immunity
-    type: item
-    system:
-      description: Unharmed by gas; unaffected by charm, hold, and sleep spells.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: y056zmx482jle9lw
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!1wl2orxc5qqrptn5.y056zmx482jle9lw'
-  - name: Initiative
-    type: item
-    system:
-      description: >-
-        -1 penalty due to stiff movement. Already reflected in monster
-        statistics.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: vj1pbjbkuultpmk2
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!1wl2orxc5qqrptn5.vj1pbjbkuultpmk2'
-  - name: Flammable
-    type: item
-    system:
-      description: >-
-        -2 to saves against fire attacks; suffers one extra point of damage per
-        die.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 07p523hfjzh2h5h8
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!1wl2orxc5qqrptn5.07p523hfjzh2h5h8'
+- name: Fist
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 1d8
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 1
+      ac: 13
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: dqwtdpo01bxk22ks
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920825
+    modifiedTime: 1754273920825
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!1wl2orxc5qqrptn5.dqwtdpo01bxk22ks'
+- name: Mundane Damage Immunity
+  type: item
+  system:
+    description: Can only be harmed by magical attacks.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 67lufcuoxydib0p2
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920825
+    modifiedTime: 1754273920825
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!1wl2orxc5qqrptn5.67lufcuoxydib0p2'
+- name: Immunity
+  type: item
+  system:
+    description: Unharmed by gas; unaffected by charm, hold, and sleep spells.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: y056zmx482jle9lw
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920825
+    modifiedTime: 1754273920825
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!1wl2orxc5qqrptn5.y056zmx482jle9lw'
+- name: Initiative
+  type: item
+  system:
+    description: >-
+      -1 penalty due to stiff movement. Already reflected in monster
+      statistics.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: vj1pbjbkuultpmk2
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920825
+    modifiedTime: 1754273920825
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!1wl2orxc5qqrptn5.vj1pbjbkuultpmk2'
+- name: Flammable
+  type: item
+  system:
+    description: >-
+      -2 to saves against fire attacks; suffers one extra point of damage per
+      die.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 07p523hfjzh2h5h8
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920825
+    modifiedTime: 1754273920825
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!1wl2orxc5qqrptn5.07p523hfjzh2h5h8'
 _key: '!actors!1wl2orxc5qqrptn5'
 
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/tree-face.svg

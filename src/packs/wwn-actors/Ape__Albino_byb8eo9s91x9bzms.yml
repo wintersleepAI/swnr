@@ -110,79 +110,80 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Claw
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 1d4
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 1
-        ac: 13
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: 0eylana40k7z8idm
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920813
-      modifiedTime: 1754273920813
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!byb8eo9s91x9bzms.0eylana40k7z8idm'
-  - name: Thrown Rock
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 1d6
-      range:
-        normal: 20
-        max: 40
-      shock:
-        dmg: 0
-        ac: 15
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: tgzn0gpnfa66boqr
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920813
-      modifiedTime: 1754273920813
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!byb8eo9s91x9bzms.tgzn0gpnfa66boqr'
+- name: Claw
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 1d4
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 1
+      ac: 13
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: 0eylana40k7z8idm
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920813
+    modifiedTime: 1754273920813
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!byb8eo9s91x9bzms.0eylana40k7z8idm'
+- name: Thrown Rock
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 1d6
+    range:
+      normal: 20
+      max: 40
+    shock:
+      dmg: 0
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: tgzn0gpnfa66boqr
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920813
+    modifiedTime: 1754273920813
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!byb8eo9s91x9bzms.tgzn0gpnfa66boqr'
 _key: '!actors!byb8eo9s91x9bzms'
 
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/gorilla.svg

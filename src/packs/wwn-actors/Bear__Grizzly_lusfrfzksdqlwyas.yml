@@ -109,111 +109,112 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Claw
-    type: weapon
-    system:
-      description: >-
-        Bear hug: If a victim is hit by both paws in the same round, the bear
-        hugs for an extra 2d8 automatic damage.
-      cost: 0
-      damage: 1d4
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 1
-        ac: 15
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: dibdl6z4qrpaiyib
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!lusfrfzksdqlwyas.dibdl6z4qrpaiyib'
-  - name: Bite
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 1d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: tmcecf3k88l11dmn
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!lusfrfzksdqlwyas.tmcecf3k88l11dmn'
-  - name: Bear Hug
-    type: item
-    system:
-      description: >-
-        If a victim is hit by both paws in the same round, the bear hugs for an
-        extra 2d8 automatic damage.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: mmdvtf3p7xpj0n1s
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!lusfrfzksdqlwyas.mmdvtf3p7xpj0n1s'
+- name: Claw
+  type: weapon
+  system:
+    description: >-
+      Bear hug: If a victim is hit by both paws in the same round, the bear
+      hugs for an extra 2d8 automatic damage.
+    cost: 0
+    damage: 1d4
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 1
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: dibdl6z4qrpaiyib
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!lusfrfzksdqlwyas.dibdl6z4qrpaiyib'
+- name: Bite
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 1d8
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: tmcecf3k88l11dmn
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!lusfrfzksdqlwyas.tmcecf3k88l11dmn'
+- name: Bear Hug
+  type: item
+  system:
+    description: >-
+      If a victim is hit by both paws in the same round, the bear hugs for an
+      extra 2d8 automatic damage.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: mmdvtf3p7xpj0n1s
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!lusfrfzksdqlwyas.mmdvtf3p7xpj0n1s'
 _key: '!actors!lusfrfzksdqlwyas'
 
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/bear-head.svg

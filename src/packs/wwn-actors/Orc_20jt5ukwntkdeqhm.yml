@@ -122,267 +122,268 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Bow, Small
-    type: weapon
-    system:
-      description: >-
-        Bows cover everything from the small self bows of horse archers to the
-        man-tall longbows wielded by foot archers. Larger bows are more
-        cumbersome and impossible to shoot from horseback, but usually have
-        superior strength. An archer with a Readied quiver can load a fresh
-        arrow as a Move action each turn, or as an On Turn action if they have
-        at least Shoot-1 skill.
-      cost: 20
-      damage: 1d6
-      range:
-        normal: 50
-        max: 300
-      shock:
-        dmg: 0
-        ac: 15
-      isTwoHanded: true
-      stat: dex
-      skill: shoot
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: t97p6qt807pkwj8s
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!20jt5ukwntkdeqhm.t97p6qt807pkwj8s'
-  - name: Sword, Long
-    type: weapon
-    system:
-      description: >-
-        Swords are common sidearms throughout the Latter Earth. The expense of
-        forging a large blade makes it a symbol of wealth and status in many
-        cultures, and its convenience makes it a favored arm for street wear.
-      cost: 100
-      damage: 1d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 13
-      isTwoHanded: false
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: i2y5apya30kku3c3
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!20jt5ukwntkdeqhm.i2y5apya30kku3c3'
-  - name: Axe, War
-    type: weapon
-    system:
-      description: >-
-        Axes given here are those fashioned for war; lighter and more agile than
-        their working cousins, though still capable of hacking through a door or
-        hewing a cable if needed. War axes are big enough to demand two hands
-        for their use.
-      cost: 50
-      damage: 1d10
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 3
-        ac: 15
-      isTwoHanded: true
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 2
-      quality: stock
-      tl: 3
-    _id: p3wt4tnfi7tdttae
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!20jt5ukwntkdeqhm.p3wt4tnfi7tdttae'
-  - name: Spear, Heavy
-    type: weapon
-    system:
-      description: >-
-        Spears, and their longer cousin the pike, are common military weapons
-        throughout the Latter Earth. Lighter spears are effective thrown
-        weapons, while heavier two-handed versions penetrate armor well.
-      cost: 10
-      damage: 1d10
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
-      isTwoHanded: true
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 2
-      quality: stock
-      tl: 3
-    _id: dgoibifphfy64eyk
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!20jt5ukwntkdeqhm.dgoibifphfy64eyk'
-  - name: Club, Great
-    type: weapon
-    system:
-      description: >-
-        Clubs, staffs, and maces are of much the same genus, though the latter
-        is usually made of metal. While fully capable of killing a man, a
-        careful user can usually avoid inflicting lethal injury.
-      cost: 50
-      damage: 1d10
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
-      isTwoHanded: true
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 2
-      quality: stock
-      tl: 3
-    _id: p4o9ju7rrr7k6cwf
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!20jt5ukwntkdeqhm.p4o9ju7rrr7k6cwf'
-  - name: Hate the Sun
-    type: item
-    system:
-      description: '-1 to hit in full daylight.'
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: sowy91x3136fxc4z
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!20jt5ukwntkdeqhm.sowy91x3136fxc4z'
-  - name: Craven
-    type: item
-    system:
-      description: >-
-        Afraid of larger or stronger-looking creatures, though leaders may force
-        them to fight.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: ktbob3b85tn30fwt
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!20jt5ukwntkdeqhm.ktbob3b85tn30fwt'
+- name: Bow, Small
+  type: weapon
+  system:
+    description: >-
+      Bows cover everything from the small self bows of horse archers to the
+      man-tall longbows wielded by foot archers. Larger bows are more
+      cumbersome and impossible to shoot from horseback, but usually have
+      superior strength. An archer with a Readied quiver can load a fresh
+      arrow as a Move action each turn, or as an On Turn action if they have
+      at least Shoot-1 skill.
+    cost: 20
+    damage: 1d6
+    range:
+      normal: 50
+      max: 300
+    shock:
+      dmg: 0
+      ac: 15
+    isTwoHanded: true
+    stat: dex
+    skill: shoot
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: t97p6qt807pkwj8s
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920817
+    modifiedTime: 1754273920817
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!20jt5ukwntkdeqhm.t97p6qt807pkwj8s'
+- name: Sword, Long
+  type: weapon
+  system:
+    description: >-
+      Swords are common sidearms throughout the Latter Earth. The expense of
+      forging a large blade makes it a symbol of wealth and status in many
+      cultures, and its convenience makes it a favored arm for street wear.
+    cost: 100
+    damage: 1d8
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 13
+    isTwoHanded: false
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: i2y5apya30kku3c3
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920817
+    modifiedTime: 1754273920817
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!20jt5ukwntkdeqhm.i2y5apya30kku3c3'
+- name: Axe, War
+  type: weapon
+  system:
+    description: >-
+      Axes given here are those fashioned for war; lighter and more agile than
+      their working cousins, though still capable of hacking through a door or
+      hewing a cable if needed. War axes are big enough to demand two hands
+      for their use.
+    cost: 50
+    damage: 1d10
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 3
+      ac: 15
+    isTwoHanded: true
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 2
+    quality: stock
+    tl: 3
+  _id: p3wt4tnfi7tdttae
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920817
+    modifiedTime: 1754273920817
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!20jt5ukwntkdeqhm.p3wt4tnfi7tdttae'
+- name: Spear, Heavy
+  type: weapon
+  system:
+    description: >-
+      Spears, and their longer cousin the pike, are common military weapons
+      throughout the Latter Earth. Lighter spears are effective thrown
+      weapons, while heavier two-handed versions penetrate armor well.
+    cost: 10
+    damage: 1d10
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 15
+    isTwoHanded: true
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 2
+    quality: stock
+    tl: 3
+  _id: dgoibifphfy64eyk
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920817
+    modifiedTime: 1754273920817
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!20jt5ukwntkdeqhm.dgoibifphfy64eyk'
+- name: Club, Great
+  type: weapon
+  system:
+    description: >-
+      Clubs, staffs, and maces are of much the same genus, though the latter
+      is usually made of metal. While fully capable of killing a man, a
+      careful user can usually avoid inflicting lethal injury.
+    cost: 50
+    damage: 1d10
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 15
+    isTwoHanded: true
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 2
+    quality: stock
+    tl: 3
+  _id: p4o9ju7rrr7k6cwf
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920817
+    modifiedTime: 1754273920817
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!20jt5ukwntkdeqhm.p4o9ju7rrr7k6cwf'
+- name: Hate the Sun
+  type: item
+  system:
+    description: '-1 to hit in full daylight.'
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: sowy91x3136fxc4z
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920817
+    modifiedTime: 1754273920817
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!20jt5ukwntkdeqhm.sowy91x3136fxc4z'
+- name: Craven
+  type: item
+  system:
+    description: >-
+      Afraid of larger or stronger-looking creatures, though leaders may force
+      them to fight.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: ktbob3b85tn30fwt
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920817
+    modifiedTime: 1754273920817
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!20jt5ukwntkdeqhm.ktbob3b85tn30fwt'
 _key: '!actors!20jt5ukwntkdeqhm'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/orc-head.svg

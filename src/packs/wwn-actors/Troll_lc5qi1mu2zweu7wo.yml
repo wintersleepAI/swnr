@@ -110,195 +110,196 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Talon
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: iz9iy6asa1uwre9z
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920820
-      modifiedTime: 1754273920820
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!lc5qi1mu2zweu7wo.iz9iy6asa1uwre9z'
-  - name: Bite
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 1d10
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 3
-        ac: 15
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: m8sq00nlj68xdbs0
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920820
-      modifiedTime: 1754273920820
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!lc5qi1mu2zweu7wo.m8sq00nlj68xdbs0'
-  - name: Regeneration
-    type: item
-    system:
-      description: >-
-        3 rounds after being damaged, start regaining 3hp per round. Severed
-        limbs reattach.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: kl7nv97ty3murzur
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920820
-      modifiedTime: 1754273920820
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!lc5qi1mu2zweu7wo.kl7nv97ty3murzur'
-  - name: Return From Death
-    type: item
-    system:
-      description: If killed (0hp), will regenerate and fight again in 2d6 rounds.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: uwpg81tschl4k5ts
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920820
-      modifiedTime: 1754273920820
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!lc5qi1mu2zweu7wo.uwpg81tschl4k5ts'
-  - name: Fire and Acid
-    type: item
-    system:
-      description: >-
-        Cannot regenerate damage from these sources. The only way to permanently
-        kill a troll.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 8fd6h8z57urs3np6
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920820
-      modifiedTime: 1754273920820
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!lc5qi1mu2zweu7wo.8fd6h8z57urs3np6'
-  - name: Fear of Fire
-    type: item
-    system:
-      description: Morale 8 when attacked with fire or acid.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: xwizu4f0xigj6pof
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920820
-      modifiedTime: 1754273920820
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!lc5qi1mu2zweu7wo.xwizu4f0xigj6pof'
+- name: Talon
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 1d6
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: iz9iy6asa1uwre9z
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920820
+    modifiedTime: 1754273920820
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!lc5qi1mu2zweu7wo.iz9iy6asa1uwre9z'
+- name: Bite
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 1d10
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 3
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: m8sq00nlj68xdbs0
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920820
+    modifiedTime: 1754273920820
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!lc5qi1mu2zweu7wo.m8sq00nlj68xdbs0'
+- name: Regeneration
+  type: item
+  system:
+    description: >-
+      3 rounds after being damaged, start regaining 3hp per round. Severed
+      limbs reattach.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: kl7nv97ty3murzur
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920820
+    modifiedTime: 1754273920820
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!lc5qi1mu2zweu7wo.kl7nv97ty3murzur'
+- name: Return From Death
+  type: item
+  system:
+    description: If killed (0hp), will regenerate and fight again in 2d6 rounds.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: uwpg81tschl4k5ts
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920820
+    modifiedTime: 1754273920820
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!lc5qi1mu2zweu7wo.uwpg81tschl4k5ts'
+- name: Fire and Acid
+  type: item
+  system:
+    description: >-
+      Cannot regenerate damage from these sources. The only way to permanently
+      kill a troll.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 8fd6h8z57urs3np6
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920820
+    modifiedTime: 1754273920820
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!lc5qi1mu2zweu7wo.8fd6h8z57urs3np6'
+- name: Fear of Fire
+  type: item
+  system:
+    description: Morale 8 when attacked with fire or acid.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: xwizu4f0xigj6pof
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920820
+    modifiedTime: 1754273920820
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!lc5qi1mu2zweu7wo.xwizu4f0xigj6pof'
 _key: '!actors!lc5qi1mu2zweu7wo'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/troll.svg

@@ -133,58 +133,58 @@ prototypeToken:
     disposition: false
   movementAction: null
 items:
-  - name: Cuirass and Greaves
-    type: armor
-    system:
-      description: >-
-        Cuirass and greave armor reflects those different designs that rely on
-        solid metal plating over the wearer's vitals along with lighter limb
-        armor. Medium armor is significantly noisier and more overt; it cannot
-        be worn discreetly and applies its encumbrance as a penalty to any
-        physical Sneak rolls made by the wearer.
-      cost: 250
-      ac: 15
-      meleeAc: 15
-      traumaDiePenalty: 0
-      soak:
-        value: 0
+- name: Cuirass and Greaves
+  type: armor
+  system:
+    description: >-
+      Cuirass and greave armor reflects those different designs that rely on
+      solid metal plating over the wearer's vitals along with lighter limb
+      armor. Medium armor is significantly noisier and more overt; it cannot
+      be worn discreetly and applies its encumbrance as a penalty to any
+      physical Sneak rolls made by the wearer.
+    cost: 250
+    ac: 15
+    meleeAc: 15
+    traumaDiePenalty: 0
+    soak:
+      value: 0
+      max: 0
+    isSubtle: false
+    shield: false
+    encumbrance: 2
+    quality: stock
+    tl: 3
+    favorite: false
+    quantity: 1
+    bundle:
+      bundled: false
+    location: stowed
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
         max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 2
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      use: false
-      dr: 0
-      isHeavy: false
-    _id: e6trq2rw7curq5ag
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!zknTpS2TgBuC1Cyc.e6trq2rw7curq5ag'
+        value: 0
+    use: false
+    dr: 0
+    isHeavy: false
+  _id: e6trq2rw7curq5ag
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!zknTpS2TgBuC1Cyc.e6trq2rw7curq5ag'
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3
@@ -192,3 +192,4 @@ _id: zknTpS2TgBuC1Cyc
 sort: 0
 _key: '!actors!zknTpS2TgBuC1Cyc'
 
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/giant.svg

@@ -115,79 +115,80 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Bite
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 2d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 13
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: twx0isohxj1uwduq
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!bn2hj9kctdw9vh03.twx0isohxj1uwduq'
-  - name: Claw
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 1
-        ac: 13
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: 8qmzy2zydb5dfzvp
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!bn2hj9kctdw9vh03.8qmzy2zydb5dfzvp'
+- name: Bite
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 2d6
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 13
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: twx0isohxj1uwduq
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920812
+    modifiedTime: 1754273920812
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!bn2hj9kctdw9vh03.twx0isohxj1uwduq'
+- name: Claw
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 1d6
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 1
+      ac: 13
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: 8qmzy2zydb5dfzvp
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920812
+    modifiedTime: 1754273920812
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!bn2hj9kctdw9vh03.8qmzy2zydb5dfzvp'
 _key: '!actors!bn2hj9kctdw9vh03'
 
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/tiger.svg

@@ -111,88 +111,89 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Bow, Small
-    type: weapon
-    system:
-      description: >-
-        Bows cover everything from the small self bows of horse archers to the
-        man-tall longbows wielded by foot archers. Larger bows are more
-        cumbersome and impossible to shoot from horseback, but usually have
-        superior strength. An archer with a Readied quiver can load a fresh
-        arrow as a Move action each turn, or as an On Turn action if they have
-        at least Shoot-1 skill.
-      cost: 20
-      damage: 1d6
-      range:
-        normal: 50
-        max: 300
-      shock:
-        dmg: 0
-        ac: 15
-      isTwoHanded: true
-      stat: dex
-      skill: shoot
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: oukk6qijh2ncxscw
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920824
-      modifiedTime: 1754273920824
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!bp7eraz5ohglsnwo.oukk6qijh2ncxscw'
-  - name: Sword, Short
-    type: weapon
-    system:
-      description: >-
-        Swords are common sidearms throughout the Latter Earth. The expense of
-        forging a large blade makes it a symbol of wealth and status in many
-        cultures, and its convenience makes it a favored arm for street wear.
-      cost: 10
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
-      isTwoHanded: false
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: lomc7stkviuk4dto
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920824
-      modifiedTime: 1754273920824
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!bp7eraz5ohglsnwo.lomc7stkviuk4dto'
+- name: Bow, Small
+  type: weapon
+  system:
+    description: >-
+      Bows cover everything from the small self bows of horse archers to the
+      man-tall longbows wielded by foot archers. Larger bows are more
+      cumbersome and impossible to shoot from horseback, but usually have
+      superior strength. An archer with a Readied quiver can load a fresh
+      arrow as a Move action each turn, or as an On Turn action if they have
+      at least Shoot-1 skill.
+    cost: 20
+    damage: 1d6
+    range:
+      normal: 50
+      max: 300
+    shock:
+      dmg: 0
+      ac: 15
+    isTwoHanded: true
+    stat: dex
+    skill: shoot
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: oukk6qijh2ncxscw
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920824
+    modifiedTime: 1754273920824
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!bp7eraz5ohglsnwo.oukk6qijh2ncxscw'
+- name: Sword, Short
+  type: weapon
+  system:
+    description: >-
+      Swords are common sidearms throughout the Latter Earth. The expense of
+      forging a large blade makes it a symbol of wealth and status in many
+      cultures, and its convenience makes it a favored arm for street wear.
+    cost: 10
+    damage: 1d6
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: lomc7stkviuk4dto
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920824
+    modifiedTime: 1754273920824
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!bp7eraz5ohglsnwo.lomc7stkviuk4dto'
 _key: '!actors!bp7eraz5ohglsnwo'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/bandit.svg

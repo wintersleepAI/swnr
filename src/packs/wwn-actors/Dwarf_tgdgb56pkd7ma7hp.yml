@@ -112,150 +112,151 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Punch/Headbutt
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 1d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 0
-        ac: 15
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: gbjl9yvui5x7ewjo
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!tgdgb56pkd7ma7hp.gbjl9yvui5x7ewjo'
-  - name: Axe, War
-    type: weapon
-    system:
-      description: >-
-        Axes given here are those fashioned for war; lighter and more agile than
-        their working cousins, though still capable of hacking through a door or
-        hewing a cable if needed. War axes are big enough to demand two hands
-        for their use.
-      cost: 50
-      damage: 1d10
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 3
-        ac: 15
-      isTwoHanded: true
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 2
-      quality: stock
-      tl: 3
-    _id: 4boru0bytzbljd8s
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!tgdgb56pkd7ma7hp.4boru0bytzbljd8s'
-  - name: Hammer, War
-    type: weapon
-    system:
-      description: >-
-        Hammers listed here are the fighting variety, narrow-headed and made for
-        penetrating or shocking heavy plates of armor.
-      cost: 30
-      damage: 1d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 1
-        ac: 18
-      isTwoHanded: false
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: chuz0rjqaqdbk63w
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!tgdgb56pkd7ma7hp.chuz0rjqaqdbk63w'
-  - name: Morale
-    type: item
-    system:
-      description: Morale is 10 if leader is present.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 31zdclmct3ybox3t
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!tgdgb56pkd7ma7hp.31zdclmct3ybox3t'
+- name: Punch/Headbutt
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 1d8
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 0
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: gbjl9yvui5x7ewjo
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!tgdgb56pkd7ma7hp.gbjl9yvui5x7ewjo'
+- name: Axe, War
+  type: weapon
+  system:
+    description: >-
+      Axes given here are those fashioned for war; lighter and more agile than
+      their working cousins, though still capable of hacking through a door or
+      hewing a cable if needed. War axes are big enough to demand two hands
+      for their use.
+    cost: 50
+    damage: 1d10
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 3
+      ac: 15
+    isTwoHanded: true
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 2
+    quality: stock
+    tl: 3
+  _id: 4boru0bytzbljd8s
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!tgdgb56pkd7ma7hp.4boru0bytzbljd8s'
+- name: Hammer, War
+  type: weapon
+  system:
+    description: >-
+      Hammers listed here are the fighting variety, narrow-headed and made for
+      penetrating or shocking heavy plates of armor.
+    cost: 30
+    damage: 1d8
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 1
+      ac: 18
+    isTwoHanded: false
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: chuz0rjqaqdbk63w
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!tgdgb56pkd7ma7hp.chuz0rjqaqdbk63w'
+- name: Morale
+  type: item
+  system:
+    description: Morale is 10 if leader is present.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 31zdclmct3ybox3t
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!tgdgb56pkd7ma7hp.31zdclmct3ybox3t'
 _key: '!actors!tgdgb56pkd7ma7hp'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/dwarf-face.svg

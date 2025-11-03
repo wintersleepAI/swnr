@@ -108,162 +108,164 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Touch
-    type: weapon
-    system:
-      description: >-
-        Acid: After a successful attack, sticks to the victim and exudes acid.
-        The acid inflicts 1d6 damage per round to flesh and destroys cloth,
-        leather, or wood in one round. (Stone and metal are unaffected.)
-      cost: 0
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 0
-        ac: 15
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: yvpyh7wp59rlc0hu
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920807
-      modifiedTime: 1754273920807
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!ivpmq0mz8vttb5kc.yvpyh7wp59rlc0hu'
-  - name: Acid
-    type: item
-    system:
-      description: >-
-        Acid: After a successful attack, sticks to the victim and exudes acid.
-        The acid inflicts 1d6 damage per round to flesh and destroys cloth,
-        leather, or wood in one round. (Stone and metal are unaffected.)
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: pax47k8x4cv96ui7
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920807
-      modifiedTime: 1754273920807
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!ivpmq0mz8vttb5kc.pax47k8x4cv96ui7'
-  - name: Immunity
-    type: item
-    system:
-      description: Unharmed by all attacks except cold or fire.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: qbi980io1pdk9gjq
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920807
-      modifiedTime: 1754273920807
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!ivpmq0mz8vttb5kc.qbi980io1pdk9gjq'
-  - name: Division
-    type: item
-    system:
-      description: >-
-        Lightning or attacks with weapons cause the jelly to divide into 1d4+1
-        2HD jellies that do half damage.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: osgxbhzmama83rg3
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920807
-      modifiedTime: 1754273920807
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!ivpmq0mz8vttb5kc.osgxbhzmama83rg3'
-  - name: Seep
-    type: item
-    system:
-      description: Can squeeze through small holes and cracks.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: dakl9u0y0v9kr2sx
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920807
-      modifiedTime: 1754273920807
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!ivpmq0mz8vttb5kc.dakl9u0y0v9kr2sx'
+- name: Touch
+  type: weapon
+  system:
+    description: >-
+      Acid: After a successful attack, sticks to the victim and exudes acid.
+      The acid inflicts 1d6 damage per round to flesh and destroys cloth,
+      leather, or wood in one round. (Stone and metal are unaffected.)
+    cost: 0
+    damage: 1d6
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 0
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: yvpyh7wp59rlc0hu
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920807
+    modifiedTime: 1754273920807
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!ivpmq0mz8vttb5kc.yvpyh7wp59rlc0hu'
+- name: Acid
+  type: item
+  system:
+    description: >-
+      Acid: After a successful attack, sticks to the victim and exudes acid.
+      The acid inflicts 1d6 damage per round to flesh and destroys cloth,
+      leather, or wood in one round. (Stone and metal are unaffected.)
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: pax47k8x4cv96ui7
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920807
+    modifiedTime: 1754273920807
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!ivpmq0mz8vttb5kc.pax47k8x4cv96ui7'
+- name: Immunity
+  type: item
+  system:
+    description: Unharmed by all attacks except cold or fire.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: qbi980io1pdk9gjq
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920807
+    modifiedTime: 1754273920807
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!ivpmq0mz8vttb5kc.qbi980io1pdk9gjq'
+- name: Division
+  type: item
+  system:
+    description: >-
+      Lightning or attacks with weapons cause the jelly to divide into 1d4+1
+      2HD jellies that do half damage.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: osgxbhzmama83rg3
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920807
+    modifiedTime: 1754273920807
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!ivpmq0mz8vttb5kc.osgxbhzmama83rg3'
+- name: Seep
+  type: item
+  system:
+    description: Can squeeze through small holes and cracks.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: dakl9u0y0v9kr2sx
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920807
+    modifiedTime: 1754273920807
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!ivpmq0mz8vttb5kc.dakl9u0y0v9kr2sx'
 _key: '!actors!ivpmq0mz8vttb5kc'
 
+img: >-
+  systems/swnr/assets/icons/game-icons.net/creature-icons/transparent-slime.svg

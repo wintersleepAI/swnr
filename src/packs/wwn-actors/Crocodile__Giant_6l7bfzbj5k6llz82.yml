@@ -111,42 +111,43 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Bite
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 3d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 7
-        ac: 15
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: xhp2birme7v9a7zh
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!6l7bfzbj5k6llz82.xhp2birme7v9a7zh'
+- name: Bite
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 3d8
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 7
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: xhp2birme7v9a7zh
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!6l7bfzbj5k6llz82.xhp2birme7v9a7zh'
 _key: '!actors!6l7bfzbj5k6llz82'
 
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/croc-jaws.svg

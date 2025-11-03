@@ -110,596 +110,597 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Mace
-    type: weapon
-    system:
-      description: >-
-        Clubs, staffs, and maces are of much the same genus, though the latter
-        is usually made of metal. While fully capable of killing a man, a
-        careful user can usually avoid inflicting lethal injury.
-      cost: 0
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 1
-        ac: 18
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: xynflar8bjll90vd
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.xynflar8bjll90vd'
-  - name: Cure Light Wounds
-    type: item
-    system:
-      description: >-
-        Duration: Instant Range: The caster or a creature touched This spell has
-        two uses: Healing a living subject: Restores 1d6+1 hit points of damage.
-        This cannot grant more hit points than the subject's normal maximum.
-        Curing paralysis: Paralysing effects are negated. Reversed: Cause Light
-        Wounds Inflicts 1d6+1 hit points of damage to a touched creature. In
-        combat, a melee attack roll is required.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: igs2zeg6mo993ieu
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.igs2zeg6mo993ieu'
-  - name: Detect Evil
-    type: item
-    system:
-      description: >-
-        Duration: 6 turns Range: 120' Objects enchanted for evil purposes or
-        living beings with evil intentions are caused to magically glow. ▶
-        Intent only: This spell does not grant the ability to read minds, but
-        only grants a general sense of evil intent. ▶ Definition of evil: The
-        referee must decide what is "evil". Some things that are potentially
-        harmful, like traps, are not "evil."
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 9l81ugmukkcq9z1n
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.9l81ugmukkcq9z1n'
-  - name: Detect Magic
-    type: item
-    system:
-      description: >-
-        Duration: 2 turns Range: 60' Enchanted objects, areas, or creatures are
-        caused to glow. Both permanent and temporary enchantments are revealed.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: qjzytlmz2gh5sdca
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.qjzytlmz2gh5sdca'
-  - name: Light
-    type: item
-    system:
-      description: >-
-        Duration: 12 turns Range: 120' This spell has three usages: Conjuring
-        light: In a 15' radius. The magical light is sufficient for reading, but
-        is not as bright as daylight. The spell may be cast upon an object, in
-        which case the light moves with the object. Blinding a creature: By
-        casting the spell upon its eyes. If the target fails an Evasion save, it
-        is blinded for the duration. A blind creature cannot attack. Cancelling
-        darkness: Light may cancel a darkness spell (see below). Reversed:
-        Darkness Creates a 15' radius area of magical blackness, preventing
-        normal sight (but not infravision). Like light, it may alternatively be
-        used to blind creatures or to dispel a light spell.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: nro9s4glrfp5wbid
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.nro9s4glrfp5wbid'
-  - name: Protection from Evil
-    type: item
-    system:
-      description: >-
-        Duration: 12 turns Range: The caster This spell wards the caster from
-        attacks by creatures of another alignment, as follows: ▶ Bonuses: The
-        caster gains a +1 bonus to saving throws against attacks or special
-        abilities of affected creatures. ▶ Affected creatures' attacks: Against
-        the caster are penalised by &ndash;1. ▶ Enchanted, constructed, or
-        summoned creatures: The spell additionally prevents such creatures from
-        attacking the caster in melee, though they may still make ranged
-        attacks. If the caster engages such a creature in melee, this protection
-        is broken (the caster still gains the save and attack bonuses mentioned
-        above).
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 52pqg98drqoz0vc2
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.52pqg98drqoz0vc2'
-  - name: Purify Food and Water
-    type: item
-    system:
-      description: >-
-        Duration: Permanent Range: 10' This spell makes spoiled, rotten,
-        poisonous, or otherwise contaminated food and water pure and suitable
-        for eating and drinking. One of the following may be affected: ▶ Drink:
-        6 quarts. ▶ Rations: One trail ration (iron or standard). ▶ Unpreserved
-        food: A quantity sufficient for 12 human-sized beings.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 59n1hhma5etlphx9
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.59n1hhma5etlphx9'
-  - name: Remove Fear
-    type: item
-    system:
-      description: >-
-        Duration: 2 turns Range: The caster or a creature touched The creature
-        touched is calmed and purged of fear. Magically induced fear may be
-        dispelled, but this requires the subject to make a Mental save. The save
-        is modified by -1 per level of the caster. Reversed: Cause Fear Will
-        cause a target within 120' to flee for the duration unless it saves
-        versus spells.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 9m6hirxdmcc6cfuk
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.9m6hirxdmcc6cfuk'
-  - name: Resist Cold
-    type: item
-    system:
-      description: >-
-        Duration: 6 turns Range: 30' All creatures within range are protected
-        from cold, as follows: ▶ Normal cold: Unharmed by non-magical freezing
-        temperatures. ▶ Save bonus: Gain a +2 bonus to all saving throws versus
-        cold-based magical or breath attacks. ▶ Cold-based damage: Is reduced by
-        1 point per damage die rolled. (Each die inflicts a minimum of 1 hit
-        point damage.)
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: uvko7uop1ypc9bkb
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.uvko7uop1ypc9bkb'
-  - name: Bless
-    type: item
-    system:
-      description: >-
-        Duration: 6 turns Range: 60' May be used in one of two situations:
-        Battle: Allies within a 20' square area who are not yet in melee gain a
-        +1 bonus to attack and damage rolls and a +1 bonus to morale. Ritual:
-        Casting bless may also form part of rituals of purification or
-        consecration, at the referee's discretion. Reversed: Blight Incurs a
-        &ndash;1 penalty to morale checks, attack rolls, and damage rolls of
-        enemies within a 20' square area. A save versus spells is allowed to
-        resist the blight.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: kpsy5qghpiw84h09
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.kpsy5qghpiw84h09'
-  - name: Find Traps
-    type: item
-    system:
-      description: >-
-        Duration: 2 turns Range: 30' Trapped objects or areas within range of
-        the caster glow with a magical blue light. ▶ Magical and mechanical
-        traps: Are both detected. ▶ No knowledge: About the nature of the trap
-        or how to deactivate it is granted.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 3p8165zle8ylwc60
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.3p8165zle8ylwc60'
-  - name: Hold Person
-    type: item
-    system:
-      description: >-
-        Duration: 9 turns Range: 180' This spell causes one or more humans,
-        demihumans, or human-like monsters to be paralysed if they fail a Mental
-        save. It may be cast in two ways: Against an individual: The target's
-        saving throw is penalised by &ndash;2. Against a group: 1d4 individuals
-        in the group are targeted. Restrictions: Human-like monsters of greater
-        than 4+1 HD and undead are not affected.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: v0y4wxot6nsnt40b
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.v0y4wxot6nsnt40b'
-  - name: Know Alignment
-    type: item
-    system:
-      description: >-
-        Duration: 1 round Range: 10' The caster gains immediate knowledge of the
-        alignment of one character, monster, object, or location within range.
-        (Most objects or locations do not have an alignment, but magic items or
-        holy places might.)
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: vupxbmg1i1d5ru1l
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.vupxbmg1i1d5ru1l'
-  - name: Resist Fire
-    type: item
-    system:
-      description: >-
-        Duration: 2 turns Range: 30' A single creature is bestowed with
-        supernatural resistance to fire, as follows: ▶ Normal heat: Unharmed by
-        non-magical heat or fire. ▶ Save bonus: Gain a +2 bonus to all saving
-        throws versus fire-based magical or breath attacks. ▶ Fire-based damage:
-        Is reduced by 1 point per damage die rolled. (Each die inflicts a
-        minimum of 1 hit point damage.)
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: il74c7o6t026iv4g
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.il74c7o6t026iv4g'
-  - name: Silence 15' Radius
-    type: item
-    system:
-      description: >-
-        Duration: 12 turns Range: 180' A 15' radius area is rendered utterly
-        silent. ▶ Within the area: All sound is stopped. Conversation and spell
-        casting are impossible. ▶ Noise from outside the area: Can be heard by
-        those within it. ▶ Casting upon a creature: Silence may be cast upon a
-        creature, which must make a Mental save. If the save fails, the 15'
-        radius area of silence moves with the creature. If the save succeeds,
-        the spell's effect remains stationary&mdash;the targeted creature may
-        move out of it.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: d06z3xq44m5fwupa
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.d06z3xq44m5fwupa'
-  - name: Snake Charm
-    type: item
-    system:
-      description: >-
-        Duration: 1d4+1 rounds or turns Range: 60' One or more snakes are
-        rendered non-hostile, rearing up and swaying to and fro but not
-        attacking. ▶ HD affected: The spell affects snakes whose total Hit Dice
-        do not exceed the caster's level. For example, a 7th level caster can
-        affect 7 HD of snakes, which can equal seven 1 HD snakes, or two 3 HD
-        snakes and one 1 HD snake, or any other combination. ▶ Duration: When
-        cast on snakes that are already attacking, the spell lasts for 1d4+1
-        rounds. Otherwise, it lasts for 1d4+1 turns.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: tkini13i5rqxhcuc
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.tkini13i5rqxhcuc'
-  - name: Speak with Animals
-    type: item
-    system:
-      description: >-
-        Duration: 6 turns Range: 30' The caster can communicate with one type of
-        animal within range when the spell is cast. ▶ Type of animal: Ordinary
-        animals or giant versions of ordinary animals may be targeted. ▶
-        Questions: The caster can ask questions of and receive answers from
-        animals of the chosen kind, although the spell doesn't make animals any
-        more friendly or cooperative than normal (a reaction roll may be
-        required). ▶ Services: If an animal is friendly toward the caster, it
-        may perform some favour or service.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: ja78mbcptdjn0lxa
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920821
-      modifiedTime: 1754273920821
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!kr5eco6we44dxxlr.ja78mbcptdjn0lxa'
+- name: Mace
+  type: weapon
+  system:
+    description: >-
+      Clubs, staffs, and maces are of much the same genus, though the latter
+      is usually made of metal. While fully capable of killing a man, a
+      careful user can usually avoid inflicting lethal injury.
+    cost: 0
+    damage: 1d6
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 1
+      ac: 18
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: xynflar8bjll90vd
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.xynflar8bjll90vd'
+- name: Cure Light Wounds
+  type: item
+  system:
+    description: >-
+      Duration: Instant Range: The caster or a creature touched This spell has
+      two uses: Healing a living subject: Restores 1d6+1 hit points of damage.
+      This cannot grant more hit points than the subject's normal maximum.
+      Curing paralysis: Paralysing effects are negated. Reversed: Cause Light
+      Wounds Inflicts 1d6+1 hit points of damage to a touched creature. In
+      combat, a melee attack roll is required.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: igs2zeg6mo993ieu
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.igs2zeg6mo993ieu'
+- name: Detect Evil
+  type: item
+  system:
+    description: >-
+      Duration: 6 turns Range: 120' Objects enchanted for evil purposes or
+      living beings with evil intentions are caused to magically glow. ▶
+      Intent only: This spell does not grant the ability to read minds, but
+      only grants a general sense of evil intent. ▶ Definition of evil: The
+      referee must decide what is "evil". Some things that are potentially
+      harmful, like traps, are not "evil."
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 9l81ugmukkcq9z1n
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.9l81ugmukkcq9z1n'
+- name: Detect Magic
+  type: item
+  system:
+    description: >-
+      Duration: 2 turns Range: 60' Enchanted objects, areas, or creatures are
+      caused to glow. Both permanent and temporary enchantments are revealed.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: qjzytlmz2gh5sdca
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.qjzytlmz2gh5sdca'
+- name: Light
+  type: item
+  system:
+    description: >-
+      Duration: 12 turns Range: 120' This spell has three usages: Conjuring
+      light: In a 15' radius. The magical light is sufficient for reading, but
+      is not as bright as daylight. The spell may be cast upon an object, in
+      which case the light moves with the object. Blinding a creature: By
+      casting the spell upon its eyes. If the target fails an Evasion save, it
+      is blinded for the duration. A blind creature cannot attack. Cancelling
+      darkness: Light may cancel a darkness spell (see below). Reversed:
+      Darkness Creates a 15' radius area of magical blackness, preventing
+      normal sight (but not infravision). Like light, it may alternatively be
+      used to blind creatures or to dispel a light spell.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: nro9s4glrfp5wbid
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.nro9s4glrfp5wbid'
+- name: Protection from Evil
+  type: item
+  system:
+    description: >-
+      Duration: 12 turns Range: The caster This spell wards the caster from
+      attacks by creatures of another alignment, as follows: ▶ Bonuses: The
+      caster gains a +1 bonus to saving throws against attacks or special
+      abilities of affected creatures. ▶ Affected creatures' attacks: Against
+      the caster are penalised by &ndash;1. ▶ Enchanted, constructed, or
+      summoned creatures: The spell additionally prevents such creatures from
+      attacking the caster in melee, though they may still make ranged
+      attacks. If the caster engages such a creature in melee, this protection
+      is broken (the caster still gains the save and attack bonuses mentioned
+      above).
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 52pqg98drqoz0vc2
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.52pqg98drqoz0vc2'
+- name: Purify Food and Water
+  type: item
+  system:
+    description: >-
+      Duration: Permanent Range: 10' This spell makes spoiled, rotten,
+      poisonous, or otherwise contaminated food and water pure and suitable
+      for eating and drinking. One of the following may be affected: ▶ Drink:
+      6 quarts. ▶ Rations: One trail ration (iron or standard). ▶ Unpreserved
+      food: A quantity sufficient for 12 human-sized beings.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 59n1hhma5etlphx9
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.59n1hhma5etlphx9'
+- name: Remove Fear
+  type: item
+  system:
+    description: >-
+      Duration: 2 turns Range: The caster or a creature touched The creature
+      touched is calmed and purged of fear. Magically induced fear may be
+      dispelled, but this requires the subject to make a Mental save. The save
+      is modified by -1 per level of the caster. Reversed: Cause Fear Will
+      cause a target within 120' to flee for the duration unless it saves
+      versus spells.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 9m6hirxdmcc6cfuk
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.9m6hirxdmcc6cfuk'
+- name: Resist Cold
+  type: item
+  system:
+    description: >-
+      Duration: 6 turns Range: 30' All creatures within range are protected
+      from cold, as follows: ▶ Normal cold: Unharmed by non-magical freezing
+      temperatures. ▶ Save bonus: Gain a +2 bonus to all saving throws versus
+      cold-based magical or breath attacks. ▶ Cold-based damage: Is reduced by
+      1 point per damage die rolled. (Each die inflicts a minimum of 1 hit
+      point damage.)
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: uvko7uop1ypc9bkb
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.uvko7uop1ypc9bkb'
+- name: Bless
+  type: item
+  system:
+    description: >-
+      Duration: 6 turns Range: 60' May be used in one of two situations:
+      Battle: Allies within a 20' square area who are not yet in melee gain a
+      +1 bonus to attack and damage rolls and a +1 bonus to morale. Ritual:
+      Casting bless may also form part of rituals of purification or
+      consecration, at the referee's discretion. Reversed: Blight Incurs a
+      &ndash;1 penalty to morale checks, attack rolls, and damage rolls of
+      enemies within a 20' square area. A save versus spells is allowed to
+      resist the blight.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: kpsy5qghpiw84h09
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.kpsy5qghpiw84h09'
+- name: Find Traps
+  type: item
+  system:
+    description: >-
+      Duration: 2 turns Range: 30' Trapped objects or areas within range of
+      the caster glow with a magical blue light. ▶ Magical and mechanical
+      traps: Are both detected. ▶ No knowledge: About the nature of the trap
+      or how to deactivate it is granted.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 3p8165zle8ylwc60
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.3p8165zle8ylwc60'
+- name: Hold Person
+  type: item
+  system:
+    description: >-
+      Duration: 9 turns Range: 180' This spell causes one or more humans,
+      demihumans, or human-like monsters to be paralysed if they fail a Mental
+      save. It may be cast in two ways: Against an individual: The target's
+      saving throw is penalised by &ndash;2. Against a group: 1d4 individuals
+      in the group are targeted. Restrictions: Human-like monsters of greater
+      than 4+1 HD and undead are not affected.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: v0y4wxot6nsnt40b
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.v0y4wxot6nsnt40b'
+- name: Know Alignment
+  type: item
+  system:
+    description: >-
+      Duration: 1 round Range: 10' The caster gains immediate knowledge of the
+      alignment of one character, monster, object, or location within range.
+      (Most objects or locations do not have an alignment, but magic items or
+      holy places might.)
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: vupxbmg1i1d5ru1l
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.vupxbmg1i1d5ru1l'
+- name: Resist Fire
+  type: item
+  system:
+    description: >-
+      Duration: 2 turns Range: 30' A single creature is bestowed with
+      supernatural resistance to fire, as follows: ▶ Normal heat: Unharmed by
+      non-magical heat or fire. ▶ Save bonus: Gain a +2 bonus to all saving
+      throws versus fire-based magical or breath attacks. ▶ Fire-based damage:
+      Is reduced by 1 point per damage die rolled. (Each die inflicts a
+      minimum of 1 hit point damage.)
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: il74c7o6t026iv4g
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.il74c7o6t026iv4g'
+- name: Silence 15' Radius
+  type: item
+  system:
+    description: >-
+      Duration: 12 turns Range: 180' A 15' radius area is rendered utterly
+      silent. ▶ Within the area: All sound is stopped. Conversation and spell
+      casting are impossible. ▶ Noise from outside the area: Can be heard by
+      those within it. ▶ Casting upon a creature: Silence may be cast upon a
+      creature, which must make a Mental save. If the save fails, the 15'
+      radius area of silence moves with the creature. If the save succeeds,
+      the spell's effect remains stationary&mdash;the targeted creature may
+      move out of it.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: d06z3xq44m5fwupa
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.d06z3xq44m5fwupa'
+- name: Snake Charm
+  type: item
+  system:
+    description: >-
+      Duration: 1d4+1 rounds or turns Range: 60' One or more snakes are
+      rendered non-hostile, rearing up and swaying to and fro but not
+      attacking. ▶ HD affected: The spell affects snakes whose total Hit Dice
+      do not exceed the caster's level. For example, a 7th level caster can
+      affect 7 HD of snakes, which can equal seven 1 HD snakes, or two 3 HD
+      snakes and one 1 HD snake, or any other combination. ▶ Duration: When
+      cast on snakes that are already attacking, the spell lasts for 1d4+1
+      rounds. Otherwise, it lasts for 1d4+1 turns.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: tkini13i5rqxhcuc
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.tkini13i5rqxhcuc'
+- name: Speak with Animals
+  type: item
+  system:
+    description: >-
+      Duration: 6 turns Range: 30' The caster can communicate with one type of
+      animal within range when the spell is cast. ▶ Type of animal: Ordinary
+      animals or giant versions of ordinary animals may be targeted. ▶
+      Questions: The caster can ask questions of and receive answers from
+      animals of the chosen kind, although the spell doesn't make animals any
+      more friendly or cooperative than normal (a reaction roll may be
+      required). ▶ Services: If an animal is friendly toward the caster, it
+      may perform some favour or service.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: ja78mbcptdjn0lxa
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920821
+    modifiedTime: 1754273920821
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!kr5eco6we44dxxlr.ja78mbcptdjn0lxa'
 _key: '!actors!kr5eco6we44dxxlr'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg

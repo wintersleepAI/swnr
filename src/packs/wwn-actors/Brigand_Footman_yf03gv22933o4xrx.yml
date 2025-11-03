@@ -118,211 +118,212 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Sword, Short
-    type: weapon
-    system:
-      description: >-
-        Swords are common sidearms throughout the Latter Earth. The expense of
-        forging a large blade makes it a symbol of wealth and status in many
-        cultures, and its convenience makes it a favored arm for street wear.
-      cost: 10
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: '2'
-        ac: '15'
-      isTwoHanded: false
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: ybkq5lv17v0z9wsu
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!yf03gv22933o4xrx.ybkq5lv17v0z9wsu'
-  - name: Throwing Blade
-    type: weapon
-    system:
-      description: >-
-        Throwing blades are small leaves of steel that are not terribly useful
-        as melee weapons but are easy to carry discreetly in considerable
-        numbers.
-      cost: 3
-      damage: 1d4
-      range:
-        normal: 30
-        max: 60
-      shock:
-        dmg: '0'
-        ac: '-'
-      isTwoHanded: false
-      stat: dex
-      skill: stab
-      ab: 0
-      encumbrance: 0.2
-      quality: stock
-      tl: 3
-    _id: 7spuy0jl3ng1n8j9
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!yf03gv22933o4xrx.7spuy0jl3ng1n8j9'
-  - name: Bow, Small
-    type: weapon
-    system:
-      description: >-
-        Bows cover everything from the small self bows of horse archers to the
-        man-tall longbows wielded by foot archers. Larger bows are more
-        cumbersome and impossible to shoot from horseback, but usually have
-        superior strength. An archer with a Readied quiver can load a fresh
-        arrow as a Move action each turn, or as an On Turn action if they have
-        at least Shoot-1 skill.
-      cost: 20
-      damage: 1d6
-      range:
-        normal: 50
-        max: 300
-      shock:
-        dmg: '0'
-        ac: '-'
-      isTwoHanded: true
-      stat: dex
-      skill: shoot
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: uxet938d4id7ccqk
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!yf03gv22933o4xrx.uxet938d4id7ccqk'
-  - name: Buff Coat
-    type: armor
-    system:
-      description: >-
-        Buff coats are long coats of thick, supple hide, sometimes worn to
-        cushion the bite of heavier armor and sometimes sported as ornamented
-        street clothing for the gentry who can afford such luxuries Light armor
-        may be decidedly heavy, but it is loose and flexible enough to offer
-        minimal hindrance to the wearer's actions. Some varieties are also
-        discreet enough to be worn politely in common society.
-      cost: 50
-      ac: 12
-      meleeAc: 12
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: jvjnc9dtci5z6229
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!yf03gv22933o4xrx.jvjnc9dtci5z6229'
-  - name: Small Shield
-    type: armor
-    system:
-      description: >-
-        Shields come in two general varieties. Small ones, often made of metal,
-        can be strapped to the wearer's arm and allow them to hold and
-        manipulate objects with that hand. Larger shields require the use of a
-        gripping hand, but are usually of cheaper, lighter wood. A small shield
-        user has a base AC of 13, while a large shield user has a base AC of 14.
-        Unlike other armor, however, if the user is already wearing equal or
-        better armor the shield grants a +1 bonus to their AC. Shields allow the
-        bearer to ignore the first instance of Shock they might otherwise suffer
-        in a round.
-      cost: 20
-      ac: 1
-      meleeAc: 1
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: true
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: ihhwo23rke35lw4f
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920812
-      modifiedTime: 1754273920812
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!yf03gv22933o4xrx.ihhwo23rke35lw4f'
+- name: Sword, Short
+  type: weapon
+  system:
+    description: >-
+      Swords are common sidearms throughout the Latter Earth. The expense of
+      forging a large blade makes it a symbol of wealth and status in many
+      cultures, and its convenience makes it a favored arm for street wear.
+    cost: 10
+    damage: 1d6
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: '2'
+      ac: '15'
+    isTwoHanded: false
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: ybkq5lv17v0z9wsu
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920812
+    modifiedTime: 1754273920812
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!yf03gv22933o4xrx.ybkq5lv17v0z9wsu'
+- name: Throwing Blade
+  type: weapon
+  system:
+    description: >-
+      Throwing blades are small leaves of steel that are not terribly useful
+      as melee weapons but are easy to carry discreetly in considerable
+      numbers.
+    cost: 3
+    damage: 1d4
+    range:
+      normal: 30
+      max: 60
+    shock:
+      dmg: '0'
+      ac: '-'
+    isTwoHanded: false
+    stat: dex
+    skill: stab
+    ab: 0
+    encumbrance: 0.2
+    quality: stock
+    tl: 3
+  _id: 7spuy0jl3ng1n8j9
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920812
+    modifiedTime: 1754273920812
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!yf03gv22933o4xrx.7spuy0jl3ng1n8j9'
+- name: Bow, Small
+  type: weapon
+  system:
+    description: >-
+      Bows cover everything from the small self bows of horse archers to the
+      man-tall longbows wielded by foot archers. Larger bows are more
+      cumbersome and impossible to shoot from horseback, but usually have
+      superior strength. An archer with a Readied quiver can load a fresh
+      arrow as a Move action each turn, or as an On Turn action if they have
+      at least Shoot-1 skill.
+    cost: 20
+    damage: 1d6
+    range:
+      normal: 50
+      max: 300
+    shock:
+      dmg: '0'
+      ac: '-'
+    isTwoHanded: true
+    stat: dex
+    skill: shoot
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: uxet938d4id7ccqk
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920812
+    modifiedTime: 1754273920812
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!yf03gv22933o4xrx.uxet938d4id7ccqk'
+- name: Buff Coat
+  type: armor
+  system:
+    description: >-
+      Buff coats are long coats of thick, supple hide, sometimes worn to
+      cushion the bite of heavier armor and sometimes sported as ornamented
+      street clothing for the gentry who can afford such luxuries Light armor
+      may be decidedly heavy, but it is loose and flexible enough to offer
+      minimal hindrance to the wearer's actions. Some varieties are also
+      discreet enough to be worn politely in common society.
+    cost: 50
+    ac: 12
+    meleeAc: 12
+    traumaDiePenalty: 0
+    soak:
+      value: 0
+      max: 0
+    isSubtle: false
+    shield: false
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: jvjnc9dtci5z6229
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920812
+    modifiedTime: 1754273920812
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!yf03gv22933o4xrx.jvjnc9dtci5z6229'
+- name: Small Shield
+  type: armor
+  system:
+    description: >-
+      Shields come in two general varieties. Small ones, often made of metal,
+      can be strapped to the wearer's arm and allow them to hold and
+      manipulate objects with that hand. Larger shields require the use of a
+      gripping hand, but are usually of cheaper, lighter wood. A small shield
+      user has a base AC of 13, while a large shield user has a base AC of 14.
+      Unlike other armor, however, if the user is already wearing equal or
+      better armor the shield grants a +1 bonus to their AC. Shields allow the
+      bearer to ignore the first instance of Shock they might otherwise suffer
+      in a round.
+    cost: 20
+    ac: 1
+    meleeAc: 1
+    traumaDiePenalty: 0
+    soak:
+      value: 0
+      max: 0
+    isSubtle: false
+    shield: true
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: ihhwo23rke35lw4f
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920812
+    modifiedTime: 1754273920812
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!yf03gv22933o4xrx.ihhwo23rke35lw4f'
 _key: '!actors!yf03gv22933o4xrx'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/bandit.svg

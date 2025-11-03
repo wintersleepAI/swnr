@@ -112,44 +112,45 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Touch
-    type: weapon
-    system:
-      description: >-
-        Life Drain: Each hit inflicts 1 System Strain. If this would take a
-        victim over their maximum, they immediately die and become a shadow.
-      cost: 0
-      damage: 1d4
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 1
-        ac: 15
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: i9pckybl39igfzbi
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920817
-      modifiedTime: 1754273920817
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!qbeq26f8nb72idqy.i9pckybl39igfzbi'
+- name: Touch
+  type: weapon
+  system:
+    description: >-
+      Life Drain: Each hit inflicts 1 System Strain. If this would take a
+      victim over their maximum, they immediately die and become a shadow.
+    cost: 0
+    damage: 1d4
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 1
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: i9pckybl39igfzbi
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920817
+    modifiedTime: 1754273920817
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!qbeq26f8nb72idqy.i9pckybl39igfzbi'
 _key: '!actors!qbeq26f8nb72idqy'
 
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg

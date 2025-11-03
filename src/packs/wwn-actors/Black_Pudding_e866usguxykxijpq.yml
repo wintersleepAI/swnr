@@ -109,185 +109,186 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Touch
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 3d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 3
-        ac: 15
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: 149dmhuwjy6jdrm6
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920807
-      modifiedTime: 1754273920807
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!e866usguxykxijpq.149dmhuwjy6jdrm6'
-  - name: Immunity
-    type: item
-    system:
-      description: Only harmed by fire-based attacks.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: cebf0rm7qn50s0sk
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920807
-      modifiedTime: 1754273920807
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!e866usguxykxijpq.cebf0rm7qn50s0sk'
-  - name: Division
-    type: item
-    system:
-      description: >-
-        Non-fire attacks (including spells) cause the pudding to divide. Each
-        hit creates a 2HD pudding that does 1d8 damage.
-        @Compendium[wwn.ose-monsters.0MawbqGnZlYNLKRI]{Black Pudding Spawn}
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: gy3988pn9kt1smew
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920807
-      modifiedTime: 1754273920807
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!e866usguxykxijpq.gy3988pn9kt1smew'
-  - name: Erode Wood/Metal
-    type: item
-    system:
-      description: Can dissolve wood or metal in one turn.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: va0d4fyxn22st7iv
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920807
-      modifiedTime: 1754273920807
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!e866usguxykxijpq.va0d4fyxn22st7iv'
-  - name: Cling
-    type: item
-    system:
-      description: Can move across walls and ceilings.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: xkemccvvm8dzt4j7
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920807
-      modifiedTime: 1754273920807
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!e866usguxykxijpq.xkemccvvm8dzt4j7'
-  - name: Seep
-    type: item
-    system:
-      description: Can squeeze through small holes and cracks.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: r6q0c6qkc8bqo3wy
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920807
-      modifiedTime: 1754273920807
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!e866usguxykxijpq.r6q0c6qkc8bqo3wy'
+- name: Touch
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 3d8
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 3
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: 149dmhuwjy6jdrm6
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920807
+    modifiedTime: 1754273920807
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!e866usguxykxijpq.149dmhuwjy6jdrm6'
+- name: Immunity
+  type: item
+  system:
+    description: Only harmed by fire-based attacks.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: cebf0rm7qn50s0sk
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920807
+    modifiedTime: 1754273920807
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!e866usguxykxijpq.cebf0rm7qn50s0sk'
+- name: Division
+  type: item
+  system:
+    description: >-
+      Non-fire attacks (including spells) cause the pudding to divide. Each
+      hit creates a 2HD pudding that does 1d8 damage.
+      @Compendium[wwn.ose-monsters.0MawbqGnZlYNLKRI]{Black Pudding Spawn}
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: gy3988pn9kt1smew
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920807
+    modifiedTime: 1754273920807
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!e866usguxykxijpq.gy3988pn9kt1smew'
+- name: Erode Wood/Metal
+  type: item
+  system:
+    description: Can dissolve wood or metal in one turn.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: va0d4fyxn22st7iv
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920807
+    modifiedTime: 1754273920807
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!e866usguxykxijpq.va0d4fyxn22st7iv'
+- name: Cling
+  type: item
+  system:
+    description: Can move across walls and ceilings.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: xkemccvvm8dzt4j7
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920807
+    modifiedTime: 1754273920807
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!e866usguxykxijpq.xkemccvvm8dzt4j7'
+- name: Seep
+  type: item
+  system:
+    description: Can squeeze through small holes and cracks.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: r6q0c6qkc8bqo3wy
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920807
+    modifiedTime: 1754273920807
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!e866usguxykxijpq.r6q0c6qkc8bqo3wy'
 _key: '!actors!e866usguxykxijpq'
 
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/vile-fluid.svg

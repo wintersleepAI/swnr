@@ -118,124 +118,125 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Plate Armor
-    type: armor
-    system:
-      description: >-
-        Plate armor is an extremely expensive suit of tailored metal pieces that
-        cover both the vitals and the limbs of the wearer. Heavy armor is the
-        thickest, toughest panoply available on the market, and its bulk and
-        noise make its encumbrance apply as a penalty to Sneak or Exert checks
-        made by the wearer.
-      cost: 2000
-      ac: 17
-      meleeAc: 17
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 2
-      quality: stock
-      tl: 3
-    _id: r5w9p42ah34wvr2j
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!4j166fafsr2eansk.r5w9p42ah34wvr2j'
-  - name: Sword, Long
-    type: weapon
-    system:
-      description: >-
-        Swords are common sidearms throughout the Latter Earth. The expense of
-        forging a large blade makes it a symbol of wealth and status in many
-        cultures, and its convenience makes it a favored arm for street wear.
-      cost: 100
-      damage: 1d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 13
-      isTwoHanded: false
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: 8ovxp51rmfanc5wb
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!4j166fafsr2eansk.8ovxp51rmfanc5wb'
-  - name: Spear, Heavy
-    type: weapon
-    system:
-      description: >-
-        Spears, and their longer cousin the pike, are common military weapons
-        throughout the Latter Earth. Lighter spears are effective thrown
-        weapons, while heavier two-handed versions penetrate armor well.
-      cost: 10
-      damage: 1d10
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
-      isTwoHanded: true
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 2
-      quality: stock
-      tl: 3
-    _id: zo0ilho5938atgza
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920825
-      modifiedTime: 1754273920825
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!4j166fafsr2eansk.zo0ilho5938atgza'
+- name: Plate Armor
+  type: armor
+  system:
+    description: >-
+      Plate armor is an extremely expensive suit of tailored metal pieces that
+      cover both the vitals and the limbs of the wearer. Heavy armor is the
+      thickest, toughest panoply available on the market, and its bulk and
+      noise make its encumbrance apply as a penalty to Sneak or Exert checks
+      made by the wearer.
+    cost: 2000
+    ac: 17
+    meleeAc: 17
+    traumaDiePenalty: 0
+    soak:
+      value: 0
+      max: 0
+    isSubtle: false
+    shield: false
+    encumbrance: 2
+    quality: stock
+    tl: 3
+  _id: r5w9p42ah34wvr2j
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920825
+    modifiedTime: 1754273920825
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!4j166fafsr2eansk.r5w9p42ah34wvr2j'
+- name: Sword, Long
+  type: weapon
+  system:
+    description: >-
+      Swords are common sidearms throughout the Latter Earth. The expense of
+      forging a large blade makes it a symbol of wealth and status in many
+      cultures, and its convenience makes it a favored arm for street wear.
+    cost: 100
+    damage: 1d8
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 13
+    isTwoHanded: false
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: 8ovxp51rmfanc5wb
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920825
+    modifiedTime: 1754273920825
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!4j166fafsr2eansk.8ovxp51rmfanc5wb'
+- name: Spear, Heavy
+  type: weapon
+  system:
+    description: >-
+      Spears, and their longer cousin the pike, are common military weapons
+      throughout the Latter Earth. Lighter spears are effective thrown
+      weapons, while heavier two-handed versions penetrate armor well.
+    cost: 10
+    damage: 1d10
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 15
+    isTwoHanded: true
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 2
+    quality: stock
+    tl: 3
+  _id: zo0ilho5938atgza
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920825
+    modifiedTime: 1754273920825
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!4j166fafsr2eansk.zo0ilho5938atgza'
 _key: '!actors!4j166fafsr2eansk'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/overlord-helm.svg
