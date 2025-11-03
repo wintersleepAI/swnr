@@ -16,10 +16,10 @@ export default class SWNWeapon extends SWNBaseGearItem {
     schema.skillBoostsDamage = new fields.BooleanField({ initial: false });
     schema.skillBoostsShock = new fields.BooleanField({ initial: false });
     schema.shock = new fields.SchemaField({
-      dmg: SWNShared.requiredNumber(0),
+      dmg: SWNShared.requiredString("0"),
       ac: SWNShared.requiredNumber(10),
     });
-    schema.ab = SWNShared.requiredNumber(0, -10);
+    schema.ab = SWNShared.requiredString("0");
     schema.ammo = new fields.SchemaField({
       longReload: new fields.BooleanField({ initial: false }),
       suppress: new fields.BooleanField({ initial: false }),
@@ -27,7 +27,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       max: SWNShared.requiredNumber(10),
       value: SWNShared.requiredNumber(10),
       burst: new fields.BooleanField({ initial: false }),
-      current: new fields.DocumentIdField({readonly:false})
+      current: new fields.DocumentIdField({ readonly: false })
     });
     schema.range = new fields.SchemaField({
       normal: SWNShared.requiredNumber(1),
@@ -82,6 +82,13 @@ export default class SWNWeapon extends SWNBaseGearItem {
       this.ammo.value > 0
     );
   }
+  
+  safeDamageRoll(damageRoll) {
+    if (!Roll.validate(damageRoll.formula)) {
+      damageRoll = new Roll("1d0");
+    }
+    return damageRoll;
+  };
 
   async rollAttack(
     damageBonus, // number
@@ -129,7 +136,6 @@ export default class SWNWeapon extends SWNBaseGearItem {
       modifier,
       damageBonus,
       effectiveSkillRank: skillMod < 0 ? -2 : skillMod,
-      shockDmg: this.shock?.dmg > 0 ? this.shock.dmg : 0,
       attackRollDie,
     };
     let hitExplainTip = "1d20 +burst +mod +CharAB +WpnAB +Stat +Skill";
@@ -143,13 +149,15 @@ export default class SWNWeapon extends SWNBaseGearItem {
         "@attackRollDie + @burstFire + @modifier + @actor.meleeAb + @weapon.ab + @stat + @effectiveSkillRank";
       hitExplainTip = "1d20 +burst +mod +CharMeleeAB +WpnAB +Stat +Skill";
     }
-    const hitRoll = new Roll(dieString, rollData);
+    let hitRoll = new Roll(dieString, rollData);
+    hitRoll = this.safeDamageRoll(hitRoll);
     await hitRoll.roll();
     rollData.hitRoll = +(hitRoll.dice[0].total?.toString() ?? 0);
-    const damageRoll = new Roll(
+    let damageRoll = new Roll(
       this.damage + " + @burstFire + @stat + @damageBonus",
       rollData
     );
+    damageRoll = this.safeDamageRoll(damageRoll);
     await damageRoll.roll();
     const damageExplainTip = "roll +burst +statBonus +dmgBonus";
     const diceTooltip = {
@@ -192,13 +200,14 @@ export default class SWNWeapon extends SWNBaseGearItem {
     let shock_roll = null;
     // Show shock damage
     if (game.settings.get("swnr", "addShockMessage")) {
-      if (this.shock && this.shock.dmg > 0) {
+      if (this.shock && this.shock.dmg != "0") {
         shock_content = `Shock Damage  AC ${this.shock.ac}`;
-        const _shockRoll = new Roll(
-          " @shockDmg + @stat " +
+        let _shockRoll = new Roll(
+          this.shock.dmg + " + @stat " +
           (this.skillBoostsShock ? ` + ${damageBonus}` : ""),
           rollData
         );
+        _shockRoll = this.safeDamageRoll(_shockRoll); 
         await _shockRoll.roll();
         shock_roll = await _shockRoll.render();
         rollArray.push(_shockRoll);
