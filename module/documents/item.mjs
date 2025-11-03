@@ -67,7 +67,7 @@ export class SWNItem extends Item {
     // Initialize chat data.
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });
     const rollMode = game.settings.get('core', 'rollMode');
-    const label = `[${item.type}] ${item.name}`;
+    let label = `[${item.type}] ${item.name}`;
 
     // If there's no roll data, send a chat message.
     if (!this.system.formula) {
@@ -87,6 +87,9 @@ export class SWNItem extends Item {
       const roll = new Roll(rollData.formula, rollData.actor);
       // If you need to store the value first, uncomment the next line.
       // const result = await roll.evaluate();
+      if (item.system.description) {
+        label = `${label} ${item.system.description}`;
+      }
       roll.toMessage({
         speaker: speaker,
         rollMode: rollMode,
