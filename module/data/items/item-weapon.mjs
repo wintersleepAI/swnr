@@ -116,6 +116,10 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const template = "systems/swnr/templates/chat/attack-roll.hbs";
     const burstFire = useBurst ? 2 : 0;
     const attackRollDie = game.settings.get("swnr", "attackRoll");
+    let gearCondition = null;
+    if (game.settings.get("swnr", "useAWNGearCondition")) {
+      gearCondition = this.condition;
+    } 
     const rollData = {
       actor: actor.getRollData(),
       weapon: this,
@@ -220,6 +224,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       shock_content,
       traumaDamage,
       traumaRollRender,
+      gearCondition,
     };
     const rollMode = game.settings.get("core", "rollMode");
     const diceData = Roll.fromTerms([foundry.dice.terms.PoolTerm.fromRolls(rollArray)]);

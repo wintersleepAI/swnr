@@ -43,4 +43,12 @@
       </button>
   </div>
   {{/if}}
+
+  {{#if gearCondition}}
+    {{localize 'swnr.sheet.gear.conditionLabel'}}: {{localize (concat 'swnr.sheet.gear.condition.' gearCondition)}} <br>
+    {{localize (concat 'swnr.sheet.gear.conditionDetails.' gearCondition)}} <br>
+    {{#if (ne gearCondition 'perfect')}}
+      (modifiers not automatically applied)
+    {{/if}}
+  {{/if}}
 </div>
