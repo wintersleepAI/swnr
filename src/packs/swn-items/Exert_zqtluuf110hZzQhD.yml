@@ -1,0 +1,39 @@
+type: skill
+name: Exert
+system:
+  rank: -1
+  pool: ask
+  description: >-
+    Apply trained speed, strength, or stamina in some feat of physical exertion.
+    Roll it to run, jump, lift, swim, climb, throw, and so forth. You can use it
+    as a combat skill when throwing things, though it doesn’t qualify as a
+    combat skill for other ends.
+  source: Revised
+  favorite: false
+  defaultStat: ask
+  remember:
+    use: false
+    modifier: 0
+  stats: dex
+img: systems/swnr/assets/icons/game-icons.net/item-icons/book-white.svg
+effects: []
+folder: JtqKfM9N4blcNr3I
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.2.0
+  createdTime: 1761533229298
+  modifiedTime: 1761533229298
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+ownership:
+  default: 0
+  at8FhD4co9l5l5G2: 3
+  iXDXVi7OlHcRwXw0: 3
+_id: zqtluuf110hZzQhD
+sort: 300000
+_key: '!items!zqtluuf110hZzQhD'
+

@@ -118,132 +118,129 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Small Shield
-    type: armor
-    system:
-      description: >-
-        Shields come in two general varieties. Small ones, often made of metal,
-        can be strapped to the wearer's arm and allow them to hold and
-        manipulate objects with that hand. Larger shields require the use of a
-        gripping hand, but are usually of cheaper, lighter wood. A small shield
-        user has a base AC of 13, while a large shield user has a base AC of 14.
-        Unlike other armor, however, if the user is already wearing equal or
-        better armor the shield grants a +1 bonus to their AC. Shields allow the
-        bearer to ignore the first instance of Shock they might otherwise suffer
-        in a round.
-      cost: 20
-      ac: 1
-      meleeAc: 1
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: true
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: cibpf2dqr3j258f6
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920814
-      modifiedTime: 1754273920814
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!mrkslfbvn8y2og63.cibpf2dqr3j258f6'
-  - name: Sword, Long
-    type: weapon
-    system:
-      description: >-
-        Swords are common sidearms throughout the Latter Earth. The expense of
-        forging a large blade makes it a symbol of wealth and status in many
-        cultures, and its convenience makes it a favored arm for street wear.
-      cost: 100
-      damage: 1d8
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 13
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: k5yt2flnvwublxp2
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920814
-      modifiedTime: 1754273920814
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!mrkslfbvn8y2og63.k5yt2flnvwublxp2'
-  - name: Mail Shirt
-    type: armor
-    system:
-      description: >-
-        Mail shirts are usually of iron or steel wire, though bronze and other
-        more exotic materials are not unknown. Such shirts cover only the vitals
-        of the wearer, but are much less burdensome than a full hauberk. Medium
-        armor is significantly noisier and more overt; it cannot be worn
-        discreetly and applies its encumbrance as a penalty to any physical
-        Sneak rolls made by the wearer.
-      cost: 250
-      ac: 14
-      meleeAc: 14
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: k7q07q4ecgzxltv2
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920814
-      modifiedTime: 1754273920814
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!mrkslfbvn8y2og63.k7q07q4ecgzxltv2'
+- name: Small Shield
+  type: armor
+  system:
+    description: >-
+      Shields come in two general varieties. Small ones, often made of metal,
+      can be strapped to the wearer's arm and allow them to hold and
+      manipulate objects with that hand. Larger shields require the use of a
+      gripping hand, but are usually of cheaper, lighter wood. A small shield
+      user has a base AC of 13, while a large shield user has a base AC of 14.
+      Unlike other armor, however, if the user is already wearing equal or
+      better armor the shield grants a +1 bonus to their AC. Shields allow the
+      bearer to ignore the first instance of Shock they might otherwise suffer
+      in a round.
+    cost: 20
+    ac: 1
+    meleeAc: 1
+    traumaDiePenalty: 0
+    soak:
+      value: 0
+      max: 0
+    isSubtle: false
+    shield: true
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: cibpf2dqr3j258f6
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920814
+    modifiedTime: 1754273920814
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!mrkslfbvn8y2og63.cibpf2dqr3j258f6'
+- name: Sword, Long
+  type: weapon
+  system:
+    description: >-
+      Swords are common sidearms throughout the Latter Earth. The expense of
+      forging a large blade makes it a symbol of wealth and status in many
+      cultures, and its convenience makes it a favored arm for street wear.
+    cost: 100
+    damage: 1d8
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 13
+    isTwoHanded: false
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: k5yt2flnvwublxp2
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920814
+    modifiedTime: 1754273920814
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!mrkslfbvn8y2og63.k5yt2flnvwublxp2'
+- name: Mail Shirt
+  type: armor
+  system:
+    description: >-
+      Mail shirts are usually of iron or steel wire, though bronze and other
+      more exotic materials are not unknown. Such shirts cover only the vitals
+      of the wearer, but are much less burdensome than a full hauberk. Medium
+      armor is significantly noisier and more overt; it cannot be worn
+      discreetly and applies its encumbrance as a penalty to any physical
+      Sneak rolls made by the wearer.
+    cost: 250
+    ac: 14
+    meleeAc: 14
+    traumaDiePenalty: 0
+    soak:
+      value: 0
+      max: 0
+    isSubtle: false
+    shield: false
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: k7q07q4ecgzxltv2
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920814
+    modifiedTime: 1754273920814
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!mrkslfbvn8y2og63.k7q07q4ecgzxltv2'
 _key: '!actors!mrkslfbvn8y2og63'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/bandit.svg

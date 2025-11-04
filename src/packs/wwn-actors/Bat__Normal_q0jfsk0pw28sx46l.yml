@@ -111,35 +111,36 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Swarm
-    type: item
-    system:
-      description: >-
-        ▶ Swarm: 10 bats can swarm around a target's head, causing confusion:
-        &ndash;2 to attack rolls and saves; unable to cast spells.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 4zelxjwkd85icbts
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!q0jfsk0pw28sx46l.4zelxjwkd85icbts'
+- name: Swarm
+  type: item
+  system:
+    description: >-
+      ▶ Swarm: 10 bats can swarm around a target's head, causing confusion:
+      &ndash;2 to attack rolls and saves; unable to cast spells.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 4zelxjwkd85icbts
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!q0jfsk0pw28sx46l.4zelxjwkd85icbts'
 _key: '!actors!q0jfsk0pw28sx46l'
 
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/bat.svg

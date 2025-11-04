@@ -133,59 +133,59 @@ prototypeToken:
     disposition: false
   movementAction: null
 items:
-  - name: Buff Coat
-    type: armor
-    system:
-      description: >-
-        Buff coats are long coats of thick, supple hide, sometimes worn to
-        cushion the bite of heavier armor and sometimes sported as ornamented
-        street clothing for the gentry who can afford such luxuries Light armor
-        may be decidedly heavy, but it is loose and flexible enough to offer
-        minimal hindrance to the wearer's actions. Some varieties are also
-        discreet enough to be worn politely in common society.
-      cost: 50
-      ac: 12
-      meleeAc: 12
-      traumaDiePenalty: 0
-      soak:
-        value: 0
+- name: Buff Coat
+  type: armor
+  system:
+    description: >-
+      Buff coats are long coats of thick, supple hide, sometimes worn to
+      cushion the bite of heavier armor and sometimes sported as ornamented
+      street clothing for the gentry who can afford such luxuries Light armor
+      may be decidedly heavy, but it is loose and flexible enough to offer
+      minimal hindrance to the wearer's actions. Some varieties are also
+      discreet enough to be worn politely in common society.
+    cost: 50
+    ac: 12
+    meleeAc: 12
+    traumaDiePenalty: 0
+    soak:
+      value: 0
+      max: 0
+    isSubtle: false
+    shield: false
+    encumbrance: 1
+    quality: stock
+    tl: 3
+    favorite: false
+    quantity: 1
+    bundle:
+      bundled: false
+    location: stowed
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
         max: 0
-      isSubtle: false
-      shield: false
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      use: false
-      dr: 0
-      isHeavy: false
-    _id: ga25p6wot045x5iq
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!FhmsLYqP5yxjDMOM.ga25p6wot045x5iq'
+        value: 0
+    use: false
+    dr: 0
+    isHeavy: false
+  _id: ga25p6wot045x5iq
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!FhmsLYqP5yxjDMOM.ga25p6wot045x5iq'
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3
@@ -193,3 +193,4 @@ _id: FhmsLYqP5yxjDMOM
 sort: 200000
 _key: '!actors!FhmsLYqP5yxjDMOM'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/elf-helmet.svg

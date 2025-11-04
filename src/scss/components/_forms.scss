@@ -7,6 +7,14 @@
   font-family: typography.$font-primary;
 }
 
+.gap-2 {
+  gap: 2px;
+}
+
+.gap-4 {
+  gap: 4px;
+}
+
 .sheet-header {
   flex: 0 auto;
   /* overflow: hidden; TODO */
@@ -26,7 +34,6 @@
 
    input[type="text"],
    input[type="number"], 
-   select,
    div.field {
     font-size: 14px;
     /* padding: 2px; */
@@ -44,12 +51,31 @@
     transition: outline-color 0.5s;
     min-width: 20px;
   }
+
+  select {
+   font-size: 14px;
+   /* padding: 2px; */
+   margin: 2px;
+   border: none;
+   border-radius: 0;
+   /* background: var(--swnr-c-white); */
+   background: none;
+   color: var(--swnr-c-dark);
+   outline: 1px solid transparent;
+   height: var(--input-height);
+   line-height: var(--input-height);
+   user-select: text;
+   transition: outline-color 0.5s;
+   min-width: 20px;
+ }
+
+
   
   .profile-img,
   .item-img {
-    width: 150px;
-    max-width: 150px;
-    height: 150px;
+    width: 130px;
+    max-width: 130px;
+    height: 130px;
 
     border-radius: 50%;
     border: 1px solid var(--border-color);
@@ -94,7 +120,7 @@
 
   .thin-bar {
     margin-top:-5px;
-    margin-bottom:-15px;
+    margin-bottom:-10px;
   }
 
   .header-fields {
@@ -125,6 +151,7 @@ input[type="number"] {
     outline: none;
     color: inherit;
     font-size: inherit;
+    text-align: center;
     width: calc(50% - 30px);
     height: 100%;
   }

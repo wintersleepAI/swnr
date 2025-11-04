@@ -1,0 +1,39 @@
+type: skill
+name: Survive
+system:
+  rank: -1
+  pool: ask
+  description: >-
+    Obtain the basics of food, water, and shelter in hostile environments, along
+    with avoiding their natural perils. Roll it to handle animals, navigate
+    difficult terrain, scrounge urban resources, make basic tools, and avoid
+    wild beasts or gangs.
+  source: Revised
+  favorite: false
+  defaultStat: ask
+  remember:
+    use: false
+    modifier: 0
+  stats: dex
+img: systems/swnr/assets/icons/game-icons.net/item-icons/book-white.svg
+effects: []
+folder: JtqKfM9N4blcNr3I
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.2.0
+  createdTime: 1761533229298
+  modifiedTime: 1761533229298
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+ownership:
+  default: 0
+  at8FhD4co9l5l5G2: 3
+  iXDXVi7OlHcRwXw0: 3
+_id: YFZ0Op4MusEVqVVY
+sort: 100782
+_key: '!items!YFZ0Op4MusEVqVVY'
+

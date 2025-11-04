@@ -1,4 +1,4 @@
-<div class="chat-card">
+<div class="chat-card item-card" data-actor-id="{{actor._id}}" data-item-id="{{weapon._id}}">
   <h3 title="{{ weapon.system.description }}">{{ weapon.name }}</h3>
 
   <span title="{{ diceTooltip.hitExplain }}" class="roll roll-hit">{{{ diceTooltip.hit }}}</span>
@@ -42,5 +42,13 @@
           Save {{weapon.system.save}}
       </button>
   </div>
+  {{/if}}
+
+  {{#if gearCondition}}
+    {{localize 'swnr.sheet.gear.conditionLabel'}}: {{localize (concat 'swnr.sheet.gear.condition.' gearCondition)}} <br>
+    {{localize (concat 'swnr.sheet.gear.conditionDetails.' gearCondition)}} <br>
+    {{#if (ne gearCondition 'perfect')}}
+      (modifiers not automatically applied)
+    {{/if}}
   {{/if}}
 </div>

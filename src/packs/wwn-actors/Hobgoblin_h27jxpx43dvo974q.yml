@@ -112,183 +112,172 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Sword, Short
-    type: weapon
-    system:
-      description: >-
-        Swords are common sidearms throughout the Latter Earth. The expense of
-        forging a large blade makes it a symbol of wealth and status in many
-        cultures, and its convenience makes it a favored arm for street wear.
-      cost: 10
-      damage: 1d6
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: false
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: zd0nv5bewd7o7eei
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!h27jxpx43dvo974q.zd0nv5bewd7o7eei'
-  - name: Spear, Heavy
-    type: weapon
-    system:
-      description: >-
-        Spears, and their longer cousin the pike, are common military weapons
-        throughout the Latter Earth. Lighter spears are effective thrown
-        weapons, while heavier two-handed versions penetrate armor well.
-      cost: 10
-      damage: 1d10
-      range:
-        normal: 0
-        max: 0
-      shock:
-        dmg: 2
-        ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: true
-      stat: str
-      skill: stab
-      ab: 0
-      encumbrance: 2
-      quality: stock
-      tl: 3
-    _id: wagaznaj9wwueieo
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920823
-      modifiedTime: 1754273920823
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!h27jxpx43dvo974q.wagaznaj9wwueieo'
-  - name: Bow, Large
-    type: weapon
-    system:
-      description: >-
-        Bows cover everything from the small self bows of horse archers to the
-        man-tall longbows wielded by foot archers. Larger bows are more
-        cumbersome and impossible to shoot from horseback, but usually have
-        superior strength. An archer with a Readied quiver can load a fresh
-        arrow as a Move action each turn, or as an On Turn action if they have
-        at least Shoot-1 skill.
-      cost: 20
-      damage: 1d8
-      range:
-        normal: 100
-        max: 600
-      shock:
-        dmg: 0
-        ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-      isTwoHanded: true
-      stat: dex
-      skill: shoot
-      ab: 0
-      encumbrance: 2
-      quality: stock
-      tl: 3
-    _id: x499jyqbczc9xb45
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920824
-      modifiedTime: 1754273920824
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!h27jxpx43dvo974q.x499jyqbczc9xb45'
-  - name: Shield, Small
-    type: armor
-    system:
-      description: >-
-        Shields come in two general varieties. Small ones, often made of
-        costlier metal, can be strapped to the wearer's arm and allow them to
-        hold and manipulate objects with that hand, albeit not wield a weapon
-        with it. Larger shields are of cheaper wood and require a good grip. A
-        small shield user has a base AC of 13, while a large shield user has a
-        base AC of 14. Unlike other armor, however, if the user is already
-        wearing equal or better armor the shield grants a +1 bonus to their AC.
-        Shields allow the bearer to ignore the first instance of Shock they
-        might otherwise suffer in a round.
-      cost: 20
-      ac: 13
-      meleeAc: 13
-      traumaDiePenalty: 0
-      soak:
-        value: 0
-        max: 0
-      isSubtle: false
-      shield: true
-      encumbrance: 1
-      quality: stock
-      tl: 3
-    _id: roe3pl144ewvzs35
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920824
-      modifiedTime: 1754273920824
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!h27jxpx43dvo974q.roe3pl144ewvzs35'
+- name: Sword, Short
+  type: weapon
+  system:
+    description: >-
+      Swords are common sidearms throughout the Latter Earth. The expense of
+      forging a large blade makes it a symbol of wealth and status in many
+      cultures, and its convenience makes it a favored arm for street wear.
+    cost: 10
+    damage: 1d6
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: zd0nv5bewd7o7eei
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!h27jxpx43dvo974q.zd0nv5bewd7o7eei'
+- name: Spear, Heavy
+  type: weapon
+  system:
+    description: >-
+      Spears, and their longer cousin the pike, are common military weapons
+      throughout the Latter Earth. Lighter spears are effective thrown
+      weapons, while heavier two-handed versions penetrate armor well.
+    cost: 10
+    damage: 1d10
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 15
+    isTwoHanded: true
+    stat: str
+    skill: stab
+    ab: 0
+    encumbrance: 2
+    quality: stock
+    tl: 3
+  _id: wagaznaj9wwueieo
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920823
+    modifiedTime: 1754273920823
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!h27jxpx43dvo974q.wagaznaj9wwueieo'
+- name: Bow, Large
+  type: weapon
+  system:
+    description: >-
+      Bows cover everything from the small self bows of horse archers to the
+      man-tall longbows wielded by foot archers. Larger bows are more
+      cumbersome and impossible to shoot from horseback, but usually have
+      superior strength. An archer with a Readied quiver can load a fresh
+      arrow as a Move action each turn, or as an On Turn action if they have
+      at least Shoot-1 skill.
+    cost: 20
+    damage: 1d8
+    range:
+      normal: 100
+      max: 600
+    shock:
+      dmg: 0
+      ac: 15
+    isTwoHanded: true
+    stat: dex
+    skill: shoot
+    ab: 0
+    encumbrance: 2
+    quality: stock
+    tl: 3
+  _id: x499jyqbczc9xb45
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920824
+    modifiedTime: 1754273920824
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!h27jxpx43dvo974q.x499jyqbczc9xb45'
+- name: Shield, Small
+  type: armor
+  system:
+    description: >-
+      Shields come in two general varieties. Small ones, often made of
+      costlier metal, can be strapped to the wearer's arm and allow them to
+      hold and manipulate objects with that hand, albeit not wield a weapon
+      with it. Larger shields are of cheaper wood and require a good grip. A
+      small shield user has a base AC of 13, while a large shield user has a
+      base AC of 14. Unlike other armor, however, if the user is already
+      wearing equal or better armor the shield grants a +1 bonus to their AC.
+      Shields allow the bearer to ignore the first instance of Shock they
+      might otherwise suffer in a round.
+    cost: 20
+    ac: 13
+    meleeAc: 13
+    traumaDiePenalty: 0
+    soak:
+      value: 0
+      max: 0
+    isSubtle: false
+    shield: true
+    encumbrance: 1
+    quality: stock
+    tl: 3
+  _id: roe3pl144ewvzs35
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920824
+    modifiedTime: 1754273920824
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!h27jxpx43dvo974q.roe3pl144ewvzs35'
 _key: '!actors!h27jxpx43dvo974q'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/barbute.svg

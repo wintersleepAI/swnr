@@ -4,20 +4,50 @@
       <div class="resource-group">
         <b>{{localize 'swnr.sheet.stats'}} </b>
         {{formGroup systemFields.hitDice value=system.hitDice localize=true}}
+        {{#if (eq gameSettings.useCWNArmor true)}}
+        <div class="flex flexrow gap-4">
+          <div class="flex flex-col">
+            {{formGroup systemFields.baseAc value=system.baseAc localize=true}}
+          </div>
+          <div class="flex flex-col">
+            {{formGroup systemFields.meleeAc value=system.meleeAc localize=true}}
+          </div>
+        </div>
+        {{else}}
         {{formGroup systemFields.baseAc value=system.baseAc localize=true}}
-        {{formGroup systemFields.meleeAc value=system.meleeAc localize=true}}
+        {{/if}}
         {{formGroup systemFields.armorType value=system.armorType localize=true}}
       </div>
-      <div class="resource-group">
+      <div class="resource-group"> <!-- Combat -->
         <b>{{localize 'swnr.npc.combat'}} </b>
-        {{formGroup systemFields.attacks.fields.number value=system.attacks.number localize=true}}
+        <div class="flex flexrow gap-4">
+          <div class="flex flex-col">
+          {{formGroup systemFields.attacks.fields.number value=system.attacks.number localize=true}}
+          </div>
+          <div class="flex flex-col">
+            {{formGroup systemFields.attacks.fields.bonusDamage value=system.attacks.bonusDamage localize=true}}
+          </div>
+        </div>
+        <div class="flex flexrow gap-4">
+          <div class="flex flex-col">
+            {{formGroup systemFields.attacks.fields.shock.fields.dmg value=system.attacks.shock.dmg localize=true}}
+          </div>
+          <div class="flex flex-col">
+            {{formGroup systemFields.attacks.fields.shock.fields.ac value=system.attacks.shock.ac localize=true}}
+          </div>
+        </div>
         {{#if (eq gameSettings.useCWNArmor true)}}
-        {{formGroup systemFields.ab value=system.ab localize=true label='swnr.sheet.ranged-attack-bonus'}}
-        {{formGroup systemFields.meleeAb value=system.meleeAb localize=true}}
+        <div class="flex flexrow gap-4">
+          <div class="flex flex-col">
+            {{formGroup systemFields.ab value=system.ab localize=true label='swnr.sheet.ranged-attack-bonus'}}
+          </div>
+          <div class="flex flex-col">
+            {{formGroup systemFields.meleeAb value=system.meleeAb localize=true}}
+          </div>
+        </div>
         {{else}}
         {{formGroup systemFields.ab value=system.ab localize=true}}
         {{/if}}
-        {{formGroup systemFields.attacks.fields.bonusDamage value=system.attacks.bonusDamage localize=true}}
         {{#if (eq gameSettings.useCWNArmor true)}}
         {{formGroup systemFields.baseSoakTotal value=system.baseSoakTotal localize=true widget=groupWidget}}
         {{!-- moved to header for now

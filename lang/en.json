@@ -261,6 +261,14 @@
             },
             "bonusDamage": {
               "label": "Damage Bonus"
+            },
+            "shock": {
+              "dmg": {
+                "label": "Shock Damage"
+              },
+              "ac": {
+                "label": "Shock AC Override"
+              }
             }
           },
           "ab": {
@@ -391,6 +399,18 @@
           },
           "size": {
             "label": "Size"
+          },
+          "runHours": {
+            "label": "Run Hours"
+          },
+          "fuelNeeded": {
+            "label": "Fuel Needed"
+          },
+          "fuelType": {
+            "label": "Fuel Type"
+          },
+          "cargo": {
+            "label": "Cargo"
           }
         }
       },
@@ -1643,6 +1663,28 @@
         "mech-hull": "Mech Hull Type",
         "pilot": "Pilot"
       },
+      "gear": {
+        "conditionLabel": "Condition",
+        "condition": {
+          "perfect": "Perfect",
+          "worn": "Worn",
+          "light": "Light",
+          "moderate": "Moderate",
+          "heavy": "Heavy",
+          "broken": "Broken",
+          "ruined": "Ruined"
+        },
+        "conditionDetails": {
+          "perfect": "No penalty to use.",
+          "worn": "No penalty to use.",
+          "light": "-1 to hit or damage for weapons, -1 to skill checks using the item",
+          "moderate": "-2 to hit or damage, -1 to skill checks using the item, 20% chance to fail",
+          "heavy": "-3 to hit or damage, -2 to skill checks using the item, 50% chance to fail",
+          "broken": "The object is inoperable/unusable.",
+          "ruined": "It's broken beyond any repair."
+        },
+        "conditionTooltip": "The condition of the gear. This will affect the use of the gear. <br> Perfect: No penalty to use. <br> Worn: No penalty to use. <br> Light: -1 to hit or damage for weapons, -1 to skill checks using the item <br> Moderate: -2 to hit or damage, -1 to skill checks using the item, 20% chance to fail <br> Heavy: -3 to hit or damage, -2 to skill checks using the item, 50% chance to fail <br> Broken: The object is inoperable/unusable. <br> Ruined: It's broken beyond any repair."
+      },
       "drone": {
         "enc": "Encumbrance",
         "range": "Range",
@@ -1676,7 +1718,8 @@
           "s": "S",
           "m": "M",
           "l": "L"
-        }
+        },
+        "cargo": "Carried Cargo & Gear"
       },
       "faction": {
         "tags": "Tags",
@@ -1917,15 +1960,19 @@
       "attrRollUnderEqual": "Roll d20 under or equal",
       "attackRoll": "Attack Roll?",
       "attackRollHint": "What to roll for attacks?",
-      "useTrauma": "Use Trauma?",
+      "useTrauma": "Use CWN Trauma?",
       "useTraumaHint": "Use CWN trauma dice for rolling attacks?",
-      "useStress": "Use Stress?",
+      "useStress": "Use AWN Stress?",
       "useStressHint": "Use AWN stress attribute for characters?",
+      "useAWNVehicle": "Use AWN Vehicle Options?",
+      "useAWNVehicleHint": "Use AWN vehicle options (Run Hours, Fuel, etc)?",
+      "useAWNGearCondition": "Use AWN Gear Condition?",
+      "useAWNGearConditionHint": "Use AWN gear condition options (broken, destroyed, worn, etc)?",
       "useCWNArmor": "Use CWN Armor?",
       "useCWNArmorHint": "Use CWN armor options (soak, melee and ranged AC)?",
       "useCWNCyber": "Use CWN Cyber Options?",
       "useCWNCyberHint": "Use CWN cyber options (concealment, type, complications, etc)?",
-      "showAccess" : "Show Access?",
+      "showAccess" : "Show CWN Access?",
       "showAccessHint" : "Show Access on the character sheet?",
       "search": "Compendium item search?",
       "searchHint": "What compendiums to search for items for in-sheet item adds?",
@@ -2020,7 +2067,8 @@
       "consumable": {
         "none": "None",
         "count": "Individual",
-        "bundle": "Bundle/Clip"
+        "bundle": "Bundle/Clip",
+        "fuel": "Fuel"
       },
       "container": {
         "settings": "Container Settings",

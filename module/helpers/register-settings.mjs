@@ -178,6 +178,24 @@ export const registerSettings = function () {
     default: false,
   });
 
+  game.settings.register("swnr", "useAWNVehicle", {
+    name: "swnr.settings.useAWNVehicle",
+    hint: "swnr.settings.useAWNVehicle",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: false,
+  });
+
+  game.settings.register("swnr", "useAWNGearCondition", {
+    name: "swnr.settings.useAWNGearCondition",
+    hint: "swnr.settings.useAWNGearConditionHint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: false,
+  });
+
   // Language Settings
   game.settings.register("swnr", "languagePresetSelector", {
     name: "swnr.settings.languagePresetSelector",
@@ -241,6 +259,8 @@ export const getGameSettings = function () {
     useCWNArmor: game.settings.get("swnr", "useCWNArmor"),
     useCWNCyber: game.settings.get("swnr", "useCWNCyber"),
     useStress: game.settings.get("swnr", "useStress"),
+    useAWNVehicle: game.settings.get("swnr", "useAWNVehicle"),
+    useAWNGearCondition: game.settings.get("swnr", "useAWNGearCondition"),
     showAccess: game.settings.get("swnr", "showAccess"),
     // search: game.settings.get("swnr", "search"),
     languagePresetSelector: game.settings.get("swnr", "languagePresetSelector"),
