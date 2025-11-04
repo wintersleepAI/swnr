@@ -16,10 +16,10 @@ export default class SWNWeapon extends SWNBaseGearItem {
     schema.skillBoostsDamage = new fields.BooleanField({ initial: false });
     schema.skillBoostsShock = new fields.BooleanField({ initial: false });
     schema.shock = new fields.SchemaField({
-      dmg: SWNShared.requiredString("0"),
+      dmg: SWNShared.diceString("0"),
       ac: SWNShared.requiredNumber(10),
     });
-    schema.ab = SWNShared.requiredString("0");
+    schema.ab = SWNShared.requiredNumber(0, -10);
     schema.ammo = new fields.SchemaField({
       longReload: new fields.BooleanField({ initial: false }),
       suppress: new fields.BooleanField({ initial: false }),
@@ -33,7 +33,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       normal: SWNShared.requiredNumber(1),
       max: SWNShared.requiredNumber(2),
     });
-    schema.damage = SWNShared.requiredString("1d6");
+    schema.damage = SWNShared.diceString("1d6");
     schema.remember = new fields.SchemaField({
       use: new fields.BooleanField({ initial: false }),
       burst: new fields.BooleanField({ initial: false }),
@@ -43,7 +43,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
     //schema.quantity = SWNShared.requiredNumber(1);
     schema.save = SWNShared.stringChoices(null, CONFIG.SWN.saveTypes, false);
     schema.trauma = new fields.SchemaField({
-      die: SWNShared.requiredString("1d6"),
+      die: SWNShared.diceString("1d6"),
       rating: SWNShared.nullableNumber(),
     });
     schema.isTwoHanded = new fields.BooleanField({ initial: false });

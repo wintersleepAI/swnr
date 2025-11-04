@@ -11,7 +11,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = super.defineSchema();
-    schema.damage = SWNShared.requiredString("1d6");
+    schema.damage = SWNShared.diceString("1d6");
     schema.ab = SWNShared.requiredNumber(0);
     schema.hardpoint = SWNShared.requiredNumber(1);
     schema.qualities = SWNShared.requiredString("");
@@ -21,7 +21,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
       value: SWNShared.requiredNumber(4)
     });
     schema.trauma = new fields.SchemaField({
-      die: SWNShared.requiredString("1d6"),
+      die: SWNShared.diceString("1d6"),
       rating: SWNShared.nullableNumber(),
       vehicle: new fields.BooleanField({ initial: false }),
     });

@@ -19,16 +19,16 @@ export default class SWNNPC extends SWNActorBase {
     schema.armorType = SWNShared.stringChoices("street", CONFIG.SWN.armorTypes);
     schema.skillBonus = SWNShared.requiredNumber(0);
     schema.attacks = new fields.SchemaField({
-      damage: SWNShared.requiredString("d6"),
+      damage: SWNShared.diceString("d6"),
       bonusDamage: SWNShared.requiredNumber(0),
       number: SWNShared.requiredNumber(1),
       name: SWNShared.emptyString(),
       trauma: new fields.SchemaField({
-        die: SWNShared.requiredString("1d6"),
+        die: SWNShared.diceString("1d6"),
         rating: SWNShared.nullableNumber(),
       }),
       shock: new fields.SchemaField({
-        dmg: SWNShared.requiredNumber(0),
+        dmg: SWNShared.diceString("0"),
         ac: SWNShared.requiredString(""),
       }),
     });
