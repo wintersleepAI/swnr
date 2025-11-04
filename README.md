@@ -1,6 +1,6 @@
 # Systems Without Number Redux for Foundry VTT
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Foundry v13](https://img.shields.io/badge/foundry-v13-green)
@@ -111,6 +111,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/TheToonerfish"><img src="https://avatars.githubusercontent.com/u/120363141?v=4?s=100" width="100px;" alt="TheToonerfish"/><br /><sub><b>TheToonerfish</b></sub></a><br /><a href="https://github.com/wintersleepAI/swnr/commits?author=TheToonerfish" title="Tests">⚠️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Torticute"><img src="https://avatars.githubusercontent.com/u/30007326?v=4?s=100" width="100px;" alt="Torticute"/><br /><sub><b>Torticute</b></sub></a><br /><a href="https://github.com/wintersleepAI/swnr/commits?author=Torticute" title="Tests">⚠️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/pgotsis"><img src="https://avatars.githubusercontent.com/u/7128789?v=4?s=100" width="100px;" alt="Panos Gotsis"/><br /><sub><b>Panos Gotsis</b></sub></a><br /><a href="https://github.com/wintersleepAI/swnr/commits?author=pgotsis" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/pandanielxd"><img src="https://avatars.githubusercontent.com/u/65407753?v=4?s=100" width="100px;" alt="pandanielxd"/><br /><sub><b>pandanielxd</b></sub></a><br /><a href="https://github.com/wintersleepAI/swnr/commits?author=pandanielxd" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
