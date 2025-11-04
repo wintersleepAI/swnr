@@ -200,7 +200,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
     let shock_roll = null;
     // Show shock damage
     if (game.settings.get("swnr", "addShockMessage")) {
-      if (this.shock && this.shock.dmg != "0") {
+      if (this.shock && this.shock.dmg != null && this.shock.dmg != "" && this.shock.dmg != "0") {
         shock_content = `Shock Damage  AC ${this.shock.ac}`;
         let _shockRoll = new Roll(
           this.shock.dmg + " + @stat " +
