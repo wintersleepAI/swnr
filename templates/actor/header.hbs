@@ -206,13 +206,23 @@
         {{formGroup systemFields.access value=system.access localize=true widget=headerWidget readonly=1}}
       {{/if}}
       
-      {{#if (eq actor.type 'character')}}
+      {{#if (eq actor.type 'character')}} <!-- Stress -->
         {{#if (eq gameSettings.useStress true)}}
-          {{formGroup systemFields.stress value=system.stress localize=true widget=headerWidget}}
+        <div class="resource flex-group-center">
+          <div class="resource-content">  
+            <div class="flex flexrow">
+              {{formInput systemFields.stress value=system.stress localize=true widget=headerWidget}}
+            </div> 
+          </div>
+          <label class='resource-label'>
+            <a data-action="stressRoll">
+              {{localize 'SWN.Actor.Character.FIELDS.stress.label'}}          
+              <i class="fa fa-dice-d20"></i>
+            </a>
+          </label>  
+        </div>
         {{/if}}
       {{/if}}
-
-
 
       {{#if (eq actor.type 'character')}}
       

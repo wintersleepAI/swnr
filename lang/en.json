@@ -210,6 +210,14 @@
               "mod": {
                 "label": "Initiative Mod"
               }
+            },
+            "modifiers": {
+              "readied": {
+                "label": "Readied Modifier"
+              },
+              "stowed": {
+                "label": "Stowed Modifier"
+              }
             }
           },
           "class": {

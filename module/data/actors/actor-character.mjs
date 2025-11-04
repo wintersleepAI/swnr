@@ -49,6 +49,7 @@ export default class SWNCharacter extends SWNActorBase {
     schema.unspentPsySkillPoints = SWNShared.requiredNumber(0);
     schema.extra = SWNShared.resourceField(0, 10);
     schema.stress = SWNShared.nullableNumber();
+    schema.breakdowns = SWNShared.nullableNumber();
 
     schema.tweak = new fields.SchemaField({
       advInit: new fields.BooleanField({initial: false}),
@@ -76,6 +77,10 @@ export default class SWNCharacter extends SWNActorBase {
       balanceDisplay: SWNShared.requiredString("Balance"),
       initiative: new fields.SchemaField({
         mod: SWNShared.nullableNumber(),
+      }),
+      modifiers: new fields.SchemaField({
+        readied: SWNShared.requiredNumber(0,-99),
+        stowed: SWNShared.requiredNumber(0,-99),
       })
     });
 
@@ -211,8 +216,8 @@ export default class SWNCharacter extends SWNActorBase {
         stowed: { max: 0, value: 0, percentage: 100 },
       };
     const encumbrance = this.encumbrance;
-    encumbrance.ready.max = Math.floor(this.stats.str.total / 2);
-    encumbrance.stowed.max = this.stats.str.total;
+    encumbrance.ready.max = Math.floor(this.stats.str.total / 2) + this.tweak.modifiers.readied;
+    encumbrance.stowed.max = this.stats.str.total + this.tweak.modifiers.stowed;
     
     const inventory = this.parent.items.filter(
         (i) => i.type === "item" || i.type === "weapon" || i.type === "armor");
@@ -559,6 +564,17 @@ export default class SWNCharacter extends SWNActorBase {
    */
   async endScene() {
     return await globalThis.swnr.utils.refreshActor({ actor: this.parent, cadence: 'scene' });
+  }
+
+  async rollStress() {
+    const stress = this.stress;
+    if (isNaN(stress)) {
+      ui.notifications?.error("Unable to find stress");
+      return;
+    }
+    ui.notifications?.info("Rolling stress for " + this.parent.name + " at " + stress);
+    // const template = "systems/swnr/templates/dialogs/roll-stress.hbs";
+    // const title = game.i18n.format("swnr.titles.stressRoll", {
   }
 
   /**
