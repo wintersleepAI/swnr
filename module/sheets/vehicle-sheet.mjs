@@ -1301,7 +1301,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     );
   }
 
-  static async _setCaptSupport(dept) {
+  async _setCaptSupport(dept) {
     const deptSupport = this.actor.system.supportingDept
       ? this.actor.system.supportingDept
       : "";
