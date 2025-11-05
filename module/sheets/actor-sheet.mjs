@@ -64,6 +64,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       removeLanguage: this._onRemoveLanguage,
       toggleLanguageAdd: this._onToggleLanguageAdd,
       stressRoll: this._onStressRoll,
+      modStress: this._onModStress,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -1565,6 +1566,14 @@ export class SWNActorSheet extends SWNBaseSheet {
       return;
     }
     this.actor.system.rollStress();
+  }
+
+  static async _onModStress(event, _target) {
+    event.preventDefault();
+    if (this.actor.type !== "character") {
+      return;
+    }
+    this.actor.system.modStress();
   }
 
 }
