@@ -1952,6 +1952,14 @@
       "tweaks": "Tweaks"
     },
     "settings": {
+      "currency": {
+        "title": "Currency Settings",
+        "titleHint": "Configure the currencies for the world.",
+        "baseName": "Base Currency Name",
+        "baseNameHint": "The name of the base currency for the world.",
+        "baseEnc": "Base Currency Encumbrance",
+        "baseEncHint": "The number of base currency units that take up one slot. 0 = no encumbrance."
+      },
       "useRollNPCHD": "Use NPC HD on token create?",
       "useRollNPCHDHint": "When creating a npc token, if the HP or Hit Dice (HD) has not been rolled, it will roll d8 HD for health automatically.",
       "useHomebrewLuckSave": "Use Homebrew Luck saves?",
