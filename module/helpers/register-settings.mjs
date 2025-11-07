@@ -275,6 +275,35 @@ export const registerSettings = function () {
     // requiresReload: true,
   });
 
+
+  for (let i = 0; i < CONFIG.SWN.maxCustomCurrencyTypes; i++) {
+    game.settings.register("swnr", `customCurrencyName${i}`, {
+      name: `swnr.settings.currency.customName`,
+      hint: `swnr.settings.currency.customNameHint`,
+      scope: "world",
+      config: false, // restrict to menu
+      type: String,
+      default: "",
+    });
+
+    game.settings.register("swnr", `customCurrencyEnc${i}`, {
+      name: `swnr.settings.currency.customEnc`,
+      hint: `swnr.settings.currency.customEncHint`,
+      scope: "world",
+      config: false, // restrict to menu
+      type: Number,
+      default: 0,
+    });
+
+    game.settings.register("swnr", `customCurrencyConversionRate${i}`, {
+      name: `swnr.settings.currency.customConversionRate`,
+      hint: `swnr.settings.currency.customConversionRateHint`,
+      scope: "world",
+      config: false, // restrict to menu
+      type: Number,
+      default: 0,
+    });
+  }
   game.settings.registerMenu("swnr", "currencySettingsMenu", {
     name: "swnr.settings.currency.title",
     label: "swnr.settings.currency.title",      // The text label used in the button
@@ -314,6 +343,11 @@ export const getGameSettings = function () {
       baseCurrencyEnc: game.settings.get("swnr", "baseCurrencyEnc"),
     }
   };
+  for (let i = 0; i < CONFIG.SWN.maxCustomCurrencyTypes; i++) {
+    settings.currency[`customCurrencyName${i}`] = game.settings.get("swnr", `customCurrencyName${i}`);
+    settings.currency[`customCurrencyEnc${i}`] = game.settings.get("swnr", `customCurrencyEnc${i}`);
+    settings.currency[`customCurrencyConversionRate${i}`] = game.settings.get("swnr", `customCurrencyConversionRate${i}`);
+  }
   return settings;
 };
 
@@ -359,16 +393,33 @@ const { fields } = foundry.data;
 
 export class CurrencyFormModel extends foundry.abstract.DataModel {
   static defineSchema() {
-    return {
+    const schema = {
       baseCurrencyName: new fields.StringField({ label: "swnr.settings.currency.baseName", hint: "swnr.settings.currency.baseNameHint", required: true }),
       baseCurrencyEnc: new foundry.data.fields.NumberField({
         label: "swnr.settings.currency.baseEnc",
         hint: "swnr.settings.currency.baseEncHint",
         min: 0, max: 100, step: 1,
         initial: 0, nullable: false
-      })
-      // baseCurrencyEncWeight:  new fields.NumberField({ label: "swnr.settings.currency.baseEncWeight",   required: true }),// bonus: new fields.NumberField({ label: "Bonus",  integer: true, initial: 0 })
+      }),
+      // 5 custom currencies
+      customCurrencyName0: new fields.StringField({ label: `swnr.settings.currency.customName`, hint: `swnr.settings.currency.customNameHint`, required: false }),
+      customCurrencyEnc0: new foundry.data.fields.NumberField({ label: `swnr.settings.currency.customEnc`, hint: `swnr.settings.currency.customEncHint`, min: 0, max: 100, step: 1, initial: 0, nullable: false }),
+      customCurrencyConversionRate0: new foundry.data.fields.NumberField({ label: `swnr.settings.currency.customConversionRate`, hint: `swnr.settings.currency.customConversionRateHint`, min: -100, max: 100, step: 1, initial: 10, nullable: false }),
+      customCurrencyName1: new fields.StringField({ label: `swnr.settings.currency.customName`, hint: `swnr.settings.currency.customNameHint`, required: false }),
+      customCurrencyEnc1: new foundry.data.fields.NumberField({ label: `swnr.settings.currency.customEnc`, hint: `swnr.settings.currency.customEncHint`, min: 0, max: 100, step: 1, initial: 0, nullable: false }),
+      customCurrencyConversionRate1: new foundry.data.fields.NumberField({ label: `swnr.settings.currency.customConversionRate`, hint: `swnr.settings.currency.customConversionRateHint`, min: -100, max: 100, step: 1, initial: 10, nullable: false }),
+      customCurrencyName2: new fields.StringField({ label: `swnr.settings.currency.customName`, hint: `swnr.settings.currency.customNameHint`, required: false }),
+      customCurrencyEnc2: new foundry.data.fields.NumberField({ label: `swnr.settings.currency.customEnc`, hint: `swnr.settings.currency.customEncHint`, min: 0, max: 100, step: 1, initial: 0, nullable: false }),
+      customCurrencyConversionRate2: new foundry.data.fields.NumberField({ label: `swnr.settings.currency.customConversionRate`, hint: `swnr.settings.currency.customConversionRateHint`, min: -100, max: 100, step: 1, initial: 10, nullable: false }),
+      customCurrencyName3: new fields.StringField({ label: `swnr.settings.currency.customName`, hint: `swnr.settings.currency.customNameHint`, required: false }),
+      customCurrencyEnc3: new foundry.data.fields.NumberField({ label: `swnr.settings.currency.customEnc`, hint: `swnr.settings.currency.customEncHint`, min: 0, max: 100, step: 1, initial: 0, nullable: false }),
+      customCurrencyConversionRate3: new foundry.data.fields.NumberField({ label: `swnr.settings.currency.customConversionRate`, hint: `swnr.settings.currency.customConversionRateHint`, min: -100, max: 100, step: 1, initial: 10, nullable: false }),
+      customCurrencyName4: new fields.StringField({ label: `swnr.settings.currency.customName`, hint: `swnr.settings.currency.customNameHint`, required: false }),
+      customCurrencyEnc4: new foundry.data.fields.NumberField({ label: `swnr.settings.currency.customEnc`, hint: `swnr.settings.currency.customEncHint`, min: 0, max: 100, step: 1, initial: 0, nullable: false }),
+      customCurrencyConversionRate4: new foundry.data.fields.NumberField({ label: `swnr.settings.currency.customConversionRate`, hint: `swnr.settings.currency.customConversionRateHint`, min: -100, max: 100, step: 1, initial: 10, nullable: false }),
     };
+
+    return schema;
   }
 }
 
@@ -392,7 +443,7 @@ class CurrencySubmenuApplicationClass extends HandlebarsApplicationMixin(Applica
       contentClasses: ["standard-form"],
       title: "swnr.settings.currency.title"
     },
-    classes: ['swnr', 'currency-settings'],
+    classes: ['swnr', 'settings-form', 'currency-settings'],
 
   }
 
@@ -411,8 +462,19 @@ class CurrencySubmenuApplicationClass extends HandlebarsApplicationMixin(Applica
   }
 
   _onRender(context, options) {
-    // this.element.querySelector("input[name=something]").addEventListener("click", /* ... */);
-    // We will deal with reset later
+    super._onRender(context, options);
+    this.element.querySelector("select[name=loadPreset]").addEventListener("change", this._onLoadPresetChange.bind(this));
+  }
+  async _onLoadPresetChange(event) {
+    event.preventDefault();
+    const value = event.target.value;
+    if (value === "none") {
+      return;
+    }
+    ui.notifications.info(`Loading preset: ${value}`);
+    //TODO 
+    // - Set the base currency name and encumbrance
+
   }
 
   async _prepareContext(options) {

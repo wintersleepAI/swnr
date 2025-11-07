@@ -1958,7 +1958,13 @@
         "baseName": "Base Currency Name",
         "baseNameHint": "The name of the base currency for the world.",
         "baseEnc": "Base Currency Encumbrance",
-        "baseEncHint": "The number of base currency units that take up one slot. 0 = no encumbrance."
+        "baseEncHint": "The number of base currency units that take up one slot. 0 = no encumbrance.",
+        "customName": "Custom Currency Name",
+        "customNameHint": "The name of the custom currency for the world. Blank (leave empty) to disable",
+        "customEnc": "Currency Encumbrance",
+        "customEncHint": "The number of custom currency units that take up one slot. 0 = no encumbrance.",
+        "customConversionRate": "Conversion Rate",
+        "customConversionRateHint": "The conversion rate to the base currency. 0 means is not convertible. > 0 means the custom currency is worth less than the base currency. < 0 means the custom currency is worth more than the base currency (e.g., -10 means 1 converts to 10 base currency units)."
       },
       "useRollNPCHD": "Use NPC HD on token create?",
       "useRollNPCHDHint": "When creating a npc token, if the HP or Hit Dice (HD) has not been rolled, it will roll d8 HD for health automatically.",

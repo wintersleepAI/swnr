@@ -28,6 +28,8 @@ SWN.maxPowerLevel = 10;
 
 SWN.maxSkillRank = 4;
 
+SWN.maxCustomCurrencyTypes = 5;
+
 SWN.itemLocations = {
   readied: 'swnr.item.locationReadied', 
   stowed: 'swnr.item.locationStowed', 
