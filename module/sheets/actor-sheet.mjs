@@ -1309,13 +1309,43 @@ export class SWNActorSheet extends SWNBaseSheet {
           action: "convert",
           icon: 'fas fa-exchange-alt',
           callback: async (_event, _button, _dialog) => {
-            const currency = this.actor.system.credits.extraCurrencies[currencyIdx];
-            ui.notifications?.info(`Converting ${currency.name} to base currency`);
+            const currencyList = duplicate(this.actor.system.credits.extraCurrencies);
+            const baseCurrencyName = game.settings.get("swnr", "baseCurrencyName");
+            const currencyToConvert = currencyList[currencyIdx];
+            let baseCurrencyToAdd = 0;
+            const baseCurrency = this.actor.system.credits.carriedBase;
+            const originalValue = currencyToConvert.value;
+            let remainder = 0;
+            if (currencyToConvert.type !== 'base') {
+              // find the conversation rate 
+              const conversionRate = game.settings.get("swnr", `customCurrencyConversionRate${currencyToConvert.type}`);
+              const customCurrencyName = game.settings.get("swnr", `customCurrencyName${currencyToConvert.type}`);
+              if (conversionRate === undefined || conversionRate === null || conversionRate === 0) {
+                ui.notifications?.error(`Currency ${customCurrencyName} not able to be converted to base currency`);
+                return "cancel";
+              } 
+              if (conversionRate < 0) {
+                // Worth more than the base currency
+                baseCurrencyToAdd = currencyToConvert.value * conversionRate * -1;
+                remainder = 0;
+              } else {
+                // Worth less than the base currency
+                baseCurrencyToAdd = Math.floor(currencyToConvert.value/conversionRate);
+                remainder = currencyToConvert.value % conversionRate;
+              }
+            } else {
+              // Already base currency
+              baseCurrencyToAdd = currencyToConvert.value;
+              remainder = 0;
+            }
+            currencyList[currencyIdx].value = remainder;
+            // add the base currency to the actor
+            await this.actor.update({
+              "system.credits.extraCurrencies": currencyList,
+              "system.credits.carriedBase": baseCurrency + baseCurrencyToAdd,
+            });
+            ui.notifications?.info(`Converting ${originalValue} of ${currencyToConvert.name} ${currencyToConvert.typeName} to ${baseCurrencyName}. Added ${baseCurrencyToAdd} ${baseCurrencyName} with ${remainder}  remaining  ${currencyToConvert.typeName}`);
             return "convert";
-            // currency.type = "base";
-            // await this.actor.update({
-            //   "system.credits.extraCurrencies": [...this.actor.system.credits.extraCurrencies, currency]
-            // });
           }
         }
       ]

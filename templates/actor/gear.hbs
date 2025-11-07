@@ -15,7 +15,7 @@
     </div>
     {{#each actor.system.credits.extraCurrencies as |currency idx|}}
       <div class="flex items-center">
-        <input type="number" name="currencyValue" value="{{currency.value}}" />
+        <input type="number" name="currencyValue" value="{{currency.value}}" readonly />
         <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
           title="{{localize 'swnr.sheet.credit-change'}}  {{currency.typeName}}"
           data-credit-type="base" data-action="creditChange">
