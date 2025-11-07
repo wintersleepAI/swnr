@@ -256,6 +256,30 @@ export default class SWNCharacter extends SWNActorBase {
       .map(itemInvCost)
       .reduce((i, n) => i + n, 0);
 
+    const baseCurrencyEnc = game.settings.get("swnr", "baseCurrencyEnc");
+
+    // calculate stowed encumbrance from currency
+    if (baseCurrencyEnc > 0) {
+      const baseCurrency = this.credits.carriedBase;
+      const baseCurrencyValue = Math.floor(baseCurrency / baseCurrencyEnc);
+      encumbrance.stowed.value += baseCurrencyValue;
+    }
+    for (let currency of this.credits.extraCurrencies) {
+      if (currency.type !== 'base') {
+        const currencyEnc = game.settings.get("swnr", `customCurrencyEnc${currency.type}`);
+        if (currencyEnc > 0) {
+          const currencyValue = Math.floor(currency.value / currencyEnc);
+          encumbrance.stowed.value += currencyValue;
+        }
+      } else if (baseCurrencyEnc > 0) {
+        // more base 
+        const currencyValue = Math.floor(currency.value / baseCurrencyEnc);
+        encumbrance.stowed.value += currencyValue;
+      } else {
+        // Base has no encumbrance
+      }
+    }
+
     encumbrance.ready.percentage = Math.clamp((encumbrance.ready.value * 100) / encumbrance.ready.max, 0, 100);
     encumbrance.stowed.percentage = Math.clamp((encumbrance.stowed.value * 100) / encumbrance.stowed.max, 0, 100);
 
