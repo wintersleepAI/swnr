@@ -33,6 +33,19 @@ export default class SWNActorBase extends foundry.abstract
       /* Values: array of { powerId, powerName, amount, duration } */
     });
 
+    schema.credits = new fields.SchemaField({
+      debt: SWNShared.requiredNumber(0), //deprecated
+      balance: SWNShared.requiredNumber(0), //deprecated
+      owed: SWNShared.requiredNumber(0), //deprecated
+      carriedBase: SWNShared.requiredNumber(0),
+      extraCurrencies: new fields.ArrayField(new fields.SchemaField({
+        name: SWNShared.requiredString(""),
+        type: SWNShared.stringChoices('base', CONFIG.SWN.currencyTypes),
+        value: new fields.NumberField({ required: true, nullable: false, integer: true, initial: 0 }),
+        carried: new fields.BooleanField({required: true, initial: true}),
+      }))
+    });
+
     schema.speed = SWNShared.requiredNumber(10);
     schema.cyberdecks = new fields.ArrayField(new fields.DocumentIdField()); 
     schema.health_max_modified = SWNShared.requiredNumber(0);
@@ -41,6 +54,14 @@ export default class SWNActorBase extends foundry.abstract
 
   prepareDerivedData() {
     this.health.percentage = Math.clamp((this.health.value * 100) / this.health.max, 0, 100);
+    for (let currency of this.credits.extraCurrencies) {
+      if (currency.type === 'base') {
+        currency.typeName = game.settings.get("swnr", "baseCurrencyName");
+      } else {
+        currency.typeName = game.settings.get("swnr", `customCurrencyName${currency.type}`);
+      }
+    }
+      
   }
 
   rollSave(_saveType) {

@@ -1,38 +1,53 @@
 {{! Gear Tab }}
 <section class='tab gear sheet-body {{tab.cssClass}}' data-group='primary' data-tab='gear'>
   {{#if (eq actor.type 'character')}}
-  <div class="flex flexrow gap" style="column-gap:10%">
-    <div class="flex flex-col items-center">
-      {{formInput systemFields.credits.fields.debt value=system.credits.debt localize=true}}
-      <label for="system.credits.debt">{{system.tweak.debtDisplay}}
-      <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
-        title="{{localize 'swnr.sheet.credit-change'}} {{system.tweak.debtDisplay}}"
-        data-credit-type="debt" data-action="creditChange">
-          <i class="fas fa-coins"></i>
-      </a> 
+  <div class="grid grid-5col" style="column-gap:10px">
+    <div class="flex items-center">
+      {{formInput systemFields.credits.fields.carriedBase value=system.credits.carriedBase localize=true}}
+      <label for="system.credits.carriedBase">
+        <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
+          title="{{localize 'swnr.sheet.credit-change'}}  {{gameSettings.currency.baseCurrencyName}}"
+          data-credit-type="base" data-action="creditChange">
+            <i class="fas fa-coins"></i>
+          {{gameSettings.currency.baseCurrencyName}}
+        </a>
       </label>
     </div>
-    <div class="flex flex-col items-center">
-      {{formInput systemFields.credits.fields.balance value=system.credits.balance localize=true}}
-      <label for="system.credits.balance">{{system.tweak.balanceDisplay}}
-      <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
-        title="{{localize 'swnr.sheet.credit-change'}} {{system.tweak.balanceDisplay}}"
-        data-credit-type="balance" data-action="creditChange">
-          <i class="fas fa-coins"></i>
-      </a> 
-      </label>
+    {{#each actor.system.credits.extraCurrencies as |currency idx|}}
+      <div class="flex items-center">
+        <input type="number" name="currencyValue" value="{{currency.value}}" />
+        <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
+          title="{{localize 'swnr.sheet.credit-change'}}  {{currency.typeName}}"
+          data-credit-type="base" data-action="creditChange">
+            <i class="fas fa-coins"></i>
+        <label for="currencyValue">
+          {{#if currency.name}}
+           {{currency.name}} 
+           {{#if (ne currency.type 'base')}}
+             ({{currency.typeName}})
+           {{/if}}
+          {{else}}
+           {{currency.typeName}}
+          {{/if}}
+          </label>
+
+        <a class="currency-button" data-action="editCurrency" data-currency-idx="{{idx}}">
+          <i class="fas fa-edit"></i>
+        </a>
+      </div>
+    {{/each}}
+    <div>
+      <div class="currency-button flex flexcol items-center" data-tooltip="{{localize 'swnr.sheet.addCurrencyHint'}}">
+        <a data-action="addCurrency"><i class="fas fa-money-bill-wave fa-2x"></i></a>
+        {{localize 'swnr.sheet.addCurrency'}}
+      </div>
     </div>
-    <div class="flex flex-col items-center">
-      {{formInput systemFields.credits.fields.owed value=system.credits.owed localize=true}}
-      <label for="system.credits.owed">{{system.tweak.owedDisplay}}
-      <a class="credits-change text-gray-100 hover:text-green-400 transition-colors"
-        title="{{localize 'swnr.sheet.credit-change'}} {{system.tweak.owedDisplay}}"
-        data-credit-type="owed" data-action="creditChange">
-          <i class="fas fa-coins"></i>
-      </a>
-      </label>
-    </div>
+    {{!-- <div>
+      {{formInput systemFields.credits.fields.extraCurrencies value=system.credits.extraCurrencies localize=true}}
+      <label for="system.credits.extraCurrencies">Extra Currencies</label>
+    </div> --}}
   </div>
+
 
   <div class="flex flexrow gap" style="column-gap:10%;"><!-- Encum -->
 

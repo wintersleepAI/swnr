@@ -501,7 +501,7 @@ class CurrencySubmenuApplicationClass extends HandlebarsApplicationMixin(Applica
     if (event.type === "submit") {
       const settings = foundry.utils.expandObject(formData.object);
       for (const [key, value] of Object.entries(settings)) {
-        if (key !== "submit" && key !== "cancel") {
+        if (key !== "submit" && key !== "cancel" && key !== "loadPreset") {
           await game.settings.set("swnr", key, value);
         }
       }

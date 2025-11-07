@@ -38,6 +38,8 @@ export class SWNActorSheet extends SWNBaseSheet {
       roll: this._onRoll,
       reload: this._onReload,
       creditChange: this._onCreditChange,
+      addCurrency: this._onAddCurrency,
+      editCurrency: this._onEditCurrency,
       addUse: this._onAddUse,
       removeUse: this._onRemoveUse,
       rest: this._onRest,
@@ -1235,6 +1237,129 @@ export class SWNActorSheet extends SWNBaseSheet {
       console.error("Error handling power preparation:", error);
       ui.notifications?.error("An error occurred while changing power preparation");
     }
+  }
+
+  static async _onEditCurrency(event, target) {
+    event.preventDefault();
+    const currencyIdx = target.dataset.currencyIdx;
+    const currency = this.actor.system.credits.extraCurrencies[currencyIdx];
+    const template = "systems/swnr/templates/dialogs/add-currency-type.hbs";
+    const content = await renderTemplate(template, { settings: getGameSettings(), currency: currency });
+    const _resp = await foundry.applications.api.DialogV2.wait(
+      {
+        window: {
+          title: game.i18n.format("swnr.sheet.editCurrency",
+            { actor: this.actor.name }
+          )
+        },
+        content,
+        modal: false,
+        rejectClose: false,
+        buttons: [
+        {
+          label: game.i18n.localize("swnr.sheet.editCurrency"),
+          action: "edit",
+          icon: 'fas fa-edit',
+          callback: async (_event, button, _dialog) => {
+            const currencyType = button.form.elements.currencyType.value;
+            const currencyName = button.form.elements.currencyName.value;
+            const currencyValue = button.form.elements.currencyValue.value;
+            const carried = button.form.elements.carried.checked;
+            const currency = {
+              type: currencyType,
+              name: currencyName,
+              value: currencyValue,
+              carried: carried,
+            };
+            const currencyList = duplicate(this.actor.system.credits.extraCurrencies);
+            currencyList[currencyIdx] = currency;
+            await this.actor.update({
+              "system.credits.extraCurrencies": currencyList
+            });
+            return "edit";
+          }
+        }, 
+        {
+          label: game.i18n.localize("swnr.sheet.deleteCurrency"),
+          action: "delete",
+          icon: 'fas fa-trash',
+          callback: async (_event, _button, _dialog) => {
+            // confirm deletion
+            const confirmed = await Dialog.confirm({
+              title: "Confirm Delete",
+              content: `<p>Are you sure you want to delete this currency? The value will be lost and there is no undo.</p>`,
+              yes: () => true,
+              no: () => false,
+              defaultYes: false
+            });
+        
+            if (!confirmed) {
+              ui.notifications.info("Currency deletion cancelled");
+              return "cancel";
+            }
+            const currencyList = duplicate(this.actor.system.credits.extraCurrencies);
+            currencyList.splice(currencyIdx, 1);
+            await this.actor.update({
+              "system.credits.extraCurrencies": currencyList
+            });
+            return "delete";
+          }
+        }, {
+          label: game.i18n.localize("swnr.sheet.convertToBaseCurrency"),
+          action: "convert",
+          icon: 'fas fa-exchange-alt',
+          callback: async (_event, _button, _dialog) => {
+            const currency = this.actor.system.credits.extraCurrencies[currencyIdx];
+            ui.notifications?.info(`Converting ${currency.name} to base currency`);
+            return "convert";
+            // currency.type = "base";
+            // await this.actor.update({
+            //   "system.credits.extraCurrencies": [...this.actor.system.credits.extraCurrencies, currency]
+            // });
+          }
+        }
+      ]
+      }
+    );
+  }
+
+  static async _onAddCurrency(event, target) {
+    event.preventDefault();
+    const template = "systems/swnr/templates/dialogs/add-currency-type.hbs";
+    const content = await renderTemplate(template, { settings: getGameSettings(), currency: {} });
+
+    const _resp = await foundry.applications.api.DialogV2.prompt(
+      {
+        window: {
+          title: game.i18n.format("swnr.sheet.addCurrency",
+            { actor: this.actor.name }
+          )
+        },
+        content,
+        modal: true,
+        rejectClose: false,
+        ok:
+        {
+          label: game.i18n.localize("swnr.sheet.addCurrency"),
+          callback: async (event, button, dialog) => {
+            const currencyType = button.form.elements.currencyType.value;
+            const currencyName = button.form.elements.currencyName.value;
+            const currencyValue = button.form.elements.currencyValue.value;
+            const carried = button.form.elements.carried.checked;
+            const currency = {
+              type: currencyType,
+              name: currencyName,
+              value: currencyValue,
+              carried: carried,
+            };
+            await this.actor.update({
+              "system.credits.extraCurrencies": [...this.actor.system.credits.extraCurrencies, currency]
+            });
+          }
+        },
+      }
+    );
+
   }
 
   static async _onAddUse(event, target) {

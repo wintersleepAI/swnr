@@ -40,11 +40,6 @@ export default class SWNCharacter extends SWNActorBase {
     schema.employer = SWNShared.requiredString("");
     schema.biography = SWNShared.requiredString("");
     schema.languages = new fields.ArrayField(SWNShared.requiredString(""));
-    schema.credits = new fields.SchemaField({
-      debt: SWNShared.requiredNumber(0),
-      balance: SWNShared.requiredNumber(0),
-      owed: SWNShared.requiredNumber(0)
-    });
     schema.unspentSkillPoints = SWNShared.requiredNumber(0);
     schema.unspentPsySkillPoints = SWNShared.requiredNumber(0);
     schema.extra = SWNShared.resourceField(0, 10);
