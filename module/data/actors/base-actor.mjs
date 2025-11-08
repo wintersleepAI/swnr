@@ -37,7 +37,7 @@ export default class SWNActorBase extends foundry.abstract
       debt: SWNShared.requiredNumber(0), //deprecated
       balance: SWNShared.requiredNumber(0), //deprecated
       owed: SWNShared.requiredNumber(0), //deprecated
-      carriedBase: SWNShared.requiredNumber(0),
+      carriedBase: new fields.NumberField({ required: true, nullable: false, integer: true, initial: 0 }),
       extraCurrencies: new fields.ArrayField(new fields.SchemaField({
         name: SWNShared.requiredString(""),
         type: SWNShared.stringChoices('base', CONFIG.SWN.currencyTypes),

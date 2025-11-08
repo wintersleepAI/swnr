@@ -607,29 +607,58 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
 
     static async _onCreditChange(event, target) {
       event.preventDefault();
-      const currencyType = target.dataset.creditType;
       const _doAdd = async (_event, button, _html) => {
         const amount = button.form.elements.amount.value;
         if (isNaN(parseInt(amount))) {
           ui.notifications?.error(game.i18n.localize("swnr.InvalidNumber"));
           return;
         }
-        const oldAmount = this.actor.system.credits[currencyType];
-        if (oldAmount == undefined || oldAmount == null) {
-          ui.notifications?.error("Invalid currency type");
-          return;
+        if (this.actor.type === 'ship') {
+          const creditField = target.dataset.creditType;
+
+          const oldAmount = this.actor.system[creditField];
+          if (oldAmount == undefined || oldAmount == null) {
+            ui.notifications?.error("Invalid currency type");
+            return;
+          }
+          const newAmount = oldAmount + parseInt(amount);
+          await this.actor.update({
+            system: {
+                [creditField]: newAmount,
+              },
+          });
+        } else if (this.actor.type === 'character') {
+          const currencyType = target.dataset.currencyType;
+
+          if (currencyType === 'custom') {
+            const currencyIdx = target.dataset.currencyIdx;
+            let extraCurrencies = duplicate(this.actor.system.credits.extraCurrencies);
+            const currency = extraCurrencies[currencyIdx];
+            if (currency == undefined || currency == null) {
+              ui.notifications?.error("Invalid currency");
+              return;
+            }
+            extraCurrencies[currencyIdx].value = currency.value + parseInt(amount);
+            await this.actor.update({
+              "system.credits.extraCurrencies": extraCurrencies,
+            });
+          } else if (currencyType === 'base') {
+            const oldAmount = this.actor.system.credits.carriedBase;
+            const newAmount = oldAmount + parseInt(amount);
+            await this.actor.update({
+              "system.credits.carriedBase": newAmount,
+            });
+          } else {
+            ui.notifications?.error("Invalid currency type");
+          }
+        } else {
+          ui.notifications?.error("Credit change not supported for this actor type");
         }
-        const newAmount = this.actor.system.credits[currencyType] + parseInt(amount);
-        await this.actor.update({
-          system: {
-            credits: {
-              [currencyType]: newAmount,
-            },
-          },
-        });
+
       };
   
-      const description = game.i18n.format("swnr.dialog.addCurrency", { type: currencyType });
+      const currencyName = target.dataset.creditType;
+      const description = game.i18n.format("swnr.dialog.addCurrency", { type: currencyName });
       const proceed = await foundry.applications.api.DialogV2.prompt({
         window: { title: "Proceed" },
         content: `<p>${description}</p> <input type="number" name="amount">`,
