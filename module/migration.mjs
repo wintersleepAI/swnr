@@ -470,6 +470,35 @@ const migrations = {
       ui.notifications?.error(`Migration 2.1.0 failed: ${err.message}. Check console for details.`);
       throw err;
     }
+  },
+  "2.3.0": async () => {
+    console.log('Running migration for 2.3.0');
+    for (const actor of game.actors) {
+      let newCurrencies = [];
+      if (actor.type === 'character' ) {
+        if (actor.system.currency.debt > 0) {
+          newCurrencies.push({
+            name: actor.system.tweak.debtDisplay || "Debt",
+            type: 'base',
+            value: actor.system.currency.debt,
+            carried: true
+          });
+        }
+        if (actor.system.currency.owed > 0) {
+          newCurrencies.push({
+            name: actor.system.tweak.owedDisplay || "Owed",
+            type: 'base',
+            value: actor.system.currency.owed,
+            carried: true
+          });
+        }
+        await actor.update({
+          "system.credits.extraCurrencies": newCurrencies,
+          "system.credits.carriedBase": actor.system.credits.balance,
+        });
+        ui.notifications?.info(`Migrated ${actor.name} to 2.3.0`);
+      }
+    }
   }
 };
 
