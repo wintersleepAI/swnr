@@ -471,10 +471,78 @@ class CurrencySubmenuApplicationClass extends HandlebarsApplicationMixin(Applica
     if (value === "none") {
       return;
     }
-    ui.notifications.info(`Loading preset: ${value}`);
-    //TODO 
+    const confirmed = await Dialog.confirm({
+      title: "Confirm Delete",
+      content: `<p>Are you sure you want to load presets for currency? Existing currency settings will be overwritten and there is no undo.</p>`,
+      yes: () => true,
+      no: () => false,
+      defaultYes: false
+    });
+    if (!confirmed) {
+      event.target.value = "none";
+      return;
+    }
     // - Set the base currency name and encumbrance
-
+    if (value === "swn") {
+      game.settings.set("swnr", "baseCurrencyName", "Credits");
+      game.settings.set("swnr", "baseCurrencyEnc", 0);
+      game.settings.set("swnr", "customCurrencyName0", "");
+      game.settings.set("swnr", "customCurrencyName1", "");
+      game.settings.set("swnr", "customCurrencyName2", "");
+      game.settings.set("swnr", "customCurrencyName3", "");
+      game.settings.set("swnr", "customCurrencyName4", "");
+    } else if (value === "cwn") {
+      game.settings.set("swnr", "baseCurrencyName", "Dollars");
+      game.settings.set("swnr", "baseCurrencyEnc", 0);
+      game.settings.set("swnr", "customCurrencyName0", "");
+      game.settings.set("swnr", "customCurrencyName1", "");
+      game.settings.set("swnr", "customCurrencyName2", "");
+      game.settings.set("swnr", "customCurrencyName3", "");
+      game.settings.set("swnr", "customCurrencyName4", "");
+    } else if (value === "awn") {
+      game.settings.set("swnr", "baseCurrencyName", "Gold Escudo");
+      game.settings.set("swnr", "baseCurrencyEnc", 100);
+      game.settings.set("swnr", "customCurrencyName0", "Silver Peso");
+      game.settings.set("swnr", "customCurrencyEnc0", 100);
+      game.settings.set("swnr", "customCurrencyConversionRate0", 10);
+      game.settings.set("swnr", "customCurrencyName1", "Mandate Credit");
+      game.settings.set("swnr", "customCurrencyEnc1", 100);
+      game.settings.set("swnr", "customCurrencyConversionRate1", 10);
+      game.settings.set("swnr", "customCurrencyName2", "Ration");
+      game.settings.set("swnr", "customCurrencyEnc2", 1);
+      game.settings.set("swnr", "customCurrencyConversionRate2", 10);
+      game.settings.set("swnr", "customCurrencyName3", "");
+      game.settings.set("swnr", "customCurrencyName4", "");
+    } else if (value === "wwn") {
+      game.settings.set("swnr", "baseCurrencyName", "Silver");
+      game.settings.set("swnr", "baseCurrencyEnc", 100);
+      game.settings.set("swnr", "customCurrencyName0", "Gold");
+      game.settings.set("swnr", "customCurrencyEnc0", 100);
+      game.settings.set("swnr", "customCurrencyConversionRate0", -10);
+      game.settings.set("swnr", "customCurrencyName1", "Copper");
+      game.settings.set("swnr", "customCurrencyEnc1", 100);
+      game.settings.set("swnr", "customCurrencyConversionRate1", 0);
+      game.settings.set("swnr", "customCurrencyName2", "");
+      game.settings.set("swnr", "customCurrencyName3", "");
+      game.settings.set("swnr", "customCurrencyName4", "");
+    } else if (value === "ose") {
+      game.settings.set("swnr", "baseCurrencyName", "Gold");
+      game.settings.set("swnr", "baseCurrencyEnc", 100);
+      game.settings.set("swnr", "customCurrencyName0", "Silver");
+      game.settings.set("swnr", "customCurrencyEnc0", 100);
+      game.settings.set("swnr", "customCurrencyConversionRate0", 10);
+      game.settings.set("swnr", "customCurrencyName1", "Copper");
+      game.settings.set("swnr", "customCurrencyEnc1", 100);
+      game.settings.set("swnr", "customCurrencyConversionRate1", 100);
+      game.settings.set("swnr", "customCurrencyName2", "Platinum");
+      game.settings.set("swnr", "customCurrencyEnc2", 100);
+      game.settings.set("swnr", "customCurrencyConversionRate2", -5);
+      game.settings.set("swnr", "customCurrencyName3", "Electrum");
+      game.settings.set("swnr", "customCurrencyEnc3", 100);
+      game.settings.set("swnr", "customCurrencyConversionRate3", 2);
+      game.settings.set("swnr", "customCurrencyName4", "");
+    }
+    foundry.utils.debouncedReload();        
   }
 
   async _prepareContext(options) {
