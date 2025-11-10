@@ -113,6 +113,15 @@ export const registerSettings = function () {
     default: "d20", // The default value for the setting
   });
 
+  game.settings.register("swnr", "damageRoll", {
+    name: "swnr.settings.damageRoll",
+    hint: "swnr.settings.damageRollHint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: true,
+  });
+
   //CWN Settings
   game.settings.register("swnr", "useTrauma", {
     name: "swnr.settings.useTrauma",
@@ -326,6 +335,7 @@ export const getGameSettings = function () {
     //showTempAttrMod: game.settings.get("swnr", "showTempAttrMod"),
     attrRoll: game.settings.get("swnr", "attrRoll"),
     attackRoll: game.settings.get("swnr", "attackRoll"),
+    damageRoll: game.settings.get("swnr", "damageRoll"),
     useTrauma: game.settings.get("swnr", "useTrauma"),
     useCWNArmor: game.settings.get("swnr", "useCWNArmor"),
     useCWNCyber: game.settings.get("swnr", "useCWNCyber"),

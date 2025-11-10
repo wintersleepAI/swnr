@@ -1,4 +1,7 @@
 export function chatListeners(message, html) {
+//  html.on("click", "button.dmgroll", _onDmgRollClick.c(this));
+  html.on("click", "button.dmgroll", (event) => _onDmgRollClick.call(this, event, message));
+
   html.on("click", ".card-buttons button", _onChatCardAction.bind(this));
   // Add reroll buttons to all dice rolls
   html.find(".roll").each((_i, div) => {
@@ -417,6 +420,43 @@ export function _findCharTargets() {
     chars.push(game.user.character);
   }
   return chars;
+}
+
+// Load a saved damage roll from the message flags
+export async function _onDmgRollClick(event, message) {
+  event.preventDefault();
+  const btn = event.currentTarget;
+  const ns  = btn.dataset.flagns;
+  const key = btn.dataset.flagkey;
+
+  const payload = message.getFlag(ns, key);
+  if (!payload?.formula) return;
+
+  const actor = payload.actorId ? game.actors.get(payload.actorId) : null;
+
+  const damageRoll = await (new Roll(payload.formula, payload.data)).evaluate({ async: true });
+  const rollMode = game.settings.get("core", "rollMode");
+
+  const damageRollTemplate = "systems/swnr/templates/chat/damage-roll.hbs";
+  const damageRollData = {
+    actor: actor,
+    weapon: payload.weaponId ? game.items.get(payload.weaponId) : null,
+    damageRoll: damageRoll,
+    damage: await damageRoll.render(),
+    damageExplain: payload.damageExplain,
+    traumaRollRender: payload.traumaRollRender,
+    traumaDamage: payload.traumaDamage,
+  };
+  const damageRollContent = await renderTemplate(damageRollTemplate, damageRollData);
+  const chatData = {
+    speaker: ChatMessage.getSpeaker({ actor }),
+    content: damageRollContent,
+    roll: JSON.stringify(damageRoll),
+    rolls: [damageRoll],
+    content: damageRollContent,
+  };
+  getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+  getDocumentClass("ChatMessage").create(chatData);
 }
 
 //Taken from WWN (which could have come from OSE)

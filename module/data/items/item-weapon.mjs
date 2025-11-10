@@ -153,48 +153,60 @@ export default class SWNWeapon extends SWNBaseGearItem {
     hitRoll = this.safeDamageRoll(hitRoll);
     await hitRoll.roll();
     rollData.hitRoll = +(hitRoll.dice[0].total?.toString() ?? 0);
-    let damageRoll = new Roll(
-      this.damage + " + @burstFire + @stat + @damageBonus",
-      rollData
-    );
-    damageRoll = this.safeDamageRoll(damageRoll);
-    await damageRoll.roll();
-    const damageExplainTip = "roll +burst +statBonus +dmgBonus";
-    const diceTooltip = {
-      hit: await hitRoll.render(),
-      damage: await damageRoll.render(),
-      hitExplain: hitExplainTip,
-      damageExplain: damageExplainTip,
-    };
 
     let traumaRollRender = null;
     let traumaDamage = null;
     let useTrauma = (game.settings.get("swnr", "useTrauma") ? true : false);
+    let damageRoll = null;
 
-    if (
-      useTrauma &&
-      this.trauma.die != null &&
-      this.trauma.die !== "none" &&
-      this.trauma.rating != null
-    ) {
-      const traumaRoll = new Roll(this.trauma.die);
-      await traumaRoll.roll();
-      traumaRollRender = await traumaRoll.render();
+    const rollArray = [hitRoll];
+
+    const damageExplainTip = "roll +burst +statBonus +dmgBonus";
+    damageRoll = new Roll(
+      this.damage + " + @burstFire + @stat + @damageBonus",
+      rollData
+    );
+
+    let diceTooltip = {
+      hitExplain: hitExplainTip,
+      hit: await hitRoll.render(),
+      damage: null,
+      damageFormula: damageRoll.formula,
+      damageExplain: damageExplainTip,
+  };
+
+    // Roll Damage automatically if the setting is enabled
+    const damageRollEnabled = game.settings.get("swnr", "damageRoll");
+    if (damageRollEnabled) {
+
+      damageRoll = this.safeDamageRoll(damageRoll);
+      await damageRoll.roll();
+      diceTooltip.damage = await damageRoll.render();
+
       if (
-        traumaRoll &&
-        traumaRoll.total &&
-        traumaRoll.total >= 6 &&
-        damageRoll?.total
+        useTrauma &&
+        this.trauma.die != null &&
+        this.trauma.die !== "none" &&
+        this.trauma.rating != null
       ) {
-        const traumaDamageRoll = new Roll(
-          `${damageRoll.total} * ${this.trauma.rating}`
-        );
-        await traumaDamageRoll.roll();
-        traumaDamage = await traumaDamageRoll.render();
+        const traumaRoll = new Roll(this.trauma.die);
+        await traumaRoll.roll();
+        traumaRollRender = await traumaRoll.render();
+        if (
+          traumaRoll &&
+          traumaRoll.total &&
+          traumaRoll.total >= 6 &&
+          damageRoll?.total
+        ) {
+          const traumaDamageRoll = new Roll(
+            `${damageRoll.total} * ${this.trauma.rating}`
+          );
+          await traumaDamageRoll.roll();
+          traumaDamage = await traumaDamageRoll.render();
+        }
       }
-    }
+    } // End of Damage Roll if setting is enabled
 
-    const rollArray = [hitRoll, damageRoll];
     // Placeholder for shock damage
     let shock_content = null;
     let shock_roll = null;
@@ -257,9 +269,23 @@ export default class SWNWeapon extends SWNBaseGearItem {
       rolls: rollArray, // Added for dice so nice trigger. 
       content: chatContent
     };
+    if (!damageRollEnabled) {
+      chatData.flags = {
+        "swnr": {
+          "damageRoll": {
+            "formula": damageRoll.formula,
+            "damageExplain": damageExplainTip,
+            "actorId": actor.id,
+            "flavor": `Damage roll for ${dialogData.weapon.name}`,
+            "weaponId": this.id,
+            "traumaDamage": traumaDamage,
+            "traumaRollRender": traumaRollRender,
+          },
+        }
+      };
+    }
     getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
-
   }
 
   async roll(shiftKey = false) {
