@@ -435,6 +435,19 @@ export async function _onDmgRollClick(event, message) {
   const actor = payload.actorId ? game.actors.get(payload.actorId) : null;
 
   const damageRoll = await (new Roll(payload.formula, payload.data)).evaluate({ async: true });
+
+  let traumaRollRender = null;
+  let traumaDamage = null;
+  if (payload.traumaFormula) {
+    const traumaRoll = new Roll(payload.traumaFormula);
+    await traumaRoll.roll();
+    traumaRollRender = await traumaRoll.render();
+    if (traumaRoll && traumaRoll.total && traumaRoll.total >= 6 && damageRoll?.total) {
+      traumaDamage = new Roll(`${payload.traumaRating} * ${damageRoll.total}`);
+      await traumaDamage.roll();
+      traumaDamage = await traumaDamage.render();
+    }
+  }
   const rollMode = game.settings.get("core", "rollMode");
 
   const damageRollTemplate = "systems/swnr/templates/chat/damage-roll.hbs";
@@ -444,8 +457,8 @@ export async function _onDmgRollClick(event, message) {
     damageRoll: damageRoll,
     damage: await damageRoll.render(),
     damageExplain: payload.damageExplain,
-    traumaRollRender: payload.traumaRollRender,
-    traumaDamage: payload.traumaDamage,
+    traumaRollRender,
+    traumaDamage,
   };
   const damageRollContent = await renderTemplate(damageRollTemplate, damageRollData);
   const chatData = {
@@ -454,6 +467,7 @@ export async function _onDmgRollClick(event, message) {
     roll: JSON.stringify(damageRoll),
     rolls: [damageRoll],
     content: damageRollContent,
+    flavor: payload.flavor,
   };
   getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
   getDocumentClass("ChatMessage").create(chatData);

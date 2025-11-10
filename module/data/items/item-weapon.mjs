@@ -156,6 +156,8 @@ export default class SWNWeapon extends SWNBaseGearItem {
 
     let traumaRollRender = null;
     let traumaDamage = null;
+    let traumaRoll = null;
+    let traumaRating = null;
     let useTrauma = (game.settings.get("swnr", "useTrauma") ? true : false);
     let damageRoll = null;
 
@@ -173,7 +175,8 @@ export default class SWNWeapon extends SWNBaseGearItem {
       damage: null,
       damageFormula: damageRoll.formula,
       damageExplain: damageExplainTip,
-  };
+    };
+  
 
     // Roll Damage automatically if the setting is enabled
     const damageRollEnabled = game.settings.get("swnr", "damageRoll");
@@ -189,7 +192,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
         this.trauma.die !== "none" &&
         this.trauma.rating != null
       ) {
-        const traumaRoll = new Roll(this.trauma.die);
+        traumaRoll = new Roll(this.trauma.die);
         await traumaRoll.roll();
         traumaRollRender = await traumaRoll.render();
         if (
@@ -206,7 +209,17 @@ export default class SWNWeapon extends SWNBaseGearItem {
         }
       }
     } // End of Damage Roll if setting is enabled
-
+    else {
+      if (
+        useTrauma &&
+        this.trauma.die != null &&
+        this.trauma.die !== "none" &&
+        this.trauma.rating != null
+      ) {
+        traumaRoll = new Roll(this.trauma.die);
+        traumaRating = this.trauma.rating;
+      }
+    } // end of no damage roll setting
     // Placeholder for shock damage
     let shock_content = null;
     let shock_roll = null;
@@ -278,8 +291,8 @@ export default class SWNWeapon extends SWNBaseGearItem {
             "actorId": actor.id,
             "flavor": `Damage roll for ${dialogData.weapon.name}`,
             "weaponId": this.id,
-            "traumaDamage": traumaDamage,
-            "traumaRollRender": traumaRollRender,
+            "traumaFormula": traumaRoll?.formula || null,
+            "traumaRating": traumaRating,
           },
         }
       };
