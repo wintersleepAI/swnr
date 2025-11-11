@@ -53,6 +53,32 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
         }
       }
     }
+    // Toggle show power type on features tab
+    if (this.actor.type === "character" && (item.type === "power" || item.type === "cyberware")) {
+      const mapping = {
+        "psychic": "showPsychic",
+        "art": "showArts",
+        "adept": "showAdept",
+        "spell": "showSpells",
+        "mutation": "showMutation",
+        "cyberware": "showCyberware"
+      }
+      let propertyToUpdate = null;
+      if (mapping[item.system.subType]) {
+        propertyToUpdate = mapping[item.system.subType];
+      } else if (item.type === "cyberware") {
+        propertyToUpdate = mapping[item.type];
+      }
+      if (propertyToUpdate) {
+        await this.actor.update({
+          "system": {
+            "tweak": {
+              [propertyToUpdate]: true
+            }
+          }
+        });
+      }
+    }
 
     // Create the owned item
     return this._onDropItemCreate(item, event);

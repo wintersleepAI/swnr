@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Custom currency system configuration supported. Base currency and up to 5 custom currencies.
 - Added readied and stowed modifiers to character sheet (under features/tweaks)
 - Fixed capt support department bug
+- Auto show power type on features tab when first added
+- Setting to not roll damage/trauma dice on attack roll automatically with button to roll
 
 ## [2.2.0] 2025-11-03 More AWN support
 
