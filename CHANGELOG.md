@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Auto show power type on features tab when first added
 - Setting to not roll damage/trauma dice on attack roll automatically with button to roll
 
+## [2.2.1] 2025-11-11 CWN Cyberware compendium
+
+- Re-added CWN Cyberware compendium
+
 ## [2.2.0] 2025-11-03 More AWN support
 
 ### Fixes:

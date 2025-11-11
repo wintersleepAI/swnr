@@ -1,0 +1,24 @@
+name: Eye Mod/Dazzler
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: Xv7hL2qR9pTZ3dAy
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+sort: 0
+_id: e2m3l42cjxeyct0m
+system:
+  concealment: Medical
+  cost: 15000
+  description: This mod can emit a dazzling strobe of intense light, dazing and disorienting those standing up to five meters in front of the user. The strobe is triggered up to once per round as an On Turn action and adds one System Strain. Victims without eye protection must make a Physical saving throw or take a -4 penalty to their AC and hit rolls for the next 1d6 rounds. A victim can be targeted by this dazzling only once per scene.
+  effect: Dazzle enemies within 5m
+  strain: 0.5
+  type: Head
+effects: []
+_key: '!items!e2m3l42cjxeyct0m'
