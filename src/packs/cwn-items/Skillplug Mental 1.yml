@@ -1,0 +1,24 @@
+name: Skillplug Mental 1
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: Xv7hL2qR9pTZ3dAy
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+sort: 0
+_id: 15bbbbbfvnextkia
+system:
+  concealment: Touch
+  cost: 10000
+  description: The distilled result of years of neural research and neuromotor pattern imprinting, skillplugs can grant a user a reasonable facsimile of expertise in almost any skill. Appearing as small, brightly-colored cylinders about half the size of a cigarette, a skillplug jack and a Main Action are needed to load a plug. Commonly-available skillplugs can be found for any skill at level-0 or level-1. A basic Skillplug Jack I can only interface with intellectual skills that require only modest physical expertise; Know, Fix, or Heal could qualify for this, but Shoot, Exert, or most forms of Perform would not. Such physical skills require an upgraded Skillplug Jack II unit. Someone with a plug jack and the Skillplug Wires implant can make use of rare, costly level-2 skillplugs, or the vanishingly rare level-3 plugs. Rumors persist that the more advanced plugs require the destructive disassembly of the neural tissue of an expert practitioner in order to manufacture them. While an excellent substitute for years of practice, skillplugs have their flaws. The programmatic expertise embedded in them sometimes conflicts with the user’s natural instincts or already-extant muscle memory. Whenever the user rolls a natural 2 on a skillplug-augmented skill check, or a natural 1 on a skillplug-augmented attack roll, the check or roll is an automatic failure that no reroll ability can save. The skillplug jack itself then locks up uselessly for the scene. While it is possible to implant multiple plug jacks and use multiple skillplugs at once, the increased neural crosstalk invariably increases the chance of severe error. Each additional skillplug run after the first increases the automatic failure roll range by one point.
+  effect: Level-1 mental skill or fluent language
+  strain: 0
+  type: Head
+effects: []
+_key: '!items!15bbbbbfvnextkia'
