@@ -210,6 +210,14 @@
               "mod": {
                 "label": "Initiative Mod"
               }
+            },
+            "modifiers": {
+              "readied": {
+                "label": "Readied Modifier"
+              },
+              "stowed": {
+                "label": "Stowed Modifier"
+              }
             }
           },
           "class": {
@@ -1489,6 +1497,11 @@
       }
     },
     "sheet": {
+      "addCurrency": "Add Currency",
+      "editCurrency": "Edit Currency",
+      "deleteCurrency": "Delete Currency",
+      "convertToBaseCurrency": "Convert to Base Currency",
+      "addCurrencyHint": "Add a new currency to the character.",
       "background": "Background",
       "class": "Class",
       "homeworld": "Home world",
@@ -1608,6 +1621,7 @@
       "rest-desc": "Apply a good night's rest (reset effort, drop strain, heal HP)?",
       "rest-title": "Apply a Good Night's Rest?",
       "none": "None",
+      "stressLong": "Stress (Breakdown Checks)",
       "cyberware": {
         "disabled": "Disabled",
         "strain": "Strain",
@@ -1943,6 +1957,22 @@
       "tweaks": "Tweaks"
     },
     "settings": {
+      "damageRoll": "Auto Damage Roll",
+      "damageRollHint": "Automatically roll damage for attacks?",
+      "currency": {
+        "title": "Currency Settings",
+        "titleHint": "Configure the currencies for the world.",
+        "baseName": "Base Currency Name",
+        "baseNameHint": "The name of the base currency for the world.",
+        "baseEnc": "Base Currency Encumbrance",
+        "baseEncHint": "The number of base currency units that take up one slot. 0 = no encumbrance.",
+        "customName": "Custom Currency Name",
+        "customNameHint": "The name of the custom currency for the world. Blank (leave empty) to disable",
+        "customEnc": "Currency Encumbrance",
+        "customEncHint": "The number of custom currency units that take up one slot. 0 = no encumbrance.",
+        "customConversionRate": "Conversion Rate",
+        "customConversionRateHint": "The conversion rate to the base currency. 0 means is not convertible. > 0 means the custom currency is worth less than the base currency. < 0 means the custom currency is worth more than the base currency (e.g., -10 means 1 converts to 10 base currency units)."
+      },
       "useRollNPCHD": "Use NPC HD on token create?",
       "useRollNPCHDHint": "When creating a npc token, if the HP or Hit Dice (HD) has not been rolled, it will roll d8 HD for health automatically.",
       "useHomebrewLuckSave": "Use Homebrew Luck saves?",

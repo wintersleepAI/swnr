@@ -28,6 +28,16 @@ SWN.maxPowerLevel = 10;
 
 SWN.maxSkillRank = 4;
 
+SWN.maxCustomCurrencyTypes = 5;
+
+SWN.currencyTypes = {
+  base: 'base'
+};
+
+for (let i = 0; i < SWN.maxCustomCurrencyTypes; i++) {
+  SWN.currencyTypes[`${i}`] = `custom${i}`;
+}
+
 SWN.itemLocations = {
   readied: 'swnr.item.locationReadied', 
   stowed: 'swnr.item.locationStowed', 

@@ -235,9 +235,32 @@
             <div class="grid grid-col2"> <!-- Character Tweak options -->
               {{formGroup systemFields.tweak.fields.advInit value=system.tweak.advInit localize=true}}
               {{formGroup systemFields.tweak.fields.initiative.fields.mod value=system.tweak.initiative.mod localize=true}}
-              {{formGroup systemFields.tweak.fields.debtDisplay value=system.tweak.debtDisplay localize=true}}
+              {{!-- DEPRECATED {{formGroup systemFields.tweak.fields.debtDisplay value=system.tweak.debtDisplay localize=true}}
               {{formGroup systemFields.tweak.fields.balanceDisplay value=system.tweak.balanceDisplay localize=true}}
-              {{formGroup systemFields.tweak.fields.owedDisplay value=system.tweak.owedDisplay localize=true}}            
+              {{formGroup systemFields.tweak.fields.owedDisplay value=system.tweak.owedDisplay localize=true}}      --}}
+              {{formGroup systemFields.tweak.fields.modifiers.fields.readied value=system.tweak.modifiers.readied localize=true}}
+              {{formGroup systemFields.tweak.fields.modifiers.fields.stowed value=system.tweak.modifiers.stowed localize=true}}
+
+              <!-- Deprecated Currency Fields-->
+              <div class="flex flex-col items-center">
+                <label for="system.credits.debt">{{system.tweak.debtDisplay}} (deprecated)
+                </label>
+                {{formInput systemFields.credits.fields.debt value=system.credits.debt localize=true readonly=true}}
+
+              </div>
+              <div class="flex flex-col items-center">
+                <label for="system.credits.balance">{{system.tweak.balanceDisplay}} (deprecated)
+                </label>
+                {{formInput systemFields.credits.fields.balance value=system.credits.balance localize=true readonly=true}}
+
+              </div>
+              <div class="flex flex-col items-center">
+                <label for="system.credits.owed">{{system.tweak.owedDisplay}} (deprecated)
+                </label>
+                {{formInput systemFields.credits.fields.owed value=system.credits.owed localize=true readonly=true}}
+              </div>
+              {{!-- End Deprecated Currency Fields --}}
+
               {{formGroup systemFields.tweak.fields.showCyberware value=system.tweak.showCyberware localize=true}}
               {{formGroup systemFields.tweak.fields.showPsychic value=system.tweak.showPsychic localize=true}}
               {{formGroup systemFields.tweak.fields.showArts value=system.tweak.showArts localize=true}}

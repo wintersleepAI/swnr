@@ -1,5 +1,5 @@
 <div>
-  <h3>{{ title }}</h3>
+  <h4>{{ title }}</h4>
   <h4
    {{#if success}}
     style="color:green;"
@@ -10,4 +10,7 @@
    {{save_text}}</h4>
   <span >{{{ saveRoll }}}</span>
 
+  {{#if stressUpdate}}
+    <p>{{stressUpdate}}</p>
+  {{/if}}
 </div>

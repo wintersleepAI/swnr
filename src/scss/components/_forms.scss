@@ -15,6 +15,30 @@
   gap: 4px;
 }
 
+.settings-form {
+  overflow-y: auto;    /* vertical scrollbar */
+  overflow-x: hidden;  /* optional */
+  padding-right: 0.5em; /* space for scrollbar */
+
+  .custom-currency-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    padding: 4px;
+    margin: 4px;
+    
+    .h4 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .h4 {
+    margin-bottom: 1rem;
+  }
+}
+
 .sheet-header {
   flex: 0 auto;
   /* overflow: hidden; TODO */
@@ -50,6 +74,7 @@
     user-select: text;
     transition: outline-color 0.5s;
     min-width: 20px;
+    box-shadow: none;
   }
 
   select {

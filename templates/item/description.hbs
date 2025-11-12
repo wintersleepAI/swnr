@@ -4,6 +4,25 @@
   data-group='primary'
   data-tab='description'
 >
+<!-- check if GM --> 
+{{#if (or isGM system.showGMNotes)}}
+<div class="flex flex-col">
+  <div class="grid grid-cols-2">
+    <span><h4 style="margin-bottom: 2px;">GM Notes</h4></span>
+    {{#if isGM}}
+    <span>GM notes visible to players: 
+      {{formInput systemFields.showGMNotes value=system.showGMNotes}}
+    </span>
+    {{/if}}
+  </div>
+  <div class="grid-span-2">
+    <textarea name="system.gmNotes" rows="4" cols="40" {{#unless isGM}}readonly{{/unless}}>{{system.gmNotes}}</textarea>
+  </div>
+</div>
+{{/if}}
+
+
+<h4 style="margin: 2px;">Description</h4>
   {{! Editors must receive enriched text data from getData to properly handle rolls, UUID links, etc. }}
   <div class="editor">
     {{#if editable}} 
@@ -17,4 +36,7 @@
       {{/if}}
     </div>
   </div>
+
+
+
 </section>

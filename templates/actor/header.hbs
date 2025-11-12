@@ -206,13 +206,41 @@
         {{formGroup systemFields.access value=system.access localize=true widget=headerWidget readonly=1}}
       {{/if}}
       
-      {{#if (eq actor.type 'character')}}
+      {{#if (eq actor.type 'character')}} <!-- Stress -->
         {{#if (eq gameSettings.useStress true)}}
-          {{formGroup systemFields.stress value=system.stress localize=true widget=headerWidget}}
+        <div class="resource flex-group-center">
+          <div class="field resource-content">  
+              <input
+                type='text'
+                name='system.stress'
+                value='{{system.stress}}'
+                data-dtype='Number'
+                class='nested-field header'
+              />
+              <span class="nested-sep">(</span>
+              <input
+                type='text'
+                name='system.breakdowns'
+                value='{{system.breakdowns}}'
+                data-dtype='Number'
+                class='nested-field header'
+              />
+              <span class="nested-sep">)</span>
+
+          </div>
+          <label class='resource-label' data-tooltip="{{localize 'swnr.sheet.stressLong'}}">
+            <a data-action="modStress" style="margin-right: 2px;">
+              {{localize 'SWN.Actor.Character.FIELDS.stress.label'}}          
+              <i class="fas fa-plus-minus"></i>
+            </a>
+            <a data-action="stressRoll">
+              <i class="fa fa-dice-d20"></i>
+            </a>
+
+          </label>  
+        </div>
         {{/if}}
       {{/if}}
-
-
 
       {{#if (eq actor.type 'character')}}
       
