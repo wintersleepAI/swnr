@@ -10,7 +10,8 @@ export default class SWNItemBase extends foundry.abstract
     schema.favorite = new fields.BooleanField({initial: false});
     schema.modDesc = SWNShared.nullableString();
     schema.condition = SWNShared.stringChoices("perfect", CONFIG.SWN.gearCondition);
-
+    schema.gmNotes = SWNShared.nullableString();
+    schema.showGMNotes = new fields.BooleanField({initial: false});
     return schema;
   }
 }

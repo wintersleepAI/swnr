@@ -474,21 +474,21 @@ const migrations = {
   "2.3.0": async () => {
     console.log('Running migration for 2.3.0');
     for (const actor of game.actors) {
-      let newCurrencies = [];
+      let newCurrencies = actor.system.credits.extraCurrencies ? actor.system.credits.extraCurrencies : [];
       if (actor.type === 'character' ) {
-        if (actor.system.currency.debt > 0) {
+        if (actor.system.credits?.debt && actor.system.credits.debt > 0) {
           newCurrencies.push({
             name: actor.system.tweak.debtDisplay || "Debt",
             type: 'base',
-            value: actor.system.currency.debt,
+            value: actor.system.credits.debt,
             carried: true
           });
         }
-        if (actor.system.currency.owed > 0) {
+        if (actor.system.credits?.owed && actor.system.credits.owed > 0) {
           newCurrencies.push({
             name: actor.system.tweak.owedDisplay || "Owed",
             type: 'base',
-            value: actor.system.currency.owed,
+            value: actor.system.credits.owed,
             carried: true
           });
         }

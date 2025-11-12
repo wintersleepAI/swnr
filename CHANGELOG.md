@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added stress button to character sheet to modify and roll stress, along with tracking breakdowns (page 57 of AWN).
 - Auto show power type on features tab when first added
 - Setting to not roll damage/trauma dice on attack roll automatically with button to roll
+- Added GM notes to item description (under description tab). GM notes are hidden by default and can be shown to players by checking the box.
 
 ## [2.2.1] 2025-11-11 CWN Cyberware compendium
 
