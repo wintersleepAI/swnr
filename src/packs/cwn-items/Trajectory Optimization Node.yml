@@ -1,0 +1,24 @@
+name: Trajectory Optimization Node
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: Xv7hL2qR9pTZ3dAy
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+sort: 0
+_id: 87ekxr7n49ws99m1
+system:
+  concealment: Medical
+  cost: 50000
+  description: This cyber can calculate the optimal path for bypassing defenses and striking a target. Once per scene, as an Instant action, turn a missed hit roll into a success. Melee and unarmed attacks can be used as-is, but using this unit with a ranged attack requires an active Gunlink with the weapon.
+  effect: 1/scene turn a miss into a hit
+  strain: 1
+  type: Nerve
+effects: []
+_key: '!items!87ekxr7n49ws99m1'

@@ -40,15 +40,11 @@ export default class SWNCharacter extends SWNActorBase {
     schema.employer = SWNShared.requiredString("");
     schema.biography = SWNShared.requiredString("");
     schema.languages = new fields.ArrayField(SWNShared.requiredString(""));
-    schema.credits = new fields.SchemaField({
-      debt: SWNShared.requiredNumber(0),
-      balance: SWNShared.requiredNumber(0),
-      owed: SWNShared.requiredNumber(0)
-    });
     schema.unspentSkillPoints = SWNShared.requiredNumber(0);
     schema.unspentPsySkillPoints = SWNShared.requiredNumber(0);
     schema.extra = SWNShared.resourceField(0, 10);
-    schema.stress = SWNShared.nullableNumber();
+    schema.stress = SWNShared.requiredNumber(0);
+    schema.breakdowns = SWNShared.requiredNumber(0);
 
     schema.tweak = new fields.SchemaField({
       advInit: new fields.BooleanField({initial: false}),
@@ -76,6 +72,10 @@ export default class SWNCharacter extends SWNActorBase {
       balanceDisplay: SWNShared.requiredString("Balance"),
       initiative: new fields.SchemaField({
         mod: SWNShared.nullableNumber(),
+      }),
+      modifiers: new fields.SchemaField({
+        readied: SWNShared.requiredNumber(0,-99),
+        stowed: SWNShared.requiredNumber(0,-99),
       })
     });
 
@@ -211,8 +211,8 @@ export default class SWNCharacter extends SWNActorBase {
         stowed: { max: 0, value: 0, percentage: 100 },
       };
     const encumbrance = this.encumbrance;
-    encumbrance.ready.max = Math.floor(this.stats.str.total / 2);
-    encumbrance.stowed.max = this.stats.str.total;
+    encumbrance.ready.max = Math.floor(this.stats.str.total / 2) + this.tweak.modifiers.readied;
+    encumbrance.stowed.max = this.stats.str.total + this.tweak.modifiers.stowed;
     
     const inventory = this.parent.items.filter(
         (i) => i.type === "item" || i.type === "weapon" || i.type === "armor");
@@ -255,6 +255,30 @@ export default class SWNCharacter extends SWNActorBase {
       .filter((i) => i.system.location === "stowed")
       .map(itemInvCost)
       .reduce((i, n) => i + n, 0);
+
+    const baseCurrencyEnc = game.settings.get("swnr", "baseCurrencyEnc");
+
+    // calculate stowed encumbrance from currency
+    if (baseCurrencyEnc > 0) {
+      const baseCurrency = this.credits.carriedBase;
+      const baseCurrencyValue = Math.floor(baseCurrency / baseCurrencyEnc);
+      encumbrance.stowed.value += baseCurrencyValue;
+    }
+    for (let currency of this.credits.extraCurrencies) {
+      if (currency.type !== 'base') {
+        const currencyEnc = game.settings.get("swnr", `customCurrencyEnc${currency.type}`);
+        if (currencyEnc > 0) {
+          const currencyValue = Math.floor(currency.value / currencyEnc);
+          encumbrance.stowed.value += currencyValue;
+        }
+      } else if (baseCurrencyEnc > 0) {
+        // more base 
+        const currencyValue = Math.floor(currency.value / baseCurrencyEnc);
+        encumbrance.stowed.value += currencyValue;
+      } else {
+        // Base has no encumbrance
+      }
+    }
 
     encumbrance.ready.percentage = Math.clamp((encumbrance.ready.value * 100) / encumbrance.ready.max, 0, 100);
     encumbrance.stowed.percentage = Math.clamp((encumbrance.stowed.value * 100) / encumbrance.stowed.max, 0, 100);
@@ -559,6 +583,133 @@ export default class SWNCharacter extends SWNActorBase {
    */
   async endScene() {
     return await globalThis.swnr.utils.refreshActor({ actor: this.parent, cadence: 'scene' });
+  }
+
+  async modStress() {
+    const stressText = `
+    <b>Gaining Stress</b>
+    &bull; Killing another human being +2 <br>
+    &nbsp; - and it's your first kill +1d6 <br>
+    &nbsp; - killing more than one in the scene +1 <br>
+    &nbsp; - they were not threatening your life +2 <br>
+    &nbsp; - they were helpless or non-violent +2 <br>
+   &bull; A friend is Mortally Wounded +1 <br>
+    &nbsp; - and then dies +2 <br>
+    &bull; You are Mortally Wounded +2 <br>
+    &nbsp; - and suffer a Major Injury +2 <br>
+    &bull; You steal valuables from a non-enemy +1 <br>
+    &nbsp; - they'll probably die without it +1 <br>
+    &bull; You witness a massacre site or atrocity +1 <br>
+    &bull; You commit an act of great cruelty +1 to +3 <br>
+    &bull; You suffer hunger or great privation +2/week <br>
+
+    <b>Losing Stress</b>
+    &bull; Spend a day resting in a safe, familiar place, well-fed and comfortable. -1 <br>
+    &bull; An evening of heavy drinking, feasting, or indulgence, gaining 1 System Strain instead of recovering any. -1 <br>
+    &bull; Once per day, talk to a friend for an hour, who must make a Cha or Wis/Heal or Lead skill check against difficulty 9. On a success, lose 1 Stress. On a failure, they gain 1 Stress. +/-1 <br>
+    &bull; Accomplish a major personal goal or community purpose, justifying the suffering. This must be a task worth at least one adventure to accomplish it.      -1d10 <br>
+
+    <input name='modifier' />
+    `;
+    const prompt = await foundry.applications.api.DialogV2.prompt({
+      window: { title: "Mod Stress" },
+      content: stressText,
+      ok: {
+        label: "Modify Stress (can be roll and/or negative number)",
+        callback: async (event, button, dialog) => {
+          const modifier = (button.form.elements.modifier?.value);
+          const roll = await (new Roll(modifier)).evaluate({ async: true });
+          let oldStress = this.stress;
+          let newStress = Math.max(0, oldStress + roll.total);
+          let stressUpdate = `Stress updated from ${oldStress} to ${newStress}`;
+          if (newStress > this.stats.wis.total) {
+            stressUpdate += ` <br> Stress is greater than Wisdom (${this.stats.wis.total}), roll a breakdown. Page 57 of AWN.`;
+            ui.notifications?.info(stressUpdate);
+          }
+          await roll.toMessage({
+            flavor: stressUpdate,
+            speaker: ChatMessage.getSpeaker({ actor: this.parent ?? null })
+          });
+          await this.parent.update({ 
+            system: {
+              stress: newStress,
+            }
+          });
+        }
+      },
+      reject: true
+    });
+  }
+
+  async rollStress() {
+    const stress = this.stress;
+    if (isNaN(stress)) {
+      ui.notifications?.error("Unable to find stress");
+      return;
+    }
+    ui.notifications?.info("Rolling stress for " + this.parent.name + " at " + stress);
+
+    const target = this.save.mental;
+    const modifier = this.breakdowns * -2;
+    const title = game.i18n.format("swnr.titles.savingThrow", {
+      throwType: game.i18n.localize("swnr.sheet.saves.mental") + " (Stress)"
+    });
+    const rollMode = game.settings.get("core", "rollMode");
+
+
+    const formula = `1d20`;
+    const roll = new Roll(formula, {
+      modifier,
+      target: target,
+    });
+    await roll.roll();
+    const success = roll.total ? roll.total >= target - modifier : false;
+    const save_text = game.i18n.format(
+      success
+        ? game.i18n.localize("swnr.npc.saving.success")
+        : game.i18n.localize("swnr.npc.saving.failure"),
+      { actor: this.parent.name, target: target - modifier }
+    );
+
+    let stressUpdate = null;
+    if (success) {
+      await this.parent.update({ 
+        system: {
+          breakdowns: this.breakdowns + 1,
+        }
+      });
+      stressUpdate = "Updated breakdowns to " + (this.breakdowns + 1);
+    } else {
+
+      await this.parent.update({ 
+        system: {
+          breakdowns: 0,
+        }
+      });
+      stressUpdate = `Stress failed, breakdown checks reset to 0. Suffer breakdown until stress is <= Wisdom (${this.stats.wis.total}) or become hardened. Page 57 of AWN.`;
+    }
+
+    const chatTemplate = "systems/swnr/templates/chat/save-throw.hbs";
+    const chatDialogData = {
+      saveRoll: await roll.render(),
+      title,
+      save_text,
+      success,
+      stressUpdate
+    };
+    const chatContent = await renderTemplate(chatTemplate, chatDialogData);
+    const chatData = {
+      speaker: ChatMessage.getSpeaker(),
+      roll: JSON.stringify(roll),
+      rolls: [roll],
+      content: chatContent,
+    };
+    getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+    getDocumentClass("ChatMessage").create(chatData);
+
+
+    // const template = "systems/swnr/templates/dialogs/roll-stress.hbs";
+    // const title = game.i18n.format("swnr.titles.stressRoll", {
   }
 
   /**

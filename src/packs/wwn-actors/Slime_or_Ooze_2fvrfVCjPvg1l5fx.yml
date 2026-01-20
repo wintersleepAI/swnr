@@ -134,74 +134,66 @@ prototypeToken:
     disposition: false
   movementAction: null
 items:
-  - name: Attack
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 1d8
-      range:
-        normal: 0
+- name: Attack
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 1d8
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 1
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+    favorite: false
+    quantity: 1
+    bundle:
+      bundled: false
+    location: stowed
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
         max: 0
-      shock:
-        dmg: 1
-        ac: 15
-      ammo:
-        max: 0
-        type: ammo
-        burst: false
-        longReload: false
-        suppress: false
-        value: 10
-        current: null
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      secondStat: null
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma:
-        die: 1d6
+        value: 0
+    secondStat: null
+    skillBoostsDamage: false
+    skillBoostsShock: false
+    remember:
+      use: false
+      burst: false
+      modifier: 0
       isNonLethal: false
-      isMelee: false
-    _id: yr8fjvjuqk6uqlmq
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!2fvrfVCjPvg1l5fx.yr8fjvjuqk6uqlmq'
+    save: null
+    trauma:
+      die: 1d6
+    isNonLethal: false
+    isMelee: false
+  _id: yr8fjvjuqk6uqlmq
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!2fvrfVCjPvg1l5fx.yr8fjvjuqk6uqlmq'
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3
@@ -209,3 +201,5 @@ _id: 2fvrfVCjPvg1l5fx
 sort: 1000000
 _key: '!actors!2fvrfVCjPvg1l5fx'
 
+img: >-
+  systems/swnr/assets/icons/game-icons.net/creature-icons/transparent-slime.svg

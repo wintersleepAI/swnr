@@ -25,6 +25,9 @@
         </a>
         <span data-action="toggleItemDescription" data-item-id="{{item.id}}" style="cursor: pointer;">
           {{item.name}}
+          {{#if (ne item.system.ammo.type "none")}}
+            ({{item.system.ammo.value}}/{{item.system.ammo.max}})
+          {{/if}}
         </span>
       </div>
       <div class="item-dmg-small">

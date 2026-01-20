@@ -1,0 +1,37 @@
+type: skill
+name: Shoot
+system:
+  rank: -1
+  pool: ask
+  description: >-
+    Use it as a combat skill when using ranged weaponry, whether hurled rocks,
+    bows, laser pistols, combat rifles, or ship’s gunnery.
+  source: Revised
+  favorite: false
+  defaultStat: ask
+  remember:
+    use: false
+    modifier: 0
+  stats: dex
+img: systems/swnr/assets/icons/game-icons.net/item-icons/book-white.svg
+effects: []
+folder: JtqKfM9N4blcNr3I
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '13.350'
+  systemId: swnr
+  systemVersion: 2.2.0
+  createdTime: 1761533229298
+  modifiedTime: 1761533229298
+  lastModifiedBy: iXDXVi7OlHcRwXw0
+ownership:
+  default: 0
+  at8FhD4co9l5l5G2: 3
+  iXDXVi7OlHcRwXw0: 3
+_id: x01228sBJbm3xA3c
+sort: 106250
+_key: '!items!x01228sBJbm3xA3c'
+

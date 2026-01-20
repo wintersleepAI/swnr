@@ -82,9 +82,9 @@
       use both the "grid" and "grid-Ncol" class where "N" can be any number
       from 1 to 12 and will create that number of columns.  }}
     <div class='header-fields'>
-    <div class='resources grid grid-5col'>
+    <div class='resources grid grid-7col' style="gap: 4px;">
       
-      <div class='document-name grid-span-2 flex flexrow'><!-- Name -->
+      <div class='document-name grid-span-3 flex flexrow'><!-- Name -->
         <input
           name='name'
           type='text'
@@ -155,13 +155,29 @@
         {{/if}}
       </div>
 
-      {{formGroup systemFields.speed value=system.speed localize=true widget=headerWidget}}
-
 
       {{! "flex-group-center" is also defined in the _grid.scss file
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. }}
 
+
+      {{#if (eq actor.type 'character')}} <!-- AB  | Soak -->
+        {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget}}
+      {{else}}
+        {{#if (eq gameSettings.useCWNArmor true)}}
+        <div class="resource flex-group-center"><!-- AC -->
+          <div class="field resource-content">
+              {{system.soakTotal.value}}          
+              {{#if (eq gameSettings.useCWNArmor true)}}
+              / {{system.soakTotal.max}}
+              {{/if}}
+          </div>
+          <label class='resource-label'>
+            {{localize 'SWN.Actor.NPC.FIELDS.soakTotal.label'}}
+          </label>
+        </div>
+        {{/if}}
+      {{/if}}
 
       <div class="resource flex-group-center"><!-- AC -->
         <div class="field resource-content">
@@ -180,94 +196,7 @@
       </div>
 
       {{#if (eq actor.type 'character')}}
-        {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget}}
-
         {{#if (eq gameSettings.useDeathAndDismemberment true)}}
-        <div class="resource flex-group-center">
-          <div class="field resource-content">
-            <input
-              type='number'
-              name='system.injuries'
-              value='{{system.injuries}}'
-              data-dtype='Number'
-              class='nested-field header'
-            />
-            <span class="nested-sep">/</span>
-            <input
-              type='number'
-              name='system.wounds'
-              value='{{system.wounds}}'
-              data-dtype='Number'
-              class='nested-field header'
-            />
-          </div>
-          <label class='resource-label'>Inj/Wnd</label>
-        </div>
-        {{/if}}
-      {{else}}
-        {{#if (eq gameSettings.useCWNArmor true)}}
-        <div class="resource flex-group-center"><!-- AC -->
-          <div class="field resource-content">
-              {{system.soakTotal.value}}          
-              {{#if (eq gameSettings.useCWNArmor true)}}
-              / {{system.soakTotal.max}}
-              {{/if}}
-          </div>
-          <label class='resource-label'>
-            {{localize 'SWN.Actor.NPC.FIELDS.soakTotal.label'}}
-          </label>
-        </div>
-        {{/if}}
-        
-        {{! Attack Bonus for NPCs }}
-        <div class="resource flex-group-center">
-          <div class="field resource-content">
-            <input
-              type='number'
-              name='system.ab'
-              value='{{system.ab}}'
-              data-dtype='Number'
-              class='nested-field header'
-            />
-          </div>
-          <label class='resource-label'>
-            {{localize 'swnr.sheet.attack-bonus'}}
-          </label>
-        </div>
-        
-        {{#if (eq gameSettings.useCWNArmor true)}}
-        <div class="resource flex-group-center">
-          <div class="field resource-content">
-            <input
-              type='number'
-              name='system.meleeAb'
-              value='{{system.meleeAb}}'
-              data-dtype='Number'
-              class='nested-field header'
-            />
-          </div>
-          <label class='resource-label'>
-            {{localize 'swnr.sheet.melee-attack-bonus'}}
-          </label>
-        </div>
-        {{/if}}
-        
-        {{#if (eq gameSettings.useDeathAndDismemberment true)}}
-        {{! Critical Resistance field for NPCs }}
-        <div class="resource flex-group-center">
-          <div class="field resource-content">
-            <input
-              type='number'
-              name='system.critResistance'
-              value='{{system.critResistance}}'
-              data-dtype='Number'
-              class='nested-field header'
-            />
-          </div>
-          <label class='resource-label'>CR</label>
-        </div>
-        
-        {{! Combined Injuries/Wounds field for NPCs }}
         <div class="resource flex-group-center">
           <div class="field resource-content">
             <input
@@ -290,7 +219,6 @@
         </div>
         {{/if}}
       {{/if}}
-
     
       {{#if (eq actor.type 'npc')}}
       
@@ -299,13 +227,46 @@
       {{#if (eq gameSettings.showAccess true)}}
         {{formGroup systemFields.access value=system.access localize=true widget=headerWidget readonly=1}}
       {{/if}}
+      
+      {{#if (eq actor.type 'character')}} <!-- Stress -->
+        {{#if (eq gameSettings.useStress true)}}
+        <div class="resource flex-group-center">
+          <div class="field resource-content">  
+              <input
+                type='text'
+                name='system.stress'
+                value='{{system.stress}}'
+                data-dtype='Number'
+                class='nested-field header'
+              />
+              <span class="nested-sep">(</span>
+              <input
+                type='text'
+                name='system.breakdowns'
+                value='{{system.breakdowns}}'
+                data-dtype='Number'
+                class='nested-field header'
+              />
+              <span class="nested-sep">)</span>
+
+          </div>
+          <label class='resource-label' data-tooltip="{{localize 'swnr.sheet.stressLong'}}">
+            <a data-action="modStress" style="margin-right: 2px;">
+              {{localize 'SWN.Actor.Character.FIELDS.stress.label'}}          
+              <i class="fas fa-plus-minus"></i>
+            </a>
+            <a data-action="stressRoll">
+              <i class="fa fa-dice-d20"></i>
+            </a>
+
+          </label>  
+        </div>
+        {{/if}}
+      {{/if}}
 
       {{#if (eq actor.type 'character')}}
-        {{#if (eq gameSettings.useStress true)}}
-          {{formGroup systemFields.stress value=system.stress localize=true widget=headerWidget}}
-        {{/if}}
       
-      <div class='resource header-group flex-group-center grid-span-5'><!-- Saves -->
+      <div class='resource flex-group-center grid-span-5' style="display: flex; align-items: center; justify-content: center; gap: 10px;"><!-- Saves -->
         <div class="flex flexrow">
             <div class="save-throw-button" data-save-type="physical" data-action="rollSave">
               <i class="fas fa-dice-d20" style="margin-right:5px;"></i><p class="difficulty">v{{system.save.physical}}</p> 

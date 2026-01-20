@@ -113,36 +113,37 @@ prototypeToken:
   flags: {}
   randomImg: false
 items:
-  - name: Curse
-    type: item
-    system:
-      description: >-
-        Five sprites can collectively curse a target (no attack roll; Mental
-        save). The effect is determined by the referee, but will always be used
-        to comical effect (e.g. target trips, target's nose grows).
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-    _id: 5j47smx88xero6tl
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      createdTime: 1754273920811
-      modifiedTime: 1754273920811
-      lastModifiedBy: null
-      exportSource: null
-    folder: null
-    flags: {}
-    sort: 0
-    ownership:
-      default: 0
-    effects: []
-    _key: '!actors.items!wvhkuv6h31ib8nte.5j47smx88xero6tl'
+- name: Curse
+  type: item
+  system:
+    description: >-
+      Five sprites can collectively curse a target (no attack roll; Mental
+      save). The effect is determined by the referee, but will always be used
+      to comical effect (e.g. target trips, target's nose grows).
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+  _id: 5j47smx88xero6tl
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    createdTime: 1754273920811
+    modifiedTime: 1754273920811
+    lastModifiedBy: null
+    exportSource: null
+  folder: null
+  flags: {}
+  sort: 0
+  ownership:
+    default: 0
+  effects: []
+  _key: '!actors.items!wvhkuv6h31ib8nte.5j47smx88xero6tl'
 _key: '!actors!wvhkuv6h31ib8nte'
 
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/beast-eye.svg

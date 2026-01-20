@@ -1,0 +1,41 @@
+<div class="chat-card item-card" data-actor-id="{{actor._id}}" data-item-id="{{weapon._id}}">
+
+  <span>{{localize 'swnr.weapon.damage'}}:</span>
+  <span title="{{ damageExplain }}" class="roll roll-damage">{{{ damage }}}</span>
+
+  {{#if weapon.system.qualities}}
+  <div>{{localize 'swnr.sheet.ship.qualities'}}: {{ weapon.system.qualities }}</div>
+  {{/if}}
+
+  {{#if traumaRollRender}}
+    <span>{{localize 'swnr.weapon.trauma.label'}}:</span>
+    {{#if traumaRollRender}}
+    <span class="roll">
+      {{{traumaRollRender}}}
+    </span>
+    {{/if}}
+
+    {{#if traumaDamage}}
+      <span>{{localize 'swnr.weapon.trauma.damage'}}:</span>
+      <span class="roll roll-damage">
+        {{{traumaDamage}}}
+      </span>
+    {{/if}}
+  {{/if}}
+
+  {{#if weapon.system.save}}
+  <div class="card-buttons">
+      <button data-action="save" data-save="{{weapon.system.save}}">
+          Save {{weapon.system.save}}
+      </button>
+  </div>
+  {{/if}}
+
+  {{#if gearCondition}}
+    {{localize 'swnr.sheet.gear.conditionLabel'}}: {{localize (concat 'swnr.sheet.gear.condition.' gearCondition)}} <br>
+    {{localize (concat 'swnr.sheet.gear.conditionDetails.' gearCondition)}} <br>
+    {{#if (ne gearCondition 'perfect')}}
+      (modifiers not automatically applied)
+    {{/if}}
+  {{/if}}
+</div>

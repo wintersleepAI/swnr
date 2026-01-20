@@ -28,6 +28,16 @@ SWN.maxPowerLevel = 10;
 
 SWN.maxSkillRank = 4;
 
+SWN.maxCustomCurrencyTypes = 5;
+
+SWN.currencyTypes = {
+  base: 'base'
+};
+
+for (let i = 0; i < SWN.maxCustomCurrencyTypes; i++) {
+  SWN.currencyTypes[`${i}`] = `custom${i}`;
+}
+
 SWN.itemLocations = {
   readied: 'swnr.item.locationReadied', 
   stowed: 'swnr.item.locationStowed', 
@@ -45,6 +55,11 @@ SWN.itemConsumableTypes = {
   count: 'swnr.item.consumable.count',
   bundle: 'swnr.item.consumable.bundle',
 }
+
+SWN.fuelTypes = {
+  fuel: 'swnr.item.consumable.fuel',
+  typeBPower: 'swnr.ammo.typeBPower',
+};
 
 SWN.ammoTypes = {
   none: 'swnr.ammo.none',
@@ -70,6 +85,26 @@ SWN.saveTypes = {
   luck: 'swnr.sheet.saves.luck',
 };
 
+/*
+Perfect No penalty to use.
+Worn No penalty to use.
+Light Damage -1 to hit or damage for weapons, -1to skill checks using the item
+Moderate Damage -2 to hit or damage, -1 to skill checks using the item, 20% chance to fail
+Heavy Damage -3 to hit or damage, -2 to skill checks using the item, 50% chance to fail
+Broken The object is inoperable/unusable.
+Ruined It’s broken beyond any repair.
+*/
+
+SWN.gearCondition = {
+  perfect: 'swnr.sheet.gear.condition.perfect',
+  worn: 'swnr.sheet.gear.condition.worn',
+  light: 'swnr.sheet.gear.condition.light',
+  moderate: 'swnr.sheet.gear.condition.moderate',
+  heavy: 'swnr.sheet.gear.condition.heavy',
+  broken: 'swnr.sheet.gear.condition.broken',
+  ruined: 'swnr.sheet.gear.condition.ruined'
+};
+  
 
 SWN.poolResourceNames = ["Effort", "Slots", "Points", "Strain", "Uses"];
 
@@ -357,6 +392,7 @@ SWN.defaultImg = {
   mech: "mech.png",
   cyberdeck: "cyberdeck.png",
   faction: "faction.png",
+  npc: "blankface.png",
 };
 
 SWN.shipActions = {
@@ -532,23 +568,23 @@ SWN.shipActions = {
     desc:
       "Gunners fire all weapons mounted on the ship, designating targets as they wish.",
     note: "Gunners fire all",
-    dept: "gunnery",
+    dept: "gunner",
   },
   fireOne: {
     title: "Fire One Weapon",
     cp: -2,
-    desc: "A gunner fires a single ship’s weapon of their choice.",
+    desc: "A gunner fires a single ship's weapon of their choice.",
     note: "A gunners fires one",
-    dept: "gunnery",
+    dept: "gunner",
   },
   targetSystem: {
     title: "Target Systems",
     cp: -1,
     desc:
-      "A Fire One Weapon action you  take this round may target a ship’s weapons, en- gine, or fittings the GM decides are vulnerable.  Such targeted attacks take -4 to hit. On a hit, do half damage before applying Armor. If damage  gets through the system is disabled or drive is  degraded by 1 level. Disabled systems hit again  are destroyed. You may take this action more than once to aim additional shots you may fire.",
+      "A Fire One Weapon action you  take this round may target a ship's weapons, en- gine, or fittings the GM decides are vulnerable.  Such targeted attacks take -4 to hit. On a hit, do half damage before applying Armor. If damage  gets through the system is disabled or drive is  degraded by 1 level. Disabled systems hit again  are destroyed. You may take this action more than once to aim additional shots you may fire.",
     note:
       "'Fire One Weapon' can target fitting, weapon, or engine with -4 hit. (Half damage - armor) > 0 to work.",
-    dept: "gunnery",
+    dept: "gunner",
   },
 };
 

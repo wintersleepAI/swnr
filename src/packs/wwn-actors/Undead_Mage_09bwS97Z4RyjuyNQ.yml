@@ -145,621 +145,613 @@ prototypeToken:
     disposition: false
   movementAction: null
 items:
-  - name: Averse
-    type: item
-    system:
-      description: >-
-        Certain religious symbols, lines of salt, emblems of natural law, or
-        like icons repel it. When presented with the symbol it must make a
-        Mental save to approach it. The aversion is broken if the icon's bearer
-        or their allies attack it.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: closjb1ohtfb9vzf
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!09bwS97Z4RyjuyNQ.closjb1ohtfb9vzf'
-  - name: Beguiling
-    type: item
-    system:
-      description: >-
-        Once per scene it can beguile a creature with its gaze on a failed
-        Mental save. The target becomes its helpless slave until separated from
-        it for a full week. It cannot beguile creatures with more hit dice or
-        levels than it has.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: 6u4f7hrzpv9blyjk
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!09bwS97Z4RyjuyNQ.6u4f7hrzpv9blyjk'
-  - name: Desynchrony
-    type: item
-    system:
-      description: >-
-        Foes hit by it must make a Physical save or be paralyzed for 1d4+1
-        rounds, stunned by its own dislocation from natural law.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: 5wm7z3os87woe966
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!09bwS97Z4RyjuyNQ.5wm7z3os87woe966'
-  - name: Draining
-    type: item
-    system:
-      description: >-
-        Foes hit by it are enfeebled, taking a cumulative -2 penalty to hit
-        rolls and-1 to damage rolls, Shock, and skill checks for the rest of the
-        scene.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: j5z4jd4u3y0x53ko
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!09bwS97Z4RyjuyNQ.j5z4jd4u3y0x53ko'
-  - name: Intangible
-    type: item
-    system:
-      description: >-
-        It is a shade or specter, unable to be touched by non-magical objects or
-        energies. It can manipulate objects important to it in life or kill with
-        its icy touch.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: d7yk345nr3uoa50u
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!09bwS97Z4RyjuyNQ.d7yk345nr3uoa50u'
-  - name: Ravenous
-    type: item
-    system:
-      description: >-
-        If it hits with at least one of its attacks, it gets an immediate bonus
-        attack against the target.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: 7sakvrpcp73pcfwv
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!09bwS97Z4RyjuyNQ.7sakvrpcp73pcfwv'
-  - name: Red Hunger
-    type: item
-    system:
-      description: >-
-        It must eat a pound of human flesh or drink a pint of human blood every
-        week or lose a quarter of its maximum hit points. At zero hit points it
-        dies or goes inert until fresh food comes near.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: 66qdxsxsjtpyt0dz
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!09bwS97Z4RyjuyNQ.66qdxsxsjtpyt0dz'
-  - name: Sunscorch
-    type: item
-    system:
-      description: >-
-        Exposure to sunlight, running water, or some specific other emblem of
-        natural law inflicts 1d10 damage on it each round.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: qf80g6qm9m2w7otj
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!09bwS97Z4RyjuyNQ.qf80g6qm9m2w7otj'
-  - name: Terrifying
-    type: item
-    system:
-      description: >-
-        Enemies must make a Mental save or lose their first turn's Main Action
-        as they summon their nerve. Morale checks it induces are made at -2.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: xd7i13ndq9v5ihdk
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!09bwS97Z4RyjuyNQ.xd7i13ndq9v5ihdk'
-  - name: Impure
-    type: item
-    system:
-      description: >-
-        Weapons of silver, green wood, or other specific apotropaic material
-        inflict maximum damage to it on a hit and always inflict Shock
-        regardless of AC.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: ab2iod9qp1kqib07
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!09bwS97Z4RyjuyNQ.ab2iod9qp1kqib07'
-  - name: Unending
-    type: item
-    system:
-      description: >-
-        It cannot die by violence. Only the right act, weapon, object
-        destruction, or ritual can end it.
-      cost: 0
-      quantity: 1
-      encumbrance: 1
-      location: stowed
-      quality: stock
-      tl: 3
-      favorite: false
-      bundle:
-        bundled: false
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      roll:
-        diceNum: 1
-        diceSize: d20
-        diceBonus: +@str.mod+ceil(@lvl / 2)
-      uses:
-        max: 1
-        value: 1
-        emptyQuantity: 0
-        consumable: none
-        ammo: none
-        keepEmpty: true
-    _id: tuu31812sdro86qk
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!09bwS97Z4RyjuyNQ.tuu31812sdro86qk'
-  - name: Punch/Claw
-    type: weapon
-    system:
-      description: ''
-      cost: 0
-      damage: 1d8
-      range:
-        normal: 0
+- name: Averse
+  type: item
+  system:
+    description: >-
+      Certain religious symbols, lines of salt, emblems of natural law, or
+      like icons repel it. When presented with the symbol it must make a
+      Mental save to approach it. The aversion is broken if the icon's bearer
+      or their allies attack it.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+    favorite: false
+    bundle:
+      bundled: false
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
         max: 0
-      shock:
-        dmg: 2
-        ac: 15
-      ammo:
+        value: 0
+    roll:
+      diceNum: 1
+      diceSize: d20
+      diceBonus: +@str.mod+ceil(@lvl / 2)
+    uses:
+      max: 1
+      value: 1
+      emptyQuantity: 0
+      consumable: none
+      ammo: none
+      keepEmpty: true
+  _id: closjb1ohtfb9vzf
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!09bwS97Z4RyjuyNQ.closjb1ohtfb9vzf'
+- name: Beguiling
+  type: item
+  system:
+    description: >-
+      Once per scene it can beguile a creature with its gaze on a failed
+      Mental save. The target becomes its helpless slave until separated from
+      it for a full week. It cannot beguile creatures with more hit dice or
+      levels than it has.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+    favorite: false
+    bundle:
+      bundled: false
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
         max: 0
-        type: ammo
-        burst: false
-        longReload: false
-        suppress: false
-        value: 10
-        current: null
-      isTwoHanded: false
-      stat: str
-      skill: punch
-      ab: 0
-      encumbrance: 1
-      quality: stock
-      tl: 3
-      favorite: false
-      quantity: 1
-      bundle:
-        bundled: false
-      location: stowed
-      noEncReadied: false
-      container:
-        isContainer: false
-        isOpen: true
-        capacity:
-          max: 0
-          value: 0
-      secondStat: null
-      skillBoostsDamage: false
-      skillBoostsShock: false
-      remember:
-        use: false
-        burst: false
-        modifier: 0
-        isNonLethal: false
-      save: null
-      trauma:
-        die: 1d6
+        value: 0
+    roll:
+      diceNum: 1
+      diceSize: d20
+      diceBonus: +@str.mod+ceil(@lvl / 2)
+    uses:
+      max: 1
+      value: 1
+      emptyQuantity: 0
+      consumable: none
+      ammo: none
+      keepEmpty: true
+  _id: 6u4f7hrzpv9blyjk
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!09bwS97Z4RyjuyNQ.6u4f7hrzpv9blyjk'
+- name: Desynchrony
+  type: item
+  system:
+    description: >-
+      Foes hit by it must make a Physical save or be paralyzed for 1d4+1
+      rounds, stunned by its own dislocation from natural law.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+    favorite: false
+    bundle:
+      bundled: false
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
+        max: 0
+        value: 0
+    roll:
+      diceNum: 1
+      diceSize: d20
+      diceBonus: +@str.mod+ceil(@lvl / 2)
+    uses:
+      max: 1
+      value: 1
+      emptyQuantity: 0
+      consumable: none
+      ammo: none
+      keepEmpty: true
+  _id: 5wm7z3os87woe966
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!09bwS97Z4RyjuyNQ.5wm7z3os87woe966'
+- name: Draining
+  type: item
+  system:
+    description: >-
+      Foes hit by it are enfeebled, taking a cumulative -2 penalty to hit
+      rolls and-1 to damage rolls, Shock, and skill checks for the rest of the
+      scene.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+    favorite: false
+    bundle:
+      bundled: false
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
+        max: 0
+        value: 0
+    roll:
+      diceNum: 1
+      diceSize: d20
+      diceBonus: +@str.mod+ceil(@lvl / 2)
+    uses:
+      max: 1
+      value: 1
+      emptyQuantity: 0
+      consumable: none
+      ammo: none
+      keepEmpty: true
+  _id: j5z4jd4u3y0x53ko
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!09bwS97Z4RyjuyNQ.j5z4jd4u3y0x53ko'
+- name: Intangible
+  type: item
+  system:
+    description: >-
+      It is a shade or specter, unable to be touched by non-magical objects or
+      energies. It can manipulate objects important to it in life or kill with
+      its icy touch.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+    favorite: false
+    bundle:
+      bundled: false
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
+        max: 0
+        value: 0
+    roll:
+      diceNum: 1
+      diceSize: d20
+      diceBonus: +@str.mod+ceil(@lvl / 2)
+    uses:
+      max: 1
+      value: 1
+      emptyQuantity: 0
+      consumable: none
+      ammo: none
+      keepEmpty: true
+  _id: d7yk345nr3uoa50u
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!09bwS97Z4RyjuyNQ.d7yk345nr3uoa50u'
+- name: Ravenous
+  type: item
+  system:
+    description: >-
+      If it hits with at least one of its attacks, it gets an immediate bonus
+      attack against the target.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+    favorite: false
+    bundle:
+      bundled: false
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
+        max: 0
+        value: 0
+    roll:
+      diceNum: 1
+      diceSize: d20
+      diceBonus: +@str.mod+ceil(@lvl / 2)
+    uses:
+      max: 1
+      value: 1
+      emptyQuantity: 0
+      consumable: none
+      ammo: none
+      keepEmpty: true
+  _id: 7sakvrpcp73pcfwv
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!09bwS97Z4RyjuyNQ.7sakvrpcp73pcfwv'
+- name: Red Hunger
+  type: item
+  system:
+    description: >-
+      It must eat a pound of human flesh or drink a pint of human blood every
+      week or lose a quarter of its maximum hit points. At zero hit points it
+      dies or goes inert until fresh food comes near.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+    favorite: false
+    bundle:
+      bundled: false
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
+        max: 0
+        value: 0
+    roll:
+      diceNum: 1
+      diceSize: d20
+      diceBonus: +@str.mod+ceil(@lvl / 2)
+    uses:
+      max: 1
+      value: 1
+      emptyQuantity: 0
+      consumable: none
+      ammo: none
+      keepEmpty: true
+  _id: 66qdxsxsjtpyt0dz
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!09bwS97Z4RyjuyNQ.66qdxsxsjtpyt0dz'
+- name: Sunscorch
+  type: item
+  system:
+    description: >-
+      Exposure to sunlight, running water, or some specific other emblem of
+      natural law inflicts 1d10 damage on it each round.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+    favorite: false
+    bundle:
+      bundled: false
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
+        max: 0
+        value: 0
+    roll:
+      diceNum: 1
+      diceSize: d20
+      diceBonus: +@str.mod+ceil(@lvl / 2)
+    uses:
+      max: 1
+      value: 1
+      emptyQuantity: 0
+      consumable: none
+      ammo: none
+      keepEmpty: true
+  _id: qf80g6qm9m2w7otj
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!09bwS97Z4RyjuyNQ.qf80g6qm9m2w7otj'
+- name: Terrifying
+  type: item
+  system:
+    description: >-
+      Enemies must make a Mental save or lose their first turn's Main Action
+      as they summon their nerve. Morale checks it induces are made at -2.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+    favorite: false
+    bundle:
+      bundled: false
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
+        max: 0
+        value: 0
+    roll:
+      diceNum: 1
+      diceSize: d20
+      diceBonus: +@str.mod+ceil(@lvl / 2)
+    uses:
+      max: 1
+      value: 1
+      emptyQuantity: 0
+      consumable: none
+      ammo: none
+      keepEmpty: true
+  _id: xd7i13ndq9v5ihdk
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!09bwS97Z4RyjuyNQ.xd7i13ndq9v5ihdk'
+- name: Impure
+  type: item
+  system:
+    description: >-
+      Weapons of silver, green wood, or other specific apotropaic material
+      inflict maximum damage to it on a hit and always inflict Shock
+      regardless of AC.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+    favorite: false
+    bundle:
+      bundled: false
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
+        max: 0
+        value: 0
+    roll:
+      diceNum: 1
+      diceSize: d20
+      diceBonus: +@str.mod+ceil(@lvl / 2)
+    uses:
+      max: 1
+      value: 1
+      emptyQuantity: 0
+      consumable: none
+      ammo: none
+      keepEmpty: true
+  _id: ab2iod9qp1kqib07
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!09bwS97Z4RyjuyNQ.ab2iod9qp1kqib07'
+- name: Unending
+  type: item
+  system:
+    description: >-
+      It cannot die by violence. Only the right act, weapon, object
+      destruction, or ritual can end it.
+    cost: 0
+    quantity: 1
+    encumbrance: 1
+    location: stowed
+    quality: stock
+    tl: 3
+    favorite: false
+    bundle:
+      bundled: false
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
+        max: 0
+        value: 0
+    roll:
+      diceNum: 1
+      diceSize: d20
+      diceBonus: +@str.mod+ceil(@lvl / 2)
+    uses:
+      max: 1
+      value: 1
+      emptyQuantity: 0
+      consumable: none
+      ammo: none
+      keepEmpty: true
+  _id: tuu31812sdro86qk
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!09bwS97Z4RyjuyNQ.tuu31812sdro86qk'
+- name: Punch/Claw
+  type: weapon
+  system:
+    description: ''
+    cost: 0
+    damage: 1d8
+    range:
+      normal: 0
+      max: 0
+    shock:
+      dmg: 2
+      ac: 15
+    isTwoHanded: false
+    stat: str
+    skill: punch
+    ab: 0
+    encumbrance: 1
+    quality: stock
+    tl: 3
+    favorite: false
+    quantity: 1
+    bundle:
+      bundled: false
+    location: stowed
+    noEncReadied: false
+    container:
+      isContainer: false
+      isOpen: true
+      capacity:
+        max: 0
+        value: 0
+    secondStat: null
+    skillBoostsDamage: false
+    skillBoostsShock: false
+    remember:
+      use: false
+      burst: false
+      modifier: 0
       isNonLethal: false
-      isMelee: false
-    _id: 5omyihx1qxiuzhb6
-    _stats:
-      compendiumSource: null
-      duplicateSource: null
-      exportSource: null
-      coreVersion: '13.346'
-      systemId: swnr
-      systemVersion: 2.1.0
-      lastModifiedBy: null
-    folder: null
-    flags: {}
-    sort: 0
-    effects: []
-    ownership:
-      default: 0
-    _key: '!actors.items!09bwS97Z4RyjuyNQ.5omyihx1qxiuzhb6'
+    save: null
+    trauma:
+      die: 1d6
+    isNonLethal: false
+    isMelee: false
+  _id: 5omyihx1qxiuzhb6
+  _stats:
+    compendiumSource: null
+    duplicateSource: null
+    exportSource: null
+    coreVersion: '13.346'
+    systemId: swnr
+    systemVersion: 2.1.0
+    lastModifiedBy: null
+  folder: null
+  flags: {}
+  sort: 0
+  effects: []
+  ownership:
+    default: 0
+  _key: '!actors.items!09bwS97Z4RyjuyNQ.5omyihx1qxiuzhb6'
 ownership:
   default: 0
   lKC5x4Yf023Bizof: 3
@@ -767,3 +759,4 @@ _id: 09bwS97Z4RyjuyNQ
 sort: 800000
 _key: '!actors!09bwS97Z4RyjuyNQ'
 
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/wizard-face.svg

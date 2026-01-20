@@ -1,0 +1,60 @@
+<div class="flexcol standard-form settings-form">
+  <div class="settings-form">
+    <h4>Currency Settings for the World</h4>
+    <p class="hint">Configure the currency system for the world. This will affect all currencies in the world, it will not automatically run conversions for existing currencies.</p>
+  </div>
+  <div class="form-group">
+    <label>Load Preset:</label>
+    <div class="form-fields">
+      <select name="loadPreset">
+        <option value="none">None/Custom</option>
+        <option value="swn">SWN (Base is Credits only)</option>
+        <option value="cwn">CWN (Base is Dollars only)</option>
+        <option value="awn">AWN Zone (Gold Escudo, Silver Peso, Mandate Credit, Ration)</option>
+        <option value="wwn">WWN (Silver Standard with Gold and Copper)</option>
+        <option value="ose">OSE (Gold Standard, Platinum, Silver, Copper, and Electrum)</option>
+      </select>
+    </div>
+    <p class="hint">Load default currencies. <b>Warning:</b> this will overwrite all custom currencies if you change!</p>
+  </div>
+
+
+  {{formGroup fields.baseCurrencyName value=settings.currency.baseCurrencyName localize=true}}
+  {{formGroup fields.baseCurrencyEnc value=settings.currency.baseCurrencyEnc localize=true}}
+
+  <div class="custom-currency-container">
+    <h4>Custom Currency 1</h4>
+    {{formGroup fields.customCurrencyName0 value=settings.currency.customCurrencyName0 localize=true}}
+    {{formGroup fields.customCurrencyEnc0 value=settings.currency.customCurrencyEnc0 localize=true}}
+    {{formGroup fields.customCurrencyConversionRate0 value=settings.currency.customCurrencyConversionRate0
+    localize=true}}
+  </div>
+  <div class="custom-currency-container">
+    <h4>Custom Currency 2</h4>
+    {{formGroup fields.customCurrencyName1 value=settings.currency.customCurrencyName1 localize=true}}
+    {{formGroup fields.customCurrencyEnc1 value=settings.currency.customCurrencyEnc1 localize=true}}
+    {{formGroup fields.customCurrencyConversionRate1 value=settings.currency.customCurrencyConversionRate1
+    localize=true}}
+  </div>
+  <div class="custom-currency-container">
+    <h4>Custom Currency 3</h4>
+    {{formGroup fields.customCurrencyName2 value=settings.currency.customCurrencyName2 localize=true}}
+    {{formGroup fields.customCurrencyEnc2 value=settings.currency.customCurrencyEnc2 localize=true}}
+    {{formGroup fields.customCurrencyConversionRate2 value=settings.currency.customCurrencyConversionRate2
+    localize=true}}
+  </div>
+  <div class="custom-currency-container">
+    <h4>Custom Currency 4</h4>
+    {{formGroup fields.customCurrencyName3 value=settings.currency.customCurrencyName3 localize=true}}
+    {{formGroup fields.customCurrencyEnc3 value=settings.currency.customCurrencyEnc3 localize=true}}
+    {{formGroup fields.customCurrencyConversionRate3 value=settings.currency.customCurrencyConversionRate3
+    localize=true}}
+  </div>
+  <div class="custom-currency-container">
+    <h4>Custom Currency 5</h4>
+    {{formGroup fields.customCurrencyName4 value=settings.currency.customCurrencyName4 localize=true}}
+    {{formGroup fields.customCurrencyEnc4 value=settings.currency.customCurrencyEnc4 localize=true}}
+    {{formGroup fields.customCurrencyConversionRate4 value=settings.currency.customCurrencyConversionRate4
+    localize=true}}
+  </div>
+</div>

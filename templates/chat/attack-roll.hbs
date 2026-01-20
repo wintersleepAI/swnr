@@ -1,9 +1,18 @@
-<div class="chat-card">
-  <h3 title="{{ weapon.system.description }}">{{ weapon.name }}</h3>
+<div class="chat-card item-card" data-actor-id="{{actor._id}}" data-item-id="{{weapon._id}}">
+  <h4 title="{{ weapon.system.description }}">{{ weapon.name }}</h4>
 
+  <span>To Hit:</span>
   <span title="{{ diceTooltip.hitExplain }}" class="roll roll-hit">{{{ diceTooltip.hit }}}</span>
+  
+  {{# if diceTooltip.damage}}
   <span>{{localize 'swnr.weapon.damage'}}:</span>
   <span title="{{ diceTooltip.damageExplain }}" class="roll roll-damage">{{{ diceTooltip.damage }}}</span>
+  {{else}}
+  <div class="flex-center" data-tooltip="{{diceTooltip.damageExplain}}">
+    <button class="dmgroll" data-flagns="swnr" data-flagkey="damageRoll">Roll Damage: {{diceTooltip.damageFormula}}</button>
+  </div>
+  {{/if}}
+  
   {{#if (ne shock_content null)}}
    {{ shock_content }}
    <span class="roll roll-shock roll-damage">{{{ shock_roll }}}</span>
@@ -37,10 +46,18 @@
   {{/if}}
 
   {{#if weapon.system.save}}
-  <div class="card-buttons">
+  <div class="card-buttons flex-center">
       <button data-action="save" data-save="{{weapon.system.save}}">
           Save {{weapon.system.save}}
       </button>
   </div>
+  {{/if}}
+
+  {{#if gearCondition}}
+    {{localize 'swnr.sheet.gear.conditionLabel'}}: {{localize (concat 'swnr.sheet.gear.condition.' gearCondition)}} <br>
+    {{localize (concat 'swnr.sheet.gear.conditionDetails.' gearCondition)}} <br>
+    {{#if (ne gearCondition 'perfect')}}
+      (modifiers not automatically applied)
+    {{/if}}
   {{/if}}
 </div>

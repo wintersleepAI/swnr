@@ -4,6 +4,7 @@ import { stringify } from "yaml";
 import path from "path";
 import { fileURLToPath } from "url";
 import { mapping } from "../conversion/mapping.mjs";
+import { SWN }from "../../module/helpers/config.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -29,7 +30,7 @@ function generateRandomID(length = 16) {
 
 function generateFoundryMetadata(type, id) {
     const now = Date.now();
-    
+
     const base = {
         _id: id,
         _stats: {
@@ -58,7 +59,7 @@ function generateFoundryMetadata(type, id) {
             prototypeToken: generatePrototypeToken(),
         };
     }
-    
+
     // Item types
     return {
         ...base,
@@ -155,7 +156,7 @@ function mapCsvFieldsToSystem(row, type) {
 
     // Deep clone the template to avoid mutations
     const systemData = JSON.parse(JSON.stringify(template));
-    
+
     // Map CSV fields to system data
     Object.keys(row).forEach(csvField => {
         const value = row[csvField];
@@ -174,14 +175,14 @@ function mapCsvFieldsToSystem(row, type) {
         cleanedSystem.baseAc = systemData.baseAc || 10;
         cleanedSystem.hitDice = systemData.hitDice || 0;
         cleanedSystem.moralScore = systemData.moralScore || 0;
-        
+
         // Handle saves: pick one, e.g., physical
         if (systemData.saves) {
             cleanedSystem.saves = systemData.saves.physical || 10;
         } else {
             cleanedSystem.saves = 10;
         }
-        
+
         cleanedSystem.skillBonus = systemData.skillBonus || 0;
         cleanedSystem.speed = systemData.speed || 10;
         cleanedSystem.biography = systemData.biography || "";
@@ -200,13 +201,13 @@ function mapFieldValue(systemData, csvField, value, type) {
         description: 'description',
         cost: 'cost',
         tl: 'tl',
-        
+
         // Item fields
         quantity: 'quantity',
         encumbrance: 'encumbrance',
         location: 'location',
         quality: 'quality',
-        
+
         // Weapon fields
         damage: 'damage',
         range_normal: 'range.normal',
@@ -220,7 +221,7 @@ function mapFieldValue(systemData, csvField, value, type) {
         stat: 'stat',
         skill: 'skill',
         attack_bonus: 'ab',
-        
+
         // Armor fields  
         ac: 'ac',
         melee_ac: 'meleeAc',
@@ -229,13 +230,13 @@ function mapFieldValue(systemData, csvField, value, type) {
         soak_max: 'soak.max',
         subtle: 'isSubtle',
         shield: 'shield',
-        
+
         // Cyberware fields
         strain: 'strain',
         effect: 'effect',
         concealment: 'concealment',
         complication: 'complication',
-        
+
         // Power fields
         level: 'level',
         subtype: 'subType',
@@ -246,10 +247,10 @@ function mapFieldValue(systemData, csvField, value, type) {
         duration: 'duration',
         range: 'range',
         save: 'save',
-        
+
         // Feature fields
         feature_type: 'type',
-        
+
         // Asset fields
         category: 'category',
         asset_type: 'type',
@@ -259,7 +260,8 @@ function mapFieldValue(systemData, csvField, value, type) {
         maintenance: 'maintenance',
         income: 'income',
         base_of_influence: 'baseOfInfluence',
-        
+
+
         // NPC fields
         biography: 'biography',
         species: 'species',
@@ -268,13 +270,22 @@ function mapFieldValue(systemData, csvField, value, type) {
         hp_max: 'health.max',
         ac: 'baseAc',
         saves_evasion: 'saves.evasion',
-        saves_mental: 'saves.mental', 
+        saves_mental: 'saves.mental',
         saves_physical: 'saves.physical',
         saves_luck: 'saves.luck',
         morale: 'moralScore',
+        skill: 'skillBonus',
         ab: 'ab',
         movement: 'speed',
-        
+        dmg: 'attacks.damage',
+        dmg_bonus: 'attacks.bonusDamage',
+        dmg_num_attacks: 'attacks.number',
+        dmg_name: 'attacks.name',
+        trauma_die: 'attacks.trauma.die',
+        trauma_rating: 'attacks.trauma.rating',
+        shock_ac: 'attacks.shock.ac',
+        shock_dmg: 'attacks.shock.dmg',
+
         // Ship fields
         mass: 'mass.value',
         power: 'power.value',
@@ -289,27 +300,27 @@ function mapFieldValue(systemData, csvField, value, type) {
     if (systemPath) {
         setNestedValue(systemData, systemPath, parseValue(value, csvField));
     }
-    
+
     // Handle array fields for features and powers
     if (csvField === 'pools_granted' && (type === 'feature' || type === 'focus' || type === 'edge')) {
         systemData.poolsGranted = parsePoolsGranted(value);
     }
-    
+
     if (csvField === 'consumptions' && type === 'power') {
         systemData.consumptions = parseConsumptions(value);
     }
-    
+
     // Handle items field for NPCs
     if (csvField === 'items' && type === 'npc') {
         // Items will be handled in the main YAML structure, not in system data
         return; // Skip setting in system data
     }
-    
+
     // Handle journal content field
     if (csvField === 'content' && type === 'journal') {
         systemData.content = value;
     }
-    
+
     // Handle roll table fields
     if (csvField === 'formula' && type === 'rolltable') {
         systemData.formula = value;
@@ -322,7 +333,7 @@ function mapFieldValue(systemData, csvField, value, type) {
 function setNestedValue(obj, path, value) {
     const keys = path.split('.');
     let current = obj;
-    
+
     for (let i = 0; i < keys.length - 1; i++) {
         const key = keys[i];
         if (!(key in current)) {
@@ -330,7 +341,7 @@ function setNestedValue(obj, path, value) {
         }
         current = current[key];
     }
-    
+
     current[keys[keys.length - 1]] = value;
 }
 
@@ -348,30 +359,30 @@ function parseValue(value, field) {
     if (['burst', 'two_handed', 'subtle', 'shield', 'prepared', 'base_of_influence'].includes(field)) {
         return value === 'true' || value === '1' || value === 'yes';
     }
-    
+
     // Parse numeric fields
-    if (['cost', 'tl', 'quantity', 'encumbrance', 'ac', 'melee_ac', 'trauma_penalty', 
-         'shock_damage', 'shock_ac', 'mag', 'strain', 'level', 'rating', 'maintenance',
-         'income', 'saves', 'morale', 'ab', 'movement', 'hp', 'hp_max', 'health',
-         'health_max', 'mass', 'power', 'hardpoints', 'crew_min', 'crew_max',
-         'armor_value', 'spike_drive', 'range_normal', 'range_max', 'soak_value', 'soak_max', 'attack_bonus',
-         'saves_evasion', 'saves_mental', 'saves_physical', 'saves_luck'].includes(field)) {
+    if (['cost', 'tl', 'quantity', 'encumbrance', 'ac', 'melee_ac', 'trauma_penalty',
+        'shock_damage', 'shock_ac', 'mag', 'strain', 'level', 'rating', 'maintenance',
+        'income', 'saves', 'morale', 'ab', 'movement', 'hp', 'hp_max', 'health',
+        'health_max', 'mass', 'power', 'hardpoints', 'crew_min', 'crew_max',
+        'armor_value', 'spike_drive', 'range_normal', 'range_max', 'soak_value', 'soak_max', 'attack_bonus',
+        'saves_evasion', 'saves_mental', 'saves_physical', 'saves_luck'].includes(field)) {
         const num = parseInt(value);
         return isNaN(num) ? 0 : num;
     }
-    
+
     return value;
 }
 
 function parsePoolsGranted(value) {
     if (!value || value.trim() === '') return [];
-    
+
     try {
         // Format: "Effort:Psychic;day;1+@skills.psychic.highest|Slots:Lv1;day;@stats.int.mod"
         return value.split('|').map(poolStr => {
             const [resourceKey, cadence, formula, condition = ''] = poolStr.split(';');
             const [resourceName, subResource] = resourceKey.split(':');
-            
+
             return {
                 resourceName: resourceName.trim(),
                 subResource: subResource ? subResource.trim() : null,
@@ -388,17 +399,17 @@ function parsePoolsGranted(value) {
 
 function parseConsumptions(value) {
     if (!value || value.trim() === '') return [];
-    
+
     try {
         // Format: "poolResource;Effort:Psychic;1;scene;manual|systemStrain;1"
         return value.split('|').map(consStr => {
             const parts = consStr.split(';');
             const type = parts[0].trim();
-            
+
             if (type === 'poolResource') {
                 const [, resourceKey, usesCost, cadence, timing] = parts;
                 const [resourceName, subResource] = resourceKey.split(':');
-                
+
                 // Map legacy boolean values to new timing enum
                 let parsedTiming = timing ? timing.trim() : 'manual';
                 if (parsedTiming === 'true') {
@@ -406,7 +417,7 @@ function parseConsumptions(value) {
                 } else if (parsedTiming === 'false') {
                     parsedTiming = 'manual';
                 }
-                
+
                 return {
                     type: 'poolResource',
                     resourceName: resourceName.trim(),
@@ -426,7 +437,7 @@ function parseConsumptions(value) {
                     usesCost: parseInt(parts[1]) || 1
                 };
             }
-            
+
             return { type, raw: consStr };
         });
     } catch (error) {
@@ -439,7 +450,20 @@ function csvRowToYaml(row, sortIndex) {
     const type = row.type || "item";
     const id = generateRandomID(16);
     const metadata = generateFoundryMetadata(type, id);
-    
+    let img = row.img || null;
+    if (img == null) {
+        let img_base = SWN.itemIconPath;
+
+        if (type in SWN.defaultImg) {
+            // check if type is drone, vehicle, ship, mech, cyberdeck, faction -- if so set base path to x 
+            if (["drone", "vehicle", "ship", "mech", "cyberdeck", "faction","npc"].includes(type)) {
+                img_base = SWN.actorIconPath;
+            }
+            img = `${img_base}/${SWN.defaultImg[type]}`;
+        }
+        img = img || "icons/svg/item-bag.svg";
+    }
+
     const yamlData = {
         name: row.name,
         type: type,
@@ -447,6 +471,7 @@ function csvRowToYaml(row, sortIndex) {
         system: mapCsvFieldsToSystem(row, type),
         ...metadata,
         folder: row.folder || null, // Add folder field after metadata spread
+        img: img,
     };
 
     // Set prototype token name for actors
@@ -459,7 +484,7 @@ function csvRowToYaml(row, sortIndex) {
     if (row.img) {
         yamlData.img = row.img;
     }
-    
+
     // Handle items array for NPCs, ensuring each item has a valid _key
     if (type === 'npc' && row.items) {
         try {
@@ -470,7 +495,7 @@ function csvRowToYaml(row, sortIndex) {
                 }
                 // Construct the key required by Foundry
                 item._key = `!actors.items!${id}.${item._id}`;
-                
+
                 // Ensure basic fields are present
                 item.folder = item.folder || null;
                 item.flags = item.flags || {};
@@ -484,6 +509,33 @@ function csvRowToYaml(row, sortIndex) {
             console.warn(`Error parsing items for ${row.name}:`, error);
             yamlData.items = [];
         }
+    }
+    if (type === 'npc' && row.dmg != null && row.dmg != "") {
+        if (yamlData.items == null) {
+            yamlData.items = [];
+        }
+        let item = {};
+        item._id = generateRandomID(16);
+        item._key = `!actors.items!${id}.${item._id}`;
+        item.folder = item.folder || null;
+        item.flags = item.flags || {};
+        item.ownership = item.ownership || { default: 0 };
+        item.effects = item.effects || [];
+        item.name = yamlData.system.attacks.name || "Attack";
+        item.type = "weapon";
+        item.system = {
+            damage: yamlData.system.attacks.damage,
+            trauma: {
+                die: yamlData.system.attacks.trauma?.die || "1d6",
+                rating: yamlData.system.attacks.trauma?.rating || null,
+            },
+            shock: {
+                dmg: yamlData.system.attacks.shock?.dmg || 0,
+                ac: yamlData.system.attacks.shock?.ac || 10,
+            },
+        };
+        item.img = "systems/swnr/assets/icons/game-icons.net/item-icons/fist.svg";
+        yamlData.items.push(item);
     }
 
     return yamlData;
@@ -503,7 +555,7 @@ async function convertCsvToYaml(csvFile) {
         const csvPath = path.join(CSV_BASE_PATH, csvFile);
         const csvBaseName = path.basename(csvFile, '.csv');
         const outputDir = path.join(OUTPUT_BASE_PATH, csvBaseName);
-        
+
         // Read and parse CSV
         const csvContent = await fs.readFile(csvPath, 'utf-8');
         const records = parse(csvContent, {
@@ -589,4 +641,7 @@ console.log('SWNR CSV to YAML Converter');
 console.log(`Input directory: ${CSV_BASE_PATH}`);
 console.log(`Output directory: ${OUTPUT_BASE_PATH}\n`);
 
-convertAllCsvFiles();
+//convertAllCsvFiles();
+
+// Test npc-template.csv only
+convertCsvToYaml('npc-template.csv');

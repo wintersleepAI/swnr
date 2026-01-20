@@ -1,0 +1,24 @@
+name: Enhanced Reflexes III
+type: cyberware
+img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+folder: Xv7hL2qR9pTZ3dAy
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swnr
+  systemVersion: 2.0.0
+  createdTime: 1739238988321
+  modifiedTime: 1739238988321
+sort: 0
+_id: 2xdi94obeezvc5hb
+system:
+  concealment: Touch
+  cost: 750000
+  description: Twice per scene, as an On Turn action up to once per round, the user gains a bonus non-cyberspace Main Action and bonus Move Action. By accepting one System Strain, this ability can be used as an Instant action.
+  effect: 2/scene, bonus Main and Move
+  strain: 4
+  type: Nerve
+effects: []
+_key: '!items!2xdi94obeezvc5hb'

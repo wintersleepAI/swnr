@@ -24,6 +24,13 @@
     margin-top: 4px;
   }
 
+  .flex-center {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;      /* centers vertically (optional) */
+    margin-top: 0.5em;        /* optional spacing */
+  }
+
   // Power Usage Chat Cards
   .power-usage {
     .resource-cost {

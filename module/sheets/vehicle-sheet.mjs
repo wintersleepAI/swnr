@@ -132,7 +132,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
         break;
       case 'drone':
       case 'vehicle':
-        options.parts.push('shipCombat', 'effects');
+        options.parts.push('shipCombat', 'shipCargo', 'effects');
         options.defaultTab = 'shipCombat';
         break;
     }
@@ -500,8 +500,8 @@ export class SWNVehicleSheet extends SWNBaseSheet {
         if (roles.engineering == actorId) {
           roles.engineering = null;
         }
-        if (roles.gunnery == actorId) {
-          roles.gunnery = null;
+        if (roles.gunner == actorId) {
+          roles.gunner = null;
         }
         if (roles.bridge == actorId) {
           roles.bridge = null;
@@ -1301,7 +1301,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     );
   }
 
-  static async _setCaptSupport(dept) {
+  async _setCaptSupport(dept) {
     const deptSupport = this.actor.system.supportingDept
       ? this.actor.system.supportingDept
       : "";
@@ -1612,10 +1612,10 @@ export class SWNVehicleSheet extends SWNBaseSheet {
               label: "Eng.",
               callback: () => this._setCaptSupport("engineering"),
             },
-            gunnery: {
+            gunner: {
               icon: '<i class="fas fa-check"></i>',
               label: "Gunnery",
-              callback: () => this._setCaptSupport("gunnery"),
+              callback: () => this._setCaptSupport("gunner"),
             },
           },
           default: "bridge",

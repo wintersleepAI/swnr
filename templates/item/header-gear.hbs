@@ -43,7 +43,12 @@
         </div><!--2col-->
       </div><!--header-fields-->
     </div><!-- row-->
+    {{#if (eq gameSettings.useAWNGearCondition true)}}
+    <div class="grid grid-5col" style="margin-top:0px;">
+    {{else}}
     <div class="grid grid-4col" style="margin-top:0px;">
+    {{/if}}
+
       <div class='resource'>
         <label class='resource-label'>{{localize 'swnr.item.encumbrance'}}</label>
         <input
@@ -77,13 +82,19 @@
       <div class='resource'>
         {{formGroup systemFields.quality value=system.quality localize=true}}
       </div>
+      
+      {{#if (eq gameSettings.useAWNGearCondition true)}}
+        <div class='resource' data-tooltip='{{localize 'swnr.sheet.gear.conditionTooltip'}}'>
+          <label class='resource-label'>{{localize 'swnr.sheet.gear.conditionLabel'}}</label>
+          {{formInput systemFields.condition value=system.condition localize=true}}
+        </div>
+      {{/if}}
 
-      <div class='resource grid-span-4 thin-bar' style="">
+      <div class='resource grid-span-4 thin-bar'>
         <label class='resource-label'>{{localize 'swnr.item.noEncReadied'}}</label>
         <input type="checkbox" class="small-checkbox" name="system.noEncReadied" {{#if system.noEncReadied}}checked{{/if}} />
-
       </div>
 
-    </div><!--4col-->
+    </div><!--4/5col-->
   </div><!--flexcol-->
 </header>

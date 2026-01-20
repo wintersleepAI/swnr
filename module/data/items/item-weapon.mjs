@@ -16,24 +16,24 @@ export default class SWNWeapon extends SWNBaseGearItem {
     schema.skillBoostsDamage = new fields.BooleanField({ initial: false });
     schema.skillBoostsShock = new fields.BooleanField({ initial: false });
     schema.shock = new fields.SchemaField({
-      dmg: SWNShared.requiredNumber(0),
+      dmg: SWNShared.diceString("0"),
       ac: SWNShared.requiredNumber(10),
     });
     schema.ab = SWNShared.requiredNumber(0, -10);
     schema.ammo = new fields.SchemaField({
       longReload: new fields.BooleanField({ initial: false }),
       suppress: new fields.BooleanField({ initial: false }),
-      type: SWNShared.stringChoices("ammo", CONFIG.SWN.ammoTypes),
+      type: SWNShared.stringChoices("none", CONFIG.SWN.ammoTypes),
       max: SWNShared.requiredNumber(10),
       value: SWNShared.requiredNumber(10),
       burst: new fields.BooleanField({ initial: false }),
-      current: new fields.DocumentIdField({readonly:false})
+      current: new fields.DocumentIdField({ readonly: false })
     });
     schema.range = new fields.SchemaField({
       normal: SWNShared.requiredNumber(1),
       max: SWNShared.requiredNumber(2),
     });
-    schema.damage = SWNShared.requiredString("1d6");
+    schema.damage = SWNShared.diceString("1d6");
     schema.remember = new fields.SchemaField({
       use: new fields.BooleanField({ initial: false }),
       burst: new fields.BooleanField({ initial: false }),
@@ -43,7 +43,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
     //schema.quantity = SWNShared.requiredNumber(1);
     schema.save = SWNShared.stringChoices(null, CONFIG.SWN.saveTypes, false);
     schema.trauma = new fields.SchemaField({
-      die: SWNShared.requiredString("1d6"),
+      die: SWNShared.diceString("1d6"),
       rating: SWNShared.nullableNumber(),
     });
     schema.isTwoHanded = new fields.BooleanField({ initial: false });
@@ -82,6 +82,13 @@ export default class SWNWeapon extends SWNBaseGearItem {
       this.ammo.value > 0
     );
   }
+  
+  safeDamageRoll(damageRoll) {
+    if (!Roll.validate(damageRoll.formula)) {
+      damageRoll = new Roll("1d0");
+    }
+    return damageRoll;
+  };
 
   async rollAttack(
     damageBonus, // number
@@ -116,6 +123,10 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const template = "systems/swnr/templates/chat/attack-roll.hbs";
     const burstFire = useBurst ? 2 : 0;
     const attackRollDie = game.settings.get("swnr", "attackRoll");
+    let gearCondition = null;
+    if (game.settings.get("swnr", "useAWNGearCondition")) {
+      gearCondition = this.condition;
+    } 
     const rollData = {
       actor: actor.getRollData(),
       weapon: this,
@@ -125,7 +136,6 @@ export default class SWNWeapon extends SWNBaseGearItem {
       modifier,
       damageBonus,
       effectiveSkillRank: skillMod < 0 ? -2 : skillMod,
-      shockDmg: this.shock?.dmg > 0 ? this.shock.dmg : 0,
       attackRollDie,
     };
     let hitExplainTip = "1d20 +burst +mod +CharAB +WpnAB +Stat +Skill";
@@ -139,62 +149,90 @@ export default class SWNWeapon extends SWNBaseGearItem {
         "@attackRollDie + @burstFire + @modifier + @actor.meleeAb + @weapon.ab + @stat + @effectiveSkillRank";
       hitExplainTip = "1d20 +burst +mod +CharMeleeAB +WpnAB +Stat +Skill";
     }
-    const hitRoll = new Roll(dieString, rollData);
+    let hitRoll = new Roll(dieString, rollData);
+    hitRoll = this.safeDamageRoll(hitRoll);
     await hitRoll.roll();
     rollData.hitRoll = +(hitRoll.dice[0].total?.toString() ?? 0);
-    const damageRoll = new Roll(
-      this.damage + " + @burstFire + @stat + @damageBonus",
-      rollData
-    );
-    await damageRoll.roll();
-    const damageExplainTip = "roll +burst +statBonus +dmgBonus";
-    const diceTooltip = {
-      hit: await hitRoll.render(),
-      damage: await damageRoll.render(),
-      hitExplain: hitExplainTip,
-      damageExplain: damageExplainTip,
-    };
 
     let traumaRollRender = null;
     let traumaDamage = null;
+    let traumaRoll = null;
+    let traumaRating = null;
     let useTrauma = (game.settings.get("swnr", "useTrauma") ? true : false);
+    let damageRoll = null;
 
-    if (
-      useTrauma &&
-      this.trauma.die != null &&
-      this.trauma.die !== "none" &&
-      this.trauma.rating != null
-    ) {
-      const traumaRoll = new Roll(this.trauma.die);
-      await traumaRoll.roll();
-      traumaRollRender = await traumaRoll.render();
+    const rollArray = [hitRoll];
+
+    const damageExplainTip = "roll +burst +statBonus +dmgBonus";
+    damageRoll = new Roll(
+      this.damage + " + @burstFire + @stat + @damageBonus",
+      rollData
+    );
+
+    let diceTooltip = {
+      hitExplain: hitExplainTip,
+      hit: await hitRoll.render(),
+      damage: null,
+      damageFormula: damageRoll.formula,
+      damageExplain: damageExplainTip,
+    };
+  
+
+    // Roll Damage automatically if the setting is enabled
+    const damageRollEnabled = game.settings.get("swnr", "damageRoll");
+    if (damageRollEnabled) {
+
+      damageRoll = this.safeDamageRoll(damageRoll);
+      await damageRoll.roll();
+      diceTooltip.damage = await damageRoll.render();
+
       if (
-        traumaRoll &&
-        traumaRoll.total &&
-        traumaRoll.total >= 6 &&
-        damageRoll?.total
+        useTrauma &&
+        this.trauma.die != null &&
+        this.trauma.die !== "none" &&
+        this.trauma.rating != null
       ) {
-        const traumaDamageRoll = new Roll(
-          `${damageRoll.total} * ${this.trauma.rating}`
-        );
-        await traumaDamageRoll.roll();
-        traumaDamage = await traumaDamageRoll.render();
+        traumaRoll = new Roll(this.trauma.die);
+        await traumaRoll.roll();
+        traumaRollRender = await traumaRoll.render();
+        if (
+          traumaRoll &&
+          traumaRoll.total &&
+          traumaRoll.total >= 6 &&
+          damageRoll?.total
+        ) {
+          const traumaDamageRoll = new Roll(
+            `${damageRoll.total} * ${this.trauma.rating}`
+          );
+          await traumaDamageRoll.roll();
+          traumaDamage = await traumaDamageRoll.render();
+        }
       }
-    }
-
-    const rollArray = [hitRoll, damageRoll];
+    } // End of Damage Roll if setting is enabled
+    else {
+      if (
+        useTrauma &&
+        this.trauma.die != null &&
+        this.trauma.die !== "none" &&
+        this.trauma.rating != null
+      ) {
+        traumaRoll = new Roll(this.trauma.die);
+        traumaRating = this.trauma.rating;
+      }
+    } // end of no damage roll setting
     // Placeholder for shock damage
     let shock_content = null;
     let shock_roll = null;
     // Show shock damage
     if (game.settings.get("swnr", "addShockMessage")) {
-      if (this.shock && this.shock.dmg > 0) {
+      if (this.shock && this.shock.dmg != null && this.shock.dmg != "" && this.shock.dmg != "0") {
         shock_content = `Shock Damage  AC ${this.shock.ac}`;
-        const _shockRoll = new Roll(
-          " @shockDmg + @stat " +
+        let _shockRoll = new Roll(
+          this.shock.dmg + " + @stat " +
           (this.skillBoostsShock ? ` + ${damageBonus}` : ""),
           rollData
         );
+        _shockRoll = this.safeDamageRoll(_shockRoll); 
         await _shockRoll.roll();
         shock_roll = await _shockRoll.render();
         rollArray.push(_shockRoll);
@@ -220,6 +258,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       shock_content,
       traumaDamage,
       traumaRollRender,
+      gearCondition,
     };
     const rollMode = game.settings.get("core", "rollMode");
     const diceData = Roll.fromTerms([foundry.dice.terms.PoolTerm.fromRolls(rollArray)]);
@@ -243,9 +282,23 @@ export default class SWNWeapon extends SWNBaseGearItem {
       rolls: rollArray, // Added for dice so nice trigger. 
       content: chatContent
     };
+    if (!damageRollEnabled) {
+      chatData.flags = {
+        "swnr": {
+          "damageRoll": {
+            "formula": damageRoll.formula,
+            "damageExplain": damageExplainTip,
+            "actorId": actor.id,
+            "flavor": `Damage roll for ${dialogData.weapon.name}`,
+            "weaponId": this.id,
+            "traumaFormula": traumaRoll?.formula || null,
+            "traumaRating": traumaRating,
+          },
+        }
+      };
+    }
     getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
-
   }
 
   async roll(shiftKey = false) {

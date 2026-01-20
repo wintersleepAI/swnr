@@ -222,6 +222,13 @@
   margin-top: 4px;
 }
 
+.chat-message .flex-center {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center; /* centers vertically (optional) */
+  margin-top: 0.5em; /* optional spacing */
+}
+
 .chat-message .power-usage .resource-cost {
   background: var(--color-bg-btn);
   border: 1px solid var(--color-border-dark-tertiary);
@@ -751,6 +758,32 @@
 .swnr .item-form {
   font-family: "Roboto", sans-serif;
 }
+.swnr .gap-2 {
+  gap: 2px;
+}
+.swnr .gap-4 {
+  gap: 4px;
+}
+.swnr .settings-form {
+  overflow-y: auto; /* vertical scrollbar */
+  overflow-x: hidden; /* optional */
+  padding-right: 0.5em; /* space for scrollbar */
+}
+.swnr .settings-form .custom-currency-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  padding: 4px;
+  margin: 4px;
+}
+.swnr .settings-form .custom-currency-container .h4 {
+  margin-bottom: 1rem;
+}
+.swnr .settings-form .h4 {
+  margin-bottom: 1rem;
+}
 .swnr .sheet-header {
   flex: 0 auto;
   /* overflow: hidden; TODO */
@@ -768,7 +801,6 @@
 }
 .swnr .sheet-header input[type=text],
 .swnr .sheet-header input[type=number],
-.swnr .sheet-header select,
 .swnr .sheet-header div.field {
   font-size: 14px;
   /* padding: 2px; */
@@ -785,12 +817,29 @@
   user-select: text;
   transition: outline-color 0.5s;
   min-width: 20px;
+  box-shadow: none;
+}
+.swnr .sheet-header select {
+  font-size: 14px;
+  /* padding: 2px; */
+  margin: 2px;
+  border: none;
+  border-radius: 0;
+  /* background: var(--swnr-c-white); */
+  background: none;
+  color: var(--swnr-c-dark);
+  outline: 1px solid transparent;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  user-select: text;
+  transition: outline-color 0.5s;
+  min-width: 20px;
 }
 .swnr .sheet-header .profile-img,
 .swnr .sheet-header .item-img {
-  width: 150px;
-  max-width: 150px;
-  height: 150px;
+  width: 130px;
+  max-width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 1px solid var(--border-color);
   box-shadow: 0 0 10px inset rgba(0, 0, 0, 0.4);
@@ -825,7 +874,7 @@
 }
 .swnr .sheet-header .thin-bar {
   margin-top: -5px;
-  margin-bottom: -15px;
+  margin-bottom: -10px;
 }
 .swnr .sheet-header .header-fields {
   flex: 1;
@@ -850,6 +899,7 @@
   outline: none;
   color: inherit;
   font-size: inherit;
+  text-align: center;
   width: calc(50% - 30px);
   height: 100%;
 }

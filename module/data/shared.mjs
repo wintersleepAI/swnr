@@ -54,6 +54,13 @@ export default class SWNShared {
     return new fields.StringField({ required: true, nullable: false, initial: initialValue });
   }
 
+  static diceString(initialValue, required = true) {
+    const fields = foundry.data.fields;
+    return new fields.StringField({ required: required, nullable: !required, initial: initialValue, 
+      validate: v => v === null || (() => { new Roll(v); return true; })()
+    });
+  }
+
   static nullableString() {
     const fields = foundry.data.fields;
     return new fields.StringField({ required: false, nullable: true });

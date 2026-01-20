@@ -67,15 +67,25 @@ export class SWNItem extends Item {
     // Initialize chat data.
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });
     const rollMode = game.settings.get('core', 'rollMode');
-    const label = `[${item.type}] ${item.name}`;
-
+    let label = `[${item.type}] ${item.name}`;
+    let description = item.system.description ?? '';
+    if (game.settings.get("swnr", "useAWNGearCondition")) {
+      let conditionLabel = game.i18n.localize(`swnr.sheet.gear.condition.${item.system.condition}`);
+      label = `${label} (Condition: ${conditionLabel})`;
+      description = `${description} <br>Condition: ${conditionLabel}`;
+      if (item.system.condition != 'perfect') {
+        let conditionDetails = game.i18n.localize(`swnr.sheet.gear.conditionDetails.${item.system.condition}`);
+        description = `${description} ${conditionDetails}`;
+        description = `${description} (modifiers not automatically applied)`;
+      }
+    }
     // If there's no roll data, send a chat message.
     if (!this.system.formula) {
       ChatMessage.create({
         speaker: speaker,
         rollMode: rollMode,
         flavor: label,
-        content: item.system.description ?? '',
+        content: description,
       });
     }
     // Otherwise, create a roll and send a chat message from it.
@@ -87,6 +97,9 @@ export class SWNItem extends Item {
       const roll = new Roll(rollData.formula, rollData.actor);
       // If you need to store the value first, uncomment the next line.
       // const result = await roll.evaluate();
+      if (description && description.length > 0) {
+        label = `${label} ${description}`;
+      }
       roll.toMessage({
         speaker: speaker,
         rollMode: rollMode,

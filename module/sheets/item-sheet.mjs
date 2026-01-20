@@ -228,6 +228,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
       editable: this.isEditable,
       owner: this.document.isOwner,
       limited: this.document.limited,
+      isGM: game.user.isGM,
       // Add the item document.
       item: this.item,
       // Adding system and flags for easier access
