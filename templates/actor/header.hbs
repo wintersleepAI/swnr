@@ -181,26 +181,8 @@
 
       {{#if (eq actor.type 'character')}}
         {{formGroup systemFields.ab value=system.ab localize=true widget=headerWidget}}
-        {{!-- {{#if (eq gameSettings.useCWNArmor true)}}
-        {{formGroup systemFields.meleeAb value=system.meleeAb localize=true widget=headerWidget}}
-        {{/if}}
-        
+
         {{#if (eq gameSettings.useDeathAndDismemberment true)}}
-        {{! Critical Resistance field }}
-        <div class="resource flex-group-center">
-          <div class="field resource-content">
-            <input
-              type='number'
-              name='system.critResistance'
-              value='{{system.critResistance}}'
-              data-dtype='Number'
-              class='nested-field header'
-            />
-          </div>
-          <label class='resource-label'>CR</label>
-        </div>
-        
-        {{! Combined Injuries/Wounds field }}
         <div class="resource flex-group-center">
           <div class="field resource-content">
             <input
@@ -222,7 +204,6 @@
           <label class='resource-label'>Inj/Wnd</label>
         </div>
         {{/if}}
-        {{/if}} --}}
       {{else}}
         {{#if (eq gameSettings.useCWNArmor true)}}
         <div class="resource flex-group-center"><!-- AC -->
