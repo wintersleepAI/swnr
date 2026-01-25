@@ -120,7 +120,7 @@ export class SWNActor extends Actor {
       const sideRoll = new Roll("1d2");
       await sideRoll.roll();
       side = sideRoll.total === 1 ? "Left " : "Right ";
-    } else if (locationResult <= 8) {
+    } else if (locationResult <= 9) {
       location = "torso";
       locationIcon = "vest";
     } else {
