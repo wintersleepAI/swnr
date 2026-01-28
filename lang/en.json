@@ -2035,6 +2035,9 @@
       "statRoll": "Roll stats for {name}",
       "savemoddesc": "(Positive makes easier, negative harder)",
       "rerollButton": "Reroll",
+      "criticalHit": "Critical Hit!",
+      "criticalDamage": "Critical Damage",
+      "criticalInjury": "Critical Injury!",
       "healthButtons": {
         "fullDamage": "Apply full damage to selected token(s)",
         "halfDamage": "Apply half damage to selected token(s)",
@@ -2293,6 +2296,16 @@
       "vehicle": "Vehicle",
       "drone": "Drone",
       "mech": "Mech"
+    },
+    "injury": {
+      "minor": "Minor Injury",
+      "moderate": "Moderate Injury",
+      "location": "Location",
+      "severity": "Severity",
+      "injuries": "Injuries",
+      "wounds": "Wounds",
+      "nowAt": "now at",
+      "hp": "HP"
     },
     "deleteTitle": "Delete {name}?",
     "deleteCrew": "Do you want to remove {name} from the crew?",

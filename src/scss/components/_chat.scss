@@ -6,6 +6,126 @@
     gap: 0.25rem;
   }
 
+  // Critical Hit Styling
+  .critical-hit-banner {
+    background: linear-gradient(135deg, #8B0000 0%, #DC143C 50%, #8B0000 100%);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin: -0.5rem -0.5rem 0.5rem -0.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 4px 4px 0 0;
+
+    i {
+      margin-right: 0.5rem;
+      animation: pulse 1s ease-in-out infinite;
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  .roll-critical {
+    border: 2px solid #DC143C !important;
+    background: rgba(220, 20, 60, 0.1) !important;
+  }
+
+  .critical-damage-section {
+    margin-top: 0.5rem;
+    padding: 0.25rem;
+    border-left: 3px solid #DC143C;
+    padding-left: 0.5rem;
+  }
+
+  .critical-damage-value {
+    font-weight: bold;
+    color: #DC143C;
+    font-size: 1.1em;
+  }
+
+  // Injury Type Badges
+  .injury-type-minor {
+    background: rgba(243, 156, 18, 0.2);
+    border: 1px solid #f39c12;
+    color: #856404;
+  }
+
+  .injury-type-moderate {
+    background: rgba(231, 76, 60, 0.2);
+    border: 1px solid #e74c3c;
+    color: #721c24;
+  }
+
+  // Injury Message Styles (Fix 5: moved from inline styles)
+  &.injury-message {
+    .injury-type-indicator {
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 4px;
+      text-align: center;
+
+      .hp-percentage {
+        font-size: 0.85em;
+        margin-left: 5px;
+      }
+    }
+
+    .injury-location {
+      margin-bottom: 10px;
+
+      .location-icon {
+        margin-right: 5px;
+        color: #8B0000;
+      }
+    }
+
+    .severity-section {
+      .severity-total {
+        margin: 10px 0;
+      }
+
+      .dice-calculation {
+        background: #f0f0f0;
+        padding: 8px;
+        border-radius: 4px;
+        margin: 5px 0;
+        font-family: monospace;
+        font-size: 0.9em;
+      }
+    }
+
+    .counters-update {
+      margin-top: 10px;
+
+      table {
+        width: 100%;
+      }
+    }
+
+    .effect-description {
+      margin-top: 10px;
+      padding: 8px;
+      background: #fff3cd;
+      border-radius: 4px;
+      border-left: 3px solid #ffc107;
+
+      .effect-icon {
+        color: #856404;
+        margin-right: 5px;
+      }
+    }
+
+    .actor-status {
+      margin-top: 10px;
+      font-style: italic;
+    }
+  }
+
   .chat-button-small {
     height: 20px;
     width: 20px;
@@ -223,6 +343,43 @@
     border-color: var(--color-border-dark);
   }
   .swnr-inc:hover, .swnr-dec:hover { background: var(--color-border-dark); }
+}
+
+// Dark theme variants for critical hit styling
+.theme-dark .chat-message {
+  .injury-type-minor {
+    background: rgba(243, 156, 18, 0.3);
+    border-color: #f39c12;
+    color: #ffc107;
+  }
+
+  .injury-type-moderate {
+    background: rgba(231, 76, 60, 0.3);
+    border-color: #e74c3c;
+    color: #ff6b6b;
+  }
+
+  .dice-calculation {
+    background: #2a2a2a !important;
+    color: #ddd;
+  }
+
+  .effect-description {
+    background: rgba(255, 243, 205, 0.1) !important;
+    border-color: #ffc107 !important;
+    color: #ffc107;
+
+    .effect-icon {
+      color: #ffc107;
+    }
+  }
+
+  // Injury message dark theme variants
+  &.injury-message {
+    .injury-location .location-icon {
+      color: #ff6b6b;
+    }
+  }
 }
 
 // Actor Sheet Pool Display

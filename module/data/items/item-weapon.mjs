@@ -154,6 +154,9 @@ export default class SWNWeapon extends SWNBaseGearItem {
     await hitRoll.roll();
     rollData.hitRoll = +(hitRoll.dice[0].total?.toString() ?? 0);
 
+    // Detect natural 20 for critical hits
+    const isCriticalHit = rollData.hitRoll === 20;
+
     let traumaRollRender = null;
     let traumaDamage = null;
     let traumaRoll = null;
@@ -239,6 +242,14 @@ export default class SWNWeapon extends SWNBaseGearItem {
       }
     }
 
+    // Calculate critical damage (doubled) if damage was rolled
+    let criticalDamageTotal = null;
+    let criticalDamageRender = null;
+    if (isCriticalHit && damageRoll?.total) {
+      criticalDamageTotal = damageRoll.total * 2;
+      criticalDamageRender = `<span class="critical-damage-value">${criticalDamageTotal}</span> (${damageRoll.total} × 2)`;
+    }
+
     const dialogData = {
       actor,
       weapon: this.parent,
@@ -259,6 +270,9 @@ export default class SWNWeapon extends SWNBaseGearItem {
       traumaDamage,
       traumaRollRender,
       gearCondition,
+      isCriticalHit,
+      criticalDamageTotal,
+      criticalDamageRender,
     };
     const rollMode = game.settings.get("core", "rollMode");
     const diceData = Roll.fromTerms([foundry.dice.terms.PoolTerm.fromRolls(rollArray)]);
@@ -279,22 +293,27 @@ export default class SWNWeapon extends SWNBaseGearItem {
     const chatData = {
       speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),
       roll: JSON.stringify(diceData),
-      rolls: rollArray, // Added for dice so nice trigger. 
+      rolls: rollArray, // Added for dice so nice trigger.
       content: chatContent
     };
+
+    // Always set isCriticalHit flag on the message for reliable detection
+    chatData.flags = {
+      swnr: {
+        isCriticalHit: isCriticalHit,
+      }
+    };
+
     if (!damageRollEnabled) {
-      chatData.flags = {
-        "swnr": {
-          "damageRoll": {
-            "formula": damageRoll.formula,
-            "damageExplain": damageExplainTip,
-            "actorId": actor.id,
-            "flavor": `Damage roll for ${dialogData.weapon.name}`,
-            "weaponId": this.id,
-            "traumaFormula": traumaRoll?.formula || null,
-            "traumaRating": traumaRating,
-          },
-        }
+      chatData.flags.swnr.damageRoll = {
+        formula: damageRoll.formula,
+        damageExplain: damageExplainTip,
+        actorId: actor.id,
+        flavor: `Damage roll for ${dialogData.weapon.name}`,
+        weaponId: this.id,
+        traumaFormula: traumaRoll?.formula || null,
+        traumaRating: traumaRating,
+        isCriticalHit: isCriticalHit,
       };
     }
     getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);

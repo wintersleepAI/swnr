@@ -5,6 +5,11 @@
   </div>
 
   <div class="message-content">
+    <div class="injury-type-indicator injury-type-{{injuryType}}">
+      <strong>{{#if (eq injuryType 'minor')}}{{localize 'swnr.injury.minor'}}{{else}}{{localize 'swnr.injury.moderate'}}{{/if}}</strong>
+      <span class="hp-percentage">({{currentHp}}/{{maxHp}} {{localize 'swnr.injury.hp'}} - {{hpPercentage}}%)</span>
+    </div>
+
     <div class="injury-location">
       <i class="fas fa-{{locationIcon}} location-icon"></i>
       <strong>{{localize 'swnr.injury.location'}}:</strong> {{location}}
@@ -17,7 +22,7 @@
       </h4>
       <div class="dice-calculation">
         <div class="dice-formula">
-          1d12: [{{severityRoll}}] + {{injuryContribution}} ({{injuries}} {{localize 'swnr.injury.injuries'}} × 2) + {{excessDamage}} (excess damage) - {{critResistance}} (CR) = {{severity}}
+          {{severityDie}}: [{{severityRoll}}] + {{injuryContribution}} ({{injuries}} {{localize 'swnr.injury.injuries'}}) - {{critResistance}} (CR) = {{severity}}
         </div>
       </div>
     </div>
@@ -26,11 +31,11 @@
       <table>
         <tr>
           <td><strong>{{localize 'swnr.injury.injuries'}}:</strong></td>
-          <td>{{injuryBefore}} → {{injuryAfter}}</td>
+          <td>{{injuryBefore}} &rarr; {{injuryAfter}}</td>
         </tr>
         <tr>
           <td><strong>{{localize 'swnr.injury.wounds'}}:</strong></td>
-          <td>{{woundBefore}} → {{woundAfter}}</td>
+          <td>{{woundBefore}} &rarr; {{woundAfter}}</td>
         </tr>
       </table>
     </div>
@@ -43,7 +48,7 @@
     {{/if}}
 
     <div class="actor-status">
-      <strong>{{actor.name}}</strong> {{localize 'swnr.injury.nowAt'}} 0 {{localize 'swnr.injury.hp'}}
+      <strong>{{actor.name}}</strong> {{localize 'swnr.injury.nowAt'}} {{currentHp}}/{{maxHp}} {{localize 'swnr.injury.hp'}}
     </div>
   </div>
-</div> 
+</div>

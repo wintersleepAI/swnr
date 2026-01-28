@@ -1,14 +1,27 @@
 <div class="chat-card item-card" data-actor-id="{{actor._id}}" data-item-id="{{weapon._id}}">
   <h4 title="{{ weapon.system.description }}">{{ weapon.name }}</h4>
 
+  {{#if isCriticalHit}}
+  <div class="critical-hit-banner">
+    <i class="fas fa-skull-crossbones"></i>
+    {{localize 'swnr.chat.criticalHit'}}
+  </div>
+  {{/if}}
+
   <span>To Hit:</span>
-  <span title="{{ diceTooltip.hitExplain }}" class="roll roll-hit">{{{ diceTooltip.hit }}}</span>
-  
+  <span title="{{ diceTooltip.hitExplain }}" class="roll roll-hit {{#if isCriticalHit}}roll-critical{{/if}}">{{{ diceTooltip.hit }}}</span>
+
   {{# if diceTooltip.damage}}
   <span>{{localize 'swnr.weapon.damage'}}:</span>
   <span title="{{ diceTooltip.damageExplain }}" class="roll roll-damage">{{{ diceTooltip.damage }}}</span>
+  {{#if isCriticalHit}}
+  <div class="critical-damage-section" data-critical="true">
+    <span>{{localize 'swnr.chat.criticalDamage'}}:</span>
+    <span class="roll roll-damage roll-critical">{{{criticalDamageRender}}}</span>
+  </div>
+  {{/if}}
   {{else}}
-  <div class="flex-center" data-tooltip="{{diceTooltip.damageExplain}}">
+  <div class="flex-center" data-tooltip="{{diceTooltip.damageExplain}}" {{#if isCriticalHit}}data-critical="true"{{/if}}>
     <button class="dmgroll" data-flagns="swnr" data-flagkey="damageRoll">Roll Damage: {{diceTooltip.damageFormula}}</button>
   </div>
   {{/if}}
