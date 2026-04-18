@@ -76,6 +76,10 @@ export default class SWNCharacter extends SWNActorBase {
       modifiers: new fields.SchemaField({
         readied: SWNShared.requiredNumber(0,-99),
         stowed: SWNShared.requiredNumber(0,-99),
+        physicalSave: SWNShared.requiredNumber(0,-20),
+        evasionSave: SWNShared.requiredNumber(0,-20),
+        mentalSave: SWNShared.requiredNumber(0,-20),
+        luckSave: SWNShared.requiredNumber(0,-20),
       })
     });
 
@@ -113,17 +117,20 @@ export default class SWNCharacter extends SWNActorBase {
     const base = 16 - this.level.value;
     save.physical = Math.max(
       1,
-      base - Math.max(this.stats.str.mod, this.stats.con.mod)
+      base - Math.max(this.stats.str.mod, this.stats.con.mod) - 
+      this.tweak.modifiers.physicalSave
     );
     save.evasion = Math.max(
       1,
-      base - Math.max(this.stats.dex.mod, this.stats.int.mod)
+      base - Math.max(this.stats.dex.mod, this.stats.int.mod) - 
+      this.tweak.modifiers.evasionSave
     );
     save.mental = Math.max(
       1,
-      base - Math.max(this.stats.wis.mod, this.stats.cha.mod)
+      base - Math.max(this.stats.wis.mod, this.stats.cha.mod) - 
+      this.tweak.modifiers.mentalSave
     );
-    save.luck = Math.max(1, base);
+    save.luck = Math.max(1, base - this.tweak.modifiers.luckSave);
     this.save = save;
 
     // Access calculation
