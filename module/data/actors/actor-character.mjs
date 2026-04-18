@@ -267,11 +267,11 @@ export default class SWNCharacter extends SWNActorBase {
     for (let currency of this.credits.extraCurrencies) {
       if (currency.type !== 'base') {
         const currencyEnc = game.settings.get("swnr", `customCurrencyEnc${currency.type}`);
-        if (currencyEnc > 0) {
+        if (currencyEnc > 0 && currency.carried) {
           const currencyValue = Math.floor(currency.value / currencyEnc);
           encumbrance.stowed.value += currencyValue;
         }
-      } else if (baseCurrencyEnc > 0) {
+      } else if (baseCurrencyEnc > 0 && currency.carried) {
         // more base 
         const currencyValue = Math.floor(currency.value / baseCurrencyEnc);
         encumbrance.stowed.value += currencyValue;
