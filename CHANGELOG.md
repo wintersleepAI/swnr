@@ -5,6 +5,17 @@ All notable changes to the Systems Without Number Redux (SWNR) system for Foundr
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.1] 2026-04-XX Small fixes and updates
+
+- Added another 'extra' item location (defaults to 'Ship'), and allowed for custom labels for other and extra locations (under character tweaks). GM can set default extra label in the system settings.
+- TODO Added a world defined unskilled skill roll penalty (default is -1)
+- TODO renabled 2d6 attribute roll options 
+- TODO enabled optional 2d6 attack roll option
+- TODO added some AWN compendium content
+- Added save modifiers to character sheet (under features/tweaks)
+- Fixed issue with vacc suit and skin descriptions
+- Stowed currency encumbrance now only counts carried currencies (bug fix)
+
 ## [2.3.0] 2025-11-04 More XWN support
 
 - Custom currency system configuration supported. Base currency and up to 5 custom currencies. Old debt, balance, and owed fields are deprecated and will be removed in a future version.  They should be migrated to the new system, but the old values are shown in the tweaks section as readonly.
