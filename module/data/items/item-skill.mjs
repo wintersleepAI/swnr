@@ -55,11 +55,20 @@ export default class SWNSkill extends SWNItemBase {
     statMod,
     dice,
     skillRank,
-    modifier
+    modifier,
+    unskilledPenaltyMod = 0
   ) {
     const rollMode = game.settings.get("core", "rollMode");
 
-    const formula = `${dice} + @stat + @skill + @modifier`;
+    let formula = `${dice} + @stat + @skill + @modifier`;
+    if (skillRank < 0 && game.settings.get("swnr", "unskilledPenalty") != -1) {
+      skillRank = game.settings.get("swnr", "unskilledPenalty");
+    }
+
+    if (skillRank < 0 && unskilledPenaltyMod >= 0) {
+      skillRank += unskilledPenaltyMod;
+    }
+
     const roll = new Roll(formula, {
       skill: skillRank,
       modifier: modifier,
@@ -115,7 +124,8 @@ export default class SWNSkill extends SWNItemBase {
           stat.mod,
           dice,
           skillRank,
-          modifier
+          modifier,
+          actor.system.tweak.modifiers.unskilledPenalty
         );
         return;
       }
@@ -184,7 +194,8 @@ export default class SWNSkill extends SWNItemBase {
         stat.mod,
         dice,
         this.rank,
-        modifier
+        modifier,
+        actor.system.tweak.modifiers.unskilledPenalty
       );
     };
     const _resp = await foundry.applications.api.DialogV2.prompt(

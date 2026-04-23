@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.3.1] 2026-04-XX Small fixes and updates
 
 - Added another 'extra' item location (defaults to 'Ship'), and allowed for custom labels for other and extra locations (under character tweaks). GM can set default extra label in the system settings.
-- TODO Added a world defined unskilled skill roll penalty (default is -1)
+- Added a world defined unskilled skill roll penalty (default is -1) and allowed for a character defined unskilled skill roll penalty modifier (default is 0)
 - TODO renabled 2d6 attribute roll options 
 - TODO enabled optional 2d6 attack roll option
 - TODO added some AWN compendium content

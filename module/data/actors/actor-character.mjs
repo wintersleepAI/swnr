@@ -83,6 +83,7 @@ export default class SWNCharacter extends SWNActorBase {
         evasionSave: SWNShared.requiredNumber(0,-20),
         mentalSave: SWNShared.requiredNumber(0,-20),
         luckSave: SWNShared.requiredNumber(0,-20),
+        unskilledPenalty: SWNShared.requiredNumber(0,0),
       })
     });
 
