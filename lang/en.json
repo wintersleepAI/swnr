@@ -2034,10 +2034,10 @@
       "savemoddesc": "(Positive makes easier, negative harder)",
       "rerollButton": "Reroll",
       "healthButtons": {
-        "fullDamage": "Apply full damage to selected token(s)",
+        "fullDamage": "Apply damage to selected token(s)",
         "halfDamage": "Apply half damage to selected token(s)",
-        "fullHealing": "Apply full healing to selected token(s)",
-        "fullDamageModified": "Apply full damage with modifier to selected token(s)"
+        "fullHealing": "Apply healing to selected token(s)",
+        "fullDamageModified": "Apply modified damage to selected token(s)"
       },
       "spike": {
         "fail3": "Catastrophic dimensional energy incursion.  Ship emerges around a star within 1d6 hexes  of the target destination with drive and all systems destroyed.",
