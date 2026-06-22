@@ -225,14 +225,31 @@ export default class SWNWeapon extends SWNBaseGearItem {
     let shock_roll = null;
     // Show shock damage
     if (game.settings.get("swnr", "addShockMessage")) {
-      if (this.shock && this.shock.dmg != null && this.shock.dmg != "" && this.shock.dmg != "0") {
-        shock_content = `Shock Damage  AC ${this.shock.ac}`;
-        let _shockRoll = new Roll(
-          this.shock.dmg + " + @stat " +
-          (this.skillBoostsShock ? ` + ${damageBonus}` : ""),
-          rollData
-        );
-        _shockRoll = this.safeDamageRoll(_shockRoll); 
+      let shockFormula = null;
+
+      if (actor?.type == "npc" && actor.system.attacks.shock.dmg) {
+        shockFormula = `${actor.system.attacks.shock.dmg}`;
+      } else if (
+        this.shock &&
+        this.shock.dmg != null &&
+        this.shock.dmg != "" &&
+        this.shock.dmg != "0"
+      ) {
+        shockFormula =
+          this.shock.dmg +
+          " + @stat " +
+          (this.skillBoostsShock ? ` + ${damageBonus}` : "");
+      }
+
+      if (shockFormula) {
+        if (actor?.type == "npc" && actor.system.attacks.shock.ac) {
+          shock_content = `Shock Damage  AC ${actor.system.attacks.shock.ac}`;
+        } else {
+          shock_content = `Shock Damage  AC ${this.shock.ac}`;
+        }
+
+        let _shockRoll = new Roll(shockFormula, rollData);
+        _shockRoll = this.safeDamageRoll(_shockRoll);
         await _shockRoll.roll();
         shock_roll = await _shockRoll.render();
         rollArray.push(_shockRoll);
