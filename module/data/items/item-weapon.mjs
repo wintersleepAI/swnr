@@ -56,7 +56,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
 
   static migrateData(data) {
 
-    if (data.trauma.rating == "none" || data.trauma.rating == "") {
+    if (data.trauma && (data.trauma.rating == "none" || data.trauma.rating == "")) {
       data.trauma.rating = null;
     }
 

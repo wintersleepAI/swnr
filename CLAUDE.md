@@ -1,10 +1,13 @@
 # CLAUDE.md
 
-Concise guidance for Claude Code on this Foundry VTT v13 system.
-Concise guidance for Claude Code on this Foundry VTT v13 system.
+Concise guidance for Claude Code on this Foundry VTT v13+/v14 system.
 
-## V13 Essentials
+## V13+/V14 Essentials
 - No jQuery; use native DOM APIs.
+- UX helpers are namespaced under `foundry.applications.ux`: use
+  `foundry.applications.ux.TextEditor.implementation` (e.g. `.enrichHTML`,
+  `.getDragEventData`) and `foundry.applications.ux.DragDrop.implementation`,
+  not the bare `TextEditor` / `DragDrop` globals (deprecated since v13, removed in v15).
 - Don’t rely on `submitOnChange`; wire listeners in `_onRender()`.
 - Static action handlers only.
 - Templates need a single root element.

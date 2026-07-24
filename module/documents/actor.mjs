@@ -14,6 +14,11 @@ export class SWNActor extends Actor {
 
   /** @override */
   prepareBaseData() {
+    // Core prepareBaseData() runs _clearData(), which (as of v13/v14)
+    // initializes this.tokenActiveEffectChanges, this.overrides, statuses,
+    // and _completedActiveEffectPhases. applyActiveEffects() relies on those,
+    // so super MUST be called or effect application throws during _initialize.
+    super.prepareBaseData();
     // Data modifications in this step occur before processing embedded
     // documents or derived data.
   }
@@ -26,6 +31,7 @@ export class SWNActor extends Actor {
    * is queried and has a roll executed directly from it).
    */
   prepareDerivedData() {
+    super.prepareDerivedData();
     const actorData = this;
     const flags = actorData.flags.swnr || {};
   }

@@ -205,7 +205,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
         dragleave: this._onDragLeave.bind(this),
         drop: this._onDrop.bind(this),
       };
-      return new DragDrop(d);
+      return new foundry.applications.ux.DragDrop.implementation(d);
     });
   }
 
@@ -768,7 +768,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   async _onDrop(event, target) {
-    const data = TextEditor.getDragEventData(event);
+    const data = foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
     const actor = this.actor;
     const allowed = Hooks.call('dropActorSheetData', actor, this, data);
     if (allowed === false) return;

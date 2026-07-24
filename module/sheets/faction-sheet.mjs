@@ -123,7 +123,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       case 'description':
         // Enrich description info for display
         // Enrichment turns text like `[[/r 1d20]]` into buttons
-        context.enrichedDescription = await TextEditor.enrichHTML(
+        context.enrichedDescription = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
             this.actor.system.description,
             {
               // Whether to show secret blocks in the finished html
