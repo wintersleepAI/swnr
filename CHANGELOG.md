@@ -25,6 +25,16 @@ works on both v13 and v14.
   `roll:` field produced an empty `message.rolls` (breaking Dice So Nice and anything
   reading rolls off the message); all senders now use `rolls: [...]`.
 - Creating a new weapon threw on partial source data in `migrateData()`. (Thanks @illyja)
+- **The ship sensor roll never posted on v14.** Its dialog offered hardcoded v13 mode
+  strings and passed them into the chat API, which rejects unrecognised modes; the roll
+  threw before reaching chat. The same message also set the message-style enum on `type`
+  (the document subtype, which only accepts `"base"`) rather than `style`, which made
+  `create()` silently fail. Both fixed; public, private and blind sensor rolls all work.
+- Ship weapon migration aborted halfway on any item predating the `trauma` field — the
+  same unguarded access already fixed for weapons. Because core wraps `migrateData()` in a
+  try/catch this failed silently, skipping the stat migration below it.
+- Power chat cards were not roll messages (no Dice So Nice, empty `rolls`); they were the
+  last holdout still using the legacy singular `roll:` field.
 
 ### Compatibility
 - Migrated deprecated globals removed in v15 to their namespaces: document collections and
