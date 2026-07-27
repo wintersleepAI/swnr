@@ -1,5 +1,6 @@
 import SWNItemBase from './base-item.mjs';
 import SWNShared from '../shared.mjs';
+import { getChatMessageMode } from '../../helpers/utils.mjs';
 
 export default class SWNSkill extends SWNItemBase {
   static LOCALIZATION_PREFIXES = [
@@ -57,7 +58,7 @@ export default class SWNSkill extends SWNItemBase {
     skillRank,
     modifier
   ) {
-    const rollMode = game.settings.get("core", "rollMode");
+    const rollMode = getChatMessageMode();
 
     const formula = `${dice} + @stat + @skill + @modifier`;
     const roll = new Roll(formula, {
@@ -135,7 +136,7 @@ export default class SWNSkill extends SWNItemBase {
       stats: actor.system.stats
     };
 
-    const content = await renderTemplate(template, dialogData);
+    const content = await foundry.applications.handlebars.renderTemplate(template, dialogData);
     const _doRoll = async (_event, button, html) => {
       const dice = button.form.elements.dicepool.value;
       const statShortNameForm = button.form.elements.stat.value;

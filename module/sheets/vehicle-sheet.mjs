@@ -2,6 +2,7 @@ import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
 import { headerFieldWidget, groupFieldWidget, groupFieldWidgetDupe} from '../helpers/handlebar.mjs';
 import { SWNBaseSheet } from './base-sheet.mjs';
+import { getChatMessageMode } from '../helpers/utils.mjs';
 
 const { api, sheets } = foundry.applications;
 
@@ -578,10 +579,10 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       pool: CONFIG.SWN.pool,
     };
     const template = "systems/swnr/templates/dialogs/roll-skill-crew.hbs";
-    const html = await renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
 
     const _rollForm = async (_event, button, html) => {
-      const rollMode = game.settings.get("core", "rollMode");
+      const rollMode = getChatMessageMode();
       const dice = button.form.elements.dicepool.value;
       const modifier = parseInt(
         button.form.elements.modifier?.value
@@ -939,7 +940,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     };
 
     const template = "systems/swnr/templates/dialogs/roll-sensor.hbs";
-    const html = renderTemplate(template, dialogData);
+    const html = foundry.applications.handlebars.renderTemplate(template, dialogData);
     const _rollForm = async (_event, button, _html) => {
       const mod = parseInt(
         button.form.elements.modifier?.value
@@ -1088,7 +1089,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     };
 
     const template = "systems/swnr/templates/dialogs/roll-spike.hbs";
-    const html = renderTemplate(template, dialogData);
+    const html = foundry.applications.handlebars.renderTemplate(template, dialogData);
 
     const _rollForm = async (_event, button, _html) => {
       const mod = parseInt(
@@ -1187,7 +1188,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     });
     const dialogData = {};
     const template = "systems/swnr/templates/dialogs/roll-ship-failure.hbs";
-    const html = renderTemplate(template, dialogData);
+    const html = foundry.applications.handlebars.renderTemplate(template, dialogData);
 
     const _rollForm = async (_event, button, html) => {
       const incDrive = button.form.elements.incdrive?.checked
@@ -1282,7 +1283,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
   static async _onCrewNPCRoll(event, target) {
     event.preventDefault();
     // Roll skill, show name, skill, attr if != ""
-    const rollMode = game.settings.get("core", "rollMode");
+    const rollMode = getChatMessageMode();
     const formula = `2d6 + @npcCrewSkill`;
     const npcCrewSkill = this.actor.system.crewSkillBonus
       ? this.actor.system.crewSkillBonus
@@ -1551,7 +1552,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
               skillLevel = defaultActor.system.skillBonus;
             }
             // Roll skill, show name, skill, attr if != ""
-            const rollMode = game.settings.get("core", "rollMode");
+            const rollMode = getChatMessageMode();
             const formula = `${dicePool} + @skillLevel + @attrMod`;
             const roll = new Roll(formula, {
               skillLevel,
@@ -1573,7 +1574,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
           skillLevel = this.actor.system.crewSkillBonus
             ? this.actor.system.crewSkillBonus
             : 0;
-          const rollMode = game.settings.get("core", "rollMode");
+          const rollMode = getChatMessageMode();
           const formula = `${dicePool} + @skillLevel`;
           const roll = new Roll(formula, {
             skillLevel,

@@ -1,4 +1,5 @@
 import { ContainerHelper } from '../helpers/container-helper.mjs';
+import { getChatMessageMode } from '../helpers/utils.mjs';
 
 /**
  * Extend the basic Item with some very simple modifications.
@@ -66,7 +67,7 @@ export class SWNItem extends Item {
 
     // Initialize chat data.
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });
-    const rollMode = game.settings.get('core', 'rollMode');
+    const rollMode = getChatMessageMode();
     let label = `[${item.type}] ${item.name}`;
     let description = item.system.description ?? '';
     if (game.settings.get("swnr", "useAWNGearCondition")) {

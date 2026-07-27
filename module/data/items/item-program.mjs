@@ -1,5 +1,6 @@
 import SWNItemBase from './base-item.mjs';
 import SWNShared from '../shared.mjs';
+import { applyChatMessageMode, getChatMessageMode } from '../../helpers/utils.mjs';
 
 export default class SWNProgram extends SWNItemBase {
   static LOCALIZATION_PREFIXES = [
@@ -116,9 +117,9 @@ export default class SWNProgram extends SWNItemBase {
         && this.parent.name?.includes("Kill"),
       programSkill: "Int/Program",
     };
-    const rollMode = game.settings.get("core", "rollMode");
+    const rollMode = getChatMessageMode();
 
-    const chatContent = await renderTemplate(template, dialogData);
+    const chatContent = await foundry.applications.handlebars.renderTemplate(template, dialogData);
     // TODO: break up into two rolls and chain them?
     // const promise = game.dice3d
     //   ? game.dice3d.showForRoll(diceData)
@@ -128,7 +129,7 @@ export default class SWNProgram extends SWNItemBase {
       speaker: ChatMessage.getSpeaker({ actor: hacker ?? undefined }),
       content: chatContent
     };
-    getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+    applyChatMessageMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
   }
 

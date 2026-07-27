@@ -1,7 +1,7 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
 import { headerFieldWidget, groupFieldWidget } from '../helpers/handlebar.mjs';
-import { initSkills, initCompendSkills, calcMod } from '../helpers/utils.mjs';
+import { initSkills, initCompendSkills, calcMod, chatMode } from '../helpers/utils.mjs';
 import { SWNBaseSheet } from './base-sheet.mjs';
 
 
@@ -213,7 +213,7 @@ export class SWNActorSheet extends SWNBaseSheet {
     };
 
     // Ensure shared fragments are preloaded regardless of which parts render
-    await loadTemplates([
+    await foundry.applications.handlebars.loadTemplates([
       'systems/swnr/templates/actor/fragments/pools-display.hbs'
     ]);
 
@@ -989,7 +989,7 @@ export class SWNActorSheet extends SWNBaseSheet {
       return;
     };
     const template = "systems/swnr/templates/dialogs/add-bulk-skills.hbs";
-    const content = await renderTemplate(template, {});
+    const content = await foundry.applications.handlebars.renderTemplate(template, {});
 
     const _resp = await foundry.applications.api.DialogV2.prompt(
       {
@@ -1057,7 +1057,7 @@ export class SWNActorSheet extends SWNBaseSheet {
         return s + v.mod;
       }, 0),
     };
-    const chatContent = await renderTemplate(
+    const chatContent = await foundry.applications.handlebars.renderTemplate(
       "systems/swnr/templates/chat/stat-block.hbs",
       data
     );
@@ -1065,7 +1065,7 @@ export class SWNActorSheet extends SWNBaseSheet {
     chatMessage.create(
       {
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        roll: JSON.stringify(roll.toJSON()),
+        rolls: [roll],
         content: chatContent
       }
     );
@@ -1124,7 +1124,8 @@ export class SWNActorSheet extends SWNBaseSheet {
         { temporary: true }
       ));
   
-      const { results } = await rollTable.draw({ rollMode: CONST.DICE_ROLL_MODES.PRIVATE });
+      // CONST.DICE_ROLL_MODES is deprecated since v14 (removed in v16).
+      const { results } = await rollTable.draw({ rollMode: chatMode("gm") });
   
       await this.actor.update({
         "system.reaction": results[0].id?.split("0")[0],
@@ -1244,7 +1245,7 @@ export class SWNActorSheet extends SWNBaseSheet {
     const currencyIdx = target.dataset.currencyIdx;
     const currency = this.actor.system.credits.extraCurrencies[currencyIdx];
     const template = "systems/swnr/templates/dialogs/add-currency-type.hbs";
-    const content = await renderTemplate(template, { settings: getGameSettings(), currency: currency });
+    const content = await foundry.applications.handlebars.renderTemplate(template, { settings: getGameSettings(), currency: currency });
     const _resp = await foundry.applications.api.DialogV2.wait(
       {
         window: {
@@ -1356,7 +1357,7 @@ export class SWNActorSheet extends SWNBaseSheet {
   static async _onAddCurrency(event, target) {
     event.preventDefault();
     const template = "systems/swnr/templates/dialogs/add-currency-type.hbs";
-    const content = await renderTemplate(template, { settings: getGameSettings(), currency: {} });
+    const content = await foundry.applications.handlebars.renderTemplate(template, { settings: getGameSettings(), currency: {} });
 
     const _resp = await foundry.applications.api.DialogV2.prompt(
       {
