@@ -1,5 +1,6 @@
 import SWNItemBase from './base-item.mjs';
 import SWNShared from '../shared.mjs';
+import { applyChatMessageMode, getChatMessageMode } from '../../helpers/utils.mjs';
 
 export default class SWNPower extends SWNItemBase {
   static LOCALIZATION_PREFIXES = [
@@ -415,7 +416,7 @@ export default class SWNPower extends SWNItemBase {
   async _createPowerChatCard(powerRoll = null, consumptionResults = []) {
     const item = this.parent;
     const actor = item.actor;
-    const rollMode = game.settings.get("core", "rollMode");
+    const rollMode = getChatMessageMode();
 
     // Calculate strain cost from consumption results
     const totalStrainCost = consumptionResults
@@ -457,10 +458,10 @@ export default class SWNPower extends SWNItemBase {
     const chatData = {
       speaker: ChatMessage.getSpeaker({ actor: actor }),
       content: chatContent,
-      roll: powerRoll ? JSON.stringify(powerRoll) : null
+      rolls: powerRoll ? [powerRoll] : []
     };
 
-    getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+    applyChatMessageMode(chatData, rollMode);
     return chatData;
   }
 
@@ -514,16 +515,16 @@ export default class SWNPower extends SWNItemBase {
       hasUnprocessedConsumableManual: hasManualConsumables,
       consumableRequirements
     };
-    const rollMode = game.settings.get("core", "rollMode");
+    const rollMode = getChatMessageMode();
 
     const template = "systems/swnr/templates/chat/power-usage.hbs";
     const chatContent = await foundry.applications.handlebars.renderTemplate(template, dialogData);
     const chatData = {
       speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),
       content: chatContent,
-      roll: JSON.stringify(powerRoll)
+      rolls: [powerRoll]
     };
-    getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+    applyChatMessageMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
   }
 
@@ -884,7 +885,7 @@ export default class SWNPower extends SWNItemBase {
       value: i.system?.uses?.value || 0,
       max: i.system?.uses?.max || (i.system?.uses?.value || 0)
     }));
-    const content = await renderTemplate(template, { items });
+    const content = await foundry.applications.handlebars.renderTemplate(template, { items });
 
     return new Promise((resolve) => {
       const dialogId = `swnr-consume-select-${actor.id}-${Date.now()}`;

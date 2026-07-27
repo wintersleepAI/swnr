@@ -108,7 +108,12 @@ Hooks.once('init', function () {
   // if the transfer property on the Active Effect is true.
   CONFIG.ActiveEffect.legacyTransferral = false;
 
-  // Register sheet application classes
+  // Register sheet application classes.
+  // The bare Actors/Items/ActorSheet/ItemSheet globals are deprecated since v13
+  // and removed in v15; resolve them from their namespaces instead.
+  const { Actors, Items } = foundry.documents.collections;
+  const { ActorSheet, ItemSheet } = foundry.appv1.sheets;
+
   Actors.unregisterSheet('core', ActorSheet);
   Actors.registerSheet('swnr', SWNActorSheet, {
     makeDefault: true,
@@ -355,8 +360,12 @@ Hooks.on('renderSettingsConfig', (app, html, data) => {
 /* Chat Listeners                               */
 /* -------------------------------------------- */
 
-Hooks.on("renderChatMessage", (message, html, _data) =>
-  chatListeners(message, html)
+// renderChatMessage is deprecated since v13 and removed in v15. Its replacement
+// passes an HTMLElement where the old hook passed jQuery, so wrap it at the
+// boundary: chatListeners() and its helpers are still jQuery-based, and porting
+// them to native DOM is tracked separately from this compatibility pass.
+Hooks.on("renderChatMessageHTML", (message, html, _data) =>
+  chatListeners(message, $(html))
 );
 
 /* -------------------------------------------- */

@@ -2,6 +2,7 @@ import { getGameSettings } from '../helpers/register-settings.mjs';
 import { headerFieldWidget, groupFieldWidget } from '../helpers/handlebar.mjs';
 
 import { SWNBaseSheet } from './base-sheet.mjs';
+import { getChatMessageMode } from '../helpers/utils.mjs';
 
 const { api, sheets } = foundry.applications;
 
@@ -253,10 +254,10 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       pool: CONFIG.SWN.pool,
     };
     const template = "systems/swnr/templates/dialogs/roll-skill-crew.hbs";
-    const html = await renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
 
     const _rollForm = async (_event, button, html) => {
-      const rollMode = game.settings.get("core", "rollMode");
+      const rollMode = getChatMessageMode();
       const dice = button.form.elements.dicepool.value;
       const modifier = parseInt(
         button.form.elements.modifier?.value

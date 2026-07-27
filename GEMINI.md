@@ -1,9 +1,15 @@
 # GEMINI.md
 
-Concise guidance for Gemini on this Foundry VTT v13 system.
+Concise guidance for Gemini on this Foundry VTT v13+/v14 system.
 
-## V13 Essentials
-- No jQuery; use native DOM APIs.
+## Core Version Target
+`system.json` declares `minimum: 13.345`, `verified: 14.365` — code must run on both.
+**See `CLAUDE.md` for the authoritative v13/v14 compatibility rules** (namespaced globals,
+`prepareBaseData` super call, chat message visibility and roll attachment). Those rules are
+maintained in one place to stop the agent docs drifting apart.
+
+## Essentials
+- Prefer native DOM APIs in new code.
 - Don’t rely on `submitOnChange`; wire listeners in `_onRender()`.
 - Static action handlers only.
 - Templates need a single root element.

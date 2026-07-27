@@ -1,7 +1,6 @@
 import SWNActorBase from './base-actor.mjs';
 import SWNShared from '../shared.mjs';
-import { calcMod } from '../../helpers/utils.mjs';
-
+import { calcMod, applyChatMessageMode, getChatMessageMode } from '../../helpers/utils.mjs';
 export default class SWNCharacter extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
     ...super.LOCALIZATION_PREFIXES,
@@ -350,11 +349,11 @@ export default class SWNCharacter extends SWNActorBase {
       throwType: game.i18n.localize("swnr.sheet.saves." + saveType),
     });
     const dialogData = {};
-    const html = await renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
 
     //Callback for rolling
     const _doRoll = async (_event, button, _html) => {
-      const rollMode = game.settings.get("core", "rollMode");
+      const rollMode = getChatMessageMode();
       const modifier = parseInt(button.form.elements.modifier?.value);
       if (isNaN(modifier)) {
         ui.notifications?.error(`Error, modifier is not a number ${modString}`);
@@ -381,14 +380,13 @@ export default class SWNCharacter extends SWNActorBase {
         save_text,
         success,
       };
-      const chatContent = await renderTemplate(chatTemplate, chatDialogData);
+      const chatContent = await foundry.applications.handlebars.renderTemplate(chatTemplate, chatDialogData);
       const chatData = {
         speaker: ChatMessage.getSpeaker(),
-        roll: JSON.stringify(roll),
         rolls: [roll],
         content: chatContent
       };
-      getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+      applyChatMessageMode(chatData, rollMode);
       getDocumentClass("ChatMessage").create(chatData);
     };
     const popUpDialog = await foundry.applications.api.DialogV2.prompt(
@@ -453,7 +451,6 @@ export default class SWNCharacter extends SWNActorBase {
         getDocumentClass("ChatMessage").create({
           speaker: ChatMessage.getSpeaker({ actor: this.parent }),
           flavor: msg,
-          roll: JSON.stringify(roll),
           rolls: [roll],
         });
       } else {
@@ -672,7 +669,7 @@ export default class SWNCharacter extends SWNActorBase {
     const title = game.i18n.format("swnr.titles.savingThrow", {
       throwType: game.i18n.localize("swnr.sheet.saves.mental") + " (Stress)"
     });
-    const rollMode = game.settings.get("core", "rollMode");
+    const rollMode = getChatMessageMode();
 
 
     const formula = `1d20`;
@@ -715,14 +712,13 @@ export default class SWNCharacter extends SWNActorBase {
       success,
       stressUpdate
     };
-    const chatContent = await renderTemplate(chatTemplate, chatDialogData);
+    const chatContent = await foundry.applications.handlebars.renderTemplate(chatTemplate, chatDialogData);
     const chatData = {
       speaker: ChatMessage.getSpeaker(),
-      roll: JSON.stringify(roll),
       rolls: [roll],
       content: chatContent,
     };
-    getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+    applyChatMessageMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
 
 

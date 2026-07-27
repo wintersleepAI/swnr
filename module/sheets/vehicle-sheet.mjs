@@ -2,6 +2,7 @@ import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
 import { headerFieldWidget, groupFieldWidget, groupFieldWidgetDupe} from '../helpers/handlebar.mjs';
 import { SWNBaseSheet } from './base-sheet.mjs';
+import { getChatMessageMode } from '../helpers/utils.mjs';
 
 const { api, sheets } = foundry.applications;
 
@@ -199,7 +200,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
         context.tab = context.tabs[partId];
         // Enrich notes info for display
         // Enrichment turns text like `[[/r 1d20]]` into buttons
-        context.enrichedDescription = await TextEditor.enrichHTML(
+        context.enrichedDescription = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
           this.actor.system.description,
           {
             // Whether to show secret blocks in the finished html
@@ -211,7 +212,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
           }
         );
 
-        context.enrichedMods = await TextEditor.enrichHTML(
+        context.enrichedMods = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
           this.actor.system.mods,
           {
             // Whether to show secret blocks in the finished html
@@ -578,10 +579,10 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       pool: CONFIG.SWN.pool,
     };
     const template = "systems/swnr/templates/dialogs/roll-skill-crew.hbs";
-    const html = await renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
 
     const _rollForm = async (_event, button, html) => {
-      const rollMode = game.settings.get("core", "rollMode");
+      const rollMode = getChatMessageMode();
       const dice = button.form.elements.dicepool.value;
       const modifier = parseInt(
         button.form.elements.modifier?.value
@@ -939,7 +940,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     };
 
     const template = "systems/swnr/templates/dialogs/roll-sensor.hbs";
-    const html = renderTemplate(template, dialogData);
+    const html = foundry.applications.handlebars.renderTemplate(template, dialogData);
     const _rollForm = async (_event, button, _html) => {
       const mod = parseInt(
         button.form.elements.modifier?.value
@@ -966,9 +967,9 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       }
       const rollType = button.form.elements.rollType.value;
       if (
-        rollType != "roll" &&
-        rollType != "gmroll" &&
-        rollType != "blindroll"
+        rollType != "public" &&
+        rollType != "gm" &&
+        rollType != "blind"
       ) {
         ui.notifications?.error("Error with roll type");
         return;
@@ -1088,7 +1089,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     };
 
     const template = "systems/swnr/templates/dialogs/roll-spike.hbs";
-    const html = renderTemplate(template, dialogData);
+    const html = foundry.applications.handlebars.renderTemplate(template, dialogData);
 
     const _rollForm = async (_event, button, _html) => {
       const mod = parseInt(
@@ -1187,7 +1188,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     });
     const dialogData = {};
     const template = "systems/swnr/templates/dialogs/roll-ship-failure.hbs";
-    const html = renderTemplate(template, dialogData);
+    const html = foundry.applications.handlebars.renderTemplate(template, dialogData);
 
     const _rollForm = async (_event, button, html) => {
       const incDrive = button.form.elements.incdrive?.checked
@@ -1282,7 +1283,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
   static async _onCrewNPCRoll(event, target) {
     event.preventDefault();
     // Roll skill, show name, skill, attr if != ""
-    const rollMode = game.settings.get("core", "rollMode");
+    const rollMode = getChatMessageMode();
     const formula = `2d6 + @npcCrewSkill`;
     const npcCrewSkill = this.actor.system.crewSkillBonus
       ? this.actor.system.crewSkillBonus
@@ -1551,7 +1552,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
               skillLevel = defaultActor.system.skillBonus;
             }
             // Roll skill, show name, skill, attr if != ""
-            const rollMode = game.settings.get("core", "rollMode");
+            const rollMode = getChatMessageMode();
             const formula = `${dicePool} + @skillLevel + @attrMod`;
             const roll = new Roll(formula, {
               skillLevel,
@@ -1573,7 +1574,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
           skillLevel = this.actor.system.crewSkillBonus
             ? this.actor.system.crewSkillBonus
             : 0;
-          const rollMode = game.settings.get("core", "rollMode");
+          const rollMode = getChatMessageMode();
           const formula = `${dicePool} + @skillLevel`;
           const roll = new Roll(formula, {
             skillLevel,
@@ -1658,11 +1659,13 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     const itemId = target.dataset.itemId || target.closest('[data-item-id]')?.dataset.itemId;
     if (!itemId) return;
 
-    // Toggle the expanded state
-    if (this._expandedDescriptions[itemId]) {
-      delete this._expandedDescriptions[itemId];
+    // ApplicationV2 invokes static action handlers with `this` bound to the
+    // application INSTANCE, which does not inherit static class fields. Reference
+    // the class explicitly, as SWNActorSheet and SWNFactionSheet already do.
+    if (SWNVehicleSheet._expandedDescriptions[itemId]) {
+      delete SWNVehicleSheet._expandedDescriptions[itemId];
     } else {
-      this._expandedDescriptions[itemId] = true;
+      SWNVehicleSheet._expandedDescriptions[itemId] = true;
     }
 
     // Find and toggle the description row
@@ -1671,7 +1674,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
 
     const descriptionRow = itemRow.nextElementSibling;
     if (descriptionRow && descriptionRow.classList.contains('item-description')) {
-      const isExpanded = this._expandedDescriptions[itemId];
+      const isExpanded = SWNVehicleSheet._expandedDescriptions[itemId];
       descriptionRow.style.display = isExpanded ? 'block' : 'none';
     }
   }

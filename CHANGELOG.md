@@ -16,6 +16,49 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed issue with vacc suit and skin descriptions
 - Stowed currency encumbrance now only counts carried currencies (bug fix)
 
+### Foundry VTT v14 compatibility
+
+Verified against Foundry v14.365. Minimum supported core remains 13.345 — everything below
+works on both v13 and v14.
+
+#### Fixes
+- **Actors could not be created or loaded on v14.** `SWNActor.prepareBaseData()` overrode
+  core without calling `super`, skipping the `_clearData()` that initializes
+  `tokenActiveEffectChanges`, so active-effect application threw during document
+  initialization. (Thanks @illyja)
+- **Private and blind rolls were posted publicly on v14.** v14 renamed the `core.rollMode`
+  setting to `core.messageMode` and changed its values; the old key still exists but reads
+  back `null`, so every chat message was built with no whisper targets regardless of the
+  GM's selected mode. Visibility now resolves through version-aware helpers.
+- **Reroll buttons never appeared on v14.** The handler selected `.roll`, which core now
+  puts on each individual die rather than the roll container (`.dice-roll`).
+- **Rolls were missing from several chat cards.** Messages using the legacy singular
+  `roll:` field produced an empty `message.rolls` (breaking Dice So Nice and anything
+  reading rolls off the message); all senders now use `rolls: [...]`.
+- Creating a new weapon threw on partial source data in `migrateData()`. (Thanks @illyja)
+- **The ship sensor roll never posted on v14.** Its dialog offered hardcoded v13 mode
+  strings and passed them into the chat API, which rejects unrecognised modes; the roll
+  threw before reaching chat. The same message also set the message-style enum on `type`
+  (the document subtype, which only accepts `"base"`) rather than `style`, which made
+  `create()` silently fail. Both fixed; public, private and blind sensor rolls all work.
+- Ship weapon migration aborted halfway on any item predating the `trauma` field — the
+  same unguarded access already fixed for weapons. Because core wraps `migrateData()` in a
+  try/catch this failed silently, skipping the stat migration below it.
+- Power chat cards were not roll messages (no Dice So Nice, empty `rolls`); they were the
+  last holdout still using the legacy singular `roll:` field.
+
+#### Compatibility
+- Migrated deprecated globals removed in v15 to their namespaces: document collections and
+  AppV1 sheet classes, `renderTemplate`/`loadTemplates`, `TextEditor`, and `DragDrop`.
+  (`TextEditor`/`DragDrop` thanks @illyja)
+- Moved from the deprecated `renderChatMessage` hook to `renderChatMessageHTML`.
+- Replaced `ChatMessage.applyRollMode()` and `CONST.DICE_ROLL_MODES` (deprecated in v14).
+- System now loads with no deprecation warnings or errors on v14.
+
+#### Docs
+- `CLAUDE.md` documents the v13/v14 compatibility rules; `AGENTS.md` and `GEMINI.md` now
+  point at it instead of keeping their own drifting copies.
+
 ## [2.3.0] 2025-11-04 More XWN support
 
 - Custom currency system configuration supported. Base currency and up to 5 custom currencies. Old debt, balance, and owed fields are deprecated and will be removed in a future version.  They should be migrated to the new system, but the old values are shown in the tweaks section as readonly.

@@ -1,5 +1,6 @@
 import SWNVehicleBase from './base-vehicle.mjs';
 import SWNShared from '../shared.mjs';
+import { applyChatMessageMode, chatMode, getChatMessageMode } from '../../helpers/utils.mjs';
 
 
 export default class SWNShip extends SWNVehicleBase {
@@ -206,7 +207,7 @@ export default class SWNShip extends SWNVehicleBase {
       otherDesc,
     };
     const diceData = Roll.fromTerms([foundry.dice.terms.PoolTerm.fromRolls(poolRolls)]);
-    const chatContent = await renderTemplate(template, dialogData);
+    const chatContent = await foundry.applications.handlebars.renderTemplate(template, dialogData);
   
     let gm_ids = ChatMessage.getWhisperRecipients("GM")
       .filter((i) => i)
@@ -214,21 +215,25 @@ export default class SWNShip extends SWNVehicleBase {
       .filter((i) => i !== null);
     let blind = false;
   
-    if (rollMode == "roll") {
+    // rollMode here is a semantic mode from the sensor dialog ("public"/"gm"/
+    // "blind"), translated to the running core's vocabulary by chatMode() below.
+    if (rollMode == "public") {
       gm_ids = null;
-    } else if (rollMode == "blindroll") {
+    } else if (rollMode == "blind") {
       blind = true;
     }
     const chatData = {
       speaker: { alias: actorName },
-      roll: JSON.stringify(diceData),
+      rolls: [diceData],
       content: chatContent,
-      type: CONST.CHAT_MESSAGE_STYLES.OTHER,
+      // CHAT_MESSAGE_STYLES belongs on `style`; `type` is the document subtype
+      // and only accepts "base", so a numeric `type` silently rejects create().
+      style: CONST.CHAT_MESSAGE_STYLES.OTHER,
       whisper: gm_ids,
       blind,
     };
   
-    getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+    applyChatMessageMode(chatData, chatMode(rollMode));
     getDocumentClass("ChatMessage").create(chatData);
   }
   
@@ -300,20 +305,20 @@ export default class SWNShip extends SWNVehicleBase {
       failText,
       pilotName,
     };
-    const rollMode = game.settings.get("core", "rollMode");
+    const rollMode = getChatMessageMode();
     const poolRolls = [skillRoll];
     if (failRoll) {
       poolRolls.push(failRoll);
     }
     const diceData = Roll.fromTerms([foundry.dice.terms.PoolTerm.fromRolls(poolRolls)]);
-    const chatContent = await renderTemplate(template, dialogData);
+    const chatContent = await foundry.applications.handlebars.renderTemplate(template, dialogData);
     const chatData = {
       speaker: { alias: pilotName },
-      roll: JSON.stringify(diceData),
+      rolls: [diceData],
       content: chatContent
     };
   
-    getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+    applyChatMessageMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
   
     this.useDaysOfLifeSupport(travelDays);

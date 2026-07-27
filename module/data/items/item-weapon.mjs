@@ -1,5 +1,6 @@
 import SWNBaseGearItem from './base-gear-item.mjs';
 import SWNShared from '../shared.mjs';
+import { applyChatMessageMode, getChatMessageMode } from '../../helpers/utils.mjs';
 
 export default class SWNWeapon extends SWNBaseGearItem {
   static LOCALIZATION_PREFIXES = [
@@ -56,7 +57,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
 
   static migrateData(data) {
 
-    if (data.trauma.rating == "none" || data.trauma.rating == "") {
+    if (data.trauma && (data.trauma.rating == "none" || data.trauma.rating == "")) {
       data.trauma.rating = null;
     }
 
@@ -260,7 +261,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       traumaRollRender,
       gearCondition,
     };
-    const rollMode = game.settings.get("core", "rollMode");
+    const rollMode = getChatMessageMode();
     const diceData = Roll.fromTerms([foundry.dice.terms.PoolTerm.fromRolls(rollArray)]);
     if (
       this.ammo.type !== "none" &&
@@ -275,10 +276,9 @@ export default class SWNWeapon extends SWNBaseGearItem {
       if (newAmmoTotal === 0)
         ui.notifications?.warn(`Your ${item.name} is now out of ammo!`);
     }
-    const chatContent = await renderTemplate(template, dialogData);
+    const chatContent = await foundry.applications.handlebars.renderTemplate(template, dialogData);
     const chatData = {
       speaker: ChatMessage.getSpeaker({ actor: actor ?? undefined }),
-      roll: JSON.stringify(diceData),
       rolls: rollArray, // Added for dice so nice trigger. 
       content: chatContent
     };
@@ -297,7 +297,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
         }
       };
     }
-    getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+    applyChatMessageMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
   }
 
@@ -389,7 +389,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       stats: actor.system.stats,
     };
     const template = "systems/swnr/templates/dialogs/roll-attack.hbs";
-    const html = await renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
 
     const _rollForm = async (_event, button, html) => {
       const modifier = parseInt(button.form.elements.modifier.value);
