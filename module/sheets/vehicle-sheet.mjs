@@ -1659,11 +1659,13 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     const itemId = target.dataset.itemId || target.closest('[data-item-id]')?.dataset.itemId;
     if (!itemId) return;
 
-    // Toggle the expanded state
-    if (this._expandedDescriptions[itemId]) {
-      delete this._expandedDescriptions[itemId];
+    // ApplicationV2 invokes static action handlers with `this` bound to the
+    // application INSTANCE, which does not inherit static class fields. Reference
+    // the class explicitly, as SWNActorSheet and SWNFactionSheet already do.
+    if (SWNVehicleSheet._expandedDescriptions[itemId]) {
+      delete SWNVehicleSheet._expandedDescriptions[itemId];
     } else {
-      this._expandedDescriptions[itemId] = true;
+      SWNVehicleSheet._expandedDescriptions[itemId] = true;
     }
 
     // Find and toggle the description row
@@ -1672,7 +1674,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
 
     const descriptionRow = itemRow.nextElementSibling;
     if (descriptionRow && descriptionRow.classList.contains('item-description')) {
-      const isExpanded = this._expandedDescriptions[itemId];
+      const isExpanded = SWNVehicleSheet._expandedDescriptions[itemId];
       descriptionRow.style.display = isExpanded ? 'block' : 'none';
     }
   }
