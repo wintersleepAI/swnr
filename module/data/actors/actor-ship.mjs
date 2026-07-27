@@ -1,6 +1,6 @@
 import SWNVehicleBase from './base-vehicle.mjs';
 import SWNShared from '../shared.mjs';
-import { applyChatMessageMode, getChatMessageMode } from '../../helpers/utils.mjs';
+import { applyChatMessageMode, chatMode, getChatMessageMode } from '../../helpers/utils.mjs';
 
 
 export default class SWNShip extends SWNVehicleBase {
@@ -215,21 +215,25 @@ export default class SWNShip extends SWNVehicleBase {
       .filter((i) => i !== null);
     let blind = false;
   
-    if (rollMode == "roll") {
+    // rollMode here is a semantic mode from the sensor dialog ("public"/"gm"/
+    // "blind"), translated to the running core's vocabulary by chatMode() below.
+    if (rollMode == "public") {
       gm_ids = null;
-    } else if (rollMode == "blindroll") {
+    } else if (rollMode == "blind") {
       blind = true;
     }
     const chatData = {
       speaker: { alias: actorName },
       rolls: [diceData],
       content: chatContent,
-      type: CONST.CHAT_MESSAGE_STYLES.OTHER,
+      // CHAT_MESSAGE_STYLES belongs on `style`; `type` is the document subtype
+      // and only accepts "base", so a numeric `type` silently rejects create().
+      style: CONST.CHAT_MESSAGE_STYLES.OTHER,
       whisper: gm_ids,
       blind,
     };
   
-    applyChatMessageMode(chatData, rollMode);
+    applyChatMessageMode(chatData, chatMode(rollMode));
     getDocumentClass("ChatMessage").create(chatData);
   }
   

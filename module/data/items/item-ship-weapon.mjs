@@ -36,7 +36,10 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
 
   static migrateData(data) {
 
-    if (data.trauma.rating == "none" || data.trauma.rating == "") {
+    // `trauma` is absent on documents authored before it entered the schema.
+    // migrateData is wrapped in a try/catch by core, so an unguarded access
+    // here would silently abort the rest of this migration.
+    if (data.trauma && (data.trauma.rating == "none" || data.trauma.rating == "")) {
       data.trauma.rating = null;
     }
 

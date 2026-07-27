@@ -967,9 +967,9 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       }
       const rollType = button.form.elements.rollType.value;
       if (
-        rollType != "roll" &&
-        rollType != "gmroll" &&
-        rollType != "blindroll"
+        rollType != "public" &&
+        rollType != "gm" &&
+        rollType != "blind"
       ) {
         ui.notifications?.error("Error with roll type");
         return;
