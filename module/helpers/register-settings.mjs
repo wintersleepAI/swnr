@@ -253,6 +253,27 @@ export const registerSettings = function () {
     default: false,
   });
 
+  game.settings.register("swnr", "defaultExtraLabel", {
+    name: "swnr.settings.defaultExtraLabel",
+    hint: "swnr.settings.defaultExtraLabelHint",
+    scope: "world",
+    config: true,
+    type: String,
+    default: 'Ship',
+    requiresReload: true,
+  });
+
+
+  game.settings.register("swnr", "unskilledPenalty", {
+    name: "swnr.settings.unskilledPenalty",
+    hint: "swnr.settings.unskilledPenaltyHint",
+    scope: "world",
+    config: true,
+    type: Number,
+    default: -1,
+    equiresReload: true,
+  });
+
   // Currency Settings----------------------------------------------------------
   // TO add a currency setting, you need to add:
   // Setting here

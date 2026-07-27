@@ -179,6 +179,12 @@
             "showPoolsInCombat": {
               "label": "Show Pools in Combat Tab"
             },
+            "otherLabel": {
+              "label": "Item Location 3 Label"
+            },
+            "extraLabel": {
+              "label": "Item Location 4 Label"
+            },
             "debtDisplay": {
               "label": "Name of Currency 1"
             },
@@ -217,6 +223,9 @@
               },
               "stowed": {
                 "label": "Stowed Modifier"
+              },
+              "unskilledPenalty": {
+                "label": "Unskilled Skill Roll Modifier"
               }
             }
           },
@@ -1522,7 +1531,8 @@
         "luck": "Luck",
         "physical": "Physical",
         "mental": "Mental",
-        "evasion": "Evasion"
+        "evasion": "Evasion",
+        "value": "Value"
       },
       "name": "Name",
       "armor-class": "Armor Class",
@@ -2017,7 +2027,11 @@
         "both": "Both Earth and WWN Languages"
       },
       "showTempPoolModifiers": "Show Temporary Pool Modifiers?",
-      "showTempPoolModifiersHint": "Show temporary modifier input boxes for resource pools in the Powers tab. Allows manual adjustment of pool values and maximums."
+      "showTempPoolModifiersHint": "Show temporary modifier input boxes for resource pools in the Powers tab. Allows manual adjustment of pool values and maximums.",
+      "defaultExtraLabel": "Default Extra Location Label",
+      "defaultExtraLabelHint": "The default label for the extra item location field on the character sheet.",
+      "unskilledPenalty": "Unskilled Skill Roll Penalty",
+      "unskilledPenaltyHint": "The penalty for unskilled skill rolls. Default is -1."
     },
     "chat": {
       "dicepool": "Dice Pool",
@@ -2089,6 +2103,7 @@
       "locationOther": "Other",
       "locationStowed": "Stowed",
       "locationReadied": "Readied",
+      "locationExtra": "Ship",
       "gear": "Gear",
       "range": "Range",
       "favorite": "Favorite",

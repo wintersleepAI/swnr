@@ -170,6 +170,64 @@
               </div>
             {{/each}}
           </div>
+          <!-- save modifiers -->
+          <ol class="items-list">
+            <li class="flexrow items-header">
+              <div class="stat-bonus">{{localize 'swnr.sheet.saves.save'}}</div>
+              <div class="stat-bonus">{{localize 'swnr.sheet.modifier'}}</div>
+              <div class="stat-bonus">{{localize 'swnr.sheet.saves.value'}}</div>
+            </li>
+          </ol>
+          <div class='stats flex flexcol'> <!-- save mods -->
+            <!-- physical save -->
+            <div class='stat flexrow flex-group-center'>
+              <div class="stat-bonus">
+                {{localize 'swnr.sheet.saves.physical'}}
+              </div>
+              <div class="stat-bonus">
+                {{formInput systemFields.tweak.fields.modifiers.fields.physicalSave value=system.tweak.modifiers.physicalSave }}
+              </div>
+              <div class="stat-bonus">
+                {{system.save.physical}}
+              </div>
+            </div>
+            <!-- evasion save -->
+            <div class='stat flexrow flex-group-center'>
+              <div class="stat-bonus">
+                {{localize 'swnr.sheet.saves.evasion'}}
+              </div>
+              <div class="stat-bonus">
+                {{formInput systemFields.tweak.fields.modifiers.fields.evasionSave value=system.tweak.modifiers.evasionSave }}
+              </div>
+              <div class="stat-bonus">
+                {{system.save.evasion}}
+              </div>
+            </div>
+            <!-- mental save -->
+            <div class='stat flexrow flex-group-center'>
+              <div class="stat-bonus">
+                {{localize 'swnr.sheet.saves.mental'}}
+              </div>
+              <div class="stat-bonus">
+                {{formInput systemFields.tweak.fields.modifiers.fields.mentalSave value=system.tweak.modifiers.mentalSave }}
+              </div>
+              <div class="stat-bonus">
+                {{system.save.mental}}
+              </div>
+            </div>
+            <!-- luck save -->
+            <div class='stat flexrow flex-group-center'>
+              <div class="stat-bonus">
+                {{localize 'swnr.sheet.saves.luck'}}
+              </div>
+              <div class="stat-bonus">
+                {{formInput systemFields.tweak.fields.modifiers.fields.luckSave value=system.tweak.modifiers.luckSave }}
+              </div>
+              <div class="stat-bonus">
+                {{system.save.luck}}
+              </div>
+            </div>
+          </div>
         </aside>
         {{/unless}}
 
@@ -271,6 +329,10 @@
               {{formGroup systemFields.tweak.fields.showPoolsInPowers value=system.tweak.showPoolsInPowers localize=true}}
               {{formGroup systemFields.tweak.fields.showPoolsInCombat value=system.tweak.showPoolsInCombat localize=true}}
               {{!-- {{formGroup systemFields.tweak.fields.extraHeader value=system.tweak.extraHeader localize=true}} --}}
+              {{formGroup systemFields.tweak.fields.otherLabel value=system.tweak.otherLabel localize=true}}
+              {{formGroup systemFields.tweak.fields.extraLabel value=system.tweak.extraLabel localize=true}}
+
+              {{formGroup systemFields.tweak.fields.modifiers.fields.unskilledPenalty value=system.tweak.modifiers.unskilledPenalty localize=true}}
             </div> <!-- End Character Tweak options -->
             {{/if}}
       </section>

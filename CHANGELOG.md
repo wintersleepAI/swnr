@@ -5,12 +5,23 @@ All notable changes to the Systems Without Number Redux (SWNR) system for Foundr
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] Foundry VTT v14 compatibility
+## [2.3.1] 2026-04-XX Small fixes and updates
+
+- Added another 'extra' item location (defaults to 'Ship'), and allowed for custom labels for other and extra locations (under character tweaks). GM can set default extra label in the system settings.
+- Added a world defined unskilled skill roll penalty (default is -1) and allowed for a character defined unskilled skill roll penalty modifier (default is 0)
+- TODO renabled 2d6 attribute roll options 
+- TODO enabled optional 2d6 attack roll option
+- TODO added some AWN compendium content
+- Added save modifiers to character sheet (under features/tweaks)
+- Fixed issue with vacc suit and skin descriptions
+- Stowed currency encumbrance now only counts carried currencies (bug fix)
+
+### Foundry VTT v14 compatibility
 
 Verified against Foundry v14.365. Minimum supported core remains 13.345 — everything below
 works on both v13 and v14.
 
-### Fixes
+#### Fixes
 - **Actors could not be created or loaded on v14.** `SWNActor.prepareBaseData()` overrode
   core without calling `super`, skipping the `_clearData()` that initializes
   `tokenActiveEffectChanges`, so active-effect application threw during document
@@ -36,7 +47,7 @@ works on both v13 and v14.
 - Power chat cards were not roll messages (no Dice So Nice, empty `rolls`); they were the
   last holdout still using the legacy singular `roll:` field.
 
-### Compatibility
+#### Compatibility
 - Migrated deprecated globals removed in v15 to their namespaces: document collections and
   AppV1 sheet classes, `renderTemplate`/`loadTemplates`, `TextEditor`, and `DragDrop`.
   (`TextEditor`/`DragDrop` thanks @illyja)
@@ -44,7 +55,7 @@ works on both v13 and v14.
 - Replaced `ChatMessage.applyRollMode()` and `CONST.DICE_ROLL_MODES` (deprecated in v14).
 - System now loads with no deprecation warnings or errors on v14.
 
-### Docs
+#### Docs
 - `CLAUDE.md` documents the v13/v14 compatibility rules; `AGENTS.md` and `GEMINI.md` now
   point at it instead of keeping their own drifting copies.
 

@@ -42,6 +42,7 @@ SWN.itemLocations = {
   readied: 'swnr.item.locationReadied', 
   stowed: 'swnr.item.locationStowed', 
   other : 'swnr.item.locationOther',
+  extra: 'swnr.item.locationExtra',
 };
 
 SWN.itemQualities = {
