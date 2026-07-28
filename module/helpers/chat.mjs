@@ -46,7 +46,9 @@ async function _openDamageModifierDialog(baseDamage) {
     rejectClose: false,
   });
 
-  if (!modifier) return;
+  if (!modifier) {
+    return;
+  }
 
   const nModifier = Number(modifier);
   if (isNaN(nModifier)) {
@@ -54,6 +56,23 @@ async function _openDamageModifierDialog(baseDamage) {
     return;
   }
   applyHealthDrop(baseDamage + nModifier);
+}
+
+// Shared by the #callback and #onClick forms of the damage context-menu
+// entries, which differ only in argument order. `target` is the .context-item's
+// chat message element in both.
+function _applyChatDamageOption(opt, target) {
+  const message = game.messages.get(target.dataset.messageId);
+  const damage = _getChatDamageAmount(message);
+  if (damage === null) {
+    return;
+  }
+
+  if (opt.isModified) {
+    _openDamageModifierDialog(damage);
+  } else {
+    applyHealthDrop(Math.floor(damage * opt.multiplier));
+  }
 }
 
 export const addChatMessageContextOptions = function (html, options) {
@@ -82,26 +101,22 @@ export const addChatMessageContextOptions = function (html, options) {
 
   damageOptions.forEach(opt => {
     options.push({
-      name: opt.name,
-      icon: opt.icon,
       // v14 deprecated ContextMenuEntry#condition in favour of #visible, but
       // #visible does not exist on v13 (where it would be ignored, showing the
       // entry unconditionally). Setting both keeps either core happy: v14 reads
       // #visible and skips the deprecation warning, v13 falls back to #condition.
       condition: _canApplyChatDamage,
       visible: _canApplyChatDamage,
-      callback: (li) => {
-        const message = game.messages.get(li.dataset.messageId);
-        const damage = _getChatDamageAmount(message);
-
-        if (damage !== null) {
-          if (opt.isModified) {
-            _openDamageModifierDialog(damage);
-          } else {
-            applyHealthDrop(Math.floor(damage * opt.multiplier));
-          }
-        }
-      }
+      icon: opt.icon,
+      // Same story for #name -> #label and #callback -> #onClick, both removed
+      // in v16. Core warns only when the old key is present without the new one,
+      // so carrying both is silent on v14 and unchanged on v13. Note the handler
+      // arguments are swapped between them: onClick(event, target) against the
+      // legacy callback(target, event).
+      name: opt.name,
+      label: opt.name,
+      callback: (target) => _applyChatDamageOption(opt, target),
+      onClick: (_event, target) => _applyChatDamageOption(opt, target),
     });
   });
 
