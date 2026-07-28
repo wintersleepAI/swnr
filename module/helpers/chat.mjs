@@ -6,6 +6,13 @@ function _canApplyChatDamage(li) {
   // disabled -- an unguarded read throws when opening any chat context menu.
   if (!canvas.tokens?.controlled.length) return false;
 
+  // Attack cards made with the "Auto Damage Roll" setting off carry no damage
+  // roll at all -- the card renders a "Roll Damage" button instead, so it lacks
+  // the "roll roll-damage" marker below and its only roll is the to-hit d20.
+  // Without this guard the menu offers to apply the attack roll as damage.
+  // item-weapon.mjs stamps this flag on exactly those cards.
+  if (message?.getFlag("swnr", "damageRoll")) return false;
+
   // v13 rolls excluding messages with damage rolls
   return (message?.rolls?.length == 1 && !message?.content.includes("roll roll-damage"));
 }
