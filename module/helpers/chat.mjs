@@ -2,7 +2,9 @@ import { applyChatMessageMode, getChatMessageMode } from './utils.mjs';
 
 function _canApplyChatDamage(li) {
   const message = game.messages.get(li.dataset.messageId);
-  if (!canvas.tokens.controlled.length) return false;
+  // canvas.tokens is null with no active scene, or when the canvas is
+  // disabled -- an unguarded read throws when opening any chat context menu.
+  if (!canvas.tokens?.controlled.length) return false;
 
   // v13 rolls excluding messages with damage rolls
   return (message?.rolls?.length == 1 && !message?.content.includes("roll roll-damage"));
@@ -78,7 +80,12 @@ export const addChatMessageContextOptions = function (html, options) {
     options.push({
       name: opt.name,
       icon: opt.icon,
+      // v14 deprecated ContextMenuEntry#condition in favour of #visible, but
+      // #visible does not exist on v13 (where it would be ignored, showing the
+      // entry unconditionally). Setting both keeps either core happy: v14 reads
+      // #visible and skips the deprecation warning, v13 falls back to #condition.
       condition: _canApplyChatDamage,
+      visible: _canApplyChatDamage,
       callback: (li) => {
         const message = game.messages.get(li.dataset.messageId);
         const damage = _getChatDamageAmount(message);
