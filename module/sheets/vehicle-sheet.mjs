@@ -452,7 +452,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     const value = event.target?.value;
     const resourceType = event.target.dataset.rlType
     const idx = event.target.dataset.rlIdx;
-    const resourceList = duplicate(this.actor.system.cargoCarried);
+    const resourceList = foundry.utils.duplicate(this.actor.system.cargoCarried);
     resourceList[idx][resourceType] = value;
     await this.actor.update({ "system.cargoCarried": resourceList });
   }
@@ -461,7 +461,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     event.preventDefault();
     event.stopPropagation();
     const idx = target.dataset.idx;
-    const resourceList = duplicate(this.actor.system.cargoCarried);
+    const resourceList = foundry.utils.duplicate(this.actor.system.cargoCarried);
     resourceList.splice(idx, 1);
     await this.actor.update({ "system.cargoCarried": resourceList });
   }
