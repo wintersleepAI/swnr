@@ -1474,12 +1474,10 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       };
       actionsTaken.length = 0;
       await this.actor.update({
-        data: {
-          commandPoints: newCp,
-          actionsTaken: actionsTaken,
-          supportingDept: "",
-        },
-      });
+        "system.commandPoints": newCp,
+        "system.actionsTaken": actionsTaken,
+        "system.supportingDept": "",
+      });      
       event.target.value = "";
       ChatMessage.create(chatData);
       return;
