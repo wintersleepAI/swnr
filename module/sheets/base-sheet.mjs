@@ -1,5 +1,6 @@
 const { api, sheets } = foundry.applications;
 import { ContainerHelper } from '../helpers/container-helper.mjs';
+import { getChatMessageMode } from '../helpers/utils.mjs';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -205,7 +206,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
         dragleave: this._onDragLeave.bind(this),
         drop: this._onDrop.bind(this),
       };
-      return new DragDrop(d);
+      return new foundry.applications.ux.DragDrop.implementation(d);
     });
   }
 
@@ -524,7 +525,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
       await roll.toMessage({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         flavor: label,
-        rollMode: game.settings.get('core', 'rollMode'),
+        rollMode: getChatMessageMode(),
       });
       return roll;
     }
@@ -768,7 +769,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   async _onDrop(event, target) {
-    const data = TextEditor.getDragEventData(event);
+    const data = foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
     const actor = this.actor;
     const allowed = Hooks.call('dropActorSheetData', actor, this, data);
     if (allowed === false) return;

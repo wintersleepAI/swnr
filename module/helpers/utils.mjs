@@ -23,7 +23,60 @@ export function getDefaultImage(itemType) {
 export function calcMod(value,  bonus=0) {
   const m = (value - 10.5) / 3.5;
   return  Math.min(2, Math.max(-2, Math[m < 0 ? "ceil" : "floor"](m))) + bonus;
-  
+
+}
+
+/*--------------------------------------------*/
+/*  Chat message visibility (v13/v14 compat)  */
+/*--------------------------------------------*/
+
+/**
+ * True when running on a core version that uses the v14 message-mode API.
+ * v14 renamed the "core.rollMode" setting to "core.messageMode" and renamed the
+ * values ("publicroll"->"public", "gmroll"->"gm", "blindroll"->"blind",
+ * "selfroll"->"self"). The old setting is still registered on v14 but reads back
+ * as null, so anything using it silently loses the GM's chosen visibility.
+ * @returns {boolean}
+ */
+function usesMessageMode() {
+  return game.settings.settings.has("core.messageMode");
+}
+
+/**
+ * The configured visibility mode for new chat messages, on either core version.
+ * Use this instead of reading "core.rollMode" directly.
+ * @returns {string} A v14 message mode, or a v13 roll mode on older cores.
+ */
+export function getChatMessageMode() {
+  return usesMessageMode()
+    ? game.settings.get("core", "messageMode")
+    : game.settings.get("core", "rollMode");
+}
+
+/**
+ * Translate a semantic visibility into the value the running core expects.
+ * Lets call sites ask for "gm" without caring that v13 spells it "gmroll".
+ * @param {"public"|"gm"|"blind"|"self"} mode
+ * @returns {string}
+ */
+export function chatMode(mode) {
+  if (usesMessageMode()) return mode;
+  return { public: "publicroll", gm: "gmroll", blind: "blindroll", self: "selfroll" }[mode];
+}
+
+/**
+ * Apply the configured visibility to outgoing chat data, on either core version.
+ * Replaces direct calls to the deprecated ChatMessage.applyRollMode().
+ * @param {object} chatData  Chat data to be mutated in place.
+ * @param {string} [mode]    Mode to apply; defaults to the configured one.
+ * @returns {object} The mutated chat data.
+ */
+export function applyChatMessageMode(chatData, mode) {
+  const ChatMessageClass = getDocumentClass("ChatMessage");
+  const resolved = mode ?? getChatMessageMode();
+  return usesMessageMode()
+    ? ChatMessageClass.applyMode(chatData, resolved)
+    : ChatMessageClass.applyRollMode(chatData, resolved);
 }
 
 /*--------------------------------------------*/

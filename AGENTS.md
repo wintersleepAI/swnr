@@ -1,7 +1,13 @@
 # Repository Guidelines (Concise)
 
-## Foundry V13 ApplicationV2
-- No jQuery: use native DOM (`querySelector`, `addEventListener`).
+## Core Version Target
+`system.json` declares `minimum: 13.345`, `verified: 14.365` — code must run on both.
+**See `CLAUDE.md` for the authoritative v13/v14 compatibility rules** (namespaced globals,
+`prepareBaseData` super call, chat message visibility and roll attachment). Those rules are
+maintained in one place to stop the agent docs drifting apart.
+
+## Foundry ApplicationV2
+- Prefer native DOM in new code (`querySelector`, `addEventListener`).
 - No `submitOnChange`: wire listeners in `_onRender()`.
 - Static action handlers: `static async _onActionHandler(event, target)`.
 - Templates must have a single root element.

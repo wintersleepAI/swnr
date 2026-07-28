@@ -1,3 +1,5 @@
+import { applyChatMessageMode, getChatMessageMode } from './utils.mjs';
+
 function _canApplyChatDamage(li) {
   const message = game.messages.get(li.dataset.messageId);
   if (!canvas.tokens.controlled.length) return false;
@@ -100,8 +102,12 @@ export function chatListeners(message, html) {
   html.on("click", "button.dmgroll", (event) => _onDmgRollClick.call(this, event, message));
 
   html.on("click", ".card-buttons button", _onChatCardAction.bind(this));
-  // Add reroll buttons to all dice rolls
-  html.find(".roll").each((_i, div) => {
+  // Add reroll buttons to all dice rolls.
+  // Must target ".dice-roll" (the roll container holding .dice-formula and
+  // .dice-total), not ".roll" -- core puts "roll" on each individual die
+  // (<li class="roll die d20">), so _addRerollButton() found no .dice-total
+  // and silently bailed, leaving rerolls missing from every chat card.
+  html.find(".dice-roll").each((_i, div) => {
     _addRerollButton($(div));
   });
   
@@ -181,7 +187,7 @@ function getRerollButton(
     .attr("title", game.i18n.localize("swnr.chat.rerollButton"))
     .append($("<i>").addClass("fas fa-redo"));
   rerollButton.on("click", async (ev) => {
-    const rollMode = game.settings.get("core", "rollMode");
+    const rollMode = getChatMessageMode();
     ev.stopPropagation();
     const roll = new Roll(diceRoll);
     await roll.roll();
@@ -192,13 +198,16 @@ function getRerollButton(
       title: flavor,
       isAttack,
     };
-    const chatContent = await renderTemplate(chatTemplate, chatDialogData);
+    const chatContent = await foundry.applications.handlebars.renderTemplate(chatTemplate, chatDialogData);
     const chatData = {
       speaker: ChatMessage.getSpeaker(),
-      roll: JSON.stringify(roll),
+      // "rolls" is the current field; the legacy singular "roll" is no longer
+      // honoured, which left rerolled messages with an empty message.rolls
+      // (breaking Dice So Nice and anything reading rolls off the message).
+      rolls: [roll],
       content: chatContent
     };
-    getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+    applyChatMessageMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
   });
   return rerollButton;
@@ -515,7 +524,7 @@ export async function _onDmgRollClick(event, message) {
       traumaDamage = await traumaDamage.render();
     }
   }
-  const rollMode = game.settings.get("core", "rollMode");
+  const rollMode = getChatMessageMode();
 
   const damageRollTemplate = "systems/swnr/templates/chat/damage-roll.hbs";
   const damageRollData = {
@@ -527,16 +536,15 @@ export async function _onDmgRollClick(event, message) {
     traumaRollRender,
     traumaDamage,
   };
-  const damageRollContent = await renderTemplate(damageRollTemplate, damageRollData);
+  const damageRollContent = await foundry.applications.handlebars.renderTemplate(damageRollTemplate, damageRollData);
   const chatData = {
     speaker: ChatMessage.getSpeaker({ actor }),
     content: damageRollContent,
-    roll: JSON.stringify(damageRoll),
     rolls: [damageRoll],
     content: damageRollContent,
     flavor: payload.flavor,
   };
-  getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+  applyChatMessageMode(chatData, rollMode);
   getDocumentClass("ChatMessage").create(chatData);
 }
 
@@ -1242,7 +1250,7 @@ export async function _onChatCardAction(
 export async function welcomeMessage() {
 		const template = "systems/swnr/templates/chat/welcome.hbs";
 
-		const content = await renderTemplate(template, {});
+		const content = await foundry.applications.handlebars.renderTemplate(template, {});
 		const card = {
 			content,
 			user: game.user.id,

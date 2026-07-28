@@ -1,5 +1,6 @@
 import SWNVehicleItemBase from './base-ship.mjs';
 import SWNShared from '../shared.mjs';
+import { applyChatMessageMode, getChatMessageMode } from '../../helpers/utils.mjs';
 
 export default class SWNShipWeapon extends SWNVehicleItemBase {
   static LOCALIZATION_PREFIXES = [
@@ -35,7 +36,10 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
 
   static migrateData(data) {
 
-    if (data.trauma.rating == "none" || data.trauma.rating == "") {
+    // `trauma` is absent on documents authored before it entered the schema.
+    // migrateData is wrapped in a try/catch by core, so an unguarded access
+    // here would silently abort the rest of this migration.
+    if (data.trauma && (data.trauma.rating == "none" || data.trauma.rating == "")) {
       data.trauma.rating = null;
     }
 
@@ -141,7 +145,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
       };
 
       const template = "systems/swnr/templates/dialogs/roll-ship-attack.hbs";
-      const html = await renderTemplate(template, dialogData);
+      const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
 
       const _rollForm = async (_event, button, html) => {
         const mod = parseInt(button.form.elements.modifier.value);
@@ -308,7 +312,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
         traumaRollRender,
       };
 
-      const rollMode = game.settings.get("core", "rollMode");
+      const rollMode = getChatMessageMode();
       // const dice = hitRoll.dice.concat(damageRoll.dice)
       // const formula = dice.map(d => (<any>d).formula).join(' + ');
       // const results = dice.reduce((a, b) => a.concat(b.results), [])
@@ -316,13 +320,13 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
         foundry.dice.terms.PoolTerm.fromRolls([hitRoll, damageRoll]),
       ]);
 
-      const chatContent = await renderTemplate(template, dialogData);
+      const chatContent = await foundry.applications.handlebars.renderTemplate(template, dialogData);
       const chatData = {
         speaker: { alias: shooterName },
-        roll: JSON.stringify(diceData),
+        rolls: [diceData],
         content: chatContent
       };
-      getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+      applyChatMessageMode(chatData, rollMode);
       getDocumentClass("ChatMessage").create(chatData);
     }
 

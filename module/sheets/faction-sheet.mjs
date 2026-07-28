@@ -123,7 +123,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       case 'description':
         // Enrich description info for display
         // Enrichment turns text like `[[/r 1d20]]` into buttons
-        context.enrichedDescription = await TextEditor.enrichHTML(
+        context.enrichedDescription = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
             this.actor.system.description,
             {
               // Whether to show secret blocks in the finished html
@@ -294,7 +294,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       effect: tag?.effect ?? "",
     }
     const template = "systems/swnr/templates/dialogs/edit-faction-tag.hbs";
-    const html = await renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
     
     const _modifyTags = async (_event, button, _html) => {
       const name = button.form.elements.tagName.value;
@@ -349,7 +349,7 @@ export class SWNFactionSheet extends SWNBaseSheet {
       tags: CONFIG.SWN.factionTags
     }
     const template = "systems/swnr/templates/dialogs/select-faction-tag.hbs";
-    const html = await renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
     
     const _modifyTags = async (_event, button, _html) => {
       const selectedTagIndex = parseInt(button.form.elements.selectedTag.value);

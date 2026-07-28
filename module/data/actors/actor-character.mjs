@@ -1,7 +1,6 @@
 import SWNActorBase from './base-actor.mjs';
 import SWNShared from '../shared.mjs';
-import { calcMod } from '../../helpers/utils.mjs';
-
+import { calcMod, applyChatMessageMode, getChatMessageMode } from '../../helpers/utils.mjs';
 export default class SWNCharacter extends SWNActorBase {
   static LOCALIZATION_PREFIXES = [
     ...super.LOCALIZATION_PREFIXES,
@@ -52,6 +51,9 @@ export default class SWNCharacter extends SWNActorBase {
       quickSkill2: SWNShared.emptyString(), //deprecated
       quickSkill3: SWNShared.emptyString(), //deprecated
       extraHeader: SWNShared.emptyString(),
+      otherLabel: SWNShared.requiredString(game.i18n.localize("swnr.item.locationOther")),
+      extraLabel: SWNShared.requiredString(game.settings.get("swnr", "defaultExtraLabel")),
+      //extraLabel: SWNShared.requiredString(game.i18n.localize("swnr.item.locationExtra")),
       showResourceList: new fields.BooleanField({initial: false}),
       showCyberware: new fields.BooleanField({initial: true}),
       showPsychic: new fields.BooleanField({initial: true}),
@@ -76,6 +78,11 @@ export default class SWNCharacter extends SWNActorBase {
       modifiers: new fields.SchemaField({
         readied: SWNShared.requiredNumber(0,-99),
         stowed: SWNShared.requiredNumber(0,-99),
+        physicalSave: SWNShared.requiredNumber(0,-20),
+        evasionSave: SWNShared.requiredNumber(0,-20),
+        mentalSave: SWNShared.requiredNumber(0,-20),
+        luckSave: SWNShared.requiredNumber(0,-20),
+        unskilledPenalty: SWNShared.requiredNumber(0,0),
       })
     });
 
@@ -113,17 +120,20 @@ export default class SWNCharacter extends SWNActorBase {
     const base = 16 - this.level.value;
     save.physical = Math.max(
       1,
-      base - Math.max(this.stats.str.mod, this.stats.con.mod)
+      base - Math.max(this.stats.str.mod, this.stats.con.mod) - 
+      this.tweak.modifiers.physicalSave
     );
     save.evasion = Math.max(
       1,
-      base - Math.max(this.stats.dex.mod, this.stats.int.mod)
+      base - Math.max(this.stats.dex.mod, this.stats.int.mod) - 
+      this.tweak.modifiers.evasionSave
     );
     save.mental = Math.max(
       1,
-      base - Math.max(this.stats.wis.mod, this.stats.cha.mod)
+      base - Math.max(this.stats.wis.mod, this.stats.cha.mod) - 
+      this.tweak.modifiers.mentalSave
     );
-    save.luck = Math.max(1, base);
+    save.luck = Math.max(1, base - this.tweak.modifiers.luckSave);
     this.save = save;
 
     // Access calculation
@@ -267,11 +277,11 @@ export default class SWNCharacter extends SWNActorBase {
     for (let currency of this.credits.extraCurrencies) {
       if (currency.type !== 'base') {
         const currencyEnc = game.settings.get("swnr", `customCurrencyEnc${currency.type}`);
-        if (currencyEnc > 0) {
+        if (currencyEnc > 0 && currency.carried) {
           const currencyValue = Math.floor(currency.value / currencyEnc);
           encumbrance.stowed.value += currencyValue;
         }
-      } else if (baseCurrencyEnc > 0) {
+      } else if (baseCurrencyEnc > 0 && currency.carried) {
         // more base 
         const currencyValue = Math.floor(currency.value / baseCurrencyEnc);
         encumbrance.stowed.value += currencyValue;
@@ -303,6 +313,13 @@ export default class SWNCharacter extends SWNActorBase {
     
     // Calculate resource pools from Features/Foci/Edges
     this._calculateResourcePools();
+
+    this.locations = {
+      readied: game.i18n.localize("swnr.item.locationReadied"),
+      stowed: game.i18n.localize("swnr.item.locationStowed"),
+      other: this.tweak.otherLabel,
+      extra: this.tweak.extraLabel,
+    }
   }
 
   getRollData() {
@@ -332,11 +349,11 @@ export default class SWNCharacter extends SWNActorBase {
       throwType: game.i18n.localize("swnr.sheet.saves." + saveType),
     });
     const dialogData = {};
-    const html = await renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
 
     //Callback for rolling
     const _doRoll = async (_event, button, _html) => {
-      const rollMode = game.settings.get("core", "rollMode");
+      const rollMode = getChatMessageMode();
       const modifier = parseInt(button.form.elements.modifier?.value);
       if (isNaN(modifier)) {
         ui.notifications?.error(`Error, modifier is not a number ${modString}`);
@@ -363,14 +380,13 @@ export default class SWNCharacter extends SWNActorBase {
         save_text,
         success,
       };
-      const chatContent = await renderTemplate(chatTemplate, chatDialogData);
+      const chatContent = await foundry.applications.handlebars.renderTemplate(chatTemplate, chatDialogData);
       const chatData = {
         speaker: ChatMessage.getSpeaker(),
-        roll: JSON.stringify(roll),
         rolls: [roll],
         content: chatContent
       };
-      getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+      applyChatMessageMode(chatData, rollMode);
       getDocumentClass("ChatMessage").create(chatData);
     };
     const popUpDialog = await foundry.applications.api.DialogV2.prompt(
@@ -435,7 +451,6 @@ export default class SWNCharacter extends SWNActorBase {
         getDocumentClass("ChatMessage").create({
           speaker: ChatMessage.getSpeaker({ actor: this.parent }),
           flavor: msg,
-          roll: JSON.stringify(roll),
           rolls: [roll],
         });
       } else {
@@ -654,7 +669,7 @@ export default class SWNCharacter extends SWNActorBase {
     const title = game.i18n.format("swnr.titles.savingThrow", {
       throwType: game.i18n.localize("swnr.sheet.saves.mental") + " (Stress)"
     });
-    const rollMode = game.settings.get("core", "rollMode");
+    const rollMode = getChatMessageMode();
 
 
     const formula = `1d20`;
@@ -697,14 +712,13 @@ export default class SWNCharacter extends SWNActorBase {
       success,
       stressUpdate
     };
-    const chatContent = await renderTemplate(chatTemplate, chatDialogData);
+    const chatContent = await foundry.applications.handlebars.renderTemplate(chatTemplate, chatDialogData);
     const chatData = {
       speaker: ChatMessage.getSpeaker(),
-      roll: JSON.stringify(roll),
       rolls: [roll],
       content: chatContent,
     };
-    getDocumentClass("ChatMessage").applyRollMode(chatData, rollMode);
+    applyChatMessageMode(chatData, rollMode);
     getDocumentClass("ChatMessage").create(chatData);
 
 
