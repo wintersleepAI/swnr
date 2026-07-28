@@ -271,7 +271,7 @@ export const registerSettings = function () {
     config: true,
     type: Number,
     default: -1,
-    equiresReload: true,
+    requiresReload: true,
   });
 
   // Currency Settings----------------------------------------------------------

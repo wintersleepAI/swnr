@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added save modifiers to character sheet (under features/tweaks)
 - Fixed issue with vacc suit and skin descriptions
 - Stowed currency encumbrance now only counts carried currencies (bug fix)
+- Fixed ship, vehicle, mech, and drone weapon attacks throwing when the trauma setting is enabled
 
 ### Foundry VTT v14 compatibility
 
@@ -36,6 +37,10 @@ works on both v13 and v14.
   `roll:` field produced an empty `message.rolls` (breaking Dice So Nice and anything
   reading rolls off the message); all senders now use `rolls: [...]`.
 - Creating a new weapon threw on partial source data in `migrateData()`. (Thanks @illyja)
+- **Weapon sheets could not be opened from a character sheet on v14.** The skill dropdown
+  used the `{{#select}}` block helper, which core removed in v14, so the sheet failed with
+  `Missing helper: "select"`. It now builds its options with `selectOptions`, matching the
+  ammo dropdown beside it.
 - **The ship sensor roll never posted on v14.** Its dialog offered hardcoded v13 mode
   strings and passed them into the chat API, which rejects unrecognised modes; the roll
   threw before reaching chat. The same message also set the message-style enum on `type`
