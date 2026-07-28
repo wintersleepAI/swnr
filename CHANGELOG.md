@@ -15,54 +15,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added save modifiers to character sheet (under features/tweaks)
 - Fixed issue with vacc suit and skin descriptions
 - Stowed currency encumbrance now only counts carried currencies (bug fix)
+- Right-click a chat message roll to apply it to the selected token(s) as damage, modified damage, half damage, or healing (Thanks @pandanielxd)
+- Fixed end ship round not updating command points, actions taken, or supporting department (Thanks @gvigh)
 - Fixed ship, vehicle, mech, and drone weapon attacks throwing when the trauma setting is enabled
+- Upgrades with no data migrations no longer show the migration warning notifications
+- Failed migrations are now retried on the next load instead of being marked complete (bug fix)
 
 ### Foundry VTT v14 compatibility
 
-Verified against Foundry v14.365. Minimum supported core remains 13.345 — everything below
-works on both v13 and v14.
+Verified against Foundry v14.365. Minimum supported core remains 13.345.
 
-#### Fixes
-- **Actors could not be created or loaded on v14.** `SWNActor.prepareBaseData()` overrode
-  core without calling `super`, skipping the `_clearData()` that initializes
-  `tokenActiveEffectChanges`, so active-effect application threw during document
-  initialization. (Thanks @illyja)
-- **Private and blind rolls were posted publicly on v14.** v14 renamed the `core.rollMode`
-  setting to `core.messageMode` and changed its values; the old key still exists but reads
-  back `null`, so every chat message was built with no whisper targets regardless of the
-  GM's selected mode. Visibility now resolves through version-aware helpers.
-- **Reroll buttons never appeared on v14.** The handler selected `.roll`, which core now
-  puts on each individual die rather than the roll container (`.dice-roll`).
-- **Rolls were missing from several chat cards.** Messages using the legacy singular
-  `roll:` field produced an empty `message.rolls` (breaking Dice So Nice and anything
-  reading rolls off the message); all senders now use `rolls: [...]`.
-- Creating a new weapon threw on partial source data in `migrateData()`. (Thanks @illyja)
-- **Weapon sheets could not be opened from a character sheet on v14.** The skill dropdown
-  used the `{{#select}}` block helper, which core removed in v14, so the sheet failed with
-  `Missing helper: "select"`. It now builds its options with `selectOptions`, matching the
-  ammo dropdown beside it.
-- **The ship sensor roll never posted on v14.** Its dialog offered hardcoded v13 mode
-  strings and passed them into the chat API, which rejects unrecognised modes; the roll
-  threw before reaching chat. The same message also set the message-style enum on `type`
-  (the document subtype, which only accepts `"base"`) rather than `style`, which made
-  `create()` silently fail. Both fixed; public, private and blind sensor rolls all work.
-- Ship weapon migration aborted halfway on any item predating the `trauma` field — the
-  same unguarded access already fixed for weapons. Because core wraps `migrateData()` in a
-  try/catch this failed silently, skipping the stat migration below it.
-- Power chat cards were not roll messages (no Dice So Nice, empty `rolls`); they were the
-  last holdout still using the legacy singular `roll:` field.
-
-#### Compatibility
-- Migrated deprecated globals removed in v15 to their namespaces: document collections and
-  AppV1 sheet classes, `renderTemplate`/`loadTemplates`, `TextEditor`, and `DragDrop`.
-  (`TextEditor`/`DragDrop` thanks @illyja)
-- Moved from the deprecated `renderChatMessage` hook to `renderChatMessageHTML`.
-- Replaced `ChatMessage.applyRollMode()` and `CONST.DICE_ROLL_MODES` (deprecated in v14).
-- System now loads with no deprecation warnings or errors on v14.
-
-#### Docs
-- `CLAUDE.md` documents the v13/v14 compatibility rules; `AGENTS.md` and `GEMINI.md` now
-  point at it instead of keeping their own drifting copies.
+- Fixed actors failing to create or load on v14 (Thanks @illyja)
+- Fixed private and blind rolls being posted publicly on v14
+- Fixed reroll buttons not appearing on chat cards
+- Fixed missing rolls on several chat cards, including power cards (no Dice So Nice, empty `rolls`)
+- Fixed creating a new weapon throwing on partial data (Thanks @illyja)
+- Fixed weapon sheets failing to open from a character sheet (`Missing helper: "select"`)
+- Fixed the ship sensor roll never posting to chat
+- Fixed ship weapon migration silently aborting on items predating the trauma field
+- Fixed vehicle sheet item descriptions throwing on every expand click
+- Replaced deprecated globals removed in v15, the `renderChatMessage` hook, and the roll mode APIs deprecated in v14 (`TextEditor`/`DragDrop` thanks @illyja)
+- System now loads with no deprecation warnings or errors on v14
+- Contributor docs (`CLAUDE.md`) now cover the v13/v14 rules, with `AGENTS.md` and `GEMINI.md` pointing at it
 
 ## [2.3.0] 2025-11-04 More XWN support
 
