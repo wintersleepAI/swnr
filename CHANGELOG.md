@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added save modifiers to character sheet (under features/tweaks)
 - Fixed issue with vacc suit and skin descriptions
 - Stowed currency encumbrance now only counts carried currencies (bug fix)
+- Right-click a chat message roll to apply it to the selected token(s) as damage, modified damage, half damage, or healing (Thanks @pandanielxd)
+- Fixed end ship round not updating command points, actions taken, or supporting department (Thanks @gvigh)
+- Upgrades with no data migrations no longer show the migration warning notifications
+- Failed migrations are now retried on the next load instead of being marked complete (bug fix)
 
 ### Foundry VTT v14 compatibility
 
