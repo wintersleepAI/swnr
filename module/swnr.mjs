@@ -202,7 +202,7 @@ function initializeLanguageSettings() {
 /*  Ready Hook                                  */
 /* -------------------------------------------- */
 
-Hooks.once('ready', function () {
+Hooks.once('ready', async function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on('hotbarDrop', (_bar, data, slot) => {
 
@@ -218,21 +218,6 @@ Hooks.once('ready', function () {
     return;
   }
 
-  const storedVersion = game.settings.get('swnr', 'systemMigrationVersion');
-  const currentVersion = game.system.version;
-
-  // If there's no stored version, set it to the current system version (and don't migrate)
-  if (!storedVersion) {
-    return game.settings.set('swnr', 'systemMigrationVersion', currentVersion);
-  }
-
-  // If the stored version doesn't match the current system version, run migration
-  if (storedVersion !== currentVersion) {
-    welcomeMessage();
-    migrations.migrateWorld(storedVersion);
-    game.settings.set('swnr', 'systemMigrationVersion', currentVersion);
-  }
-
   // Initialize language settings on first load
   initializeLanguageSettings();
 
@@ -244,6 +229,29 @@ Hooks.once('ready', function () {
     }
     return originalGetInitiativeRoll.call(this);
   };
+
+  // Migration runs last: it awaits, and nothing above should wait on it.
+  const storedVersion = game.settings.get('swnr', 'systemMigrationVersion');
+  const currentVersion = game.system.version;
+
+  // If there's no stored version, set it to the current system version (and don't migrate)
+  if (!storedVersion) {
+    return game.settings.set('swnr', 'systemMigrationVersion', currentVersion);
+  }
+
+  // If the stored version doesn't match the current system version, run migration
+  if (storedVersion !== currentVersion) {
+    welcomeMessage();
+    try {
+      // migrateWorld stores the new version itself, and only on success -- writing it
+      // here as well would mark a failed migration complete and stop it retrying.
+      await migrations.migrateWorld(storedVersion);
+    } catch (err) {
+      // migrateWorld has already notified the GM and left systemMigrationVersion
+      // untouched, so the migration is retried on the next load.
+      console.error('SWNR | World migration failed', err);
+    }
+  }
 });
 
 /* -------------------------------------------- */

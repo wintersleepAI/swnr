@@ -3,11 +3,23 @@
  * @returns {Promise} A Promise which resolves once the migration is completed
  */
 export const migrateWorld = async function (storedVersion) {
+  const pendingVersions = getPendingMigrations(storedVersion);
+
+  // Most releases ship no data migrations at all. Telling the GM not to shut down
+  // their server while we do nothing is alarming and unnecessary -- just record the
+  // new version and show them what changed.
+  if (!pendingVersions.length) {
+    console.log(`SWNR | No data migrations between ${storedVersion} and ${game.system.version}`);
+    await game.settings.set("swnr", "systemMigrationVersion", game.system.version);
+    await showReleaseNotesToGM();
+    return;
+  }
+
   ui.notifications.info(`Applying SWN/CWN/AWN System Migration for version ${game.system.version}. Please be patient and do not close your game or shut down your server.`, { permanent: true });
 
   try {
     // Migrate world depending on the version of the system
-    await runMigrationsSequentially(storedVersion);
+    await runMigrationsSequentially(pendingVersions);
 
     // Set the migration as complete only if all migrations succeeded
     await game.settings.set("swnr", "systemMigrationVersion", game.system.version);
@@ -23,20 +35,26 @@ export const migrateWorld = async function (storedVersion) {
 };
 
 /**
- * Runs migration functions sequentially, starting from the stored version
- * up to the latest version defined in the migrations object.
- *
- * This function first filters the migration versions to only those that are
- * greater than the currently stored version, then sorts them in ascending order.
- * It then iterates through each version and awaits the corresponding migration function,
- * ensuring that migrations are applied in the correct order.
+ * Lists the migrations that still need to run, i.e. those keyed to a version
+ * greater than the stored one, in ascending order.
  *
  * @param {string} storedVersion - The version number from which to start migrations.
- * @returns {Promise<void>} A Promise that resolves once all applicable migrations have been executed.
+ * @returns {string[]} The applicable migration versions, oldest first.
  */
-async function runMigrationsSequentially(storedVersion) {
-  const versions = Object.keys(migrations).filter(key => compareVersions(key, storedVersion) > 0).sort((a, b) => compareVersions(a, b));
+function getPendingMigrations(storedVersion) {
+  return Object.keys(migrations)
+    .filter(key => compareVersions(key, storedVersion) > 0)
+    .sort((a, b) => compareVersions(a, b));
+}
 
+/**
+ * Runs the given migration functions sequentially, awaiting each one so that they
+ * are applied in order.
+ *
+ * @param {string[]} versions - Migration versions to run, oldest first.
+ * @returns {Promise<void>} A Promise that resolves once all migrations have been executed.
+ */
+async function runMigrationsSequentially(versions) {
   for (const version of versions) {
     await migrations[version]();
   }
