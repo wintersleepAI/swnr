@@ -259,7 +259,7 @@ export default class SWNShipWeapon extends SWNVehicleItemBase {
         this.trauma.die !== "none" &&
         this.trauma.rating != null
       ) {
-        const traumaRoll = new Roll(this.system.trauma.die);
+        const traumaRoll = new Roll(this.trauma.die);
         await traumaRoll.roll();
         traumaRollRender = await traumaRoll.render();
         if (

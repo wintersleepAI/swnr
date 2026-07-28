@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Stowed currency encumbrance now only counts carried currencies (bug fix)
 - Right-click a chat message roll to apply it to the selected token(s) as damage, modified damage, half damage, or healing (Thanks @pandanielxd)
 - Fixed end ship round not updating command points, actions taken, or supporting department (Thanks @gvigh)
+- Fixed ship, vehicle, mech, and drone weapon attacks throwing when the trauma setting is enabled
 - Upgrades with no data migrations no longer show the migration warning notifications
 - Failed migrations are now retried on the next load instead of being marked complete (bug fix)
 
@@ -29,6 +30,7 @@ Verified against Foundry v14.365. Minimum supported core remains 13.345.
 - Fixed reroll buttons not appearing on chat cards
 - Fixed missing rolls on several chat cards, including power cards (no Dice So Nice, empty `rolls`)
 - Fixed creating a new weapon throwing on partial data (Thanks @illyja)
+- Fixed weapon sheets failing to open from a character sheet (`Missing helper: "select"`)
 - Fixed the ship sensor roll never posting to chat
 - Fixed ship weapon migration silently aborting on items predating the trauma field
 - Fixed vehicle sheet item descriptions throwing on every expand click

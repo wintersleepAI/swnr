@@ -602,9 +602,15 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     // Get the related items for the owning parent (if any) for ammo
     const item = this.item;
     let ammo = [];
+    // Skill choices are built here rather than in the template because the label
+    // combines two fields (name and rank), which selectOptions cannot compose.
+    const skills = {};
     const parent = item.parent;
     if (parent && parent.type === 'character' && item.type === 'weapon') {
       //console.log(`Getting related items for ${item.name} with parent ${parent.name}`);
+      for (const skill of parent.itemTypes.skill) {
+        skills[skill.id] = `${skill.name} ${skill.system.rank}`;
+      }
       // Get the related
       const ammoType = item.system.ammo?.type;
       //console.log(`Ammo type for ${item.name} is ${ammoType}`);
@@ -616,7 +622,7 @@ export class SWNItemSheet extends api.HandlebarsApplicationMixin(
     }
     const related = {
       ammo: ammo,
-
+      skills: skills,
     };
     return related;
   }
