@@ -37,36 +37,48 @@ jobs:
         run: |
           npm run pack-compendium
 
-      - name: Modify system.json with version
+      # Both jq edits run before the zip is built, so the system.json inside the
+      # package matches the one attached to the release. Previously the download
+      # field was set after zipping, leaving every installed copy with "".
+      - name: Modify system.json with version and download URL
         run: |
           VERSION="${GITHUB_REF/refs\/tags\/v/}"
-          echo "Updating system.json with version $VERSION"
-          jq --arg version "$VERSION" '.version = $version' system.json > system.json.tmp && mv system.json.tmp system.json
+          DOWNLOAD_URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/v${VERSION}/swnr-${VERSION}.zip"
+          echo "Updating system.json with version $VERSION and download URL $DOWNLOAD_URL"
+          jq --arg version "$VERSION" --arg download_url "$DOWNLOAD_URL" \
+            '.version = $version | .download = $download_url' system.json > system.json.tmp \
+            && mv system.json.tmp system.json
 
+      # Ship only what Foundry loads. README/CHANGELOG/LICENSE stay because
+      # system.json points at them for the setup UI links.
       - name: Create zip package
         run: |
           VERSION="${GITHUB_REF/refs\/tags\/v/}"
           mkdir -p release
-          zip -r "release/swnr-${VERSION}.zip" * -x "*.git*" "*.github*" "release/*" "node_modules/*" "foundry/*"
+          zip -r "release/swnr-${VERSION}.zip" * \
+            -x "*.git*" "*.github*" "release/*" "node_modules/*" "foundry/*" \
+               "src/*" "scripts/*" "docs/*" "lib/*" \
+               "package.json" "package-lock.json" "eslint.config.mjs" "jsconfig.json" \
+               "test-release-notes.mjs" "CLAUDE.md" "AGENTS.md" "GEMINI.md" "CONTRIBUTING.md"
 
+      # Any tag with a hyphen (v2.3.1-rc1, -beta, -test) is published as a
+      # prerelease. GitHub excludes prereleases from /releases/latest, which is
+      # what system.json's manifest URL points at -- without this, tagging a
+      # release candidate would offer it as an update to every existing install.
+      # A plain vX.Y.Z tag is unaffected.
       - name: Upload release zip to GitHub
         uses: softprops/action-gh-release@v1
         with:
           files: release/*.zip
+          prerelease: ${{ contains(github.ref_name, '-') }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Modify system.json download field
-        run: |
-          VERSION="${GITHUB_REF/refs\/tags\/v/}"
-          DOWNLOAD_URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/v${VERSION}/swnr-${VERSION}.zip"
-          echo "Updating download URL in system.json to $DOWNLOAD_URL"
-          jq --arg download_url "$DOWNLOAD_URL" '.download = $download_url' system.json > system.json.tmp && mv system.json.tmp system.json
 
       - name: Upload system.json to GitHub release
         uses: softprops/action-gh-release@v1
         with:
           files: system.json
+          prerelease: ${{ contains(github.ref_name, '-') }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

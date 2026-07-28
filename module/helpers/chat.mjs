@@ -263,7 +263,14 @@ export function _addRerollButton(html) {
 
 export function _addHealthButtons(html) {
   const totalDiv = html.find(".dice-total");
-  
+  // An attack card rendered with "Auto Damage Roll" off has a .roll-damage
+  // section holding a "Roll Damage" button rather than a rolled total, so there
+  // is nothing to attach to. Bail the same way _addRerollButton does, rather
+  // than falling through to parseInt("") and logging on every chat render.
+  if (!totalDiv || totalDiv.length === 0) {
+    return;
+  }
+
   // Check if health buttons already exist to prevent duplicates
   const existingContainer = totalDiv.parent().find(".dmgBtn-container");
   if (existingContainer.length > 0 && existingContainer.find(".dice-total-fullDamage-btn").length > 0) {

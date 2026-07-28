@@ -1,6 +1,6 @@
 {
   "name": "swnr",
-  "version": "2.0.0",
+  "version": "2.3.1",
   "description": "CSS compiler for the SWN system",
   "scripts": {
     "build": "sass src/scss/swnr.scss css/swnr.css --style=expanded --no-source-map",
