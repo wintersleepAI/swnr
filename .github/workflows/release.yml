@@ -61,10 +61,16 @@ jobs:
                "package.json" "package-lock.json" "eslint.config.mjs" "jsconfig.json" \
                "test-release-notes.mjs" "CLAUDE.md" "AGENTS.md" "GEMINI.md" "CONTRIBUTING.md"
 
+      # Any tag with a hyphen (v2.3.1-rc1, -beta, -test) is published as a
+      # prerelease. GitHub excludes prereleases from /releases/latest, which is
+      # what system.json's manifest URL points at -- without this, tagging a
+      # release candidate would offer it as an update to every existing install.
+      # A plain vX.Y.Z tag is unaffected.
       - name: Upload release zip to GitHub
         uses: softprops/action-gh-release@v1
         with:
           files: release/*.zip
+          prerelease: ${{ contains(github.ref_name, '-') }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -72,6 +78,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: system.json
+          prerelease: ${{ contains(github.ref_name, '-') }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
