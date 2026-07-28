@@ -20,7 +20,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       dmg: SWNShared.diceString("0"),
       ac: SWNShared.requiredNumber(10),
     });
-    schema.ab = SWNShared.requiredNumber(0, -10);
+    schema.ab = SWNShared.diceString("0");
     schema.ammo = new fields.SchemaField({
       longReload: new fields.BooleanField({ initial: false }),
       suppress: new fields.BooleanField({ initial: false }),
