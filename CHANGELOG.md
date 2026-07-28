@@ -9,9 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added another 'extra' item location (defaults to 'Ship'), and allowed for custom labels for other and extra locations (under character tweaks). GM can set default extra label in the system settings.
 - Added a world defined unskilled skill roll penalty (default is -1) and allowed for a character defined unskilled skill roll penalty modifier (default is 0)
-- TODO renabled 2d6 attribute roll options 
-- TODO enabled optional 2d6 attack roll option
-- TODO added some AWN compendium content
 - Added save modifiers to character sheet (under features/tweaks)
 - Fixed issue with vacc suit and skin descriptions
 - Stowed currency encumbrance now only counts carried currencies (bug fix)
