@@ -107,7 +107,7 @@
           <!-- Location (wider so it doesn’t truncate) -->
           <div class="item-loc item-prop" style="flex: 0 0 130px;">
             <select data-item-id="{{item.id}}" class="location-selector">
-              {{selectOptions ../config/itemLocations selected=system.location localize=true}}
+              {{selectOptions ../system.locations selected=system.location}}
             </select>
           </div>
 

@@ -26,37 +26,34 @@ function _getChatDamageAmount(message) {
   return null;
 }
 
-function _openDamageModifierDialog(baseDamage) {
-  new Dialog({
-    title: "Apply Modifier to Damage",
+async function _openDamageModifierDialog(baseDamage) {
+  // DialogV2's ok callback runs only when the button is pressed. The legacy
+  // Dialog this replaced applied damage from its close: handler, which fires on
+  // every teardown path -- so dismissing with Escape still applied whatever had
+  // been typed.
+  const modifier = await foundry.applications.api.DialogV2.prompt({
+    window: { title: "Apply Modifier to Damage" },
     content: `
-      <form>
-        <div class="form-group">
-          <label>Modifier to damage (${baseDamage}) </label>
-          <input type='text' name='inputField'></input>
-        </div>
-      </form>`,
-    buttons: {
-      yes: {
-        icon: "<i class='fas fa-check'></i>",
-        label: `Apply`,
-      },
+      <div class="form-group">
+        <label>Modifier to damage (${baseDamage}) </label>
+        <input type="text" name="inputField" autofocus>
+      </div>`,
+    ok: {
+      icon: "fas fa-check",
+      label: "Apply",
+      callback: (_event, button) => button.form.elements.inputField.value,
     },
-    default: "yes",
-    close: (html) => {
-      const form = html[0].querySelector("form");
-      const modifier = form.querySelector('[name="inputField"]')?.value;
+    rejectClose: false,
+  });
 
-      if (modifier && modifier !== "") {
-        const nModifier = Number(modifier);
-        if (!isNaN(nModifier)) {
-          applyHealthDrop(baseDamage + nModifier);
-        } else {
-          ui.notifications?.error(modifier + " is not a number");
-        }
-      }
-    },
-  }).render(true);
+  if (!modifier) return;
+
+  const nModifier = Number(modifier);
+  if (isNaN(nModifier)) {
+    ui.notifications?.error(modifier + " is not a number");
+    return;
+  }
+  applyHealthDrop(baseDamage + nModifier);
 }
 
 export const addChatMessageContextOptions = function (html, options) {
@@ -654,7 +651,10 @@ export async function _onChatCardAction(
                 statData.mod,
                 dice,
                 skillRank,
-                0
+                0,
+                // npcs have no tweak block; characters carry a per-actor
+                // adjustment to the world unskilled penalty.
+                t.system.tweak?.modifiers?.unskilledPenalty ?? 0
               );
             }
           }

@@ -62,6 +62,9 @@ export default class SWNSkill extends SWNItemBase {
     const rollMode = getChatMessageMode();
 
     let formula = `${dice} + @stat + @skill + @modifier`;
+    // The != -1 check reads as a "did the GM customize it?" sentinel, but the
+    // setting's default is also the untrained rank, so the branch it skips
+    // would assign the same value. Behaviour is identical either way.
     if (skillRank < 0 && game.settings.get("swnr", "unskilledPenalty") != -1) {
       skillRank = game.settings.get("swnr", "unskilledPenalty");
     }

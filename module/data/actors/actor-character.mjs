@@ -52,8 +52,10 @@ export default class SWNCharacter extends SWNActorBase {
       quickSkill3: SWNShared.emptyString(), //deprecated
       extraHeader: SWNShared.emptyString(),
       otherLabel: SWNShared.requiredString(game.i18n.localize("swnr.item.locationOther")),
+      // Read once at schema-definition time, so this only tracks the setting
+      // because defaultExtraLabel is registered with requiresReload: true.
+      // Drop that flag and existing characters keep the stale initial value.
       extraLabel: SWNShared.requiredString(game.settings.get("swnr", "defaultExtraLabel")),
-      //extraLabel: SWNShared.requiredString(game.i18n.localize("swnr.item.locationExtra")),
       showResourceList: new fields.BooleanField({initial: false}),
       showCyberware: new fields.BooleanField({initial: true}),
       showPsychic: new fields.BooleanField({initial: true}),
@@ -314,12 +316,9 @@ export default class SWNCharacter extends SWNActorBase {
     // Calculate resource pools from Features/Foci/Edges
     this._calculateResourcePools();
 
-    this.locations = {
-      readied: game.i18n.localize("swnr.item.locationReadied"),
-      stowed: game.i18n.localize("swnr.item.locationStowed"),
-      other: this.tweak.otherLabel,
-      extra: this.tweak.extraLabel,
-    }
+    // Base fills in the defaults; only these two are renameable per character.
+    this.locations.other = this.tweak.otherLabel;
+    this.locations.extra = this.tweak.extraLabel;
   }
 
   getRollData() {

@@ -61,7 +61,18 @@ export default class SWNActorBase extends foundry.abstract
         currency.typeName = game.settings.get("swnr", `customCurrencyName${currency.type}`);
       }
     }
-      
+
+    // Display labels for the gear tab's Location dropdown, keyed by the stored
+    // values in CONFIG.SWN.itemLocations. Defined here rather than on the
+    // character because SWNActorSheet renders gear.hbs for npcs too, and an
+    // actor without this map renders an empty <select> for every item.
+    // SWNCharacter overrides `other` and `extra` from its tweak labels.
+    this.locations = {
+      readied: game.i18n.localize("swnr.item.locationReadied"),
+      stowed: game.i18n.localize("swnr.item.locationStowed"),
+      other: game.i18n.localize("swnr.item.locationOther"),
+      extra: game.settings.get("swnr", "defaultExtraLabel"),
+    };
   }
 
   rollSave(_saveType) {
