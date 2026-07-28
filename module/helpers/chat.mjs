@@ -1,4 +1,116 @@
 import { applyChatMessageMode, getChatMessageMode } from './utils.mjs';
+
+function _canApplyChatDamage(li) {
+  const message = game.messages.get(li.dataset.messageId);
+  // canvas.tokens is null with no active scene, or when the canvas is
+  // disabled -- an unguarded read throws when opening any chat context menu.
+  if (!canvas.tokens?.controlled.length) return false;
+
+  // Attack cards made with the "Auto Damage Roll" setting off carry no damage
+  // roll at all -- the card renders a "Roll Damage" button instead, so it lacks
+  // the "roll roll-damage" marker below and its only roll is the to-hit d20.
+  // Without this guard the menu offers to apply the attack roll as damage.
+  // item-weapon.mjs stamps this flag on exactly those cards.
+  if (message?.getFlag("swnr", "damageRoll")) return false;
+
+  // v13 rolls excluding messages with damage rolls
+  return (message?.rolls?.length == 1 && !message?.content.includes("roll roll-damage"));
+}
+
+function _getChatDamageAmount(message) {
+  // v13 rolls
+  if (message?.rolls?.length) {
+    return message.rolls[0].total;
+  }
+
+  return null;
+}
+
+function _openDamageModifierDialog(baseDamage) {
+  new Dialog({
+    title: "Apply Modifier to Damage",
+    content: `
+      <form>
+        <div class="form-group">
+          <label>Modifier to damage (${baseDamage}) </label>
+          <input type='text' name='inputField'></input>
+        </div>
+      </form>`,
+    buttons: {
+      yes: {
+        icon: "<i class='fas fa-check'></i>",
+        label: `Apply`,
+      },
+    },
+    default: "yes",
+    close: (html) => {
+      const form = html[0].querySelector("form");
+      const modifier = form.querySelector('[name="inputField"]')?.value;
+
+      if (modifier && modifier !== "") {
+        const nModifier = Number(modifier);
+        if (!isNaN(nModifier)) {
+          applyHealthDrop(baseDamage + nModifier);
+        } else {
+          ui.notifications?.error(modifier + " is not a number");
+        }
+      }
+    },
+  }).render(true);
+}
+
+export const addChatMessageContextOptions = function (html, options) {
+  const damageOptions = [
+    {
+      name: game.i18n.localize("swnr.chat.healthButtons.fullDamage"),
+      icon: '<i class="fas fa-user-minus"></i>',
+      multiplier: 1
+    },
+    {
+      name: game.i18n.localize("swnr.chat.healthButtons.fullDamageModified"),
+      icon: '<i class="fas fa-user-edit"></i>',
+      isModified: true
+    },
+    {
+      name: game.i18n.localize("swnr.chat.healthButtons.halfDamage"),
+      icon: '<i class="fas fa-user-minus"></i>',
+      multiplier: 0.5
+    },
+    {
+      name: game.i18n.localize("swnr.chat.healthButtons.fullHealing"),
+      icon: '<i class="fas fa-user-plus"></i>',
+      multiplier: -1
+    },
+  ];
+
+  damageOptions.forEach(opt => {
+    options.push({
+      name: opt.name,
+      icon: opt.icon,
+      // v14 deprecated ContextMenuEntry#condition in favour of #visible, but
+      // #visible does not exist on v13 (where it would be ignored, showing the
+      // entry unconditionally). Setting both keeps either core happy: v14 reads
+      // #visible and skips the deprecation warning, v13 falls back to #condition.
+      condition: _canApplyChatDamage,
+      visible: _canApplyChatDamage,
+      callback: (li) => {
+        const message = game.messages.get(li.dataset.messageId);
+        const damage = _getChatDamageAmount(message);
+
+        if (damage !== null) {
+          if (opt.isModified) {
+            _openDamageModifierDialog(damage);
+          } else {
+            applyHealthDrop(Math.floor(damage * opt.multiplier));
+          }
+        }
+      }
+    });
+  });
+
+  return options;
+}
+
 export function chatListeners(message, html) {
 //  html.on("click", "button.dmgroll", _onDmgRollClick.c(this));
   html.on("click", "button.dmgroll", (event) => _onDmgRollClick.call(this, event, message));
@@ -207,37 +319,7 @@ export function _addHealthButtons(html) {
 
   fullDamageModifiedButton.on("click", (ev) => {
     ev.stopPropagation();
-    new Dialog({
-      title: "Apply Modifier to Damage",
-      content: `
-          <form>
-            <div class="form-group">
-              <label>Modifier to damage (${total}) </label>
-              <input type='text' name='inputField'></input>
-            </div>
-          </form>`,
-      buttons: {
-        yes: {
-          icon: "<i class='fas fa-check'></i>",
-          label: `Apply`,
-        },
-      },
-      default: "yes",
-      close: (html) => {
-        const form = html[0].querySelector("form");
-        const modifier = ((
-          form.querySelector('[name="inputField"]')
-        ))?.value;
-        if (modifier && modifier != "") {
-          const nModifier = Number(modifier);
-          if (nModifier) {
-            applyHealthDrop(total + nModifier);
-          } else {
-            ui.notifications?.error(modifier + " is not a number");
-          }
-        }
-      },
-    }).render(true);
+    _openDamageModifierDialog(total);
   });
 
   halfDamageButton.on("click", (ev) => {

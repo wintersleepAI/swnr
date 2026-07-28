@@ -12,7 +12,7 @@ import { SWNFactionSheet } from './sheets/faction-sheet.mjs';
 import { SWN } from './helpers/config.mjs';
 import { registerSettings, addLanguagePreset } from './helpers/register-settings.mjs';
 import { registerHandlebarHelpers } from './helpers/handlebar.mjs';
-import { chatListeners, welcomeMessage } from './helpers/chat.mjs';
+import { chatListeners, welcomeMessage, addChatMessageContextOptions } from './helpers/chat.mjs';
 import * as refreshHelpers from './helpers/refresh-helpers.mjs';
 import * as refreshOrchestrator from './helpers/refresh-orchestrator.mjs';
 
@@ -367,6 +367,8 @@ Hooks.on('renderSettingsConfig', (app, html, data) => {
 Hooks.on("renderChatMessageHTML", (message, html, _data) =>
   chatListeners(message, $(html))
 );
+
+Hooks.on("getChatMessageContextOptions", addChatMessageContextOptions);
 
 /* -------------------------------------------- */
 /* Other Hooks                                */
