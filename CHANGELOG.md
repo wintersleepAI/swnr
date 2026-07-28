@@ -34,6 +34,7 @@ Verified against Foundry v14.365. Minimum supported core remains 13.345.
 - Fixed the ship sensor roll never posting to chat
 - Fixed ship weapon migration silently aborting on items predating the trauma field
 - Fixed vehicle sheet item descriptions throwing on every expand click
+- Fixed editing character resources, custom currencies, and vehicle cargo throwing on v14 (the `duplicate` global was removed, not just deprecated)
 - Replaced deprecated globals removed in v15, the `renderChatMessage` hook, and the roll mode APIs deprecated in v14 (`TextEditor`/`DragDrop` thanks @illyja)
 - System now loads with no deprecation warnings or errors on v14
 - Contributor docs (`CLAUDE.md`) now cover the v13/v14 rules, with `AGENTS.md` and `GEMINI.md` pointing at it

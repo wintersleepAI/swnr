@@ -659,7 +659,7 @@ export class SWNBaseSheet extends api.HandlebarsApplicationMixin(
 
           if (currencyType === 'custom') {
             const currencyIdx = target.dataset.currencyIdx;
-            let extraCurrencies = duplicate(this.actor.system.credits.extraCurrencies);
+            let extraCurrencies = foundry.utils.duplicate(this.actor.system.credits.extraCurrencies);
             const currency = extraCurrencies[currencyIdx];
             if (currency == undefined || currency == null) {
               ui.notifications?.error("Invalid currency");
