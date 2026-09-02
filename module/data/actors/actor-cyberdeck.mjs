@@ -10,7 +10,6 @@ export default class SWNCyberdeck extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = {};
-    schema.access = SWNShared.resourceField(1,1); // CWN
     schema.health = SWNShared.resourceField(1,1);
     schema.memory = SWNShared.resourceField(1,1);
     schema.cpu = SWNShared.resourceField(1,1);
@@ -67,6 +66,16 @@ export default class SWNCyberdeck extends foundry.abstract.TypeDataModel {
     {
       this.hackerHP.max = 0;
       this.hackerHP.value = 0;
+    }
+
+    //Access is the hacker's pool (CWN); the deck only contributes bonusAccess.
+    //Mirrored here read-only so macros and the API see the same numbers as the
+    //sheet. Spending it means updating the hacker, not the deck, so the value
+    //persists and stays in sync with the character sheet.
+    this.access = { value: 0, max: 0 };
+    if (hacker) {
+      this.access.max = hacker.system.access.max + this.bonusAccess;
+      this.access.value = hacker.system.access.value + this.bonusAccess;
     }
   }
 

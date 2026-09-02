@@ -1088,6 +1088,17 @@
 .swnr .resource-label {
   font-weight: bold;
 }
+.swnr .resource-with-refresh {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+}
+.swnr .resource-with-refresh .item-control {
+  font-size: 12px;
+  line-height: 1;
+}
 .swnr .stat {
   margin-bottom: 2px;
 }

@@ -9,6 +9,22 @@
   font-weight: bold;
 }
 
+// Cyberdeck header: a resource whose block is followed by a refresh control.
+// The resource block is block-level, so the control would otherwise wrap onto a
+// row of its own. Bottom-aligning them puts the icon on the label's line.
+.resource-with-refresh {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+
+  .item-control {
+    font-size: 12px;
+    line-height: 1;
+  }
+}
+
 .stat {
   margin-bottom: 2px;
   

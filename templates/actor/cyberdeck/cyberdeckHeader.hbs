@@ -57,14 +57,36 @@
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. }}
     <div class='resources grid grid-4col'>
-      <div>
+      <div class='resource-with-refresh'>
         {{formGroup systemFields.health value=system.health localize=true widget=headerWidget}}
         <a class="item-control" data-action="refreshShielding" title='{{localize 'swnr.sheet.cyberdeck.refreshShielding'}}'><i class="fas fa-hourglass-end"></i></a>
       </div>
       {{formGroup systemFields.memory value=system.memory localize=true widget=headerWidget}}
       {{formGroup systemFields.cpu value=system.cpu localize=true widget=headerWidget}}
-      <div>
-        {{formGroup systemFields.access value=access localize=true widget=headerWidget}}
+      <div class='resource-with-refresh'>
+        <div class='resource flex-group-center'>
+          <div class='resource header flexrow'>
+            <div class='field resource-content flex flexrow'>
+              <input
+                type='number'
+                class='nested-field header'
+                data-access-input
+                value='{{access.value}}'
+                {{#unless hasHacker}}disabled{{/unless}}
+              />
+              <span class='nested-sep'>/</span>
+              <input
+                type='number'
+                class='nested-field header readonly'
+                value='{{access.max}}'
+                readonly
+              />
+            </div>
+          </div>
+          <label class='resource-label'>
+            {{localize 'SWN.Actor.Cyberdeck.FIELDS.access.label'}}
+          </label>
+        </div>
         <a class="item-control" data-action="refreshAccess" title='{{localize 'swnr.sheet.cyberdeck.refreshAccess'}}'><i class="fas fa-hourglass-end"></i></a>
       </div>
     </div>
