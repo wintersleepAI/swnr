@@ -13,7 +13,7 @@ export default class SWNVehicleBase extends foundry.abstract
     schema.ac = SWNShared.requiredNumber(10);
     schema.traumaTarget = SWNShared.requiredNumber(6);
     schema.armor = SWNShared.resourceField(1,1);
-    schema.speed = SWNShared.requiredNumber(1);
+    schema.speed = SWNShared.requiredNumber(1,-100);
     schema.crew = SWNShared.rangeResourceField(1,1,1);
     schema.crewMembers = new fields.ArrayField(new fields.DocumentIdField());
     schema.tl = SWNShared.requiredNumber(5);
