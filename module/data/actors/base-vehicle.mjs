@@ -21,8 +21,8 @@ export default class SWNVehicleBase extends foundry.abstract
     schema.description = new fields.HTMLField();
     schema.mods = new fields.HTMLField();//SWNShared.requiredString(""); // TODO: HTML?
 
-    schema.power = SWNShared.resourceField(1,1,true);
-    schema.mass = SWNShared.resourceField(1,1,true);
+    schema.power = SWNShared.resourceField(1,1,true, false);
+    schema.mass = SWNShared.resourceField(1,1,true, false);
     schema.hardpoints = SWNShared.resourceField(1,1,true);
     return schema;
   }

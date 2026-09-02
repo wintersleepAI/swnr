@@ -1,12 +1,12 @@
 export default class SWNShared {
 
   // helper function to generate a SchemaField with resources (value, max)
-  static resourceField(initialValue, initialMax, derivedValue = false) {
+  static resourceField(initialValue, initialMax, derivedValue = false, integer = true) {
     const fields = foundry.data.fields;
     return new fields.SchemaField({
       // Make sure to call new so you invoke the constructor!
-      value: new fields.NumberField({ required: true, nullable: false, integer: true, min: -20, initial: initialValue }),
-      max: new fields.NumberField({ required: true, nullable: false, integer: true, initial: initialMax }),
+      value: new fields.NumberField({ required: true, nullable: false, integer: integer, min: -20, initial: initialValue }),
+      max: new fields.NumberField({ required: true, nullable: false, integer: integer, initial: initialMax }),
     });
   }
   
