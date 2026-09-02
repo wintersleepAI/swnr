@@ -198,18 +198,6 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       (item) => item.system.type === "datafile"
     );
 
-    const access = {
-      value: 0,
-      max: 0,
-    };
-
-    if (hacker && (hacker.type == "character" || hacker.type == "npc")) {
-      access.max =
-        hacker.system.access.max + this.actor.system.bonusAccess;
-      access.value =
-        hacker.system.access.value + this.actor.system.bonusAccess;
-    }
-
     return foundry.utils.mergeObject(context, {
       itemTypes: this.actor.itemTypes,
       activePrograms: activePrograms,
@@ -217,7 +205,15 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       subjects: subjects,
       datafiles: datafiles,
       hacker: hacker,
-      access: access
+      hasHacker: hacker != null,
+      access: {
+        value: hacker
+          ? hacker.system.access.value + this.actor.system.bonusAccess
+          : 0,
+        max: hacker
+          ? hacker.system.access.max + this.actor.system.bonusAccess
+          : 0,
+      }
     });
   }
 
@@ -232,9 +228,33 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
   _onRender(context, options) {
     super._onRender(context, options);
 
-    // You may want to add other special handling here
-    // Foundry comes with a large number of utility classes, e.g. SearchFilter
-    // That you may want to implement yourself.
+    // Access is stored on the hacker, not on the deck, so it cannot be part of
+    // the normal form submission. The input is unnamed and wired here instead.
+    this.element
+      .querySelector("[data-access-input]")
+      ?.addEventListener("change", this._onAccessChange.bind(this));
+  }
+
+  /**
+   * Write an edited Access value back to the hacker's pool.
+   * The field shows the hacker's pool plus this deck's bonusAccess, so the
+   * bonus is removed again before storing.
+   * @param {Event} event   The originating change event
+   */
+  async _onAccessChange(event) {
+    event.preventDefault();
+    const hacker = this.actor.system.getHacker();
+    const displayed = Number(event.currentTarget.value);
+    if (hacker && Number.isFinite(displayed)) {
+      // Clamp to the schema minimum so a typo cannot throw a validation error.
+      const value = Math.max(
+        -20,
+        Math.round(displayed) - this.actor.system.bonusAccess
+      );
+      await hacker.update({ "system.access.value": value });
+    }
+    // The deck sheet does not observe the hacker document, so re-render it.
+    this.render();
   }
 
   static async _onHackerRoll(event, target) {
