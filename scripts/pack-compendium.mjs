@@ -7,7 +7,7 @@ const SYSTEM_ID = process.cwd();
 const BASE_SRC_PATH = "src/packs";
 const BASE_DEST_PATH = "packs";
 
-// await compilePacksRecursivly();
+const IGNORE = [ '.gitattributes', '.DS_Store' ];
 
 /**
  * Compiles all packs in the given base path
@@ -16,7 +16,7 @@ async function compilePacksRecursivly() {
     const packs = (await fs.readdir(BASE_SRC_PATH, { withFileTypes: true })).filter(file => file.isDirectory());
 
     for (const pack of packs) {
-        if (pack.name === '.gitattributes') continue;
+        if (IGNORE.includes(pack.name)) continue;
 
         const srcPath = path.join(BASE_SRC_PATH, pack.name);
         const destPath = path.join(BASE_DEST_PATH, pack.name);
@@ -29,20 +29,9 @@ async function compilePacksRecursivly() {
     }
 }
 
-const IGNORE = [ '.gitattributes', '.DS_Store' ];
-
-fs.readdir(`${SYSTEM_ID}/src/packs`)
-    .then(packs => {
-        for (const pack of packs) {
-            console.log('pack:', pack);
-            if (IGNORE.includes(pack.name)) {
-                continue;
-            }
-
-            console.log(`Packing ${pack}`);
-            compilePack(`${SYSTEM_ID}/src/packs/${pack}`, `${SYSTEM_ID}/packs/${pack}`, { yaml: true })
-                .catch(err => {
-                    console.log(err);
-                });
-        }
-    });
+// Exit non-zero on any pack failure. The release workflow ships packs/ straight
+// into the zip, so a swallowed error means a silently incomplete compendium.
+compilePacksRecursivly().catch(err => {
+    console.error(err);
+    process.exit(1);
+});

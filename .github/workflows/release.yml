@@ -6,8 +6,7 @@ on:
       - 'v*'
 
 permissions:
-  contents: write   # Required for uploading release assets
-  actions: write    # Required for interacting with releases
+  contents: write   # Required for creating the release and uploading its assets
 
 jobs:
   release:
@@ -15,6 +14,22 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      # The in-app release notes journal is generated from CHANGELOG.md, so a tag
+      # that runs ahead of the changelog ships the wrong notes -- and a Foundry
+      # release cannot be withdrawn once filed, only superseded. Fail before we
+      # build anything. Prerelease tags compare on their base version, so
+      # v2.3.2-rc.1 matches a "## [2.3.2]" entry.
+      - name: Verify the tag matches the top CHANGELOG entry
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          BASE="${VERSION%%-*}"
+          TOP="$(grep -m1 -oE '^## \[[0-9][^]]*\]' CHANGELOG.md | tr -d '#[] ')"
+          if [ "$BASE" != "$TOP" ]; then
+            echo "::error::Tag ${GITHUB_REF_NAME} (version $BASE) does not match the top CHANGELOG entry [$TOP]"
+            exit 1
+          fi
+          echo "Tag ${GITHUB_REF_NAME} matches CHANGELOG entry [$TOP]"
 
       - name: Set up Node.js (for modifying system.json and running npm scripts)
         uses: actions/setup-node@v4
@@ -49,6 +64,23 @@ jobs:
             '.version = $version | .download = $download_url' system.json > system.json.tmp \
             && mv system.json.tmp system.json
 
+      # The GitHub release page doubles as the "notes" URL handed to Foundry, so
+      # give it a real body: this version's CHANGELOG section. Written to the
+      # runner temp dir so it stays out of the zip.
+      - name: Extract release notes for this version
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          BASE="${VERSION%%-*}"
+          awk -v v="$BASE" '
+            /^## \[/ { if (p) exit; if ($0 ~ "^## \\[" v "\\]") p = 1 }
+            p { print }
+          ' CHANGELOG.md > "${RUNNER_TEMP}/release-notes.md"
+          if [ ! -s "${RUNNER_TEMP}/release-notes.md" ]; then
+            echo "::error::No CHANGELOG section found for version $BASE"
+            exit 1
+          fi
+          cat "${RUNNER_TEMP}/release-notes.md"
+
       # Ship only what Foundry loads. README/CHANGELOG/LICENSE stay because
       # system.json points at them for the setup UI links.
       - name: Create zip package
@@ -66,21 +98,69 @@ jobs:
       # what system.json's manifest URL points at -- without this, tagging a
       # release candidate would offer it as an update to every existing install.
       # A plain vX.Y.Z tag is unaffected.
-      - name: Upload release zip to GitHub
-        uses: softprops/action-gh-release@v1
+      - name: Create GitHub release with the zip and manifest
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
         with:
-          files: release/*.zip
+          files: |
+            release/*.zip
+            system.json
+          body_path: ${{ runner.temp }}/release-notes.md
           prerelease: ${{ contains(github.ref_name, '-') }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload system.json to GitHub release
-        uses: softprops/action-gh-release@v1
+      # The publish action fetches the manifest URL itself, and GitHub's asset
+      # CDN can lag release creation by a few seconds. Poll rather than flake.
+      - name: Wait for the release manifest to be downloadable
+        run: |
+          MANIFEST="https://github.com/${GITHUB_REPOSITORY}/releases/download/${GITHUB_REF_NAME}/system.json"
+          for i in $(seq 1 10); do
+            if curl -sfL "$MANIFEST" -o /dev/null; then
+              echo "Manifest live at $MANIFEST"
+              exit 0
+            fi
+            echo "Attempt $i: not available yet, retrying in 6s"
+            sleep 6
+          done
+          echo "::error::Release manifest never became downloadable at $MANIFEST"
+          exit 1
+
+      # Files the new version with foundryvtt.com. The action reads id, version
+      # and compatibility out of the manifest it downloads, so those stay defined
+      # in system.json alone.
+      #
+      # notes-url must be passed explicitly: left undefined the action falls back
+      # to the manifest's `changelog` entry, which is the relative path
+      # "CHANGELOG.md" and would be rejected by the API.
+      #
+      # Prerelease tags only dry-run -- the API validates the submission and
+      # reports back, but nothing is filed.
+      - name: Publish to the Foundry VTT package registry
+        id: foundry-release
+        uses: cs96and/FoundryVTT-release-package@e27cef796b4dd34493c1bc29e00fc772b89715d6 # v1.0.3
         with:
-          files: system.json
-          prerelease: ${{ contains(github.ref_name, '-') }}
+          package-token: ${{ secrets.FOUNDRY_PACKAGE_TOKEN }}
+          manifest-url: https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/system.json
+          notes-url: https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }}
+          dry-run: ${{ contains(github.ref_name, '-') && 'true' || 'false' }}
+
+      - name: Report Foundry release result
+        if: always() && steps.foundry-release.outcome != 'skipped'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MODE: ${{ contains(github.ref_name, '-') && 'dry-run (prerelease)' || 'published' }}
+          CODE: ${{ steps.foundry-release.outputs.response-code }}
+          BODY: ${{ steps.foundry-release.outputs.response-json }}
+        run: |
+          {
+            echo "### Foundry package release"
+            echo ""
+            echo "- Mode: \`${MODE}\`"
+            echo "- HTTP: \`${CODE}\`"
+            echo ""
+            echo '```json'
+            echo "${BODY}"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Clean up
         run: |

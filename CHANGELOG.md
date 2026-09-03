@@ -5,6 +5,20 @@ All notable changes to the Systems Without Number Redux (SWNR) system for Foundr
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.2] 2026-09-03 Misc fixes (initiative, fractional item attributes, and cyberdeck)
+
+- Automate foundry package release via github actions
+- Initiative modifiers are no longer character-only: NPCs and ships can have one too. The character setting moved out of tweaks onto a shared attribute and should be migrated automatically on load.
+- A ship with no pilot assigned to the bridge now rolls its own initiative instead of nothing, and the ship's own initiative modifier applies whether or not a pilot is assigned.
+- Rolling a crew member's skill from the vehicle sheet can now add the vehicle's Speed as a modifier. The box is checked by default for piloting and driving skills and follows the selected skill, but the roller has the final say.
+- Cyberdeck Access now reads and writes the hacker's Access pool (plus the deck's bonus access) instead of a value stored on the deck, so spending it stays in sync with the character sheet. The field is disabled when no hacker is assigned.
+- Program rolls now apply the program's own skill check modifier. It was read from the cyberdeck, which has no such field, so verb and subject modifiers were silently dropped.
+- Item encumbrance and cost accept fractional values.
+- Ship and vehicle power and mass accept fractional values, and ship fittings can have negative power and mass.
+- Vehicle and ship speed can be negative.
+- Fixed the vehicle and ship notes tab not scrolling, and the two note editors overlapping
+- Cyberdeck shielding and access refresh buttons are on the same row again
+
 ## [2.3.1] 2026-07-28 Small fixes and updates
 
 - Added another 'extra' item location (defaults to 'Ship'), and allowed for custom labels for other and extra locations (under character tweaks). GM can set default extra label in the system settings.
