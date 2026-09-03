@@ -19,6 +19,10 @@ export default class SWNActorBase extends foundry.abstract
     schema.meleeAc = SWNShared.requiredNumber(10);
     schema.ab = SWNShared.requiredNumber(1);
     schema.meleeAb = SWNShared.requiredNumber(1);
+    // Flat modifier on the initiative roll, e.g. CWN reflex cyberware.
+    schema.initiative = new fields.SchemaField({
+      mod: SWNShared.nullableNumber(),
+    });
     schema.systemStrain = new fields.SchemaField({
       value: SWNShared.requiredNumber(0),
       permanent: SWNShared.requiredNumber(0,-99)

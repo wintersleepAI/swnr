@@ -1,12 +1,20 @@
+// Helpers for the field *types* the schemas are built from -- a nullable number, a
+// value/max resource, a dice string. Add one when several schemas need the same
+// shape of field with different meanings.
+//
+// A specific attribute is not a type: define it inline in the schema that owns it,
+// even when two schemas happen to declare the same thing. Hiding an attribute
+// behind a helper here puts its shape a file away from every schema that uses it,
+// and the helper name goes stale the moment one caller's needs diverge.
 export default class SWNShared {
 
   // helper function to generate a SchemaField with resources (value, max)
-  static resourceField(initialValue, initialMax, derivedValue = false) {
+  static resourceField(initialValue, initialMax, derivedValue = false, integer = true) {
     const fields = foundry.data.fields;
     return new fields.SchemaField({
       // Make sure to call new so you invoke the constructor!
-      value: new fields.NumberField({ required: true, nullable: false, integer: true, min: -20, initial: initialValue }),
-      max: new fields.NumberField({ required: true, nullable: false, integer: true, initial: initialMax }),
+      value: new fields.NumberField({ required: true, nullable: false, integer: integer, min: -20, initial: initialValue }),
+      max: new fields.NumberField({ required: true, nullable: false, integer: integer, initial: initialMax }),
     });
   }
   

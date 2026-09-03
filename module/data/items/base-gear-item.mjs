@@ -11,8 +11,8 @@ export default class SWNBaseGearItem extends SWNItemBase {
       bundled: new fields.BooleanField({initial: false}),
       amount: SWNShared.nullableNumber()
     });
-    schema.encumbrance = SWNShared.requiredNumber(1);
-    schema.cost = SWNShared.requiredNumber(0);
+    schema.encumbrance = SWNShared.requiredNumber(1,0, false);
+    schema.cost = SWNShared.requiredNumber(0,0,false);
     schema.tl =  SWNShared.techLevel(false);
     schema.location = SWNShared.stringChoices("stowed", CONFIG.SWN.itemLocations);
     schema.quality = SWNShared.stringChoices("stock", CONFIG.SWN.itemQualities);

@@ -252,6 +252,26 @@ input[type="checkbox"].small-checkbox {
   margin-bottom: 0;
 }
 
+// Vehicle / ship notes tab: two side-by-side editors that grow with their
+// content while the surrounding .sheet-body supplies the scrollbar.
+.tab.notes {
+  .notes-grid {
+    align-items: start;
+  }
+
+  .notes-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 0; // let long content wrap instead of stretching the column
+  }
+
+  .editor,
+  prose-mirror {
+    height: auto;
+    min-height: 200px;
+  }
+}
+
 .swnr {
   
   .form-group {

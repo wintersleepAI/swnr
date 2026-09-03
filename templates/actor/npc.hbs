@@ -48,6 +48,7 @@
         {{else}}
         {{formGroup systemFields.ab value=system.ab localize=true}}
         {{/if}}
+        {{formGroup systemFields.initiative.fields.mod value=system.initiative.mod localize=true}}
         {{#if (eq gameSettings.useCWNArmor true)}}
         {{formGroup systemFields.baseSoakTotal value=system.baseSoakTotal localize=true widget=groupWidget}}
         {{!-- moved to header for now

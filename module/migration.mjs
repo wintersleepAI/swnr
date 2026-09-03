@@ -517,6 +517,28 @@ const migrations = {
         ui.notifications?.info(`Migrated ${actor.name} to 2.3.0`);
       }
     }
+  },
+  "2.3.2": async () => {
+    console.log('Running migration for 2.3.2');
+    // The initiative mod moved from `system.tweak.initiative` (characters only) to
+    // `system.initiative` on the base actor, so npcs and ships can carry one too.
+    // Read from _source: `initiative` is no longer in the character tweak schema,
+    // so the prepared data model does not expose the old value.
+    let migrated = 0;
+    for (const actor of game.actors) {
+      const oldMod = actor._source.system?.tweak?.initiative?.mod;
+      if (oldMod === undefined) {
+        continue;
+      }
+      await actor.update({
+        "system.initiative.mod": oldMod,
+        "system.tweak.-=initiative": null,
+      });
+      migrated++;
+    }
+    if (migrated > 0) {
+      ui.notifications?.info(`Migrated the initiative modifier on ${migrated} actor(s) to 2.3.2`);
+    }
   }
 };
 

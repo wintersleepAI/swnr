@@ -76,8 +76,13 @@ export default class SWNProgram extends SWNItemBase {
       }
     }
 
-    if (cyberdeck.system.skillCheckMod) {
-      skillRollData.skillCheckMod = cyberdeck.system.skillCheckMod;
+    // The modifier lives on the program itself: a verb's (or subject's) own
+    // modifier when rolled straight from its icon, and the combined verb +
+    // subject modifier that _onActivateProgram stores on a running program.
+    // The cyberdeck has no skillCheckMod field, so reading it here always
+    // yielded 0 and silently dropped the verb's bonus.
+    if (this.skillCheckMod) {
+      skillRollData.skillCheckMod = this.skillCheckMod;
     }
     let programRoll = "";
     let traumaRoll = "";

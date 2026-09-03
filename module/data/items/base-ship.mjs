@@ -11,8 +11,8 @@ export default class SWNVehicleItemBase extends SWNItemBase {
     const schema = super.defineSchema();
     schema.tl =  SWNShared.techLevel(true, 4);
     schema.cost = SWNShared.requiredNumber(0);
-    schema.power = SWNShared.requiredNumber(1);
-    schema.mass = SWNShared.requiredNumber(1);
+    schema.power = SWNShared.requiredNumber(1, -10, false);
+    schema.mass = SWNShared.requiredNumber(1, -10, false);
     schema.costMultiplier = new fields.BooleanField({initial: false});
     schema.powerMultiplier = new fields.BooleanField({initial: false});
     schema.massMultiplier = new fields.BooleanField({initial: false});

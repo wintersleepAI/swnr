@@ -13,7 +13,7 @@ export default class SWNVehicleBase extends foundry.abstract
     schema.ac = SWNShared.requiredNumber(10);
     schema.traumaTarget = SWNShared.requiredNumber(6);
     schema.armor = SWNShared.resourceField(1,1);
-    schema.speed = SWNShared.requiredNumber(1);
+    schema.speed = SWNShared.requiredNumber(1,-100);
     schema.crew = SWNShared.rangeResourceField(1,1,1);
     schema.crewMembers = new fields.ArrayField(new fields.DocumentIdField());
     schema.tl = SWNShared.requiredNumber(5);
@@ -21,8 +21,8 @@ export default class SWNVehicleBase extends foundry.abstract
     schema.description = new fields.HTMLField();
     schema.mods = new fields.HTMLField();//SWNShared.requiredString(""); // TODO: HTML?
 
-    schema.power = SWNShared.resourceField(1,1,true);
-    schema.mass = SWNShared.resourceField(1,1,true);
+    schema.power = SWNShared.resourceField(1,1,true, false);
+    schema.mass = SWNShared.resourceField(1,1,true, false);
     schema.hardpoints = SWNShared.resourceField(1,1,true);
     return schema;
   }

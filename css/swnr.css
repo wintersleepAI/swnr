@@ -959,6 +959,19 @@
   margin-top: -10px;
   margin-bottom: 0;
 }
+.swnr .tab.notes .notes-grid {
+  align-items: start;
+}
+.swnr .tab.notes .notes-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.swnr .tab.notes .editor,
+.swnr .tab.notes prose-mirror {
+  height: auto;
+  min-height: 200px;
+}
 .swnr .swnr .form-group {
   margin: 2px;
   padding: 2px;
@@ -1087,6 +1100,17 @@
 }
 .swnr .resource-label {
   font-weight: bold;
+}
+.swnr .resource-with-refresh {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+}
+.swnr .resource-with-refresh .item-control {
+  font-size: 12px;
+  line-height: 1;
 }
 .swnr .stat {
   margin-bottom: 2px;

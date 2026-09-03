@@ -56,36 +56,45 @@ export class SWNActor extends Actor {
   * @returns {{img: string}}    Candidate item image.
   */
   rollInitiative(options = {}) {
-    // For starship actors, use the pilot's initiative.
+    // Render a flat modifier as a formula suffix. A negative becomes ` - n` rather
+    // than ` + -n`, which the roll parser rejects; zero or unset contributes
+    // nothing, so the formula stays clean when no modifier applies.
+    const signed = (value) => {
+      const n = Number(value);
+      if (!n) {
+        return '';
+      }
+      return n < 0 ? ` - ${Math.abs(n)}` : ` + ${n}`;
+    };
+    // Flat initiative modifier, e.g. CWN reflex cyberware. Lives on the base actor
+    // (and on ships), so characters, npcs, and ships can all carry one.
+    const initMod = (actor) => signed(actor.system.initiative?.mod);
+    const die = (adv) => (adv ? "2d8kh1" : "1d8");
+
+    // For starship actors, use the pilot's initiative. The ship's own modifier
+    // applies either way -- it belongs to the hull, not to whoever is in the chair.
     if (this.type === "ship") {
+      const shipMod = initMod(this);
       const pilotId = this.system.roles.bridge;
       if (pilotId && pilotId !== "") {
         const pilot = game.actors?.get(pilotId);
         if (pilot && pilot.type === "character") {
           const intMod = pilot.system.stats.int.mod;
           const dexMod = pilot.system.stats.dex.mod;
-          const mod = intMod >= dexMod ? intMod : dexMod;
-          let tweakMod = pilot.system.tweak?.initiative.mod || '';
-          if (tweakMod !== '') {
-            tweakMod = ` + ${tweakMod}`;
-          }
+          const statMod = signed(intMod >= dexMod ? intMod : dexMod);
           // Use pilot's advInit flag if set.
           const adv = pilot.system?.tweak?.advInit || false;
-          const formula = adv ? `2d8kh1 + ${mod}` : `1d8 + ${mod}${tweakMod}`;
+          const formula = `${die(adv)}${statMod}${initMod(pilot)}${shipMod}`;
           return new Roll(formula, pilot.getRollData());
         }
       }
+      // No pilot assigned: the ship rolls on its own, with no stat to draw on.
+      return new Roll(`${die(false)}${shipMod}`, this.getRollData());
     }
   
     // Regular initiative roll.
     const adv = this.system?.tweak?.advInit || false;
-    let tweakMod = this.system.tweak?.initiative?.mod || '';
-    if (tweakMod !== '') {
-      tweakMod = ` + ${tweakMod}`;
-    }
-    const formula = adv
-      ? `2d8kh1 + @stats.dex.mod ${tweakMod}`
-      : `1d8 + @stats.dex.mod ${tweakMod}`;
+    const formula = `${die(adv)} + @stats.dex.mod${initMod(this)}`;
     return new Roll(formula, this.getRollData());
   }
   

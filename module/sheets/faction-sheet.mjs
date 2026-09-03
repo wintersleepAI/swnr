@@ -1,4 +1,5 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
+import { getDialogElement } from '../helpers/utils.mjs';
 import { SWNBaseSheet } from './base-sheet.mjs';
 
 const { api, sheets } = foundry.applications;
@@ -363,12 +364,13 @@ export class SWNFactionSheet extends SWNBaseSheet {
     }
     
     const _addListener = (event,  dialog) => {
-      dialog.querySelector("#selectedTag")
-          .addEventListener("change", (event) => {
+      const root = getDialogElement(event, dialog);
+      root?.querySelector("#selectedTag")
+          ?.addEventListener("change", (event) => {
             const value = event.target.value;
-            dialog.querySelector(".tag-list .tag-details:not(.hidden)")
+            root.querySelector(".tag-list .tag-details:not(.hidden)")
                 ?.classList?.add("hidden");
-            dialog.querySelector(`.tag-list .tag-${value}`)
+            root.querySelector(`.tag-list .tag-${value}`)
                 ?.classList?.remove("hidden");
           });
     }
