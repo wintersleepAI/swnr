@@ -2,7 +2,7 @@ import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { getGameSettings } from '../helpers/register-settings.mjs';
 import { headerFieldWidget, groupFieldWidget, groupFieldWidgetDupe} from '../helpers/handlebar.mjs';
 import { SWNBaseSheet } from './base-sheet.mjs';
-import { getChatMessageMode } from '../helpers/utils.mjs';
+import { getChatMessageMode, getDialogElement, rollablePools } from '../helpers/utils.mjs';
 
 const { api, sheets } = foundry.applications;
 
@@ -569,21 +569,90 @@ export class SWNVehicleSheet extends SWNBaseSheet {
     crewActor?.sheet?.render(true);
   }
 
+  /**
+   * Skill keys whose checks a vehicle's Speed modifies: piloting/driving a
+   * vehicle in a chase or maneuver.
+   * @type {string[]}
+   */
+  static SPEED_SKILL_KEYS = [
+    "pilot",
+    "drive",
+    "vehicle-air",
+    "vehicle-grav",
+    "vehicle-land",
+    "vehicle-space",
+    "vehicle-water",
+  ];
+
+  /**
+   * Localized names of the skills a vehicle's Speed applies to. Skill items
+   * are created with localized names (see initSkills), so the raw keys are
+   * kept as well for skills added from other sources.
+   * @returns {Set<string>} lower-cased skill names
+   */
+  static _speedSkillNames() {
+    const names = new Set(this.SPEED_SKILL_KEYS);
+    for (const [skillSet, keys] of Object.entries(CONFIG.SWN.skills)) {
+      for (const key of keys) {
+        if (!this.SPEED_SKILL_KEYS.includes(key)) {
+          continue;
+        }
+        const path = `swnr.skills.${skillSet}.${key}.name`;
+        const name = game.i18n.localize(path);
+        if (name != path) {
+          names.add(name.toLowerCase());
+        }
+      }
+    }
+    return names;
+  }
+
   async crewRoll(crewActor) {
     const skills = crewActor.itemTypes.skill;
     const isChar = crewActor.type == "character" ? true : false;
+    const speed = this.actor.system.speed ?? 0;
+    // Speed modifies chase/maneuver checks made with a piloting skill. The
+    // dialog defaults the box to the pre-selected skill and follows the
+    // select, but the roller keeps the final say.
+    const speedSkillNames = SWNVehicleSheet._speedSkillNames();
+    const speedSkillIds = new Set(
+      skills
+        .filter((skill) => speedSkillNames.has(skill.name.toLowerCase()))
+        .map((skill) => skill.id)
+    );
     const dialogData = {
       actor: crewActor,
       skills: skills,
       isChar,
-      pool: CONFIG.SWN.pool,
+      // This dialog has no step that resolves "ask", so only offer pools that
+      // can be rolled directly.
+      pool: rollablePools(),
+      showSpeed: true,
+      speed,
+      speedChecked: isChar && speedSkillIds.has(skills[0]?.id),
     };
     const template = "systems/swnr/templates/dialogs/roll-skill-crew.hbs";
     const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
 
+    const _trackSpeedSkill = (event, dialog) => {
+      const root = getDialogElement(event, dialog);
+      const skillSelect = root?.querySelector("select[name=skill]");
+      const speedBox = root?.querySelector("input[name=includeSpeed]");
+      if (!skillSelect || !speedBox) {
+        return;
+      }
+      skillSelect.addEventListener("change", (event) => {
+        speedBox.checked = speedSkillIds.has(event.target.value);
+      });
+    };
+
     const _rollForm = async (_event, button, html) => {
       const rollMode = getChatMessageMode();
       const dice = button.form.elements.dicepool.value;
+      if (!dice || dice == "ask") {
+        ui.notifications?.error("Dice must be set and not ask");
+        return;
+      }
       const modifier = parseInt(
         button.form.elements.modifier?.value
       ) || 0;
@@ -604,19 +673,27 @@ export class SWNVehicleSheet extends SWNBaseSheet {
       const stat = crewActor.system["stats"]?.[statName] || {
         mod: 0,
       };
-      const formula = `${dice} + @stat + @skillBonus + @modifier`;
+      const includeSpeed = button.form.elements.includeSpeed?.checked
+        ? true : false;
+      const formula = includeSpeed
+        ? `${dice} + @stat + @skillBonus + @modifier + @speed`
+        : `${dice} + @stat + @skillBonus + @modifier`;
       const roll = new Roll(formula, {
         skillBonus,
         modifier,
         stat: stat.mod,
+        speed,
       });
       const skillName = skill ? skill.name : "No Skill";
       const statNameDisply = statName
         ? game.i18n.localize("swnr.stat.short." + statName)
         : "No Stat";
+      const speedTitle = includeSpeed
+        ? ` + ${game.i18n.localize("swnr.chat.speedMod")} (${speed})`
+        : "";
       const title = `${game.i18n.localize(
         "swnr.chat.skillCheck"
-      )}: ${statNameDisply}/${skillName}`;
+      )}: ${statNameDisply}/${skillName}${speedTitle}`;
       await roll.roll();
       roll.toMessage(
         {
@@ -640,6 +717,7 @@ export class SWNVehicleSheet extends SWNBaseSheet {
         label: game.i18n.localize("swnr.chat.roll"),
         callback: _rollForm,
       },
+      render: _trackSpeedSkill,
     });
   }
 

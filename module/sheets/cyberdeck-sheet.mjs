@@ -2,7 +2,7 @@ import { getGameSettings } from '../helpers/register-settings.mjs';
 import { headerFieldWidget, groupFieldWidget } from '../helpers/handlebar.mjs';
 
 import { SWNBaseSheet } from './base-sheet.mjs';
-import { getChatMessageMode } from '../helpers/utils.mjs';
+import { getChatMessageMode, rollablePools } from '../helpers/utils.mjs';
 
 const { api, sheets } = foundry.applications;
 
@@ -271,7 +271,9 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
       actor: crewActor,
       skills: skills,
       isChar,
-      pool: CONFIG.SWN.pool,
+      // This dialog has no step that resolves "ask", so only offer pools that
+      // can be rolled directly.
+      pool: rollablePools(),
     };
     const template = "systems/swnr/templates/dialogs/roll-skill-crew.hbs";
     const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
@@ -279,6 +281,10 @@ export class SWNCyberdeckSheet extends SWNBaseSheet {
     const _rollForm = async (_event, button, html) => {
       const rollMode = getChatMessageMode();
       const dice = button.form.elements.dicepool.value;
+      if (!dice || dice == "ask") {
+        ui.notifications?.error("Dice must be set and not ask");
+        return;
+      }
       const modifier = parseInt(
         button.form.elements.modifier?.value
       ) || 0;

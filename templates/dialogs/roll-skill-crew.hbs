@@ -37,5 +37,14 @@
       <label for="modifier">{{localize 'swnr.chat.modifier'}}: </label>
       <input name="modifier" type="number" step="1" value="0" />
     </div>
+
+    {{! Speed only applies to vehicle checks, so the sheet opts in }}
+    {{#if showSpeed}}
+    <div class="flex flex-col">
+      <label for="includeSpeed">{{localize 'swnr.chat.includeSpeed'}}
+        ({{numberFormat speed decimals=0 sign=true}}): </label>
+      <input type="checkbox" name="includeSpeed" id="includeSpeed" {{checked speedChecked}}>
+    </div>
+    {{/if}}
   </div>
 </form>

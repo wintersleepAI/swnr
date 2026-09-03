@@ -80,6 +80,41 @@ export function applyChatMessageMode(chatData, mode) {
 }
 
 /*--------------------------------------------*/
+/*  Dialog Utilities                          */
+/*--------------------------------------------*/
+
+/**
+ * The root element of a DialogV2 from inside its `render` callback.
+ * v13 hands the callback the dialog element, v14 the application instance, so
+ * take the first candidate that is actually an element.
+ * @param {Event} event             The render event.
+ * @param {HTMLElement|object} dialog  The callback's second argument.
+ * @returns {HTMLElement|null} The dialog element, or null if it cannot be found.
+ */
+export function getDialogElement(event, dialog) {
+  const candidates = [
+    dialog,
+    dialog?.element,
+    event?.target,
+    event?.target?.element,
+    event?.currentTarget,
+  ];
+  return candidates.find((c) => c instanceof HTMLElement) ?? null;
+}
+
+/**
+ * The dice pool choices that can be rolled as-is, i.e. everything but "ask".
+ * Dialogs that have no step resolving "ask" would otherwise build a formula
+ * containing it and fail to evaluate.
+ * @returns {Record<string, string>} Pool choices keyed by formula.
+ */
+export function rollablePools() {
+  return Object.fromEntries(
+    Object.entries(CONFIG.SWN.pool).filter(([key]) => key != "ask")
+  );
+}
+
+/*--------------------------------------------*/
 /*  Skill Utilities                           */
 /*--------------------------------------------*/
 
