@@ -27,6 +27,11 @@ export default class SWNShip extends SWNVehicleBase {
     schema.paymentMonths = SWNShared.requiredNumber(0);
     schema.maintenanceMonths = SWNShared.requiredNumber(0);
     schema.creditPool = SWNShared.requiredNumber(0);
+    // Flat modifier on the initiative roll. Declared here rather than inherited:
+    // ships hang off SWNVehicleBase, which shares no ancestor with SWNActorBase.
+    schema.initiative = new fields.SchemaField({
+      mod: SWNShared.nullableNumber(),
+    });
     schema.lastMaintenance = SWNShared.date();
     schema.lastPayment = SWNShared.date();
     schema.roles = new fields.SchemaField({

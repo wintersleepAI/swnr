@@ -68,6 +68,12 @@
           "hitDie": {
             "label": "Hit Die (per level)"
           },
+          "initiative": {
+            "label": "Initiative",
+            "mod": {
+              "label": "Initiative Mod"
+            }
+          },
           "traumaTarget": {
             "label": "Trauma Target"
           },
@@ -209,12 +215,6 @@
               },
               "day": {
                 "label": "Day"
-              }
-            },
-            "initiative": {
-              "label": "Initiative",
-              "mod": {
-                "label": "Initiative Mod"
               }
             },
             "modifiers": {

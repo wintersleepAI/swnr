@@ -74,9 +74,6 @@ export default class SWNCharacter extends SWNActorBase {
       debtDisplay: SWNShared.requiredString("Debt"),
       owedDisplay: SWNShared.requiredString("Owed"),
       balanceDisplay: SWNShared.requiredString("Balance"),
-      initiative: new fields.SchemaField({
-        mod: SWNShared.nullableNumber(),
-      }),
       modifiers: new fields.SchemaField({
         readied: SWNShared.requiredNumber(0,-99),
         stowed: SWNShared.requiredNumber(0,-99),
@@ -89,6 +86,18 @@ export default class SWNCharacter extends SWNActorBase {
     });
 
     return schema;
+  }
+
+  // The initiative mod used to live under `tweak`; it now sits on SWNActorBase so
+  // npcs and ships can carry one too. Only fill in from the old path when the new
+  // field is absent from source -- an actor the world migration has already moved
+  // stores `initiative`, and re-reading `tweak` would undo a later edit (including
+  // clearing the mod back to null).
+  static migrateData(data) {
+    if (data.initiative === undefined && data.tweak?.initiative?.mod != null) {
+      data.initiative = { mod: data.tweak.initiative.mod };
+    }
+    return super.migrateData(data);
   }
 
   prepareDerivedData() {
