@@ -5,6 +5,13 @@ All notable changes to the Systems Without Number Redux (SWNR) system for Foundr
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.3] 
+
+- Fix on attack roll failing if first attribute was ask and second was set.
+- Weapon attack bonus accepts a dice formula or an annotated number (e.g. `1d4`, `2[cyberarm]`) instead of a plain number. Existing values are converted automatically. (Thanks @pandanielxd)
+- An NPC with shock damage on its stat block now uses it for every weapon attack, in place of the weapon's own shock. (Thanks @pandanielxd)
+- Fixed the melee attack bonus being applied to characters under the CWN armor setting. It is an NPC stat-block field with no character equivalent, so melee attacks were rolling a fixed 1 in place of the character's attack bonus.
+
 ## [2.3.2] 2026-09-03 Misc fixes (initiative, fractional item attributes, and cyberdeck)
 
 - Automate foundry package release via github actions

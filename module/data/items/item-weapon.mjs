@@ -20,7 +20,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       dmg: SWNShared.diceString("0"),
       ac: SWNShared.requiredNumber(10),
     });
-    schema.ab = SWNShared.requiredNumber(0, -10);
+    schema.ab = SWNShared.diceString("0", true, false);
     schema.ammo = new fields.SchemaField({
       longReload: new fields.BooleanField({ initial: false }),
       suppress: new fields.BooleanField({ initial: false }),
@@ -439,6 +439,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       // check if there is 2nd stat name and its mod is better
       if (
         actor?.type == "character" &&
+        statName != "ask" && 
         secStatName != null &&
         secStatName != "none" &&
         actor.system.stats[statName].mod <
