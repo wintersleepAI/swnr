@@ -145,7 +145,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       "@attackRollDie + @burstFire + @modifier + @actor.ab + @weapon.ab + @stat + @effectiveSkillRank";
     const useA = game.settings.get("swnr", "useCWNArmor") ? true : false;
     if (useA && item.system.isMelee &&
-      (actor.type == "character" || actor.type == "npc")) {
+      (actor.type == "npc")) {
       dieString =
         "@attackRollDie + @burstFire + @modifier + @actor.meleeAb + @weapon.ab + @stat + @effectiveSkillRank";
       hitExplainTip = "1d20 +burst +mod +CharMeleeAB +WpnAB +Stat +Skill";
@@ -226,14 +226,34 @@ export default class SWNWeapon extends SWNBaseGearItem {
     let shock_roll = null;
     // Show shock damage
     if (game.settings.get("swnr", "addShockMessage")) {
-      if (this.shock && this.shock.dmg != null && this.shock.dmg != "" && this.shock.dmg != "0") {
-        shock_content = `Shock Damage  AC ${this.shock.ac}`;
-        let _shockRoll = new Roll(
-          this.shock.dmg + " + @stat " +
-          (this.skillBoostsShock ? ` + ${damageBonus}` : ""),
-          rollData
-        );
-        _shockRoll = this.safeDamageRoll(_shockRoll); 
+      let shockFormula = null;
+
+      if (this.isMelee) {
+          const npcShock = actor?.type === "npc" ? actor.system.attacks.shock : null;
+          if (npcShock?.dmg && npcShock.dmg !== "0") {
+            shockFormula = `${npcShock.dmg}`;
+          } else if (
+            this.shock &&
+            this.shock.dmg != null &&
+            this.shock.dmg != "" &&
+            this.shock.dmg != "0"
+        ) {
+          shockFormula =
+            this.shock.dmg +
+            " + @stat " +
+            (this.skillBoostsShock ? ` + ${damageBonus}` : "");
+        }
+      }
+
+      if (shockFormula) {
+        if (actor?.type == "npc" && actor.system.attacks.shock.ac) {
+          shock_content = `Shock Damage  AC ${actor.system.attacks.shock.ac}`;
+        } else {
+          shock_content = `Shock Damage  AC ${this.shock.ac}`;
+        }
+
+        let _shockRoll = new Roll(shockFormula, rollData);
+        _shockRoll = this.safeDamageRoll(_shockRoll);
         await _shockRoll.roll();
         shock_roll = await _shockRoll.render();
         rollArray.push(_shockRoll);
