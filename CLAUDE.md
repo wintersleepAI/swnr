@@ -82,6 +82,20 @@ Consumable dialog
 ## Refresh
 - Internal `uses` may auto‑refresh by cadence (scene/day). Ensure chats reflect persisted changes.
 
+## Assets
+
+- **Token-art SVGs must declare `width` and `height` attributes on the `<svg>` tag.**
+  Foundry sizes a canvas texture from those attributes; a CSS `style="width: 512px"`
+  does not count, and neither does `viewBox` alone. Without them the texture falls back
+  to a small default and the token renders undersized next to PNG tokens. The
+  game-icons.net art ships without them.
+- After adding icons, run `npm run normalize-icons` (`scripts/normalize-icon-svgs.mjs`).
+  It derives the size from each file's own `viewBox`, skips files already sized, and is
+  safe to re-run. Scope it with `--pack <name>` (token art for one pack) or a path, and
+  preview with `--dry-run`.
+- Item icons are only ever rendered in HTML sheets, so they are unaffected by the sizing
+  bug -- but normalising them anyway keeps the library consistent.
+
 ## CSS/SCSS Development
 - **NEVER edit `css/swnr.css` directly** - it's compiled from SCSS sources.
 - Make style changes in `src/scss/` files:

@@ -1,0 +1,213 @@
+name: Jackman Sniper
+type: npc
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/rabbit.svg
+folder: mGtKDEaZMdwkNIKr
+system:
+  health:
+    value: 5
+    max: 5
+  biography: >-
+    <p><strong>HD</strong> 1 &bull; <strong>AC</strong> 15 &bull; <strong>Atk</strong> +4 &bull;
+    <strong>Dmg</strong> wpn+2 &bull; <strong>TR</strong> wpn &bull; <strong>Shock</strong> wpn
+    &bull; <strong>MV</strong> 10m &bull; <strong>ML</strong> 7 &bull; <strong>Skill</strong> +2
+    &bull; <strong>Save</strong> 15+</p>
+
+    <p>Born of a Highshine-induced cross of humanity and the ubiquitous black-tailed jackrabbits of
+    the Albuquerque Death Zone, male jacks and female jills are usually slightly smaller than
+    baseline humans. Some are recognizable only by their long ears, while others are so lapine as to
+    have muzzles and furred bodies.</p>
+
+    <p>Jackfolk are high-strung, watchful mutants by nature, most of them living together in
+    settlements that survive by hunting and simple agriculture. Some of the bolder ones act as
+    tinkers and peddlers, trusting in their superior speed and alertness to see them through the
+    dangers of the zone.</p>
+
+    <p><em>Weapons.</em> This NPC fights with whatever gear it carries; drop weapon items onto the
+    sheet to arm it. Its Damage Bonus of +2 is already set and applies to every weapon damage
+    roll.</p>
+  species: Beastfolk
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 15
+  meleeAc: 15
+  ab: 4
+  meleeAb: 4
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: primitive
+  skillBonus: 2
+  attacks:
+    damage: ""
+    bonusDamage: 2
+    number: 1
+    name: ""
+    trauma:
+      die: ""
+      rating: null
+    shock:
+      dmg: "0"
+      ac: ""
+  hitDice: "1"
+  saves: 15
+  moralScore: 7
+  reaction: unknown
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: false
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items:
+  - name: Jackfolk Origin Focus
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: >-
+        <p>Gain Notice as a bonus skill. Gain a +1 bonus to your Dexterity or Wisdom modifier and -1
+        penalty to your Strength or Constitution modifier. You are exceptionally evasive; use of the
+        Fighting Withdrawal maneuver is an On Turn action for you, and once per scene you may accept
+        one point of System Strain as an On Turn action to gain a bonus Move action. If you are
+        being chased, you may roll any relevant Exert skill checks to escape twice, taking the
+        better roll.</p>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: MHYdsLiAtLOIbPtw
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!h4W4oI9vPUjKOUrf.MHYdsLiAtLOIbPtw"
+effects: []
+prototypeToken:
+  name: Jackman Sniper
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/rabbit.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: h4W4oI9vPUjKOUrf
+ownership:
+  default: 0
+sort: 400000
+flags: {}
+_key: "!actors!h4W4oI9vPUjKOUrf"

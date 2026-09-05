@@ -1,0 +1,376 @@
+name: Manscorpion
+type: npc
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/scorpion.svg
+folder: aZT47KvtCR0ei0rp
+system:
+  health:
+    value: 14
+    max: 14
+  biography: >-
+    <p><strong>HD</strong> 3 &bull; <strong>AC</strong> 15 &bull; <strong>Atk</strong> +5x3 &bull;
+    <strong>Dmg</strong> 1d6 claw/sting &bull; <strong>TR</strong> 1d6/x2 &bull;
+    <strong>Shock</strong> &mdash; &bull; <strong>MV</strong> 15m &bull; <strong>ML</strong> 9
+    &bull; <strong>Skill</strong> +2 &bull; <strong>Save</strong> 14+</p>
+
+    <p>These horse-sized devils have the body of a scorpion mated to a humanoid torso and an
+    insectile, mandibled head. They prefer to nest in human ruins and use their hardened climbing
+    claws to ascend to high lairs. They do not appear to have any human kind of intelligence, and do
+    not use tools in their hunts. They often ambush their prey, stinging them and then retreating
+    until their poison has had time to work.</p><p>Manscorpions hunt alone, but their nests will
+    have 2d6 adults.</p>
+  species: Mutant Animal
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 15
+  meleeAc: 15
+  ab: 5
+  meleeAb: 5
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 15
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: primitive
+  skillBonus: 2
+  attacks:
+    damage: 1d6
+    bonusDamage: 0
+    number: 3
+    name: Claw
+    trauma:
+      die: 1d6
+      rating: 2
+    shock:
+      dmg: "0"
+      ac: ""
+  hitDice: "3"
+  saves: 14
+  moralScore: 9
+  reaction: unknown
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: false
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items:
+  - name: Claw
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/animal-icons/crab-claw.svg
+    system:
+      description: ""
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      encumbrance: 0
+      cost: 0
+      tl: null
+      location: readied
+      quality: stock
+      noEncReadied: true
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      stat: str
+      secondStat: none
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      shock:
+        dmg: "0"
+        ac: 10
+      ab: "0"
+      ammo:
+        longReload: false
+        suppress: false
+        type: none
+        max: 0
+        value: 0
+        burst: false
+        current: null
+      range:
+        normal: 0
+        max: 0
+      damage: 1d6
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      trauma:
+        die: 1d6
+        rating: 2
+      isTwoHanded: false
+      isNonLethal: false
+      isMelee: true
+    _id: t2ln9jlxVPrbUDaH
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!hFNpoAX6xlg2R6R8.t2ln9jlxVPrbUDaH"
+  - name: Sting
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/animal-icons/scorpion-tail.svg
+    system:
+      description: ""
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      encumbrance: 0
+      cost: 0
+      tl: null
+      location: readied
+      quality: stock
+      noEncReadied: true
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      stat: str
+      secondStat: none
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      shock:
+        dmg: "0"
+        ac: 10
+      ab: "0"
+      ammo:
+        longReload: false
+        suppress: false
+        type: none
+        max: 0
+        value: 0
+        burst: false
+        current: null
+      range:
+        normal: 0
+        max: 0
+      damage: 1d6
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      trauma:
+        die: 1d6
+        rating: 2
+      isTwoHanded: false
+      isNonLethal: false
+      isMelee: true
+    _id: lOcH5tkjxS6TTk8T
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!hFNpoAX6xlg2R6R8.lOcH5tkjxS6TTk8T"
+  - name: Paralytic Poison
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: >-
+        <p>One of a manscorpion's three attacks will be a sting; a victim struck by this must make a
+        Physical saving throw immediately and another at the end of their next round. If they fail
+        both, they are paralyzed for 1d10+10 minutes.</p>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: OMd64zQ59Xz4U8g8
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!hFNpoAX6xlg2R6R8.OMd64zQ59Xz4U8g8"
+  - name: Wallcrawler
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: <p>They can traverse walls and ceilings as if they were flat ground.</p>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: xoHEEerK0S1k2EXG
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!hFNpoAX6xlg2R6R8.xoHEEerK0S1k2EXG"
+effects: []
+prototypeToken:
+  name: Manscorpion
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/scorpion.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: hFNpoAX6xlg2R6R8
+ownership:
+  default: 0
+sort: 800000
+flags: {}
+_key: "!actors!hFNpoAX6xlg2R6R8"

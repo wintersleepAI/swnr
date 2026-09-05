@@ -1,0 +1,210 @@
+name: Morlock Chief
+type: npc
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/ogre.svg
+folder: 2VjnYTYBokSJyj6U
+system:
+  health:
+    value: 27
+    max: 27
+  biography: >-
+    <p><strong>HD</strong> 6 &bull; <strong>AC</strong> 18 &bull; <strong>Atk</strong> +8x2 &bull;
+    <strong>Dmg</strong> wpn+3 &bull; <strong>TR</strong> wpn &bull; <strong>Shock</strong> wpn+3
+    &bull; <strong>MV</strong> 15m &bull; <strong>ML</strong> 10 &bull; <strong>Skill</strong> +2
+    &bull; <strong>Save</strong> 12+</p>
+
+    <p>Not so much a specific strain as an unfortunately common syndrome, morlocks are those
+    wretches who have been shaped in painful ways by the Highshine. Twisted and deformed, they pass
+    their suffering on to new generations through birth or grim surgical rituals.</p><p>Morlocks
+    commonly hate baselines out of envy and the inevitable competition for resources. Morlock tribes
+    will gladly raid human settlements or ambush careless caravans, only to retreat to their caves
+    and sewer tunnels before the baselines can retaliate. While the Highshine has marred them, it
+    has also made them strong; morlocks have a toughness and physical prowess far superior to those
+    of ordinary humans, though it usually comes at a cost of perpetual pain and a shortened
+    lifespan.</p>
+
+    <p><em>Weapons.</em> This NPC fights with whatever gear it carries; drop weapon items onto the
+    sheet to arm it. Its Damage Bonus of +3 is already set and applies to every weapon damage roll.
+    Its Shock is that of its weapon, +3.</p>
+  species: Mutant Humanoid
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 18
+  meleeAc: 18
+  ab: 8
+  meleeAb: 8
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 15
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: primitive
+  skillBonus: 2
+  attacks:
+    damage: ""
+    bonusDamage: 3
+    number: 2
+    name: ""
+    trauma:
+      die: ""
+      rating: null
+    shock:
+      dmg: "0"
+      ac: ""
+  hitDice: "6"
+  saves: 12
+  moralScore: 10
+  reaction: unknown
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: false
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: true
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items:
+  - name: Tunnel Crawler
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: >-
+        <p>Morlocks see in complete darkness and can survive on only half the food and water a human
+        requires. While they prefer to use weapons, their claws and fangs do damage as a knife in
+        unarmed combat.</p>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: 9q3v9jbID16XPiLg
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!l9VgALlRPDfEgZWA.9q3v9jbID16XPiLg"
+effects: []
+prototypeToken:
+  name: Morlock Chief
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/ogre.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: l9VgALlRPDfEgZWA
+ownership:
+  default: 0
+sort: 600000
+flags: {}
+_key: "!actors!l9VgALlRPDfEgZWA"

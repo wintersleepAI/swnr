@@ -1,0 +1,206 @@
+name: Turtleman Villager
+type: npc
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/turtle.svg
+folder: mGtKDEaZMdwkNIKr
+system:
+  health:
+    value: 5
+    max: 5
+  biography: >-
+    <p><strong>HD</strong> 1 &bull; <strong>AC</strong> 16 &bull; <strong>Atk</strong> +3 &bull;
+    <strong>Dmg</strong> wpn &bull; <strong>TR</strong> wpn &bull; <strong>Shock</strong> wpn &bull;
+    <strong>MV</strong> 10m &bull; <strong>ML</strong> 8 &bull; <strong>Skill</strong> +1 &bull;
+    <strong>Save</strong> 15+</p>
+
+    <p>Uncommon even by beastfolk standards, these humanoid turtles tend to favor their animal
+    natures in appearance. Even so, a few of them are born with a more kappa-like appearance and
+    smaller dorsal shells, and could pass for human beneath a heavy cloak.</p>
+
+    <p>Turtlekin are naturally contemplative and inclined to peaceful behavior. Their inoffensive
+    manner sometimes entices raiders, however, and so a tradition of martial discipline has been
+    cultivated by some villages.</p>
+
+    <p><em>Weapons.</em> This NPC fights with whatever gear it carries; drop weapon items onto the
+    sheet to arm it.</p>
+  species: Beastfolk
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 16
+  meleeAc: 16
+  ab: 3
+  meleeAb: 3
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: primitive
+  skillBonus: 1
+  attacks:
+    damage: ""
+    bonusDamage: 0
+    number: 1
+    name: ""
+    trauma:
+      die: ""
+      rating: null
+    shock:
+      dmg: "0"
+      ac: ""
+  hitDice: "1"
+  saves: 15
+  moralScore: 8
+  reaction: unknown
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: false
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items:
+  - name: Turtlekin Origin Focus
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: >-
+        <p>Your base AC is equal to 16 plus half your level, rounded down. Once per day, as an
+        Instant action, you can deflect a weapon attack with your shell and thus negate a hit.</p>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: hAJaXNw0OtOusXEM
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!ROCQBLzFposNPazk.hAJaXNw0OtOusXEM"
+effects: []
+prototypeToken:
+  name: Turtleman Villager
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/turtle.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: ROCQBLzFposNPazk
+ownership:
+  default: 0
+sort: 800000
+flags: {}
+_key: "!actors!ROCQBLzFposNPazk"

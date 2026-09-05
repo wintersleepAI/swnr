@@ -1,0 +1,241 @@
+name: Tinman
+type: npc
+img: systems/swnr/assets/icons/android.png
+folder: lUeJ7tuwDhSnk7q6
+system:
+  health:
+    value: 18
+    max: 18
+  biography: >-
+    <p><strong>HD</strong> 4 &bull; <strong>AC</strong> 16 &bull; <strong>Atk</strong> +6 &bull;
+    <strong>Dmg</strong> By wpn &bull; <strong>TR</strong> By wpn &bull; <strong>Shock</strong> By
+    wpn &bull; <strong>MV</strong> 10m &bull; <strong>ML</strong> 8 &bull; <strong>Skill</strong> +2
+    &bull; <strong>Save</strong> 13+</p>
+
+    <p>These androids were built to resemble humans, some of them with unsettling accuracy. Most
+    were intended for human interaction of some sort, so they are among the most likely robots to
+    engage peacefully with modern survivors. Even so, they remain mere expert systems, and will
+    often try to apply their original programming even when it is inappropriate.</p>
+
+    <p><em>Weapons.</em> This NPC fights with whatever gear it carries; drop weapon items onto the
+    sheet to arm it.</p>
+  species: Robot
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 16
+  meleeAc: 16
+  ab: 6
+  meleeAb: 6
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: combat
+  skillBonus: 2
+  attacks:
+    damage: ""
+    bonusDamage: 0
+    number: 1
+    name: ""
+    trauma:
+      die: ""
+      rating: null
+    shock:
+      dmg: "0"
+      ac: ""
+  hitDice: "4"
+  saves: 13
+  moralScore: 8
+  reaction: unknown
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: false
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items:
+  - name: Expert System
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: >-
+        <p>The bot is competent within its function but lacks any true general intelligence or
+        self-awareness. Whenever it is called on to function outside its role, make a skill check
+        using the bot's skill modifier; if it fails, it tries to use its usual behavior even if such
+        a behavior is inappropriate.</p><p>Initial bot reactions depend on their intended role. If
+        programmed to attack, their initial response will always be hostile; other bots react
+        according to the Reaction Roll, defaulting to an attempt to behave as their programming
+        dictates.</p>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: EtZt7WuQ9wAmagIh
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!z6OT5WaQ120tXWIg.EtZt7WuQ9wAmagIh"
+  - name: Self-Powered Chassis
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: >-
+        <p>Robots are self-powered and do not normally run out of ammunition for any weapons they
+        have built in.</p><p>Most late-Mandate robots can self-repair up to their hit dice in lost
+        hit points every 24 hours, requiring an eight-hour shutdown period in which to conduct the
+        repairs. One unit of TL4 scrap can instead repair half the robot's maximum hit points in
+        damage with half an hour of work. Robots reduced to zero hit points are completely wrecked
+        and can only be scrapped.</p>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: PQswaVhUOokzhpcW
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!z6OT5WaQ120tXWIg.PQswaVhUOokzhpcW"
+effects: []
+prototypeToken:
+  name: Tinman
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/android.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: 0
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: z6OT5WaQ120tXWIg
+ownership:
+  default: 0
+sort: 900000
+flags: {}
+_key: "!actors!z6OT5WaQ120tXWIg"

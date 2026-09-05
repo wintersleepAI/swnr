@@ -1,0 +1,251 @@
+name: Shambler
+type: npc
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/shambling-zombie.svg
+folder: PHynPhjg62GPyC0c
+system:
+  health:
+    value: 1
+    max: 1
+  biography: >-
+    <p><strong>HD</strong> 1 HP &bull; <strong>AC</strong> None &bull; <strong>Atk</strong> +0
+    &bull; <strong>Dmg</strong> 1d6 &bull; <strong>TR</strong> 1d8/x2 &bull; <strong>Shock</strong>
+    &mdash; &bull; <strong>MV</strong> 5m &bull; <strong>ML</strong> 12 &bull;
+    <strong>Skill</strong> +0 &bull; <strong>Save</strong> 20+</p>
+
+    <p>The archetypal zombie, slow-moving and mindlessly ravenous. Particularly rotten or crippled
+    examples of other zombie types might also be treated as Shamblers.</p>
+
+    <p><em>AC: None.</em> Attacks against this creature hit automatically; the stored Armor Class of
+    0 reproduces that in play.</p>
+
+    <p><em>Zombies don't dodge.</em> If you swing or shoot at a zombie, you're going to hit it; the
+    only question is whether you do enough damage to drop it. <em>Zombies are durable</em>, ignoring
+    food, oxygen, warm clothing, and basic hygiene. <em>Zombies are stupid</em>, and only rare
+    subtypes are clever enough to have tactics. <em>Zombies swarm</em> &mdash; one zombie is almost
+    harmless, and there is never only one zombie.</p>
+  species: Zombie
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 0
+  meleeAc: 0
+  ab: 0
+  meleeAb: 0
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 5
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: primitive
+  skillBonus: 0
+  attacks:
+    damage: 1d6
+    bonusDamage: 0
+    number: 1
+    name: Clawing Bite
+    trauma:
+      die: 1d8
+      rating: 2
+    shock:
+      dmg: "0"
+      ac: ""
+  hitDice: 1 HP
+  saves: 20
+  moralScore: 12
+  reaction: hostile
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: false
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items:
+  - name: Clawing Bite
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/creature-icons/shambling-zombie.svg
+    system:
+      description: ""
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      encumbrance: 0
+      cost: 0
+      tl: null
+      location: readied
+      quality: stock
+      noEncReadied: true
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      stat: str
+      secondStat: none
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      shock:
+        dmg: "0"
+        ac: 10
+      ab: "0"
+      ammo:
+        longReload: false
+        suppress: false
+        type: none
+        max: 0
+        value: 0
+        burst: false
+        current: null
+      range:
+        normal: 0
+        max: 0
+      damage: 1d6
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      trauma:
+        die: 1d8
+        rating: 2
+      isTwoHanded: false
+      isNonLethal: false
+      isMelee: true
+    _id: cASO4HqYeGrNNXKh
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!kBZdvqC5HlewkSS2.cASO4HqYeGrNNXKh"
+effects: []
+prototypeToken:
+  name: Shambler
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/shambling-zombie.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: kBZdvqC5HlewkSS2
+ownership:
+  default: 0
+sort: 100000
+flags: {}
+_key: "!actors!kBZdvqC5HlewkSS2"

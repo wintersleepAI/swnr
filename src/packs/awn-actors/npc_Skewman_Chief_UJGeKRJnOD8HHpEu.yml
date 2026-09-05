@@ -1,0 +1,211 @@
+name: Skewman Chief
+type: npc
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/goblin-head.svg
+folder: 2VjnYTYBokSJyj6U
+system:
+  health:
+    value: 18
+    max: 18
+  biography: >-
+    <p><strong>HD</strong> 4 &bull; <strong>AC</strong> 16 &bull; <strong>Atk</strong> +6x2 &bull;
+    <strong>Dmg</strong> wpn+2 &bull; <strong>TR</strong> wpn &bull; <strong>Shock</strong> wpn
+    &bull; <strong>MV</strong> 10m &bull; <strong>ML</strong> 9 &bull; <strong>Skill</strong> +3
+    &bull; <strong>Save</strong> 13+</p>
+
+    <p>A heritable deficiency in ligament formation produces the skewmen, an unhappy breed of
+    deformed mutants. Their joints are remarkably flexible but unable to support them upright. They
+    are forced to crawl with an unsettling quickness and to use blunt weapons that are as much
+    crutch as club.</p><p>Most skewman tribes nurse a bitter hatred of the "upright", blaming them
+    for causing the disaster that cursed their ancestors. Prisoners they take are subject to
+    terrible operations that will transform them into a skewman as well if not rescued within a
+    month.</p>
+
+    <p>Skewmen are especially voracious gatherers of ancient technology, even items they cannot use.
+    Their chieftains are always adorned with several such devices.</p>
+
+    <p><em>Weapons.</em> This NPC fights with whatever gear it carries; drop weapon items onto the
+    sheet to arm it. Its Damage Bonus of +2 is already set and applies to every weapon damage
+    roll.</p>
+  species: Mutant Humanoid
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 16
+  meleeAc: 16
+  ab: 6
+  meleeAb: 6
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: primitive
+  skillBonus: 3
+  attacks:
+    damage: ""
+    bonusDamage: 2
+    number: 2
+    name: ""
+    trauma:
+      die: ""
+      rating: null
+    shock:
+      dmg: "0"
+      ac: ""
+  hitDice: "4"
+  saves: 13
+  moralScore: 9
+  reaction: unknown
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: false
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: true
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items:
+  - name: Crooked Man
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: >-
+        <p>Skewmen gain a +4 bonus to all checks to grapple or resist a grapple for creatures of
+        man-size or smaller. Due to their means of locomotion, they can use only one-handed
+        weapons.</p>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: ukfKpKfM4Fyf1TDz
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!UJGeKRJnOD8HHpEu.ukfKpKfM4Fyf1TDz"
+effects: []
+prototypeToken:
+  name: Skewman Chief
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/goblin-head.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: UJGeKRJnOD8HHpEu
+ownership:
+  default: 0
+sort: 900000
+flags: {}
+_key: "!actors!UJGeKRJnOD8HHpEu"

@@ -1,0 +1,277 @@
+name: Bronco Stallion
+type: npc
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/horse-head.svg
+folder: mGtKDEaZMdwkNIKr
+system:
+  health:
+    value: 14
+    max: 14
+  biography: >-
+    <p><strong>HD</strong> 3 &bull; <strong>AC</strong> 14 &bull; <strong>Atk</strong> +4 &bull;
+    <strong>Dmg</strong> 2d6 kick &bull; <strong>TR</strong> 1d6/x2 &bull; <strong>Shock</strong>
+    &mdash; &bull; <strong>MV</strong> 20m &bull; <strong>ML</strong> 8 &bull;
+    <strong>Skill</strong> +1 &bull; <strong>Save</strong> 14+</p>
+
+    <p>"Broncos" are completely equine in body, though they possess human levels of intelligence.
+    Horse-like members of the species tend to have extremely equine minds; grazing, treats, and
+    mates are all that particularly interest them. They move in herds led by a matriarch, with
+    stallions bringing up the rear to guard the rest of the herd. At times a bronco forms a bond of
+    friendship with a baseline or other mutant, serving as a loyal steed.</p>
+  species: Beastfolk
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 14
+  meleeAc: 14
+  ab: 4
+  meleeAb: 4
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 20
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: primitive
+  skillBonus: 1
+  attacks:
+    damage: 2d6
+    bonusDamage: 0
+    number: 1
+    name: Kick
+    trauma:
+      die: 1d6
+      rating: 2
+    shock:
+      dmg: "0"
+      ac: ""
+  hitDice: "3"
+  saves: 14
+  moralScore: 8
+  reaction: unknown
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: false
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items:
+  - name: Kick
+    type: weapon
+    img: systems/swnr/assets/icons/game-icons.net/animal-icons/horseshoe.svg
+    system:
+      description: ""
+      favorite: false
+      quantity: 1
+      bundle:
+        bundled: false
+        amount: null
+      encumbrance: 0
+      cost: 0
+      tl: null
+      location: readied
+      quality: stock
+      noEncReadied: true
+      container:
+        isContainer: false
+        isOpen: true
+        capacity:
+          max: 0
+          value: 0
+      stat: str
+      secondStat: none
+      skill: ask
+      skillBoostsDamage: false
+      skillBoostsShock: false
+      shock:
+        dmg: "0"
+        ac: 10
+      ab: "0"
+      ammo:
+        longReload: false
+        suppress: false
+        type: none
+        max: 0
+        value: 0
+        burst: false
+        current: null
+      range:
+        normal: 0
+        max: 0
+      damage: 2d6
+      remember:
+        use: false
+        burst: false
+        modifier: 0
+        isNonLethal: false
+      save: null
+      trauma:
+        die: 1d6
+        rating: 2
+      isTwoHanded: false
+      isNonLethal: false
+      isMelee: true
+    _id: 2Kultm3XA7pi3GAV
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!mqOqC2fyK9ECJNNs.2Kultm3XA7pi3GAV"
+  - name: Bronco Origin Focus
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: >-
+        <p>You are a horse, and any special armor or gear built for your use costs four times as
+        much as usual. You can speak human languages and communicate with normal horses. You have a
+        Strength score of 18, a base Move rate of 20 meters, a base AC of 14, and can carry a rider
+        and their equipment if your own Encumbrance is 10 or less. Your kick attack does 2d6 damage
+        with a 1d6/x2 Trauma Rating.</p>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: 0HsBdZGsotdBhg9V
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!mqOqC2fyK9ECJNNs.0HsBdZGsotdBhg9V"
+effects: []
+prototypeToken:
+  name: Bronco Stallion
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/horse-head.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: mqOqC2fyK9ECJNNs
+ownership:
+  default: 0
+sort: 600000
+flags: {}
+_key: "!actors!mqOqC2fyK9ECJNNs"
