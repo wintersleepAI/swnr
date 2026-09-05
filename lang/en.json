@@ -790,7 +790,8 @@
             }
           },
           "ab": {
-            "label": "Attack Bonus"
+            "label": "Attack Bonus",
+            "hint": "A number or dice formula, e.g. 1 or 1d4"
           },
           "range": {
             "label": "Range",

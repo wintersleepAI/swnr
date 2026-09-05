@@ -1,0 +1,281 @@
+name: Territorial Ranger
+type: npc
+img: systems/swnr/assets/icons/game-icons.net/humanoid-icons/barbute.svg
+folder: 5lR9SPVdXfMdppvQ
+system:
+  health:
+    value: 90
+    max: 90
+  biography: >-
+    <p><strong>HD</strong> 20 &bull; <strong>AC</strong> 22 &bull; <strong>Atk</strong> +20x4 &bull;
+    <strong>Dmg</strong> wpn+6 &bull; <strong>TR</strong> wpn &bull; <strong>Shock</strong> wpn
+    &bull; <strong>MV</strong> 15m &bull; <strong>ML</strong> 11 &bull; <strong>Skill</strong> +5
+    &bull; <strong>Save</strong> 3+</p>
+
+    <p>Built of hybrid corper-Mandate cybertech, these revenants sleep beneath Boot Hill until
+    called to perform their terrible duty.</p>
+
+    <p><em>Weapons.</em> This NPC fights with whatever gear it carries; drop weapon items onto the
+    sheet to arm it. Its Damage Bonus of +6 is already set and applies to every weapon damage
+    roll.</p>
+
+    <p><em>Special abilities.</em> The stat line marks 6 picks from the Cyborg Special Abilities
+    list (AWN p.214), reproduced on this sheet.</p>
+  species: Cyborg
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 22
+  meleeAc: 22
+  ab: 20
+  meleeAb: 20
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 15
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: combat
+  skillBonus: 5
+  attacks:
+    damage: ""
+    bonusDamage: 6
+    number: 4
+    name: ""
+    trauma:
+      die: ""
+      rating: null
+    shock:
+      dmg: "0"
+      ac: ""
+  hitDice: "20"
+  saves: 3
+  moralScore: 11
+  reaction: unknown
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: true
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items:
+  - name: Cyborg Special Abilities (6 picks)
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: >-
+        <p>Cyborgs all have some sort of chrome, though many systems may be too damaged or too
+        trivial to have any real game effect. The systems below, however, are more meaningful.
+        Others can be lifted from <em>Cities Without Number</em> at the GM's discretion.</p>
+
+        <p>Systems marked with asterisks count as that many special ability picks; thus, Enhanced
+        Reflexes Omega counts as three picks.</p>
+
+        <ul>
+
+        <li><strong>Backup Organs:</strong> The cyborg ignores the first Traumatic Hit they suffer
+        in a fight, reducing it to its normal damage total.</li>
+
+        <li><strong>Body Arsenal:</strong> Their unarmed attacks do 2d6+2 damage with a Shock of
+        4/15 and a Trauma Die of 1d10/x3.</li>
+
+        <li><strong>Dermal Plating:</strong> Their base AC is 18, or +2 if higher, and their base
+        Trauma Target is 7.</li>
+
+        <li><strong>Enhanced Reflexes Alpha:</strong> Once per scene, on their turn, they get a
+        bonus Main Action.</li>
+
+        <li><strong>Enhanced Reflexes Beta**:</strong> Twice per scene, on their turn, they get a
+        bonus Main and Move Action.</li>
+
+        <li><strong>Enhanced Reflexes Omega***:</strong> As Beta, but they can trigger the extra
+        action as an Instant action.</li>
+
+        <li><strong>Ghost Camo:</strong> When active, they cannot be detected by human senses from
+        more than 10 meters distance. When closer, they get a +2 bonus to any stealth skill
+        checks.</li>
+
+        <li><strong>Mounted Weapon:</strong> They have a built-in firearm that grants them +2 to hit
+        and a +1 to their Trauma Die rolls that doesn't stack with other bonuses. This gun has
+        effectively unlimited ammo.</li>
+
+        <li><strong>Movement Boost Alpha:</strong> Their base Move rate is increased by 10
+        meters.</li>
+
+        <li><strong>Movement Boost Beta**:</strong> As Alpha, but once per scene they can take a
+        Move action as an Instant action.</li>
+
+        <li><strong>Muscle Augmentation:</strong> They gain +4 damage to melee and melee Shock, and
+        can break doors and do similar feats of strength as On Turn actions.</li>
+
+        <li><strong>Nemesis Targeter**:</strong> Once per fight, as an Instant action, the cyborg
+        can turn a weapon miss into a hit.</li>
+
+        <li><strong>Omnispectral Sight:</strong> They can see even in perfect darkness and detect
+        invisible creatures unless the effect is psychic in nature.</li>
+
+        <li><strong>Pheromone Booster:</strong> They get a +1 to their Skill Bonus for social
+        interactions. Once per scene, they can make a semi-plausible request of someone, who must
+        succeed on a Mental save to resist obeying for as long as the rest of the scene.</li>
+
+        <li><strong>Polyskin:</strong> As an On Turn action, they can mimic any human they've seen
+        before, including altering the appearance of their armor or clothing. This mimicry lasts
+        while they are alive or until they turn it off.</li>
+
+        <li><strong>Sealed Systems:</strong> The cyborg ignores environmental hazards as if they
+        were wearing a space suit.</li>
+
+        <li><strong>Self-Repair Unit:</strong> Above zero hit points, the cyborg heals 5 points of
+        damage each round. If Mortally Wounded, it stabilizes automatically.</li>
+
+        <li><strong>Terminator Tendrils:</strong> They can extend manipulatory tendrils up to 5
+        meters to handle or manipulate things. Any downed enemies within that range at the end of
+        the cyborg's turn are coup-de-graced by them, killing them instantly.</li>
+
+        <li><strong>Titan Gun Mount***:</strong> They have a built-in Heavy weapon normally
+        requiring a vehicle to mount it. This gun has effectively unlimited ammo.</li>
+
+        <li><strong>Wallcrawler:</strong> They can traverse walls and ceilings as if they were flat
+        ground.</li>
+
+        <li><strong>Weak Point Targeting**:</strong> Any Shock they inflict treats the subject as
+        having AC 10, and their Trauma Die rolls gain a +2 bonus.</li>
+
+        </ul>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: XaFPCHDDRwyvaSRK
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!XiBtVfqkoV7SAxJT.XaFPCHDDRwyvaSRK"
+effects: []
+prototypeToken:
+  name: Territorial Ranger
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/game-icons.net/humanoid-icons/barbute.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: XiBtVfqkoV7SAxJT
+ownership:
+  default: 0
+sort: 800000
+flags: {}
+_key: "!actors!XiBtVfqkoV7SAxJT"

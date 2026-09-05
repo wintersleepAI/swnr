@@ -1,0 +1,42 @@
+name: Jack Control Port
+type: shipFitting
+_id: zFcn3vMslYklV6Lm
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: LWemrT7tS2V37WNs
+system:
+  description: >-
+    <h3>Vehicle Fitting</h3><p><strong>Scrap:</strong> 50 &bull; <strong>TL:</strong> 4 &bull;
+    <strong>Power:</strong> 2 &bull; <strong>Mass:</strong> 0 &bull; <strong>Min. Size:</strong>
+    Small &bull; <strong>Min. Skill:</strong> Fix-2</p><h3>Description</h3><p>For
+    cybernetically-augmented settings, the vehicle can connect to a cranial jack. While jacked in,
+    the driver need only use a Move action to control the vehicle rather than a Main.</p>
+  favorite: false
+  tl: 4
+  cost: 0
+  power: 2
+  mass: 0
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: s
+  broken: false
+  destroyed: false
+  juryRigged: false
+  type: vehicle
+  effect: Drive with a Move action via cranial jack.
+effects: []
+sort: 13000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!zFcn3vMslYklV6Lm"

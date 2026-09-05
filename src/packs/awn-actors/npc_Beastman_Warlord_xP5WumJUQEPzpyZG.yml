@@ -1,0 +1,176 @@
+name: Beastman Warlord
+type: npc
+img: systems/swnr/assets/icons/game-icons.net/creature-icons/brute.svg
+folder: mGtKDEaZMdwkNIKr
+system:
+  health:
+    value: 68
+    max: 68
+  biography: >-
+    <p><strong>HD</strong> 15 &bull; <strong>AC</strong> 18 &bull; <strong>Atk</strong> +20x3 &bull;
+    <strong>Dmg</strong> wpn+6 &bull; <strong>TR</strong> wpn &bull; <strong>Shock</strong> wpn+6
+    &bull; <strong>MV</strong> 10m &bull; <strong>ML</strong> 10 &bull; <strong>Skill</strong> +4
+    &bull; <strong>Save</strong> 8+</p>
+
+    <p>More humanoid beastfolk have more human psychology, and often use their more abstract
+    thinking abilities to gain high status in their pack. So long as they can satisfy the simple
+    desires of their more feral brethren, they can lead them to raid weaker communities or barter
+    their labor for valuable goods. The greatest of them weld whole herds and packs into a single
+    terrible host.</p>
+
+    <p><em>Weapons.</em> This NPC fights with whatever gear it carries; drop weapon items onto the
+    sheet to arm it. Its Damage Bonus of +6 is already set and applies to every weapon damage roll.
+    Its Shock is that of its weapon, +6.</p>
+  species: Beastfolk
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 18
+  meleeAc: 18
+  ab: 20
+  meleeAb: 20
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: primitive
+  skillBonus: 4
+  attacks:
+    damage: ""
+    bonusDamage: 6
+    number: 3
+    name: ""
+    trauma:
+      die: ""
+      rating: null
+    shock:
+      dmg: "0"
+      ac: ""
+  hitDice: "15"
+  saves: 8
+  moralScore: 10
+  reaction: unknown
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: false
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items: []
+effects: []
+prototypeToken:
+  name: Beastman Warlord
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/game-icons.net/creature-icons/brute.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: xP5WumJUQEPzpyZG
+ownership:
+  default: 0
+sort: 1200000
+flags: {}
+_key: "!actors!xP5WumJUQEPzpyZG"

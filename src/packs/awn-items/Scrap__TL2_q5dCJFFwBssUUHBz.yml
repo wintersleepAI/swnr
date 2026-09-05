@@ -1,0 +1,55 @@
+name: Scrap, TL2
+type: item
+_id: q5dCJFFwBssUUHBz
+img: systems/swnr/assets/icons/game-icons.net/item-icons/jigsaw-box.svg
+folder: 46CoCbby4mAAsP2Y
+system:
+  description: >-
+    <h3>Description</h3><p>Most larger settlements will have at least one scrapsmith willing to
+    barter salvaged debris. The sophistication of their offered goods will depend on the source of
+    their supply. A unit of scrap is one point of Encumbrance and can be used to repair, build, or
+    maintain anything of the same tech level.</p>
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 1
+  cost: 10
+  tl: 2
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: null
+    diceSize: null
+    diceBonus: null
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+sort: 30000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!q5dCJFFwBssUUHBz"

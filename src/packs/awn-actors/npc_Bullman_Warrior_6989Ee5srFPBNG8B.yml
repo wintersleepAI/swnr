@@ -1,0 +1,213 @@
+name: Bullman Warrior
+type: npc
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/minotaur.svg
+folder: mGtKDEaZMdwkNIKr
+system:
+  health:
+    value: 9
+    max: 9
+  biography: >-
+    <p><strong>HD</strong> 2 &bull; <strong>AC</strong> 13 &bull; <strong>Atk</strong> +3 &bull;
+    <strong>Dmg</strong> wpn &bull; <strong>TR</strong> wpn &bull; <strong>Shock</strong> wpn &bull;
+    <strong>MV</strong> 10m &bull; <strong>ML</strong> 8 &bull; <strong>Skill</strong> +1 &bull;
+    <strong>Save</strong> 14+</p>
+
+    <p>Found in nomadic herds under the leadership of a bullman chief, these mutants usually appear
+    as bipedal, cattle-headed humanoids at least a head taller than a corresponding baseline. Some
+    with a more feral admixture have hoofed feet and a short, dense fur, while others appear almost
+    baseline save for the horns that both bullmen and cowgirls sport.</p>
+
+    <p>Bullfolk are seldom naturally aggressive or hostile towards baseline humans, most herds
+    having no interest in anything but good grazing and trampling predators. Social hierarchy within
+    the herd is strict and based on personal strength and achievement. Stray bulls or cows who don't
+    fit in with their brethren sometimes seek employment in baseline settlements until they can
+    perform sufficiently impressive deeds or meet a more congenial herd. Others join fellow outcasts
+    to become banditos, earning glory through bloodshed.</p>
+
+    <p><em>Weapons.</em> This NPC fights with whatever gear it carries; drop weapon items onto the
+    sheet to arm it.</p>
+  species: Beastfolk
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 13
+  meleeAc: 13
+  ab: 3
+  meleeAb: 3
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: primitive
+  skillBonus: 1
+  attacks:
+    damage: ""
+    bonusDamage: 0
+    number: 1
+    name: ""
+    trauma:
+      die: ""
+      rating: null
+    shock:
+      dmg: "0"
+      ac: ""
+  hitDice: "2"
+  saves: 14
+  moralScore: 8
+  reaction: unknown
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: false
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items:
+  - name: Bullfolk Origin Focus
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: >-
+        <p>Gain Exert as a bonus skill. Gain a +1 bonus to your Strength or Constitution modifier
+        and take a -1 penalty to your Dexterity or Intelligence modifier. You can graze in any
+        non-barren environment, feeding yourself with two hours of browsing. You automatically
+        ignore 1d6+2 damage from the first enemy hit you take in a fight, as the blow only
+        infuriates you.</p>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: vbfhRPdpxjRHRdUK
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!6989Ee5srFPBNG8B.vbfhRPdpxjRHRdUK"
+effects: []
+prototypeToken:
+  name: Bullman Warrior
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/minotaur.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: 6989Ee5srFPBNG8B
+ownership:
+  default: 0
+sort: 100000
+flags: {}
+_key: "!actors!6989Ee5srFPBNG8B"

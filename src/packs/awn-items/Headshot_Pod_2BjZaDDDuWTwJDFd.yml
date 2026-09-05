@@ -1,0 +1,60 @@
+name: Headshot Pod
+type: shipWeapon
+_id: 2BjZaDDDuWTwJDFd
+img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+folder: 2dR5pNlA4LTNnKGU
+system:
+  description: >-
+    <h3>Vehicle Weapon</h3><p><strong>TL3 Scrap to Build:</strong> 200 &bull;
+    <strong>Power:</strong> 3 &bull; <strong>Mass:</strong> 2 &bull; <strong>Min. Size:</strong>
+    Large</p><h3>Description</h3><p>Headshot pods are a family of guided missiles meant for mounted
+    deployment on vehicles or large drones. They always target AC 10 to hit, but require two full
+    consecutive rounds of aiming at a visible target to get a target lock on them and prime for
+    firing on the third round. Any bystanders within 5 meters of the impact take damage as if from a
+    frag grenade. A headshot pod missile takes 20 TL3 scrap to build. This weapon’s Trauma Die can
+    inflict Traumatic Hits on drones, vehicles, and other machines.</p>
+  favorite: false
+  tl: 3
+  cost: 0
+  power: 3
+  mass: 2
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: m
+  broken: false
+  destroyed: false
+  juryRigged: false
+  type: vehicle
+  ab: 0
+  hardpoint: 1
+  qualities: Guided; always targets AC 10
+  damage: 4d6
+  range:
+    normal: 1000
+    max: 2000
+  stat: dex
+  ammo:
+    type: missile
+    max: 1
+    value: 1
+  trauma:
+    die: 1d20
+    rating: 4
+    vehicle: true
+effects: []
+sort: 1000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!2BjZaDDDuWTwJDFd"

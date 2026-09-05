@@ -62,10 +62,23 @@ export default class SWNShared {
     return new fields.StringField({ required: true, nullable: false, initial: initialValue });
   }
 
-  static diceString(initialValue, required = true) {
+  // Leave blank permitted where "" is a meaningful "none". Pass blank = false for a
+  // value that is substituted straight into a roll formula: "" there yields an
+  // unparseable formula, so a cleared field is reset to initialValue on save instead.
+  static diceString(initialValue, required = true, blank = true) {
     const fields = foundry.data.fields;
-    return new fields.StringField({ required: required, nullable: !required, initial: initialValue, 
-      validate: v => v === null || (() => { new Roll(v); return true; })()
+    return new fields.StringField({
+      required: required, nullable: !required, blank: blank, initial: initialValue,
+      // Roll.validate parses and evaluates, and neutralises @references first, so a
+      // formula like "@str" passes. Throwing puts the offending string in the error
+      // the user sees; returning false would only say "Invalid value".
+      // "" and "none" are the two ways the data says "no die here" -- trauma.die
+      // carries both, and the shipped CWN actors spell it "None".
+      validate: v => {
+        if ( (v === null) || (v === "") || (v.toLowerCase() === "none") ) { return true; }
+        if ( !Roll.validate(v) ) { throw new Error(`"${v}" is not a valid dice formula`); }
+        return true;
+      }
     });
   }
 

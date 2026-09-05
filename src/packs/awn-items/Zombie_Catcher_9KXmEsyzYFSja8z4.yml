@@ -1,0 +1,44 @@
+name: Zombie Catcher
+type: shipFitting
+_id: 9KXmEsyzYFSja8z4
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: LWemrT7tS2V37WNs
+system:
+  description: >-
+    <h3>Vehicle Fitting</h3><p><strong>Scrap:</strong> 25 &bull; <strong>TL:</strong> 3 &bull;
+    <strong>Power:</strong> 0 &bull; <strong>Mass:</strong> 2 &bull; <strong>Min. Size:</strong>
+    Medium &bull; <strong>Min. Skill:</strong> Fix-0</p><h3>Description</h3><p>The vehicle is
+    reinforced to ram through crowds. As a Move action, the driver can inflict 2d10 damage on any
+    zombie hordes they run into. Large vehicles add +2d10. The driver must make a Dex/Drive skill
+    check at difficulty 7, +1 each additional time this is done in a scene; on a failure, the
+    fitting clogs up and stops working for the scene.</p>
+  favorite: false
+  tl: 3
+  cost: 0
+  power: 0
+  mass: 2
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: m
+  broken: false
+  destroyed: false
+  juryRigged: false
+  type: vehicle
+  effect: Ram zombie hordes for 2d10 damage.
+effects: []
+sort: 26000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!9KXmEsyzYFSja8z4"

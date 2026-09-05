@@ -1,0 +1,58 @@
+name: Beam flexer
+type: item
+_id: x8WO6NmhUz2CApbI
+img: systems/swnr/assets/icons/game-icons.net/item-icons/anvil.svg
+folder: d1ShT3yGdtDDiH4e
+system:
+  description: >-
+    <h3>High-Tech Device</h3><p><strong>Category:</strong> Tools &amp; Hardware &bull;
+    <strong>Rarity:</strong> Uncommon</p><h3>Description</h3><p>A specialized construction tool,
+    this pistol-shaped device can non-destructively bend or twist unattended metal or wooden objects
+    within 5m, provided they are no larger than 5m in any dimension. It takes one minute to bend an
+    object.</p><h3>Power and Use</h3><p>Requires a Type A energy cell to activate, and functions for
+    one scene per use.</p><p>Unless specified otherwise, this device requires a Main Action to
+    trigger its activation.</p>
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 1
+  cost: 0
+  tl: 4
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: null
+    diceSize: null
+    diceBonus: null
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+sort: 5000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!x8WO6NmhUz2CApbI"

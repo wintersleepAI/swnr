@@ -1,0 +1,58 @@
+name: Teetotaler ring
+type: item
+_id: BAeRdkZy520Cz4e6
+img: systems/swnr/assets/icons/game-icons.net/item-icons/techno-heart.svg
+folder: u9jV2ZZaTeeZbA7B
+system:
+  description: >-
+    <h3>High-Tech Device</h3><p><strong>Category:</strong> Art &amp; Personal Effects &bull;
+    <strong>Rarity:</strong> Rare</p><h3>Description</h3><p>This ring causes any liquid the user
+    drinks to become pure water. While it can manage minor impurities or occasional poisons without
+    difficulty, drinking more than a liter or so of non-potable water in one day gives it a 1 in 8
+    chance of breaking.</p><h3>Power and Use</h3><p>Functions indefinitely on its own power, though
+    particularly abusive use might run it down prematurely.</p><p>Unless specified otherwise, this
+    device requires a Main Action to trigger its activation.</p>
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 0
+  cost: 0
+  tl: 4
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: null
+    diceSize: null
+    diceBonus: null
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+sort: 48000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!BAeRdkZy520Cz4e6"

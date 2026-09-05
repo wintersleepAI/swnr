@@ -1,0 +1,305 @@
+name: Great Hero
+type: npc
+img: systems/swnr/assets/icons/game-icons.net/weapons-icons/winged-sword.svg
+folder: POMobXZu8qAn9k1I
+system:
+  health:
+    value: 36
+    max: 36
+  biography: >-
+    <p><strong>HD</strong> 8 &bull; <strong>AC</strong> 16 &bull; <strong>Atk</strong> +12x2 &bull;
+    <strong>Dmg</strong> By wpn+5 &bull; <strong>TR</strong> By wpn &bull; <strong>Shock</strong>
+    8/- &bull; <strong>MV</strong> 10m &bull; <strong>ML</strong> 11 &bull; <strong>Skill</strong>
+    +2 &bull; <strong>Save</strong> 11+</p>
+
+    <p><em>Wastelanders.</em> Statistics suited to a Mutant Wasteland campaign of savage tribals and
+    ruthless raiders.</p>
+
+    <p>A legend in their own time, the sort of figure whole tribes follow into the waste.</p>
+
+    <p><em>Weapons.</em> This NPC fights with whatever gear it carries; drop weapon items onto the
+    sheet to arm it. Its Damage Bonus of +5 is already set and applies to every weapon damage
+    roll.</p>
+
+    <p><em>Special abilities.</em> The stat line marks 3 picks from the Human Special Abilities list
+    (AWN p.215), reproduced on this sheet.</p>
+
+    <p><strong>Common Human Weapon Loadouts</strong></p>
+
+    <ul>
+
+    <li><strong>Desperate Refugee:</strong> Knife, 40% chance of a Light or Heavy Pistol</li>
+
+    <li><strong>Neighborhood Militia:</strong> Knife, 50% chance of a Rifle or Shotgun, otherwise an
+    axe or melee weapon</li>
+
+    <li><strong>Wasteland Tribal:</strong> Knife, Spear, 50% chance for a primitive bow</li>
+
+    <li><strong>Hardened Modern Survivor:</strong> Knife, Rifle or Shotgun, 20% chance of 1d4 frag
+    grenades</li>
+
+    <li><strong>Modern Soldier:</strong> Knife, Combat Rifle, 1d4 frag grenades</li>
+
+    <li><strong>Poor Raider:</strong> Melee weapon, 20% chance of a Pistol, Rifle, or Shotgun</li>
+
+    <li><strong>Veteran Raider:</strong> Melee weapon, Rifle or Shotgun, 20% chance of it being a
+    combat version of the gun</li>
+
+    <li><strong>Raider Boss:</strong> Knife, Combat Rifle or Combat Shotgun, 1d6 grenades of
+    choice</li>
+
+    </ul>
+
+    <p>For ammo, NPCs will usually have loaded guns and 1d2 extra magazines on their person.</p>
+  species: Human
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 16
+  meleeAc: 16
+  ab: 12
+  meleeAb: 12
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: primitive
+  skillBonus: 2
+  attacks:
+    damage: ""
+    bonusDamage: 5
+    number: 2
+    name: ""
+    trauma:
+      die: ""
+      rating: null
+    shock:
+      dmg: "8"
+      ac: "-"
+  hitDice: "8"
+  saves: 11
+  moralScore: 11
+  reaction: unknown
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: false
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items:
+  - name: Human Special Abilities (3 picks)
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: >-
+        <p>The special combat powers below might derive from mutations, latent psychic abilities,
+        customized tech, or sheer natural talent. Enemies with asterisks behind their hit dice will
+        usually have one or more of these abilities, but the occasional lucky grunt might have one
+        as well.</p>
+
+        <ul>
+
+        <li><strong>Berserker:</strong> When reduced to zero hit points, the NPC can continue acting
+        for 1d4+1 rounds before becoming Mortally Wounded, provided they try to kill someone each
+        round.</li>
+
+        <li><strong>Body Shield:</strong> If a minion or helpless victim is within melee range when
+        the NPC is hit, as an Instant action they can shunt the damage to them.</li>
+
+        <li><strong>Bonus Firepower:</strong> The NPC and their allies have access to a heavy
+        weapon, high explosives, or other unexpectedly serious combat gear.</li>
+
+        <li><strong>Bulletproof:</strong> The NPC's natural Armor Class is 20, or +2 if already 20
+        or higher.</li>
+
+        <li><strong>Crushing Blow:</strong> The NPC adds their hit dice to the damage done by a
+        weapon hit.</li>
+
+        <li><strong>Fleet of Foot:</strong> The NPC gains a bonus Move action each round.</li>
+
+        <li><strong>Ghost:</strong> The NPC has the benefit of the Ghost Edge.</li>
+
+        <li><strong>Greased Lightning:</strong> The NPC gets a bonus Main Action each round.</li>
+
+        <li><strong>Guns Blazing:</strong> When shooting, the NPC can make twice as many attacks as
+        usual with a single Main Action.</li>
+
+        <li><strong>Hard Case:</strong> The NPC has eight hit points for each of their hit
+        dice.</li>
+
+        <li><strong>Lethal Aim:</strong> The NPC gets a +2 bonus to all Trauma Rolls they might
+        make, if the campaign uses Traumatic Hit rules.</li>
+
+        <li><strong>Living Banner:</strong> The NPC's Morale becomes 12, and their immediate allies
+        automatically pass all Morale checks.</li>
+
+        <li><strong>Luck of the Damned:</strong> Once per scene, as an Instant action, the NPC can
+        automatically make a saving throw or negate a weapon hit against them.</li>
+
+        <li><strong>Nine Lives:</strong> The first time the NPC is reduced to zero hit points in a
+        week by a survivable injury, they regain half their maximum HP.</li>
+
+        <li><strong>Only a Flesh Wound:</strong> The NPC's Trauma Target is 8 instead of the usual
+        6, if the campaign uses Traumatic Hit rules.</li>
+
+        <li><strong>Paranoid:</strong> The NPC and their group cannot be surprised or suffer from
+        Execution Attacks.</li>
+
+        <li><strong>Rallying Cry:</strong> Once per scene, as a Main Action, the NPC can rally all
+        allies within 30 meters, giving them 1d8 bonus HP for the rest of the scene and getting any
+        non-extremely-dead allies back on their feet until the scene ends.</li>
+
+        <li><strong>Sure Shot:</strong> The NPC's hit bonus is increased by their hit dice.</li>
+
+        <li><strong>Toxic Blades:</strong> The NPC's melee hits, but not Shock, inflict 1d6
+        additional System Strain, leaving the victim Mortally Wounded if that would put them over
+        their maximum.</li>
+
+        <li><strong>Unshockable:</strong> The NPC is immune to Shock damage.</li>
+
+        <li><strong>Veteran's Luck:</strong> The NPC has the benefit of the Veteran's Luck
+        Edge.</li>
+
+        <li><strong>Wall of Lead:</strong> As a Main Action, the NPC can blaze away with a gun to
+        use Suppressive Fire rules against as many targets in range as they have bullets left.</li>
+
+        </ul>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: 2BYcPfVDhMgrOsOs
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!lRnK1Vu3irTePTe4.2BYcPfVDhMgrOsOs"
+effects: []
+prototypeToken:
+  name: Great Hero
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/game-icons.net/weapons-icons/winged-sword.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: lRnK1Vu3irTePTe4
+ownership:
+  default: 0
+sort: 1700000
+flags: {}
+_key: "!actors!lRnK1Vu3irTePTe4"

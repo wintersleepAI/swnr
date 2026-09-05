@@ -20,7 +20,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       dmg: SWNShared.diceString("0"),
       ac: SWNShared.requiredNumber(10),
     });
-    schema.ab = SWNShared.requiredNumber(0, -10);
+    schema.ab = SWNShared.diceString("0", true, false);
     schema.ammo = new fields.SchemaField({
       longReload: new fields.BooleanField({ initial: false }),
       suppress: new fields.BooleanField({ initial: false }),
@@ -83,7 +83,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       this.ammo.value > 0
     );
   }
-  
+
   safeDamageRoll(damageRoll) {
     if (!Roll.validate(damageRoll.formula)) {
       damageRoll = new Roll("1d0");
@@ -127,7 +127,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
     let gearCondition = null;
     if (game.settings.get("swnr", "useAWNGearCondition")) {
       gearCondition = this.condition;
-    } 
+    }
     const rollData = {
       actor: actor.getRollData(),
       weapon: this,
@@ -140,12 +140,12 @@ export default class SWNWeapon extends SWNBaseGearItem {
       attackRollDie,
     };
     let hitExplainTip = "1d20 +burst +mod +CharAB +WpnAB +Stat +Skill";
-
     let dieString =
       "@attackRollDie + @burstFire + @modifier + @actor.ab + @weapon.ab + @stat + @effectiveSkillRank";
+
+    // if using CWN armor and NPC grab melee AB.
     const useA = game.settings.get("swnr", "useCWNArmor") ? true : false;
-    if (useA && item.system.isMelee &&
-      (actor.type == "character" || actor.type == "npc")) {
+    if (useA && item.system.isMelee && actor.type == "npc") {
       dieString =
         "@attackRollDie + @burstFire + @modifier + @actor.meleeAb + @weapon.ab + @stat + @effectiveSkillRank";
       hitExplainTip = "1d20 +burst +mod +CharMeleeAB +WpnAB +Stat +Skill";
@@ -177,7 +177,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       damageFormula: damageRoll.formula,
       damageExplain: damageExplainTip,
     };
-  
+
 
     // Roll Damage automatically if the setting is enabled
     const damageRollEnabled = game.settings.get("swnr", "damageRoll");
@@ -226,14 +226,32 @@ export default class SWNWeapon extends SWNBaseGearItem {
     let shock_roll = null;
     // Show shock damage
     if (game.settings.get("swnr", "addShockMessage")) {
-      if (this.shock && this.shock.dmg != null && this.shock.dmg != "" && this.shock.dmg != "0") {
-        shock_content = `Shock Damage  AC ${this.shock.ac}`;
-        let _shockRoll = new Roll(
-          this.shock.dmg + " + @stat " +
-          (this.skillBoostsShock ? ` + ${damageBonus}` : ""),
-          rollData
-        );
-        _shockRoll = this.safeDamageRoll(_shockRoll); 
+      let shockFormula = null;
+
+      const npcShock = actor?.type === "npc" ? actor.system.attacks.shock : null;
+      if (npcShock?.dmg && npcShock.dmg !== "0") {
+        shockFormula = `${npcShock.dmg}`;
+      } else if (
+        this.shock &&
+        this.shock.dmg != null &&
+        this.shock.dmg != "" &&
+        this.shock.dmg != "0"
+      ) {
+        shockFormula =
+          this.shock.dmg +
+          " + @stat " +
+          (this.skillBoostsShock ? ` + ${damageBonus}` : "");
+      }
+
+      if (shockFormula) {
+        if (actor?.type == "npc" && actor.system.attacks.shock.ac) {
+          shock_content = `Shock Damage  AC ${actor.system.attacks.shock.ac}`;
+        } else {
+          shock_content = `Shock Damage  AC ${this.shock.ac}`;
+        }
+
+        let _shockRoll = new Roll(shockFormula, rollData);
+        _shockRoll = this.safeDamageRoll(_shockRoll);
         await _shockRoll.roll();
         shock_roll = await _shockRoll.render();
         rollArray.push(_shockRoll);
@@ -421,6 +439,7 @@ export default class SWNWeapon extends SWNBaseGearItem {
       // check if there is 2nd stat name and its mod is better
       if (
         actor?.type == "character" &&
+        statName != "ask" && 
         secStatName != null &&
         secStatName != "none" &&
         actor.system.stats[statName].mod <

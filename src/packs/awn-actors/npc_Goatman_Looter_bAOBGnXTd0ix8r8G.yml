@@ -1,0 +1,212 @@
+name: Goatman Looter
+type: npc
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/goat.svg
+folder: mGtKDEaZMdwkNIKr
+system:
+  health:
+    value: 5
+    max: 5
+  biography: >-
+    <p><strong>HD</strong> 1 &bull; <strong>AC</strong> 15 &bull; <strong>Atk</strong> +3 &bull;
+    <strong>Dmg</strong> wpn &bull; <strong>TR</strong> wpn &bull; <strong>Shock</strong> wpn &bull;
+    <strong>MV</strong> 10m &bull; <strong>ML</strong> 9 &bull; <strong>Skill</strong> +1 &bull;
+    <strong>Save</strong> 15+</p>
+
+    <p>Spike-horned and slender, the goatfolk of the hills and mountains are notoriously fractious,
+    troublesome, and lascivious. Every billy or nanny has a natural disposition to ignore any rules
+    or demands made by someone else and an intrinsic desire to prove themselves independent and
+    self-sufficient. Among their own kind, status is based on altitude; skill and daring are
+    celebrated as "high" virtues, and the most socially-dominant goatman is always at the highest
+    physical point of any village.</p>
+
+    <p>Goatfolk are rarely an organized threat to baseline humans, but they are notorious raiders
+    and thieves and are often unwelcome in human communities. This, of course, just makes some of
+    them want all the more badly to go there.</p>
+
+    <p><em>Weapons.</em> This NPC fights with whatever gear it carries; drop weapon items onto the
+    sheet to arm it.</p>
+  species: Beastfolk
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 15
+  meleeAc: 15
+  ab: 3
+  meleeAb: 3
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: primitive
+  skillBonus: 1
+  attacks:
+    damage: ""
+    bonusDamage: 0
+    number: 1
+    name: ""
+    trauma:
+      die: ""
+      rating: null
+    shock:
+      dmg: "0"
+      ac: ""
+  hitDice: "1"
+  saves: 15
+  moralScore: 9
+  reaction: unknown
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: false
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items:
+  - name: Goatfolk Origin Focus
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: >-
+        <p>Gain Exert as a bonus skill. Gain a +1 bonus to your Dexterity or Charisma modifier and a
+        -1 penalty to your Wisdom or Strength modifier. You automatically succeed at any
+        non-impossible climbing checks of slopes, cliffs, or trees. You are immune to
+        mind-influencing effects from magic, tech, or psionics, and do not even notice when they are
+        attempted against you.</p>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: x9XoulB7QbBajgSJ
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!bAOBGnXTd0ix8r8G.x9XoulB7QbBajgSJ"
+effects: []
+prototypeToken:
+  name: Goatman Looter
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/goat.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: bAOBGnXTd0ix8r8G
+ownership:
+  default: 0
+sort: 300000
+flags: {}
+_key: "!actors!bAOBGnXTd0ix8r8G"

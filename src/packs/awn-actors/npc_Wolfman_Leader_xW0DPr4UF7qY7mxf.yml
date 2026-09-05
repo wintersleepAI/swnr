@@ -1,0 +1,208 @@
+name: Wolfman Leader
+type: npc
+img: systems/swnr/assets/icons/game-icons.net/animal-icons/wolf-head.svg
+folder: mGtKDEaZMdwkNIKr
+system:
+  health:
+    value: 27
+    max: 27
+  biography: >-
+    <p><strong>HD</strong> 6 &bull; <strong>AC</strong> 16 &bull; <strong>Atk</strong> +9 &bull;
+    <strong>Dmg</strong> wpn+2 &bull; <strong>TR</strong> wpn &bull; <strong>Shock</strong> wpn+2
+    &bull; <strong>MV</strong> 10m &bull; <strong>ML</strong> 9 &bull; <strong>Skill</strong> +2
+    &bull; <strong>Save</strong> 12+</p>
+
+    <p>The strongest of a wolfman pack leads it. "Domesticated" subtypes derived from human pets
+    have a different psychology; these "dogfolk" have an inbred need for human companionship and an
+    almost instinctive desire to follow a human leader. Some "bad dogs" manage to overcome their own
+    instincts through willpower or sheer mistreatment and can sometimes become leaders of rebel
+    packs or vicious raiders. The emotional trauma of their rebellion tends to make them highly
+    unstable, however, and prone to lashing out at perceived threats.</p>
+
+    <p><em>Weapons.</em> This NPC fights with whatever gear it carries; drop weapon items onto the
+    sheet to arm it. Its Damage Bonus of +2 is already set and applies to every weapon damage roll.
+    Its Shock is that of its weapon, +2.</p>
+  species: Beastfolk
+  access:
+    value: 1
+    max: 1
+  traumaTarget: 6
+  baseAc: 16
+  meleeAc: 16
+  ab: 9
+  meleeAb: 9
+  initiative:
+    mod: null
+  systemStrain:
+    value: 0
+    permanent: 0
+  pools: {}
+  effortCommitments: {}
+  speed: 10
+  cyberdecks: []
+  health_max_modified: 0
+  armorType: primitive
+  skillBonus: 2
+  attacks:
+    damage: ""
+    bonusDamage: 2
+    number: 1
+    name: ""
+    trauma:
+      die: ""
+      rating: null
+    shock:
+      dmg: "0"
+      ac: ""
+  hitDice: "6"
+  saves: 12
+  moralScore: 9
+  reaction: unknown
+  homeworld: ""
+  faction: ""
+  notes:
+    left: {}
+    right: {}
+    public: {}
+  baseSoakTotal:
+    value: 0
+    max: 0
+  tweak:
+    showCyberware: false
+    showPsychic: false
+    showArts: false
+    showSpells: false
+    showAdept: false
+    showMutation: false
+    showPoolsInHeader: false
+    showPoolsInPowers: false
+items:
+  - name: Wolfman Origin Focus
+    type: feature
+    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    system:
+      description: >-
+        <p>Gain Notice as a bonus skill. Gain a +1 bonus to your Strength or Dexterity modifier and
+        a -1 penalty to your Intelligence modifier. You count as two allies for all Swarm Attack
+        support actions you take and you gain a +1 bonus to hit in melee if an ally is also
+        adjacent.</p>
+      favorite: false
+      level: 0
+      type: feature
+      poolsGranted: []
+    _id: 5uzFMIUn2Qq2VUUY
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    folder: null
+    flags: {}
+    sort: 0
+    effects: []
+    ownership:
+      default: 0
+    _key: "!actors.items!xW0DPr4UF7qY7mxf.5uzFMIUn2Qq2VUUY"
+effects: []
+prototypeToken:
+  name: Wolfman Leader
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/game-icons.net/animal-icons/wolf-head.svg
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: -1
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_id: xW0DPr4UF7qY7mxf
+ownership:
+  default: 0
+sort: 1100000
+flags: {}
+_key: "!actors!xW0DPr4UF7qY7mxf"

@@ -1,0 +1,44 @@
+name: Field Portable
+type: shipFitting
+_id: GgDkwOW5Yt9rxFHT
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: LWemrT7tS2V37WNs
+system:
+  description: >-
+    <h3>Vehicle Fitting</h3><p><strong>Scrap:</strong> 100 &bull; <strong>TL:</strong> 3 &bull;
+    <strong>Power:</strong> 0 &bull; <strong>Mass:</strong> 2 &bull; <strong>Min. Size:</strong>
+    Small &bull; <strong>Min. Skill:</strong> Fix-2</p><h3>Description</h3><p>Only Small or Medium
+    vehicles can take this option, allowing them to be broken down into easily-portable parts
+    packages. Small vehicles turn into 30 items of Encumbrance and Medium ones into 150. Disassembly
+    takes 30 minutes for a Small vehicle and 3 hours for a Medium one, with reassembly taking four
+    times as long.</p>
+  favorite: false
+  tl: 3
+  cost: 0
+  power: 0
+  mass: 2
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: s
+  broken: false
+  destroyed: false
+  juryRigged: false
+  type: vehicle
+  effect: Vehicle breaks down into portable packages.
+effects: []
+sort: 9000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!GgDkwOW5Yt9rxFHT"

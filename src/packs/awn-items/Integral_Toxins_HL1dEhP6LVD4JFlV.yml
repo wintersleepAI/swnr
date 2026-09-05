@@ -1,0 +1,57 @@
+name: Integral Toxins
+type: item
+_id: HL1dEhP6LVD4JFlV
+img: systems/swnr/assets/icons/game-icons.net/item-icons/circuitry.svg
+folder: m3hPId9sEuUl8U64
+system:
+  description: >-
+    <h3>Weapon Mod</h3><p><strong>Skill:</strong> Fix-2 &bull; <strong>Scrap Required:</strong> 30
+    &bull; <strong>Special Tech:</strong> 1</p><p><strong>Effect:</strong> Gain a +2 poison bonus to
+    damage and Shock.</p><h3>Description</h3><p>A melee or thrown weapon is impregnated with
+    numerous microcells of an advanced hemotoxin, the cells rupturing on impact with a target. The
+    weapon does +2 damage and Shock to subjects not immune to poison.</p><p><em>This mod is only
+    appropriate for sci-fi settings or other campaigns with advanced tech.</em></p>
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 0
+  cost: 0
+  tl: null
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: null
+    diceSize: null
+    diceBonus: null
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+sort: 5000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!HL1dEhP6LVD4JFlV"

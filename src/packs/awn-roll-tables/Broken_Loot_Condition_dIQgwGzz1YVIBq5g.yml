@@ -1,0 +1,182 @@
+name: Broken Loot Condition
+img: icons/svg/d20-grey.svg
+description: >-
+  <p>Relics dragged out of a centuries-old ruin tend not to be in the best possible condition.
+  <em>Ashes Without Number</em> p. 74.</p>
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: nNT08gwngCuoF5AS
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!dIQgwGzz1YVIBq5g.nNT08gwngCuoF5AS"
+    description: >-
+      Roll again; it looks like that condition, but will be ruined on first use if not first
+      repaired
+    name: ""
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: 6A2ZnffABsLztWRq
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!dIQgwGzz1YVIBq5g.6A2ZnffABsLztWRq"
+    description: Heavy Damage
+    name: ""
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 4
+    drawn: false
+    _id: dJeGhhuLE9mRqvfp
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!dIQgwGzz1YVIBq5g.dJeGhhuLE9mRqvfp"
+    description: Moderate Damage
+    name: ""
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 6
+    drawn: false
+    _id: yvjkfHYGbXuTY8n1
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!dIQgwGzz1YVIBq5g.yvjkfHYGbXuTY8n1"
+    description: Light Damage
+    name: ""
+  - type: text
+    weight: 1
+    range:
+      - 7
+      - 8
+    drawn: false
+    _id: km0KASMGApt6WlUl
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!dIQgwGzz1YVIBq5g.km0KASMGApt6WlUl"
+    description: Worn
+    name: ""
+  - type: text
+    weight: 1
+    range:
+      - 9
+      - 9
+    drawn: false
+    _id: cxAXPcfvGeFwMg4P
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!dIQgwGzz1YVIBq5g.cxAXPcfvGeFwMg4P"
+    description: Perfect, but unloaded or discharged
+    name: ""
+  - type: text
+    weight: 1
+    range:
+      - 10
+      - 10
+    drawn: false
+    _id: 32VrSCCYqmeFTCcI
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!dIQgwGzz1YVIBq5g.32VrSCCYqmeFTCcI"
+    description: Perfect and fully-charged or loaded
+    name: ""
+replacement: true
+displayRoll: true
+folder: RFQ0O4psgnIQCx2M
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+formula: 1d10
+_id: dIQgwGzz1YVIBq5g
+sort: 300000
+_key: "!tables!dIQgwGzz1YVIBq5g"

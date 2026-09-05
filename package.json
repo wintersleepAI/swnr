@@ -8,6 +8,7 @@
     "compile-release-notes": "node scripts/compile-release-notes.mjs",
     "pack-compendium": "node scripts/pack-compendium.mjs",
     "unpack-compendium": "node scripts/unpack-compendium.mjs",
+    "normalize-icons": "node scripts/normalize-icon-svgs.mjs",
     "convert-yaml": "node scripts/conversion/convert-yaml.mjs",
     "convert-csv": "node scripts/csv-import/csv-to-yaml.mjs",
     "local-release": "npm run build && npm run compile-release-notes && npm run pack-compendium"

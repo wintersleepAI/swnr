@@ -1,0 +1,57 @@
+name: Lead Lined
+type: item
+_id: l12cVfpOP1elLWlH
+img: systems/swnr/assets/icons/game-icons.net/item-icons/circuitry.svg
+folder: zwGahHIUGGI0hfTh
+system:
+  description: >-
+    <h3>Armor Mod</h3><p><strong>Skill:</strong> Fix-1 &bull; <strong>Scrap Required:</strong> 5
+    &bull; <strong>Special Tech:</strong> 0</p><p><strong>Effect:</strong> +1 Enc, but increase
+    radiation save interval.</p><h3>Description</h3><p>The armor is lined with dense,
+    radiation-resistant materials and equipped with a breathing filter. The time interval for
+    radiation saves is increased by one step, but the suit’s Encumbrance increases by 1 point as
+    well.</p>
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 0
+  cost: 0
+  tl: null
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: null
+    diceSize: null
+    diceBonus: null
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+sort: 5000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!l12cVfpOP1elLWlH"

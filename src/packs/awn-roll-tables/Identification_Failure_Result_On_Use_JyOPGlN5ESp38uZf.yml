@@ -1,0 +1,210 @@
+name: Identification Failure Result On Use
+img: icons/svg/d20-grey.svg
+description: <p>Identifying Mysterious Tech, <em>Ashes Without Number</em> p. 103.</p>
+results:
+  - type: text
+    weight: 1
+    range:
+      - 1
+      - 1
+    drawn: false
+    _id: JPXBIEYdjRMNj2Gz
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!JyOPGlN5ESp38uZf.JPXBIEYdjRMNj2Gz"
+    description: It melts, blows up, or short-circuits, doing 2d6 damage to the user.
+    name: ""
+  - type: text
+    weight: 1
+    range:
+      - 2
+      - 2
+    drawn: false
+    _id: qTVr2IgInV0RnVhG
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!JyOPGlN5ESp38uZf.qTVr2IgInV0RnVhG"
+    description: >-
+      It completely drains its power cell and fails to function. The item remains intact and another
+      identification attempt can be made with a +2 bonus.
+    name: ""
+  - type: text
+    weight: 1
+    range:
+      - 3
+      - 3
+    drawn: false
+    _id: luyEDMfuzthbdmNa
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!JyOPGlN5ESp38uZf.luyEDMfuzthbdmNa"
+    description: It buzzes or wails loudly for 1 to 3 rounds before exploding as in result 1.
+    name: ""
+  - type: text
+    weight: 1
+    range:
+      - 4
+      - 4
+    drawn: false
+    _id: Efr6lmcrbunQcHSP
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!JyOPGlN5ESp38uZf.Efr6lmcrbunQcHSP"
+    description: >-
+      It is aimed or directed in a random direction, using 1d12 as a clockface. The item remains
+      intact and another identification attempt can be made with a +2 bonus.
+    name: ""
+  - type: text
+    weight: 1
+    range:
+      - 5
+      - 5
+    drawn: false
+    _id: 9vfMM2TARe8UKZ15
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!JyOPGlN5ESp38uZf.9vfMM2TARe8UKZ15"
+    description: >-
+      It does absolutely nothing for 1d6 rounds before it goes off. The item remains intact and
+      another identification attempt can be made with a +2 bonus.
+    name: ""
+  - type: text
+    weight: 1
+    range:
+      - 6
+      - 6
+    drawn: false
+    _id: FqQpkzEZ4lpYfWBN
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!JyOPGlN5ESp38uZf.FqQpkzEZ4lpYfWBN"
+    description: It functions normally once before melting down. If a single-use item, it simply disintegrates.
+    name: ""
+  - type: text
+    weight: 1
+    range:
+      - 7
+      - 7
+    drawn: false
+    _id: YAEogLHVobxqsHzl
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!JyOPGlN5ESp38uZf.YAEogLHVobxqsHzl"
+    description: >-
+      It functions, but shocks, burns, or otherwise damages the user for 2d6 damage. The item
+      remains intact and another identification attempt can be made with a +2 bonus.
+    name: ""
+  - type: text
+    weight: 1
+    range:
+      - 8
+      - 8
+    drawn: false
+    _id: q6N0llU1TjxOQzE2
+    img: icons/svg/d20-black.svg
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: "13.348"
+      systemId: swnr
+      systemVersion: 2.3.2
+      createdTime: 1788523200000
+      modifiedTime: 1788523200000
+      lastModifiedBy: null
+    _key: "!tables.results!JyOPGlN5ESp38uZf.q6N0llU1TjxOQzE2"
+    description: >-
+      It works perfectly for 1d6 uses before exploding as per result 1. If a single-use item, roll
+      1d6; on a 1, it fails to function and injures the user as per result 1.
+    name: ""
+replacement: true
+displayRoll: true
+folder: RFQ0O4psgnIQCx2M
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+formula: 1d8
+_id: JyOPGlN5ESp38uZf
+sort: 500000
+_key: "!tables!JyOPGlN5ESp38uZf"
