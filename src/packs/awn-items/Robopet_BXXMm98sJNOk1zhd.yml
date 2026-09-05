@@ -1,0 +1,59 @@
+name: Robopet
+type: item
+_id: BXXMm98sJNOk1zhd
+img: systems/swnr/assets/icons/game-icons.net/item-icons/item-white.svg
+folder: IxJPC6OQpJZ1hVdG
+system:
+  description: >-
+    <h3>High-Tech Device</h3><p><strong>Category:</strong> Household Goods &bull;
+    <strong>Rarity:</strong> Uncommon</p><h3>Description</h3><p>This cat-sized robot pet functions
+    for one week per Type A cell. It behaves like a well-trained pet animal but its AI processors
+    are smart enough to obey simple commands. It can manipulate objects with the dexterity and
+    strength of a large housecat and has stats of 5 HP, AC 15, Move 10m, Save 15+, and Skill +1. It
+    self-repairs 1 HP per day.</p><h3>Power and Use</h3><p>Requires a Type A energy cell to
+    activate, and functions for one scene per use.</p><p>Unless specified otherwise, this device
+    requires a Main Action to trigger its activation.</p>
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 2
+  cost: 0
+  tl: 4
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: null
+    diceSize: null
+    diceBonus: null
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+sort: 36000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!BXXMm98sJNOk1zhd"

@@ -1,0 +1,57 @@
+name: Drone Cannon
+type: shipWeapon
+_id: mUDwZ7GWSAH1Lzjp
+img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+folder: 2dR5pNlA4LTNnKGU
+system:
+  description: >-
+    <h3>Vehicle Weapon</h3><p><strong>TL3 Scrap to Build:</strong> 50 &bull; <strong>Power:</strong>
+    1 &bull; <strong>Mass:</strong> 1 &bull; <strong>Min. Size:</strong>
+    Medium</p><h3>Description</h3><p>Drone cannons are heavy automatic weapons too bulky for human
+    portability. A round of firing costs 100 rounds of ammunition. This weapon’s Trauma Die can
+    inflict Traumatic Hits on drones, vehicles, and other machines.</p>
+  favorite: false
+  tl: 3
+  cost: 0
+  power: 1
+  mass: 1
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: m
+  broken: false
+  destroyed: false
+  juryRigged: false
+  type: vehicle
+  ab: 0
+  hardpoint: 1
+  qualities: Traumatic Hits on vehicles and drones
+  damage: 2d8
+  range:
+    normal: 200
+    max: 1000
+  stat: dex
+  ammo:
+    type: ammo
+    max: 10
+    value: 10
+  trauma:
+    die: 1d10
+    rating: 3
+    vehicle: true
+effects: []
+sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!mUDwZ7GWSAH1Lzjp"

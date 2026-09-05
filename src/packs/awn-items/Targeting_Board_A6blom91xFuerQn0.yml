@@ -1,0 +1,42 @@
+name: Targeting Board
+type: shipFitting
+_id: A6blom91xFuerQn0
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: LWemrT7tS2V37WNs
+system:
+  description: >-
+    <h3>Vehicle Fitting</h3><p><strong>Scrap:</strong> 25 &bull; <strong>TL:</strong> 3 &bull;
+    <strong>Power:</strong> 1 &bull; <strong>Mass:</strong> 1 &bull; <strong>Min. Size:</strong>
+    Medium &bull; <strong>Min. Skill:</strong> Fix-2</p><h3>Description</h3><p>A single unified
+    targeting board allows one gunner to manage up to three vehicle weapons instead of the one gun
+    per gunner that would usually be allowed.</p>
+  favorite: false
+  tl: 3
+  cost: 0
+  power: 1
+  mass: 1
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: m
+  broken: false
+  destroyed: false
+  juryRigged: false
+  type: vehicle
+  effect: One gunner manages up to three weapons.
+effects: []
+sort: 24000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!A6blom91xFuerQn0"

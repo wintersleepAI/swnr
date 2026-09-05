@@ -1,0 +1,56 @@
+name: Zen
+type: item
+_id: MVRT7aABN17VzJdg
+img: systems/swnr/assets/icons/game-icons.net/item-icons/health-capsule.svg
+folder: TUsSTt4ZBvdVpL6a
+system:
+  description: >-
+    <h3>Description</h3><p>A calming psychoactive tab occasionally forcibly prescribed by Harmony
+    Bureau psychologists to “troubled” citizens, a dose of Zen temporarily suppresses any Breakdown
+    or psychic scar the user may have for 24 hours, making it impossible to gain Stress during that
+    time. The enforced calm compels them to make a successful Mental save before any violent action,
+    however, with the action wasted if they fail.</p>
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 0
+  cost: 100
+  tl: 4
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: null
+    diceSize: null
+    diceBonus: null
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+sort: 11000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!MVRT7aABN17VzJdg"

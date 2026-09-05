@@ -9,13 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fixed compendium tokens using the bundled game-icons.net art rendering undersized on the canvas. Those SVGs declared no `width`/`height` attributes, so Foundry sized the texture from a fallback rather than the art. Affects the AWN and WWN actor compendiums.
 - The AWN Actors compendium is populated with the 95 stat blocks from *Creatures of the Wastes*, foldered by type (Animals, Beastfolk, Cyborgs, Humans, Mutant Animals, Mutant Humanoids, Robots, Zombies). Natural attacks ship as weapon items and named abilities as features; the shared Cyborg, Human, and Zombie special-ability menus are attached to the stat blocks that draw from them.
+- The AWN Items compendium is filled out from the Ashes Without Number Equipment chapter with 313 entries (in folders) covering weapons, mods, survival gear, pharmaceuticals, vehicle gear, and the 150 high-tech devices, and the chapter's d100 and dN tables ship as RollTables whose results link to the matching items.
+- The AWN Actors compendium gains the nine Equipment-chapter vehicles (Motorcycle, Micro Flyer, Car, Truck, Helicopter, Hovercycle, Gravcar, Gravtruck, Atmoflyer) in a Vehicles folder, with scrap cost, run hours, and fuel load recorded; km/h is left at 0 because AWN gives only the abstract Speed stat.
+
 
 ## [2.3.2] 2026-09-03 Misc fixes (initiative, fractional item attributes, and cyberdeck)
 - Fix on attack roll failing if first attribute was ask and second was set.
 - Weapon attack bonus accepts a dice formula or an annotated number (e.g. `1d4`, `2[cyberarm]`) instead of a plain number. Existing values are converted automatically. (Thanks @pandanielxd)
 - An NPC with shock damage on its stat block now uses it for every weapon attack, in place of the weapon's own shock. (Thanks @pandanielxd)
 - Fixed the melee attack bonus being applied to characters under the CWN armor setting. It is an NPC stat-block field with no character equivalent, so melee attacks were rolling a fixed 1 in place of the character's attack bonus.
-
 - Automate foundry package release via github actions
 - Initiative modifiers are no longer character-only: NPCs and ships can have one too. The character setting moved out of tweaks onto a shared attribute and should be migrated automatically on load.
 - A ship with no pilot assigned to the bridge now rolls its own initiative instead of nothing, and the ship's own initiative modifier applies whether or not a pilot is assigned.

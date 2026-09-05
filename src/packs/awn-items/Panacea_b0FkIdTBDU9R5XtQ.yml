@@ -1,0 +1,55 @@
+name: Panacea
+type: item
+_id: b0FkIdTBDU9R5XtQ
+img: systems/swnr/assets/icons/game-icons.net/item-icons/health-capsule.svg
+folder: TUsSTt4ZBvdVpL6a
+system:
+  description: >-
+    <p><strong>Skill:</strong> Heal-2</p><h3>Description</h3><p>This complex stim immediately cures
+    any non-biowarfare disease. Due to the unstable nanite substrate of the stim, however, there is
+    a 1 in 6 chance that it instead worsens the disease by one degree, or instantly kills the victim
+    of a Lethal disease.</p>
+  favorite: false
+  quantity: 1
+  bundle:
+    bundled: false
+    amount: null
+  encumbrance: 0
+  cost: 5000
+  tl: 4
+  location: stowed
+  quality: stock
+  noEncReadied: false
+  container:
+    isContainer: false
+    isOpen: true
+    capacity:
+      max: 0
+      value: 0
+  roll:
+    diceNum: null
+    diceSize: null
+    diceBonus: null
+  uses:
+    max: 1
+    value: 1
+    emptyQuantity: 0
+    consumable: none
+    ammo: none
+    keepEmpty: true
+effects: []
+sort: 4000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!b0FkIdTBDU9R5XtQ"

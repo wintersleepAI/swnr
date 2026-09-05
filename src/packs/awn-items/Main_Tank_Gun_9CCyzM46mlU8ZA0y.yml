@@ -1,0 +1,59 @@
+name: Main Tank Gun
+type: shipWeapon
+_id: 9CCyzM46mlU8ZA0y
+img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+folder: 2dR5pNlA4LTNnKGU
+system:
+  description: >-
+    <h3>Vehicle Weapon</h3><p><strong>TL3 Scrap to Build:</strong> 500 &bull;
+    <strong>Power:</strong> 1 &bull; <strong>Mass:</strong> 4 &bull; <strong>Min. Size:</strong>
+    Large</p><h3>Description</h3><p>Main tank gun attacks always target AC 10, and anyone within 10
+    meters of impact takes 1d20 damage if not behind heavy cover. They cannot be mounted on aircraft
+    or anything smaller than a tank or ground turret. Each round costs 10 units of TL3 scrap to
+    build. This weapon’s Trauma Die can inflict Traumatic Hits on drones, vehicles, and other
+    machines.</p>
+  favorite: false
+  tl: 3
+  cost: 0
+  power: 1
+  mass: 4
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: m
+  broken: false
+  destroyed: false
+  juryRigged: false
+  type: vehicle
+  ab: 0
+  hardpoint: 1
+  qualities: Always targets AC 10; 1d20 splash within 10m
+  damage: 4d12
+  range:
+    normal: 1000
+    max: 3000
+  stat: dex
+  ammo:
+    type: ammo
+    max: 1
+    value: 1
+  trauma:
+    die: 1d20
+    rating: 4
+    vehicle: true
+effects: []
+sort: 2000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!9CCyzM46mlU8ZA0y"

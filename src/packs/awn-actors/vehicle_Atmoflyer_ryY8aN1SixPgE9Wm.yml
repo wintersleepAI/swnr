@@ -1,0 +1,153 @@
+name: Atmoflyer
+type: vehicle
+_id: ryY8aN1SixPgE9Wm
+img: systems/swnr/assets/icons/vehicle.png
+folder: 5C8hQFVu9q5IFmHe
+system:
+  description: >-
+    <p><strong>Scrap</strong> — &bull; <strong>Speed</strong> 4 &bull; <strong>Armor</strong> 8
+    &bull; <strong>TT</strong> 9 &bull; <strong>AC</strong> 14 &bull; <strong>HP</strong> 30 &bull;
+    <strong>Crew</strong> 5 &bull; <strong>Power</strong> 4 &bull; <strong>Mass</strong> 15 &bull;
+    <strong>Size</strong> Large &bull; <strong>Hardpoints</strong> 2</p><p>One of a variety of
+    high-tech helicopters, VTOL aircraft, or jets, a properly maintained atmoflyer can reach any
+    point on the planet within an hour and land on any reasonably flat patch of ground. In the
+    example Terran Mandate campaign setting provided in this book, however, their use has been
+    sharply curtailed by the planet’s orbital defense grid, which automatically annihilates any
+    inorganic flying vehicle that dares to leave the ground. An atmoflyer is too complex to rebuild
+    from scrap.</p>
+  health:
+    value: 30
+    max: 30
+  cost: 0
+  ac: 14
+  traumaTarget: 9
+  armor:
+    value: 8
+    max: 8
+  speed: 4
+  crew:
+    min: 1
+    current: 1
+    max: 5
+  crewMembers: []
+  tl: 4
+  mods: ""
+  power:
+    value: 4
+    max: 4
+  mass:
+    value: 15
+    max: 15
+  hardpoints:
+    value: 2
+    max: 2
+  kmph: 0
+  tonnage: 0
+  size: l
+  runHours:
+    value: 3
+    max: 3
+  fuelNeeded: 2
+  fuelType: typeBPower
+  cargo:
+    value: 0
+    max: 1000
+  cargoCarried: []
+items: []
+effects: []
+prototypeToken:
+  name: Atmoflyer
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/vehicle.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: 0
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+ownership:
+  default: 0
+sort: 8000
+flags: {}
+_key: "!actors!ryY8aN1SixPgE9Wm"

@@ -1,0 +1,149 @@
+name: Gravcar
+type: vehicle
+_id: oGbV56EXLjaZhB2P
+img: systems/swnr/assets/icons/vehicle.png
+folder: 5C8hQFVu9q5IFmHe
+system:
+  description: >-
+    <p><strong>Scrap</strong> 100 &bull; <strong>Speed</strong> 2 &bull; <strong>Armor</strong> 4
+    &bull; <strong>TT</strong> 11 &bull; <strong>AC</strong> 11 &bull; <strong>HP</strong> 25 &bull;
+    <strong>Crew</strong> 5 &bull; <strong>Power</strong> 3 &bull; <strong>Mass</strong> 8 &bull;
+    <strong>Size</strong> Medium &bull; <strong>Hardpoints</strong> 1</p><p>A common gravitic
+    vehicle for individual drivers or light utility duty, gravcars share the terrain and boosting
+    advantages of hovercycles.</p>
+  health:
+    value: 25
+    max: 25
+  cost: 0
+  ac: 11
+  traumaTarget: 11
+  armor:
+    value: 4
+    max: 4
+  speed: 2
+  crew:
+    min: 1
+    current: 1
+    max: 5
+  crewMembers: []
+  tl: 4
+  mods: ""
+  power:
+    value: 3
+    max: 3
+  mass:
+    value: 8
+    max: 8
+  hardpoints:
+    value: 1
+    max: 1
+  kmph: 0
+  tonnage: 0
+  size: m
+  runHours:
+    value: 6
+    max: 6
+  fuelNeeded: 1
+  fuelType: typeBPower
+  cargo:
+    value: 0
+    max: 100
+  cargoCarried: []
+items: []
+effects: []
+prototypeToken:
+  name: Gravcar
+  displayName: 0
+  actorLink: false
+  appendNumber: false
+  prependAdjective: false
+  width: 1
+  height: 1
+  texture:
+    src: systems/swnr/assets/icons/vehicle.png
+    anchorX: 0.5
+    anchorY: 0.5
+    offsetX: 0
+    offsetY: 0
+    fit: contain
+    scaleX: 1
+    scaleY: 1
+    rotation: 0
+    tint: "#ffffff"
+    alphaThreshold: 0.75
+  lockRotation: false
+  rotation: 0
+  alpha: 1
+  disposition: 0
+  displayBars: 0
+  bar1:
+    attribute: health
+  bar2:
+    attribute: null
+  light:
+    negative: false
+    priority: 0
+    alpha: 0.5
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    attenuation: 0.5
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+  sight:
+    enabled: false
+    range: 0
+    angle: 360
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    brightness: 0
+    saturation: 0
+    contrast: 0
+  detectionModes: []
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  flags: {}
+  randomImg: false
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+ownership:
+  default: 0
+sort: 6000
+flags: {}
+_key: "!actors!oGbV56EXLjaZhB2P"

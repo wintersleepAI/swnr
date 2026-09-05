@@ -1,0 +1,42 @@
+name: Power System, Large
+type: shipFitting
+_id: liUOGMf4C4OB62vv
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: LWemrT7tS2V37WNs
+system:
+  description: >-
+    <h3>Vehicle Fitting</h3><p><strong>Scrap:</strong> 100 &bull; <strong>TL:</strong> 4 &bull;
+    <strong>Power:</strong> +8 granted &bull; <strong>Mass:</strong> 5 &bull; <strong>Min.
+    Size:</strong> Large &bull; <strong>Min. Skill:</strong> Fix-3</p><h3>Description</h3><p>These
+    fittings add extra Power in battery capacity and electronic support at the cost of an additional
+    Mass burden.</p>
+  favorite: false
+  tl: 4
+  cost: 0
+  power: -8
+  mass: 5
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: l
+  broken: false
+  destroyed: false
+  juryRigged: false
+  type: vehicle
+  effect: +8 Power.
+effects: []
+sort: 20000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!liUOGMf4C4OB62vv"

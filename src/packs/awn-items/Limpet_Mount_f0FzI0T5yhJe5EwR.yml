@@ -1,0 +1,45 @@
+name: Limpet Mount
+type: shipFitting
+_id: f0FzI0T5yhJe5EwR
+img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+folder: LWemrT7tS2V37WNs
+system:
+  description: >-
+    <h3>Vehicle Fitting</h3><p><strong>Scrap:</strong> 50/100 &bull; <strong>TL:</strong> 3 &bull;
+    <strong>Power:</strong> 0 &bull; <strong>Mass:</strong> 3 &bull; <strong>Min. Size:</strong>
+    Medium &bull; <strong>Min. Skill:</strong> Fix-2</p><h3>Description</h3><p>An entire second
+    vehicle can be mounted with this fitting, Medium vehicles taking Small parasites and Large ones
+    taking Small or Medium. Adding a mount for a Small vehicle takes up 3 Mass while a Medium one
+    takes 6. Modifying a vehicle to be mounted costs 10% of its base scrap, but it can be launched
+    even while the parent vehicle is underway. These parasite vehicles are destroyed if the parent
+    is; otherwise, they take only half the damage the parent takes.</p>
+  favorite: false
+  tl: 3
+  cost: 0
+  power: 0
+  mass: 3
+  costMultiplier: false
+  powerMultiplier: false
+  massMultiplier: false
+  minClass: m
+  broken: false
+  destroyed: false
+  juryRigged: false
+  type: vehicle
+  effect: Carry an entire second vehicle.
+effects: []
+sort: 14000
+ownership:
+  default: 0
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  exportSource: null
+  coreVersion: "13.348"
+  systemId: swnr
+  systemVersion: 2.3.2
+  createdTime: 1788523200000
+  modifiedTime: 1788523200000
+  lastModifiedBy: null
+_key: "!items!f0FzI0T5yhJe5EwR"
