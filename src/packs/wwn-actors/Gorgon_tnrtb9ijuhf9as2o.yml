@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Gore
   type: weapon
+  img: modules/game-icons-net/whitetransparent/bull-horns.svg
   system:
     description: ''
     cost: 0
@@ -148,6 +149,7 @@ items:
   _key: '!actors.items!tnrtb9ijuhf9as2o.d29yto57rnycojst'
 - name: Charge
   type: item
+  img: modules/game-icons-net/whitetransparent/charging-bull.svg
   system:
     description: >-
       When not in melee. Requires a clear run of at least 20 yards. Gore
@@ -178,6 +180,7 @@ items:
   _key: '!actors.items!tnrtb9ijuhf9as2o.scoqyl4vsludkceu'
 - name: Petrifying Breath
   type: item
+  img: modules/game-icons-net/whitetransparent/stone-bust.svg
   system:
     description: >-
       Cloud 60' long, 10' wide. All in the cloud are turned to stone (save to

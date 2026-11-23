@@ -136,7 +136,7 @@ prototypeToken:
 items:
   - name: Heavy Pistol
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    img: modules/game-icons-net/whitetransparent/revolver.svg
     folder: null
     flags: {}
     _stats:
@@ -212,7 +212,7 @@ items:
   - name: Knife
     type: weapon
     _id: JX1Rfw3XHOHz15hC
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    img: modules/game-icons-net/whitetransparent/bowie-knife.svg
     system:
       description: ''
       favorite: false
@@ -282,7 +282,7 @@ items:
     _key: '!actors.items!yIRsQPPWDTU0RkXV.JX1Rfw3XHOHz15hC'
   - name: Ordinary Clothing
     type: armor
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+    img: modules/game-icons-net/whitetransparent/t-shirt.svg
     folder: null
     flags: {}
     _stats:

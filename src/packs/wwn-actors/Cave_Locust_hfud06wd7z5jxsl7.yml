@@ -109,6 +109,7 @@ prototypeToken:
 items:
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -146,6 +147,7 @@ items:
   _key: '!actors.items!hfud06wd7z5jxsl7.wdatkf2kd8f7198q'
 - name: Jump
   type: weapon
+  img: modules/game-icons-net/whitetransparent/jump-across.svg
   system:
     description: >-
       Very skittish. If attacked, usually flee by jumping up to 60' then
@@ -186,6 +188,7 @@ items:
   _key: '!actors.items!hfud06wd7z5jxsl7.hzc33tfihg59bzoo'
 - name: Spit
   type: weapon
+  img: modules/game-icons-net/whitetransparent/spill.svg
   system:
     description: >-
       Used defensively. 10' range. Target treated as AC 10. The affected
@@ -227,6 +230,7 @@ items:
   _key: '!actors.items!hfud06wd7z5jxsl7.t3vaomfod4t3jgdh'
 - name: Shriek
   type: item
+  img: modules/game-icons-net/whitetransparent/sonic-screech.svg
   system:
     description: >-
       If attacked or frightened, shriek to warn others. This may attract
@@ -257,6 +261,7 @@ items:
   _key: '!actors.items!hfud06wd7z5jxsl7.wbcjhhojga8nf8wj'
 - name: Poison Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/antibody.svg
   system:
     description: >-
       Immune to yellow mould and most poisons, due to their habit of eating
@@ -287,6 +292,7 @@ items:
   _key: '!actors.items!hfud06wd7z5jxsl7.s4913ktq85mubqd3'
 - name: Blend in with Stone
   type: item
+  img: modules/game-icons-net/whitetransparent/stone-wall.svg
   system:
     description: >-
       May be overlooked or mistaken for statues, due to their stony

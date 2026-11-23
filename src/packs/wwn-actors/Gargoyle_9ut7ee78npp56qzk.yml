@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Claw
   type: weapon
+  img: modules/game-icons-net/whitetransparent/claw.svg
   system:
     description: ''
     cost: 0
@@ -148,6 +149,7 @@ items:
   _key: '!actors.items!9ut7ee78npp56qzk.lsccxngtmppl7hz5'
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -185,6 +187,7 @@ items:
   _key: '!actors.items!9ut7ee78npp56qzk.8uzk071u7h50lhlt'
 - name: Horn
   type: weapon
+  img: modules/game-icons-net/whitetransparent/rhinoceros-horn.svg
   system:
     description: ''
     cost: 0
@@ -222,6 +225,7 @@ items:
   _key: '!actors.items!9ut7ee78npp56qzk.8vgbt1ev7w9zfqg1'
 - name: Blend In With Stone
   type: item
+  img: modules/game-icons-net/whitetransparent/stone-wall.svg
   system:
     description: May be overlooked or mistaken for inanimate statues.
     cost: 0
@@ -250,6 +254,7 @@ items:
   _key: '!actors.items!9ut7ee78npp56qzk.ztkdiw46b7cen7f9'
 - name: Guardians
   type: item
+  img: modules/game-icons-net/whitetransparent/guards.svg
   system:
     description: Almost always attack when approached.
     cost: 0
@@ -278,6 +283,7 @@ items:
   _key: '!actors.items!9ut7ee78npp56qzk.morrxvw3y86u29m6'
 - name: Spell Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/magic-shield.svg
   system:
     description: Unaffected by sleep or charm spells.
     cost: 0
@@ -306,6 +312,7 @@ items:
   _key: '!actors.items!9ut7ee78npp56qzk.gxdtju7hay8u9l1u'
 - name: Mundane Damage Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/shield.svg
   system:
     description: Can only be harmed by magical attacks.
     cost: 0

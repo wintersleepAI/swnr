@@ -113,6 +113,7 @@ prototypeToken:
 items:
 - name: Bow, Small
   type: weapon
+  img: modules/game-icons-net/whitetransparent/pocket-bow.svg
   system:
     description: >-
       Bows cover everything from the small self bows of horse archers to the
@@ -156,6 +157,7 @@ items:
   _key: '!actors.items!bp7eraz5ohglsnwo.oukk6qijh2ncxscw'
 - name: Sword, Short
   type: weapon
+  img: modules/game-icons-net/whitetransparent/gladius.svg
   system:
     description: >-
       Swords are common sidearms throughout the Latter Earth. The expense of

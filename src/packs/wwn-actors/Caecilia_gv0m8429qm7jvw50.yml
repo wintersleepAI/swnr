@@ -109,6 +109,7 @@ prototypeToken:
 items:
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: >-
       Swallow whole: On an attack roll of 19 or more. Inside the monster's
@@ -150,6 +151,7 @@ items:
   _key: '!actors.items!gv0m8429qm7jvw50.cliellnjw9yjw0dt'
 - name: Swallow Whole
   type: item
+  img: modules/game-icons-net/whitetransparent/swallower.svg
   system:
     description: >-
       On an attack roll of 19 or more. Inside the monster's belly: suffer 1d8

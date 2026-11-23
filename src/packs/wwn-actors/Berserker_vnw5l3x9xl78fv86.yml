@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Hammer, Great
   type: weapon
+  img: modules/game-icons-net/whitetransparent/warhammer.svg
   system:
     description: >-
       Hammers listed here are the fighting variety, narrow-headed and made for
@@ -150,6 +151,7 @@ items:
   _key: '!actors.items!vnw5l3x9xl78fv86.nvzotebqcp64kms8'
 - name: Axe, War
   type: weapon
+  img: modules/game-icons-net/whitetransparent/battle-axe.svg
   system:
     description: >-
       Axes given here are those fashioned for war; lighter and more agile than
@@ -191,6 +193,7 @@ items:
   _key: '!actors.items!vnw5l3x9xl78fv86.wdcscqba74acw2so'
 - name: Spear, Light
   type: weapon
+  img: modules/game-icons-net/whitetransparent/stone-spear.svg
   system:
     description: >-
       Spears, and their longer cousin the pike, are common military weapons
@@ -231,6 +234,7 @@ items:
   _key: '!actors.items!vnw5l3x9xl78fv86.8lqhrh0yi663u18h'
 - name: Battle Rage
   type: item
+  img: modules/game-icons-net/whitetransparent/enrage.svg
   system:
     description: >-
       +2 to hit humans and similar humanoids (e.g. orcs, goblins). Rage

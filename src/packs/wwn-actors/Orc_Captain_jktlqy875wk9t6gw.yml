@@ -124,6 +124,7 @@ prototypeToken:
 items:
 - name: Bow, Small
   type: weapon
+  img: modules/game-icons-net/whitetransparent/pocket-bow.svg
   system:
     description: >-
       Bows cover everything from the small self bows of horse archers to the
@@ -167,6 +168,7 @@ items:
   _key: '!actors.items!jktlqy875wk9t6gw.f4d0j3dsshmcuqam'
 - name: Sword, Long
   type: weapon
+  img: modules/game-icons-net/whitetransparent/broadsword.svg
   system:
     description: >-
       Swords are common sidearms throughout the Latter Earth. The expense of
@@ -207,6 +209,7 @@ items:
   _key: '!actors.items!jktlqy875wk9t6gw.wp7i7z5bm62rllef'
 - name: Axe, War
   type: weapon
+  img: modules/game-icons-net/whitetransparent/battle-axe.svg
   system:
     description: >-
       Axes given here are those fashioned for war; lighter and more agile than
@@ -248,6 +251,7 @@ items:
   _key: '!actors.items!jktlqy875wk9t6gw.ded9g9nqudlvfqcj'
 - name: Spear, Heavy
   type: weapon
+  img: modules/game-icons-net/whitetransparent/barbed-spear.svg
   system:
     description: >-
       Spears, and their longer cousin the pike, are common military weapons
@@ -288,6 +292,7 @@ items:
   _key: '!actors.items!jktlqy875wk9t6gw.r8okjh8yxlmro274'
 - name: Club, Great
   type: weapon
+  img: modules/game-icons-net/whitetransparent/spiked-bat.svg
   system:
     description: >-
       Clubs, staffs, and maces are of much the same genus, though the latter
@@ -328,6 +333,7 @@ items:
   _key: '!actors.items!jktlqy875wk9t6gw.l5z19tcez6b4nhei'
 - name: Hate the Sun
   type: item
+  img: modules/game-icons-net/whitetransparent/sun.svg
   system:
     description: '-1 to hit in full daylight.'
     cost: 0
@@ -356,6 +362,7 @@ items:
   _key: '!actors.items!jktlqy875wk9t6gw.nwox5tte73k7fu3g'
 - name: Craven
   type: item
+  img: modules/game-icons-net/whitetransparent/run.svg
   system:
     description: >-
       Afraid of larger or stronger-looking creatures, though leaders may force

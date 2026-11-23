@@ -110,6 +110,7 @@ prototypeToken:
 items:
 - name: Touch
   type: weapon
+  img: modules/game-icons-net/whitetransparent/skeletal-hand.svg
   system:
     description: >-
       Acid: After a successful attack, sticks to the victim and exudes acid.
@@ -150,6 +151,7 @@ items:
   _key: '!actors.items!smivpsid61ou2qwq.dmbqudgsrfgam2om'
 - name: Acid
   type: item
+  img: modules/game-icons-net/whitetransparent/acid.svg
   system:
     description: >-
       Acid: After a successful attack, sticks to the victim and exudes acid.
@@ -181,6 +183,7 @@ items:
   _key: '!actors.items!smivpsid61ou2qwq.ojnl19zyuoj72omq'
 - name: Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/shield.svg
   system:
     description: Unharmed by all attacks except cold or fire.
     cost: 0
@@ -209,6 +212,7 @@ items:
   _key: '!actors.items!smivpsid61ou2qwq.9l184n2xi6dgy73c'
 - name: Division
   type: item
+  img: modules/game-icons-net/whitetransparent/split-body.svg
   system:
     description: >-
       Lightning or attacks with weapons cause the jelly to divide into 1d4+1
@@ -239,6 +243,7 @@ items:
   _key: '!actors.items!smivpsid61ou2qwq.t4k7uivv5vdjfxew'
 - name: Seep
   type: item
+  img: modules/game-icons-net/whitetransparent/dripping-goo.svg
   system:
     description: Can squeeze through small holes and cracks.
     cost: 0

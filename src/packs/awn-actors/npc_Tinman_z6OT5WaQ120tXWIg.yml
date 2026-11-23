@@ -76,7 +76,7 @@ system:
 items:
   - name: Expert System
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/artificial-intelligence.svg
     system:
       description: >-
         <p>The bot is competent within its function but lacks any true general intelligence or
@@ -110,7 +110,7 @@ items:
     _key: "!actors.items!z6OT5WaQ120tXWIg.EtZt7WuQ9wAmagIh"
   - name: Self-Powered Chassis
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/robot-golem.svg
     system:
       description: >-
         <p>Robots are self-powered and do not normally run out of ammunition for any weapons they

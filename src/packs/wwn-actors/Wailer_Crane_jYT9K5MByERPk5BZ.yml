@@ -143,6 +143,7 @@ prototypeToken:
 items:
 - name: Beak
   type: weapon
+  img: modules/game-icons-net/whitetransparent/triple-beak.svg
   system:
     description: ''
     cost: 0
@@ -203,6 +204,7 @@ items:
   _key: '!actors.items!jYT9K5MByERPk5BZ.9dtmhg3kobfmq50t'
 - name: Wail
   type: item
+  img: modules/game-icons-net/whitetransparent/ghost.svg
   system:
     description: ''
     cost: 0

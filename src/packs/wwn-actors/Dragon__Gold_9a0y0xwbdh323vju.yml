@@ -142,6 +142,7 @@ prototypeToken:
 items:
 - name: Claw
   type: weapon
+  img: modules/game-icons-net/whitetransparent/claw.svg
   system:
     description: ''
     cost: 0
@@ -179,6 +180,7 @@ items:
   _key: '!actors.items!9a0y0xwbdh323vju.wepr0ee36kfq1vay'
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -216,6 +218,7 @@ items:
   _key: '!actors.items!9a0y0xwbdh323vju.r14m5z076uqahhwz'
 - name: Breath Weapon
   type: item
+  img: modules/game-icons-net/whitetransparent/dragon-breath.svg
   system:
     description: 90' long cone of fire or cloud of chlorine gas.
     cost: 0
@@ -244,6 +247,7 @@ items:
   _key: '!actors.items!9a0y0xwbdh323vju.wl775rfnvfrax7a6'
 - name: Language and Spells
   type: item
+  img: modules/game-icons-net/whitetransparent/spell-book.svg
   system:
     description: 100%; 4 x 1st level, 4 x 2nd level, 4 x 3rd level.
     cost: 0
@@ -272,6 +276,7 @@ items:
   _key: '!actors.items!9a0y0xwbdh323vju.yn2shtw30pjep63h'
 - name: Sleeping
   type: item
+  img: modules/game-icons-net/whitetransparent/night-sleep.svg
   system:
     description: 5%.
     cost: 0
@@ -300,6 +305,7 @@ items:
   _key: '!actors.items!9a0y0xwbdh323vju.0a2znztm5z7wf5ti'
 - name: Shape Changing
   type: item
+  img: modules/game-icons-net/whitetransparent/transform.svg
   system:
     description: May take on the form of a person or animal.
     cost: 0

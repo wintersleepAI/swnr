@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -148,6 +149,7 @@ items:
   _key: '!actors.items!js1beew2yuij1zcg.d2qdgt9ffb2wciv1'
 - name: Heads
   type: item
+  img: modules/game-icons-net/whitetransparent/hydra.svg
   system:
     description: '[[/r 1d8+4]] heads; 1 HD per head. Attack bonus equal to HD.'
     cost: 0
@@ -176,6 +178,7 @@ items:
   _key: '!actors.items!js1beew2yuij1zcg.9liqxd32h7fkui1g'
 - name: Disabling Heads
   type: item
+  img: modules/game-icons-net/whitetransparent/hydra.svg
   system:
     description: For every 8 hp damage taken, one head is disabled (cannot attack).
     cost: 0
@@ -204,6 +207,7 @@ items:
   _key: '!actors.items!js1beew2yuij1zcg.69wjucx1jtuptk5w'
 - name: Variants
   type: item
+  img: modules/game-icons-net/whitetransparent/cubes.svg
   system:
     description: >-
       Special hydras sometimes found with venom, fiery breath, etc. Add 225 XP
@@ -236,6 +240,7 @@ items:
   _key: '!actors.items!js1beew2yuij1zcg.mkj64l9o57wa2ujy'
 - name: Fire Breath
   type: item
+  img: modules/game-icons-net/whitetransparent/fire-breath.svg
   system:
     description: >-
       [[/r 1d6]]: 2-in-6 chance each round that one head will breathe fire
@@ -266,6 +271,7 @@ items:
   _key: '!actors.items!js1beew2yuij1zcg.2ztfm0it2897k8lv'
 - name: Poisonous Blood
   type: item
+  img: modules/game-icons-net/whitetransparent/death-juice.svg
   system:
     description: >-
       Whenever a head is severed, all creatures within 20' must save or take

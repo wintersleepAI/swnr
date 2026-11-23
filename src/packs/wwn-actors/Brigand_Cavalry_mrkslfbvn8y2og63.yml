@@ -120,6 +120,7 @@ prototypeToken:
 items:
 - name: Small Shield
   type: armor
+  img: modules/game-icons-net/whitetransparent/round-shield.svg
   system:
     description: >-
       Shields come in two general varieties. Small ones, often made of metal,
@@ -163,6 +164,7 @@ items:
   _key: '!actors.items!mrkslfbvn8y2og63.cibpf2dqr3j258f6'
 - name: Sword, Long
   type: weapon
+  img: modules/game-icons-net/whitetransparent/broadsword.svg
   system:
     description: >-
       Swords are common sidearms throughout the Latter Earth. The expense of
@@ -203,6 +205,7 @@ items:
   _key: '!actors.items!mrkslfbvn8y2og63.k5yt2flnvwublxp2'
 - name: Mail Shirt
   type: armor
+  img: modules/game-icons-net/whitetransparent/chain-mail.svg
   system:
     description: >-
       Mail shirts are usually of iron or steel wire, though bronze and other

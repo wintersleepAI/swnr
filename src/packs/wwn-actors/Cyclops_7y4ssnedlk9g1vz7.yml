@@ -117,6 +117,7 @@ prototypeToken:
 items:
 - name: Club
   type: weapon
+  img: modules/game-icons-net/whitetransparent/wood-club.svg
   system:
     description: ''
     cost: 0
@@ -154,6 +155,7 @@ items:
   _key: '!actors.items!7y4ssnedlk9g1vz7.1ykupddnaeil49zr'
 - name: Rock
   type: weapon
+  img: modules/game-icons-net/whitetransparent/rock.svg
   system:
     description: ''
     cost: 0
@@ -191,6 +193,7 @@ items:
   _key: '!actors.items!7y4ssnedlk9g1vz7.glh5yh5nui1wm82k'
 - name: Curse
   type: item
+  img: modules/game-icons-net/whitetransparent/cursed-star.svg
   system:
     description: >-
       1-in-20 cyclops can place a curse on a character once a week. Mental

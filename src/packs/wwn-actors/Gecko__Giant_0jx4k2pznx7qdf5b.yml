@@ -109,6 +109,7 @@ prototypeToken:
 items:
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -146,6 +147,7 @@ items:
   _key: '!actors.items!0jx4k2pznx7qdf5b.ecrjwclm5tjd0bqk'
 - name: Cling
   type: item
+  img: modules/game-icons-net/whitetransparent/gecko.svg
   system:
     description: Climb walls, trees, etc. and drop on victims.
     cost: 0

@@ -83,7 +83,7 @@ system:
 items:
   - name: Swarming Attack
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/creature-icons/swallower.svg
+    img: modules/game-icons-net/whitetransparent/ants.svg
     system:
       description: ""
       favorite: false
@@ -156,7 +156,7 @@ items:
     _key: "!actors.items!zpFmuQdK6IOUnA5x.hfzXqUgOKrYhXwgl"
   - name: Innumerable
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/ants.svg
     system:
       description: >-
         <p>Zombie hordes are effectively immune to single-target weapons and special powers. Only
@@ -189,7 +189,7 @@ items:
     _key: "!actors.items!zpFmuQdK6IOUnA5x.Y9DsMcIy5ZzjLsLw"
   - name: Ubiquitous
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/meeple-army.svg
     system:
       description: >-
         <p>Zombie hordes fill particular areas, such as rooms, streets, or entire buildings crawling
@@ -220,7 +220,7 @@ items:
     _key: "!actors.items!zpFmuQdK6IOUnA5x.cMJEcn3z2AuEeG3h"
   - name: Savage
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/enrage.svg
     system:
       description: >-
         <p>Every round, a horde will use its Main Action to level a single attack at every victim
@@ -252,7 +252,7 @@ items:
     _key: "!actors.items!zpFmuQdK6IOUnA5x.DeESFrtNAxT1Kdgt"
   - name: Ravenous
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/carnivore-mouth.svg
     system:
       description: >-
         <p>Anyone within reach of a zombie horde suffers 1d8 damage each round simply from the
@@ -282,7 +282,7 @@ items:
     _key: "!actors.items!zpFmuQdK6IOUnA5x.3XcvjWjtTHsdaHec"
   - name: Roadblock
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/barricade.svg
     system:
       description: >-
         <p>Zombie horde attacks can damage vehicles, including their Ravenous ability. A vehicle
@@ -312,7 +312,7 @@ items:
     _key: "!actors.items!zpFmuQdK6IOUnA5x.JH2gTe7tuFaUbOLR"
   - name: Grasping
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/grasping-claws.svg
     system:
       description: >-
         <p>Humans that try to move through the horde are automatically hit with a grapple attempt

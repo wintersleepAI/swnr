@@ -113,6 +113,7 @@ prototypeToken:
 items:
 - name: Sword, Short
   type: weapon
+  img: modules/game-icons-net/whitetransparent/gladius.svg
   system:
     description: >-
       Swords are common sidearms throughout the Latter Earth. The expense of
@@ -153,6 +154,7 @@ items:
   _key: '!actors.items!fx8znhpzirrs97im.iypsra4viak0wjmr'
 - name: Bow, Small
   type: weapon
+  img: modules/game-icons-net/whitetransparent/pocket-bow.svg
   system:
     description: >-
       Bows cover everything from the small self bows of horse archers to the
@@ -196,6 +198,7 @@ items:
   _key: '!actors.items!fx8znhpzirrs97im.4s537gpvj88slx9q'
 - name: Dagger
   type: weapon
+  img: modules/game-icons-net/whitetransparent/plain-dagger.svg
   system:
     description: >-
       Daggers come in ten thousand varieties, but the listed kind is a common
@@ -237,6 +240,7 @@ items:
   _key: '!actors.items!fx8znhpzirrs97im.livco8btze7y5mz9'
 - name: Spear, Light
   type: weapon
+  img: modules/game-icons-net/whitetransparent/stone-spear.svg
   system:
     description: >-
       Spears, and their longer cousin the pike, are common military weapons
@@ -277,6 +281,7 @@ items:
   _key: '!actors.items!fx8znhpzirrs97im.cvnv2b40qpp52age'
 - name: Ambush
   type: item
+  img: modules/game-icons-net/whitetransparent/bandit.svg
   system:
     description: Set up surprise attacks.
     cost: 0
@@ -305,6 +310,7 @@ items:
   _key: '!actors.items!fx8znhpzirrs97im.2pijsuseh42k257l'
 - name: 'Infravision: 90'''
   type: item
+  img: modules/game-icons-net/whitetransparent/night-vision.svg
   system:
     description: ''
     cost: 0
@@ -333,6 +339,7 @@ items:
   _key: '!actors.items!fx8znhpzirrs97im.v2j86r8uygohpqlv'
 - name: Hate Gnomes
   type: item
+  img: modules/game-icons-net/whitetransparent/bad-gnome.svg
   system:
     description: Attack on sight.
     cost: 0

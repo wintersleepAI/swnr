@@ -120,6 +120,7 @@ prototypeToken:
 items:
 - name: Sword, Long
   type: weapon
+  img: modules/game-icons-net/whitetransparent/broadsword.svg
   system:
     description: >-
       Swords are common sidearms throughout the Latter Earth. The expense of
@@ -160,6 +161,7 @@ items:
   _key: '!actors.items!clvod7hjlyvfx5lp.idat8u6rblsxxe0p'
 - name: Plate Armor
   type: armor
+  img: modules/game-icons-net/whitetransparent/breastplate.svg
   system:
     description: >-
       Plate armor is an extremely expensive suit of tailored metal pieces that
@@ -199,6 +201,7 @@ items:
   _key: '!actors.items!clvod7hjlyvfx5lp.ggzejwlehoedsc6s'
 - name: Spear, Heavy
   type: weapon
+  img: modules/game-icons-net/whitetransparent/barbed-spear.svg
   system:
     description: >-
       Spears, and their longer cousin the pike, are common military weapons

@@ -124,6 +124,7 @@ prototypeToken:
 items:
 - name: Sword, Long
   type: weapon
+  img: modules/game-icons-net/whitetransparent/broadsword.svg
   system:
     description: >-
       Swords are common sidearms throughout the Latter Earth. The expense of
@@ -164,6 +165,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.u3fo6bpttn19smno'
 - name: Crossbow
   type: weapon
+  img: modules/game-icons-net/whitetransparent/crossbow.svg
   system:
     description: >-
       Crossbows come in heavier varieties than the one listed, but such slow,
@@ -206,6 +208,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.ogbnn8fl1orkpd02'
 - name: Light (Mage)
   type: item
+  img: modules/game-icons-net/whitetransparent/light-bulb.svg
   system:
     description: >-
       Duration: 6 turns + 1 per level Range: 120' This spell has three usages:
@@ -244,6 +247,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.x0nv20veojpsqgg8'
 - name: Magic Missile
   type: item
+  img: modules/game-icons-net/whitetransparent/energy-arrow.svg
   system:
     description: >-
       Duration: 1 turn Range: 150' This spell conjures a glowing dart of
@@ -280,6 +284,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.1v43zminuvgne5o4'
 - name: Shield
   type: item
+  img: modules/game-icons-net/whitetransparent/roman-shield.svg
   system:
     description: >-
       Duration: 2 turns Range: The caster Shield creates an invisible field of
@@ -311,6 +316,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.lc3db1xqxowa0a5x'
 - name: Water Breathing
   type: item
+  img: modules/game-icons-net/whitetransparent/snorkel.svg
   system:
     description: >-
       Duration: 1 day Range: 30' The subject can breathe water freely by means
@@ -343,6 +349,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.zsa5ughhe3brk02v'
 - name: Invisibility
   type: item
+  img: modules/game-icons-net/whitetransparent/invisible.svg
   system:
     description: >-
       Duration: Permanent (but may be broken, see below) Range: 240' The
@@ -380,6 +387,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.yz809gmzpctgzwml'
 - name: Web
   type: item
+  img: modules/game-icons-net/whitetransparent/spider-web.svg
   system:
     description: >-
       Duration: 48 turns Range: 10' Web conjures a many-layered mass of
@@ -419,6 +427,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.qic676w9obh0kvfg'
 - name: Knock
   type: item
+  img: modules/game-icons-net/whitetransparent/padlock-open.svg
   system:
     description: >-
       Duration: 1 round Range: 60' The knock spell opens stuck, barred, or
@@ -451,6 +460,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.g8gyit49sssn9tet'
 - name: Protection from Normal Missiles
   type: item
+  img: modules/game-icons-net/whitetransparent/arrows-shield.svg
   system:
     description: >-
       Duration: 12 turns Range: 30' A single subject in range gains complete
@@ -482,6 +492,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.fqf17ymfat1ebx30'
 - name: Lightning Bolt
   type: item
+  img: modules/game-icons-net/whitetransparent/lightning-bow.svg
   system:
     description: >-
       Duration: Instant Range: 180' A powerful stroke of electrical energy,
@@ -517,6 +528,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.e3ajzyk05bz4opiz'
 - name: Hallucinatory Terrain
   type: item
+  img: modules/game-icons-net/whitetransparent/mountains.svg
   system:
     description: >-
       Duration: Until touched Range: 240' Hallucinatory terrain either
@@ -550,6 +562,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.laul7os90m75atdg'
 - name: Dimension Door
   type: item
+  img: modules/game-icons-net/whitetransparent/magic-gate.svg
   system:
     description: >-
       Duration: 1 round Range: 10' The caster or a single creature is
@@ -586,6 +599,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.f83vs92x7c4qpynf'
 - name: Polymorph Self
   type: item
+  img: modules/game-icons-net/whitetransparent/transform.svg
   system:
     description: >-
       Duration: 6 turns +1 per level Range: The caster The caster transforms
@@ -625,6 +639,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.uvhq9zeuu6nmtyhi'
 - name: Polymorph Others
   type: item
+  img: modules/game-icons-net/whitetransparent/frog-prince.svg
   system:
     description: >-
       Duration: Permanent Range: 60' A living subject is changed into another
@@ -663,6 +678,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.yk4ser4z2yfbnbyh'
 - name: Wall of Ice
   type: item
+  img: modules/game-icons-net/whitetransparent/frozen-block.svg
   system:
     description: >-
       Duration: 12 turns Range: 120' An immobile, translucent, wall of ice
@@ -701,6 +717,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.z8xvraf49y206mis'
 - name: Teleport
   type: item
+  img: modules/game-icons-net/whitetransparent/teleport.svg
   system:
     description: >-
       Duration: Instant Range: 10' The caster or a chosen creature vanishes
@@ -753,6 +770,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.7t9z4d2yqlr1adl4'
 - name: Conjure Elemental
   type: item
+  img: modules/game-icons-net/whitetransparent/fire-silhouette.svg
   system:
     description: >-
       Duration: Permanent (until dismissed or slain) Range: 240' A 16 Hit Dice
@@ -816,6 +834,7 @@ items:
   _key: '!actors.items!q9ftdb8u14rfp4zs.v3bcfg08hq740d5k'
 - name: Cloudkill
   type: item
+  img: modules/game-icons-net/whitetransparent/poison-gas.svg
   system:
     description: >-
       Duration: 6 turns Range: 30' A poisonous fog streams from the caster's

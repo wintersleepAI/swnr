@@ -179,7 +179,7 @@ prototypeToken:
 items:
   - name: Plasma Beam
     type: shipWeapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    img: modules/game-icons-net/whitetransparent/plasma-bolt.svg
     folder: null
     flags: {}
     _stats:
@@ -230,7 +230,7 @@ items:
     _key: '!actors.items!2tJXAG44rZ2RZPYB.zki98qlxdpsssyjf'
   - name: Spike Drive-2 upgrade
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    img: modules/game-icons-net/whitetransparent/rocket-thruster.svg
     folder: null
     flags: {}
     _stats:
@@ -270,7 +270,7 @@ items:
     _key: '!actors.items!2tJXAG44rZ2RZPYB.e35y39vifrkk4s2z'
   - name: Cargo Lighter
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    img: modules/game-icons-net/whitetransparent/cargo-ship.svg
     folder: null
     flags: {}
     _stats:
@@ -313,7 +313,7 @@ items:
     _key: '!actors.items!2tJXAG44rZ2RZPYB.81lnofpc8ljkljs9'
   - name: Fuel Bunker
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    img: modules/game-icons-net/whitetransparent/fuel-tank.svg
     folder: null
     flags: {}
     _stats:
@@ -352,7 +352,7 @@ items:
     _key: '!actors.items!2tJXAG44rZ2RZPYB.32ik753p9tb4sxbs'
   - name: Ship's Locker
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    img: modules/game-icons-net/whitetransparent/lockers.svg
     folder: null
     flags: {}
     _stats:

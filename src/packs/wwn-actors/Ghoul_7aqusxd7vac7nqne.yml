@@ -110,6 +110,7 @@ prototypeToken:
 items:
 - name: Claw
   type: weapon
+  img: modules/game-icons-net/whitetransparent/claw.svg
   system:
     description: >-
       Paralysis: For [[/r 2d4]] turns. Elves and creatures larger than ogres
@@ -149,6 +150,7 @@ items:
   _key: '!actors.items!7aqusxd7vac7nqne.6kt5mmoj4nvx75gj'
 - name: Undead
   type: item
+  img: modules/game-icons-net/whitetransparent/raise-skeleton.svg
   system:
     description: >-
       Make no noise, until they attack. Immune to effects that affect living
@@ -180,6 +182,7 @@ items:
   _key: '!actors.items!7aqusxd7vac7nqne.emjsulgow6lh8ado'
 - name: Paralysis
   type: item
+  img: modules/game-icons-net/whitetransparent/frozen-body.svg
   system:
     description: >-
       For [[/r 2d4]] turns. Elves and creatures larger than ogres are

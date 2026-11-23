@@ -144,6 +144,7 @@ prototypeToken:
 items:
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -181,6 +182,7 @@ items:
   _key: '!actors.items!qdg7cwic9z1bsi5w.42m923bt7pbgx2qi'
 - name: Breath Weapon
   type: item
+  img: modules/game-icons-net/whitetransparent/dragon-breath.svg
   system:
     description: >-
       Poison spittle, 100' range, 20' diameter. Save or die. Poison is
@@ -211,6 +213,7 @@ items:
   _key: '!actors.items!qdg7cwic9z1bsi5w.g6etinqhcpa6ygsx'
 - name: Language and Spells
   type: item
+  img: modules/game-icons-net/whitetransparent/spell-book.svg
   system:
     description: 20%; 3 x 1st level, 3 x 2nd level.
     cost: 0
@@ -239,6 +242,7 @@ items:
   _key: '!actors.items!qdg7cwic9z1bsi5w.a0rucjnihcon67mt'
 - name: Sleeping
   type: item
+  img: modules/game-icons-net/whitetransparent/night-sleep.svg
   system:
     description: 30%.
     cost: 0
@@ -267,6 +271,7 @@ items:
   _key: '!actors.items!qdg7cwic9z1bsi5w.8p52ys6qezs3lvsb'
 - name: Gliding
   type: item
+  img: modules/game-icons-net/whitetransparent/feathered-wing.svg
   system:
     description: Leap out of the water and glide for up to 6 rounds at swim speed.
     cost: 0

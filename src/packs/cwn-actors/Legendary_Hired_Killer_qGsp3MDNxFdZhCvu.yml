@@ -134,7 +134,7 @@ prototypeToken:
 items:
   - name: Advanced Knife
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    img: modules/game-icons-net/whitetransparent/switchblade.svg
     folder: null
     flags: {}
     _stats:
@@ -213,7 +213,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.EYYNWBn8RrZBN7TY'
   - name: Coordination Augment II
     type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    img: modules/game-icons-net/whitetransparent/acrobatic.svg
     folder: null
     flags: {}
     _stats:
@@ -245,7 +245,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.xI0QtoAMLr5Mztea'
   - name: Armored Clothing
     type: armor
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/armor-white.svg
+    img: modules/game-icons-net/whitetransparent/leather-vest.svg
     folder: null
     flags: {}
     _stats:
@@ -298,7 +298,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.KBQMBpg6hDAjG3ow'
   - name: Modded Light Pistol
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/weapon-white.svg
+    img: modules/game-icons-net/whitetransparent/glock.svg
     folder: null
     flags: {}
     _stats:
@@ -410,7 +410,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.0mIX6zxhYshZsTpj'
   - name: Enhanced Reflexes III
     type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    img: modules/game-icons-net/whitetransparent/quick-man.svg
     folder: null
     flags: {}
     _stats:
@@ -444,7 +444,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.asBMyEPi1H78VpwG'
   - name: Eye Mod/Flechette Launcher
     type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    img: modules/game-icons-net/whitetransparent/spine-arrow.svg
     folder: null
     flags: {}
     _stats:
@@ -481,7 +481,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.NduugZpX943TgUFW'
   - name: Eye Mod/Impostor
     type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    img: modules/game-icons-net/whitetransparent/double-face-mask.svg
     folder: null
     flags: {}
     _stats:
@@ -518,7 +518,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.hBDfHI95ZYo4xaNk'
   - name: Eye Mod/Infrared Vision
     type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    img: modules/game-icons-net/whitetransparent/thermometer-hot.svg
     folder: null
     flags: {}
     _stats:
@@ -553,7 +553,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.x2XLNp24zBqeoJcz'
   - name: Eye Mod/Zoom
     type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    img: modules/game-icons-net/whitetransparent/spyglass.svg
     folder: null
     flags: {}
     _stats:
@@ -586,7 +586,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.D3p9y3y0kkdLaG80'
   - name: Reaction Booster II
     type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    img: modules/game-icons-net/whitetransparent/fast-forward-button.svg
     folder: null
     flags: {}
     _stats:
@@ -620,7 +620,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.NqxryAQnq7OMOGMZ'
   - name: Stick Pads
     type: cyberware
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/cyber-eye.svg
+    img: modules/game-icons-net/whitetransparent/gecko.svg
     folder: null
     flags: {}
     _stats:
@@ -654,7 +654,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.1Aa2VqAQvKJUECgv'
   - name: Hard To Kill
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+    img: modules/game-icons-net/whitetransparent/heart-shield.svg
     folder: null
     flags: {}
     _stats:
@@ -681,7 +681,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.ExsnLJPZiDpGEVjd'
   - name: Killing Blow
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+    img: modules/game-icons-net/whitetransparent/deadly-strike.svg
     folder: null
     flags: {}
     _stats:
@@ -710,7 +710,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.ntBKchaSBkWH6QXd'
   - name: Veteran's Luck
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/edge.svg
+    img: modules/game-icons-net/whitetransparent/rolling-dices.svg
     folder: null
     flags: {}
     _stats:
@@ -738,7 +738,7 @@ items:
     _key: '!actors.items!qGsp3MDNxFdZhCvu.p8q6riQcFB0W3VvX'
   - name: Deadeye
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/dead-eye.svg
     folder: null
     flags: {}
     _stats:

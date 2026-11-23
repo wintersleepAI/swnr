@@ -112,6 +112,7 @@ prototypeToken:
 items:
 - name: Talon
   type: weapon
+  img: modules/game-icons-net/whitetransparent/bird-claw.svg
   system:
     description: ''
     cost: 0
@@ -149,6 +150,7 @@ items:
   _key: '!actors.items!lc5qi1mu2zweu7wo.iz9iy6asa1uwre9z'
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -186,6 +188,7 @@ items:
   _key: '!actors.items!lc5qi1mu2zweu7wo.m8sq00nlj68xdbs0'
 - name: Regeneration
   type: item
+  img: modules/game-icons-net/whitetransparent/regeneration.svg
   system:
     description: >-
       3 rounds after being damaged, start regaining 3hp per round. Severed
@@ -216,6 +219,7 @@ items:
   _key: '!actors.items!lc5qi1mu2zweu7wo.kl7nv97ty3murzur'
 - name: Return From Death
   type: item
+  img: modules/game-icons-net/whitetransparent/raise-zombie.svg
   system:
     description: If killed (0hp), will regenerate and fight again in 2d6 rounds.
     cost: 0
@@ -244,6 +248,7 @@ items:
   _key: '!actors.items!lc5qi1mu2zweu7wo.uwpg81tschl4k5ts'
 - name: Fire and Acid
   type: item
+  img: modules/game-icons-net/whitetransparent/fire-flower.svg
   system:
     description: >-
       Cannot regenerate damage from these sources. The only way to permanently
@@ -274,6 +279,7 @@ items:
   _key: '!actors.items!lc5qi1mu2zweu7wo.8fd6h8z57urs3np6'
 - name: Fear of Fire
   type: item
+  img: modules/game-icons-net/whitetransparent/fire.svg
   system:
     description: Morale 8 when attacked with fire or acid.
     cost: 0

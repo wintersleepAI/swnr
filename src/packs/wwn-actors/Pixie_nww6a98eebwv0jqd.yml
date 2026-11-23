@@ -109,6 +109,7 @@ prototypeToken:
 items:
 - name: Tiny Dagger
   type: weapon
+  img: modules/game-icons-net/whitetransparent/plain-dagger.svg
   system:
     description: ''
     cost: 0
@@ -146,6 +147,7 @@ items:
   _key: '!actors.items!nww6a98eebwv0jqd.74vu841z87x6j60n'
 - name: Invisible
   type: item
+  img: modules/game-icons-net/whitetransparent/invisible.svg
   system:
     description: >-
       Naturally invisible, but may choose to reveal themselves. May remain
@@ -178,6 +180,7 @@ items:
   _key: '!actors.items!nww6a98eebwv0jqd.vjv71foaueh8898f'
 - name: Surprise
   type: item
+  img: modules/game-icons-net/whitetransparent/surprised.svg
   system:
     description: Always surprise, if invisible.
     cost: 0
@@ -206,6 +209,7 @@ items:
   _key: '!actors.items!nww6a98eebwv0jqd.ha1mpbqa8eke640b'
 - name: Limited Flight
   type: item
+  img: modules/game-icons-net/whitetransparent/feathered-wing.svg
   system:
     description: Small wings only allow 3 turns of flight. Must rest 1 turn after flying.
     cost: 0

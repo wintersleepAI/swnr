@@ -75,7 +75,7 @@ system:
 items:
   - name: Claw
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/animal-icons/crab-claw.svg
+    img: modules/game-icons-net/whitetransparent/claw.svg
     system:
       description: ""
       favorite: false
@@ -148,7 +148,7 @@ items:
     _key: "!actors.items!hFNpoAX6xlg2R6R8.t2ln9jlxVPrbUDaH"
   - name: Sting
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/animal-icons/scorpion-tail.svg
+    img: modules/game-icons-net/whitetransparent/wasp-sting.svg
     system:
       description: ""
       favorite: false
@@ -221,7 +221,7 @@ items:
     _key: "!actors.items!hFNpoAX6xlg2R6R8.lOcH5tkjxS6TTk8T"
   - name: Paralytic Poison
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/poison-bottle.svg
     system:
       description: >-
         <p>One of a manscorpion's three attacks will be a sting; a victim struck by this must make a
@@ -251,7 +251,7 @@ items:
     _key: "!actors.items!hFNpoAX6xlg2R6R8.OMd64zQ59Xz4U8g8"
   - name: Wallcrawler
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/spider-bot.svg
     system:
       description: <p>They can traverse walls and ceilings as if they were flat ground.</p>
       favorite: false

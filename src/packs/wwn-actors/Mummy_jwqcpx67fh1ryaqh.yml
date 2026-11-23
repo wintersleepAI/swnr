@@ -109,6 +109,7 @@ prototypeToken:
 items:
 - name: Touch
   type: weapon
+  img: modules/game-icons-net/whitetransparent/skeletal-hand.svg
   system:
     description: >-
       Disease: Anyone hit contracts a horrible rotting disease. Magical
@@ -149,6 +150,7 @@ items:
   _key: '!actors.items!jwqcpx67fh1ryaqh.6jq6adud8xzi79o0'
 - name: Paralyze With Terror
   type: item
+  img: modules/game-icons-net/whitetransparent/terror.svg
   system:
     description: >-
       Anyone seeing a mummy must save or be paralysed with terror. Paralysis
@@ -179,6 +181,7 @@ items:
   _key: '!actors.items!jwqcpx67fh1ryaqh.6tq9w3y9qu6bqxnh'
 - name: Damage Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/shield.svg
   system:
     description: Only harmed by fire or magic. All damage reduced by half.
     cost: 0
@@ -207,6 +210,7 @@ items:
   _key: '!actors.items!jwqcpx67fh1ryaqh.892csicy7a91zsq3'
 - name: Mummy Rot
   type: item
+  img: modules/game-icons-net/whitetransparent/mummy-head.svg
   system:
     description: >-
       Disease: Anyone hit contracts a horrible rotting disease. Magical
@@ -238,6 +242,7 @@ items:
   _key: '!actors.items!jwqcpx67fh1ryaqh.xtrbcx2wlep4f9yb'
 - name: Undead
   type: item
+  img: modules/game-icons-net/whitetransparent/raise-skeleton.svg
   system:
     description: >-
       Make no noise, until they attack. Immune to effects that affect living

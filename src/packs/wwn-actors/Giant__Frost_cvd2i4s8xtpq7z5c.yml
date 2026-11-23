@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Gigantic Weapon
   type: weapon
+  img: modules/game-icons-net/whitetransparent/two-handed-sword.svg
   system:
     description: ''
     cost: 0
@@ -148,6 +149,7 @@ items:
   _key: '!actors.items!cvd2i4s8xtpq7z5c.tgnobz0lnijlmkit'
 - name: Boulder
   type: weapon
+  img: modules/game-icons-net/whitetransparent/falling-boulder.svg
   system:
     description: ''
     cost: 0
@@ -185,6 +187,7 @@ items:
   _key: '!actors.items!cvd2i4s8xtpq7z5c.jn05fxapj9rtnuv6'
 - name: Cold Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/snowflake-1.svg
   system:
     description: Unharmed by cold-based attacks.
     cost: 0
@@ -213,6 +216,7 @@ items:
   _key: '!actors.items!cvd2i4s8xtpq7z5c.xojegz5w01b7gl6w'
 - name: Castle
   type: item
+  img: modules/game-icons-net/whitetransparent/castle.svg
   system:
     description: High upon snowy mountains.
     cost: 0
@@ -241,6 +245,7 @@ items:
   _key: '!actors.items!cvd2i4s8xtpq7z5c.6rhl127vhqovfwt3'
 - name: Guardians
   type: item
+  img: modules/game-icons-net/whitetransparent/guards.svg
   system:
     description: 20% chance of [[/r 3d6]] polar bears, [[/r 6d6]] wolves otherwise.
     cost: 0

@@ -113,6 +113,7 @@ prototypeToken:
 items:
 - name: Claw
   type: weapon
+  img: modules/game-icons-net/whitetransparent/claw.svg
   system:
     description: ''
     cost: 0
@@ -150,6 +151,7 @@ items:
   _key: '!actors.items!ray79obb2wfkvnat.s3ie4bgf3qidqh5u'
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -187,6 +189,7 @@ items:
   _key: '!actors.items!ray79obb2wfkvnat.samp5r473g4sr1xo'
 - name: Tail Spike
   type: weapon
+  img: modules/game-icons-net/whitetransparent/spiked-tail.svg
   system:
     description: >-
       180' range. 24 in total; 2 regrow each day. Cannot fire spikes in the
@@ -226,6 +229,7 @@ items:
   _key: '!actors.items!ray79obb2wfkvnat.axarbawukty3ofk4'
 - name: Track and Ambush
   type: item
+  img: modules/game-icons-net/whitetransparent/bandit.svg
   system:
     description: Follow humans and attack with tail spikes when they stop to rest.
     cost: 0

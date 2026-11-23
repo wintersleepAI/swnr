@@ -115,6 +115,7 @@ prototypeToken:
 items:
 - name: Antlers or Hoofs
   type: weapon
+  img: modules/game-icons-net/whitetransparent/deer-head.svg
   system:
     description: ''
     cost: 0
@@ -152,6 +153,7 @@ items:
   _key: '!actors.items!xewcv1ksm47q7lp9.harsso8vcni8k8yj'
 - name: Stampede
   type: weapon
+  img: modules/game-icons-net/whitetransparent/trample.svg
   system:
     description: >-
       Herds of 20 or more can trample those in their path. 3-in-4 chance each

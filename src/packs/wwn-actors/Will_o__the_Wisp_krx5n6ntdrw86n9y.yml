@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Lightning
   type: weapon
+  img: modules/game-icons-net/whitetransparent/lightning-bow.svg
   system:
     description: ''
     cost: 0
@@ -148,6 +149,7 @@ items:
   _key: '!actors.items!krx5n6ntdrw86n9y.o5f8bltssmwvtcfk'
 - name: Damage Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/shield.svg
   system:
     description: >-
       Only harmed by magical attacks. Immune to electricity. Minimum damage
@@ -178,6 +180,7 @@ items:
   _key: '!actors.items!krx5n6ntdrw86n9y.cgsd5wyfaw3gmry9'
 - name: Invisibility
   type: item
+  img: modules/game-icons-net/whitetransparent/invisible.svg
   system:
     description: At will. Cannot attack while invisible.
     cost: 0
@@ -206,6 +209,7 @@ items:
   _key: '!actors.items!krx5n6ntdrw86n9y.kbhqu4vjnjyhjss5'
 - name: Reveal Treasure Hoard
   type: item
+  img: modules/game-icons-net/whitetransparent/open-treasure-chest.svg
   system:
     description: >-
       Will reveal location of treasure hoard if reduced to 5 or fewer hp.

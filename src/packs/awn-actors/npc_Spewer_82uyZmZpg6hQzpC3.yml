@@ -81,7 +81,7 @@ system:
 items:
   - name: Toxic Spittle
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/creature-icons/vile-fluid.svg
+    img: modules/game-icons-net/whitetransparent/spill.svg
     system:
       description: ""
       favorite: false
@@ -154,7 +154,7 @@ items:
     _key: "!actors.items!82uyZmZpg6hQzpC3.1BsY7jiGf6FiiS4J"
   - name: Bursting Corpse
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/goo-explosion.svg
     system:
       description: >-
         <p>Some varieties of Spewer burst upon death, inflicting an automatic attack on everything

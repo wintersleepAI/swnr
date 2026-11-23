@@ -121,6 +121,7 @@ prototypeToken:
 items:
 - name: Buff Coat
   type: armor
+  img: modules/game-icons-net/whitetransparent/leather-vest.svg
   system:
     description: >-
       Buff coats are long coats of thick, supple hide, sometimes worn to
@@ -161,6 +162,7 @@ items:
   _key: '!actors.items!siogvy0n7fu2pht7.rouz4i55qbvnqj6o'
 - name: Shield, Large
   type: armor
+  img: modules/game-icons-net/whitetransparent/bordered-shield.svg
   system:
     description: >-
       Shields come in two general varieties. Small ones, often made of
@@ -204,6 +206,7 @@ items:
   _key: '!actors.items!siogvy0n7fu2pht7.0z07e0i4tux6zsm3'
 - name: Spear, Light
   type: weapon
+  img: modules/game-icons-net/whitetransparent/stone-spear.svg
   system:
     description: >-
       Spears, and their longer cousin the pike, are common military weapons
@@ -244,6 +247,7 @@ items:
   _key: '!actors.items!siogvy0n7fu2pht7.g2et24bf9nx8kmne'
 - name: Bow, Small
   type: weapon
+  img: modules/game-icons-net/whitetransparent/pocket-bow.svg
   system:
     description: >-
       Bows cover everything from the small self bows of horse archers to the
@@ -287,6 +291,7 @@ items:
   _key: '!actors.items!siogvy0n7fu2pht7.psm7336arrcj97ft'
 - name: Sword, Long
   type: weapon
+  img: modules/game-icons-net/whitetransparent/broadsword.svg
   system:
     description: >-
       Swords are common sidearms throughout the Latter Earth. The expense of

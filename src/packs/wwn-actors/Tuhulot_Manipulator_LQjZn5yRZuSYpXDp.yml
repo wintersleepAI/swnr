@@ -137,6 +137,7 @@ prototypeToken:
 items:
 - name: Distorted Space-Time
   type: weapon
+  img: modules/game-icons-net/whitetransparent/vortex.svg
   system:
     description: ''
     cost: 0
@@ -197,6 +198,7 @@ items:
   _key: '!actors.items!LQjZn5yRZuSYpXDp.jyhinqzzhxhdqx43'
 - name: Scrying Gaze
   type: item
+  img: modules/game-icons-net/whitetransparent/crystal-ball.svg
   system:
     description: >-
       Scrying gaze allows them to observe a particular point within ten miles
@@ -247,6 +249,7 @@ items:
   _key: '!actors.items!LQjZn5yRZuSYpXDp.2ymipzscjlwudyxs'
 - name: Blandishing Voice
   type: item
+  img: modules/game-icons-net/whitetransparent/lips.svg
   system:
     description: >-
       Blandishing voice bends the mind of a single target on a failed Mental
@@ -297,6 +300,7 @@ items:
   _key: '!actors.items!LQjZn5yRZuSYpXDp.uuquavlym46xb3xa'
 - name: Sidewards Step
   type: item
+  img: modules/game-icons-net/whitetransparent/footsteps.svg
   system:
     description: >-
       Sidewards step lets them teleport to any location within a mile they've
@@ -347,6 +351,7 @@ items:
   _key: '!actors.items!LQjZn5yRZuSYpXDp.ggug1mnkgm1efpr2'
 - name: Soul Consumption
   type: item
+  img: modules/game-icons-net/whitetransparent/soul-vessel.svg
   system:
     description: >-
       Soul consumption power allows them to eat the memories and identity of a

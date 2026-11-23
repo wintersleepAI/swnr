@@ -104,6 +104,16 @@
     "minimum": "13.345",
     "verified": "14.365"
   },
+  "relationships": {
+    "requires": [
+      {
+        "id": "game-icons-net",
+        "type": "module",
+        "manifest": "https://raw.githubusercontent.com/datdamnzotz/icons/master/module.json",
+        "reason": "Compendium item images use icons from this module."
+      }
+    ]
+  },
   "esmodules": ["module/swnr.mjs"],
   "styles": ["css/swnr.css"],
   "languages": [

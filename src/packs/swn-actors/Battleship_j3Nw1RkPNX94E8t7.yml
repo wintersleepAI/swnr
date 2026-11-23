@@ -182,7 +182,7 @@ prototypeToken:
 items:
   - name: Vortex Tunnel Inductor
     type: shipWeapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    img: modules/game-icons-net/whitetransparent/vortex.svg
     folder: null
     flags: {}
     _stats:
@@ -234,7 +234,7 @@ items:
     _key: '!actors.items!j3Nw1RkPNX94E8t7.5br7xt79bvmnoecd'
   - name: Lightning Charge Mantle
     type: shipWeapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    img: modules/game-icons-net/whitetransparent/lightning-storm.svg
     folder: null
     flags: {}
     _stats:
@@ -286,7 +286,7 @@ items:
     _key: '!actors.items!j3Nw1RkPNX94E8t7.fca8hpunyf4niv9e'
   - name: Multifocal Laser
     type: shipWeapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    img: modules/game-icons-net/whitetransparent/laser-burst.svg
     folder: null
     flags: {}
     _stats:
@@ -338,7 +338,7 @@ items:
     _key: '!actors.items!j3Nw1RkPNX94E8t7.ar54ccnvn6yn18se'
   - name: Multifocal Laser
     type: shipWeapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    img: modules/game-icons-net/whitetransparent/laser-burst.svg
     folder: null
     flags: {}
     _stats:
@@ -390,7 +390,7 @@ items:
     _key: '!actors.items!j3Nw1RkPNX94E8t7.wmn8czlr18xqp724'
   - name: Gravcannon
     type: shipWeapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    img: modules/game-icons-net/whitetransparent/gravitation.svg
     folder: null
     flags: {}
     _stats:
@@ -442,7 +442,7 @@ items:
     _key: '!actors.items!j3Nw1RkPNX94E8t7.4hbp5zn6f71rswat'
   - name: Hardened Polyceramic Overlay
     type: shipDefense
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/bubble-field.svg
+    img: modules/game-icons-net/whitetransparent/armoured-shell.svg
     folder: null
     flags: {}
     _stats:
@@ -559,7 +559,7 @@ items:
     _key: '!actors.items!j3Nw1RkPNX94E8t7.cnrmea4ioyygw1a6'
   - name: Drop Pod
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    img: modules/game-icons-net/whitetransparent/incoming-rocket.svg
     folder: null
     flags: {}
     _stats:
@@ -600,7 +600,7 @@ items:
     _key: '!actors.items!j3Nw1RkPNX94E8t7.hxlg224c3qnildk0'
   - name: Armory
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    img: modules/game-icons-net/whitetransparent/crossed-swords.svg
     folder: null
     flags: {}
     _stats:
@@ -641,7 +641,7 @@ items:
     _key: '!actors.items!j3Nw1RkPNX94E8t7.qhrc2npwtrww3yh9'
   - name: Ship's Locker
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    img: modules/game-icons-net/whitetransparent/lockers.svg
     folder: null
     flags: {}
     _stats:
@@ -684,7 +684,7 @@ items:
     _key: '!actors.items!j3Nw1RkPNX94E8t7.2sxuoqnadccd6ddm'
   - name: Boarding Tubes
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    img: modules/game-icons-net/whitetransparent/airtight-hatch.svg
     folder: null
     flags: {}
     _stats:
@@ -725,7 +725,7 @@ items:
     _key: '!actors.items!j3Nw1RkPNX94E8t7.3855f3q7iyij1fwl'
   - name: Fuel Scoops
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/energise.svg
+    img: modules/game-icons-net/whitetransparent/funnel.svg
     folder: null
     flags: {}
     _stats:
@@ -804,7 +804,7 @@ items:
     _key: '!actors.items!j3Nw1RkPNX94E8t7.7ktyive0qd2fl21g'
   - name: Ship bay (fighter and shuttle)
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    img: modules/game-icons-net/whitetransparent/light-fighter.svg
     folder: null
     flags: {}
     _stats:

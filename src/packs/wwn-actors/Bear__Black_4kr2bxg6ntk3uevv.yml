@@ -112,6 +112,7 @@ prototypeToken:
 items:
 - name: Claw
   type: weapon
+  img: modules/game-icons-net/whitetransparent/claw.svg
   system:
     description: >-
       Bear hug: If a victim is hit by both paws in the same round, the bear
@@ -151,6 +152,7 @@ items:
   _key: '!actors.items!4kr2bxg6ntk3uevv.7u05al321ze4lnv1'
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -188,6 +190,7 @@ items:
   _key: '!actors.items!4kr2bxg6ntk3uevv.za7nse2qkt6ndd6d'
 - name: Bear Hug
   type: item
+  img: modules/game-icons-net/whitetransparent/bear-face.svg
   system:
     description: >-
       If a victim is hit by both paws in the same round, the bear hugs for an

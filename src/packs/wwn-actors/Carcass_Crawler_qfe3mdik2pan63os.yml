@@ -112,6 +112,7 @@ prototypeToken:
 items:
 - name: Tentacle
   type: weapon
+  img: modules/game-icons-net/whitetransparent/tentacle-strike.svg
   system:
     description: >-
       Paralysis: A hit by a tentacle causes paralysis for 2d4 turns (Physical
@@ -152,6 +153,7 @@ items:
   _key: '!actors.items!qfe3mdik2pan63os.jrqb9sdj0t43762v'
 - name: Paralysis
   type: item
+  img: modules/game-icons-net/whitetransparent/frozen-body.svg
   system:
     description: >-
       A hit by a tentacle causes paralysis for 2d4 turns (Physical save).
@@ -182,6 +184,7 @@ items:
   _key: '!actors.items!qfe3mdik2pan63os.vvsk0en86w61l6yb'
 - name: Cling
   type: item
+  img: modules/game-icons-net/whitetransparent/gecko.svg
   system:
     description: Can walk on walls and ceilings.
     cost: 0

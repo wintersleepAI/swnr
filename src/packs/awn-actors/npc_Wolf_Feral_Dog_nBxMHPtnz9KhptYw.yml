@@ -72,7 +72,7 @@ system:
 items:
   - name: Bite
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/animal-icons/wolf-head.svg
+    img: modules/game-icons-net/whitetransparent/fangs.svg
     system:
       description: ""
       favorite: false
@@ -145,7 +145,7 @@ items:
     _key: "!actors.items!nBxMHPtnz9KhptYw.6sFVZx0RG8n5zHDf"
   - name: Pack Hunter
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/wolf-head.svg
     system:
       description: >-
         <p>Seldom found in groups smaller than 2d6 animals. They instinctively use the Swarm Attack

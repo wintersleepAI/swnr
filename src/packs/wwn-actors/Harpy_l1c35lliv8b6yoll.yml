@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Claw
   type: weapon
+  img: modules/game-icons-net/whitetransparent/claw.svg
   system:
     description: ''
     cost: 0
@@ -148,6 +149,7 @@ items:
   _key: '!actors.items!l1c35lliv8b6yoll.h6h7dhfriix1mmf3'
 - name: Club
   type: weapon
+  img: modules/game-icons-net/whitetransparent/wood-club.svg
   system:
     description: >-
       Clubs, staves, and maces are of much the same genus, though the latter
@@ -188,6 +190,7 @@ items:
   _key: '!actors.items!l1c35lliv8b6yoll.yxndsrpc625br1y7'
 - name: Charm
   type: item
+  img: modules/game-icons-net/whitetransparent/smitten.svg
   system:
     description: >-
       Anyone who hears the song of a group of harpies must save or be charmed:
@@ -222,6 +225,7 @@ items:
   _key: '!actors.items!l1c35lliv8b6yoll.hydfs2nzdc93n1nm'
 - name: Magic Resistance
   type: item
+  img: modules/game-icons-net/whitetransparent/magic-shield.svg
   system:
     description: +2 to all saving throws versus magical effects.
     cost: 0

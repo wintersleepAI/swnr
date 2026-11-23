@@ -112,6 +112,7 @@ prototypeToken:
 items:
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -149,6 +150,7 @@ items:
   _key: '!actors.items!opy0bgh705thqlp3.u2n3r9e9xreuww2z'
 - name: Fire Breath
   type: item
+  img: modules/game-icons-net/whitetransparent/fire-breath.svg
   system:
     description: >-
       [[/r 1d6]]: 2-in-6 chance per round of breathing fire. One target. Save
@@ -179,6 +181,7 @@ items:
   _key: '!actors.items!opy0bgh705thqlp3.nl3eg5h77tjdjl1w'
 - name: Fire Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/fire-shield.svg
   system:
     description: Unharmed by non-magical fire.
     cost: 0
@@ -207,6 +210,7 @@ items:
   _key: '!actors.items!opy0bgh705thqlp3.kv3vvnyv84icx6rh'
 - name: Detect Invisible
   type: item
+  img: modules/game-icons-net/whitetransparent/invisible-face.svg
   system:
     description: >-
       Receives an opposed Dex/Sneak check with a +4 bonus to detect invisible
@@ -237,6 +241,7 @@ items:
   _key: '!actors.items!opy0bgh705thqlp3.l131sx9gsr27z51b'
 - name: Pets
   type: item
+  img: modules/game-icons-net/whitetransparent/sitting-dog.svg
   system:
     description: Sometimes found with other creatures with an affinity for fire.
     cost: 0

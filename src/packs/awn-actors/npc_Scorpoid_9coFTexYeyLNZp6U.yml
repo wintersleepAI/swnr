@@ -72,7 +72,7 @@ system:
 items:
   - name: Monoblade Claw
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/animal-icons/crab-claw.svg
+    img: modules/game-icons-net/whitetransparent/wolverine-claws.svg
     system:
       description: ""
       favorite: false
@@ -145,7 +145,7 @@ items:
     _key: "!actors.items!9coFTexYeyLNZp6U.1lcj8zmF6jLC3BF7"
   - name: Electrostatic Stinger
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/animal-icons/scorpion-tail.svg
+    img: modules/game-icons-net/whitetransparent/wasp-sting.svg
     system:
       description: ""
       favorite: false
@@ -218,7 +218,7 @@ items:
     _key: "!actors.items!9coFTexYeyLNZp6U.xbvQ9gmwh3MEcCCf"
   - name: Expert System
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/artificial-intelligence.svg
     system:
       description: >-
         <p>The bot is competent within its function but lacks any true general intelligence or
@@ -252,7 +252,7 @@ items:
     _key: "!actors.items!9coFTexYeyLNZp6U.cfW4f8IHrzx6d6La"
   - name: Self-Powered Chassis
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/robot-golem.svg
     system:
       description: >-
         <p>Robots are self-powered and do not normally run out of ammunition for any weapons they
