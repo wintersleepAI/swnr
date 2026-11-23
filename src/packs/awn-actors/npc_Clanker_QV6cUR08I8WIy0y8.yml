@@ -72,7 +72,7 @@ system:
 items:
   - name: Strike
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/fist.svg
+    img: modules/game-icons-net/whitetransparent/punch.svg
     system:
       description: ""
       favorite: false
@@ -145,7 +145,7 @@ items:
     _key: "!actors.items!QV6cUR08I8WIy0y8.s36KfLTbGs7plYao"
   - name: Expert System
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/artificial-intelligence.svg
     system:
       description: >-
         <p>The bot is competent within its function but lacks any true general intelligence or
@@ -179,7 +179,7 @@ items:
     _key: "!actors.items!QV6cUR08I8WIy0y8.2Dmp0gZTjk9Qcrqk"
   - name: Self-Powered Chassis
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/robot-golem.svg
     system:
       description: >-
         <p>Robots are self-powered and do not normally run out of ammunition for any weapons they

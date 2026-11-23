@@ -114,6 +114,7 @@ prototypeToken:
 items:
 - name: Fist
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fist.svg
   system:
     description: ''
     cost: 0
@@ -151,6 +152,7 @@ items:
   _key: '!actors.items!1wl2orxc5qqrptn5.dqwtdpo01bxk22ks'
 - name: Mundane Damage Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/shield.svg
   system:
     description: Can only be harmed by magical attacks.
     cost: 0
@@ -179,6 +181,7 @@ items:
   _key: '!actors.items!1wl2orxc5qqrptn5.67lufcuoxydib0p2'
 - name: Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/shield.svg
   system:
     description: Unharmed by gas; unaffected by charm, hold, and sleep spells.
     cost: 0
@@ -207,6 +210,7 @@ items:
   _key: '!actors.items!1wl2orxc5qqrptn5.y056zmx482jle9lw'
 - name: Initiative
   type: item
+  img: modules/game-icons-net/whitetransparent/fast-forward-button.svg
   system:
     description: >-
       -1 penalty due to stiff movement. Already reflected in monster
@@ -237,6 +241,7 @@ items:
   _key: '!actors.items!1wl2orxc5qqrptn5.vj1pbjbkuultpmk2'
 - name: Flammable
   type: item
+  img: modules/game-icons-net/whitetransparent/fire-zone.svg
   system:
     description: >-
       -2 to saves against fire attacks; suffers one extra point of damage per

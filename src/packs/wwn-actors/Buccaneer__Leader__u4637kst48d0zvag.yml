@@ -124,6 +124,7 @@ prototypeToken:
 items:
 - name: Mail Shirt
   type: armor
+  img: modules/game-icons-net/whitetransparent/chain-mail.svg
   system:
     description: >-
       Mail shirts are usually of iron or steel wire, though bronze and other
@@ -164,6 +165,7 @@ items:
   _key: '!actors.items!u4637kst48d0zvag.f6alinrio6sh7eiq'
 - name: Sword, Long
   type: weapon
+  img: modules/game-icons-net/whitetransparent/broadsword.svg
   system:
     description: >-
       Swords are common sidearms throughout the Latter Earth. The expense of
@@ -204,6 +206,7 @@ items:
   _key: '!actors.items!u4637kst48d0zvag.673xmq0eqetd5rwi'
 - name: Crossbow
   type: weapon
+  img: modules/game-icons-net/whitetransparent/crossbow.svg
   system:
     description: >-
       Crossbows come in heavier varieties than the one listed, but such slow,

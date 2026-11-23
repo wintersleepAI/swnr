@@ -145,6 +145,7 @@ prototypeToken:
 items:
 - name: Averse
   type: item
+  img: modules/game-icons-net/whitetransparent/halt.svg
   system:
     description: >-
       Certain religious symbols, lines of salt, emblems of natural law, or
@@ -196,6 +197,7 @@ items:
   _key: '!actors.items!zteDa7FOcCCAcoRa.37pt6re3vdyk7gpj'
 - name: Beguiling
   type: item
+  img: modules/game-icons-net/whitetransparent/smitten.svg
   system:
     description: >-
       Once per scene it can beguile a creature with its gaze on a failed
@@ -247,6 +249,7 @@ items:
   _key: '!actors.items!zteDa7FOcCCAcoRa.okr5qr7bzsdkq3jf'
 - name: Desynchrony
   type: item
+  img: modules/game-icons-net/whitetransparent/vortex.svg
   system:
     description: >-
       Foes hit by it must make a Physical save or be paralyzed for 1d4+1
@@ -296,6 +299,7 @@ items:
   _key: '!actors.items!zteDa7FOcCCAcoRa.pf7x5cxz5g7x912l'
 - name: Draining
   type: item
+  img: modules/game-icons-net/whitetransparent/life-tap.svg
   system:
     description: >-
       Foes hit by it are enfeebled, taking a cumulative -2 penalty to hit
@@ -346,6 +350,7 @@ items:
   _key: '!actors.items!zteDa7FOcCCAcoRa.djp4g5ww8r2z5j3m'
 - name: Intangible
   type: item
+  img: modules/game-icons-net/whitetransparent/ghost.svg
   system:
     description: >-
       It is a shade or specter, unable to be touched by non-magical objects or
@@ -396,6 +401,7 @@ items:
   _key: '!actors.items!zteDa7FOcCCAcoRa.b92s74eywbq6hevc'
 - name: Ravenous
   type: item
+  img: modules/game-icons-net/whitetransparent/carnivore-mouth.svg
   system:
     description: >-
       If it hits with at least one of its attacks, it gets an immediate bonus
@@ -445,6 +451,7 @@ items:
   _key: '!actors.items!zteDa7FOcCCAcoRa.rhdoofmh14k63x91'
 - name: Red Hunger
   type: item
+  img: modules/game-icons-net/whitetransparent/bleeding-heart.svg
   system:
     description: >-
       It must eat a pound of human flesh or drink a pint of human blood every
@@ -495,6 +502,7 @@ items:
   _key: '!actors.items!zteDa7FOcCCAcoRa.a50618u7ifar5w6b'
 - name: Sunscorch
   type: item
+  img: modules/game-icons-net/whitetransparent/sun-radiations.svg
   system:
     description: >-
       Exposure to sunlight, running water, or some specific other emblem of
@@ -544,6 +552,7 @@ items:
   _key: '!actors.items!zteDa7FOcCCAcoRa.55tdk9n3it22v6w3'
 - name: Terrifying
   type: item
+  img: modules/game-icons-net/whitetransparent/terror.svg
   system:
     description: >-
       Enemies must make a Mental save or lose their first turn's Main Action
@@ -593,6 +602,7 @@ items:
   _key: '!actors.items!zteDa7FOcCCAcoRa.4iov5mdsmd05irrx'
 - name: Impure
   type: item
+  img: modules/game-icons-net/whitetransparent/evil-love.svg
   system:
     description: >-
       Weapons of silver, green wood, or other specific apotropaic material
@@ -643,6 +653,7 @@ items:
   _key: '!actors.items!zteDa7FOcCCAcoRa.7a0td6i0asyj2tcf'
 - name: Unending
   type: item
+  img: modules/game-icons-net/whitetransparent/infinity.svg
   system:
     description: >-
       It cannot die by violence. Only the right act, weapon, object
@@ -692,6 +703,7 @@ items:
   _key: '!actors.items!zteDa7FOcCCAcoRa.cn1ioqqgkqg1gta4'
 - name: Punch/Claw
   type: weapon
+  img: modules/game-icons-net/whitetransparent/claw-slashes.svg
   system:
     description: ''
     cost: 0

@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Charm
   type: item
+  img: modules/game-icons-net/whitetransparent/smitten.svg
   system:
     description: >-
       Victim compelled to approach the tree, vanishes inside it (Mental save
@@ -142,6 +143,7 @@ items:
   _key: '!actors.items!iwkkemf7uycp4hfy.j4c4j57sbi0u39w2'
 - name: Bound With Tree
   type: item
+  img: modules/game-icons-net/whitetransparent/tree-face.svg
   system:
     description: >-
       Spiritually connected with a single tree. Dryad dies if the tree dies,
@@ -172,6 +174,7 @@ items:
   _key: '!actors.items!iwkkemf7uycp4hfy.1qzrdh3we35ociy3'
 - name: Meld With Tree
   type: item
+  img: modules/game-icons-net/whitetransparent/tree-face.svg
   system:
     description: Can disappear by joining with her tree.
     cost: 0
@@ -200,6 +203,7 @@ items:
   _key: '!actors.items!iwkkemf7uycp4hfy.9000rwyp7nv0affp'
 - name: Defensive
   type: item
+  img: modules/game-icons-net/whitetransparent/shield.svg
   system:
     description: >-
       Distrustful of strangers. Attempt to charm anyone who approaches or
@@ -230,6 +234,7 @@ items:
   _key: '!actors.items!iwkkemf7uycp4hfy.axjpe9hko3mbzw23'
 - name: Treasure
   type: item
+  img: modules/game-icons-net/whitetransparent/open-treasure-chest.svg
   system:
     description: Hidden in roots of the tree. Treasure Type D from OSE.
     cost: 0

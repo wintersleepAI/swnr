@@ -115,6 +115,7 @@ prototypeToken:
 items:
 - name: Claw
   type: weapon
+  img: modules/game-icons-net/whitetransparent/claw.svg
   system:
     description: ''
     cost: 0
@@ -152,6 +153,7 @@ items:
   _key: '!actors.items!b2c0lcujqo2q2vgl.bg3shrq2ube2lozz'
 - name: Goat Head - Gore
   type: weapon
+  img: modules/game-icons-net/whitetransparent/goat.svg
   system:
     description: ''
     cost: 0
@@ -189,6 +191,7 @@ items:
   _key: '!actors.items!b2c0lcujqo2q2vgl.mafy98rzyxfj8rin'
 - name: Lion Head - Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/lion.svg
   system:
     description: ''
     cost: 0
@@ -226,6 +229,7 @@ items:
   _key: '!actors.items!b2c0lcujqo2q2vgl.2pmn4sto1vjn9hib'
 - name: Dragon Head - Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/dragon-head.svg
   system:
     description: ''
     cost: 0
@@ -263,6 +267,7 @@ items:
   _key: '!actors.items!b2c0lcujqo2q2vgl.76a20ns4rovnx69g'
 - name: Breath Weapon
   type: item
+  img: modules/game-icons-net/whitetransparent/dragon-breath.svg
   system:
     description: >-
       Breath weapon: Cone of fire: end 10' wide, 50' long. Can be used up to

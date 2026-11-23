@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -148,6 +149,7 @@ items:
   _key: '!actors.items!cqtca4800gsf3ecr.w71yq2tz9av6pw0r'
 - name: Blink
   type: item
+  img: modules/game-icons-net/whitetransparent/teleport.svg
   system:
     description: >-
       Blink: In combat, teleport close to an enemy, attack, then reappear 1d4
@@ -179,6 +181,7 @@ items:
   _key: '!actors.items!cqtca4800gsf3ecr.yfqyimkvh3ma914r'
 - name: Disappear
   type: item
+  img: modules/game-icons-net/whitetransparent/invisible.svg
   system:
     description: If in serious danger, the pack can flee by entirely disappearing.
     cost: 0

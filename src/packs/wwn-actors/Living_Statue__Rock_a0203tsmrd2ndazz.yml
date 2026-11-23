@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Magma Jet
   type: weapon
+  img: modules/game-icons-net/whitetransparent/lava.svg
   system:
     description: ''
     cost: 0
@@ -148,6 +149,7 @@ items:
   _key: '!actors.items!a0203tsmrd2ndazz.6vjplq9hpjvdkabi'
 - name: Sleep Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/night-sleep.svg
   system:
     description: Unaffected by sleep spells.
     cost: 0
@@ -176,6 +178,7 @@ items:
   _key: '!actors.items!a0203tsmrd2ndazz.ezwgiazo8mpxk6wz'
 - name: Magical Origins
   type: item
+  img: modules/game-icons-net/whitetransparent/magic-swirl.svg
   system:
     description: Created by powerful wizards.
     cost: 0

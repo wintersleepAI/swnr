@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Hoof
   type: weapon
+  img: modules/game-icons-net/whitetransparent/hoof.svg
   system:
     description: ''
     cost: 0
@@ -148,6 +149,7 @@ items:
   _key: '!actors.items!vms5skuzkxes6y5l.gnxijc6zhnlpfien'
 - name: Horn
   type: weapon
+  img: modules/game-icons-net/whitetransparent/rhinoceros-horn.svg
   system:
     description: ''
     cost: 0
@@ -185,6 +187,7 @@ items:
   _key: '!actors.items!vms5skuzkxes6y5l.w3tkonl586fz2l55'
 - name: Teleport
   type: item
+  img: modules/game-icons-net/whitetransparent/teleport.svg
   system:
     description: Once per day, up to 360' (including rider).
     cost: 0
@@ -213,6 +216,7 @@ items:
   _key: '!actors.items!vms5skuzkxes6y5l.5vtnsfb0z33l2qbs'
 - name: Empathy With Maidens
   type: item
+  img: modules/game-icons-net/whitetransparent/dress.svg
   system:
     description: A pure-hearted maiden can communicate with and ride a unicorn.
     cost: 0

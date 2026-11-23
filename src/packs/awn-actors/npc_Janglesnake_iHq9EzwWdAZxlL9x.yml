@@ -71,7 +71,7 @@ system:
 items:
   - name: Vibroblade Bite
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/animal-icons/snake-bite.svg
+    img: modules/game-icons-net/whitetransparent/shark-jaws.svg
     system:
       description: ""
       favorite: false
@@ -144,7 +144,7 @@ items:
     _key: "!actors.items!iHq9EzwWdAZxlL9x.v9tFN3shn1XOhiSn"
   - name: Expert System
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/artificial-intelligence.svg
     system:
       description: >-
         <p>The bot is competent within its function but lacks any true general intelligence or
@@ -178,7 +178,7 @@ items:
     _key: "!actors.items!iHq9EzwWdAZxlL9x.qVdUo8hDbAG1qpE5"
   - name: Self-Powered Chassis
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/robot-golem.svg
     system:
       description: >-
         <p>Robots are self-powered and do not normally run out of ammunition for any weapons they
@@ -211,7 +211,7 @@ items:
     _key: "!actors.items!iHq9EzwWdAZxlL9x.iWtjjpflRCZUxEKs"
   - name: Constricting Coils
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/snake-spiral.svg
     system:
       description: >-
         <p>After a successful bite, a janglesnake gets a free constriction grapple attempt against

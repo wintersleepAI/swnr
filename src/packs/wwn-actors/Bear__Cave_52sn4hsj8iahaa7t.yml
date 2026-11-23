@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Claw
   type: weapon
+  img: modules/game-icons-net/whitetransparent/claw.svg
   system:
     description: >-
       Bear hug: If a victim is hit by both paws in the same round, the bear
@@ -150,6 +151,7 @@ items:
   _key: '!actors.items!52sn4hsj8iahaa7t.zxpojuvv6ha2mvol'
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -187,6 +189,7 @@ items:
   _key: '!actors.items!52sn4hsj8iahaa7t.67275226i2wnwgr2'
 - name: Bear Hug
   type: item
+  img: modules/game-icons-net/whitetransparent/bear-face.svg
   system:
     description: >-
       If a victim is hit by both paws in the same round, the bear hugs for an
@@ -217,6 +220,7 @@ items:
   _key: '!actors.items!52sn4hsj8iahaa7t.kae2lvxwaxnb4zww'
 - name: Sense of Smell
   type: item
+  img: modules/game-icons-net/whitetransparent/snout.svg
   system:
     description: >-
       Poor eyesight, but keen sense of smell. When hungry, will follow a track

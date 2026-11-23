@@ -71,7 +71,7 @@ system:
 items:
   - name: Onboard Weapons
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/weapons-icons/turret.svg
+    img: modules/game-icons-net/whitetransparent/autogun.svg
     system:
       description: ""
       favorite: false
@@ -144,7 +144,7 @@ items:
     _key: "!actors.items!qtfrTAnTm2YKLwi3.qTfHZCigb1S6eySL"
   - name: Expert System
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/artificial-intelligence.svg
     system:
       description: >-
         <p>The bot is competent within its function but lacks any true general intelligence or
@@ -178,7 +178,7 @@ items:
     _key: "!actors.items!qtfrTAnTm2YKLwi3.4DB1zGoCbfQJfmq8"
   - name: Self-Powered Chassis
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/robot-golem.svg
     system:
       description: >-
         <p>Robots are self-powered and do not normally run out of ammunition for any weapons they
@@ -211,7 +211,7 @@ items:
     _key: "!actors.items!qtfrTAnTm2YKLwi3.sU9JGSzlWyxsExmG"
   - name: Run Over
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/tire-tracks.svg
     system:
       description: >-
         <p>The juggernaut can run over creatures as part of its Move actions, forcing an Evasion

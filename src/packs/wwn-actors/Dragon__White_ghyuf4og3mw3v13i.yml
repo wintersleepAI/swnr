@@ -141,6 +141,7 @@ prototypeToken:
 items:
 - name: Claw
   type: weapon
+  img: modules/game-icons-net/whitetransparent/claw.svg
   system:
     description: ''
     cost: 0
@@ -178,6 +179,7 @@ items:
   _key: '!actors.items!ghyuf4og3mw3v13i.z2mw8qmemrbssiwn'
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -215,6 +217,7 @@ items:
   _key: '!actors.items!ghyuf4og3mw3v13i.xq8r0eauhx1ynz4g'
 - name: Breath Weapon
   type: item
+  img: modules/game-icons-net/whitetransparent/dragon-breath.svg
   system:
     description: 80' long line of cold. Deals damage equal to current hp, save for half.
     cost: 0
@@ -243,6 +246,7 @@ items:
   _key: '!actors.items!ghyuf4og3mw3v13i.0tb79dtk7w02reyw'
 - name: Language and Spells
   type: item
+  img: modules/game-icons-net/whitetransparent/spell-book.svg
   system:
     description: 10%; 3 &times; 1st level.
     cost: 0
@@ -271,6 +275,7 @@ items:
   _key: '!actors.items!ghyuf4og3mw3v13i.n0dm01dbk578uuxj'
 - name: Sleeping
   type: item
+  img: modules/game-icons-net/whitetransparent/night-sleep.svg
   system:
     description: 50%.
     cost: 0

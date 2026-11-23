@@ -110,6 +110,7 @@ prototypeToken:
 items:
 - name: Touch
   type: weapon
+  img: modules/game-icons-net/whitetransparent/skeletal-hand.svg
   system:
     description: Deals no direct damage. See entries for Acid and Consume Flesh.
     cost: 0
@@ -147,6 +148,7 @@ items:
   _key: '!actors.items!htch3payt4pqe9ex.acgpoer1zfzcwnn3'
 - name: Surprise
   type: item
+  img: modules/game-icons-net/whitetransparent/surprised.svg
   system:
     description: >-
       Drops down on surprised characters from above. The Green Slime gains a
@@ -177,6 +179,7 @@ items:
   _key: '!actors.items!htch3payt4pqe9ex.1lm8q76e7u0mc6ao'
 - name: Acid
   type: item
+  img: modules/game-icons-net/whitetransparent/acid.svg
   system:
     description: >-
       When in contact with a victim, sticks on and exudes acid. The acid
@@ -208,6 +211,7 @@ items:
   _key: '!actors.items!htch3payt4pqe9ex.rdyb7xt69p6zj601'
 - name: Consume Flesh
   type: item
+  img: modules/game-icons-net/whitetransparent/carrion.svg
   system:
     description: >-
       Once in contact with flesh for 6 rounds, the victim is turned into green
@@ -238,6 +242,7 @@ items:
   _key: '!actors.items!htch3payt4pqe9ex.9b2riro9l024ctyv'
 - name: Removing
   type: item
+  img: modules/game-icons-net/whitetransparent/cancel.svg
   system:
     description: >-
       Once stuck on a victim, can only be removed by fire. This inflicts half
@@ -268,6 +273,7 @@ items:
   _key: '!actors.items!htch3payt4pqe9ex.inph4xc187zse4jh'
 - name: Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/shield.svg
   system:
     description: Unharmed by all attacks except cold or fire.
     cost: 0

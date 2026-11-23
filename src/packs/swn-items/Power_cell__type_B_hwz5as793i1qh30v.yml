@@ -51,7 +51,7 @@ system:
     diceSize: d20
     diceBonus: +@str.mod+ceil(@lvl / 2)
 effects: []
-img: systems/swnr/assets/icons/game-icons.net/item-icons/battery-75.svg
+img: modules/game-icons-net/whitetransparent/battery-100.svg
 ownership:
   default: 0
   iXDXVi7OlHcRwXw0: 3

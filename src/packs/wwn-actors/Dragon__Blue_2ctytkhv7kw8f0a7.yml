@@ -142,6 +142,7 @@ prototypeToken:
 items:
 - name: Claw
   type: weapon
+  img: modules/game-icons-net/whitetransparent/claw.svg
   system:
     description: ''
     cost: 0
@@ -179,6 +180,7 @@ items:
   _key: '!actors.items!2ctytkhv7kw8f0a7.5ihq4unlvvmrwc9x'
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -216,6 +218,7 @@ items:
   _key: '!actors.items!2ctytkhv7kw8f0a7.7zyb5jbcyyu1n8mz'
 - name: Breath Weapon
   type: item
+  img: modules/game-icons-net/whitetransparent/dragon-breath.svg
   system:
     description: 100' long line of lightning.
     cost: 0
@@ -244,6 +247,7 @@ items:
   _key: '!actors.items!2ctytkhv7kw8f0a7.q5k7zf7jigh8y63p'
 - name: Language and Spells
   type: item
+  img: modules/game-icons-net/whitetransparent/spell-book.svg
   system:
     description: 40%; 4 x 1st level, 4 x 2nd level.
     cost: 0
@@ -272,6 +276,7 @@ items:
   _key: '!actors.items!2ctytkhv7kw8f0a7.b86qxakio35xwt8a'
 - name: Sleeping
   type: item
+  img: modules/game-icons-net/whitetransparent/night-sleep.svg
   system:
     description: 20%.
     cost: 0

@@ -110,6 +110,7 @@ prototypeToken:
 items:
 - name: Touch
   type: weapon
+  img: modules/game-icons-net/whitetransparent/skeletal-hand.svg
   system:
     description: ''
     cost: 0
@@ -147,6 +148,7 @@ items:
   _key: '!actors.items!cn5rz0btafyji9wq.yz228jbanl3stnam'
 - name: Blend In With Stone
   type: item
+  img: modules/game-icons-net/whitetransparent/stone-wall.svg
   system:
     description: Difficult to tell apart from wet stone.
     cost: 0
@@ -175,6 +177,7 @@ items:
   _key: '!actors.items!cn5rz0btafyji9wq.gi5nlx2e86zzw2yc'
 - name: Acid
   type: item
+  img: modules/game-icons-net/whitetransparent/acid.svg
   system:
     description: >-
       After a successful attack, sticks to the victim and exudes acid. The
@@ -206,6 +209,7 @@ items:
   _key: '!actors.items!cn5rz0btafyji9wq.qojqdpfb4oui9tr0'
 - name: Energy Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/lightning-shield.svg
   system:
     description: Unharmed by cold or fire.
     cost: 0

@@ -142,6 +142,7 @@ prototypeToken:
 items:
 - name: Claw
   type: weapon
+  img: modules/game-icons-net/whitetransparent/claw.svg
   system:
     description: ''
     cost: 0
@@ -179,6 +180,7 @@ items:
   _key: '!actors.items!tbqs3dfgyx2rxjqd.xbxtmc2a477n6lp5'
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -216,6 +218,7 @@ items:
   _key: '!actors.items!tbqs3dfgyx2rxjqd.nec6ki0uizy6mb9e'
 - name: Breath Weapon
   type: item
+  img: modules/game-icons-net/whitetransparent/dragon-breath.svg
   system:
     description: Cloud of chlorine gas.
     cost: 0
@@ -244,6 +247,7 @@ items:
   _key: '!actors.items!tbqs3dfgyx2rxjqd.uusf2of37zoo0y7k'
 - name: Language and Spells
   type: item
+  img: modules/game-icons-net/whitetransparent/spell-book.svg
   system:
     description: 30%; 3 x 1st level, 3 x 2nd level.
     cost: 0
@@ -272,6 +276,7 @@ items:
   _key: '!actors.items!tbqs3dfgyx2rxjqd.tjtlw3ev4lrp7csw'
 - name: Sleeping
   type: item
+  img: modules/game-icons-net/whitetransparent/night-sleep.svg
   system:
     description: 30%.
     cost: 0

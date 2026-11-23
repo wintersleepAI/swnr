@@ -109,6 +109,7 @@ prototypeToken:
 items:
 - name: Snakebites
   type: weapon
+  img: modules/game-icons-net/whitetransparent/snake-bite.svg
   system:
     description: 'Poison: The snakes'' bites are venemous: save or die in 1 turn.'
     cost: 0
@@ -146,6 +147,7 @@ items:
   _key: '!actors.items!fd40v2wgcc4jdfd5.2hqtgcdjk1t01qzy'
 - name: Poison
   type: item
+  img: modules/game-icons-net/whitetransparent/poison.svg
   system:
     description: 'The snakes'' bites are venemous: save or die in 1 turn.'
     cost: 0
@@ -174,6 +176,7 @@ items:
   _key: '!actors.items!fd40v2wgcc4jdfd5.hbk1bre727fb9c0o'
 - name: Disguise
   type: item
+  img: modules/game-icons-net/whitetransparent/duality-mask.svg
   system:
     description: >-
       Use hooded cloaks to lure victims close before revealing their true
@@ -204,6 +207,7 @@ items:
   _key: '!actors.items!fd40v2wgcc4jdfd5.gy4djjt3ukot8nia'
 - name: Petrification
   type: item
+  img: modules/game-icons-net/whitetransparent/stone-bust.svg
   system:
     description: >-
       Anyone who looks at an undisguised medusa will be turned to stone (save
@@ -234,6 +238,7 @@ items:
   _key: '!actors.items!fd40v2wgcc4jdfd5.2jfhaucgj9f30ktv'
 - name: Avert Eyes
   type: item
+  img: modules/game-icons-net/whitetransparent/sight-disabled.svg
   system:
     description: >-
       -4 penalty to attack rolls and the medusa gains +2 bonus on attack
@@ -264,6 +269,7 @@ items:
   _key: '!actors.items!fd40v2wgcc4jdfd5.1s385rdozc88k9ln'
 - name: Mirrors
   type: item
+  img: modules/game-icons-net/whitetransparent/mirror-mirror.svg
   system:
     description: >-
       The reflection of a medusa is harmless. If a medusa sees her own
@@ -294,6 +300,7 @@ items:
   _key: '!actors.items!fd40v2wgcc4jdfd5.ch5d8fuioofef1u2'
 - name: Magic Resistance
   type: item
+  img: modules/game-icons-net/whitetransparent/magic-shield.svg
   system:
     description: +2 bonus to saves versus magical effects.
     cost: 0

@@ -73,7 +73,7 @@ system:
 items:
   - name: Claw
     type: weapon
-    img: systems/swnr/assets/icons/game-icons.net/animal-icons/wolverine-claws.svg
+    img: modules/game-icons-net/whitetransparent/claw.svg
     system:
       description: ""
       favorite: false
@@ -146,7 +146,7 @@ items:
     _key: "!actors.items!aENR3tXVyITdOQqA.xAEEw1h9e5xTzpsJ"
   - name: Rabid Speed
     type: feature
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/reticule.svg
+    img: modules/game-icons-net/whitetransparent/sprint.svg
     system:
       description: >-
         <p>Gut weasels always win initiative in combat. Against Alert foes or others with automatic

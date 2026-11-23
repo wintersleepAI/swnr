@@ -119,6 +119,7 @@ prototypeToken:
 items:
 - name: Bite + Petrification
   type: weapon
+  img: modules/game-icons-net/whitetransparent/medusa-head.svg
   system:
     description: >-
       Petrifying touch: Anyone touched by a basilisk is turned to stone
@@ -158,6 +159,7 @@ items:
   _key: '!actors.items!4ntho5181ouu6ltp.1c2g1bn1b26hwljv'
 - name: Petrifying Gaze
   type: item
+  img: modules/game-icons-net/whitetransparent/medusa-head.svg
   system:
     description: >-
       Anyone meeting a basilisk's gaze is turned to stone (Evasion save).

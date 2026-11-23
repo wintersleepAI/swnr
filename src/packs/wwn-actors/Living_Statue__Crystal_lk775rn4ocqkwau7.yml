@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Sturdy Blow
   type: weapon
+  img: modules/game-icons-net/whitetransparent/wood-club.svg
   system:
     description: ''
     cost: 0
@@ -148,6 +149,7 @@ items:
   _key: '!actors.items!lk775rn4ocqkwau7.pezocschfzy3mrma'
 - name: Sleep Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/night-sleep.svg
   system:
     description: Unaffected by sleep spells.
     cost: 0
@@ -176,6 +178,7 @@ items:
   _key: '!actors.items!lk775rn4ocqkwau7.n7rn3vo1evihs69x'
 - name: Magical Origins
   type: item
+  img: modules/game-icons-net/whitetransparent/magic-swirl.svg
   system:
     description: Created by powerful wizards.
     cost: 0
@@ -204,6 +207,7 @@ items:
   _key: '!actors.items!lk775rn4ocqkwau7.qghfkshewfuy4jj4'
 - name: Attacks
   type: item
+  img: modules/game-icons-net/whitetransparent/crossed-swords.svg
   system:
     description: >-
       Depend on form of statue (humanoid statues may use weapons, animal

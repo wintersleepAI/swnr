@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Touch
   type: weapon
+  img: modules/game-icons-net/whitetransparent/skeletal-hand.svg
   system:
     description: ''
     cost: 0
@@ -148,6 +149,7 @@ items:
   _key: '!actors.items!50qe6iqjpzu52lw6.yfzwq44uq5nfxe15'
 - name: Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/shield.svg
   system:
     description: Only harmed by fire-based attacks.
     cost: 0
@@ -176,6 +178,7 @@ items:
   _key: '!actors.items!50qe6iqjpzu52lw6.ly6by6q5vu0r39cn'
 - name: Division
   type: item
+  img: modules/game-icons-net/whitetransparent/split-body.svg
   system:
     description: >-
       Non-fire attacks (including spells) cause the pudding to divide. Each
@@ -207,6 +210,7 @@ items:
   _key: '!actors.items!50qe6iqjpzu52lw6.xd982xasp0jnxkg9'
 - name: Erode Wood/Metal
   type: item
+  img: modules/game-icons-net/whitetransparent/broken-axe.svg
   system:
     description: Can dissolve wood or metal in one turn.
     cost: 0
@@ -235,6 +239,7 @@ items:
   _key: '!actors.items!50qe6iqjpzu52lw6.0do3ubz8infh89ab'
 - name: Cling
   type: item
+  img: modules/game-icons-net/whitetransparent/gecko.svg
   system:
     description: Can move across walls and ceilings.
     cost: 0
@@ -263,6 +268,7 @@ items:
   _key: '!actors.items!50qe6iqjpzu52lw6.pooe8g5cucm1wkup'
 - name: Seep
   type: item
+  img: modules/game-icons-net/whitetransparent/dripping-goo.svg
   system:
     description: Can squeeze through small holes and cracks.
     cost: 0

@@ -112,6 +112,7 @@ prototypeToken:
 items:
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -149,6 +150,7 @@ items:
   _key: '!actors.items!rhzb2wuo8izwrkn9.se9pde3kfmb6wnhi'
 - name: Spear, Light
   type: weapon
+  img: modules/game-icons-net/whitetransparent/stone-spear.svg
   system:
     description: >-
       Spears, and their longer cousin the pike, are common military weapons
@@ -189,6 +191,7 @@ items:
   _key: '!actors.items!rhzb2wuo8izwrkn9.iy84qlnek7prfu46'
 - name: Sword, Short
   type: weapon
+  img: modules/game-icons-net/whitetransparent/gladius.svg
   system:
     description: >-
       Swords are common sidearms throughout the Latter Earth. The expense of
@@ -229,6 +232,7 @@ items:
   _key: '!actors.items!rhzb2wuo8izwrkn9.ptzun1mjl27ileur'
 - name: Bow, Large
   type: weapon
+  img: modules/game-icons-net/whitetransparent/bow-arrow.svg
   system:
     description: >-
       Bows cover everything from the small self bows of horse archers to the
@@ -272,6 +276,7 @@ items:
   _key: '!actors.items!rhzb2wuo8izwrkn9.plqna596dqt33px5'
 - name: Leader
   type: item
+  img: modules/game-icons-net/whitetransparent/crown.svg
   system:
     description: Groups of 20+ are led by a gnoll with 3HD.
     cost: 0

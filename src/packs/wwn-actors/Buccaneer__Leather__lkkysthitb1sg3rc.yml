@@ -124,6 +124,7 @@ prototypeToken:
 items:
 - name: Sword, Long
   type: weapon
+  img: modules/game-icons-net/whitetransparent/broadsword.svg
   system:
     description: >-
       Swords are common sidearms throughout the Latter Earth. The expense of
@@ -164,6 +165,7 @@ items:
   _key: '!actors.items!lkkysthitb1sg3rc.6x5era06rihp0kd8'
 - name: Crossbow
   type: weapon
+  img: modules/game-icons-net/whitetransparent/crossbow.svg
   system:
     description: >-
       Crossbows come in heavier varieties than the one listed, but such slow,
@@ -206,6 +208,7 @@ items:
   _key: '!actors.items!lkkysthitb1sg3rc.ripwobu3ge3l75f6'
 - name: Buff Coat
   type: armor
+  img: modules/game-icons-net/whitetransparent/leather-vest.svg
   system:
     description: >-
       Buff coats are long coats of thick, supple hide, sometimes worn to

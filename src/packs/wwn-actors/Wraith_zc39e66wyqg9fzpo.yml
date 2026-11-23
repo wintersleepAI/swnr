@@ -112,6 +112,7 @@ prototypeToken:
 items:
 - name: Touch
   type: weapon
+  img: modules/game-icons-net/whitetransparent/skeletal-hand.svg
   system:
     description: >-
       Energy Drain: A successfully hit target gains system strain equal to the
@@ -157,6 +158,7 @@ items:
   _key: '!actors.items!zc39e66wyqg9fzpo.xngomw8ign2du6wh'
 - name: Energy Drain
   type: item
+  img: modules/game-icons-net/whitetransparent/life-tap.svg
   system:
     description: >-
       A successfully hit target gains system strain equal to the damage
@@ -193,6 +195,7 @@ items:
   _key: '!actors.items!zc39e66wyqg9fzpo.fxhp9m12qew08klz'
 - name: Undead
   type: item
+  img: modules/game-icons-net/whitetransparent/raise-skeleton.svg
   system:
     description: >-
       Make no noise, until they attack. Immune to effects that affect living
@@ -224,6 +227,7 @@ items:
   _key: '!actors.items!zc39e66wyqg9fzpo.zynwfj7smx6xkun5'
 - name: Mundane Damage Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/shield.svg
   system:
     description: Only harmed by silver weapons or magic. Half damage from silver weapons.
     cost: 0

@@ -182,7 +182,7 @@ prototypeToken:
 items:
   - name: Gravcannon
     type: shipWeapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    img: modules/game-icons-net/whitetransparent/gravitation.svg
     folder: null
     flags: {}
     _stats:
@@ -234,7 +234,7 @@ items:
     _key: '!actors.items!OMmVg0iI854scINw.12puqh5apfrxwmqf'
   - name: Smart Cloud
     type: shipWeapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    img: modules/game-icons-net/whitetransparent/poison-cloud.svg
     folder: null
     flags: {}
     _stats:
@@ -286,7 +286,7 @@ items:
     _key: '!actors.items!OMmVg0iI854scINw.ui2hjvg9xh1hf12g'
   - name: Multifocal Laser
     type: shipWeapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    img: modules/game-icons-net/whitetransparent/laser-burst.svg
     folder: null
     flags: {}
     _stats:
@@ -338,7 +338,7 @@ items:
     _key: '!actors.items!OMmVg0iI854scINw.pzx8cajrjl9tqw35'
   - name: Multifocal Laser
     type: shipWeapon
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/sinusoidal-beam.svg
+    img: modules/game-icons-net/whitetransparent/laser-burst.svg
     folder: null
     flags: {}
     _stats:
@@ -390,7 +390,7 @@ items:
     _key: '!actors.items!OMmVg0iI854scINw.92sjjs37bdcf5lb8'
   - name: Hardened Polyceramic Overlay
     type: shipDefense
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/bubble-field.svg
+    img: modules/game-icons-net/whitetransparent/armoured-shell.svg
     folder: null
     flags: {}
     _stats:
@@ -468,7 +468,7 @@ items:
     _key: '!actors.items!OMmVg0iI854scINw.z5oddpu2fi90bf64'
   - name: Drop Pod
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    img: modules/game-icons-net/whitetransparent/incoming-rocket.svg
     folder: null
     flags: {}
     _stats:
@@ -509,7 +509,7 @@ items:
     _key: '!actors.items!OMmVg0iI854scINw.ezp1fez2vx54vs8u'
   - name: Armory
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    img: modules/game-icons-net/whitetransparent/crossed-swords.svg
     folder: null
     flags: {}
     _stats:
@@ -550,7 +550,7 @@ items:
     _key: '!actors.items!OMmVg0iI854scINw.aq8zwrsf2k24wqlu'
   - name: Ship's Locker
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    img: modules/game-icons-net/whitetransparent/lockers.svg
     folder: null
     flags: {}
     _stats:
@@ -593,7 +593,7 @@ items:
     _key: '!actors.items!OMmVg0iI854scINw.a3y4kjigdj4u9cri'
   - name: Boarding Tubes
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/power-generator.svg
+    img: modules/game-icons-net/whitetransparent/airtight-hatch.svg
     folder: null
     flags: {}
     _stats:
@@ -634,7 +634,7 @@ items:
     _key: '!actors.items!OMmVg0iI854scINw.xa8wjc1wlq5stctl'
   - name: Fuel Scoops
     type: shipFitting
-    img: systems/swnr/assets/icons/game-icons.net/item-icons/energise.svg
+    img: modules/game-icons-net/whitetransparent/funnel.svg
     folder: null
     flags: {}
     _stats:

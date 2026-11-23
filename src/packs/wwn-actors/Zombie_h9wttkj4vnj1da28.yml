@@ -112,6 +112,7 @@ prototypeToken:
 items:
 - name: Strike
   type: weapon
+  img: modules/game-icons-net/whitetransparent/punch.svg
   system:
     description: ''
     cost: 0
@@ -149,6 +150,7 @@ items:
   _key: '!actors.items!h9wttkj4vnj1da28.p2z9tzwvpmv87ckf'
 - name: Undead
   type: item
+  img: modules/game-icons-net/whitetransparent/raise-skeleton.svg
   system:
     description: >-
       Make no noise, until they attack. Immune to effects that affect living
@@ -180,6 +182,7 @@ items:
   _key: '!actors.items!h9wttkj4vnj1da28.u9v49kj6vn7vfx6h'
 - name: Initiative
   type: item
+  img: modules/game-icons-net/whitetransparent/fast-forward-button.svg
   system:
     description: >-
       Always lose. Effectively figured into initiative modifier with huge
@@ -210,6 +213,7 @@ items:
   _key: '!actors.items!h9wttkj4vnj1da28.yok6e7ujkgrzw3ny'
 - name: Guardians
   type: item
+  img: modules/game-icons-net/whitetransparent/guards.svg
   system:
     description: Always attack on sight.
     cost: 0

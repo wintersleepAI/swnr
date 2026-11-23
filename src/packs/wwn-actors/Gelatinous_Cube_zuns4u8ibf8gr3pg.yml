@@ -111,6 +111,7 @@ prototypeToken:
 items:
 - name: Touch
   type: weapon
+  img: modules/game-icons-net/whitetransparent/skeletal-hand.svg
   system:
     description: 'Paralysis: For [[/r 2d4]] turns (save to avoid).'
     cost: 0
@@ -148,6 +149,7 @@ items:
   _key: '!actors.items!zuns4u8ibf8gr3pg.qronv1figp22uw0e'
 - name: Paralysis
   type: item
+  img: modules/game-icons-net/whitetransparent/frozen-body.svg
   system:
     description: For [[/r 2d4]] turns (save to avoid).
     cost: 0
@@ -176,6 +178,7 @@ items:
   _key: '!actors.items!zuns4u8ibf8gr3pg.zribdefl5fz10ipj'
 - name: Surprise
   type: item
+  img: modules/game-icons-net/whitetransparent/surprised.svg
   system:
     description: +5 on checks to surprise, due to near-invisibility.
     cost: 0
@@ -204,6 +207,7 @@ items:
   _key: '!actors.items!zuns4u8ibf8gr3pg.q3a7bn7gpgoxw8ft'
 - name: Energy Immunity
   type: item
+  img: modules/game-icons-net/whitetransparent/lightning-shield.svg
   system:
     description: Unharmed by cold or lightning.
     cost: 0
@@ -232,6 +236,7 @@ items:
   _key: '!actors.items!zuns4u8ibf8gr3pg.08jnoh3fnh4k4w5d'
 - name: Embedded Items
   type: item
+  img: modules/game-icons-net/whitetransparent/pierced-body.svg
   system:
     description: >-
       Indigestible items (e.g. gems, coins) are carried around inside the

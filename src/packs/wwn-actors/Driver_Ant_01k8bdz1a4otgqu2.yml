@@ -109,6 +109,7 @@ prototypeToken:
 items:
 - name: Bite
   type: weapon
+  img: modules/game-icons-net/whitetransparent/fangs.svg
   system:
     description: ''
     cost: 0
@@ -146,6 +147,7 @@ items:
   _key: '!actors.items!01k8bdz1a4otgqu2.yqi2cycla91to968'
 - name: Rapacious
   type: item
+  img: modules/game-icons-net/whitetransparent/gluttonous-smile.svg
   system:
     description: Consume everything in their path, when hungry.
     cost: 0
@@ -174,6 +176,7 @@ items:
   _key: '!actors.items!01k8bdz1a4otgqu2.yos9563dimtsgif8'
 - name: Morale
   type: item
+  img: modules/game-icons-net/whitetransparent/rally-the-troops.svg
   system:
     description: >-
       Attack relentlessly, once they are engaged in melee (morale 12). Will
@@ -204,6 +207,7 @@ items:
   _key: '!actors.items!01k8bdz1a4otgqu2.874b1zjr3cu5i7oj'
 - name: Lair Treasure
   type: item
+  img: modules/game-icons-net/whitetransparent/open-treasure-chest.svg
   system:
     description: 30% chance of 1d10 * 1,000gp worth of gold nuggets, mined by the ants.
     cost: 0
